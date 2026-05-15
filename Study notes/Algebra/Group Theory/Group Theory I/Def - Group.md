@@ -2,7 +2,9 @@
 type: definition
 subject: group-theory
 prereqs: []
-tags: [algebra, group-theory]
+tags:
+  - algebra
+  - group-theory
 ---
 
 # Notation

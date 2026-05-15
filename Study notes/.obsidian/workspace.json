@@ -13,12 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/Group Theory/Group Theory I — §1.1–1.2.md",
-                "mode": "source",
-                "source": false
+                "file": "Algebra/Group Theory/Group Theory I/Def - Group.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "Group Theory I — §1.1–1.2"
+              "title": "Def - Group"
             }
           }
         ]
@@ -78,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "365b19c7bfd998b8",
@@ -186,8 +195,17 @@
   },
   "active": "10f9f8cf081b9403",
   "lastOpenFiles": [
-    "Algebra/Group Theory/Group Theory I/Def - Simple Group.md",
+    "Algebra/Group Theory/Group Theory I/Exercise Index - §1.1 Basic Concepts.md",
     "Algebra/Group Theory/Group Theory I — §1.1–1.2.md",
-    "Welcome.md"
+    "Algebra/Group Theory/Group Theory II/Thm - Cayley's Theorem.md",
+    "Algebra/Group Theory/Group Theory I/Def - Group.md",
+    "[Def - Group.md",
+    "Algebra/Group Theory/Group Theory I/Ex - Groups of prime order are cyclic.md",
+    "Algebra/Group Theory/Group Theory II — §1.3–1.4.md",
+    "Welcome.md",
+    "Algebra/Group Theory/Group Theory II/Def - Automorphism Group.md",
+    "Algebra/Group Theory/Group Theory III — §1.5–1.7.md",
+    "Algebra/Group Theory/Group Theory I/Def - Homomorphism.md",
+    "Algebra/Group Theory/Group Theory I/Def - Simple Group.md"
   ]
 }
