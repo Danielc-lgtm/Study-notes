@@ -211,7 +211,7 @@ A chapter-level page containing the study notes for a mathematical topic. There 
 
 **Non-definition/theorem content:** If the source material does not fit neatly into definition/theorem format (e.g., extended explanations, derivations, computational techniques), the concept map entries become subchapter-style page links, and the linked pages contain the explanatory content organized according to the core philosophy principles.
 
-**Sizing:** A topic page's concept map should contain at most approximately 10–12 definition/theorem collapsible sections. If the source material has more, split into multiple topic pages at natural sub-chapter boundaries, with cross-references between them.
+**Sizing:** A topic page covers a natural sub-chapter unit of the source material, typically a range of sections (e.g., §1.1–1.2). There is no cap on the number of definition/theorem collapsible sections a topic page may contain; split topic pages only at natural sub-chapter boundaries that follow the source material's section structure, with cross-references between them.
 
 **"Aim just above the user's range":** For each chapter, when the definitions and theorems unlock concepts from a more advanced field, include those advanced concepts in the concept map (use web search to find them). Mark them clearly as previews.
 
