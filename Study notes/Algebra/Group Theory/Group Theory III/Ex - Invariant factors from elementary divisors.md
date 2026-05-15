@@ -27,11 +27,7 @@ The single theorem behind this exercise is the classification, and it is worth k
 
 The classification thus presents a finite abelian group in two standard shapes. The **elementary divisor** form is a [[Def - Direct Product|direct product]] $C_{q_1} \times \cdots \times C_{q_s}$ in which every $q_j$ is a *prime power* — this is the form you have been handed. The **invariant factor** form is a product $C_{d_1} \times \cdots \times C_{d_r}$ subject to the chain condition $d_1$ is a multiple of $d_2$ is a multiple of $d_3$, and so on: $d_{i+1} \mid d_i$. The invariant factors are unique, so the answer to this problem is a single well-defined list.
 
-The bridge between the two forms is the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]]:
-
-![[Thm - Chinese Remainder Theorem for Cyclic Groups#Statement]]
-
-It is the only tool we need. Read left-to-right it *fuses* cyclic factors of coprime order, $C_m \times C_n \rightsquigarrow C_{mn}$; read right-to-left it *splits* a cyclic group along the coprime parts of its order. The whole task is to fuse the given prime-power factors, in the right groupings, so that the resulting orders form a divisibility chain.
+The bridge between the two forms is the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem for cyclic groups]]: if $m$ and $n$ are coprime, $\gcd(m,n) = 1$, then $C_{mn} \cong C_m \times C_n$. It is the only tool we need. Read left-to-right it *fuses* cyclic factors of coprime order, $C_m \times C_n \rightsquigarrow C_{mn}$; read right-to-left it *splits* a cyclic group along the coprime parts of its order. The whole task is to fuse the given prime-power factors, in the right groupings, so that the resulting orders form a divisibility chain.
 
 The [[Def - Order of a Group and of an Element|order]] of $A$ is the product of the orders of all its cyclic factors, $|A| = 2 \cdot 2 \cdot 4 \cdot 3 \cdot 9 \cdot 5 = 2^4 \cdot 3^2 \cdot 5 = 720$; it is unchanged by whichever form we write $A$ in.
 
