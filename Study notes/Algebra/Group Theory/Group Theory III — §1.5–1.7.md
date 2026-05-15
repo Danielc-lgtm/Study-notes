@@ -39,59 +39,31 @@ The third stage, §1.7, is the summit: **Sylow's theorems**. Where Cauchy's theo
 
 ## §1.5 Finite p-Groups
 
-<details>
-<summary><strong>[[Def - p-group]]</strong></summary>
+- **[[Def - p-group]]**
+	- A **$p$-group** is a finite group whose order is a power $p^n$ of a prime $p$, with $n \geq 1$. By [[Thm - Lagrange's Theorem|Lagrange]] every element has order a power of $p$, and by [[Group Theory II — §1.3–1.4|Cauchy's theorem]] the converse holds, so $p$-groups are exactly the finite groups in which every element has $p$-power order. They are the simplest groups beyond prime order, and they are unexpectedly rigid: their defining arithmetic forces a non-trivial centre, subgroups of every intermediate order, and abelian-ness in order $p^2$.
 
-A **$p$-group** is a finite group whose order is a power $p^n$ of a prime $p$, with $n \geq 1$. By [[Thm - Lagrange's Theorem|Lagrange]] every element has order a power of $p$, and by [[Group Theory II — §1.3–1.4|Cauchy's theorem]] the converse holds, so $p$-groups are exactly the finite groups in which every element has $p$-power order. They are the simplest groups beyond prime order, and they are unexpectedly rigid: their defining arithmetic forces a non-trivial centre, subgroups of every intermediate order, and abelian-ness in order $p^2$.
+- **[[Thm - p-Groups Have Non-Trivial Centre]]**
+	- Every non-trivial finite $p$-group has non-trivial [[Def - Centraliser and Centre|centre]], $Z(G) \neq \{e\}$. The proof is the [[Thm - The Class Equation|class equation]] read modulo $p$: every non-central conjugacy class has size a non-trivial power of $p$, hence divisible by $p$, and since $|G|$ is too, the count of size-one classes — that is, $|Z(G)|$ — must be divisible by $p$. As $\{e\}$ is one such class, there must be at least $p$ of them. An immediate consequence is that a $p$-group of order $p^n$ with $n \geq 2$ is never [[Def - Simple Group|simple]].
 
-</details>
+- **[[Thm - Quotient by the Centre and Commutativity]]**
+	- For any group $G$, if the quotient $G/Z(G)$ is cyclic then $G$ is [[Def - Abelian Group|abelian]] — in which case $G/Z(G)$ is in fact trivial. The point is that a generator coset $gZ(G)$ forces every element into the form $g^r z$ with $z$ central, and any two such elements visibly commute. Combined with [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre]], this yields the clean corollary that **every group of order $p^2$ is abelian**: the centre has order $p$ or $p^2$, and order $p$ would make $G/Z(G)$ cyclic of order $p$, a contradiction.
 
-<details>
-<summary><strong>[[Thm - p-Groups Have Non-Trivial Centre]]</strong></summary>
-
-Every non-trivial finite $p$-group has non-trivial [[Def - Centraliser and Centre|centre]], $Z(G) \neq \{e\}$. The proof is the [[Thm - The Class Equation|class equation]] read modulo $p$: every non-central conjugacy class has size a non-trivial power of $p$, hence divisible by $p$, and since $|G|$ is too, the count of size-one classes — that is, $|Z(G)|$ — must be divisible by $p$. As $\{e\}$ is one such class, there must be at least $p$ of them. An immediate consequence is that a $p$-group of order $p^n$ with $n \geq 2$ is never [[Def - Simple Group|simple]].
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Quotient by the Centre and Commutativity]]</strong></summary>
-
-For any group $G$, if the quotient $G/Z(G)$ is cyclic then $G$ is [[Def - Abelian Group|abelian]] — in which case $G/Z(G)$ is in fact trivial. The point is that a generator coset $gZ(G)$ forces every element into the form $g^r z$ with $z$ central, and any two such elements visibly commute. Combined with [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre]], this yields the clean corollary that **every group of order $p^2$ is abelian**: the centre has order $p$ or $p^2$, and order $p$ would make $G/Z(G)$ cyclic of order $p$, a contradiction.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Subgroups of a p-Group]]</strong></summary>
-
-A group $G$ of order $p^a$ has a subgroup of order $p^b$ for *every* $0 \leq b \leq a$, and these can be taken normal in $G$. This is Lagrange's converse holding in full for $p$-groups, and it fails for general groups ($A_5$, order $60$, has no subgroup of order $30$). The proof inducts on $a$: a central element of order $p$ generates a normal subgroup $N \cong C_p$, the smaller group $G/N$ has a subgroup of order $p^{b-1}$ by induction, and the [[Thm - Correspondence Theorem|correspondence theorem]] pulls it back to a subgroup of order $p^b$ in $G$.
-
-</details>
+- **[[Thm - Subgroups of a p-Group]]**
+	- A group $G$ of order $p^a$ has a subgroup of order $p^b$ for *every* $0 \leq b \leq a$, and these can be taken normal in $G$. This is Lagrange's converse holding in full for $p$-groups, and it fails for general groups ($A_5$, order $60$, has no subgroup of order $30$). The proof inducts on $a$: a central element of order $p$ generates a normal subgroup $N \cong C_p$, the smaller group $G/N$ has a subgroup of order $p^{b-1}$ by induction, and the [[Thm - Correspondence Theorem|correspondence theorem]] pulls it back to a subgroup of order $p^b$ in $G$.
 
 > [!note] Exercise Index — §1.5
 > [[Exercise Index - §1.5 Finite p-Groups]]
 
 ## §1.6 Finite Abelian Groups
 
-<details>
-<summary><strong>[[Def - Direct Product]]</strong></summary>
+- **[[Def - Direct Product]]**
+	- The **direct product** $G \times H$ of two groups is the set of pairs $(g, h)$ with componentwise multiplication $(g_1, h_1)(g_2, h_2) = (g_1 g_2, h_1 h_2)$. It has order $|G|\,|H|$, contains $G$ and $H$ as commuting normal subgroups intersecting trivially, and is the construction by which small groups are assembled into larger ones. The classification of finite [[Def - Abelian Group|abelian]] groups says the direct product of cyclic groups is the *only* way abelian groups are built — every one of them is such a product.
 
-The **direct product** $G \times H$ of two groups is the set of pairs $(g, h)$ with componentwise multiplication $(g_1, h_1)(g_2, h_2) = (g_1 g_2, h_1 h_2)$. It has order $|G|\,|H|$, contains $G$ and $H$ as commuting normal subgroups intersecting trivially, and is the construction by which small groups are assembled into larger ones. The classification of finite [[Def - Abelian Group|abelian]] groups says the direct product of cyclic groups is the *only* way abelian groups are built — every one of them is such a product.
+- **[[Thm - Classification of Finite Abelian Groups]]**
+	- Every finite [[Def - Abelian Group|abelian]] group $G$ is isomorphic to a [[Def - Direct Product|direct product]] $C_{d_1} \times C_{d_2} \times \cdots \times C_{d_r}$ of cyclic groups, and the $d_i$ may be chosen so that $d_{i+1} \mid d_i$ — the **invariant factors** — in which case the list is unique. Equivalently, $G$ is a product of cyclic groups of prime-power order — the **elementary divisors**. This is a complete and irredundant classification: it solves the isomorphism problem for finite abelian groups outright. It is proved in full later in the course as the case $R = \mathbb{Z}$ of the structure theorem for modules over a principal ideal domain.
 
-</details>
-
-<details>
-<summary><strong>[[Thm - Classification of Finite Abelian Groups]]</strong></summary>
-
-Every finite [[Def - Abelian Group|abelian]] group $G$ is isomorphic to a [[Def - Direct Product|direct product]] $C_{d_1} \times C_{d_2} \times \cdots \times C_{d_r}$ of cyclic groups, and the $d_i$ may be chosen so that $d_{i+1} \mid d_i$ — the **invariant factors** — in which case the list is unique. Equivalently, $G$ is a product of cyclic groups of prime-power order — the **elementary divisors**. This is a complete and irredundant classification: it solves the isomorphism problem for finite abelian groups outright. It is proved in full later in the course as the case $R = \mathbb{Z}$ of the structure theorem for modules over a principal ideal domain.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Chinese Remainder Theorem for Cyclic Groups]]</strong></summary>
-
-If $m$ and $n$ are coprime, then $C_{mn} \cong C_m \times C_n$. The proof exhibits an element of order $mn$ in $C_m \times C_n$: a generator pair $(g, h)$ has order $\operatorname{lcm}(m, n) = mn$. This is the group-theoretic form of the Chinese remainder theorem, and it is the device that converts between the two faces of the [[Thm - Classification of Finite Abelian Groups|classification]] — fusing prime-power [[Def - Direct Product|factors]] across distinct primes into invariant factors, or splitting invariant factors back into elementary divisors.
-
-</details>
+- **[[Thm - Chinese Remainder Theorem for Cyclic Groups]]**
+	- If $m$ and $n$ are coprime, then $C_{mn} \cong C_m \times C_n$. The proof exhibits an element of order $mn$ in $C_m \times C_n$: a generator pair $(g, h)$ has order $\operatorname{lcm}(m, n) = mn$. This is the group-theoretic form of the Chinese remainder theorem, and it is the device that converts between the two faces of the [[Thm - Classification of Finite Abelian Groups|classification]] — fusing prime-power [[Def - Direct Product|factors]] across distinct primes into invariant factors, or splitting invariant factors back into elementary divisors.
 
 > [!tip] Unlocked: Smith Normal Form and Modules over a PID *(from Rings and Modules)*
 > The [[Thm - Classification of Finite Abelian Groups|classification]] is the case $R = \mathbb{Z}$ of the structure theorem for finitely generated modules over a principal ideal domain. Taking $R = k[X]$ instead yields the rational and Jordan canonical forms of a linear operator; the computational engine in all cases is the Smith normal form of an integer or polynomial matrix.
@@ -101,26 +73,14 @@ If $m$ and $n$ are coprime, then $C_{mn} \cong C_m \times C_n$. The proof exhibi
 
 ## §1.7 Sylow's Theorems
 
-<details>
-<summary><strong>[[Def - Sylow p-Subgroup]]</strong></summary>
+- **[[Def - Sylow p-Subgroup]]**
+	- Write $|G| = p^a m$ with $p$ prime and $p \nmid m$. A **Sylow $p$-subgroup** of $G$ is a subgroup of order exactly $p^a$ — a $p$-subgroup of the largest order [[Thm - Lagrange's Theorem|Lagrange]] permits. It is a [[Def - p-group|$p$-group]] maximal both by order and by inclusion. Sylow $p$-subgroups are the objects whose existence, conjugacy, and number are governed by [[Thm - Sylow's Theorems|Sylow's theorems]]; the example to keep in mind is the group of upper-triangular unipotent matrices, a Sylow $p$-subgroup of $\mathrm{GL}_n(\mathbb{Z}/p)$.
 
-Write $|G| = p^a m$ with $p$ prime and $p \nmid m$. A **Sylow $p$-subgroup** of $G$ is a subgroup of order exactly $p^a$ — a $p$-subgroup of the largest order [[Thm - Lagrange's Theorem|Lagrange]] permits. It is a [[Def - p-group|$p$-group]] maximal both by order and by inclusion. Sylow $p$-subgroups are the objects whose existence, conjugacy, and number are governed by [[Thm - Sylow's Theorems|Sylow's theorems]]; the example to keep in mind is the group of upper-triangular unipotent matrices, a Sylow $p$-subgroup of $\mathrm{GL}_n(\mathbb{Z}/p)$.
+- **[[Thm - Sylow's Theorems]]**
+	- Let $|G| = p^a m$ with $p \nmid m$. **(I, Existence)** $G$ has a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]]. **(II, Conjugacy)** any two Sylow $p$-subgroups are [[Def - Conjugacy Class|conjugate]], and every $p$-subgroup lies inside some Sylow $p$-subgroup. **(III, Count)** the number $n_p$ of Sylow $p$-subgroups satisfies $n_p \equiv 1 \pmod p$ and $n_p \mid |G|$ — indeed $n_p \mid m$. Each part is proved by a [[Group Theory II — §1.3–1.4|group action]]: $G$ on its $p^a$-subsets for existence, a $p$-subgroup on cosets for conjugacy, a Sylow subgroup on $\operatorname{Syl}_p(G)$ for the congruence.
 
-</details>
-
-<details>
-<summary><strong>[[Thm - Sylow's Theorems]]</strong></summary>
-
-Let $|G| = p^a m$ with $p \nmid m$. **(I, Existence)** $G$ has a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]]. **(II, Conjugacy)** any two Sylow $p$-subgroups are [[Def - Conjugacy Class|conjugate]], and every $p$-subgroup lies inside some Sylow $p$-subgroup. **(III, Count)** the number $n_p$ of Sylow $p$-subgroups satisfies $n_p \equiv 1 \pmod p$ and $n_p \mid |G|$ — indeed $n_p \mid m$. Each part is proved by a [[Group Theory II — §1.3–1.4|group action]]: $G$ on its $p^a$-subsets for existence, a $p$-subgroup on cosets for conjugacy, a Sylow subgroup on $\operatorname{Syl}_p(G)$ for the congruence.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - A Unique Sylow Subgroup is Normal]]</strong></summary>
-
-If $G$ has exactly one [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] — that is, if $n_p = 1$ — then that subgroup is [[Def - Normal Subgroup|normal]]. The reason is immediate from [[Thm - Sylow's Theorems|Sylow II]]: any conjugate $gPg^{-1}$ is again a Sylow $p$-subgroup, so if there is only one, conjugation must fix it. This is the single most-used consequence of Sylow's theorems in practice: combined with the count $n_p \equiv 1 \pmod p$, $n_p \mid m$, it is the standard route to proving a group of given order is not [[Def - Simple Group|simple]].
-
-</details>
+- **[[Thm - A Unique Sylow Subgroup is Normal]]**
+	- If $G$ has exactly one [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] — that is, if $n_p = 1$ — then that subgroup is [[Def - Normal Subgroup|normal]]. The reason is immediate from [[Thm - Sylow's Theorems|Sylow II]]: any conjugate $gPg^{-1}$ is again a Sylow $p$-subgroup, so if there is only one, conjugation must fix it. This is the single most-used consequence of Sylow's theorems in practice: combined with the count $n_p \equiv 1 \pmod p$, $n_p \mid m$, it is the standard route to proving a group of given order is not [[Def - Simple Group|simple]].
 
 > [!tip] Unlocked: Borel Subgroups *(from the Theory of Algebraic Groups)*
 > The upper-triangular unipotent [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $\mathrm{GL}_n(\mathbb{Z}/p)$ is the finite shadow of a **Borel subgroup** — a maximal connected solvable subgroup of an algebraic group. Borel's conjugacy theorem ("all Borel subgroups are conjugate") is the exact analogue of [[Thm - Sylow's Theorems|Sylow II]].

@@ -207,7 +207,7 @@ There are five page types. See `references/templates.md` for complete templates.
 
 A chapter-level page containing the study notes for a mathematical topic. There can be multiple topic pages per subject (e.g., "Group Theory I — §1.1–1.2", "Group Theory II — §1.5–1.7"). Each topic page is self-contained: its own Notation Registry, Motivation, Concept Map, Sources and Targets, Legal Operations, Problem-Solving Strategy, Most Reusable Properties, Bridges, and Insights.
 
-**Concept map format:** This is the single place where the reader sees all definitions, theorems, and exercises for the chapter, with collapsible sections and wikilinks. Each collapsible section contains an unambiguous, rigorous statement or definition (3–5 sentences with key details, examples, and connections). Each name links to the full subpage. Definitions, theorems, and exercises are interleaved in natural reading order following the source material.
+**Concept map format:** This is the single place where the reader sees all definitions, theorems, and exercises for the chapter. Each entry is a **foldable bullet**: a parent bullet holding the wikilinked name, with an indented child bullet holding an unambiguous, rigorous statement or definition (3–5 sentences with key details, examples, and connections). Folding the parent bullet collapses the statement; the wikilink stays clickable in both Editing and Reading view because it is ordinary Markdown. Each name links to the full subpage. Definitions, theorems, and exercises are interleaved in natural reading order following the source material. Do not use HTML `<details>` blocks for concept-map entries — wikilinks inside HTML tags are not clickable in Obsidian, and such blocks do not collapse reliably in Reading view.
 
 **Non-definition/theorem content:** If the source material does not fit neatly into definition/theorem format (e.g., extended explanations, derivations, computational techniques), the concept map entries become subchapter-style page links, and the linked pages contain the explanatory content organized according to the core philosophy principles.
 
@@ -219,7 +219,7 @@ Contains the following sections (see templates for full structure):
 
 1. **Notation Registry** — always visible (not collapsed), every symbol used in the topic's subpages
 2. **Motivation** — why this topic exists, what problems it solves, clarity and unambiguousness emphasized
-3. **Concept Map** — all definitions, theorems, exercises with collapsible sections and wikilinks, per-section exercise index callouts
+3. **Concept Map** — all definitions, theorems, exercises as foldable bullets (wikilinked name on the parent, statement on an indented child), per-section exercise index callouts
 4. **Sources and Targets (topic-level)** — Targets: "what sorts of properties or desiderata do we usually try to prove in this subject?" Sources: "what sorts of assumptions are usually given or leveraged?" Both derived post-hoc from exercises
 5. **Legal Operations** — fully self-contained (a person with zero background should understand), derived post-hoc from exercises. 7+ legal operations, 3+ "illegal but tempting" with counterexamples
 6. **Problem-Solving Strategy** — written as self-contained paragraphs (not tables), explaining when to use which techniques and why, such that a reader with no background could substantially improve their ability to solve exercises. Follows the insight density principle

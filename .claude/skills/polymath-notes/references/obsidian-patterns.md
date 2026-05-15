@@ -93,8 +93,25 @@ The key is that $gH = g'H$ implies $\varphi(g) = \varphi(g')$...
 
 **Important formatting notes:**
 - Leave a blank line after `<summary>...</summary>` before the content.
-- Leave a blank line before the closing `</details>` tag.
-- Markdown rendering inside `<details>` blocks works in Obsidian, including LaTeX, wikilinks, and further nesting.
+- Leave a blank line before every closing `</details>` tag — including a closing tag that immediately follows another `</details>` in a nested block.
+- LaTeX and plain markdown render inside `<details>` blocks in Obsidian.
+- **Never put a wikilink inside an HTML tag.** A `[[wikilink]]` placed inside `<details>`, `<summary>`, `<strong>`, or any other HTML element is *not* clickable in Obsidian — Obsidian does not parse wikilink syntax inside raw HTML. Keep every wikilink in ordinary Markdown. If a collapsible section needs a wikilinked title, do not use `<details>`; use the foldable-bullet pattern below.
+
+Use `<details>` for collapsible content whose visible title is plain text — lemma decompositions, formal proofs, progressive hints, worked-solution steps. For the concept map, whose entries need a clickable wikilink in the title, use foldable bullets instead.
+
+## Foldable Bullets (for the Concept Map)
+
+The concept map needs entries that are both collapsible and carry a clickable wikilink in the visible title. HTML `<details>` cannot do this: a wikilink inside the `<summary>` is dead, and a `<details>` block containing markdown does not collapse reliably in Obsidian's Reading view. Use a nested bullet list instead — a parent bullet holds the wikilinked name, an indented child bullet holds the statement:
+
+```markdown
+- **[[Def - Group]]**
+	- A group is a set $G$ with an associative binary operation, an identity element, and an inverse for every element. [...continue the 3–5 sentence statement, all on this single line...]
+
+- **[[Thm - Lagrange's Theorem]]**
+	- For a finite group $G$ and a subgroup $H \leq G$, $|G| = |H| \cdot |G:H|$, so $|H|$ divides $|G|$. [...3–5 sentences...]
+```
+
+Folding the parent bullet collapses the statement, and this works in both Editing view and Reading view (enable "Fold indent" in Settings → Editor; note that some themes hide the fold arrows). The wikilink, being ordinary Markdown, is clickable in both views. Two rules keep folding reliable in Reading view: keep the parent bullet to a single short line, and write the child statement as a single (long) line — Reading view may not show a fold arrow for multi-line list items. Indent the child by one level (a tab, or the indentation Obsidian inserts when you press Tab in a list).
 
 ## Callouts
 

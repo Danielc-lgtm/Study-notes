@@ -44,61 +44,29 @@ The second half of the topic, §1.4, applies this to the most important action o
 
 ## §1.3 Actions and Permutations
 
-<details>
-<summary><strong>[[Def - Symmetric Group]]</strong></summary>
+- **[[Def - Symmetric Group]]**
+	- For a set $X$, the **symmetric group** $\operatorname{Sym}(X)$ is the group of all bijections $X \to X$ under composition. When $X = \{1, \dots, n\}$ this is $S_n$, of order $n!$. Permutations are written in disjoint cycle notation, and every permutation factors as a product of transpositions; the parity of the number of transpositions is well-defined and gives the sign homomorphism $\operatorname{sgn} : S_n \to \{\pm 1\}$, whose kernel is the [[Def - Subgroup|subgroup]] $A_n$ of even permutations. The symmetric group is the universal home for actions: every group embeds in some $\operatorname{Sym}(X)$.
 
-For a set $X$, the **symmetric group** $\operatorname{Sym}(X)$ is the group of all bijections $X \to X$ under composition. When $X = \{1, \dots, n\}$ this is $S_n$, of order $n!$. Permutations are written in disjoint cycle notation, and every permutation factors as a product of transpositions; the parity of the number of transpositions is well-defined and gives the sign homomorphism $\operatorname{sgn} : S_n \to \{\pm 1\}$, whose kernel is the [[Def - Subgroup|subgroup]] $A_n$ of even permutations. The symmetric group is the universal home for actions: every group embeds in some $\operatorname{Sym}(X)$.
+- **[[Def - Permutation Group]]**
+	- A **permutation group** is a [[Def - Subgroup|subgroup]] of $\operatorname{Sym}(X)$ for some set $X$ — a group given by *some*, not necessarily all, permutations of a set. Its **degree** is $|X|$. The dihedral group acting on the vertices of a polygon and the rotation group of a cube acting on its faces are permutation groups. The definition looks restrictive but is not: by [[Thm - Cayley's Theorem|Cayley's theorem]] every group is isomorphic to a permutation group, so the content of the notion is the *choice* of set $X$, which can make a group's structure vivid or opaque.
 
-</details>
+- **[[Def - Group Action]]**
+	- An **action** of $G$ on a set $X$ is a map $G \times X \to X$, written $(g, x) \mapsto g \cdot x$, satisfying $e \cdot x = x$ and $g_1 \cdot (g_2 \cdot x) = (g_1 g_2) \cdot x$. These axioms say exactly that composing the action of $g_2$ with the action of $g_1$ is the action of $g_1 g_2$, and that the identity does nothing. The associated map sending each $g$ to the permutation $x \mapsto g \cdot x$ is called the **permutation representation** of the action. An action is the formal content of "$G$ is a group of symmetries of $X$".
 
-<details>
-<summary><strong>[[Def - Permutation Group]]</strong></summary>
+- **[[Thm - Actions Correspond to Homomorphisms]]**
+	- An action of $G$ on $X$ is the same thing as a [[Def - Homomorphism|homomorphism]] $\rho : G \to \operatorname{Sym}(X)$. Given an action, $\rho(g)$ is the permutation $x \mapsto g \cdot x$; given a homomorphism, $g \cdot x := \rho(g)(x)$ is an action; the two constructions are mutually inverse. This is the **true name** of a group action, and it makes the whole machinery of homomorphisms available: the kernel $\ker\rho$ (the elements acting trivially) is a [[Def - Normal Subgroup|normal subgroup]], and by the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] $G/\ker\rho$ embeds in $\operatorname{Sym}(X)$.
 
-A **permutation group** is a [[Def - Subgroup|subgroup]] of $\operatorname{Sym}(X)$ for some set $X$ — a group given by *some*, not necessarily all, permutations of a set. Its **degree** is $|X|$. The dihedral group acting on the vertices of a polygon and the rotation group of a cube acting on its faces are permutation groups. The definition looks restrictive but is not: by [[Thm - Cayley's Theorem|Cayley's theorem]] every group is isomorphic to a permutation group, so the content of the notion is the *choice* of set $X$, which can make a group's structure vivid or opaque.
+- **[[Thm - Cayley's Theorem]]**
+	- Every group $G$ is isomorphic to a subgroup of $\operatorname{Sym}(G)$. The proof is the **left-regular action** of $G$ on itself, $g \cdot x = gx$; its permutation representation $\rho : G \to \operatorname{Sym}(G)$ has trivial kernel, because $g$ acting trivially fixes $e$ and hence equals $e$, so by the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] $G \cong \operatorname{im}\rho$. The theorem says abstract groups and permutation groups are the same class of object — though for a group of order $n$ it only embeds $G$ into the enormous $S_n$, so it is more a statement of principle than a practical tool.
 
-</details>
+- **[[Thm - Coset Action and the Normal Core]]**
+	- For $H \leq G$, the group $G$ acts on the set of left cosets $G/H$ by $g \cdot (xH) = gxH$. The kernel of this action is $\bigcap_{x \in G} xHx^{-1}$, the **normal core** of $H$ — the largest [[Def - Normal Subgroup|normal subgroup]] of $G$ contained in $H$. Consequently a subgroup of index $n$ yields a normal subgroup $K \leq H$ with $G/K$ embedding in $S_n$, so $|G/K|$ divides $n!$. Applied to a non-abelian [[Def - Simple Group|simple]] group, this forces every proper subgroup to have index at least $5$ — a remarkably strong constraint extracted from nothing but a counting action.
 
-<details>
-<summary><strong>[[Def - Group Action]]</strong></summary>
+- **[[Def - Orbit and Stabiliser]]**
+	- For an action of $G$ on $X$ and a point $x \in X$, the **orbit** $G \cdot x = \{g \cdot x : g \in G\}$ is everywhere $x$ can be sent, and the **stabiliser** $G_x = \{g : g \cdot x = x\}$ is everything in $G$ that fixes $x$. The stabiliser is always a [[Def - Subgroup|subgroup]]; the orbits partition $X$ into disjoint pieces. An action is **transitive** when there is a single orbit, and **faithful** when only $e$ fixes every point. Orbit and stabiliser are complementary measurements — how far $x$ moves, and how much of $G$ ignores it.
 
-An **action** of $G$ on a set $X$ is a map $G \times X \to X$, written $(g, x) \mapsto g \cdot x$, satisfying $e \cdot x = x$ and $g_1 \cdot (g_2 \cdot x) = (g_1 g_2) \cdot x$. These axioms say exactly that composing the action of $g_2$ with the action of $g_1$ is the action of $g_1 g_2$, and that the identity does nothing. The associated map sending each $g$ to the permutation $x \mapsto g \cdot x$ is called the **permutation representation** of the action. An action is the formal content of "$G$ is a group of symmetries of $X$".
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Actions Correspond to Homomorphisms]]</strong></summary>
-
-An action of $G$ on $X$ is the same thing as a [[Def - Homomorphism|homomorphism]] $\rho : G \to \operatorname{Sym}(X)$. Given an action, $\rho(g)$ is the permutation $x \mapsto g \cdot x$; given a homomorphism, $g \cdot x := \rho(g)(x)$ is an action; the two constructions are mutually inverse. This is the **true name** of a group action, and it makes the whole machinery of homomorphisms available: the kernel $\ker\rho$ (the elements acting trivially) is a [[Def - Normal Subgroup|normal subgroup]], and by the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] $G/\ker\rho$ embeds in $\operatorname{Sym}(X)$.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Cayley's Theorem]]</strong></summary>
-
-Every group $G$ is isomorphic to a subgroup of $\operatorname{Sym}(G)$. The proof is the **left-regular action** of $G$ on itself, $g \cdot x = gx$; its permutation representation $\rho : G \to \operatorname{Sym}(G)$ has trivial kernel, because $g$ acting trivially fixes $e$ and hence equals $e$, so by the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] $G \cong \operatorname{im}\rho$. The theorem says abstract groups and permutation groups are the same class of object — though for a group of order $n$ it only embeds $G$ into the enormous $S_n$, so it is more a statement of principle than a practical tool.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Coset Action and the Normal Core]]</strong></summary>
-
-For $H \leq G$, the group $G$ acts on the set of left cosets $G/H$ by $g \cdot (xH) = gxH$. The kernel of this action is $\bigcap_{x \in G} xHx^{-1}$, the **normal core** of $H$ — the largest [[Def - Normal Subgroup|normal subgroup]] of $G$ contained in $H$. Consequently a subgroup of index $n$ yields a normal subgroup $K \leq H$ with $G/K$ embedding in $S_n$, so $|G/K|$ divides $n!$. Applied to a non-abelian [[Def - Simple Group|simple]] group, this forces every proper subgroup to have index at least $5$ — a remarkably strong constraint extracted from nothing but a counting action.
-
-</details>
-
-<details>
-<summary><strong>[[Def - Orbit and Stabiliser]]</strong></summary>
-
-For an action of $G$ on $X$ and a point $x \in X$, the **orbit** $G \cdot x = \{g \cdot x : g \in G\}$ is everywhere $x$ can be sent, and the **stabiliser** $G_x = \{g : g \cdot x = x\}$ is everything in $G$ that fixes $x$. The stabiliser is always a [[Def - Subgroup|subgroup]]; the orbits partition $X$ into disjoint pieces. An action is **transitive** when there is a single orbit, and **faithful** when only $e$ fixes every point. Orbit and stabiliser are complementary measurements — how far $x$ moves, and how much of $G$ ignores it.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Orbit-Stabiliser Theorem]]</strong></summary>
-
-If $G$ acts on $X$, then for each $x$ the map $g G_x \mapsto g \cdot x$ is a bijection between the cosets of the stabiliser and the orbit; hence for finite $G$, $|G| = |G_x| \cdot |G \cdot x|$. In particular every orbit size divides $|G|$. This is the master counting theorem: it is [[Thm - Lagrange's Theorem|Lagrange's theorem]] for actions, and it converts any structural question that can be phrased as "how big is this orbit" into a divisibility statement. The art of using it is the choice of the set $X$ and the action.
-
-</details>
+- **[[Thm - Orbit-Stabiliser Theorem]]**
+	- If $G$ acts on $X$, then for each $x$ the map $g G_x \mapsto g \cdot x$ is a bijection between the cosets of the stabiliser and the orbit; hence for finite $G$, $|G| = |G_x| \cdot |G \cdot x|$. In particular every orbit size divides $|G|$. This is the master counting theorem: it is [[Thm - Lagrange's Theorem|Lagrange's theorem]] for actions, and it converts any structural question that can be phrased as "how big is this orbit" into a divisibility statement. The art of using it is the choice of the set $X$ and the action.
 
 > [!tip] Unlocked: Burnside's Lemma *(from Enumerative Combinatorics)*
 > Averaging the fixed-point counts $|X^g|$ over $g \in G$ gives the number of orbits. This turns the orbit-stabiliser theorem into a counting engine for colourings up to symmetry — necklaces, cube colourings, chemical isomers — and generalises to the Pólya enumeration theorem.
@@ -108,54 +76,26 @@ If $G$ acts on $X$, then for each $x$ the map $g G_x \mapsto g \cdot x$ is a bij
 
 ## §1.4 Conjugacy Classes, Centralisers, and Normalisers
 
-<details>
-<summary><strong>[[Def - Automorphism Group]]</strong></summary>
+- **[[Def - Automorphism Group]]**
+	- An **automorphism** of $G$ is an [[Def - Isomorphism|isomorphism]] $G \to G$, and the automorphisms form a group $\operatorname{Aut}(G)$ under composition. Each $g \in G$ gives an **inner automorphism** $x \mapsto gxg^{-1}$; these form a normal subgroup $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$, and the map $g \mapsto (x \mapsto gxg^{-1})$ is a homomorphism $G \to \operatorname{Aut}(G)$ with kernel the [[Def - Centraliser and Centre|centre]], so $G/Z(G) \cong \operatorname{Inn}(G)$. The automorphism group measures the internal symmetry of $G$ itself.
 
-An **automorphism** of $G$ is an [[Def - Isomorphism|isomorphism]] $G \to G$, and the automorphisms form a group $\operatorname{Aut}(G)$ under composition. Each $g \in G$ gives an **inner automorphism** $x \mapsto gxg^{-1}$; these form a normal subgroup $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$, and the map $g \mapsto (x \mapsto gxg^{-1})$ is a homomorphism $G \to \operatorname{Aut}(G)$ with kernel the [[Def - Centraliser and Centre|centre]], so $G/Z(G) \cong \operatorname{Inn}(G)$. The automorphism group measures the internal symmetry of $G$ itself.
+- **[[Def - Conjugacy Class]]**
+	- The **conjugacy class** of $g \in G$ is $\operatorname{ccl}_G(g) = \{hgh^{-1} : h \in G\}$ — the orbit of $g$ under the action of $G$ on itself by conjugation. Conjugate elements are "the same element viewed in different coordinates": they have the same order, and in [[Def - Symmetric Group|symmetric groups]] the same cycle type. Conjugacy classes partition $G$, and a [[Def - Normal Subgroup|subgroup is normal exactly when it is a union of conjugacy classes]] — which is why conjugacy is the right language for detecting normal subgroups.
 
-</details>
+- **[[Def - Centraliser and Centre]]**
+	- The **centraliser** $C_G(g) = \{h : hg = gh\}$ is the set of elements commuting with $g$ — the stabiliser of $g$ under conjugation. The **centre** $Z(G) = \{h : hg = gh \text{ for all } g\} = \bigcap_g C_G(g)$ is the set of elements commuting with everything. The centre is always a [[Def - Normal Subgroup|normal]] (indeed abelian) subgroup, equal to the kernel of $G \to \operatorname{Aut}(G)$; it measures how far $G$ is from being [[Def - Abelian Group|abelian]], with $Z(G) = G$ exactly when $G$ is abelian.
 
-<details>
-<summary><strong>[[Def - Conjugacy Class]]</strong></summary>
+- **[[Thm - The Class Equation]]**
+	- By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] applied to conjugation, $|\operatorname{ccl}_G(g)| = |G : C_G(g)|$ — every conjugacy class size divides $|G|$. Summing over classes and separating the singletons (which are exactly the central elements) gives the **class equation** $|G| = |Z(G)| + \sum_i |G : C_G(x_i)|$, the sum running over non-central class representatives. This single identity is the workhorse of finite group theory: it is the lever that proves a [[Group Theory III — §1.5–1.7|$p$-group has non-trivial centre]] and underpins the Sylow theorems.
 
-The **conjugacy class** of $g \in G$ is $\operatorname{ccl}_G(g) = \{hgh^{-1} : h \in G\}$ — the orbit of $g$ under the action of $G$ on itself by conjugation. Conjugate elements are "the same element viewed in different coordinates": they have the same order, and in [[Def - Symmetric Group|symmetric groups]] the same cycle type. Conjugacy classes partition $G$, and a [[Def - Normal Subgroup|subgroup is normal exactly when it is a union of conjugacy classes]] — which is why conjugacy is the right language for detecting normal subgroups.
+- **[[Def - Normaliser]]**
+	- The **normaliser** of a subgroup $H \leq G$ is $N_G(H) = \{g : gHg^{-1} = H\}$ — the stabiliser of $H$ under the conjugation action of $G$ on its own subgroups. It is the largest subgroup of $G$ in which $H$ is [[Def - Normal Subgroup|normal]]: always $H \trianglelefteq N_G(H) \leq G$, with $H$ normal in $G$ precisely when $N_G(H) = G$. By [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser]], the number of conjugates of $H$ equals $|G : N_G(H)|$, which is how one counts subgroups of a given type.
 
-</details>
+- **[[Thm - Conjugacy Classes of the Symmetric Group]]**
+	- Two permutations in $S_n$ are conjugate if and only if they have the same **cycle type**, so the conjugacy classes of $S_n$ are in bijection with the partitions of $n$. Conjugating $\sigma$ by $\tau$ simply relabels the points $\sigma$ permutes, leaving the cycle lengths unchanged. The class of cycle type $1^{a_1}2^{a_2}\cdots$ has size $n! / \prod_k k^{a_k} a_k!$. This makes $S_n$ the one infinite family of groups whose conjugacy structure is completely transparent, and it is the combinatorial input to the simplicity proof for $A_n$.
 
-<details>
-<summary><strong>[[Def - Centraliser and Centre]]</strong></summary>
-
-The **centraliser** $C_G(g) = \{h : hg = gh\}$ is the set of elements commuting with $g$ — the stabiliser of $g$ under conjugation. The **centre** $Z(G) = \{h : hg = gh \text{ for all } g\} = \bigcap_g C_G(g)$ is the set of elements commuting with everything. The centre is always a [[Def - Normal Subgroup|normal]] (indeed abelian) subgroup, equal to the kernel of $G \to \operatorname{Aut}(G)$; it measures how far $G$ is from being [[Def - Abelian Group|abelian]], with $Z(G) = G$ exactly when $G$ is abelian.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - The Class Equation]]</strong></summary>
-
-By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] applied to conjugation, $|\operatorname{ccl}_G(g)| = |G : C_G(g)|$ — every conjugacy class size divides $|G|$. Summing over classes and separating the singletons (which are exactly the central elements) gives the **class equation** $|G| = |Z(G)| + \sum_i |G : C_G(x_i)|$, the sum running over non-central class representatives. This single identity is the workhorse of finite group theory: it is the lever that proves a [[Group Theory III — §1.5–1.7|$p$-group has non-trivial centre]] and underpins the Sylow theorems.
-
-</details>
-
-<details>
-<summary><strong>[[Def - Normaliser]]</strong></summary>
-
-The **normaliser** of a subgroup $H \leq G$ is $N_G(H) = \{g : gHg^{-1} = H\}$ — the stabiliser of $H$ under the conjugation action of $G$ on its own subgroups. It is the largest subgroup of $G$ in which $H$ is [[Def - Normal Subgroup|normal]]: always $H \trianglelefteq N_G(H) \leq G$, with $H$ normal in $G$ precisely when $N_G(H) = G$. By [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser]], the number of conjugates of $H$ equals $|G : N_G(H)|$, which is how one counts subgroups of a given type.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Conjugacy Classes of the Symmetric Group]]</strong></summary>
-
-Two permutations in $S_n$ are conjugate if and only if they have the same **cycle type**, so the conjugacy classes of $S_n$ are in bijection with the partitions of $n$. Conjugating $\sigma$ by $\tau$ simply relabels the points $\sigma$ permutes, leaving the cycle lengths unchanged. The class of cycle type $1^{a_1}2^{a_2}\cdots$ has size $n! / \prod_k k^{a_k} a_k!$. This makes $S_n$ the one infinite family of groups whose conjugacy structure is completely transparent, and it is the combinatorial input to the simplicity proof for $A_n$.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Simplicity of the Alternating Group]]</strong></summary>
-
-The alternating group $A_n$ is [[Def - Simple Group|simple]] for all $n \geq 5$ (and trivially for $n = 2, 3$; $A_4$ is *not* simple). The proof shows $A_n$ is generated by $3$-cycles, that all $3$-cycles are conjugate within $A_n$ once $n \geq 5$, and that any non-trivial [[Def - Normal Subgroup|normal subgroup]] must contain a $3$-cycle — whence it is everything. $A_5$, of order $60$, is the smallest non-abelian simple group, and the non-solvability of $A_n$ for $n \geq 5$ is the group-theoretic reason the general quintic has no solution in radicals.
-
-</details>
+- **[[Thm - Simplicity of the Alternating Group]]**
+	- The alternating group $A_n$ is [[Def - Simple Group|simple]] for all $n \geq 5$ (and trivially for $n = 2, 3$; $A_4$ is *not* simple). The proof shows $A_n$ is generated by $3$-cycles, that all $3$-cycles are conjugate within $A_n$ once $n \geq 5$, and that any non-trivial [[Def - Normal Subgroup|normal subgroup]] must contain a $3$-cycle — whence it is everything. $A_5$, of order $60$, is the smallest non-abelian simple group, and the non-solvability of $A_n$ for $n \geq 5$ is the group-theoretic reason the general quintic has no solution in radicals.
 
 > [!tip] Unlocked: Linear Representation and Character *(from Representation Theory)*
 > Replacing the set $X$ by a vector space turns an action into a [[Def - Homomorphism|homomorphism]] $G \to \mathrm{GL}(V)$ — a linear representation. Functions constant on [[Def - Conjugacy Class|conjugacy classes]] (characters) become the central objects, and the number of irreducible representations equals the number of conjugacy classes.

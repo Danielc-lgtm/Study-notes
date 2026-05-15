@@ -43,33 +43,23 @@ tags: [area-tag, subject-tag]
 
 # Concept Map
 
-[All definitions, theorems, and exercises for this chapter. Each entry is a collapsible section with a wikilinked name. The collapsible section body contains the formal statement (3–5 sentences with key details, examples, and connections). Definitions, theorems, and exercises are interleaved in natural reading order following the source material.]
+[All definitions, theorems, and exercises for this chapter. Each entry is a foldable bullet: a parent bullet holding the wikilinked name, and an indented child bullet holding the formal statement (3–5 sentences with key details, examples, and connections). Folding the parent (Obsidian list folding) collapses the statement; the wikilink stays clickable in both Editing and Reading view because it is ordinary Markdown. Definitions, theorems, and exercises are interleaved in natural reading order following the source material.]
+
+[Do NOT use HTML `<details>`/`<summary>` for concept-map entries — wikilinks inside HTML tags are not clickable in Obsidian, and `<details>` blocks containing markdown do not collapse reliably in Reading view. See `obsidian-patterns.md` for the foldable-bullet pattern. Keep the parent bullet and the child statement each to a single line so the entry folds reliably in Reading view.]
 
 ## §X.1 [Section Title]
 
-<details>
-<summary><strong>[[Def - Topology]]</strong></summary>
+- **[[Def - Topology]]**
+	- A topology on a set $X$ is a collection $\tau \subseteq \mathcal{P}(X)$ containing $\emptyset$ and $X$, closed under arbitrary unions and finite intersections. The pair $(X, \tau)$ is a topological space. The elements of $\tau$ are called open sets. The discrete topology ($\tau = \mathcal{P}(X)$) and indiscrete topology ($\tau = \{\emptyset, X\}$) are the finest and coarsest topologies on any set, with every other topology lying between them.
 
-A topology on a set $X$ is a collection $\tau \subseteq \mathcal{P}(X)$ containing $\emptyset$ and $X$, closed under arbitrary unions and finite intersections. The pair $(X, \tau)$ is a topological space. The elements of $\tau$ are called open sets. The discrete topology ($\tau = \mathcal{P}(X)$) and indiscrete topology ($\tau = \{\emptyset, X\}$) are the finest and coarsest topologies on any set, with every other topology lying between them.
-
-</details>
-
-<details>
-<summary><strong>[[Thm - Extreme Value Theorem]]</strong></summary>
-
-If $X$ is compact and $f : X \to \mathbb{R}$ is continuous, then $f$ attains its maximum and minimum. This is a direct consequence of two facts: continuous images of compact sets are compact, and compact subsets of $\mathbb{R}$ are closed and bounded (Heine-Borel). The theorem fails without compactness: $f(x) = x$ on $(0,1)$ has no maximum.
-
-</details>
+- **[[Thm - Extreme Value Theorem]]**
+	- If $X$ is compact and $f : X \to \mathbb{R}$ is continuous, then $f$ attains its maximum and minimum. This is a direct consequence of two facts: continuous images of compact sets are compact, and compact subsets of $\mathbb{R}$ are closed and bounded (Heine-Borel). The theorem fails without compactness: $f(x) = x$ on $(0,1)$ has no maximum.
 
 > [!tip] Unlocked: Affine Variety *(from Algebraic Geometry)*
 > Now that you have ideals and the Zariski topology, you can define affine varieties as zero sets of ideals. See [[Def - Affine Variety]].
 
-<details>
-<summary><strong>[[Ex - Proving compactness of the closed unit interval]]</strong></summary>
-
-Show that $[0,1]$ is compact in the standard topology. (⭐⭐)
-
-</details>
+- **[[Ex - Proving compactness of the closed unit interval]]**
+	- Show that $[0,1]$ is compact in the standard topology. (⭐⭐)
 
 > [!note] Exercise Index — §X.1
 > [[Exercise Index - §X.1 Section Title]]
