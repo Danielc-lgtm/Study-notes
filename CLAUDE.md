@@ -10,6 +10,18 @@ Weaker areas: algebra (most neglected), some physics curriculum gaps, computatio
 
 Active research areas: ontology identification (AIT + reusable function pointers), information-theoretic emergence of continuity, Bayesian ontology shifts, meta-learning/metacognition, continuous dynamic Bayesian nets, decision theory (UDT, program equilibrium), Maxwell's demon in algorithmic thermodynamics.
 
+## Prerequisite DAG
+
+The study system is organized via a prerequisite DAG maintained in Notion:
+- **DAG page:** https://www.notion.so/35bf76ffda148143abcad0be3ca296f4
+
+This DAG tracks ~130 subjects with prerequisite dependencies, synergy clusters, and (familiarity, interest) scores. When creating notes, use the DAG to:
+- Identify what the current topic unlocks downstream ("aim just above range")
+- Find cross-subject connections for the Bridges section
+- Determine what prerequisites the reader can be assumed to know
+
+If the Notion MCP is connected, fetch the DAG page directly. Otherwise, ask the user for relevant DAG context.
+
 ## Vault Structure
 
 ```
