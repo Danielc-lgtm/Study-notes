@@ -58,26 +58,14 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Factor $56$ and write the Sylow constraints for $7$. They leave exactly two candidates for $n_7$. One of them finishes the problem at once — which? Treat the other as a case to be handled separately.
 
-Factor $56$ and write the Sylow constraints for $7$. They leave exactly two candidates for $n_7$. One of them finishes the problem at once — which? Treat the other as a case to be handled separately.
+> [!note]- Hint 2
+> Suppose $n_7 = 8$. The prime $7$ appears to the first power, so the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: how many elements of order $7$ does $G$ have? Subtract from $56$. How many elements are left over?
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Suppose $n_7 = 8$. The prime $7$ appears to the first power, so the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: how many elements of order $7$ does $G$ have? Subtract from $56$. How many elements are left over?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-A Sylow $2$-subgroup has order $8$, and every element in it has order a power of $2$ — so it contains *no* element of order $7$. There are exactly $56 - 48 = 8$ elements of $G$ that are not of order $7$. A Sylow $2$-subgroup, with its $8$ elements, must be *precisely* this set of $8$. So there is room for only one — $n_2 = 1$ — and the Sylow $2$-subgroup is [[Thm - A Unique Sylow Subgroup is Normal|normal]].
-
-</details>
+> [!note]- Hint 3
+> A Sylow $2$-subgroup has order $8$, and every element in it has order a power of $2$ — so it contains *no* element of order $7$. There are exactly $56 - 48 = 8$ elements of $G$ that are not of order $7$. A Sylow $2$-subgroup, with its $8$ elements, must be *precisely* this set of $8$. So there is room for only one — $n_2 = 1$ — and the Sylow $2$-subgroup is [[Thm - A Unique Sylow Subgroup is Normal|normal]].
 
 ---
 
@@ -89,85 +77,65 @@ The plan is a case split on $n_7$. The Sylow constraints leave $n_7 \in \{1, 8\}
 
 For the prime $7$, write $|G| = 7^1 \cdot 8$. Sylow III gives $n_7 \mid 8$ and $n_7 \equiv 1 \pmod 7$; the only divisors of $8$ congruent to $1$ modulo $7$ are $1$ and $8$.
 
-<details>
-<summary>Derivation</summary>
-
-Factor $|G| = 56 = 2^3 \cdot 7$. With respect to the prime $7$, the largest power of $7$ dividing $56$ is $7^1$, so $|G| = 7^a m$ with $a = 1$ and $m = 8$.
-
-By [[Thm - Sylow's Theorems|Sylow's third theorem]], $n_7 \mid m = 8$ and $n_7 \equiv 1 \pmod 7$. The divisors of $8$ are $1, 2, 4, 8$. Reducing modulo $7$: $1 \equiv 1$, $2 \equiv 2$, $4 \equiv 4$, $8 \equiv 1$. So the divisors congruent to $1 \pmod 7$ are exactly $1$ and $8$. Hence
-$$n_7 \in \{1, 8\}.$$
-
-</details>
+> [!note]- Derivation
+> Factor $|G| = 56 = 2^3 \cdot 7$. With respect to the prime $7$, the largest power of $7$ dividing $56$ is $7^1$, so $|G| = 7^a m$ with $a = 1$ and $m = 8$.
+>
+> By [[Thm - Sylow's Theorems|Sylow's third theorem]], $n_7 \mid m = 8$ and $n_7 \equiv 1 \pmod 7$. The divisors of $8$ are $1, 2, 4, 8$. Reducing modulo $7$: $1 \equiv 1$, $2 \equiv 2$, $4 \equiv 4$, $8 \equiv 1$. So the divisors congruent to $1 \pmod 7$ are exactly $1$ and $8$. Hence
+> $$n_7 \in \{1, 8\}.$$
 
 **Step 2: If $n_7 = 1$, the unique Sylow $7$-subgroup is normal — done.**
 
 A unique Sylow $7$-subgroup is [[Thm - A Unique Sylow Subgroup is Normal|normal]]; it has order $7$, so it is proper and non-trivial, and $G$ is not simple.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose $n_7 = 1$. Let $P$ be the unique Sylow $7$-subgroup. By [[Thm - A Unique Sylow Subgroup is Normal]], $P$ is [[Def - Normal Subgroup|normal]] in $G$: every conjugate $gPg^{-1}$ is a Sylow $7$-subgroup, and uniqueness forces $gPg^{-1} = P$.
-
-Now $|P| = 7$, so $P \neq \{e\}$ (as $7 > 1$) and $P \neq G$ (as $7 < 56$). Thus $P$ is a proper non-trivial normal subgroup, and by the definition of a [[Def - Simple Group|simple group]], $G$ is not simple. This case is complete.
-
-</details>
+> [!note]- Derivation
+> Suppose $n_7 = 1$. Let $P$ be the unique Sylow $7$-subgroup. By [[Thm - A Unique Sylow Subgroup is Normal]], $P$ is [[Def - Normal Subgroup|normal]] in $G$: every conjugate $gPg^{-1}$ is a Sylow $7$-subgroup, and uniqueness forces $gPg^{-1} = P$.
+>
+> Now $|P| = 7$, so $P \neq \{e\}$ (as $7 > 1$) and $P \neq G$ (as $7 < 56$). Thus $P$ is a proper non-trivial normal subgroup, and by the definition of a [[Def - Simple Group|simple group]], $G$ is not simple. This case is complete.
 
 **Step 3: If $n_7 = 8$, there are $48$ elements of order $7$, leaving an $8$-element complement.**
 
 By the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]], $n_7 = 8$ gives $8 \cdot 6 = 48$ elements of order $7$. The remaining $56 - 48 = 8$ elements of $G$ have order *not* equal to $7$.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose instead $n_7 = 8$. The prime $7$ divides $|G| = 56$ but $7^2 = 49$ does not, so the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: every Sylow $7$-subgroup has order $7$, distinct ones intersect only in the identity, and the number of elements of order $7$ is exactly
-$$n_7 (7 - 1) = 8 \cdot 6 = 48.$$
-
-(For self-containedness: each Sylow $7$-subgroup is cyclic of order $7$ with $6$ non-identity elements, all of order $7$; two distinct ones $P \neq Q$ have $P \cap Q$ a subgroup of $P$ of order dividing $7$, hence $\{e\}$, so the $8$ subgroups contribute disjoint sets of $6$.)
-
-Let $E$ be the set of these $48$ elements of order $7$. Its complement in $G$,
-$$L := G \setminus E,$$
-has $|L| = 56 - 48 = 8$. Every element of $L$ has order $\neq 7$. (Note $L$ contains the identity, which has order $1$.)
-
-</details>
+> [!note]- Derivation
+> Suppose instead $n_7 = 8$. The prime $7$ divides $|G| = 56$ but $7^2 = 49$ does not, so the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: every Sylow $7$-subgroup has order $7$, distinct ones intersect only in the identity, and the number of elements of order $7$ is exactly
+> $$n_7 (7 - 1) = 8 \cdot 6 = 48.$$
+>
+> (For self-containedness: each Sylow $7$-subgroup is cyclic of order $7$ with $6$ non-identity elements, all of order $7$; two distinct ones $P \neq Q$ have $P \cap Q$ a subgroup of $P$ of order dividing $7$, hence $\{e\}$, so the $8$ subgroups contribute disjoint sets of $6$.)
+>
+> Let $E$ be the set of these $48$ elements of order $7$. Its complement in $G$,
+> $$L := G \setminus E,$$
+> has $|L| = 56 - 48 = 8$. Every element of $L$ has order $\neq 7$. (Note $L$ contains the identity, which has order $1$.)
 
 **Step 4: The $8$-element complement is forced to be the unique Sylow $2$-subgroup, so $n_2 = 1$ — done.**
 
 A Sylow $2$-subgroup has order $8$ and contains no element of order $7$, so it lies inside the $8$-element set $L$; being of size $8$ it *equals* $L$. Hence there is exactly one Sylow $2$-subgroup, $n_2 = 1$, and it is normal.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> Let $Q$ be any Sylow $2$-subgroup of $G$. With respect to the prime $2$, $|G| = 2^3 \cdot 7$, so $|Q| = 2^3 = 8$.
+>
+> Every element $x \in Q$ has order dividing $|Q| = 8$ by [[Thm - Lagrange's Theorem|Lagrange]], so $\operatorname{ord}(x) \in \{1, 2, 4, 8\}$. In particular *no* element of $Q$ has order $7$. Therefore $Q \cap E = \emptyset$, which means $Q \subseteq G \setminus E = L$.
+>
+> But $|Q| = 8 = |L|$, and $Q \subseteq L$. A subset of an $8$-element set that itself has $8$ elements is the whole set, so
+> $$Q = L.$$
+>
+> This identity holds for *every* Sylow $2$-subgroup $Q$ — each of them equals the one fixed set $L$. So there is exactly one Sylow $2$-subgroup, i.e. $n_2 = 1$.
+>
+> By [[Thm - A Unique Sylow Subgroup is Normal]], this unique Sylow $2$-subgroup is [[Def - Normal Subgroup|normal]]. It has order $8$, so it is proper ($8 < 56$) and non-trivial ($8 > 1$). Hence $G$ has a proper non-trivial normal subgroup and is not [[Def - Simple Group|simple]].
+>
+> In *both* cases — $n_7 = 1$ and $n_7 = 8$ — the group $G$ has been shown to have a normal Sylow subgroup. Therefore no group of order $56$ is simple. $\blacksquare$
 
-Let $Q$ be any Sylow $2$-subgroup of $G$. With respect to the prime $2$, $|G| = 2^3 \cdot 7$, so $|Q| = 2^3 = 8$.
-
-Every element $x \in Q$ has order dividing $|Q| = 8$ by [[Thm - Lagrange's Theorem|Lagrange]], so $\operatorname{ord}(x) \in \{1, 2, 4, 8\}$. In particular *no* element of $Q$ has order $7$. Therefore $Q \cap E = \emptyset$, which means $Q \subseteq G \setminus E = L$.
-
-But $|Q| = 8 = |L|$, and $Q \subseteq L$. A subset of an $8$-element set that itself has $8$ elements is the whole set, so
-$$Q = L.$$
-
-This identity holds for *every* Sylow $2$-subgroup $Q$ — each of them equals the one fixed set $L$. So there is exactly one Sylow $2$-subgroup, i.e. $n_2 = 1$.
-
-By [[Thm - A Unique Sylow Subgroup is Normal]], this unique Sylow $2$-subgroup is [[Def - Normal Subgroup|normal]]. It has order $8$, so it is proper ($8 < 56$) and non-trivial ($8 > 1$). Hence $G$ has a proper non-trivial normal subgroup and is not [[Def - Simple Group|simple]].
-
-In *both* cases — $n_7 = 1$ and $n_7 = 8$ — the group $G$ has been shown to have a normal Sylow subgroup. Therefore no group of order $56$ is simple. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $|G| = 56 = 2^3 \cdot 7$.
-
-With respect to $7$, $|G| = 7^1 \cdot 8$. By [[Thm - Sylow's Theorems|Sylow III]], $n_7 \mid 8$ and $n_7 \equiv 1 \pmod 7$; the divisors of $8$ congruent to $1$ modulo $7$ are $1$ and $8$, so $n_7 \in \{1, 8\}$.
-
-*Case $n_7 = 1$.* The unique [[Def - Sylow p-Subgroup|Sylow $7$-subgroup]] is [[Thm - A Unique Sylow Subgroup is Normal|normal]]; it has order $7$, so it is a proper non-trivial normal subgroup, and $G$ is not [[Def - Simple Group|simple]].
-
-*Case $n_7 = 8$.* Since $7$ divides $56$ to the first power, distinct Sylow $7$-subgroups (each of order $7$, hence cyclic) intersect only in $\{e\}$, so the number of elements of order $7$ is exactly $n_7(7-1) = 8 \cdot 6 = 48$. Call this set $E$; then $L := G \setminus E$ has $|L| = 56 - 48 = 8$, and every element of $L$ has order $\neq 7$.
-
-Let $Q$ be any Sylow $2$-subgroup; $|Q| = 2^3 = 8$. By [[Thm - Lagrange's Theorem|Lagrange]] every element of $Q$ has order dividing $8$, so $Q$ contains no element of order $7$, giving $Q \subseteq L$. As $|Q| = 8 = |L|$, we get $Q = L$. This holds for every Sylow $2$-subgroup, so $n_2 = 1$. By [[Thm - A Unique Sylow Subgroup is Normal]] the unique Sylow $2$-subgroup is normal; it has order $8$, so it is proper and non-trivial, and $G$ is not simple.
-
-In either case $G$ is not simple. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $|G| = 56 = 2^3 \cdot 7$.
+>
+> With respect to $7$, $|G| = 7^1 \cdot 8$. By [[Thm - Sylow's Theorems|Sylow III]], $n_7 \mid 8$ and $n_7 \equiv 1 \pmod 7$; the divisors of $8$ congruent to $1$ modulo $7$ are $1$ and $8$, so $n_7 \in \{1, 8\}$.
+>
+> *Case $n_7 = 1$.* The unique [[Def - Sylow p-Subgroup|Sylow $7$-subgroup]] is [[Thm - A Unique Sylow Subgroup is Normal|normal]]; it has order $7$, so it is a proper non-trivial normal subgroup, and $G$ is not [[Def - Simple Group|simple]].
+>
+> *Case $n_7 = 8$.* Since $7$ divides $56$ to the first power, distinct Sylow $7$-subgroups (each of order $7$, hence cyclic) intersect only in $\{e\}$, so the number of elements of order $7$ is exactly $n_7(7-1) = 8 \cdot 6 = 48$. Call this set $E$; then $L := G \setminus E$ has $|L| = 56 - 48 = 8$, and every element of $L$ has order $\neq 7$.
+>
+> Let $Q$ be any Sylow $2$-subgroup; $|Q| = 2^3 = 8$. By [[Thm - Lagrange's Theorem|Lagrange]] every element of $Q$ has order dividing $8$, so $Q$ contains no element of order $7$, giving $Q \subseteq L$. As $|Q| = 8 = |L|$, we get $Q = L$. This holds for every Sylow $2$-subgroup, so $n_2 = 1$. By [[Thm - A Unique Sylow Subgroup is Normal]] the unique Sylow $2$-subgroup is normal; it has order $8$, so it is proper and non-trivial, and $G$ is not simple.
+>
+> In either case $G$ is not simple. $\blacksquare$
 
 ---
 

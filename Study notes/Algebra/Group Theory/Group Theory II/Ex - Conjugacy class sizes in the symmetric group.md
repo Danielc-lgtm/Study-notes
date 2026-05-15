@@ -63,26 +63,14 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Counting the conjugacy class directly is awkward. By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], the class size is $|S_n|/|C_{S_n}(\sigma)|$, so it suffices to count the centraliser — the permutations $\tau$ with $\tau\sigma\tau^{-1} = \sigma$. The centraliser is the more structured object; compute it instead.
 
-Counting the conjugacy class directly is awkward. By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], the class size is $|S_n|/|C_{S_n}(\sigma)|$, so it suffices to count the centraliser — the permutations $\tau$ with $\tau\sigma\tau^{-1} = \sigma$. The centraliser is the more structured object; compute it instead.
+> [!note]- Hint 2
+> Use the relabelling rule: $\tau\sigma\tau^{-1}$ is the permutation obtained from $\sigma$'s cycle notation by replacing each entry $x$ with $\tau(x)$. So $\tau$ centralises $\sigma$ exactly when this relabelling reproduces the *same* permutation $\sigma$. Ask: in how many ways can you relabel the cycle notation of $\sigma$ and end up writing down the same permutation?
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Use the relabelling rule: $\tau\sigma\tau^{-1}$ is the permutation obtained from $\sigma$'s cycle notation by replacing each entry $x$ with $\tau(x)$. So $\tau$ centralises $\sigma$ exactly when this relabelling reproduces the *same* permutation $\sigma$. Ask: in how many ways can you relabel the cycle notation of $\sigma$ and end up writing down the same permutation?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-A relabelling reproduces $\sigma$ in two independent ways. (i) It may send each cycle of $\sigma$ to a cycle of $\sigma$ *of the same length* — the $a_k$ cycles of length $k$ may be permuted among themselves in $a_k!$ ways. (ii) Within a single $k$-cycle, the relabelling may start at any of the $k$ entries — a $k$-cycle has $k$ equivalent rotations. Multiply: $a_k!$ for shuffling the length-$k$ cycles, and $k$ for each of the $a_k$ such cycles. Over all $k$ this gives $|C_{S_n}(\sigma)| = \prod_k k^{a_k} a_k!$.
-
-</details>
+> [!note]- Hint 3
+> A relabelling reproduces $\sigma$ in two independent ways. (i) It may send each cycle of $\sigma$ to a cycle of $\sigma$ *of the same length* — the $a_k$ cycles of length $k$ may be permuted among themselves in $a_k!$ ways. (ii) Within a single $k$-cycle, the relabelling may start at any of the $k$ entries — a $k$-cycle has $k$ equivalent rotations. Multiply: $a_k!$ for shuffling the length-$k$ cycles, and $k$ for each of the $a_k$ such cycles. Over all $k$ this gives $|C_{S_n}(\sigma)| = \prod_k k^{a_k} a_k!$.
 
 ---
 
@@ -94,92 +82,72 @@ The strategy is to count the centraliser $C_{S_n}(\sigma)$ — the permutations 
 
 By the relabelling rule for conjugation, $\tau\sigma\tau^{-1} = \sigma$ holds exactly when applying $\tau$ to every entry of $\sigma$'s disjoint-cycle notation yields a cycle notation for the same $\sigma$.
 
-<details>
-<summary>Derivation</summary>
-
-By [[Thm - Conjugacy Classes of the Symmetric Group|the conjugation rule]], if $\sigma$ has the disjoint cycles $C_1, C_2, \dots$ with $C_i = (x_1^{(i)}\, x_2^{(i)}\, \cdots)$, then
-$$\tau\sigma\tau^{-1} \text{ has disjoint cycles } \tau(C_1), \tau(C_2), \dots, \quad \text{where } \tau(C_i) = \big(\tau(x_1^{(i)})\ \tau(x_2^{(i)})\ \cdots\big).$$
-That is, $\tau\sigma\tau^{-1}$ is read off by replacing each entry $x$ in $\sigma$'s cycle notation by $\tau(x)$.
-
-Therefore $\tau \in C_{S_n}(\sigma)$, meaning $\tau\sigma\tau^{-1} = \sigma$, holds precisely when the relabelled collection of cycles $\{\tau(C_1), \tau(C_2), \dots\}$ is, as a set of disjoint cycles, the *same permutation* as $\sigma$. Counting the centraliser is thus counting the bijections $\tau$ of $\{1,\dots,n\}$ for which this relabelling regenerates $\sigma$.
-
-</details>
+> [!note]- Derivation
+> By [[Thm - Conjugacy Classes of the Symmetric Group|the conjugation rule]], if $\sigma$ has the disjoint cycles $C_1, C_2, \dots$ with $C_i = (x_1^{(i)}\, x_2^{(i)}\, \cdots)$, then
+> $$\tau\sigma\tau^{-1} \text{ has disjoint cycles } \tau(C_1), \tau(C_2), \dots, \quad \text{where } \tau(C_i) = \big(\tau(x_1^{(i)})\ \tau(x_2^{(i)})\ \cdots\big).$$
+> That is, $\tau\sigma\tau^{-1}$ is read off by replacing each entry $x$ in $\sigma$'s cycle notation by $\tau(x)$.
+>
+> Therefore $\tau \in C_{S_n}(\sigma)$, meaning $\tau\sigma\tau^{-1} = \sigma$, holds precisely when the relabelled collection of cycles $\{\tau(C_1), \tau(C_2), \dots\}$ is, as a set of disjoint cycles, the *same permutation* as $\sigma$. Counting the centraliser is thus counting the bijections $\tau$ of $\{1,\dots,n\}$ for which this relabelling regenerates $\sigma$.
 
 **Step 2: Such a $\tau$ has exactly two independent freedoms — permuting equal-length cycles, and rotating within each cycle.**
 
 For the relabelling to reproduce $\sigma$, $\tau$ must carry each cycle of $\sigma$ onto a cycle of $\sigma$ of the *same length*; cycles of the same length may be interchanged freely, and within a cycle the relabelling may begin at any entry.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose $\tau$ centralises $\sigma$, so $\{\tau(C_1), \tau(C_2), \dots\} = \{C_1, C_2, \dots\}$ as sets of cycles. Each $\tau(C_i)$ is itself a cycle, of the *same length* as $C_i$ (relabelling does not change a cycle's length). So $\tau$ permutes the cycles of $\sigma$ among themselves, and this permutation can only mix cycles of equal length — a $k$-cycle must go to a $k$-cycle.
-
-This gives the **first freedom**. For each length $k$, the $a_k$ cycles of length $k$ are sent by $\tau$ to the $a_k$ cycles of length $k$ in some order: there are $a_k!$ such orderings, and the choices for different lengths $k$ are independent of each other.
-
-Now fix which cycle goes to which. If $\tau$ must send the cycle $C = (x_1\, x_2\, \cdots\, x_k)$ onto the cycle $C' = (y_1\, y_2\, \cdots\, y_k)$, what can $\tau$ do on the points of $C$? The relabelling $\tau(C) = (\tau(x_1)\, \tau(x_2)\, \cdots\, \tau(x_k))$ must equal $C'$ *as a cyclic sequence*. But a $k$-cycle written $(y_1\, y_2\, \cdots\, y_k)$ has $k$ equally valid starting points — it is the same cycle as $(y_2\, \cdots\, y_k\, y_1)$, and so on. So $\tau(x_1)$ may be any one of $y_1, \dots, y_k$, and once $\tau(x_1)$ is chosen the rest is forced: $\tau(x_2)$ is the next entry, $\tau(x_3)$ the one after, since $\tau$ must respect the cyclic order. This gives exactly $k$ choices for how $\tau$ acts on the $k$ points of $C$.
-
-This is the **second freedom**: for each individual cycle of length $k$, there are $k$ ways to fix the internal alignment of the relabelling, and the choices for different cycles are independent.
-
-Crucially these two freedoms are *independent* and *exhaust all of $\tau$*. The first decides the cycle-to-cycle assignment; the second decides, for each assigned pair, the rotational alignment; and together they determine $\tau$ on every one of the $n$ points (every point lies in exactly one cycle of $\sigma$, since the cycles are disjoint and cover $\{1,\dots,n\}$). Conversely, *any* choice of a cycle-permutation respecting lengths together with a rotation for each cycle defines a bona fide $\tau \in S_n$ that centralises $\sigma$. So the centraliser is in bijection with (cycle-shuffles) $\times$ (per-cycle rotations).
-
-</details>
+> [!note]- Derivation
+> Suppose $\tau$ centralises $\sigma$, so $\{\tau(C_1), \tau(C_2), \dots\} = \{C_1, C_2, \dots\}$ as sets of cycles. Each $\tau(C_i)$ is itself a cycle, of the *same length* as $C_i$ (relabelling does not change a cycle's length). So $\tau$ permutes the cycles of $\sigma$ among themselves, and this permutation can only mix cycles of equal length — a $k$-cycle must go to a $k$-cycle.
+>
+> This gives the **first freedom**. For each length $k$, the $a_k$ cycles of length $k$ are sent by $\tau$ to the $a_k$ cycles of length $k$ in some order: there are $a_k!$ such orderings, and the choices for different lengths $k$ are independent of each other.
+>
+> Now fix which cycle goes to which. If $\tau$ must send the cycle $C = (x_1\, x_2\, \cdots\, x_k)$ onto the cycle $C' = (y_1\, y_2\, \cdots\, y_k)$, what can $\tau$ do on the points of $C$? The relabelling $\tau(C) = (\tau(x_1)\, \tau(x_2)\, \cdots\, \tau(x_k))$ must equal $C'$ *as a cyclic sequence*. But a $k$-cycle written $(y_1\, y_2\, \cdots\, y_k)$ has $k$ equally valid starting points — it is the same cycle as $(y_2\, \cdots\, y_k\, y_1)$, and so on. So $\tau(x_1)$ may be any one of $y_1, \dots, y_k$, and once $\tau(x_1)$ is chosen the rest is forced: $\tau(x_2)$ is the next entry, $\tau(x_3)$ the one after, since $\tau$ must respect the cyclic order. This gives exactly $k$ choices for how $\tau$ acts on the $k$ points of $C$.
+>
+> This is the **second freedom**: for each individual cycle of length $k$, there are $k$ ways to fix the internal alignment of the relabelling, and the choices for different cycles are independent.
+>
+> Crucially these two freedoms are *independent* and *exhaust all of $\tau$*. The first decides the cycle-to-cycle assignment; the second decides, for each assigned pair, the rotational alignment; and together they determine $\tau$ on every one of the $n$ points (every point lies in exactly one cycle of $\sigma$, since the cycles are disjoint and cover $\{1,\dots,n\}$). Conversely, *any* choice of a cycle-permutation respecting lengths together with a rotation for each cycle defines a bona fide $\tau \in S_n$ that centralises $\sigma$. So the centraliser is in bijection with (cycle-shuffles) $\times$ (per-cycle rotations).
 
 **Step 3: Counting the two freedoms gives $|C_{S_n}(\sigma)| = \prod_k k^{a_k} a_k!$.**
 
 Multiplying the $a_k!$ ways to shuffle the length-$k$ cycles by the $k$ rotations available to each of those $a_k$ cycles, and taking the product over all lengths $k$, gives $|C_{S_n}(\sigma)| = \prod_{k=1}^n k^{a_k}\, a_k!$.
 
-<details>
-<summary>Derivation</summary>
-
-By Step 2 a centralising $\tau$ is determined by two independent collections of choices, so $|C_{S_n}(\sigma)|$ is the product of the number of choices.
-
-*Shuffling cycles of equal length.* For each length $k$ there are $a_k!$ ways to permute the $a_k$ cycles of length $k$ among themselves; over all lengths this contributes
-$$\prod_{k=1}^{n} a_k!.$$
-
-*Rotating within each cycle.* Each cycle of length $k$ admits $k$ internal rotational alignments. There are $a_k$ cycles of length $k$, each contributing a factor $k$ independently, so the length-$k$ cycles together contribute $k^{a_k}$; over all lengths this contributes
-$$\prod_{k=1}^{n} k^{a_k}.$$
-
-Since the two collections of choices are independent, the centraliser order is their product:
-$$|C_{S_n}(\sigma)| = \Big(\prod_{k=1}^{n} a_k!\Big)\Big(\prod_{k=1}^{n} k^{a_k}\Big) = \prod_{k=1}^{n} k^{a_k}\, a_k!.$$
-
-(As a sanity check, the factors for $k$ with $a_k = 0$ are $k^0\,0! = 1$ and contribute nothing, so the product effectively runs only over the cycle lengths actually present. Fixed points, $k = 1$, contribute $1^{a_1} a_1! = a_1!$ — the freedom to permute the $a_1$ fixed points among themselves, and no rotation since a $1$-cycle has only one alignment.)
-
-</details>
+> [!note]- Derivation
+> By Step 2 a centralising $\tau$ is determined by two independent collections of choices, so $|C_{S_n}(\sigma)|$ is the product of the number of choices.
+>
+> *Shuffling cycles of equal length.* For each length $k$ there are $a_k!$ ways to permute the $a_k$ cycles of length $k$ among themselves; over all lengths this contributes
+> $$\prod_{k=1}^{n} a_k!.$$
+>
+> *Rotating within each cycle.* Each cycle of length $k$ admits $k$ internal rotational alignments. There are $a_k$ cycles of length $k$, each contributing a factor $k$ independently, so the length-$k$ cycles together contribute $k^{a_k}$; over all lengths this contributes
+> $$\prod_{k=1}^{n} k^{a_k}.$$
+>
+> Since the two collections of choices are independent, the centraliser order is their product:
+> $$|C_{S_n}(\sigma)| = \Big(\prod_{k=1}^{n} a_k!\Big)\Big(\prod_{k=1}^{n} k^{a_k}\Big) = \prod_{k=1}^{n} k^{a_k}\, a_k!.$$
+>
+> (As a sanity check, the factors for $k$ with $a_k = 0$ are $k^0\,0! = 1$ and contribute nothing, so the product effectively runs only over the cycle lengths actually present. Fixed points, $k = 1$, contribute $1^{a_1} a_1! = a_1!$ — the freedom to permute the $a_1$ fixed points among themselves, and no rotation since a $1$-cycle has only one alignment.)
 
 **Step 4: Orbit-stabiliser converts this into the class size.**
 
 The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] gives $|\operatorname{ccl}_{S_n}(\sigma)| = |S_n|/|C_{S_n}(\sigma)| = n!/\prod_k k^{a_k} a_k!$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> The conjugacy class $\operatorname{ccl}_{S_n}(\sigma)$ is the orbit of $\sigma$ under the conjugation action of $S_n$ on itself, and the centraliser $C_{S_n}(\sigma)$ is the stabiliser of $\sigma$. The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] gives
+> $$|\operatorname{ccl}_{S_n}(\sigma)| \cdot |C_{S_n}(\sigma)| = |S_n| = n!.$$
+> Substituting $|C_{S_n}(\sigma)| = \prod_{k} k^{a_k} a_k!$ from Step 3,
+> $$|\operatorname{ccl}_{S_n}(\sigma)| = \frac{n!}{\displaystyle\prod_{k=1}^{n} k^{a_k}\, a_k!}. \qquad \blacksquare$$
 
-The conjugacy class $\operatorname{ccl}_{S_n}(\sigma)$ is the orbit of $\sigma$ under the conjugation action of $S_n$ on itself, and the centraliser $C_{S_n}(\sigma)$ is the stabiliser of $\sigma$. The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] gives
-$$|\operatorname{ccl}_{S_n}(\sigma)| \cdot |C_{S_n}(\sigma)| = |S_n| = n!.$$
-Substituting $|C_{S_n}(\sigma)| = \prod_{k} k^{a_k} a_k!$ from Step 3,
-$$|\operatorname{ccl}_{S_n}(\sigma)| = \frac{n!}{\displaystyle\prod_{k=1}^{n} k^{a_k}\, a_k!}. \qquad \blacksquare$$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $\sigma \in S_n$ have cycle type $(a_1, \dots, a_n)$, so $\sigma$ has $a_k$ disjoint cycles of length $k$ and $\sum_k k a_k = n$.
-
-By [[Thm - Conjugacy Classes of the Symmetric Group|the conjugation rule]], for any $\tau \in S_n$ the permutation $\tau\sigma\tau^{-1}$ is obtained from the disjoint-cycle notation of $\sigma$ by replacing each entry $x$ with $\tau(x)$; in particular each cycle $(x_1\,\cdots\,x_k)$ of $\sigma$ becomes the cycle $(\tau(x_1)\,\cdots\,\tau(x_k))$. Hence $\tau \in C_{S_n}(\sigma)$ — that is, $\tau\sigma\tau^{-1} = \sigma$ — if and only if relabelling the cycles of $\sigma$ by $\tau$ regenerates $\sigma$.
-
-Such a $\tau$ must send each cycle of $\sigma$ to a cycle of $\sigma$ of the same length, and is determined by two independent collections of choices:
-
-1. *A length-preserving permutation of the cycles.* For each $k$, the $a_k$ cycles of length $k$ are permuted among themselves: $a_k!$ choices, independent across $k$, contributing $\prod_k a_k!$.
-
-2. *A rotational alignment within each cycle.* Once $\tau$ is required to map a particular $k$-cycle onto a particular $k$-cycle, the image of the first entry may be any of the $k$ entries of the target (a $k$-cycle has $k$ equivalent starting points), after which $\tau$ is forced on the remaining $k-1$ points by cyclic order: $k$ choices per cycle. Over the $a_k$ cycles of length $k$ this contributes $k^{a_k}$, hence $\prod_k k^{a_k}$ overall.
-
-These choices are independent and jointly determine $\tau$ on all $n$ points, and every such choice yields a valid centralising $\tau$. Therefore
-$$|C_{S_n}(\sigma)| = \prod_{k=1}^{n} k^{a_k}\, a_k!.$$
-
-The conjugacy class is the orbit and the centraliser the stabiliser of $\sigma$ under conjugation, so by the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]],
-$$|\operatorname{ccl}_{S_n}(\sigma)| = \frac{|S_n|}{|C_{S_n}(\sigma)|} = \frac{n!}{\displaystyle\prod_{k=1}^{n} k^{a_k}\, a_k!}. \qquad \blacksquare$$
-
-</details>
+> [!note]- Complete formal solution
+> Let $\sigma \in S_n$ have cycle type $(a_1, \dots, a_n)$, so $\sigma$ has $a_k$ disjoint cycles of length $k$ and $\sum_k k a_k = n$.
+>
+> By [[Thm - Conjugacy Classes of the Symmetric Group|the conjugation rule]], for any $\tau \in S_n$ the permutation $\tau\sigma\tau^{-1}$ is obtained from the disjoint-cycle notation of $\sigma$ by replacing each entry $x$ with $\tau(x)$; in particular each cycle $(x_1\,\cdots\,x_k)$ of $\sigma$ becomes the cycle $(\tau(x_1)\,\cdots\,\tau(x_k))$. Hence $\tau \in C_{S_n}(\sigma)$ — that is, $\tau\sigma\tau^{-1} = \sigma$ — if and only if relabelling the cycles of $\sigma$ by $\tau$ regenerates $\sigma$.
+>
+> Such a $\tau$ must send each cycle of $\sigma$ to a cycle of $\sigma$ of the same length, and is determined by two independent collections of choices:
+>
+> 1. *A length-preserving permutation of the cycles.* For each $k$, the $a_k$ cycles of length $k$ are permuted among themselves: $a_k!$ choices, independent across $k$, contributing $\prod_k a_k!$.
+>
+> 2. *A rotational alignment within each cycle.* Once $\tau$ is required to map a particular $k$-cycle onto a particular $k$-cycle, the image of the first entry may be any of the $k$ entries of the target (a $k$-cycle has $k$ equivalent starting points), after which $\tau$ is forced on the remaining $k-1$ points by cyclic order: $k$ choices per cycle. Over the $a_k$ cycles of length $k$ this contributes $k^{a_k}$, hence $\prod_k k^{a_k}$ overall.
+>
+> These choices are independent and jointly determine $\tau$ on all $n$ points, and every such choice yields a valid centralising $\tau$. Therefore
+> $$|C_{S_n}(\sigma)| = \prod_{k=1}^{n} k^{a_k}\, a_k!.$$
+>
+> The conjugacy class is the orbit and the centraliser the stabiliser of $\sigma$ under conjugation, so by the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]],
+> $$|\operatorname{ccl}_{S_n}(\sigma)| = \frac{|S_n|}{|C_{S_n}(\sigma)|} = \frac{n!}{\displaystyle\prod_{k=1}^{n} k^{a_k}\, a_k!}. \qquad \blacksquare$$
 
 ---
 

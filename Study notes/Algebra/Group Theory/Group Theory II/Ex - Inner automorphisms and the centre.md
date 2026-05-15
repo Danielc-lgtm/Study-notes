@@ -68,26 +68,14 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> For part 1, write out $\gamma_{gh}(x)$ and $(\gamma_g \circ \gamma_h)(x)$ separately and compare. The associativity of the group and the cancellation $h^{-1}g^{-1} = (gh)^{-1}$ are all you need.
 
-For part 1, write out $\gamma_{gh}(x)$ and $(\gamma_g \circ \gamma_h)(x)$ separately and compare. The associativity of the group and the cancellation $h^{-1}g^{-1} = (gh)^{-1}$ are all you need.
+> [!note]- Hint 2
+> The codomain of $\gamma$ is $\operatorname{Aut}(G)$, whose identity element is the *identity map* $\operatorname{id}_G$. So $g \in \ker\gamma$ means $\gamma_g = \operatorname{id}_G$, i.e. $gxg^{-1} = x$ for **every** $x \in G$. Rearrange $gxg^{-1} = x$ to a statement about $g$ and $x$ commuting. Which standard subgroup is "the elements commuting with everything"?
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-The codomain of $\gamma$ is $\operatorname{Aut}(G)$, whose identity element is the *identity map* $\operatorname{id}_G$. So $g \in \ker\gamma$ means $\gamma_g = \operatorname{id}_G$, i.e. $gxg^{-1} = x$ for **every** $x \in G$. Rearrange $gxg^{-1} = x$ to a statement about $g$ and $x$ commuting. Which standard subgroup is "the elements commuting with everything"?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Parts 1–3 give a homomorphism with $\ker\gamma = Z(G)$ and $\operatorname{im}\gamma = \operatorname{Inn}(G)$. Quote [[Thm - First Isomorphism Theorem|the first isomorphism theorem]] for part 4. For part 5, let $\phi \in \operatorname{Aut}(G)$ be arbitrary and compute $\phi \circ \gamma_g \circ \phi^{-1}$ applied to a point $x$: push $\phi^{-1}$ in, conjugate, push $\phi$ out, and use that $\phi$ is a homomorphism so $\phi(g x' g^{-1}) = \phi(g)\phi(x')\phi(g)^{-1}$. You should land on $\gamma_{\phi(g)}$.
-
-</details>
+> [!note]- Hint 3
+> Parts 1–3 give a homomorphism with $\ker\gamma = Z(G)$ and $\operatorname{im}\gamma = \operatorname{Inn}(G)$. Quote [[Thm - First Isomorphism Theorem|the first isomorphism theorem]] for part 4. For part 5, let $\phi \in \operatorname{Aut}(G)$ be arbitrary and compute $\phi \circ \gamma_g \circ \phi^{-1}$ applied to a point $x$: push $\phi^{-1}$ in, conjugate, push $\phi$ out, and use that $\phi$ is a homomorphism so $\phi(g x' g^{-1}) = \phi(g)\phi(x')\phi(g)^{-1}$. You should land on $\gamma_{\phi(g)}$.
 
 ---
 
@@ -99,97 +87,73 @@ The spine of the solution is: $\gamma$ is a homomorphism, its kernel is $Z(G)$, 
 
 Conjugation by a product equals the composite of the two conjugations, because the inner $h^{-1}$ and $g^{-1}$ assemble into $(gh)^{-1}$.
 
-<details>
-<summary>Derivation</summary>
-
-Fix $g, h \in G$. For any $x \in G$,
-$$(\gamma_g \circ \gamma_h)(x) = \gamma_g\big(\gamma_h(x)\big) = \gamma_g\big(h x h^{-1}\big) = g(h x h^{-1})g^{-1} = (gh)\,x\,(h^{-1}g^{-1}) = (gh)\,x\,(gh)^{-1} = \gamma_{gh}(x),$$
-using associativity and $h^{-1}g^{-1} = (gh)^{-1}$. Since this holds for every $x$, the maps agree: $\gamma_{gh} = \gamma_g \circ \gamma_h$.
-
-The product in $\operatorname{Aut}(G)$ is composition, so this is exactly the statement that $\gamma(gh) = \gamma(g)\gamma(h)$ — i.e. $\gamma$ is a [[Def - Homomorphism|homomorphism]] $G \to \operatorname{Aut}(G)$. (That each $\gamma_g$ genuinely lies in $\operatorname{Aut}(G)$: $\gamma_g(xy) = gxyg^{-1} = gxg^{-1} \cdot gyg^{-1} = \gamma_g(x)\gamma_g(y)$ so $\gamma_g$ is a homomorphism, and $\gamma_g \circ \gamma_{g^{-1}} = \gamma_{gg^{-1}} = \gamma_e = \operatorname{id}_G$ shows it is invertible, hence an automorphism.)
-
-</details>
+> [!note]- Derivation
+> Fix $g, h \in G$. For any $x \in G$,
+> $$(\gamma_g \circ \gamma_h)(x) = \gamma_g\big(\gamma_h(x)\big) = \gamma_g\big(h x h^{-1}\big) = g(h x h^{-1})g^{-1} = (gh)\,x\,(h^{-1}g^{-1}) = (gh)\,x\,(gh)^{-1} = \gamma_{gh}(x),$$
+> using associativity and $h^{-1}g^{-1} = (gh)^{-1}$. Since this holds for every $x$, the maps agree: $\gamma_{gh} = \gamma_g \circ \gamma_h$.
+>
+> The product in $\operatorname{Aut}(G)$ is composition, so this is exactly the statement that $\gamma(gh) = \gamma(g)\gamma(h)$ — i.e. $\gamma$ is a [[Def - Homomorphism|homomorphism]] $G \to \operatorname{Aut}(G)$. (That each $\gamma_g$ genuinely lies in $\operatorname{Aut}(G)$: $\gamma_g(xy) = gxyg^{-1} = gxg^{-1} \cdot gyg^{-1} = \gamma_g(x)\gamma_g(y)$ so $\gamma_g$ is a homomorphism, and $\gamma_g \circ \gamma_{g^{-1}} = \gamma_{gg^{-1}} = \gamma_e = \operatorname{id}_G$ shows it is invertible, hence an automorphism.)
 
 **Step 2: $\ker\gamma = Z(G)$.**
 
 An element $g$ lies in the kernel if and only if conjugation by $g$ is the identity map, if and only if $g$ commutes with every element of $G$ — which is the definition of the centre.
 
-<details>
-<summary>Derivation</summary>
-
-The identity element of the group $\operatorname{Aut}(G)$ is the identity map $\operatorname{id}_G$. So by [[Def - Kernel and Image|definition of the kernel]],
-$$g \in \ker\gamma \iff \gamma(g) = \operatorname{id}_G \iff \gamma_g = \operatorname{id}_G \iff gxg^{-1} = x \ \text{ for all } x \in G.$$
-Right-multiplying $gxg^{-1} = x$ by $g$ gives the equivalent condition $gx = xg$ for all $x \in G$. So
-$$g \in \ker\gamma \iff gx = xg \ \text{ for all } x \in G,$$
-which is exactly the defining condition for $g$ to belong to the [[Def - Centraliser and Centre|centre]] $Z(G)$. Hence $\ker\gamma = Z(G)$.
-
-</details>
+> [!note]- Derivation
+> The identity element of the group $\operatorname{Aut}(G)$ is the identity map $\operatorname{id}_G$. So by [[Def - Kernel and Image|definition of the kernel]],
+> $$g \in \ker\gamma \iff \gamma(g) = \operatorname{id}_G \iff \gamma_g = \operatorname{id}_G \iff gxg^{-1} = x \ \text{ for all } x \in G.$$
+> Right-multiplying $gxg^{-1} = x$ by $g$ gives the equivalent condition $gx = xg$ for all $x \in G$. So
+> $$g \in \ker\gamma \iff gx = xg \ \text{ for all } x \in G,$$
+> which is exactly the defining condition for $g$ to belong to the [[Def - Centraliser and Centre|centre]] $Z(G)$. Hence $\ker\gamma = Z(G)$.
 
 **Step 3: $\operatorname{im}\gamma = \operatorname{Inn}(G)$.**
 
 The image is the set of all maps $\gamma_g$, which is by definition the set $\operatorname{Inn}(G)$ of inner automorphisms.
 
-<details>
-<summary>Derivation</summary>
-
-By [[Def - Kernel and Image|definition of the image]],
-$$\operatorname{im}\gamma = \{\gamma(g) : g \in G\} = \{\gamma_g : g \in G\}.$$
-An *inner automorphism* of $G$ is precisely an automorphism of the form $x \mapsto gxg^{-1}$ for some $g \in G$ — that is, a map $\gamma_g$. So $\{\gamma_g : g \in G\}$ is exactly the set $\operatorname{Inn}(G)$ of inner automorphisms, and $\operatorname{im}\gamma = \operatorname{Inn}(G)$.
-
-As the image of a homomorphism, $\operatorname{Inn}(G)$ is automatically a [[Def - Subgroup|subgroup]] of $\operatorname{Aut}(G)$ — closure and inverses are inherited from $\gamma$ being a homomorphism (Step 1).
-
-</details>
+> [!note]- Derivation
+> By [[Def - Kernel and Image|definition of the image]],
+> $$\operatorname{im}\gamma = \{\gamma(g) : g \in G\} = \{\gamma_g : g \in G\}.$$
+> An *inner automorphism* of $G$ is precisely an automorphism of the form $x \mapsto gxg^{-1}$ for some $g \in G$ — that is, a map $\gamma_g$. So $\{\gamma_g : g \in G\}$ is exactly the set $\operatorname{Inn}(G)$ of inner automorphisms, and $\operatorname{im}\gamma = \operatorname{Inn}(G)$.
+>
+> As the image of a homomorphism, $\operatorname{Inn}(G)$ is automatically a [[Def - Subgroup|subgroup]] of $\operatorname{Aut}(G)$ — closure and inverses are inherited from $\gamma$ being a homomorphism (Step 1).
 
 **Step 4: $G/Z(G) \cong \operatorname{Inn}(G)$.**
 
 Feeding the kernel and image into the first isomorphism theorem gives the isomorphism directly.
 
-<details>
-<summary>Derivation</summary>
-
-$\gamma : G \to \operatorname{Aut}(G)$ is a homomorphism (Step 1) with $\ker\gamma = Z(G)$ (Step 2) and $\operatorname{im}\gamma = \operatorname{Inn}(G)$ (Step 3). The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] states that for any homomorphism $\varphi$, $G/\ker\varphi \cong \operatorname{im}\varphi$. Applying it to $\gamma$:
-$$G / Z(G) = G/\ker\gamma \ \cong\ \operatorname{im}\gamma = \operatorname{Inn}(G).$$
-(In particular this re-proves that $Z(G)$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$ — it is a kernel — and tells us $\operatorname{Inn}(G)$ measures exactly the part of $G$ that conjugation "can see": $G$ acts on itself by conjugation through the quotient $G/Z(G)$.)
-
-</details>
+> [!note]- Derivation
+> $\gamma : G \to \operatorname{Aut}(G)$ is a homomorphism (Step 1) with $\ker\gamma = Z(G)$ (Step 2) and $\operatorname{im}\gamma = \operatorname{Inn}(G)$ (Step 3). The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] states that for any homomorphism $\varphi$, $G/\ker\varphi \cong \operatorname{im}\varphi$. Applying it to $\gamma$:
+> $$G / Z(G) = G/\ker\gamma \ \cong\ \operatorname{im}\gamma = \operatorname{Inn}(G).$$
+> (In particular this re-proves that $Z(G)$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$ — it is a kernel — and tells us $\operatorname{Inn}(G)$ measures exactly the part of $G$ that conjugation "can see": $G$ acts on itself by conjugation through the quotient $G/Z(G)$.)
 
 **Step 5: $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$.**
 
 Conjugating an inner automorphism $\gamma_g$ by any automorphism $\phi$ produces another inner automorphism, namely $\gamma_{\phi(g)}$ — so $\operatorname{Inn}(G)$ is closed under conjugation in $\operatorname{Aut}(G)$, hence normal.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> We show that for every $\phi \in \operatorname{Aut}(G)$ and every $\gamma_g \in \operatorname{Inn}(G)$, the conjugate $\phi \circ \gamma_g \circ \phi^{-1}$ is again inner. Apply it to an arbitrary $x \in G$:
+> $$\big(\phi \circ \gamma_g \circ \phi^{-1}\big)(x) = \phi\Big(\gamma_g\big(\phi^{-1}(x)\big)\Big) = \phi\Big(g\,\phi^{-1}(x)\,g^{-1}\Big).$$
+> Now $\phi$ is a homomorphism, so it distributes over the product $g \cdot \phi^{-1}(x) \cdot g^{-1}$:
+> $$\phi\Big(g\,\phi^{-1}(x)\,g^{-1}\Big) = \phi(g)\;\phi\big(\phi^{-1}(x)\big)\;\phi(g^{-1}) = \phi(g)\;x\;\phi(g)^{-1},$$
+> using $\phi(\phi^{-1}(x)) = x$ and $\phi(g^{-1}) = \phi(g)^{-1}$. The right-hand side is conjugation of $x$ by the element $\phi(g) \in G$, that is, $\gamma_{\phi(g)}(x)$. Since this holds for all $x$,
+> $$\phi \circ \gamma_g \circ \phi^{-1} = \gamma_{\phi(g)} \in \operatorname{Inn}(G).$$
+> So $\operatorname{Inn}(G)$ is closed under conjugation by every element of $\operatorname{Aut}(G)$: for all $\phi \in \operatorname{Aut}(G)$, $\phi\,\operatorname{Inn}(G)\,\phi^{-1} \subseteq \operatorname{Inn}(G)$. By the [[Def - Normal Subgroup|definition of normality]] (a subgroup closed under conjugation by every element is normal), $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$. $\blacksquare$
 
-We show that for every $\phi \in \operatorname{Aut}(G)$ and every $\gamma_g \in \operatorname{Inn}(G)$, the conjugate $\phi \circ \gamma_g \circ \phi^{-1}$ is again inner. Apply it to an arbitrary $x \in G$:
-$$\big(\phi \circ \gamma_g \circ \phi^{-1}\big)(x) = \phi\Big(\gamma_g\big(\phi^{-1}(x)\big)\Big) = \phi\Big(g\,\phi^{-1}(x)\,g^{-1}\Big).$$
-Now $\phi$ is a homomorphism, so it distributes over the product $g \cdot \phi^{-1}(x) \cdot g^{-1}$:
-$$\phi\Big(g\,\phi^{-1}(x)\,g^{-1}\Big) = \phi(g)\;\phi\big(\phi^{-1}(x)\big)\;\phi(g^{-1}) = \phi(g)\;x\;\phi(g)^{-1},$$
-using $\phi(\phi^{-1}(x)) = x$ and $\phi(g^{-1}) = \phi(g)^{-1}$. The right-hand side is conjugation of $x$ by the element $\phi(g) \in G$, that is, $\gamma_{\phi(g)}(x)$. Since this holds for all $x$,
-$$\phi \circ \gamma_g \circ \phi^{-1} = \gamma_{\phi(g)} \in \operatorname{Inn}(G).$$
-So $\operatorname{Inn}(G)$ is closed under conjugation by every element of $\operatorname{Aut}(G)$: for all $\phi \in \operatorname{Aut}(G)$, $\phi\,\operatorname{Inn}(G)\,\phi^{-1} \subseteq \operatorname{Inn}(G)$. By the [[Def - Normal Subgroup|definition of normality]] (a subgroup closed under conjugation by every element is normal), $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $G$ be a group, $\gamma_g(x) = gxg^{-1}$, and $\gamma(g) = \gamma_g$.
-
-**1. $\gamma$ is a homomorphism.** Each $\gamma_g$ is an automorphism: $\gamma_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1}) = \gamma_g(x)\gamma_g(y)$, and $\gamma_g\circ\gamma_{g^{-1}} = \operatorname{id}_G$ gives invertibility. For $g,h \in G$ and any $x$,
-$$(\gamma_g\circ\gamma_h)(x) = g(hxh^{-1})g^{-1} = (gh)x(gh)^{-1} = \gamma_{gh}(x),$$
-so $\gamma_{gh} = \gamma_g\circ\gamma_h$, i.e. $\gamma(gh) = \gamma(g)\gamma(h)$. Thus $\gamma : G \to \operatorname{Aut}(G)$ is a [[Def - Homomorphism|homomorphism]].
-
-**2. $\ker\gamma = Z(G)$.** The identity of $\operatorname{Aut}(G)$ is $\operatorname{id}_G$, so $g \in \ker\gamma \iff \gamma_g = \operatorname{id}_G \iff gxg^{-1} = x$ for all $x \iff gx = xg$ for all $x \iff g \in Z(G)$.
-
-**3. $\operatorname{im}\gamma = \operatorname{Inn}(G)$.** By definition $\operatorname{im}\gamma = \{\gamma_g : g \in G\}$, and an inner automorphism is exactly a map of the form $\gamma_g$; so $\operatorname{im}\gamma = \operatorname{Inn}(G)$, a subgroup of $\operatorname{Aut}(G)$ as the image of a homomorphism.
-
-**4. $G/Z(G) \cong \operatorname{Inn}(G)$.** By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\gamma$, $G/\ker\gamma \cong \operatorname{im}\gamma$, i.e. $G/Z(G) \cong \operatorname{Inn}(G)$.
-
-**5. $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$.** Let $\phi \in \operatorname{Aut}(G)$ and $\gamma_g \in \operatorname{Inn}(G)$. For any $x$,
-$$(\phi\circ\gamma_g\circ\phi^{-1})(x) = \phi\big(g\,\phi^{-1}(x)\,g^{-1}\big) = \phi(g)\,x\,\phi(g)^{-1} = \gamma_{\phi(g)}(x),$$
-using that $\phi$ is a homomorphism. Hence $\phi\circ\gamma_g\circ\phi^{-1} = \gamma_{\phi(g)} \in \operatorname{Inn}(G)$, so $\operatorname{Inn}(G)$ is closed under conjugation in $\operatorname{Aut}(G)$ and is therefore [[Def - Normal Subgroup|normal]]: $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $G$ be a group, $\gamma_g(x) = gxg^{-1}$, and $\gamma(g) = \gamma_g$.
+>
+> **1. $\gamma$ is a homomorphism.** Each $\gamma_g$ is an automorphism: $\gamma_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1}) = \gamma_g(x)\gamma_g(y)$, and $\gamma_g\circ\gamma_{g^{-1}} = \operatorname{id}_G$ gives invertibility. For $g,h \in G$ and any $x$,
+> $$(\gamma_g\circ\gamma_h)(x) = g(hxh^{-1})g^{-1} = (gh)x(gh)^{-1} = \gamma_{gh}(x),$$
+> so $\gamma_{gh} = \gamma_g\circ\gamma_h$, i.e. $\gamma(gh) = \gamma(g)\gamma(h)$. Thus $\gamma : G \to \operatorname{Aut}(G)$ is a [[Def - Homomorphism|homomorphism]].
+>
+> **2. $\ker\gamma = Z(G)$.** The identity of $\operatorname{Aut}(G)$ is $\operatorname{id}_G$, so $g \in \ker\gamma \iff \gamma_g = \operatorname{id}_G \iff gxg^{-1} = x$ for all $x \iff gx = xg$ for all $x \iff g \in Z(G)$.
+>
+> **3. $\operatorname{im}\gamma = \operatorname{Inn}(G)$.** By definition $\operatorname{im}\gamma = \{\gamma_g : g \in G\}$, and an inner automorphism is exactly a map of the form $\gamma_g$; so $\operatorname{im}\gamma = \operatorname{Inn}(G)$, a subgroup of $\operatorname{Aut}(G)$ as the image of a homomorphism.
+>
+> **4. $G/Z(G) \cong \operatorname{Inn}(G)$.** By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\gamma$, $G/\ker\gamma \cong \operatorname{im}\gamma$, i.e. $G/Z(G) \cong \operatorname{Inn}(G)$.
+>
+> **5. $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$.** Let $\phi \in \operatorname{Aut}(G)$ and $\gamma_g \in \operatorname{Inn}(G)$. For any $x$,
+> $$(\phi\circ\gamma_g\circ\phi^{-1})(x) = \phi\big(g\,\phi^{-1}(x)\,g^{-1}\big) = \phi(g)\,x\,\phi(g)^{-1} = \gamma_{\phi(g)}(x),$$
+> using that $\phi$ is a homomorphism. Hence $\phi\circ\gamma_g\circ\phi^{-1} = \gamma_{\phi(g)} \in \operatorname{Inn}(G)$, so $\operatorname{Inn}(G)$ is closed under conjugation in $\operatorname{Aut}(G)$ and is therefore [[Def - Normal Subgroup|normal]]: $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$. $\blacksquare$
 
 ---
 

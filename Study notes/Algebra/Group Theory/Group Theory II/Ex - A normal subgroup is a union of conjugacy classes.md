@@ -58,26 +58,14 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Stare at the definition of normality, $gNg^{-1} = N$ for all $g \in G$, and ask what action this is talking about. The set $gNg^{-1}$ is what you get by conjugating every element of $N$ by $g$. Normality is the statement that $N$ is *unchanged* by every conjugation — a fixed set of the conjugation action.
 
-Stare at the definition of normality, $gNg^{-1} = N$ for all $g \in G$, and ask what action this is talking about. The set $gNg^{-1}$ is what you get by conjugating every element of $N$ by $g$. Normality is the statement that $N$ is *unchanged* by every conjugation — a fixed set of the conjugation action.
+> [!note]- Hint 2
+> You do not need both inclusions $gNg^{-1} \subseteq N$ and $N \subseteq gNg^{-1}$ separately. Prove the single containment "$gng^{-1} \in N$ for all $g \in G$ and all $n \in N$", but prove it *for every $g$* — then apply it to $g^{-1}$ in place of $g$ to recover the reverse inclusion for free.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-You do not need both inclusions $gNg^{-1} \subseteq N$ and $N \subseteq gNg^{-1}$ separately. Prove the single containment "$gng^{-1} \in N$ for all $g \in G$ and all $n \in N$", but prove it *for every $g$* — then apply it to $g^{-1}$ in place of $g$ to recover the reverse inclusion for free.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-The conjugacy classes [[Def - Conjugacy Class|partition]] $G$. So a subset $N$ is a *union of conjugacy classes* if and only if it contains, with each of its elements $n$, the whole class $\operatorname{ccl}_G(n)$. And $\operatorname{ccl}_G(n) \subseteq N$ says exactly that every conjugate $gng^{-1}$ of $n$ lies in $N$ — which is the containment from Hint 2. The two sides of the biconditional are the same condition stated twice.
-
-</details>
+> [!note]- Hint 3
+> The conjugacy classes [[Def - Conjugacy Class|partition]] $G$. So a subset $N$ is a *union of conjugacy classes* if and only if it contains, with each of its elements $n$, the whole class $\operatorname{ccl}_G(n)$. And $\operatorname{ccl}_G(n) \subseteq N$ says exactly that every conjugate $gng^{-1}$ of $n$ lies in $N$ — which is the containment from Hint 2. The two sides of the biconditional are the same condition stated twice.
 
 ---
 
@@ -91,74 +79,58 @@ We show $N \trianglelefteq G \iff (\star) \iff N$ is a union of conjugacy classe
 
 $N \trianglelefteq G$ means $gNg^{-1} = N$ for all $g$. This is equivalent to the weaker-looking containment $gNg^{-1} \subseteq N$ for all $g$ — i.e. to $(\star)$ — because applying the containment to $g^{-1}$ supplies the reverse inclusion.
 
-<details>
-<summary>Derivation</summary>
-
-By the [[Def - Normal Subgroup|definition of normality]], $N \trianglelefteq G$ means $gNg^{-1} = N$ for every $g \in G$. Equality certainly implies the containment $gNg^{-1} \subseteq N$ for every $g$, and unwinding the set $gNg^{-1} = \{gng^{-1} : n \in N\}$, that containment is precisely the pointwise statement $(\star)$: every conjugate $gng^{-1}$ lands in $N$.
-
-For the converse, suppose $(\star)$ holds, i.e. $gNg^{-1} \subseteq N$ for all $g \in G$. We must recover $gNg^{-1} = N$. Fix $g$. We already have $gNg^{-1} \subseteq N$. For the reverse inclusion, apply $(\star)$ to the element $g^{-1}$ (it too is an element of $G$, so $(\star)$ applies):
-$$g^{-1} N g \subseteq N.$$
-Conjugate both sides by $g$ — that is, apply the bijection $x \mapsto gxg^{-1}$, which preserves containments:
-$$g(g^{-1} N g)g^{-1} \subseteq gNg^{-1}, \qquad \text{i.e.} \qquad N \subseteq gNg^{-1}.$$
-Combining $gNg^{-1} \subseteq N$ and $N \subseteq gNg^{-1}$ gives $gNg^{-1} = N$. Since $g$ was arbitrary, $N \trianglelefteq G$.
-
-So $N \trianglelefteq G$ if and only if $(\star)$ holds.
-
-</details>
+> [!note]- Derivation
+> By the [[Def - Normal Subgroup|definition of normality]], $N \trianglelefteq G$ means $gNg^{-1} = N$ for every $g \in G$. Equality certainly implies the containment $gNg^{-1} \subseteq N$ for every $g$, and unwinding the set $gNg^{-1} = \{gng^{-1} : n \in N\}$, that containment is precisely the pointwise statement $(\star)$: every conjugate $gng^{-1}$ lands in $N$.
+>
+> For the converse, suppose $(\star)$ holds, i.e. $gNg^{-1} \subseteq N$ for all $g \in G$. We must recover $gNg^{-1} = N$. Fix $g$. We already have $gNg^{-1} \subseteq N$. For the reverse inclusion, apply $(\star)$ to the element $g^{-1}$ (it too is an element of $G$, so $(\star)$ applies):
+> $$g^{-1} N g \subseteq N.$$
+> Conjugate both sides by $g$ — that is, apply the bijection $x \mapsto gxg^{-1}$, which preserves containments:
+> $$g(g^{-1} N g)g^{-1} \subseteq gNg^{-1}, \qquad \text{i.e.} \qquad N \subseteq gNg^{-1}.$$
+> Combining $gNg^{-1} \subseteq N$ and $N \subseteq gNg^{-1}$ gives $gNg^{-1} = N$. Since $g$ was arbitrary, $N \trianglelefteq G$.
+>
+> So $N \trianglelefteq G$ if and only if $(\star)$ holds.
 
 **Step 2: $(\star)$ is equivalent to "$N$ contains the conjugacy class of each of its elements".**
 
 The condition $(\star)$ — every conjugate of every $n \in N$ lies in $N$ — says exactly that $\operatorname{ccl}_G(n) \subseteq N$ for every $n \in N$.
 
-<details>
-<summary>Derivation</summary>
-
-The [[Def - Conjugacy Class|conjugacy class]] of $n$ is by definition the set of all its conjugates,
-$$\operatorname{ccl}_G(n) = \{gng^{-1} : g \in G\}.$$
-The statement "$\operatorname{ccl}_G(n) \subseteq N$" therefore means: for every $g \in G$, the conjugate $gng^{-1}$ lies in $N$. Quantifying this over all $n \in N$ gives exactly the condition $(\star)$: for all $g \in G$ and all $n \in N$, $gng^{-1} \in N$.
-
-So $(\star)$ holds $\iff$ for every $n \in N$, $\operatorname{ccl}_G(n) \subseteq N$.
-
-</details>
+> [!note]- Derivation
+> The [[Def - Conjugacy Class|conjugacy class]] of $n$ is by definition the set of all its conjugates,
+> $$\operatorname{ccl}_G(n) = \{gng^{-1} : g \in G\}.$$
+> The statement "$\operatorname{ccl}_G(n) \subseteq N$" therefore means: for every $g \in G$, the conjugate $gng^{-1}$ lies in $N$. Quantifying this over all $n \in N$ gives exactly the condition $(\star)$: for all $g \in G$ and all $n \in N$, $gng^{-1} \in N$.
+>
+> So $(\star)$ holds $\iff$ for every $n \in N$, $\operatorname{ccl}_G(n) \subseteq N$.
 
 **Step 3: "$N$ contains the class of each of its elements" is equivalent to "$N$ is a union of conjugacy classes".**
 
 Because the conjugacy classes partition $G$, a subset $N$ is a union of classes precisely when it is conjugation-saturated — when it contains the full class of every element it contains.
 
-<details>
-<summary>Derivation</summary>
-
-Conjugacy classes are the orbits of the conjugation action, and orbits **partition** $G$: every element of $G$ lies in exactly one conjugacy class, and distinct classes are disjoint.
-
-($\Rightarrow$) Suppose $N$ contains the conjugacy class of each of its elements. Then
-$$N = \bigcup_{n \in N} \{n\} \subseteq \bigcup_{n \in N} \operatorname{ccl}_G(n) \subseteq N,$$
-where the first inclusion holds because $n \in \operatorname{ccl}_G(n)$ (take $g = e$), and the second is the hypothesis. Hence $N = \bigcup_{n \in N} \operatorname{ccl}_G(n)$, exhibiting $N$ as a union of conjugacy classes.
-
-($\Leftarrow$) Suppose $N = \bigcup_{i} C_i$ is a union of conjugacy classes $C_i$. Take any $n \in N$. Then $n$ lies in some $C_i$. But $n$ lies in exactly one conjugacy class — namely $\operatorname{ccl}_G(n)$ — so $C_i = \operatorname{ccl}_G(n)$. Hence $\operatorname{ccl}_G(n) = C_i \subseteq N$. So $N$ contains the class of each of its elements.
-
-The two conditions are therefore equivalent. (The role of the partition property is the disjointness used in $(\Leftarrow)$: it is what forces the class $C_i$ containing $n$ to be *the* class $\operatorname{ccl}_G(n)$.)
-
-</details>
+> [!note]- Derivation
+> Conjugacy classes are the orbits of the conjugation action, and orbits **partition** $G$: every element of $G$ lies in exactly one conjugacy class, and distinct classes are disjoint.
+>
+> ($\Rightarrow$) Suppose $N$ contains the conjugacy class of each of its elements. Then
+> $$N = \bigcup_{n \in N} \{n\} \subseteq \bigcup_{n \in N} \operatorname{ccl}_G(n) \subseteq N,$$
+> where the first inclusion holds because $n \in \operatorname{ccl}_G(n)$ (take $g = e$), and the second is the hypothesis. Hence $N = \bigcup_{n \in N} \operatorname{ccl}_G(n)$, exhibiting $N$ as a union of conjugacy classes.
+>
+> ($\Leftarrow$) Suppose $N = \bigcup_{i} C_i$ is a union of conjugacy classes $C_i$. Take any $n \in N$. Then $n$ lies in some $C_i$. But $n$ lies in exactly one conjugacy class — namely $\operatorname{ccl}_G(n)$ — so $C_i = \operatorname{ccl}_G(n)$. Hence $\operatorname{ccl}_G(n) = C_i \subseteq N$. So $N$ contains the class of each of its elements.
+>
+> The two conditions are therefore equivalent. (The role of the partition property is the disjointness used in $(\Leftarrow)$: it is what forces the class $C_i$ containing $n$ to be *the* class $\operatorname{ccl}_G(n)$.)
 
 **Step 4: Assemble the chain.**
 
 Chaining Steps 1–3: $N \trianglelefteq G \iff (\star) \iff \operatorname{ccl}_G(n) \subseteq N$ for all $n \in N \iff N$ is a union of conjugacy classes. $\blacksquare$
 
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $N \leq G$ be a subgroup. We prove the biconditional via the intermediate condition
-$$(\star) \qquad gng^{-1} \in N \quad \text{for all } g \in G,\ n \in N.$$
-
-**$N \trianglelefteq G \iff (\star)$.** By [[Def - Normal Subgroup|definition]], $N \trianglelefteq G$ means $gNg^{-1} = N$ for all $g \in G$, which gives $gNg^{-1} \subseteq N$ — exactly $(\star)$. Conversely, assume $(\star)$, i.e. $gNg^{-1} \subseteq N$ for all $g \in G$. Fix $g$; applying the hypothesis to $g^{-1}$ gives $g^{-1}Ng \subseteq N$, and conjugating by $g$ (an inclusion-preserving bijection) yields $N \subseteq gNg^{-1}$. With $gNg^{-1} \subseteq N$ this gives $gNg^{-1} = N$ for all $g$, so $N \trianglelefteq G$.
-
-**$(\star) \iff \operatorname{ccl}_G(n) \subseteq N$ for all $n \in N$.** The [[Def - Conjugacy Class|conjugacy class]] is $\operatorname{ccl}_G(n) = \{gng^{-1} : g \in G\}$, so $\operatorname{ccl}_G(n) \subseteq N$ means $gng^{-1} \in N$ for all $g \in G$. Quantifying over $n \in N$ gives exactly $(\star)$.
-
-**$\operatorname{ccl}_G(n) \subseteq N$ for all $n \in N \iff N$ is a union of conjugacy classes.** Conjugacy classes partition $G$. If $N$ contains the class of each of its elements, then $N = \bigcup_{n \in N}\{n\} \subseteq \bigcup_{n \in N}\operatorname{ccl}_G(n) \subseteq N$, so $N = \bigcup_{n\in N}\operatorname{ccl}_G(n)$ is a union of classes. Conversely, if $N = \bigcup_i C_i$ with each $C_i$ a conjugacy class, then any $n \in N$ lies in some $C_i$; since $n$ lies in a unique class, $C_i = \operatorname{ccl}_G(n)$, so $\operatorname{ccl}_G(n) \subseteq N$.
-
-Chaining the three equivalences: $N \trianglelefteq G$ if and only if $N$ is a union of conjugacy classes of $G$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $N \leq G$ be a subgroup. We prove the biconditional via the intermediate condition
+> $$(\star) \qquad gng^{-1} \in N \quad \text{for all } g \in G,\ n \in N.$$
+>
+> **$N \trianglelefteq G \iff (\star)$.** By [[Def - Normal Subgroup|definition]], $N \trianglelefteq G$ means $gNg^{-1} = N$ for all $g \in G$, which gives $gNg^{-1} \subseteq N$ — exactly $(\star)$. Conversely, assume $(\star)$, i.e. $gNg^{-1} \subseteq N$ for all $g \in G$. Fix $g$; applying the hypothesis to $g^{-1}$ gives $g^{-1}Ng \subseteq N$, and conjugating by $g$ (an inclusion-preserving bijection) yields $N \subseteq gNg^{-1}$. With $gNg^{-1} \subseteq N$ this gives $gNg^{-1} = N$ for all $g$, so $N \trianglelefteq G$.
+>
+> **$(\star) \iff \operatorname{ccl}_G(n) \subseteq N$ for all $n \in N$.** The [[Def - Conjugacy Class|conjugacy class]] is $\operatorname{ccl}_G(n) = \{gng^{-1} : g \in G\}$, so $\operatorname{ccl}_G(n) \subseteq N$ means $gng^{-1} \in N$ for all $g \in G$. Quantifying over $n \in N$ gives exactly $(\star)$.
+>
+> **$\operatorname{ccl}_G(n) \subseteq N$ for all $n \in N \iff N$ is a union of conjugacy classes.** Conjugacy classes partition $G$. If $N$ contains the class of each of its elements, then $N = \bigcup_{n \in N}\{n\} \subseteq \bigcup_{n \in N}\operatorname{ccl}_G(n) \subseteq N$, so $N = \bigcup_{n\in N}\operatorname{ccl}_G(n)$ is a union of classes. Conversely, if $N = \bigcup_i C_i$ with each $C_i$ a conjugacy class, then any $n \in N$ lies in some $C_i$; since $n$ lies in a unique class, $C_i = \operatorname{ccl}_G(n)$, so $\operatorname{ccl}_G(n) \subseteq N$.
+>
+> Chaining the three equivalences: $N \trianglelefteq G$ if and only if $N$ is a union of conjugacy classes of $G$. $\blacksquare$
 
 ---
 

@@ -128,133 +128,97 @@ Establish the relabelling formula $\tau\sigma\tau^{-1} = (\tau(a_1)\,\tau(a_2)\,
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: The relabelling formula for conjugation</strong></summary>
+> [!note]- Lemma 1: The relabelling formula for conjugation
+> **Statement:** For $\sigma, \tau \in S_n$ and any cycle $(a_1\,a_2\,\cdots\,a_r)$ appearing in the disjoint cycle decomposition of $\sigma$, the conjugate $\tau\sigma\tau^{-1}$ contains the cycle $(\tau(a_1)\,\tau(a_2)\,\cdots\,\tau(a_r))$. Hence $\tau\sigma\tau^{-1}$ is obtained from $\sigma$ by applying $\tau$ to every entry.
+>
+> **Hint:** Evaluate $\tau\sigma\tau^{-1}$ on the point $\tau(a)$ by composing right to left.
+>
+> **Why needed:** It is the single computation from which both directions of the theorem and the geometric picture follow.
+>
+> > [!note]- Full proof
+> > Take any point of the form $\tau(a)$ with $a \in \{1, \dots, n\}$ — every point is of this form, since $\tau$ is a bijection. Compute, applying maps right to left:
+> > $$(\tau \sigma \tau^{-1})\bigl(\tau(a)\bigr) = \tau\Bigl(\sigma\bigl(\tau^{-1}(\tau(a))\bigr)\Bigr) = \tau\bigl(\sigma(a)\bigr).$$
+> > So $\tau\sigma\tau^{-1}$ sends $\tau(a)$ to $\tau(\sigma(a))$. If $\sigma$ has the cycle $(a_1\,a_2\,\cdots\,a_r)$, meaning $\sigma(a_i) = a_{i+1}$ (indices mod $r$), then $\tau\sigma\tau^{-1}$ sends $\tau(a_i) \mapsto \tau(a_{i+1})$, which is precisely the cycle $(\tau(a_1)\,\tau(a_2)\,\cdots\,\tau(a_r))$. Applying this to every cycle of $\sigma$ shows $\tau\sigma\tau^{-1}$ is $\sigma$ with each entry relabelled by $\tau$.
 
-**Statement:** For $\sigma, \tau \in S_n$ and any cycle $(a_1\,a_2\,\cdots\,a_r)$ appearing in the disjoint cycle decomposition of $\sigma$, the conjugate $\tau\sigma\tau^{-1}$ contains the cycle $(\tau(a_1)\,\tau(a_2)\,\cdots\,\tau(a_r))$. Hence $\tau\sigma\tau^{-1}$ is obtained from $\sigma$ by applying $\tau$ to every entry.
+> [!note]- Lemma 2: Conjugate permutations have equal cycle type
+> **Statement:** If $\sigma' = \tau\sigma\tau^{-1}$ in $S_n$, then $\sigma$ and $\sigma'$ have the same cycle type.
+>
+> **Hint:** Use Lemma 1: relabelling sends each $r$-cycle to an $r$-cycle.
+>
+> **Why needed:** It is the forward implication of the biconditional.
+>
+> > [!note]- Full proof
+> > By Lemma 1, $\sigma' = \tau\sigma\tau^{-1}$ is obtained by replacing each cycle $(a_1\,\cdots\,a_r)$ of $\sigma$ with $(\tau(a_1)\,\cdots\,\tau(a_r))$. Since $\tau$ is a bijection, distinct cycles of $\sigma$ (which are supported on disjoint point sets) map to cycles of $\sigma'$ supported on disjoint point sets, and an $r$-cycle becomes an $r$-cycle. So $\sigma$ and $\sigma'$ have exactly the same multiset of cycle lengths — the same cycle type.
 
-**Hint:** Evaluate $\tau\sigma\tau^{-1}$ on the point $\tau(a)$ by composing right to left.
+> [!note]- Lemma 3: Equal cycle type implies conjugacy
+> **Statement:** If $\sigma, \sigma' \in S_n$ have the same cycle type, there exists $\tau \in S_n$ with $\tau\sigma\tau^{-1} = \sigma'$.
+>
+> **Hint:** Write both permutations in full disjoint cycle notation, *including $1$-cycles for fixed points*, with cycles of each length aligned; define $\tau$ position by position.
+>
+> **Why needed:** It is the converse implication, completing the biconditional and the bijection between classes and partitions.
+>
+> > [!note]- Full proof
+> > Write $\sigma$ and $\sigma'$ in disjoint cycle notation, including a $1$-cycle for every fixed point, so that each notation uses all $n$ symbols exactly once. Because $\sigma$ and $\sigma'$ have the same cycle type, their cycles can be paired off: each $k$-cycle of $\sigma$ with a $k$-cycle of $\sigma'$, every cycle paired. Write the paired cycles one above the other, aligning their entries position by position; this is possible because paired cycles have equal length.
+> >
+> > Define $\tau : \{1,\dots,n\} \to \{1,\dots,n\}$ by sending each entry of $\sigma$ to the entry directly below it in $\sigma'$. Since every symbol appears exactly once in the layout of $\sigma$ and exactly once in that of $\sigma'$, $\tau$ is a well-defined bijection, hence $\tau \in S_n$.
+> >
+> > By construction $\tau$ carries each cycle $(a_1\,\cdots\,a_r)$ of $\sigma$ entry-wise to the paired cycle of $\sigma'$. By Lemma 1, $\tau\sigma\tau^{-1}$ is $\sigma$ with each entry relabelled by $\tau$ — which is exactly $\sigma'$. Hence $\tau\sigma\tau^{-1} = \sigma'$.
 
-**Why needed:** It is the single computation from which both directions of the theorem and the geometric picture follow.
-
-<details>
-<summary>Full proof</summary>
-
-Take any point of the form $\tau(a)$ with $a \in \{1, \dots, n\}$ — every point is of this form, since $\tau$ is a bijection. Compute, applying maps right to left:
-$$(\tau \sigma \tau^{-1})\bigl(\tau(a)\bigr) = \tau\Bigl(\sigma\bigl(\tau^{-1}(\tau(a))\bigr)\Bigr) = \tau\bigl(\sigma(a)\bigr).$$
-So $\tau\sigma\tau^{-1}$ sends $\tau(a)$ to $\tau(\sigma(a))$. If $\sigma$ has the cycle $(a_1\,a_2\,\cdots\,a_r)$, meaning $\sigma(a_i) = a_{i+1}$ (indices mod $r$), then $\tau\sigma\tau^{-1}$ sends $\tau(a_i) \mapsto \tau(a_{i+1})$, which is precisely the cycle $(\tau(a_1)\,\tau(a_2)\,\cdots\,\tau(a_r))$. Applying this to every cycle of $\sigma$ shows $\tau\sigma\tau^{-1}$ is $\sigma$ with each entry relabelled by $\tau$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Conjugate permutations have equal cycle type</strong></summary>
-
-**Statement:** If $\sigma' = \tau\sigma\tau^{-1}$ in $S_n$, then $\sigma$ and $\sigma'$ have the same cycle type.
-
-**Hint:** Use Lemma 1: relabelling sends each $r$-cycle to an $r$-cycle.
-
-**Why needed:** It is the forward implication of the biconditional.
-
-<details>
-<summary>Full proof</summary>
-
-By Lemma 1, $\sigma' = \tau\sigma\tau^{-1}$ is obtained by replacing each cycle $(a_1\,\cdots\,a_r)$ of $\sigma$ with $(\tau(a_1)\,\cdots\,\tau(a_r))$. Since $\tau$ is a bijection, distinct cycles of $\sigma$ (which are supported on disjoint point sets) map to cycles of $\sigma'$ supported on disjoint point sets, and an $r$-cycle becomes an $r$-cycle. So $\sigma$ and $\sigma'$ have exactly the same multiset of cycle lengths — the same cycle type.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: Equal cycle type implies conjugacy</strong></summary>
-
-**Statement:** If $\sigma, \sigma' \in S_n$ have the same cycle type, there exists $\tau \in S_n$ with $\tau\sigma\tau^{-1} = \sigma'$.
-
-**Hint:** Write both permutations in full disjoint cycle notation, *including $1$-cycles for fixed points*, with cycles of each length aligned; define $\tau$ position by position.
-
-**Why needed:** It is the converse implication, completing the biconditional and the bijection between classes and partitions.
-
-<details>
-<summary>Full proof</summary>
-
-Write $\sigma$ and $\sigma'$ in disjoint cycle notation, including a $1$-cycle for every fixed point, so that each notation uses all $n$ symbols exactly once. Because $\sigma$ and $\sigma'$ have the same cycle type, their cycles can be paired off: each $k$-cycle of $\sigma$ with a $k$-cycle of $\sigma'$, every cycle paired. Write the paired cycles one above the other, aligning their entries position by position; this is possible because paired cycles have equal length.
-
-Define $\tau : \{1,\dots,n\} \to \{1,\dots,n\}$ by sending each entry of $\sigma$ to the entry directly below it in $\sigma'$. Since every symbol appears exactly once in the layout of $\sigma$ and exactly once in that of $\sigma'$, $\tau$ is a well-defined bijection, hence $\tau \in S_n$.
-
-By construction $\tau$ carries each cycle $(a_1\,\cdots\,a_r)$ of $\sigma$ entry-wise to the paired cycle of $\sigma'$. By Lemma 1, $\tau\sigma\tau^{-1}$ is $\sigma$ with each entry relabelled by $\tau$ — which is exactly $\sigma'$. Hence $\tau\sigma\tau^{-1} = \sigma'$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 4: The class-size formula</strong></summary>
-
-**Statement:** The conjugacy class of cycle type $1^{a_1} 2^{a_2} \cdots n^{a_n}$ (where $\sum_k k\,a_k = n$) has size $\dfrac{n!}{\prod_{k=1}^n k^{a_k}\, a_k!}$.
-
-**Hint:** Count ordered fillings of a fixed cycle template, then quotient by rotations within cycles and by permutations of equal-length cycles.
-
-**Why needed:** It makes the class equation of $S_n$ explicit and, by the proposition $|\operatorname{ccl}| = |S_n : C_{S_n}(\sigma)|$, yields $|C_{S_n}(\sigma)| = \prod_k k^{a_k}a_k!$.
-
-<details>
-<summary>Full proof</summary>
-
-Fix the cycle type: a template consisting of $a_k$ empty cycles of length $k$, for each $k$, with $\sum_k k\,a_k = n$ slots in total. Filling the $n$ slots with the symbols $1, 2, \dots, n$ in some order can be done in $n!$ ways, and every permutation of the given cycle type arises from at least one filling.
-
-Two fillings produce the *same* permutation precisely when they differ by a symmetry of the template:
-
-- **Rotation within a cycle.** A cycle $(a_1\,a_2\,\cdots\,a_k)$ is unchanged by cyclic rotation of its entries, so each $k$-cycle is written in $k$ equivalent ways. With $a_k$ cycles of length $k$, this contributes a factor $k^{a_k}$ of redundancy, and over all $k$ a factor $\prod_k k^{a_k}$.
-
-- **Permuting equal-length cycles.** The $a_k$ disjoint cycles of the same length $k$ may be listed in any order without changing the permutation, contributing a factor $a_k!$, and over all $k$ a factor $\prod_k a_k!$.
-
-These are all the redundancies: two fillings give the same permutation if and only if they are related by rotations and reorderings of this kind. Hence each permutation of the cycle type corresponds to exactly $\prod_k k^{a_k}a_k!$ fillings, and the number of distinct permutations is
-$$\frac{n!}{\prod_{k=1}^n k^{a_k}\,a_k!}.$$
-
-</details>
-
-</details>
+> [!note]- Lemma 4: The class-size formula
+> **Statement:** The conjugacy class of cycle type $1^{a_1} 2^{a_2} \cdots n^{a_n}$ (where $\sum_k k\,a_k = n$) has size $\dfrac{n!}{\prod_{k=1}^n k^{a_k}\, a_k!}$.
+>
+> **Hint:** Count ordered fillings of a fixed cycle template, then quotient by rotations within cycles and by permutations of equal-length cycles.
+>
+> **Why needed:** It makes the class equation of $S_n$ explicit and, by the proposition $|\operatorname{ccl}| = |S_n : C_{S_n}(\sigma)|$, yields $|C_{S_n}(\sigma)| = \prod_k k^{a_k}a_k!$.
+>
+> > [!note]- Full proof
+> > Fix the cycle type: a template consisting of $a_k$ empty cycles of length $k$, for each $k$, with $\sum_k k\,a_k = n$ slots in total. Filling the $n$ slots with the symbols $1, 2, \dots, n$ in some order can be done in $n!$ ways, and every permutation of the given cycle type arises from at least one filling.
+> >
+> > Two fillings produce the *same* permutation precisely when they differ by a symmetry of the template:
+> >
+> > - **Rotation within a cycle.** A cycle $(a_1\,a_2\,\cdots\,a_k)$ is unchanged by cyclic rotation of its entries, so each $k$-cycle is written in $k$ equivalent ways. With $a_k$ cycles of length $k$, this contributes a factor $k^{a_k}$ of redundancy, and over all $k$ a factor $\prod_k k^{a_k}$.
+> >
+> > - **Permuting equal-length cycles.** The $a_k$ disjoint cycles of the same length $k$ may be listed in any order without changing the permutation, contributing a factor $a_k!$, and over all $k$ a factor $\prod_k a_k!$.
+> >
+> > These are all the redundancies: two fillings give the same permutation if and only if they are related by rotations and reorderings of this kind. Hence each permutation of the cycle type corresponds to exactly $\prod_k k^{a_k}a_k!$ fillings, and the number of distinct permutations is
+> > $$\frac{n!}{\prod_{k=1}^n k^{a_k}\,a_k!}.$$
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** Two permutations $\sigma, \sigma' \in S_n$ are conjugate if and only if they have the same cycle type; hence the conjugacy classes of $S_n$ correspond bijectively to the partitions of $n$.
-
-*Proof.*
-
-*Relabelling formula.* Let $\sigma, \tau \in S_n$. For any $a \in \{1, \dots, n\}$,
-$$(\tau\sigma\tau^{-1})\bigl(\tau(a)\bigr) = \tau\bigl(\sigma(\tau^{-1}\tau(a))\bigr) = \tau\bigl(\sigma(a)\bigr).$$
-Thus if $\sigma$ contains the cycle $(a_1\,a_2\,\cdots\,a_r)$ — that is, $\sigma(a_i) = a_{i+1}$ with indices modulo $r$ — then $\tau\sigma\tau^{-1}$ sends $\tau(a_i) \mapsto \tau(a_{i+1})$, so it contains the cycle $(\tau(a_1)\,\tau(a_2)\,\cdots\,\tau(a_r))$. Applying this to each disjoint cycle, $\tau\sigma\tau^{-1}$ is $\sigma$ with every entry relabelled by $\tau$.
-
-*($\Rightarrow$) Conjugate implies equal cycle type.* If $\sigma' = \tau\sigma\tau^{-1}$, the relabelling formula expresses $\sigma'$ as $\sigma$ with entries permuted by the bijection $\tau$. Disjoint cycles map to disjoint cycles and an $r$-cycle maps to an $r$-cycle, so $\sigma$ and $\sigma'$ have identical multisets of cycle lengths — the same cycle type.
-
-*($\Leftarrow$) Equal cycle type implies conjugate.* Suppose $\sigma$ and $\sigma'$ have the same cycle type. Write each in disjoint cycle notation, including a $1$-cycle for every fixed point, so that all $n$ symbols are used exactly once in each. Pair the cycles of $\sigma$ with the cycles of $\sigma'$ so that paired cycles have equal length — possible since the cycle types agree. Place each pair of cycles one above the other with entries aligned by position. Define $\tau$ to send each entry of $\sigma$ to the entry directly below it in $\sigma'$. Each of the $n$ symbols appears once in the layout of $\sigma$ and once in that of $\sigma'$, so $\tau$ is a bijection of $\{1, \dots, n\}$, hence $\tau \in S_n$. By construction $\tau$ carries each cycle of $\sigma$ entry-wise onto the paired cycle of $\sigma'$, so by the relabelling formula $\tau\sigma\tau^{-1} = \sigma'$.
-
-*Bijection with partitions.* By the two implications, the conjugacy class of $\sigma$ is determined by, and determines, its cycle type. A cycle type is a multiset of positive integers summing to $n$, i.e. a partition of $n$. Hence $\sigma \mapsto (\text{cycle type of } \sigma)$ induces a bijection between the conjugacy classes of $S_n$ and the partitions of $n$. $\qquad\blacksquare$
-
-**Class size.** The conjugacy class of cycle type $1^{a_1}\cdots n^{a_n}$ has size $n!/\prod_k k^{a_k}a_k!$.
-
-*Proof.* Fix a template of $a_k$ empty $k$-cycles for each $k$, with $\sum_k k\,a_k = n$ slots. Filling the slots with $1, \dots, n$ in order gives $n!$ fillings, and every permutation of the cycle type arises. Two fillings yield the same permutation if and only if they differ by (i) a cyclic rotation of the entries within some cycles — a $k$-cycle has $k$ rotations, giving redundancy $\prod_k k^{a_k}$ — or (ii) a reordering of the $a_k$ equal-length $k$-cycles among themselves — giving redundancy $\prod_k a_k!$. These exhaust the ways two fillings produce the same permutation, so each permutation corresponds to exactly $\prod_k k^{a_k}a_k!$ fillings, and the class has size $n!/\prod_k k^{a_k}a_k!$. $\qquad\blacksquare$
-
-**Worked example: the conjugacy classes of $S_5$.** The partitions of $5$ give seven classes. Applying the size formula:
-
-| Cycle type | Partition of $5$ | Representative | Class size $\dfrac{5!}{\prod_k k^{a_k}a_k!}$ |
-|---|---|---|---|
-| $1^5$ | $1+1+1+1+1$ | $e$ | $\dfrac{120}{1^5\cdot 5!} = 1$ |
-| $2 \cdot 1^3$ | $2+1+1+1$ | $(1\,2)$ | $\dfrac{120}{2^1\,1!\cdot 1^3\,3!} = 10$ |
-| $2^2 \cdot 1$ | $2+2+1$ | $(1\,2)(3\,4)$ | $\dfrac{120}{2^2\,2!\cdot 1^1\,1!} = 15$ |
-| $3 \cdot 1^2$ | $3+1+1$ | $(1\,2\,3)$ | $\dfrac{120}{3^1\,1!\cdot 1^2\,2!} = 20$ |
-| $3 \cdot 2$ | $3+2$ | $(1\,2\,3)(4\,5)$ | $\dfrac{120}{3^1\,1!\cdot 2^1\,1!} = 20$ |
-| $4 \cdot 1$ | $4+1$ | $(1\,2\,3\,4)$ | $\dfrac{120}{4^1\,1!\cdot 1^1\,1!} = 30$ |
-| $5$ | $5$ | $(1\,2\,3\,4\,5)$ | $\dfrac{120}{5^1\,1!} = 24$ |
-
-The seven class sizes are $1, 10, 15, 20, 20, 30, 24$, and they sum to $120 = |S_5| = 5!$, confirming the [[Thm - The Class Equation|class equation]] for $S_5$. The single size-$1$ class is the identity, so $Z(S_5) = \{e\}$.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** Two permutations $\sigma, \sigma' \in S_n$ are conjugate if and only if they have the same cycle type; hence the conjugacy classes of $S_n$ correspond bijectively to the partitions of $n$.
+>
+> *Proof.*
+>
+> *Relabelling formula.* Let $\sigma, \tau \in S_n$. For any $a \in \{1, \dots, n\}$,
+> $$(\tau\sigma\tau^{-1})\bigl(\tau(a)\bigr) = \tau\bigl(\sigma(\tau^{-1}\tau(a))\bigr) = \tau\bigl(\sigma(a)\bigr).$$
+> Thus if $\sigma$ contains the cycle $(a_1\,a_2\,\cdots\,a_r)$ — that is, $\sigma(a_i) = a_{i+1}$ with indices modulo $r$ — then $\tau\sigma\tau^{-1}$ sends $\tau(a_i) \mapsto \tau(a_{i+1})$, so it contains the cycle $(\tau(a_1)\,\tau(a_2)\,\cdots\,\tau(a_r))$. Applying this to each disjoint cycle, $\tau\sigma\tau^{-1}$ is $\sigma$ with every entry relabelled by $\tau$.
+>
+> *($\Rightarrow$) Conjugate implies equal cycle type.* If $\sigma' = \tau\sigma\tau^{-1}$, the relabelling formula expresses $\sigma'$ as $\sigma$ with entries permuted by the bijection $\tau$. Disjoint cycles map to disjoint cycles and an $r$-cycle maps to an $r$-cycle, so $\sigma$ and $\sigma'$ have identical multisets of cycle lengths — the same cycle type.
+>
+> *($\Leftarrow$) Equal cycle type implies conjugate.* Suppose $\sigma$ and $\sigma'$ have the same cycle type. Write each in disjoint cycle notation, including a $1$-cycle for every fixed point, so that all $n$ symbols are used exactly once in each. Pair the cycles of $\sigma$ with the cycles of $\sigma'$ so that paired cycles have equal length — possible since the cycle types agree. Place each pair of cycles one above the other with entries aligned by position. Define $\tau$ to send each entry of $\sigma$ to the entry directly below it in $\sigma'$. Each of the $n$ symbols appears once in the layout of $\sigma$ and once in that of $\sigma'$, so $\tau$ is a bijection of $\{1, \dots, n\}$, hence $\tau \in S_n$. By construction $\tau$ carries each cycle of $\sigma$ entry-wise onto the paired cycle of $\sigma'$, so by the relabelling formula $\tau\sigma\tau^{-1} = \sigma'$.
+>
+> *Bijection with partitions.* By the two implications, the conjugacy class of $\sigma$ is determined by, and determines, its cycle type. A cycle type is a multiset of positive integers summing to $n$, i.e. a partition of $n$. Hence $\sigma \mapsto (\text{cycle type of } \sigma)$ induces a bijection between the conjugacy classes of $S_n$ and the partitions of $n$. $\qquad\blacksquare$
+>
+> **Class size.** The conjugacy class of cycle type $1^{a_1}\cdots n^{a_n}$ has size $n!/\prod_k k^{a_k}a_k!$.
+>
+> *Proof.* Fix a template of $a_k$ empty $k$-cycles for each $k$, with $\sum_k k\,a_k = n$ slots. Filling the slots with $1, \dots, n$ in order gives $n!$ fillings, and every permutation of the cycle type arises. Two fillings yield the same permutation if and only if they differ by (i) a cyclic rotation of the entries within some cycles — a $k$-cycle has $k$ rotations, giving redundancy $\prod_k k^{a_k}$ — or (ii) a reordering of the $a_k$ equal-length $k$-cycles among themselves — giving redundancy $\prod_k a_k!$. These exhaust the ways two fillings produce the same permutation, so each permutation corresponds to exactly $\prod_k k^{a_k}a_k!$ fillings, and the class has size $n!/\prod_k k^{a_k}a_k!$. $\qquad\blacksquare$
+>
+> **Worked example: the conjugacy classes of $S_5$.** The partitions of $5$ give seven classes. Applying the size formula:
+>
+> | Cycle type | Partition of $5$ | Representative | Class size $\dfrac{5!}{\prod_k k^{a_k}a_k!}$ |
+> |---|---|---|---|
+> | $1^5$ | $1+1+1+1+1$ | $e$ | $\dfrac{120}{1^5\cdot 5!} = 1$ |
+> | $2 \cdot 1^3$ | $2+1+1+1$ | $(1\,2)$ | $\dfrac{120}{2^1\,1!\cdot 1^3\,3!} = 10$ |
+> | $2^2 \cdot 1$ | $2+2+1$ | $(1\,2)(3\,4)$ | $\dfrac{120}{2^2\,2!\cdot 1^1\,1!} = 15$ |
+> | $3 \cdot 1^2$ | $3+1+1$ | $(1\,2\,3)$ | $\dfrac{120}{3^1\,1!\cdot 1^2\,2!} = 20$ |
+> | $3 \cdot 2$ | $3+2$ | $(1\,2\,3)(4\,5)$ | $\dfrac{120}{3^1\,1!\cdot 2^1\,1!} = 20$ |
+> | $4 \cdot 1$ | $4+1$ | $(1\,2\,3\,4)$ | $\dfrac{120}{4^1\,1!\cdot 1^1\,1!} = 30$ |
+> | $5$ | $5$ | $(1\,2\,3\,4\,5)$ | $\dfrac{120}{5^1\,1!} = 24$ |
+>
+> The seven class sizes are $1, 10, 15, 20, 20, 30, 24$, and they sum to $120 = |S_5| = 5!$, confirming the [[Thm - The Class Equation|class equation]] for $S_5$. The single size-$1$ class is the identity, so $Z(S_5) = \{e\}$.
 
 ---
 

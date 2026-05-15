@@ -57,26 +57,14 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> For part 1, do not try to write down an isomorphism formula directly. Instead use the criterion: a finite group is *cyclic* if and only if it has an element whose [[Def - Order of a Group and of an Element|order]] equals the size of the group. The group $C_m \times C_n$ has $mn$ elements — so if you can find one element of order $mn$ inside it, that group must be cyclic of order $mn$, hence isomorphic to $C_{mn}$.
 
-For part 1, do not try to write down an isomorphism formula directly. Instead use the criterion: a finite group is *cyclic* if and only if it has an element whose [[Def - Order of a Group and of an Element|order]] equals the size of the group. The group $C_m \times C_n$ has $mn$ elements — so if you can find one element of order $mn$ inside it, that group must be cyclic of order $mn$, hence isomorphic to $C_{mn}$.
+> [!note]- Hint 2
+> Which element of $C_m \times C_n$ should you test? Take $g$ a generator of $C_m$ (so $\operatorname{ord}(g) = m$) and $h$ a generator of $C_n$ (so $\operatorname{ord}(h) = n$), and consider the pair $(g, h)$. Now ask: for which integers $j$ is $(g,h)^j = (e,e)$? Powers in a [[Def - Direct Product|direct product]] act coordinatewise, so $(g,h)^j = (g^j, h^j)$.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Which element of $C_m \times C_n$ should you test? Take $g$ a generator of $C_m$ (so $\operatorname{ord}(g) = m$) and $h$ a generator of $C_n$ (so $\operatorname{ord}(h) = n$), and consider the pair $(g, h)$. Now ask: for which integers $j$ is $(g,h)^j = (e,e)$? Powers in a [[Def - Direct Product|direct product]] act coordinatewise, so $(g,h)^j = (g^j, h^j)$.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-$(g^j, h^j) = (e, e)$ means $g^j = e$ *and* $h^j = e$, i.e. $m \mid j$ *and* $n \mid j$. The smallest positive such $j$ is $\operatorname{lcm}(m, n)$. Since $\gcd(m,n) = 1$, the lowest common multiple is $\operatorname{lcm}(m,n) = mn$. So $(g,h)$ has order $mn$ — done. For part 2, factor $60 = 4 \cdot 15 = 4 \cdot 3 \cdot 5$ into pairwise coprime prime powers and split $C_{60}$ one factor at a time.
-
-</details>
+> [!note]- Hint 3
+> $(g^j, h^j) = (e, e)$ means $g^j = e$ *and* $h^j = e$, i.e. $m \mid j$ *and* $n \mid j$. The smallest positive such $j$ is $\operatorname{lcm}(m, n)$. Since $\gcd(m,n) = 1$, the lowest common multiple is $\operatorname{lcm}(m,n) = mn$. So $(g,h)$ has order $mn$ — done. For part 2, factor $60 = 4 \cdot 15 = 4 \cdot 3 \cdot 5$ into pairwise coprime prime powers and split $C_{60}$ one factor at a time.
 
 ---
 
@@ -88,85 +76,65 @@ The strategy for part 1 is to find an element of order $mn$ inside $C_m \times C
 
 Let $g$ generate $C_m$ and $h$ generate $C_n$, so $\operatorname{ord}(g) = m$ and $\operatorname{ord}(h) = n$. The element to study is the pair $(g, h) \in C_m \times C_n$.
 
-<details>
-<summary>Derivation</summary>
-
-By definition a cyclic group has a generator: $C_m = \langle g \rangle$ for some $g$ of [[Def - Order of a Group and of an Element|order]] exactly $m$, and likewise $C_n = \langle h \rangle$ with $\operatorname{ord}(h) = n$. The [[Def - Direct Product|direct product]] $C_m \times C_n$ consists of all pairs $(a, b)$ with $a \in C_m$, $b \in C_n$, multiplied coordinatewise, and has order $|C_m| \cdot |C_n| = mn$. Its identity is $(e, e)$. We single out the pair $(g, h)$ and will compute its order.
-
-</details>
+> [!note]- Derivation
+> By definition a cyclic group has a generator: $C_m = \langle g \rangle$ for some $g$ of [[Def - Order of a Group and of an Element|order]] exactly $m$, and likewise $C_n = \langle h \rangle$ with $\operatorname{ord}(h) = n$. The [[Def - Direct Product|direct product]] $C_m \times C_n$ consists of all pairs $(a, b)$ with $a \in C_m$, $b \in C_n$, multiplied coordinatewise, and has order $|C_m| \cdot |C_n| = mn$. Its identity is $(e, e)$. We single out the pair $(g, h)$ and will compute its order.
 
 **Step 2: Compute the order of $(g, h)$ — it is $\operatorname{lcm}(m, n)$.**
 
 A power $(g,h)^j$ equals the identity exactly when both $m \mid j$ and $n \mid j$. The least positive such $j$ is the lowest common multiple, so $\operatorname{ord}(g, h) = \operatorname{lcm}(m, n)$.
 
-<details>
-<summary>Derivation</summary>
-
-Multiplication in the [[Def - Direct Product|direct product]] is coordinatewise, so powers are too: $(g, h)^j = (g^j, h^j)$ for every integer $j \geq 0$ (an easy induction — $(g,h)^{j+1} = (g,h)^j (g,h) = (g^j, h^j)(g,h) = (g^{j+1}, h^{j+1})$).
-
-The order of $(g,h)$ is the least positive $j$ with $(g,h)^j = (e,e)$. Now
-$$(g^j, h^j) = (e, e) \iff g^j = e \ \text{ and } \ h^j = e.$$
-By the order characterisation in [[Def - Order of a Group and of an Element]], $g^j = e$ holds precisely when $\operatorname{ord}(g) \mid j$, that is $m \mid j$; likewise $h^j = e$ holds precisely when $n \mid j$. So $(g,h)^j = (e,e)$ if and only if $j$ is a *common multiple* of $m$ and $n$. The least positive common multiple is by definition $\operatorname{lcm}(m, n)$, hence
-$$\operatorname{ord}(g, h) = \operatorname{lcm}(m, n).$$
-
-</details>
+> [!note]- Derivation
+> Multiplication in the [[Def - Direct Product|direct product]] is coordinatewise, so powers are too: $(g, h)^j = (g^j, h^j)$ for every integer $j \geq 0$ (an easy induction — $(g,h)^{j+1} = (g,h)^j (g,h) = (g^j, h^j)(g,h) = (g^{j+1}, h^{j+1})$).
+>
+> The order of $(g,h)$ is the least positive $j$ with $(g,h)^j = (e,e)$. Now
+> $$(g^j, h^j) = (e, e) \iff g^j = e \ \text{ and } \ h^j = e.$$
+> By the order characterisation in [[Def - Order of a Group and of an Element]], $g^j = e$ holds precisely when $\operatorname{ord}(g) \mid j$, that is $m \mid j$; likewise $h^j = e$ holds precisely when $n \mid j$. So $(g,h)^j = (e,e)$ if and only if $j$ is a *common multiple* of $m$ and $n$. The least positive common multiple is by definition $\operatorname{lcm}(m, n)$, hence
+> $$\operatorname{ord}(g, h) = \operatorname{lcm}(m, n).$$
 
 **Step 3: Use coprimality to get order $mn$, and conclude $C_m \times C_n \cong C_{mn}$.**
 
 Because $\gcd(m, n) = 1$, the lowest common multiple is the full product: $\operatorname{lcm}(m, n) = mn$. So $(g, h)$ has order $mn$, equal to $|C_m \times C_n|$; therefore $C_m \times C_n$ is cyclic of order $mn$, that is, $C_m \times C_n \cong C_{mn}$.
 
-<details>
-<summary>Derivation</summary>
-
-The general identity relating the two is $\operatorname{lcm}(m,n) \cdot \gcd(m,n) = mn$. With the hypothesis $\gcd(m, n) = 1$ this becomes
-$$\operatorname{lcm}(m, n) = \frac{mn}{\gcd(m,n)} = \frac{mn}{1} = mn.$$
-(Directly: if $m \mid j$ and $n \mid j$ with $m, n$ coprime, then $mn \mid j$ — the coprime divisibility lemma — so every common multiple is a multiple of $mn$, and $mn$ is itself one; hence $mn$ is the least.)
-
-Combining with Step 2, $\operatorname{ord}(g, h) = mn$. The cyclic subgroup $\langle (g,h) \rangle$ generated by $(g,h)$ therefore has $mn$ elements. But the ambient group $C_m \times C_n$ also has exactly $mn$ elements, so
-$$\langle (g, h) \rangle = C_m \times C_n.$$
-A group equal to the cyclic subgroup generated by one of its elements is cyclic; and a cyclic group is determined up to [[Def - Isomorphism|isomorphism]] by its order. Since $|C_m \times C_n| = mn$, we conclude
-$$C_m \times C_n \cong C_{mn}. \qquad \square$$
-Equivalently and explicitly, the map $C_{mn} \to C_m \times C_n$ sending the generator of $C_{mn}$ to $(g,h)$ is a well-defined bijective homomorphism.
-
-</details>
+> [!note]- Derivation
+> The general identity relating the two is $\operatorname{lcm}(m,n) \cdot \gcd(m,n) = mn$. With the hypothesis $\gcd(m, n) = 1$ this becomes
+> $$\operatorname{lcm}(m, n) = \frac{mn}{\gcd(m,n)} = \frac{mn}{1} = mn.$$
+> (Directly: if $m \mid j$ and $n \mid j$ with $m, n$ coprime, then $mn \mid j$ — the coprime divisibility lemma — so every common multiple is a multiple of $mn$, and $mn$ is itself one; hence $mn$ is the least.)
+>
+> Combining with Step 2, $\operatorname{ord}(g, h) = mn$. The cyclic subgroup $\langle (g,h) \rangle$ generated by $(g,h)$ therefore has $mn$ elements. But the ambient group $C_m \times C_n$ also has exactly $mn$ elements, so
+> $$\langle (g, h) \rangle = C_m \times C_n.$$
+> A group equal to the cyclic subgroup generated by one of its elements is cyclic; and a cyclic group is determined up to [[Def - Isomorphism|isomorphism]] by its order. Since $|C_m \times C_n| = mn$, we conclude
+> $$C_m \times C_n \cong C_{mn}. \qquad \square$$
+> Equivalently and explicitly, the map $C_{mn} \to C_m \times C_n$ sending the generator of $C_{mn}$ to $(g,h)$ is a well-defined bijective homomorphism.
 
 **Step 4: Decompose $C_{60}$ into prime-power cyclic factors.**
 
 Factor $60 = 2^2 \cdot 3 \cdot 5 = 4 \cdot 3 \cdot 5$ into pairwise coprime prime powers and apply Step 3 repeatedly:
 $$C_{60} \cong C_4 \times C_3 \times C_5.$$
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> The prime factorization is $60 = 2^2 \cdot 3 \cdot 5$, so the prime-power factors are $4, 3, 5$, and these are pairwise coprime (distinct primes share no common factor).
+>
+> Apply part 1, which we have now proved, in its splitting direction. First split $60 = 4 \cdot 15$, and $\gcd(4, 15) = 1$:
+> $$C_{60} \cong C_4 \times C_{15}.$$
+> Now split the factor $C_{15}$, using $15 = 3 \cdot 5$ with $\gcd(3, 5) = 1$:
+> $$C_{15} \cong C_3 \times C_5.$$
+> Substituting,
+> $$C_{60} \cong C_4 \times C_3 \times C_5,$$
+> a [[Def - Direct Product|direct product]] of cyclic groups of prime-power order, as required. As a check, the orders multiply correctly: $4 \cdot 3 \cdot 5 = 60$. Note the factor $C_4$ does *not* split further — $4 = 2^2$ is a prime power, and $C_4 \not\cong C_2 \times C_2$ because $2$ and $2$ are not coprime; this is the elementary divisor form, and $C_4$ is an elementary divisor in its own right.
 
-The prime factorization is $60 = 2^2 \cdot 3 \cdot 5$, so the prime-power factors are $4, 3, 5$, and these are pairwise coprime (distinct primes share no common factor).
-
-Apply part 1, which we have now proved, in its splitting direction. First split $60 = 4 \cdot 15$, and $\gcd(4, 15) = 1$:
-$$C_{60} \cong C_4 \times C_{15}.$$
-Now split the factor $C_{15}$, using $15 = 3 \cdot 5$ with $\gcd(3, 5) = 1$:
-$$C_{15} \cong C_3 \times C_5.$$
-Substituting,
-$$C_{60} \cong C_4 \times C_3 \times C_5,$$
-a [[Def - Direct Product|direct product]] of cyclic groups of prime-power order, as required. As a check, the orders multiply correctly: $4 \cdot 3 \cdot 5 = 60$. Note the factor $C_4$ does *not* split further — $4 = 2^2$ is a prime power, and $C_4 \not\cong C_2 \times C_2$ because $2$ and $2$ are not coprime; this is the elementary divisor form, and $C_4$ is an elementary divisor in its own right.
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-**Part 1.** Let $\gcd(m,n) = 1$. Write $C_m = \langle g \rangle$ with $\operatorname{ord}(g) = m$ and $C_n = \langle h \rangle$ with $\operatorname{ord}(h) = n$, and consider $(g, h) \in C_m \times C_n$.
-
-Multiplication in the [[Def - Direct Product|direct product]] is coordinatewise, so $(g,h)^j = (g^j, h^j)$. Hence $(g,h)^j = (e,e)$ if and only if $g^j = e$ and $h^j = e$, which by the [[Def - Order of a Group and of an Element|definition of order]] holds if and only if $m \mid j$ and $n \mid j$. The least positive such $j$ is $\operatorname{lcm}(m,n)$, so $\operatorname{ord}(g,h) = \operatorname{lcm}(m,n)$.
-
-Since $\gcd(m,n) = 1$, we have $\operatorname{lcm}(m,n) = mn / \gcd(m,n) = mn$. Thus $\operatorname{ord}(g,h) = mn$. The subgroup $\langle (g,h) \rangle$ then has $mn$ elements, equal to $|C_m \times C_n| = mn$, so $\langle (g,h) \rangle = C_m \times C_n$ and the group is cyclic. A cyclic group of order $mn$ is isomorphic to $C_{mn}$, hence
-$$C_m \times C_n \cong C_{mn}.$$
-
-**Part 2.** Factor $60 = 2^2 \cdot 3 \cdot 5$, giving pairwise coprime prime powers $4, 3, 5$. Applying Part 1:
-$$C_{60} \cong C_4 \times C_{15} \quad (\gcd(4,15)=1), \qquad C_{15} \cong C_3 \times C_5 \quad (\gcd(3,5)=1).$$
-Therefore
-$$C_{60} \cong C_4 \times C_3 \times C_5,$$
-a direct product of cyclic groups of prime-power order. The factor $C_4$ does not decompose further, since $4$ is a prime power. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> **Part 1.** Let $\gcd(m,n) = 1$. Write $C_m = \langle g \rangle$ with $\operatorname{ord}(g) = m$ and $C_n = \langle h \rangle$ with $\operatorname{ord}(h) = n$, and consider $(g, h) \in C_m \times C_n$.
+>
+> Multiplication in the [[Def - Direct Product|direct product]] is coordinatewise, so $(g,h)^j = (g^j, h^j)$. Hence $(g,h)^j = (e,e)$ if and only if $g^j = e$ and $h^j = e$, which by the [[Def - Order of a Group and of an Element|definition of order]] holds if and only if $m \mid j$ and $n \mid j$. The least positive such $j$ is $\operatorname{lcm}(m,n)$, so $\operatorname{ord}(g,h) = \operatorname{lcm}(m,n)$.
+>
+> Since $\gcd(m,n) = 1$, we have $\operatorname{lcm}(m,n) = mn / \gcd(m,n) = mn$. Thus $\operatorname{ord}(g,h) = mn$. The subgroup $\langle (g,h) \rangle$ then has $mn$ elements, equal to $|C_m \times C_n| = mn$, so $\langle (g,h) \rangle = C_m \times C_n$ and the group is cyclic. A cyclic group of order $mn$ is isomorphic to $C_{mn}$, hence
+> $$C_m \times C_n \cong C_{mn}.$$
+>
+> **Part 2.** Factor $60 = 2^2 \cdot 3 \cdot 5$, giving pairwise coprime prime powers $4, 3, 5$. Applying Part 1:
+> $$C_{60} \cong C_4 \times C_{15} \quad (\gcd(4,15)=1), \qquad C_{15} \cong C_3 \times C_5 \quad (\gcd(3,5)=1).$$
+> Therefore
+> $$C_{60} \cong C_4 \times C_3 \times C_5,$$
+> a direct product of cyclic groups of prime-power order. The factor $C_4$ does not decompose further, since $4$ is a prime power. $\blacksquare$
 
 ---
 

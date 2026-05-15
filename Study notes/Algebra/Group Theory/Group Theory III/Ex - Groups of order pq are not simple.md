@@ -57,26 +57,14 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Do not test both primes. Non-simplicity needs only *one* prime with a unique Sylow subgroup. Which of $p$ and $q$ is more constrained? Write out the Sylow constraints for each and compare how many candidate values survive.
 
-Do not test both primes. Non-simplicity needs only *one* prime with a unique Sylow subgroup. Which of $p$ and $q$ is more constrained? Write out the Sylow constraints for each and compare how many candidate values survive.
+> [!note]- Hint 2
+> For the prime $q$: the count $n_q$ must divide $m = p$, so $n_q \in \{1, p\}$. It must also satisfy $n_q \equiv 1 \pmod q$. Use the hypothesis $p < q$ to decide whether $p$ can be $\equiv 1 \pmod q$.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-For the prime $q$: the count $n_q$ must divide $m = p$, so $n_q \in \{1, p\}$. It must also satisfy $n_q \equiv 1 \pmod q$. Use the hypothesis $p < q$ to decide whether $p$ can be $\equiv 1 \pmod q$.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Since $1 < p < q$, the integer $p$ is strictly between $1$ and $q$, so $p \not\equiv 1 \pmod q$ — there is no positive multiple of $q$ equal to $p - 1$. Hence $n_q = 1$. A unique Sylow $q$-subgroup is [[Thm - A Unique Sylow Subgroup is Normal|normal]]; it has order $q$, so it is proper and non-trivial, and $G$ is not simple.
-
-</details>
+> [!note]- Hint 3
+> Since $1 < p < q$, the integer $p$ is strictly between $1$ and $q$, so $p \not\equiv 1 \pmod q$ — there is no positive multiple of $q$ equal to $p - 1$. Hence $n_q = 1$. A unique Sylow $q$-subgroup is [[Thm - A Unique Sylow Subgroup is Normal|normal]]; it has order $q$, so it is proper and non-trivial, and $G$ is not simple.
 
 ---
 
@@ -88,64 +76,48 @@ The plan is the first step of the non-simplicity playbook: factor $|G| = pq$, ap
 
 For the prime $q$, write $|G| = q^1 \cdot p$. Sylow III says $n_q \mid p$, so $n_q$ is $1$ or $p$.
 
-<details>
-<summary>Derivation</summary>
-
-Factor $|G| = pq$ with respect to the prime $q$: since $q$ is prime and $q \nmid p$ (because $0 < p < q$ means $p$ cannot be a multiple of $q$), the largest power of $q$ dividing $|G|$ is $q^1$, and we have $|G| = q^a m$ with $a = 1$ and $m = p$.
-
-By [[Thm - Sylow's Theorems|Sylow's third theorem]], the number $n_q = |\operatorname{Syl}_q(G)|$ of Sylow $q$-subgroups satisfies
-$$n_q \mid m = p.$$
-Since $p$ is prime, its only positive divisors are $1$ and $p$. Hence $n_q \in \{1, p\}$.
-
-</details>
+> [!note]- Derivation
+> Factor $|G| = pq$ with respect to the prime $q$: since $q$ is prime and $q \nmid p$ (because $0 < p < q$ means $p$ cannot be a multiple of $q$), the largest power of $q$ dividing $|G|$ is $q^1$, and we have $|G| = q^a m$ with $a = 1$ and $m = p$.
+>
+> By [[Thm - Sylow's Theorems|Sylow's third theorem]], the number $n_q = |\operatorname{Syl}_q(G)|$ of Sylow $q$-subgroups satisfies
+> $$n_q \mid m = p.$$
+> Since $p$ is prime, its only positive divisors are $1$ and $p$. Hence $n_q \in \{1, p\}$.
 
 **Step 2: The congruence eliminates $n_q = p$, so $n_q = 1$.**
 
 Sylow III also says $n_q \equiv 1 \pmod q$. Since $1 < p < q$, the value $p$ is not congruent to $1$ modulo $q$. So $n_q \neq p$, and the only surviving candidate is $n_q = 1$.
 
-<details>
-<summary>Derivation</summary>
-
-[[Thm - Sylow's Theorems|Sylow III]] also imposes the congruence
-$$n_q \equiv 1 \pmod q.$$
-We test the two candidates from Step 1.
-
-The candidate $n_q = 1$ satisfies the congruence trivially: $1 \equiv 1 \pmod q$.
-
-The candidate $n_q = p$ would require $p \equiv 1 \pmod q$, that is, $q \mid (p - 1)$. But $p$ is a prime with $p < q$, so $1 \leq p - 1 < q - 1 < q$. A positive multiple of $q$ is at least $q$, and $p - 1$ is strictly smaller than $q$; the only way out would be $p - 1 = 0$, i.e. $p = 1$, which is not prime. So $q \nmid (p - 1)$, and $p \not\equiv 1 \pmod q$.
-
-Thus $n_q = p$ violates the congruence and is rejected. The only value satisfying *both* Sylow constraints is
-$$n_q = 1.$$
-
-</details>
+> [!note]- Derivation
+> [[Thm - Sylow's Theorems|Sylow III]] also imposes the congruence
+> $$n_q \equiv 1 \pmod q.$$
+> We test the two candidates from Step 1.
+>
+> The candidate $n_q = 1$ satisfies the congruence trivially: $1 \equiv 1 \pmod q$.
+>
+> The candidate $n_q = p$ would require $p \equiv 1 \pmod q$, that is, $q \mid (p - 1)$. But $p$ is a prime with $p < q$, so $1 \leq p - 1 < q - 1 < q$. A positive multiple of $q$ is at least $q$, and $p - 1$ is strictly smaller than $q$; the only way out would be $p - 1 = 0$, i.e. $p = 1$, which is not prime. So $q \nmid (p - 1)$, and $p \not\equiv 1 \pmod q$.
+>
+> Thus $n_q = p$ violates the congruence and is rejected. The only value satisfying *both* Sylow constraints is
+> $$n_q = 1.$$
 
 **Step 3: The unique Sylow $q$-subgroup is normal, so $G$ is not simple.**
 
 With $n_q = 1$ there is exactly one Sylow $q$-subgroup; by [[Thm - A Unique Sylow Subgroup is Normal]] it is normal. It has order $q$, so it is a proper non-trivial normal subgroup, and $G$ is not simple.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> Let $P$ be the unique Sylow $q$-subgroup of $G$ (it exists by [[Thm - Sylow's Theorems|Sylow I]], and there is exactly one by Step 2). By [[Thm - A Unique Sylow Subgroup is Normal]], a Sylow subgroup that is the only one of its kind is [[Def - Normal Subgroup|normal]]: any conjugate $gPg^{-1}$ is again a Sylow $q$-subgroup (conjugation preserves order), and uniqueness forces $gPg^{-1} = P$ for all $g$, which is exactly normality. So $P \trianglelefteq G$.
+>
+> Now $|P| = q$. Since $q > 1$, the subgroup $P$ is non-trivial: $P \neq \{e\}$. Since $q < pq = |G|$ (because $p > 1$), the subgroup $P$ is proper: $P \neq G$.
+>
+> A group is [[Def - Simple Group|simple]] precisely when its only normal subgroups are $\{e\}$ and itself. We have exhibited a normal subgroup $P$ that is neither. Therefore $G$ is **not simple**. $\blacksquare$
 
-Let $P$ be the unique Sylow $q$-subgroup of $G$ (it exists by [[Thm - Sylow's Theorems|Sylow I]], and there is exactly one by Step 2). By [[Thm - A Unique Sylow Subgroup is Normal]], a Sylow subgroup that is the only one of its kind is [[Def - Normal Subgroup|normal]]: any conjugate $gPg^{-1}$ is again a Sylow $q$-subgroup (conjugation preserves order), and uniqueness forces $gPg^{-1} = P$ for all $g$, which is exactly normality. So $P \trianglelefteq G$.
-
-Now $|P| = q$. Since $q > 1$, the subgroup $P$ is non-trivial: $P \neq \{e\}$. Since $q < pq = |G|$ (because $p > 1$), the subgroup $P$ is proper: $P \neq G$.
-
-A group is [[Def - Simple Group|simple]] precisely when its only normal subgroups are $\{e\}$ and itself. We have exhibited a normal subgroup $P$ that is neither. Therefore $G$ is **not simple**. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $p < q$ be primes and $|G| = pq$.
-
-With respect to the prime $q$, write $|G| = q^a m$. Since $q \nmid p$ (as $0 < p < q$), we have $a = 1$ and $m = p$. By [[Thm - Sylow's Theorems|Sylow's third theorem]], the number $n_q$ of [[Def - Sylow p-Subgroup|Sylow $q$-subgroups]] satisfies $n_q \mid p$ and $n_q \equiv 1 \pmod q$.
-
-From $n_q \mid p$ and $p$ prime, $n_q \in \{1, p\}$. The candidate $n_q = p$ would require $q \mid (p - 1)$; but $0 < p - 1 < q$, so no positive multiple of $q$ equals $p - 1$, and this is impossible. Hence $n_q = 1$.
-
-By [[Thm - A Unique Sylow Subgroup is Normal]], the unique Sylow $q$-subgroup $P$ is [[Def - Normal Subgroup|normal]] in $G$. It has order $q$, so $\{e\} \neq P \neq G$ (using $q > 1$ and $q < pq$). Thus $P$ is a proper non-trivial normal subgroup, and by the definition of a [[Def - Simple Group|simple group]], $G$ is not simple. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $p < q$ be primes and $|G| = pq$.
+>
+> With respect to the prime $q$, write $|G| = q^a m$. Since $q \nmid p$ (as $0 < p < q$), we have $a = 1$ and $m = p$. By [[Thm - Sylow's Theorems|Sylow's third theorem]], the number $n_q$ of [[Def - Sylow p-Subgroup|Sylow $q$-subgroups]] satisfies $n_q \mid p$ and $n_q \equiv 1 \pmod q$.
+>
+> From $n_q \mid p$ and $p$ prime, $n_q \in \{1, p\}$. The candidate $n_q = p$ would require $q \mid (p - 1)$; but $0 < p - 1 < q$, so no positive multiple of $q$ equals $p - 1$, and this is impossible. Hence $n_q = 1$.
+>
+> By [[Thm - A Unique Sylow Subgroup is Normal]], the unique Sylow $q$-subgroup $P$ is [[Def - Normal Subgroup|normal]] in $G$. It has order $q$, so $\{e\} \neq P \neq G$ (using $q > 1$ and $q < pq$). Thus $P$ is a proper non-trivial normal subgroup, and by the definition of a [[Def - Simple Group|simple group]], $G$ is not simple. $\blacksquare$
 
 ---
 

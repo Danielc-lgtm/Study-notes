@@ -118,117 +118,81 @@ Work with the quotient map $\pi : G \to G/K$. Show "image" and "preimage" land i
 
 # Lemma Decomposition
 
-<details>
-<summary><strong>Lemma 1: A subgroup of $G$ contains $K$ if and only if it is a union of $K$-cosets</strong></summary>
+> [!note]- Lemma 1: A subgroup of $G$ contains $K$ if and only if it is a union of $K$-cosets
+> **Statement:** Let $K \trianglelefteq G$ and $L \leq G$. Then $K \subseteq L$ if and only if $L$ is a union of left cosets of $K$, equivalently $L = \pi^{-1}(\pi(L))$.
+>
+> **Hint:** If $K \subseteq L$ and $\ell \in L$, then the whole coset $\ell K \subseteq L$ by closure; conversely any union of cosets that is a subgroup contains the identity coset $K$.
+>
+> **Why needed:** This is the structural fact that makes "image" and "preimage" mutually inverse — the core of the correspondence. The hypothesis $K \subseteq L$ enters here.
+>
+> > [!note]- Full proof
+> > ($\Rightarrow$) Suppose $K \subseteq L$. Take any $\ell \in L$. For every $k \in K$ we have $k \in L$, so $\ell k \in L$ by closure of $L$. Hence $\ell K \subseteq L$. Therefore $L = \bigcup_{\ell \in L} \ell K$ is a union of $K$-cosets. Consequently $\pi^{-1}(\pi(L)) = \{g : gK \in \pi(L)\} = \bigcup_{\ell \in L}\ell K = L$.
+> >
+> > ($\Leftarrow$) Suppose $L$ is a union of $K$-cosets and $L \leq G$. Since $e \in L$, the coset $eK = K$ is one of the cosets comprising $L$, so $K \subseteq L$.
 
-**Statement:** Let $K \trianglelefteq G$ and $L \leq G$. Then $K \subseteq L$ if and only if $L$ is a union of left cosets of $K$, equivalently $L = \pi^{-1}(\pi(L))$.
+> [!note]- Lemma 2: Images and preimages of subgroups under a homomorphism are subgroups
+> **Statement:** Let $\pi : G \to G'$ be a homomorphism. If $L \leq G$ then $\pi(L) \leq G'$; if $X \leq G'$ then $\pi^{-1}(X) \leq G$, and $\pi^{-1}(X) \supseteq \ker\pi$.
+>
+> **Hint:** Apply the subgroup criterion, pushing it through $\pi$ in each direction.
+>
+> **Why needed:** It guarantees that "image" and "preimage" actually produce subgroups, so the two sides of the correspondence are sets of subgroups.
+>
+> > [!note]- Full proof
+> > *Image.* $\pi(L)$ contains $\pi(e_G) = e_{G'}$. For $\pi(a), \pi(b) \in \pi(L)$ with $a, b \in L$, $\pi(a)\pi(b)^{-1} = \pi(ab^{-1})$ and $ab^{-1} \in L$, so $\pi(a)\pi(b)^{-1} \in \pi(L)$. By the subgroup criterion $\pi(L) \leq G'$.
+> >
+> > *Preimage.* $\pi^{-1}(X)$ contains $e_G$ since $\pi(e_G) = e_{G'} \in X$. For $a, b \in \pi^{-1}(X)$, $\pi(ab^{-1}) = \pi(a)\pi(b)^{-1} \in X$ (as $X$ is a subgroup), so $ab^{-1} \in \pi^{-1}(X)$. By the subgroup criterion $\pi^{-1}(X) \leq G$. Finally, if $g \in \ker\pi$ then $\pi(g) = e_{G'} \in X$, so $g \in \pi^{-1}(X)$; hence $\ker\pi \subseteq \pi^{-1}(X)$.
 
-**Hint:** If $K \subseteq L$ and $\ell \in L$, then the whole coset $\ell K \subseteq L$ by closure; conversely any union of cosets that is a subgroup contains the identity coset $K$.
+> [!note]- Lemma 3: The correspondence preserves normality
+> **Statement:** With $K \trianglelefteq G$ and $K \leq L \leq G$: $L \trianglelefteq G$ if and only if $L/K \trianglelefteq G/K$.
+>
+> **Hint:** Use that $\pi$ is surjective, so every element of $G/K$ is $\pi(g)$, and $\pi(gLg^{-1}) = \pi(g)\,\pi(L)\,\pi(g)^{-1}$.
+>
+> **Why needed:** It is the property that lets the correspondence be restricted to normal subgroups — the version used in inductive proofs and in [[Thm - Composition Series|composition series]].
+>
+> > [!note]- Full proof
+> > ($\Rightarrow$) Suppose $L \trianglelefteq G$. Let $x \in G/K$ and write $x = \pi(g)$ (possible since $\pi$ is surjective). Then
+> > $$x\,(L/K)\,x^{-1} = \pi(g)\,\pi(L)\,\pi(g)^{-1} = \pi(gLg^{-1}) = \pi(L) = L/K,$$
+> > using that $\pi$ is a homomorphism and $gLg^{-1} = L$. So $L/K \trianglelefteq G/K$.
+> >
+> > ($\Leftarrow$) Suppose $L/K \trianglelefteq G/K$. Let $g \in G$. Then $\pi(gLg^{-1}) = \pi(g)\,(L/K)\,\pi(g)^{-1} = L/K = \pi(L)$. Applying $\pi^{-1}$ and using Lemma 1 (both $gLg^{-1}$ and $L$ contain $K$ — note $gKg^{-1} = K$ since $K \trianglelefteq G$, so $K \subseteq gLg^{-1}$): $gLg^{-1} = \pi^{-1}(\pi(gLg^{-1})) = \pi^{-1}(\pi(L)) = L$. So $L \trianglelefteq G$.
 
-**Why needed:** This is the structural fact that makes "image" and "preimage" mutually inverse — the core of the correspondence. The hypothesis $K \subseteq L$ enters here.
-
-<details>
-<summary>Full proof</summary>
-
-($\Rightarrow$) Suppose $K \subseteq L$. Take any $\ell \in L$. For every $k \in K$ we have $k \in L$, so $\ell k \in L$ by closure of $L$. Hence $\ell K \subseteq L$. Therefore $L = \bigcup_{\ell \in L} \ell K$ is a union of $K$-cosets. Consequently $\pi^{-1}(\pi(L)) = \{g : gK \in \pi(L)\} = \bigcup_{\ell \in L}\ell K = L$.
-
-($\Leftarrow$) Suppose $L$ is a union of $K$-cosets and $L \leq G$. Since $e \in L$, the coset $eK = K$ is one of the cosets comprising $L$, so $K \subseteq L$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Images and preimages of subgroups under a homomorphism are subgroups</strong></summary>
-
-**Statement:** Let $\pi : G \to G'$ be a homomorphism. If $L \leq G$ then $\pi(L) \leq G'$; if $X \leq G'$ then $\pi^{-1}(X) \leq G$, and $\pi^{-1}(X) \supseteq \ker\pi$.
-
-**Hint:** Apply the subgroup criterion, pushing it through $\pi$ in each direction.
-
-**Why needed:** It guarantees that "image" and "preimage" actually produce subgroups, so the two sides of the correspondence are sets of subgroups.
-
-<details>
-<summary>Full proof</summary>
-
-*Image.* $\pi(L)$ contains $\pi(e_G) = e_{G'}$. For $\pi(a), \pi(b) \in \pi(L)$ with $a, b \in L$, $\pi(a)\pi(b)^{-1} = \pi(ab^{-1})$ and $ab^{-1} \in L$, so $\pi(a)\pi(b)^{-1} \in \pi(L)$. By the subgroup criterion $\pi(L) \leq G'$.
-
-*Preimage.* $\pi^{-1}(X)$ contains $e_G$ since $\pi(e_G) = e_{G'} \in X$. For $a, b \in \pi^{-1}(X)$, $\pi(ab^{-1}) = \pi(a)\pi(b)^{-1} \in X$ (as $X$ is a subgroup), so $ab^{-1} \in \pi^{-1}(X)$. By the subgroup criterion $\pi^{-1}(X) \leq G$. Finally, if $g \in \ker\pi$ then $\pi(g) = e_{G'} \in X$, so $g \in \pi^{-1}(X)$; hence $\ker\pi \subseteq \pi^{-1}(X)$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: The correspondence preserves normality</strong></summary>
-
-**Statement:** With $K \trianglelefteq G$ and $K \leq L \leq G$: $L \trianglelefteq G$ if and only if $L/K \trianglelefteq G/K$.
-
-**Hint:** Use that $\pi$ is surjective, so every element of $G/K$ is $\pi(g)$, and $\pi(gLg^{-1}) = \pi(g)\,\pi(L)\,\pi(g)^{-1}$.
-
-**Why needed:** It is the property that lets the correspondence be restricted to normal subgroups — the version used in inductive proofs and in [[Thm - Composition Series|composition series]].
-
-<details>
-<summary>Full proof</summary>
-
-($\Rightarrow$) Suppose $L \trianglelefteq G$. Let $x \in G/K$ and write $x = \pi(g)$ (possible since $\pi$ is surjective). Then
-$$x\,(L/K)\,x^{-1} = \pi(g)\,\pi(L)\,\pi(g)^{-1} = \pi(gLg^{-1}) = \pi(L) = L/K,$$
-using that $\pi$ is a homomorphism and $gLg^{-1} = L$. So $L/K \trianglelefteq G/K$.
-
-($\Leftarrow$) Suppose $L/K \trianglelefteq G/K$. Let $g \in G$. Then $\pi(gLg^{-1}) = \pi(g)\,(L/K)\,\pi(g)^{-1} = L/K = \pi(L)$. Applying $\pi^{-1}$ and using Lemma 1 (both $gLg^{-1}$ and $L$ contain $K$ — note $gKg^{-1} = K$ since $K \trianglelefteq G$, so $K \subseteq gLg^{-1}$): $gLg^{-1} = \pi^{-1}(\pi(gLg^{-1})) = \pi^{-1}(\pi(L)) = L$. So $L \trianglelefteq G$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 4: The correspondence preserves index</strong></summary>
-
-**Statement:** With $K \trianglelefteq G$ and $K \leq L \leq G$: $|G : L| = |G/K : L/K|$.
-
-**Hint:** Map a coset $gL$ to the coset $(gK)(L/K)$ of $L/K$ in $G/K$, and show this is a well-defined bijection.
-
-**Why needed:** It makes the correspondence quantitative, so index obstructions transfer between $G$ and $G/K$.
-
-<details>
-<summary>Full proof</summary>
-
-Define $\Phi$ from the set of left cosets of $L$ in $G$ to the set of left cosets of $L/K$ in $G/K$ by $\Phi(gL) = (gK)(L/K)$.
-
-*Well-defined.* If $gL = g'L$ then $g^{-1}g' \in L$, so $\pi(g^{-1}g') = (g^{-1}g')K \in L/K$, hence $(gK)(L/K) = (g'K)(L/K)$.
-
-*Injective.* If $(gK)(L/K) = (g'K)(L/K)$ then $(gK)^{-1}(g'K) = (g^{-1}g')K \in L/K$, so $g^{-1}g' \in \pi^{-1}(L/K) = L$ (Lemma 1), giving $gL = g'L$.
-
-*Surjective.* A coset of $L/K$ in $G/K$ has the form $x(L/K)$ with $x = gK$ for some $g$ (surjectivity of $\pi$), and then $x(L/K) = \Phi(gL)$.
-
-So $\Phi$ is a bijection, and $|G : L| = |G/K : L/K|$. The relative version for $K \leq L_1 \leq L_2$ follows by the same argument applied within $L_2$.
-
-</details>
-
-</details>
+> [!note]- Lemma 4: The correspondence preserves index
+> **Statement:** With $K \trianglelefteq G$ and $K \leq L \leq G$: $|G : L| = |G/K : L/K|$.
+>
+> **Hint:** Map a coset $gL$ to the coset $(gK)(L/K)$ of $L/K$ in $G/K$, and show this is a well-defined bijection.
+>
+> **Why needed:** It makes the correspondence quantitative, so index obstructions transfer between $G$ and $G/K$.
+>
+> > [!note]- Full proof
+> > Define $\Phi$ from the set of left cosets of $L$ in $G$ to the set of left cosets of $L/K$ in $G/K$ by $\Phi(gL) = (gK)(L/K)$.
+> >
+> > *Well-defined.* If $gL = g'L$ then $g^{-1}g' \in L$, so $\pi(g^{-1}g') = (g^{-1}g')K \in L/K$, hence $(gK)(L/K) = (g'K)(L/K)$.
+> >
+> > *Injective.* If $(gK)(L/K) = (g'K)(L/K)$ then $(gK)^{-1}(g'K) = (g^{-1}g')K \in L/K$, so $g^{-1}g' \in \pi^{-1}(L/K) = L$ (Lemma 1), giving $gL = g'L$.
+> >
+> > *Surjective.* A coset of $L/K$ in $G/K$ has the form $x(L/K)$ with $x = gK$ for some $g$ (surjectivity of $\pi$), and then $x(L/K) = \Phi(gL)$.
+> >
+> > So $\Phi$ is a bijection, and $|G : L| = |G/K : L/K|$. The relative version for $K \leq L_1 \leq L_2$ follows by the same argument applied within $L_2$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-Let $K \trianglelefteq G$ with quotient map $\pi : G \to G/K$, $g \mapsto gK$. Write
-$$\mathcal{S}_G = \{L : K \leq L \leq G\}, \qquad \mathcal{S}_{G/K} = \{X : X \leq G/K\}.$$
-
-**The two maps land correctly.** For $L \in \mathcal{S}_G$, $\pi(L) = L/K$ is a subgroup of $G/K$ by Lemma 2, so $L \mapsto L/K$ maps $\mathcal{S}_G \to \mathcal{S}_{G/K}$. For $X \in \mathcal{S}_{G/K}$, $\pi^{-1}(X)$ is a subgroup of $G$ containing $\ker\pi = K$ by Lemma 2, so $X \mapsto \pi^{-1}(X)$ maps $\mathcal{S}_{G/K} \to \mathcal{S}_G$.
-
-**The maps are mutually inverse.** Let $L \in \mathcal{S}_G$. Since $K \leq L$, Lemma 1 gives $\pi^{-1}(\pi(L)) = L$. Let $X \in \mathcal{S}_{G/K}$. Since $\pi$ is surjective, for any $x \in X$ we have $x = \pi(g)$ for some $g$, and then $g \in \pi^{-1}(X)$, so $x = \pi(g) \in \pi(\pi^{-1}(X))$; conversely $\pi(\pi^{-1}(X)) \subseteq X$ always. Hence $\pi(\pi^{-1}(X)) = X$. So the two maps are mutually inverse bijections $\mathcal{S}_G \leftrightarrow \mathcal{S}_{G/K}$.
-
-**Inclusion is preserved.** Let $L_1, L_2 \in \mathcal{S}_G$. If $L_1 \leq L_2$ then applying $\pi$ gives $L_1/K = \pi(L_1) \subseteq \pi(L_2) = L_2/K$. Conversely if $L_1/K \leq L_2/K$, applying $\pi^{-1}$ and using $\pi^{-1}(\pi(L_i)) = L_i$ gives $L_1 \leq L_2$. So $L_1 \leq L_2 \iff L_1/K \leq L_2/K$, and the bijection is an isomorphism of subgroup lattices.
-
-**Normality is preserved.** This is Lemma 3: $L \trianglelefteq G \iff L/K \trianglelefteq G/K$. Consequently the bijection restricts to a bijection between $\{L : K \leq L \trianglelefteq G\}$ and $\{X : X \trianglelefteq G/K\}$.
-
-**Index is preserved.** This is Lemma 4: $|G : L| = |G/K : L/K|$, and more generally $|L_2 : L_1| = |L_2/K : L_1/K|$ for $K \leq L_1 \leq L_2 \leq G$.
-
-This establishes all claims. $\blacksquare$
-
-</details>
+> [!note]- Complete formal proof
+> Let $K \trianglelefteq G$ with quotient map $\pi : G \to G/K$, $g \mapsto gK$. Write
+> $$\mathcal{S}_G = \{L : K \leq L \leq G\}, \qquad \mathcal{S}_{G/K} = \{X : X \leq G/K\}.$$
+>
+> **The two maps land correctly.** For $L \in \mathcal{S}_G$, $\pi(L) = L/K$ is a subgroup of $G/K$ by Lemma 2, so $L \mapsto L/K$ maps $\mathcal{S}_G \to \mathcal{S}_{G/K}$. For $X \in \mathcal{S}_{G/K}$, $\pi^{-1}(X)$ is a subgroup of $G$ containing $\ker\pi = K$ by Lemma 2, so $X \mapsto \pi^{-1}(X)$ maps $\mathcal{S}_{G/K} \to \mathcal{S}_G$.
+>
+> **The maps are mutually inverse.** Let $L \in \mathcal{S}_G$. Since $K \leq L$, Lemma 1 gives $\pi^{-1}(\pi(L)) = L$. Let $X \in \mathcal{S}_{G/K}$. Since $\pi$ is surjective, for any $x \in X$ we have $x = \pi(g)$ for some $g$, and then $g \in \pi^{-1}(X)$, so $x = \pi(g) \in \pi(\pi^{-1}(X))$; conversely $\pi(\pi^{-1}(X)) \subseteq X$ always. Hence $\pi(\pi^{-1}(X)) = X$. So the two maps are mutually inverse bijections $\mathcal{S}_G \leftrightarrow \mathcal{S}_{G/K}$.
+>
+> **Inclusion is preserved.** Let $L_1, L_2 \in \mathcal{S}_G$. If $L_1 \leq L_2$ then applying $\pi$ gives $L_1/K = \pi(L_1) \subseteq \pi(L_2) = L_2/K$. Conversely if $L_1/K \leq L_2/K$, applying $\pi^{-1}$ and using $\pi^{-1}(\pi(L_i)) = L_i$ gives $L_1 \leq L_2$. So $L_1 \leq L_2 \iff L_1/K \leq L_2/K$, and the bijection is an isomorphism of subgroup lattices.
+>
+> **Normality is preserved.** This is Lemma 3: $L \trianglelefteq G \iff L/K \trianglelefteq G/K$. Consequently the bijection restricts to a bijection between $\{L : K \leq L \trianglelefteq G\}$ and $\{X : X \trianglelefteq G/K\}$.
+>
+> **Index is preserved.** This is Lemma 4: $|G : L| = |G/K : L/K|$, and more generally $|L_2 : L_1| = |L_2/K : L_1/K|$ for $K \leq L_1 \leq L_2 \leq G$.
+>
+> This establishes all claims. $\blacksquare$
 
 ---
 

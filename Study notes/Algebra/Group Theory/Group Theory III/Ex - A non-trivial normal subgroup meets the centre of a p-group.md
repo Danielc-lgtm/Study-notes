@@ -63,34 +63,18 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> You want to find a central element inside $N$. Central elements are the ones fixed by conjugation, so think about the conjugation action — but act on the *right set*. Acting $G$ on all of $G$ only reproves [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]]. What does the normality of $N$ allow $G$ to act on instead?
 
-You want to find a central element inside $N$. Central elements are the ones fixed by conjugation, so think about the conjugation action — but act on the *right set*. Acting $G$ on all of $G$ only reproves [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]]. What does the normality of $N$ allow $G$ to act on instead?
+> [!note]- Hint 2
+> Because $N$ is normal, conjugation $n \mapsto gng^{-1}$ sends $N$ into $N$, so $G$ acts on the *set* $N$ by conjugation. Apply the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]]: since $|G|$ is a power of $p$, every orbit has size $1$ or a size divisible by $p$. Now ask: which elements $x \in N$ have an orbit of size exactly $1$?
 
-</details>
+> [!note]- Hint 3
+> An element $x \in N$ has a size-$1$ orbit precisely when $gxg^{-1} = x$ for **every** $g \in G$ — that is, when $x$ commutes with all of $G$, so $x \in Z(G)$. Hence the fixed-point set of the action is exactly $N \cap Z(G)$. The orbits partition $N$, so
+> $$|N| = |N \cap Z(G)| + (\text{sum of orbit sizes} > 1).$$
 
-<details>
-<summary>Hint 2</summary>
-
-Because $N$ is normal, conjugation $n \mapsto gng^{-1}$ sends $N$ into $N$, so $G$ acts on the *set* $N$ by conjugation. Apply the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]]: since $|G|$ is a power of $p$, every orbit has size $1$ or a size divisible by $p$. Now ask: which elements $x \in N$ have an orbit of size exactly $1$?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-An element $x \in N$ has a size-$1$ orbit precisely when $gxg^{-1} = x$ for **every** $g \in G$ — that is, when $x$ commutes with all of $G$, so $x \in Z(G)$. Hence the fixed-point set of the action is exactly $N \cap Z(G)$. The orbits partition $N$, so
-$$|N| = |N \cap Z(G)| + (\text{sum of orbit sizes} > 1).$$
-
-</details>
-
-<details>
-<summary>Hint 4</summary>
-
-Every orbit of size greater than $1$ has size divisible by $p$, so the parenthesised sum is $\equiv 0 \pmod p$. And $p \mid |N|$, since $N$ is a non-trivial subgroup of a $p$-group ([[Thm - Lagrange's Theorem|Lagrange]]). Reading the displayed equation modulo $p$ gives $|N \cap Z(G)| \equiv 0 \pmod p$. The identity $e$ lies in $N \cap Z(G)$, so this set is non-empty and its size is a multiple of $p \geq 2$ — hence at least $p$, so it contains something other than $e$.
-
-</details>
+> [!note]- Hint 4
+> Every orbit of size greater than $1$ has size divisible by $p$, so the parenthesised sum is $\equiv 0 \pmod p$. And $p \mid |N|$, since $N$ is a non-trivial subgroup of a $p$-group ([[Thm - Lagrange's Theorem|Lagrange]]). Reading the displayed equation modulo $p$ gives $|N \cap Z(G)| \equiv 0 \pmod p$. The identity $e$ lies in $N \cap Z(G)$, so this set is non-empty and its size is a multiple of $p \geq 2$ — hence at least $p$, so it contains something other than $e$.
 
 ---
 
@@ -102,88 +86,68 @@ The strategy is to let $G$ act on the *set* $N$ by conjugation — legitimate be
 
 Because $N$ is normal, the rule $g \ast n = gng^{-1}$ sends elements of $N$ to elements of $N$, and it satisfies the group-action axioms. So $G$ acts on the set $N$.
 
-<details>
-<summary>Derivation</summary>
-
-Define $\ast : G \times N \to N$ by $g \ast n = gng^{-1}$. The first thing to check is that the output really lands in $N$: this is exactly the content of $N \trianglelefteq G$. By the definition of a [[Def - Normal Subgroup|normal subgroup]], $gng^{-1} \in N$ for every $g \in G$ and every $n \in N$, so $\ast$ is a well-defined function into $N$. (Normality is not optional here — for a non-normal subgroup, conjugation would push elements *out* of the subset, and there would be no action on $N$ at all.)
-
-The [[Def - Group Action|group action]] axioms hold because conjugation is an action of $G$ on the whole of $G$ and we have merely restricted its domain to the invariant subset $N$:
-$$e \ast n = ene^{-1} = n, \qquad g \ast (h \ast n) = g(hnh^{-1})g^{-1} = (gh)n(gh)^{-1} = (gh) \ast n.$$
-So $\ast$ is a genuine action of $G$ on the set $N$. The orbits of this action are the **$G$-conjugacy classes that lie inside $N$**, and they partition $N$.
-
-</details>
+> [!note]- Derivation
+> Define $\ast : G \times N \to N$ by $g \ast n = gng^{-1}$. The first thing to check is that the output really lands in $N$: this is exactly the content of $N \trianglelefteq G$. By the definition of a [[Def - Normal Subgroup|normal subgroup]], $gng^{-1} \in N$ for every $g \in G$ and every $n \in N$, so $\ast$ is a well-defined function into $N$. (Normality is not optional here — for a non-normal subgroup, conjugation would push elements *out* of the subset, and there would be no action on $N$ at all.)
+>
+> The [[Def - Group Action|group action]] axioms hold because conjugation is an action of $G$ on the whole of $G$ and we have merely restricted its domain to the invariant subset $N$:
+> $$e \ast n = ene^{-1} = n, \qquad g \ast (h \ast n) = g(hnh^{-1})g^{-1} = (gh)n(gh)^{-1} = (gh) \ast n.$$
+> So $\ast$ is a genuine action of $G$ on the set $N$. The orbits of this action are the **$G$-conjugacy classes that lie inside $N$**, and they partition $N$.
 
 **Step 2: Every orbit has size $1$ or a multiple of $p$.**
 
 By the orbit–stabiliser theorem each orbit size divides $|G| = p^n$, so it is a power of $p$ — hence either $1$ or divisible by $p$.
 
-<details>
-<summary>Derivation</summary>
-
-Fix $x \in N$ and let $\mathcal{O}_x$ be its orbit under the action of Step 1. The [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] states that, for a finite group $G$,
-$$|\mathcal{O}_x| = \frac{|G|}{|G_x|},$$
-where $G_x = \{g \in G : g \ast x = x\}$ is the stabiliser. In particular $|\mathcal{O}_x|$ divides $|G|$.
-
-Since $G$ is a [[Def - p-group|$p$-group]], $|G| = p^n$. The divisors of $p^n$ are exactly $1, p, p^2, \dots, p^n$. So every orbit size is one of these. An orbit size therefore falls into exactly one of two cases: it equals $1$ (the divisor $p^0$), or it is one of $p, p^2, \dots, p^n$, every one of which is divisible by $p$. There is no third possibility — this dichotomy is the whole reason a $p$-group hypothesis is so powerful in counting arguments.
-
-</details>
+> [!note]- Derivation
+> Fix $x \in N$ and let $\mathcal{O}_x$ be its orbit under the action of Step 1. The [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] states that, for a finite group $G$,
+> $$|\mathcal{O}_x| = \frac{|G|}{|G_x|},$$
+> where $G_x = \{g \in G : g \ast x = x\}$ is the stabiliser. In particular $|\mathcal{O}_x|$ divides $|G|$.
+>
+> Since $G$ is a [[Def - p-group|$p$-group]], $|G| = p^n$. The divisors of $p^n$ are exactly $1, p, p^2, \dots, p^n$. So every orbit size is one of these. An orbit size therefore falls into exactly one of two cases: it equals $1$ (the divisor $p^0$), or it is one of $p, p^2, \dots, p^n$, every one of which is divisible by $p$. There is no third possibility — this dichotomy is the whole reason a $p$-group hypothesis is so powerful in counting arguments.
 
 **Step 3: The size-$1$ orbits are exactly the elements of $N \cap Z(G)$.**
 
 An element $x \in N$ has an orbit of size $1$ if and only if $gxg^{-1} = x$ for all $g \in G$, i.e. $x \in Z(G)$. So the fixed-point set is $N \cap Z(G)$.
 
-<details>
-<summary>Derivation</summary>
-
-The orbit $\mathcal{O}_x$ has size $1$ exactly when $x$ is its only member, that is, when $g \ast x = x$ for every $g \in G$. Spelling out the action,
-$$\mathcal{O}_x = \{x\} \iff gxg^{-1} = x \text{ for all } g \in G \iff gx = xg \text{ for all } g \in G.$$
-The right-hand condition says $x$ commutes with every element of $G$, which is the defining property of the [[Def - Centraliser and Centre|centre]]: $x \in Z(G)$.
-
-Crucially, the quantifier ranges over *all* $g \in G$, not merely $g \in N$. So a fixed point is an element that is central in the **whole group $G$** — not merely central in $N$. An element $x$ with a size-$1$ orbit is therefore an element of $N$ (it was chosen there) that also lies in $Z(G)$. Hence the set of fixed points of the action is exactly
-$$N^{G} = \{x \in N : \mathcal{O}_x = \{x\}\} = N \cap Z(G).$$
-This is the step where the choice of $N$ as the acted-on set pays off: the fixed points are forced *into* $N$, because the set being acted on was $N$ in the first place. (Were one to confuse this with $Z(N)$, the elements central in $N$ alone, the argument would break — $Z(N)$ need not meet $Z(G)$ non-trivially, and is not what the count below produces.)
-
-</details>
+> [!note]- Derivation
+> The orbit $\mathcal{O}_x$ has size $1$ exactly when $x$ is its only member, that is, when $g \ast x = x$ for every $g \in G$. Spelling out the action,
+> $$\mathcal{O}_x = \{x\} \iff gxg^{-1} = x \text{ for all } g \in G \iff gx = xg \text{ for all } g \in G.$$
+> The right-hand condition says $x$ commutes with every element of $G$, which is the defining property of the [[Def - Centraliser and Centre|centre]]: $x \in Z(G)$.
+>
+> Crucially, the quantifier ranges over *all* $g \in G$, not merely $g \in N$. So a fixed point is an element that is central in the **whole group $G$** — not merely central in $N$. An element $x$ with a size-$1$ orbit is therefore an element of $N$ (it was chosen there) that also lies in $Z(G)$. Hence the set of fixed points of the action is exactly
+> $$N^{G} = \{x \in N : \mathcal{O}_x = \{x\}\} = N \cap Z(G).$$
+> This is the step where the choice of $N$ as the acted-on set pays off: the fixed points are forced *into* $N$, because the set being acted on was $N$ in the first place. (Were one to confuse this with $Z(N)$, the elements central in $N$ alone, the argument would break — $Z(N)$ need not meet $Z(G)$ non-trivially, and is not what the count below produces.)
 
 **Step 4: Count modulo $p$ — there are at least $p$ fixed points.**
 
 The orbits partition $N$, so $|N| = |N \cap Z(G)| + (\text{multiples of } p)$. Since $p \mid |N|$, this forces $p \mid |N \cap Z(G)|$. As $e$ is a fixed point, $|N \cap Z(G)| \geq p > 1$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> The orbits of a [[Def - Group Action|group action]] are pairwise disjoint and their union is the whole set, so they partition $N$. Summing their sizes recovers $|N|$. Separate the orbits into those of size $1$ and those of size greater than $1$. By Step 3 there are exactly $|N \cap Z(G)|$ orbits of size $1$, each contributing $1$ to the total. By Step 2 every orbit of size greater than $1$ has size divisible by $p$, so their sizes sum to some multiple of $p$, say $pK$. Therefore
+> $$|N| = |N \cap Z(G)| + pK.$$
+> Now read this modulo $p$. The term $pK$ vanishes, leaving
+> $$|N \cap Z(G)| \equiv |N| \pmod p.$$
+> Next, $N$ is a subgroup of the $p$-group $G$, so by [[Thm - Lagrange's Theorem|Lagrange's theorem]] $|N|$ divides $|G| = p^n$, making $|N|$ a power of $p$. The hypothesis $N \neq \{e\}$ rules out $|N| = p^0 = 1$, so $|N| = p^k$ with $k \geq 1$, and in particular $p \mid |N|$, i.e. $|N| \equiv 0 \pmod p$. Combining,
+> $$|N \cap Z(G)| \equiv 0 \pmod p.$$
+> Finally, $N \cap Z(G)$ is not empty: the identity $e$ lies in $N$ (it is a subgroup) and in $Z(G)$ (it commutes with everything), so $e \in N \cap Z(G)$ and $|N \cap Z(G)| \geq 1$. A positive integer that is divisible by $p$ is at least $p$. Since $p \geq 2$, we conclude
+> $$|N \cap Z(G)| \geq p > 1,$$
+> so $N \cap Z(G)$ contains an element other than $e$. Hence $N \cap Z(G) \neq \{e\}$. $\blacksquare$
 
-The orbits of a [[Def - Group Action|group action]] are pairwise disjoint and their union is the whole set, so they partition $N$. Summing their sizes recovers $|N|$. Separate the orbits into those of size $1$ and those of size greater than $1$. By Step 3 there are exactly $|N \cap Z(G)|$ orbits of size $1$, each contributing $1$ to the total. By Step 2 every orbit of size greater than $1$ has size divisible by $p$, so their sizes sum to some multiple of $p$, say $pK$. Therefore
-$$|N| = |N \cap Z(G)| + pK.$$
-Now read this modulo $p$. The term $pK$ vanishes, leaving
-$$|N \cap Z(G)| \equiv |N| \pmod p.$$
-Next, $N$ is a subgroup of the $p$-group $G$, so by [[Thm - Lagrange's Theorem|Lagrange's theorem]] $|N|$ divides $|G| = p^n$, making $|N|$ a power of $p$. The hypothesis $N \neq \{e\}$ rules out $|N| = p^0 = 1$, so $|N| = p^k$ with $k \geq 1$, and in particular $p \mid |N|$, i.e. $|N| \equiv 0 \pmod p$. Combining,
-$$|N \cap Z(G)| \equiv 0 \pmod p.$$
-Finally, $N \cap Z(G)$ is not empty: the identity $e$ lies in $N$ (it is a subgroup) and in $Z(G)$ (it commutes with everything), so $e \in N \cap Z(G)$ and $|N \cap Z(G)| \geq 1$. A positive integer that is divisible by $p$ is at least $p$. Since $p \geq 2$, we conclude
-$$|N \cap Z(G)| \geq p > 1,$$
-so $N \cap Z(G)$ contains an element other than $e$. Hence $N \cap Z(G) \neq \{e\}$. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $G$ be a finite $p$-group, $|G| = p^n$, and let $N \trianglelefteq G$ with $N \neq \{e\}$.
-
-**The action.** Define $\ast : G \times N \to N$ by $g \ast n = gng^{-1}$. Since $N \trianglelefteq G$, the [[Def - Normal Subgroup|normality]] condition $gng^{-1} \in N$ makes this a well-defined function into $N$, and the identities $e \ast n = n$ and $g \ast (h \ast n) = (gh) \ast n$ hold because conjugation is an action of $G$ on $G$ restricted to the invariant subset $N$. So $G$ acts on the set $N$.
-
-**Orbit sizes.** For $x \in N$ with orbit $\mathcal{O}_x$, the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] gives $|\mathcal{O}_x| = |G|/|G_x|$, so $|\mathcal{O}_x|$ divides $|G| = p^n$ and is thus a power of $p$. Every orbit therefore has size $1$ or a size divisible by $p$.
-
-**Fixed points.** The orbit $\mathcal{O}_x$ has size $1$ if and only if $gxg^{-1} = x$ for all $g \in G$, i.e. if and only if $x$ commutes with every element of $G$, i.e. if and only if $x \in Z(G)$. Since $x \in N$, the set of size-$1$ orbits corresponds exactly to $N \cap Z(G)$.
-
-**Counting modulo $p$.** The orbits partition $N$, so summing orbit sizes,
-$$|N| = |N \cap Z(G)| + pK$$
-for some integer $K \geq 0$ (the size-$1$ orbits contribute $|N \cap Z(G)|$; the larger orbits contribute a sum of multiples of $p$). Hence $|N \cap Z(G)| \equiv |N| \pmod p$.
-
-By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|N|$ divides $|G| = p^n$, so $|N|$ is a power of $p$; as $N \neq \{e\}$, $|N| \neq 1$, so $p \mid |N|$. Therefore $|N \cap Z(G)| \equiv 0 \pmod p$.
-
-Finally $e \in N \cap Z(G)$, so $|N \cap Z(G)| \geq 1$; being a positive multiple of $p \geq 2$, it is at least $p > 1$. Hence $N \cap Z(G)$ contains a non-identity element, and $N \cap Z(G) \neq \{e\}$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $G$ be a finite $p$-group, $|G| = p^n$, and let $N \trianglelefteq G$ with $N \neq \{e\}$.
+>
+> **The action.** Define $\ast : G \times N \to N$ by $g \ast n = gng^{-1}$. Since $N \trianglelefteq G$, the [[Def - Normal Subgroup|normality]] condition $gng^{-1} \in N$ makes this a well-defined function into $N$, and the identities $e \ast n = n$ and $g \ast (h \ast n) = (gh) \ast n$ hold because conjugation is an action of $G$ on $G$ restricted to the invariant subset $N$. So $G$ acts on the set $N$.
+>
+> **Orbit sizes.** For $x \in N$ with orbit $\mathcal{O}_x$, the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] gives $|\mathcal{O}_x| = |G|/|G_x|$, so $|\mathcal{O}_x|$ divides $|G| = p^n$ and is thus a power of $p$. Every orbit therefore has size $1$ or a size divisible by $p$.
+>
+> **Fixed points.** The orbit $\mathcal{O}_x$ has size $1$ if and only if $gxg^{-1} = x$ for all $g \in G$, i.e. if and only if $x$ commutes with every element of $G$, i.e. if and only if $x \in Z(G)$. Since $x \in N$, the set of size-$1$ orbits corresponds exactly to $N \cap Z(G)$.
+>
+> **Counting modulo $p$.** The orbits partition $N$, so summing orbit sizes,
+> $$|N| = |N \cap Z(G)| + pK$$
+> for some integer $K \geq 0$ (the size-$1$ orbits contribute $|N \cap Z(G)|$; the larger orbits contribute a sum of multiples of $p$). Hence $|N \cap Z(G)| \equiv |N| \pmod p$.
+>
+> By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|N|$ divides $|G| = p^n$, so $|N|$ is a power of $p$; as $N \neq \{e\}$, $|N| \neq 1$, so $p \mid |N|$. Therefore $|N \cap Z(G)| \equiv 0 \pmod p$.
+>
+> Finally $e \in N \cap Z(G)$, so $|N \cap Z(G)| \geq 1$; being a positive multiple of $p \geq 2$, it is at least $p > 1$. Hence $N \cap Z(G)$ contains a non-identity element, and $N \cap Z(G) \neq \{e\}$. $\blacksquare$
 
 ---
 

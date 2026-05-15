@@ -65,33 +65,17 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Factor $132$ and write the Sylow constraints, assuming $G$ is simple (so no $n_p = 1$). For $p = 11$ you get a single value; for $p = 3$ you get *two* admissible values. The two-valued case is where the difficulty lies.
 
-Factor $132$ and write the Sylow constraints, assuming $G$ is simple (so no $n_p = 1$). For $p = 11$ you get a single value; for $p = 3$ you get *two* admissible values. The two-valued case is where the difficulty lies.
+> [!note]- Hint 2
+> Try element-counting straight away with $n_{11} = 12$ and *each* candidate for $n_3$. With the larger candidate the counts overflow $|G|$ — good. With the smaller candidate $n_3 = 4$ they do not. So $n_3 = 4$ must be eliminated by a *different* tactic before counting can finish.
 
-</details>
+> [!note]- Hint 3
+> To kill $n_3 = 4$: $G$ acts by conjugation on its $4$ Sylow $3$-subgroups, giving $\varphi : G \to S_4$. The kernel is normal ([[Thm - Coset Action and the Normal Core|normal core]]); the action is non-trivial ([[Thm - Sylow's Theorems|Sylow II]] makes it transitive on $4 > 1$ points), so by simplicity the kernel is trivial, and $G$ embeds in $S_4$ by the [[Thm - First Isomorphism Theorem|first isomorphism theorem]]. But $|S_4| = 24$ and $|G| = 132$. Can a group of order $132$ embed in a group of order $24$?
 
-<details>
-<summary>Hint 2</summary>
-
-Try element-counting straight away with $n_{11} = 12$ and *each* candidate for $n_3$. With the larger candidate the counts overflow $|G|$ — good. With the smaller candidate $n_3 = 4$ they do not. So $n_3 = 4$ must be eliminated by a *different* tactic before counting can finish.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-To kill $n_3 = 4$: $G$ acts by conjugation on its $4$ Sylow $3$-subgroups, giving $\varphi : G \to S_4$. The kernel is normal ([[Thm - Coset Action and the Normal Core|normal core]]); the action is non-trivial ([[Thm - Sylow's Theorems|Sylow II]] makes it transitive on $4 > 1$ points), so by simplicity the kernel is trivial, and $G$ embeds in $S_4$ by the [[Thm - First Isomorphism Theorem|first isomorphism theorem]]. But $|S_4| = 24$ and $|G| = 132$. Can a group of order $132$ embed in a group of order $24$?
-
-</details>
-
-<details>
-<summary>Hint 4</summary>
-
-So $n_3 = 22$. Now element-count: $n_{11} = 12$ gives $12 \cdot (11-1) = 120$ elements of order $11$; $n_3 = 22$ gives $22 \cdot (3-1) = 44$ elements of order $3$. These sets are disjoint. Add them and compare with $|G| = 132$.
-
-</details>
+> [!note]- Hint 4
+> So $n_3 = 22$. Now element-count: $n_{11} = 12$ gives $12 \cdot (11-1) = 120$ elements of order $11$; $n_3 = 22$ gives $22 \cdot (3-1) = 44$ elements of order $3$. These sets are disjoint. Add them and compare with $|G| = 132$.
 
 ---
 
@@ -103,95 +87,75 @@ The plan is a proof by contradiction in three stages: pin $n_{11} = 12$; pin $n_
 
 Assume $G$ is simple, so no $n_p = 1$. For $p = 11$ the constraints $n_{11} \equiv 1 \pmod{11}$, $n_{11} \mid 12$ leave $\{1, 12\}$; deleting $1$ gives $n_{11} = 12$. Since $11$ appears to the first power, this gives $12 \cdot 10 = 120$ elements of order $11$.
 
-<details>
-<summary>Derivation</summary>
-
-Factor $|G| = 132 = 2^2 \cdot 3 \cdot 11$. Suppose for contradiction that $G$ is [[Def - Simple Group|simple]]. If any $n_p = 1$, the unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] would be [[Thm - A Unique Sylow Subgroup is Normal|normal]] and proper non-trivial (its order is $p^a$ with $1 < p^a < 132$), contradicting simplicity. So
-$$n_p \neq 1 \quad \text{for all } p \in \{2, 3, 11\}.$$
-
-*The prime $11$.* With respect to $11$, $|G| = 11^1 \cdot 12$, so $m = 12$. [[Thm - Sylow's Theorems|Sylow III]] gives $n_{11} \mid 12$ and $n_{11} \equiv 1 \pmod{11}$. The divisors of $12$ are $1, 2, 3, 4, 6, 12$; modulo $11$ these are $1, 2, 3, 4, 6, 1$, so only $1$ and $12$ are $\equiv 1$. The constraints leave $n_{11} \in \{1, 12\}$, and simplicity deletes $1$, so
-$$n_{11} = 12.$$
-
-Since $11$ divides $132$ but $11^2 = 121$ does not, the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: each Sylow $11$-subgroup has order $11$, distinct ones meet only in $\{e\}$, and the number of elements of order $11$ is exactly
-$$n_{11}(11 - 1) = 12 \cdot 10 = 120.$$
-
-</details>
+> [!note]- Derivation
+> Factor $|G| = 132 = 2^2 \cdot 3 \cdot 11$. Suppose for contradiction that $G$ is [[Def - Simple Group|simple]]. If any $n_p = 1$, the unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] would be [[Thm - A Unique Sylow Subgroup is Normal|normal]] and proper non-trivial (its order is $p^a$ with $1 < p^a < 132$), contradicting simplicity. So
+> $$n_p \neq 1 \quad \text{for all } p \in \{2, 3, 11\}.$$
+>
+> *The prime $11$.* With respect to $11$, $|G| = 11^1 \cdot 12$, so $m = 12$. [[Thm - Sylow's Theorems|Sylow III]] gives $n_{11} \mid 12$ and $n_{11} \equiv 1 \pmod{11}$. The divisors of $12$ are $1, 2, 3, 4, 6, 12$; modulo $11$ these are $1, 2, 3, 4, 6, 1$, so only $1$ and $12$ are $\equiv 1$. The constraints leave $n_{11} \in \{1, 12\}$, and simplicity deletes $1$, so
+> $$n_{11} = 12.$$
+>
+> Since $11$ divides $132$ but $11^2 = 121$ does not, the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: each Sylow $11$-subgroup has order $11$, distinct ones meet only in $\{e\}$, and the number of elements of order $11$ is exactly
+> $$n_{11}(11 - 1) = 12 \cdot 10 = 120.$$
 
 **Step 2: The Sylow constraints leave $n_3 \in \{4, 22\}$.**
 
 For $p = 3$ the constraints $n_3 \equiv 1 \pmod 3$, $n_3 \mid 44$ leave $\{1, 4, 22\}$; simplicity deletes $1$, leaving the two candidates $n_3 \in \{4, 22\}$.
 
-<details>
-<summary>Derivation</summary>
-
-With respect to the prime $3$, $|G| = 3^1 \cdot 44$, so $m = 44$. [[Thm - Sylow's Theorems|Sylow III]] gives $n_3 \mid 44$ and $n_3 \equiv 1 \pmod 3$.
-
-The divisors of $44 = 2^2 \cdot 11$ are $1, 2, 4, 11, 22, 44$. Reducing modulo $3$:
-$$1 \equiv 1,\quad 2 \equiv 2,\quad 4 \equiv 1,\quad 11 \equiv 2,\quad 22 \equiv 1,\quad 44 \equiv 2.$$
-The divisors congruent to $1 \pmod 3$ are $1, 4, 22$. So the bare constraints give $n_3 \in \{1, 4, 22\}$, and simplicity deletes $1$:
-$$n_3 \in \{4, 22\}.$$
-
-Two candidates remain, and they must be separated before the argument can proceed.
-
-</details>
+> [!note]- Derivation
+> With respect to the prime $3$, $|G| = 3^1 \cdot 44$, so $m = 44$. [[Thm - Sylow's Theorems|Sylow III]] gives $n_3 \mid 44$ and $n_3 \equiv 1 \pmod 3$.
+>
+> The divisors of $44 = 2^2 \cdot 11$ are $1, 2, 4, 11, 22, 44$. Reducing modulo $3$:
+> $$1 \equiv 1,\quad 2 \equiv 2,\quad 4 \equiv 1,\quad 11 \equiv 2,\quad 22 \equiv 1,\quad 44 \equiv 2.$$
+> The divisors congruent to $1 \pmod 3$ are $1, 4, 22$. So the bare constraints give $n_3 \in \{1, 4, 22\}$, and simplicity deletes $1$:
+> $$n_3 \in \{4, 22\}.$$
+>
+> Two candidates remain, and they must be separated before the argument can proceed.
 
 **Step 3: The value $n_3 = 4$ is impossible — it would embed $G$ into $S_4$.**
 
 If $n_3 = 4$, the conjugation action of $G$ on its $4$ Sylow $3$-subgroups is faithful (its kernel is normal, hence trivial by simplicity, since the action is non-trivial). The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] then embeds $G$ into $S_4$. But $|S_4| = 24$ and $132 \nmid 24$ — impossible. So $n_3 = 22$.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose, towards eliminating it, that $n_3 = 4$. Let $G$ act on the set $\operatorname{Syl}_3(G)$ of its $4$ Sylow $3$-subgroups by conjugation, $g \cdot P = gPg^{-1}$. This action is a [[Def - Homomorphism|homomorphism]]
-$$\varphi : G \longrightarrow \operatorname{Sym}(\operatorname{Syl}_3(G)) \cong S_4.$$
-
-By the [[Thm - Coset Action and the Normal Core|normal-core principle]], the kernel $\ker\varphi$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$. Since $G$ is [[Def - Simple Group|simple]], $\ker\varphi$ is either $\{e\}$ or $G$.
-
-It is not $G$: that would mean $\varphi$ is trivial, i.e. $gPg^{-1} = P$ for every $g$ and every Sylow $3$-subgroup $P$. But by [[Thm - Sylow's Theorems|Sylow II]] the conjugation action on $\operatorname{Syl}_3(G)$ is *transitive*, and with $n_3 = 4 > 1$ Sylow subgroups a transitive action cannot fix every point. So $\varphi$ is non-trivial and $\ker\varphi \neq G$.
-
-Therefore $\ker\varphi = \{e\}$: the homomorphism $\varphi$ is injective. By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G \cong \varphi(G) = \operatorname{im}\varphi$, which is a subgroup of $S_4$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]], the order of a subgroup divides the order of the group, so
-$$|G| \;\Big|\; |S_4| = 4! = 24.$$
-But $|G| = 132$, and $132 \nmid 24$ (indeed $132 > 24$). This is a contradiction.
-
-Hence $n_3 = 4$ is impossible, and by Step 2 the only surviving value is
-$$n_3 = 22.$$
-
-</details>
+> [!note]- Derivation
+> Suppose, towards eliminating it, that $n_3 = 4$. Let $G$ act on the set $\operatorname{Syl}_3(G)$ of its $4$ Sylow $3$-subgroups by conjugation, $g \cdot P = gPg^{-1}$. This action is a [[Def - Homomorphism|homomorphism]]
+> $$\varphi : G \longrightarrow \operatorname{Sym}(\operatorname{Syl}_3(G)) \cong S_4.$$
+>
+> By the [[Thm - Coset Action and the Normal Core|normal-core principle]], the kernel $\ker\varphi$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$. Since $G$ is [[Def - Simple Group|simple]], $\ker\varphi$ is either $\{e\}$ or $G$.
+>
+> It is not $G$: that would mean $\varphi$ is trivial, i.e. $gPg^{-1} = P$ for every $g$ and every Sylow $3$-subgroup $P$. But by [[Thm - Sylow's Theorems|Sylow II]] the conjugation action on $\operatorname{Syl}_3(G)$ is *transitive*, and with $n_3 = 4 > 1$ Sylow subgroups a transitive action cannot fix every point. So $\varphi$ is non-trivial and $\ker\varphi \neq G$.
+>
+> Therefore $\ker\varphi = \{e\}$: the homomorphism $\varphi$ is injective. By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G \cong \varphi(G) = \operatorname{im}\varphi$, which is a subgroup of $S_4$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]], the order of a subgroup divides the order of the group, so
+> $$|G| \;\Big|\; |S_4| = 4! = 24.$$
+> But $|G| = 132$, and $132 \nmid 24$ (indeed $132 > 24$). This is a contradiction.
+>
+> Hence $n_3 = 4$ is impossible, and by Step 2 the only surviving value is
+> $$n_3 = 22.$$
 
 **Step 4: With $n_3 = 22$ there are $44$ elements of order $3$; the count overflows $G$.**
 
 By the [[Ex - Counting elements of prime order with Sylow subgroups|counting fact]], $n_3 = 22$ gives $22 \cdot 2 = 44$ elements of order $3$. Together with the $120$ elements of order $11$, and these sets being disjoint, $G$ would contain at least $120 + 44 = 164$ elements — but $|G| = 132$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> The prime $3$ divides $|G| = 132$ but $3^2 = 9$ does not, so the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: each Sylow $3$-subgroup has order $3$, distinct ones meet only in $\{e\}$, and the number of elements of order $3$ is exactly
+> $$n_3(3 - 1) = 22 \cdot 2 = 44.$$
+>
+> Let $A$ be the set of elements of order $11$ (size $120$, by Step 1) and $B$ the set of elements of order $3$ (size $44$). An element has a single order and $11 \neq 3$, so $A \cap B = \emptyset$, and neither set contains the identity. Hence
+> $$|A \cup B| = |A| + |B| = 120 + 44 = 164.$$
+> But $A \cup B \subseteq G$, so $164 = |A \cup B| \leq |G| = 132$ — that is, $164 \leq 132$, a contradiction.
+>
+> Every line since Step 1 used the standing assumption that $G$ is [[Def - Simple Group|simple]]; the contradiction refutes it. Therefore $G$ is **not simple**: no group of order $132$ is simple. $\blacksquare$
 
-The prime $3$ divides $|G| = 132$ but $3^2 = 9$ does not, so the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]] applies: each Sylow $3$-subgroup has order $3$, distinct ones meet only in $\{e\}$, and the number of elements of order $3$ is exactly
-$$n_3(3 - 1) = 22 \cdot 2 = 44.$$
-
-Let $A$ be the set of elements of order $11$ (size $120$, by Step 1) and $B$ the set of elements of order $3$ (size $44$). An element has a single order and $11 \neq 3$, so $A \cap B = \emptyset$, and neither set contains the identity. Hence
-$$|A \cup B| = |A| + |B| = 120 + 44 = 164.$$
-But $A \cup B \subseteq G$, so $164 = |A \cup B| \leq |G| = 132$ — that is, $164 \leq 132$, a contradiction.
-
-Every line since Step 1 used the standing assumption that $G$ is [[Def - Simple Group|simple]]; the contradiction refutes it. Therefore $G$ is **not simple**: no group of order $132$ is simple. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $|G| = 132 = 2^2 \cdot 3 \cdot 11$ and suppose, for contradiction, that $G$ is [[Def - Simple Group|simple]]. Then no $n_p = 1$, since a unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] would be a proper non-trivial [[Thm - A Unique Sylow Subgroup is Normal|normal subgroup]].
-
-*The prime $11$.* Here $|G| = 11^1 \cdot 12$. By [[Thm - Sylow's Theorems|Sylow III]], $n_{11} \mid 12$ and $n_{11} \equiv 1 \pmod{11}$, leaving $n_{11} \in \{1, 12\}$; since $n_{11} \neq 1$, $n_{11} = 12$. As $11^2 \nmid 132$, distinct Sylow $11$-subgroups (cyclic of order $11$) meet only in $\{e\}$, so $G$ has exactly $n_{11}(11-1) = 12 \cdot 10 = 120$ elements of order $11$.
-
-*The prime $3$.* Here $|G| = 3^1 \cdot 44$. By Sylow III, $n_3 \mid 44$ and $n_3 \equiv 1 \pmod 3$; the divisors of $44$ congruent to $1$ modulo $3$ are $1, 4, 22$, so $n_3 \in \{4, 22\}$ after deleting $1$.
-
-*Eliminate $n_3 = 4$.* Suppose $n_3 = 4$. The conjugation action of $G$ on its $4$ Sylow $3$-subgroups gives $\varphi : G \to S_4$. By the [[Thm - Coset Action and the Normal Core|normal-core principle]], $\ker\varphi \trianglelefteq G$; simplicity forces $\ker\varphi \in \{\{e\}, G\}$. By [[Thm - Sylow's Theorems|Sylow II]] the action is transitive on $4 > 1$ points, so $\varphi$ is non-trivial and $\ker\varphi \neq G$; hence $\ker\varphi = \{e\}$. By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G$ embeds in $S_4$, so $|G| = 132$ divides $|S_4| = 24$ by [[Thm - Lagrange's Theorem|Lagrange]] — impossible. So $n_3 = 22$.
-
-*Count.* As $3^2 \nmid 132$, $G$ has exactly $n_3(3-1) = 22 \cdot 2 = 44$ elements of order $3$. The order-$11$ and order-$3$ elements form disjoint sets, so $G$ has at least $120 + 44 = 164$ elements. But $|G| = 132 < 164$ — a contradiction.
-
-Therefore $G$ is not simple. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $|G| = 132 = 2^2 \cdot 3 \cdot 11$ and suppose, for contradiction, that $G$ is [[Def - Simple Group|simple]]. Then no $n_p = 1$, since a unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] would be a proper non-trivial [[Thm - A Unique Sylow Subgroup is Normal|normal subgroup]].
+>
+> *The prime $11$.* Here $|G| = 11^1 \cdot 12$. By [[Thm - Sylow's Theorems|Sylow III]], $n_{11} \mid 12$ and $n_{11} \equiv 1 \pmod{11}$, leaving $n_{11} \in \{1, 12\}$; since $n_{11} \neq 1$, $n_{11} = 12$. As $11^2 \nmid 132$, distinct Sylow $11$-subgroups (cyclic of order $11$) meet only in $\{e\}$, so $G$ has exactly $n_{11}(11-1) = 12 \cdot 10 = 120$ elements of order $11$.
+>
+> *The prime $3$.* Here $|G| = 3^1 \cdot 44$. By Sylow III, $n_3 \mid 44$ and $n_3 \equiv 1 \pmod 3$; the divisors of $44$ congruent to $1$ modulo $3$ are $1, 4, 22$, so $n_3 \in \{4, 22\}$ after deleting $1$.
+>
+> *Eliminate $n_3 = 4$.* Suppose $n_3 = 4$. The conjugation action of $G$ on its $4$ Sylow $3$-subgroups gives $\varphi : G \to S_4$. By the [[Thm - Coset Action and the Normal Core|normal-core principle]], $\ker\varphi \trianglelefteq G$; simplicity forces $\ker\varphi \in \{\{e\}, G\}$. By [[Thm - Sylow's Theorems|Sylow II]] the action is transitive on $4 > 1$ points, so $\varphi$ is non-trivial and $\ker\varphi \neq G$; hence $\ker\varphi = \{e\}$. By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G$ embeds in $S_4$, so $|G| = 132$ divides $|S_4| = 24$ by [[Thm - Lagrange's Theorem|Lagrange]] — impossible. So $n_3 = 22$.
+>
+> *Count.* As $3^2 \nmid 132$, $G$ has exactly $n_3(3-1) = 22 \cdot 2 = 44$ elements of order $3$. The order-$11$ and order-$3$ elements form disjoint sets, so $G$ has at least $120 + 44 = 164$ elements. But $|G| = 132 < 164$ — a contradiction.
+>
+> Therefore $G$ is not simple. $\blacksquare$
 
 ---
 

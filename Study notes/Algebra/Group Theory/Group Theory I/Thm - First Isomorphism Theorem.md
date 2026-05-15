@@ -113,100 +113,72 @@ Define the candidate map $f$ on cosets by applying $\varphi$ to a representative
 
 # Lemma Decomposition
 
-<details>
-<summary><strong>Lemma 1: The kernel of a homomorphism is a normal subgroup</strong></summary>
+> [!note]- Lemma 1: The kernel of a homomorphism is a normal subgroup
+> **Statement:** For any homomorphism $\varphi : G \to H$, the set $\ker\varphi$ is a subgroup of $G$, and it is normal: $x^{-1}gx \in \ker\varphi$ for all $g \in \ker\varphi$, $x \in G$.
+>
+> **Hint:** Use the subgroup criterion ($\varphi(gh^{-1}) = e_H$) for the subgroup part; for normality, compute $\varphi(x^{-1}gx)$ and watch the $\varphi(g)$ in the middle become the identity.
+>
+> **Why needed:** It guarantees $G/\ker\varphi$ is a group, so that the source of $f$ exists. (This lemma is independently the proof that "every kernel is normal".)
+>
+> > [!note]- Full proof
+> > First, $\ker\varphi$ is non-empty: $\varphi(e_G) = e_H$, so $e_G \in \ker\varphi$. For the subgroup criterion, take $g, h \in \ker\varphi$. Then
+> > $$\varphi(gh^{-1}) = \varphi(g)\,\varphi(h)^{-1} = e_H \cdot e_H^{-1} = e_H,$$
+> > so $gh^{-1} \in \ker\varphi$. Hence $\ker\varphi$ is a subgroup.
+> >
+> > For normality, take $g \in \ker\varphi$ and $x \in G$. Then
+> > $$\varphi(x^{-1}gx) = \varphi(x^{-1})\,\varphi(g)\,\varphi(x) = \varphi(x^{-1})\,e_H\,\varphi(x) = \varphi(x^{-1})\,\varphi(x) = \varphi(x^{-1}x) = \varphi(e_G) = e_H.$$
+> > So $x^{-1}gx \in \ker\varphi$, and $\ker\varphi \trianglelefteq G$.
 
-**Statement:** For any homomorphism $\varphi : G \to H$, the set $\ker\varphi$ is a subgroup of $G$, and it is normal: $x^{-1}gx \in \ker\varphi$ for all $g \in \ker\varphi$, $x \in G$.
+> [!note]- Lemma 2: Coset equality criterion
+> **Statement:** For a subgroup $N \leq G$ and elements $g, g' \in G$, the cosets are equal, $gN = g'N$, if and only if $g^{-1}g' \in N$.
+>
+> **Hint:** If $gN = g'N$ then $g' \in gN$ since $g' \in g'N$; conversely if $g^{-1}g' \in N$ then $g' = g(g^{-1}g') \in gN$ and translate.
+>
+> **Why needed:** This is the algebraic identity used in *both* directions in the proof — for well-definedness and for injectivity of $f$.
+>
+> > [!note]- Full proof
+> > ($\Rightarrow$) Suppose $gN = g'N$. Since $e \in N$, we have $g' = g'e \in g'N = gN$, so $g' = gn$ for some $n \in N$, whence $g^{-1}g' = n \in N$.
+> >
+> > ($\Leftarrow$) Suppose $g^{-1}g' = n \in N$, so $g' = gn$. Then $g'N = gnN = gN$, because $nN = N$ as $n \in N$ and $N$ is closed under multiplication. (Explicitly, $nN \subseteq N$ by closure, and $N = n(n^{-1}N) \subseteq nN$, so $nN = N$.)
 
-**Hint:** Use the subgroup criterion ($\varphi(gh^{-1}) = e_H$) for the subgroup part; for normality, compute $\varphi(x^{-1}gx)$ and watch the $\varphi(g)$ in the middle become the identity.
-
-**Why needed:** It guarantees $G/\ker\varphi$ is a group, so that the source of $f$ exists. (This lemma is independently the proof that "every kernel is normal".)
-
-<details>
-<summary>Full proof</summary>
-
-First, $\ker\varphi$ is non-empty: $\varphi(e_G) = e_H$, so $e_G \in \ker\varphi$. For the subgroup criterion, take $g, h \in \ker\varphi$. Then
-$$\varphi(gh^{-1}) = \varphi(g)\,\varphi(h)^{-1} = e_H \cdot e_H^{-1} = e_H,$$
-so $gh^{-1} \in \ker\varphi$. Hence $\ker\varphi$ is a subgroup.
-
-For normality, take $g \in \ker\varphi$ and $x \in G$. Then
-$$\varphi(x^{-1}gx) = \varphi(x^{-1})\,\varphi(g)\,\varphi(x) = \varphi(x^{-1})\,e_H\,\varphi(x) = \varphi(x^{-1})\,\varphi(x) = \varphi(x^{-1}x) = \varphi(e_G) = e_H.$$
-So $x^{-1}gx \in \ker\varphi$, and $\ker\varphi \trianglelefteq G$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Coset equality criterion</strong></summary>
-
-**Statement:** For a subgroup $N \leq G$ and elements $g, g' \in G$, the cosets are equal, $gN = g'N$, if and only if $g^{-1}g' \in N$.
-
-**Hint:** If $gN = g'N$ then $g' \in gN$ since $g' \in g'N$; conversely if $g^{-1}g' \in N$ then $g' = g(g^{-1}g') \in gN$ and translate.
-
-**Why needed:** This is the algebraic identity used in *both* directions in the proof — for well-definedness and for injectivity of $f$.
-
-<details>
-<summary>Full proof</summary>
-
-($\Rightarrow$) Suppose $gN = g'N$. Since $e \in N$, we have $g' = g'e \in g'N = gN$, so $g' = gn$ for some $n \in N$, whence $g^{-1}g' = n \in N$.
-
-($\Leftarrow$) Suppose $g^{-1}g' = n \in N$, so $g' = gn$. Then $g'N = gnN = gN$, because $nN = N$ as $n \in N$ and $N$ is closed under multiplication. (Explicitly, $nN \subseteq N$ by closure, and $N = n(n^{-1}N) \subseteq nN$, so $nN = N$.)
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: A well-defined surjective injective homomorphism is an isomorphism</strong></summary>
-
-**Statement:** A map $f : A \to B$ between groups that is a homomorphism and is bijective is an isomorphism; in particular its set-theoretic inverse is automatically a homomorphism.
-
-**Hint:** For elements $b_1, b_2 \in B$ write $b_i = f(a_i)$ and apply $f^{-1}$ to $f(a_1 a_2) = b_1 b_2$.
-
-**Why needed:** It is the final assembly step: once $f$ is shown to be a well-defined surjective injective homomorphism, this lemma upgrades it to a genuine isomorphism without further work.
-
-<details>
-<summary>Full proof</summary>
-
-A bijective homomorphism has a set-theoretic inverse $f^{-1} : B \to A$. We check $f^{-1}$ is a homomorphism. Take $b_1, b_2 \in B$ and write $b_1 = f(a_1)$, $b_2 = f(a_2)$. Since $f$ is a homomorphism, $f(a_1 a_2) = f(a_1)f(a_2) = b_1 b_2$. Applying $f^{-1}$,
-$$f^{-1}(b_1 b_2) = a_1 a_2 = f^{-1}(b_1)\,f^{-1}(b_2).$$
-So $f^{-1}$ is a homomorphism, and $f$ is an isomorphism with isomorphism inverse $f^{-1}$.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: A well-defined surjective injective homomorphism is an isomorphism
+> **Statement:** A map $f : A \to B$ between groups that is a homomorphism and is bijective is an isomorphism; in particular its set-theoretic inverse is automatically a homomorphism.
+>
+> **Hint:** For elements $b_1, b_2 \in B$ write $b_i = f(a_i)$ and apply $f^{-1}$ to $f(a_1 a_2) = b_1 b_2$.
+>
+> **Why needed:** It is the final assembly step: once $f$ is shown to be a well-defined surjective injective homomorphism, this lemma upgrades it to a genuine isomorphism without further work.
+>
+> > [!note]- Full proof
+> > A bijective homomorphism has a set-theoretic inverse $f^{-1} : B \to A$. We check $f^{-1}$ is a homomorphism. Take $b_1, b_2 \in B$ and write $b_1 = f(a_1)$, $b_2 = f(a_2)$. Since $f$ is a homomorphism, $f(a_1 a_2) = f(a_1)f(a_2) = b_1 b_2$. Applying $f^{-1}$,
+> > $$f^{-1}(b_1 b_2) = a_1 a_2 = f^{-1}(b_1)\,f^{-1}(b_2).$$
+> > So $f^{-1}$ is a homomorphism, and $f$ is an isomorphism with isomorphism inverse $f^{-1}$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-Let $\varphi : G \to H$ be a homomorphism.
-
-**Step 0 — the quotient exists.** By Lemma 1, $\ker\varphi$ is a normal subgroup of $G$, so the quotient group $G/\ker\varphi$ is defined, with multiplication $(g\ker\varphi)(g'\ker\varphi) = gg'\ker\varphi$.
-
-**Step 1 — define the map.** Define
-$$f : G/\ker\varphi \longrightarrow \operatorname{im}\varphi, \qquad f(g\ker\varphi) = \varphi(g).$$
-
-**Step 2 — $f$ is well-defined.** The rule for $f$ uses a coset representative, so we must check the output is independent of the choice. Suppose $g\ker\varphi = g'\ker\varphi$. By the coset equality criterion (Lemma 2), $g^{-1}g' \in \ker\varphi$, so $\varphi(g^{-1}g') = e_H$. Then
-$$e_H = \varphi(g^{-1}g') = \varphi(g)^{-1}\,\varphi(g'),$$
-and multiplying on the left by $\varphi(g)$ gives $\varphi(g) = \varphi(g')$, i.e. $f(g\ker\varphi) = f(g'\ker\varphi)$. Hence $f$ is well-defined. (It lands in $\operatorname{im}\varphi$ by definition of the image.)
-
-**Step 3 — $f$ is a homomorphism.** For cosets $g\ker\varphi$ and $g'\ker\varphi$,
-$$f\big((g\ker\varphi)(g'\ker\varphi)\big) = f(gg'\ker\varphi) = \varphi(gg') = \varphi(g)\,\varphi(g') = f(g\ker\varphi)\,f(g'\ker\varphi),$$
-using the definition of multiplication in the quotient and that $\varphi$ is a homomorphism.
-
-**Step 4 — $f$ is surjective.** Let $h \in \operatorname{im}\varphi$. By definition $h = \varphi(g)$ for some $g \in G$, and then $h = f(g\ker\varphi)$. So every element of $\operatorname{im}\varphi$ is in the image of $f$.
-
-**Step 5 — $f$ is injective.** Suppose $f(g\ker\varphi) = f(g'\ker\varphi)$, i.e. $\varphi(g) = \varphi(g')$. Then $\varphi(g^{-1}g') = \varphi(g)^{-1}\varphi(g') = e_H$, so $g^{-1}g' \in \ker\varphi$. By the coset equality criterion (Lemma 2), $g\ker\varphi = g'\ker\varphi$. Hence $f$ is injective.
-
-**Step 6 — conclude.** The map $f$ is a bijective homomorphism, hence by Lemma 3 an isomorphism. Therefore
-$$G/\ker\varphi \;\cong\; \operatorname{im}\varphi. \qquad \blacksquare$$
-
-</details>
+> [!note]- Complete formal proof
+> Let $\varphi : G \to H$ be a homomorphism.
+>
+> **Step 0 — the quotient exists.** By Lemma 1, $\ker\varphi$ is a normal subgroup of $G$, so the quotient group $G/\ker\varphi$ is defined, with multiplication $(g\ker\varphi)(g'\ker\varphi) = gg'\ker\varphi$.
+>
+> **Step 1 — define the map.** Define
+> $$f : G/\ker\varphi \longrightarrow \operatorname{im}\varphi, \qquad f(g\ker\varphi) = \varphi(g).$$
+>
+> **Step 2 — $f$ is well-defined.** The rule for $f$ uses a coset representative, so we must check the output is independent of the choice. Suppose $g\ker\varphi = g'\ker\varphi$. By the coset equality criterion (Lemma 2), $g^{-1}g' \in \ker\varphi$, so $\varphi(g^{-1}g') = e_H$. Then
+> $$e_H = \varphi(g^{-1}g') = \varphi(g)^{-1}\,\varphi(g'),$$
+> and multiplying on the left by $\varphi(g)$ gives $\varphi(g) = \varphi(g')$, i.e. $f(g\ker\varphi) = f(g'\ker\varphi)$. Hence $f$ is well-defined. (It lands in $\operatorname{im}\varphi$ by definition of the image.)
+>
+> **Step 3 — $f$ is a homomorphism.** For cosets $g\ker\varphi$ and $g'\ker\varphi$,
+> $$f\big((g\ker\varphi)(g'\ker\varphi)\big) = f(gg'\ker\varphi) = \varphi(gg') = \varphi(g)\,\varphi(g') = f(g\ker\varphi)\,f(g'\ker\varphi),$$
+> using the definition of multiplication in the quotient and that $\varphi$ is a homomorphism.
+>
+> **Step 4 — $f$ is surjective.** Let $h \in \operatorname{im}\varphi$. By definition $h = \varphi(g)$ for some $g \in G$, and then $h = f(g\ker\varphi)$. So every element of $\operatorname{im}\varphi$ is in the image of $f$.
+>
+> **Step 5 — $f$ is injective.** Suppose $f(g\ker\varphi) = f(g'\ker\varphi)$, i.e. $\varphi(g) = \varphi(g')$. Then $\varphi(g^{-1}g') = \varphi(g)^{-1}\varphi(g') = e_H$, so $g^{-1}g' \in \ker\varphi$. By the coset equality criterion (Lemma 2), $g\ker\varphi = g'\ker\varphi$. Hence $f$ is injective.
+>
+> **Step 6 — conclude.** The map $f$ is a bijective homomorphism, hence by Lemma 3 an isomorphism. Therefore
+> $$G/\ker\varphi \;\cong\; \operatorname{im}\varphi. \qquad \blacksquare$$
 
 ---
 

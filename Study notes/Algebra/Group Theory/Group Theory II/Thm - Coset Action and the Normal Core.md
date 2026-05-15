@@ -143,140 +143,96 @@ Let $G$ act on $G/H$ by $g\cdot xH = gxH$; this is a homomorphism $\rho : G \to 
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: Left multiplication on cosets is a well-defined action</strong></summary>
+> [!note]- Lemma 1: Left multiplication on cosets is a well-defined action
+> **Statement:** For $H \leq G$, the rule $g\cdot(xH) = gxH$ is a well-defined [[Def - Group Action|action]] of $G$ on the set $G/H$ of left cosets.
+>
+> **Hint:** Check independence of the representative first, then the two action axioms.
+>
+> **Why needed:** It produces the homomorphism $\rho : G \to \operatorname{Sym}(G/H)$ that is the subject of the theorem.
+>
+> > [!note]- Full proof
+> > *Well-defined.* Suppose $xH = x'H$, so $x' = xh$ for some $h \in H$. Then $gx'H = g(xh)H = gx(hH) = gxH$, since $hH = H$. So $g\cdot(xH)$ does not depend on the chosen representative.
+> >
+> > *Identity axiom:* $e\cdot(xH) = exH = xH$.
+> >
+> > *Associativity axiom:* $g_1\cdot(g_2\cdot(xH)) = g_1\cdot(g_2 xH) = g_1 g_2 xH = (g_1 g_2)\cdot(xH)$, by associativity in $G$.
+> >
+> > Hence $g\cdot(xH) = gxH$ is an action of $G$ on $G/H$.
 
-**Statement:** For $H \leq G$, the rule $g\cdot(xH) = gxH$ is a well-defined [[Def - Group Action|action]] of $G$ on the set $G/H$ of left cosets.
+> [!note]- Lemma 2: An element fixes the coset $xH$ if and only if it lies in $xHx^{-1}$
+> **Statement:** For the coset action, $g$ fixes the coset $xH$ (that is, $gxH = xH$) if and only if $g \in xHx^{-1}$.
+>
+> **Hint:** Rearrange $gxH = xH$ by left-multiplying with $x^{-1}$; every step is an equivalence.
+>
+> **Why needed:** Intersecting this condition over all $x$ gives the kernel of the action.
+>
+> > [!note]- Full proof
+> > The element $g$ fixes $xH$ if and only if $gxH = xH$. Left-multiplying both sides by $x^{-1}$, this holds if and only if $x^{-1}gxH = H$. A coset $yH$ equals $H$ if and only if $y \in H$, so this holds if and only if $x^{-1}gx \in H$. Finally $x^{-1}gx \in H \iff g \in xHx^{-1}$. Every implication is reversible, so $g$ fixes $xH \iff g \in xHx^{-1}$.
 
-**Hint:** Check independence of the representative first, then the two action axioms.
+> [!note]- Lemma 3: The kernel of the coset action is the intersection of all conjugates of $H$
+> **Statement:** The kernel of $\rho : G \to \operatorname{Sym}(G/H)$ is $\ker\rho = \bigcap_{x\in G} xHx^{-1}$.
+>
+> **Hint:** An element is in the kernel if and only if it fixes *every* coset; apply Lemma 2 to each.
+>
+> **Why needed:** It is the explicit description of the normal subgroup the construction produces.
+>
+> > [!note]- Full proof
+> > By definition $g \in \ker\rho$ if and only if $\rho(g)$ is the identity permutation of $G/H$, i.e. if and only if $g$ fixes every coset $xH$. By Lemma 2, $g$ fixes $xH$ if and only if $g \in xHx^{-1}$. Therefore $g \in \ker\rho$ if and only if $g \in xHx^{-1}$ for *all* $x \in G$, which is exactly $g \in \bigcap_{x\in G} xHx^{-1}$. Hence $\ker\rho = \bigcap_{x\in G} xHx^{-1}$.
 
-**Why needed:** It produces the homomorphism $\rho : G \to \operatorname{Sym}(G/H)$ that is the subject of the theorem.
+> [!note]- Lemma 4: The normal core is the largest normal subgroup of $G$ contained in $H$
+> **Statement:** $\operatorname{Core}_G(H) = \bigcap_{x\in G} xHx^{-1}$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$, is contained in $H$, and contains every normal subgroup of $G$ that is contained in $H$.
+>
+> **Hint:** Normality and containment in $H$ are quick; for "largest", use normality of $N$ to put $N$ inside every conjugate of $H$.
+>
+> **Why needed:** It justifies calling the kernel the *normal core* and explains exactly which normal subgroup is produced.
+>
+> > [!note]- Full proof
+> > *Normal.* As the kernel of the homomorphism $\rho$ (Lemma 3), $\operatorname{Core}_G(H) \trianglelefteq G$. (Directly: conjugating $\bigcap_x xHx^{-1}$ by $g$ sends it to $\bigcap_x (gx)H(gx)^{-1}$, the same intersection reindexed.)
+> >
+> > *Contained in $H$.* The term for $x = e$ is $eHe^{-1} = H$, and an intersection is contained in each of its terms, so $\operatorname{Core}_G(H) \leq H$.
+> >
+> > *Largest.* Let $N \trianglelefteq G$ with $N \leq H$. For any $x \in G$, normality of $N$ gives $N = xNx^{-1}$, and $N \leq H$ gives $xNx^{-1} \leq xHx^{-1}$; hence $N \leq xHx^{-1}$ for every $x$. Therefore $N \leq \bigcap_x xHx^{-1} = \operatorname{Core}_G(H)$.
 
-<details>
-<summary>Full proof</summary>
-
-*Well-defined.* Suppose $xH = x'H$, so $x' = xh$ for some $h \in H$. Then $gx'H = g(xh)H = gx(hH) = gxH$, since $hH = H$. So $g\cdot(xH)$ does not depend on the chosen representative.
-
-*Identity axiom:* $e\cdot(xH) = exH = xH$.
-
-*Associativity axiom:* $g_1\cdot(g_2\cdot(xH)) = g_1\cdot(g_2 xH) = g_1 g_2 xH = (g_1 g_2)\cdot(xH)$, by associativity in $G$.
-
-Hence $g\cdot(xH) = gxH$ is an action of $G$ on $G/H$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: An element fixes the coset $xH$ if and only if it lies in $xHx^{-1}$</strong></summary>
-
-**Statement:** For the coset action, $g$ fixes the coset $xH$ (that is, $gxH = xH$) if and only if $g \in xHx^{-1}$.
-
-**Hint:** Rearrange $gxH = xH$ by left-multiplying with $x^{-1}$; every step is an equivalence.
-
-**Why needed:** Intersecting this condition over all $x$ gives the kernel of the action.
-
-<details>
-<summary>Full proof</summary>
-
-The element $g$ fixes $xH$ if and only if $gxH = xH$. Left-multiplying both sides by $x^{-1}$, this holds if and only if $x^{-1}gxH = H$. A coset $yH$ equals $H$ if and only if $y \in H$, so this holds if and only if $x^{-1}gx \in H$. Finally $x^{-1}gx \in H \iff g \in xHx^{-1}$. Every implication is reversible, so $g$ fixes $xH \iff g \in xHx^{-1}$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: The kernel of the coset action is the intersection of all conjugates of $H$</strong></summary>
-
-**Statement:** The kernel of $\rho : G \to \operatorname{Sym}(G/H)$ is $\ker\rho = \bigcap_{x\in G} xHx^{-1}$.
-
-**Hint:** An element is in the kernel if and only if it fixes *every* coset; apply Lemma 2 to each.
-
-**Why needed:** It is the explicit description of the normal subgroup the construction produces.
-
-<details>
-<summary>Full proof</summary>
-
-By definition $g \in \ker\rho$ if and only if $\rho(g)$ is the identity permutation of $G/H$, i.e. if and only if $g$ fixes every coset $xH$. By Lemma 2, $g$ fixes $xH$ if and only if $g \in xHx^{-1}$. Therefore $g \in \ker\rho$ if and only if $g \in xHx^{-1}$ for *all* $x \in G$, which is exactly $g \in \bigcap_{x\in G} xHx^{-1}$. Hence $\ker\rho = \bigcap_{x\in G} xHx^{-1}$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 4: The normal core is the largest normal subgroup of $G$ contained in $H$</strong></summary>
-
-**Statement:** $\operatorname{Core}_G(H) = \bigcap_{x\in G} xHx^{-1}$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$, is contained in $H$, and contains every normal subgroup of $G$ that is contained in $H$.
-
-**Hint:** Normality and containment in $H$ are quick; for "largest", use normality of $N$ to put $N$ inside every conjugate of $H$.
-
-**Why needed:** It justifies calling the kernel the *normal core* and explains exactly which normal subgroup is produced.
-
-<details>
-<summary>Full proof</summary>
-
-*Normal.* As the kernel of the homomorphism $\rho$ (Lemma 3), $\operatorname{Core}_G(H) \trianglelefteq G$. (Directly: conjugating $\bigcap_x xHx^{-1}$ by $g$ sends it to $\bigcap_x (gx)H(gx)^{-1}$, the same intersection reindexed.)
-
-*Contained in $H$.* The term for $x = e$ is $eHe^{-1} = H$, and an intersection is contained in each of its terms, so $\operatorname{Core}_G(H) \leq H$.
-
-*Largest.* Let $N \trianglelefteq G$ with $N \leq H$. For any $x \in G$, normality of $N$ gives $N = xNx^{-1}$, and $N \leq H$ gives $xNx^{-1} \leq xHx^{-1}$; hence $N \leq xHx^{-1}$ for every $x$. Therefore $N \leq \bigcap_x xHx^{-1} = \operatorname{Core}_G(H)$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 5: Intersecting a simple image with $A_n$</strong></summary>
-
-**Statement:** Let $G$ be a non-abelian [[Def - Simple Group|simple]] group and $\rho : G \to S_n$ an injective homomorphism. Then $\operatorname{im}\rho \leq A_n$.
-
-**Hint:** $\operatorname{im}\rho\cap A_n$ is normal in $\operatorname{im}\rho \cong G$; rule out the trivial case using the second isomorphism theorem.
-
-**Why needed:** It is the step that upgrades the corollary's embedding from $S_n$ to $A_n$, which is what forces $n \geq 5$.
-
-<details>
-<summary>Full proof</summary>
-
-Since $A_n \trianglelefteq S_n$, the intersection $\operatorname{im}\rho \cap A_n$ is normal in $\operatorname{im}\rho$. As $\rho$ is injective, $\operatorname{im}\rho \cong G$ is simple, so $\operatorname{im}\rho\cap A_n$ is either $\{e\}$ or $\operatorname{im}\rho$.
-
-Suppose it is $\{e\}$. By the second isomorphism theorem,
-$$\operatorname{im}\rho \;\cong\; \frac{\operatorname{im}\rho}{\operatorname{im}\rho\cap A_n} \;\cong\; \frac{\operatorname{im}\rho\,A_n}{A_n} \;\leq\; \frac{S_n}{A_n} \;\cong\; C_2.$$
-Then $\operatorname{im}\rho$, hence $G$, is a subgroup of $C_2$ — abelian, contradicting that $G$ is non-abelian. So $\operatorname{im}\rho\cap A_n = \operatorname{im}\rho$, i.e. $\operatorname{im}\rho \leq A_n$.
-
-</details>
-
-</details>
+> [!note]- Lemma 5: Intersecting a simple image with $A_n$
+> **Statement:** Let $G$ be a non-abelian [[Def - Simple Group|simple]] group and $\rho : G \to S_n$ an injective homomorphism. Then $\operatorname{im}\rho \leq A_n$.
+>
+> **Hint:** $\operatorname{im}\rho\cap A_n$ is normal in $\operatorname{im}\rho \cong G$; rule out the trivial case using the second isomorphism theorem.
+>
+> **Why needed:** It is the step that upgrades the corollary's embedding from $S_n$ to $A_n$, which is what forces $n \geq 5$.
+>
+> > [!note]- Full proof
+> > Since $A_n \trianglelefteq S_n$, the intersection $\operatorname{im}\rho \cap A_n$ is normal in $\operatorname{im}\rho$. As $\rho$ is injective, $\operatorname{im}\rho \cong G$ is simple, so $\operatorname{im}\rho\cap A_n$ is either $\{e\}$ or $\operatorname{im}\rho$.
+> >
+> > Suppose it is $\{e\}$. By the second isomorphism theorem,
+> > $$\operatorname{im}\rho \;\cong\; \frac{\operatorname{im}\rho}{\operatorname{im}\rho\cap A_n} \;\cong\; \frac{\operatorname{im}\rho\,A_n}{A_n} \;\leq\; \frac{S_n}{A_n} \;\cong\; C_2.$$
+> > Then $\operatorname{im}\rho$, hence $G$, is a subgroup of $C_2$ — abelian, contradicting that $G$ is non-abelian. So $\operatorname{im}\rho\cap A_n = \operatorname{im}\rho$, i.e. $\operatorname{im}\rho \leq A_n$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** For $H \leq G$, the group $G$ acts on $G/H$ by $g\cdot xH = gxH$, and the kernel of the associated homomorphism $\rho : G \to \operatorname{Sym}(G/H)$ is $\bigcap_{x\in G} xHx^{-1}$, the largest normal subgroup of $G$ contained in $H$.
-
-*Proof.* The rule $g\cdot xH = gxH$ is well-defined: if $xH = x'H$ then $x' = xh$ with $h \in H$, so $gx'H = gxhH = gxH$. It satisfies $e\cdot xH = xH$ and $g_1\cdot(g_2\cdot xH) = g_1 g_2 xH = (g_1 g_2)\cdot xH$, so it is an action. By [[Thm - Actions Correspond to Homomorphisms]] it is a homomorphism $\rho : G \to \operatorname{Sym}(G/H)$.
-
-Now $g \in \ker\rho$ if and only if $g$ fixes every coset, i.e. $gxH = xH$ for all $x \in G$. For a fixed $x$: $gxH = xH \iff x^{-1}gxH = H \iff x^{-1}gx \in H \iff g \in xHx^{-1}$, each step reversible. Hence
-$$\ker\rho = \bigcap_{x\in G} xHx^{-1}.$$
-This is a normal subgroup, being a kernel. Taking $x = e$ shows it lies in $H$. If $N \trianglelefteq G$ and $N \leq H$, then $N = xNx^{-1} \leq xHx^{-1}$ for all $x$, so $N \leq \bigcap_x xHx^{-1}$; thus $\ker\rho$ is the largest normal subgroup of $G$ inside $H$. $\qquad\blacksquare$
-
-**Index theorem.** Let $G$ be finite, $H \leq G$ of index $n$, and $K = \ker\rho$. Then $K \trianglelefteq G$, $K \leq H$, and $\operatorname{Sym}(G/H) \cong S_n$. By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]],
-$$G/K \;\cong\; \operatorname{im}\rho \;\leq\; \operatorname{Sym}(G/H) \;\cong\; S_n.$$
-By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|G/K|$ divides $|S_n| = n!$. And $|G/K| \geq |G/H| = n$, since $K \leq H$ gives $|G:K| \geq |G:H|$. $\qquad\blacksquare$
-
-**Corollary.** Let $G$ be a non-abelian simple group and $H \leq G$ a proper subgroup of index $n > 1$. The coset action gives $\rho : G \to \operatorname{Sym}(G/H) \cong S_n$ with $\ker\rho \trianglelefteq G$. By simplicity, $\ker\rho$ is $\{e\}$ or $G$. It is not $G$: since $H$ is proper there is $g \in G\setminus H$, and then $g\cdot H = gH \neq H$, so $g \notin \ker\rho$. Hence $\ker\rho = \{e\}$, and by the first isomorphism theorem $G \cong \operatorname{im}\rho \leq S_n$.
-
-We strengthen this to $G \hookrightarrow A_n$. Since $A_n \trianglelefteq S_n$, the subgroup $\operatorname{im}\rho\cap A_n$ is normal in $\operatorname{im}\rho \cong G$, hence $\{e\}$ or $\operatorname{im}\rho$. If it were $\{e\}$, the second isomorphism theorem would give
-$$\operatorname{im}\rho \cong \frac{\operatorname{im}\rho}{\operatorname{im}\rho\cap A_n} \cong \frac{\operatorname{im}\rho\,A_n}{A_n} \leq \frac{S_n}{A_n} \cong C_2,$$
-making $G$ abelian — a contradiction. So $\operatorname{im}\rho\cap A_n = \operatorname{im}\rho$, i.e. $G \cong \operatorname{im}\rho \leq A_n$.
-
-Finally, $n \geq 5$. The groups $S_1, S_2, S_3, S_4$ — equivalently $A_1, A_2, A_3, A_4$ — contain no non-abelian simple subgroup, as one verifies by listing all their subgroups: $A_1, A_2$ are trivial, $A_3 \cong C_3$ is abelian, and every subgroup of $S_4$ (hence of $A_4$) is solvable. So a non-abelian simple $G$ cannot embed in $A_n$ for $n \leq 4$; therefore $n \geq 5$. $\qquad\blacksquare$
-
-This is the theorem and corollary of §1.3 of the source lecture notes, with the coset-action kernel computation as the central reversible argument.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** For $H \leq G$, the group $G$ acts on $G/H$ by $g\cdot xH = gxH$, and the kernel of the associated homomorphism $\rho : G \to \operatorname{Sym}(G/H)$ is $\bigcap_{x\in G} xHx^{-1}$, the largest normal subgroup of $G$ contained in $H$.
+>
+> *Proof.* The rule $g\cdot xH = gxH$ is well-defined: if $xH = x'H$ then $x' = xh$ with $h \in H$, so $gx'H = gxhH = gxH$. It satisfies $e\cdot xH = xH$ and $g_1\cdot(g_2\cdot xH) = g_1 g_2 xH = (g_1 g_2)\cdot xH$, so it is an action. By [[Thm - Actions Correspond to Homomorphisms]] it is a homomorphism $\rho : G \to \operatorname{Sym}(G/H)$.
+>
+> Now $g \in \ker\rho$ if and only if $g$ fixes every coset, i.e. $gxH = xH$ for all $x \in G$. For a fixed $x$: $gxH = xH \iff x^{-1}gxH = H \iff x^{-1}gx \in H \iff g \in xHx^{-1}$, each step reversible. Hence
+> $$\ker\rho = \bigcap_{x\in G} xHx^{-1}.$$
+> This is a normal subgroup, being a kernel. Taking $x = e$ shows it lies in $H$. If $N \trianglelefteq G$ and $N \leq H$, then $N = xNx^{-1} \leq xHx^{-1}$ for all $x$, so $N \leq \bigcap_x xHx^{-1}$; thus $\ker\rho$ is the largest normal subgroup of $G$ inside $H$. $\qquad\blacksquare$
+>
+> **Index theorem.** Let $G$ be finite, $H \leq G$ of index $n$, and $K = \ker\rho$. Then $K \trianglelefteq G$, $K \leq H$, and $\operatorname{Sym}(G/H) \cong S_n$. By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]],
+> $$G/K \;\cong\; \operatorname{im}\rho \;\leq\; \operatorname{Sym}(G/H) \;\cong\; S_n.$$
+> By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|G/K|$ divides $|S_n| = n!$. And $|G/K| \geq |G/H| = n$, since $K \leq H$ gives $|G:K| \geq |G:H|$. $\qquad\blacksquare$
+>
+> **Corollary.** Let $G$ be a non-abelian simple group and $H \leq G$ a proper subgroup of index $n > 1$. The coset action gives $\rho : G \to \operatorname{Sym}(G/H) \cong S_n$ with $\ker\rho \trianglelefteq G$. By simplicity, $\ker\rho$ is $\{e\}$ or $G$. It is not $G$: since $H$ is proper there is $g \in G\setminus H$, and then $g\cdot H = gH \neq H$, so $g \notin \ker\rho$. Hence $\ker\rho = \{e\}$, and by the first isomorphism theorem $G \cong \operatorname{im}\rho \leq S_n$.
+>
+> We strengthen this to $G \hookrightarrow A_n$. Since $A_n \trianglelefteq S_n$, the subgroup $\operatorname{im}\rho\cap A_n$ is normal in $\operatorname{im}\rho \cong G$, hence $\{e\}$ or $\operatorname{im}\rho$. If it were $\{e\}$, the second isomorphism theorem would give
+> $$\operatorname{im}\rho \cong \frac{\operatorname{im}\rho}{\operatorname{im}\rho\cap A_n} \cong \frac{\operatorname{im}\rho\,A_n}{A_n} \leq \frac{S_n}{A_n} \cong C_2,$$
+> making $G$ abelian — a contradiction. So $\operatorname{im}\rho\cap A_n = \operatorname{im}\rho$, i.e. $G \cong \operatorname{im}\rho \leq A_n$.
+>
+> Finally, $n \geq 5$. The groups $S_1, S_2, S_3, S_4$ — equivalently $A_1, A_2, A_3, A_4$ — contain no non-abelian simple subgroup, as one verifies by listing all their subgroups: $A_1, A_2$ are trivial, $A_3 \cong C_3$ is abelian, and every subgroup of $S_4$ (hence of $A_4$) is solvable. So a non-abelian simple $G$ cannot embed in $A_n$ for $n \leq 4$; therefore $n \geq 5$. $\qquad\blacksquare$
+>
+> This is the theorem and corollary of §1.3 of the source lecture notes, with the coset-action kernel computation as the central reversible argument.
 
 ---
 

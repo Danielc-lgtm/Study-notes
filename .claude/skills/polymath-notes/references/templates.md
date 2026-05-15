@@ -302,42 +302,27 @@ tags: [area-tag, subject-tag]
 
 # Lemma Decomposition
 
-[Each lemma independently practiceable in approximately 5 minutes.]
+[Each lemma independently practiceable in approximately 5 minutes. Each lemma is a collapsible callout; the full proof is a nested collapsible callout inside it.]
 
-<details>
-<summary><strong>Lemma 1: [Statement]</strong></summary>
+> [!note]- Lemma 1: [Statement]
+> **Statement:** [Precise statement]
+>
+> **Hint:** [One key idea for proving]
+>
+> **Why needed:** [How it is used in the main proof]
+>
+> > [!note]- Full proof
+> > [Complete formal proof]
 
-**Statement:** [Precise statement]
-
-**Hint:** [One key idea for proving]
-
-**Why needed:** [How it is used in the main proof]
-
-<details>
-<summary>Full proof</summary>
-
-[Complete formal proof]
-
-</details>
-</details>
-
-<details>
-<summary><strong>Lemma 2: [Statement]</strong></summary>
-
-[Same structure]
-
-</details>
+> [!note]- Lemma 2: [Statement]
+> [Same structure]
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-[The complete, formal proof. Ground truth for verification after attempting rederivation from the scaffold.]
-
-</details>
+> [!note]- Complete formal proof
+> [The complete, formal proof. Ground truth for verification after attempting rederivation from the scaffold.]
 
 ---
 
@@ -422,63 +407,39 @@ A [[Def - Normal Subgroup|normal subgroup]] $H \trianglelefteq G$ is a subgroup 
 
 # Hints
 
-[Progressive hints in collapsible sections, from gentle nudge to near-giveaway. 2–4 hints.]
+[Progressive hints as collapsible callouts, from gentle nudge to near-giveaway. 2–4 hints.]
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> [Identifies the problem class or key technique.]
 
-[Identifies the problem class or key technique.]
+> [!note]- Hint 2
+> [Names the specific theorem or construction.]
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-[Names the specific theorem or construction.]
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-[Gives the key computational step or trick.]
-
-</details>
+> [!note]- Hint 3
+> [Gives the key computational step or trick.]
 
 ---
 
 # Solution
 
-[Hierarchical structure: the top level shows the highest-density insight — the key idea and result of each step. Collapsible sections reveal progressively more detail.]
+[Hierarchical structure: the top level shows the highest-density insight — the key idea and result of each step. Collapsible callouts reveal progressively more detail.]
 
 **Step 1: [Name — what this step achieves]**
 
 [Statement of the result of this step. Enough detail to know the claim without expanding.]
 
-<details>
-<summary>Derivation</summary>
-
-[Full derivation. Recall any theorem or definition used, with wikilinks and restatement of the theorem statement. Each claim independently verifiable.]
-
-</details>
+> [!note]- Derivation
+> [Full derivation. Recall any theorem or definition used, with wikilinks and restatement of the theorem statement. Each claim independently verifiable.]
 
 **Step 2: [Name]**
 
 [Result.]
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> [Full derivation.]
 
-[Full derivation.]
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-[Complete, cleaned-up solution as a single self-contained proof. Every step justified, no gaps.]
-
-</details>
+> [!note]- Complete formal solution
+> [Complete, cleaned-up solution as a single self-contained proof. Every step justified, no gaps.]
 
 ---
 

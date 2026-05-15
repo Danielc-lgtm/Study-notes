@@ -50,26 +50,14 @@ An element $x$ **commutes** with $g$ when $gx = xg$, equivalently when $gxg^{-1}
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Do not try to compute with $x$ alone. Instead, take an arbitrary $g \in G$ and apply some structure-preserving operation to $x$. Which operation, built from $g$, produces another element you can say something about?
 
-Do not try to compute with $x$ alone. Instead, take an arbitrary $g \in G$ and apply some structure-preserving operation to $x$. Which operation, built from $g$, produces another element you can say something about?
+> [!note]- Hint 2
+> Consider the conjugate $gxg^{-1}$. What is its order? Use the fact that conjugation preserves the order of an element.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Consider the conjugate $gxg^{-1}$. What is its order? Use the fact that conjugation preserves the order of an element.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-The conjugate $gxg^{-1}$ has order $2$. But $G$ has only *one* element of order $2$. So $gxg^{-1} = x$. Now multiply both sides on the right by $g$.
-
-</details>
+> [!note]- Hint 3
+> The conjugate $gxg^{-1}$ has order $2$. But $G$ has only *one* element of order $2$. So $gxg^{-1} = x$. Now multiply both sides on the right by $g$.
 
 ---
 
@@ -79,51 +67,35 @@ The conjugate $gxg^{-1}$ has order $2$. But $G$ has only *one* element of order 
 
 Conjugation preserves order, and $x$ has order $2$, so $gxg^{-1}$ also has order $2$.
 
-<details>
-<summary>Derivation</summary>
-
-Fix an arbitrary $g \in G$ and set $y = gxg^{-1}$. As recalled in the problem statement, $(gxg^{-1})^n = g x^n g^{-1}$ for every $n \geq 1$, because consecutive factors $g^{-1}g$ cancel.
-
-Therefore $y^2 = (gxg^{-1})^2 = g x^2 g^{-1} = g e g^{-1} = e$, using $x^2 = e$. And $y \neq e$: if $gxg^{-1} = e$ then $x = g^{-1}eg = e$, contradicting that $x$ has order $2$. An element that is not the identity and squares to the identity has order exactly $2$. Hence $\operatorname{ord}(gxg^{-1}) = 2$.
-
-</details>
+> [!note]- Derivation
+> Fix an arbitrary $g \in G$ and set $y = gxg^{-1}$. As recalled in the problem statement, $(gxg^{-1})^n = g x^n g^{-1}$ for every $n \geq 1$, because consecutive factors $g^{-1}g$ cancel.
+>
+> Therefore $y^2 = (gxg^{-1})^2 = g x^2 g^{-1} = g e g^{-1} = e$, using $x^2 = e$. And $y \neq e$: if $gxg^{-1} = e$ then $x = g^{-1}eg = e$, contradicting that $x$ has order $2$. An element that is not the identity and squares to the identity has order exactly $2$. Hence $\operatorname{ord}(gxg^{-1}) = 2$.
 
 **Step 2: By uniqueness, $gxg^{-1} = x$.**
 
 Since $gxg^{-1}$ has order $2$ and $x$ is the *only* element of order $2$ in $G$, the two must be equal.
 
-<details>
-<summary>Derivation</summary>
-
-The hypothesis is that $G$ contains exactly one element of order $2$, and that element is $x$. Step 1 produced an element $gxg^{-1}$ of order $2$. "Exactly one" means every element of order $2$ equals $x$, so in particular $gxg^{-1} = x$.
-
-</details>
+> [!note]- Derivation
+> The hypothesis is that $G$ contains exactly one element of order $2$, and that element is $x$. Step 1 produced an element $gxg^{-1}$ of order $2$. "Exactly one" means every element of order $2$ equals $x$, so in particular $gxg^{-1} = x$.
 
 **Step 3: Rearrange to get $gx = xg$.**
 
 From $gxg^{-1} = x$, right-multiplying by $g$ gives $gx = xg$. As $g$ was arbitrary, $x$ commutes with every element of $G$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> Take the equation $gxg^{-1} = x$ from Step 2 and multiply both sides on the right by $g$:
+> $$gxg^{-1}g = xg \quad\Longrightarrow\quad gxe = xg \quad\Longrightarrow\quad gx = xg.$$
+> Since $g$ was an arbitrary element of $G$, this holds for all $g \in G$. That is precisely the statement that $x$ commutes with every element of $G$ (equivalently, $x$ is central). $\qquad\blacksquare$
 
-Take the equation $gxg^{-1} = x$ from Step 2 and multiply both sides on the right by $g$:
-$$gxg^{-1}g = xg \quad\Longrightarrow\quad gxe = xg \quad\Longrightarrow\quad gx = xg.$$
-Since $g$ was an arbitrary element of $G$, this holds for all $g \in G$. That is precisely the statement that $x$ commutes with every element of $G$ (equivalently, $x$ is central). $\qquad\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $g \in G$ be arbitrary, and put $y = gxg^{-1}$.
-
-By telescoping, $(gxg^{-1})^n = g x^n g^{-1}$ for all $n \ge 1$. Hence $y^2 = g x^2 g^{-1} = g e g^{-1} = e$, and $y \ne e$ (since $y = e$ would force $x = e$). An element that squares to $e$ but is not $e$ has order exactly $2$, so $y$ has order $2$.
-
-By hypothesis $x$ is the unique element of order $2$ in $G$, so $y = x$, i.e. $gxg^{-1} = x$.
-
-Right-multiplying by $g$ yields $gx = xg$. As $g$ was arbitrary, $x$ commutes with every element of $G$. $\qquad\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $g \in G$ be arbitrary, and put $y = gxg^{-1}$.
+>
+> By telescoping, $(gxg^{-1})^n = g x^n g^{-1}$ for all $n \ge 1$. Hence $y^2 = g x^2 g^{-1} = g e g^{-1} = e$, and $y \ne e$ (since $y = e$ would force $x = e$). An element that squares to $e$ but is not $e$ has order exactly $2$, so $y$ has order $2$.
+>
+> By hypothesis $x$ is the unique element of order $2$ in $G$, so $y = x$, i.e. $gxg^{-1} = x$.
+>
+> Right-multiplying by $g$ yields $gx = xg$. As $g$ was arbitrary, $x$ commutes with every element of $G$. $\qquad\blacksquare$
 
 > [!example] Optional remark: a group of even order always has an element of order $2$
 > The hypothesis "$G$ has an element of order $2$" is not vacuous when $|G|$ is even. Pair off the elements of $G$: put $y$ together with $y^{-1}$. An element is paired *with itself* exactly when $y = y^{-1}$, i.e. $y^2 = e$ — that is, $y$ is either the identity or has order $2$. The elements with $y \ne y^{-1}$ split into genuine pairs of size $2$, contributing an even count. So the number of self-paired elements has the same parity as $|G|$. When $|G|$ is even, the count of self-paired elements is even; it is at least $1$ (the identity is self-paired); hence it is at least $2$, and the extra self-paired element is a non-identity element with $y^2 = e$ — an element of order $2$. This is a "pairing" or "involution-counting" argument, and it is the seed of more powerful results such as Cauchy's theorem.

@@ -113,66 +113,46 @@ Conjugation by any $g \in G$ sends a Sylow $p$-subgroup to a subgroup of the sam
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: Conjugation preserves the property of being a Sylow $p$-subgroup</strong></summary>
+> [!note]- Lemma 1: Conjugation preserves the property of being a Sylow $p$-subgroup
+> **Statement:** Let $P$ be a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $G$ and let $g \in G$. Then the conjugate $gPg^{-1}$ is also a Sylow $p$-subgroup of $G$.
+>
+> **Hint:** The map $c_g : x \mapsto gxg^{-1}$ is an automorphism of $G$; automorphisms carry subgroups to subgroups of equal order.
+>
+> **Why needed:** It is the one substantive input — it confines the conjugation action of $G$ to the set $\operatorname{Syl}_p(G)$, which is what makes uniqueness bite.
+>
+> > [!note]- Full proof
+> > The map $c_g : G \to G$, $c_g(x) = gxg^{-1}$, is a homomorphism — $c_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1}) = c_g(x)c_g(y)$ — and it is a bijection with inverse $c_{g^{-1}}$, so it is an automorphism of $G$. An automorphism sends subgroups to subgroups, so $c_g(P) = gPg^{-1}$ is a subgroup of $G$; and being a bijection it preserves cardinality, so $|gPg^{-1}| = |P| = p^a$. A subgroup of order $p^a$ in a group of order $p^a m$ is by definition a Sylow $p$-subgroup. Hence $gPg^{-1} \in \operatorname{Syl}_p(G)$.
 
-**Statement:** Let $P$ be a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $G$ and let $g \in G$. Then the conjugate $gPg^{-1}$ is also a Sylow $p$-subgroup of $G$.
-
-**Hint:** The map $c_g : x \mapsto gxg^{-1}$ is an automorphism of $G$; automorphisms carry subgroups to subgroups of equal order.
-
-**Why needed:** It is the one substantive input — it confines the conjugation action of $G$ to the set $\operatorname{Syl}_p(G)$, which is what makes uniqueness bite.
-
-<details>
-<summary>Full proof</summary>
-
-The map $c_g : G \to G$, $c_g(x) = gxg^{-1}$, is a homomorphism — $c_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1}) = c_g(x)c_g(y)$ — and it is a bijection with inverse $c_{g^{-1}}$, so it is an automorphism of $G$. An automorphism sends subgroups to subgroups, so $c_g(P) = gPg^{-1}$ is a subgroup of $G$; and being a bijection it preserves cardinality, so $|gPg^{-1}| = |P| = p^a$. A subgroup of order $p^a$ in a group of order $p^a m$ is by definition a Sylow $p$-subgroup. Hence $gPg^{-1} \in \operatorname{Syl}_p(G)$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: A normal subgroup equals its conjugacy class of subgroups</strong></summary>
-
-**Statement:** A subgroup $N \leq G$ is [[Def - Normal Subgroup|normal]] if and only if $gNg^{-1} = N$ for every $g \in G$ — equivalently, $N$ is the only member of its conjugacy class $\{gNg^{-1} : g \in G\}$ of subgroups.
-
-**Hint:** This is the definition of normal, restated as a statement about the orbit of $N$ under the conjugation action of $G$ on its set of subgroups.
-
-**Why needed:** It is the dictionary entry translating "the conjugation orbit of $P$ is a single point" into "$P$ is normal", used in both directions of the theorem.
-
-<details>
-<summary>Full proof</summary>
-
-By definition $N \trianglelefteq G$ means $gNg^{-1} = N$ for all $g \in G$. The conjugates $gNg^{-1}$ as $g$ ranges over $G$ form the orbit of $N$ under the action of $G$ on the set of its subgroups by conjugation. To say every $gNg^{-1}$ equals $N$ is exactly to say this orbit is the single point $\{N\}$ — i.e. $N$ is the only member of its conjugacy class of subgroups. Conversely, if the orbit is $\{N\}$ then $gNg^{-1} = N$ for all $g$, which is normality.
-
-</details>
-
-</details>
+> [!note]- Lemma 2: A normal subgroup equals its conjugacy class of subgroups
+> **Statement:** A subgroup $N \leq G$ is [[Def - Normal Subgroup|normal]] if and only if $gNg^{-1} = N$ for every $g \in G$ — equivalently, $N$ is the only member of its conjugacy class $\{gNg^{-1} : g \in G\}$ of subgroups.
+>
+> **Hint:** This is the definition of normal, restated as a statement about the orbit of $N$ under the conjugation action of $G$ on its set of subgroups.
+>
+> **Why needed:** It is the dictionary entry translating "the conjugation orbit of $P$ is a single point" into "$P$ is normal", used in both directions of the theorem.
+>
+> > [!note]- Full proof
+> > By definition $N \trianglelefteq G$ means $gNg^{-1} = N$ for all $g \in G$. The conjugates $gNg^{-1}$ as $g$ ranges over $G$ form the orbit of $N$ under the action of $G$ on the set of its subgroups by conjugation. To say every $gNg^{-1}$ equals $N$ is exactly to say this orbit is the single point $\{N\}$ — i.e. $N$ is the only member of its conjugacy class of subgroups. Conversely, if the orbit is $\{N\}$ then $gNg^{-1} = N$ for all $g$, which is normality.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** Let $G$ be a finite group, $p$ a prime, $|G| = p^a m$ with $p \nmid m$. If $n_p = 1$ — that is, if $G$ has a unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] $P$ — then $P \trianglelefteq G$. Conversely, if a Sylow $p$-subgroup is normal then $n_p = 1$.
-
-*Proof (of the main statement).* Let $P$ be the unique Sylow $p$-subgroup of $G$, so $|P| = p^a$, and let $g \in G$ be arbitrary. Consider the conjugate subgroup $g^{-1}Pg$.
-
-Conjugation by $g$ is an automorphism of $G$ — it is a bijective homomorphism — so $g^{-1}Pg$ is a subgroup of $G$, and it has the same order as $P$:
-$$|g^{-1}Pg| = |P| = p^a.$$
-A subgroup of order $p^a$ is a Sylow $p$-subgroup. Hence $g^{-1}Pg \in \operatorname{Syl}_p(G)$.
-
-But $G$ has only one Sylow $p$-subgroup, namely $P$; that is, $\operatorname{Syl}_p(G) = \{P\}$. Since $g^{-1}Pg$ is a member of this one-element set, we must have
-$$g^{-1}Pg = P.$$
-This holds for every $g \in G$. By the definition of a [[Def - Normal Subgroup|normal subgroup]], $P \trianglelefteq G$. $\quad\blacksquare$
-
-*Proof (of the converse).* Suppose a Sylow $p$-subgroup $P$ satisfies $P \trianglelefteq G$, so $g^{-1}Pg = P$ for all $g \in G$. Let $P'$ be any Sylow $p$-subgroup of $G$. By [[Thm - Sylow's Theorems|Sylow's second theorem]], all Sylow $p$-subgroups are conjugate, so $P' = g^{-1}Pg$ for some $g \in G$. By normality $g^{-1}Pg = P$, hence $P' = P$. So $P$ is the only Sylow $p$-subgroup, and $n_p = 1$. $\quad\blacksquare$
-
-This is the lemma proved in §1.7 of the source lecture notes, immediately after the statement of Sylow's theorems.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** Let $G$ be a finite group, $p$ a prime, $|G| = p^a m$ with $p \nmid m$. If $n_p = 1$ — that is, if $G$ has a unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] $P$ — then $P \trianglelefteq G$. Conversely, if a Sylow $p$-subgroup is normal then $n_p = 1$.
+>
+> *Proof (of the main statement).* Let $P$ be the unique Sylow $p$-subgroup of $G$, so $|P| = p^a$, and let $g \in G$ be arbitrary. Consider the conjugate subgroup $g^{-1}Pg$.
+>
+> Conjugation by $g$ is an automorphism of $G$ — it is a bijective homomorphism — so $g^{-1}Pg$ is a subgroup of $G$, and it has the same order as $P$:
+> $$|g^{-1}Pg| = |P| = p^a.$$
+> A subgroup of order $p^a$ is a Sylow $p$-subgroup. Hence $g^{-1}Pg \in \operatorname{Syl}_p(G)$.
+>
+> But $G$ has only one Sylow $p$-subgroup, namely $P$; that is, $\operatorname{Syl}_p(G) = \{P\}$. Since $g^{-1}Pg$ is a member of this one-element set, we must have
+> $$g^{-1}Pg = P.$$
+> This holds for every $g \in G$. By the definition of a [[Def - Normal Subgroup|normal subgroup]], $P \trianglelefteq G$. $\quad\blacksquare$
+>
+> *Proof (of the converse).* Suppose a Sylow $p$-subgroup $P$ satisfies $P \trianglelefteq G$, so $g^{-1}Pg = P$ for all $g \in G$. Let $P'$ be any Sylow $p$-subgroup of $G$. By [[Thm - Sylow's Theorems|Sylow's second theorem]], all Sylow $p$-subgroups are conjugate, so $P' = g^{-1}Pg$ for some $g \in G$. By normality $g^{-1}Pg = P$, hence $P' = P$. So $P$ is the only Sylow $p$-subgroup, and $n_p = 1$. $\quad\blacksquare$
+>
+> This is the lemma proved in §1.7 of the source lecture notes, immediately after the statement of Sylow's theorems.
 
 ---
 

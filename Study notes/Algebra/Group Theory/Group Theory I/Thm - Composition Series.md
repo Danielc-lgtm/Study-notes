@@ -116,94 +116,66 @@ Induct on $|G|$. If $G$ is simple, done. Otherwise pick a *maximal* proper norma
 
 # Lemma Decomposition
 
-<details>
-<summary><strong>Lemma 1: A non-simple finite group has a maximal proper normal subgroup</strong></summary>
+> [!note]- Lemma 1: A non-simple finite group has a maximal proper normal subgroup
+> **Statement:** If $G$ is a finite group that is not simple (and non-trivial), then among the proper non-trivial normal subgroups of $G$ there is one of maximal order.
+>
+> **Hint:** There are only finitely many subgroups of a finite group; a finite non-empty set of integers has a maximum.
+>
+> **Why needed:** The whole construction descends through this maximal subgroup; without its existence there is nothing to quotient by.
+>
+> > [!note]- Full proof
+> > Since $G$ is not simple and is non-trivial, it has at least one normal subgroup other than $\{e\}$ and $G$ — that is, the set $\mathcal{N}$ of proper non-trivial normal subgroups is non-empty. A finite group has only finitely many subsets, hence finitely many subgroups, so $\mathcal{N}$ is finite. The orders $\{|N| : N \in \mathcal{N}\}$ form a finite non-empty set of positive integers, which therefore has a maximum; any $N \in \mathcal{N}$ achieving it is a proper non-trivial normal subgroup of maximal order.
 
-**Statement:** If $G$ is a finite group that is not simple (and non-trivial), then among the proper non-trivial normal subgroups of $G$ there is one of maximal order.
+> [!note]- Lemma 2: Quotienting by a maximal proper normal subgroup yields a simple group
+> **Statement:** Let $G$ be a group and $M \trianglelefteq G$ a proper normal subgroup that is maximal among proper normal subgroups of $G$. Then $G/M$ is simple.
+>
+> **Hint:** Use the [[Thm - Correspondence Theorem|correspondence theorem]]: normal subgroups of $G/M$ match normal subgroups of $G$ containing $M$.
+>
+> **Why needed:** It is the step that produces a *simple* composition factor at the top of the chain — the defining property of a composition series.
+>
+> > [!note]- Full proof
+> > First, $G/M$ is non-trivial because $M$ is a *proper* subgroup of $G$. Suppose, for contradiction, $G/M$ is not simple: then it has a normal subgroup $X$ with $X \neq \{e_{G/M}\}$ and $X \neq G/M$.
+> >
+> > By the [[Thm - Correspondence Theorem|correspondence theorem]] applied to $M \trianglelefteq G$, normal subgroups of $G/M$ correspond bijectively (preserving inclusion and normality) to normal subgroups of $G$ containing $M$. Let $K \trianglelefteq G$ be the normal subgroup of $G$ corresponding to $X$, so $M \leq K$. Because the correspondence preserves inclusion and is a bijection:
+> > - $X \neq \{e_{G/M}\}$ corresponds to $K \neq M$, so $M \subsetneq K$;
+> > - $X \neq G/M$ corresponds to $K \neq G$, so $K \subsetneq G$.
+> >
+> > Thus $K$ is a normal subgroup of $G$ with $M \subsetneq K \subsetneq G$ — a proper non-trivial normal subgroup of $G$ strictly larger than $M$. This contradicts the maximality of $M$. Hence $G/M$ is simple.
 
-**Hint:** There are only finitely many subgroups of a finite group; a finite non-empty set of integers has a maximum.
-
-**Why needed:** The whole construction descends through this maximal subgroup; without its existence there is nothing to quotient by.
-
-<details>
-<summary>Full proof</summary>
-
-Since $G$ is not simple and is non-trivial, it has at least one normal subgroup other than $\{e\}$ and $G$ — that is, the set $\mathcal{N}$ of proper non-trivial normal subgroups is non-empty. A finite group has only finitely many subsets, hence finitely many subgroups, so $\mathcal{N}$ is finite. The orders $\{|N| : N \in \mathcal{N}\}$ form a finite non-empty set of positive integers, which therefore has a maximum; any $N \in \mathcal{N}$ achieving it is a proper non-trivial normal subgroup of maximal order.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Quotienting by a maximal proper normal subgroup yields a simple group</strong></summary>
-
-**Statement:** Let $G$ be a group and $M \trianglelefteq G$ a proper normal subgroup that is maximal among proper normal subgroups of $G$. Then $G/M$ is simple.
-
-**Hint:** Use the [[Thm - Correspondence Theorem|correspondence theorem]]: normal subgroups of $G/M$ match normal subgroups of $G$ containing $M$.
-
-**Why needed:** It is the step that produces a *simple* composition factor at the top of the chain — the defining property of a composition series.
-
-<details>
-<summary>Full proof</summary>
-
-First, $G/M$ is non-trivial because $M$ is a *proper* subgroup of $G$. Suppose, for contradiction, $G/M$ is not simple: then it has a normal subgroup $X$ with $X \neq \{e_{G/M}\}$ and $X \neq G/M$.
-
-By the [[Thm - Correspondence Theorem|correspondence theorem]] applied to $M \trianglelefteq G$, normal subgroups of $G/M$ correspond bijectively (preserving inclusion and normality) to normal subgroups of $G$ containing $M$. Let $K \trianglelefteq G$ be the normal subgroup of $G$ corresponding to $X$, so $M \leq K$. Because the correspondence preserves inclusion and is a bijection:
-- $X \neq \{e_{G/M}\}$ corresponds to $K \neq M$, so $M \subsetneq K$;
-- $X \neq G/M$ corresponds to $K \neq G$, so $K \subsetneq G$.
-
-Thus $K$ is a normal subgroup of $G$ with $M \subsetneq K \subsetneq G$ — a proper non-trivial normal subgroup of $G$ strictly larger than $M$. This contradicts the maximality of $M$. Hence $G/M$ is simple.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: A strictly decreasing chain of subgroups of a finite group has finite length</strong></summary>
-
-**Statement:** If $G$ is finite and $G = H_1 \supsetneq H_2 \supsetneq H_3 \supsetneq \cdots$ is a strictly decreasing chain of subgroups, the chain has finitely many terms.
-
-**Hint:** Track the orders.
-
-**Why needed:** It guarantees the descending construction terminates — the induction on $|G|$ is well-founded only because the chain cannot be infinite.
-
-<details>
-<summary>Full proof</summary>
-
-For each $i$, $H_{i+1} \subsetneq H_i$, and both are subgroups of the finite group $G$, so $|H_{i+1}| < |H_i|$ (a proper subset has strictly smaller cardinality). Hence $|H_1| > |H_2| > |H_3| > \cdots$ is a strictly decreasing sequence of positive integers bounded below by $1$. Such a sequence has at most $|H_1| = |G|$ terms, so the chain is finite.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: A strictly decreasing chain of subgroups of a finite group has finite length
+> **Statement:** If $G$ is finite and $G = H_1 \supsetneq H_2 \supsetneq H_3 \supsetneq \cdots$ is a strictly decreasing chain of subgroups, the chain has finitely many terms.
+>
+> **Hint:** Track the orders.
+>
+> **Why needed:** It guarantees the descending construction terminates — the induction on $|G|$ is well-founded only because the chain cannot be infinite.
+>
+> > [!note]- Full proof
+> > For each $i$, $H_{i+1} \subsetneq H_i$, and both are subgroups of the finite group $G$, so $|H_{i+1}| < |H_i|$ (a proper subset has strictly smaller cardinality). Hence $|H_1| > |H_2| > |H_3| > \cdots$ is a strictly decreasing sequence of positive integers bounded below by $1$. Such a sequence has at most $|H_1| = |G|$ terms, so the chain is finite.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-We prove by strong induction on $|G|$ that every finite group $G$ has a composition series.
-
-**Base case.** If $|G| = 1$, then $G = \{e\}$ and the one-term chain $G = \{e\}$ is a (degenerate) composition series. If $G$ is simple, the chain $G \trianglerighteq \{e\}$ is a composition series: the single quotient $G/\{e\} \cong G$ is simple.
-
-**Inductive step.** Let $|G| > 1$ and suppose every finite group of order less than $|G|$ has a composition series. If $G$ is simple, the base case applies. Otherwise $G$ is not simple.
-
-By Lemma 1, $G$ has a proper non-trivial normal subgroup of maximal order; call it $H_2$, so $H_2 \trianglelefteq G$ and $\{e\} \neq H_2 \subsetneq G$. By Lemma 2, since $H_2$ is maximal among proper normal subgroups of $G$, the quotient $G/H_2$ is simple.
-
-Now $H_2$ is a finite group with $|H_2| < |G|$ (it is a proper subgroup). By the inductive hypothesis, $H_2$ has a composition series
-$$H_2 = H_2 \;\trianglerighteq\; H_3 \;\trianglerighteq\; \cdots \;\trianglerighteq\; H_n = \{e\},$$
-with each $H_{i+1} \trianglelefteq H_i$ and each $H_i/H_{i+1}$ simple, for $i = 2, \dots, n-1$.
-
-Prepend $G$ to obtain
-$$G = H_1 \;\trianglerighteq\; H_2 \;\trianglerighteq\; H_3 \;\trianglerighteq\; \cdots \;\trianglerighteq\; H_n = \{e\}.$$
-We check this is a composition series. Each $H_{i+1} \trianglelefteq H_i$: for $i \geq 2$ this holds by the series for $H_2$, and for $i = 1$ it is the statement $H_2 \trianglelefteq G$, established above. Each quotient $H_i/H_{i+1}$ is simple: for $i \geq 2$ by the series for $H_2$, and for $i = 1$ the quotient $H_1/H_2 = G/H_2$ is simple by Lemma 2.
-
-Hence $G$ has a composition series. By induction, every finite group does.
-
-**Termination remark.** The construction terminates because, reading it as a repeated descent, it produces a strictly decreasing chain $G = H_1 \supsetneq H_2 \supsetneq \cdots$, which by Lemma 3 has finitely many terms; it can only stop at $\{e\}$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal proof
+> We prove by strong induction on $|G|$ that every finite group $G$ has a composition series.
+>
+> **Base case.** If $|G| = 1$, then $G = \{e\}$ and the one-term chain $G = \{e\}$ is a (degenerate) composition series. If $G$ is simple, the chain $G \trianglerighteq \{e\}$ is a composition series: the single quotient $G/\{e\} \cong G$ is simple.
+>
+> **Inductive step.** Let $|G| > 1$ and suppose every finite group of order less than $|G|$ has a composition series. If $G$ is simple, the base case applies. Otherwise $G$ is not simple.
+>
+> By Lemma 1, $G$ has a proper non-trivial normal subgroup of maximal order; call it $H_2$, so $H_2 \trianglelefteq G$ and $\{e\} \neq H_2 \subsetneq G$. By Lemma 2, since $H_2$ is maximal among proper normal subgroups of $G$, the quotient $G/H_2$ is simple.
+>
+> Now $H_2$ is a finite group with $|H_2| < |G|$ (it is a proper subgroup). By the inductive hypothesis, $H_2$ has a composition series
+> $$H_2 = H_2 \;\trianglerighteq\; H_3 \;\trianglerighteq\; \cdots \;\trianglerighteq\; H_n = \{e\},$$
+> with each $H_{i+1} \trianglelefteq H_i$ and each $H_i/H_{i+1}$ simple, for $i = 2, \dots, n-1$.
+>
+> Prepend $G$ to obtain
+> $$G = H_1 \;\trianglerighteq\; H_2 \;\trianglerighteq\; H_3 \;\trianglerighteq\; \cdots \;\trianglerighteq\; H_n = \{e\}.$$
+> We check this is a composition series. Each $H_{i+1} \trianglelefteq H_i$: for $i \geq 2$ this holds by the series for $H_2$, and for $i = 1$ it is the statement $H_2 \trianglelefteq G$, established above. Each quotient $H_i/H_{i+1}$ is simple: for $i \geq 2$ by the series for $H_2$, and for $i = 1$ the quotient $H_1/H_2 = G/H_2$ is simple by Lemma 2.
+>
+> Hence $G$ has a composition series. By induction, every finite group does.
+>
+> **Termination remark.** The construction terminates because, reading it as a repeated descent, it produces a strictly decreasing chain $G = H_1 \supsetneq H_2 \supsetneq \cdots$, which by Lemma 3 has finitely many terms; it can only stop at $\{e\}$. $\blacksquare$
 
 ---
 

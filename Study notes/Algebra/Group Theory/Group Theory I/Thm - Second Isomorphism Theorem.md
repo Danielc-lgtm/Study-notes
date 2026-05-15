@@ -114,91 +114,63 @@ Do not attack the three claims independently. Define one homomorphism — restri
 
 # Lemma Decomposition
 
-<details>
-<summary><strong>Lemma 1: A coset $gK$ has a representative in $H$ if and only if $g \in HK$</strong></summary>
+> [!note]- Lemma 1: A coset $gK$ has a representative in $H$ if and only if $g \in HK$
+> **Statement:** For $H \leq G$, $K \trianglelefteq G$, and $g \in G$: there exists $h \in H$ with $hK = gK$ if and only if $g \in HK$.
+>
+> **Hint:** $hK = gK$ means $g^{-1}h \in K$; rearrange to express $g$ in terms of $h$ and an element of $K$.
+>
+> **Why needed:** It identifies $\operatorname{im}\varphi$ with $HK/K$ — the right-hand side of the theorem — and shows $HK$ is the preimage of a subgroup, hence a subgroup.
+>
+> > [!note]- Full proof
+> > ($\Rightarrow$) Suppose $hK = gK$ for some $h \in H$. Then $g^{-1}h \in K$, say $g^{-1}h = k$, so $g = hk^{-1} \in HK$ (since $k^{-1} \in K$).
+> >
+> > ($\Leftarrow$) Suppose $g \in HK$, say $g = hk$ with $h \in H$, $k \in K$. Then $g^{-1}h = (hk)^{-1}h = k^{-1}h^{-1}h = k^{-1} \in K$, so $gK = hK$, and $h \in H$ is the required representative.
 
-**Statement:** For $H \leq G$, $K \trianglelefteq G$, and $g \in G$: there exists $h \in H$ with $hK = gK$ if and only if $g \in HK$.
+> [!note]- Lemma 2: The product $HK$ is a subgroup of $G$ when $K \trianglelefteq G$
+> **Statement:** If $H \leq G$ and $K \trianglelefteq G$, then $HK = \{hk : h\in H, k\in K\}$ is a subgroup of $G$.
+>
+> **Hint:** Use the subgroup criterion: take $hk, h'k' \in HK$ and show $(h'k')(hk)^{-1} \in HK$, inserting $h^{-1}h$ to move a $K$-element past an $H$-element via normality.
+>
+> **Why needed:** It is claim 1 of the theorem, proved directly here as an alternative to the homomorphism route (and a self-contained drill in using normality).
+>
+> > [!note]- Full proof
+> > The set $HK$ is non-empty since $e = ee \in HK$. Take $hk, h'k' \in HK$. Then
+> > $$h'k'(hk)^{-1} = h'k'k^{-1}h^{-1} = (h'h^{-1})\,\big(h(k'k^{-1})h^{-1}\big).$$
+> > The first factor $h'h^{-1}$ lies in $H$. The second factor is $k'k^{-1} \in K$ conjugated by $h \in G$, which lies in $K$ because $K$ is normal in $G$. So $h'k'(hk)^{-1}$ is a product of an element of $H$ with an element of $K$, hence lies in $HK$. By the subgroup criterion, $HK \leq G$.
 
-**Hint:** $hK = gK$ means $g^{-1}h \in K$; rearrange to express $g$ in terms of $h$ and an element of $K$.
-
-**Why needed:** It identifies $\operatorname{im}\varphi$ with $HK/K$ — the right-hand side of the theorem — and shows $HK$ is the preimage of a subgroup, hence a subgroup.
-
-<details>
-<summary>Full proof</summary>
-
-($\Rightarrow$) Suppose $hK = gK$ for some $h \in H$. Then $g^{-1}h \in K$, say $g^{-1}h = k$, so $g = hk^{-1} \in HK$ (since $k^{-1} \in K$).
-
-($\Leftarrow$) Suppose $g \in HK$, say $g = hk$ with $h \in H$, $k \in K$. Then $g^{-1}h = (hk)^{-1}h = k^{-1}h^{-1}h = k^{-1} \in K$, so $gK = hK$, and $h \in H$ is the required representative.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: The product $HK$ is a subgroup of $G$ when $K \trianglelefteq G$</strong></summary>
-
-**Statement:** If $H \leq G$ and $K \trianglelefteq G$, then $HK = \{hk : h\in H, k\in K\}$ is a subgroup of $G$.
-
-**Hint:** Use the subgroup criterion: take $hk, h'k' \in HK$ and show $(h'k')(hk)^{-1} \in HK$, inserting $h^{-1}h$ to move a $K$-element past an $H$-element via normality.
-
-**Why needed:** It is claim 1 of the theorem, proved directly here as an alternative to the homomorphism route (and a self-contained drill in using normality).
-
-<details>
-<summary>Full proof</summary>
-
-The set $HK$ is non-empty since $e = ee \in HK$. Take $hk, h'k' \in HK$. Then
-$$h'k'(hk)^{-1} = h'k'k^{-1}h^{-1} = (h'h^{-1})\,\big(h(k'k^{-1})h^{-1}\big).$$
-The first factor $h'h^{-1}$ lies in $H$. The second factor is $k'k^{-1} \in K$ conjugated by $h \in G$, which lies in $K$ because $K$ is normal in $G$. So $h'k'(hk)^{-1}$ is a product of an element of $H$ with an element of $K$, hence lies in $HK$. By the subgroup criterion, $HK \leq G$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: The restricted quotient map and its kernel and image</strong></summary>
-
-**Statement:** Let $K \trianglelefteq G$, $H \leq G$. The map $\varphi : H \to G/K$, $\varphi(h) = hK$, is a homomorphism with $\ker\varphi = H \cap K$ and $\operatorname{im}\varphi = HK/K$.
-
-**Hint:** $\varphi$ is the inclusion $H \hookrightarrow G$ followed by the quotient map $\pi : G \to G/K$. For the kernel, $\varphi(h) = K \iff h \in K$.
-
-**Why needed:** It is the single homomorphism that the first isomorphism theorem is applied to; its kernel and image are the two sides of the final isomorphism.
-
-<details>
-<summary>Full proof</summary>
-
-The quotient map $\pi : G \to G/K$, $g \mapsto gK$, is a homomorphism (this requires $K \trianglelefteq G$). The inclusion $\iota : H \to G$, $h \mapsto h$, is a homomorphism. Hence $\varphi = \pi \circ \iota : H \to G/K$, $h \mapsto hK$, is a homomorphism.
-
-*Kernel.* The identity of $G/K$ is the coset $K$. So $h \in \ker\varphi \iff hK = K \iff h \in K$. Since $h$ is already in $H$, this says $h \in H \cap K$. Thus $\ker\varphi = H \cap K$.
-
-*Image.* By definition $\operatorname{im}\varphi = \{hK : h \in H\}$. By Lemma 1 this is exactly the set of cosets $gK$ with $g \in HK$, that is, $HK/K$.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: The restricted quotient map and its kernel and image
+> **Statement:** Let $K \trianglelefteq G$, $H \leq G$. The map $\varphi : H \to G/K$, $\varphi(h) = hK$, is a homomorphism with $\ker\varphi = H \cap K$ and $\operatorname{im}\varphi = HK/K$.
+>
+> **Hint:** $\varphi$ is the inclusion $H \hookrightarrow G$ followed by the quotient map $\pi : G \to G/K$. For the kernel, $\varphi(h) = K \iff h \in K$.
+>
+> **Why needed:** It is the single homomorphism that the first isomorphism theorem is applied to; its kernel and image are the two sides of the final isomorphism.
+>
+> > [!note]- Full proof
+> > The quotient map $\pi : G \to G/K$, $g \mapsto gK$, is a homomorphism (this requires $K \trianglelefteq G$). The inclusion $\iota : H \to G$, $h \mapsto h$, is a homomorphism. Hence $\varphi = \pi \circ \iota : H \to G/K$, $h \mapsto hK$, is a homomorphism.
+> >
+> > *Kernel.* The identity of $G/K$ is the coset $K$. So $h \in \ker\varphi \iff hK = K \iff h \in K$. Since $h$ is already in $H$, this says $h \in H \cap K$. Thus $\ker\varphi = H \cap K$.
+> >
+> > *Image.* By definition $\operatorname{im}\varphi = \{hK : h \in H\}$. By Lemma 1 this is exactly the set of cosets $gK$ with $g \in HK$, that is, $HK/K$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-Let $G$ be a group, $H \leq G$, and $K \trianglelefteq G$.
-
-**The homomorphism.** Define
-$$\varphi : H \longrightarrow G/K, \qquad \varphi(h) = hK.$$
-This is the composite of the inclusion $H \hookrightarrow G$ with the quotient homomorphism $G \to G/K$ (which exists because $K \trianglelefteq G$), so $\varphi$ is a homomorphism.
-
-**Claim 1: $HK$ is a subgroup.** The image $\operatorname{im}\varphi$ is a subgroup of $G/K$. By the coset-representative argument (Lemma 1), a coset $gK$ lies in $\operatorname{im}\varphi$ exactly when $g \in HK$; thus $\operatorname{im}\varphi$ consists precisely of the cosets of $K$ with a representative in $HK$. The union of these cosets is the set $HK$ itself (each such coset $hK$ with $h\in H$ is contained in $HK$, and conversely each element $hk\in HK$ lies in the coset $hK$). Since a union of cosets forming a subgroup of $G/K$ pulls back to a subgroup of $G$, $HK$ is a subgroup of $G$. (For a self-contained direct proof, see Lemma 2.)
-
-**Claim 2: normality.** Since $K \subseteq HK \subseteq G$ and $K$ is normal in $G$, conjugation by any element of the subgroup $HK$ maps $K$ into $K$; hence $K \trianglelefteq HK$, and the quotient $HK/K$ is a group. For the other half: $\ker\varphi$ is a normal subgroup of the domain $H$. We compute $\ker\varphi$: an element $h \in H$ satisfies $\varphi(h) = K$ if and only if $hK = K$ if and only if $h \in K$; combined with $h \in H$ this gives $h \in H \cap K$. So $\ker\varphi = H \cap K$, and therefore $H \cap K \trianglelefteq H$.
-
-**Claim 3: the isomorphism.** We have a homomorphism $\varphi : H \to G/K$ with
-$$\ker\varphi = H \cap K, \qquad \operatorname{im}\varphi = HK/K$$
-(the image computed via Lemma 1). The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\varphi$ gives an isomorphism
-$$\frac{H}{\ker\varphi} \;\cong\; \operatorname{im}\varphi, \qquad\text{that is}\qquad \frac{H}{H \cap K} \;\cong\; \frac{HK}{K}. \qquad \blacksquare$$
-
-</details>
+> [!note]- Complete formal proof
+> Let $G$ be a group, $H \leq G$, and $K \trianglelefteq G$.
+>
+> **The homomorphism.** Define
+> $$\varphi : H \longrightarrow G/K, \qquad \varphi(h) = hK.$$
+> This is the composite of the inclusion $H \hookrightarrow G$ with the quotient homomorphism $G \to G/K$ (which exists because $K \trianglelefteq G$), so $\varphi$ is a homomorphism.
+>
+> **Claim 1: $HK$ is a subgroup.** The image $\operatorname{im}\varphi$ is a subgroup of $G/K$. By the coset-representative argument (Lemma 1), a coset $gK$ lies in $\operatorname{im}\varphi$ exactly when $g \in HK$; thus $\operatorname{im}\varphi$ consists precisely of the cosets of $K$ with a representative in $HK$. The union of these cosets is the set $HK$ itself (each such coset $hK$ with $h\in H$ is contained in $HK$, and conversely each element $hk\in HK$ lies in the coset $hK$). Since a union of cosets forming a subgroup of $G/K$ pulls back to a subgroup of $G$, $HK$ is a subgroup of $G$. (For a self-contained direct proof, see Lemma 2.)
+>
+> **Claim 2: normality.** Since $K \subseteq HK \subseteq G$ and $K$ is normal in $G$, conjugation by any element of the subgroup $HK$ maps $K$ into $K$; hence $K \trianglelefteq HK$, and the quotient $HK/K$ is a group. For the other half: $\ker\varphi$ is a normal subgroup of the domain $H$. We compute $\ker\varphi$: an element $h \in H$ satisfies $\varphi(h) = K$ if and only if $hK = K$ if and only if $h \in K$; combined with $h \in H$ this gives $h \in H \cap K$. So $\ker\varphi = H \cap K$, and therefore $H \cap K \trianglelefteq H$.
+>
+> **Claim 3: the isomorphism.** We have a homomorphism $\varphi : H \to G/K$ with
+> $$\ker\varphi = H \cap K, \qquad \operatorname{im}\varphi = HK/K$$
+> (the image computed via Lemma 1). The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\varphi$ gives an isomorphism
+> $$\frac{H}{\ker\varphi} \;\cong\; \operatorname{im}\varphi, \qquad\text{that is}\qquad \frac{H}{H \cap K} \;\cong\; \frac{HK}{K}. \qquad \blacksquare$$
 
 ---
 

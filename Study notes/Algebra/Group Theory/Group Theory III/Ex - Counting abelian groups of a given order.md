@@ -54,26 +54,14 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> You are counting *abelian* groups, so the [[Thm - Classification of Finite Abelian Groups|classification of finite abelian groups]] applies. Use the form that writes the group as a product of cyclic groups of *prime-power* order. Begin by factorizing $720$ into prime powers — what primes appear, and to what powers?
 
-You are counting *abelian* groups, so the [[Thm - Classification of Finite Abelian Groups|classification of finite abelian groups]] applies. Use the form that writes the group as a product of cyclic groups of *prime-power* order. Begin by factorizing $720$ into prime powers — what primes appear, and to what powers?
+> [!note]- Hint 2
+> The primes can be handled one at a time. The [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] says that the part of the group belonging to one prime does not interact with the part belonging to another, so the total count is a *product* of separate counts, one per prime. Fix a single prime $p$ appearing with exponent $a$: how many abelian groups of order exactly $p^a$ are there?
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-The primes can be handled one at a time. The [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] says that the part of the group belonging to one prime does not interact with the part belonging to another, so the total count is a *product* of separate counts, one per prime. Fix a single prime $p$ appearing with exponent $a$: how many abelian groups of order exactly $p^a$ are there?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-An abelian group of order $p^a$ is $C_{p^{b_1}} \times \cdots \times C_{p^{b_t}}$ with $b_1 + \cdots + b_t = a$ and every $b_j \geq 1$. Because direct product ignores the ordering of its factors, this is exactly an unordered way of writing $a$ as a sum of positive integers — a *partition* of $a$. So the number of abelian groups of order $p^a$ is $p(a)$, the partition function. Now evaluate $p(4)$, $p(2)$, $p(1)$ and multiply.
-
-</details>
+> [!note]- Hint 3
+> An abelian group of order $p^a$ is $C_{p^{b_1}} \times \cdots \times C_{p^{b_t}}$ with $b_1 + \cdots + b_t = a$ and every $b_j \geq 1$. Because direct product ignores the ordering of its factors, this is exactly an unordered way of writing $a$ as a sum of positive integers — a *partition* of $a$. So the number of abelian groups of order $p^a$ is $p(a)$, the partition function. Now evaluate $p(4)$, $p(2)$, $p(1)$ and multiply.
 
 ---
 
@@ -85,87 +73,67 @@ The strategy is to factor $720$, use the [[Thm - Classification of Finite Abelia
 
 The order factorizes as $720 = 2^4 \cdot 3^2 \cdot 5^1$. The three primes are $2, 3, 5$, with exponents $4, 2, 1$.
 
-<details>
-<summary>Derivation</summary>
-
-Divide out powers of small primes: $720 = 2 \cdot 360 = 2^2 \cdot 180 = 2^3 \cdot 90 = 2^4 \cdot 45$, and $45 = 9 \cdot 5 = 3^2 \cdot 5$. Hence
-$$720 = 2^4 \cdot 3^2 \cdot 5^1,$$
-with $2 \nmid 45$ confirming the power of $2$ is exactly $4$. The relevant data is the list of exponents $(a_2, a_3, a_5) = (4, 2, 1)$.
-
-</details>
+> [!note]- Derivation
+> Divide out powers of small primes: $720 = 2 \cdot 360 = 2^2 \cdot 180 = 2^3 \cdot 90 = 2^4 \cdot 45$, and $45 = 9 \cdot 5 = 3^2 \cdot 5$. Hence
+> $$720 = 2^4 \cdot 3^2 \cdot 5^1,$$
+> with $2 \nmid 45$ confirming the power of $2$ is exactly $4$. The relevant data is the list of exponents $(a_2, a_3, a_5) = (4, 2, 1)$.
 
 **Step 2: Reduce to one prime at a time.**
 
 By the [[Thm - Classification of Finite Abelian Groups|classification]] together with the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]], an abelian group of order $720$ is determined, independently for each prime $p \in \{2,3,5\}$, by an abelian group of order $p^{a_p}$ — its **Sylow $p$-subgroup**. The total count is the product of the per-prime counts.
 
-<details>
-<summary>Derivation</summary>
-
-The classification, in elementary-divisor form, says any abelian group $G$ of order $720$ is a [[Def - Direct Product|direct product]] of cyclic groups of prime-power order:
-$$G \cong C_{q_1} \times C_{q_2} \times \cdots \times C_{q_s}, \qquad \text{each } q_j \text{ a prime power.}$$
-Group the factors $q_j$ by which prime they are a power of. Collecting the $2$-power factors into a product $G_2$, the $3$-power factors into $G_3$, and the $5$-power factor into $G_5$, we get $G \cong G_2 \times G_3 \times G_5$. Counting orders, $|G_2|$ is a power of $2$, $|G_3|$ a power of $3$, $|G_5|$ a power of $5$, and their product is $720 = 2^4 \cdot 3^2 \cdot 5$; by uniqueness of prime factorization, $|G_2| = 2^4$, $|G_3| = 3^2$, $|G_5| = 5$.
-
-This is independence in two directions. First, *every* abelian $G$ of order $720$ arises this way. Second, the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] guarantees there is no double-counting and no interference between primes: because $2^4$, $3^2$, $5$ are pairwise coprime, a choice of $G_2$, a choice of $G_3$, and a choice of $G_5$ assemble into one and only one isomorphism type $G_2 \times G_3 \times G_5$, and distinct triples of choices give non-isomorphic groups (their Sylow subgroups, which the triple records, differ). So the abelian groups of order $720$ are in bijection with triples
-$$(\text{abelian group of order } 2^4,\ \text{abelian group of order } 3^2,\ \text{abelian group of order } 5),$$
-and the count is the *product* of the three separate counts.
-
-</details>
+> [!note]- Derivation
+> The classification, in elementary-divisor form, says any abelian group $G$ of order $720$ is a [[Def - Direct Product|direct product]] of cyclic groups of prime-power order:
+> $$G \cong C_{q_1} \times C_{q_2} \times \cdots \times C_{q_s}, \qquad \text{each } q_j \text{ a prime power.}$$
+> Group the factors $q_j$ by which prime they are a power of. Collecting the $2$-power factors into a product $G_2$, the $3$-power factors into $G_3$, and the $5$-power factor into $G_5$, we get $G \cong G_2 \times G_3 \times G_5$. Counting orders, $|G_2|$ is a power of $2$, $|G_3|$ a power of $3$, $|G_5|$ a power of $5$, and their product is $720 = 2^4 \cdot 3^2 \cdot 5$; by uniqueness of prime factorization, $|G_2| = 2^4$, $|G_3| = 3^2$, $|G_5| = 5$.
+>
+> This is independence in two directions. First, *every* abelian $G$ of order $720$ arises this way. Second, the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] guarantees there is no double-counting and no interference between primes: because $2^4$, $3^2$, $5$ are pairwise coprime, a choice of $G_2$, a choice of $G_3$, and a choice of $G_5$ assemble into one and only one isomorphism type $G_2 \times G_3 \times G_5$, and distinct triples of choices give non-isomorphic groups (their Sylow subgroups, which the triple records, differ). So the abelian groups of order $720$ are in bijection with triples
+> $$(\text{abelian group of order } 2^4,\ \text{abelian group of order } 3^2,\ \text{abelian group of order } 5),$$
+> and the count is the *product* of the three separate counts.
 
 **Step 3: Count abelian groups of order $p^a$ as partitions of $a$.**
 
 The number of abelian groups of order $p^a$, up to isomorphism, is exactly $p(a)$ — the number of integer partitions of the exponent $a$. This holds for every prime $p$ and is independent of which prime $p$ is.
 
-<details>
-<summary>Derivation</summary>
-
-Fix a prime $p$ and exponent $a$. By the [[Thm - Classification of Finite Abelian Groups|classification]], an abelian group of order $p^a$ is a direct product of cyclic groups of prime-power order, and since the order is $p^a$ every factor must be a power *of $p$*:
-$$C_{p^{b_1}} \times C_{p^{b_2}} \times \cdots \times C_{p^{b_t}}, \qquad b_1, b_2, \dots, b_t \geq 1.$$
-The order of this product is $p^{b_1 + b_2 + \cdots + b_t}$, and for it to equal $p^a$ we need
-$$b_1 + b_2 + \cdots + b_t = a.$$
-So the data of the group is a finite list of positive integers summing to $a$. But the [[Def - Direct Product|direct product]] does not depend on the order in which its factors are listed — $C_{p^{b_1}} \times C_{p^{b_2}} \cong C_{p^{b_2}} \times C_{p^{b_1}}$ — so what has actually been specified is the *unordered* multiset $\{b_1, \dots, b_t\}$. An unordered multiset of positive integers summing to $a$ is precisely an **integer partition** of $a$.
-
-The correspondence is a genuine bijection. Each partition of $a$ produces one group, by raising $p$ to each part and taking the product. Conversely each abelian group of order $p^a$, by the *uniqueness* clause of the classification, has a single well-defined multiset of elementary divisors, hence determines a single partition; and two groups with the same partition have the same elementary divisors, so by uniqueness are isomorphic. Therefore the number of abelian groups of order $p^a$ up to isomorphism equals $p(a)$, the partition function evaluated at $a$. The prime $p$ played no role beyond labelling — only the exponent $a$ matters.
-
-</details>
+> [!note]- Derivation
+> Fix a prime $p$ and exponent $a$. By the [[Thm - Classification of Finite Abelian Groups|classification]], an abelian group of order $p^a$ is a direct product of cyclic groups of prime-power order, and since the order is $p^a$ every factor must be a power *of $p$*:
+> $$C_{p^{b_1}} \times C_{p^{b_2}} \times \cdots \times C_{p^{b_t}}, \qquad b_1, b_2, \dots, b_t \geq 1.$$
+> The order of this product is $p^{b_1 + b_2 + \cdots + b_t}$, and for it to equal $p^a$ we need
+> $$b_1 + b_2 + \cdots + b_t = a.$$
+> So the data of the group is a finite list of positive integers summing to $a$. But the [[Def - Direct Product|direct product]] does not depend on the order in which its factors are listed — $C_{p^{b_1}} \times C_{p^{b_2}} \cong C_{p^{b_2}} \times C_{p^{b_1}}$ — so what has actually been specified is the *unordered* multiset $\{b_1, \dots, b_t\}$. An unordered multiset of positive integers summing to $a$ is precisely an **integer partition** of $a$.
+>
+> The correspondence is a genuine bijection. Each partition of $a$ produces one group, by raising $p$ to each part and taking the product. Conversely each abelian group of order $p^a$, by the *uniqueness* clause of the classification, has a single well-defined multiset of elementary divisors, hence determines a single partition; and two groups with the same partition have the same elementary divisors, so by uniqueness are isomorphic. Therefore the number of abelian groups of order $p^a$ up to isomorphism equals $p(a)$, the partition function evaluated at $a$. The prime $p$ played no role beyond labelling — only the exponent $a$ matters.
 
 **Step 4: Evaluate and multiply.**
 
 The exponents are $4, 2, 1$. Counting partitions, $p(4) = 5$, $p(2) = 2$, $p(1) = 1$, so the number of abelian groups of order $720$ is
 $$p(4) \cdot p(2) \cdot p(1) = 5 \cdot 2 \cdot 1 = 10.$$
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> The partitions of $4$ are
+> $$4, \quad 3+1, \quad 2+2, \quad 2+1+1, \quad 1+1+1+1,$$
+> so $p(4) = 5$. These correspond to the five abelian groups of order $2^4 = 16$:
+> $$C_{16}, \quad C_8 \times C_2, \quad C_4 \times C_4, \quad C_4 \times C_2 \times C_2, \quad C_2 \times C_2 \times C_2 \times C_2.$$
+> The partitions of $2$ are $2$ and $1+1$, so $p(2) = 2$, corresponding to the two abelian groups of order $3^2 = 9$:
+> $$C_9, \quad C_3 \times C_3.$$
+> The only partition of $1$ is $1$ itself, so $p(1) = 1$: the single abelian group of order $5$ is $C_5$.
+>
+> By Step 2 the total count is the product of these:
+> $$p(4) \cdot p(2) \cdot p(1) = 5 \cdot 2 \cdot 1 = 10.$$
+> There are exactly $\mathbf{10}$ abelian groups of order $720$ up to isomorphism.
 
-The partitions of $4$ are
-$$4, \quad 3+1, \quad 2+2, \quad 2+1+1, \quad 1+1+1+1,$$
-so $p(4) = 5$. These correspond to the five abelian groups of order $2^4 = 16$:
-$$C_{16}, \quad C_8 \times C_2, \quad C_4 \times C_4, \quad C_4 \times C_2 \times C_2, \quad C_2 \times C_2 \times C_2 \times C_2.$$
-The partitions of $2$ are $2$ and $1+1$, so $p(2) = 2$, corresponding to the two abelian groups of order $3^2 = 9$:
-$$C_9, \quad C_3 \times C_3.$$
-The only partition of $1$ is $1$ itself, so $p(1) = 1$: the single abelian group of order $5$ is $C_5$.
-
-By Step 2 the total count is the product of these:
-$$p(4) \cdot p(2) \cdot p(1) = 5 \cdot 2 \cdot 1 = 10.$$
-There are exactly $\mathbf{10}$ abelian groups of order $720$ up to isomorphism.
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Factor the order: $720 = 2^4 \cdot 3^2 \cdot 5^1$.
-
-By the [[Thm - Classification of Finite Abelian Groups|classification of finite abelian groups]] in elementary-divisor form, every abelian group $G$ of order $720$ is a [[Def - Direct Product|direct product]] of cyclic groups of prime-power order. Grouping these factors by their underlying prime gives $G \cong G_2 \times G_3 \times G_5$ where $|G_2| = 2^4$, $|G_3| = 3^2$, $|G_5| = 5$. Because $2^4, 3^2, 5$ are pairwise coprime, the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] makes this decomposition a bijection: isomorphism types of $G$ correspond bijectively to triples $(G_2, G_3, G_5)$ of abelian groups of orders $2^4, 3^2, 5$ respectively. Hence
-$$\#\{\text{abelian groups of order } 720\} = \#\{\text{order } 2^4\} \cdot \#\{\text{order } 3^2\} \cdot \#\{\text{order } 5\}.$$
-
-For a single prime $p$, an abelian group of order $p^a$ is $C_{p^{b_1}} \times \cdots \times C_{p^{b_t}}$ with each $b_j \geq 1$ and $\sum b_j = a$. Since the direct product is insensitive to the ordering of its factors, the group is determined by the unordered multiset $\{b_1, \dots, b_t\}$, i.e. by an integer partition of $a$. By the uniqueness clause of the classification this correspondence is a bijection, so the number of abelian groups of order $p^a$ is $p(a)$, the partition function.
-
-The exponents here are $4, 2, 1$, with $p(4) = 5$ (partitions $4,\ 3{+}1,\ 2{+}2,\ 2{+}1{+}1,\ 1{+}1{+}1{+}1$), $p(2) = 2$ (partitions $2,\ 1{+}1$), and $p(1) = 1$. Therefore
-$$\#\{\text{abelian groups of order } 720\} = p(4) \cdot p(2) \cdot p(1) = 5 \cdot 2 \cdot 1 = 10.$$
-
-In general, for $n = p_1^{a_1} \cdots p_k^{a_k}$ the same argument gives the number of abelian groups of order $n$ as $\prod_{i=1}^{k} p(a_i)$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Factor the order: $720 = 2^4 \cdot 3^2 \cdot 5^1$.
+>
+> By the [[Thm - Classification of Finite Abelian Groups|classification of finite abelian groups]] in elementary-divisor form, every abelian group $G$ of order $720$ is a [[Def - Direct Product|direct product]] of cyclic groups of prime-power order. Grouping these factors by their underlying prime gives $G \cong G_2 \times G_3 \times G_5$ where $|G_2| = 2^4$, $|G_3| = 3^2$, $|G_5| = 5$. Because $2^4, 3^2, 5$ are pairwise coprime, the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] makes this decomposition a bijection: isomorphism types of $G$ correspond bijectively to triples $(G_2, G_3, G_5)$ of abelian groups of orders $2^4, 3^2, 5$ respectively. Hence
+> $$\#\{\text{abelian groups of order } 720\} = \#\{\text{order } 2^4\} \cdot \#\{\text{order } 3^2\} \cdot \#\{\text{order } 5\}.$$
+>
+> For a single prime $p$, an abelian group of order $p^a$ is $C_{p^{b_1}} \times \cdots \times C_{p^{b_t}}$ with each $b_j \geq 1$ and $\sum b_j = a$. Since the direct product is insensitive to the ordering of its factors, the group is determined by the unordered multiset $\{b_1, \dots, b_t\}$, i.e. by an integer partition of $a$. By the uniqueness clause of the classification this correspondence is a bijection, so the number of abelian groups of order $p^a$ is $p(a)$, the partition function.
+>
+> The exponents here are $4, 2, 1$, with $p(4) = 5$ (partitions $4,\ 3{+}1,\ 2{+}2,\ 2{+}1{+}1,\ 1{+}1{+}1{+}1$), $p(2) = 2$ (partitions $2,\ 1{+}1$), and $p(1) = 1$. Therefore
+> $$\#\{\text{abelian groups of order } 720\} = p(4) \cdot p(2) \cdot p(1) = 5 \cdot 2 \cdot 1 = 10.$$
+>
+> In general, for $n = p_1^{a_1} \cdots p_k^{a_k}$ the same argument gives the number of abelian groups of order $n$ as $\prod_{i=1}^{k} p(a_i)$. $\blacksquare$
 
 ---
 

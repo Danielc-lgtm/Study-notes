@@ -57,26 +57,14 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> You want to merge the six prime-power cyclic factors into as few cyclic factors as possible while obtaining a divisibility chain. The only legal merge is the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]]: $C_m \times C_n \cong C_{mn}$ when $\gcd(m,n) = 1$. So you may only ever fuse factors whose orders are *coprime* — and prime powers are coprime exactly when they belong to *different primes*. Sort the six factors by their prime.
 
-You want to merge the six prime-power cyclic factors into as few cyclic factors as possible while obtaining a divisibility chain. The only legal merge is the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]]: $C_m \times C_n \cong C_{mn}$ when $\gcd(m,n) = 1$. So you may only ever fuse factors whose orders are *coprime* — and prime powers are coprime exactly when they belong to *different primes*. Sort the six factors by their prime.
+> [!note]- Hint 2
+> Make a table. One column for each prime ($2$, $3$, $5$); fill each column with that prime's prime-power factors. The $2$-column holds $\{4, 2, 2\}$, the $3$-column holds $\{9, 3\}$, the $5$-column holds $\{5\}$. Sort every column into *descending* order. The number of invariant factors $r$ is the height of the tallest column.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Make a table. One column for each prime ($2$, $3$, $5$); fill each column with that prime's prime-power factors. The $2$-column holds $\{4, 2, 2\}$, the $3$-column holds $\{9, 3\}$, the $5$-column holds $\{5\}$. Sort every column into *descending* order. The number of invariant factors $r$ is the height of the tallest column.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Read the table row by row. The first invariant factor $d_1$ is the product of the top entry of each column — the largest power of every prime. The second $d_2$ is the product of the second entries (use $1$ for a column that has run out). Continue down the rows. Because each column descends, each row divides the row above it, so $d_{i+1} \mid d_i$ comes out for free. Top row: $4 \cdot 9 \cdot 5$. Second row: $2 \cdot 3$. Third row: $2$ (the $3$- and $5$-columns are empty, contributing $1$).
-
-</details>
+> [!note]- Hint 3
+> Read the table row by row. The first invariant factor $d_1$ is the product of the top entry of each column — the largest power of every prime. The second $d_2$ is the product of the second entries (use $1$ for a column that has run out). Continue down the rows. Because each column descends, each row divides the row above it, so $d_{i+1} \mid d_i$ comes out for free. Top row: $4 \cdot 9 \cdot 5$. Second row: $2 \cdot 3$. Third row: $2$ (the $3$- and $5$-columns are empty, contributing $1$).
 
 ---
 
@@ -88,86 +76,70 @@ The strategy is to sort the prime-power factors into columns by prime, descendin
 
 Group the six elementary divisors by their underlying prime and sort each group into descending order. The $2$-column is $(4, 2, 2)$, the $3$-column is $(9, 3)$, the $5$-column is $(5)$.
 
-<details>
-<summary>Derivation</summary>
-
-The elementary divisors are $\{2, 2, 4, 3, 9, 5\}$, every entry a prime power. Sort them by which prime they are a power of:
-
-- powers of $2$: $\quad 4 = 2^2,\quad 2 = 2^1,\quad 2 = 2^1$;
-- powers of $3$: $\quad 9 = 3^2,\quad 3 = 3^1$;
-- powers of $5$: $\quad 5 = 5^1$.
-
-Now sort each list into *descending* order and place the lists as the columns of a grid, padding shorter columns at the bottom with $1$ (the $1$ stands for a missing factor $C_1$, the trivial group, which contributes nothing to a product):
-
-| row | $p = 2$ | $p = 3$ | $p = 5$ |
-|---|---|---|---|
-| 1 | $4$ | $9$ | $5$ |
-| 2 | $2$ | $3$ | $1$ |
-| 3 | $2$ | $1$ | $1$ |
-
-The tallest column has height $3$ (the prime $2$ appears with three factors), so $A$ will have $r = 3$ invariant factors.
-
-</details>
+> [!note]- Derivation
+> The elementary divisors are $\{2, 2, 4, 3, 9, 5\}$, every entry a prime power. Sort them by which prime they are a power of:
+>
+> - powers of $2$: $\quad 4 = 2^2,\quad 2 = 2^1,\quad 2 = 2^1$;
+> - powers of $3$: $\quad 9 = 3^2,\quad 3 = 3^1$;
+> - powers of $5$: $\quad 5 = 5^1$.
+>
+> Now sort each list into *descending* order and place the lists as the columns of a grid, padding shorter columns at the bottom with $1$ (the $1$ stands for a missing factor $C_1$, the trivial group, which contributes nothing to a product):
+>
+> | row | $p = 2$ | $p = 3$ | $p = 5$ |
+> |---|---|---|---|
+> | 1 | $4$ | $9$ | $5$ |
+> | 2 | $2$ | $3$ | $1$ |
+> | 3 | $2$ | $1$ | $1$ |
+>
+> The tallest column has height $3$ (the prime $2$ appears with three factors), so $A$ will have $r = 3$ invariant factors.
 
 **Step 2: Fuse each row into a single invariant factor.**
 
 Each row of the grid has pairwise coprime entries, so the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] lets the corresponding cyclic factors fuse into one cyclic group. The row products are
 $$d_1 = 4 \cdot 9 \cdot 5 = 180, \qquad d_2 = 2 \cdot 3 \cdot 1 = 6, \qquad d_3 = 2 \cdot 1 \cdot 1 = 2.$$
 
-<details>
-<summary>Derivation</summary>
-
-Take row $1$: the cyclic factors of order $4, 9, 5$. Their orders are pairwise coprime — $\gcd(4,9) = \gcd(4,5) = \gcd(9,5) = 1$ — so the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]], applied twice ($C_4 \times C_9 \cong C_{36}$, then $C_{36} \times C_5 \cong C_{180}$), gives
-$$C_4 \times C_9 \times C_5 \cong C_{180}, \qquad d_1 = 4 \cdot 9 \cdot 5 = 180.$$
-Row $2$ has factors of order $2$ and $3$ (the $5$-column entry is the trivial $C_1$, which we drop):
-$$C_2 \times C_3 \cong C_6, \qquad d_2 = 2 \cdot 3 = 6,$$
-valid since $\gcd(2,3) = 1$. Row $3$ has the single factor of order $2$:
-$$d_3 = 2.$$
-Reassembling, and using that the direct product does not care how its factors are bracketed or ordered,
-$$A \cong \underbrace{(C_4 \times C_9 \times C_5)}_{C_{180}} \times \underbrace{(C_2 \times C_3)}_{C_6} \times \underbrace{C_2}_{C_2} \cong C_{180} \times C_6 \times C_2.$$
-That this regrouping leaves $A$ unchanged is exactly the content of the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] running in its fusing direction: it is an isomorphism, so the group on the right is the same abelian group as the group on the left, merely re-expressed.
-
-</details>
+> [!note]- Derivation
+> Take row $1$: the cyclic factors of order $4, 9, 5$. Their orders are pairwise coprime — $\gcd(4,9) = \gcd(4,5) = \gcd(9,5) = 1$ — so the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]], applied twice ($C_4 \times C_9 \cong C_{36}$, then $C_{36} \times C_5 \cong C_{180}$), gives
+> $$C_4 \times C_9 \times C_5 \cong C_{180}, \qquad d_1 = 4 \cdot 9 \cdot 5 = 180.$$
+> Row $2$ has factors of order $2$ and $3$ (the $5$-column entry is the trivial $C_1$, which we drop):
+> $$C_2 \times C_3 \cong C_6, \qquad d_2 = 2 \cdot 3 = 6,$$
+> valid since $\gcd(2,3) = 1$. Row $3$ has the single factor of order $2$:
+> $$d_3 = 2.$$
+> Reassembling, and using that the direct product does not care how its factors are bracketed or ordered,
+> $$A \cong \underbrace{(C_4 \times C_9 \times C_5)}_{C_{180}} \times \underbrace{(C_2 \times C_3)}_{C_6} \times \underbrace{C_2}_{C_2} \cong C_{180} \times C_6 \times C_2.$$
+> That this regrouping leaves $A$ unchanged is exactly the content of the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] running in its fusing direction: it is an isomorphism, so the group on the right is the same abelian group as the group on the left, merely re-expressed.
 
 **Step 3: Verify the divisibility chain and the order.**
 
 The invariant factors are $d_1 = 180$, $d_2 = 6$, $d_3 = 2$, and they satisfy the required chain $d_3 \mid d_2 \mid d_1$, i.e. $2 \mid 6 \mid 180$. The order check $180 \cdot 6 \cdot 2 = 2160$ — wait, this must equal $|A| = 720$; the check confirms the decomposition is correct once done properly below.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> *Divisibility chain.* Check the two divisions: $d_2 = 6$ divides $d_1 = 180$ because $180 = 6 \cdot 30$; and $d_3 = 2$ divides $d_2 = 6$ because $6 = 2 \cdot 3$. So
+> $$d_3 \mid d_2 \mid d_1, \qquad 2 \mid 6 \mid 180,$$
+> which is the chain condition required of invariant factors. The chain did not have to be checked by luck — it is forced by Step 1. Each column of the grid was sorted into descending order, so entry $i+1$ of a column divides entry $i$ (a smaller power of a prime divides a larger power of the same prime). Multiplying across row $i+1$ versus row $i$, every prime contributes a divisor relationship, so the whole product $d_{i+1}$ divides $d_i$.
+>
+> *Order check.* The product of the invariant factors must recover $|A|$. Compute:
+> $$d_1 \cdot d_2 \cdot d_3 = 180 \cdot 6 \cdot 2 = 2160 \;?$$
+> That is *not* $720$, so something would be wrong — but nothing is, because the orders multiply correctly when read off the grid prime by prime. The total order is $\prod_{\text{all entries}} = (4 \cdot 2 \cdot 2)(9 \cdot 3)(5) = 16 \cdot 27 \cdot 5$, and $16 \cdot 27 \cdot 5 = 2160$. So in fact $|A| = 2160$, not $720$: the order of $A$ is whatever the given elementary divisors multiply to, and $2 \cdot 2 \cdot 4 \cdot 3 \cdot 9 \cdot 5 = 2160$. The Recall section's arithmetic $2^4 \cdot 3^2 \cdot 5$ mis-added the powers of $2$: the $2$-part is $2 \cdot 2 \cdot 4 = 16 = 2^4$, the $3$-part is $3 \cdot 9 = 27 = 3^3$, the $5$-part is $5$, so $|A| = 2^4 \cdot 3^3 \cdot 5 = 2160$. The invariant-factor product $180 \cdot 6 \cdot 2 = 2160$ agrees with this, confirming the decomposition. (The number $720$ is unrelated to this group; the order of *this* $A$ is $2160$.)
 
-*Divisibility chain.* Check the two divisions: $d_2 = 6$ divides $d_1 = 180$ because $180 = 6 \cdot 30$; and $d_3 = 2$ divides $d_2 = 6$ because $6 = 2 \cdot 3$. So
-$$d_3 \mid d_2 \mid d_1, \qquad 2 \mid 6 \mid 180,$$
-which is the chain condition required of invariant factors. The chain did not have to be checked by luck — it is forced by Step 1. Each column of the grid was sorted into descending order, so entry $i+1$ of a column divides entry $i$ (a smaller power of a prime divides a larger power of the same prime). Multiplying across row $i+1$ versus row $i$, every prime contributes a divisor relationship, so the whole product $d_{i+1}$ divides $d_i$.
-
-*Order check.* The product of the invariant factors must recover $|A|$. Compute:
-$$d_1 \cdot d_2 \cdot d_3 = 180 \cdot 6 \cdot 2 = 2160 \;?$$
-That is *not* $720$, so something would be wrong — but nothing is, because the orders multiply correctly when read off the grid prime by prime. The total order is $\prod_{\text{all entries}} = (4 \cdot 2 \cdot 2)(9 \cdot 3)(5) = 16 \cdot 27 \cdot 5$, and $16 \cdot 27 \cdot 5 = 2160$. So in fact $|A| = 2160$, not $720$: the order of $A$ is whatever the given elementary divisors multiply to, and $2 \cdot 2 \cdot 4 \cdot 3 \cdot 9 \cdot 5 = 2160$. The Recall section's arithmetic $2^4 \cdot 3^2 \cdot 5$ mis-added the powers of $2$: the $2$-part is $2 \cdot 2 \cdot 4 = 16 = 2^4$, the $3$-part is $3 \cdot 9 = 27 = 3^3$, the $5$-part is $5$, so $|A| = 2^4 \cdot 3^3 \cdot 5 = 2160$. The invariant-factor product $180 \cdot 6 \cdot 2 = 2160$ agrees with this, confirming the decomposition. (The number $720$ is unrelated to this group; the order of *this* $A$ is $2160$.)
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-We are given $A \cong C_2 \times C_2 \times C_4 \times C_3 \times C_9 \times C_5$ and seek its invariant factor form.
-
-**Sort by prime.** Each given factor has prime-power order. Collect the orders by prime and sort each list descending:
-$$p = 2:\ (4, 2, 2), \qquad p = 3:\ (9, 3), \qquad p = 5:\ (5).$$
-Arrange as a grid with one column per prime, padding short columns with $1$:
-$$\begin{array}{c|ccc} & 2 & 3 & 5 \\ \hline \text{row 1} & 4 & 9 & 5 \\ \text{row 2} & 2 & 3 & 1 \\ \text{row 3} & 2 & 1 & 1 \end{array}$$
-The number of invariant factors is the height of the grid, $r = 3$.
-
-**Fuse each row.** The entries in any one row are powers of distinct primes, hence pairwise coprime, so by the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] the cyclic factors in that row fuse to a single cyclic group whose order is the row product:
-$$d_1 = 4 \cdot 9 \cdot 5 = 180, \qquad d_2 = 2 \cdot 3 \cdot 1 = 6, \qquad d_3 = 2 \cdot 1 \cdot 1 = 2.$$
-Concretely $C_4 \times C_9 \times C_5 \cong C_{180}$, $C_2 \times C_3 \cong C_6$, and $C_2$ stands alone, so
-$$A \cong C_{180} \times C_6 \times C_2.$$
-
-**Verify.** The chain condition holds: $2 \mid 6$ (since $6 = 2 \cdot 3$) and $6 \mid 180$ (since $180 = 6 \cdot 30$), so $d_3 \mid d_2 \mid d_1$. This is automatic: each column descends, so each row divides the row above it entry-by-entry, hence as products. The order is preserved: $d_1 d_2 d_3 = 180 \cdot 6 \cdot 2 = 2160$, equal to the product of the given elementary divisors $2 \cdot 2 \cdot 4 \cdot 3 \cdot 9 \cdot 5 = 2^4 \cdot 3^3 \cdot 5 = 2160 = |A|$.
-
-The invariant factor decomposition is
-$$A \cong C_{180} \times C_6 \times C_2, \qquad 2 \mid 6 \mid 180. \qquad \blacksquare$$
-
-</details>
+> [!note]- Complete formal solution
+> We are given $A \cong C_2 \times C_2 \times C_4 \times C_3 \times C_9 \times C_5$ and seek its invariant factor form.
+>
+> **Sort by prime.** Each given factor has prime-power order. Collect the orders by prime and sort each list descending:
+> $$p = 2:\ (4, 2, 2), \qquad p = 3:\ (9, 3), \qquad p = 5:\ (5).$$
+> Arrange as a grid with one column per prime, padding short columns with $1$:
+> $$\begin{array}{c|ccc} & 2 & 3 & 5 \\ \hline \text{row 1} & 4 & 9 & 5 \\ \text{row 2} & 2 & 3 & 1 \\ \text{row 3} & 2 & 1 & 1 \end{array}$$
+> The number of invariant factors is the height of the grid, $r = 3$.
+>
+> **Fuse each row.** The entries in any one row are powers of distinct primes, hence pairwise coprime, so by the [[Thm - Chinese Remainder Theorem for Cyclic Groups|Chinese remainder theorem]] the cyclic factors in that row fuse to a single cyclic group whose order is the row product:
+> $$d_1 = 4 \cdot 9 \cdot 5 = 180, \qquad d_2 = 2 \cdot 3 \cdot 1 = 6, \qquad d_3 = 2 \cdot 1 \cdot 1 = 2.$$
+> Concretely $C_4 \times C_9 \times C_5 \cong C_{180}$, $C_2 \times C_3 \cong C_6$, and $C_2$ stands alone, so
+> $$A \cong C_{180} \times C_6 \times C_2.$$
+>
+> **Verify.** The chain condition holds: $2 \mid 6$ (since $6 = 2 \cdot 3$) and $6 \mid 180$ (since $180 = 6 \cdot 30$), so $d_3 \mid d_2 \mid d_1$. This is automatic: each column descends, so each row divides the row above it entry-by-entry, hence as products. The order is preserved: $d_1 d_2 d_3 = 180 \cdot 6 \cdot 2 = 2160$, equal to the product of the given elementary divisors $2 \cdot 2 \cdot 4 \cdot 3 \cdot 9 \cdot 5 = 2^4 \cdot 3^3 \cdot 5 = 2160 = |A|$.
+>
+> The invariant factor decomposition is
+> $$A \cong C_{180} \times C_6 \times C_2, \qquad 2 \mid 6 \mid 180. \qquad \blacksquare$$
 
 ---
 

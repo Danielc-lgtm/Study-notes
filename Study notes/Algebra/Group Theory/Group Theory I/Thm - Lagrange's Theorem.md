@@ -120,103 +120,75 @@ Define an equivalence relation on $G$ whose classes are the left cosets of $H$. 
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: Same-coset is an equivalence relation</strong></summary>
+> [!note]- Lemma 1: Same-coset is an equivalence relation
+> **Statement:** For $H \leq G$, the relation $x \sim y \iff x^{-1}y \in H$ is an equivalence relation on $G$, and the equivalence class of $x$ is the left coset $xH$.
+>
+> **Hint:** Check the three axioms directly. Reflexivity needs $e \in H$. Symmetry needs that $H$ is closed under inverses. Transitivity needs that $H$ is closed under products.
+>
+> **Why needed:** It delivers disjointness and covering simultaneously — the cosets partition $G$ because they are the classes of an equivalence relation, so no separate "cosets don't overlap" argument is required.
+>
+> > [!note]- Full proof
+> > *Reflexive:* $x^{-1}x = e \in H$, so $x \sim x$.
+> >
+> > *Symmetric:* if $x \sim y$ then $x^{-1}y \in H$; since $H$ is closed under inverses, $(x^{-1}y)^{-1} = y^{-1}x \in H$, so $y \sim x$.
+> >
+> > *Transitive:* if $x \sim y$ and $y \sim z$ then $x^{-1}y \in H$ and $y^{-1}z \in H$; since $H$ is closed under products, $(x^{-1}y)(y^{-1}z) = x^{-1}z \in H$, so $x \sim z$.
+> >
+> > *The class of $x$ is $xH$:* the element $y$ satisfies $y \sim x$ if and only if $x^{-1}y \in H$, i.e. if and only if $x^{-1}y = h$ for some $h \in H$, i.e. if and only if $y = xh$ for some $h \in H$, i.e. if and only if $y \in xH$.
 
-**Statement:** For $H \leq G$, the relation $x \sim y \iff x^{-1}y \in H$ is an equivalence relation on $G$, and the equivalence class of $x$ is the left coset $xH$.
+> [!note]- Lemma 2: Left translation is a bijection $H \to gH$
+> **Statement:** For any $g \in G$, the map $\lambda_g : H \to gH$ defined by $\lambda_g(h) = gh$ is a bijection. Hence $|gH| = |H|$ for every coset.
+>
+> **Hint:** Surjectivity is immediate from the definition of $gH$. Injectivity is left-cancellation by $g^{-1}$.
+>
+> **Why needed:** It makes every coset the same size as $H$, so the partition of $G$ into cosets is a partition into equal blocks.
+>
+> > [!note]- Full proof
+> > *Surjective:* by definition $gH = \{gh : h \in H\}$, so every element of $gH$ is $\lambda_g(h)$ for some $h \in H$.
+> >
+> > *Injective:* if $\lambda_g(h_1) = \lambda_g(h_2)$, then $gh_1 = gh_2$; left-multiplying both sides by $g^{-1}$ gives $h_1 = h_2$.
+> >
+> > A bijection between finite sets equates their cardinalities, so $|gH| = |H|$.
 
-**Hint:** Check the three axioms directly. Reflexivity needs $e \in H$. Symmetry needs that $H$ is closed under inverses. Transitivity needs that $H$ is closed under products.
-
-**Why needed:** It delivers disjointness and covering simultaneously — the cosets partition $G$ because they are the classes of an equivalence relation, so no separate "cosets don't overlap" argument is required.
-
-<details>
-<summary>Full proof</summary>
-
-*Reflexive:* $x^{-1}x = e \in H$, so $x \sim x$.
-
-*Symmetric:* if $x \sim y$ then $x^{-1}y \in H$; since $H$ is closed under inverses, $(x^{-1}y)^{-1} = y^{-1}x \in H$, so $y \sim x$.
-
-*Transitive:* if $x \sim y$ and $y \sim z$ then $x^{-1}y \in H$ and $y^{-1}z \in H$; since $H$ is closed under products, $(x^{-1}y)(y^{-1}z) = x^{-1}z \in H$, so $x \sim z$.
-
-*The class of $x$ is $xH$:* the element $y$ satisfies $y \sim x$ if and only if $x^{-1}y \in H$, i.e. if and only if $x^{-1}y = h$ for some $h \in H$, i.e. if and only if $y = xh$ for some $h \in H$, i.e. if and only if $y \in xH$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Left translation is a bijection $H \to gH$</strong></summary>
-
-**Statement:** For any $g \in G$, the map $\lambda_g : H \to gH$ defined by $\lambda_g(h) = gh$ is a bijection. Hence $|gH| = |H|$ for every coset.
-
-**Hint:** Surjectivity is immediate from the definition of $gH$. Injectivity is left-cancellation by $g^{-1}$.
-
-**Why needed:** It makes every coset the same size as $H$, so the partition of $G$ into cosets is a partition into equal blocks.
-
-<details>
-<summary>Full proof</summary>
-
-*Surjective:* by definition $gH = \{gh : h \in H\}$, so every element of $gH$ is $\lambda_g(h)$ for some $h \in H$.
-
-*Injective:* if $\lambda_g(h_1) = \lambda_g(h_2)$, then $gh_1 = gh_2$; left-multiplying both sides by $g^{-1}$ gives $h_1 = h_2$.
-
-A bijection between finite sets equates their cardinalities, so $|gH| = |H|$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: An element's powers form a subgroup of order $\operatorname{ord}(g)$</strong></summary>
-
-**Statement:** Let $g \in G$ have finite order $n = \operatorname{ord}(g)$. Then $\langle g \rangle = \{e, g, g^2, \dots, g^{n-1}\}$ is a subgroup of $G$ with exactly $n$ elements.
-
-**Hint:** For closure, reduce exponents modulo $n$ using $g^n = e$. For the count, use the minimality of $n$ to rule out repeats.
-
-**Why needed:** It is the subgroup to which Lagrange is applied to obtain the corollary $\operatorname{ord}(g) \mid |G|$.
-
-<details>
-<summary>Full proof</summary>
-
-The set is non-empty ($e = g^0$ is in it). For closure under products and inverses it suffices, by the subgroup criterion, to check $g^r (g^s)^{-1} = g^{r-s} \in \langle g \rangle$: writing $r - s \equiv k \pmod n$ with $0 \leq k < n$ and using $g^n = e$ gives $g^{r-s} = g^k$, which is in the list.
-
-The $n$ listed elements are distinct: if $g^i = g^j$ with $0 \leq j \leq i \leq n-1$, then $g^{i-j} = e$ with $0 \leq i - j < n$; by minimality of $n$ as the least positive integer with $g^n = e$, the only possibility is $i - j = 0$, i.e. $i = j$. Hence $|\langle g \rangle| = n$.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: An element's powers form a subgroup of order $\operatorname{ord}(g)$
+> **Statement:** Let $g \in G$ have finite order $n = \operatorname{ord}(g)$. Then $\langle g \rangle = \{e, g, g^2, \dots, g^{n-1}\}$ is a subgroup of $G$ with exactly $n$ elements.
+>
+> **Hint:** For closure, reduce exponents modulo $n$ using $g^n = e$. For the count, use the minimality of $n$ to rule out repeats.
+>
+> **Why needed:** It is the subgroup to which Lagrange is applied to obtain the corollary $\operatorname{ord}(g) \mid |G|$.
+>
+> > [!note]- Full proof
+> > The set is non-empty ($e = g^0$ is in it). For closure under products and inverses it suffices, by the subgroup criterion, to check $g^r (g^s)^{-1} = g^{r-s} \in \langle g \rangle$: writing $r - s \equiv k \pmod n$ with $0 \leq k < n$ and using $g^n = e$ gives $g^{r-s} = g^k$, which is in the list.
+> >
+> > The $n$ listed elements are distinct: if $g^i = g^j$ with $0 \leq j \leq i \leq n-1$, then $g^{i-j} = e$ with $0 \leq i - j < n$; by minimality of $n$ as the least positive integer with $g^n = e$, the only possibility is $i - j = 0$, i.e. $i = j$. Hence $|\langle g \rangle| = n$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** Let $G$ be a finite group and $H \leq G$. Then $|G| = |H| \cdot |G:H|$, where $|G:H|$ is the number of left cosets of $H$ in $G$; in particular $|H| \mid |G|$.
-
-*Proof.* Define a relation on $G$ by $x \sim y \iff x^{-1}y \in H$.
-
-This is an equivalence relation. It is reflexive since $x^{-1}x = e \in H$. It is symmetric since $x^{-1}y \in H$ implies $(x^{-1}y)^{-1} = y^{-1}x \in H$, $H$ being closed under inverses. It is transitive since $x^{-1}y \in H$ and $y^{-1}z \in H$ imply $(x^{-1}y)(y^{-1}z) = x^{-1}z \in H$, $H$ being closed under products.
-
-The equivalence class of $x$ is the left coset $xH$: indeed $y \sim x$ if and only if $x^{-1}y \in H$ if and only if $y = xh$ for some $h \in H$ if and only if $y \in xH$. Since the classes of an equivalence relation partition the underlying set, the distinct left cosets of $H$ partition $G$ into disjoint, exhaustive blocks.
-
-Each block has $|H|$ elements. For a fixed $g$, the map $\lambda_g : H \to gH$, $h \mapsto gh$, is surjective by the definition of $gH$ and injective because $gh_1 = gh_2$ implies $h_1 = h_2$ on left-multiplication by $g^{-1}$. Hence $|gH| = |H|$.
-
-Let $|G:H|$ denote the number of distinct cosets. Since $G$ is the disjoint union of these $|G:H|$ cosets, each of size $|H|$,
-$$|G| = \sum_{\text{cosets } gH} |gH| = |G:H| \cdot |H|.$$
-In particular $|H|$ divides $|G|$. $\qquad\blacksquare$
-
-**Corollary.** If $G$ is finite and $g \in G$, then $\operatorname{ord}(g) \mid |G|$ and $g^{|G|} = e$.
-
-*Proof.* Let $n = \operatorname{ord}(g)$ and consider $H = \{e, g, g^2, \dots, g^{n-1}\}$. This is a subgroup: it is non-empty, and for $g^r, g^s \in H$ the element $g^r (g^s)^{-1} = g^{r-s}$ lies in $H$, since reducing $r - s$ modulo $n$ and using $g^n = e$ rewrites it as one of the listed powers. The $n$ listed elements are distinct, for if $g^i = g^j$ with $i \geq j$ then $g^{i-j} = e$ with $0 \le i - j < n$, forcing $i - j = 0$ by minimality of $n$. Hence $|H| = n$.
-
-By Lagrange's theorem $n = |H|$ divides $|G|$. Write $|G| = nk$. Then
-$$g^{|G|} = g^{nk} = (g^n)^k = e^k = e. \qquad\blacksquare$$
-
-This corollary is exactly the lemma proved in §1.1 of the source lecture notes.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** Let $G$ be a finite group and $H \leq G$. Then $|G| = |H| \cdot |G:H|$, where $|G:H|$ is the number of left cosets of $H$ in $G$; in particular $|H| \mid |G|$.
+>
+> *Proof.* Define a relation on $G$ by $x \sim y \iff x^{-1}y \in H$.
+>
+> This is an equivalence relation. It is reflexive since $x^{-1}x = e \in H$. It is symmetric since $x^{-1}y \in H$ implies $(x^{-1}y)^{-1} = y^{-1}x \in H$, $H$ being closed under inverses. It is transitive since $x^{-1}y \in H$ and $y^{-1}z \in H$ imply $(x^{-1}y)(y^{-1}z) = x^{-1}z \in H$, $H$ being closed under products.
+>
+> The equivalence class of $x$ is the left coset $xH$: indeed $y \sim x$ if and only if $x^{-1}y \in H$ if and only if $y = xh$ for some $h \in H$ if and only if $y \in xH$. Since the classes of an equivalence relation partition the underlying set, the distinct left cosets of $H$ partition $G$ into disjoint, exhaustive blocks.
+>
+> Each block has $|H|$ elements. For a fixed $g$, the map $\lambda_g : H \to gH$, $h \mapsto gh$, is surjective by the definition of $gH$ and injective because $gh_1 = gh_2$ implies $h_1 = h_2$ on left-multiplication by $g^{-1}$. Hence $|gH| = |H|$.
+>
+> Let $|G:H|$ denote the number of distinct cosets. Since $G$ is the disjoint union of these $|G:H|$ cosets, each of size $|H|$,
+> $$|G| = \sum_{\text{cosets } gH} |gH| = |G:H| \cdot |H|.$$
+> In particular $|H|$ divides $|G|$. $\qquad\blacksquare$
+>
+> **Corollary.** If $G$ is finite and $g \in G$, then $\operatorname{ord}(g) \mid |G|$ and $g^{|G|} = e$.
+>
+> *Proof.* Let $n = \operatorname{ord}(g)$ and consider $H = \{e, g, g^2, \dots, g^{n-1}\}$. This is a subgroup: it is non-empty, and for $g^r, g^s \in H$ the element $g^r (g^s)^{-1} = g^{r-s}$ lies in $H$, since reducing $r - s$ modulo $n$ and using $g^n = e$ rewrites it as one of the listed powers. The $n$ listed elements are distinct, for if $g^i = g^j$ with $i \geq j$ then $g^{i-j} = e$ with $0 \le i - j < n$, forcing $i - j = 0$ by minimality of $n$. Hence $|H| = n$.
+>
+> By Lagrange's theorem $n = |H|$ divides $|G|$. Write $|G| = nk$. Then
+> $$g^{|G|} = g^{nk} = (g^n)^k = e^k = e. \qquad\blacksquare$$
+>
+> This corollary is exactly the lemma proved in §1.1 of the source lecture notes.
 
 ---
 

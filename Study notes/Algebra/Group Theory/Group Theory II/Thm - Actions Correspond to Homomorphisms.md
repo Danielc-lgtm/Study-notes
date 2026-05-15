@@ -128,143 +128,99 @@ Build the map both ways and check each is the inverse of the other. Forward: sen
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: Acting by a fixed group element is a permutation</strong></summary>
+> [!note]- Lemma 1: Acting by a fixed group element is a permutation
+> **Statement:** Let $G$ act on $X$. For each $g \in G$, the function $\sigma_g : X \to X$, $\sigma_g(x) = g\cdot x$, is a bijection, with inverse $\sigma_{g^{-1}}$.
+>
+> **Hint:** Compose $\sigma_{g^{-1}}$ with $\sigma_g$ and collapse the result using the associativity axiom and then the identity axiom.
+>
+> **Why needed:** It is what makes the assignment $g \mapsto \sigma_g$ a map into $\operatorname{Sym}(X)$ rather than merely into the monoid of all functions $X \to X$.
+>
+> > [!note]- Full proof
+> > For any $x \in X$,
+> > $$\sigma_{g^{-1}}(\sigma_g(x)) = g^{-1}\cdot(g\cdot x) = (g^{-1}g)\cdot x = e\cdot x = x,$$
+> > using the associativity axiom for the middle equality and the identity axiom for the last. Hence $\sigma_{g^{-1}}\circ\sigma_g = \operatorname{id}_X$. The same computation with $g$ and $g^{-1}$ interchanged gives $\sigma_g\circ\sigma_{g^{-1}} = \operatorname{id}_X$. A function with a two-sided inverse is a bijection, so $\sigma_g \in \operatorname{Sym}(X)$ with $(\sigma_g)^{-1} = \sigma_{g^{-1}}$.
 
-**Statement:** Let $G$ act on $X$. For each $g \in G$, the function $\sigma_g : X \to X$, $\sigma_g(x) = g\cdot x$, is a bijection, with inverse $\sigma_{g^{-1}}$.
+> [!note]- Lemma 2: The assignment $g \mapsto \sigma_g$ is a homomorphism
+> **Statement:** Let $G$ act on $X$, and define $\rho(g) = \sigma_g$ as in Lemma 1. Then $\rho : G \to \operatorname{Sym}(X)$ satisfies $\rho(g_1 g_2) = \rho(g_1)\circ\rho(g_2)$ and $\rho(e) = \operatorname{id}_X$.
+>
+> **Hint:** Evaluate both sides of the multiplicativity equation at an arbitrary point $x$ and apply the associativity axiom.
+>
+> **Why needed:** This is the forward direction of the correspondence: an action produces a permutation representation.
+>
+> > [!note]- Full proof
+> > For any $x \in X$,
+> > $$(\rho(g_1)\circ\rho(g_2))(x) = \rho(g_1)(\rho(g_2)(x)) = g_1\cdot(g_2\cdot x) = (g_1 g_2)\cdot x = \rho(g_1 g_2)(x),$$
+> > the third equality being the action's associativity axiom. Since this holds for every $x$, the functions agree: $\rho(g_1)\circ\rho(g_2) = \rho(g_1 g_2)$. For the identity, $\rho(e)(x) = e\cdot x = x = \operatorname{id}_X(x)$ for all $x$, so $\rho(e) = \operatorname{id}_X$. Hence $\rho$ is a homomorphism.
 
-**Hint:** Compose $\sigma_{g^{-1}}$ with $\sigma_g$ and collapse the result using the associativity axiom and then the identity axiom.
+> [!note]- Lemma 3: A homomorphism into $\operatorname{Sym}(X)$ defines an action
+> **Statement:** Let $\rho : G \to \operatorname{Sym}(X)$ be a homomorphism. Then the map $G \times X \to X$ defined by $g\cdot x := \rho(g)(x)$ satisfies the two axioms of a group action.
+>
+> **Hint:** Unwind both axioms into statements about $\rho$ and use that $\rho$ is a homomorphism.
+>
+> **Why needed:** This is the backward direction of the correspondence.
+>
+> > [!note]- Full proof
+> > *Identity axiom:* $e\cdot x = \rho(e)(x) = \operatorname{id}_X(x) = x$, since a homomorphism sends $e$ to the identity of the codomain.
+> >
+> > *Associativity axiom:* for any $g_1, g_2 \in G$ and $x \in X$,
+> > $$g_1\cdot(g_2\cdot x) = \rho(g_1)\big(\rho(g_2)(x)\big) = \big(\rho(g_1)\circ\rho(g_2)\big)(x) = \rho(g_1 g_2)(x) = (g_1 g_2)\cdot x,$$
+> > the third equality being the homomorphism property of $\rho$. Both axioms hold, so $g\cdot x = \rho(g)(x)$ is an action.
 
-**Why needed:** It is what makes the assignment $g \mapsto \sigma_g$ a map into $\operatorname{Sym}(X)$ rather than merely into the monoid of all functions $X \to X$.
+> [!note]- Lemma 4: The two constructions are mutually inverse
+> **Statement:** The passage (action $\mapsto \rho$) of Lemma 2 and the passage ($\rho \mapsto$ action) of Lemma 3 are inverse to each other.
+>
+> **Hint:** Apply one construction then the other and check the result agrees with the input by definition-chasing alone.
+>
+> **Why needed:** It upgrades "there are maps both ways" to "an action and a permutation representation are literally the same data".
+>
+> > [!note]- Full proof
+> > Start with an action $\cdot$. Lemma 2 produces $\rho$ with $\rho(g)(x) = g\cdot x$. Lemma 3 applied to this $\rho$ produces the action $g \star x := \rho(g)(x) = g\cdot x$ — identical to the original.
+> >
+> > Start with a homomorphism $\rho$. Lemma 3 produces the action $g\cdot x = \rho(g)(x)$. Lemma 2 applied to this action produces $\rho'$ with $\rho'(g) = (x\mapsto g\cdot x) = (x\mapsto\rho(g)(x)) = \rho(g)$, so $\rho' = \rho$.
+> >
+> > Both round-trips are the identity, so the constructions are mutually inverse bijections between actions of $G$ on $X$ and homomorphisms $G \to \operatorname{Sym}(X)$.
 
-<details>
-<summary>Full proof</summary>
-
-For any $x \in X$,
-$$\sigma_{g^{-1}}(\sigma_g(x)) = g^{-1}\cdot(g\cdot x) = (g^{-1}g)\cdot x = e\cdot x = x,$$
-using the associativity axiom for the middle equality and the identity axiom for the last. Hence $\sigma_{g^{-1}}\circ\sigma_g = \operatorname{id}_X$. The same computation with $g$ and $g^{-1}$ interchanged gives $\sigma_g\circ\sigma_{g^{-1}} = \operatorname{id}_X$. A function with a two-sided inverse is a bijection, so $\sigma_g \in \operatorname{Sym}(X)$ with $(\sigma_g)^{-1} = \sigma_{g^{-1}}$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: The assignment $g \mapsto \sigma_g$ is a homomorphism</strong></summary>
-
-**Statement:** Let $G$ act on $X$, and define $\rho(g) = \sigma_g$ as in Lemma 1. Then $\rho : G \to \operatorname{Sym}(X)$ satisfies $\rho(g_1 g_2) = \rho(g_1)\circ\rho(g_2)$ and $\rho(e) = \operatorname{id}_X$.
-
-**Hint:** Evaluate both sides of the multiplicativity equation at an arbitrary point $x$ and apply the associativity axiom.
-
-**Why needed:** This is the forward direction of the correspondence: an action produces a permutation representation.
-
-<details>
-<summary>Full proof</summary>
-
-For any $x \in X$,
-$$(\rho(g_1)\circ\rho(g_2))(x) = \rho(g_1)(\rho(g_2)(x)) = g_1\cdot(g_2\cdot x) = (g_1 g_2)\cdot x = \rho(g_1 g_2)(x),$$
-the third equality being the action's associativity axiom. Since this holds for every $x$, the functions agree: $\rho(g_1)\circ\rho(g_2) = \rho(g_1 g_2)$. For the identity, $\rho(e)(x) = e\cdot x = x = \operatorname{id}_X(x)$ for all $x$, so $\rho(e) = \operatorname{id}_X$. Hence $\rho$ is a homomorphism.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: A homomorphism into $\operatorname{Sym}(X)$ defines an action</strong></summary>
-
-**Statement:** Let $\rho : G \to \operatorname{Sym}(X)$ be a homomorphism. Then the map $G \times X \to X$ defined by $g\cdot x := \rho(g)(x)$ satisfies the two axioms of a group action.
-
-**Hint:** Unwind both axioms into statements about $\rho$ and use that $\rho$ is a homomorphism.
-
-**Why needed:** This is the backward direction of the correspondence.
-
-<details>
-<summary>Full proof</summary>
-
-*Identity axiom:* $e\cdot x = \rho(e)(x) = \operatorname{id}_X(x) = x$, since a homomorphism sends $e$ to the identity of the codomain.
-
-*Associativity axiom:* for any $g_1, g_2 \in G$ and $x \in X$,
-$$g_1\cdot(g_2\cdot x) = \rho(g_1)\big(\rho(g_2)(x)\big) = \big(\rho(g_1)\circ\rho(g_2)\big)(x) = \rho(g_1 g_2)(x) = (g_1 g_2)\cdot x,$$
-the third equality being the homomorphism property of $\rho$. Both axioms hold, so $g\cdot x = \rho(g)(x)$ is an action.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 4: The two constructions are mutually inverse</strong></summary>
-
-**Statement:** The passage (action $\mapsto \rho$) of Lemma 2 and the passage ($\rho \mapsto$ action) of Lemma 3 are inverse to each other.
-
-**Hint:** Apply one construction then the other and check the result agrees with the input by definition-chasing alone.
-
-**Why needed:** It upgrades "there are maps both ways" to "an action and a permutation representation are literally the same data".
-
-<details>
-<summary>Full proof</summary>
-
-Start with an action $\cdot$. Lemma 2 produces $\rho$ with $\rho(g)(x) = g\cdot x$. Lemma 3 applied to this $\rho$ produces the action $g \star x := \rho(g)(x) = g\cdot x$ — identical to the original.
-
-Start with a homomorphism $\rho$. Lemma 3 produces the action $g\cdot x = \rho(g)(x)$. Lemma 2 applied to this action produces $\rho'$ with $\rho'(g) = (x\mapsto g\cdot x) = (x\mapsto\rho(g)(x)) = \rho(g)$, so $\rho' = \rho$.
-
-Both round-trips are the identity, so the constructions are mutually inverse bijections between actions of $G$ on $X$ and homomorphisms $G \to \operatorname{Sym}(X)$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 5: Kernel is normal, and $G/G_X \cong G^X$</strong></summary>
-
-**Statement:** For the permutation representation $\rho$ of an action, $G_X := \ker\rho$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$, $G^X := \operatorname{im}\rho$ is a subgroup of $\operatorname{Sym}(X)$, and $G/G_X \cong G^X$. If the action is faithful then $G \cong G^X \leq \operatorname{Sym}(X)$.
-
-**Hint:** This is the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied verbatim to the homomorphism $\rho$.
-
-**Why needed:** It is the consequence that makes the theorem useful — it routes every action through quotients and embeddings.
-
-<details>
-<summary>Full proof</summary>
-
-By Lemmas 1–2, $\rho : G \to \operatorname{Sym}(X)$ is a homomorphism. For any homomorphism, the kernel is a normal subgroup of the domain and the image is a subgroup of the codomain; hence $G_X = \ker\rho \trianglelefteq G$ and $G^X = \operatorname{im}\rho \leq \operatorname{Sym}(X)$. Concretely, $g \in G_X$ if and only if $\rho(g) = \operatorname{id}_X$, i.e. if and only if $g\cdot x = x$ for all $x$ — the elements acting trivially everywhere.
-
-The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\rho$ gives an isomorphism $G/\ker\rho \cong \operatorname{im}\rho$, that is, $G/G_X \cong G^X$. If the action is faithful, $G_X = \{e\}$, and $G/\{e\} \cong G$, so $G \cong G^X \leq \operatorname{Sym}(X)$.
-
-</details>
-
-</details>
+> [!note]- Lemma 5: Kernel is normal, and $G/G_X \cong G^X$
+> **Statement:** For the permutation representation $\rho$ of an action, $G_X := \ker\rho$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$, $G^X := \operatorname{im}\rho$ is a subgroup of $\operatorname{Sym}(X)$, and $G/G_X \cong G^X$. If the action is faithful then $G \cong G^X \leq \operatorname{Sym}(X)$.
+>
+> **Hint:** This is the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied verbatim to the homomorphism $\rho$.
+>
+> **Why needed:** It is the consequence that makes the theorem useful — it routes every action through quotients and embeddings.
+>
+> > [!note]- Full proof
+> > By Lemmas 1–2, $\rho : G \to \operatorname{Sym}(X)$ is a homomorphism. For any homomorphism, the kernel is a normal subgroup of the domain and the image is a subgroup of the codomain; hence $G_X = \ker\rho \trianglelefteq G$ and $G^X = \operatorname{im}\rho \leq \operatorname{Sym}(X)$. Concretely, $g \in G_X$ if and only if $\rho(g) = \operatorname{id}_X$, i.e. if and only if $g\cdot x = x$ for all $x$ — the elements acting trivially everywhere.
+> >
+> > The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\rho$ gives an isomorphism $G/\ker\rho \cong \operatorname{im}\rho$, that is, $G/G_X \cong G^X$. If the action is faithful, $G_X = \{e\}$, and $G/\{e\} \cong G$, so $G \cong G^X \leq \operatorname{Sym}(X)$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** An action of $G$ on $X$ is the same data as a homomorphism $\rho : G \to \operatorname{Sym}(X)$; the two constructions are mutually inverse.
-
-*Proof.* **From an action to a homomorphism.** Let $\ast : G \times X \to X$ be an action. Define $\rho : G \to \operatorname{Sym}(X)$ by sending $g$ to the function $\rho(g) = (g \ast - : X \to X)$.
-
-First, $\rho(g)$ is a permutation: the function $g^{-1}\ast -$ is a two-sided inverse for it, since
-$$\rho(g^{-1})\big(\rho(g)(x)\big) = g^{-1}\ast(g\ast x) = (g^{-1}\cdot g)\ast x = e\ast x = x,$$
-and a symmetric computation shows $\rho(g)\circ\rho(g^{-1}) = \operatorname{id}_X$. So $\rho(g) \in \operatorname{Sym}(X)$, and $\rho$ is a well-defined function $G \to \operatorname{Sym}(X)$.
-
-Next, $\rho$ is a homomorphism. For all $x \in X$,
-$$\rho(g_1)\big(\rho(g_2)(x)\big) = g_1\ast(g_2\ast x) = (g_1\cdot g_2)\ast x = \rho(g_1\cdot g_2)(x).$$
-Since this holds for every $x$, we get $\rho(g_1)\circ\rho(g_2) = \rho(g_1\cdot g_2)$. Also $\rho(e)(x) = e\ast x = x$, so $\rho(e) = \operatorname{id}_X$. Hence $\rho$ is a homomorphism.
-
-**From a homomorphism to an action.** Conversely, given a homomorphism $\rho : G \to \operatorname{Sym}(X)$, define $\ast : G \times X \to X$ by $g\ast x = \rho(g)(x)$. Then
-$$\text{(i)}\quad g_1\ast(g_2\ast x) = \rho(g_1)\big(\rho(g_2)(x)\big) = \big(\rho(g_1)\circ\rho(g_2)\big)(x) = \rho(g_1\cdot g_2)(x) = (g_1\cdot g_2)\ast x,$$
-$$\text{(ii)}\quad e\ast x = \rho(e)(x) = \operatorname{id}_X(x) = x.$$
-So $\ast$ is a group action.
-
-**Mutual inverseness.** Applying the second construction to the $\rho$ built from an action $\ast$ yields the action $g\star x = \rho(g)(x) = g\ast x$, recovering $\ast$. Applying the first construction to the action built from a homomorphism $\rho$ yields $\rho'(g) = (x\mapsto g\ast x) = (x\mapsto\rho(g)(x)) = \rho(g)$, recovering $\rho$. The two constructions are therefore inverse to each other, so actions of $G$ on $X$ are the same data as homomorphisms $G \to \operatorname{Sym}(X)$. $\qquad\blacksquare$
-
-**Consequence.** Write $G_X = \ker\rho$ and $G^X = \operatorname{im}\rho$. Since $\rho$ is a homomorphism, $G_X \trianglelefteq G$ is a normal subgroup and $G^X \leq \operatorname{Sym}(X)$ is a subgroup. The first isomorphism theorem applied to $\rho$ gives
-$$G/G_X \cong G^X.$$
-In particular, if $G_X = \{e\}$ (the action is faithful), then $G \cong G^X \leq \operatorname{Sym}(X)$. $\qquad\blacksquare$
-
-This is the Lemma and Proposition of §1.3 of the source lecture notes; per the notes, the substance is the explicit translation exhibited in the proof, not the bare equivalence.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** An action of $G$ on $X$ is the same data as a homomorphism $\rho : G \to \operatorname{Sym}(X)$; the two constructions are mutually inverse.
+>
+> *Proof.* **From an action to a homomorphism.** Let $\ast : G \times X \to X$ be an action. Define $\rho : G \to \operatorname{Sym}(X)$ by sending $g$ to the function $\rho(g) = (g \ast - : X \to X)$.
+>
+> First, $\rho(g)$ is a permutation: the function $g^{-1}\ast -$ is a two-sided inverse for it, since
+> $$\rho(g^{-1})\big(\rho(g)(x)\big) = g^{-1}\ast(g\ast x) = (g^{-1}\cdot g)\ast x = e\ast x = x,$$
+> and a symmetric computation shows $\rho(g)\circ\rho(g^{-1}) = \operatorname{id}_X$. So $\rho(g) \in \operatorname{Sym}(X)$, and $\rho$ is a well-defined function $G \to \operatorname{Sym}(X)$.
+>
+> Next, $\rho$ is a homomorphism. For all $x \in X$,
+> $$\rho(g_1)\big(\rho(g_2)(x)\big) = g_1\ast(g_2\ast x) = (g_1\cdot g_2)\ast x = \rho(g_1\cdot g_2)(x).$$
+> Since this holds for every $x$, we get $\rho(g_1)\circ\rho(g_2) = \rho(g_1\cdot g_2)$. Also $\rho(e)(x) = e\ast x = x$, so $\rho(e) = \operatorname{id}_X$. Hence $\rho$ is a homomorphism.
+>
+> **From a homomorphism to an action.** Conversely, given a homomorphism $\rho : G \to \operatorname{Sym}(X)$, define $\ast : G \times X \to X$ by $g\ast x = \rho(g)(x)$. Then
+> $$\text{(i)}\quad g_1\ast(g_2\ast x) = \rho(g_1)\big(\rho(g_2)(x)\big) = \big(\rho(g_1)\circ\rho(g_2)\big)(x) = \rho(g_1\cdot g_2)(x) = (g_1\cdot g_2)\ast x,$$
+> $$\text{(ii)}\quad e\ast x = \rho(e)(x) = \operatorname{id}_X(x) = x.$$
+> So $\ast$ is a group action.
+>
+> **Mutual inverseness.** Applying the second construction to the $\rho$ built from an action $\ast$ yields the action $g\star x = \rho(g)(x) = g\ast x$, recovering $\ast$. Applying the first construction to the action built from a homomorphism $\rho$ yields $\rho'(g) = (x\mapsto g\ast x) = (x\mapsto\rho(g)(x)) = \rho(g)$, recovering $\rho$. The two constructions are therefore inverse to each other, so actions of $G$ on $X$ are the same data as homomorphisms $G \to \operatorname{Sym}(X)$. $\qquad\blacksquare$
+>
+> **Consequence.** Write $G_X = \ker\rho$ and $G^X = \operatorname{im}\rho$. Since $\rho$ is a homomorphism, $G_X \trianglelefteq G$ is a normal subgroup and $G^X \leq \operatorname{Sym}(X)$ is a subgroup. The first isomorphism theorem applied to $\rho$ gives
+> $$G/G_X \cong G^X.$$
+> In particular, if $G_X = \{e\}$ (the action is faithful), then $G \cong G^X \leq \operatorname{Sym}(X)$. $\qquad\blacksquare$
+>
+> This is the Lemma and Proposition of §1.3 of the source lecture notes; per the notes, the substance is the explicit translation exhibited in the proof, not the bare equivalence.
 
 ---
 

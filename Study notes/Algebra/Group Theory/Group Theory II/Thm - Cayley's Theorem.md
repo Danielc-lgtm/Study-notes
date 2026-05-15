@@ -122,95 +122,67 @@ Make $G$ act on its own underlying set by left multiplication. By [[Thm - Action
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: Left multiplication is a group action of $G$ on itself</strong></summary>
+> [!note]- Lemma 1: Left multiplication is a group action of $G$ on itself
+> **Statement:** For a group $G$, the map $G \times G \to G$ defined by $g\cdot x = gx$ (the product in $G$) is an [[Def - Group Action|action]] of $G$ on the underlying set of $G$.
+>
+> **Hint:** Check the two action axioms; both reduce to associativity and the identity law of $G$.
+>
+> **Why needed:** It is the action whose permutation representation *is* Cayley's embedding.
+>
+> > [!note]- Full proof
+> > *Identity axiom:* $e\cdot x = ex = x$ for all $x \in G$, by the identity law of $G$.
+> >
+> > *Associativity axiom:* for all $g_1, g_2, x \in G$,
+> > $$g_1\cdot(g_2\cdot x) = g_1\cdot(g_2 x) = g_1(g_2 x) = (g_1 g_2)x = (g_1 g_2)\cdot x,$$
+> > the middle equality being associativity of the group operation. Both axioms hold, so $g\cdot x = gx$ is an action.
 
-**Statement:** For a group $G$, the map $G \times G \to G$ defined by $g\cdot x = gx$ (the product in $G$) is an [[Def - Group Action|action]] of $G$ on the underlying set of $G$.
+> [!note]- Lemma 2: The regular action is faithful
+> **Statement:** Let $\rho : G \to \operatorname{Sym}(G)$ be the permutation representation of the left-regular action. Then $\ker\rho = \{e\}$.
+>
+> **Hint:** An element of the kernel fixes every point; test the condition at the single point $e$.
+>
+> **Why needed:** Triviality of the kernel is precisely what makes $\rho$ injective, hence an embedding.
+>
+> > [!note]- Full proof
+> > Let $g \in \ker\rho$. By definition $\rho(g) = \operatorname{id}_G$, i.e. $g\cdot x = x$ for every $x \in G$. Apply this at $x = e$:
+> > $$g = ge = g\cdot e = e.$$
+> > So the only element of the kernel is $e$, and $\ker\rho = \{e\}$.
 
-**Hint:** Check the two action axioms; both reduce to associativity and the identity law of $G$.
-
-**Why needed:** It is the action whose permutation representation *is* Cayley's embedding.
-
-<details>
-<summary>Full proof</summary>
-
-*Identity axiom:* $e\cdot x = ex = x$ for all $x \in G$, by the identity law of $G$.
-
-*Associativity axiom:* for all $g_1, g_2, x \in G$,
-$$g_1\cdot(g_2\cdot x) = g_1\cdot(g_2 x) = g_1(g_2 x) = (g_1 g_2)x = (g_1 g_2)\cdot x,$$
-the middle equality being associativity of the group operation. Both axioms hold, so $g\cdot x = gx$ is an action.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: The regular action is faithful</strong></summary>
-
-**Statement:** Let $\rho : G \to \operatorname{Sym}(G)$ be the permutation representation of the left-regular action. Then $\ker\rho = \{e\}$.
-
-**Hint:** An element of the kernel fixes every point; test the condition at the single point $e$.
-
-**Why needed:** Triviality of the kernel is precisely what makes $\rho$ injective, hence an embedding.
-
-<details>
-<summary>Full proof</summary>
-
-Let $g \in \ker\rho$. By definition $\rho(g) = \operatorname{id}_G$, i.e. $g\cdot x = x$ for every $x \in G$. Apply this at $x = e$:
-$$g = ge = g\cdot e = e.$$
-So the only element of the kernel is $e$, and $\ker\rho = \{e\}$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: An injective homomorphism is an isomorphism onto its image</strong></summary>
-
-**Statement:** If $\varphi : G \to K$ is a [[Def - Homomorphism|homomorphism]] with $\ker\varphi = \{e\}$, then $\varphi$ restricts to an [[Def - Isomorphism|isomorphism]] $G \cong \operatorname{im}\varphi$.
-
-**Hint:** This is the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] in the special case of a trivial kernel.
-
-**Why needed:** It is the final step converting the faithful action into the asserted isomorphism $G \cong \operatorname{im}\rho$.
-
-<details>
-<summary>Full proof</summary>
-
-The first isomorphism theorem gives an isomorphism $G/\ker\varphi \xrightarrow{\sim} \operatorname{im}\varphi$ induced by $\varphi$. When $\ker\varphi = \{e\}$, the quotient $G/\{e\}$ is canonically isomorphic to $G$ (the cosets $g\{e\} = \{g\}$ are the singletons). Composing, $G \cong G/\{e\} \cong \operatorname{im}\varphi$, and the composite is $\varphi$ with codomain restricted to its image. Hence $\varphi : G \to \operatorname{im}\varphi$ is an isomorphism.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: An injective homomorphism is an isomorphism onto its image
+> **Statement:** If $\varphi : G \to K$ is a [[Def - Homomorphism|homomorphism]] with $\ker\varphi = \{e\}$, then $\varphi$ restricts to an [[Def - Isomorphism|isomorphism]] $G \cong \operatorname{im}\varphi$.
+>
+> **Hint:** This is the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] in the special case of a trivial kernel.
+>
+> **Why needed:** It is the final step converting the faithful action into the asserted isomorphism $G \cong \operatorname{im}\rho$.
+>
+> > [!note]- Full proof
+> > The first isomorphism theorem gives an isomorphism $G/\ker\varphi \xrightarrow{\sim} \operatorname{im}\varphi$ induced by $\varphi$. When $\ker\varphi = \{e\}$, the quotient $G/\{e\}$ is canonically isomorphic to $G$ (the cosets $g\{e\} = \{g\}$ are the singletons). Composing, $G \cong G/\{e\} \cong \operatorname{im}\varphi$, and the composite is $\varphi$ with codomain restricted to its image. Hence $\varphi : G \to \operatorname{im}\varphi$ is an isomorphism.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem (Cayley).** Every group $G$ is isomorphic to a subgroup of $\operatorname{Sym}(G)$.
-
-*Proof.* Define an action of $G$ on its own underlying set by
-$$g \ast x = gx \qquad (g, x \in G),$$
-the product taken in $G$. This is an action: $e\ast x = ex = x$, and
-$$g_1\ast(g_2\ast x) = g_1(g_2 x) = (g_1 g_2)x = (g_1\cdot g_2)\ast x$$
-by associativity. By [[Thm - Actions Correspond to Homomorphisms]], this action is the same data as a homomorphism
-$$\rho : G \to \operatorname{Sym}(G), \qquad \rho(g) = (x \mapsto gx).$$
-
-We compute the kernel. Suppose $g \in \ker\rho$, so $g$ acts trivially on every element of $G$. In particular it acts trivially on the identity:
-$$g\ast e = e \quad\Longrightarrow\quad ge = e \quad\Longrightarrow\quad g = e.$$
-Hence $\ker\rho = \{e\}$.
-
-By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]],
-$$G \;\cong\; G/\ker\rho \;\cong\; \operatorname{im}\rho \;\leq\; \operatorname{Sym}(G).$$
-So $G$ is isomorphic to a subgroup of $\operatorname{Sym}(G)$. $\qquad\blacksquare$
-
-**Finite form.** If $|G| = n$, any bijection $G \leftrightarrow \{1, \dots, n\}$ induces an isomorphism $\operatorname{Sym}(G) \cong S_n$. Composing with the embedding above realises $G$ as a subgroup of $S_n$. $\qquad\blacksquare$
-
-This is the Cayley's theorem example of §1.3 of the source lecture notes; the proof there is exactly the kernel computation for the left-regular action.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem (Cayley).** Every group $G$ is isomorphic to a subgroup of $\operatorname{Sym}(G)$.
+>
+> *Proof.* Define an action of $G$ on its own underlying set by
+> $$g \ast x = gx \qquad (g, x \in G),$$
+> the product taken in $G$. This is an action: $e\ast x = ex = x$, and
+> $$g_1\ast(g_2\ast x) = g_1(g_2 x) = (g_1 g_2)x = (g_1\cdot g_2)\ast x$$
+> by associativity. By [[Thm - Actions Correspond to Homomorphisms]], this action is the same data as a homomorphism
+> $$\rho : G \to \operatorname{Sym}(G), \qquad \rho(g) = (x \mapsto gx).$$
+>
+> We compute the kernel. Suppose $g \in \ker\rho$, so $g$ acts trivially on every element of $G$. In particular it acts trivially on the identity:
+> $$g\ast e = e \quad\Longrightarrow\quad ge = e \quad\Longrightarrow\quad g = e.$$
+> Hence $\ker\rho = \{e\}$.
+>
+> By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]],
+> $$G \;\cong\; G/\ker\rho \;\cong\; \operatorname{im}\rho \;\leq\; \operatorname{Sym}(G).$$
+> So $G$ is isomorphic to a subgroup of $\operatorname{Sym}(G)$. $\qquad\blacksquare$
+>
+> **Finite form.** If $|G| = n$, any bijection $G \leftrightarrow \{1, \dots, n\}$ induces an isomorphism $\operatorname{Sym}(G) \cong S_n$. Composing with the embedding above realises $G$ as a subgroup of $S_n$. $\qquad\blacksquare$
+>
+> This is the Cayley's theorem example of §1.3 of the source lecture notes; the proof there is exactly the kernel computation for the left-regular action.
 
 ---
 

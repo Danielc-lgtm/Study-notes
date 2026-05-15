@@ -122,117 +122,81 @@ Let $G$ act on itself by conjugation. Its orbits, the conjugacy classes, partiti
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: Conjugation is an action of $G$ on itself</strong></summary>
+> [!note]- Lemma 1: Conjugation is an action of $G$ on itself
+> **Statement:** The map $G \times G \to G$, $(g, x) \mapsto gxg^{-1}$, is a [[Def - Group Action|group action]] of $G$ on the set $G$.
+>
+> **Hint:** Check the identity axiom and the compatibility axiom directly, being careful that $(gh)^{-1} = h^{-1}g^{-1}$.
+>
+> **Why needed:** It guarantees the conjugacy classes are the orbits of an action, hence that they partition $G$ — which is what makes the class equation a count.
+>
+> > [!note]- Full proof
+> > *Identity:* $e \ast x = exe^{-1} = x$.
+> >
+> > *Compatibility:* for $g, h \in G$,
+> > $$g \ast (h \ast x) = g(hxh^{-1})g^{-1} = (gh)\,x\,(h^{-1}g^{-1}) = (gh)\,x\,(gh)^{-1} = (gh) \ast x.$$
+> >
+> > Both axioms hold, so conjugation is an action. (Its [[Thm - Actions Correspond to Homomorphisms|permutation representation]] $\varphi : G \to \operatorname{Sym}(G)$ even lands in [[Def - Automorphism Group|$\operatorname{Aut}(G)$]], since each $\varphi(g)$ is a homomorphism: $\varphi(g)(x_1 x_2) = g x_1 x_2 g^{-1} = (g x_1 g^{-1})(g x_2 g^{-1}) = \varphi(g)(x_1)\,\varphi(g)(x_2)$.)
 
-**Statement:** The map $G \times G \to G$, $(g, x) \mapsto gxg^{-1}$, is a [[Def - Group Action|group action]] of $G$ on the set $G$.
+> [!note]- Lemma 2: The stabiliser of $x$ under conjugation is $C_G(x)$
+> **Statement:** For the conjugation action, the stabiliser of $x \in G$ is the [[Def - Centraliser and Centre|centraliser]] $C_G(x) = \{g \in G : gx = xg\}$.
+>
+> **Hint:** Unwind "stabiliser": $g$ stabilises $x$ if and only if $g \ast x = x$.
+>
+> **Why needed:** It is the identification that turns orbit–stabiliser into the proposition $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$.
+>
+> > [!note]- Full proof
+> > By definition the stabiliser of $x$ is $\{g \in G : g \ast x = x\} = \{g : gxg^{-1} = x\}$. Right-multiplying the equation $gxg^{-1} = x$ by $g$ gives the equivalent equation $gx = xg$. Hence the stabiliser is $\{g : gx = xg\} = C_G(x)$. Being a stabiliser, it is automatically a [[Def - Subgroup|subgroup]] of $G$.
 
-**Hint:** Check the identity axiom and the compatibility axiom directly, being careful that $(gh)^{-1} = h^{-1}g^{-1}$.
+> [!note]- Lemma 3: Class size equals centraliser index
+> **Statement:** For any $x$ in a finite group $G$, $\ |\operatorname{ccl}_G(x)| = |G : C_G(x)| = |G|/|C_G(x)|$; in particular $|\operatorname{ccl}_G(x)|$ divides $|G|$.
+>
+> **Hint:** Apply the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] with the orbit $\operatorname{ccl}_G(x)$ and the stabiliser $C_G(x)$.
+>
+> **Why needed:** This is the proposition underlying the class equation; the divisibility of class sizes is its sharpest consequence.
+>
+> > [!note]- Full proof
+> > By Lemma 1 conjugation is an action; the orbit of $x$ is $\operatorname{ccl}_G(x)$ and, by Lemma 2, its stabiliser is $C_G(x)$. The [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] provides a bijection $\operatorname{ccl}_G(x) \leftrightarrow G/C_G(x)$, $gxg^{-1} \leftrightarrow g\,C_G(x)$. Hence $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$, and for finite $G$ this equals $|G|/|C_G(x)|$. Since $|C_G(x)|$ divides $|G|$ by [[Thm - Lagrange's Theorem|Lagrange's theorem]], the quotient $|\operatorname{ccl}_G(x)|$ is an integer dividing $|G|$.
 
-**Why needed:** It guarantees the conjugacy classes are the orbits of an action, hence that they partition $G$ — which is what makes the class equation a count.
-
-<details>
-<summary>Full proof</summary>
-
-*Identity:* $e \ast x = exe^{-1} = x$.
-
-*Compatibility:* for $g, h \in G$,
-$$g \ast (h \ast x) = g(hxh^{-1})g^{-1} = (gh)\,x\,(h^{-1}g^{-1}) = (gh)\,x\,(gh)^{-1} = (gh) \ast x.$$
-
-Both axioms hold, so conjugation is an action. (Its [[Thm - Actions Correspond to Homomorphisms|permutation representation]] $\varphi : G \to \operatorname{Sym}(G)$ even lands in [[Def - Automorphism Group|$\operatorname{Aut}(G)$]], since each $\varphi(g)$ is a homomorphism: $\varphi(g)(x_1 x_2) = g x_1 x_2 g^{-1} = (g x_1 g^{-1})(g x_2 g^{-1}) = \varphi(g)(x_1)\,\varphi(g)(x_2)$.)
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: The stabiliser of $x$ under conjugation is $C_G(x)$</strong></summary>
-
-**Statement:** For the conjugation action, the stabiliser of $x \in G$ is the [[Def - Centraliser and Centre|centraliser]] $C_G(x) = \{g \in G : gx = xg\}$.
-
-**Hint:** Unwind "stabiliser": $g$ stabilises $x$ if and only if $g \ast x = x$.
-
-**Why needed:** It is the identification that turns orbit–stabiliser into the proposition $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$.
-
-<details>
-<summary>Full proof</summary>
-
-By definition the stabiliser of $x$ is $\{g \in G : g \ast x = x\} = \{g : gxg^{-1} = x\}$. Right-multiplying the equation $gxg^{-1} = x$ by $g$ gives the equivalent equation $gx = xg$. Hence the stabiliser is $\{g : gx = xg\} = C_G(x)$. Being a stabiliser, it is automatically a [[Def - Subgroup|subgroup]] of $G$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: Class size equals centraliser index</strong></summary>
-
-**Statement:** For any $x$ in a finite group $G$, $\ |\operatorname{ccl}_G(x)| = |G : C_G(x)| = |G|/|C_G(x)|$; in particular $|\operatorname{ccl}_G(x)|$ divides $|G|$.
-
-**Hint:** Apply the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] with the orbit $\operatorname{ccl}_G(x)$ and the stabiliser $C_G(x)$.
-
-**Why needed:** This is the proposition underlying the class equation; the divisibility of class sizes is its sharpest consequence.
-
-<details>
-<summary>Full proof</summary>
-
-By Lemma 1 conjugation is an action; the orbit of $x$ is $\operatorname{ccl}_G(x)$ and, by Lemma 2, its stabiliser is $C_G(x)$. The [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] provides a bijection $\operatorname{ccl}_G(x) \leftrightarrow G/C_G(x)$, $gxg^{-1} \leftrightarrow g\,C_G(x)$. Hence $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$, and for finite $G$ this equals $|G|/|C_G(x)|$. Since $|C_G(x)|$ divides $|G|$ by [[Thm - Lagrange's Theorem|Lagrange's theorem]], the quotient $|\operatorname{ccl}_G(x)|$ is an integer dividing $|G|$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 4: A conjugacy class is a singleton if and only if its element is central</strong></summary>
-
-**Statement:** $|\operatorname{ccl}_G(x)| = 1$ if and only if $x \in Z(G)$.
-
-**Hint:** A class is a singleton if and only if $x$ is its own only conjugate; spell out what that says for every $g$.
-
-**Why needed:** It identifies the size-$1$ classes with the centre, so the class equation can collect them into the single block $|Z(G)|$.
-
-<details>
-<summary>Full proof</summary>
-
-The class $\operatorname{ccl}_G(x) = \{gxg^{-1} : g \in G\}$ contains $x$ (take $g = e$). It is a singleton precisely when $gxg^{-1} = x$ for every $g \in G$, equivalently $gx = xg$ for every $g$, equivalently $x$ commutes with all of $G$ — which is the definition of $x \in Z(G)$. Hence the singleton classes are exactly the elements of the centre, and there are $|Z(G)|$ of them.
-
-</details>
-
-</details>
+> [!note]- Lemma 4: A conjugacy class is a singleton if and only if its element is central
+> **Statement:** $|\operatorname{ccl}_G(x)| = 1$ if and only if $x \in Z(G)$.
+>
+> **Hint:** A class is a singleton if and only if $x$ is its own only conjugate; spell out what that says for every $g$.
+>
+> **Why needed:** It identifies the size-$1$ classes with the centre, so the class equation can collect them into the single block $|Z(G)|$.
+>
+> > [!note]- Full proof
+> > The class $\operatorname{ccl}_G(x) = \{gxg^{-1} : g \in G\}$ contains $x$ (take $g = e$). It is a singleton precisely when $gxg^{-1} = x$ for every $g \in G$, equivalently $gx = xg$ for every $g$, equivalently $x$ commutes with all of $G$ — which is the definition of $x \in Z(G)$. Hence the singleton classes are exactly the elements of the centre, and there are $|Z(G)|$ of them.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Proposition.** Let $G$ be a finite group. For every $x \in G$,
-$$|\operatorname{ccl}_G(x)| = |G : C_G(x)| = \frac{|G|}{|C_G(x)|},$$
-and in particular $|\operatorname{ccl}_G(x)|$ divides $|G|$.
-
-*Proof.* Let $G$ act on the set $G$ by conjugation, $g \ast x = gxg^{-1}$; this is an action because $e \ast x = x$ and $g \ast (h \ast x) = g(hxh^{-1})g^{-1} = (gh)x(gh)^{-1} = (gh)\ast x$. Under this action the orbit of $x$ is $\operatorname{ccl}_G(x)$ by definition, and the stabiliser of $x$ is
-$$\{g \in G : gxg^{-1} = x\} = \{g \in G : gx = xg\} = C_G(x).$$
-The [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] applied to this action gives a bijection $\operatorname{ccl}_G(x) \leftrightarrow G/C_G(x)$, hence $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$. For finite $G$ this index equals $|G|/|C_G(x)|$, and since $|C_G(x)|$ divides $|G|$ by [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|\operatorname{ccl}_G(x)|$ is an integer dividing $|G|$. $\qquad\blacksquare$
-
-**The Class Equation.** Let $G$ be a finite group. Then
-$$|G| = |Z(G)| + \sum_{i} |G : C_G(x_i)|,$$
-the sum running over one representative $x_i$ from each conjugacy class of size greater than $1$, with every summand a divisor of $|G|$ exceeding $1$.
-
-*Proof.* The conjugacy classes are the orbits of the conjugation action, so they are pairwise disjoint and their union is $G$. Counting $G$ block by block,
-$$|G| = \sum_{\text{conjugacy classes } \mathcal{C}} |\mathcal{C}|.$$
-Split the conjugacy classes into those of size $1$ and those of size greater than $1$.
-
-A class $\operatorname{ccl}_G(x)$ has size $1$ exactly when $gxg^{-1} = x$ for all $g \in G$, i.e. when $x$ commutes with every element of $G$, i.e. when $x \in Z(G)$. Thus the size-$1$ classes are precisely the singletons $\{x\}$ with $x \in Z(G)$, and there are exactly $|Z(G)|$ of them; together they contribute $|Z(G)|$ to the sum.
-
-For each class of size greater than $1$, choose a representative $x_i$. By the proposition, that class has size $|\operatorname{ccl}_G(x_i)| = |G : C_G(x_i)|$, an integer dividing $|G|$; and since the class is not a singleton, $|G : C_G(x_i)| > 1$.
-
-Substituting both pieces into the block count gives
-$$|G| = |Z(G)| + \sum_i |G : C_G(x_i)|,$$
-with the stated properties of the summands. $\qquad\blacksquare$
-
-**Remark (the lever).** If $|G| = p^n$ for a prime $p$, then by the proposition every class size divides $p^n$, so every non-central summand $|G : C_G(x_i)|$ is a positive power of $p$, hence divisible by $p$. Reducing the class equation modulo $p$ kills the sum, leaving $0 \equiv |Z(G)| \pmod p$. Therefore $p \mid |Z(G)|$, and since $e \in Z(G)$ gives $|Z(G)| \geq 1$, in fact $|Z(G)| \geq p$: a finite [[Group Theory III — §1.5–1.7|$p$-group has non-trivial centre]].
-
-</details>
+> [!note]- Complete formal proof
+> **Proposition.** Let $G$ be a finite group. For every $x \in G$,
+> $$|\operatorname{ccl}_G(x)| = |G : C_G(x)| = \frac{|G|}{|C_G(x)|},$$
+> and in particular $|\operatorname{ccl}_G(x)|$ divides $|G|$.
+>
+> *Proof.* Let $G$ act on the set $G$ by conjugation, $g \ast x = gxg^{-1}$; this is an action because $e \ast x = x$ and $g \ast (h \ast x) = g(hxh^{-1})g^{-1} = (gh)x(gh)^{-1} = (gh)\ast x$. Under this action the orbit of $x$ is $\operatorname{ccl}_G(x)$ by definition, and the stabiliser of $x$ is
+> $$\{g \in G : gxg^{-1} = x\} = \{g \in G : gx = xg\} = C_G(x).$$
+> The [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] applied to this action gives a bijection $\operatorname{ccl}_G(x) \leftrightarrow G/C_G(x)$, hence $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$. For finite $G$ this index equals $|G|/|C_G(x)|$, and since $|C_G(x)|$ divides $|G|$ by [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|\operatorname{ccl}_G(x)|$ is an integer dividing $|G|$. $\qquad\blacksquare$
+>
+> **The Class Equation.** Let $G$ be a finite group. Then
+> $$|G| = |Z(G)| + \sum_{i} |G : C_G(x_i)|,$$
+> the sum running over one representative $x_i$ from each conjugacy class of size greater than $1$, with every summand a divisor of $|G|$ exceeding $1$.
+>
+> *Proof.* The conjugacy classes are the orbits of the conjugation action, so they are pairwise disjoint and their union is $G$. Counting $G$ block by block,
+> $$|G| = \sum_{\text{conjugacy classes } \mathcal{C}} |\mathcal{C}|.$$
+> Split the conjugacy classes into those of size $1$ and those of size greater than $1$.
+>
+> A class $\operatorname{ccl}_G(x)$ has size $1$ exactly when $gxg^{-1} = x$ for all $g \in G$, i.e. when $x$ commutes with every element of $G$, i.e. when $x \in Z(G)$. Thus the size-$1$ classes are precisely the singletons $\{x\}$ with $x \in Z(G)$, and there are exactly $|Z(G)|$ of them; together they contribute $|Z(G)|$ to the sum.
+>
+> For each class of size greater than $1$, choose a representative $x_i$. By the proposition, that class has size $|\operatorname{ccl}_G(x_i)| = |G : C_G(x_i)|$, an integer dividing $|G|$; and since the class is not a singleton, $|G : C_G(x_i)| > 1$.
+>
+> Substituting both pieces into the block count gives
+> $$|G| = |Z(G)| + \sum_i |G : C_G(x_i)|,$$
+> with the stated properties of the summands. $\qquad\blacksquare$
+>
+> **Remark (the lever).** If $|G| = p^n$ for a prime $p$, then by the proposition every class size divides $p^n$, so every non-central summand $|G : C_G(x_i)|$ is a positive power of $p$, hence divisible by $p$. Reducing the class equation modulo $p$ kills the sum, leaving $0 \equiv |Z(G)| \pmod p$. Therefore $p \mid |Z(G)|$, and since $e \in Z(G)$ gives $|Z(G)| \geq 1$, in fact $|Z(G)| \geq p$: a finite [[Group Theory III — §1.5–1.7|$p$-group has non-trivial centre]].
 
 ---
 

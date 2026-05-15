@@ -145,149 +145,113 @@ All three theorems are one technique — choose a set for a group to act on, the
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: The fixed-point congruence for a $p$-group action</strong></summary>
+> [!note]- Lemma 1: The fixed-point congruence for a $p$-group action
+> **Statement:** Let $Q$ be a [[Def - p-group|$p$-group]] of order $p^b$ acting on a finite set $X$, and let $X^Q = \{x \in X : q \cdot x = x \text{ for all } q \in Q\}$ be the set of fixed points. Then $|X^Q| \equiv |X| \pmod p$. In particular, if $p \nmid |X|$, then $X^Q \neq \emptyset$.
+>
+> **Hint:** Partition $X$ into [[Def - Orbit and Stabiliser|orbits]]; by [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser]] each orbit size divides $p^b$, so is $1$ or a multiple of $p$; sum modulo $p$.
+>
+> **Why needed:** It is the shared engine: Sylow II uses it on $G/P$, Sylow III's congruence uses it on $\operatorname{Syl}_p(G)$.
+>
+> > [!note]- Full proof
+> > The set $X$ is the disjoint union of the orbits of the $Q$-action. For an orbit $O$, the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] gives $|O| = |Q : Q_x| = |Q|/|Q_x|$ for any $x \in O$, so $|O|$ divides $|Q| = p^b$. Hence each orbit has size a power of $p$: either $1$ or divisible by $p$. An orbit of size $1$ is a single point fixed by all of $Q$, i.e. a point of $X^Q$. Writing $|X| = \sum_{\text{orbits } O} |O|$ and reducing modulo $p$, every orbit with $|O|$ divisible by $p$ contributes $0$, and every orbit of size $1$ contributes $1$, so $|X| \equiv |X^Q| \pmod p$. If $p \nmid |X|$ then $|X^Q| \equiv |X| \not\equiv 0 \pmod p$, so $|X^Q| \neq 0$.
 
-**Statement:** Let $Q$ be a [[Def - p-group|$p$-group]] of order $p^b$ acting on a finite set $X$, and let $X^Q = \{x \in X : q \cdot x = x \text{ for all } q \in Q\}$ be the set of fixed points. Then $|X^Q| \equiv |X| \pmod p$. In particular, if $p \nmid |X|$, then $X^Q \neq \emptyset$.
+> [!note]- Lemma 2: Every translation orbit of $p^a$-subsets has size at least $m$
+> **Statement:** Let $|G| = p^a m$ and let $G$ act on $\Omega = \{X \subseteq G : |X| = p^a\}$ by left translation $g \cdot X = gX$. Then every orbit $\Sigma$ has $|\Sigma| \geq m$.
+>
+> **Hint:** Show $\Sigma$ contains, for every $g \in G$, a subset *containing* $g$; since each subset has only $p^a$ elements, you need at least $|G|/p^a$ of them to reach every $g$.
+>
+> **Why needed:** It establishes the minimal orbit size in the Sylow I proof — the size that yields a Sylow subgroup.
+>
+> > [!note]- Full proof
+> > Fix an orbit $\Sigma$ and a subset $X = \{g_1, \dots, g_{p^a}\} \in \Sigma$. For any $g \in G$, the element $g g_1^{-1}$ lies in $G$, so $\Sigma$ — being closed under the action — contains
+> > $$g g_1^{-1} \cdot X = \{g g_1^{-1} g_1, \; g g_1^{-1} g_2, \dots\} = \{g, \; g g_1^{-1} g_2, \dots\},$$
+> > a $p^a$-element subset that *contains $g$*. Thus for every $g \in G$ there is a member of $\Sigma$ containing $g$. The union of all members of $\Sigma$ is therefore all of $G$. Since each member has exactly $p^a$ elements, covering the $|G| = p^a m$ elements of $G$ requires at least $p^a m / p^a = m$ members. Hence $|\Sigma| \geq m$.
 
-**Hint:** Partition $X$ into [[Def - Orbit and Stabiliser|orbits]]; by [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser]] each orbit size divides $p^b$, so is $1$ or a multiple of $p$; sum modulo $p$.
+> [!note]- Lemma 3: The count $\binom{p^a m}{p^a}$ is not divisible by $p$
+> **Statement:** For $p$ prime and any positive integer $m$ with $p \nmid m$ (indeed any $m$), $p \nmid \dbinom{p^a m}{p^a}$.
+>
+> **Hint:** Write the binomial coefficient as $\prod_{j=0}^{p^a-1} \frac{p^a m - j}{p^a - j}$ and compare, for each $j$, the power of $p$ in the numerator $p^a m - j$ with that in the denominator $p^a - j$.
+>
+> **Why needed:** It forces a translation orbit of size exactly $m$ in the Sylow I proof: if every orbit had size divisible by $p$, then $|\Omega|$ would be too.
+>
+> > [!note]- Full proof
+> > Write
+> > $$\binom{p^a m}{p^a} = \prod_{j=0}^{p^a - 1} \frac{p^a m - j}{p^a - j}.$$
+> > Fix $j$ with $0 \leq j < p^a$ and let $p^c$ be the exact power of $p$ dividing $j$ (for $j = 0$ the factor is $\frac{p^a m}{p^a} = m$, contributing no $p$ either way). Since $j < p^a$ we have $c < a$. Now $p^a m - j$: writing $j = p^c j'$ with $p \nmid j'$, we get $p^a m - j = p^c(p^{a-c} m - j')$, and $p^{a-c} m - j' \equiv -j' \not\equiv 0 \pmod p$ because $a - c \geq 1$; so the exact power of $p$ dividing $p^a m - j$ is $p^c$. Identically, $p^a - j = p^c(p^{a-c} - j')$ with $p^{a-c} - j' \equiv -j' \not\equiv 0 \pmod p$, so the exact power of $p$ dividing $p^a - j$ is also $p^c$. Numerator and denominator carry the *same* power of $p$ in every factor, so all powers of $p$ cancel and the product $\binom{p^a m}{p^a}$ is coprime to $p$.
 
-**Why needed:** It is the shared engine: Sylow II uses it on $G/P$, Sylow III's congruence uses it on $\operatorname{Syl}_p(G)$.
-
-<details>
-<summary>Full proof</summary>
-
-The set $X$ is the disjoint union of the orbits of the $Q$-action. For an orbit $O$, the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] gives $|O| = |Q : Q_x| = |Q|/|Q_x|$ for any $x \in O$, so $|O|$ divides $|Q| = p^b$. Hence each orbit has size a power of $p$: either $1$ or divisible by $p$. An orbit of size $1$ is a single point fixed by all of $Q$, i.e. a point of $X^Q$. Writing $|X| = \sum_{\text{orbits } O} |O|$ and reducing modulo $p$, every orbit with $|O|$ divisible by $p$ contributes $0$, and every orbit of size $1$ contributes $1$, so $|X| \equiv |X^Q| \pmod p$. If $p \nmid |X|$ then $|X^Q| \equiv |X| \not\equiv 0 \pmod p$, so $|X^Q| \neq 0$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Every translation orbit of $p^a$-subsets has size at least $m$</strong></summary>
-
-**Statement:** Let $|G| = p^a m$ and let $G$ act on $\Omega = \{X \subseteq G : |X| = p^a\}$ by left translation $g \cdot X = gX$. Then every orbit $\Sigma$ has $|\Sigma| \geq m$.
-
-**Hint:** Show $\Sigma$ contains, for every $g \in G$, a subset *containing* $g$; since each subset has only $p^a$ elements, you need at least $|G|/p^a$ of them to reach every $g$.
-
-**Why needed:** It establishes the minimal orbit size in the Sylow I proof — the size that yields a Sylow subgroup.
-
-<details>
-<summary>Full proof</summary>
-
-Fix an orbit $\Sigma$ and a subset $X = \{g_1, \dots, g_{p^a}\} \in \Sigma$. For any $g \in G$, the element $g g_1^{-1}$ lies in $G$, so $\Sigma$ — being closed under the action — contains
-$$g g_1^{-1} \cdot X = \{g g_1^{-1} g_1, \; g g_1^{-1} g_2, \dots\} = \{g, \; g g_1^{-1} g_2, \dots\},$$
-a $p^a$-element subset that *contains $g$*. Thus for every $g \in G$ there is a member of $\Sigma$ containing $g$. The union of all members of $\Sigma$ is therefore all of $G$. Since each member has exactly $p^a$ elements, covering the $|G| = p^a m$ elements of $G$ requires at least $p^a m / p^a = m$ members. Hence $|\Sigma| \geq m$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: The count $\binom{p^a m}{p^a}$ is not divisible by $p$</strong></summary>
-
-**Statement:** For $p$ prime and any positive integer $m$ with $p \nmid m$ (indeed any $m$), $p \nmid \dbinom{p^a m}{p^a}$.
-
-**Hint:** Write the binomial coefficient as $\prod_{j=0}^{p^a-1} \frac{p^a m - j}{p^a - j}$ and compare, for each $j$, the power of $p$ in the numerator $p^a m - j$ with that in the denominator $p^a - j$.
-
-**Why needed:** It forces a translation orbit of size exactly $m$ in the Sylow I proof: if every orbit had size divisible by $p$, then $|\Omega|$ would be too.
-
-<details>
-<summary>Full proof</summary>
-
-Write
-$$\binom{p^a m}{p^a} = \prod_{j=0}^{p^a - 1} \frac{p^a m - j}{p^a - j}.$$
-Fix $j$ with $0 \leq j < p^a$ and let $p^c$ be the exact power of $p$ dividing $j$ (for $j = 0$ the factor is $\frac{p^a m}{p^a} = m$, contributing no $p$ either way). Since $j < p^a$ we have $c < a$. Now $p^a m - j$: writing $j = p^c j'$ with $p \nmid j'$, we get $p^a m - j = p^c(p^{a-c} m - j')$, and $p^{a-c} m - j' \equiv -j' \not\equiv 0 \pmod p$ because $a - c \geq 1$; so the exact power of $p$ dividing $p^a m - j$ is $p^c$. Identically, $p^a - j = p^c(p^{a-c} - j')$ with $p^{a-c} - j' \equiv -j' \not\equiv 0 \pmod p$, so the exact power of $p$ dividing $p^a - j$ is also $p^c$. Numerator and denominator carry the *same* power of $p$ in every factor, so all powers of $p$ cancel and the product $\binom{p^a m}{p^a}$ is coprime to $p$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 4: A Sylow $p$-subgroup of $G$ contained in a subgroup $K$ is a Sylow $p$-subgroup of $K$</strong></summary>
-
-**Statement:** Let $P$ be a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $G$ and let $K$ be any subgroup of $G$ with $P \leq K \leq G$. Then $P$ is a Sylow $p$-subgroup of $K$.
-
-**Hint:** $|P| = p^a$ is a $p$-power dividing $|K|$, and $|K|$ divides $|G| = p^a m$, so $p^a$ is already the largest power of $p$ that *can* divide $|K|$.
-
-**Why needed:** In Sylow III's congruence, this is what makes both $P$ and $Q$ Sylow $p$-subgroups of $N_G(Q)$, so that Sylow II can be applied inside the normaliser.
-
-<details>
-<summary>Full proof</summary>
-
-By [[Thm - Lagrange's Theorem|Lagrange]], $|P| \mid |K|$ and $|K| \mid |G|$, so $p^a = |P| \mid |K| \mid p^a m$. Thus the order of $K$ is $p^a m'$ where $m' \mid m$, and since $p \nmid m$ also $p \nmid m'$ — so $p^a$ is the exact power of $p$ dividing $|K|$. The subgroup $P \leq K$ has order $p^a$, which is precisely the maximal $p$-power dividing $|K|$. Hence $P$ is a Sylow $p$-subgroup of $K$.
-
-</details>
-
-</details>
+> [!note]- Lemma 4: A Sylow $p$-subgroup of $G$ contained in a subgroup $K$ is a Sylow $p$-subgroup of $K$
+> **Statement:** Let $P$ be a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $G$ and let $K$ be any subgroup of $G$ with $P \leq K \leq G$. Then $P$ is a Sylow $p$-subgroup of $K$.
+>
+> **Hint:** $|P| = p^a$ is a $p$-power dividing $|K|$, and $|K|$ divides $|G| = p^a m$, so $p^a$ is already the largest power of $p$ that *can* divide $|K|$.
+>
+> **Why needed:** In Sylow III's congruence, this is what makes both $P$ and $Q$ Sylow $p$-subgroups of $N_G(Q)$, so that Sylow II can be applied inside the normaliser.
+>
+> > [!note]- Full proof
+> > By [[Thm - Lagrange's Theorem|Lagrange]], $|P| \mid |K|$ and $|K| \mid |G|$, so $p^a = |P| \mid |K| \mid p^a m$. Thus the order of $K$ is $p^a m'$ where $m' \mid m$, and since $p \nmid m$ also $p \nmid m'$ — so $p^a$ is the exact power of $p$ dividing $|K|$. The subgroup $P \leq K$ has order $p^a$, which is precisely the maximal $p$-power dividing $|K|$. Hence $P$ is a Sylow $p$-subgroup of $K$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-Let $G$ be a finite group with $|G| = p^a m$, $p$ prime, $p \nmid m$. The arguments below are the proofs from the source lecture notes.
-
----
-
-**Proof of Sylow I (existence).**
-
-We must produce a subgroup of order $p^a$. We find a clever set for $G$ to act on. Let
-$$\Omega = \{X \subseteq G : |X| = p^a\}$$
-be the set of all $p^a$-*element subsets* of $G$ (subsets, not subgroups), and let $G$ act on $\Omega$ by left translation,
-$$g * \{g_1, g_2, \dots, g_{p^a}\} = \{g g_1, g g_2, \dots, g g_{p^a}\}.$$
-Let $\Sigma$ be an orbit of this action.
-
-*Every orbit has size at least $m$.* If $\{g_1, \dots, g_{p^a}\} \in \Sigma$, then for every $g \in G$, by the definition of an orbit,
-$$g g_1^{-1} * \{g_1, \dots, g_{p^a}\} = \{g, \; g g_1^{-1} g_2, \dots, g g_1^{-1} g_{p^a}\} \in \Sigma,$$
-so $\Sigma$ contains a set which contains $g$. Since each member of $\Sigma$ has $p^a$ elements and their union is all of $G$, we need at least $|G|/p^a = m$ members:
-$$|\Sigma| \geq \frac{|G|}{p^a} = m.$$
-
-*If some orbit has size exactly $m$, we are done.* Suppose $|\Sigma| = m$. By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], the stabiliser of any $X \in \Sigma$ has index $|\Sigma| = m$ in $G$, hence order $|G|/m = p^a$. A stabiliser is a subgroup, so this stabiliser is a subgroup of order $p^a$ — a Sylow $p$-subgroup.
-
-*Some orbit does have size $m$.* By orbit–stabiliser, every orbit size divides $|G| = p^a m$. So if an orbit has size $> m$, that size is divisible by $p$. We show not every orbit can have size $> m$ by showing $p \nmid |\Omega|$ — for $\Omega$ is the disjoint union of its orbits, so if all orbits had $p$-divisible size, $|\Omega|$ would be $p$-divisible too. We compute:
-$$|\Omega| = \binom{|G|}{p^a} = \binom{p^a m}{p^a} = \prod_{j=0}^{p^a - 1} \frac{p^a m - j}{p^a - j}.$$
-Fix $j$ with $0 \leq j < p^a$. Since $j < p^a$, the largest power of $p$ dividing $p^a m - j$ equals the largest power of $p$ dividing $j$ (write $j = p^c j'$ with $c < a$, $p \nmid j'$; then $p^a m - j = p^c(p^{a-c}m - j')$ and $p \nmid p^{a-c}m - j'$). Identically, the largest power of $p$ dividing $p^a - j$ equals the largest power of $p$ dividing $j$. So numerator and denominator carry the same power of $p$ in every factor; they cancel, and $p \nmid |\Omega|$.
-
-Therefore not every orbit has size $> m$; some orbit has size exactly $m$, and its stabiliser is a Sylow $p$-subgroup. $\quad\blacksquare$
-
-*(Remark, after the lecture notes: the proof is not straightforward. The clever idea is to act on $\Omega$ at all; and even given $\Omega$, the obvious move would be to find a member of $\Omega$ that happens to be a subgroup — that is **not** what is done. Instead one finds an orbit whose stabiliser is a Sylow $p$-subgroup.)*
-
----
-
-**Proof of Sylow II (conjugacy and containment).**
-
-We prove the stronger statement: *if $Q \leq G$ is any $p$-subgroup (so $|Q| = p^b$, $b$ not necessarily $a$) and $P \leq G$ is a Sylow $p$-subgroup, then there exists $g \in G$ with $g^{-1}Qg \leq P$.* Applying this with $Q$ a Sylow $p$-subgroup gives $g^{-1}Qg \leq P$ with $|g^{-1}Qg| = |Q| = p^a = |P|$, forcing $g^{-1}Qg = P$ — so any two Sylow $p$-subgroups are conjugate.
-
-Let $Q$ act on the set of left cosets $G/P$ by
-$$q * gP = qgP.$$
-By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], every orbit of this action has size dividing $|Q| = p^b$, hence size $1$ or divisible by $p$. They cannot *all* be divisible by $p$, because
-$$|G/P| = \frac{|G|}{|P|} = \frac{p^a m}{p^a} = m$$
-is coprime to $p$, and the orbit sizes sum to $|G/P| = m$. So at least one orbit has size $1$, say $\{gP\}$.
-
-An orbit $\{gP\}$ of size $1$ means $q * gP = gP$ for every $q \in Q$, i.e. $qgP = gP$, i.e. $g^{-1}qg \in P$ for every $q \in Q$. Hence $g^{-1}Qg \subseteq P$, and being a subgroup, $g^{-1}Qg \leq P$. This proves the strong form, and with it conjugacy. $\quad\blacksquare$
-
----
-
-**Proof of Sylow III (the count).**
-
-We must show $n_p \equiv 1 \pmod p$ and $n_p \mid |G|$, where $n_p = |\operatorname{Syl}_p(G)|$.
-
-*The divisibility $n_p \mid |G|$.* The group $G$ acts on $\operatorname{Syl}_p(G)$ by conjugation, $g * P = gPg^{-1}$ (this is well-defined: a conjugate of a subgroup of order $p^a$ again has order $p^a$). By Sylow II, all Sylow $p$-subgroups are conjugate, so this action is **transitive** — it has a single orbit, all of $\operatorname{Syl}_p(G)$. By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], the size of this orbit, namely $|\operatorname{Syl}_p(G)| = n_p$, divides $|G|$.
-
-*The congruence $n_p \equiv 1 \pmod p$.* Fix one Sylow $p$-subgroup $P \in \operatorname{Syl}_p(G)$ and let $P$ act on $\operatorname{Syl}_p(G)$ by conjugation. By orbit–stabiliser, every orbit of this action has size dividing $|P| = p^a$, hence $1$ or divisible by $p$. So $n_p$ is congruent modulo $p$ to the number of orbits of size $1$. There is one orbit of size $1$, namely $\{P\}$ itself, since conjugating $P$ by elements of $P$ returns $P$. It remains to show this is the *only* orbit of size $1$.
-
-Suppose $\{Q\}$ is an orbit of size $1$. Then $p^{-1}Qp = Q$ for every $p \in P$, which says $P \leq N_G(Q)$, the [[Def - Normaliser|normaliser]] of $Q$. Now $N_G(Q)$ is itself a group, and we examine its Sylow $p$-subgroups. We have $Q \leq N_G(Q) \leq G$, so by [[Thm - Lagrange's Theorem|Lagrange]] $p^a = |Q| \mid |N_G(Q)| \mid |G| = p^a m$; hence $p^a$ is the exact power of $p$ dividing $|N_G(Q)|$. Therefore $Q$, of order $p^a$, is a Sylow $p$-subgroup *of $N_G(Q)$*. Likewise $P \leq N_G(Q)$ has order $p^a$, so $P$ is also a Sylow $p$-subgroup of $N_G(Q)$.
-
-By Sylow II applied **within the group $N_G(Q)$**, the two Sylow $p$-subgroups $P$ and $Q$ of $N_G(Q)$ are conjugate in $N_G(Q)$ — there is $g \in N_G(Q)$ with $g^{-1}Qg = P$. But conjugating $Q$ by an element of $N_G(Q)$ does nothing, by the definition of the normaliser: $g^{-1}Qg = Q$. Hence $P = Q$.
-
-So $\{P\}$ is the only orbit of size $1$, and $n_p \equiv 1 \pmod p$.
-
-*Finally $n_p \mid m$.* We have $n_p \mid |G| = p^a m$ and, from the congruence, $p \nmid n_p$. A divisor of $p^a m$ coprime to $p$ must divide $m$. Hence $n_p \mid m$. $\quad\blacksquare$
-
-</details>
+> [!note]- Complete formal proof
+> Let $G$ be a finite group with $|G| = p^a m$, $p$ prime, $p \nmid m$. The arguments below are the proofs from the source lecture notes.
+>
+> ---
+>
+> **Proof of Sylow I (existence).**
+>
+> We must produce a subgroup of order $p^a$. We find a clever set for $G$ to act on. Let
+> $$\Omega = \{X \subseteq G : |X| = p^a\}$$
+> be the set of all $p^a$-*element subsets* of $G$ (subsets, not subgroups), and let $G$ act on $\Omega$ by left translation,
+> $$g * \{g_1, g_2, \dots, g_{p^a}\} = \{g g_1, g g_2, \dots, g g_{p^a}\}.$$
+> Let $\Sigma$ be an orbit of this action.
+>
+> *Every orbit has size at least $m$.* If $\{g_1, \dots, g_{p^a}\} \in \Sigma$, then for every $g \in G$, by the definition of an orbit,
+> $$g g_1^{-1} * \{g_1, \dots, g_{p^a}\} = \{g, \; g g_1^{-1} g_2, \dots, g g_1^{-1} g_{p^a}\} \in \Sigma,$$
+> so $\Sigma$ contains a set which contains $g$. Since each member of $\Sigma$ has $p^a$ elements and their union is all of $G$, we need at least $|G|/p^a = m$ members:
+> $$|\Sigma| \geq \frac{|G|}{p^a} = m.$$
+>
+> *If some orbit has size exactly $m$, we are done.* Suppose $|\Sigma| = m$. By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], the stabiliser of any $X \in \Sigma$ has index $|\Sigma| = m$ in $G$, hence order $|G|/m = p^a$. A stabiliser is a subgroup, so this stabiliser is a subgroup of order $p^a$ — a Sylow $p$-subgroup.
+>
+> *Some orbit does have size $m$.* By orbit–stabiliser, every orbit size divides $|G| = p^a m$. So if an orbit has size $> m$, that size is divisible by $p$. We show not every orbit can have size $> m$ by showing $p \nmid |\Omega|$ — for $\Omega$ is the disjoint union of its orbits, so if all orbits had $p$-divisible size, $|\Omega|$ would be $p$-divisible too. We compute:
+> $$|\Omega| = \binom{|G|}{p^a} = \binom{p^a m}{p^a} = \prod_{j=0}^{p^a - 1} \frac{p^a m - j}{p^a - j}.$$
+> Fix $j$ with $0 \leq j < p^a$. Since $j < p^a$, the largest power of $p$ dividing $p^a m - j$ equals the largest power of $p$ dividing $j$ (write $j = p^c j'$ with $c < a$, $p \nmid j'$; then $p^a m - j = p^c(p^{a-c}m - j')$ and $p \nmid p^{a-c}m - j'$). Identically, the largest power of $p$ dividing $p^a - j$ equals the largest power of $p$ dividing $j$. So numerator and denominator carry the same power of $p$ in every factor; they cancel, and $p \nmid |\Omega|$.
+>
+> Therefore not every orbit has size $> m$; some orbit has size exactly $m$, and its stabiliser is a Sylow $p$-subgroup. $\quad\blacksquare$
+>
+> *(Remark, after the lecture notes: the proof is not straightforward. The clever idea is to act on $\Omega$ at all; and even given $\Omega$, the obvious move would be to find a member of $\Omega$ that happens to be a subgroup — that is **not** what is done. Instead one finds an orbit whose stabiliser is a Sylow $p$-subgroup.)*
+>
+> ---
+>
+> **Proof of Sylow II (conjugacy and containment).**
+>
+> We prove the stronger statement: *if $Q \leq G$ is any $p$-subgroup (so $|Q| = p^b$, $b$ not necessarily $a$) and $P \leq G$ is a Sylow $p$-subgroup, then there exists $g \in G$ with $g^{-1}Qg \leq P$.* Applying this with $Q$ a Sylow $p$-subgroup gives $g^{-1}Qg \leq P$ with $|g^{-1}Qg| = |Q| = p^a = |P|$, forcing $g^{-1}Qg = P$ — so any two Sylow $p$-subgroups are conjugate.
+>
+> Let $Q$ act on the set of left cosets $G/P$ by
+> $$q * gP = qgP.$$
+> By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], every orbit of this action has size dividing $|Q| = p^b$, hence size $1$ or divisible by $p$. They cannot *all* be divisible by $p$, because
+> $$|G/P| = \frac{|G|}{|P|} = \frac{p^a m}{p^a} = m$$
+> is coprime to $p$, and the orbit sizes sum to $|G/P| = m$. So at least one orbit has size $1$, say $\{gP\}$.
+>
+> An orbit $\{gP\}$ of size $1$ means $q * gP = gP$ for every $q \in Q$, i.e. $qgP = gP$, i.e. $g^{-1}qg \in P$ for every $q \in Q$. Hence $g^{-1}Qg \subseteq P$, and being a subgroup, $g^{-1}Qg \leq P$. This proves the strong form, and with it conjugacy. $\quad\blacksquare$
+>
+> ---
+>
+> **Proof of Sylow III (the count).**
+>
+> We must show $n_p \equiv 1 \pmod p$ and $n_p \mid |G|$, where $n_p = |\operatorname{Syl}_p(G)|$.
+>
+> *The divisibility $n_p \mid |G|$.* The group $G$ acts on $\operatorname{Syl}_p(G)$ by conjugation, $g * P = gPg^{-1}$ (this is well-defined: a conjugate of a subgroup of order $p^a$ again has order $p^a$). By Sylow II, all Sylow $p$-subgroups are conjugate, so this action is **transitive** — it has a single orbit, all of $\operatorname{Syl}_p(G)$. By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], the size of this orbit, namely $|\operatorname{Syl}_p(G)| = n_p$, divides $|G|$.
+>
+> *The congruence $n_p \equiv 1 \pmod p$.* Fix one Sylow $p$-subgroup $P \in \operatorname{Syl}_p(G)$ and let $P$ act on $\operatorname{Syl}_p(G)$ by conjugation. By orbit–stabiliser, every orbit of this action has size dividing $|P| = p^a$, hence $1$ or divisible by $p$. So $n_p$ is congruent modulo $p$ to the number of orbits of size $1$. There is one orbit of size $1$, namely $\{P\}$ itself, since conjugating $P$ by elements of $P$ returns $P$. It remains to show this is the *only* orbit of size $1$.
+>
+> Suppose $\{Q\}$ is an orbit of size $1$. Then $p^{-1}Qp = Q$ for every $p \in P$, which says $P \leq N_G(Q)$, the [[Def - Normaliser|normaliser]] of $Q$. Now $N_G(Q)$ is itself a group, and we examine its Sylow $p$-subgroups. We have $Q \leq N_G(Q) \leq G$, so by [[Thm - Lagrange's Theorem|Lagrange]] $p^a = |Q| \mid |N_G(Q)| \mid |G| = p^a m$; hence $p^a$ is the exact power of $p$ dividing $|N_G(Q)|$. Therefore $Q$, of order $p^a$, is a Sylow $p$-subgroup *of $N_G(Q)$*. Likewise $P \leq N_G(Q)$ has order $p^a$, so $P$ is also a Sylow $p$-subgroup of $N_G(Q)$.
+>
+> By Sylow II applied **within the group $N_G(Q)$**, the two Sylow $p$-subgroups $P$ and $Q$ of $N_G(Q)$ are conjugate in $N_G(Q)$ — there is $g \in N_G(Q)$ with $g^{-1}Qg = P$. But conjugating $Q$ by an element of $N_G(Q)$ does nothing, by the definition of the normaliser: $g^{-1}Qg = Q$. Hence $P = Q$.
+>
+> So $\{P\}$ is the only orbit of size $1$, and $n_p \equiv 1 \pmod p$.
+>
+> *Finally $n_p \mid m$.* We have $n_p \mid |G| = p^a m$ and, from the congruence, $p \nmid n_p$. A divisor of $p^a m$ coprime to $p$ must divide $m$. Hence $n_p \mid m$. $\quad\blacksquare$
 
 ---
 

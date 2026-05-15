@@ -59,26 +59,14 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> You are asked to find the order of a group of symmetries, and you are told to use orbit-stabiliser. So the group must *act* on something. The cube has several natural finite sets attached to it that any rotation permutes. List them, and pick the simplest one.
 
-You are asked to find the order of a group of symmetries, and you are told to use orbit-stabiliser. So the group must *act* on something. The cube has several natural finite sets attached to it that any rotation permutes. List them, and pick the simplest one.
+> [!note]- Hint 2
+> Take $X$ to be the set of $6$ faces. Two questions: (a) Can every face be rotated to every other face? (b) Fix one face — how many rotations of the cube leave that face exactly where it is?
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Take $X$ to be the set of $6$ faces. Two questions: (a) Can every face be rotated to every other face? (b) Fix one face — how many rotations of the cube leave that face exactly where it is?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-For (a): yes, the action is transitive — there is a rotation carrying any chosen face to any other, so the orbit of a face is all $6$ faces. For (b): the rotations fixing a face are precisely the spins about the axis through that face and the opposite face; there are $4$ of them (by $0°, 90°, 180°, 270°$). Orbit-stabiliser gives $|G| = 6 \times 4$.
-
-</details>
+> [!note]- Hint 3
+> For (a): yes, the action is transitive — there is a rotation carrying any chosen face to any other, so the orbit of a face is all $6$ faces. For (b): the rotations fixing a face are precisely the spins about the axis through that face and the opposite face; there are $4$ of them (by $0°, 90°, 180°, 270°$). Orbit-stabiliser gives $|G| = 6 \times 4$.
 
 ---
 
@@ -90,78 +78,54 @@ The plan is to let $G$ act on the $6$ faces of the cube, show the action is tran
 
 Each rotation of the cube permutes its $6$ faces, so $G$ acts on the set $X$ of faces. Any face can be carried to any other by a suitable rotation, so there is a single orbit: for any face $x$, the orbit $G \cdot x$ is all of $X$ and $|G \cdot x| = 6$.
 
-<details>
-<summary>Derivation</summary>
-
-A rotation of the cube is a bijection of three-dimensional space carrying the cube to itself; it sends faces to faces (a face is a flat square piece of the boundary, and rigid motions preserve this), and it does so bijectively. So restricting each $g \in G$ to its effect on faces gives a permutation of the $6$-element set $X$, and composition of rotations corresponds to composition of these permutations. The identity rotation fixes every face. Hence the two [[Def - Group Action|action axioms]] $e \cdot x = x$ and $g_1 \cdot (g_2 \cdot x) = (g_1 g_2) \cdot x$ hold, and $G$ acts on $X$.
-
-The action is **transitive**: given any two faces, there is a rotation of the cube taking the first to the second. Concretely, label the faces top, bottom, front, back, left, right. A quarter-turn about the front-to-back axis cycles top $\to$ right $\to$ bottom $\to$ left $\to$ top, so the four side faces are all reachable from one another; a quarter-turn about a side axis swaps top with front. Composing such moves carries any face to any other. Therefore every face lies in the orbit of every other, the action has exactly one orbit, and for any face $x$,
-$$|G \cdot x| = |X| = 6.$$
-
-</details>
+> [!note]- Derivation
+> A rotation of the cube is a bijection of three-dimensional space carrying the cube to itself; it sends faces to faces (a face is a flat square piece of the boundary, and rigid motions preserve this), and it does so bijectively. So restricting each $g \in G$ to its effect on faces gives a permutation of the $6$-element set $X$, and composition of rotations corresponds to composition of these permutations. The identity rotation fixes every face. Hence the two [[Def - Group Action|action axioms]] $e \cdot x = x$ and $g_1 \cdot (g_2 \cdot x) = (g_1 g_2) \cdot x$ hold, and $G$ acts on $X$.
+>
+> The action is **transitive**: given any two faces, there is a rotation of the cube taking the first to the second. Concretely, label the faces top, bottom, front, back, left, right. A quarter-turn about the front-to-back axis cycles top $\to$ right $\to$ bottom $\to$ left $\to$ top, so the four side faces are all reachable from one another; a quarter-turn about a side axis swaps top with front. Composing such moves carries any face to any other. Therefore every face lies in the orbit of every other, the action has exactly one orbit, and for any face $x$,
+> $$|G \cdot x| = |X| = 6.$$
 
 **Step 2: The stabiliser of a face is the group of rotations about the axis through it — it has order $4$.**
 
 Fix the top face. A rotation fixes the top face (as a face, mapping it to itself) exactly when it is a spin about the vertical axis through the centres of the top and bottom faces. The spins by $0°, 90°, 180°, 270°$ are the only such rotations, so the stabiliser $G_x$ has order $4$.
 
-<details>
-<summary>Derivation</summary>
-
-Let $x$ be the top face and consider $G_x = \{g \in G : g \cdot x = x\}$, the rotations sending the top face to itself. Such a rotation fixes the top face setwise, hence fixes its centre point; being a symmetry of the cube it also fixes the cube's centre. A rotation of space fixing two distinct points fixes the entire line through them — here, the vertical axis through the centres of the top and bottom faces. So every element of $G_x$ is a rotation *about that fixed axis*.
-
-The rotations about a fixed axis that carry the cube to itself are exactly those that carry the square top face to itself, namely the rotations by multiples of $90°$:
-$$0°, \quad 90°, \quad 180°, \quad 270°.$$
-A rotation by any other angle would move the four edges of the top square to positions not occupied by edges, so it is not a symmetry. These four rotations are distinct and each fixes the top face, so
-$$|G_x| = 4.$$
-(As a sanity check, $G_x$ is the cyclic group $C_4$ generated by the quarter-turn about this axis, consistent with the general fact that a stabiliser is a [[Def - Subgroup|subgroup]] of $G$.)
-
-</details>
+> [!note]- Derivation
+> Let $x$ be the top face and consider $G_x = \{g \in G : g \cdot x = x\}$, the rotations sending the top face to itself. Such a rotation fixes the top face setwise, hence fixes its centre point; being a symmetry of the cube it also fixes the cube's centre. A rotation of space fixing two distinct points fixes the entire line through them — here, the vertical axis through the centres of the top and bottom faces. So every element of $G_x$ is a rotation *about that fixed axis*.
+>
+> The rotations about a fixed axis that carry the cube to itself are exactly those that carry the square top face to itself, namely the rotations by multiples of $90°$:
+> $$0°, \quad 90°, \quad 180°, \quad 270°.$$
+> A rotation by any other angle would move the four edges of the top square to positions not occupied by edges, so it is not a symmetry. These four rotations are distinct and each fixes the top face, so
+> $$|G_x| = 4.$$
+> (As a sanity check, $G_x$ is the cyclic group $C_4$ generated by the quarter-turn about this axis, consistent with the general fact that a stabiliser is a [[Def - Subgroup|subgroup]] of $G$.)
 
 **Step 3: Apply the orbit-stabiliser theorem to conclude $|G| = 24$.**
 
 With $|G \cdot x| = 6$ and $|G_x| = 4$, the orbit-stabiliser theorem gives $|G| = 6 \times 4 = 24$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] states that for a finite group $G$ acting on a set $X$ and any point $x \in X$,
+> $$|G| = |G \cdot x| \cdot |G_x|.$$
+> Take $x$ to be the top face. Step 1 gives $|G \cdot x| = 6$ and Step 2 gives $|G_x| = 4$. Therefore
+> $$|G| = 6 \cdot 4 = 24.$$
+> The rotation group of the cube has order $24$. $\blacksquare$
 
-The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] states that for a finite group $G$ acting on a set $X$ and any point $x \in X$,
-$$|G| = |G \cdot x| \cdot |G_x|.$$
-Take $x$ to be the top face. Step 1 gives $|G \cdot x| = 6$ and Step 2 gives $|G_x| = 4$. Therefore
-$$|G| = 6 \cdot 4 = 24.$$
-The rotation group of the cube has order $24$. $\blacksquare$
+> [!note]- Cross-check via the 8 vertices
+> Run the identical argument on the set $X'$ of $8$ vertices of the cube. The action is again transitive — any vertex can be rotated to any other — so each orbit has size $|X'| = 8$. Fix one vertex $v$; a rotation fixing $v$ fixes both $v$ and the cube's centre, hence fixes the long diagonal through $v$, and is therefore a spin about that diagonal. The rotations about a long diagonal carrying the cube to itself are the three rotations by $0°, 120°, 240°$ (the diagonal is an axis of $3$-fold symmetry, since three faces meet at each vertex). So the stabiliser has order $3$, and orbit-stabiliser gives
+> $$|G| = 8 \cdot 3 = 24,$$
+> agreeing with Step 3. The same exercise on the $12$ edges gives $|G| = 12 \cdot 2 = 24$, since the stabiliser of an edge is the order-$2$ group containing the identity and the $180°$ rotation about the axis through that edge's midpoint and the opposite edge's midpoint.
 
-</details>
+> [!note]- Remark: the action on the 4 long diagonals gives an isomorphism with $S_4$
+> The cube has $4$ long diagonals (each joining a pair of opposite vertices), and every rotation permutes them, giving an action $G \to \operatorname{Sym}(X'') \cong S_4$ on a $4$-element set. This [[Thm - Actions Correspond to Homomorphisms|homomorphism]] is in fact an isomorphism. It is injective: a rotation fixing all four diagonals as lines must fix the cube pointwise or invert every diagonal, and a single rotation cannot invert all four simultaneously while fixing the cube, so only the identity acts trivially — the kernel is trivial. Since $|G| = 24 = |S_4|$, an injective homomorphism between finite groups of equal order is a bijection. Hence the rotation group of the cube is isomorphic to $S_4$. This is a recurring bonus of the action viewpoint: a well-chosen action does not merely *count* the group, it can *identify* it.
 
-<details>
-<summary>Cross-check via the 8 vertices</summary>
-
-Run the identical argument on the set $X'$ of $8$ vertices of the cube. The action is again transitive — any vertex can be rotated to any other — so each orbit has size $|X'| = 8$. Fix one vertex $v$; a rotation fixing $v$ fixes both $v$ and the cube's centre, hence fixes the long diagonal through $v$, and is therefore a spin about that diagonal. The rotations about a long diagonal carrying the cube to itself are the three rotations by $0°, 120°, 240°$ (the diagonal is an axis of $3$-fold symmetry, since three faces meet at each vertex). So the stabiliser has order $3$, and orbit-stabiliser gives
-$$|G| = 8 \cdot 3 = 24,$$
-agreeing with Step 3. The same exercise on the $12$ edges gives $|G| = 12 \cdot 2 = 24$, since the stabiliser of an edge is the order-$2$ group containing the identity and the $180°$ rotation about the axis through that edge's midpoint and the opposite edge's midpoint.
-
-</details>
-
-<details>
-<summary>Remark: the action on the 4 long diagonals gives an isomorphism with $S_4$</summary>
-
-The cube has $4$ long diagonals (each joining a pair of opposite vertices), and every rotation permutes them, giving an action $G \to \operatorname{Sym}(X'') \cong S_4$ on a $4$-element set. This [[Thm - Actions Correspond to Homomorphisms|homomorphism]] is in fact an isomorphism. It is injective: a rotation fixing all four diagonals as lines must fix the cube pointwise or invert every diagonal, and a single rotation cannot invert all four simultaneously while fixing the cube, so only the identity acts trivially — the kernel is trivial. Since $|G| = 24 = |S_4|$, an injective homomorphism between finite groups of equal order is a bijection. Hence the rotation group of the cube is isomorphic to $S_4$. This is a recurring bonus of the action viewpoint: a well-chosen action does not merely *count* the group, it can *identify* it.
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $G$ be the rotation group of the cube.
-
-Each rotation permutes the $6$ faces, so $G$ acts on the set $X$ of faces. The action is transitive: any face can be carried to any other by a rotation (the four side faces cycle under a quarter-turn about a horizontal axis, and a quarter-turn about a side axis exchanges a side face with the top). Hence for any face $x$ the orbit $G \cdot x$ is all of $X$, so $|G \cdot x| = 6$.
-
-Fix the top face $x$. A rotation in the stabiliser $G_x$ fixes the top face setwise, hence fixes its centre and the cube's centre, hence fixes the vertical axis through both face-centres, so it is a rotation about that axis. The rotations about this axis preserving the cube are exactly those by $0°, 90°, 180°, 270°$, so $G_x$ has order $4$.
-
-By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], $|G| = |G \cdot x| \cdot |G_x| = 6 \cdot 4 = 24$.
-
-(Cross-check: acting on the $8$ vertices gives orbit size $8$ and stabiliser size $3$, with $8 \cdot 3 = 24$; acting on the $12$ edges gives $12 \cdot 2 = 24$. Acting on the $4$ long diagonals gives an injective homomorphism $G \to S_4$, which is an isomorphism by equality of orders.) $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $G$ be the rotation group of the cube.
+>
+> Each rotation permutes the $6$ faces, so $G$ acts on the set $X$ of faces. The action is transitive: any face can be carried to any other by a rotation (the four side faces cycle under a quarter-turn about a horizontal axis, and a quarter-turn about a side axis exchanges a side face with the top). Hence for any face $x$ the orbit $G \cdot x$ is all of $X$, so $|G \cdot x| = 6$.
+>
+> Fix the top face $x$. A rotation in the stabiliser $G_x$ fixes the top face setwise, hence fixes its centre and the cube's centre, hence fixes the vertical axis through both face-centres, so it is a rotation about that axis. The rotations about this axis preserving the cube are exactly those by $0°, 90°, 180°, 270°$, so $G_x$ has order $4$.
+>
+> By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], $|G| = |G \cdot x| \cdot |G_x| = 6 \cdot 4 = 24$.
+>
+> (Cross-check: acting on the $8$ vertices gives orbit size $8$ and stabiliser size $3$, with $8 \cdot 3 = 24$; acting on the $12$ edges gives $12 \cdot 2 = 24$. Acting on the $4$ long diagonals gives an injective homomorphism $G \to S_4$, which is an isomorphism by equality of orders.) $\blacksquare$
 
 ---
 

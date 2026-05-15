@@ -113,93 +113,65 @@ Define the forgetful homomorphism $\theta : G/K \to G/L$ that sends each $K$-cos
 
 # Lemma Decomposition
 
-<details>
-<summary><strong>Lemma 1: The forgetful map $G/K \to G/L$ is well-defined when $K \subseteq L$</strong></summary>
+> [!note]- Lemma 1: The forgetful map $G/K \to G/L$ is well-defined when $K \subseteq L$
+> **Statement:** Let $K \leq L \leq G$ with $K, L \trianglelefteq G$. The rule $\theta(gK) = gL$ defines a function $G/K \to G/L$ (independent of the chosen representative $g$).
+>
+> **Hint:** A finer equivalence refines a coarser one: if two elements differ by something in $K$, they differ by something in $L \supseteq K$.
+>
+> **Why needed:** It is the foundational check that makes $\theta$ a legitimate map; the containment $K \subseteq L$ enters here and nowhere else.
+>
+> > [!note]- Full proof
+> > Suppose $gK = g'K$. Then $g^{-1}g' \in K$. Since $K \subseteq L$, we also have $g^{-1}g' \in L$, which means $gL = g'L$. Hence $\theta(gK) = gL = g'L = \theta(g'K)$: the output does not depend on the representative, so $\theta$ is well-defined.
 
-**Statement:** Let $K \leq L \leq G$ with $K, L \trianglelefteq G$. The rule $\theta(gK) = gL$ defines a function $G/K \to G/L$ (independent of the chosen representative $g$).
+> [!note]- Lemma 2: $\theta$ is a surjective homomorphism
+> **Statement:** The well-defined map $\theta : G/K \to G/L$, $gK \mapsto gL$, is a homomorphism and is surjective.
+>
+> **Hint:** Multiplication in both quotients is "multiply representatives"; surjectivity is immediate from the formula.
+>
+> **Why needed:** These are two of the four hypotheses of the first isomorphism theorem; surjectivity pins the image as all of $G/L$.
+>
+> > [!note]- Full proof
+> > *Homomorphism.* For cosets $gK, g'K \in G/K$,
+> > $$\theta\big((gK)(g'K)\big) = \theta(gg'K) = gg'L = (gL)(g'L) = \theta(gK)\,\theta(g'K),$$
+> > using the definition of multiplication in $G/K$ and in $G/L$.
+> >
+> > *Surjectivity.* An arbitrary element of $G/L$ has the form $gL$ for some $g \in G$. Then $gL = \theta(gK)$, so it lies in the image. Hence $\theta$ is surjective.
 
-**Hint:** A finer equivalence refines a coarser one: if two elements differ by something in $K$, they differ by something in $L \supseteq K$.
-
-**Why needed:** It is the foundational check that makes $\theta$ a legitimate map; the containment $K \subseteq L$ enters here and nowhere else.
-
-<details>
-<summary>Full proof</summary>
-
-Suppose $gK = g'K$. Then $g^{-1}g' \in K$. Since $K \subseteq L$, we also have $g^{-1}g' \in L$, which means $gL = g'L$. Hence $\theta(gK) = gL = g'L = \theta(g'K)$: the output does not depend on the representative, so $\theta$ is well-defined.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: $\theta$ is a surjective homomorphism</strong></summary>
-
-**Statement:** The well-defined map $\theta : G/K \to G/L$, $gK \mapsto gL$, is a homomorphism and is surjective.
-
-**Hint:** Multiplication in both quotients is "multiply representatives"; surjectivity is immediate from the formula.
-
-**Why needed:** These are two of the four hypotheses of the first isomorphism theorem; surjectivity pins the image as all of $G/L$.
-
-<details>
-<summary>Full proof</summary>
-
-*Homomorphism.* For cosets $gK, g'K \in G/K$,
-$$\theta\big((gK)(g'K)\big) = \theta(gg'K) = gg'L = (gL)(g'L) = \theta(gK)\,\theta(g'K),$$
-using the definition of multiplication in $G/K$ and in $G/L$.
-
-*Surjectivity.* An arbitrary element of $G/L$ has the form $gL$ for some $g \in G$. Then $gL = \theta(gK)$, so it lies in the image. Hence $\theta$ is surjective.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: $\ker\theta = L/K$</strong></summary>
-
-**Statement:** With $\theta$ as above, $\ker\theta = \{\ell K : \ell \in L\} = L/K$. In particular $L/K$ is a normal subgroup of $G/K$.
-
-**Hint:** The identity of $G/L$ is the coset $L$; ask which $gK$ map to it.
-
-**Why needed:** It identifies the kernel that the first isomorphism theorem quotients by, and it delivers the normality claim $L/K \trianglelefteq G/K$ for free.
-
-<details>
-<summary>Full proof</summary>
-
-The identity element of $G/L$ is the coset $L = eL$. An element $gK \in G/K$ lies in $\ker\theta$ if and only if $\theta(gK) = L$, i.e. if and only if $gL = L$, i.e. if and only if $g \in L$. Therefore
-$$\ker\theta = \{gK : g \in L\} = \{\ell K : \ell \in L\} = L/K.$$
-(The set $\{\ell K : \ell \in L\}$ is well-defined as a subset of $G/K$ because $K \subseteq L$, so every $\ell K$ is a genuine coset of $K$.) Being the kernel of the homomorphism $\theta$, the set $L/K$ is a normal subgroup of the domain $G/K$.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: $\ker\theta = L/K$
+> **Statement:** With $\theta$ as above, $\ker\theta = \{\ell K : \ell \in L\} = L/K$. In particular $L/K$ is a normal subgroup of $G/K$.
+>
+> **Hint:** The identity of $G/L$ is the coset $L$; ask which $gK$ map to it.
+>
+> **Why needed:** It identifies the kernel that the first isomorphism theorem quotients by, and it delivers the normality claim $L/K \trianglelefteq G/K$ for free.
+>
+> > [!note]- Full proof
+> > The identity element of $G/L$ is the coset $L = eL$. An element $gK \in G/K$ lies in $\ker\theta$ if and only if $\theta(gK) = L$, i.e. if and only if $gL = L$, i.e. if and only if $g \in L$. Therefore
+> > $$\ker\theta = \{gK : g \in L\} = \{\ell K : \ell \in L\} = L/K.$$
+> > (The set $\{\ell K : \ell \in L\}$ is well-defined as a subset of $G/K$ because $K \subseteq L$, so every $\ell K$ is a genuine coset of $K$.) Being the kernel of the homomorphism $\theta$, the set $L/K$ is a normal subgroup of the domain $G/K$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-Let $G$ be a group and $K \leq L \leq G$ with $K \trianglelefteq G$ and $L \trianglelefteq G$. Then $G/K$, $G/L$ are quotient groups.
-
-**Define the map.** Set
-$$\theta : G/K \longrightarrow G/L, \qquad \theta(gK) = gL.$$
-
-**$\theta$ is well-defined.** The rule uses a representative $g$ of the coset $gK$, so we check independence of the choice. If $gK = g'K$, then $g^{-1}g' \in K$. Since $K \subseteq L$, also $g^{-1}g' \in L$, hence $gL = g'L$. Thus $\theta(gK) = \theta(g'K)$, and $\theta$ is a function. (This is the only step using $K \subseteq L$.)
-
-**$\theta$ is a homomorphism.** For $gK, g'K \in G/K$,
-$$\theta\big((gK)(g'K)\big) = \theta(gg'K) = gg'L = (gL)(g'L) = \theta(gK)\,\theta(g'K).$$
-
-**$\theta$ is surjective.** Any element of $G/L$ is $gL$ for some $g \in G$, and $gL = \theta(gK)$. So $\operatorname{im}\theta = G/L$.
-
-**Compute the kernel.** The identity of $G/L$ is the coset $L$. Then
-$$gK \in \ker\theta \iff \theta(gK) = L \iff gL = L \iff g \in L.$$
-Hence $\ker\theta = \{gK : g \in L\} = L/K$. As the kernel of a homomorphism, $L/K$ is a normal subgroup of $G/K$.
-
-**Apply the first isomorphism theorem.** The map $\theta : G/K \to G/L$ is a homomorphism with $\ker\theta = L/K$ and $\operatorname{im}\theta = G/L$. The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] gives
-$$\frac{G/K}{\ker\theta} \;\cong\; \operatorname{im}\theta, \qquad\text{that is}\qquad \frac{G/K}{L/K} \;\cong\; \frac{G}{L}. \qquad \blacksquare$$
-
-</details>
+> [!note]- Complete formal proof
+> Let $G$ be a group and $K \leq L \leq G$ with $K \trianglelefteq G$ and $L \trianglelefteq G$. Then $G/K$, $G/L$ are quotient groups.
+>
+> **Define the map.** Set
+> $$\theta : G/K \longrightarrow G/L, \qquad \theta(gK) = gL.$$
+>
+> **$\theta$ is well-defined.** The rule uses a representative $g$ of the coset $gK$, so we check independence of the choice. If $gK = g'K$, then $g^{-1}g' \in K$. Since $K \subseteq L$, also $g^{-1}g' \in L$, hence $gL = g'L$. Thus $\theta(gK) = \theta(g'K)$, and $\theta$ is a function. (This is the only step using $K \subseteq L$.)
+>
+> **$\theta$ is a homomorphism.** For $gK, g'K \in G/K$,
+> $$\theta\big((gK)(g'K)\big) = \theta(gg'K) = gg'L = (gL)(g'L) = \theta(gK)\,\theta(g'K).$$
+>
+> **$\theta$ is surjective.** Any element of $G/L$ is $gL$ for some $g \in G$, and $gL = \theta(gK)$. So $\operatorname{im}\theta = G/L$.
+>
+> **Compute the kernel.** The identity of $G/L$ is the coset $L$. Then
+> $$gK \in \ker\theta \iff \theta(gK) = L \iff gL = L \iff g \in L.$$
+> Hence $\ker\theta = \{gK : g \in L\} = L/K$. As the kernel of a homomorphism, $L/K$ is a normal subgroup of $G/K$.
+>
+> **Apply the first isomorphism theorem.** The map $\theta : G/K \to G/L$ is a homomorphism with $\ker\theta = L/K$ and $\operatorname{im}\theta = G/L$. The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] gives
+> $$\frac{G/K}{\ker\theta} \;\cong\; \operatorname{im}\theta, \qquad\text{that is}\qquad \frac{G/K}{L/K} \;\cong\; \frac{G}{L}. \qquad \blacksquare$$
 
 ---
 

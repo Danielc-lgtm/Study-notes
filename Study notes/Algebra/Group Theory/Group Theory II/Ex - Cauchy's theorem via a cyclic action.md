@@ -64,33 +64,17 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> This is an existence statement proved by counting, not by construction. You want a finite set whose size is divisible by $p$ and on which a group of order $p$ acts. The element of order $p$ should appear as a *special point* of that set — think about what kind of point would correspond to an element $g$ with $g^p = e$.
 
-This is an existence statement proved by counting, not by construction. You want a finite set whose size is divisible by $p$ and on which a group of order $p$ acts. The element of order $p$ should appear as a *special point* of that set — think about what kind of point would correspond to an element $g$ with $g^p = e$.
+> [!note]- Hint 2
+> Take $X = \{(g_1, \dots, g_p) \in G^p : g_1 g_2 \cdots g_p = e\}$. First compute $|X|$: how freely can you choose the coordinates? Once $g_1, \dots, g_{p-1}$ are chosen, is $g_p$ determined? Conclude $|X| = |G|^{p-1}$, and note $p \mid |X|$.
 
-</details>
+> [!note]- Hint 3
+> Let $\mathbb{Z}/p$ act on $X$ by cyclic rotation: $1 \cdot (g_1, g_2, \dots, g_p) = (g_2, \dots, g_p, g_1)$. You must check this lands back in $X$ — i.e. if $g_1 \cdots g_p = e$, then $g_2 \cdots g_p g_1 = e$. (If $ab = e$ in a group, what is $ba$? Apply this with $a = g_1$, $b = g_2 \cdots g_p$.) Then orbit-stabiliser forces every orbit to have size $1$ or $p$, since $p$ is prime.
 
-<details>
-<summary>Hint 2</summary>
-
-Take $X = \{(g_1, \dots, g_p) \in G^p : g_1 g_2 \cdots g_p = e\}$. First compute $|X|$: how freely can you choose the coordinates? Once $g_1, \dots, g_{p-1}$ are chosen, is $g_p$ determined? Conclude $|X| = |G|^{p-1}$, and note $p \mid |X|$.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Let $\mathbb{Z}/p$ act on $X$ by cyclic rotation: $1 \cdot (g_1, g_2, \dots, g_p) = (g_2, \dots, g_p, g_1)$. You must check this lands back in $X$ — i.e. if $g_1 \cdots g_p = e$, then $g_2 \cdots g_p g_1 = e$. (If $ab = e$ in a group, what is $ba$? Apply this with $a = g_1$, $b = g_2 \cdots g_p$.) Then orbit-stabiliser forces every orbit to have size $1$ or $p$, since $p$ is prime.
-
-</details>
-
-<details>
-<summary>Hint 4</summary>
-
-An orbit has size $1$ exactly when the tuple is *fixed* by the rotation — and a tuple unchanged by cyclic shift must have all coordinates equal: $(g, g, \dots, g)$, which lies in $X$ precisely when $g^p = e$. Count $|X|$ as (number of size-$1$ orbits) $+$ (size-$p$ orbits, each contributing a multiple of $p$). Reduce mod $p$: the number of fixed points is $\equiv |X| \equiv 0 \pmod p$. You already know one fixed point, $(e, \dots, e)$. So how many are there at least — and what does a *second* one give you?
-
-</details>
+> [!note]- Hint 4
+> An orbit has size $1$ exactly when the tuple is *fixed* by the rotation — and a tuple unchanged by cyclic shift must have all coordinates equal: $(g, g, \dots, g)$, which lies in $X$ precisely when $g^p = e$. Count $|X|$ as (number of size-$1$ orbits) $+$ (size-$p$ orbits, each contributing a multiple of $p$). Reduce mod $p$: the number of fixed points is $\equiv |X| \equiv 0 \pmod p$. You already know one fixed point, $(e, \dots, e)$. So how many are there at least — and what does a *second* one give you?
 
 ---
 
@@ -102,93 +86,73 @@ The plan is to build the set $X$ of $p$-tuples with product $e$, observe $|X| = 
 
 Define $X = \{(g_1, \dots, g_p) \in G^p : g_1 g_2 \cdots g_p = e\}$. The first $p-1$ coordinates may be chosen freely, after which the last is forced to be $g_p = (g_1 \cdots g_{p-1})^{-1}$. So $|X| = |G|^{p-1}$, and since $p \mid |G|$ and $p - 1 \geq 1$, the prime $p$ divides $|X|$.
 
-<details>
-<summary>Derivation</summary>
-
-A tuple $(g_1, \dots, g_p) \in G^p$ lies in $X$ if and only if $g_1 g_2 \cdots g_p = e$. Choose the first $p-1$ entries $g_1, \dots, g_{p-1}$ to be *any* elements of $G$ whatsoever — there are $|G|^{p-1}$ such choices. The defining equation then reads
-$$g_1 g_2 \cdots g_{p-1}\, g_p = e \quad\Longleftrightarrow\quad g_p = (g_1 g_2 \cdots g_{p-1})^{-1}.$$
-So the last entry $g_p$ is *uniquely determined* by the first $p-1$: exactly one value of $g_p$ completes the tuple to an element of $X$, and that value always exists (every element of a group has an inverse). Hence the elements of $X$ are in bijection with the free choices of $(g_1, \dots, g_{p-1}) \in G^{p-1}$, giving
-$$|X| = |G|^{p-1}.$$
-Since $p$ divides $|G|$ by hypothesis, and the exponent satisfies $p - 1 \geq 1$ (as $p \geq 2$), the prime $p$ divides $|G|^{p-1} = |X|$:
-$$p \ \big|\ |X|.$$
-
-</details>
+> [!note]- Derivation
+> A tuple $(g_1, \dots, g_p) \in G^p$ lies in $X$ if and only if $g_1 g_2 \cdots g_p = e$. Choose the first $p-1$ entries $g_1, \dots, g_{p-1}$ to be *any* elements of $G$ whatsoever — there are $|G|^{p-1}$ such choices. The defining equation then reads
+> $$g_1 g_2 \cdots g_{p-1}\, g_p = e \quad\Longleftrightarrow\quad g_p = (g_1 g_2 \cdots g_{p-1})^{-1}.$$
+> So the last entry $g_p$ is *uniquely determined* by the first $p-1$: exactly one value of $g_p$ completes the tuple to an element of $X$, and that value always exists (every element of a group has an inverse). Hence the elements of $X$ are in bijection with the free choices of $(g_1, \dots, g_{p-1}) \in G^{p-1}$, giving
+> $$|X| = |G|^{p-1}.$$
+> Since $p$ divides $|G|$ by hypothesis, and the exponent satisfies $p - 1 \geq 1$ (as $p \geq 2$), the prime $p$ divides $|G|^{p-1} = |X|$:
+> $$p \ \big|\ |X|.$$
 
 **Step 2: The cyclic group $\mathbb{Z}/p$ acts on $X$ by rotating the coordinates — and this is well-defined.**
 
 The cyclic shift $\sigma : (g_1, g_2, \dots, g_p) \mapsto (g_2, \dots, g_p, g_1)$ sends $X$ into $X$, because if $g_1 g_2 \cdots g_p = e$ then the rotated product $g_2 \cdots g_p g_1$ is also $e$. Iterating $\sigma$ defines an action of $\mathbb{Z}/p = \{0, 1, \dots, p-1\}$ on $X$, with $k$ acting as $\sigma^k$.
 
-<details>
-<summary>Derivation</summary>
-
-*The shift preserves $X$ — the crux of the construction.* Suppose $(g_1, \dots, g_p) \in X$, so $g_1 g_2 \cdots g_p = e$. We must show the rotated tuple $(g_2, \dots, g_p, g_1)$ is also in $X$, i.e. that $g_2 g_3 \cdots g_p g_1 = e$.
-
-Write $a = g_1$ and $b = g_2 g_3 \cdots g_p$. The hypothesis is $ab = g_1(g_2 \cdots g_p) = e$, so $b = a^{-1}$, and therefore $ba = a^{-1}a = e$ as well. (In any group, a one-sided inverse is two-sided: $ab = e$ forces $ba = e$.) But $ba = (g_2 \cdots g_p)\,g_1$ is exactly the product of the rotated tuple. Hence
-$$g_2 g_3 \cdots g_p g_1 = e,$$
-so $(g_2, \dots, g_p, g_1) \in X$. The shift $\sigma : X \to X$ is well-defined. This is the one step where the *cyclic* structure is essential: a non-cyclic rearrangement of $g_1, \dots, g_p$ would not in general preserve the product, but a *cyclic* one does, precisely by the $ab = e \Rightarrow ba = e$ identity.
-
-*The shift generates an action of $\mathbb{Z}/p$.* The map $\sigma$ is a bijection of $X$: applying it $p$ times returns every coordinate to its original position, so $\sigma^p = \operatorname{id}_X$, and $\sigma$ has inverse $\sigma^{p-1}$. Define $k \cdot x = \sigma^k(x)$ for $k \in \mathbb{Z}/p$ and $x \in X$. This is well-defined modulo $p$ because $\sigma^p = \operatorname{id}$, so $\sigma^{k}$ depends only on $k \bmod p$. It satisfies the [[Def - Group Action|action axioms]]: $0 \cdot x = \sigma^0(x) = x$, and $k_1 \cdot (k_2 \cdot x) = \sigma^{k_1}(\sigma^{k_2}(x)) = \sigma^{k_1 + k_2}(x) = (k_1 + k_2) \cdot x$. So $\mathbb{Z}/p$ acts on $X$.
-
-</details>
+> [!note]- Derivation
+> *The shift preserves $X$ — the crux of the construction.* Suppose $(g_1, \dots, g_p) \in X$, so $g_1 g_2 \cdots g_p = e$. We must show the rotated tuple $(g_2, \dots, g_p, g_1)$ is also in $X$, i.e. that $g_2 g_3 \cdots g_p g_1 = e$.
+>
+> Write $a = g_1$ and $b = g_2 g_3 \cdots g_p$. The hypothesis is $ab = g_1(g_2 \cdots g_p) = e$, so $b = a^{-1}$, and therefore $ba = a^{-1}a = e$ as well. (In any group, a one-sided inverse is two-sided: $ab = e$ forces $ba = e$.) But $ba = (g_2 \cdots g_p)\,g_1$ is exactly the product of the rotated tuple. Hence
+> $$g_2 g_3 \cdots g_p g_1 = e,$$
+> so $(g_2, \dots, g_p, g_1) \in X$. The shift $\sigma : X \to X$ is well-defined. This is the one step where the *cyclic* structure is essential: a non-cyclic rearrangement of $g_1, \dots, g_p$ would not in general preserve the product, but a *cyclic* one does, precisely by the $ab = e \Rightarrow ba = e$ identity.
+>
+> *The shift generates an action of $\mathbb{Z}/p$.* The map $\sigma$ is a bijection of $X$: applying it $p$ times returns every coordinate to its original position, so $\sigma^p = \operatorname{id}_X$, and $\sigma$ has inverse $\sigma^{p-1}$. Define $k \cdot x = \sigma^k(x)$ for $k \in \mathbb{Z}/p$ and $x \in X$. This is well-defined modulo $p$ because $\sigma^p = \operatorname{id}$, so $\sigma^{k}$ depends only on $k \bmod p$. It satisfies the [[Def - Group Action|action axioms]]: $0 \cdot x = \sigma^0(x) = x$, and $k_1 \cdot (k_2 \cdot x) = \sigma^{k_1}(\sigma^{k_2}(x)) = \sigma^{k_1 + k_2}(x) = (k_1 + k_2) \cdot x$. So $\mathbb{Z}/p$ acts on $X$.
 
 **Step 3: Every orbit has size $1$ or $p$, and the size-$1$ orbits are exactly the constant tuples $(g, \dots, g)$ with $g^p = e$.**
 
 By the orbit-stabiliser theorem each orbit size divides $|\mathbb{Z}/p| = p$; as $p$ is prime, every orbit has size $1$ or $p$. An orbit has size $1$ — the tuple is fixed by $\sigma$ — exactly when all $p$ coordinates are equal, say $(g, \dots, g)$, and such a tuple lies in $X$ precisely when $g^p = e$.
 
-<details>
-<summary>Derivation</summary>
-
-*Orbit sizes.* By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], the size of each orbit of the $\mathbb{Z}/p$-action divides $|\mathbb{Z}/p| = p$. The only positive divisors of the prime $p$ are $1$ and $p$, so every orbit has size $1$ or $p$. (There is no third possibility — this is the entire reason the acting group was chosen to have *prime* order.)
-
-*Size-$1$ orbits are fixed tuples.* An orbit $\{x\}$ has size $1$ exactly when $x$ is a [[Def - Orbit and Stabiliser|fixed point]]: $k \cdot x = x$ for all $k$, equivalently $\sigma(x) = x$. Now $\sigma$ fixes the tuple $x = (g_1, g_2, \dots, g_p)$ if and only if
-$$(g_2, g_3, \dots, g_p, g_1) = (g_1, g_2, \dots, g_p),$$
-which compares coordinate by coordinate to $g_2 = g_1,\ g_3 = g_2,\ \dots,\ g_1 = g_p$ — that is, $g_1 = g_2 = \cdots = g_p$. So a fixed tuple is a **constant tuple** $(g, g, \dots, g)$ for a single $g \in G$.
-
-*Which constant tuples lie in $X$.* The constant tuple $(g, \dots, g)$ belongs to $X$ if and only if its product is the identity, i.e. if and only if
-$$\underbrace{g \cdot g \cdots g}_{p} = g^p = e.$$
-Therefore the fixed points of the action are in bijection with the elements $g \in G$ satisfying $g^p = e$. Write
-$$F = \{g \in G : g^p = e\},$$
-so the number of fixed points (size-$1$ orbits) equals $|F|$.
-
-</details>
+> [!note]- Derivation
+> *Orbit sizes.* By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], the size of each orbit of the $\mathbb{Z}/p$-action divides $|\mathbb{Z}/p| = p$. The only positive divisors of the prime $p$ are $1$ and $p$, so every orbit has size $1$ or $p$. (There is no third possibility — this is the entire reason the acting group was chosen to have *prime* order.)
+>
+> *Size-$1$ orbits are fixed tuples.* An orbit $\{x\}$ has size $1$ exactly when $x$ is a [[Def - Orbit and Stabiliser|fixed point]]: $k \cdot x = x$ for all $k$, equivalently $\sigma(x) = x$. Now $\sigma$ fixes the tuple $x = (g_1, g_2, \dots, g_p)$ if and only if
+> $$(g_2, g_3, \dots, g_p, g_1) = (g_1, g_2, \dots, g_p),$$
+> which compares coordinate by coordinate to $g_2 = g_1,\ g_3 = g_2,\ \dots,\ g_1 = g_p$ — that is, $g_1 = g_2 = \cdots = g_p$. So a fixed tuple is a **constant tuple** $(g, g, \dots, g)$ for a single $g \in G$.
+>
+> *Which constant tuples lie in $X$.* The constant tuple $(g, \dots, g)$ belongs to $X$ if and only if its product is the identity, i.e. if and only if
+> $$\underbrace{g \cdot g \cdots g}_{p} = g^p = e.$$
+> Therefore the fixed points of the action are in bijection with the elements $g \in G$ satisfying $g^p = e$. Write
+> $$F = \{g \in G : g^p = e\},$$
+> so the number of fixed points (size-$1$ orbits) equals $|F|$.
 
 **Step 4: The number of fixed points is divisible by $p$; since one fixed point is already known, there are at least $p$, so some $g \neq e$ has $g^p = e$ — an element of order $p$.**
 
 Counting $|X|$ over its orbits modulo $p$, the size-$p$ orbits contribute multiples of $p$, so $|F| \equiv |X| \equiv 0 \pmod p$. The tuple $(e, \dots, e)$ shows $|F| \geq 1$, hence $|F| \geq p \geq 2$, so $F$ contains some $g \neq e$. That $g$ satisfies $g^p = e$ with $g \neq e$, so its order divides $p$ and is not $1$ — its order is exactly $p$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> *The fixed-point count is $\equiv 0 \pmod p$.* The orbits of the $\mathbb{Z}/p$-action [[Def - Orbit and Stabiliser|partition]] $X$, so $|X|$ is the sum of all orbit sizes. Group the orbits by size, which by Step 3 is $1$ or $p$. If there are $|F|$ orbits of size $1$ and $m$ orbits of size $p$, then
+> $$|X| = \underbrace{1 \cdot |F|}_{\text{size-}1\text{ orbits}} + \underbrace{p \cdot m}_{\text{size-}p\text{ orbits}}.$$
+> Reducing modulo $p$, the term $p \cdot m$ vanishes, so $|X| \equiv |F| \pmod p$. By Step 1, $p \mid |X|$, i.e. $|X| \equiv 0 \pmod p$. Therefore
+> $$|F| \equiv 0 \pmod p.$$
+>
+> *The count is positive, hence at least $p$.* The constant tuple $(e, e, \dots, e)$ has product $e^p = e$, so it lies in $X$ and is a fixed point; equivalently $e \in F$. Thus $|F| \geq 1$. A non-negative integer that is divisible by $p$ and at least $1$ must be at least $p$:
+> $$|F| \geq p \geq 2.$$
+>
+> *Extracting the element.* Since $|F| \geq 2$, the set $F = \{g \in G : g^p = e\}$ contains an element $g \neq e$. This $g$ satisfies $g^p = e$, so the [[Thm - Lagrange's Theorem|order]] of $g$ divides $p$. The divisors of the prime $p$ are $1$ and $p$; the order is $1$ only for $g = e$, and $g \neq e$, so
+> $$\operatorname{ord}(g) = p.$$
+> Thus $G$ has an element of order exactly $p$. $\blacksquare$
 
-*The fixed-point count is $\equiv 0 \pmod p$.* The orbits of the $\mathbb{Z}/p$-action [[Def - Orbit and Stabiliser|partition]] $X$, so $|X|$ is the sum of all orbit sizes. Group the orbits by size, which by Step 3 is $1$ or $p$. If there are $|F|$ orbits of size $1$ and $m$ orbits of size $p$, then
-$$|X| = \underbrace{1 \cdot |F|}_{\text{size-}1\text{ orbits}} + \underbrace{p \cdot m}_{\text{size-}p\text{ orbits}}.$$
-Reducing modulo $p$, the term $p \cdot m$ vanishes, so $|X| \equiv |F| \pmod p$. By Step 1, $p \mid |X|$, i.e. $|X| \equiv 0 \pmod p$. Therefore
-$$|F| \equiv 0 \pmod p.$$
-
-*The count is positive, hence at least $p$.* The constant tuple $(e, e, \dots, e)$ has product $e^p = e$, so it lies in $X$ and is a fixed point; equivalently $e \in F$. Thus $|F| \geq 1$. A non-negative integer that is divisible by $p$ and at least $1$ must be at least $p$:
-$$|F| \geq p \geq 2.$$
-
-*Extracting the element.* Since $|F| \geq 2$, the set $F = \{g \in G : g^p = e\}$ contains an element $g \neq e$. This $g$ satisfies $g^p = e$, so the [[Thm - Lagrange's Theorem|order]] of $g$ divides $p$. The divisors of the prime $p$ are $1$ and $p$; the order is $1$ only for $g = e$, and $g \neq e$, so
-$$\operatorname{ord}(g) = p.$$
-Thus $G$ has an element of order exactly $p$. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $G$ be a finite group and $p$ a prime with $p \mid |G|$.
-
-Set $X = \{(g_1, \dots, g_p) \in G^p : g_1 g_2 \cdots g_p = e\}$. The first $p - 1$ coordinates are arbitrary and the last is forced, $g_p = (g_1 \cdots g_{p-1})^{-1}$, so $|X| = |G|^{p-1}$; since $p \mid |G|$, also $p \mid |X|$.
-
-Let $\sigma : X \to X$ be the cyclic shift $(g_1, \dots, g_p) \mapsto (g_2, \dots, g_p, g_1)$. This maps $X$ to $X$: if $g_1(g_2 \cdots g_p) = e$, then writing $a = g_1$, $b = g_2 \cdots g_p$ we have $ab = e$, hence $ba = e$, i.e. $(g_2 \cdots g_p)g_1 = e$. Since $\sigma^p = \operatorname{id}_X$, the rule $k \cdot x = \sigma^k(x)$ defines an action of $\mathbb{Z}/p$ on $X$.
-
-By the orbit-stabiliser theorem, every orbit size divides $|\mathbb{Z}/p| = p$, so each orbit has size $1$ or $p$. An orbit has size $1$ if and only if the tuple is fixed by $\sigma$, which forces all coordinates equal: the fixed points are the constant tuples $(g, \dots, g)$, and such a tuple lies in $X$ if and only if $g^p = e$. Let $F = \{g \in G : g^p = e\}$, so the number of fixed points is $|F|$.
-
-The orbits partition $X$, so $|X| = |F| + p m$ where $m$ is the number of size-$p$ orbits. Hence $|F| \equiv |X| \equiv 0 \pmod p$. Since $(e, \dots, e) \in X$ is a fixed point, $|F| \geq 1$; being divisible by $p$ and positive, $|F| \geq p \geq 2$. So there exists $g \in F$ with $g \neq e$. This $g$ satisfies $g^p = e$, so $\operatorname{ord}(g)$ divides $p$; as $g \neq e$, $\operatorname{ord}(g) \neq 1$, whence $\operatorname{ord}(g) = p$.
-
-Therefore $G$ has an element of order $p$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $G$ be a finite group and $p$ a prime with $p \mid |G|$.
+>
+> Set $X = \{(g_1, \dots, g_p) \in G^p : g_1 g_2 \cdots g_p = e\}$. The first $p - 1$ coordinates are arbitrary and the last is forced, $g_p = (g_1 \cdots g_{p-1})^{-1}$, so $|X| = |G|^{p-1}$; since $p \mid |G|$, also $p \mid |X|$.
+>
+> Let $\sigma : X \to X$ be the cyclic shift $(g_1, \dots, g_p) \mapsto (g_2, \dots, g_p, g_1)$. This maps $X$ to $X$: if $g_1(g_2 \cdots g_p) = e$, then writing $a = g_1$, $b = g_2 \cdots g_p$ we have $ab = e$, hence $ba = e$, i.e. $(g_2 \cdots g_p)g_1 = e$. Since $\sigma^p = \operatorname{id}_X$, the rule $k \cdot x = \sigma^k(x)$ defines an action of $\mathbb{Z}/p$ on $X$.
+>
+> By the orbit-stabiliser theorem, every orbit size divides $|\mathbb{Z}/p| = p$, so each orbit has size $1$ or $p$. An orbit has size $1$ if and only if the tuple is fixed by $\sigma$, which forces all coordinates equal: the fixed points are the constant tuples $(g, \dots, g)$, and such a tuple lies in $X$ if and only if $g^p = e$. Let $F = \{g \in G : g^p = e\}$, so the number of fixed points is $|F|$.
+>
+> The orbits partition $X$, so $|X| = |F| + p m$ where $m$ is the number of size-$p$ orbits. Hence $|F| \equiv |X| \equiv 0 \pmod p$. Since $(e, \dots, e) \in X$ is a fixed point, $|F| \geq 1$; being divisible by $p$ and positive, $|F| \geq p \geq 2$. So there exists $g \in F$ with $g \neq e$. This $g$ satisfies $g^p = e$, so $\operatorname{ord}(g)$ divides $p$; as $g \neq e$, $\operatorname{ord}(g) \neq 1$, whence $\operatorname{ord}(g) = p$.
+>
+> Therefore $G$ has an element of order $p$. $\blacksquare$
 
 > [!warning] Why the auxiliary group must be $\mathbb{Z}/p$, not $G$ and not $S_p$
 > It is tempting to let $G$ itself act, or to let the full symmetric group $S_p$ permute the coordinates. Both fail. If $S_p$ permuted the coordinates, a non-cyclic permutation would scramble the product $g_1 \cdots g_p$ into a genuinely different product, which need not equal $e$ — so $S_p$ does not act on $X$ at all; only the *cyclic* shifts preserve the constraint, by the $ab = e \Rightarrow ba = e$ identity. And the acting group must have *prime* order: the whole argument hinges on "orbit size divides $|C|$" collapsing to the dichotomy $1$ or $p$, which happens only when $|C|$ is prime. A group of composite order would permit intermediate orbit sizes and the mod-$p$ count would break. The construction is rigid: the set is forced by the need for $|X|$ to be a power of $|G|$, and the acting group is forced to be $\mathbb{Z}/p$ by the need for both well-definedness and the prime-order dichotomy.

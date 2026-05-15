@@ -56,26 +56,14 @@ This solution deploys the following legal operations from [[Group Theory I — �
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Do not start conjugating elements. The hypothesis is about the *index*, so it is about *how many cosets exist*. Write down what the complete list of left cosets of $H$ looks like when there are exactly two of them, and remember that $H$ is always one coset on the list.
 
-Do not start conjugating elements. The hypothesis is about the *index*, so it is about *how many cosets exist*. Write down what the complete list of left cosets of $H$ looks like when there are exactly two of them, and remember that $H$ is always one coset on the list.
+> [!note]- Hint 2
+> The two left cosets partition $G$ — they are disjoint and together cover everything. One of them is $H$. What set must the other one be? Now run the identical argument for *right* cosets. Compare the two lists.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-The two left cosets partition $G$ — they are disjoint and together cover everything. One of them is $H$. What set must the other one be? Now run the identical argument for *right* cosets. Compare the two lists.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-For $g \in H$ you have $gH = H = Hg$ directly. For $g \notin H$, the left coset $gH$ is not $H$, so it is the other left coset; the right coset $Hg$ is not $H$, so it is the other right coset. Both "other" cosets equal $G \setminus H$. Hence $gH = Hg$ for every $g$, which is exactly the coset characterisation of normality.
-
-</details>
+> [!note]- Hint 3
+> For $g \in H$ you have $gH = H = Hg$ directly. For $g \notin H$, the left coset $gH$ is not $H$, so it is the other left coset; the right coset $Hg$ is not $H$, so it is the other right coset. Both "other" cosets equal $G \setminus H$. Hence $gH = Hg$ for every $g$, which is exactly the coset characterisation of normality.
 
 ---
 
@@ -87,70 +75,54 @@ The strategy is to show the left-coset partition and the right-coset partition o
 
 Because $|G : H| = 2$ there are exactly two left cosets, and one of them is $H$ itself. The cosets partition $G$, so the second left coset is exactly $G \setminus H$.
 
-<details>
-<summary>Derivation</summary>
-
-By definition the index $|G : H|$ is the number of distinct left cosets $gH$, so the hypothesis $|G : H| = 2$ says there are precisely two of them. One left coset is always $H$: taking the representative $g = e$ gives the coset $eH = \{e \cdot h : h \in H\} = H$.
-
-The left cosets of $H$ **partition** $G$ — this is a standard fact from [[Def - Coset]]: any two cosets are either identical or disjoint, and every element $g$ lies in *some* coset, namely $gH$ (since $g = ge \in gH$ as $e \in H$). So the two cosets are disjoint and their union is all of $G$. Calling the second coset $C$, disjointness gives $C \cap H = \emptyset$ and exhaustiveness gives $C \cup H = G$. Together these say $C$ consists of exactly those elements of $G$ not in $H$:
-$$C = G \setminus H.$$
-Hence the complete list of left cosets is $\{\,H,\ G \setminus H\,\}$.
-
-</details>
+> [!note]- Derivation
+> By definition the index $|G : H|$ is the number of distinct left cosets $gH$, so the hypothesis $|G : H| = 2$ says there are precisely two of them. One left coset is always $H$: taking the representative $g = e$ gives the coset $eH = \{e \cdot h : h \in H\} = H$.
+>
+> The left cosets of $H$ **partition** $G$ — this is a standard fact from [[Def - Coset]]: any two cosets are either identical or disjoint, and every element $g$ lies in *some* coset, namely $gH$ (since $g = ge \in gH$ as $e \in H$). So the two cosets are disjoint and their union is all of $G$. Calling the second coset $C$, disjointness gives $C \cap H = \emptyset$ and exhaustiveness gives $C \cup H = G$. Together these say $C$ consists of exactly those elements of $G$ not in $H$:
+> $$C = G \setminus H.$$
+> Hence the complete list of left cosets is $\{\,H,\ G \setminus H\,\}$.
 
 **Step 2: The two right cosets are also $H$ and $G \setminus H$.**
 
 The identical argument with right cosets in place of left cosets shows the two right cosets are $H$ and $G \setminus H$ — literally the same pair of subsets of $G$.
 
-<details>
-<summary>Derivation</summary>
-
-Lagrange's counting works identically for right cosets: the number of right cosets of $H$ equals the number of left cosets, so there are exactly two right cosets as well. (Even without quoting that fact, the map $gH \mapsto Hg^{-1}$ is a bijection between left and right cosets, so the two counts agree.)
-
-One right coset is $H$, via the representative $e$: the coset $He = \{h \cdot e : h \in H\} = H$. The right cosets also partition $G$ — the same disjoint-or-equal and exhaustive argument applies, with $g \in Hg$ because $g = eg$ and $e \in H$. So the second right coset is the complement of $H$, exactly as in Step 1:
-$$G \setminus H.$$
-Hence the complete list of right cosets is $\{\,H,\ G \setminus H\,\}$ — the same two sets that appeared as the left cosets.
-
-</details>
+> [!note]- Derivation
+> Lagrange's counting works identically for right cosets: the number of right cosets of $H$ equals the number of left cosets, so there are exactly two right cosets as well. (Even without quoting that fact, the map $gH \mapsto Hg^{-1}$ is a bijection between left and right cosets, so the two counts agree.)
+>
+> One right coset is $H$, via the representative $e$: the coset $He = \{h \cdot e : h \in H\} = H$. The right cosets also partition $G$ — the same disjoint-or-equal and exhaustive argument applies, with $g \in Hg$ because $g = eg$ and $e \in H$. So the second right coset is the complement of $H$, exactly as in Step 1:
+> $$G \setminus H.$$
+> Hence the complete list of right cosets is $\{\,H,\ G \setminus H\,\}$ — the same two sets that appeared as the left cosets.
 
 **Step 3: Conclude $gH = Hg$ for every $g \in G$, hence $H \trianglelefteq G$.**
 
 Every $g$ falls into one of two cases, and in each case its left coset and right coset are the same set. Therefore $gH = Hg$ for all $g$, which is the coset characterisation of normality.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> Fix $g \in G$ and split on whether $g$ lies in $H$.
+>
+> *Case $g \in H$.* A coset equals $H$ exactly when its representative lies in $H$: if $g \in H$ then $gH = H$ (and $Hg = H$), because $gH \subseteq H$ by closure of the subgroup $H$ under products, and $H = g(g^{-1}H) \subseteq gH$ shows the reverse inclusion. So $gH = H = Hg$.
+>
+> *Case $g \notin H$.* Then the left coset $gH$ is not equal to $H$ — if it were, $g = ge$ would lie in $H$. By Step 1 there are only two left cosets, $H$ and $G \setminus H$, so $gH$ must be the other one:
+> $$gH = G \setminus H.$$
+> Identically, the right coset $Hg$ is not $H$, and by Step 2 the only other right coset is $G \setminus H$, so
+> $$Hg = G \setminus H.$$
+> Therefore $gH = G \setminus H = Hg$.
+>
+> In both cases $gH = Hg$. Since $g$ was arbitrary, $gH = Hg$ for **every** $g \in G$. The coset characterisation in [[Def - Normal Subgroup]] states that a subgroup is normal precisely when its left and right cosets coincide; equivalently, multiplying $gH = Hg$ on the left by $g^{-1}$ gives $g^{-1}Hg = H$ for all $g$, the conjugation definition of normality. Either way, $H \trianglelefteq G$. $\blacksquare$
 
-Fix $g \in G$ and split on whether $g$ lies in $H$.
-
-*Case $g \in H$.* A coset equals $H$ exactly when its representative lies in $H$: if $g \in H$ then $gH = H$ (and $Hg = H$), because $gH \subseteq H$ by closure of the subgroup $H$ under products, and $H = g(g^{-1}H) \subseteq gH$ shows the reverse inclusion. So $gH = H = Hg$.
-
-*Case $g \notin H$.* Then the left coset $gH$ is not equal to $H$ — if it were, $g = ge$ would lie in $H$. By Step 1 there are only two left cosets, $H$ and $G \setminus H$, so $gH$ must be the other one:
-$$gH = G \setminus H.$$
-Identically, the right coset $Hg$ is not $H$, and by Step 2 the only other right coset is $G \setminus H$, so
-$$Hg = G \setminus H.$$
-Therefore $gH = G \setminus H = Hg$.
-
-In both cases $gH = Hg$. Since $g$ was arbitrary, $gH = Hg$ for **every** $g \in G$. The coset characterisation in [[Def - Normal Subgroup]] states that a subgroup is normal precisely when its left and right cosets coincide; equivalently, multiplying $gH = Hg$ on the left by $g^{-1}$ gives $g^{-1}Hg = H$ for all $g$, the conjugation definition of normality. Either way, $H \trianglelefteq G$. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $H \leq G$ with $|G : H| = 2$.
-
-Since $|G : H| = 2$, there are exactly two left cosets of $H$. One of them is $H$ itself (the coset $eH = H$). The left cosets partition $G$: they are pairwise disjoint and their union is $G$, because every $g$ lies in $gH$ (as $g = ge$, $e \in H$) and two cosets that share an element are equal. Hence the second left coset is the complement $G \setminus H$, and the list of left cosets is $\{H,\ G \setminus H\}$.
-
-The same reasoning applies to right cosets. There are exactly two of them (the map $gH \mapsto Hg^{-1}$ is a bijection from left cosets to right cosets), one is $H$ (the coset $He = H$), and they partition $G$. So the list of right cosets is also $\{H,\ G \setminus H\}$.
-
-Now fix $g \in G$.
-
-- If $g \in H$, then $gH = H$ and $Hg = H$, so $gH = Hg$.
-- If $g \notin H$, then $gH \neq H$, so $gH$ is the other left coset $G \setminus H$; likewise $Hg \neq H$, so $Hg$ is the other right coset $G \setminus H$. Hence $gH = G \setminus H = Hg$.
-
-In either case $gH = Hg$. As $g \in G$ was arbitrary, $gH = Hg$ for all $g \in G$. This is the coset characterisation of a [[Def - Normal Subgroup|normal subgroup]] — equivalently $g^{-1}Hg = H$ for all $g$ — so $H \trianglelefteq G$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $H \leq G$ with $|G : H| = 2$.
+>
+> Since $|G : H| = 2$, there are exactly two left cosets of $H$. One of them is $H$ itself (the coset $eH = H$). The left cosets partition $G$: they are pairwise disjoint and their union is $G$, because every $g$ lies in $gH$ (as $g = ge$, $e \in H$) and two cosets that share an element are equal. Hence the second left coset is the complement $G \setminus H$, and the list of left cosets is $\{H,\ G \setminus H\}$.
+>
+> The same reasoning applies to right cosets. There are exactly two of them (the map $gH \mapsto Hg^{-1}$ is a bijection from left cosets to right cosets), one is $H$ (the coset $He = H$), and they partition $G$. So the list of right cosets is also $\{H,\ G \setminus H\}$.
+>
+> Now fix $g \in G$.
+>
+> - If $g \in H$, then $gH = H$ and $Hg = H$, so $gH = Hg$.
+> - If $g \notin H$, then $gH \neq H$, so $gH$ is the other left coset $G \setminus H$; likewise $Hg \neq H$, so $Hg$ is the other right coset $G \setminus H$. Hence $gH = G \setminus H = Hg$.
+>
+> In either case $gH = Hg$. As $g \in G$ was arbitrary, $gH = Hg$ for all $g \in G$. This is the coset characterisation of a [[Def - Normal Subgroup|normal subgroup]] — equivalently $g^{-1}Hg = H$ for all $g$ — so $H \trianglelefteq G$. $\blacksquare$
 
 ---
 

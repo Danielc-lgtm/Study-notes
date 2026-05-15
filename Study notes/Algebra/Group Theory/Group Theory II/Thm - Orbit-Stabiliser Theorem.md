@@ -130,128 +130,92 @@ Define $\Phi : G/G_x \to G\cdot x$ by $g\,G_x \mapsto g\cdot x$. The single iden
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: The stabiliser is a subgroup</strong></summary>
+> [!note]- Lemma 1: The stabiliser is a subgroup
+> **Statement:** For an action of $G$ on $X$ and any $x \in X$, the stabiliser $G_x = \{g \in G : g\cdot x = x\}$ is a [[Def - Subgroup|subgroup]] of $G$.
+>
+> **Hint:** Check non-emptiness, closure under products, and closure under inverses, using only the two action axioms.
+>
+> **Why needed:** $G_x$ must be a subgroup for "cosets of $G_x$" and Lagrange's theorem to make sense.
+>
+> > [!note]- Full proof
+> > *Identity:* $e\cdot x = x$ by the identity axiom, so $e \in G_x$ and $G_x$ is non-empty.
+> >
+> > *Products:* if $g, h \in G_x$, then $(gh)\cdot x = g\cdot(h\cdot x) = g\cdot x = x$, using the associativity axiom and $h\cdot x = x$, then $g\cdot x = x$. So $gh \in G_x$.
+> >
+> > *Inverses:* if $g \in G_x$, then $g\cdot x = x$; acting by $g^{-1}$ gives $g^{-1}\cdot(g\cdot x) = g^{-1}\cdot x$, and the left side is $(g^{-1}g)\cdot x = e\cdot x = x$. So $g^{-1}\cdot x = x$, i.e. $g^{-1} \in G_x$.
+> >
+> > Hence $G_x \leq G$.
 
-**Statement:** For an action of $G$ on $X$ and any $x \in X$, the stabiliser $G_x = \{g \in G : g\cdot x = x\}$ is a [[Def - Subgroup|subgroup]] of $G$.
+> [!note]- Lemma 2: Same orbit point if and only if same coset of the stabiliser
+> **Statement:** For $g, h \in G$ and a fixed $x \in X$: $\ g\cdot x = h\cdot x \iff h^{-1}g \in G_x \iff g\,G_x = h\,G_x$.
+>
+> **Hint:** Move everything to one side by acting with $h^{-1}$; then use the standard coset-equality criterion.
+>
+> **Why needed:** This is the heart of the theorem — it gives well-definedness and injectivity of $\Phi$ together.
+>
+> > [!note]- Full proof
+> > *First equivalence.* Suppose $g\cdot x = h\cdot x$. Act by $h^{-1}$ on both sides:
+> > $$h^{-1}\cdot(g\cdot x) = h^{-1}\cdot(h\cdot x) \;\Longrightarrow\; (h^{-1}g)\cdot x = (h^{-1}h)\cdot x = e\cdot x = x,$$
+> > using the associativity and identity axioms. So $(h^{-1}g)\cdot x = x$, i.e. $h^{-1}g \in G_x$. Conversely, if $h^{-1}g \in G_x$ then $(h^{-1}g)\cdot x = x$; acting by $h$ gives $g\cdot x = h\cdot x$ by the same axioms.
+> >
+> > *Second equivalence.* By the standard criterion for left cosets, $g\,G_x = h\,G_x$ holds if and only if $h^{-1}g \in G_x$.
+> >
+> > Chaining the two gives the stated triple equivalence.
 
-**Hint:** Check non-emptiness, closure under products, and closure under inverses, using only the two action axioms.
+> [!note]- Lemma 3: The orbit-coset map is a bijection
+> **Statement:** The map $\Phi : G/G_x \to G\cdot x$, $\ \Phi(g\,G_x) = g\cdot x$, is well-defined, injective, and surjective.
+>
+> **Hint:** Well-definedness and injectivity are the two directions of Lemma 2; surjectivity is the definition of the orbit.
+>
+> **Why needed:** This is the bijective form of the theorem, valid for all groups.
+>
+> > [!note]- Full proof
+> > *Well-defined.* If $g\,G_x = h\,G_x$, then by Lemma 2, $g\cdot x = h\cdot x$, so $\Phi$ assigns the same value to a coset regardless of the chosen representative.
+> >
+> > *Injective.* If $\Phi(g\,G_x) = \Phi(h\,G_x)$, then $g\cdot x = h\cdot x$, so by Lemma 2, $g\,G_x = h\,G_x$.
+> >
+> > *Surjective.* By definition $G\cdot x = \{g\cdot x : g \in G\}$. Any $g\cdot x$ in the orbit equals $\Phi(g\,G_x)$, so $\Phi$ hits every element of $G\cdot x$.
+> >
+> > Hence $\Phi$ is a bijection.
 
-**Why needed:** $G_x$ must be a subgroup for "cosets of $G_x$" and Lagrange's theorem to make sense.
-
-<details>
-<summary>Full proof</summary>
-
-*Identity:* $e\cdot x = x$ by the identity axiom, so $e \in G_x$ and $G_x$ is non-empty.
-
-*Products:* if $g, h \in G_x$, then $(gh)\cdot x = g\cdot(h\cdot x) = g\cdot x = x$, using the associativity axiom and $h\cdot x = x$, then $g\cdot x = x$. So $gh \in G_x$.
-
-*Inverses:* if $g \in G_x$, then $g\cdot x = x$; acting by $g^{-1}$ gives $g^{-1}\cdot(g\cdot x) = g^{-1}\cdot x$, and the left side is $(g^{-1}g)\cdot x = e\cdot x = x$. So $g^{-1}\cdot x = x$, i.e. $g^{-1} \in G_x$.
-
-Hence $G_x \leq G$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Same orbit point if and only if same coset of the stabiliser</strong></summary>
-
-**Statement:** For $g, h \in G$ and a fixed $x \in X$: $\ g\cdot x = h\cdot x \iff h^{-1}g \in G_x \iff g\,G_x = h\,G_x$.
-
-**Hint:** Move everything to one side by acting with $h^{-1}$; then use the standard coset-equality criterion.
-
-**Why needed:** This is the heart of the theorem — it gives well-definedness and injectivity of $\Phi$ together.
-
-<details>
-<summary>Full proof</summary>
-
-*First equivalence.* Suppose $g\cdot x = h\cdot x$. Act by $h^{-1}$ on both sides:
-$$h^{-1}\cdot(g\cdot x) = h^{-1}\cdot(h\cdot x) \;\Longrightarrow\; (h^{-1}g)\cdot x = (h^{-1}h)\cdot x = e\cdot x = x,$$
-using the associativity and identity axioms. So $(h^{-1}g)\cdot x = x$, i.e. $h^{-1}g \in G_x$. Conversely, if $h^{-1}g \in G_x$ then $(h^{-1}g)\cdot x = x$; acting by $h$ gives $g\cdot x = h\cdot x$ by the same axioms.
-
-*Second equivalence.* By the standard criterion for left cosets, $g\,G_x = h\,G_x$ holds if and only if $h^{-1}g \in G_x$.
-
-Chaining the two gives the stated triple equivalence.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: The orbit-coset map is a bijection</strong></summary>
-
-**Statement:** The map $\Phi : G/G_x \to G\cdot x$, $\ \Phi(g\,G_x) = g\cdot x$, is well-defined, injective, and surjective.
-
-**Hint:** Well-definedness and injectivity are the two directions of Lemma 2; surjectivity is the definition of the orbit.
-
-**Why needed:** This is the bijective form of the theorem, valid for all groups.
-
-<details>
-<summary>Full proof</summary>
-
-*Well-defined.* If $g\,G_x = h\,G_x$, then by Lemma 2, $g\cdot x = h\cdot x$, so $\Phi$ assigns the same value to a coset regardless of the chosen representative.
-
-*Injective.* If $\Phi(g\,G_x) = \Phi(h\,G_x)$, then $g\cdot x = h\cdot x$, so by Lemma 2, $g\,G_x = h\,G_x$.
-
-*Surjective.* By definition $G\cdot x = \{g\cdot x : g \in G\}$. Any $g\cdot x$ in the orbit equals $\Phi(g\,G_x)$, so $\Phi$ hits every element of $G\cdot x$.
-
-Hence $\Phi$ is a bijection.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 4: Stabilisers along an orbit are conjugate</strong></summary>
-
-**Statement:** For points $x$ and $g\cdot x$ in the same orbit, $G_{g\cdot x} = g\,G_x\,g^{-1}$. In particular $|G_{g\cdot x}| = |G_x|$.
-
-**Hint:** Translate the condition "$h$ fixes $g\cdot x$" into a condition on $g^{-1}hg$.
-
-**Why needed:** It explains why the counting form $|G| = |G_x|\cdot|G\cdot x|$ is independent of the chosen point $x$ — and corrects the tempting error of treating "the stabiliser" as a single subgroup.
-
-<details>
-<summary>Full proof</summary>
-
-An element $h$ fixes $g\cdot x$ if and only if $h\cdot(g\cdot x) = g\cdot x$. Acting by $g^{-1}$: this holds if and only if $(g^{-1}hg)\cdot x = x$, i.e. if and only if $g^{-1}hg \in G_x$, i.e. if and only if $h \in g\,G_x\,g^{-1}$. So $G_{g\cdot x} = g\,G_x\,g^{-1}$.
-
-Conjugation by $g$ is a bijection $G_x \to g\,G_x\,g^{-1}$, so the two subgroups have equal order. Hence every point of the orbit has a stabiliser of the same size, and $|G| = |G_x|\cdot|G\cdot x|$ does not depend on which $x$ in the orbit is used.
-
-</details>
-
-</details>
+> [!note]- Lemma 4: Stabilisers along an orbit are conjugate
+> **Statement:** For points $x$ and $g\cdot x$ in the same orbit, $G_{g\cdot x} = g\,G_x\,g^{-1}$. In particular $|G_{g\cdot x}| = |G_x|$.
+>
+> **Hint:** Translate the condition "$h$ fixes $g\cdot x$" into a condition on $g^{-1}hg$.
+>
+> **Why needed:** It explains why the counting form $|G| = |G_x|\cdot|G\cdot x|$ is independent of the chosen point $x$ — and corrects the tempting error of treating "the stabiliser" as a single subgroup.
+>
+> > [!note]- Full proof
+> > An element $h$ fixes $g\cdot x$ if and only if $h\cdot(g\cdot x) = g\cdot x$. Acting by $g^{-1}$: this holds if and only if $(g^{-1}hg)\cdot x = x$, i.e. if and only if $g^{-1}hg \in G_x$, i.e. if and only if $h \in g\,G_x\,g^{-1}$. So $G_{g\cdot x} = g\,G_x\,g^{-1}$.
+> >
+> > Conjugation by $g$ is a bijection $G_x \to g\,G_x\,g^{-1}$, so the two subgroups have equal order. Hence every point of the orbit has a stabiliser of the same size, and $|G| = |G_x|\cdot|G\cdot x|$ does not depend on which $x$ in the orbit is used.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** Let $G$ act on $X$ and fix $x \in X$. The map $\Phi : G/G_x \to G\cdot x$, $\ g\,G_x \mapsto g\cdot x$, is a bijection. If $G$ is finite, $|G| = |G_x|\cdot|G\cdot x|$.
-
-*Proof.* First, $G_x$ is a [[Def - Subgroup|subgroup]] of $G$: it contains $e$ since $e\cdot x = x$; it is closed under products since $g, h \in G_x$ give $(gh)\cdot x = g\cdot(h\cdot x) = g\cdot x = x$; and it is closed under inverses since $g\cdot x = x$ gives $g^{-1}\cdot x = (g^{-1}g)\cdot x = e\cdot x = x$. So the left cosets $G/G_x$ are defined.
-
-We claim that for all $g, h \in G$,
-$$g\cdot x = h\cdot x \iff h^{-1}g \in G_x \iff g\,G_x = h\,G_x. \tag{$\ast$}$$
-For the first equivalence: $g\cdot x = h\cdot x$ holds if and only if, acting by $h^{-1}$, $(h^{-1}g)\cdot x = (h^{-1}h)\cdot x = e\cdot x = x$ — that is, if and only if $h^{-1}g \in G_x$. The second equivalence is the standard criterion for equality of left cosets.
-
-*$\Phi$ is well-defined.* If $g\,G_x = h\,G_x$, then by $(\ast)$ read right-to-left into the middle and then to the left, $g\cdot x = h\cdot x$; so $\Phi(g\,G_x)$ is independent of the representative.
-
-*$\Phi$ is injective.* If $\Phi(g\,G_x) = \Phi(h\,G_x)$, then $g\cdot x = h\cdot x$, so by $(\ast)$, $g\,G_x = h\,G_x$.
-
-*$\Phi$ is surjective.* Every element of $G\cdot x = \{g\cdot x : g \in G\}$ is of the form $g\cdot x = \Phi(g\,G_x)$.
-
-Hence $\Phi : G/G_x \to G\cdot x$ is a bijection.
-
-*Counting form.* Suppose $G$ is finite. The bijection $\Phi$ gives $|G\cdot x| = |G/G_x| = |G : G_x|$, the number of left cosets of $G_x$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|G| = |G_x|\cdot|G : G_x|$. Substituting,
-$$|G| = |G_x|\cdot|G\cdot x|.$$
-In particular $|G\cdot x|$ divides $|G|$. $\qquad\blacksquare$
-
-This is the orbit-stabiliser theorem as stated in §1.3 of the source lecture notes; the notes record the bijective form $G\cdot x \leftrightarrow G/G_x$, valid for arbitrary groups, with the counting form as the finite specialisation.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** Let $G$ act on $X$ and fix $x \in X$. The map $\Phi : G/G_x \to G\cdot x$, $\ g\,G_x \mapsto g\cdot x$, is a bijection. If $G$ is finite, $|G| = |G_x|\cdot|G\cdot x|$.
+>
+> *Proof.* First, $G_x$ is a [[Def - Subgroup|subgroup]] of $G$: it contains $e$ since $e\cdot x = x$; it is closed under products since $g, h \in G_x$ give $(gh)\cdot x = g\cdot(h\cdot x) = g\cdot x = x$; and it is closed under inverses since $g\cdot x = x$ gives $g^{-1}\cdot x = (g^{-1}g)\cdot x = e\cdot x = x$. So the left cosets $G/G_x$ are defined.
+>
+> We claim that for all $g, h \in G$,
+> $$g\cdot x = h\cdot x \iff h^{-1}g \in G_x \iff g\,G_x = h\,G_x. \tag{$\ast$}$$
+> For the first equivalence: $g\cdot x = h\cdot x$ holds if and only if, acting by $h^{-1}$, $(h^{-1}g)\cdot x = (h^{-1}h)\cdot x = e\cdot x = x$ — that is, if and only if $h^{-1}g \in G_x$. The second equivalence is the standard criterion for equality of left cosets.
+>
+> *$\Phi$ is well-defined.* If $g\,G_x = h\,G_x$, then by $(\ast)$ read right-to-left into the middle and then to the left, $g\cdot x = h\cdot x$; so $\Phi(g\,G_x)$ is independent of the representative.
+>
+> *$\Phi$ is injective.* If $\Phi(g\,G_x) = \Phi(h\,G_x)$, then $g\cdot x = h\cdot x$, so by $(\ast)$, $g\,G_x = h\,G_x$.
+>
+> *$\Phi$ is surjective.* Every element of $G\cdot x = \{g\cdot x : g \in G\}$ is of the form $g\cdot x = \Phi(g\,G_x)$.
+>
+> Hence $\Phi : G/G_x \to G\cdot x$ is a bijection.
+>
+> *Counting form.* Suppose $G$ is finite. The bijection $\Phi$ gives $|G\cdot x| = |G/G_x| = |G : G_x|$, the number of left cosets of $G_x$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|G| = |G_x|\cdot|G : G_x|$. Substituting,
+> $$|G| = |G_x|\cdot|G\cdot x|.$$
+> In particular $|G\cdot x|$ divides $|G|$. $\qquad\blacksquare$
+>
+> This is the orbit-stabiliser theorem as stated in §1.3 of the source lecture notes; the notes record the bijective form $G\cdot x \leftrightarrow G/G_x$, valid for arbitrary groups, with the counting form as the finite specialisation.
 
 ---
 

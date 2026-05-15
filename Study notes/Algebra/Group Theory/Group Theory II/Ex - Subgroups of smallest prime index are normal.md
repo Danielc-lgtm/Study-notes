@@ -66,33 +66,17 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> The index is prime but not necessarily $2$, so the index-two argument is unavailable. The hypothesis is "small index", so reach for the standard small-index tool: let $G$ act on the set of left cosets $G/H$. What homomorphism does this produce, and into which group?
 
-The index is prime but not necessarily $2$, so the index-two argument is unavailable. The hypothesis is "small index", so reach for the standard small-index tool: let $G$ act on the set of left cosets $G/H$. What homomorphism does this produce, and into which group?
+> [!note]- Hint 2
+> The coset action gives $\rho : G \to S_p$ with kernel $K$. By the [[Thm - Coset Action and the Normal Core|normal core]] theorem, $K \trianglelefteq G$ and $K \leq H$. If you can show $K = H$, you are finished — why? So the target is now $|H : K| = 1$. Find two different integers that $|H : K|$ must divide.
 
-</details>
+> [!note]- Hint 3
+> From $G/K \hookrightarrow S_p$, the index $|G : K|$ divides $p!$. Factor $|G : K| = |G : H| \cdot |H : K| = p \cdot |H : K|$, so $|H : K|$ divides $(p-1)!$. Separately, $|H : K|$ divides $|G|$ by Lagrange. Now use that $p$ is the *smallest* prime dividing $|G|$: what primes can divide $(p-1)!$, and what primes can divide $|G|$?
 
-<details>
-<summary>Hint 2</summary>
-
-The coset action gives $\rho : G \to S_p$ with kernel $K$. By the [[Thm - Coset Action and the Normal Core|normal core]] theorem, $K \trianglelefteq G$ and $K \leq H$. If you can show $K = H$, you are finished — why? So the target is now $|H : K| = 1$. Find two different integers that $|H : K|$ must divide.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-From $G/K \hookrightarrow S_p$, the index $|G : K|$ divides $p!$. Factor $|G : K| = |G : H| \cdot |H : K| = p \cdot |H : K|$, so $|H : K|$ divides $(p-1)!$. Separately, $|H : K|$ divides $|G|$ by Lagrange. Now use that $p$ is the *smallest* prime dividing $|G|$: what primes can divide $(p-1)!$, and what primes can divide $|G|$?
-
-</details>
-
-<details>
-<summary>Hint 4</summary>
-
-Every prime factor of $(p-1)!$ is strictly less than $p$. Every prime factor of $|G|$ is at least $p$, because $p$ is the smallest prime dividing $|G|$. An integer dividing both can therefore have no prime factors — it is $1$. Hence $|H : K| = 1$, so $H = K$, and $K$ is a kernel, hence normal.
-
-</details>
+> [!note]- Hint 4
+> Every prime factor of $(p-1)!$ is strictly less than $p$. Every prime factor of $|G|$ is at least $p$, because $p$ is the smallest prime dividing $|G|$. An integer dividing both can therefore have no prime factors — it is $1$. Hence $|H : K| = 1$, so $H = K$, and $K$ is a kernel, hence normal.
 
 ---
 
@@ -104,86 +88,66 @@ The plan is to act on the $p$ cosets of $H$ to obtain a homomorphism $G \to S_p$
 
 Letting $G$ act on the $p$-element set $G/H$ of left cosets by $g \cdot (xH) = gxH$ produces a homomorphism $\rho : G \to S_p$. Its kernel $K = \ker\rho$ is a normal subgroup of $G$, and every element of $K$ lies in $H$, so $K \leq H$.
 
-<details>
-<summary>Derivation</summary>
-
-Define $g \cdot (xH) = gxH$. This is a well-defined [[Def - Group Action|action]]: if $xH = x'H$ then $x^{-1}x' \in H$, so $(gx)^{-1}(gx') = x^{-1}x' \in H$ and hence $gxH = gx'H$; the axioms $e \cdot (xH) = xH$ and $g_1 \cdot (g_2 \cdot xH) = (g_1g_2) \cdot xH$ are immediate. By [[Thm - Actions Correspond to Homomorphisms|the correspondence between actions and homomorphisms]], this action is a homomorphism $\rho : G \to \operatorname{Sym}(G/H)$, and since $|G/H| = |G : H| = p$ we identify $\operatorname{Sym}(G/H) \cong S_p$, so
-$$\rho : G \longrightarrow S_p.$$
-
-The [[Def - Kernel and Image|kernel]] $K = \ker\rho$ consists of the $g \in G$ acting trivially on every coset: $gxH = xH$ for all $x \in G$. As the [[Thm - Coset Action and the Normal Core|coset action theorem]] records, this kernel is the **normal core** $\bigcap_{x \in G} xHx^{-1}$, the largest normal subgroup of $G$ contained in $H$. Two facts from that description are all we need. First, $K \trianglelefteq G$, because the kernel of any homomorphism is a [[Def - Normal Subgroup|normal subgroup]]. Second, $K \leq H$: if $g \in K$ then in particular $g$ fixes the coset $eH = H$, so $gH = H$, which forces $g \in H$ (as $g = ge \in gH = H$). Thus
-$$K \trianglelefteq G \quad\text{and}\quad K \leq H.$$
-
-</details>
+> [!note]- Derivation
+> Define $g \cdot (xH) = gxH$. This is a well-defined [[Def - Group Action|action]]: if $xH = x'H$ then $x^{-1}x' \in H$, so $(gx)^{-1}(gx') = x^{-1}x' \in H$ and hence $gxH = gx'H$; the axioms $e \cdot (xH) = xH$ and $g_1 \cdot (g_2 \cdot xH) = (g_1g_2) \cdot xH$ are immediate. By [[Thm - Actions Correspond to Homomorphisms|the correspondence between actions and homomorphisms]], this action is a homomorphism $\rho : G \to \operatorname{Sym}(G/H)$, and since $|G/H| = |G : H| = p$ we identify $\operatorname{Sym}(G/H) \cong S_p$, so
+> $$\rho : G \longrightarrow S_p.$$
+>
+> The [[Def - Kernel and Image|kernel]] $K = \ker\rho$ consists of the $g \in G$ acting trivially on every coset: $gxH = xH$ for all $x \in G$. As the [[Thm - Coset Action and the Normal Core|coset action theorem]] records, this kernel is the **normal core** $\bigcap_{x \in G} xHx^{-1}$, the largest normal subgroup of $G$ contained in $H$. Two facts from that description are all we need. First, $K \trianglelefteq G$, because the kernel of any homomorphism is a [[Def - Normal Subgroup|normal subgroup]]. Second, $K \leq H$: if $g \in K$ then in particular $g$ fixes the coset $eH = H$, so $gH = H$, which forces $g \in H$ (as $g = ge \in gH = H$). Thus
+> $$K \trianglelefteq G \quad\text{and}\quad K \leq H.$$
 
 **Step 2: $|H : K|$ divides $(p-1)!$.**
 
 Because $G/K$ embeds in $S_p$, the index $|G : K|$ divides $p!$. Splitting that index along the chain $K \leq H \leq G$ as $|G : K| = p \cdot |H : K|$ and cancelling the factor $p$ shows $|H : K|$ divides $(p-1)!$.
 
-<details>
-<summary>Derivation</summary>
-
-By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\rho$, the quotient $G/K = G/\ker\rho$ is isomorphic to $\operatorname{im}\rho$, a subgroup of $S_p$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]], the order of a subgroup divides the order of the group, so
-$$|G : K| = |G/K| = |\operatorname{im}\rho| \ \big|\ |S_p| = p!.$$
-
-Indices are multiplicative along a chain of subgroups: for $K \leq H \leq G$,
-$$|G : K| = |G : H| \cdot |H : K|.$$
-(This is the tower law for indices, itself a counting consequence of [[Thm - Lagrange's Theorem|Lagrange]]: each coset of $H$ in $G$ splits into $|H : K|$ cosets of $K$.) Since $|G : H| = p$, this reads $|G : K| = p \cdot |H : K|$. Substituting into $|G : K| \mid p!$ gives
-$$p \cdot |H : K| \ \big|\ p! = p \cdot (p-1)!,$$
-and cancelling the common factor $p$ yields
-$$|H : K| \ \big|\ (p-1)!.$$
-
-</details>
+> [!note]- Derivation
+> By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\rho$, the quotient $G/K = G/\ker\rho$ is isomorphic to $\operatorname{im}\rho$, a subgroup of $S_p$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]], the order of a subgroup divides the order of the group, so
+> $$|G : K| = |G/K| = |\operatorname{im}\rho| \ \big|\ |S_p| = p!.$$
+>
+> Indices are multiplicative along a chain of subgroups: for $K \leq H \leq G$,
+> $$|G : K| = |G : H| \cdot |H : K|.$$
+> (This is the tower law for indices, itself a counting consequence of [[Thm - Lagrange's Theorem|Lagrange]]: each coset of $H$ in $G$ splits into $|H : K|$ cosets of $K$.) Since $|G : H| = p$, this reads $|G : K| = p \cdot |H : K|$. Substituting into $|G : K| \mid p!$ gives
+> $$p \cdot |H : K| \ \big|\ p! = p \cdot (p-1)!,$$
+> and cancelling the common factor $p$ yields
+> $$|H : K| \ \big|\ (p-1)!.$$
 
 **Step 3: $|H : K|$ divides $|G|$.**
 
 Since $K \leq H \leq G$ are finite groups, $|H : K| = |H|/|K|$ is an integer dividing $|H|$, and $|H|$ in turn divides $|G|$; hence $|H : K|$ divides $|G|$.
 
-<details>
-<summary>Derivation</summary>
-
-By [[Thm - Lagrange's Theorem|Lagrange's theorem]] applied to $K \leq H$, the index $|H : K| = |H|/|K|$ divides $|H|$. By Lagrange applied to $H \leq G$, the order $|H|$ divides $|G|$. Divisibility is transitive, so
-$$|H : K| \ \big|\ |H| \ \big|\ |G| \quad\Longrightarrow\quad |H : K| \ \big|\ |G|.$$
-
-</details>
+> [!note]- Derivation
+> By [[Thm - Lagrange's Theorem|Lagrange's theorem]] applied to $K \leq H$, the index $|H : K| = |H|/|K|$ divides $|H|$. By Lagrange applied to $H \leq G$, the order $|H|$ divides $|G|$. Divisibility is transitive, so
+> $$|H : K| \ \big|\ |H| \ \big|\ |G| \quad\Longrightarrow\quad |H : K| \ \big|\ |G|.$$
 
 **Step 4: Conclude $|H : K| = 1$, hence $H = K \trianglelefteq G$.**
 
 By Steps 2 and 3, the integer $|H : K|$ divides both $(p-1)!$ and $|G|$. Every prime factor of $(p-1)!$ is less than $p$, while every prime factor of $|G|$ is at least $p$ — because $p$ is the smallest prime dividing $|G|$. A common divisor of the two can have no prime factor, so $|H : K| = 1$. Then $H = K$, and since $K$ is a kernel it is normal: $H \trianglelefteq G$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> Let $d = |H : K|$. By Step 2, $d \mid (p-1)!$, and by Step 3, $d \mid |G|$.
+>
+> Consider any prime $q$ dividing $d$. Since $d \mid (p-1)!$, the prime $q$ divides $(p-1)! = 1 \cdot 2 \cdots (p-1)$, and a prime divides a product exactly when it divides one of the factors; each factor here is an integer in $\{1, \dots, p-1\}$, so $q \leq p - 1 < p$. Thus every prime factor of $d$ satisfies $q < p$.
+>
+> On the other hand, since $d \mid |G|$, any prime $q$ dividing $d$ also divides $|G|$. By hypothesis $p$ is the **smallest** prime dividing $|G|$, so every prime dividing $|G|$ — in particular $q$ — satisfies $q \geq p$.
+>
+> A prime $q$ dividing $d$ would therefore satisfy both $q < p$ and $q \geq p$, which is impossible. Hence $d$ has no prime factors at all, and the only positive integer with no prime factors is $1$:
+> $$|H : K| = d = 1.$$
+> Therefore $|H| = |K|$, and since $K \leq H$ this forces $H = K$. But $K = \ker\rho$ is the kernel of a homomorphism, hence a [[Def - Normal Subgroup|normal subgroup]] of $G$. Therefore
+> $$H = K \trianglelefteq G. \qquad \blacksquare$$
 
-Let $d = |H : K|$. By Step 2, $d \mid (p-1)!$, and by Step 3, $d \mid |G|$.
-
-Consider any prime $q$ dividing $d$. Since $d \mid (p-1)!$, the prime $q$ divides $(p-1)! = 1 \cdot 2 \cdots (p-1)$, and a prime divides a product exactly when it divides one of the factors; each factor here is an integer in $\{1, \dots, p-1\}$, so $q \leq p - 1 < p$. Thus every prime factor of $d$ satisfies $q < p$.
-
-On the other hand, since $d \mid |G|$, any prime $q$ dividing $d$ also divides $|G|$. By hypothesis $p$ is the **smallest** prime dividing $|G|$, so every prime dividing $|G|$ — in particular $q$ — satisfies $q \geq p$.
-
-A prime $q$ dividing $d$ would therefore satisfy both $q < p$ and $q \geq p$, which is impossible. Hence $d$ has no prime factors at all, and the only positive integer with no prime factors is $1$:
-$$|H : K| = d = 1.$$
-Therefore $|H| = |K|$, and since $K \leq H$ this forces $H = K$. But $K = \ker\rho$ is the kernel of a homomorphism, hence a [[Def - Normal Subgroup|normal subgroup]] of $G$. Therefore
-$$H = K \trianglelefteq G. \qquad \blacksquare$$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $G$ be finite and $H \leq G$ with $|G : H| = p$, the smallest prime dividing $|G|$.
-
-Let $G$ act on the set $G/H$ of left cosets by $g \cdot (xH) = gxH$. This action is well-defined and, since $|G/H| = p$, corresponds to a homomorphism $\rho : G \to S_p$. Let $K = \ker\rho$. As a kernel, $K \trianglelefteq G$; and $K \leq H$, since any $g \in K$ fixes the coset $H$, giving $g \in gH = H$.
-
-By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G/K \cong \operatorname{im}\rho \leq S_p$, so by [[Thm - Lagrange's Theorem|Lagrange's theorem]] $|G : K|$ divides $|S_p| = p!$. By the tower law for indices on $K \leq H \leq G$,
-$$|G : K| = |G : H| \cdot |H : K| = p \cdot |H : K|.$$
-Hence $p \cdot |H : K| \mid p!$, and cancelling $p$ gives $|H : K| \mid (p-1)!$.
-
-Separately, by Lagrange's theorem $|H : K| \mid |H|$ and $|H| \mid |G|$, so $|H : K| \mid |G|$.
-
-Thus $|H : K|$ divides both $(p-1)!$ and $|G|$. Any prime $q \mid |H : K|$ divides $(p-1)!$, hence equals one of $1, \dots, p-1$, so $q < p$; but $q$ also divides $|G|$, and $p$ is the smallest prime dividing $|G|$, so $q \geq p$. No prime can satisfy both, so $|H : K|$ has no prime factors and equals $1$.
-
-Therefore $H = K$, and since $K = \ker\rho$ is normal in $G$, we conclude $H \trianglelefteq G$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $G$ be finite and $H \leq G$ with $|G : H| = p$, the smallest prime dividing $|G|$.
+>
+> Let $G$ act on the set $G/H$ of left cosets by $g \cdot (xH) = gxH$. This action is well-defined and, since $|G/H| = p$, corresponds to a homomorphism $\rho : G \to S_p$. Let $K = \ker\rho$. As a kernel, $K \trianglelefteq G$; and $K \leq H$, since any $g \in K$ fixes the coset $H$, giving $g \in gH = H$.
+>
+> By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G/K \cong \operatorname{im}\rho \leq S_p$, so by [[Thm - Lagrange's Theorem|Lagrange's theorem]] $|G : K|$ divides $|S_p| = p!$. By the tower law for indices on $K \leq H \leq G$,
+> $$|G : K| = |G : H| \cdot |H : K| = p \cdot |H : K|.$$
+> Hence $p \cdot |H : K| \mid p!$, and cancelling $p$ gives $|H : K| \mid (p-1)!$.
+>
+> Separately, by Lagrange's theorem $|H : K| \mid |H|$ and $|H| \mid |G|$, so $|H : K| \mid |G|$.
+>
+> Thus $|H : K|$ divides both $(p-1)!$ and $|G|$. Any prime $q \mid |H : K|$ divides $(p-1)!$, hence equals one of $1, \dots, p-1$, so $q < p$; but $q$ also divides $|G|$, and $p$ is the smallest prime dividing $|G|$, so $q \geq p$. No prime can satisfy both, so $|H : K|$ has no prime factors and equals $1$.
+>
+> Therefore $H = K$, and since $K = \ker\rho$ is normal in $G$, we conclude $H \trianglelefteq G$. $\blacksquare$
 
 > [!warning] The minimality of $p$ is indispensable
 > Without "smallest prime", the result is false. In the alternating group $A_4$ of order $12$, take $H = \langle (1\,2\,3) \rangle$, a subgroup of order $3$ and index $4$. Here $4$ is the smallest *integer* exceeding $1$ that is an index, but it is not prime, and $A_4$ has the prime $2$ dividing its order with $2 < 3$. This $H$ is not normal in $A_4$ — it has four distinct conjugates. The argument above breaks at exactly Step 4: $|H : K| = |H : K|$ would need to divide $(p-1)!$ for $p$ the index, but the index is not the smallest prime, so there is no clash of prime ranges to force $|H : K| = 1$. The theorem is sharp: it is the *minimality* of the prime, not merely its primality, that does the work.

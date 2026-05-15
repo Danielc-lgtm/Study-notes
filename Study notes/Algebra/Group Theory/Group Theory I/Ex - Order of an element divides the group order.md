@@ -57,26 +57,14 @@ For part (c), recall the group of **units modulo $p$**: the set $(\mathbb{Z}/p\m
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> For (a): the element $g$ is not a subgroup, but it determines one. Which subgroup, and how big is it?
 
-For (a): the element $g$ is not a subgroup, but it determines one. Which subgroup, and how big is it?
+> [!note]- Hint 2
+> For (a): the cyclic subgroup $\langle g \rangle$ has exactly $\operatorname{ord}(g)$ elements. Apply [[Thm - Lagrange's Theorem|Lagrange's theorem]] to it. For (b): if $\operatorname{ord}(g)$ divides $|G|$, write $|G| = \operatorname{ord}(g) \cdot k$ and expand $g^{|G|}$.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-For (a): the cyclic subgroup $\langle g \rangle$ has exactly $\operatorname{ord}(g)$ elements. Apply [[Thm - Lagrange's Theorem|Lagrange's theorem]] to it. For (b): if $\operatorname{ord}(g)$ divides $|G|$, write $|G| = \operatorname{ord}(g) \cdot k$ and expand $g^{|G|}$.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-For (c): the nonzero residues modulo $p$ form a group under multiplication. How many elements does it have? Now apply part (b) to that group.
-
-</details>
+> [!note]- Hint 3
+> For (c): the nonzero residues modulo $p$ form a group under multiplication. How many elements does it have? Now apply part (b) to that group.
 
 ---
 
@@ -86,60 +74,44 @@ For (c): the nonzero residues modulo $p$ form a group under multiplication. How 
 
 The powers of $g$ form a subgroup $\langle g \rangle$ with exactly $\operatorname{ord}(g)$ elements. By Lagrange's theorem, the order of this subgroup divides $|G|$; hence $\operatorname{ord}(g) \mid |G|$.
 
-<details>
-<summary>Derivation</summary>
-
-Let $n = \operatorname{ord}(g)$ and set $H = \{e, g, g^2, \dots, g^{n-1}\}$.
-
-*$H$ is a subgroup.* It is non-empty. For closure under products and inverses, apply the subgroup criterion: $g^r (g^s)^{-1} = g^{r-s}$, and reducing the exponent $r - s$ modulo $n$ and using $g^n = e$ rewrites this as one of $e, g, \dots, g^{n-1}$, so it lies in $H$.
-
-*$H$ has exactly $n$ elements.* The listed powers are distinct: if $g^i = g^j$ with $0 \le j \le i \le n - 1$, then $g^{i-j} = e$ with $0 \le i - j < n$, and the minimality of $n$ as the least positive integer with $g^n = e$ forces $i - j = 0$. So $|H| = n = \operatorname{ord}(g)$.
-
-By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|H|$ divides $|G|$. Therefore $\operatorname{ord}(g) \mid |G|$.
-
-</details>
+> [!note]- Derivation
+> Let $n = \operatorname{ord}(g)$ and set $H = \{e, g, g^2, \dots, g^{n-1}\}$.
+>
+> *$H$ is a subgroup.* It is non-empty. For closure under products and inverses, apply the subgroup criterion: $g^r (g^s)^{-1} = g^{r-s}$, and reducing the exponent $r - s$ modulo $n$ and using $g^n = e$ rewrites this as one of $e, g, \dots, g^{n-1}$, so it lies in $H$.
+>
+> *$H$ has exactly $n$ elements.* The listed powers are distinct: if $g^i = g^j$ with $0 \le j \le i \le n - 1$, then $g^{i-j} = e$ with $0 \le i - j < n$, and the minimality of $n$ as the least positive integer with $g^n = e$ forces $i - j = 0$. So $|H| = n = \operatorname{ord}(g)$.
+>
+> By [[Thm - Lagrange's Theorem|Lagrange's theorem]], $|H|$ divides $|G|$. Therefore $\operatorname{ord}(g) \mid |G|$.
 
 **Step 2 (part b): $g^{|G|} = e$.**
 
 Writing $|G| = \operatorname{ord}(g) \cdot k$ and using $g^{\operatorname{ord}(g)} = e$ gives $g^{|G|} = e$.
 
-<details>
-<summary>Derivation</summary>
-
-By part (a), $\operatorname{ord}(g)$ divides $|G|$, so $|G| = \operatorname{ord}(g) \cdot k$ for some positive integer $k$. Then
-$$g^{|G|} = g^{\operatorname{ord}(g) \cdot k} = \bigl(g^{\operatorname{ord}(g)}\bigr)^{k} = e^{k} = e,$$
-where the third equality uses the defining property $g^{\operatorname{ord}(g)} = e$ of the order.
-
-</details>
+> [!note]- Derivation
+> By part (a), $\operatorname{ord}(g)$ divides $|G|$, so $|G| = \operatorname{ord}(g) \cdot k$ for some positive integer $k$. Then
+> $$g^{|G|} = g^{\operatorname{ord}(g) \cdot k} = \bigl(g^{\operatorname{ord}(g)}\bigr)^{k} = e^{k} = e,$$
+> where the third equality uses the defining property $g^{\operatorname{ord}(g)} = e$ of the order.
 
 **Step 3 (part c): apply (b) to the group of units modulo $p$.**
 
 The nonzero residues modulo a prime $p$ form a group $(\mathbb{Z}/p\mathbb{Z})^\times$ of order $p - 1$. The residue of $a$ is an element of this group, so part (b) gives $a^{p-1} \equiv 1 \pmod p$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> Let $G = (\mathbb{Z}/p\mathbb{Z})^\times = \{1, 2, \dots, p-1\}$ with multiplication modulo $p$.
+>
+> *$G$ is a group.* Multiplication mod $p$ is associative and has identity $1$. It is closed on $G$: if $p \nmid x$ and $p \nmid y$ then $p \nmid xy$, since $p$ is prime — so a product of nonzero residues is a nonzero residue. Each element has an inverse: for $x$ with $p \nmid x$, $\gcd(x, p) = 1$, so Bézout's identity gives integers $u, v$ with $ux + vp = 1$, whence $u x \equiv 1 \pmod p$ and the residue of $u$ inverts $x$.
+>
+> *The order of $G$.* The set $\{1, 2, \dots, p-1\}$ has exactly $p - 1$ elements, so $|G| = p - 1$.
+>
+> *Apply (b).* Since $a$ is an integer not divisible by $p$, its residue $\bar a$ lies in $G$. Part (b), applied to the element $\bar a$ of the finite group $G$, gives $\bar a^{\,|G|} = \bar 1$, that is,
+> $$a^{p-1} \equiv 1 \pmod p. \qquad\blacksquare$$
 
-Let $G = (\mathbb{Z}/p\mathbb{Z})^\times = \{1, 2, \dots, p-1\}$ with multiplication modulo $p$.
-
-*$G$ is a group.* Multiplication mod $p$ is associative and has identity $1$. It is closed on $G$: if $p \nmid x$ and $p \nmid y$ then $p \nmid xy$, since $p$ is prime — so a product of nonzero residues is a nonzero residue. Each element has an inverse: for $x$ with $p \nmid x$, $\gcd(x, p) = 1$, so Bézout's identity gives integers $u, v$ with $ux + vp = 1$, whence $u x \equiv 1 \pmod p$ and the residue of $u$ inverts $x$.
-
-*The order of $G$.* The set $\{1, 2, \dots, p-1\}$ has exactly $p - 1$ elements, so $|G| = p - 1$.
-
-*Apply (b).* Since $a$ is an integer not divisible by $p$, its residue $\bar a$ lies in $G$. Part (b), applied to the element $\bar a$ of the finite group $G$, gives $\bar a^{\,|G|} = \bar 1$, that is,
-$$a^{p-1} \equiv 1 \pmod p. \qquad\blacksquare$$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-**(a)** Let $n = \operatorname{ord}(g)$ and $H = \{e, g, \dots, g^{n-1}\}$. The set $H$ is non-empty, and for any $g^r, g^s \in H$ the element $g^r(g^s)^{-1} = g^{r-s}$ equals $g^k$ where $k \equiv r - s \pmod n$ and $0 \le k < n$ (using $g^n = e$), so $g^{r-s} \in H$; by the subgroup criterion $H \leq G$. The $n$ listed powers are distinct: $g^i = g^j$ with $i \ge j$ gives $g^{i-j} = e$ with $0 \le i - j < n$, so $i = j$ by minimality of $n$. Hence $|H| = n$. By Lagrange's theorem $|H|$ divides $|G|$, i.e. $\operatorname{ord}(g) \mid |G|$.
-
-**(b)** By (a), $|G| = \operatorname{ord}(g)\,k$ for some integer $k \ge 1$. Then $g^{|G|} = (g^{\operatorname{ord}(g)})^k = e^k = e$.
-
-**(c)** The set $G = (\mathbb{Z}/p\mathbb{Z})^\times = \{1, \dots, p-1\}$ with multiplication mod $p$ is a group: multiplication is associative with identity $1$; it is closed because $p$ prime and $p \nmid x, p \nmid y$ imply $p \nmid xy$; and each $x$ is invertible because $\gcd(x,p) = 1$ yields, via Bézout, a residue $u$ with $ux \equiv 1$. Its order is $|G| = p - 1$. Since $p \nmid a$, the residue $\bar a$ lies in $G$, and (b) gives $\bar a^{\,p-1} = \bar 1$, i.e. $a^{p-1} \equiv 1 \pmod p$. $\qquad\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> **(a)** Let $n = \operatorname{ord}(g)$ and $H = \{e, g, \dots, g^{n-1}\}$. The set $H$ is non-empty, and for any $g^r, g^s \in H$ the element $g^r(g^s)^{-1} = g^{r-s}$ equals $g^k$ where $k \equiv r - s \pmod n$ and $0 \le k < n$ (using $g^n = e$), so $g^{r-s} \in H$; by the subgroup criterion $H \leq G$. The $n$ listed powers are distinct: $g^i = g^j$ with $i \ge j$ gives $g^{i-j} = e$ with $0 \le i - j < n$, so $i = j$ by minimality of $n$. Hence $|H| = n$. By Lagrange's theorem $|H|$ divides $|G|$, i.e. $\operatorname{ord}(g) \mid |G|$.
+>
+> **(b)** By (a), $|G| = \operatorname{ord}(g)\,k$ for some integer $k \ge 1$. Then $g^{|G|} = (g^{\operatorname{ord}(g)})^k = e^k = e$.
+>
+> **(c)** The set $G = (\mathbb{Z}/p\mathbb{Z})^\times = \{1, \dots, p-1\}$ with multiplication mod $p$ is a group: multiplication is associative with identity $1$; it is closed because $p$ prime and $p \nmid x, p \nmid y$ imply $p \nmid xy$; and each $x$ is invertible because $\gcd(x,p) = 1$ yields, via Bézout, a residue $u$ with $ux \equiv 1$. Its order is $|G| = p - 1$. Since $p \nmid a$, the residue $\bar a$ lies in $G$, and (b) gives $\bar a^{\,p-1} = \bar 1$, i.e. $a^{p-1} \equiv 1 \pmod p$. $\qquad\blacksquare$
 
 ---
 

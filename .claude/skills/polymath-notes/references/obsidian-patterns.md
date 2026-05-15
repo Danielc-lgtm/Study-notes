@@ -60,44 +60,37 @@ Obsidian can embed the content of another page (or a specific section) inline. T
 - Use a brief restatement in your own words when transclusion would be too bulky, or when you want to highlight a specific aspect of the definition relevant to the current context.
 - Always include a wikilink alongside any restatement.
 
-## Collapsible Sections (Details/Summary)
+## Collapsible Callouts
 
-Obsidian supports HTML `<details>/<summary>` tags for collapsible content. These implement the hierarchical structure principle.
-
-```markdown
-<details>
-<summary><strong>Lemma 1: Cosets partition G</strong></summary>
-
-Two cosets $gH$ and $g'H$ are either identical or disjoint...
-
-</details>
-```
-
-**Nesting:** Collapsible sections can be nested for multi-level progressive disclosure:
+Collapsible content — lemma decompositions, formal proofs, progressive hints, worked-solution steps — uses Obsidian's **collapsible callouts**: a `> [!type]` block whose type marker carries a `-` (collapsed by default) or `+` (expanded by default). Study notes use `-`, so the content is hidden until the reader chooses to expand it. Every line of the callout body is prefixed with `> `, and a blank line inside the callout is a line containing just `>`.
 
 ```markdown
-<details>
-<summary><strong>Step 1: Show the map is well-defined</strong></summary>
-
-The key is that $gH = g'H$ implies $\varphi(g) = \varphi(g')$...
-
-<details>
-<summary>Full derivation</summary>
-
-[Detailed computation]
-
-</details>
-
-</details>
+> [!note]- Lemma 1: Cosets partition G
+> **Statement:** Two cosets $gH$ and $g'H$ are either identical or disjoint.
+>
+> **Hint:** Show that "lying in the same coset" is an equivalence relation.
 ```
 
-**Important formatting notes:**
-- Leave a blank line after `<summary>...</summary>` before the content.
-- Leave a blank line before every closing `</details>` tag — including a closing tag that immediately follows another `</details>` in a nested block.
-- LaTeX and plain markdown render inside `<details>` blocks in Obsidian.
-- **Never put a wikilink inside an HTML tag.** A `[[wikilink]]` placed inside `<details>`, `<summary>`, `<strong>`, or any other HTML element is *not* clickable in Obsidian — Obsidian does not parse wikilink syntax inside raw HTML. Keep every wikilink in ordinary Markdown. If a collapsible section needs a wikilinked title, do not use `<details>`; use the foldable-bullet pattern below.
+**Nesting:** a callout nests inside another by adding a second `> ` to its lines — the inner callout's body carries `> > `. This is how a full proof is tucked inside a lemma:
 
-Use `<details>` for collapsible content whose visible title is plain text — lemma decompositions, formal proofs, progressive hints, worked-solution steps. For the concept map, whose entries need a clickable wikilink in the title, use foldable bullets instead.
+```markdown
+> [!note]- Lemma 1: [Statement]
+> **Statement:** [...]
+>
+> **Hint:** [...]
+>
+> > [!note]- Full proof
+> > [the complete proof]
+```
+
+**Do not use HTML `<details>`/`<summary>` for collapsible content.** Although `<details>` renders in Editing view, it does not collapse reliably in Obsidian's Reading view, and Obsidian does not parse markdown inside HTML tags. Collapsible callouts collapse correctly in *both* views and support the full range of markdown — LaTeX, wikilinks, lists, nested callouts — in both the title and the body.
+
+**Never put a wikilink inside an HTML tag.** A `[[wikilink]]` placed inside `<details>`, `<summary>`, `<strong>`, or any other HTML element is *not* clickable in Obsidian — Obsidian does not parse wikilink syntax inside raw HTML. Keep every wikilink in ordinary Markdown (callout titles and bodies are Markdown, so wikilinks work there).
+
+**Formatting notes:**
+- Choose a callout type from the list in the Callouts section below; `note` is the neutral default for proofs, lemmas, hints, and derivations.
+- A callout must be preceded by a blank line (or begin the section).
+- The title follows the type marker on the same line: `> [!note]- Title here`.
 
 ## Foldable Bullets (for the Concept Map)
 

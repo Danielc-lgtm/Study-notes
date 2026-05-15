@@ -52,7 +52,7 @@ If the Notion MCP is connected, fetch the DAG page directly. Otherwise, ask the 
 - **LaTeX:** `$...$` for inline math, `$$...$$` for display math. Every variable, symbol, and equation in prose must be in LaTeX — no bare Unicode math symbols.
 - **Internal links:** Obsidian wikilinks `[[Def - Group]]` or `[[Def - Group|group]]` with display text. Links work across folders by filename; use full paths only to disambiguate.
 - **Transclusion:** `![[Def - Group#The Definition]]` to embed sections from other pages inline. Preferred for Recall sections in exercises.
-- **Collapsible sections:** HTML `<details><summary>` tags for progressive disclosure. Always leave blank lines after `<summary>` and before `</details>`.
+- **Collapsible sections:** Obsidian collapsible callouts `> [!note]- Title` (collapsed by default) for proofs, lemmas, hints, and worked solutions; foldable parent/child bullets for the concept map. Do not use HTML `<details>` tags — they do not collapse reliably in Reading view, and wikilinks placed inside HTML are not clickable.
 - **Callouts:** `> [!note]`, `> [!tip]`, `> [!warning]` for exercise index links, unlocked concepts, and illegal-but-tempting operations.
 - **YAML frontmatter:** Required on every page. Fields: `type`, `subject`, `tags`, `prereqs`, and `difficulty` (exercises only).
 

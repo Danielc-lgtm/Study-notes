@@ -52,26 +52,14 @@ The group $G$ here is **arbitrary** — finite or infinite, abelian or not. No c
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Argue by contradiction: suppose $G = H \cup K$ with both $H$ and $K$ proper. Since each is proper, each *misses* some element of $G$. Where does a missed element have to be?
 
-Argue by contradiction: suppose $G = H \cup K$ with both $H$ and $K$ proper. Since each is proper, each *misses* some element of $G$. Where does a missed element have to be?
+> [!note]- Hint 2
+> You can find $a \in H$ with $a \notin K$, and $b \in K$ with $b \notin H$. Now consider a single element built from $a$ and $b$. Try their product $ab$.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-You can find $a \in H$ with $a \notin K$, and $b \in K$ with $b \notin H$. Now consider a single element built from $a$ and $b$. Try their product $ab$.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-Suppose $ab \in H$. You also know $a \in H$, so $a^{-1} \in H$, so $a^{-1}(ab) = b \in H$ — but $b \notin H$. Contradiction. Run the symmetric argument to rule out $ab \in K$.
-
-</details>
+> [!note]- Hint 3
+> Suppose $ab \in H$. You also know $a \in H$, so $a^{-1} \in H$, so $a^{-1}(ab) = b \in H$ — but $b \notin H$. Contradiction. Run the symmetric argument to rule out $ab \in K$.
 
 ---
 
@@ -81,74 +69,54 @@ Suppose $ab \in H$. You also know $a \in H$, so $a^{-1} \in H$, so $a^{-1}(ab) =
 
 Assume $G = H \cup K$ with $H \neq G$ and $K \neq G$. Properness of each subgroup yields elements $a \in H \setminus K$ and $b \in K \setminus H$.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose, for contradiction, that $G = H \cup K$ with both $H$ and $K$ proper.
-
-Since $K \neq G$, there exists an element of $G$ not in $K$. Call it $a$. Because $G = H \cup K$, the element $a$ lies in $H$ or in $K$; it is not in $K$, so $a \in H$. Thus $a \in H \setminus K$.
-
-Symmetrically, since $H \neq G$ there is an element $b \in G$ with $b \notin H$; as $b \in H \cup K$ and $b \notin H$, we get $b \in K$. Thus $b \in K \setminus H$.
-
-</details>
+> [!note]- Derivation
+> Suppose, for contradiction, that $G = H \cup K$ with both $H$ and $K$ proper.
+>
+> Since $K \neq G$, there exists an element of $G$ not in $K$. Call it $a$. Because $G = H \cup K$, the element $a$ lies in $H$ or in $K$; it is not in $K$, so $a \in H$. Thus $a \in H \setminus K$.
+>
+> Symmetrically, since $H \neq G$ there is an element $b \in G$ with $b \notin H$; as $b \in H \cup K$ and $b \notin H$, we get $b \in K$. Thus $b \in K \setminus H$.
 
 **Step 2: The product $ab$ cannot lie in $H$.**
 
 If $ab \in H$, then since $a \in H$ we could solve for $b = a^{-1}(ab) \in H$, contradicting $b \notin H$.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose $ab \in H$. We have $a \in H$, and $H$ is a subgroup, so $a^{-1} \in H$. Then $H$ is closed under products, so
-$$a^{-1}(ab) = (a^{-1}a)b = eb = b \in H.$$
-But $b \in K \setminus H$, so $b \notin H$ — a contradiction. Hence $ab \notin H$.
-
-</details>
+> [!note]- Derivation
+> Suppose $ab \in H$. We have $a \in H$, and $H$ is a subgroup, so $a^{-1} \in H$. Then $H$ is closed under products, so
+> $$a^{-1}(ab) = (a^{-1}a)b = eb = b \in H.$$
+> But $b \in K \setminus H$, so $b \notin H$ — a contradiction. Hence $ab \notin H$.
 
 **Step 3: The product $ab$ cannot lie in $K$.**
 
 If $ab \in K$, then since $b \in K$ we could solve for $a = (ab)b^{-1} \in K$, contradicting $a \notin K$.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose $ab \in K$. We have $b \in K$, and $K$ is a subgroup, so $b^{-1} \in K$. Then $K$ is closed under products, so
-$$(ab)b^{-1} = a(bb^{-1}) = ae = a \in K.$$
-But $a \in H \setminus K$, so $a \notin K$ — a contradiction. Hence $ab \notin K$.
-
-</details>
+> [!note]- Derivation
+> Suppose $ab \in K$. We have $b \in K$, and $K$ is a subgroup, so $b^{-1} \in K$. Then $K$ is closed under products, so
+> $$(ab)b^{-1} = a(bb^{-1}) = ae = a \in K.$$
+> But $a \in H \setminus K$, so $a \notin K$ — a contradiction. Hence $ab \notin K$.
 
 **Step 4: Conclude.**
 
 The element $ab$ lies in neither $H$ nor $K$, so $ab \notin H \cup K = G$. But $ab$ is a product of two elements of the group $G$, so $ab \in G$ — a contradiction. Therefore $H$ or $K$ equals $G$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> By Steps 2 and 3, $ab \notin H$ and $ab \notin K$, so $ab \notin H \cup K$. By assumption $H \cup K = G$, so $ab \notin G$.
+>
+> On the other hand, $a, b \in G$ and $G$ is closed under its operation, so $ab \in G$.
+>
+> These contradict one another. The assumption that $G = H \cup K$ with both subgroups proper is therefore untenable: if $G = H \cup K$, then $H = G$ or $K = G$. $\qquad\blacksquare$
 
-By Steps 2 and 3, $ab \notin H$ and $ab \notin K$, so $ab \notin H \cup K$. By assumption $H \cup K = G$, so $ab \notin G$.
-
-On the other hand, $a, b \in G$ and $G$ is closed under its operation, so $ab \in G$.
-
-These contradict one another. The assumption that $G = H \cup K$ with both subgroups proper is therefore untenable: if $G = H \cup K$, then $H = G$ or $K = G$. $\qquad\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $H, K \leq G$ with $G = H \cup K$. Suppose, for contradiction, that both are proper.
-
-Since $K \ne G$, choose $a \in G \setminus K$; as $a \in H \cup K$ and $a \notin K$, we have $a \in H$. Since $H \ne G$, choose $b \in G \setminus H$; as $b \in H \cup K$ and $b \notin H$, we have $b \in K$.
-
-Consider $ab \in G$. It lies in $H \cup K$, so $ab \in H$ or $ab \in K$.
-
-If $ab \in H$: since $a \in H$, also $a^{-1} \in H$, hence $b = a^{-1}(ab) \in H$, contradicting $b \notin H$.
-
-If $ab \in K$: since $b \in K$, also $b^{-1} \in K$, hence $a = (ab)b^{-1} \in K$, contradicting $a \notin K$.
-
-Both cases are impossible, yet one must hold — contradiction. Hence $H$ and $K$ cannot both be proper: if $G = H \cup K$ then $H = G$ or $K = G$. $\qquad\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $H, K \leq G$ with $G = H \cup K$. Suppose, for contradiction, that both are proper.
+>
+> Since $K \ne G$, choose $a \in G \setminus K$; as $a \in H \cup K$ and $a \notin K$, we have $a \in H$. Since $H \ne G$, choose $b \in G \setminus H$; as $b \in H \cup K$ and $b \notin H$, we have $b \in K$.
+>
+> Consider $ab \in G$. It lies in $H \cup K$, so $ab \in H$ or $ab \in K$.
+>
+> If $ab \in H$: since $a \in H$, also $a^{-1} \in H$, hence $b = a^{-1}(ab) \in H$, contradicting $b \notin H$.
+>
+> If $ab \in K$: since $b \in K$, also $b^{-1} \in K$, hence $a = (ab)b^{-1} \in K$, contradicting $a \notin K$.
+>
+> Both cases are impossible, yet one must hold — contradiction. Hence $H$ and $K$ cannot both be proper: if $G = H \cup K$ then $H = G$ or $K = G$. $\qquad\blacksquare$
 
 ---
 

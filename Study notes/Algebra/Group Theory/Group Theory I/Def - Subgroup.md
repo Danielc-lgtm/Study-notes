@@ -50,25 +50,17 @@ $$h_1, h_2 \in H \quad \implies \quad h_1 h_2^{-1} \in H.$$
 
 **Proof of the criterion.**
 
-<details>
-<summary>Forward direction: a subgroup satisfies the criterion</summary>
+> [!note]- Forward direction: a subgroup satisfies the criterion
+> If $H \leq G$ then $e \in H$ so $H \neq \emptyset$. Given $h_1, h_2 \in H$, condition (3) gives $h_2^{-1} \in H$, and then condition (2) gives $h_1 h_2^{-1} \in H$. So the criterion holds.
 
-If $H \leq G$ then $e \in H$ so $H \neq \emptyset$. Given $h_1, h_2 \in H$, condition (3) gives $h_2^{-1} \in H$, and then condition (2) gives $h_1 h_2^{-1} \in H$. So the criterion holds.
-
-</details>
-
-<details>
-<summary>Reverse direction: the criterion implies the three axioms</summary>
-
-Assume $H \neq \emptyset$ and $h_1 h_2^{-1} \in H$ for all $h_1, h_2 \in H$.
-
-- **Identity.** Since $H \neq \emptyset$, pick any $h \in H$. Apply the criterion with $h_1 = h_2 = h$: then $h h^{-1} = e \in H$.
-- **Inverses.** Given $a \in H$, we now know $e \in H$. Apply the criterion with $h_1 = e$, $h_2 = a$: then $e \, a^{-1} = a^{-1} \in H$.
-- **Closure.** Given $a, b \in H$, we now know $b^{-1} \in H$. Apply the criterion with $h_1 = a$, $h_2 = b^{-1}$: then $a (b^{-1})^{-1} = a b \in H$.
-
-All three axioms hold, so $H \leq G$. Associativity is inherited from $G$.
-
-</details>
+> [!note]- Reverse direction: the criterion implies the three axioms
+> Assume $H \neq \emptyset$ and $h_1 h_2^{-1} \in H$ for all $h_1, h_2 \in H$.
+>
+> - **Identity.** Since $H \neq \emptyset$, pick any $h \in H$. Apply the criterion with $h_1 = h_2 = h$: then $h h^{-1} = e \in H$.
+> - **Inverses.** Given $a \in H$, we now know $e \in H$. Apply the criterion with $h_1 = e$, $h_2 = a$: then $e \, a^{-1} = a^{-1} \in H$.
+> - **Closure.** Given $a, b \in H$, we now know $b^{-1} \in H$. Apply the criterion with $h_1 = a$, $h_2 = b^{-1}$: then $a (b^{-1})^{-1} = a b \in H$.
+>
+> All three axioms hold, so $H \leq G$. Associativity is inherited from $G$.
 
 ---
 

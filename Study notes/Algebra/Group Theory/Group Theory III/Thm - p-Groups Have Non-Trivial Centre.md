@@ -120,96 +120,68 @@ Let $G$ act on itself by conjugation. Write down the [[Thm - The Class Equation|
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: Singleton conjugacy class if and only if central</strong></summary>
+> [!note]- Lemma 1: Singleton conjugacy class if and only if central
+> **Statement:** For $x \in G$, the conjugacy class $\operatorname{ccl}(x) = \{gxg^{-1} : g \in G\}$ equals the singleton $\{x\}$ if and only if $x \in Z(G)$.
+>
+> **Hint:** Unfold both conditions to the same equation $gx = xg$ for all $g$.
+>
+> **Why needed:** It is the bridge that turns "count the singleton classes" into "compute $|Z(G)|$".
+>
+> > [!note]- Full proof
+> > The class $\operatorname{ccl}(x)$ is the singleton $\{x\}$ if and only if $gxg^{-1} = x$ for every $g \in G$ — that is, every conjugate of $x$ equals $x$. Right-multiplying $gxg^{-1} = x$ by $g$ gives $gx = xg$. So $\operatorname{ccl}(x) = \{x\}$ if and only if $gx = xg$ for all $g \in G$, which is exactly the statement $x \in Z(G)$.
 
-**Statement:** For $x \in G$, the conjugacy class $\operatorname{ccl}(x) = \{gxg^{-1} : g \in G\}$ equals the singleton $\{x\}$ if and only if $x \in Z(G)$.
+> [!note]- Lemma 2: Non-central conjugacy classes have size divisible by $p$
+> **Statement:** Let $G$ be a $p$-group. If $x \in G$ is not central, then $|\operatorname{ccl}(x)|$ is divisible by $p$.
+>
+> **Hint:** Orbit–stabiliser turns the class size into an index; Lagrange turns the index into a divisor of $p^n$.
+>
+> **Why needed:** It makes the entire non-central part of the class equation a multiple of $p$.
+>
+> > [!note]- Full proof
+> > Conjugation is an action of $G$ on itself; the orbit of $x$ is $\operatorname{ccl}(x)$ and the stabiliser of $x$ is the [[Def - Centraliser and Centre|centraliser]] $C_G(x)$. By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], $|\operatorname{ccl}(x)| = |G : C_G(x)|$. By [[Thm - Lagrange's Theorem|Lagrange]], this index divides $|G| = p^n$, so $|\operatorname{ccl}(x)| = p^k$ for some $0 \leq k \leq n$. Since $x$ is not central, by Lemma 1 the class is not a singleton, so $|\operatorname{ccl}(x)| > 1$, forcing $k \geq 1$. Hence $p \mid p^k = |\operatorname{ccl}(x)|$.
 
-**Hint:** Unfold both conditions to the same equation $gx = xg$ for all $g$.
-
-**Why needed:** It is the bridge that turns "count the singleton classes" into "compute $|Z(G)|$".
-
-<details>
-<summary>Full proof</summary>
-
-The class $\operatorname{ccl}(x)$ is the singleton $\{x\}$ if and only if $gxg^{-1} = x$ for every $g \in G$ — that is, every conjugate of $x$ equals $x$. Right-multiplying $gxg^{-1} = x$ by $g$ gives $gx = xg$. So $\operatorname{ccl}(x) = \{x\}$ if and only if $gx = xg$ for all $g \in G$, which is exactly the statement $x \in Z(G)$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Non-central conjugacy classes have size divisible by $p$</strong></summary>
-
-**Statement:** Let $G$ be a $p$-group. If $x \in G$ is not central, then $|\operatorname{ccl}(x)|$ is divisible by $p$.
-
-**Hint:** Orbit–stabiliser turns the class size into an index; Lagrange turns the index into a divisor of $p^n$.
-
-**Why needed:** It makes the entire non-central part of the class equation a multiple of $p$.
-
-<details>
-<summary>Full proof</summary>
-
-Conjugation is an action of $G$ on itself; the orbit of $x$ is $\operatorname{ccl}(x)$ and the stabiliser of $x$ is the [[Def - Centraliser and Centre|centraliser]] $C_G(x)$. By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], $|\operatorname{ccl}(x)| = |G : C_G(x)|$. By [[Thm - Lagrange's Theorem|Lagrange]], this index divides $|G| = p^n$, so $|\operatorname{ccl}(x)| = p^k$ for some $0 \leq k \leq n$. Since $x$ is not central, by Lemma 1 the class is not a singleton, so $|\operatorname{ccl}(x)| > 1$, forcing $k \geq 1$. Hence $p \mid p^k = |\operatorname{ccl}(x)|$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: A non-empty $p$-power-order set has order at least $p$</strong></summary>
-
-**Statement:** If $N$ is a positive integer with $p \mid N$, then $N \geq p$. In particular, if $|Z(G)| \geq 1$ and $p \mid |Z(G)|$, then $|Z(G)| \geq p \geq 2$.
-
-**Hint:** The least positive multiple of $p$ is $p$.
-
-**Why needed:** It converts the divisibility conclusion into the concrete statement that a non-identity central element exists.
-
-<details>
-<summary>Full proof</summary>
-
-If $p \mid N$ and $N \geq 1$, write $N = pk$ with $k$ a non-negative integer; since $N \geq 1 > 0$ we have $k \geq 1$, so $N = pk \geq p$. The identity $e$ satisfies $eg = ge$ for all $g$, so $e \in Z(G)$ and $|Z(G)| \geq 1$; with $p \mid |Z(G)|$ this gives $|Z(G)| \geq p$, and as $p \geq 2$, the centre contains an element other than $e$.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: A non-empty $p$-power-order set has order at least $p$
+> **Statement:** If $N$ is a positive integer with $p \mid N$, then $N \geq p$. In particular, if $|Z(G)| \geq 1$ and $p \mid |Z(G)|$, then $|Z(G)| \geq p \geq 2$.
+>
+> **Hint:** The least positive multiple of $p$ is $p$.
+>
+> **Why needed:** It converts the divisibility conclusion into the concrete statement that a non-identity central element exists.
+>
+> > [!note]- Full proof
+> > If $p \mid N$ and $N \geq 1$, write $N = pk$ with $k$ a non-negative integer; since $N \geq 1 > 0$ we have $k \geq 1$, so $N = pk \geq p$. The identity $e$ satisfies $eg = ge$ for all $g$, so $e \in Z(G)$ and $|Z(G)| \geq 1$; with $p \mid |Z(G)|$ this gives $|Z(G)| \geq p$, and as $p \geq 2$, the centre contains an element other than $e$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** If $G$ is a finite $p$-group, then $Z(G) \neq \{e\}$; more precisely $p \mid |Z(G)|$.
-
-*Proof.* Let $|G| = p^n$ with $n \geq 1$. Let $G$ act on itself by conjugation, $g \cdot x = gxg^{-1}$. The orbits of this action are precisely the [[Def - Conjugacy Class|conjugacy classes]] of $G$, and they partition $G$.
-
-Each orbit has size dividing $|G| = p^n$. Indeed, the orbit of $x$ is its conjugacy class $\operatorname{ccl}(x)$ and the stabiliser is the centraliser $C_G(x)$, so by the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] $|\operatorname{ccl}(x)| = |G : C_G(x)|$, which divides $p^n$ by [[Thm - Lagrange's Theorem|Lagrange's theorem]]. Hence every conjugacy class has size $p^k$ for some $0 \leq k \leq n$, so each class is either a singleton ($k = 0$) or has size divisible by $p$ ($k \geq 1$).
-
-A conjugacy class is a singleton $\{x\}$ exactly when $gxg^{-1} = x$ for all $g \in G$, i.e. $gx = xg$ for all $g$, i.e. $x \in Z(G)$. So the singleton classes are exactly the one-element sets $\{x\}$ with $x \in Z(G)$, and there are precisely $|Z(G)|$ of them.
-
-Since the conjugacy classes partition $G$, summing their sizes gives $|G|$. Grouping the singleton classes together:
-$$|G| = |Z(G)| + \sum_{i} |G : C_G(x_i)|,$$
-where $x_1, x_2, \dots$ are representatives of the conjugacy classes of size greater than $1$ (one per non-central class). This is the [[Thm - The Class Equation|class equation]].
-
-Read this equation modulo $p$. The left side $|G| = p^n$ is divisible by $p$ since $n \geq 1$. Each summand $|G : C_G(x_i)|$ is the size of a non-singleton class, hence divisible by $p$ by the discussion above. Therefore the remaining term satisfies
-$$|Z(G)| = |G| - \sum_i |G : C_G(x_i)| \equiv 0 \pmod p,$$
-that is, $p \mid |Z(G)|$.
-
-Finally, the identity $e$ commutes with every element, so $e \in Z(G)$ and $|Z(G)| \geq 1$. A positive integer divisible by $p$ is at least $p$, so $|Z(G)| \geq p \geq 2$. Hence $Z(G)$ contains an element other than $e$, i.e. $Z(G) \neq \{e\}$. $\qquad\blacksquare$
-
-**Corollary.** If $|G| = p^n$ with $n \geq 2$, then $G$ is not simple.
-
-*Proof.* The centre $Z(G)$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$ (for any $g \in G$ and $z \in Z(G)$, $gzg^{-1} = z \in Z(G)$, so $Z(G)$ is closed under conjugation). By the theorem, $Z(G) \neq \{e\}$.
-
-If $Z(G) \neq G$, then $Z(G)$ is a proper non-trivial normal subgroup, so $G$ is not [[Def - Simple Group|simple]].
-
-If $Z(G) = G$, then $G$ is abelian. Since $|G| = p^n$ with $n \geq 2$, the order $p^n$ is divisible by the prime $p$, so by [[Group Theory II — §1.3–1.4|Cauchy's theorem]] $G$ contains an element $x$ of order $p$. Then $\langle x \rangle$ has order $p$, so it is proper ($p < p^n$ as $n \geq 2$) and non-trivial; and it is normal because $G$ is abelian (every subgroup of an abelian group is normal). So again $G$ has a proper non-trivial normal subgroup and is not simple.
-
-In both cases $G$ is not simple. $\qquad\blacksquare$
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** If $G$ is a finite $p$-group, then $Z(G) \neq \{e\}$; more precisely $p \mid |Z(G)|$.
+>
+> *Proof.* Let $|G| = p^n$ with $n \geq 1$. Let $G$ act on itself by conjugation, $g \cdot x = gxg^{-1}$. The orbits of this action are precisely the [[Def - Conjugacy Class|conjugacy classes]] of $G$, and they partition $G$.
+>
+> Each orbit has size dividing $|G| = p^n$. Indeed, the orbit of $x$ is its conjugacy class $\operatorname{ccl}(x)$ and the stabiliser is the centraliser $C_G(x)$, so by the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] $|\operatorname{ccl}(x)| = |G : C_G(x)|$, which divides $p^n$ by [[Thm - Lagrange's Theorem|Lagrange's theorem]]. Hence every conjugacy class has size $p^k$ for some $0 \leq k \leq n$, so each class is either a singleton ($k = 0$) or has size divisible by $p$ ($k \geq 1$).
+>
+> A conjugacy class is a singleton $\{x\}$ exactly when $gxg^{-1} = x$ for all $g \in G$, i.e. $gx = xg$ for all $g$, i.e. $x \in Z(G)$. So the singleton classes are exactly the one-element sets $\{x\}$ with $x \in Z(G)$, and there are precisely $|Z(G)|$ of them.
+>
+> Since the conjugacy classes partition $G$, summing their sizes gives $|G|$. Grouping the singleton classes together:
+> $$|G| = |Z(G)| + \sum_{i} |G : C_G(x_i)|,$$
+> where $x_1, x_2, \dots$ are representatives of the conjugacy classes of size greater than $1$ (one per non-central class). This is the [[Thm - The Class Equation|class equation]].
+>
+> Read this equation modulo $p$. The left side $|G| = p^n$ is divisible by $p$ since $n \geq 1$. Each summand $|G : C_G(x_i)|$ is the size of a non-singleton class, hence divisible by $p$ by the discussion above. Therefore the remaining term satisfies
+> $$|Z(G)| = |G| - \sum_i |G : C_G(x_i)| \equiv 0 \pmod p,$$
+> that is, $p \mid |Z(G)|$.
+>
+> Finally, the identity $e$ commutes with every element, so $e \in Z(G)$ and $|Z(G)| \geq 1$. A positive integer divisible by $p$ is at least $p$, so $|Z(G)| \geq p \geq 2$. Hence $Z(G)$ contains an element other than $e$, i.e. $Z(G) \neq \{e\}$. $\qquad\blacksquare$
+>
+> **Corollary.** If $|G| = p^n$ with $n \geq 2$, then $G$ is not simple.
+>
+> *Proof.* The centre $Z(G)$ is a [[Def - Normal Subgroup|normal subgroup]] of $G$ (for any $g \in G$ and $z \in Z(G)$, $gzg^{-1} = z \in Z(G)$, so $Z(G)$ is closed under conjugation). By the theorem, $Z(G) \neq \{e\}$.
+>
+> If $Z(G) \neq G$, then $Z(G)$ is a proper non-trivial normal subgroup, so $G$ is not [[Def - Simple Group|simple]].
+>
+> If $Z(G) = G$, then $G$ is abelian. Since $|G| = p^n$ with $n \geq 2$, the order $p^n$ is divisible by the prime $p$, so by [[Group Theory II — §1.3–1.4|Cauchy's theorem]] $G$ contains an element $x$ of order $p$. Then $\langle x \rangle$ has order $p$, so it is proper ($p < p^n$ as $n \geq 2$) and non-trivial; and it is normal because $G$ is abelian (every subgroup of an abelian group is normal). So again $G$ has a proper non-trivial normal subgroup and is not simple.
+>
+> In both cases $G$ is not simple. $\qquad\blacksquare$
 
 ---
 

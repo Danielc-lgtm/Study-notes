@@ -62,26 +62,14 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> To prove a group is not [[Def - Simple Group|simple]] you need just one proper non-trivial [[Def - Normal Subgroup|normal subgroup]]. The order is a prime power — what subgroup does a [[Def - p-group|$p$-group]] always come equipped with, that is automatically normal?
 
-To prove a group is not [[Def - Simple Group|simple]] you need just one proper non-trivial [[Def - Normal Subgroup|normal subgroup]]. The order is a prime power — what subgroup does a [[Def - p-group|$p$-group]] always come equipped with, that is automatically normal?
+> [!note]- Hint 2
+> The centre $Z(G)$ is always normal, and by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] it is non-trivial. So if $Z(G) \neq G$ you are finished immediately. The only thing to worry about is the case $Z(G) = G$.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-The centre $Z(G)$ is always normal, and by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] it is non-trivial. So if $Z(G) \neq G$ you are finished immediately. The only thing to worry about is the case $Z(G) = G$.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-If $Z(G) = G$ then $G$ is [[Def - Abelian Group|abelian]]. In an abelian group *every* subgroup is normal, so you just need any proper non-trivial subgroup. Use [[Thm - Subgroups of a p-Group|the subgroup theorem for $p$-groups]] to get a subgroup of order $p$ — it is proper because $p < p^n$ for $n \geq 2$, and normal because $G$ is abelian.
-
-</details>
+> [!note]- Hint 3
+> If $Z(G) = G$ then $G$ is [[Def - Abelian Group|abelian]]. In an abelian group *every* subgroup is normal, so you just need any proper non-trivial subgroup. Use [[Thm - Subgroups of a p-Group|the subgroup theorem for $p$-groups]] to get a subgroup of order $p$ — it is proper because $p < p^n$ for $n \geq 2$, and normal because $G$ is abelian.
 
 ---
 
@@ -93,66 +81,50 @@ The strategy is to offer $Z(G)$ as the proper non-trivial normal subgroup, with 
 
 For any group, $Z(G)$ is a normal subgroup. As $G$ is a $p$-group with $n \geq 2 \geq 1$, the centre is also non-trivial: $Z(G) \neq \{e\}$.
 
-<details>
-<summary>Derivation</summary>
-
-The [[Def - Centraliser and Centre|centre]] $Z(G)$ is a subgroup of $G$ (it contains $e$ and is closed under products and inverses, since elements commuting with everything are stable under those operations). It is moreover a [[Def - Normal Subgroup|normal]] subgroup: for any $g \in G$ and $z \in Z(G)$, the conjugate $gzg^{-1}$ equals $z$ — because $z$ commutes with $g$, so $gzg^{-1} = gg^{-1}z = z$ — and hence $gZ(G)g^{-1} = Z(G)$. Normality holds for the centre of *every* group, with no hypothesis on $G$.
-
-Now use the hypothesis. The order is $|G| = p^n$ with $n \geq 2$, so $G$ is a [[Def - p-group|$p$-group]] and, since $|G| = p^n \geq p^2 > 1$, it is non-trivial. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] then gives
-$$Z(G) \neq \{e\}.$$
-So $Z(G)$ is a normal subgroup that is certainly not trivial. The only remaining question is whether it is *proper*.
-
-</details>
+> [!note]- Derivation
+> The [[Def - Centraliser and Centre|centre]] $Z(G)$ is a subgroup of $G$ (it contains $e$ and is closed under products and inverses, since elements commuting with everything are stable under those operations). It is moreover a [[Def - Normal Subgroup|normal]] subgroup: for any $g \in G$ and $z \in Z(G)$, the conjugate $gzg^{-1}$ equals $z$ — because $z$ commutes with $g$, so $gzg^{-1} = gg^{-1}z = z$ — and hence $gZ(G)g^{-1} = Z(G)$. Normality holds for the centre of *every* group, with no hypothesis on $G$.
+>
+> Now use the hypothesis. The order is $|G| = p^n$ with $n \geq 2$, so $G$ is a [[Def - p-group|$p$-group]] and, since $|G| = p^n \geq p^2 > 1$, it is non-trivial. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] then gives
+> $$Z(G) \neq \{e\}.$$
+> So $Z(G)$ is a normal subgroup that is certainly not trivial. The only remaining question is whether it is *proper*.
 
 **Step 2: If $Z(G) \neq G$, the centre is the required subgroup.**
 
 When $Z(G)$ is a proper subgroup, it is at once proper, non-trivial, and normal — exactly what is needed, and $G$ is not simple.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose $Z(G) \neq G$. Collecting the three properties: by Step 1 the centre $Z(G)$ is [[Def - Normal Subgroup|normal]] in $G$ and satisfies $Z(G) \neq \{e\}$, and by the assumption of this case $Z(G) \neq G$. So $Z(G)$ is a normal subgroup that is neither $\{e\}$ nor $G$ — a *proper non-trivial* normal subgroup.
-
-The definition of a [[Def - Simple Group|simple]] group is one whose only normal subgroups are $\{e\}$ and itself. The existence of $Z(G)$ as a normal subgroup different from both shows $G$ fails that definition. Hence $G$ is not simple.
-
-</details>
+> [!note]- Derivation
+> Suppose $Z(G) \neq G$. Collecting the three properties: by Step 1 the centre $Z(G)$ is [[Def - Normal Subgroup|normal]] in $G$ and satisfies $Z(G) \neq \{e\}$, and by the assumption of this case $Z(G) \neq G$. So $Z(G)$ is a normal subgroup that is neither $\{e\}$ nor $G$ — a *proper non-trivial* normal subgroup.
+>
+> The definition of a [[Def - Simple Group|simple]] group is one whose only normal subgroups are $\{e\}$ and itself. The existence of $Z(G)$ as a normal subgroup different from both shows $G$ fails that definition. Hence $G$ is not simple.
 
 **Step 3: If $Z(G) = G$, then $G$ is abelian, and a subgroup of order $p$ works.**
 
 When $Z(G) = G$ the group is abelian, so every subgroup is normal; [[Thm - Subgroups of a p-Group|the subgroup theorem]] supplies a subgroup of order $p$, which is proper (as $p < p^n$) and non-trivial.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> Suppose instead $Z(G) = G$. By the definition of the [[Def - Centraliser and Centre|centre]], $Z(G) = G$ means every element of $G$ commutes with every other, so $G$ is [[Def - Abelian Group|abelian]].
+>
+> In an abelian group, *every* subgroup is [[Def - Normal Subgroup|normal]]: for any subgroup $H$ and any $g \in G$, the conjugate $gHg^{-1} = \{ghg^{-1} : h \in H\} = \{h : h \in H\} = H$, since $ghg^{-1} = h$ by commutativity. So the normality obstruction disappears entirely — to finish, it is enough to produce *any* proper non-trivial subgroup.
+>
+> [[Thm - Subgroups of a p-Group|The subgroup theorem for $p$-groups]] states that a group of order $p^n$ has a subgroup of order $p^b$ for every $0 \leq b \leq n$. Apply it with $b = 1$: there is a subgroup $H \leq G$ with $|H| = p$. (Alternatively, take any non-identity $x \in G$; its order divides $p^n$ by [[Thm - Lagrange's Theorem|Lagrange]] and exceeds $1$, so it is some $p^c$ with $c \geq 1$, and $x^{p^{c-1}}$ has order exactly $p$, generating such an $H$.)
+>
+> This $H$ is:
+> - **non-trivial**, since $|H| = p \geq 2 > 1$;
+> - **proper**, since $|H| = p$ while $|G| = p^n$ with $n \geq 2$, so $|H| = p < p^2 \leq p^n = |G|$ and $H \neq G$;
+> - **normal**, since $G$ is abelian and every subgroup of an abelian group is normal.
+>
+> So $H$ is a proper non-trivial normal subgroup, and $G$ is not simple. $\blacksquare$
 
-Suppose instead $Z(G) = G$. By the definition of the [[Def - Centraliser and Centre|centre]], $Z(G) = G$ means every element of $G$ commutes with every other, so $G$ is [[Def - Abelian Group|abelian]].
-
-In an abelian group, *every* subgroup is [[Def - Normal Subgroup|normal]]: for any subgroup $H$ and any $g \in G$, the conjugate $gHg^{-1} = \{ghg^{-1} : h \in H\} = \{h : h \in H\} = H$, since $ghg^{-1} = h$ by commutativity. So the normality obstruction disappears entirely — to finish, it is enough to produce *any* proper non-trivial subgroup.
-
-[[Thm - Subgroups of a p-Group|The subgroup theorem for $p$-groups]] states that a group of order $p^n$ has a subgroup of order $p^b$ for every $0 \leq b \leq n$. Apply it with $b = 1$: there is a subgroup $H \leq G$ with $|H| = p$. (Alternatively, take any non-identity $x \in G$; its order divides $p^n$ by [[Thm - Lagrange's Theorem|Lagrange]] and exceeds $1$, so it is some $p^c$ with $c \geq 1$, and $x^{p^{c-1}}$ has order exactly $p$, generating such an $H$.)
-
-This $H$ is:
-- **non-trivial**, since $|H| = p \geq 2 > 1$;
-- **proper**, since $|H| = p$ while $|G| = p^n$ with $n \geq 2$, so $|H| = p < p^2 \leq p^n = |G|$ and $H \neq G$;
-- **normal**, since $G$ is abelian and every subgroup of an abelian group is normal.
-
-So $H$ is a proper non-trivial normal subgroup, and $G$ is not simple. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $|G| = p^n$ with $p$ prime and $n \geq 2$.
-
-The [[Def - Centraliser and Centre|centre]] $Z(G)$ is a normal subgroup of $G$: it is a subgroup, and for $g \in G$, $z \in Z(G)$ one has $gzg^{-1} = z \in Z(G)$, so $gZ(G)g^{-1} = Z(G)$. Since $|G| = p^n \geq p^2 > 1$, the group $G$ is a non-trivial [[Def - p-group|$p$-group]], so by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], $Z(G) \neq \{e\}$.
-
-*Case 1: $Z(G) \neq G$.* Then $Z(G)$ is a normal subgroup with $Z(G) \neq \{e\}$ and $Z(G) \neq G$ — a proper non-trivial normal subgroup. By definition of a [[Def - Simple Group|simple]] group, $G$ is not simple.
-
-*Case 2: $Z(G) = G$.* Then every element of $G$ commutes with every other, so $G$ is [[Def - Abelian Group|abelian]], and consequently every subgroup of $G$ is [[Def - Normal Subgroup|normal]] (for any subgroup $H$ and $g \in G$, commutativity gives $gHg^{-1} = H$). By [[Thm - Subgroups of a p-Group|the subgroup theorem for $p$-groups]], $G$ has a subgroup $H$ of order $p$. Then $H$ is non-trivial ($|H| = p > 1$), proper ($|H| = p < p^2 \leq p^n = |G|$ since $n \geq 2$), and normal (as $G$ is abelian). So $G$ has a proper non-trivial normal subgroup and is not simple.
-
-In both cases $G$ is not simple. Hence no group of order $p^n$ with $n \geq 2$ is simple. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $|G| = p^n$ with $p$ prime and $n \geq 2$.
+>
+> The [[Def - Centraliser and Centre|centre]] $Z(G)$ is a normal subgroup of $G$: it is a subgroup, and for $g \in G$, $z \in Z(G)$ one has $gzg^{-1} = z \in Z(G)$, so $gZ(G)g^{-1} = Z(G)$. Since $|G| = p^n \geq p^2 > 1$, the group $G$ is a non-trivial [[Def - p-group|$p$-group]], so by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], $Z(G) \neq \{e\}$.
+>
+> *Case 1: $Z(G) \neq G$.* Then $Z(G)$ is a normal subgroup with $Z(G) \neq \{e\}$ and $Z(G) \neq G$ — a proper non-trivial normal subgroup. By definition of a [[Def - Simple Group|simple]] group, $G$ is not simple.
+>
+> *Case 2: $Z(G) = G$.* Then every element of $G$ commutes with every other, so $G$ is [[Def - Abelian Group|abelian]], and consequently every subgroup of $G$ is [[Def - Normal Subgroup|normal]] (for any subgroup $H$ and $g \in G$, commutativity gives $gHg^{-1} = H$). By [[Thm - Subgroups of a p-Group|the subgroup theorem for $p$-groups]], $G$ has a subgroup $H$ of order $p$. Then $H$ is non-trivial ($|H| = p > 1$), proper ($|H| = p < p^2 \leq p^n = |G|$ since $n \geq 2$), and normal (as $G$ is abelian). So $G$ has a proper non-trivial normal subgroup and is not simple.
+>
+> In both cases $G$ is not simple. Hence no group of order $p^n$ with $n \geq 2$ is simple. $\blacksquare$
 
 ---
 

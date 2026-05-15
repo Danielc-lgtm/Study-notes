@@ -60,26 +60,14 @@ This solution deploys the following legal operations from [[Group Theory III —
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> The hypothesis is a prime power, so the first thing to write down is what every [[Def - p-group|$p$-group]] problem starts with: the centre is non-trivial. Then ask what [[Thm - Lagrange's Theorem|Lagrange's theorem]] permits the *order* of that centre to be.
 
-The hypothesis is a prime power, so the first thing to write down is what every [[Def - p-group|$p$-group]] problem starts with: the centre is non-trivial. Then ask what [[Thm - Lagrange's Theorem|Lagrange's theorem]] permits the *order* of that centre to be.
+> [!note]- Hint 2
+> Lagrange and non-triviality together leave only two possibilities, $|Z(G)| = p$ or $|Z(G)| = p^2$. The case $|Z(G)| = p^2$ is the conclusion you want, so it needs no work. Spend all your effort ruling out $|Z(G)| = p$.
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-Lagrange and non-triviality together leave only two possibilities, $|Z(G)| = p$ or $|Z(G)| = p^2$. The case $|Z(G)| = p^2$ is the conclusion you want, so it needs no work. Spend all your effort ruling out $|Z(G)| = p$.
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-If $|Z(G)| = p$ then $G/Z(G)$ has order $p^2/p = p$, so it is cyclic — every group of prime order is. Now apply [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]]: a cyclic $G/Z(G)$ makes $G$ abelian, and an abelian group is its own centre. That says $Z(G) = G$, so $|Z(G)| = p^2$ — flatly contradicting the assumption $|Z(G)| = p$.
-
-</details>
+> [!note]- Hint 3
+> If $|Z(G)| = p$ then $G/Z(G)$ has order $p^2/p = p$, so it is cyclic — every group of prime order is. Now apply [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]]: a cyclic $G/Z(G)$ makes $G$ abelian, and an abelian group is its own centre. That says $Z(G) = G$, so $|Z(G)| = p^2$ — flatly contradicting the assumption $|Z(G)| = p$.
 
 ---
 
@@ -91,68 +79,52 @@ The strategy is to pin the order of the centre. [[Thm - Lagrange's Theorem|Lagra
 
 $G$ is a $p$-group, so $Z(G) \neq \{e\}$. By [[Thm - Lagrange's Theorem|Lagrange]] the order $|Z(G)|$ divides $p^2$, hence lies in $\{1, p, p^2\}$; non-triviality removes $1$.
 
-<details>
-<summary>Derivation</summary>
-
-By definition $G$ has order $p^2 = p^2$, a prime power with exponent $2 \geq 1$, so $G$ is a [[Def - p-group|$p$-group]]. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] states that every non-trivial finite $p$-group has a non-trivial [[Def - Centraliser and Centre|centre]]; since $|G| = p^2 > 1$, the group $G$ is non-trivial, and therefore
-$$Z(G) \neq \{e\}.$$
-
-The centre $Z(G)$ is a subgroup of $G$. [[Thm - Lagrange's Theorem|Lagrange's theorem]] says the order of any subgroup of a finite group divides the order of the group, so $|Z(G)|$ divides $|G| = p^2$. The positive divisors of $p^2$ are exactly $1$, $p$, and $p^2$ — these and no others, because $p$ is prime. Hence
-$$|Z(G)| \in \{1,\ p,\ p^2\}.$$
-The value $1$ corresponds to $Z(G) = \{e\}$, which Step 1's first sentence has excluded. Therefore $|Z(G)| \in \{p,\ p^2\}$.
-
-</details>
+> [!note]- Derivation
+> By definition $G$ has order $p^2 = p^2$, a prime power with exponent $2 \geq 1$, so $G$ is a [[Def - p-group|$p$-group]]. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] states that every non-trivial finite $p$-group has a non-trivial [[Def - Centraliser and Centre|centre]]; since $|G| = p^2 > 1$, the group $G$ is non-trivial, and therefore
+> $$Z(G) \neq \{e\}.$$
+>
+> The centre $Z(G)$ is a subgroup of $G$. [[Thm - Lagrange's Theorem|Lagrange's theorem]] says the order of any subgroup of a finite group divides the order of the group, so $|Z(G)|$ divides $|G| = p^2$. The positive divisors of $p^2$ are exactly $1$, $p$, and $p^2$ — these and no others, because $p$ is prime. Hence
+> $$|Z(G)| \in \{1,\ p,\ p^2\}.$$
+> The value $1$ corresponds to $Z(G) = \{e\}$, which Step 1's first sentence has excluded. Therefore $|Z(G)| \in \{p,\ p^2\}$.
 
 **Step 2: The case $|Z(G)| = p$ is impossible.**
 
 If the centre had order $p$, the quotient $G/Z(G)$ would have order $p$, hence be cyclic; but a cyclic $G/Z(G)$ forces $G$ abelian and thus $Z(G) = G$ — contradicting $|Z(G)| = p < p^2$.
 
-<details>
-<summary>Derivation</summary>
-
-Suppose, for contradiction, that $|Z(G)| = p$. The centre is a normal subgroup, so the [[Def - Quotient Group|quotient group]] $G/Z(G)$ exists, and by the counting form of [[Thm - Lagrange's Theorem|Lagrange's theorem]] its order is
-$$|G/Z(G)| = \frac{|G|}{|Z(G)|} = \frac{p^2}{p} = p.$$
-
-A group of prime order $p$ is cyclic: pick any non-identity element $g$; its order divides $p$ by Lagrange and is not $1$, so it is $p$, and the $p$ powers $e, g, g^2, \dots, g^{p-1}$ already exhaust the group. Hence $G/Z(G)$ is **cyclic**.
-
-Now invoke [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]]: *if $G/Z(G)$ is cyclic then $G$ is abelian*. So $G$ is abelian. But the [[Def - Centraliser and Centre|centre]] of an abelian group is the whole group — every element commutes with every other, so every element is central — giving
-$$Z(G) = G, \qquad \text{hence} \qquad |Z(G)| = |G| = p^2.$$
-This contradicts the assumption $|Z(G)| = p$, because $p \neq p^2$ (indeed $p < p^2$ as $p \geq 2$). The assumption is therefore untenable: $|Z(G)| \neq p$.
-
-</details>
+> [!note]- Derivation
+> Suppose, for contradiction, that $|Z(G)| = p$. The centre is a normal subgroup, so the [[Def - Quotient Group|quotient group]] $G/Z(G)$ exists, and by the counting form of [[Thm - Lagrange's Theorem|Lagrange's theorem]] its order is
+> $$|G/Z(G)| = \frac{|G|}{|Z(G)|} = \frac{p^2}{p} = p.$$
+>
+> A group of prime order $p$ is cyclic: pick any non-identity element $g$; its order divides $p$ by Lagrange and is not $1$, so it is $p$, and the $p$ powers $e, g, g^2, \dots, g^{p-1}$ already exhaust the group. Hence $G/Z(G)$ is **cyclic**.
+>
+> Now invoke [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]]: *if $G/Z(G)$ is cyclic then $G$ is abelian*. So $G$ is abelian. But the [[Def - Centraliser and Centre|centre]] of an abelian group is the whole group — every element commutes with every other, so every element is central — giving
+> $$Z(G) = G, \qquad \text{hence} \qquad |Z(G)| = |G| = p^2.$$
+> This contradicts the assumption $|Z(G)| = p$, because $p \neq p^2$ (indeed $p < p^2$ as $p \geq 2$). The assumption is therefore untenable: $|Z(G)| \neq p$.
 
 **Step 3: Conclude $Z(G) = G$, so $G$ is abelian.**
 
 Steps 1 and 2 leave only $|Z(G)| = p^2$. Then $|Z(G)| = |G|$ with $Z(G) \leq G$ forces $Z(G) = G$, and $G$ equal to its own centre is precisely the statement that $G$ is abelian.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> By Step 1, $|Z(G)| \in \{p, p^2\}$; by Step 2, $|Z(G)| \neq p$. The only remaining possibility is
+> $$|Z(G)| = p^2 = |G|.$$
+> A subgroup of a finite group whose order equals the order of the whole group must be the whole group — it is a subset of the same finite cardinality. Hence $Z(G) = G$.
+>
+> Unwinding the definition of the [[Def - Centraliser and Centre|centre]], $Z(G) = G$ says that *every* element of $G$ commutes with *every* element of $G$: for all $x, y \in G$, $xy = yx$. That is the definition of an [[Def - Abelian Group|abelian]] group. Therefore $G$ is abelian. $\blacksquare$
 
-By Step 1, $|Z(G)| \in \{p, p^2\}$; by Step 2, $|Z(G)| \neq p$. The only remaining possibility is
-$$|Z(G)| = p^2 = |G|.$$
-A subgroup of a finite group whose order equals the order of the whole group must be the whole group — it is a subset of the same finite cardinality. Hence $Z(G) = G$.
-
-Unwinding the definition of the [[Def - Centraliser and Centre|centre]], $Z(G) = G$ says that *every* element of $G$ commutes with *every* element of $G$: for all $x, y \in G$, $xy = yx$. That is the definition of an [[Def - Abelian Group|abelian]] group. Therefore $G$ is abelian. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $p$ be prime and $|G| = p^2$.
-
-Since $|G| = p^2$ is a prime power, $G$ is a [[Def - p-group|$p$-group]], and as $|G| > 1$ it is non-trivial. By [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], $Z(G) \neq \{e\}$.
-
-The centre $Z(G)$ is a subgroup of $G$, so by [[Thm - Lagrange's Theorem|Lagrange's theorem]] its order divides $|G| = p^2$. The divisors of $p^2$ are $1, p, p^2$, and $Z(G) \neq \{e\}$ rules out $1$. Hence
-$$|Z(G)| \in \{p,\ p^2\}.$$
-
-Suppose $|Z(G)| = p$. The centre is normal, so $G/Z(G)$ is a group, of order
-$$|G/Z(G)| = |G|/|Z(G)| = p^2/p = p.$$
-Every group of prime order is cyclic, so $G/Z(G)$ is cyclic. By [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]], a cyclic $G/Z(G)$ implies $G$ is abelian. But then every element of $G$ is central, so $Z(G) = G$ and $|Z(G)| = p^2$, contradicting $|Z(G)| = p$. Hence $|Z(G)| \neq p$.
-
-Therefore $|Z(G)| = p^2 = |G|$. Since $Z(G) \leq G$ and the two have equal finite order, $Z(G) = G$. By definition of the [[Def - Centraliser and Centre|centre]], $Z(G) = G$ means every pair of elements of $G$ commutes, i.e. $G$ is [[Def - Abelian Group|abelian]]. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $p$ be prime and $|G| = p^2$.
+>
+> Since $|G| = p^2$ is a prime power, $G$ is a [[Def - p-group|$p$-group]], and as $|G| > 1$ it is non-trivial. By [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], $Z(G) \neq \{e\}$.
+>
+> The centre $Z(G)$ is a subgroup of $G$, so by [[Thm - Lagrange's Theorem|Lagrange's theorem]] its order divides $|G| = p^2$. The divisors of $p^2$ are $1, p, p^2$, and $Z(G) \neq \{e\}$ rules out $1$. Hence
+> $$|Z(G)| \in \{p,\ p^2\}.$$
+>
+> Suppose $|Z(G)| = p$. The centre is normal, so $G/Z(G)$ is a group, of order
+> $$|G/Z(G)| = |G|/|Z(G)| = p^2/p = p.$$
+> Every group of prime order is cyclic, so $G/Z(G)$ is cyclic. By [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]], a cyclic $G/Z(G)$ implies $G$ is abelian. But then every element of $G$ is central, so $Z(G) = G$ and $|Z(G)| = p^2$, contradicting $|Z(G)| = p$. Hence $|Z(G)| \neq p$.
+>
+> Therefore $|Z(G)| = p^2 = |G|$. Since $Z(G) \leq G$ and the two have equal finite order, $Z(G) = G$. By definition of the [[Def - Centraliser and Centre|centre]], $Z(G) = G$ means every pair of elements of $G$ commutes, i.e. $G$ is [[Def - Abelian Group|abelian]]. $\blacksquare$
 
 ---
 

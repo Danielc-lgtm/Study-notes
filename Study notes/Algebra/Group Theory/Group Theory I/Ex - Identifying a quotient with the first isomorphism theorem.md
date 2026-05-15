@@ -62,26 +62,14 @@ This solution deploys the following legal operations from [[Group Theory I — �
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> Do not try to multiply cosets of matrices. To identify a quotient $G/N$ you build a homomorphism *out of* $G$. Which familiar quantity assigned to a matrix is multiplicative — that is, turns matrix products into products of numbers?
 
-Do not try to multiply cosets of matrices. To identify a quotient $G/N$ you build a homomorphism *out of* $G$. Which familiar quantity assigned to a matrix is multiplicative — that is, turns matrix products into products of numbers?
+> [!note]- Hint 2
+> The determinant satisfies $\det(AB) = \det(A)\det(B)$. Over a field $\mathbb{F}$ this makes $\det$ a homomorphism from $\mathrm{GL}_n(\mathbb{F})$ to some group of nonzero field elements. Which group, and why is the value never $0$?
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-The determinant satisfies $\det(AB) = \det(A)\det(B)$. Over a field $\mathbb{F}$ this makes $\det$ a homomorphism from $\mathrm{GL}_n(\mathbb{F})$ to some group of nonzero field elements. Which group, and why is the value never $0$?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-You now have a homomorphism $\det : \mathrm{GL}_n(\mathbb{F}) \to \mathbb{F}^\times$. Check it is *onto* (scale a single diagonal entry) and identify its *kernel* (the matrices sent to $1$). Then feed it to the [[Thm - First Isomorphism Theorem|first isomorphism theorem]]: $G/\ker\varphi \cong \operatorname{im}\varphi$.
-
-</details>
+> [!note]- Hint 3
+> You now have a homomorphism $\det : \mathrm{GL}_n(\mathbb{F}) \to \mathbb{F}^\times$. Check it is *onto* (scale a single diagonal entry) and identify its *kernel* (the matrices sent to $1$). Then feed it to the [[Thm - First Isomorphism Theorem|first isomorphism theorem]]: $G/\ker\varphi \cong \operatorname{im}\varphi$.
 
 ---
 
@@ -93,87 +81,67 @@ The plan is to exhibit one homomorphism, the determinant, and check three things
 
 The map $A \mapsto \det(A)$ sends invertible matrices to *nonzero* field elements and satisfies $\det(AB) = \det(A)\det(B)$, so it is a group homomorphism into $\mathbb{F}^\times$.
 
-<details>
-<summary>Derivation</summary>
-
-First, the codomain. A matrix $A$ is invertible over a field if and only if $\det(A) \neq 0$; concretely, $A \in \mathrm{GL}_n(\mathbb{F})$ has an inverse $A^{-1}$, and applying the multiplicativity of $\det$ to $A A^{-1} = I$ gives $\det(A)\det(A^{-1}) = \det(I) = 1$, so $\det(A)$ has a multiplicative inverse in $\mathbb{F}$ and is therefore nonzero. Hence $\det(A) \in \mathbb{F}^\times$ for every $A \in \mathrm{GL}_n(\mathbb{F})$, and the map genuinely lands in $\mathbb{F}^\times$.
-
-Next, the homomorphism property. A [[Def - Homomorphism|homomorphism]] is a map $\varphi$ with $\varphi(g_1 g_2) = \varphi(g_1)\varphi(g_2)$. The determinant satisfies exactly this — the multiplicativity of the determinant, $\det(AB) = \det(A)\det(B)$, is a standard fact of linear algebra valid over any field. The operation on the left is matrix multiplication in $\mathrm{GL}_n(\mathbb{F})$; the operation on the right is multiplication in $\mathbb{F}^\times$. So
-$$\det : \mathrm{GL}_n(\mathbb{F}) \longrightarrow \mathbb{F}^\times$$
-is a group homomorphism. (Consistency check: $\det(I) = 1$, the identity of $\mathbb{F}^\times$, as a homomorphism must satisfy.)
-
-</details>
+> [!note]- Derivation
+> First, the codomain. A matrix $A$ is invertible over a field if and only if $\det(A) \neq 0$; concretely, $A \in \mathrm{GL}_n(\mathbb{F})$ has an inverse $A^{-1}$, and applying the multiplicativity of $\det$ to $A A^{-1} = I$ gives $\det(A)\det(A^{-1}) = \det(I) = 1$, so $\det(A)$ has a multiplicative inverse in $\mathbb{F}$ and is therefore nonzero. Hence $\det(A) \in \mathbb{F}^\times$ for every $A \in \mathrm{GL}_n(\mathbb{F})$, and the map genuinely lands in $\mathbb{F}^\times$.
+>
+> Next, the homomorphism property. A [[Def - Homomorphism|homomorphism]] is a map $\varphi$ with $\varphi(g_1 g_2) = \varphi(g_1)\varphi(g_2)$. The determinant satisfies exactly this — the multiplicativity of the determinant, $\det(AB) = \det(A)\det(B)$, is a standard fact of linear algebra valid over any field. The operation on the left is matrix multiplication in $\mathrm{GL}_n(\mathbb{F})$; the operation on the right is multiplication in $\mathbb{F}^\times$. So
+> $$\det : \mathrm{GL}_n(\mathbb{F}) \longrightarrow \mathbb{F}^\times$$
+> is a group homomorphism. (Consistency check: $\det(I) = 1$, the identity of $\mathbb{F}^\times$, as a homomorphism must satisfy.)
 
 **Step 2: The determinant is surjective onto $\mathbb{F}^\times$.**
 
 Every nonzero scalar $\lambda \in \mathbb{F}^\times$ is the determinant of some invertible matrix — for instance the diagonal matrix with one entry $\lambda$ and the rest $1$. So $\operatorname{im}(\det) = \mathbb{F}^\times$.
 
-<details>
-<summary>Derivation</summary>
-
-Fix any $\lambda \in \mathbb{F}^\times$. Let $D_\lambda$ be the diagonal matrix
-$$D_\lambda = \operatorname{diag}(\lambda, 1, 1, \ldots, 1),$$
-that is, the identity matrix with its top-left entry replaced by $\lambda$. Its determinant is the product of the diagonal entries, $\det(D_\lambda) = \lambda \cdot 1 \cdots 1 = \lambda$, which is nonzero, so $D_\lambda$ is invertible and $D_\lambda \in \mathrm{GL}_n(\mathbb{F})$.
-
-Thus every $\lambda \in \mathbb{F}^\times$ equals $\det(D_\lambda)$ for an explicit element $D_\lambda$ of the domain. Therefore the image of $\det$ is all of $\mathbb{F}^\times$:
-$$\operatorname{im}(\det) = \mathbb{F}^\times,$$
-and $\det$ is surjective. (For $n = 1$ this is immediate, since $\mathrm{GL}_1(\mathbb{F}) = \mathbb{F}^\times$ and $\det$ is the identity map.)
-
-</details>
+> [!note]- Derivation
+> Fix any $\lambda \in \mathbb{F}^\times$. Let $D_\lambda$ be the diagonal matrix
+> $$D_\lambda = \operatorname{diag}(\lambda, 1, 1, \ldots, 1),$$
+> that is, the identity matrix with its top-left entry replaced by $\lambda$. Its determinant is the product of the diagonal entries, $\det(D_\lambda) = \lambda \cdot 1 \cdots 1 = \lambda$, which is nonzero, so $D_\lambda$ is invertible and $D_\lambda \in \mathrm{GL}_n(\mathbb{F})$.
+>
+> Thus every $\lambda \in \mathbb{F}^\times$ equals $\det(D_\lambda)$ for an explicit element $D_\lambda$ of the domain. Therefore the image of $\det$ is all of $\mathbb{F}^\times$:
+> $$\operatorname{im}(\det) = \mathbb{F}^\times,$$
+> and $\det$ is surjective. (For $n = 1$ this is immediate, since $\mathrm{GL}_1(\mathbb{F}) = \mathbb{F}^\times$ and $\det$ is the identity map.)
 
 **Step 3: The kernel of the determinant is exactly $\mathrm{SL}_n(\mathbb{F})$.**
 
 By the very definition of $\mathrm{SL}_n(\mathbb{F})$ as the determinant-$1$ matrices, $\ker(\det) = \mathrm{SL}_n(\mathbb{F})$. Since kernels are always normal, this already proves $\mathrm{SL}_n(\mathbb{F}) \trianglelefteq \mathrm{GL}_n(\mathbb{F})$.
 
-<details>
-<summary>Derivation</summary>
-
-The [[Def - Kernel and Image|kernel]] of $\det$ is the set of elements mapped to the identity of the codomain. The identity of $\mathbb{F}^\times$ is the number $1$, so
-$$\ker(\det) = \{\, A \in \mathrm{GL}_n(\mathbb{F}) : \det(A) = 1 \,\}.$$
-But the right-hand side is, word for word, the definition of the special linear group $\mathrm{SL}_n(\mathbb{F})$. Hence
-$$\ker(\det) = \mathrm{SL}_n(\mathbb{F}).$$
-
-Now invoke a structural fact from [[Def - Kernel and Image]]: the kernel of any group homomorphism is a *normal* subgroup of its domain. (Reason: for $A \in \ker\varphi$ and any $g$, $\varphi(g A g^{-1}) = \varphi(g)\varphi(A)\varphi(g)^{-1} = \varphi(g)\,e\,\varphi(g)^{-1} = e$, so $gAg^{-1} \in \ker\varphi$.) Applying this to $\varphi = \det$ shows immediately that
-$$\mathrm{SL}_n(\mathbb{F}) = \ker(\det) \trianglelefteq \mathrm{GL}_n(\mathbb{F}).$$
-This disposes of the normality claim with no conjugation calculation on matrices — the work was done once, generically, inside the kernel-is-normal lemma.
-
-</details>
+> [!note]- Derivation
+> The [[Def - Kernel and Image|kernel]] of $\det$ is the set of elements mapped to the identity of the codomain. The identity of $\mathbb{F}^\times$ is the number $1$, so
+> $$\ker(\det) = \{\, A \in \mathrm{GL}_n(\mathbb{F}) : \det(A) = 1 \,\}.$$
+> But the right-hand side is, word for word, the definition of the special linear group $\mathrm{SL}_n(\mathbb{F})$. Hence
+> $$\ker(\det) = \mathrm{SL}_n(\mathbb{F}).$$
+>
+> Now invoke a structural fact from [[Def - Kernel and Image]]: the kernel of any group homomorphism is a *normal* subgroup of its domain. (Reason: for $A \in \ker\varphi$ and any $g$, $\varphi(g A g^{-1}) = \varphi(g)\varphi(A)\varphi(g)^{-1} = \varphi(g)\,e\,\varphi(g)^{-1} = e$, so $gAg^{-1} \in \ker\varphi$.) Applying this to $\varphi = \det$ shows immediately that
+> $$\mathrm{SL}_n(\mathbb{F}) = \ker(\det) \trianglelefteq \mathrm{GL}_n(\mathbb{F}).$$
+> This disposes of the normality claim with no conjugation calculation on matrices — the work was done once, generically, inside the kernel-is-normal lemma.
 
 **Step 4: Apply the first isomorphism theorem.**
 
 With $\det$ a surjective homomorphism whose kernel is $\mathrm{SL}_n(\mathbb{F})$, the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] gives $\mathrm{GL}_n(\mathbb{F})/\mathrm{SL}_n(\mathbb{F}) \cong \mathbb{F}^\times$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] states that for any homomorphism $\varphi : G \to H$, the kernel is normal and
+> $$G/\ker\varphi \;\cong\; \operatorname{im}\varphi,$$
+> the isomorphism being the map $g \ker\varphi \mapsto \varphi(g)$.
+>
+> Apply it with $G = \mathrm{GL}_n(\mathbb{F})$, $H = \mathbb{F}^\times$, and $\varphi = \det$. By Step 3, $\ker(\det) = \mathrm{SL}_n(\mathbb{F})$. By Step 2, $\operatorname{im}(\det) = \mathbb{F}^\times$. Substituting,
+> $$\mathrm{GL}_n(\mathbb{F}) \big/ \mathrm{SL}_n(\mathbb{F}) \;\cong\; \mathbb{F}^\times.$$
+> Explicitly, the isomorphism sends the coset $A\,\mathrm{SL}_n(\mathbb{F})$ to the scalar $\det(A)$ — two invertible matrices lie in the same coset of $\mathrm{SL}_n(\mathbb{F})$ exactly when they have the same determinant. $\blacksquare$
 
-The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] states that for any homomorphism $\varphi : G \to H$, the kernel is normal and
-$$G/\ker\varphi \;\cong\; \operatorname{im}\varphi,$$
-the isomorphism being the map $g \ker\varphi \mapsto \varphi(g)$.
-
-Apply it with $G = \mathrm{GL}_n(\mathbb{F})$, $H = \mathbb{F}^\times$, and $\varphi = \det$. By Step 3, $\ker(\det) = \mathrm{SL}_n(\mathbb{F})$. By Step 2, $\operatorname{im}(\det) = \mathbb{F}^\times$. Substituting,
-$$\mathrm{GL}_n(\mathbb{F}) \big/ \mathrm{SL}_n(\mathbb{F}) \;\cong\; \mathbb{F}^\times.$$
-Explicitly, the isomorphism sends the coset $A\,\mathrm{SL}_n(\mathbb{F})$ to the scalar $\det(A)$ — two invertible matrices lie in the same coset of $\mathrm{SL}_n(\mathbb{F})$ exactly when they have the same determinant. $\blacksquare$
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Define $\varphi = \det : \mathrm{GL}_n(\mathbb{F}) \to \mathbb{F}^\times$, $A \mapsto \det(A)$.
-
-*This is a well-defined homomorphism into $\mathbb{F}^\times$.* If $A \in \mathrm{GL}_n(\mathbb{F})$ then $A$ is invertible, and from $\det(A)\det(A^{-1}) = \det(AA^{-1}) = \det(I) = 1$ we see $\det(A) \neq 0$, so $\det(A) \in \mathbb{F}^\times$. The multiplicativity $\det(AB) = \det(A)\det(B)$ is exactly the homomorphism property.
-
-*$\varphi$ is surjective.* Given $\lambda \in \mathbb{F}^\times$, the matrix $D_\lambda = \operatorname{diag}(\lambda, 1, \ldots, 1)$ has $\det(D_\lambda) = \lambda \neq 0$, so $D_\lambda \in \mathrm{GL}_n(\mathbb{F})$ and $\varphi(D_\lambda) = \lambda$. Hence $\operatorname{im}(\varphi) = \mathbb{F}^\times$.
-
-*The kernel is $\mathrm{SL}_n(\mathbb{F})$.* The identity of $\mathbb{F}^\times$ is $1$, so $\ker(\varphi) = \{A \in \mathrm{GL}_n(\mathbb{F}) : \det(A) = 1\} = \mathrm{SL}_n(\mathbb{F})$, by the definition of $\mathrm{SL}_n(\mathbb{F})$.
-
-*Normality.* The kernel of any homomorphism is a normal subgroup of its domain, so $\mathrm{SL}_n(\mathbb{F}) = \ker(\varphi) \trianglelefteq \mathrm{GL}_n(\mathbb{F})$.
-
-*Identification.* By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G/\ker\varphi \cong \operatorname{im}\varphi$. Substituting the kernel and image computed above,
-$$\mathrm{GL}_n(\mathbb{F}) \big/ \mathrm{SL}_n(\mathbb{F}) \;\cong\; \mathbb{F}^\times,$$
-with the isomorphism $A\,\mathrm{SL}_n(\mathbb{F}) \mapsto \det(A)$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Define $\varphi = \det : \mathrm{GL}_n(\mathbb{F}) \to \mathbb{F}^\times$, $A \mapsto \det(A)$.
+>
+> *This is a well-defined homomorphism into $\mathbb{F}^\times$.* If $A \in \mathrm{GL}_n(\mathbb{F})$ then $A$ is invertible, and from $\det(A)\det(A^{-1}) = \det(AA^{-1}) = \det(I) = 1$ we see $\det(A) \neq 0$, so $\det(A) \in \mathbb{F}^\times$. The multiplicativity $\det(AB) = \det(A)\det(B)$ is exactly the homomorphism property.
+>
+> *$\varphi$ is surjective.* Given $\lambda \in \mathbb{F}^\times$, the matrix $D_\lambda = \operatorname{diag}(\lambda, 1, \ldots, 1)$ has $\det(D_\lambda) = \lambda \neq 0$, so $D_\lambda \in \mathrm{GL}_n(\mathbb{F})$ and $\varphi(D_\lambda) = \lambda$. Hence $\operatorname{im}(\varphi) = \mathbb{F}^\times$.
+>
+> *The kernel is $\mathrm{SL}_n(\mathbb{F})$.* The identity of $\mathbb{F}^\times$ is $1$, so $\ker(\varphi) = \{A \in \mathrm{GL}_n(\mathbb{F}) : \det(A) = 1\} = \mathrm{SL}_n(\mathbb{F})$, by the definition of $\mathrm{SL}_n(\mathbb{F})$.
+>
+> *Normality.* The kernel of any homomorphism is a normal subgroup of its domain, so $\mathrm{SL}_n(\mathbb{F}) = \ker(\varphi) \trianglelefteq \mathrm{GL}_n(\mathbb{F})$.
+>
+> *Identification.* By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $G/\ker\varphi \cong \operatorname{im}\varphi$. Substituting the kernel and image computed above,
+> $$\mathrm{GL}_n(\mathbb{F}) \big/ \mathrm{SL}_n(\mathbb{F}) \;\cong\; \mathbb{F}^\times,$$
+> with the isomorphism $A\,\mathrm{SL}_n(\mathbb{F}) \mapsto \det(A)$. $\blacksquare$
 
 ---
 

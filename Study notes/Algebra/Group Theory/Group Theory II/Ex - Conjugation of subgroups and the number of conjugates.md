@@ -69,26 +69,14 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 # Hints
 
-<details>
-<summary>Hint 1</summary>
+> [!note]- Hint 1
+> For Part 1, the only mild surprise is the *set* being acted on: its elements are subgroups. So first check that $gHg^{-1}$ is genuinely a subgroup (use that conjugation by a fixed $g$ is a structure-preserving map). Then verify the two action axioms $e \cdot H = H$ and $g_1 \cdot (g_2 \cdot H) = (g_1 g_2) \cdot H$ by direct computation.
 
-For Part 1, the only mild surprise is the *set* being acted on: its elements are subgroups. So first check that $gHg^{-1}$ is genuinely a subgroup (use that conjugation by a fixed $g$ is a structure-preserving map). Then verify the two action axioms $e \cdot H = H$ and $g_1 \cdot (g_2 \cdot H) = (g_1 g_2) \cdot H$ by direct computation.
+> [!note]- Hint 2
+> For Part 2, write out what "$g$ stabilises $H$" means for this action: it means $g \cdot H = H$, i.e. $gHg^{-1} = H$. Now look at the definition of the [[Def - Normaliser|normaliser]] $N_G(H)$. Are you looking at the same set?
 
-</details>
-
-<details>
-<summary>Hint 2</summary>
-
-For Part 2, write out what "$g$ stabilises $H$" means for this action: it means $g \cdot H = H$, i.e. $gHg^{-1} = H$. Now look at the definition of the [[Def - Normaliser|normaliser]] $N_G(H)$. Are you looking at the same set?
-
-</details>
-
-<details>
-<summary>Hint 3</summary>
-
-For Part 3, the subgroups conjugate to $H$ are exactly the elements of the orbit $G \cdot H$ under this action. The stabiliser of $H$ is $N_G(H)$ by Part 2. Apply the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]]: the orbit size equals the index of the stabiliser.
-
-</details>
+> [!note]- Hint 3
+> For Part 3, the subgroups conjugate to $H$ are exactly the elements of the orbit $G \cdot H$ under this action. The stabiliser of $H$ is $N_G(H)$ by Part 2. Apply the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]]: the orbit size equals the index of the stabiliser.
 
 ---
 
@@ -100,69 +88,53 @@ The plan is: in Part 1 verify that conjugation sends subgroups to subgroups and 
 
 For a fixed $g$, the map $c_g : x \mapsto gxg^{-1}$ is an [[Def - Isomorphism|isomorphism]] $G \to G$, so it carries any subgroup $H$ to a subgroup $gHg^{-1}$; hence $g \cdot H = gHg^{-1}$ lands in $\mathcal{S}$. The identity axiom $e \cdot H = eHe^{-1} = H$ and the compatibility axiom $g_1 \cdot (g_2 \cdot H) = (g_1 g_2) \cdot H$ both hold by direct computation.
 
-<details>
-<summary>Derivation</summary>
-
-*Conjugation maps subgroups to subgroups.* Fix $g \in G$ and let $c_g : G \to G$ be the map $c_g(x) = gxg^{-1}$. It is a homomorphism, since $c_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1}) = c_g(x)c_g(y)$, and it is a bijection with inverse $c_{g^{-1}}$, because $c_g(c_{g^{-1}}(x)) = g(g^{-1}xg)g^{-1} = x$. So $c_g$ is an automorphism of $G$. The image of a [[Def - Subgroup|subgroup]] under a homomorphism is a subgroup; therefore $c_g(H) = gHg^{-1}$ is a subgroup of $G$ whenever $H$ is. (Directly: $gHg^{-1}$ contains $geg^{-1} = e$; it is closed under products, $(gh_1g^{-1})(gh_2g^{-1}) = g(h_1h_2)g^{-1}$; and under inverses, $(ghg^{-1})^{-1} = gh^{-1}g^{-1}$.) Hence $g \cdot H := gHg^{-1}$ is a well-defined element of $\mathcal{S}$, so the rule is a map $G \times \mathcal{S} \to \mathcal{S}$.
-
-*Identity axiom.* $e \cdot H = eHe^{-1} = \{ehe^{-1} : h \in H\} = \{h : h \in H\} = H$.
-
-*Compatibility axiom.* For $g_1, g_2 \in G$,
-$$g_1 \cdot (g_2 \cdot H) = g_1 (g_2 H g_2^{-1}) g_1^{-1} = (g_1 g_2)\, H\, (g_2^{-1} g_1^{-1}) = (g_1 g_2)\, H\, (g_1 g_2)^{-1} = (g_1 g_2) \cdot H,$$
-using $(g_1 g_2)^{-1} = g_2^{-1} g_1^{-1}$. Both axioms hold, so $(g, H) \mapsto gHg^{-1}$ is an [[Def - Group Action|action]] of $G$ on the set $\mathcal{S}$ of subgroups.
-
-</details>
+> [!note]- Derivation
+> *Conjugation maps subgroups to subgroups.* Fix $g \in G$ and let $c_g : G \to G$ be the map $c_g(x) = gxg^{-1}$. It is a homomorphism, since $c_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1}) = c_g(x)c_g(y)$, and it is a bijection with inverse $c_{g^{-1}}$, because $c_g(c_{g^{-1}}(x)) = g(g^{-1}xg)g^{-1} = x$. So $c_g$ is an automorphism of $G$. The image of a [[Def - Subgroup|subgroup]] under a homomorphism is a subgroup; therefore $c_g(H) = gHg^{-1}$ is a subgroup of $G$ whenever $H$ is. (Directly: $gHg^{-1}$ contains $geg^{-1} = e$; it is closed under products, $(gh_1g^{-1})(gh_2g^{-1}) = g(h_1h_2)g^{-1}$; and under inverses, $(ghg^{-1})^{-1} = gh^{-1}g^{-1}$.) Hence $g \cdot H := gHg^{-1}$ is a well-defined element of $\mathcal{S}$, so the rule is a map $G \times \mathcal{S} \to \mathcal{S}$.
+>
+> *Identity axiom.* $e \cdot H = eHe^{-1} = \{ehe^{-1} : h \in H\} = \{h : h \in H\} = H$.
+>
+> *Compatibility axiom.* For $g_1, g_2 \in G$,
+> $$g_1 \cdot (g_2 \cdot H) = g_1 (g_2 H g_2^{-1}) g_1^{-1} = (g_1 g_2)\, H\, (g_2^{-1} g_1^{-1}) = (g_1 g_2)\, H\, (g_1 g_2)^{-1} = (g_1 g_2) \cdot H,$$
+> using $(g_1 g_2)^{-1} = g_2^{-1} g_1^{-1}$. Both axioms hold, so $(g, H) \mapsto gHg^{-1}$ is an [[Def - Group Action|action]] of $G$ on the set $\mathcal{S}$ of subgroups.
 
 **Step 2 (Part 2): The stabiliser of $H$ is the normaliser $N_G(H)$.**
 
 By definition the stabiliser is $G_H = \{g \in G : g \cdot H = H\}$. Since $g \cdot H = gHg^{-1}$, the defining condition is $gHg^{-1} = H$ — and this is exactly the defining condition of the [[Def - Normaliser|normaliser]]. Hence $G_H = N_G(H)$.
 
-<details>
-<summary>Derivation</summary>
-
-For the conjugation action on $\mathcal{S}$, the [[Def - Orbit and Stabiliser|stabiliser]] of the point $H$ is
-$$G_H = \{g \in G : g \cdot H = H\} = \{g \in G : gHg^{-1} = H\},$$
-substituting the definition $g \cdot H = gHg^{-1}$. The [[Def - Normaliser|normaliser]] of $H$ is, by definition,
-$$N_G(H) = \{g \in G : gHg^{-1} = H\}.$$
-The two sets are described by the identical condition, so
-$$G_H = N_G(H).$$
-This is not a theorem requiring proof; it is the recognition that the normaliser *was defined* to be the stabiliser of $H$ under conjugation. As a free consequence, $N_G(H)$ is a [[Def - Subgroup|subgroup]] of $G$ — every stabiliser is — which is the cleanest reason the normaliser is a subgroup at all.
-
-</details>
+> [!note]- Derivation
+> For the conjugation action on $\mathcal{S}$, the [[Def - Orbit and Stabiliser|stabiliser]] of the point $H$ is
+> $$G_H = \{g \in G : g \cdot H = H\} = \{g \in G : gHg^{-1} = H\},$$
+> substituting the definition $g \cdot H = gHg^{-1}$. The [[Def - Normaliser|normaliser]] of $H$ is, by definition,
+> $$N_G(H) = \{g \in G : gHg^{-1} = H\}.$$
+> The two sets are described by the identical condition, so
+> $$G_H = N_G(H).$$
+> This is not a theorem requiring proof; it is the recognition that the normaliser *was defined* to be the stabiliser of $H$ under conjugation. As a free consequence, $N_G(H)$ is a [[Def - Subgroup|subgroup]] of $G$ — every stabiliser is — which is the cleanest reason the normaliser is a subgroup at all.
 
 **Step 3 (Part 3): The number of conjugates of $H$ is $|G : N_G(H)|$.**
 
 The subgroups conjugate to $H$ are precisely the elements of the orbit $G \cdot H$. By the orbit-stabiliser theorem the orbit size equals the index of the stabiliser, and the stabiliser is $N_G(H)$ by Step 2. Hence the number of conjugates of $H$ is $|G : N_G(H)|$.
 
-<details>
-<summary>Derivation</summary>
+> [!note]- Derivation
+> A subgroup $H'$ is, by definition, **conjugate** to $H$ when $H' = gHg^{-1}$ for some $g \in G$ — that is, when $H' = g \cdot H$ for some $g$. The set of all such $H'$ is exactly the [[Def - Orbit and Stabiliser|orbit]]
+> $$G \cdot H = \{g \cdot H : g \in G\} = \{gHg^{-1} : g \in G\}.$$
+> So "the number of subgroups conjugate to $H$" is $|G \cdot H|$.
+>
+> The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], applied to the finite group $G$ acting on $\mathcal{S}$, gives a bijection $gG_H \mapsto g \cdot H$ between the left cosets of the stabiliser $G_H$ and the orbit $G \cdot H$; counting,
+> $$|G \cdot H| = |G : G_H|.$$
+> By Step 2, $G_H = N_G(H)$. Substituting,
+> $$\#\{\text{subgroups conjugate to } H\} = |G \cdot H| = |G : N_G(H)|. \qquad \blacksquare$$
+> In particular this number divides $|G|$, and it equals $1$ exactly when $N_G(H) = G$, i.e. exactly when $H$ is [[Def - Normal Subgroup|normal]] — a normal subgroup is its own only conjugate.
 
-A subgroup $H'$ is, by definition, **conjugate** to $H$ when $H' = gHg^{-1}$ for some $g \in G$ — that is, when $H' = g \cdot H$ for some $g$. The set of all such $H'$ is exactly the [[Def - Orbit and Stabiliser|orbit]]
-$$G \cdot H = \{g \cdot H : g \in G\} = \{gHg^{-1} : g \in G\}.$$
-So "the number of subgroups conjugate to $H$" is $|G \cdot H|$.
-
-The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], applied to the finite group $G$ acting on $\mathcal{S}$, gives a bijection $gG_H \mapsto g \cdot H$ between the left cosets of the stabiliser $G_H$ and the orbit $G \cdot H$; counting,
-$$|G \cdot H| = |G : G_H|.$$
-By Step 2, $G_H = N_G(H)$. Substituting,
-$$\#\{\text{subgroups conjugate to } H\} = |G \cdot H| = |G : N_G(H)|. \qquad \blacksquare$$
-In particular this number divides $|G|$, and it equals $1$ exactly when $N_G(H) = G$, i.e. exactly when $H$ is [[Def - Normal Subgroup|normal]] — a normal subgroup is its own only conjugate.
-
-</details>
-
-<details>
-<summary><strong>Complete formal solution</strong></summary>
-
-Let $G$ be a group and $\mathcal{S}$ its set of subgroups.
-
-*Part 1.* Fix $g \in G$. The map $c_g(x) = gxg^{-1}$ is an automorphism of $G$: it is a homomorphism, since $c_g(xy) = (gxg^{-1})(gyg^{-1})$, and a bijection with inverse $c_{g^{-1}}$. The image of a subgroup under a homomorphism is a subgroup, so $gHg^{-1} \in \mathcal{S}$ for every $H \in \mathcal{S}$; thus $(g, H) \mapsto gHg^{-1}$ is a map $G \times \mathcal{S} \to \mathcal{S}$. It satisfies $e \cdot H = eHe^{-1} = H$ and
-$$g_1 \cdot (g_2 \cdot H) = g_1(g_2Hg_2^{-1})g_1^{-1} = (g_1g_2)H(g_1g_2)^{-1} = (g_1g_2) \cdot H,$$
-so it is an action of $G$ on $\mathcal{S}$.
-
-*Part 2.* The stabiliser of $H$ is $G_H = \{g : g \cdot H = H\} = \{g : gHg^{-1} = H\}$, which is verbatim the definition of the normaliser $N_G(H)$. Hence $G_H = N_G(H)$.
-
-*Part 3.* The subgroups conjugate to $H$ are the elements of the orbit $G \cdot H = \{gHg^{-1} : g \in G\}$. For finite $G$, the orbit-stabiliser theorem gives $|G \cdot H| = |G : G_H|$. By Part 2, $G_H = N_G(H)$, so the number of conjugates of $H$ is $|G : N_G(H)|$. $\blacksquare$
-
-</details>
+> [!note]- Complete formal solution
+> Let $G$ be a group and $\mathcal{S}$ its set of subgroups.
+>
+> *Part 1.* Fix $g \in G$. The map $c_g(x) = gxg^{-1}$ is an automorphism of $G$: it is a homomorphism, since $c_g(xy) = (gxg^{-1})(gyg^{-1})$, and a bijection with inverse $c_{g^{-1}}$. The image of a subgroup under a homomorphism is a subgroup, so $gHg^{-1} \in \mathcal{S}$ for every $H \in \mathcal{S}$; thus $(g, H) \mapsto gHg^{-1}$ is a map $G \times \mathcal{S} \to \mathcal{S}$. It satisfies $e \cdot H = eHe^{-1} = H$ and
+> $$g_1 \cdot (g_2 \cdot H) = g_1(g_2Hg_2^{-1})g_1^{-1} = (g_1g_2)H(g_1g_2)^{-1} = (g_1g_2) \cdot H,$$
+> so it is an action of $G$ on $\mathcal{S}$.
+>
+> *Part 2.* The stabiliser of $H$ is $G_H = \{g : g \cdot H = H\} = \{g : gHg^{-1} = H\}$, which is verbatim the definition of the normaliser $N_G(H)$. Hence $G_H = N_G(H)$.
+>
+> *Part 3.* The subgroups conjugate to $H$ are the elements of the orbit $G \cdot H = \{gHg^{-1} : g \in G\}$. For finite $G$, the orbit-stabiliser theorem gives $|G \cdot H| = |G : G_H|$. By Part 2, $G_H = N_G(H)$, so the number of conjugates of $H$ is $|G : N_G(H)|$. $\blacksquare$
 
 > [!example] Worked instance — Sylow subgroups
 > The conjugate count $|G : N_G(H)|$ is the formula behind the third Sylow theorem. If $P$ is a Sylow $p$-subgroup of a finite group $G$, then all Sylow $p$-subgroups are conjugate, so their number is $n_p = |G : N_G(P)|$. Since $P \leq N_G(P) \leq G$, this index divides $|G : P|$, which is the part of $|G|$ coprime to $p$. That single divisibility fact — extracted from this exercise's formula — is one of the two pillars of Sylow counting, the other being the congruence $n_p \equiv 1 \pmod p$.

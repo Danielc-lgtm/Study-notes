@@ -124,95 +124,67 @@ Do not build an isomorphism by hand. Instead, find a single element of $C_m \tim
 
 Each lemma below is independently practiceable in roughly five minutes.
 
-<details>
-<summary><strong>Lemma 1: The order of a pair is the lcm of the coordinate orders</strong></summary>
+> [!note]- Lemma 1: The order of a pair is the lcm of the coordinate orders
+> **Statement:** In a [[Def - Direct Product|direct product]] $A \times B$, an element $(a, b)$ has order $\operatorname{ord}(a, b) = \operatorname{lcm}(\operatorname{ord}(a),\ \operatorname{ord}(b))$.
+>
+> **Hint:** The operation is componentwise, so $(a,b)^k = (a^k, b^k)$; this equals the identity exactly when both coordinates do, which is a "divisible by both orders" condition.
+>
+> **Why needed:** It is subgoal 2 — it converts the order of the candidate generator $(g, h)$ into an arithmetic quantity, the least common multiple, before coprimality is ever invoked.
+>
+> > [!note]- Full proof
+> > Write $a$ for $\operatorname{ord}(a)$ and $b$ for $\operatorname{ord}(b)$ in this proof (abuse of notation), and let $k$ be any positive integer. Because the operation in $A \times B$ is componentwise,
+> > $$(a, b)^k = (a^k,\ b^k).$$
+> > This equals the identity $(e_A, e_B)$ if and only if $a^k = e_A$ and $b^k = e_B$ simultaneously. Now $a^k = e_A$ holds exactly when $\operatorname{ord}(a) \mid k$, and likewise $b^k = e_B$ holds exactly when $\operatorname{ord}(b) \mid k$. So $(a,b)^k = (e_A, e_B)$ if and only if $k$ is a common multiple of $\operatorname{ord}(a)$ and $\operatorname{ord}(b)$. The order of $(a, b)$ is the *least* positive such $k$, which is by definition $\operatorname{lcm}(\operatorname{ord}(a), \operatorname{ord}(b))$.
 
-**Statement:** In a [[Def - Direct Product|direct product]] $A \times B$, an element $(a, b)$ has order $\operatorname{ord}(a, b) = \operatorname{lcm}(\operatorname{ord}(a),\ \operatorname{ord}(b))$.
+> [!note]- Lemma 2: Coprime means the lcm is the product
+> **Statement:** For positive integers $m, n$, one always has $\gcd(m, n) \cdot \operatorname{lcm}(m, n) = mn$. Consequently $\gcd(m, n) = 1$ if and only if $\operatorname{lcm}(m, n) = mn$.
+>
+> **Hint:** Compare prime factorisations: at each prime, the gcd takes the minimum exponent and the lcm the maximum, and $\min + \max = $ sum of the two exponents.
+>
+> **Why needed:** It is subgoal 3 — the single point at which the coprimality hypothesis enters, upgrading $\operatorname{lcm}(m,n)$ to the full product $mn$.
+>
+> > [!note]- Full proof
+> > Factor $m = \prod_p p^{\alpha_p}$ and $n = \prod_p p^{\beta_p}$ over all primes $p$ (exponents zero for primes not dividing the number). Then
+> > $$\gcd(m, n) = \prod_p p^{\min(\alpha_p, \beta_p)}, \qquad \operatorname{lcm}(m, n) = \prod_p p^{\max(\alpha_p, \beta_p)}.$$
+> > For every prime $p$, the identity $\min(\alpha_p, \beta_p) + \max(\alpha_p, \beta_p) = \alpha_p + \beta_p$ holds (whichever of the two exponents is larger, the min picks up the other). Multiplying over all primes,
+> > $$\gcd(m, n) \cdot \operatorname{lcm}(m, n) = \prod_p p^{\alpha_p + \beta_p} = \Bigl(\prod_p p^{\alpha_p}\Bigr)\Bigl(\prod_p p^{\beta_p}\Bigr) = mn.$$
+> > Hence $\operatorname{lcm}(m, n) = mn / \gcd(m, n)$, which equals $mn$ exactly when $\gcd(m, n) = 1$.
 
-**Hint:** The operation is componentwise, so $(a,b)^k = (a^k, b^k)$; this equals the identity exactly when both coordinates do, which is a "divisible by both orders" condition.
-
-**Why needed:** It is subgoal 2 — it converts the order of the candidate generator $(g, h)$ into an arithmetic quantity, the least common multiple, before coprimality is ever invoked.
-
-<details>
-<summary>Full proof</summary>
-
-Write $a$ for $\operatorname{ord}(a)$ and $b$ for $\operatorname{ord}(b)$ in this proof (abuse of notation), and let $k$ be any positive integer. Because the operation in $A \times B$ is componentwise,
-$$(a, b)^k = (a^k,\ b^k).$$
-This equals the identity $(e_A, e_B)$ if and only if $a^k = e_A$ and $b^k = e_B$ simultaneously. Now $a^k = e_A$ holds exactly when $\operatorname{ord}(a) \mid k$, and likewise $b^k = e_B$ holds exactly when $\operatorname{ord}(b) \mid k$. So $(a,b)^k = (e_A, e_B)$ if and only if $k$ is a common multiple of $\operatorname{ord}(a)$ and $\operatorname{ord}(b)$. The order of $(a, b)$ is the *least* positive such $k$, which is by definition $\operatorname{lcm}(\operatorname{ord}(a), \operatorname{ord}(b))$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 2: Coprime means the lcm is the product</strong></summary>
-
-**Statement:** For positive integers $m, n$, one always has $\gcd(m, n) \cdot \operatorname{lcm}(m, n) = mn$. Consequently $\gcd(m, n) = 1$ if and only if $\operatorname{lcm}(m, n) = mn$.
-
-**Hint:** Compare prime factorisations: at each prime, the gcd takes the minimum exponent and the lcm the maximum, and $\min + \max = $ sum of the two exponents.
-
-**Why needed:** It is subgoal 3 — the single point at which the coprimality hypothesis enters, upgrading $\operatorname{lcm}(m,n)$ to the full product $mn$.
-
-<details>
-<summary>Full proof</summary>
-
-Factor $m = \prod_p p^{\alpha_p}$ and $n = \prod_p p^{\beta_p}$ over all primes $p$ (exponents zero for primes not dividing the number). Then
-$$\gcd(m, n) = \prod_p p^{\min(\alpha_p, \beta_p)}, \qquad \operatorname{lcm}(m, n) = \prod_p p^{\max(\alpha_p, \beta_p)}.$$
-For every prime $p$, the identity $\min(\alpha_p, \beta_p) + \max(\alpha_p, \beta_p) = \alpha_p + \beta_p$ holds (whichever of the two exponents is larger, the min picks up the other). Multiplying over all primes,
-$$\gcd(m, n) \cdot \operatorname{lcm}(m, n) = \prod_p p^{\alpha_p + \beta_p} = \Bigl(\prod_p p^{\alpha_p}\Bigr)\Bigl(\prod_p p^{\beta_p}\Bigr) = mn.$$
-Hence $\operatorname{lcm}(m, n) = mn / \gcd(m, n)$, which equals $mn$ exactly when $\gcd(m, n) = 1$.
-
-</details>
-
-</details>
-
-<details>
-<summary><strong>Lemma 3: An element of order $|G|$ makes $G$ cyclic</strong></summary>
-
-**Statement:** If a finite group $G$ has an element $x$ with $\operatorname{ord}(x) = |G|$, then $G$ is cyclic, generated by $x$; in particular $G \cong C_{|G|}$.
-
-**Hint:** The powers $x^0, x^1, \dots, x^{|G|-1}$ are distinct, and there are $|G|$ of them.
-
-**Why needed:** It is subgoal 4 — it converts "there exists an element of order $mn$ in a group of order $mn$" into "the group is $C_{mn}$", finishing the proof.
-
-<details>
-<summary>Full proof</summary>
-
-Let $N = |G|$ and suppose $\operatorname{ord}(x) = N$. The powers $x^0, x^1, \dots, x^{N-1}$ are pairwise distinct: if $x^i = x^j$ with $0 \le j \le i \le N-1$ then $x^{i-j} = e$ with $0 \le i - j < N$, and by minimality of $N = \operatorname{ord}(x)$ as the least positive integer with $x^N = e$, this forces $i - j = 0$. So $\langle x \rangle$ contains at least $N$ distinct elements; since $\langle x \rangle \subseteq G$ and $|G| = N$, we get $\langle x \rangle = G$, so $G$ is cyclic with generator $x$. Any two cyclic groups of the same finite order are isomorphic — the map $x^k \mapsto k$ identifies $G$ with $\mathbb{Z}/N\mathbb{Z} = C_N$ — so $G \cong C_N$.
-
-</details>
-
-</details>
+> [!note]- Lemma 3: An element of order $|G|$ makes $G$ cyclic
+> **Statement:** If a finite group $G$ has an element $x$ with $\operatorname{ord}(x) = |G|$, then $G$ is cyclic, generated by $x$; in particular $G \cong C_{|G|}$.
+>
+> **Hint:** The powers $x^0, x^1, \dots, x^{|G|-1}$ are distinct, and there are $|G|$ of them.
+>
+> **Why needed:** It is subgoal 4 — it converts "there exists an element of order $mn$ in a group of order $mn$" into "the group is $C_{mn}$", finishing the proof.
+>
+> > [!note]- Full proof
+> > Let $N = |G|$ and suppose $\operatorname{ord}(x) = N$. The powers $x^0, x^1, \dots, x^{N-1}$ are pairwise distinct: if $x^i = x^j$ with $0 \le j \le i \le N-1$ then $x^{i-j} = e$ with $0 \le i - j < N$, and by minimality of $N = \operatorname{ord}(x)$ as the least positive integer with $x^N = e$, this forces $i - j = 0$. So $\langle x \rangle$ contains at least $N$ distinct elements; since $\langle x \rangle \subseteq G$ and $|G| = N$, we get $\langle x \rangle = G$, so $G$ is cyclic with generator $x$. Any two cyclic groups of the same finite order are isomorphic — the map $x^k \mapsto k$ identifies $G$ with $\mathbb{Z}/N\mathbb{Z} = C_N$ — so $G \cong C_N$.
 
 ---
 
 # Formal Proof
 
-<details>
-<summary><strong>Complete formal proof</strong></summary>
-
-**Theorem.** If $m, n$ are positive integers with $\gcd(m, n) = 1$, then $C_{mn} \cong C_m \times C_n$.
-
-*Proof.* It suffices to find an element of order $mn$ in the group $C_m \times C_n$. For then, since $C_m \times C_n$ has order $|C_m| \cdot |C_n| = mn$, an element of order $mn$ generates the whole group, so $C_m \times C_n$ is cyclic of order $mn$, hence isomorphic to $C_{mn}$.
-
-Let $g$ be a generator of $C_m$, so $\operatorname{ord}(g) = m$, and let $h$ be a generator of $C_n$, so $\operatorname{ord}(h) = n$. Consider the element $(g, h) \in C_m \times C_n$, and let $k = \operatorname{ord}(g, h)$ be its order.
-
-Since the operation in the [[Def - Direct Product|direct product]] is componentwise, for any integer $j$ we have $(g, h)^j = (g^j, h^j)$. In particular $(g, h)^k = (e, e)$ gives $(g^k, h^k) = (e, e)$, so
-$$g^k = e \qquad \text{and} \qquad h^k = e.$$
-Because $\operatorname{ord}(g) = m$, the equation $g^k = e$ forces $m \mid k$; because $\operatorname{ord}(h) = n$, the equation $h^k = e$ forces $n \mid k$. Thus $k$ is a common multiple of $m$ and $n$, so $\operatorname{lcm}(m, n) \mid k$.
-
-Conversely, $(g, h)^{\operatorname{lcm}(m,n)} = (g^{\operatorname{lcm}(m,n)}, h^{\operatorname{lcm}(m,n)}) = (e, e)$, since $\operatorname{lcm}(m,n)$ is a multiple of both $m = \operatorname{ord}(g)$ and $n = \operatorname{ord}(h)$. Hence $k \mid \operatorname{lcm}(m, n)$. Together with $\operatorname{lcm}(m,n) \mid k$ this gives
-$$k = \operatorname{ord}(g, h) = \operatorname{lcm}(m, n).$$
-
-Now invoke the hypothesis. Since $\gcd(m, n) = 1$ and $\gcd(m, n) \cdot \operatorname{lcm}(m, n) = mn$ for all positive integers, we obtain $\operatorname{lcm}(m, n) = mn$. Therefore
-$$\operatorname{ord}(g, h) = mn.$$
-
-The group $C_m \times C_n$ has order $mn$ and contains the element $(g, h)$ of order $mn$. The $mn$ powers $(g,h)^0, (g,h)^1, \dots, (g,h)^{mn-1}$ are pairwise distinct (a repeat $(g,h)^i = (g,h)^j$ with $i > j$ would give an element power equal to the identity with exponent strictly between $0$ and $mn$, contradicting that the order is $mn$), so they exhaust the group. Hence $C_m \times C_n$ is cyclic of order $mn$, and any cyclic group of order $mn$ is isomorphic to $C_{mn}$. Therefore
-$$C_{mn} \cong C_m \times C_n. \qquad\blacksquare$$
-
-**Remark (the iterated form).** If $n = p_1^{a_1} \cdots p_k^{a_k}$ with the $p_i$ distinct primes, then the prime powers $p_i^{a_i}$ are pairwise coprime, and applying the theorem repeatedly gives $C_n \cong C_{p_1^{a_1}} \times \cdots \times C_{p_k^{a_k}}$. This is the form in which the theorem feeds the [[Thm - Classification of Finite Abelian Groups|classification of finite abelian groups]], converting between its invariant-factor and elementary-divisor presentations.
-
-</details>
+> [!note]- Complete formal proof
+> **Theorem.** If $m, n$ are positive integers with $\gcd(m, n) = 1$, then $C_{mn} \cong C_m \times C_n$.
+>
+> *Proof.* It suffices to find an element of order $mn$ in the group $C_m \times C_n$. For then, since $C_m \times C_n$ has order $|C_m| \cdot |C_n| = mn$, an element of order $mn$ generates the whole group, so $C_m \times C_n$ is cyclic of order $mn$, hence isomorphic to $C_{mn}$.
+>
+> Let $g$ be a generator of $C_m$, so $\operatorname{ord}(g) = m$, and let $h$ be a generator of $C_n$, so $\operatorname{ord}(h) = n$. Consider the element $(g, h) \in C_m \times C_n$, and let $k = \operatorname{ord}(g, h)$ be its order.
+>
+> Since the operation in the [[Def - Direct Product|direct product]] is componentwise, for any integer $j$ we have $(g, h)^j = (g^j, h^j)$. In particular $(g, h)^k = (e, e)$ gives $(g^k, h^k) = (e, e)$, so
+> $$g^k = e \qquad \text{and} \qquad h^k = e.$$
+> Because $\operatorname{ord}(g) = m$, the equation $g^k = e$ forces $m \mid k$; because $\operatorname{ord}(h) = n$, the equation $h^k = e$ forces $n \mid k$. Thus $k$ is a common multiple of $m$ and $n$, so $\operatorname{lcm}(m, n) \mid k$.
+>
+> Conversely, $(g, h)^{\operatorname{lcm}(m,n)} = (g^{\operatorname{lcm}(m,n)}, h^{\operatorname{lcm}(m,n)}) = (e, e)$, since $\operatorname{lcm}(m,n)$ is a multiple of both $m = \operatorname{ord}(g)$ and $n = \operatorname{ord}(h)$. Hence $k \mid \operatorname{lcm}(m, n)$. Together with $\operatorname{lcm}(m,n) \mid k$ this gives
+> $$k = \operatorname{ord}(g, h) = \operatorname{lcm}(m, n).$$
+>
+> Now invoke the hypothesis. Since $\gcd(m, n) = 1$ and $\gcd(m, n) \cdot \operatorname{lcm}(m, n) = mn$ for all positive integers, we obtain $\operatorname{lcm}(m, n) = mn$. Therefore
+> $$\operatorname{ord}(g, h) = mn.$$
+>
+> The group $C_m \times C_n$ has order $mn$ and contains the element $(g, h)$ of order $mn$. The $mn$ powers $(g,h)^0, (g,h)^1, \dots, (g,h)^{mn-1}$ are pairwise distinct (a repeat $(g,h)^i = (g,h)^j$ with $i > j$ would give an element power equal to the identity with exponent strictly between $0$ and $mn$, contradicting that the order is $mn$), so they exhaust the group. Hence $C_m \times C_n$ is cyclic of order $mn$, and any cyclic group of order $mn$ is isomorphic to $C_{mn}$. Therefore
+> $$C_{mn} \cong C_m \times C_n. \qquad\blacksquare$$
+>
+> **Remark (the iterated form).** If $n = p_1^{a_1} \cdots p_k^{a_k}$ with the $p_i$ distinct primes, then the prime powers $p_i^{a_i}$ are pairwise coprime, and applying the theorem repeatedly gives $C_n \cong C_{p_1^{a_1}} \times \cdots \times C_{p_k^{a_k}}$. This is the form in which the theorem feeds the [[Thm - Classification of Finite Abelian Groups|classification of finite abelian groups]], converting between its invariant-factor and elementary-divisor presentations.
 
 ---
 
