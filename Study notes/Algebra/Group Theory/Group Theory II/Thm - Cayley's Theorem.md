@@ -141,6 +141,7 @@ $$g_1\cdot(g_2\cdot x) = g_1\cdot(g_2 x) = g_1(g_2 x) = (g_1 g_2)x = (g_1 g_2)\c
 the middle equality being associativity of the group operation. Both axioms hold, so $g\cdot x = gx$ is an action.
 
 </details>
+
 </details>
 
 <details>
@@ -160,6 +161,7 @@ $$g = ge = g\cdot e = e.$$
 So the only element of the kernel is $e$, and $\ker\rho = \{e\}$.
 
 </details>
+
 </details>
 
 <details>
@@ -177,6 +179,7 @@ So the only element of the kernel is $e$, and $\ker\rho = \{e\}$.
 The first isomorphism theorem gives an isomorphism $G/\ker\varphi \xrightarrow{\sim} \operatorname{im}\varphi$ induced by $\varphi$. When $\ker\varphi = \{e\}$, the quotient $G/\{e\}$ is canonically isomorphic to $G$ (the cosets $g\{e\} = \{g\}$ are the singletons). Composing, $G \cong G/\{e\} \cong \operatorname{im}\varphi$, and the composite is $\varphi$ with codomain restricted to its image. Hence $\varphi : G \to \operatorname{im}\varphi$ is an isomorphism.
 
 </details>
+
 </details>
 
 ---

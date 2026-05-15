@@ -90,7 +90,7 @@ A relabelling reproduces $\sigma$ in two independent ways. (i) It may send each 
 
 The strategy is to count the centraliser $C_{S_n}(\sigma)$ — the permutations that "relabel $\sigma$ back to itself" — and then divide $n!$ by it using orbit-stabiliser.
 
-**Step 1: A permutation $\tau$ centralises $\sigma$ iff relabelling $\sigma$'s cycle notation by $\tau$ reproduces $\sigma$.**
+**Step 1: A permutation $\tau$ centralises $\sigma$ if and only if relabelling $\sigma$'s cycle notation by $\tau$ reproduces $\sigma$.**
 
 By the relabelling rule for conjugation, $\tau\sigma\tau^{-1} = \sigma$ holds exactly when applying $\tau$ to every entry of $\sigma$'s disjoint-cycle notation yields a cycle notation for the same $\sigma$.
 

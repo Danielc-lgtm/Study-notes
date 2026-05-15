@@ -73,7 +73,7 @@ Conversely, take a subgroup $L$ of $G$ that contains $K$. Since $L$ contains $K$
 
 That is the whole theorem. Subgroups of $G$ containing $K$ are precisely the **block-unions**, and block-unions are precisely the things that have a well-defined image in $G/K$ and a well-defined preimage from $G/K$. The two operations "take image" and "take preimage" are inverse because forming the union of a set of blocks and then asking which blocks you used returns the same set of blocks. The condition "$L$ contains $K$" is not a technicality — it is *exactly* the condition that $L$ respects the block structure, and only block-respecting subgroups can correspond to anything downstairs. A subgroup not containing $K$ would cut across cosets, and its image in $G/K$ would forget that, so the correspondence would not be injective without the containment restriction.
 
-Once you see subgroups-above-$K$ as block-unions, the three preservation properties are obvious too. *Inclusion*: one union of blocks sits inside another iff its block-set does — set containment is set containment. *Index*: the cosets of $L$ in $G$ are themselves unions of blocks, and they biject with the cosets of $L/K$ in $G/K$, so the counts agree. *Normality*: conjugation in $G$ permutes the blocks the same way conjugation in $G/K$ does (because $\pi$ is a surjective homomorphism), so $L$ is conjugation-invariant in $G$ exactly when $L/K$ is conjugation-invariant in $G/K$.
+Once you see subgroups-above-$K$ as block-unions, the three preservation properties are obvious too. *Inclusion*: one union of blocks sits inside another if and only if its block-set does — set containment is set containment. *Index*: the cosets of $L$ in $G$ are themselves unions of blocks, and they biject with the cosets of $L/K$ in $G/K$, so the counts agree. *Normality*: conjugation in $G$ permutes the blocks the same way conjugation in $G/K$ does (because $\pi$ is a surjective homomorphism), so $L$ is conjugation-invariant in $G$ exactly when $L/K$ is conjugation-invariant in $G/K$.
 
 ---
 
@@ -86,7 +86,7 @@ The conceptual crux is *why the containment $K \leq L$ is exactly the right rest
 # Rederivation Scaffold
 
 **High-level strategy:**
-Work with the quotient map $\pi : G \to G/K$. Show "image" and "preimage" land in the right places, show they are mutually inverse (so the correspondence is a bijection), then verify the three preservation properties by unwinding definitions. The recurring lemma is that a subgroup of $G$ contains $K$ iff it is a union of $K$-cosets.
+Work with the quotient map $\pi : G \to G/K$. Show "image" and "preimage" land in the right places, show they are mutually inverse (so the correspondence is a bijection), then verify the three preservation properties by unwinding definitions. The recurring lemma is that a subgroup of $G$ contains $K$ if and only if it is a union of $K$-cosets.
 
 **Subgoal decomposition:**
 
@@ -119,7 +119,7 @@ Work with the quotient map $\pi : G \to G/K$. Show "image" and "preimage" land i
 # Lemma Decomposition
 
 <details>
-<summary><strong>Lemma 1: A subgroup of $G$ contains $K$ iff it is a union of $K$-cosets</strong></summary>
+<summary><strong>Lemma 1: A subgroup of $G$ contains $K$ if and only if it is a union of $K$-cosets</strong></summary>
 
 **Statement:** Let $K \trianglelefteq G$ and $L \leq G$. Then $K \subseteq L$ if and only if $L$ is a union of left cosets of $K$, equivalently $L = \pi^{-1}(\pi(L))$.
 
@@ -135,6 +135,7 @@ Work with the quotient map $\pi : G \to G/K$. Show "image" and "preimage" land i
 ($\Leftarrow$) Suppose $L$ is a union of $K$-cosets and $L \leq G$. Since $e \in L$, the coset $eK = K$ is one of the cosets comprising $L$, so $K \subseteq L$.
 
 </details>
+
 </details>
 
 <details>
@@ -154,6 +155,7 @@ Work with the quotient map $\pi : G \to G/K$. Show "image" and "preimage" land i
 *Preimage.* $\pi^{-1}(X)$ contains $e_G$ since $\pi(e_G) = e_{G'} \in X$. For $a, b \in \pi^{-1}(X)$, $\pi(ab^{-1}) = \pi(a)\pi(b)^{-1} \in X$ (as $X$ is a subgroup), so $ab^{-1} \in \pi^{-1}(X)$. By the subgroup criterion $\pi^{-1}(X) \leq G$. Finally, if $g \in \ker\pi$ then $\pi(g) = e_{G'} \in X$, so $g \in \pi^{-1}(X)$; hence $\ker\pi \subseteq \pi^{-1}(X)$.
 
 </details>
+
 </details>
 
 <details>
@@ -175,6 +177,7 @@ using that $\pi$ is a homomorphism and $gLg^{-1} = L$. So $L/K \trianglelefteq G
 ($\Leftarrow$) Suppose $L/K \trianglelefteq G/K$. Let $g \in G$. Then $\pi(gLg^{-1}) = \pi(g)\,(L/K)\,\pi(g)^{-1} = L/K = \pi(L)$. Applying $\pi^{-1}$ and using Lemma 1 (both $gLg^{-1}$ and $L$ contain $K$ — note $gKg^{-1} = K$ since $K \trianglelefteq G$, so $K \subseteq gLg^{-1}$): $gLg^{-1} = \pi^{-1}(\pi(gLg^{-1})) = \pi^{-1}(\pi(L)) = L$. So $L \trianglelefteq G$.
 
 </details>
+
 </details>
 
 <details>
@@ -200,6 +203,7 @@ Define $\Phi$ from the set of left cosets of $L$ in $G$ to the set of left coset
 So $\Phi$ is a bijection, and $|G : L| = |G/K : L/K|$. The relative version for $K \leq L_1 \leq L_2$ follows by the same argument applied within $L_2$.
 
 </details>
+
 </details>
 
 ---

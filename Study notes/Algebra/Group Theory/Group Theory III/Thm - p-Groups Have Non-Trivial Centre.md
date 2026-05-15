@@ -121,7 +121,7 @@ Let $G$ act on itself by conjugation. Write down the [[Thm - The Class Equation|
 Each lemma below is independently practiceable in roughly five minutes.
 
 <details>
-<summary><strong>Lemma 1: Singleton conjugacy class iff central</strong></summary>
+<summary><strong>Lemma 1: Singleton conjugacy class if and only if central</strong></summary>
 
 **Statement:** For $x \in G$, the conjugacy class $\operatorname{ccl}(x) = \{gxg^{-1} : g \in G\}$ equals the singleton $\{x\}$ if and only if $x \in Z(G)$.
 
@@ -132,7 +132,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 <details>
 <summary>Full proof</summary>
 
-The class $\operatorname{ccl}(x)$ is the singleton $\{x\}$ iff $gxg^{-1} = x$ for every $g \in G$ — that is, every conjugate of $x$ equals $x$. Right-multiplying $gxg^{-1} = x$ by $g$ gives $gx = xg$. So $\operatorname{ccl}(x) = \{x\}$ iff $gx = xg$ for all $g \in G$, which is exactly the statement $x \in Z(G)$.
+The class $\operatorname{ccl}(x)$ is the singleton $\{x\}$ if and only if $gxg^{-1} = x$ for every $g \in G$ — that is, every conjugate of $x$ equals $x$. Right-multiplying $gxg^{-1} = x$ by $g$ gives $gx = xg$. So $\operatorname{ccl}(x) = \{x\}$ if and only if $gx = xg$ for all $g \in G$, which is exactly the statement $x \in Z(G)$.
 
 </details>
 

@@ -140,11 +140,11 @@ By the orbit-stabiliser theorem each orbit size divides $|\mathbb{Z}/p| = p$; as
 
 *Orbit sizes.* By the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], the size of each orbit of the $\mathbb{Z}/p$-action divides $|\mathbb{Z}/p| = p$. The only positive divisors of the prime $p$ are $1$ and $p$, so every orbit has size $1$ or $p$. (There is no third possibility — this is the entire reason the acting group was chosen to have *prime* order.)
 
-*Size-$1$ orbits are fixed tuples.* An orbit $\{x\}$ has size $1$ exactly when $x$ is a [[Def - Orbit and Stabiliser|fixed point]]: $k \cdot x = x$ for all $k$, equivalently $\sigma(x) = x$. Now $\sigma$ fixes the tuple $x = (g_1, g_2, \dots, g_p)$ iff
+*Size-$1$ orbits are fixed tuples.* An orbit $\{x\}$ has size $1$ exactly when $x$ is a [[Def - Orbit and Stabiliser|fixed point]]: $k \cdot x = x$ for all $k$, equivalently $\sigma(x) = x$. Now $\sigma$ fixes the tuple $x = (g_1, g_2, \dots, g_p)$ if and only if
 $$(g_2, g_3, \dots, g_p, g_1) = (g_1, g_2, \dots, g_p),$$
 which compares coordinate by coordinate to $g_2 = g_1,\ g_3 = g_2,\ \dots,\ g_1 = g_p$ — that is, $g_1 = g_2 = \cdots = g_p$. So a fixed tuple is a **constant tuple** $(g, g, \dots, g)$ for a single $g \in G$.
 
-*Which constant tuples lie in $X$.* The constant tuple $(g, \dots, g)$ belongs to $X$ iff its product is the identity, i.e. iff
+*Which constant tuples lie in $X$.* The constant tuple $(g, \dots, g)$ belongs to $X$ if and only if its product is the identity, i.e. if and only if
 $$\underbrace{g \cdot g \cdots g}_{p} = g^p = e.$$
 Therefore the fixed points of the action are in bijection with the elements $g \in G$ satisfying $g^p = e$. Write
 $$F = \{g \in G : g^p = e\},$$
@@ -182,7 +182,7 @@ Set $X = \{(g_1, \dots, g_p) \in G^p : g_1 g_2 \cdots g_p = e\}$. The first $p -
 
 Let $\sigma : X \to X$ be the cyclic shift $(g_1, \dots, g_p) \mapsto (g_2, \dots, g_p, g_1)$. This maps $X$ to $X$: if $g_1(g_2 \cdots g_p) = e$, then writing $a = g_1$, $b = g_2 \cdots g_p$ we have $ab = e$, hence $ba = e$, i.e. $(g_2 \cdots g_p)g_1 = e$. Since $\sigma^p = \operatorname{id}_X$, the rule $k \cdot x = \sigma^k(x)$ defines an action of $\mathbb{Z}/p$ on $X$.
 
-By the orbit-stabiliser theorem, every orbit size divides $|\mathbb{Z}/p| = p$, so each orbit has size $1$ or $p$. An orbit has size $1$ iff the tuple is fixed by $\sigma$, which forces all coordinates equal: the fixed points are the constant tuples $(g, \dots, g)$, and such a tuple lies in $X$ iff $g^p = e$. Let $F = \{g \in G : g^p = e\}$, so the number of fixed points is $|F|$.
+By the orbit-stabiliser theorem, every orbit size divides $|\mathbb{Z}/p| = p$, so each orbit has size $1$ or $p$. An orbit has size $1$ if and only if the tuple is fixed by $\sigma$, which forces all coordinates equal: the fixed points are the constant tuples $(g, \dots, g)$, and such a tuple lies in $X$ if and only if $g^p = e$. Let $F = \{g \in G : g^p = e\}$, so the number of fixed points is $|F|$.
 
 The orbits partition $X$, so $|X| = |F| + p m$ where $m$ is the number of size-$p$ orbits. Hence $|F| \equiv |X| \equiv 0 \pmod p$. Since $(e, \dots, e) \in X$ is a fixed point, $|F| \geq 1$; being divisible by $p$ and positive, $|F| \geq p \geq 2$. So there exists $g \in F$ with $g \neq e$. This $g$ satisfies $g^p = e$, so $\operatorname{ord}(g)$ divides $p$; as $g \neq e$, $\operatorname{ord}(g) \neq 1$, whence $\operatorname{ord}(g) = p$.
 

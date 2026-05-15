@@ -138,9 +138,10 @@ Each lemma below is independently practiceable in roughly five minutes.
 
 *Transitive:* if $x \sim y$ and $y \sim z$ then $x^{-1}y \in H$ and $y^{-1}z \in H$; since $H$ is closed under products, $(x^{-1}y)(y^{-1}z) = x^{-1}z \in H$, so $x \sim z$.
 
-*The class of $x$ is $xH$:* the element $y$ satisfies $y \sim x$ iff $x^{-1}y \in H$, i.e. iff $x^{-1}y = h$ for some $h \in H$, i.e. iff $y = xh$ for some $h \in H$, i.e. iff $y \in xH$.
+*The class of $x$ is $xH$:* the element $y$ satisfies $y \sim x$ if and only if $x^{-1}y \in H$, i.e. if and only if $x^{-1}y = h$ for some $h \in H$, i.e. if and only if $y = xh$ for some $h \in H$, i.e. if and only if $y \in xH$.
 
 </details>
+
 </details>
 
 <details>
@@ -162,6 +163,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 A bijection between finite sets equates their cardinalities, so $|gH| = |H|$.
 
 </details>
+
 </details>
 
 <details>
@@ -181,6 +183,7 @@ The set is non-empty ($e = g^0$ is in it). For closure under products and invers
 The $n$ listed elements are distinct: if $g^i = g^j$ with $0 \leq j \leq i \leq n-1$, then $g^{i-j} = e$ with $0 \leq i - j < n$; by minimality of $n$ as the least positive integer with $g^n = e$, the only possibility is $i - j = 0$, i.e. $i = j$. Hence $|\langle g \rangle| = n$.
 
 </details>
+
 </details>
 
 ---
@@ -196,7 +199,7 @@ The $n$ listed elements are distinct: if $g^i = g^j$ with $0 \leq j \leq i \leq 
 
 This is an equivalence relation. It is reflexive since $x^{-1}x = e \in H$. It is symmetric since $x^{-1}y \in H$ implies $(x^{-1}y)^{-1} = y^{-1}x \in H$, $H$ being closed under inverses. It is transitive since $x^{-1}y \in H$ and $y^{-1}z \in H$ imply $(x^{-1}y)(y^{-1}z) = x^{-1}z \in H$, $H$ being closed under products.
 
-The equivalence class of $x$ is the left coset $xH$: indeed $y \sim x$ iff $x^{-1}y \in H$ iff $y = xh$ for some $h \in H$ iff $y \in xH$. Since the classes of an equivalence relation partition the underlying set, the distinct left cosets of $H$ partition $G$ into disjoint, exhaustive blocks.
+The equivalence class of $x$ is the left coset $xH$: indeed $y \sim x$ if and only if $x^{-1}y \in H$ if and only if $y = xh$ for some $h \in H$ if and only if $y \in xH$. Since the classes of an equivalence relation partition the underlying set, the distinct left cosets of $H$ partition $G$ into disjoint, exhaustive blocks.
 
 Each block has $|H|$ elements. For a fixed $g$, the map $\lambda_g : H \to gH$, $h \mapsto gh$, is surjective by the definition of $gH$ and injective because $gh_1 = gh_2$ implies $h_1 = h_2$ on left-multiplication by $g^{-1}$. Hence $|gH| = |H|$.
 

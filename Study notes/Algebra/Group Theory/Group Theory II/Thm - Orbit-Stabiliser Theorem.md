@@ -151,10 +151,11 @@ Each lemma below is independently practiceable in roughly five minutes.
 Hence $G_x \leq G$.
 
 </details>
+
 </details>
 
 <details>
-<summary><strong>Lemma 2: Same orbit point iff same coset of the stabiliser</strong></summary>
+<summary><strong>Lemma 2: Same orbit point if and only if same coset of the stabiliser</strong></summary>
 
 **Statement:** For $g, h \in G$ and a fixed $x \in X$: $\ g\cdot x = h\cdot x \iff h^{-1}g \in G_x \iff g\,G_x = h\,G_x$.
 
@@ -174,6 +175,7 @@ using the associativity and identity axioms. So $(h^{-1}g)\cdot x = x$, i.e. $h^
 Chaining the two gives the stated triple equivalence.
 
 </details>
+
 </details>
 
 <details>
@@ -197,6 +199,7 @@ Chaining the two gives the stated triple equivalence.
 Hence $\Phi$ is a bijection.
 
 </details>
+
 </details>
 
 <details>
@@ -211,11 +214,12 @@ Hence $\Phi$ is a bijection.
 <details>
 <summary>Full proof</summary>
 
-An element $h$ fixes $g\cdot x$ iff $h\cdot(g\cdot x) = g\cdot x$. Acting by $g^{-1}$: this holds iff $(g^{-1}hg)\cdot x = x$, i.e. iff $g^{-1}hg \in G_x$, i.e. iff $h \in g\,G_x\,g^{-1}$. So $G_{g\cdot x} = g\,G_x\,g^{-1}$.
+An element $h$ fixes $g\cdot x$ if and only if $h\cdot(g\cdot x) = g\cdot x$. Acting by $g^{-1}$: this holds if and only if $(g^{-1}hg)\cdot x = x$, i.e. if and only if $g^{-1}hg \in G_x$, i.e. if and only if $h \in g\,G_x\,g^{-1}$. So $G_{g\cdot x} = g\,G_x\,g^{-1}$.
 
 Conjugation by $g$ is a bijection $G_x \to g\,G_x\,g^{-1}$, so the two subgroups have equal order. Hence every point of the orbit has a stabiliser of the same size, and $|G| = |G_x|\cdot|G\cdot x|$ does not depend on which $x$ in the orbit is used.
 
 </details>
+
 </details>
 
 ---
@@ -231,7 +235,7 @@ Conjugation by $g$ is a bijection $G_x \to g\,G_x\,g^{-1}$, so the two subgroups
 
 We claim that for all $g, h \in G$,
 $$g\cdot x = h\cdot x \iff h^{-1}g \in G_x \iff g\,G_x = h\,G_x. \tag{$\ast$}$$
-For the first equivalence: $g\cdot x = h\cdot x$ holds iff, acting by $h^{-1}$, $(h^{-1}g)\cdot x = (h^{-1}h)\cdot x = e\cdot x = x$ — that is, iff $h^{-1}g \in G_x$. The second equivalence is the standard criterion for equality of left cosets.
+For the first equivalence: $g\cdot x = h\cdot x$ holds if and only if, acting by $h^{-1}$, $(h^{-1}g)\cdot x = (h^{-1}h)\cdot x = e\cdot x = x$ — that is, if and only if $h^{-1}g \in G_x$. The second equivalence is the standard criterion for equality of left cosets.
 
 *$\Phi$ is well-defined.* If $g\,G_x = h\,G_x$, then by $(\ast)$ read right-to-left into the middle and then to the left, $g\cdot x = h\cdot x$; so $\Phi(g\,G_x)$ is independent of the representative.
 

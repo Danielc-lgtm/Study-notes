@@ -91,7 +91,7 @@ The deepest compression — the "true name" of normality — is the equivalence:
 
 **Kernel and image of $\operatorname{sgn} : S_n \to \{\pm 1\}$.** The kernel is the alternating group $A_n$ of even permutations — automatically normal in $S_n$. The image is all of $\{\pm 1\}$ for $n \geq 2$. Hence $S_n/A_n \cong \{\pm 1\} \cong C_2$.
 
-**Kernel and image of the quotient map $\pi : G \to G/N$.** The kernel is exactly $N$: $\pi(g) = gN$ equals the identity coset $N$ iff $g \in N$. The image is all of $G/N$, since $\pi$ is surjective. This is the example proving the converse half of "normal = kernel": every normal subgroup *is* a kernel.
+**Kernel and image of the quotient map $\pi : G \to G/N$.** The kernel is exactly $N$: $\pi(g) = gN$ equals the identity coset $N$ if and only if $g \in N$. The image is all of $G/N$, since $\pi$ is surjective. This is the example proving the converse half of "normal = kernel": every normal subgroup *is* a kernel.
 
 **Is NOT a kernel — a non-normal subgroup.** The subgroup $\langle(1\,2)\rangle \leq S_3$ is *not* the kernel of any homomorphism out of $S_3$, because it is not [[Def - Normal Subgroup|normal]] and every kernel is normal. This is a sharp non-example: it shows kernels are a strict subclass of subgroups, and the deficiency is precisely the failure of normality.
 
@@ -101,7 +101,7 @@ The deepest compression — the "true name" of normality — is the equivalence:
 
 **Corollary — order constraints from kernel and image.** If $G$ is finite, $|G| = |\ker\varphi|\cdot|\operatorname{im}\varphi|$, because $|\operatorname{im}\varphi| = |G/\ker\varphi| = |G:\ker\varphi|$ by the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] and [[Thm - Lagrange's Theorem|Lagrange]]. Consequently $|\operatorname{im}\varphi|$ divides both $|G|$ and $|H|$ — a divisibility obstruction that rules out many would-be homomorphisms (e.g. no non-trivial homomorphism from a group of order $7$ to one of order $10$).
 
-**Calibration check.** Reproduce the proofs that $\ker\varphi$ is normal and $\operatorname{im}\varphi$ is a subgroup, and the proof that $\varphi$ is injective iff $\ker\varphi = \{e_G\}$. If you can also explain why $\operatorname{im}\varphi$ fails to be normal in general while $\ker\varphi$ never does, you have understood the asymmetry at the heart of this definition.
+**Calibration check.** Reproduce the proofs that $\ker\varphi$ is normal and $\operatorname{im}\varphi$ is a subgroup, and the proof that $\varphi$ is injective if and only if $\ker\varphi = \{e_G\}$. If you can also explain why $\operatorname{im}\varphi$ fails to be normal in general while $\ker\varphi$ never does, you have understood the asymmetry at the heart of this definition.
 
 ---
 

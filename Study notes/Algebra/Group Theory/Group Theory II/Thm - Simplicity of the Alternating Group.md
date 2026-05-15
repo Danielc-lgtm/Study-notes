@@ -57,7 +57,7 @@ A fourth source is **a transitive group action of large degree with no obvious n
 
 The theorem delivers: $A_n$ has no normal subgroup but $\{e\}$ and itself, for $n \geq 5$. Combined with one further property $D$, this becomes a sharper conclusion.
 
-The headline combination is **simplicity of $A_n$ plus the Galois correspondence yields the unsolvability of the quintic**. Property $D$ is "the general degree-$n$ polynomial has Galois group $S_n$, and a polynomial is solvable by radicals iff its Galois group is solvable". A simple non-abelian group is not solvable; $A_n \trianglelefteq S_n$ with simple non-abelian $A_n$ makes $S_n$ non-solvable. The result $E$ — *no radical formula for the general quintic* — is non-obvious because solvability by radicals is an analytic-looking property of explicit formulas, while the obstruction is the internal normal-subgroup structure of a finite group.
+The headline combination is **simplicity of $A_n$ plus the Galois correspondence yields the unsolvability of the quintic**. Property $D$ is "the general degree-$n$ polynomial has Galois group $S_n$, and a polynomial is solvable by radicals if and only if its Galois group is solvable". A simple non-abelian group is not solvable; $A_n \trianglelefteq S_n$ with simple non-abelian $A_n$ makes $S_n$ non-solvable. The result $E$ — *no radical formula for the general quintic* — is non-obvious because solvability by radicals is an analytic-looking property of explicit formulas, while the obstruction is the internal normal-subgroup structure of a finite group.
 
 A second combination is **simplicity plus the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] forces every homomorphism out of $A_n$ to be trivial or injective**. Property $D$ is "$\varphi : A_n \to K$ is any homomorphism". Its [[Def - Kernel and Image|kernel]] is normal in $A_n$, hence $\{e\}$ or $A_n$; so $\varphi$ is either injective or constant. The result $E$ is that $A_n$ ($n \geq 5$) admits no non-trivial proper quotient at all — it cannot be "simplified". This is non-obvious because most groups have many quotients; simplicity is exactly the statement that this one has none.
 
@@ -141,6 +141,7 @@ Any element of $A_n$ is, by definition of *even*, a product of an even number of
 So every product of two transpositions is a product of $3$-cycles, hence so is every product of an even number of transpositions, i.e. every element of $A_n$.
 
 </details>
+
 </details>
 
 <details>
@@ -167,6 +168,7 @@ Now $\bar\sigma \in A_n$, so by normality $(1\,2\,3) = \bar\sigma^{-1}(a\,b\,c)\
 Either way $(1\,2\,3) \in H$, and as $(1\,2\,3)$ was an arbitrary $3$-cycle, $H$ contains all $3$-cycles.
 
 </details>
+
 </details>
 
 <details>
@@ -206,6 +208,7 @@ a $5$-cycle. By Case (i) applied to this $5$-cycle in $H$, $H$ contains a $3$-cy
 In every case $H$ contains a $3$-cycle, as claimed.
 
 </details>
+
 </details>
 
 ---
@@ -285,14 +288,14 @@ The aim is to find settings where simplicity of $A_n$ is the decisive fact altho
 
 - **[[Def - Simple Group|Simple Groups]] and the Jordan–Hölder programme** — $A_5$ is the first non-abelian entry in the catalogue of finite simple groups, and the family $\{A_n : n \geq 5\}$ is one of the major infinite families in the classification of finite simple groups. This theorem is the proof that the atoms of finite group theory are not all abelian.
 
-- **Solvability and Galois theory** — a simple non-abelian group is not solvable, so $A_n$ ($n \geq 5$) and hence $S_n$ are non-solvable. Via the Galois correspondence — solvable Galois group iff solvable by radicals — this is the exact group-theoretic reason the general polynomial of degree $\geq 5$ has no solution formula in radicals (Abel–Ruffini).
+- **Solvability and Galois theory** — a simple non-abelian group is not solvable, so $A_n$ ($n \geq 5$) and hence $S_n$ are non-solvable. Via the Galois correspondence — solvable Galois group if and only if solvable by radicals — this is the exact group-theoretic reason the general polynomial of degree $\geq 5$ has no solution formula in radicals (Abel–Ruffini).
 
 ---
 
 # Unlocked by This
 
 > [!tip] The Abel–Ruffini theorem and Galois' solvability criterion *(from [[Group Theory III — §1.5–1.7|Galois Theory]])*
-> Since $A_n$ is simple and non-abelian for $n \geq 5$, the group $S_n$ is not solvable. Galois' theorem — a polynomial is solvable by radicals iff its Galois group is solvable — then yields the Abel–Ruffini theorem: the general quintic, and every higher-degree general polynomial, cannot be solved by radicals.
+> Since $A_n$ is simple and non-abelian for $n \geq 5$, the group $S_n$ is not solvable. Galois' theorem — a polynomial is solvable by radicals if and only if its Galois group is solvable — then yields the Abel–Ruffini theorem: the general quintic, and every higher-degree general polynomial, cannot be solved by radicals.
 
 > [!tip] The classification of finite simple groups *(from Advanced Group Theory)*
 > $A_5$ is the smallest non-abelian simple group, and $\{A_n : n \geq 5\}$ is one of the principal infinite families in the classification of all finite simple groups — alongside the cyclic groups of prime order, the groups of Lie type, and the $26$ sporadic groups.

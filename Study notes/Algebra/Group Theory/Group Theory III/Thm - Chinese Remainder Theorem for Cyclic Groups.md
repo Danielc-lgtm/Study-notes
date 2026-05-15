@@ -138,9 +138,10 @@ Each lemma below is independently practiceable in roughly five minutes.
 
 Write $a$ for $\operatorname{ord}(a)$ and $b$ for $\operatorname{ord}(b)$ in this proof (abuse of notation), and let $k$ be any positive integer. Because the operation in $A \times B$ is componentwise,
 $$(a, b)^k = (a^k,\ b^k).$$
-This equals the identity $(e_A, e_B)$ if and only if $a^k = e_A$ and $b^k = e_B$ simultaneously. Now $a^k = e_A$ holds exactly when $\operatorname{ord}(a) \mid k$, and likewise $b^k = e_B$ holds exactly when $\operatorname{ord}(b) \mid k$. So $(a,b)^k = (e_A, e_B)$ iff $k$ is a common multiple of $\operatorname{ord}(a)$ and $\operatorname{ord}(b)$. The order of $(a, b)$ is the *least* positive such $k$, which is by definition $\operatorname{lcm}(\operatorname{ord}(a), \operatorname{ord}(b))$.
+This equals the identity $(e_A, e_B)$ if and only if $a^k = e_A$ and $b^k = e_B$ simultaneously. Now $a^k = e_A$ holds exactly when $\operatorname{ord}(a) \mid k$, and likewise $b^k = e_B$ holds exactly when $\operatorname{ord}(b) \mid k$. So $(a,b)^k = (e_A, e_B)$ if and only if $k$ is a common multiple of $\operatorname{ord}(a)$ and $\operatorname{ord}(b)$. The order of $(a, b)$ is the *least* positive such $k$, which is by definition $\operatorname{lcm}(\operatorname{ord}(a), \operatorname{ord}(b))$.
 
 </details>
+
 </details>
 
 <details>
@@ -162,6 +163,7 @@ $$\gcd(m, n) \cdot \operatorname{lcm}(m, n) = \prod_p p^{\alpha_p + \beta_p} = \
 Hence $\operatorname{lcm}(m, n) = mn / \gcd(m, n)$, which equals $mn$ exactly when $\gcd(m, n) = 1$.
 
 </details>
+
 </details>
 
 <details>
@@ -179,6 +181,7 @@ Hence $\operatorname{lcm}(m, n) = mn / \gcd(m, n)$, which equals $mn$ exactly wh
 Let $N = |G|$ and suppose $\operatorname{ord}(x) = N$. The powers $x^0, x^1, \dots, x^{N-1}$ are pairwise distinct: if $x^i = x^j$ with $0 \le j \le i \le N-1$ then $x^{i-j} = e$ with $0 \le i - j < N$, and by minimality of $N = \operatorname{ord}(x)$ as the least positive integer with $x^N = e$, this forces $i - j = 0$. So $\langle x \rangle$ contains at least $N$ distinct elements; since $\langle x \rangle \subseteq G$ and $|G| = N$, we get $\langle x \rangle = G$, so $G$ is cyclic with generator $x$. Any two cyclic groups of the same finite order are isomorphic — the map $x^k \mapsto k$ identifies $G$ with $\mathbb{Z}/N\mathbb{Z} = C_N$ — so $G \cong C_N$.
 
 </details>
+
 </details>
 
 ---

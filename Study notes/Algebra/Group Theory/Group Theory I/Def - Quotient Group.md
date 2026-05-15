@@ -92,7 +92,7 @@ A sharper compression: forming $G/N$ is *deliberate, controlled forgetting*. It 
 
 **Corollary — $G/N$ remembers sizes but not the gluing.** From $|G/N| = |G:N|$ and $|N|$ one recovers $|G|$, so the quotient remembers the *orders* of the pieces. It does *not* remember how $G$ was assembled: $C_4$ and $C_2 \times C_2$ both have a normal $C_2$ with quotient $C_2$, yet are not isomorphic. Reconstructing $G$ from $N$ and $G/N$ is the *extension problem*, and it genuinely has many answers — in particular $G \not\cong N \times (G/N)$ in general.
 
-**Calibration check.** Confirm that the quotient map $\pi : G \to G/N$ is a surjective homomorphism with $\ker\pi = N$ exactly. Confirm that $|G/N| = 1$ iff $N = G$, and $|G/N| = |G|$ iff $N = \{e\}$. If you can also explain why $\bar f(gN) := f(g)$ in the universal property is well-defined precisely when $f$ kills $N$, you have understood both the definition and its categorical content.
+**Calibration check.** Confirm that the quotient map $\pi : G \to G/N$ is a surjective homomorphism with $\ker\pi = N$ exactly. Confirm that $|G/N| = 1$ if and only if $N = G$, and $|G/N| = |G|$ if and only if $N = \{e\}$. If you can also explain why $\bar f(gN) := f(g)$ in the universal property is well-defined precisely when $f$ kills $N$, you have understood both the definition and its categorical content.
 
 ---
 

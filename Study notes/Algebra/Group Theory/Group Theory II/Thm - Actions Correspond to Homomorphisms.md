@@ -145,6 +145,7 @@ $$\sigma_{g^{-1}}(\sigma_g(x)) = g^{-1}\cdot(g\cdot x) = (g^{-1}g)\cdot x = e\cd
 using the associativity axiom for the middle equality and the identity axiom for the last. Hence $\sigma_{g^{-1}}\circ\sigma_g = \operatorname{id}_X$. The same computation with $g$ and $g^{-1}$ interchanged gives $\sigma_g\circ\sigma_{g^{-1}} = \operatorname{id}_X$. A function with a two-sided inverse is a bijection, so $\sigma_g \in \operatorname{Sym}(X)$ with $(\sigma_g)^{-1} = \sigma_{g^{-1}}$.
 
 </details>
+
 </details>
 
 <details>
@@ -164,6 +165,7 @@ $$(\rho(g_1)\circ\rho(g_2))(x) = \rho(g_1)(\rho(g_2)(x)) = g_1\cdot(g_2\cdot x) 
 the third equality being the action's associativity axiom. Since this holds for every $x$, the functions agree: $\rho(g_1)\circ\rho(g_2) = \rho(g_1 g_2)$. For the identity, $\rho(e)(x) = e\cdot x = x = \operatorname{id}_X(x)$ for all $x$, so $\rho(e) = \operatorname{id}_X$. Hence $\rho$ is a homomorphism.
 
 </details>
+
 </details>
 
 <details>
@@ -185,6 +187,7 @@ $$g_1\cdot(g_2\cdot x) = \rho(g_1)\big(\rho(g_2)(x)\big) = \big(\rho(g_1)\circ\r
 the third equality being the homomorphism property of $\rho$. Both axioms hold, so $g\cdot x = \rho(g)(x)$ is an action.
 
 </details>
+
 </details>
 
 <details>
@@ -206,6 +209,7 @@ Start with a homomorphism $\rho$. Lemma 3 produces the action $g\cdot x = \rho(g
 Both round-trips are the identity, so the constructions are mutually inverse bijections between actions of $G$ on $X$ and homomorphisms $G \to \operatorname{Sym}(X)$.
 
 </details>
+
 </details>
 
 <details>
@@ -220,11 +224,12 @@ Both round-trips are the identity, so the constructions are mutually inverse bij
 <details>
 <summary>Full proof</summary>
 
-By Lemmas 1–2, $\rho : G \to \operatorname{Sym}(X)$ is a homomorphism. For any homomorphism, the kernel is a normal subgroup of the domain and the image is a subgroup of the codomain; hence $G_X = \ker\rho \trianglelefteq G$ and $G^X = \operatorname{im}\rho \leq \operatorname{Sym}(X)$. Concretely, $g \in G_X$ iff $\rho(g) = \operatorname{id}_X$, i.e. iff $g\cdot x = x$ for all $x$ — the elements acting trivially everywhere.
+By Lemmas 1–2, $\rho : G \to \operatorname{Sym}(X)$ is a homomorphism. For any homomorphism, the kernel is a normal subgroup of the domain and the image is a subgroup of the codomain; hence $G_X = \ker\rho \trianglelefteq G$ and $G^X = \operatorname{im}\rho \leq \operatorname{Sym}(X)$. Concretely, $g \in G_X$ if and only if $\rho(g) = \operatorname{id}_X$, i.e. if and only if $g\cdot x = x$ for all $x$ — the elements acting trivially everywhere.
 
 The [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\rho$ gives an isomorphism $G/\ker\rho \cong \operatorname{im}\rho$, that is, $G/G_X \cong G^X$. If the action is faithful, $G_X = \{e\}$, and $G/\{e\} \cong G$, so $G \cong G^X \leq \operatorname{Sym}(X)$.
 
 </details>
+
 </details>
 
 ---

@@ -104,7 +104,7 @@ So the compression is: $\operatorname{Aut}(G)$ is "the symmetry group of $G$ reg
 
 **Corollary — an abelian group has trivial inner automorphism group.** If $G$ is [[Def - Abelian Group|abelian]] then $\gamma_g(x) = gxg^{-1} = x$ for every $g$, so every inner automorphism is the identity and $\operatorname{Inn}(G) = \{\operatorname{id}_G\}$. Consistently, $Z(G) = G$ so $G/Z(G)$ is trivial. For abelian groups all the automorphism content lives in $\operatorname{Out}(G) = \operatorname{Aut}(G)$.
 
-**Corollary — the centre is the kernel, so conjugation is faithful iff $Z(G) = \{e\}$.** The conjugation homomorphism $\gamma : G \to \operatorname{Aut}(G)$ is injective exactly when its kernel $Z(G)$ is trivial. So a group acts faithfully on itself by conjugation precisely when it has trivial centre — such a group embeds into its own automorphism group as $\operatorname{Inn}(G) \cong G$. This is the calibration check linking this page to [[Def - Centraliser and Centre]]: the centre is the exact obstruction to conjugation being faithful.
+**Corollary — the centre is the kernel, so conjugation is faithful if and only if $Z(G) = \{e\}$.** The conjugation homomorphism $\gamma : G \to \operatorname{Aut}(G)$ is injective exactly when its kernel $Z(G)$ is trivial. So a group acts faithfully on itself by conjugation precisely when it has trivial centre — such a group embeds into its own automorphism group as $\operatorname{Inn}(G) \cong G$. This is the calibration check linking this page to [[Def - Centraliser and Centre]]: the centre is the exact obstruction to conjugation being faithful.
 
 ---
 

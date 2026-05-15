@@ -128,6 +128,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 The map $c_g : G \to G$, $c_g(x) = gxg^{-1}$, is a homomorphism — $c_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1}) = c_g(x)c_g(y)$ — and it is a bijection with inverse $c_{g^{-1}}$, so it is an automorphism of $G$. An automorphism sends subgroups to subgroups, so $c_g(P) = gPg^{-1}$ is a subgroup of $G$; and being a bijection it preserves cardinality, so $|gPg^{-1}| = |P| = p^a$. A subgroup of order $p^a$ in a group of order $p^a m$ is by definition a Sylow $p$-subgroup. Hence $gPg^{-1} \in \operatorname{Syl}_p(G)$.
 
 </details>
+
 </details>
 
 <details>
@@ -145,6 +146,7 @@ The map $c_g : G \to G$, $c_g(x) = gxg^{-1}$, is a homomorphism — $c_g(xy) = g
 By definition $N \trianglelefteq G$ means $gNg^{-1} = N$ for all $g \in G$. The conjugates $gNg^{-1}$ as $g$ ranges over $G$ form the orbit of $N$ under the action of $G$ on the set of its subgroups by conjugation. To say every $gNg^{-1}$ equals $N$ is exactly to say this orbit is the single point $\{N\}$ — i.e. $N$ is the only member of its conjugacy class of subgroups. Conversely, if the orbit is $\{N\}$ then $gNg^{-1} = N$ for all $g$, which is normality.
 
 </details>
+
 </details>
 
 ---

@@ -112,11 +112,11 @@ Establish the relabelling formula $\tau\sigma\tau^{-1} = (\tau(a_1)\,\tau(a_2)\,
 
 2. **Conjugate $\implies$ same cycle type.** Conclude that $\tau\sigma\tau^{-1}$ has the identical list of cycle lengths as $\sigma$.
    - *Hint:* Relabelling sends each $r$-cycle to an $r$-cycle bijectively; lengths are untouched.
-   - *Why needed:* The forward direction of the iff.
+   - *Why needed:* The forward direction of the biconditional.
 
 3. **Same cycle type $\implies$ conjugate.** Given $\sigma, \sigma'$ of the same cycle type, write both in disjoint cycle notation including $1$-cycles, align cycles of equal length, and define $\tau$ to map each entry of $\sigma$ to the entry in the corresponding position of $\sigma'$.
    - *Hint:* Because all $n$ points appear (fixed points as $1$-cycles), $\tau$ is a bijection of $\{1,\dots,n\}$; by step 1, $\tau\sigma\tau^{-1} = \sigma'$.
-   - *Why needed:* The converse direction; it completes the iff and the bijection with partitions.
+   - *Why needed:* The converse direction; it completes the biconditional and the bijection with partitions.
 
 4. **Class size.** Count permutations of a fixed cycle type $1^{a_1}\cdots n^{a_n}$: fill the cycle template with $1, \dots, n$ in $n!$ ways, then divide by the over-counting.
    - *Hint:* Each $k$-cycle is counted $k$ times (rotations); the $a_k$ equal-length $k$-cycles are counted $a_k!$ times (reorderings). Divide by $\prod_k k^{a_k}a_k!$.
@@ -145,6 +145,7 @@ $$(\tau \sigma \tau^{-1})\bigl(\tau(a)\bigr) = \tau\Bigl(\sigma\bigl(\tau^{-1}(\
 So $\tau\sigma\tau^{-1}$ sends $\tau(a)$ to $\tau(\sigma(a))$. If $\sigma$ has the cycle $(a_1\,a_2\,\cdots\,a_r)$, meaning $\sigma(a_i) = a_{i+1}$ (indices mod $r$), then $\tau\sigma\tau^{-1}$ sends $\tau(a_i) \mapsto \tau(a_{i+1})$, which is precisely the cycle $(\tau(a_1)\,\tau(a_2)\,\cdots\,\tau(a_r))$. Applying this to every cycle of $\sigma$ shows $\tau\sigma\tau^{-1}$ is $\sigma$ with each entry relabelled by $\tau$.
 
 </details>
+
 </details>
 
 <details>
@@ -154,7 +155,7 @@ So $\tau\sigma\tau^{-1}$ sends $\tau(a)$ to $\tau(\sigma(a))$. If $\sigma$ has t
 
 **Hint:** Use Lemma 1: relabelling sends each $r$-cycle to an $r$-cycle.
 
-**Why needed:** It is the forward implication of the iff.
+**Why needed:** It is the forward implication of the biconditional.
 
 <details>
 <summary>Full proof</summary>
@@ -162,6 +163,7 @@ So $\tau\sigma\tau^{-1}$ sends $\tau(a)$ to $\tau(\sigma(a))$. If $\sigma$ has t
 By Lemma 1, $\sigma' = \tau\sigma\tau^{-1}$ is obtained by replacing each cycle $(a_1\,\cdots\,a_r)$ of $\sigma$ with $(\tau(a_1)\,\cdots\,\tau(a_r))$. Since $\tau$ is a bijection, distinct cycles of $\sigma$ (which are supported on disjoint point sets) map to cycles of $\sigma'$ supported on disjoint point sets, and an $r$-cycle becomes an $r$-cycle. So $\sigma$ and $\sigma'$ have exactly the same multiset of cycle lengths — the same cycle type.
 
 </details>
+
 </details>
 
 <details>
@@ -171,7 +173,7 @@ By Lemma 1, $\sigma' = \tau\sigma\tau^{-1}$ is obtained by replacing each cycle 
 
 **Hint:** Write both permutations in full disjoint cycle notation, *including $1$-cycles for fixed points*, with cycles of each length aligned; define $\tau$ position by position.
 
-**Why needed:** It is the converse implication, completing the iff and the bijection between classes and partitions.
+**Why needed:** It is the converse implication, completing the biconditional and the bijection between classes and partitions.
 
 <details>
 <summary>Full proof</summary>
@@ -183,6 +185,7 @@ Define $\tau : \{1,\dots,n\} \to \{1,\dots,n\}$ by sending each entry of $\sigma
 By construction $\tau$ carries each cycle $(a_1\,\cdots\,a_r)$ of $\sigma$ entry-wise to the paired cycle of $\sigma'$. By Lemma 1, $\tau\sigma\tau^{-1}$ is $\sigma$ with each entry relabelled by $\tau$ — which is exactly $\sigma'$. Hence $\tau\sigma\tau^{-1} = \sigma'$.
 
 </details>
+
 </details>
 
 <details>
@@ -209,6 +212,7 @@ These are all the redundancies: two fillings give the same permutation if and on
 $$\frac{n!}{\prod_{k=1}^n k^{a_k}\,a_k!}.$$
 
 </details>
+
 </details>
 
 ---
@@ -234,7 +238,7 @@ Thus if $\sigma$ contains the cycle $(a_1\,a_2\,\cdots\,a_r)$ — that is, $\sig
 
 **Class size.** The conjugacy class of cycle type $1^{a_1}\cdots n^{a_n}$ has size $n!/\prod_k k^{a_k}a_k!$.
 
-*Proof.* Fix a template of $a_k$ empty $k$-cycles for each $k$, with $\sum_k k\,a_k = n$ slots. Filling the slots with $1, \dots, n$ in order gives $n!$ fillings, and every permutation of the cycle type arises. Two fillings yield the same permutation iff they differ by (i) a cyclic rotation of the entries within some cycles — a $k$-cycle has $k$ rotations, giving redundancy $\prod_k k^{a_k}$ — or (ii) a reordering of the $a_k$ equal-length $k$-cycles among themselves — giving redundancy $\prod_k a_k!$. These exhaust the ways two fillings produce the same permutation, so each permutation corresponds to exactly $\prod_k k^{a_k}a_k!$ fillings, and the class has size $n!/\prod_k k^{a_k}a_k!$. $\qquad\blacksquare$
+*Proof.* Fix a template of $a_k$ empty $k$-cycles for each $k$, with $\sum_k k\,a_k = n$ slots. Filling the slots with $1, \dots, n$ in order gives $n!$ fillings, and every permutation of the cycle type arises. Two fillings yield the same permutation if and only if they differ by (i) a cyclic rotation of the entries within some cycles — a $k$-cycle has $k$ rotations, giving redundancy $\prod_k k^{a_k}$ — or (ii) a reordering of the $a_k$ equal-length $k$-cycles among themselves — giving redundancy $\prod_k a_k!$. These exhaust the ways two fillings produce the same permutation, so each permutation corresponds to exactly $\prod_k k^{a_k}a_k!$ fillings, and the class has size $n!/\prod_k k^{a_k}a_k!$. $\qquad\blacksquare$
 
 **Worked example: the conjugacy classes of $S_5$.** The partitions of $5$ give seven classes. Applying the size formula:
 
@@ -258,7 +262,7 @@ The seven class sizes are $1, 10, 15, 20, 20, 30, 24$, and they sum to $120 = |S
 
 The aim is to find settings where cycle-type combinatorics is the right tool although the problem does not mention conjugacy.
 
-**Combinatorics: counting permutations by order, and the lcm structure.** The order of a permutation is the least common multiple of its cycle lengths. A problem asking "how many elements of $S_7$ have order $12$" is, after this translation, "which partitions of $7$ have parts with $\operatorname{lcm} = 12$" — here $12 = 4 \cdot 3$, so the parts must include a $4$ and a $3$ — followed by the class-size formula for each such partition. The application is non-obvious because element order looks algebraic; cycle type makes it a partition-counting exercise. This also explains structural facts like "$S_n$ has an element of order $m$ iff $m$ is a sum-of-its-own-lcm-factors realisable within $n$".
+**Combinatorics: counting permutations by order, and the lcm structure.** The order of a permutation is the least common multiple of its cycle lengths. A problem asking "how many elements of $S_7$ have order $12$" is, after this translation, "which partitions of $7$ have parts with $\operatorname{lcm} = 12$" — here $12 = 4 \cdot 3$, so the parts must include a $4$ and a $3$ — followed by the class-size formula for each such partition. The application is non-obvious because element order looks algebraic; cycle type makes it a partition-counting exercise. This also explains structural facts like "$S_n$ has an element of order $m$ if and only if $m$ is a sum-of-its-own-lcm-factors realisable within $n$".
 
 **Linear algebra: the determinant and the sign homomorphism.** The Leibniz formula for the determinant sums $\operatorname{sgn}(\sigma)$ over all $\sigma \in S_n$. Since conjugate permutations have the same cycle type and the sign is a function of cycle type — a $k$-cycle has sign $(-1)^{k-1}$ — the sign is a *class function*, constant on conjugacy classes. Grouping the determinant's $n!$ terms by cycle type, and using the class-size formula, reorganises the sum by partition. The application is non-obvious because the determinant is presented analytically, with the symmetric group hidden inside the index set.
 

@@ -112,7 +112,7 @@ The product in $\operatorname{Aut}(G)$ is composition, so this is exactly the st
 
 **Step 2: $\ker\gamma = Z(G)$.**
 
-An element $g$ lies in the kernel iff conjugation by $g$ is the identity map, iff $g$ commutes with every element of $G$ — which is the definition of the centre.
+An element $g$ lies in the kernel if and only if conjugation by $g$ is the identity map, if and only if $g$ commutes with every element of $G$ — which is the definition of the centre.
 
 <details>
 <summary>Derivation</summary>

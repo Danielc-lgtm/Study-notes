@@ -86,7 +86,7 @@ The theorem has two claims — that the coset action exists, and that its kernel
 
 **Why $G$ acts on $G/H$.** Take the set of left cosets $G/H$; its elements are the "clumps" $xH$ that tile $G$. An element $g \in G$ sends the clump $xH$ to the clump $gxH$. Is this a well-defined rule on *clumps* (not on representatives)? Yes — if $xH = x'H$ then $x' = xh$ for some $h \in H$, so $gx'H = gxhH = gxH$, the clump is sent to the same place regardless of which representative names it. And the action axioms are immediate: $e\cdot xH = xH$, and $g_1\cdot(g_2\cdot xH) = g_1 g_2 xH = (g_1 g_2)\cdot xH$ by associativity. So left multiplication genuinely permutes the coset space, exactly as it permutes $G$ itself in [[Thm - Cayley's Theorem|Cayley's theorem]] — the coset action is Cayley's regular action with the points "blurred" into clumps of size $|H|$.
 
-**Why the kernel is the normal core.** Ask which $g$ act *invisibly* — fix every coset. The element $g$ fixes the coset $xH$ when $gxH = xH$. Rearrange: $gxH = xH$ means $x^{-1}gxH = H$, which means $x^{-1}gx \in H$, which means $g \in xHx^{-1}$. So *$g$ fixes the particular coset $xH$ exactly when $g$ lies in the conjugate $xHx^{-1}$.* This is the key local computation, and the argument is completely reversible — each step is an "iff". Now $g$ is in the kernel when it fixes *every* coset, i.e. when $g \in xHx^{-1}$ for *every* $x$. That is precisely the intersection:
+**Why the kernel is the normal core.** Ask which $g$ act *invisibly* — fix every coset. The element $g$ fixes the coset $xH$ when $gxH = xH$. Rearrange: $gxH = xH$ means $x^{-1}gxH = H$, which means $x^{-1}gx \in H$, which means $g \in xHx^{-1}$. So *$g$ fixes the particular coset $xH$ exactly when $g$ lies in the conjugate $xHx^{-1}$.* This is the key local computation, and the argument is completely reversible — each step is an "if and only if". Now $g$ is in the kernel when it fixes *every* coset, i.e. when $g \in xHx^{-1}$ for *every* $x$. That is precisely the intersection:
 $$\ker\rho = \bigcap_{x \in G} xHx^{-1}.$$
 So the kernel is forced to be this intersection of all conjugates of $H$ — there is no choice in the matter, it is just the bookkeeping of "fixes coset $xH$ $\iff$ lies in $xHx^{-1}$" run over all $x$.
 
@@ -118,7 +118,7 @@ Let $G$ act on $G/H$ by $g\cdot xH = gxH$; this is a homomorphism $\rho : G \to 
    - *Why needed:* It produces, via [[Thm - Actions Correspond to Homomorphisms]], the homomorphism $\rho : G \to \operatorname{Sym}(G/H)$.
 
 2. **Compute the kernel.** Show $g \in \ker\rho \iff g \in xHx^{-1}$ for all $x$, hence $\ker\rho = \bigcap_x xHx^{-1}$.
-   - *Hint:* $g$ fixes $xH$ iff $gxH = xH$ iff $x^{-1}gx \in H$ iff $g \in xHx^{-1}$; every step is reversible; "fixes all cosets" gives the intersection.
+   - *Hint:* $g$ fixes $xH$ if and only if $gxH = xH$ if and only if $x^{-1}gx \in H$ if and only if $g \in xHx^{-1}$; every step is reversible; "fixes all cosets" gives the intersection.
    - *Why needed:* This is the identification of the kernel with the normal core.
 
 3. **The core is the largest normal subgroup inside $H$.** Show $\operatorname{Core}_G(H) \trianglelefteq G$, that $\operatorname{Core}_G(H) \leq H$, and that any $N \trianglelefteq G$ with $N \leq H$ satisfies $N \leq \operatorname{Core}_G(H)$.
@@ -164,10 +164,11 @@ Each lemma below is independently practiceable in roughly five minutes.
 Hence $g\cdot(xH) = gxH$ is an action of $G$ on $G/H$.
 
 </details>
+
 </details>
 
 <details>
-<summary><strong>Lemma 2: An element fixes the coset $xH$ iff it lies in $xHx^{-1}$</strong></summary>
+<summary><strong>Lemma 2: An element fixes the coset $xH$ if and only if it lies in $xHx^{-1}$</strong></summary>
 
 **Statement:** For the coset action, $g$ fixes the coset $xH$ (that is, $gxH = xH$) if and only if $g \in xHx^{-1}$.
 
@@ -178,9 +179,10 @@ Hence $g\cdot(xH) = gxH$ is an action of $G$ on $G/H$.
 <details>
 <summary>Full proof</summary>
 
-The element $g$ fixes $xH$ iff $gxH = xH$. Left-multiplying both sides by $x^{-1}$, this holds iff $x^{-1}gxH = H$. A coset $yH$ equals $H$ iff $y \in H$, so this holds iff $x^{-1}gx \in H$. Finally $x^{-1}gx \in H \iff g \in xHx^{-1}$. Every implication is reversible, so $g$ fixes $xH \iff g \in xHx^{-1}$.
+The element $g$ fixes $xH$ if and only if $gxH = xH$. Left-multiplying both sides by $x^{-1}$, this holds if and only if $x^{-1}gxH = H$. A coset $yH$ equals $H$ if and only if $y \in H$, so this holds if and only if $x^{-1}gx \in H$. Finally $x^{-1}gx \in H \iff g \in xHx^{-1}$. Every implication is reversible, so $g$ fixes $xH \iff g \in xHx^{-1}$.
 
 </details>
+
 </details>
 
 <details>
@@ -188,16 +190,17 @@ The element $g$ fixes $xH$ iff $gxH = xH$. Left-multiplying both sides by $x^{-1
 
 **Statement:** The kernel of $\rho : G \to \operatorname{Sym}(G/H)$ is $\ker\rho = \bigcap_{x\in G} xHx^{-1}$.
 
-**Hint:** An element is in the kernel iff it fixes *every* coset; apply Lemma 2 to each.
+**Hint:** An element is in the kernel if and only if it fixes *every* coset; apply Lemma 2 to each.
 
 **Why needed:** It is the explicit description of the normal subgroup the construction produces.
 
 <details>
 <summary>Full proof</summary>
 
-By definition $g \in \ker\rho$ iff $\rho(g)$ is the identity permutation of $G/H$, i.e. iff $g$ fixes every coset $xH$. By Lemma 2, $g$ fixes $xH$ iff $g \in xHx^{-1}$. Therefore $g \in \ker\rho$ iff $g \in xHx^{-1}$ for *all* $x \in G$, which is exactly $g \in \bigcap_{x\in G} xHx^{-1}$. Hence $\ker\rho = \bigcap_{x\in G} xHx^{-1}$.
+By definition $g \in \ker\rho$ if and only if $\rho(g)$ is the identity permutation of $G/H$, i.e. if and only if $g$ fixes every coset $xH$. By Lemma 2, $g$ fixes $xH$ if and only if $g \in xHx^{-1}$. Therefore $g \in \ker\rho$ if and only if $g \in xHx^{-1}$ for *all* $x \in G$, which is exactly $g \in \bigcap_{x\in G} xHx^{-1}$. Hence $\ker\rho = \bigcap_{x\in G} xHx^{-1}$.
 
 </details>
+
 </details>
 
 <details>
@@ -219,6 +222,7 @@ By definition $g \in \ker\rho$ iff $\rho(g)$ is the identity permutation of $G/H
 *Largest.* Let $N \trianglelefteq G$ with $N \leq H$. For any $x \in G$, normality of $N$ gives $N = xNx^{-1}$, and $N \leq H$ gives $xNx^{-1} \leq xHx^{-1}$; hence $N \leq xHx^{-1}$ for every $x$. Therefore $N \leq \bigcap_x xHx^{-1} = \operatorname{Core}_G(H)$.
 
 </details>
+
 </details>
 
 <details>
@@ -240,6 +244,7 @@ $$\operatorname{im}\rho \;\cong\; \frac{\operatorname{im}\rho}{\operatorname{im}
 Then $\operatorname{im}\rho$, hence $G$, is a subgroup of $C_2$ — abelian, contradicting that $G$ is non-abelian. So $\operatorname{im}\rho\cap A_n = \operatorname{im}\rho$, i.e. $\operatorname{im}\rho \leq A_n$.
 
 </details>
+
 </details>
 
 ---
@@ -253,7 +258,7 @@ Then $\operatorname{im}\rho$, hence $G$, is a subgroup of $C_2$ — abelian, con
 
 *Proof.* The rule $g\cdot xH = gxH$ is well-defined: if $xH = x'H$ then $x' = xh$ with $h \in H$, so $gx'H = gxhH = gxH$. It satisfies $e\cdot xH = xH$ and $g_1\cdot(g_2\cdot xH) = g_1 g_2 xH = (g_1 g_2)\cdot xH$, so it is an action. By [[Thm - Actions Correspond to Homomorphisms]] it is a homomorphism $\rho : G \to \operatorname{Sym}(G/H)$.
 
-Now $g \in \ker\rho$ iff $g$ fixes every coset, i.e. $gxH = xH$ for all $x \in G$. For a fixed $x$: $gxH = xH \iff x^{-1}gxH = H \iff x^{-1}gx \in H \iff g \in xHx^{-1}$, each step reversible. Hence
+Now $g \in \ker\rho$ if and only if $g$ fixes every coset, i.e. $gxH = xH$ for all $x \in G$. For a fixed $x$: $gxH = xH \iff x^{-1}gxH = H \iff x^{-1}gx \in H \iff g \in xHx^{-1}$, each step reversible. Hence
 $$\ker\rho = \bigcap_{x\in G} xHx^{-1}.$$
 This is a normal subgroup, being a kernel. Taking $x = e$ shows it lies in $H$. If $N \trianglelefteq G$ and $N \leq H$, then $N = xNx^{-1} \leq xHx^{-1}$ for all $x$, so $N \leq \bigcap_x xHx^{-1}$; thus $\ker\rho$ is the largest normal subgroup of $G$ inside $H$. $\qquad\blacksquare$
 

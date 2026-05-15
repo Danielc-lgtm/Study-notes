@@ -102,7 +102,7 @@ Define the forgetful homomorphism $\theta : G/K \to G/L$ that sends each $K$-cos
    - *Why needed:* So the image is all of $G/L$, the right-hand side of the claimed isomorphism.
 
 5. **Kernel.** Show $\ker\theta = L/K$.
-   - *Hint:* $\theta(gK) = L$ (the identity of $G/L$) iff $gL = L$ iff $g \in L$; the set of such $gK$ is exactly $\{ \ell K : \ell \in L\} = L/K$.
+   - *Hint:* $\theta(gK) = L$ (the identity of $G/L$) if and only if $gL = L$ if and only if $g \in L$; the set of such $gK$ is exactly $\{ \ell K : \ell \in L\} = L/K$.
    - *Why needed:* Identifies the kernel; also, being a kernel, $L/K \trianglelefteq G/K$.
 
 6. **Apply the first isomorphism theorem.** Conclude $\dfrac{G/K}{L/K} \cong G/L$.
@@ -128,6 +128,7 @@ Define the forgetful homomorphism $\theta : G/K \to G/L$ that sends each $K$-cos
 Suppose $gK = g'K$. Then $g^{-1}g' \in K$. Since $K \subseteq L$, we also have $g^{-1}g' \in L$, which means $gL = g'L$. Hence $\theta(gK) = gL = g'L = \theta(g'K)$: the output does not depend on the representative, so $\theta$ is well-defined.
 
 </details>
+
 </details>
 
 <details>
@@ -149,6 +150,7 @@ using the definition of multiplication in $G/K$ and in $G/L$.
 *Surjectivity.* An arbitrary element of $G/L$ has the form $gL$ for some $g \in G$. Then $gL = \theta(gK)$, so it lies in the image. Hence $\theta$ is surjective.
 
 </details>
+
 </details>
 
 <details>
@@ -163,11 +165,12 @@ using the definition of multiplication in $G/K$ and in $G/L$.
 <details>
 <summary>Full proof</summary>
 
-The identity element of $G/L$ is the coset $L = eL$. An element $gK \in G/K$ lies in $\ker\theta$ iff $\theta(gK) = L$, i.e. iff $gL = L$, i.e. iff $g \in L$. Therefore
+The identity element of $G/L$ is the coset $L = eL$. An element $gK \in G/K$ lies in $\ker\theta$ if and only if $\theta(gK) = L$, i.e. if and only if $gL = L$, i.e. if and only if $g \in L$. Therefore
 $$\ker\theta = \{gK : g \in L\} = \{\ell K : \ell \in L\} = L/K.$$
 (The set $\{\ell K : \ell \in L\}$ is well-defined as a subset of $G/K$ because $K \subseteq L$, so every $\ell K$ is a genuine coset of $K$.) Being the kernel of the homomorphism $\theta$, the set $L/K$ is a normal subgroup of the domain $G/K$.
 
 </details>
+
 </details>
 
 ---

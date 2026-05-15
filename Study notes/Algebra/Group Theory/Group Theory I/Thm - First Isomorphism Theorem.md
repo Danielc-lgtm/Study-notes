@@ -134,6 +134,7 @@ $$\varphi(x^{-1}gx) = \varphi(x^{-1})\,\varphi(g)\,\varphi(x) = \varphi(x^{-1})\
 So $x^{-1}gx \in \ker\varphi$, and $\ker\varphi \trianglelefteq G$.
 
 </details>
+
 </details>
 
 <details>
@@ -153,6 +154,7 @@ So $x^{-1}gx \in \ker\varphi$, and $\ker\varphi \trianglelefteq G$.
 ($\Leftarrow$) Suppose $g^{-1}g' = n \in N$, so $g' = gn$. Then $g'N = gnN = gN$, because $nN = N$ as $n \in N$ and $N$ is closed under multiplication. (Explicitly, $nN \subseteq N$ by closure, and $N = n(n^{-1}N) \subseteq nN$, so $nN = N$.)
 
 </details>
+
 </details>
 
 <details>
@@ -172,6 +174,7 @@ $$f^{-1}(b_1 b_2) = a_1 a_2 = f^{-1}(b_1)\,f^{-1}(b_2).$$
 So $f^{-1}$ is a homomorphism, and $f$ is an isomorphism with isomorphism inverse $f^{-1}$.
 
 </details>
+
 </details>
 
 ---

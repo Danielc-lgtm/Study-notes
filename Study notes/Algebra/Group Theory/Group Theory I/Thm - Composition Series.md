@@ -45,7 +45,7 @@ The theorem has a famous companion, the **Jordan–Hölder theorem**, which says
 
 The precondition is mild — *any* finite group has a composition series. The disguised-source question is: when does having a composition series, or controlling its factors, become the useful hypothesis?
 
-The first source is **a finite solvable group**. A finite group $G$ is solvable if it has a normal series with abelian factors; refining such a series produces a composition series whose factors are abelian *and* simple. By [[Thm - Abelian Simple Groups are Cyclic of Prime Order|the classification of abelian simple groups]], those factors are cyclic of prime order. The non-obvious step is that solvability secretly pins down the composition factors completely — they are exactly cyclic groups $C_p$. *Example problem:* show a finite group is solvable iff all its composition factors are cyclic of prime order.
+The first source is **a finite solvable group**. A finite group $G$ is solvable if it has a normal series with abelian factors; refining such a series produces a composition series whose factors are abelian *and* simple. By [[Thm - Abelian Simple Groups are Cyclic of Prime Order|the classification of abelian simple groups]], those factors are cyclic of prime order. The non-obvious step is that solvability secretly pins down the composition factors completely — they are exactly cyclic groups $C_p$. *Example problem:* show a finite group is solvable if and only if all its composition factors are cyclic of prime order.
 
 The second source is **a finite $p$-group** (order a power of a prime $p$). Every finite $p$-group has a non-trivial centre, and from this one builds a composition series all of whose factors are $C_p$. The non-obviousness is that "$|G| = p^n$" alone forces every composition factor to be the *same* group $C_p$, so a $p$-group is, in composition-factor terms, maximally homogeneous. *Example problem:* show every group of order $p^n$ has a normal subgroup of every order $p^k$, $0 \le k \le n$.
 
@@ -131,6 +131,7 @@ Induct on $|G|$. If $G$ is simple, done. Otherwise pick a *maximal* proper norma
 Since $G$ is not simple and is non-trivial, it has at least one normal subgroup other than $\{e\}$ and $G$ — that is, the set $\mathcal{N}$ of proper non-trivial normal subgroups is non-empty. A finite group has only finitely many subsets, hence finitely many subgroups, so $\mathcal{N}$ is finite. The orders $\{|N| : N \in \mathcal{N}\}$ form a finite non-empty set of positive integers, which therefore has a maximum; any $N \in \mathcal{N}$ achieving it is a proper non-trivial normal subgroup of maximal order.
 
 </details>
+
 </details>
 
 <details>
@@ -154,6 +155,7 @@ By the [[Thm - Correspondence Theorem|correspondence theorem]] applied to $M \tr
 Thus $K$ is a normal subgroup of $G$ with $M \subsetneq K \subsetneq G$ — a proper non-trivial normal subgroup of $G$ strictly larger than $M$. This contradicts the maximality of $M$. Hence $G/M$ is simple.
 
 </details>
+
 </details>
 
 <details>
@@ -171,6 +173,7 @@ Thus $K$ is a normal subgroup of $G$ with $M \subsetneq K \subsetneq G$ — a pr
 For each $i$, $H_{i+1} \subsetneq H_i$, and both are subgroups of the finite group $G$, so $|H_{i+1}| < |H_i|$ (a proper subset has strictly smaller cardinality). Hence $|H_1| > |H_2| > |H_3| > \cdots$ is a strictly decreasing sequence of positive integers bounded below by $1$. Such a sequence has at most $|H_1| = |G|$ terms, so the chain is finite.
 
 </details>
+
 </details>
 
 ---
@@ -208,7 +211,7 @@ Hence $G$ has a composition series. By induction, every finite group does.
 
 **Composition factors of a cyclic group recover prime factorisation.** Take $G = C_n$ with $n = p_1 p_2 \cdots p_r$ (primes, with repetition). A composition series of $C_n$ has factors that are abelian simple, hence each $\cong C_{p}$ for some prime by [[Thm - Abelian Simple Groups are Cyclic of Prime Order|the abelian classification]], and their orders multiply to $n$. So the composition factors of $C_n$ are exactly the prime factors of $n$. The application is non-obvious because it exhibits the prime factorisation of an integer as a *special case* of the composition series of a group — the analogy made literal.
 
-**Solvability as a composition-factor condition.** A finite group $G$ is solvable iff every composition factor of $G$ is cyclic of prime order. To use this: given a finite group, compute (or constrain) its composition factors; if any factor is a non-abelian simple group, $G$ is not solvable. This is the standard route to proving, for instance, that $S_n$ is not solvable for $n \geq 5$ — its composition factors include the non-abelian simple group $A_n$. The non-obvious step is converting the global property "solvable" into a local check on each simple factor.
+**Solvability as a composition-factor condition.** A finite group $G$ is solvable if and only if every composition factor of $G$ is cyclic of prime order. To use this: given a finite group, compute (or constrain) its composition factors; if any factor is a non-abelian simple group, $G$ is not solvable. This is the standard route to proving, for instance, that $S_n$ is not solvable for $n \geq 5$ — its composition factors include the non-abelian simple group $A_n$. The non-obvious step is converting the global property "solvable" into a local check on each simple factor.
 
 **Distinguishing groups of the same order.** Two finite groups with different multisets of composition factors are non-isomorphic (by Jordan–Hölder, the factors are an invariant). For example, $C_6$ and $S_3$ both have order $6$ — but $C_6$ has composition factors $\{C_2, C_3\}$ with abelian-only factors (so it is solvable, indeed abelian), while $S_3$ has the same factor multiset $\{C_2, C_3\}$ yet is non-abelian; a sharper invariant (the series itself, or the extension data) is needed here, illustrating that composition factors *constrain* but the extension problem carries the remaining information. The non-obvious lesson: composition factors are necessary but not sufficient to identify a group.
 
@@ -234,4 +237,4 @@ Hence $G$ has a composition series. By induction, every finite group does.
 > Existence of a composition series is only half the story. The **Jordan–Hölder theorem** asserts uniqueness: any two composition series of a finite group $G$ have the same length and the same multiset of composition factors (up to isomorphism and reordering). Together with this existence theorem, it makes the composition factors a genuine invariant of $G$ — the true analogue of the prime factorisation. See [[Thm - Jordan-Hölder Theorem]].
 
 > [!tip] Solvable Groups and Galois' Criterion *(from Galois Theory)*
-> A finite group is **solvable** exactly when all its composition factors are cyclic of prime order. Galois' theorem says a polynomial is solvable by radicals iff its Galois group is solvable — so the composition series, with its factors classified by [[Thm - Abelian Simple Groups are Cyclic of Prime Order]], is the algebraic heart of why the general quintic has no radical formula. See [[Def - Solvable Group]].
+> A finite group is **solvable** exactly when all its composition factors are cyclic of prime order. Galois' theorem says a polynomial is solvable by radicals if and only if its Galois group is solvable — so the composition series, with its factors classified by [[Thm - Abelian Simple Groups are Cyclic of Prime Order]], is the algebraic heart of why the general quintic has no radical formula. See [[Def - Solvable Group]].

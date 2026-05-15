@@ -160,6 +160,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 The set $X$ is the disjoint union of the orbits of the $Q$-action. For an orbit $O$, the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] gives $|O| = |Q : Q_x| = |Q|/|Q_x|$ for any $x \in O$, so $|O|$ divides $|Q| = p^b$. Hence each orbit has size a power of $p$: either $1$ or divisible by $p$. An orbit of size $1$ is a single point fixed by all of $Q$, i.e. a point of $X^Q$. Writing $|X| = \sum_{\text{orbits } O} |O|$ and reducing modulo $p$, every orbit with $|O|$ divisible by $p$ contributes $0$, and every orbit of size $1$ contributes $1$, so $|X| \equiv |X^Q| \pmod p$. If $p \nmid |X|$ then $|X^Q| \equiv |X| \not\equiv 0 \pmod p$, so $|X^Q| \neq 0$.
 
 </details>
+
 </details>
 
 <details>
@@ -179,6 +180,7 @@ $$g g_1^{-1} \cdot X = \{g g_1^{-1} g_1, \; g g_1^{-1} g_2, \dots\} = \{g, \; g 
 a $p^a$-element subset that *contains $g$*. Thus for every $g \in G$ there is a member of $\Sigma$ containing $g$. The union of all members of $\Sigma$ is therefore all of $G$. Since each member has exactly $p^a$ elements, covering the $|G| = p^a m$ elements of $G$ requires at least $p^a m / p^a = m$ members. Hence $|\Sigma| \geq m$.
 
 </details>
+
 </details>
 
 <details>
@@ -198,6 +200,7 @@ $$\binom{p^a m}{p^a} = \prod_{j=0}^{p^a - 1} \frac{p^a m - j}{p^a - j}.$$
 Fix $j$ with $0 \leq j < p^a$ and let $p^c$ be the exact power of $p$ dividing $j$ (for $j = 0$ the factor is $\frac{p^a m}{p^a} = m$, contributing no $p$ either way). Since $j < p^a$ we have $c < a$. Now $p^a m - j$: writing $j = p^c j'$ with $p \nmid j'$, we get $p^a m - j = p^c(p^{a-c} m - j')$, and $p^{a-c} m - j' \equiv -j' \not\equiv 0 \pmod p$ because $a - c \geq 1$; so the exact power of $p$ dividing $p^a m - j$ is $p^c$. Identically, $p^a - j = p^c(p^{a-c} - j')$ with $p^{a-c} - j' \equiv -j' \not\equiv 0 \pmod p$, so the exact power of $p$ dividing $p^a - j$ is also $p^c$. Numerator and denominator carry the *same* power of $p$ in every factor, so all powers of $p$ cancel and the product $\binom{p^a m}{p^a}$ is coprime to $p$.
 
 </details>
+
 </details>
 
 <details>
@@ -215,6 +218,7 @@ Fix $j$ with $0 \leq j < p^a$ and let $p^c$ be the exact power of $p$ dividing $
 By [[Thm - Lagrange's Theorem|Lagrange]], $|P| \mid |K|$ and $|K| \mid |G|$, so $p^a = |P| \mid |K| \mid p^a m$. Thus the order of $K$ is $p^a m'$ where $m' \mid m$, and since $p \nmid m$ also $p \nmid m'$ — so $p^a$ is the exact power of $p$ dividing $|K|$. The subgroup $P \leq K$ has order $p^a$, which is precisely the maximal $p$-power dividing $|K|$. Hence $P$ is a Sylow $p$-subgroup of $K$.
 
 </details>
+
 </details>
 
 ---

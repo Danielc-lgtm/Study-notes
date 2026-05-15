@@ -95,11 +95,11 @@ Do not attack the three claims independently. Define one homomorphism — restri
    - *Why needed:* This single map is the source of all three claims.
 
 2. **Compute the image.** Show $\operatorname{im}\varphi = HK/K$, and deduce $HK \leq G$.
-   - *Hint:* $\operatorname{im}\varphi = \{hK : h \in H\}$; a coset $gK$ lies here iff $g \in HK$. The image of a homomorphism is a subgroup of $G/K$, and its preimage under $\pi$ is the subgroup $HK$.
+   - *Hint:* $\operatorname{im}\varphi = \{hK : h \in H\}$; a coset $gK$ lies here if and only if $g \in HK$. The image of a homomorphism is a subgroup of $G/K$, and its preimage under $\pi$ is the subgroup $HK$.
    - *Why needed:* Gives claim 1 and identifies the right-hand side of the isomorphism.
 
 3. **Compute the kernel.** Show $\ker\varphi = H \cap K$, and deduce $H \cap K \trianglelefteq H$.
-   - *Hint:* $h \in \ker\varphi$ iff $hK = K$ iff $h \in K$; since also $h \in H$, this is $h \in H\cap K$. Kernels are normal in the domain $H$.
+   - *Hint:* $h \in \ker\varphi$ if and only if $hK = K$ if and only if $h \in K$; since also $h \in H$, this is $h \in H\cap K$. Kernels are normal in the domain $H$.
    - *Why needed:* Gives the normality half of claim 2 and the left-hand side of the isomorphism.
 
 4. **Apply the first isomorphism theorem.** Conclude $H/(H\cap K) \cong HK/K$.
@@ -115,7 +115,7 @@ Do not attack the three claims independently. Define one homomorphism — restri
 # Lemma Decomposition
 
 <details>
-<summary><strong>Lemma 1: A coset $gK$ has a representative in $H$ iff $g \in HK$</strong></summary>
+<summary><strong>Lemma 1: A coset $gK$ has a representative in $H$ if and only if $g \in HK$</strong></summary>
 
 **Statement:** For $H \leq G$, $K \trianglelefteq G$, and $g \in G$: there exists $h \in H$ with $hK = gK$ if and only if $g \in HK$.
 
@@ -131,6 +131,7 @@ Do not attack the three claims independently. Define one homomorphism — restri
 ($\Leftarrow$) Suppose $g \in HK$, say $g = hk$ with $h \in H$, $k \in K$. Then $g^{-1}h = (hk)^{-1}h = k^{-1}h^{-1}h = k^{-1} \in K$, so $gK = hK$, and $h \in H$ is the required representative.
 
 </details>
+
 </details>
 
 <details>
@@ -150,6 +151,7 @@ $$h'k'(hk)^{-1} = h'k'k^{-1}h^{-1} = (h'h^{-1})\,\big(h(k'k^{-1})h^{-1}\big).$$
 The first factor $h'h^{-1}$ lies in $H$. The second factor is $k'k^{-1} \in K$ conjugated by $h \in G$, which lies in $K$ because $K$ is normal in $G$. So $h'k'(hk)^{-1}$ is a product of an element of $H$ with an element of $K$, hence lies in $HK$. By the subgroup criterion, $HK \leq G$.
 
 </details>
+
 </details>
 
 <details>
@@ -171,6 +173,7 @@ The quotient map $\pi : G \to G/K$, $g \mapsto gK$, is a homomorphism (this requ
 *Image.* By definition $\operatorname{im}\varphi = \{hK : h \in H\}$. By Lemma 1 this is exactly the set of cosets $gK$ with $g \in HK$, that is, $HK/K$.
 
 </details>
+
 </details>
 
 ---
@@ -188,7 +191,7 @@ This is the composite of the inclusion $H \hookrightarrow G$ with the quotient h
 
 **Claim 1: $HK$ is a subgroup.** The image $\operatorname{im}\varphi$ is a subgroup of $G/K$. By the coset-representative argument (Lemma 1), a coset $gK$ lies in $\operatorname{im}\varphi$ exactly when $g \in HK$; thus $\operatorname{im}\varphi$ consists precisely of the cosets of $K$ with a representative in $HK$. The union of these cosets is the set $HK$ itself (each such coset $hK$ with $h\in H$ is contained in $HK$, and conversely each element $hk\in HK$ lies in the coset $hK$). Since a union of cosets forming a subgroup of $G/K$ pulls back to a subgroup of $G$, $HK$ is a subgroup of $G$. (For a self-contained direct proof, see Lemma 2.)
 
-**Claim 2: normality.** Since $K \subseteq HK \subseteq G$ and $K$ is normal in $G$, conjugation by any element of the subgroup $HK$ maps $K$ into $K$; hence $K \trianglelefteq HK$, and the quotient $HK/K$ is a group. For the other half: $\ker\varphi$ is a normal subgroup of the domain $H$. We compute $\ker\varphi$: an element $h \in H$ satisfies $\varphi(h) = K$ iff $hK = K$ iff $h \in K$; combined with $h \in H$ this gives $h \in H \cap K$. So $\ker\varphi = H \cap K$, and therefore $H \cap K \trianglelefteq H$.
+**Claim 2: normality.** Since $K \subseteq HK \subseteq G$ and $K$ is normal in $G$, conjugation by any element of the subgroup $HK$ maps $K$ into $K$; hence $K \trianglelefteq HK$, and the quotient $HK/K$ is a group. For the other half: $\ker\varphi$ is a normal subgroup of the domain $H$. We compute $\ker\varphi$: an element $h \in H$ satisfies $\varphi(h) = K$ if and only if $hK = K$ if and only if $h \in K$; combined with $h \in H$ this gives $h \in H \cap K$. So $\ker\varphi = H \cap K$, and therefore $H \cap K \trianglelefteq H$.
 
 **Claim 3: the isomorphism.** We have a homomorphism $\varphi : H \to G/K$ with
 $$\ker\varphi = H \cap K, \qquad \operatorname{im}\varphi = HK/K$$

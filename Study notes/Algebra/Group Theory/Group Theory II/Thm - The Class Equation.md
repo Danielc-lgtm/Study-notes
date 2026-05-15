@@ -105,11 +105,11 @@ Let $G$ act on itself by conjugation. Its orbits, the conjugacy classes, partiti
    - *Why needed:* It licenses the language of orbits and stabilisers, so the conjugacy classes are genuine orbits and partition $G$.
 
 2. **Class size equals centraliser index.** Show the stabiliser of $x$ under conjugation is $C_G(x)$, then apply [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser]] to get $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$.
-   - *Hint:* $g$ stabilises $x$ iff $gxg^{-1} = x$ iff $gx = xg$ — that is the definition of $C_G(x)$.
+   - *Hint:* $g$ stabilises $x$ if and only if $gxg^{-1} = x$ if and only if $gx = xg$ — that is the definition of $C_G(x)$.
    - *Why needed:* This is the proposition; it makes every class size a divisor of $|G|$.
 
 3. **Singleton classes are exactly the centre.** Show $|\operatorname{ccl}_G(x)| = 1 \iff x \in Z(G)$.
-   - *Hint:* The class is a singleton iff $gxg^{-1} = x$ for all $g$, which says $x$ commutes with all of $G$.
+   - *Hint:* The class is a singleton if and only if $gxg^{-1} = x$ for all $g$, which says $x$ commutes with all of $G$.
    - *Why needed:* It lets the size-$1$ classes be collected into one block of size $|Z(G)|$.
 
 4. **Assemble the class equation.** The classes partition $G$, so $|G| = \sum_{\text{all classes}} (\text{size})$. Split the sum: the singleton classes contribute $|Z(G)|$ in total, the rest contribute $\sum_i |G : C_G(x_i)|$ with each term $> 1$.
@@ -142,6 +142,7 @@ $$g \ast (h \ast x) = g(hxh^{-1})g^{-1} = (gh)\,x\,(h^{-1}g^{-1}) = (gh)\,x\,(gh
 Both axioms hold, so conjugation is an action. (Its [[Thm - Actions Correspond to Homomorphisms|permutation representation]] $\varphi : G \to \operatorname{Sym}(G)$ even lands in [[Def - Automorphism Group|$\operatorname{Aut}(G)$]], since each $\varphi(g)$ is a homomorphism: $\varphi(g)(x_1 x_2) = g x_1 x_2 g^{-1} = (g x_1 g^{-1})(g x_2 g^{-1}) = \varphi(g)(x_1)\,\varphi(g)(x_2)$.)
 
 </details>
+
 </details>
 
 <details>
@@ -149,7 +150,7 @@ Both axioms hold, so conjugation is an action. (Its [[Thm - Actions Correspond t
 
 **Statement:** For the conjugation action, the stabiliser of $x \in G$ is the [[Def - Centraliser and Centre|centraliser]] $C_G(x) = \{g \in G : gx = xg\}$.
 
-**Hint:** Unwind "stabiliser": $g$ stabilises $x$ iff $g \ast x = x$.
+**Hint:** Unwind "stabiliser": $g$ stabilises $x$ if and only if $g \ast x = x$.
 
 **Why needed:** It is the identification that turns orbit–stabiliser into the proposition $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$.
 
@@ -159,6 +160,7 @@ Both axioms hold, so conjugation is an action. (Its [[Thm - Actions Correspond t
 By definition the stabiliser of $x$ is $\{g \in G : g \ast x = x\} = \{g : gxg^{-1} = x\}$. Right-multiplying the equation $gxg^{-1} = x$ by $g$ gives the equivalent equation $gx = xg$. Hence the stabiliser is $\{g : gx = xg\} = C_G(x)$. Being a stabiliser, it is automatically a [[Def - Subgroup|subgroup]] of $G$.
 
 </details>
+
 </details>
 
 <details>
@@ -176,14 +178,15 @@ By definition the stabiliser of $x$ is $\{g \in G : g \ast x = x\} = \{g : gxg^{
 By Lemma 1 conjugation is an action; the orbit of $x$ is $\operatorname{ccl}_G(x)$ and, by Lemma 2, its stabiliser is $C_G(x)$. The [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] provides a bijection $\operatorname{ccl}_G(x) \leftrightarrow G/C_G(x)$, $gxg^{-1} \leftrightarrow g\,C_G(x)$. Hence $|\operatorname{ccl}_G(x)| = |G : C_G(x)|$, and for finite $G$ this equals $|G|/|C_G(x)|$. Since $|C_G(x)|$ divides $|G|$ by [[Thm - Lagrange's Theorem|Lagrange's theorem]], the quotient $|\operatorname{ccl}_G(x)|$ is an integer dividing $|G|$.
 
 </details>
+
 </details>
 
 <details>
-<summary><strong>Lemma 4: A conjugacy class is a singleton iff its element is central</strong></summary>
+<summary><strong>Lemma 4: A conjugacy class is a singleton if and only if its element is central</strong></summary>
 
 **Statement:** $|\operatorname{ccl}_G(x)| = 1$ if and only if $x \in Z(G)$.
 
-**Hint:** A class is a singleton iff $x$ is its own only conjugate; spell out what that says for every $g$.
+**Hint:** A class is a singleton if and only if $x$ is its own only conjugate; spell out what that says for every $g$.
 
 **Why needed:** It identifies the size-$1$ classes with the centre, so the class equation can collect them into the single block $|Z(G)|$.
 
@@ -193,6 +196,7 @@ By Lemma 1 conjugation is an action; the orbit of $x$ is $\operatorname{ccl}_G(x
 The class $\operatorname{ccl}_G(x) = \{gxg^{-1} : g \in G\}$ contains $x$ (take $g = e$). It is a singleton precisely when $gxg^{-1} = x$ for every $g \in G$, equivalently $gx = xg$ for every $g$, equivalently $x$ commutes with all of $G$ — which is the definition of $x \in Z(G)$. Hence the singleton classes are exactly the elements of the centre, and there are $|Z(G)|$ of them.
 
 </details>
+
 </details>
 
 ---

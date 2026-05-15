@@ -173,7 +173,7 @@ Let $G$ be a finite $p$-group, $|G| = p^n$, and let $N \trianglelefteq G$ with $
 
 **Orbit sizes.** For $x \in N$ with orbit $\mathcal{O}_x$, the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]] gives $|\mathcal{O}_x| = |G|/|G_x|$, so $|\mathcal{O}_x|$ divides $|G| = p^n$ and is thus a power of $p$. Every orbit therefore has size $1$ or a size divisible by $p$.
 
-**Fixed points.** The orbit $\mathcal{O}_x$ has size $1$ iff $gxg^{-1} = x$ for all $g \in G$, i.e. iff $x$ commutes with every element of $G$, i.e. iff $x \in Z(G)$. Since $x \in N$, the set of size-$1$ orbits corresponds exactly to $N \cap Z(G)$.
+**Fixed points.** The orbit $\mathcal{O}_x$ has size $1$ if and only if $gxg^{-1} = x$ for all $g \in G$, i.e. if and only if $x$ commutes with every element of $G$, i.e. if and only if $x \in Z(G)$. Since $x \in N$, the set of size-$1$ orbits corresponds exactly to $N \cap Z(G)$.
 
 **Counting modulo $p$.** The orbits partition $N$, so summing orbit sizes,
 $$|N| = |N \cap Z(G)| + pK$$
