@@ -13,24 +13,25 @@ Active research areas: ontology identification (AIT + reusable function pointers
 ## Vault Structure
 
 ```
-Study notes/
-  [Subject Area]/              # e.g., Algebra/, Analysis/, Geometry/
-    [Subtopic]/                # e.g., Group Theory/, Functional Analysis/
-      [Topic Page].md          # chapter-level topic page
-      [Topic Name]/            # subfolder for that topic's subpages
-        Def - [Name].md
-        Thm - [Name].md
-        Ex - [Name].md
-        Exercise Index - §X.Y.md
-  .obsidian/                   # Obsidian configuration
-  CLAUDE.md                    # this file
-  .claude/                     # Claude Code skills
+[repo root]/
+  CLAUDE.md                        # this file
+  .claude/                         # Claude Code skills
     skills/
       polymath-notes/
         SKILL.md
         references/
           obsidian-patterns.md
           templates.md
+  Study notes/                     # the Obsidian vault
+    [Subject Area]/                # e.g., Algebra/, Analysis/, Geometry/
+      [Subtopic]/                  # e.g., Group Theory/, Functional Analysis/
+        [Topic Page].md            # chapter-level topic page
+        [Topic Name]/              # subfolder for that topic's subpages
+          Def - [Name].md
+          Thm - [Name].md
+          Ex - [Name].md
+          Exercise Index - §X.Y.md
+    .obsidian/                     # Obsidian configuration
 ```
 
 ## Conventions
