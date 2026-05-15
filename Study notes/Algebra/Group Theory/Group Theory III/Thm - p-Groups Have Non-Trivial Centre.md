@@ -135,6 +135,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 The class $\operatorname{ccl}(x)$ is the singleton $\{x\}$ iff $gxg^{-1} = x$ for every $g \in G$ — that is, every conjugate of $x$ equals $x$. Right-multiplying $gxg^{-1} = x$ by $g$ gives $gx = xg$. So $\operatorname{ccl}(x) = \{x\}$ iff $gx = xg$ for all $g \in G$, which is exactly the statement $x \in Z(G)$.
 
 </details>
+
 </details>
 
 <details>
@@ -152,6 +153,7 @@ The class $\operatorname{ccl}(x)$ is the singleton $\{x\}$ iff $gxg^{-1} = x$ fo
 Conjugation is an action of $G$ on itself; the orbit of $x$ is $\operatorname{ccl}(x)$ and the stabiliser of $x$ is the [[Def - Centraliser and Centre|centraliser]] $C_G(x)$. By the [[Thm - Orbit-Stabiliser Theorem|orbit–stabiliser theorem]], $|\operatorname{ccl}(x)| = |G : C_G(x)|$. By [[Thm - Lagrange's Theorem|Lagrange]], this index divides $|G| = p^n$, so $|\operatorname{ccl}(x)| = p^k$ for some $0 \leq k \leq n$. Since $x$ is not central, by Lemma 1 the class is not a singleton, so $|\operatorname{ccl}(x)| > 1$, forcing $k \geq 1$. Hence $p \mid p^k = |\operatorname{ccl}(x)|$.
 
 </details>
+
 </details>
 
 <details>
@@ -169,6 +171,7 @@ Conjugation is an action of $G$ on itself; the orbit of $x$ is $\operatorname{cc
 If $p \mid N$ and $N \geq 1$, write $N = pk$ with $k$ a non-negative integer; since $N \geq 1 > 0$ we have $k \geq 1$, so $N = pk \geq p$. The identity $e$ satisfies $eg = ge$ for all $g$, so $e \in Z(G)$ and $|Z(G)| \geq 1$; with $p \mid |Z(G)|$ this gives $|Z(G)| \geq p$, and as $p \geq 2$, the centre contains an element other than $e$.
 
 </details>
+
 </details>
 
 ---
