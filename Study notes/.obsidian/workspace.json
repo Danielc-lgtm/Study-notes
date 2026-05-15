@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "Algebra/Group Theory/Group Theory I — §1.1–1.2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Welcome"
+              "title": "Group Theory I — §1.1–1.2"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "365b19c7bfd998b8",
@@ -185,6 +186,8 @@
   },
   "active": "10f9f8cf081b9403",
   "lastOpenFiles": [
+    "Algebra/Group Theory/Group Theory I/Def - Simple Group.md",
+    "Algebra/Group Theory/Group Theory I — §1.1–1.2.md",
     "Welcome.md"
   ]
 }
