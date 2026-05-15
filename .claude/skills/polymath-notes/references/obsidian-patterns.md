@@ -38,6 +38,8 @@ Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the p
 [[Thm - Lagrange's Theorem#Why Is It True]]
 ```
 
+**Never wrap a wikilink in square brackets.** Writing `[[[Def - Group]]]`, or enclosing a list of wikilinks as `[[[Def - A]], [[Def - B]]]`, places a `[` directly against the `[[` opener — Obsidian reads the resulting `[[[` as a malformed link, and the link breaks. To group a list of wikilinks (for instance the dependency list on an exercise index page), enclose it in parentheses: `([[Def - A]], [[Def - B]])`.
+
 **All definition, theorem, and exercise references throughout the notes should use wikilinks.** The same concept may be linked with different display text in different contexts.
 
 ## Transclusion (Embedding)

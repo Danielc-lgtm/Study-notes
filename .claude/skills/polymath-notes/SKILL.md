@@ -283,7 +283,7 @@ Contains six sections (Sources and Targets is NOT included — it was removed):
 
 ### Exercise Index Page
 
-One page per sub-chapter section listing all exercises for that section. Each exercise wikilink is followed by bracketed wikilinks to every definition and theorem used in that exercise's solution. Aim for at least 3 exercises per sub-chapter section. Integrated into the topic page's concept map as a callout at the end of each section.
+One page per sub-chapter section listing all exercises for that section. Each exercise wikilink is followed by a parenthesised list of wikilinks to every definition and theorem used in that exercise's solution (parentheses, not square brackets — a `[` against a `[[` opener breaks the link). Aim for at least 3 exercises per sub-chapter section. Integrated into the topic page's concept map as a callout at the end of each section.
 
 ---
 

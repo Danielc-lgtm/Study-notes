@@ -472,11 +472,11 @@ tags: [area-tag, subject-tag]
 
 ## §X.Y [Section Title] — Exercises
 
-- [[Ex - Exercise Name]] — one-line description of technique/pattern drilled [[[Def - A]], [[Thm - B]], [[Def - C]]]
-- [[Ex - Exercise Name]] — one-line description [[[Thm - D]], [[Def - E]]]
-- [[Ex - Exercise Name]] — one-line description [[[Def - F]], [[Thm - G]], [[Thm - H]]]
+- [[Ex - Exercise Name]] — one-line description of technique/pattern drilled ([[Def - A]], [[Thm - B]], [[Def - C]])
+- [[Ex - Exercise Name]] — one-line description ([[Thm - D]], [[Def - E]])
+- [[Ex - Exercise Name]] — one-line description ([[Def - F]], [[Thm - G]], [[Thm - H]])
 
 [Aim for at least 3 exercises per section.]
 
-[The bracketed wikilinks after each exercise are the complete list of definitions and theorems invoked in that exercise's solution — per-exercise prerequisites, not section-level prerequisites. This lets the reader see exactly which concepts each exercise drills.]
+[The parenthesised wikilinks after each exercise are the complete list of definitions and theorems invoked in that exercise's solution — per-exercise prerequisites, not section-level prerequisites. This lets the reader see exactly which concepts each exercise drills. Enclose the list in parentheses, never square brackets: a `[` placed immediately before a `[[wikilink]]` produces `[[[`, which Obsidian mis-parses, breaking the link.]
 ```
