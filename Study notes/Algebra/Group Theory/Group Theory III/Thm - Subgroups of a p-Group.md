@@ -131,6 +131,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 By [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial-centre theorem]], $Z(G) \neq \{e\}$, so choose $z \in Z(G)$ with $z \neq e$. By [[Thm - Lagrange's Theorem|Lagrange]], $\operatorname{ord}(z)$ divides $|G| = p^a$, so $\operatorname{ord}(z) = p^c$ for some $c \geq 1$ (as $z \neq e$). Set $x = z^{p^{c-1}}$. Then $x^p = z^{p^c} = e$, and $x \neq e$ since $p^{c-1} < p^c = \operatorname{ord}(z)$; so $\operatorname{ord}(x) = p$. Finally $x$ is a power of the central element $z$, and powers of central elements are central, so $x \in Z(G)$.
 
 </details>
+
 </details>
 
 <details>
@@ -148,6 +149,7 @@ By [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial-centre theorem]], $Z
 For any $g \in G$ and any power $x^k$, since $x$ is central $gx^k g^{-1} = x^k g g^{-1} = x^k \in \langle x\rangle$. So $g\langle x\rangle g^{-1} \subseteq \langle x\rangle$ for every $g$, which is the definition of $\langle x\rangle$ being [[Def - Normal Subgroup|normal]] in $G$. (In fact every subgroup of $Z(G)$ is normal in $G$, by the identical argument.)
 
 </details>
+
 </details>
 
 <details>
@@ -165,6 +167,7 @@ For any $g \in G$ and any power $x^k$, since $x$ is central $gx^k g^{-1} = x^k g
 By the [[Thm - Correspondence Theorem|correspondence theorem]], the subgroups of $G/N$ are exactly the sets $K/N$ for subgroups $K$ with $N \leq K \leq G$, and this correspondence $K \leftrightarrow K/N$ is a bijection. So there is a unique $K$ with $N \leq K \leq G$ and $K/N = L$. For the order: $K$ is partitioned into the cosets of $N$ it contains, and the cosets of $N$ lying inside $K$ are precisely the elements of $K/N = L$. So $K$ is a disjoint union of $|L|$ cosets, each of size $|N|$, giving $|K| = |L| \cdot |N|$.
 
 </details>
+
 </details>
 
 ---
