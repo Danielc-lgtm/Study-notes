@@ -147,7 +147,7 @@ $2026=45^2+1^2$.
 > [!note]- Complete formal solution
 > **Claim.** $65=4^2+7^2=8^2+1^2$ and $2026=45^2+1^2$ are sums of two squares; $2023$ is not.
 >
-> *Dictionary.* For $z=a+bi\in\mathbb{Z}[i]$, $N(z)=a^2+b^2$, so an integer is a sum of two squares exactly when it is a norm. $N$ is multiplicative since $N(z)=z\bar z$ and conjugation is a ring homomorphism. By the sum of two squares theorem, $n=\prod p_i^{n_i}$ is a sum of two squares iff every $p_i\equiv 3\pmod 4$ has even exponent.
+> *Dictionary.* For $z=a+bi\in\mathbb{Z}[i]$, $N(z)=a^2+b^2$, so an integer is a sum of two squares exactly when it is a norm. $N$ is multiplicative since $N(z)=z\bar z$ and conjugation is a ring homomorphism. By the sum of two squares theorem, $n=\prod p_i^{n_i}$ is a sum of two squares if and only if every $p_i\equiv 3\pmod 4$ has even exponent.
 >
 > *Decisions.* $65=5\cdot 13$ with $5,13\equiv 1\pmod 4$: no prime $\equiv 3\pmod 4$, so $65$ is a sum of two squares. $2026=2\cdot 1013$ with $1013$ prime, $1013\equiv 1\pmod 4$: no prime $\equiv 3\pmod 4$, so $2026$ is a sum of two squares. $2023=7\cdot 17^2$ with $7\equiv 3\pmod 4$ to the odd power $1$: the criterion fails, so $2023$ is **not** a sum of two squares.
 >
