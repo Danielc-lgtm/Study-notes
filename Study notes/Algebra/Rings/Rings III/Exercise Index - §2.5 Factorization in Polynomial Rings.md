@@ -1,0 +1,16 @@
+---
+type: exercise-index
+subject: ring-theory
+section: "2.5"
+tags: [algebra, ring-theory]
+---
+
+## §2.5 Factorization in Polynomial Rings — Exercises
+
+- [[Ex - Irreducibility by Eisenstein's criterion]] — the direct use of the criterion: read off the coefficient list of $X^n - p$ and of $X^5 - 12X^3 + 36X - 6$, find a prime $p$ dividing every coefficient but the leading one with $p^2 \nmid a_0$, and conclude irreducibility in $\mathbb{Z}[X]$ then $\mathbb{Q}[X]$; deduce $\sqrt[n]{p}$ is irrational by reading a root statement off an irreducible polynomial of degree $\geq 2$, and see that the criterion is prime-sensitive — a wrong prime fails the $p^2 \nmid a_0$ test ([[Thm - Eisenstein's Criterion]], [[Thm - Gauss's Lemma]], [[Def - Content and Primitive Polynomial]], [[Def - Irreducible and Prime Elements]], [[Def - Polynomial Ring]], [[Def - Field of Fractions]]).
+
+- [[Ex - Irreducibility of the cyclotomic polynomial]] — irreducibility when Eisenstein does not directly apply: the all-ones polynomial $\Phi_p(X) = X^{p-1} + \cdots + X + 1$ has no Eisenstein prime, so substitute $X \mapsto X+1$ via the closed form $\Phi_p(X) = (X^p-1)/(X-1)$, expand $(X+1)^p$ by the binomial theorem to expose non-leading coefficients $\binom{p}{k}$ all divisible by $p$ and constant term exactly $p$, apply Eisenstein, then transfer irreducibility back because $X \mapsto X+1$ is a ring automorphism of $\mathbb{Q}[X]$ ([[Thm - Eisenstein's Criterion]], [[Thm - Gauss's Lemma]], [[Def - Content and Primitive Polynomial]], [[Def - Irreducible and Prime Elements]], [[Def - Polynomial Ring]]).
+
+- [[Ex - Gauss's lemma and factorization over the integers]] — a guided proof of Gauss's lemma over $\mathbb{Z}$: a primitive polynomial reducible over $\mathbb{Q}$ is already reducible over $\mathbb{Z}$, shown by clearing denominators to get $\lambda f = g'h'$, splitting each factor into content times primitive part, and comparing contents so that $\lambda$ is absorbed and cancels; applied to certify $X^3 + X + 1$ irreducible over $\mathbb{Q}$ by a finite integer-root search, the legitimacy of which is exactly what Gauss's lemma supplies ([[Thm - Gauss's Lemma]], [[Def - Content and Primitive Polynomial]], [[Def - Irreducible and Prime Elements]], [[Def - Field of Fractions]], [[Def - Polynomial Ring]]).
+
+- [[Ex - Reduction modulo a prime as an irreducibility test]] — irreducibility by projecting into a finite field: $X^4 + X + 1$ is certified irreducible over $\mathbb{Q}$ by reducing mod $2$, where ruling out a root excludes linear factors and comparing against $(X^2+X+1)^2$ excludes the only possible quadratic-times-quadratic split; the method's limitation is exhibited by $X^4 + 1$, irreducible over $\mathbb{Q}$ yet reducible modulo every prime, proving reduction mod $p$ is a sufficient but not necessary test ([[Thm - Gauss's Lemma]], [[Thm - Eisenstein's Criterion]], [[Def - Content and Primitive Polynomial]], [[Def - Irreducible and Prime Elements]], [[Def - Polynomial Ring]], [[Def - Field of Fractions]]).

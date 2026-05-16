@@ -27,11 +27,11 @@ A polynomial $f = a_0 + a_1 X + \cdots + a_n X^n \in R[X]$ over a unique factori
 
 An element of a ring is [[Def - Irreducible and Prime Elements|irreducible]] if it is non-zero, not a unit, and every factorisation into two factors forces one factor to be a unit. For a polynomial in $\mathbb{Z}[X]$ the units are exactly $\pm 1$ (the units of $\mathbb{Z}$), so a polynomial of positive degree is reducible exactly when it is a product of two polynomials each of positive degree, or a non-unit constant times a polynomial.
 
-![[Thm - Eisenstein's Criterion#The Statement]]
+**[[Thm - Eisenstein's Criterion|Eisenstein's criterion]].** Let $R$ be a unique factorization domain and $f = a_0 + a_1 X + \cdots + a_n X^n \in R[X]$ a primitive polynomial with $a_n \neq 0$. If there is an irreducible (hence prime) $p \in R$ with (i) $p \nmid a_n$, (ii) $p \mid a_i$ for all $0 \leq i < n$, and (iii) $p^2 \nmid a_0$, then $f$ is irreducible in $R[X]$, and hence in $F[X]$ for $F$ the field of fractions of $R$.
 
 The criterion is the workhorse here. In words: if you can find **one** prime $p$ that divides every coefficient *except* the leading one, and whose square fails to divide the constant term, then the polynomial cannot be split. Note the asymmetry — the prime must miss the top coefficient and miss (to second order) the bottom coefficient, while dividing everything strictly in between.
 
-![[Thm - Gauss's Lemma#The Statement]]
+![[Thm - Gauss's Lemma#Statement]]
 
 Gauss's lemma is what licenses the phrase "hence in $\mathbb{Q}[X]$": for a primitive polynomial, irreducibility over $\mathbb{Z}$ and irreducibility over $\mathbb{Q}$ are the *same* statement. Eisenstein's criterion is naturally a statement about $\mathbb{Z}[X]$ — it talks about a prime dividing coefficients, and $\mathbb{Q}$ has no primes — so the workflow is always: apply Eisenstein in $\mathbb{Z}[X]$, then transport the conclusion to $\mathbb{Q}[X]$ by Gauss.
 

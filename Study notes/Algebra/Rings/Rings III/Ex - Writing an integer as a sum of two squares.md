@@ -27,11 +27,9 @@ which is **multiplicative**: $N(zw)=N(z)N(w)$ for all $z,w\in\mathbb{Z}[i]$, bec
 
 A square integer is congruent to $0$ or $1$ modulo $4$, so a sum of two squares is congruent to $0$, $1$ or $2$ modulo $4$ — **never $3$**. This is the elementary obstruction; the theorem below says it is, suitably refined, the *only* obstruction.
 
-![[Thm - Sum of Two Squares#Formal Statement]]
+**Sum of two squares theorem.** The [[Thm - Sum of Two Squares|sum of two squares theorem]] states: a non-negative integer $n$ is a sum of two squares if and only if, in its prime factorisation, every prime $p\equiv 3\pmod 4$ occurs to an **even** power. Equivalently: write $n=\prod_i p_i^{n_i}$ with the $p_i$ distinct primes; then $n=a^2+b^2$ has an integer solution if and only if $p_i\equiv 3\pmod 4$ forces $n_i$ even.
 
-**Sum of two squares theorem.** A non-negative integer $n$ is a sum of two squares if and only if, in its prime factorisation, every prime $p\equiv 3\pmod 4$ occurs to an **even** power. Equivalently: write $n=\prod_i p_i^{n_i}$ with the $p_i$ distinct primes; then $n=a^2+b^2$ has an integer solution if and only if $p_i\equiv 3\pmod 4$ forces $n_i$ even.
-
-![[Thm - Classification of Gaussian Primes#Formal Statement]]
+![[Thm - Classification of Gaussian Primes#Statement]]
 
 The mechanism behind the theorem is the [[Thm - Classification of Gaussian Primes|classification of Gaussian primes]]. A rational prime $p$ behaves in $\mathbb{Z}[i]$ in one of three ways: $p=2$ **ramifies**, $2=-i(1+i)^2$; a prime $p\equiv 1\pmod 4$ **splits**, $p=\pi\bar\pi$ with $\pi,\bar\pi$ non-associate Gaussian primes of norm $p$; a prime $p\equiv 3\pmod 4$ stays **inert** — it remains a Gaussian prime, of norm $p^2$. So a prime $p\equiv 1\pmod 4$, and the prime $2$, are themselves norms of Gaussian integers; a prime $p\equiv 3\pmod 4$ is not, and only its square $p^2=N(p)$ is.
 

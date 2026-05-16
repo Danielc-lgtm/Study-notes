@@ -32,7 +32,7 @@ Because the norm is a Euclidean function, $\mathbb{Z}[i]$ is a Euclidean domain,
 
 In a unique factorization domain [[Def - Irreducible and Prime Elements|irreducible and prime coincide]]; in $\mathbb{Z}[i]$ we simply say **Gaussian prime**. A useful sufficient test: if $N(z)$ is a rational prime, then $z$ is a Gaussian prime, because a non-trivial factorisation $z=uv$ would give $N(z)=N(u)N(v)$ with both factors $>1$, contradicting primality of $N(z)$.
 
-![[Thm - Classification of Gaussian Primes#Formal Statement]]
+![[Thm - Classification of Gaussian Primes#Statement]]
 
 **Classification of Gaussian primes.** Every Gaussian prime is an associate of exactly one of:
 - $1+i$, the unique prime above $2$, with $N(1+i)=2$ (and $2$ **ramifies**: $2=-i(1+i)^2$);
