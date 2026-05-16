@@ -48,9 +48,9 @@ A [[Def - Unique Factorization Domain|unique factorization domain]] (UFD) is an 
 
 The two structural implications we will invoke:
 
-![[Thm - Euclidean Domains are Principal Ideal Domains#The Statement]]
+![[Thm - Euclidean Domains are Principal Ideal Domains#Statement]]
 
-![[Thm - Principal Ideal Domains are Unique Factorization Domains#The Statement]]
+![[Thm - Principal Ideal Domains are Unique Factorization Domains#Statement]]
 
 ---
 
