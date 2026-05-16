@@ -28,11 +28,11 @@ The polynomial $\Phi_p$ is the quotient that appears in the **finite geometric s
 $$\Phi_p(X) = \frac{X^p - 1}{X - 1}.$$
 This is an identity of polynomials in $\mathbb{Z}[X]$ — the division is exact, with no remainder.
 
-![[Thm - Eisenstein's Criterion#The Statement]]
+**[[Thm - Eisenstein's Criterion|Eisenstein's criterion]].** Let $R$ be a unique factorization domain and $f = a_0 + a_1 X + \cdots + a_n X^n \in R[X]$ a primitive polynomial with $a_n \neq 0$. If there is a prime $p \in R$ with (i) $p \nmid a_n$, (ii) $p \mid a_i$ for all $0 \leq i < n$, and (iii) $p^2 \nmid a_0$, then $f$ is irreducible in $R[X]$, hence in $F[X]$ for $F$ the field of fractions of $R$.
 
 The criterion needs a prime dividing every coefficient except the leading one, with the square of the prime not dividing the constant term. $\Phi_p$ obviously fails this: all its coefficients are $1$. The strategy will be to *substitute a shifted variable* and apply the criterion to the result.
 
-![[Thm - Gauss's Lemma#The Statement]]
+![[Thm - Gauss's Lemma#Statement]]
 
 Gauss's lemma converts irreducibility in $\mathbb{Z}[X]$ into irreducibility in $\mathbb{Q}[X]$ for primitive polynomials. As always, Eisenstein's criterion is fundamentally a $\mathbb{Z}[X]$ statement and Gauss is the bridge to $\mathbb{Q}$.
 

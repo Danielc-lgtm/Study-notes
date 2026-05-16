@@ -24,7 +24,7 @@ The **content** of $f = a_0 + a_1 X + \cdots + a_n X^n \in \mathbb{Z}[X]$ is $c(
 
 A polynomial $f$ of positive degree is **reducible over a ring** $S \in \{\mathbb{Z}, \mathbb{Q}\}$ if $f = gh$ with $g, h \in S[X]$ both non-units of $S[X]$; otherwise it is [[Def - Irreducible and Prime Elements|irreducible]] over $S$. The crucial difference between the two rings: in $\mathbb{Q}[X]$ the units are the non-zero *constants*, so a non-unit factor just needs positive degree; in $\mathbb{Z}[X]$ the units are only $\pm 1$, so a constant like $2$ is a non-unit, and "reducible over $\mathbb{Z}$" can mean splitting off a non-unit constant. This is why the primitivity hypothesis matters — it rules out the boring factorisation $f = 2 \cdot (\tfrac12 f)$.
 
-![[Thm - Gauss's Lemma#The Statement]]
+![[Thm - Gauss's Lemma#Statement]]
 
 This exercise *is* (part 1) a guided proof of one direction of Gauss's lemma, specialised to $R = \mathbb{Z}$, $F = \mathbb{Q}$, and (part 2) a flagship application.
 
