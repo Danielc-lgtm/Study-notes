@@ -99,7 +99,7 @@ Prove the cycle by closing two implications and citing one. Treat (ii)$\iff$(iii
 **Subgoal decomposition:**
 
 1. **(ii) $\iff$ (iii).** Show: $S$ generates and is independent $\iff$ every element has a unique expansion.
-   - *Hint:* Two expansions of one element are equal iff their difference is a relation; uniqueness $\iff$ the only relation is the zero one. Spanning is shared.
+   - *Hint:* Two expansions of one element are equal if and only if their difference is a relation; uniqueness $\iff$ the only relation is the zero one. Spanning is shared.
    - *Why needed:* Lets the rest of the proof freely use whichever of (ii), (iii) is convenient; (iii) supplies the well-definedness in step 3.
 
 2. **(i) $\Rightarrow$ (ii).** Assume $S$ generates $M$ freely. Show $S$ is independent.
@@ -194,7 +194,7 @@ Prove the cycle by closing two implications and citing one. Treat (ii)$\iff$(iii
 > Let $R$ be a commutative ring, $M$ an $R$-module, and $S = \{m_1, \dots, m_k\} \subseteq M$ a finite subset. We prove (i) $\Rightarrow$ (ii) $\Rightarrow$ (i) and (ii) $\iff$ (iii); together these give the full equivalence.
 >
 > ---
-> **(ii) $\iff$ (iii).** This is Lemma 1: "$S$ generates $M$ and is linearly independent" holds if and only if "every element of $M$ is uniquely expressible as $\sum_i r_i m_i$". The proof is the linear-algebra argument — two expansions of an element are equal iff their difference is a relation, so uniqueness of expansion is equivalent to the only relation being trivial.
+> **(ii) $\iff$ (iii).** This is Lemma 1: "$S$ generates $M$ and is linearly independent" holds if and only if "every element of $M$ is uniquely expressible as $\sum_i r_i m_i$". The proof is the linear-algebra argument — two expansions of an element are equal if and only if their difference is a relation, so uniqueness of expansion is equivalent to the only relation being trivial.
 >
 > ---
 > **(i) $\Rightarrow$ (ii).** Assume $S$ generates $M$ freely. By definition this includes that $S$ generates $M$, so only linear independence needs proof; this is Lemma 2. In outline: a non-trivial relation $\sum_i r_i m_i = 0$ with $r_1 \neq 0$ would, via the universal property, extend the set function $m_1 \mapsto 1_R$, $m_i \mapsto 0$ $(i \neq 1)$ to a homomorphism $\theta : M \to R$; applying $\theta$ to the relation yields $0 = \theta(0) = \sum_i r_i \theta(m_i) = r_1$, contradicting $r_1 \neq 0$. So $S$ is independent, and (ii) holds.

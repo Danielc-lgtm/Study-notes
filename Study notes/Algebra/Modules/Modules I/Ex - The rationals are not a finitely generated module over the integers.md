@@ -51,7 +51,7 @@ This solution deploys the following legal operations from [[Modules I — §3.1�
 
 4. **Exhibit an escaping element to defeat generation.** Produce a specific element of $M$ — here $\tfrac{1}{2d}$ — provably outside the overgroup $\tfrac{1}{d}\mathbb{Z}$, hence outside $\langle S\rangle$.
 
-5. **Detect non-membership via the reduced-fraction invariant.** Show $\tfrac{1}{2d}\notin\tfrac{1}{d}\mathbb{Z}$ by the divisibility test: a fraction in lowest terms with denominator $D$ lies in $\tfrac{1}{d}\mathbb{Z}$ iff $D\mid d$, and $2d\nmid d$.
+5. **Detect non-membership via the reduced-fraction invariant.** Show $\tfrac{1}{2d}\notin\tfrac{1}{d}\mathbb{Z}$ by the divisibility test: a fraction in lowest terms with denominator $D$ lies in $\tfrac{1}{d}\mathbb{Z}$ if and only if $D\mid d$, and $2d\nmid d$.
 
 ---
 

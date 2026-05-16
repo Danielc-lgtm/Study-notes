@@ -118,7 +118,7 @@ Prove the first theorem once, by citing the group theorem for the additive part 
    - *Why needed:* A module isomorphism must respect the action; this is the one module-specific check on the map.
 
 4. **Second theorem.** Define $g : B \to (A+B)/A$ by $g(b) = b + A$; show it is a surjective homomorphism with $\ker g = A \cap B$, then apply the first theorem.
-   - *Hint:* Surjective because $a + b + A = b + A$; an element $b$ is in the kernel iff $b + A = A$ iff $b \in A$, and since $b \in B$ already, iff $b \in A \cap B$.
+   - *Hint:* Surjective because $a + b + A = b + A$; an element $b$ is in the kernel if and only if $b + A = A$ if and only if $b \in A$, and since $b \in B$ already, if and only if $b \in A \cap B$.
    - *Why needed:* Converts the second theorem into a one-line consequence of the first.
 
 5. **Third theorem.** Define $h : M/N \to M/L$ by $h(m + N) = m + L$; show it is well-defined (because $N \leq L$), surjective, with kernel $L/N$, then apply the first theorem.
@@ -193,7 +193,7 @@ Prove the first theorem once, by citing the group theorem for the additive part 
 > >
 > > **Surjective.** A general element of $(A+B)/A$ is $(a + b) + A$ with $a \in A$, $b \in B$. Since $a \in A$, the coset $(a+b)+A$ equals $b + A = g(b)$. So $g$ hits every element.
 > >
-> > **Kernel.** $b \in \ker g$ means $g(b) = b + A = A$, the zero coset, which holds iff $b \in A$. But $b \in B$ by assumption. Hence $b \in \ker g \iff b \in A \text{ and } b \in B \iff b \in A \cap B$. So $\ker g = A \cap B$.
+> > **Kernel.** $b \in \ker g$ means $g(b) = b + A = A$, the zero coset, which holds if and only if $b \in A$. But $b \in B$ by assumption. Hence $b \in \ker g \iff b \in A \text{ and } b \in B \iff b \in A \cap B$. So $\ker g = A \cap B$.
 
 > [!note]- Lemma 6: The third-theorem map and its kernel
 > **Statement:** For submodules $N \leq L \leq M$, the map $h : M/N \to M/L$, $h(m + N) = m + L$, is a well-defined surjective module homomorphism with $\ker h = L/N$.

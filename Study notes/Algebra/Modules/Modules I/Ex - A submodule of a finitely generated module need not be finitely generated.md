@@ -61,7 +61,7 @@ This solution deploys the following legal operations from [[Modules I — §3.1�
 
 1. **Generate a module by an element via the unital axiom.** Since $1_R\cdot r=r$ for every $r$ (module axiom (d)), the single element $1$ generates $R$ as a module over itself — the operation that establishes finite generation for free.
 
-2. **Identify submodules of $R$ with ideals.** A subset of the module $R$ is a submodule iff it is an ideal; this lets the ideal $I=(X_1,X_2,\dots)$ be deployed as a *submodule* counterexample.
+2. **Identify submodules of $R$ with ideals.** A subset of the module $R$ is a submodule if and only if it is an ideal; this lets the ideal $I=(X_1,X_2,\dots)$ be deployed as a *submodule* counterexample.
 
 3. **Assume a finite generating set and derive a contradiction.** To disprove "$I$ is finitely generated," posit generators $f_1,\dots,f_k$ — the standard proof-by-contradiction opening for a negative statement.
 
@@ -107,7 +107,7 @@ The module $R$ over itself is cyclic, hence finitely generated.
 The ideal $I$ is a submodule, and it consists exactly of the polynomials whose constant term is $0$.
 
 > [!note]- Derivation
-> *Submodule.* A subset $N\subseteq R$ is an $R$-[[Def - Submodule|submodule]] of the module $R$ iff $N$ is an additive subgroup closed under multiplication by every element of $R$ — and those are precisely the defining conditions of an [[Def - Ideal|ideal]]. The set $I=(X_1,X_2,\dots)$ is an ideal by construction, so it is an $R$-submodule of $M=R$.
+> *Submodule.* A subset $N\subseteq R$ is an $R$-[[Def - Submodule|submodule]] of the module $R$ if and only if $N$ is an additive subgroup closed under multiplication by every element of $R$ — and those are precisely the defining conditions of an [[Def - Ideal|ideal]]. The set $I=(X_1,X_2,\dots)$ is an ideal by construction, so it is an $R$-submodule of $M=R$.
 >
 > *Description.* By definition, $I$ is the set of finite $R$-linear combinations $\sum_i r_iX_i$. Every such combination has constant term $0$, since each $X_i$ does and constant terms add and multiply. Conversely, if $f\in R$ has zero constant term, then every monomial of $f$ has positive degree, hence is divisible by some variable; collecting monomials by a variable each is divisible by writes $f=\sum_i r_iX_i$ (a finite sum). So
 > $$I=\{f\in R:\text{constant term of }f\text{ is }0\}.$$
