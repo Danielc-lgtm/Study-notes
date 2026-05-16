@@ -24,7 +24,7 @@ For a prime $p$, **reduction mod $p$** is the map $\mathbb{Z}[X] \to \mathbb{F}_
 
 A polynomial of positive degree is [[Def - Irreducible and Prime Elements|irreducible]] over a field if it is not a product of two positive-degree factors. Over $\mathbb{F}_2$ there are exactly four monic linear polynomials and quadratics to keep track of: the linear ones are $X$ and $X + 1$; the monic quadratics are $X^2, X^2 + 1, X^2 + X, X^2 + X + 1$, of which only $X^2 + X + 1$ is **irreducible** (the other three have a root in $\mathbb{F}_2$).
 
-![[Thm - Gauss's Lemma#The Statement]]
+![[Thm - Gauss's Lemma#Statement]]
 
 Gauss's lemma underwrites the reduction test: it lets a $\mathbb{Q}[X]$-factorisation of a primitive polynomial be replaced by a $\mathbb{Z}[X]$-factorisation, whose factors can then be reduced mod $p$.
 
