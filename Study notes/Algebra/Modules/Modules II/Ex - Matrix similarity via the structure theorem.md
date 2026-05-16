@@ -104,9 +104,9 @@ An invertible matrix $P$ satisfies $B = P^{-1}AP$ if and only if, viewed as an $
 > $$\theta(X \cdot_A v) = X \cdot_B \theta(v) \qquad \text{for all } v \in F^n.$$
 > On $V_A$ the element $X$ acts as $A$, and on $V_B$ it acts as $B$. So, writing $\theta$ as a matrix $P$, the condition reads
 > $$P (A v) = B (P v) \quad \text{for all } v, \qquad \text{i.e.} \qquad PA = BP.$$
-> Therefore: an $F$-linear map $P$ is an $F[X]$-module *homomorphism* $V_A \to V_B$ iff $PA = BP$, and it is an *isomorphism* iff additionally $P$ is invertible. When $P$ is invertible, $PA = BP$ rearranges to $B = PAP^{-1}$.
+> Therefore: an $F$-linear map $P$ is an $F[X]$-module *homomorphism* $V_A \to V_B$ if and only if $PA = BP$, and it is an *isomorphism* if and only if additionally $P$ is invertible. When $P$ is invertible, $PA = BP$ rearranges to $B = PAP^{-1}$.
 >
-> Now compare with statement $(1)$: $A$ and $B$ are similar iff $B = P^{-1}AP$ for some invertible $P$. The two relations $B = PAP^{-1}$ and $B = P^{-1}AP$ define the *same* equivalence relation on matrices — replacing $P$ by $P^{-1}$ converts one into the other. Hence:
+> Now compare with statement $(1)$: $A$ and $B$ are similar if and only if $B = P^{-1}AP$ for some invertible $P$. The two relations $B = PAP^{-1}$ and $B = P^{-1}AP$ define the *same* equivalence relation on matrices — replacing $P$ by $P^{-1}$ converts one into the other. Hence:
 > $$A \sim B \;\Longleftrightarrow\; \exists\,P \in \mathrm{GL}_n(F)\ \text{with}\ PA = BP \;\Longleftrightarrow\; V_A \cong V_B \ \text{as } F[X]\text{-modules}.$$
 > This is $(1) \Leftrightarrow (2)$. The content is purely a translation: "change of basis conjugating $A$ to $B$" and "$F[X]$-module isomorphism $V_A \to V_B$" are *the same data*, because an $F[X]$-module map is precisely an $F$-linear map that respects the distinguished operator.
 
@@ -167,7 +167,7 @@ The cycle $(1) \Rightarrow (2) \Rightarrow (3) \Rightarrow (1)$ is complete, so 
 > [!note]- Complete formal solution
 > **Claim.** For $A, B \in M_{n,n}(F)$: $A \sim B \iff V_A \cong V_B$ as $F[X]$-modules $\iff XI-A$ and $XI-B$ are equivalent over $F[X]$. Consequently the rational canonical form is a complete similarity invariant.
 >
-> *$(1) \Leftrightarrow (2)$.* An $F$-linear map $P : F^n \to F^n$ is an $F[X]$-module map $V_A \to V_B$ iff it commutes with the action of $X$, i.e. $PA = BP$ (since $X$ acts as $A$, resp. $B$). It is an isomorphism iff $P$ is moreover invertible, and then $B = PAP^{-1}$. The relations $B = PAP^{-1}$ and $B = P^{-1}AP$ define the same equivalence; hence $A \sim B \iff \exists\,P \in \mathrm{GL}_n(F),\ PA = BP \iff V_A \cong V_B$.
+> *$(1) \Leftrightarrow (2)$.* An $F$-linear map $P : F^n \to F^n$ is an $F[X]$-module map $V_A \to V_B$ if and only if it commutes with the action of $X$, i.e. $PA = BP$ (since $X$ acts as $A$, resp. $B$). It is an isomorphism if and only if $P$ is moreover invertible, and then $B = PAP^{-1}$. The relations $B = PAP^{-1}$ and $B = P^{-1}AP$ define the same equivalence; hence $A \sim B \iff \exists\,P \in \mathrm{GL}_n(F),\ PA = BP \iff V_A \cong V_B$.
 >
 > *Presentation.* For any $M$, the sequence $0 \to F[X]^n \xrightarrow{XI-M} F[X]^n \xrightarrow{\pi_M} V_M \to 0$ is exact ($XI-M$ injective since $\det(XI-M) = \chi_M \ne 0$ in the domain $F[X]$); so $V_M \cong F[X]^n/(XI-M)F[X]^n$.
 >
