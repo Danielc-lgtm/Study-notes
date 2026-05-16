@@ -41,15 +41,15 @@ For an ideal $I\trianglelefteq R$, the ring $R$ is itself an $R$-module (scalars
 
 ![[Def - Module Homomorphism#The Definition]]
 
-The engine is the first isomorphism theorem for modules.
+The engine is the first isomorphism theorem for modules; the page below states all four isomorphism theorems together with the submodule correspondence, and we use the first one and the correspondence.
 
-![[Thm - Isomorphism Theorems for Modules#First Isomorphism Theorem]]
+![[Thm - Isomorphism Theorems for Modules#Statement]]
 
 A **maximal ideal** $\mathfrak{m}\trianglelefteq R$ is a proper ideal ($\mathfrak{m}\neq R$) not contained in any strictly larger proper ideal — equivalently, $R/\mathfrak{m}$ is a field.
 
 ![[Def - Prime and Maximal Ideal#The Definition]]
 
-The bridge between these notions is the **submodule correspondence**: for an ideal $I\trianglelefteq R$, the $R$-submodules of the quotient module $R/I$ correspond bijectively, inclusion-preservingly, to the ideals of $R$ containing $I$. This is the module-theoretic form of the ideal correspondence theorem, and it holds because $R$-submodules of $R/I$ are exactly the additive subgroups closed under ring multiplication — i.e. the ideals of $R/I$ — which pull back to ideals of $R$ between $I$ and $R$.
+The bridge between these notions is the **submodule correspondence**, the final clause of the [[Thm - Isomorphism Theorems for Modules|isomorphism theorems]] above: for an ideal $I\trianglelefteq R$, the $R$-submodules of the quotient module $R/I$ correspond bijectively, inclusion-preservingly, to the ideals of $R$ containing $I$. This is the module-theoretic form of the ideal correspondence theorem, and it holds because $R$-submodules of $R/I$ are exactly the additive subgroups closed under ring multiplication — i.e. the ideals of $R/I$ — which pull back to ideals of $R$ between $I$ and $R$.
 
 ---
 
