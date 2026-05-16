@@ -33,7 +33,7 @@ The three elementary row operations on a matrix over a ring $R$ are: add an $R$-
 
 Two matrices are **equivalent** when one is reachable from the other by such operations; equivalently $B=QAT^{-1}$ for invertible $Q,T$.
 
-![[Thm - Smith Normal Form#Formal Statement]]
+![[Thm - Smith Normal Form#Statement]]
 
 The non-zero diagonal entries $d_1\mid d_2\mid\cdots\mid d_r$ produced are the **invariant factors** of $A$. They are determined only up to multiplication by units of $R$ — over $\mathbb{Z}$, up to sign — so we conventionally take them positive.
 

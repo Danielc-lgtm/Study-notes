@@ -28,11 +28,11 @@ The point is to become fluent with the two canonical decompositions and the book
 
 The engine of both forms is the structure theorem.
 
-![[Thm - Classification of Finitely Generated Abelian Groups#Formal Statement]]
+![[Thm - Classification of Finitely Generated Abelian Groups#Statement]]
 
 That statement *is* the invariant-factor form: a finite abelian group is uniquely $C_{d_1}\times\cdots\times C_{d_s}$ with $d_1\mid\cdots\mid d_s$. The elementary-divisor form is obtained from it by splitting each cyclic factor along its prime factorisation, using the Chinese remainder theorem for modules.
 
-![[Thm - Chinese Remainder Theorem for Modules#Formal Statement]]
+![[Thm - Chinese Remainder Theorem for Modules#Statement]]
 
 Concretely, for $R=\mathbb{Z}$: if $n=p_1^{a_1}\cdots p_k^{a_k}$ with the $p_i$ distinct primes, then since the prime powers $p_i^{a_i}$ are pairwise coprime,
 $$C_n\cong C_{p_1^{a_1}}\times\cdots\times C_{p_k^{a_k}}.$$

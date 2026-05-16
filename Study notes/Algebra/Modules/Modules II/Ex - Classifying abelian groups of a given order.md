@@ -24,11 +24,11 @@ This is the standard "count the abelian groups of order $n$" problem: a direct p
 
 The classification of finite abelian groups is what makes the count finite and computable.
 
-![[Thm - Classification of Finitely Generated Abelian Groups#Formal Statement]]
+![[Thm - Classification of Finitely Generated Abelian Groups#Statement]]
 
 So every finite abelian group has a *unique* invariant-factor form $C_{d_1}\times\cdots\times C_{d_s}$ with $d_1\mid\cdots\mid d_s$. Equivalently — splitting each $d_i$ into prime powers by the Chinese remainder theorem — it has a unique **elementary-divisor form**, a product of cyclic groups of prime-power order.
 
-![[Thm - Chinese Remainder Theorem for Modules#Formal Statement]]
+![[Thm - Chinese Remainder Theorem for Modules#Statement]]
 
 Because $C_n\cong\prod_i C_{p_i^{a_i}}$ when $n=\prod p_i^{a_i}$, a group of order $n=p_1^{a_1}\cdots p_k^{a_k}$ splits canonically as a product of its **$p$-primary parts** $A=A_{p_1}\times\cdots\times A_{p_k}$, where $A_{p_i}$ is the abelian group whose order is the prime power $p_i^{a_i}$. Choosing $A$ is therefore the same as independently choosing each $A_{p_i}$.
 
