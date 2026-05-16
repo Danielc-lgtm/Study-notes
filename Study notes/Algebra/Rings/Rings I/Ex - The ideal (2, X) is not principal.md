@@ -94,7 +94,7 @@ Suppose for contradiction $(2,X)=(d)$ for some $d\in\mathbb{Z}[X]$. Then $d\mid 
 > [!note]- Derivation
 > The ideal $(2,X)$ certainly contains its generators $2$ and $X$ (take $f=1,g=0$ and $f=0,g=1$ respectively in $2f+Xg$). Under the assumption $(2,X)=(d)$, this means
 > $$2\in(d)\qquad\text{and}\qquad X\in(d).$$
-> By the **ideal–divisibility dictionary**, membership $a\in(d)$ is exactly the statement $d\mid a$: indeed $(d)=\{dc:c\in\mathbb{Z}[X]\}$, so $a\in(d)$ iff $a=dc$ for some $c$, which is the definition of $d\mid a$. Therefore
+> By the **ideal–divisibility dictionary**, membership $a\in(d)$ is exactly the statement $d\mid a$: indeed $(d)=\{dc:c\in\mathbb{Z}[X]\}$, so $a\in(d)$ if and only if $a=dc$ for some $c$, which is the definition of $d\mid a$. Therefore
 > $$d\mid 2\qquad\text{and}\qquad d\mid X.$$
 > Concretely, there exist polynomials $c_1,c_2\in\mathbb{Z}[X]$ with $2=d\,c_1$ and $X=d\,c_2$.
 

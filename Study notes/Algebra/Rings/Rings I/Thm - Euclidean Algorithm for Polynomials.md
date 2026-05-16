@@ -43,7 +43,7 @@ The first disguised source is **a problem about the ideals of $F[X]$, or about a
 
 The second disguised source is **a quotient ring $F[X]/(g)$ whose elements you must pin down**. To work in $F[X]/(g)$ you need canonical representatives for the cosets. The division algorithm supplies them: every $f$ equals $gq + r$ with $\deg r < \deg g$, so every coset $f + (g)$ equals $r + (g)$ for a *unique* remainder $r$ of degree less than $\deg g$. The non-obvious recognition is that "I need to understand $F[X]/(g)$" should trigger "divide by $g$ to get normal-form representatives". *Example problem:* show every element of $\mathbb{R}[X]/(X^2+1)$ is uniquely $a + bX$ — exactly the source's computation, which is just the division algorithm applied with $g = X^2 + 1$.
 
-The third disguised source is **a question about whether a polynomial has a given root, or shares a root with another polynomial**. Root questions are remainder questions: $\alpha$ is a root of $f$ iff $X - \alpha$ divides $f$ iff the remainder of $f$ on division by $X - \alpha$ is zero — and that remainder is the constant $f(\alpha)$. More generally, the greatest common divisor of $f$ and $g$, computed by iterating the division algorithm, encodes their common roots. The non-obvious step is translating "root" or "common root" into "remainder" or "gcd". *Example problem:* prove a polynomial of degree $n$ over a field has at most $n$ roots, by repeatedly dividing out linear factors $X - \alpha$.
+The third disguised source is **a question about whether a polynomial has a given root, or shares a root with another polynomial**. Root questions are remainder questions: $\alpha$ is a root of $f$ if and only if $X - \alpha$ divides $f$ if and only if the remainder of $f$ on division by $X - \alpha$ is zero — and that remainder is the constant $f(\alpha)$. More generally, the greatest common divisor of $f$ and $g$, computed by iterating the division algorithm, encodes their common roots. The non-obvious step is translating "root" or "common root" into "remainder" or "gcd". *Example problem:* prove a polynomial of degree $n$ over a field has at most $n$ roots, by repeatedly dividing out linear factors $X - \alpha$.
 
 **Targets (Output Amplification)**
 
@@ -193,7 +193,7 @@ Fix the divisor $g$ and induct on $\deg f$. The base case is $\deg f < \deg g$. 
 
 - **[[Thm - Ideal Correspondence|Ideal Correspondence]]** — a structural companion. Once the division algorithm shows every ideal of $F[X]$ is principal, the ideal correspondence describes the ideals of a quotient $F[X]/(g)$ as the principal ideals $(d)/(g)$ for divisors $d$ of $g$ — so the ideal lattice of $F[X]/(g)$ is the divisor lattice of $g$.
 
-- **The factor theorem and root-counting** — the linear-divisor specialisation. Taking $g = X - \alpha$ collapses this theorem into "$\alpha$ is a root of $f$ iff $(X - \alpha) \mid f$", from which "degree $n$ $\Rightarrow$ at most $n$ roots" follows by iteration.
+- **The factor theorem and root-counting** — the linear-divisor specialisation. Taking $g = X - \alpha$ collapses this theorem into "$\alpha$ is a root of $f$ if and only if $(X - \alpha) \mid f$", from which "degree $n$ $\Rightarrow$ at most $n$ roots" follows by iteration.
 
 ---
 
