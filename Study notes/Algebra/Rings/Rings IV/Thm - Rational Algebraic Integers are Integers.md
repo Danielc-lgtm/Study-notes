@@ -98,7 +98,7 @@ Take the minimal polynomial $f_\alpha \in \mathbb{Z}[X]$ of the rational algebra
    - *Why needed:* Supplies the integer polynomial whose coefficients we will read off at the end; integrality of those coefficients is the crux.
 
 2. **$f_\alpha$ is irreducible in $\mathbb{Q}[X]$.** Promote irreducibility from $\mathbb{Z}[X]$ to $\mathbb{Q}[X]$.
-   - *Hint:* $f_\alpha$ is monic, hence primitive; apply [[Thm - Gauss's Lemma|Gauss's lemma]], which says a primitive polynomial is irreducible in $\mathbb{Z}[X]$ iff irreducible in $\mathbb{Q}[X]$.
+   - *Hint:* $f_\alpha$ is monic, hence primitive; apply [[Thm - Gauss's Lemma|Gauss's lemma]], which says a primitive polynomial is irreducible in $\mathbb{Z}[X]$ if and only if irreducible in $\mathbb{Q}[X]$.
    - *Why needed:* The factorisation argument happens in $\mathbb{Q}[X]$, where $X - \alpha$ lives; we need irreducibility *there*.
 
 3. **$X - \alpha$ divides $f_\alpha$ in $\mathbb{Q}[X]$.** Show the linear factor is genuinely a factor.
@@ -136,7 +136,7 @@ Take the minimal polynomial $f_\alpha \in \mathbb{Z}[X]$ of the rational algebra
 > [!note]- Lemma 3: $X - \alpha$ divides $f_\alpha$ in $\mathbb{Q}[X]$
 > **Statement:** Since $\alpha \in \mathbb{Q}$ and $f_\alpha(\alpha) = 0$, the polynomial $X - \alpha$ divides $f_\alpha$ in $\mathbb{Q}[X]$.
 >
-> **Hint:** The factor theorem: in a polynomial ring over a field, $c$ is a root of $f$ iff $(X - c) \mid f$. Apply it with $c = \alpha$ in $\mathbb{Q}[X]$.
+> **Hint:** The factor theorem: in a polynomial ring over a field, $c$ is a root of $f$ if and only if $(X - c) \mid f$. Apply it with $c = \alpha$ in $\mathbb{Q}[X]$.
 >
 > **Why needed:** It exhibits a concrete linear (degree-$1$, non-unit) divisor of $f_\alpha$, which an irreducible polynomial can only have by coinciding with it.
 >
