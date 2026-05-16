@@ -161,14 +161,14 @@ Pair each of the $3$ groups of order $8$ with the forced $C_3$ and each of the $
 > | 3 | $C_2\times C_{300}$ | $2\cdot 300=600$ |
 > | 4 | $C_{10}\times C_{60}$ | $10\cdot 60=600$ |
 > | 5 | $C_2\times C_2\times C_{150}$ | $2\cdot 2\cdot 150=600$ |
-> | 6 | $C_{10}\times C_{10}\times C_6$ | $10\cdot 10\cdot 6=600$ |
+> | 6 | $C_2\times C_{10}\times C_{30}$ | $2\cdot 10\cdot 30=600$ |
 >
-> A worked grid for group #4: prime $2$ row $(2^1,2^2)$, prime $3$ row $(3^1)$, prime $5$ row $(5^1,5^1)$; right-aligned, $d_2=2^2\cdot 3^1\cdot 5^1=60$ and $d_1=2^1\cdot 1\cdot 5^1=10$, with $10\mid 60$. Every group is finite (no $C_\infty$ factor) since the order is finite, and all six are pairwise non-isomorphic by the uniqueness clause of [[Thm - Classification of Finitely Generated Abelian Groups|the classification]].
+> A worked grid for group #4: prime $2$ row $(2^1,2^2)$, prime $3$ row $(3^1)$, prime $5$ row $(5^1,5^1)$; right-aligned, $d_2=2^2\cdot 3^1\cdot 5^1=60$ and $d_1=2^1\cdot 1\cdot 5^1=10$, with $10\mid 60$. A worked grid for group #6: prime $2$ row $(2^1,2^1,2^1)$, prime $3$ row $(3^1)$, prime $5$ row $(5^1,5^1)$; right-aligned to three columns, $d_3=2^1\cdot 3^1\cdot 5^1=30$, $d_2=2^1\cdot 1\cdot 5^1=10$, $d_1=2^1\cdot 1\cdot 1=2$, with $2\mid 10\mid 30$. Every group is finite (no $C_\infty$ factor) since the order is finite, and all six are pairwise non-isomorphic by the uniqueness clause of [[Thm - Classification of Finitely Generated Abelian Groups|the classification]].
 
 > [!note]- Complete formal solution
 > Factor $600=2^3\cdot 3^1\cdot 5^2$. By [[Thm - Classification of Finitely Generated Abelian Groups]] and [[Thm - Chinese Remainder Theorem for Modules]], every abelian group of order $600$ is uniquely $A_2\times A_3\times A_5$ with $|A_2|=8$, $|A_3|=3$, $|A_5|=25$, and the three factors may be chosen independently. An abelian group of order $p^a$ is a product $\prod_j C_{p^{a_j}}$ with $\sum a_j=a$, $a_1\ge\cdots\ge a_r\ge 1$; uniqueness makes such groups correspond bijectively to partitions of $a$, so there are $p(a)$ of them. Hence
 > $$\#\{\text{abelian groups of order }600\}=p(3)\cdot p(1)\cdot p(2)=3\cdot 1\cdot 2=6,$$
-> using $p(3)=3$ (partitions $3,\,2{+}1,\,1{+}1{+}1$), $p(1)=1$, $p(2)=2$ (partitions $2,\,1{+}1$). The six groups, in invariant-factor form: $C_{600}$, $\ C_5\times C_{120}$, $\ C_2\times C_{300}$, $\ C_{10}\times C_{60}$, $\ C_2\times C_2\times C_{150}$, $\ C_{10}\times C_{10}\times C_6$. They are pairwise non-isomorphic by uniqueness of the invariant-factor decomposition. $\blacksquare$
+> using $p(3)=3$ (partitions $3,\,2{+}1,\,1{+}1{+}1$), $p(1)=1$, $p(2)=2$ (partitions $2,\,1{+}1$). The six groups, in invariant-factor form: $C_{600}$, $\ C_5\times C_{120}$, $\ C_2\times C_{300}$, $\ C_{10}\times C_{60}$, $\ C_2\times C_2\times C_{150}$, $\ C_2\times C_{10}\times C_{30}$. They are pairwise non-isomorphic by uniqueness of the invariant-factor decomposition. $\blacksquare$
 
 ---
 
