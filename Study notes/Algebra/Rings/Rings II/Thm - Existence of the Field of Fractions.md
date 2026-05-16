@@ -99,7 +99,7 @@ Imitate the construction of $\mathbb{Q}$ from $\mathbb{Z}$ verbatim. Form pairs 
    - *Why needed:* A field is first of all a ring.
 
 4. **Every nonzero element is invertible.** Show $\tfrac{a}{b} \neq 0_F \implies \tfrac{a}{b}$ has inverse $\tfrac{b}{a}$.
-   - *Hint:* $\tfrac{a}{b} = \tfrac{0}{1}$ means $a\cdot 1 = b\cdot 0$, i.e. $a = 0$. So $\tfrac{a}{b}\neq 0_F$ iff $a\neq 0$, exactly when $\tfrac{b}{a}$ is a legal symbol; then $\tfrac{a}{b}\cdot\tfrac{b}{a}=\tfrac{ab}{ab}=\tfrac{1}{1}$.
+   - *Hint:* $\tfrac{a}{b} = \tfrac{0}{1}$ means $a\cdot 1 = b\cdot 0$, i.e. $a = 0$. So $\tfrac{a}{b}\neq 0_F$ if and only if $a\neq 0$, exactly when $\tfrac{b}{a}$ is a legal symbol; then $\tfrac{a}{b}\cdot\tfrac{b}{a}=\tfrac{ab}{ab}=\tfrac{1}{1}$.
    - *Why needed:* This is what upgrades the ring $F$ to a field.
 
 5. **Embed $R$ in $F$.** Show $\varphi : R \to F$, $r \mapsto \tfrac{r}{1}$, is an injective ring homomorphism, and every element of $F$ is a quotient of elements of $R$.

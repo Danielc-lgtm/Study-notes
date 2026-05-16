@@ -107,7 +107,7 @@ Prove the field criterion first — it is the bedrock. Then get maximality from 
    - *Why needed:* It is the prototype; statement 2 is this statement transported across the quotient.
 
 2. **Maximal $\iff$ field quotient.** Show $I$ maximal $\iff R/I$ a field.
-   - *Hint:* By statement 1, $R/I$ is a field iff its only ideals are $\{0\}$ and $R/I$. By the [[Thm - Ideal Correspondence|ideal correspondence]], the ideals of $R/I$ correspond to the ideals of $R$ containing $I$; $\{0\}\leftrightarrow I$ and $R/I\leftrightarrow R$. "Only those two" is exactly "$I$ maximal".
+   - *Hint:* By statement 1, $R/I$ is a field if and only if its only ideals are $\{0\}$ and $R/I$. By the [[Thm - Ideal Correspondence|ideal correspondence]], the ideals of $R/I$ correspond to the ideals of $R$ containing $I$; $\{0\}\leftrightarrow I$ and $R/I\leftrightarrow R$. "Only those two" is exactly "$I$ maximal".
    - *Why needed:* It establishes the maximal-side of the dictionary; statement 4 needs it.
 
 3. **Prime $\iff$ domain quotient.** Show $I$ prime $\iff R/I$ an integral domain.

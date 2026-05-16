@@ -159,7 +159,7 @@ A subring of the domain $R$ is a domain, so $\mathbb{Z}/\operatorname{char}(R)\m
 > [!note]- Derivation
 > A [[Def - Subring|subring]] $S\le R$ of an [[Def - Integral Domain|integral domain]] is itself an integral domain: if $a,b\in S$ with $ab=0$, then this equation holds in $R$, where $R$'s domain property forces $a=0$ or $b=0$; and $S$ inherits non-zeroness (it contains $1_R\neq 0_R$). So $\operatorname{im}\iota$ is a domain, and via the isomorphism of Step 6, $\mathbb{Z}/\operatorname{char}(R)\mathbb{Z}$ is a domain.
 >
-> Now invoke [[Thm - Maximal and Prime Ideals via Quotients|the quotient characterisation of prime ideals]]: an ideal $I\trianglelefteq\mathbb{Z}$ is **prime** iff $\mathbb{Z}/I$ is an integral domain. With $I=\operatorname{char}(R)\mathbb{Z}$, the quotient $\mathbb{Z}/\operatorname{char}(R)\mathbb{Z}$ is a domain, so
+> Now invoke [[Thm - Maximal and Prime Ideals via Quotients|the quotient characterisation of prime ideals]]: an ideal $I\trianglelefteq\mathbb{Z}$ is **prime** if and only if $\mathbb{Z}/I$ is an integral domain. With $I=\operatorname{char}(R)\mathbb{Z}$, the quotient $\mathbb{Z}/\operatorname{char}(R)\mathbb{Z}$ is a domain, so
 > $$\operatorname{char}(R)\mathbb{Z}\text{ is a prime ideal of }\mathbb{Z}.$$
 
 **Step 8: Prime ideals of $\mathbb{Z}$ are $(0)$ and $(p)$ — conclude.**
@@ -167,7 +167,7 @@ A subring of the domain $R$ is a domain, so $\mathbb{Z}/\operatorname{char}(R)\m
 The prime ideals of $\mathbb{Z}$ are exactly $0\mathbb{Z}$ and $p\mathbb{Z}$ for prime numbers $p$; hence $\operatorname{char}(R)\in\{0\}\cup\{\text{primes}\}$.
 
 > [!note]- Derivation
-> The ideals of $\mathbb{Z}$ are precisely the $n\mathbb{Z}$ for $n\ge 0$. Which are prime? The quotient $\mathbb{Z}/n\mathbb{Z}$ is an integral domain iff:
+> The ideals of $\mathbb{Z}$ are precisely the $n\mathbb{Z}$ for $n\ge 0$. Which are prime? The quotient $\mathbb{Z}/n\mathbb{Z}$ is an integral domain if and only if:
 > - $n=0$: $\mathbb{Z}/0\mathbb{Z}=\mathbb{Z}$, which is a domain. So $(0)$ is prime.
 > - $n=1$: $\mathbb{Z}/1\mathbb{Z}=\{0\}$, the zero ring, which is *not* a domain (a domain is non-zero). So $(1)=\mathbb{Z}$ is not prime — consistent with the definition requiring a prime ideal to be proper.
 > - $n=p$ prime: $\mathbb{Z}/p\mathbb{Z}$ is the field $\mathbb{F}_p$, hence a domain. So $(p)$ is prime.

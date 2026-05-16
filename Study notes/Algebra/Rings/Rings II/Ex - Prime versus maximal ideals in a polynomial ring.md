@@ -65,7 +65,7 @@ This solution deploys the following legal operations from [[Rings II — §2.3�
 
 1. **Identify a quotient ring by the first isomorphism theorem** (operation: *build a surjection out of $R$ with the right kernel*). To compute $\mathbb{Z}[X]/(X)$, construct the surjective evaluation homomorphism $\varepsilon_0:\mathbb{Z}[X]\to\mathbb{Z}$, $f\mapsto f(0)$, verify $\ker\varepsilon_0=(X)$, and conclude $\mathbb{Z}[X]/(X)\cong\mathbb{Z}$. Likewise for $(2,X)$ with target $\mathbb{F}_2$.
 
-2. **Compute the kernel of an evaluation map as the ideal of polynomials vanishing there** (operation: *a polynomial lies in the kernel of $\varepsilon_a$ iff it vanishes at $a$*). The kernel of $f\mapsto f(0)$ is the polynomials with zero constant term, which is exactly $(X)$ — every such polynomial is $X$ times something.
+2. **Compute the kernel of an evaluation map as the ideal of polynomials vanishing there** (operation: *a polynomial lies in the kernel of $\varepsilon_a$ if and only if it vanishes at $a$*). The kernel of $f\mapsto f(0)$ is the polynomials with zero constant term, which is exactly $(X)$ — every such polynomial is $X$ times something.
 
 3. **Characterise primality via the quotient being an integral domain** (the prime $\Leftrightarrow$ domain operation; see [[Thm - Maximal and Prime Ideals via Quotients]]). Since $\mathbb{Z}[X]/(X)\cong\mathbb{Z}$ is an integral domain, $(X)$ is prime.
 
@@ -104,7 +104,7 @@ The evaluation homomorphism $\varepsilon_0:\mathbb{Z}[X]\to\mathbb{Z}$, $f\mapst
 >
 > **Surjective.** Every integer $n$ is the value $\varepsilon_0(n)$ of the constant polynomial $n$. So $\operatorname{im}\varepsilon_0=\mathbb{Z}$.
 >
-> **Kernel is $(X)$.** A polynomial $f=\sum_j a_jX^j$ lies in $\ker\varepsilon_0$ iff $a_0=0$, i.e. iff $f$ has zero constant term. Any such polynomial factors as $f=X\cdot(a_1+a_2X+\cdots)=X g$ for $g\in\mathbb{Z}[X]$, so $f\in(X)$. Conversely every element $Xg$ of $(X)$ has constant term $0$, so lies in $\ker\varepsilon_0$. Hence
+> **Kernel is $(X)$.** A polynomial $f=\sum_j a_jX^j$ lies in $\ker\varepsilon_0$ if and only if $a_0=0$, i.e. if and only if $f$ has zero constant term. Any such polynomial factors as $f=X\cdot(a_1+a_2X+\cdots)=X g$ for $g\in\mathbb{Z}[X]$, so $f\in(X)$. Conversely every element $Xg$ of $(X)$ has constant term $0$, so lies in $\ker\varepsilon_0$. Hence
 > $$\ker\varepsilon_0=(X).$$
 >
 > By the [[Thm - First Isomorphism Theorem for Rings|first isomorphism theorem]], $\mathbb{Z}[X]/\ker\varepsilon_0\cong\operatorname{im}\varepsilon_0$, that is
@@ -153,7 +153,7 @@ The composite homomorphism $\psi:\mathbb{Z}[X]\to\mathbb{F}_2$, $f\mapsto f(0)\b
 The quotient $\mathbb{Z}[X]/(2,X)\cong\mathbb{F}_2$ is a field, so by the quotient characterisation, $(2,X)$ is maximal; being maximal, it is also prime.
 
 > [!note]- Derivation
-> The two-element ring $\mathbb{F}_2$ is a [[Def - Unit and Field|field]]: it is non-zero and commutative, and its only non-zero element $1$ is its own inverse, $1\cdot 1=1$. By [[Thm - Maximal and Prime Ideals via Quotients|maximal and prime ideals via quotients]], $I$ is maximal iff $R/I$ is a field, so
+> The two-element ring $\mathbb{F}_2$ is a [[Def - Unit and Field|field]]: it is non-zero and commutative, and its only non-zero element $1$ is its own inverse, $1\cdot 1=1$. By [[Thm - Maximal and Prime Ideals via Quotients|maximal and prime ideals via quotients]], $I$ is maximal if and only if $R/I$ is a field, so
 > $$\mathbb{Z}[X]/(2,X)\text{ is a field}\quad\Longrightarrow\quad (2,X)\text{ is maximal.}$$
 > Every field is an integral domain, so every maximal ideal is prime; hence $(2,X)$ is also prime. This recovers the result of [[Ex - The ideal (2, X) is not principal|the (2,X) exercise]] from a different angle: there, $(2,X)$ was shown to be a proper ideal by exhibiting the homomorphism $\psi$; here the *same* homomorphism, pushed through the first isomorphism theorem, shows the much stronger fact that $(2,X)$ is maximal.
 
