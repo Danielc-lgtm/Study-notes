@@ -1,0 +1,91 @@
+---
+type: definition
+subject: ring-theory
+prereqs:
+  - "Def - Abelian Group"
+  - "Def - Group"
+tags: [algebra, ring-theory]
+---
+
+# Notation
+
+A ring is written $(R, +, \cdot, 0_R, 1_R)$: the underlying set $R$, the **addition** $+ : R \times R \to R$, the **multiplication** $\cdot : R \times R \to R$, the **additive identity** $0_R$, and the **multiplicative identity** $1_R$. When the ring is clear from context the subscripts are dropped and we write $0$ and $1$. The additive inverse of $r$ is $-r$, satisfying $r + (-r) = 0_R$, and $r - s$ abbreviates $r + (-s)$. Multiplication is usually written by juxtaposition, $rs$ for $r \cdot s$, and binds tighter than addition, so $r_1 r_2 + r_3$ means $(r_1 r_2) + r_3$. Repeated multiplication is written $r^n$ for the $n$-fold product, with $r^0 = 1_R$. The product of finitely many elements is defined by induction; infinite sums and products are **not** defined — there is no notion of convergence in a bare ring. See [[Rings I — §2.1–2.2]] for the full notation registry.
+
+---
+
+# Axiom Motivation
+
+The thing we are axiomatizing is a **number system in which you can add, subtract, and multiply, but not necessarily divide**. The canonical example to keep in mind throughout is $\mathbb{Z}$, the integers: you can add two integers, subtract them, multiply them, and the answer is always an integer — but you cannot in general divide, since $\tfrac{1}{2} \notin \mathbb{Z}$. The ring axioms are the attempt to write down exactly the structure that $\mathbb{Z}$ carries, so cleanly that any theorem proved from them applies simultaneously to $\mathbb{Z}$, to polynomial rings, to rings of functions, and to the finite arithmetic of $\mathbb{Z}/n\mathbb{Z}$. The deeper purpose of the abstraction is comparative: $\mathbb{Z}$ has many special properties — unique factorization, a division algorithm, the fact that a product is zero only if a factor is — and once we have the general notion of a ring we can ask, of each property, whether it survives in an arbitrary ring and how the properties relate.
+
+We have two operations, so we must say how each behaves and how they interact. Take addition first. We want subtraction to always be possible — $\mathbb{Z}$ has it, and the entire point of separating rings from semirings is to keep it — so addition must supply an inverse for every element. We also want addition to be associative, to have an identity $0_R$, and, crucially, to be **commutative**: $3 + 5 = 5 + 3$ in every number system worth the name. That is a lot of demands, and rather than list them one by one the definition packages them into a single phrase: $(R, +, 0_R)$ is an **[[Def - Abelian Group|abelian group]]**. This is pure economy. "Abelian group" already means "associative, has identity $0_R$, has inverses, commutative", so the first axiom of a ring is one word that carries four group-theoretic demands. If we weakened this — said merely "monoid" instead of "abelian group" — we would lose subtraction, and $\mathbb{Z}$ would no longer be the prototype; the natural numbers $\mathbb{N}$ would sneak in. If we dropped commutativity of $+$, we would be modelling something genuinely strange that no familiar number system exhibits. So addition is required to be as well-behaved as possible.
+
+Multiplication is held to a deliberately *lower* standard, and the asymmetry is the whole personality of ring theory. We demand multiplication be **associative**, $a(bc) = (ab)c$, for the same reason we demand it of a group operation: it makes a product of many factors $r_1 r_2 \cdots r_n$ unambiguous, so "multiply these elements" has meaning. We demand a **multiplicative identity** $1_R$, the element with $1_R \cdot r = r \cdot 1_R = r$, because $\mathbb{Z}$ has the number $1$ and we want to keep it; this is a genuine choice — some authors do not insist on a $1$, but this course does, and the convention matters because it forces every [[Def - Ring Homomorphism|ring homomorphism]] and every [[Def - Subring|subring]] to respect $1$. What we pointedly do **not** demand of multiplication is inverses: a ring is precisely a structure where division can fail. Demanding multiplicative inverses for every nonzero element is a real strengthening — it produces a [[Def - Unit and Field|field]] — and it would exclude the prototype, since $2 \in \mathbb{Z}$ has no inverse. The space between "ring" and "field" is exactly the space of interesting arithmetic: divisibility, primes, factorization, the Euclidean algorithm all live in rings that are not fields.
+
+Now the two operations cannot be allowed to drift independently — if they did, the symbol $R$ would just be carrying a group and an unrelated semigroup glued at the same underlying set. The bridge is **distributivity**, $r_1(r_2 + r_3) = r_1 r_2 + r_1 r_3$ and $(r_1 + r_2)r_3 = r_1 r_3 + r_2 r_3$. This is the single axiom that ties multiplication to addition, and it is the axiom doing all the real work. It is what makes "expand the brackets" a legal move; it is what forces $r \cdot 0_R = 0_R$ (see the corollaries below — this deduction uses distributivity and nothing else); it is what makes the difference between a ring and a meaningless pair of structures. To see that it is not automatic, notice that distributivity is exactly the statement that for each fixed $r$, the map $x \mapsto rx$ is a homomorphism of the additive group; an arbitrary pair (abelian group, monoid) on the same set will not satisfy this. We state distributivity on **both** sides because, multiplication not being assumed commutative at this stage, left-distributivity and right-distributivity are logically independent.
+
+That gives the full definition: an abelian group under $+$, a monoid under $\cdot$, the two linked by distributivity. There is one further choice this course makes, and it deserves to be stated as motivation rather than buried as a remark. We additionally require multiplication to be **commutative**, $ab = ba$. The justification is that commutative rings "behave like number systems" — in them one can ask the usual questions of number theory, divisibility and factorization and congruences, and expect sensible answers. Non-commutative rings (matrix rings, group rings, operator algebras) are a rich subject, but a different one. So throughout this course **all rings are commutative and have a $1$**, and "ring" will always mean "commutative unital ring". The definition below states the general (possibly non-commutative) axioms first, because that is the honest logical structure, and then imposes commutativity as the standing convention.
+
+In summary: $+$ is forced to be an abelian group so that subtraction always works and $\mathbb{Z}$ is the prototype; $\cdot$ is required only to be an associative operation with identity, deliberately leaving out inverses so that divisibility is a non-trivial subject; distributivity is the one axiom welding the two together; and commutativity is the standing convention that keeps every ring in this course feeling like a number system.
+
+---
+
+# The Definition
+
+A **ring** is a quintuple $(R, +, \cdot, 0_R, 1_R)$ where $R$ is a set, $0_R, 1_R \in R$ are distinguished elements, and $+ : R \times R \to R$ and $\cdot : R \times R \to R$ are binary operations, satisfying:
+
+1. **Additive group.** $(R, +, 0_R)$ is an [[Def - Abelian Group|abelian group]]: addition is associative and commutative, $0_R$ is an additive identity, and every $r \in R$ has an additive inverse $-r$ with $r + (-r) = 0_R$.
+
+2. **Multiplicative monoid.** Multiplication is **associative**, $a \cdot (b \cdot c) = (a \cdot b) \cdot c$ for all $a, b, c \in R$, and admits the **identity** $1_R$, with $1_R \cdot r = r \cdot 1_R = r$ for all $r \in R$.
+
+3. **Distributivity.** Multiplication distributes over addition on both sides:
+$$r_1 \cdot (r_2 + r_3) = (r_1 \cdot r_2) + (r_1 \cdot r_3), \qquad (r_1 + r_2) \cdot r_3 = (r_1 \cdot r_3) + (r_2 \cdot r_3).$$
+
+A ring $R$ is **commutative** if it additionally satisfies $a \cdot b = b \cdot a$ for all $a, b \in R$.
+
+**Standing convention for this course: every ring is commutative and contains a multiplicative identity $1_R$.** Henceforth "ring" means "commutative unital ring", and the second distributivity law follows from the first by commutativity. Closure of $+$ and $\cdot$ is not a separate axiom: it is already part of the statement that they are functions with codomain $R$.
+
+---
+
+# Relate to Other Fields / Compression
+
+A ring is the **fusion of an [[Def - Abelian Group|abelian group]] and a monoid on one underlying set, welded by distributivity**. Strip away multiplication and a ring is just an abelian group; strip away addition and forget $0_R$ and a ring is just a commutative monoid. The content beyond those two pieces is the single distributive law, and the cleanest way to read that law is: *for each fixed $r$, the multiplication-by-$r$ map $x \mapsto rx$ is an endomorphism of the additive group $(R, +)$.* So a ring is an abelian group equipped with a compatible multiplication, where "compatible" means "acts by group endomorphisms".
+
+This compresses further against the rest of the algebraic hierarchy. A **commutative ring** is one invertibility-axiom away from a [[Def - Unit and Field|field]], exactly as a [[Def - Group|group]] is one invertibility-axiom away from a monoid: a field is a commutative ring in which every nonzero element has a multiplicative inverse. Drop the requirement of additive inverses and a ring degrades to a **semiring** (the natural numbers $\mathbb{N}$ are the prototype). Drop commutativity of multiplication and you get a general (associative, unital) ring, the home of matrix and operator algebras. The notion is also the linear-algebra backdrop made self-contained: a ring is what a **field of scalars** is generalized to when you no longer insist scalars be invertible, and modules over a ring are the resulting generalization of vector spaces.
+
+---
+
+# Examples / Corollaries
+
+**Is an instance: $\mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}$.** The familiar number systems, each with the usual $0$, $1$, addition, and multiplication, are commutative rings. They form a chain of [[Def - Subring|subrings]] $\mathbb{Z} \leq \mathbb{Q} \leq \mathbb{R} \leq \mathbb{C}$. The integers $\mathbb{Z}$ are the prototype the axioms are built around; $\mathbb{Q}, \mathbb{R}, \mathbb{C}$ are moreover [[Def - Unit and Field|fields]], since every nonzero element has a multiplicative inverse.
+
+**Is an instance: the Gaussian integers $\mathbb{Z}[i]$.** The set $\mathbb{Z}[i] = \{a + bi : a, b \in \mathbb{Z}\}$, with addition and multiplication inherited from $\mathbb{C}$, is a commutative ring. It contains $0$ and $1$, and a quick check shows the sum and product of two elements of the form $a + bi$ with integer coefficients is again of that form, so the operations restrict. It is a [[Def - Subring|subring]] of $\mathbb{C}$ but, like $\mathbb{Z}$, **not** a field — for instance $1 + i$ has no inverse in $\mathbb{Z}[i]$.
+
+**Is an instance: the product ring $R \times S$.** Given two rings $R$ and $S$, the Cartesian product $R \times S$ becomes a ring under componentwise operations,
+$$(r, s) + (r', s') = (r + r',\, s + s'), \qquad (r, s) \cdot (r', s') = (r \cdot r',\, s \cdot s'),$$
+with zero element $(0_R, 0_S)$ and identity $(1_R, 1_S)$. Each axiom holds because it holds in each component separately. This construction is a steady source of examples and counterexamples: $\mathbb{Z} \times \mathbb{Z}$, for instance, has the element $(1, 0)$ satisfying $(1,0)^2 = (1,0)$, a nonzero non-identity idempotent — something $\mathbb{Z}$ itself does not possess. It also shows that the deduction $r \cdot 0 = 0$ does **not** reverse: in $\mathbb{Z} \times \mathbb{Z}$ one has $(1,0) \cdot (0,1) = (0,0)$ with neither factor zero.
+
+**Is an instance: the zero ring $\{0\}$.** The one-element set $\{0\}$ with the only possible operations ($0 + 0 = 0$, $0 \cdot 0 = 0$) is a ring, with $0_R = 1_R = 0$. It is the **zero ring**, and it is the unique ring in which $1_R = 0_R$ (see the corollary below). It is degenerate but legitimate, and it is constantly useful as a counterexample to incautious claims — any statement of the form "every ring has a nonzero ..." must be checked against it.
+
+**Is NOT an instance: $(\mathbb{N}, +, \cdot, 0, 1)$.** The natural numbers under the usual addition and multiplication satisfy associativity, commutativity, distributivity, and have both identities $0$ and $1$ — yet they form **no ring**, because $(\mathbb{N}, +, 0)$ is not a group: it is only a monoid. The number $3$ has no additive inverse, since no natural number $n$ satisfies $3 + n = 0$. This non-example probes axiom (1) precisely: it is the failure of *subtraction* that disqualifies $\mathbb{N}$. The structure $(\mathbb{N}, +, \cdot)$ is a **semiring**, and the ring $\mathbb{Z}$ is exactly what one builds by formally adjoining the missing additive inverses.
+
+**Is NOT an instance: a non-associative or non-unital structure.** Two further failure modes, each isolating one axiom. First, take $\mathbb{R}^3$ with vector addition and the **cross product** $\times$ as "multiplication": addition is an abelian group and the cross product distributes over addition, but the cross product is *not associative* — $(\mathbf{e}_1 \times \mathbf{e}_1) \times \mathbf{e}_2 = \mathbf{0}$ while $\mathbf{e}_1 \times (\mathbf{e}_1 \times \mathbf{e}_2) = -\mathbf{e}_2$ — and there is no multiplicative identity, so axiom (2) fails twice over. Second, take the **even integers** $2\mathbb{Z}$ with the usual $+$ and $\cdot$: this is an abelian group, multiplication is associative and distributes, but there is *no* multiplicative identity, since $1 \notin 2\mathbb{Z}$ and no even integer fixes every even integer under multiplication. Under this course's convention $2\mathbb{Z}$ is therefore not a ring (it is a "rng" — a ring without identity), and in particular not a [[Def - Subring|subring]] of $\mathbb{Z}$.
+
+**Corollary ($r \cdot 0_R = 0_R$).** In any ring, multiplication by zero yields zero. The argument uses **only** distributivity and additive cancellation. Since $0_R + 0_R = 0_R$ in the additive group, multiply on the left by $r$:
+$$r \cdot 0_R = r \cdot (0_R + 0_R) = r \cdot 0_R + r \cdot 0_R.$$
+Now add $-(r \cdot 0_R)$ to both sides; the left side becomes $0_R$ and the right side becomes $r \cdot 0_R$, so $r \cdot 0_R = 0_R$. *Calibration check:* notice the deduction never touched the multiplicative identity or commutativity — it is purely the distributive law forcing $0$ to be absorbing. This is why $0$ being absorbing is a *theorem*, not an axiom.
+
+**Corollary (in a nonzero ring, $1_R \neq 0_R$).** If $R \neq \{0\}$ then the two identities are distinct. Suppose for contradiction $1_R = 0_R$. Pick any $r \neq 0_R$ (possible since $R$ is not the zero ring). Then, using the identity axiom and the previous corollary,
+$$r = r \cdot 1_R = r \cdot 0_R = 0_R,$$
+contradicting $r \neq 0_R$. Hence $1_R \neq 0_R$. Equivalently and contrapositively: a ring with $1_R = 0_R$ has *only* the element $0$, so it is the zero ring. This is the precise sense in which "$1 \neq 0$" and "the ring is nonzero" are the same condition.
+
+**Corollary (the negative-one rule, $(-1_R) \cdot r = -r$).** In any ring, multiplying by $-1_R$ negates. Indeed $r + (-1_R) \cdot r = 1_R \cdot r + (-1_R) \cdot r = (1_R + (-1_R)) \cdot r = 0_R \cdot r = 0_R$, using distributivity and the previous corollary; so $(-1_R) \cdot r$ is the additive inverse of $r$. *Calibration check:* if you can reproduce this you have understood that the familiar sign rules of arithmetic are consequences of distributivity, not separate assumptions.
+
+---
+
+# Unlocked by This
+
+> [!tip] Module *(from Commutative Algebra and Linear Algebra)*
+> Once you have a ring $R$, you can let it act on an abelian group: a **module** over $R$ is an abelian group $M$ together with a scalar multiplication $R \times M \to M$ satisfying distributivity and associativity laws. Modules are to rings what vector spaces are to fields — and indeed a module over a [[Def - Unit and Field|field]] *is* a vector space. See the Modules notes.
+
+> [!tip] Affine Scheme *(from Algebraic Geometry)*
+> Every commutative ring $R$ is the ring of functions on a geometric object, its **spectrum** $\operatorname{Spec} R$, whose points are the prime [[Def - Ideal|ideals]] of $R$. The entire dictionary of algebraic geometry — rings as functions, ideals as subvarieties, [[Def - Quotient Ring|quotient rings]] as restriction to a subvariety — rests on the ring axioms fixed here.
