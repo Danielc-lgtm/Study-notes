@@ -97,7 +97,7 @@ The proof is two lines once the *idea* is seen — and the idea is the supportin
 
 # Cross-Field Exercise Suggestions
 
-Pick the convex $\varphi$ and reap a named inequality. $\varphi(x)=|x|^{q/p}$ ($q\ge p$) gives $\|X\|_p\le\|X\|_q$ — *moment monotonicity* on a probability space. $\varphi(x)=x\log x$ gives the non-negativity of **entropy / KL-divergence** (Gibbs' inequality) — the foundation of information theory. $\varphi$ convex applied to a [[Def - Conditional Expectation|conditional expectation]] gives **conditional Jensen** $\mathbb{E}[\varphi(X)\mid\mathcal{G}]\ge\varphi(\mathbb{E}[X\mid\mathcal{G}])$, which makes $|M_n|^p$ a [[Def - Submartingale|submartingale]] when $M_n$ is a martingale — the engine of [[Thm - Doob's Maximal Inequality|Doob's $L^p$ inequality]].
+Pick the convex $\varphi$ and reap a named inequality. $\varphi(x)=|x|^{q/p}$ ($q\ge p$) gives $\|X\|_p\le\|X\|_q$ — *moment monotonicity* on a probability space. $\varphi(x)=x\log x$ gives the non-negativity of **entropy / KL-divergence** (Gibbs' inequality) — the foundation of information theory. $\varphi$ convex applied to a [[Def - Conditional Expectation|conditional expectation]] gives **conditional Jensen** $\mathbb{E}[\varphi(X)\mid\mathcal{G}]\ge\varphi(\mathbb{E}[X\mid\mathcal{G}])$, which makes $|M_n|^p$ a [[Def - Martingale|submartingale]] when $M_n$ is a martingale — the engine of [[Thm - Doob's Maximal Inequality|Doob's $L^p$ inequality]].
 
 ---
 

@@ -24,7 +24,7 @@ $X,Y\in L^1(\Omega,\mathcal{F},\mathbb{P})$; $\mathcal{H}\subseteq\mathcal{G}\su
 
 **Sources.** Hypothesis: $X,Y\in L^1$ (or $\ge0$ for the monotone statements). Every property is proved the same way — *verify the candidate satisfies the two [[Def - Conditional Expectation|characterising properties]]*, then invoke [[Thm - Existence and Uniqueness of Conditional Expectation|uniqueness]].
 
-**Targets.** Linearity makes $\mathbb{E}[\cdot\mid\mathcal{G}]$ a linear operator; the **tower property** is the defining identity of [[Def - Martingale|martingales]] and the engine of the [[Thm - Strong Law of Large Numbers|SLLN]]; **conditional Jensen** makes $|M_n|^p$ a [[Def - Submartingale|submartingale]] when $M_n$ is a martingale, powering [[Thm - Doob's Maximal Inequality|Doob's inequalities]]; the **$L^p$-contraction** $\|\mathbb{E}[X\mid\mathcal{G}]\|_p\le\|X\|_p$ gives the uniform integrability of conditional expectations.
+**Targets.** Linearity makes $\mathbb{E}[\cdot\mid\mathcal{G}]$ a linear operator; the **tower property** is the defining identity of [[Def - Martingale|martingales]] and the engine of the [[Thm - Strong Law of Large Numbers|SLLN]]; **conditional Jensen** makes $|M_n|^p$ a [[Def - Martingale|submartingale]] when $M_n$ is a martingale, powering [[Thm - Doob's Maximal Inequality|Doob's inequalities]]; the **$L^p$-contraction** $\|\mathbb{E}[X\mid\mathcal{G}]\|_p\le\|X\|_p$ gives the uniform integrability of conditional expectations.
 
 ---
 
@@ -109,7 +109,7 @@ No single step is deep; the difficulty is *bookkeeping* and seeing that **one me
 
 # Cross-Field Exercise Suggestions
 
-The **tower property** is the definition of a [[Def - Martingale|martingale]] ($\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n$) and proves the [[Thm - Strong Law of Large Numbers|SLLN]] via backward martingales. **Conditional Jensen** makes $(|M_n|^p)$ a [[Def - Submartingale|submartingale]] for a martingale $M$ — the input to [[Thm - Doob's Maximal Inequality|Doob's $L^p$ inequality]]. **Taking out what is known** is the rule behind the optional-stopping and predictable-projection calculus.
+The **tower property** is the definition of a [[Def - Martingale|martingale]] ($\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n$) and proves the [[Thm - Strong Law of Large Numbers|SLLN]] via backward martingales. **Conditional Jensen** makes $(|M_n|^p)$ a [[Def - Martingale|submartingale]] for a martingale $M$ — the input to [[Thm - Doob's Maximal Inequality|Doob's $L^p$ inequality]]. **Taking out what is known** is the rule behind the optional-stopping and predictable-projection calculus.
 
 ---
 
