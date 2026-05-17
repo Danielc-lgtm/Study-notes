@@ -64,6 +64,8 @@ tags: [area-tag, subject-tag]
 > [!note] Exercise Index — §X.1
 > [[Exercise Index - §X.1 Section Title]]
 
+[The wikilink in this callout must be byte-identical to the filename of the Exercise Index page it points to. Choose one `[Section Title]` string per section and use it verbatim in all three places — the `## §X.1 [Section Title]` concept-map header, this callout's wikilink, and the Exercise Index page's filename — so the link always resolves. A mismatch (a fuller title in the header than in the filename, say) silently breaks the link.]
+
 ## §X.2 [Section Title]
 
 [Continue with same pattern...]
@@ -460,7 +462,7 @@ A [[Def - Normal Subgroup|normal subgroup]] $H \trianglelefteq G$ is a subgroup 
 
 ## Exercise Index Page Template
 
-One page per sub-chapter section. Lists all exercises with per-exercise dependency links.
+One page per sub-chapter section. Lists all exercises with per-exercise dependency links. The filename — `Exercise Index - §X.Y [Section Title].md` — must be byte-identical to the wikilink in the parent topic page's exercise-index callout: use the exact `[Section Title]` string the topic page uses for that section's `## §X.Y` concept-map header, so the callout link resolves.
 
 ```markdown
 ---

@@ -102,7 +102,7 @@ But there is one genuine difference, and it is worth flagging at the outset beca
 > A **module** over a ring $R$ is an [[Def - Abelian Group|abelian group]] carrying a compatible $R$-action — the ring analogue of a vector space, with the field of scalars relaxed to a ring. The submodule, quotient module, and three isomorphism theorems are this very page re-run a third time, with "ideal" replaced by "submodule". An ideal of $R$ is precisely a submodule of $R$ viewed as a module over itself. See [[Modules I — §3.1–3.2]].
 
 > [!note] Exercise Index — §2.2
-> [[Exercise Index - §2.2 Homomorphisms, Ideals, Quotients and Isomorphisms]]
+> [[Exercise Index - §2.2 Homomorphisms, Ideals and Quotients]]
 
 ---
 

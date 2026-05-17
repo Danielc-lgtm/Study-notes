@@ -69,7 +69,7 @@ At the bottom, an [[Def - Integral Domain|integral domain]] merely lacks zero-di
 > Once prime ideals are in hand, the set of *all* prime ideals of $R$ — the **prime spectrum** $\operatorname{Spec}(R)$ — can be made into a topological space, and a commutative ring becomes the ring of functions on its own spectrum. Maximal ideals are the "ordinary points", non-maximal primes are "generic points" of subvarieties. This is the foundation of scheme theory. See [[Rings III — §2.5–2.6]].
 
 > [!note] Exercise Index — §2.3
-> [[Exercise Index - §2.3 Integral Domains, Field of Fractions, Prime and Maximal Ideals]]
+> [[Exercise Index - §2.3 Integral Domains and Ideals]]
 
 ## §2.4 Factorization in Integral Domains
 
