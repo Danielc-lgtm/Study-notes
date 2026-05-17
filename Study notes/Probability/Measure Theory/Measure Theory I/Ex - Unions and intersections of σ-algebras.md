@@ -20,7 +20,7 @@ Let $X$ be a set and let $(\mathcal{A}_i)_{i\in I}$ be an arbitrary (possibly un
 
 **Recall:**
 
-A [[Def - Algebra and σ-Algebra|$\sigma$-algebra]] on $X$ is a family $\mathcal{A}\subseteq 2^X$ with $X\in\mathcal{A}$, closed under complement and under countable unions. The [[Def - Generated σ-Algebra|generated $\sigma$-algebra]] $\sigma(\mathcal{C})$ is the intersection of all $\sigma$-algebras containing $\mathcal{C}$.
+A [[Def - Algebra and σ-Algebra|σ-algebra]] on $X$ is a family $\mathcal{A}\subseteq 2^X$ with $X\in\mathcal{A}$, closed under complement and under countable unions. The [[Def - Generated σ-Algebra|generated σ-algebra]] $\sigma(\mathcal{C})$ is the intersection of all $\sigma$-algebras containing $\mathcal{C}$.
 
 ---
 
@@ -74,7 +74,7 @@ On $X=\{1,2,3\}$ take $\mathcal{A}_1=\sigma(\{1\})=\{\emptyset,\{1\},\{2,3\},X\}
 **(c) Consequences.**
 
 > [!note]- Derivation
-> For any $\mathcal{C}\subseteq 2^X$, the family of $\sigma$-algebras containing $\mathcal{C}$ is nonempty ($2^X$ is one), and by (a) its intersection $\sigma(\mathcal{C})$ is a $\sigma$-algebra; it contains $\mathcal{C}$ and is contained in every $\sigma$-algebra containing $\mathcal{C}$, so it is the smallest such — the [[Def - Generated σ-Algebra|generated $\sigma$-algebra]] is well-defined.
+> For any $\mathcal{C}\subseteq 2^X$, the family of $\sigma$-algebras containing $\mathcal{C}$ is nonempty ($2^X$ is one), and by (a) its intersection $\sigma(\mathcal{C})$ is a $\sigma$-algebra; it contains $\mathcal{C}$ and is contained in every $\sigma$-algebra containing $\mathcal{C}$, so it is the smallest such — the [[Def - Generated σ-Algebra|generated σ-algebra]] is well-defined.
 > By (b), $\sigma(\mathcal{C}_1)\cup\sigma(\mathcal{C}_2)$ need not be a $\sigma$-algebra, so it cannot equal $\sigma(\mathcal{C}_1\cup\mathcal{C}_2)$ (which is one); with $\mathcal{C}_1=\{\{1\}\}$, $\mathcal{C}_2=\{\{2\}\}$ the left side omits $\{1,2\}$ while the right contains it. $\square$
 
 > [!note]- Complete formal solution

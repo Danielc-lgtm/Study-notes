@@ -59,9 +59,9 @@ A measure generalises *length/area/volume* by dropping all dependence on geometr
 
 **Dirac measure.** Fix $x \in X$. Define $\delta_x(A) = 1$ if $x \in A$, and $0$ if $x \notin A$. This is a probability measure — the law of a "random variable" that is deterministically $x$.
 
-**Lebesgue measure.** On $(\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$, the unique [[Def - Lebesgue Measure|measure $\lambda$]] assigning each box its elementary volume. It is $\sigma$-finite but not finite.
+**Lebesgue measure.** On $(\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$, the unique [[Def - Lebesgue Measure|measure λ]] assigning each box its elementary volume. It is $\sigma$-finite but not finite.
 
-**A finite measure built from a density.** For $f \geq 0$ measurable, $\nu(A) = \int_A f\,d\mu$ is a measure ([[Def - Absolute Continuity and Density|with density $f$]]); $\sigma$-additivity is the [[Thm - Monotone Convergence Theorem|monotone convergence theorem]].
+**A finite measure built from a density.** For $f \geq 0$ measurable, $\nu(A) = \int_A f\,d\mu$ is a measure ([[Def - Absolute Continuity and Density|with density f]]); $\sigma$-additivity is the [[Thm - Monotone Convergence Theorem|monotone convergence theorem]].
 
 Non-example: finitely additive set functions that fail countable additivity exist (e.g. a "limit density" on $\mathbb{N}$), but they are *not* measures and support no integration theory.
 

@@ -43,7 +43,7 @@ Uniform integrability is the probabilistic name for [[Def - Absolute Continuity 
 
 # Examples / Corollaries
 
-**UI:** any family bounded in $L^p$, $p>1$ (by [[Ex - Lp boundedness implies uniform integrability|the power-of-$\mathbb{P}(A)$ estimate]]); any dominated family; the conditional expectations of a fixed $Z\in L^1$.
+**UI:** any family bounded in $L^p$, $p>1$ (by [[Ex - Lp boundedness implies uniform integrability|the power-of-ℙ(A) estimate]]); any dominated family; the conditional expectations of a fixed $Z\in L^1$.
 
 **Not UI:** the spike $X_n=n\mathbf{1}_{[0,1/n]}$ — bounded in $L^1$ ($\mathbb{E}X_n=1$) but $\mathbb{E}[X_n\mathbf{1}_{\{X_n>M\}}]=1$ for all $n>M$. *$L^1$-boundedness alone never suffices* — mass can concentrate.
 

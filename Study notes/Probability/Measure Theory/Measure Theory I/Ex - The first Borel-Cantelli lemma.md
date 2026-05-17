@@ -70,7 +70,7 @@ A [[Def - Measure and Measure Space|measure]] satisfies $\mu(\emptyset)=0$ and c
 $$\mu\big(\limsup_k A_k\big)\ \le\ \mu\Big(\bigcup_{k=n}^\infty A_k\Big)\ \le\ \sum_{k=n}^\infty\mu(A_k).$$
 
 > [!note]- Derivation
-> The intersection $\bigcap_m(\cdots)$ is contained in its $m=n$ term $\bigcup_{k\ge n}A_k$, giving the first inequality by [[Thm - Properties of Measures|monotonicity]]. The union $\bigcup_{k\ge n}A_k$ is a countable union, so by [[Thm - Properties of Measures|$\sigma$-subadditivity]] its measure is at most $\sum_{k\ge n}\mu(A_k)$.
+> The intersection $\bigcap_m(\cdots)$ is contained in its $m=n$ term $\bigcup_{k\ge n}A_k$, giving the first inequality by [[Thm - Properties of Measures|monotonicity]]. The union $\bigcup_{k\ge n}A_k$ is a countable union, so by [[Thm - Properties of Measures|σ-subadditivity]] its measure is at most $\sum_{k\ge n}\mu(A_k)$.
 
 **Step 3 — Let $n\to\infty$.** The bound $\mu(\limsup A_k)\le\sum_{k\ge n}\mu(A_k)$ holds for *every* $n$. Since $\sum_{k\ge 1}\mu(A_k)<\infty$, its tails satisfy $\sum_{k\ge n}\mu(A_k)\to 0$ as $n\to\infty$. Hence $\mu(\limsup A_k)\le 0$, and being a measure value it equals $0$.
 

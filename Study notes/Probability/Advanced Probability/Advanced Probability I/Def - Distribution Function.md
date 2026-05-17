@@ -17,7 +17,7 @@ $X$ a real [[Def - Random Variable|random variable]], $\mu_X$ its law; $F_X$ its
 
 The [[Def - Random Variable|law]] $\mu_X$ is a measure on $\mathcal{B}(\mathbb{R})$ — an infinite-dimensional object. Can it be encoded by a single *function*? Yes: by the **distribution function** $F_X(t)=\mathbb{P}(X\le t)$, the accumulated probability up to $t$.
 
-That $F_X$ *determines* $\mu_X$ is the [[Thm - Dynkin's π-λ Theorem|$\pi$–$\lambda$]] principle: the rays $(-\infty,t]$ form a $\pi$-system generating $\mathcal{B}(\mathbb{R})$, so a measure is pinned down by its values on them — and those values are exactly $F_X$. So $F_X$ and $\mu_X$ are equivalent data; the function is just the more convenient handle.
+That $F_X$ *determines* $\mu_X$ is the [[Thm - Dynkin's π-λ Theorem|π–λ]] principle: the rays $(-\infty,t]$ form a $\pi$-system generating $\mathcal{B}(\mathbb{R})$, so a measure is pinned down by its values on them — and those values are exactly $F_X$. So $F_X$ and $\mu_X$ are equivalent data; the function is just the more convenient handle.
 
 The *converse* — which functions $F$ arise — is the deep direction. A distribution function is non-decreasing (more accumulated mass to the right), right-continuous ([[Thm - Properties of Measures|continuity from above]]: $\{X\le t_n\}\downarrow\{X\le t\}$ as $t_n\downarrow t$), with limits $0$ at $-\infty$ and $1$ at $+\infty$. Conversely *any* such $F$ is the distribution function of a unique law $\mu_F$ — built by the [[Thm - Hahn-Carathéodory Extension Theorem|Hahn–Carathéodory extension]] of the pre-measure $(a,b]\mapsto F(b)-F(a)$. So distribution functions and laws on $\mathbb{R}$ are in *bijection*.
 

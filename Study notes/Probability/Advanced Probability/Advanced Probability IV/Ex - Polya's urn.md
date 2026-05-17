@@ -21,7 +21,7 @@ An urn starts with one red and one black ball. At each step a ball is drawn unif
 
 **Recall:**
 
-[[Thm - Almost Sure Martingale Convergence|A.s. convergence]]: a bounded martingale converges a.s. [[Thm - Lp and L1 Martingale Convergence|$L^1$-convergence]]: under uniform integrability.
+[[Thm - Almost Sure Martingale Convergence|A.s. convergence]]: a bounded martingale converges a.s. [[Thm - Lp and L1 Martingale Convergence|L¹-convergence]]: under uniform integrability.
 
 ---
 
@@ -61,7 +61,7 @@ Dividing by the new total $n+3$:
 $$\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=\frac{\mathbb{E}[R_{n+1}\mid\mathcal{F}_n]}{n+3}=\frac{R_n}{n+2}=X_n.$$
 So the red fraction $(X_n)$ is a martingale — the *fraction* is conserved in conditional mean even though the *count* grows.
 
-**Step 2 — (b).** $X_n=R_n/(n+2)\in[0,1]$ is bounded. A bounded martingale is $L^1$-bounded, so by the [[Thm - Almost Sure Martingale Convergence|a.s. convergence theorem]] $X_n\to X_\infty$ almost surely. It is also bounded hence [[Def - Uniform Integrability|uniformly integrable]], so by the [[Thm - Lp and L1 Martingale Convergence|$L^1$-convergence theorem]] the convergence is also in $L^1$ — and indeed in every $L^p$. In particular $\mathbb{E}[X_\infty]=\lim\mathbb{E}[X_n]=\mathbb{E}[X_0]=\tfrac12$.
+**Step 2 — (b).** $X_n=R_n/(n+2)\in[0,1]$ is bounded. A bounded martingale is $L^1$-bounded, so by the [[Thm - Almost Sure Martingale Convergence|a.s. convergence theorem]] $X_n\to X_\infty$ almost surely. It is also bounded hence [[Def - Uniform Integrability|uniformly integrable]], so by the [[Thm - Lp and L1 Martingale Convergence|L¹-convergence theorem]] the convergence is also in $L^1$ — and indeed in every $L^p$. In particular $\mathbb{E}[X_\infty]=\lim\mathbb{E}[X_n]=\mathbb{E}[X_0]=\tfrac12$.
 
 **Step 3 — (c).** A direct computation of the distribution of $R_n$ (a Beta–Binomial / exchangeability argument) shows $R_n-1$ is uniform on $\{0,1,\dots,n\}$, so $X_n$ is uniform on a grid in $[0,1]$, and in the limit $X_\infty\sim\text{Uniform}[0,1]$. The striking conclusion: **the limiting red fraction is genuinely random** — it converges, with probability one, but the value it converges to is uniformly spread over $[0,1]$. Early draws "lock in" a random proportion. (This is consistent with $\mathbb{E}[X_\infty]=\tfrac12$ — the *mean* of the limit is the start, but the limit itself is far from deterministic.)
 

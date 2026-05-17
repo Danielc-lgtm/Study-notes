@@ -60,4 +60,4 @@ Calibration: (i) Is every measure an outer measure? Only after extending it by $
 # Unlocked by This
 
 > [!tip] Carathéodory's criterion
-> An outer measure becomes a measure once restricted to the sets $A$ that "split every test set additively": $\mu^*(B) = \mu^*(B\cap A) + \mu^*(B\setminus A)$ for all $B$. These form the [[Def - Carathéodory Measurable Sets|Carathéodory $\sigma$-algebra]] $\Sigma$, and $\mu^*|_\Sigma$ is a measure — see [[Thm - Carathéodory's σ-Algebra]].
+> An outer measure becomes a measure once restricted to the sets $A$ that "split every test set additively": $\mu^*(B) = \mu^*(B\cap A) + \mu^*(B\setminus A)$ for all $B$. These form the [[Def - Carathéodory Measurable Sets|Carathéodory σ-algebra]] $\Sigma$, and $\mu^*|_\Sigma$ is a measure — see [[Thm - Carathéodory's σ-Algebra]].

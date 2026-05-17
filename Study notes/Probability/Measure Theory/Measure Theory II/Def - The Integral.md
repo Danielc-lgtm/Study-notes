@@ -77,4 +77,4 @@ Calibration: (i) Does $\int f\,d\mu$ exist for every $f\ge0$? Yes — possibly $
 > For a [[Def - Random Variable|random variable]] $X$ on $(\Omega,\mathcal{F},\mathbb{P})$, $\mathbb{E}[X]=\int X\,d\mathbb{P}$. All of expectation, variance, moments, and — via the [[Thm - Radon-Nikodym Theorem|Radon–Nikodym theorem]] — [[Def - Conditional Expectation|conditional expectation]] are built on this integral.
 
 > [!tip] $L^p$ spaces
-> $\int|f|^p\,d\mu$ defines the [[Def - Lp Spaces|$L^p$ norm]]; the integral is the engine of the entire $L^p$ theory.
+> $\int|f|^p\,d\mu$ defines the [[Def - Lp Spaces|Lᵖ norm]]; the integral is the engine of the entire $L^p$ theory.

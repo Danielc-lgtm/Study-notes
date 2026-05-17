@@ -24,7 +24,7 @@ The [[Def - The Integral|integral]] was *defined* in three stages (simple, non-n
 
 **Sources.** Hypothesis "$f,g\in L^1$." Broadened: linearity for non-negative measurable $f,g$ holds with no integrability assumption (values in $[0,\infty]$); monotonicity holds for any $f\le g$; the [[Def - Almost Everywhere|a.e.]] versions ($f\le g$ a.e., $f=g$ a.e.) hold by discarding null sets.
 
-**Targets.** Linearity is what makes $\int$ a *linear functional* — the structure underlying [[Def - Lp Spaces|$L^p$ spaces]] as normed vector spaces. The triangle inequality $|\int f|\le\int|f|$ is the prototype of the $L^p$ norm inequalities and the workhorse estimate for [[Thm - Dominated Convergence Theorem|DCT]] and convergence proofs. Monotonicity is invoked silently in essentially every estimate.
+**Targets.** Linearity is what makes $\int$ a *linear functional* — the structure underlying [[Def - Lp Spaces|Lᵖ spaces]] as normed vector spaces. The triangle inequality $|\int f|\le\int|f|$ is the prototype of the $L^p$ norm inequalities and the workhorse estimate for [[Thm - Dominated Convergence Theorem|DCT]] and convergence proofs. Monotonicity is invoked silently in essentially every estimate.
 
 ---
 
@@ -95,7 +95,7 @@ Only linearity is hard, and the difficulty is structural, not computational: the
 
 # Cross-Field Exercise Suggestions
 
-Linearity makes $f\mapsto\int f\,d\mu$ a linear functional on [[Def - Lp Spaces|$L^1$]] — the starting point of duality theory and the Riesz representation theorem. In probability it is **linearity of expectation**, $\mathbb{E}[\alpha X+\beta Y]=\alpha\mathbb{E}X+\beta\mathbb{E}Y$, which holds with *no independence assumption* — a fact that trivialises many computations (e.g. the expected number of fixed points of a random permutation, by indicator decomposition).
+Linearity makes $f\mapsto\int f\,d\mu$ a linear functional on [[Def - Lp Spaces|L¹]] — the starting point of duality theory and the Riesz representation theorem. In probability it is **linearity of expectation**, $\mathbb{E}[\alpha X+\beta Y]=\alpha\mathbb{E}X+\beta\mathbb{E}Y$, which holds with *no independence assumption* — a fact that trivialises many computations (e.g. the expected number of fixed points of a random permutation, by indicator decomposition).
 
 ---
 

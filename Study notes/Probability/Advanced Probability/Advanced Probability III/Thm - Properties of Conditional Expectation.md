@@ -109,7 +109,7 @@ No single step is deep; the difficulty is *bookkeeping* and seeing that **one me
 
 # Cross-Field Exercise Suggestions
 
-The **tower property** is the definition of a [[Def - Martingale|martingale]] ($\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n$) and proves the [[Thm - Strong Law of Large Numbers|SLLN]] via backward martingales. **Conditional Jensen** makes $(|M_n|^p)$ a [[Def - Martingale|submartingale]] for a martingale $M$ — the input to [[Thm - Doob's Maximal Inequality|Doob's $L^p$ inequality]]. **Taking out what is known** is the rule behind the optional-stopping and predictable-projection calculus.
+The **tower property** is the definition of a [[Def - Martingale|martingale]] ($\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n$) and proves the [[Thm - Strong Law of Large Numbers|SLLN]] via backward martingales. **Conditional Jensen** makes $(|M_n|^p)$ a [[Def - Martingale|submartingale]] for a martingale $M$ — the input to [[Thm - Doob's Maximal Inequality|Doob's Lᵖ inequality]]. **Taking out what is known** is the rule behind the optional-stopping and predictable-projection calculus.
 
 ---
 

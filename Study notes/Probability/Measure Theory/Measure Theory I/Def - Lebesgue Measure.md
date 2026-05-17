@@ -11,7 +11,7 @@ tags: [analysis, measure-theory, probability]
 
 # Notation
 
-$\lambda$ (or $\lambda_n$, or $\mathrm{d}x$) is Lebesgue measure on $\mathbb{R}^n$. $\mathcal{B}(\mathbb{R}^n)$ is the [[Def - Borel σ-Algebra|Borel $\sigma$-algebra]]; $\mathcal{B}^*(\mathbb{R}^n)$ its [[Def - Null Set and Completion|completion]], the Lebesgue $\sigma$-algebra. $\widetilde\lambda$ is [[Def - Interval and Elementary Figure|elementary volume]].
+$\lambda$ (or $\lambda_n$, or $\mathrm{d}x$) is Lebesgue measure on $\mathbb{R}^n$. $\mathcal{B}(\mathbb{R}^n)$ is the [[Def - Borel σ-Algebra|Borel σ-algebra]]; $\mathcal{B}^*(\mathbb{R}^n)$ its [[Def - Null Set and Completion|completion]], the Lebesgue $\sigma$-algebra. $\widetilde\lambda$ is [[Def - Interval and Elementary Figure|elementary volume]].
 
 ---
 
@@ -33,7 +33,7 @@ Why bother, given the Riemann integral already integrates over boxes? Because Ri
 
 - $\widetilde\lambda$ is a pre-measure on the algebra $\mathcal{A}$ of elementary figures (a theorem, by Heine–Borel);
 - $\widetilde\lambda$ is $\sigma$-finite ($\mathbb{R}^n=\bigsqcup_{z\in\mathbb{Z}^n}(z,z+\mathbf 1]$, each cube of volume $1$);
-- the extension theorem produces a measure $\mu^*|_\Sigma$ on the [[Def - Carathéodory Measurable Sets|Carathéodory $\sigma$-algebra]] $\Sigma$, with $\mathcal{B}(\mathbb{R}^n)\subseteq\Sigma$;
+- the extension theorem produces a measure $\mu^*|_\Sigma$ on the [[Def - Carathéodory Measurable Sets|Carathéodory σ-algebra]] $\Sigma$, with $\mathcal{B}(\mathbb{R}^n)\subseteq\Sigma$;
 - by uniqueness this extension is the *only* measure on $\mathcal{B}(\mathbb{R}^n)$ agreeing with $\widetilde\lambda$ on boxes.
 
 We call $\lambda=\mu^*|_{\mathcal{B}(\mathbb{R}^n)}$ Lebesgue measure. The full $\Sigma$ is the **Lebesgue $\sigma$-algebra** $\mathcal{B}^*(\mathbb{R}^n)$, the [[Def - Null Set and Completion|completion]] of $\mathcal{B}(\mathbb{R}^n)$; a set in it is **Lebesgue-measurable**. Restricting $\lambda$ to a Borel set $A$ gives the **Lebesgue measure on $A$**; for $A=[0,1]^n$ this is a probability measure, the **uniform distribution**.

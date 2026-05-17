@@ -87,7 +87,7 @@ The diagonal extraction is standard; the *crux* is recognising that diagonalisat
 # Formal Proof
 
 > [!note]- Complete formal proof
-> Lemma 1 extracts a subsequence with $F_n\to F$ at continuity points, $F$ non-decreasing right-continuous. Lemma 2 uses tightness to give $F(-\infty)=0$, $F(+\infty)=1$, so $F$ is the distribution function of a probability measure $\mu$ ([[Def - Distribution Function|the $F\leftrightarrow\mu$ correspondence]]). Convergence of $F_n$ to $F$ at all continuity points is, by [[Def - Weak Convergence|Portmanteau]], $\mu_n\Rightarrow\mu$ along the subsequence. The converse (relative compactness $\Rightarrow$ tightness on a Polish space) is the standard inner-regularity argument. $\blacksquare$
+> Lemma 1 extracts a subsequence with $F_n\to F$ at continuity points, $F$ non-decreasing right-continuous. Lemma 2 uses tightness to give $F(-\infty)=0$, $F(+\infty)=1$, so $F$ is the distribution function of a probability measure $\mu$ ([[Def - Distribution Function|the F↔μ correspondence]]). Convergence of $F_n$ to $F$ at all continuity points is, by [[Def - Weak Convergence|Portmanteau]], $\mu_n\Rightarrow\mu$ along the subsequence. The converse (relative compactness $\Rightarrow$ tightness on a Polish space) is the standard inner-regularity argument. $\blacksquare$
 
 ---
 

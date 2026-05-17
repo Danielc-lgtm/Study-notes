@@ -11,7 +11,7 @@ tags: [analysis, measure-theory]
 
 # Notation
 
-$X$ is a set, $\mathcal{A}\subseteq 2^X$ an [[Def - Algebra and σ-Algebra|algebra]], $\widetilde\mu:\mathcal{A}\to[0,\infty]$ a [[Def - Pre-Measure|pre-measure]]. $\mu^*$ is the [[Def - Outer Measure|outer measure]] built from $\widetilde\mu$ by the cover formula; $\Sigma$ is the [[Def - Carathéodory Measurable Sets|Carathéodory $\sigma$-algebra]] of $\mu^*$; $\mu=\mu^*|_\Sigma$.
+$X$ is a set, $\mathcal{A}\subseteq 2^X$ an [[Def - Algebra and σ-Algebra|algebra]], $\widetilde\mu:\mathcal{A}\to[0,\infty]$ a [[Def - Pre-Measure|pre-measure]]. $\mu^*$ is the [[Def - Outer Measure|outer measure]] built from $\widetilde\mu$ by the cover formula; $\Sigma$ is the [[Def - Carathéodory Measurable Sets|Carathéodory σ-algebra]] of $\mu^*$; $\mu=\mu^*|_\Sigma$.
 
 ---
 

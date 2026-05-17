@@ -42,7 +42,7 @@ Hence for an independent sequence, $\mathbb{P}(A_n\text{ i.o.})\in\{0,1\}$, dich
 
 # Why Is It True
 
-**First lemma — $\sigma$-subadditivity and a vanishing tail.** $\limsup A_n\subseteq\bigcup_{n\ge N}A_n$ for *every* $N$. By [[Thm - Properties of Measures|$\sigma$-subadditivity]], $\mathbb{P}(\limsup A_n)\le\sum_{n\ge N}\mathbb{P}(A_n)$. Since $\sum\mathbb{P}(A_n)<\infty$, the tail $\to0$ as $N\to\infty$; the left side does not depend on $N$, so it is $0$. (Equivalently: $\mathbb{E}[\sum\mathbf{1}_{A_n}]=\sum\mathbb{P}(A_n)<\infty$, so $\sum\mathbf{1}_{A_n}<\infty$ a.s.) This is exactly the [[Ex - The first Borel-Cantelli lemma|set-level argument from measure theory]] — no probability beyond a finite measure is used.
+**First lemma — $\sigma$-subadditivity and a vanishing tail.** $\limsup A_n\subseteq\bigcup_{n\ge N}A_n$ for *every* $N$. By [[Thm - Properties of Measures|σ-subadditivity]], $\mathbb{P}(\limsup A_n)\le\sum_{n\ge N}\mathbb{P}(A_n)$. Since $\sum\mathbb{P}(A_n)<\infty$, the tail $\to0$ as $N\to\infty$; the left side does not depend on $N$, so it is $0$. (Equivalently: $\mathbb{E}[\sum\mathbf{1}_{A_n}]=\sum\mathbb{P}(A_n)<\infty$, so $\sum\mathbf{1}_{A_n}<\infty$ a.s.) This is exactly the [[Ex - The first Borel-Cantelli lemma|set-level argument from measure theory]] — no probability beyond a finite measure is used.
 
 **Second lemma — independence turns "divergent sum" into "complement is null."** Work with the complement: $(\limsup A_n)^c=\liminf A_n^c=\bigcup_N\bigcap_{n\ge N}A_n^c=\{A_n\text{ eventually never occurs}\}$. It suffices to show each $\bigcap_{n\ge N}A_n^c$ has probability $0$. By independence (of the $A_n^c$), for any $M\ge N$,
 $$\mathbb{P}\Big(\bigcap_{n=N}^M A_n^c\Big)=\prod_{n=N}^M(1-\mathbb{P}(A_n))\le\prod_{n=N}^M e^{-\mathbb{P}(A_n)}=\exp\Big(-\sum_{n=N}^M\mathbb{P}(A_n)\Big),$$
@@ -77,7 +77,7 @@ The first lemma is easy ($\sigma$-subadditivity, tail). The second has two steps
 > **Statement:** $\sum\mathbb{P}(A_n)<\infty\Rightarrow\mathbb{P}(\limsup A_n)=0$.
 >
 > > [!note]- Full proof
-> > For each $N$, $\limsup_n A_n=\bigcap_M\bigcup_{n\ge M}A_n\subseteq\bigcup_{n\ge N}A_n$, so by [[Thm - Properties of Measures|$\sigma$-subadditivity]] $\mathbb{P}(\limsup A_n)\le\sum_{n\ge N}\mathbb{P}(A_n)$. The right side is the tail of a convergent series, $\to0$ as $N\to\infty$; the left side is fixed, hence $0$. $\square$
+> > For each $N$, $\limsup_n A_n=\bigcap_M\bigcup_{n\ge M}A_n\subseteq\bigcup_{n\ge N}A_n$, so by [[Thm - Properties of Measures|σ-subadditivity]] $\mathbb{P}(\limsup A_n)\le\sum_{n\ge N}\mathbb{P}(A_n)$. The right side is the tail of a convergent series, $\to0$ as $N\to\infty$; the left side is fixed, hence $0$. $\square$
 
 > [!note]- Lemma 2: Second Borel–Cantelli
 > **Statement:** $(A_n)$ independent, $\sum\mathbb{P}(A_n)=\infty\Rightarrow\mathbb{P}(\limsup A_n)=1$.

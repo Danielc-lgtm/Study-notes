@@ -11,7 +11,7 @@ tags: [analysis, measure-theory, probability]
 
 # Problem Statement
 
-Let $(X,\mathcal{A},\mu)$ be a measure space and $L^2(\mu)$ its [[Def - Lp Spaces|$L^2$ space]], with $\langle f,g\rangle=\int f\bar g\,d\mu$.
+Let $(X,\mathcal{A},\mu)$ be a measure space and $L^2(\mu)$ its [[Def - Lp Spaces|L² space]], with $\langle f,g\rangle=\int f\bar g\,d\mu$.
 
 **(a)** Show $\langle\cdot,\cdot\rangle$ is an inner product on $L^2(\mu)$ and the **Cauchy–Schwarz inequality** $|\langle f,g\rangle|\le\|f\|_2\|g\|_2$ holds — as the case $p=q=2$ of [[Thm - Hölder and Minkowski Inequalities|Hölder]].
 
@@ -21,7 +21,7 @@ Let $(X,\mathcal{A},\mu)$ be a measure space and $L^2(\mu)$ its [[Def - Lp Space
 
 **Recall:**
 
-[[Thm - Hölder and Minkowski Inequalities|Hölder]] with $p=q=2$: $\int|fg|\le\|f\|_2\|g\|_2$. [[Thm - Completeness of Lp Spaces|$L^2$ is complete]].
+[[Thm - Hölder and Minkowski Inequalities|Hölder]] with $p=q=2$: $\int|fg|\le\|f\|_2\|g\|_2$. [[Thm - Completeness of Lp Spaces|L² is complete]].
 
 ---
 
@@ -60,7 +60,7 @@ Let $(X,\mathcal{A},\mu)$ be a measure space and $L^2(\mu)$ its [[Def - Lp Space
 
 # Solution
 
-**Step 1 — (a) Inner product and Cauchy–Schwarz.** For $f,g\in L^2$, Hölder with $p=q=2$ gives $\int|f\bar g|\,d\mu\le\|f\|_2\|g\|_2<\infty$, so $f\bar g\in L^1$ and $\langle f,g\rangle=\int f\bar g\,d\mu$ is well-defined. It is sesquilinear, conjugate-symmetric, and positive: $\langle f,f\rangle=\int|f|^2=\|f\|_2^2\ge0$, with $=0$ iff $f=0$ in $L^2$ (i.e. $f=0$ a.e.). Cauchy–Schwarz $|\langle f,g\rangle|=|\int f\bar g|\le\int|f\bar g|\le\|f\|_2\|g\|_2$ is exactly [[Thm - Hölder and Minkowski Inequalities|Hölder $p=q=2$]].
+**Step 1 — (a) Inner product and Cauchy–Schwarz.** For $f,g\in L^2$, Hölder with $p=q=2$ gives $\int|f\bar g|\,d\mu\le\|f\|_2\|g\|_2<\infty$, so $f\bar g\in L^1$ and $\langle f,g\rangle=\int f\bar g\,d\mu$ is well-defined. It is sesquilinear, conjugate-symmetric, and positive: $\langle f,f\rangle=\int|f|^2=\|f\|_2^2\ge0$, with $=0$ iff $f=0$ in $L^2$ (i.e. $f=0$ a.e.). Cauchy–Schwarz $|\langle f,g\rangle|=|\int f\bar g|\le\int|f\bar g|\le\|f\|_2\|g\|_2$ is exactly [[Thm - Hölder and Minkowski Inequalities|Hölder p=q=2]].
 
 **Step 2 — (b) Hilbert space and projection.** $\|f\|_2=\sqrt{\langle f,f\rangle}$, and by [[Thm - Completeness of Lp Spaces|Riesz–Fischer]] $L^2(\mu)$ is complete. A complete inner-product space is a **Hilbert space**. In a Hilbert space the projection theorem holds: for a closed subspace $V$, every $f$ has a unique $P_V f\in V$ minimising $\|f-v\|_2$ over $v\in V$, characterised by $f-P_V f\perp V$.
 

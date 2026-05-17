@@ -9,7 +9,7 @@ tags: [analysis, measure-theory]
 
 # Notation
 
-$(X,\mathcal{A},\mu)$ a measure space; $1\le p,q\le\infty$ **conjugate exponents**, $\tfrac1p+\tfrac1q=1$; $\|f\|_p$ the [[Def - Lp Spaces|$L^p$ norm]].
+$(X,\mathcal{A},\mu)$ a measure space; $1\le p,q\le\infty$ **conjugate exponents**, $\tfrac1p+\tfrac1q=1$; $\|f\|_p$ the [[Def - Lp Spaces|Lᵖ norm]].
 
 ---
 
@@ -101,7 +101,7 @@ The genuine ideas: (i) the **conjugate-exponent bookkeeping** $\tfrac1p+\tfrac1q
 
 # Cross-Field Exercise Suggestions
 
-Hölder on a *probability* space gives the **moment inequality** $\|X\|_r\le\|X\|_p$ for $r\le p$ — higher moments dominate lower (a special case: $\mathrm{Var}\ge0$). Cauchy–Schwarz ($p=q=2$) gives $|\mathbb{E}[XY]|\le\|X\|_2\|Y\|_2$, the bound behind correlation coefficients and the [[Def - Conditional Expectation|$L^2$ projection]] picture of conditional expectation. Hölder also yields the **Lyapunov / log-convexity** of $p\mapsto\log\|X\|_p$, used in interpolation and large-deviation estimates.
+Hölder on a *probability* space gives the **moment inequality** $\|X\|_r\le\|X\|_p$ for $r\le p$ — higher moments dominate lower (a special case: $\mathrm{Var}\ge0$). Cauchy–Schwarz ($p=q=2$) gives $|\mathbb{E}[XY]|\le\|X\|_2\|Y\|_2$, the bound behind correlation coefficients and the [[Def - Conditional Expectation|L² projection]] picture of conditional expectation. Hölder also yields the **Lyapunov / log-convexity** of $p\mapsto\log\|X\|_p$, used in interpolation and large-deviation estimates.
 
 ---
 

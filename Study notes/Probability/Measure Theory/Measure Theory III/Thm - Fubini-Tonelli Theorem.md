@@ -99,7 +99,7 @@ Tonelli itself is routine *once* one accepts that "Tonelli for indicators $=$ th
 
 # Cross-Field Exercise Suggestions
 
-Fubini–Tonelli proves the **layer-cake formula** $\int g\,d\mu=\int_0^\infty\mu(g>t)\,dt$ (apply Tonelli to $\mathbf{1}_{\{(x,t):t<g(x)\}}$ on $X\times[0,\infty)$) — the bridge between integrating a function and integrating its tail. In probability it gives $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$ for [[Def - Independence|independent]] $X,Y$ (the joint law is a product, integrate the product against it), and the [[Thm - Doob's Maximal Inequality|$L^p$ maximal inequality]] uses Fubini to integrate $\int_0^\infty pt^{p-1}\mathbb{P}(X^*>t)\,dt$.
+Fubini–Tonelli proves the **layer-cake formula** $\int g\,d\mu=\int_0^\infty\mu(g>t)\,dt$ (apply Tonelli to $\mathbf{1}_{\{(x,t):t<g(x)\}}$ on $X\times[0,\infty)$) — the bridge between integrating a function and integrating its tail. In probability it gives $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$ for [[Def - Independence|independent]] $X,Y$ (the joint law is a product, integrate the product against it), and the [[Thm - Doob's Maximal Inequality|Lᵖ maximal inequality]] uses Fubini to integrate $\int_0^\infty pt^{p-1}\mathbb{P}(X^*>t)\,dt$.
 
 ---
 

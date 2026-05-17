@@ -8,7 +8,7 @@ tags: [analysis, measure-theory]
 
 # Notation
 
-$X$ is a set, $\mathcal{A} \subseteq 2^X$ a [[Def - Algebra and σ-Algebra|$\sigma$-algebra]]. The pair $(X, \mathcal{A})$ is a measurable space; elements of $\mathcal{A}$ are measurable sets.
+$X$ is a set, $\mathcal{A} \subseteq 2^X$ a [[Def - Algebra and σ-Algebra|σ-algebra]]. The pair $(X, \mathcal{A})$ is a measurable space; elements of $\mathcal{A}$ are measurable sets.
 
 ---
 
@@ -42,7 +42,7 @@ A measurable space is to measure theory what a topological space is to analysis 
 
 # Examples / Corollaries
 
-$(X, 2^X)$ — every set with its power set — is a measurable space, the finest possible. $(X, \{\emptyset, X\})$ is the coarsest. $(\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$ with the [[Def - Borel σ-Algebra|Borel $\sigma$-algebra]] is the default measurable space of analysis. $(\Omega, \mathcal{F})$ in probability is a measurable space awaiting a probability measure.
+$(X, 2^X)$ — every set with its power set — is a measurable space, the finest possible. $(X, \{\emptyset, X\})$ is the coarsest. $(\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$ with the [[Def - Borel σ-Algebra|Borel σ-algebra]] is the default measurable space of analysis. $(\Omega, \mathcal{F})$ in probability is a measurable space awaiting a probability measure.
 
 Corollary (restriction): if $(X, \mathcal{A})$ is a measurable space and $A \subseteq X$, then $\mathcal{A}|_A = \{A \cap B : B \in \mathcal{A}\}$ is a $\sigma$-algebra on $A$, so $(A, \mathcal{A}|_A)$ is again a measurable space — the **trace** or restricted measurable space.
 

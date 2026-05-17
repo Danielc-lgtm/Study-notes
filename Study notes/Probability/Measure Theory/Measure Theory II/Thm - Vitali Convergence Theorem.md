@@ -25,7 +25,7 @@ The [[Thm - Dominated Convergence Theorem|DCT]] gives $L^1$-convergence under a 
 
 **Sources.** Hypotheses: $\mu(X)<\infty$, $f_n\xrightarrow{\mu}f$, $(f_n)$ uniformly integrable (UI). Source-broadenings for UI: a dominated family ($|f_n|\le g\in L^1$) is UI — so DCT is a *special case*; an $L^p$-bounded family ($p>1$) is UI; a family of [[Def - Conditional Expectation|conditional expectations]] $\{\mathbb{E}[Z\mid\mathcal{G}]\}$ of a fixed $Z\in L^1$ is UI — the fact that makes [[Thm - Almost Sure Martingale Convergence|martingales]] converge in $L^1$.
 
-**Targets.** The equivalence is the master tool for upgrading weaker convergence to $L^1$: it converts a.s. or in-measure convergence into $L^1$ convergence given UI, and it is the precise criterion behind the [[Thm - Almost Sure Martingale Convergence|$L^1$ martingale convergence theorem]] (a martingale converges in $L^1$ iff it is UI).
+**Targets.** The equivalence is the master tool for upgrading weaker convergence to $L^1$: it converts a.s. or in-measure convergence into $L^1$ convergence given UI, and it is the precise criterion behind the [[Thm - Almost Sure Martingale Convergence|L¹ martingale convergence theorem]] (a martingale converges in $L^1$ iff it is UI).
 
 ---
 
@@ -40,7 +40,7 @@ Let $\mu(X)<\infty$ and $f,f_n\in L^1(\mu)$. The following are equivalent:
 
 # Why Is It True
 
-**(2) $\Rightarrow$ (1).** $L^1$-convergence gives convergence in measure by [[Thm - Markov's Inequality|Markov's inequality]] ($\mu(|f_n-f|>\varepsilon)\le\varepsilon^{-1}\int|f_n-f|\to0$). For uniform integrability: $L^1$-convergence makes $(f_n)$ a tail-uniform family — for $n\ge n_0$, $\int_A|f_n|\le\int_A|f|+\int|f_n-f|$ is small, and the *finite* family $\{f,f_1,\dots,f_{n_0}\}$ is automatically UI ([[Def - Absolute Continuity and Density|finitely many $L^1$ functions are UI]]). Finite family $+$ uniform tail $=$ UI of the whole sequence.
+**(2) $\Rightarrow$ (1).** $L^1$-convergence gives convergence in measure by [[Thm - Markov's Inequality|Markov's inequality]] ($\mu(|f_n-f|>\varepsilon)\le\varepsilon^{-1}\int|f_n-f|\to0$). For uniform integrability: $L^1$-convergence makes $(f_n)$ a tail-uniform family — for $n\ge n_0$, $\int_A|f_n|\le\int_A|f|+\int|f_n-f|$ is small, and the *finite* family $\{f,f_1,\dots,f_{n_0}\}$ is automatically UI ([[Def - Absolute Continuity and Density|finitely many L¹ functions are UI]]). Finite family $+$ uniform tail $=$ UI of the whole sequence.
 
 **(1) $\Rightarrow$ (2)** is the substance. Suppose, for contradiction, $\int|f_n-f|\not\to0$. Pass to a subsequence along which $\int|f_n-f|$ stays bounded away from $0$, and (by the [[Def - Convergence in Measure|subsequence principle]]) along which additionally $f_n\to f$ **a.e.** Split the integral at a threshold set $F$:
 $$\int|f_n-f|=\int_F|f_n-f|+\int_{X\setminus F}|f_n-f|.$$

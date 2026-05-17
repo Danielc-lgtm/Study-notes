@@ -24,7 +24,7 @@ $(X_n)$ a [[Def - Martingale|martingale]] or non-negative submartingale; $X_n^*=
 
 **Sources.** Hypotheses: $(X_n)$ a martingale, or a *non-negative* submartingale (then $|X_n|$ may be dropped). By [[Thm - Properties of Conditional Expectation|conditional Jensen]], $|X_n|$ is a submartingale when $X_n$ is a martingale — so the non-negative-submartingale form is the general one.
 
-**Targets.** The maximal inequality $\lambda\,\mathbb{P}(X_n^*\ge\lambda)\le\mathbb{E}[|X_n|\mathbf{1}_{X_n^*\ge\lambda}]$ feeds the **upcrossing argument** and hence [[Thm - Almost Sure Martingale Convergence|a.s. convergence]]; the $L^p$ inequality $\|X_n^*\|_p\le\frac{p}{p-1}\|X_n\|_p$ feeds [[Thm - Lp and L1 Martingale Convergence|$L^p$-convergence]] of martingales and the Burkholder–Davis–Gundy inequalities.
+**Targets.** The maximal inequality $\lambda\,\mathbb{P}(X_n^*\ge\lambda)\le\mathbb{E}[|X_n|\mathbf{1}_{X_n^*\ge\lambda}]$ feeds the **upcrossing argument** and hence [[Thm - Almost Sure Martingale Convergence|a.s. convergence]]; the $L^p$ inequality $\|X_n^*\|_p\le\frac{p}{p-1}\|X_n\|_p$ feeds [[Thm - Lp and L1 Martingale Convergence|Lᵖ-convergence]] of martingales and the Burkholder–Davis–Gundy inequalities.
 
 ---
 

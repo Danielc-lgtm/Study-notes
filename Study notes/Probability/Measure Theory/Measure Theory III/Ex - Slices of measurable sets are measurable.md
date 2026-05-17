@@ -20,13 +20,13 @@ Let $(X_1,\mathcal{A}_1)$, $(X_2,\mathcal{A}_2)$ be measurable spaces and $E\in\
 
 ![[Def - Product σ-Algebra#The Definition]]
 
-[[Thm - Dynkin's π-λ Theorem|$\pi$–$\lambda$]]: a $\lambda$-system containing a generating $\pi$-system contains the whole $\sigma$-algebra.
+[[Thm - Dynkin's π-λ Theorem|π–λ]]: a $\lambda$-system containing a generating $\pi$-system contains the whole $\sigma$-algebra.
 
 ---
 
 # Convergent Strategy
 
-**Problem class:** a "for all sets in a generated $\sigma$-algebra" statement — handled by the [[Thm - Dynkin's π-λ Theorem|$\pi$–$\lambda$]] / minimality principle.
+**Problem class:** a "for all sets in a generated $\sigma$-algebra" statement — handled by the [[Thm - Dynkin's π-λ Theorem|π–λ]] / minimality principle.
 
 **Assumption pattern:** "$E\in\mathcal{A}_1\otimes\mathcal{A}_2$" is membership in a *generated* $\sigma$-algebra; the property "$E$ has measurable slices" must be shown to (i) hold on the generating rectangles and (ii) define a $\sigma$-algebra (or $\lambda$-system).
 
@@ -73,4 +73,4 @@ Let $(X_1,\mathcal{A}_1)$, $(X_2,\mathcal{A}_2)$ be measurable spaces and $E\in\
 
 **Slices of product-measurable sets are measurable — and the proof is, once again, "the good sets form a $\sigma$-algebra containing the generators."** Slicing at a fixed $x_1$ is a Boolean homomorphism, so it preserves $\sigma$-algebra structure; the only computation is the slice of a rectangle. This is the same minimality skeleton as [[Ex - Measurability via a generating set|measurability via generators]] — and it is the *first* lemma in the construction of [[Thm - Product Measure|product measures]] and [[Thm - Fubini-Tonelli Theorem|Fubini's theorem]], because both speak of integrating slice functions.
 
-**Measurability of the *slice function* $f(x_1,\cdot)$ is immediate; measurability of the *slice-integral* $x_1\mapsto\int f(x_1,\cdot)$ is the genuinely hard fact** — that one needs the [[Thm - Dynkin's π-λ Theorem|$\pi$–$\lambda$ theorem]] with a $\lambda$-system (not a $\sigma$-algebra), because the integral does not commute with all set operations. The two should not be conflated: this exercise is the easy half that Fubini's construction takes for granted.
+**Measurability of the *slice function* $f(x_1,\cdot)$ is immediate; measurability of the *slice-integral* $x_1\mapsto\int f(x_1,\cdot)$ is the genuinely hard fact** — that one needs the [[Thm - Dynkin's π-λ Theorem|π–λ theorem]] with a $\lambda$-system (not a $\sigma$-algebra), because the integral does not commute with all set operations. The two should not be conflated: this exercise is the easy half that Fubini's construction takes for granted.

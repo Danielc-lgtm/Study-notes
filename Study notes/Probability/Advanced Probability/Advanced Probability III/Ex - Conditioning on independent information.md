@@ -59,7 +59,7 @@ $$\mathbb{E}[h(X,Y)\mid\mathcal{G}]=g(X),\qquad g(x)=\mathbb{E}[h(x,Y)].$$
 $$\mathbb{E}[h(X,Y)\mathbf{1}_A]=\mathbb{E}\big[\mathbb{E}[h(x,Y)]\big|_{x=X}\mathbf{1}_A\big]=\mathbb{E}[g(X)\mathbf{1}_A].$$
 So $g(X)$ satisfies the characterisation: $\mathbb{E}[h(X,Y)\mid\mathcal{G}]=g(X)$. *Known information is frozen, independent information is averaged.*
 
-**Step 3 — (c).** $\mathbb{E}[X\mid\mathcal{G}]$ is $\mathcal{G}$-measurable, hence $\sigma(\mathcal{G},\mathcal{H})$-measurable. The sets $A\cap B$ ($A\in\mathcal{G}$, $B\in\mathcal{H}$) form a [[Thm - Dynkin's π-λ Theorem|$\pi$-system]] generating $\sigma(\mathcal{G},\mathcal{H})$; it suffices to verify the averaging identity there. Since $\sigma(X,\mathcal{G})$ is independent of $\mathcal{H}$, both $X\mathbf{1}_A$ and $\mathbb{E}[X\mid\mathcal{G}]\mathbf{1}_A$ are independent of $\mathbf{1}_B$, so
+**Step 3 — (c).** $\mathbb{E}[X\mid\mathcal{G}]$ is $\mathcal{G}$-measurable, hence $\sigma(\mathcal{G},\mathcal{H})$-measurable. The sets $A\cap B$ ($A\in\mathcal{G}$, $B\in\mathcal{H}$) form a [[Thm - Dynkin's π-λ Theorem|π-system]] generating $\sigma(\mathcal{G},\mathcal{H})$; it suffices to verify the averaging identity there. Since $\sigma(X,\mathcal{G})$ is independent of $\mathcal{H}$, both $X\mathbf{1}_A$ and $\mathbb{E}[X\mid\mathcal{G}]\mathbf{1}_A$ are independent of $\mathbf{1}_B$, so
 $$\mathbb{E}[X\mathbf{1}_{A\cap B}]=\mathbb{E}[X\mathbf{1}_A]\mathbb{P}(B)=\mathbb{E}[\mathbb{E}[X\mid\mathcal{G}]\mathbf{1}_A]\mathbb{P}(B)=\mathbb{E}[\mathbb{E}[X\mid\mathcal{G}]\mathbf{1}_{A\cap B}].$$
 By [[Thm - Dynkin's π-λ Theorem|Dynkin]] the identity extends to all of $\sigma(\mathcal{G},\mathcal{H})$; uniqueness gives $\mathbb{E}[X\mid\sigma(\mathcal{G},\mathcal{H})]=\mathbb{E}[X\mid\mathcal{G}]$.
 

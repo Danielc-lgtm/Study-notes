@@ -21,7 +21,7 @@ $$\mathrm{Var}(X)=\underbrace{\mathrm{Var}\big(\mathbb{E}[X\mid\mathcal{G}]\big)
 
 **Recall:**
 
-[[Thm - Properties of Conditional Expectation|Conditional Jensen]]; $\mathrm{Var}(X\mid\mathcal{G})=\mathbb{E}[X^2\mid\mathcal{G}]-\mathbb{E}[X\mid\mathcal{G}]^2$. [[Thm - Conditional Expectation as L2 Projection|Conditional expectation is $L^2$-projection]].
+[[Thm - Properties of Conditional Expectation|Conditional Jensen]]; $\mathrm{Var}(X\mid\mathcal{G})=\mathbb{E}[X^2\mid\mathcal{G}]-\mathbb{E}[X\mid\mathcal{G}]^2$. [[Thm - Conditional Expectation as L2 Projection|Conditional expectation is L²-projection]].
 
 ---
 
@@ -69,7 +69,7 @@ $$\mathbb{E}[X^2]=\mathbb{E}[\mathrm{Var}(X\mid\mathcal{G})]+\mathbb{E}\big[\mat
 Now subtract $(\mathbb{E}X)^2$. Since $\mathbb{E}[\mathbb{E}[X\mid\mathcal{G}]]=\mathbb{E}[X]$ (tower property again), $(\mathbb{E}X)^2=(\mathbb{E}[\mathbb{E}[X\mid\mathcal{G}]])^2$, and so $\mathbb{E}[\mathbb{E}[X\mid\mathcal{G}]^2]-(\mathbb{E}X)^2=\mathrm{Var}(\mathbb{E}[X\mid\mathcal{G}])$. Hence
 $$\mathrm{Var}(X)=\mathbb{E}[X^2]-(\mathbb{E}X)^2=\mathbb{E}[\mathrm{Var}(X\mid\mathcal{G})]+\mathrm{Var}\big(\mathbb{E}[X\mid\mathcal{G}]\big).$$
 
-**Step 3 — (c) Interpretation.** Both terms are non-negative, so $\mathrm{Var}(\mathbb{E}[X\mid\mathcal{G}])\le\mathrm{Var}(X)$ — **conditioning (then averaging) never increases variance**; predicting $X$ by $\mathbb{E}[X\mid\mathcal{G}]$ removes the variance $\mathbb{E}[\mathrm{Var}(X\mid\mathcal{G})]$, the *unexplained / residual* part, leaving $\mathrm{Var}(\mathbb{E}[X\mid\mathcal{G}])$, the *explained* part. This is the Pythagorean variance split of [[Thm - Conditional Expectation as L2 Projection|$L^2$-projection]] — total $=$ explained $+$ residual — and the basis of ANOVA, the coefficient of determination $R^2$, and Rao–Blackwell estimator improvement.
+**Step 3 — (c) Interpretation.** Both terms are non-negative, so $\mathrm{Var}(\mathbb{E}[X\mid\mathcal{G}])\le\mathrm{Var}(X)$ — **conditioning (then averaging) never increases variance**; predicting $X$ by $\mathbb{E}[X\mid\mathcal{G}]$ removes the variance $\mathbb{E}[\mathrm{Var}(X\mid\mathcal{G})]$, the *unexplained / residual* part, leaving $\mathrm{Var}(\mathbb{E}[X\mid\mathcal{G}])$, the *explained* part. This is the Pythagorean variance split of [[Thm - Conditional Expectation as L2 Projection|L²-projection]] — total $=$ explained $+$ residual — and the basis of ANOVA, the coefficient of determination $R^2$, and Rao–Blackwell estimator improvement.
 
 > [!note]- Complete formal solution
 > (a) Conditional Jensen ($\varphi=x^2$): $\mathbb{E}[X^2\mid\mathcal{G}]\ge\mathbb{E}[X\mid\mathcal{G}]^2$; take $\mathbb{E}$, tower property $\Rightarrow\mathbb{E}[X^2]\ge\|\mathbb{E}[X\mid\mathcal{G}]\|_2^2$. (b) $\mathbb{E}[X^2\mid\mathcal{G}]=\mathrm{Var}(X\mid\mathcal{G})+\mathbb{E}[X\mid\mathcal{G}]^2$; take $\mathbb{E}$, subtract $(\mathbb{E}X)^2$, use the tower property to get $\mathrm{Var}(X)=\mathbb{E}[\mathrm{Var}(X\mid\mathcal{G})]+\mathrm{Var}(\mathbb{E}[X\mid\mathcal{G}])$. (c) Both terms $\ge0$, so conditioning reduces variance by the explained part. $\blacksquare$

@@ -16,7 +16,7 @@ $(\Omega,\mathcal{F},\mathbb{P})$ a probability space, $\mathcal{G}\subseteq\mat
 
 # Motivation
 
-[[Def - Conditional Expectation|Conditional expectation]] was *defined by a characterisation* — a $\mathcal{G}$-measurable variable with the same $\mathcal{G}$-integrals as $X$ — not by a formula. For the definition to be legitimate, such a variable must *exist*, and (so the notation $\mathbb{E}[X\mid\mathcal{G}]$ is meaningful) be *unique*. This theorem supplies both. There are two standard constructions, each illuminating: one via [[Thm - Radon-Nikodym Theorem|Radon–Nikodym]] (conditional expectation as a density), one via [[Thm - Conditional Expectation as L2 Projection|$L^2$ projection]] (conditional expectation as a best approximation).
+[[Def - Conditional Expectation|Conditional expectation]] was *defined by a characterisation* — a $\mathcal{G}$-measurable variable with the same $\mathcal{G}$-integrals as $X$ — not by a formula. For the definition to be legitimate, such a variable must *exist*, and (so the notation $\mathbb{E}[X\mid\mathcal{G}]$ is meaningful) be *unique*. This theorem supplies both. There are two standard constructions, each illuminating: one via [[Thm - Radon-Nikodym Theorem|Radon–Nikodym]] (conditional expectation as a density), one via [[Thm - Conditional Expectation as L2 Projection|L² projection]] (conditional expectation as a best approximation).
 
 ---
 
@@ -40,7 +40,7 @@ For every $X\in L^1(\Omega,\mathcal{F},\mathbb{P})$ and every sub-$\sigma$-algeb
 
 **Existence — Radon–Nikodym route.** First $X\ge0$. The set function $\nu(A)=\int_A X\,d\mathbb{P}$, for $A\in\mathcal{G}$, is a finite measure on $(\Omega,\mathcal{G})$, and $\nu\ll\mathbb{P}|_\mathcal{G}$ (if $\mathbb{P}(A)=0$ then $X\mathbf{1}_A=0$ a.s., so $\nu(A)=0$). Both measures are finite, hence $\sigma$-finite, so the [[Thm - Radon-Nikodym Theorem|Radon–Nikodym theorem]] *on the space $(\Omega,\mathcal{G})$* yields a $\mathcal{G}$-measurable density $Y=\mathrm{d}\nu/\mathrm{d}(\mathbb{P}|_\mathcal{G})\ge0$ with $\int_A Y\,d\mathbb{P}=\nu(A)=\int_A X\,d\mathbb{P}$ for $A\in\mathcal{G}$ — exactly the characterisation. For general $X\in L^1$, apply this to $X^+,X^-$ and subtract. **Conditional expectation is the Radon–Nikodym derivative of $X\,d\mathbb{P}$ restricted to $\mathcal{G}$** — and applying Radon–Nikodym *on $\mathcal{G}$* is what forces $Y$ to be $\mathcal{G}$-measurable.
 
-**Existence — projection route.** First $X\in L^2$. The space $L^2(\Omega,\mathcal{G},\mathbb{P})$ is a *closed* subspace of the Hilbert space $L^2(\Omega,\mathcal{F},\mathbb{P})$ (closed because [[Thm - Completeness of Lp Spaces|$L^2$ is complete]] and $\mathcal{G}$-measurability survives $L^2$-limits). Let $Y$ be the [[Ex - The Cauchy-Schwarz inequality and L2 geometry|orthogonal projection]] of $X$ onto it: $Y$ is $\mathcal{G}$-measurable, and $X-Y\perp L^2(\mathcal{G})$, i.e. $\mathbb{E}[(X-Y)Z]=0$ for all $Z\in L^2(\mathcal{G})$ — taking $Z=\mathbf{1}_A$ gives the averaging identity. Extend to $X\in L^1$: for $X\ge0$, truncate $X_n=X\wedge n\in L^2$, project to get $Y_n$ (increasing, by a comparison argument), let $Y=\lim Y_n$ (monotone limit, $\mathcal{G}$-measurable); the averaging identity passes through by [[Thm - Monotone Convergence Theorem|MCT]].
+**Existence — projection route.** First $X\in L^2$. The space $L^2(\Omega,\mathcal{G},\mathbb{P})$ is a *closed* subspace of the Hilbert space $L^2(\Omega,\mathcal{F},\mathbb{P})$ (closed because [[Thm - Completeness of Lp Spaces|L² is complete]] and $\mathcal{G}$-measurability survives $L^2$-limits). Let $Y$ be the [[Ex - The Cauchy-Schwarz inequality and L2 geometry|orthogonal projection]] of $X$ onto it: $Y$ is $\mathcal{G}$-measurable, and $X-Y\perp L^2(\mathcal{G})$, i.e. $\mathbb{E}[(X-Y)Z]=0$ for all $Z\in L^2(\mathcal{G})$ — taking $Z=\mathbf{1}_A$ gives the averaging identity. Extend to $X\in L^1$: for $X\ge0$, truncate $X_n=X\wedge n\in L^2$, project to get $Y_n$ (increasing, by a comparison argument), let $Y=\lim Y_n$ (monotone limit, $\mathcal{G}$-measurable); the averaging identity passes through by [[Thm - Monotone Convergence Theorem|MCT]].
 
 ---
 
@@ -81,7 +81,7 @@ The conceptual hurdle is that conditional expectation is *not constructed by a f
 # Formal Proof
 
 > [!note]- Complete formal proof
-> Uniqueness is Lemma 1. Existence: Lemma 2 for $X\ge0$; for general $X\in L^1$ apply Lemma 2 to $X^+,X^-$ obtaining $\mathcal{G}$-measurable $Y^\pm$ and set $Y=Y^+-Y^-$, which is $\mathcal{G}$-measurable, integrable ($\mathbb{E}|Y|\le\mathbb{E}Y^++\mathbb{E}Y^-=\mathbb{E}|X|$), and satisfies the averaging identity by linearity. (Alternatively, the [[Thm - Conditional Expectation as L2 Projection|$L^2$-projection construction]] followed by monotone extension to $L^1$.) $\blacksquare$
+> Uniqueness is Lemma 1. Existence: Lemma 2 for $X\ge0$; for general $X\in L^1$ apply Lemma 2 to $X^+,X^-$ obtaining $\mathcal{G}$-measurable $Y^\pm$ and set $Y=Y^+-Y^-$, which is $\mathcal{G}$-measurable, integrable ($\mathbb{E}|Y|\le\mathbb{E}Y^++\mathbb{E}Y^-=\mathbb{E}|X|$), and satisfies the averaging identity by linearity. (Alternatively, the [[Thm - Conditional Expectation as L2 Projection|L²-projection construction]] followed by monotone extension to $L^1$.) $\blacksquare$
 
 ---
 

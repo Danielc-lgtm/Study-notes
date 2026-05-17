@@ -9,7 +9,7 @@ tags: [analysis, measure-theory, topology]
 
 # Notation
 
-$(X, \tau)$ is a topological space, with $\tau \subseteq 2^X$ the collection of open sets. $\mathcal{B}(X)$ denotes the Borel $\sigma$-algebra of $X$; for $X = \mathbb{R}^n$ we write $\mathcal{B}(\mathbb{R}^n)$, and for $\mathbb{R}$ often just $\mathcal{B}$. Recall $\sigma(\mathcal{C})$, the [[Def - Generated σ-Algebra|$\sigma$-algebra generated]] by a family $\mathcal{C}$.
+$(X, \tau)$ is a topological space, with $\tau \subseteq 2^X$ the collection of open sets. $\mathcal{B}(X)$ denotes the Borel $\sigma$-algebra of $X$; for $X = \mathbb{R}^n$ we write $\mathcal{B}(\mathbb{R}^n)$, and for $\mathbb{R}$ often just $\mathcal{B}$. Recall $\sigma(\mathcal{C})$, the [[Def - Generated σ-Algebra|σ-algebra generated]] by a family $\mathcal{C}$.
 
 ---
 
@@ -37,7 +37,7 @@ For $X = \mathbb{R}^n$ with the Euclidean topology, $\mathcal{B}(\mathbb{R}^n)$ 
 
 # Relate to Other Fields / Compression
 
-$\mathcal{B}(X) = \sigma(\tau)$ is the **forgetful-then-free composite**: forget all of topology except *which sets are open*, then freely generate a $\sigma$-algebra. It is the analogue of taking the underlying group of a Lie group — keeping just enough structure for the next theory to begin. In probability, $\mathcal{B}(\mathbb{R})$ is the default $\sigma$-algebra on the value-space of a real [[Def - Random Variable|random variable]]: a random variable *is* a Borel-measurable function, and its law is a measure on $\mathcal{B}(\mathbb{R})$. The compatibility $\mathcal{B}(\mathbb{R}^m) \otimes \mathcal{B}(\mathbb{R}^n) = \mathcal{B}(\mathbb{R}^{m+n})$ links Borel structure to [[Def - Product σ-Algebra|product $\sigma$-algebras]].
+$\mathcal{B}(X) = \sigma(\tau)$ is the **forgetful-then-free composite**: forget all of topology except *which sets are open*, then freely generate a $\sigma$-algebra. It is the analogue of taking the underlying group of a Lie group — keeping just enough structure for the next theory to begin. In probability, $\mathcal{B}(\mathbb{R})$ is the default $\sigma$-algebra on the value-space of a real [[Def - Random Variable|random variable]]: a random variable *is* a Borel-measurable function, and its law is a measure on $\mathcal{B}(\mathbb{R})$. The compatibility $\mathcal{B}(\mathbb{R}^m) \otimes \mathcal{B}(\mathbb{R}^n) = \mathcal{B}(\mathbb{R}^{m+n})$ links Borel structure to [[Def - Product σ-Algebra|product σ-algebras]].
 
 ---
 

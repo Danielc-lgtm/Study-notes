@@ -17,7 +17,7 @@ $(X,\mathcal{A},\mu)$ is a [[Def - Measure and Measure Space|measure space]]. $\
 
 A **null set** is a set of measure zero — negligible, invisible to the measure. The whole style of measure theory is to ignore what happens on null sets: functions equal "[[Def - Almost Everywhere|almost everywhere]]" are identified, convergence is demanded only "almost everywhere," $L^p$ is a space of equivalence classes. For this to be coherent, the negligible sets had better behave well.
 
-They do, up to one annoyance. The null sets of a $\sigma$-algebra are closed under countable unions ([[Thm - Properties of Measures|$\sigma$-subadditivity]]: a countable union of measure-zero sets has measure zero). But they need not be closed under taking *subsets within the $\sigma$-algebra* — and worse, a subset $N'\subseteq N$ of a Borel null set $N$ need not itself be *Borel*. Then "$\mu(N')$" is literally undefined, even though $N'$ is morally negligible (it sits inside something of measure $0$). This is not a rare pathology: most subsets of the Cantor set are not Borel, yet the Cantor set is Lebesgue-null, so *most negligible sets are not in the Borel $\sigma$-algebra at all*.
+They do, up to one annoyance. The null sets of a $\sigma$-algebra are closed under countable unions ([[Thm - Properties of Measures|σ-subadditivity]]: a countable union of measure-zero sets has measure zero). But they need not be closed under taking *subsets within the $\sigma$-algebra* — and worse, a subset $N'\subseteq N$ of a Borel null set $N$ need not itself be *Borel*. Then "$\mu(N')$" is literally undefined, even though $N'$ is morally negligible (it sits inside something of measure $0$). This is not a rare pathology: most subsets of the Cantor set are not Borel, yet the Cantor set is Lebesgue-null, so *most negligible sets are not in the Borel $\sigma$-algebra at all*.
 
 The fix is **completion**: enlarge the $\sigma$-algebra by *declaring every subset of a null set measurable*, with measure $0$. A measure space where this already holds — every subset of a null set is measurable — is called **complete**. Completion is the smallest enlargement making a measure space complete. The payoff is technical hygiene: in a complete space, "a function defined almost everywhere" or "a function equal a.e. to a measurable one" is automatically measurable, and one never has to check that an exceptional set is Borel. The [[Def - Carathéodory Measurable Sets|Carathéodory construction]] produces complete measures automatically — which is why the **Lebesgue $\sigma$-algebra** is complete and strictly larger than the Borel one.
 
@@ -27,7 +27,7 @@ The fix is **completion**: enlarge the $\sigma$-algebra by *declaring every subs
 
 Let $(X,\mathcal{A},\mu)$ be a measure space.
 
-A set $N\in\mathcal{A}$ is **$\mu$-null** if $\mu(N)=0$. A property holds **[[Def - Almost Everywhere|$\mu$-almost everywhere]]** ($\mu$-a.e.) if the set where it fails is contained in a null set.
+A set $N\in\mathcal{A}$ is **$\mu$-null** if $\mu(N)=0$. A property holds **[[Def - Almost Everywhere|μ-almost everywhere]]** ($\mu$-a.e.) if the set where it fails is contained in a null set.
 
 The measure space is **complete** if every subset of a null set is itself measurable: $N\in\mathcal{A}$, $\mu(N)=0$, $N'\subseteq N\implies N'\in\mathcal{A}$.
 
@@ -47,7 +47,7 @@ Completion is the measure-theoretic analogue of *completing a metric space* (adj
 
 # Examples / Corollaries
 
-In $\mathbb{R}$: every countable set is Lebesgue-null ($\lambda(\{x\})=0$, [[Thm - Properties of Measures|$\sigma$-subadditivity]]), so $\mathbb{Q}$ is null. The Cantor set is an *uncountable* null set. Since the Cantor set has $2^{\aleph_0}$ subsets but the Borel $\sigma$-algebra has only $2^{\aleph_0}$ *total* elements while the Lebesgue $\sigma$-algebra has $2^{2^{\aleph_0}}$, **most subsets of the Cantor set are Lebesgue-measurable but not Borel** — this is the strict inclusion $\mathcal{B}(\mathbb{R})\subsetneq\mathcal{B}^*(\mathbb{R})$, and it is *why* completion is necessary.
+In $\mathbb{R}$: every countable set is Lebesgue-null ($\lambda(\{x\})=0$, [[Thm - Properties of Measures|σ-subadditivity]]), so $\mathbb{Q}$ is null. The Cantor set is an *uncountable* null set. Since the Cantor set has $2^{\aleph_0}$ subsets but the Borel $\sigma$-algebra has only $2^{\aleph_0}$ *total* elements while the Lebesgue $\sigma$-algebra has $2^{2^{\aleph_0}}$, **most subsets of the Cantor set are Lebesgue-measurable but not Borel** — this is the strict inclusion $\mathcal{B}(\mathbb{R})\subsetneq\mathcal{B}^*(\mathbb{R})$, and it is *why* completion is necessary.
 
 The Carathéodory construction is automatically complete: any subset of a $\mu^*$-outer-measure-zero set satisfies the [[Def - Carathéodory Measurable Sets|Carathéodory criterion]]. So Lebesgue measure, built that way, is already complete on $\Sigma$.
 
@@ -58,7 +58,7 @@ Calibration: (i) Is $\{0\}$ a null set in $(\mathbb{R},\mathcal{B},\lambda)$? Ye
 # Unlocked by This
 
 > [!tip] Almost-everywhere reasoning and $L^p$ spaces
-> Completion makes "[[Def - Almost Everywhere|$\mu$-a.e.]]" reasoning friction-free: a function equal a.e. to a measurable function is measurable. This underlies the construction of [[Def - Lp Spaces|$L^p$ spaces]] as spaces of equivalence classes modulo a.e. equality.
+> Completion makes "[[Def - Almost Everywhere|μ-a.e.]]" reasoning friction-free: a function equal a.e. to a measurable function is measurable. This underlies the construction of [[Def - Lp Spaces|Lᵖ spaces]] as spaces of equivalence classes modulo a.e. equality.
 
 > [!tip] Usual conditions on a filtration *(from Martingale Theory)*
 > Augmenting a [[Def - Filtration|filtration]] with all null sets — part of the "usual conditions" — is exactly completion applied in continuous-time probability.

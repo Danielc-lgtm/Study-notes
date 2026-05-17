@@ -22,7 +22,7 @@ $$\widetilde\mu(A)=\begin{cases}0,&A=\emptyset,\\ \infty,&A\neq\emptyset.\end{ca
 
 **Recall:**
 
-The [[Thm - Hahn-Carathéodory Extension Theorem|extension theorem]] says a pre-measure on an algebra extends to a measure on the generated $\sigma$-algebra; the [[Thm - Uniqueness of the Hahn-Carathéodory Extension|companion]] says the extension is *unique* **if $\widetilde\mu$ is [[Def - σ-Finite Measure|$\sigma$-finite]]**.
+The [[Thm - Hahn-Carathéodory Extension Theorem|extension theorem]] says a pre-measure on an algebra extends to a measure on the generated $\sigma$-algebra; the [[Thm - Uniqueness of the Hahn-Carathéodory Extension|companion]] says the extension is *unique* **if $\widetilde\mu$ is [[Def - σ-Finite Measure|σ-finite]]**.
 
 ---
 

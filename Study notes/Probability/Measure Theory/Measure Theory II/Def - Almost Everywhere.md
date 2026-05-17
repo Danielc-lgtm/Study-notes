@@ -19,7 +19,7 @@ A measure cannot see [[Def - Null Set and Completion|null sets]]. So any stateme
 
 The need is concrete. The pointwise limit of measurable functions may fail to exist at a few points; a function may be defined only off a null set; two functions may differ on a null set yet have identical integrals. Demanding *genuine* pointwise statements everywhere would make the convergence theorems false and $L^p$ spaces impossible. Demanding them only **almost everywhere** — outside a null exceptional set — is exactly the right weakening: weak enough that the theorems hold, strong enough that the conclusions are useful.
 
-The reason a.e.-reasoning is *coherent* (rather than a slippery abuse) is the null sets' good behaviour, all from [[Thm - Properties of Measures|$\sigma$-subadditivity]]: a *countable* union of null sets is null. So countably many a.e.-statements can be conjoined into a single a.e.-statement — the exceptional sets pool into one null set. This is the precise reason one may say "$f_n\to f$ a.e. *and* $g_n\to g$ a.e.", combine, and still have an a.e.-statement. Uncountably many would break it; countably many do not — the same "$\sigma$" discipline as everywhere else.
+The reason a.e.-reasoning is *coherent* (rather than a slippery abuse) is the null sets' good behaviour, all from [[Thm - Properties of Measures|σ-subadditivity]]: a *countable* union of null sets is null. So countably many a.e.-statements can be conjoined into a single a.e.-statement — the exceptional sets pool into one null set. This is the precise reason one may say "$f_n\to f$ a.e. *and* $g_n\to g$ a.e.", combine, and still have an a.e.-statement. Uncountably many would break it; countably many do not — the same "$\sigma$" discipline as everywhere else.
 
 ---
 
@@ -37,7 +37,7 @@ Two functions $f,g$ are **equal a.e.** ($f=g$ a.e.) if $\mu(\{f\neq g\})=0$; $g$
 
 # Relate to Other Fields / Compression
 
-"$f=g$ a.e." is the equivalence relation one quotients by to pass from the seminormed space $\mathcal{L}^p$ to the genuine normed space [[Def - Lp Spaces|$L^p$]] — null sets are the *kernel* of the seminorm, exactly as one quotients by the kernel to make a seminorm a norm in functional analysis. In probability "almost surely" *is* "a.e." for $\mathbb{P}$; the strong law of large numbers, almost-sure martingale convergence, and the "[[Def - Filtration|usual conditions]]" all live in this register. The slogan "measure-theoretic statements are immune to null-set modification" is the operational content.
+"$f=g$ a.e." is the equivalence relation one quotients by to pass from the seminormed space $\mathcal{L}^p$ to the genuine normed space [[Def - Lp Spaces|Lᵖ]] — null sets are the *kernel* of the seminorm, exactly as one quotients by the kernel to make a seminorm a norm in functional analysis. In probability "almost surely" *is* "a.e." for $\mathbb{P}$; the strong law of large numbers, almost-sure martingale convergence, and the "[[Def - Filtration|usual conditions]]" all live in this register. The slogan "measure-theoretic statements are immune to null-set modification" is the operational content.
 
 ---
 
@@ -54,7 +54,7 @@ Calibration: (i) Does "$f_n\to f$ a.e." require $f_n(x)\to f(x)$ for every $x$? 
 # Unlocked by This
 
 > [!tip] $L^p$ spaces and a.e. convergence theorems
-> Quotienting by a.e.-equality turns the $L^p$ seminorm into a norm — [[Def - Lp Spaces|$L^p$ spaces]] are spaces of equivalence classes. The [[Thm - Dominated Convergence Theorem|DCT]] and [[Thm - Monotone Convergence Theorem|MCT]] hypothesise convergence (and domination) only *a.e.*
+> Quotienting by a.e.-equality turns the $L^p$ seminorm into a norm — [[Def - Lp Spaces|Lᵖ spaces]] are spaces of equivalence classes. The [[Thm - Dominated Convergence Theorem|DCT]] and [[Thm - Monotone Convergence Theorem|MCT]] hypothesise convergence (and domination) only *a.e.*
 
 > [!tip] Almost sure convergence *(from [[Advanced Probability II — Convergence and Limit Theorems|Advanced Probability]])*
 > "Almost surely" is a.e. for $\mathbb{P}$; it is the strongest of the [[Def - Modes of Convergence|modes of convergence]] of random variables and the mode in which the [[Thm - Strong Law of Large Numbers|strong law]] holds.

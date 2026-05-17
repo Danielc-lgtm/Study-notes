@@ -11,7 +11,7 @@ tags: [analysis, measure-theory]
 
 # Notation
 
-$(X,\mathcal{A},\mu)$ a measure space; $1\le p\le\infty$; $\|\cdot\|_p$ the [[Def - Lp Spaces|$L^p$ norm]]. A sequence is **Cauchy** if $\|f_n-f_m\|_p\to0$ as $n,m\to\infty$.
+$(X,\mathcal{A},\mu)$ a measure space; $1\le p\le\infty$; $\|\cdot\|_p$ the [[Def - Lp Spaces|Lᵖ norm]]. A sequence is **Cauchy** if $\|f_n-f_m\|_p\to0$ as $n,m\to\infty$.
 
 ---
 
@@ -25,7 +25,7 @@ A normed space is *useful* in analysis only if it is **complete** — if Cauchy 
 
 **Sources.** The hypothesis is "$(f_n)$ Cauchy in $L^p$." The proof's broadening: a Cauchy sequence has a **rapidly Cauchy subsequence** ($\|f_{n_{k+1}}-f_{n_k}\|_p\le2^{-k}$), and that subsequence admits a *dominating function*. Recognising "extract a fast subsequence, dominate it" is the transferable technique.
 
-**Targets.** Completeness makes $L^p$ a **Banach space**; $L^2$ a **Hilbert space**, which unlocks orthogonal projection — the construction of [[Def - Conditional Expectation|conditional expectation]]. It is also the hypothesis behind the [[Thm - Almost Sure Martingale Convergence|$L^p$ martingale convergence theorem]] and every "limit of approximants is a genuine function" argument.
+**Targets.** Completeness makes $L^p$ a **Banach space**; $L^2$ a **Hilbert space**, which unlocks orthogonal projection — the construction of [[Def - Conditional Expectation|conditional expectation]]. It is also the hypothesis behind the [[Thm - Almost Sure Martingale Convergence|Lᵖ martingale convergence theorem]] and every "limit of approximants is a genuine function" argument.
 
 ---
 
@@ -96,7 +96,7 @@ The whole proof is one strategic idea — **pass to a rapidly-Cauchy subsequence
 
 # Cross-Field Exercise Suggestions
 
-Completeness of $L^2$ makes it a **Hilbert space**, which gives orthogonal projection onto closed subspaces — and projecting a random variable onto $L^2(\mathcal{G})$ for a sub-$\sigma$-algebra $\mathcal{G}$ *is* [[Def - Conditional Expectation|conditional expectation]]. Completeness of $L^p$ also makes the [[Thm - Almost Sure Martingale Convergence|$L^p$-bounded martingale]]'s limit a genuine $L^p$ random variable, and is the property invoked whenever a function is constructed as the $L^p$-limit of approximants (Fourier series, solutions of PDE).
+Completeness of $L^2$ makes it a **Hilbert space**, which gives orthogonal projection onto closed subspaces — and projecting a random variable onto $L^2(\mathcal{G})$ for a sub-$\sigma$-algebra $\mathcal{G}$ *is* [[Def - Conditional Expectation|conditional expectation]]. Completeness of $L^p$ also makes the [[Thm - Almost Sure Martingale Convergence|Lᵖ-bounded martingale]]'s limit a genuine $L^p$ random variable, and is the property invoked whenever a function is constructed as the $L^p$-limit of approximants (Fourier series, solutions of PDE).
 
 ---
 

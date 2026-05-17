@@ -16,7 +16,7 @@ Let $(M_n)$ be a [[Def - Martingale|martingale]] and $\varphi:\mathbb{R}\to\math
 
 **(b)** Show that if $(M_n)$ is merely a *submartingale* and $\varphi$ is convex *and non-decreasing*, then $(\varphi(M_n))$ is still a submartingale.
 
-**(c)** Explain why this is the source of [[Thm - Doob's Maximal Inequality|Doob's $L^p$ inequality]].
+**(c)** Explain why this is the source of [[Thm - Doob's Maximal Inequality|Doob's Lᵖ inequality]].
 
 **Recall:**
 
@@ -71,4 +71,4 @@ So $(\varphi(M_n))$ is a submartingale. Taking $\varphi(x)=|x|$ and $\varphi(x)=
 
 **A convex function of a martingale is a submartingale — conditional Jensen plus the martingale identity, one line.** This is the most-used structural fact about martingales after the definition itself: $|M_n|$, $M_n^2$, $|M_n|^p$, $e^{uM_n}$ are all submartingales. The mechanism — [[Thm - Properties of Conditional Expectation|conditional Jensen]] produces "$\ge\varphi(\mathbb{E}[M_{n+1}\mid\mathcal{F}_n])$", the martingale identity collapses the inner term to $M_n$ — is worth internalising as a single move. For a *submartingale* base the same works *if $\varphi$ is also non-decreasing*, the monotonicity preventing the submartingale inequality from flipping.
 
-**This is the lemma that lets submartingale theorems be applied to martingales — most importantly [[Thm - Doob's Maximal Inequality|Doob's $L^p$ inequality]].** Doob's maximal and $L^p$ inequalities are naturally about non-negative submartingales; $\varphi(x)=|x|^p$ converts a martingale into exactly such an object, so the inequalities reach all martingales. The same construction makes the [[Thm - Almost Sure Martingale Convergence|convergence theory]] and the analysis of $\mathbb{E}[|M_n|^p]$ possible. Convexity is the bridge between the martingale property (an equality) and the submartingale inequalities that carry the hard analysis.
+**This is the lemma that lets submartingale theorems be applied to martingales — most importantly [[Thm - Doob's Maximal Inequality|Doob's Lᵖ inequality]].** Doob's maximal and $L^p$ inequalities are naturally about non-negative submartingales; $\varphi(x)=|x|^p$ converts a martingale into exactly such an object, so the inequalities reach all martingales. The same construction makes the [[Thm - Almost Sure Martingale Convergence|convergence theory]] and the analysis of $\mathbb{E}[|M_n|^p]$ possible. Convexity is the bridge between the martingale property (an equality) and the submartingale inequalities that carry the hard analysis.

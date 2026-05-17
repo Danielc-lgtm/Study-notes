@@ -16,7 +16,7 @@ $X$ a set, $\mathcal{A}\subseteq 2^X$ an [[Def - Algebra and σ-Algebra|algebra]
 
 # Motivation
 
-The [[Thm - Hahn-Carathéodory Extension Theorem|extension theorem]] proves a pre-measure *can* be extended to a measure. But "can" is not "must in only one way." Without further hypotheses, a pre-measure may extend to *genuinely different* measures on $\sigma(\mathcal{A})$ — and then it is meaningless to speak of "*the* Lebesgue measure" or "*the* law of $X$." This theorem supplies the missing word **the**: under [[Def - σ-Finite Measure|$\sigma$-finiteness]], the extension is unique. Existence plus uniqueness is what licenses the definite article throughout measure theory and probability.
+The [[Thm - Hahn-Carathéodory Extension Theorem|extension theorem]] proves a pre-measure *can* be extended to a measure. But "can" is not "must in only one way." Without further hypotheses, a pre-measure may extend to *genuinely different* measures on $\sigma(\mathcal{A})$ — and then it is meaningless to speak of "*the* Lebesgue measure" or "*the* law of $X$." This theorem supplies the missing word **the**: under [[Def - σ-Finite Measure|σ-finiteness]], the extension is unique. Existence plus uniqueness is what licenses the definite article throughout measure theory and probability.
 
 ---
 

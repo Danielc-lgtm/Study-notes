@@ -40,7 +40,7 @@ Equivalently, $\mathbb{E}[X\mid\mathcal{G}]$ is the unique $W\in L^2(\mathcal{G}
 
 # Why Is It True
 
-**$L^2(\mathcal{G})$ is a closed subspace.** It is a linear subspace of $L^2(\mathcal{F})$; closed because [[Thm - Completeness of Lp Spaces|$L^2$ is complete]] and an $L^2$-limit of $\mathcal{G}$-measurable functions is $\mathcal{G}$-measurable (an $L^2$-limit has an a.s.-convergent subsequence, and a.s. limits of $\mathcal{G}$-measurable functions are $\mathcal{G}$-measurable).
+**$L^2(\mathcal{G})$ is a closed subspace.** It is a linear subspace of $L^2(\mathcal{F})$; closed because [[Thm - Completeness of Lp Spaces|L² is complete]] and an $L^2$-limit of $\mathcal{G}$-measurable functions is $\mathcal{G}$-measurable (an $L^2$-limit has an a.s.-convergent subsequence, and a.s. limits of $\mathcal{G}$-measurable functions are $\mathcal{G}$-measurable).
 
 **The projection exists and is characterised by orthogonality.** In a [[Ex - The Cauchy-Schwarz inequality and L2 geometry|Hilbert space]], every closed subspace $V$ admits a unique orthogonal projection: for each $X$ there is a unique $W\in V$ minimising $\|X-W\|$, characterised by $X-W\perp V$. (Proof: a minimising sequence is Cauchy by the parallelogram law, converges by completeness, the limit lies in $V$ since $V$ is closed; orthogonality is the first-order optimality condition.)
 
@@ -75,7 +75,7 @@ The leap is *seeing* that the abstract averaging identity is a geometric orthogo
 > **Statement:** $L^2(\Omega,\mathcal{G},\mathbb{P})$ is a closed linear subspace of $L^2(\Omega,\mathcal{F},\mathbb{P})$.
 >
 > > [!note]- Full proof
-> > It is a linear subspace. If $W_n\in L^2(\mathcal{G})$ and $W_n\to W$ in $L^2(\mathcal{F})$, then ([[Ex - Lp convergence and almost-everywhere subsequences|$L^2$-convergence gives an a.s.-convergent subsequence]]) $W_{n_k}\to W$ a.s.; each $W_{n_k}$ is $\mathcal{G}$-measurable, and an a.s.-limit of $\mathcal{G}$-measurable functions is $\mathcal{G}$-measurable (in the completed $\mathcal{G}$). So $W\in L^2(\mathcal{G})$ — the subspace is closed. $\square$
+> > It is a linear subspace. If $W_n\in L^2(\mathcal{G})$ and $W_n\to W$ in $L^2(\mathcal{F})$, then ([[Ex - Lp convergence and almost-everywhere subsequences|L²-convergence gives an a.s.-convergent subsequence]]) $W_{n_k}\to W$ a.s.; each $W_{n_k}$ is $\mathcal{G}$-measurable, and an a.s.-limit of $\mathcal{G}$-measurable functions is $\mathcal{G}$-measurable (in the completed $\mathcal{G}$). So $W\in L^2(\mathcal{G})$ — the subspace is closed. $\square$
 
 > [!note]- Lemma 2: The projection is the conditional expectation
 > **Statement:** The orthogonal projection $W=P_{L^2(\mathcal{G})}X$ equals $\mathbb{E}[X\mid\mathcal{G}]$.

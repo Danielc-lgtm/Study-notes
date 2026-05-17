@@ -58,7 +58,7 @@ But $S_T\in\{0,N\}$, so $\mathbb{E}[S_T]=0\cdot\mathbb{P}(S_T=0)+N\cdot\mathbb{P
 $$\mathbb{P}(S_T=N)=\frac{k}{N},\qquad\mathbb{P}(S_T=0)=1-\frac kN.$$
 The probability of reaching the target is the starting fraction of the way there.
 
-**Step 2 — (b) Expected duration.** $(S_n^2-n)$ is a martingale ([[Ex - Martingales of the random walk|with $\sigma^2=1$]]), and again the stopped process is bounded ($S_{T\wedge n}^2\le N^2$, and $T\wedge n\le n$; uniform integrability holds since $T\in L^1$ — itself a consequence below — but one applies optional stopping to $S_{T\wedge n}^2-(T\wedge n)$ and lets $n\to\infty$ by monotone convergence on $T\wedge n\uparrow T$). This gives
+**Step 2 — (b) Expected duration.** $(S_n^2-n)$ is a martingale ([[Ex - Martingales of the random walk|with σ²=1]]), and again the stopped process is bounded ($S_{T\wedge n}^2\le N^2$, and $T\wedge n\le n$; uniform integrability holds since $T\in L^1$ — itself a consequence below — but one applies optional stopping to $S_{T\wedge n}^2-(T\wedge n)$ and lets $n\to\infty$ by monotone convergence on $T\wedge n\uparrow T$). This gives
 $$\mathbb{E}[S_T^2]-\mathbb{E}[T]=\mathbb{E}[S_0^2]=k^2.$$
 Now $\mathbb{E}[S_T^2]=0^2\cdot\mathbb{P}(S_T=0)+N^2\cdot\mathbb{P}(S_T=N)=N^2\cdot\frac kN=Nk$. So
 $$\mathbb{E}[T]=\mathbb{E}[S_T^2]-k^2=Nk-k^2=k(N-k).$$

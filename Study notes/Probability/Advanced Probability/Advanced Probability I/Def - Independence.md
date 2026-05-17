@@ -37,7 +37,7 @@ $$\mathbb{P}\Big(\bigcap_{i\in J}A_i\Big)=\prod_{i\in J}\mathbb{P}(A_i).$$
 
 **Random variables.** $(X_i)_{i\in I}$ are **independent** if the $\sigma$-algebras $(\sigma(X_i))_{i\in I}$ are independent — equivalently, for all $t_i$ and finite $J$, $\mathbb{P}(X_i\le t_i,\,i\in J)=\prod_{i\in J}\mathbb{P}(X_i\le t_i)$ — equivalently, the joint law $\mu_{(X_i)_{i\in J}}$ is the [[Thm - Product Measure|product]] $\bigotimes_{i\in J}\mu_{X_i}$.
 
-**$\pi$-system criterion.** Independence of $\sigma$-algebras need only be checked for $A_i$ ranging over generating [[Thm - Dynkin's π-λ Theorem|$\pi$-systems]] (e.g. the rays for random variables).
+**$\pi$-system criterion.** Independence of $\sigma$-algebras need only be checked for $A_i$ ranging over generating [[Thm - Dynkin's π-λ Theorem|π-systems]] (e.g. the rays for random variables).
 
 ---
 

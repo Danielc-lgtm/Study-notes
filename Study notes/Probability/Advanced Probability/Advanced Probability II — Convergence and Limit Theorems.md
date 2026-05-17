@@ -100,7 +100,7 @@ The CLT is a [[Def - Weak Convergence|weak-convergence]] statement, so the chapt
 **Illegal but tempting operations:**
 
 > [!warning] 1. Inferring $\mathbb{E}X_n\to\mathbb{E}X$ from a.s. or in-probability convergence
-> Mass can escape — $n\mathbf{1}_{[0,1/n]}\to0$ a.s. but $\mathbb{E}=1$. One needs [[Def - Uniform Integrability|uniform integrability]] (or domination); [[Ex - Uniform integrability upgrades convergence|$L^1$-boundedness is not enough]].
+> Mass can escape — $n\mathbf{1}_{[0,1/n]}\to0$ a.s. but $\mathbb{E}=1$. One needs [[Def - Uniform Integrability|uniform integrability]] (or domination); [[Ex - Uniform integrability upgrades convergence|L¹-boundedness is not enough]].
 
 > [!warning] 2. Treating convergence in distribution as convergence of the variables
 > $X_n\xrightarrow{d}X$ constrains only the *laws* — the variables may be unrelated, even independent. The upgrade to convergence in probability holds *only when the limit is constant* ([[Ex - Convergence in distribution to a constant]]).

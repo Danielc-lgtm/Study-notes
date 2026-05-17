@@ -20,7 +20,7 @@ Let $(X,W)$ be jointly Gaussian, mean zero, with $\mathrm{Var}(W)>0$.
 
 **Recall:**
 
-[[Thm - Conditional Expectation as L2 Projection|Conditional expectation is $L^2$-projection]]. For Gaussians, *uncorrelated $\Rightarrow$ independent*.
+[[Thm - Conditional Expectation as L2 Projection|Conditional expectation is L²-projection]]. For Gaussians, *uncorrelated $\Rightarrow$ independent*.
 
 ---
 
@@ -73,6 +73,6 @@ so $R$ and $W$ are *uncorrelated*. Crucially, $R$ and $W$ are jointly Gaussian �
 
 # Key Takeaways
 
-**For jointly Gaussian variables, conditional expectation is *linear* — the best predictor equals the best *linear* predictor.** This is the Gaussian world's defining simplification: $\mathbb{E}[X\mid W]=\frac{\mathrm{Cov}(X,W)}{\mathrm{Var}(W)}W$, the regression line, with the coefficient pinned by orthogonality ([[Thm - Conditional Expectation as L2 Projection|$L^2$-projection]]). In general, conditional expectation is some complicated nonlinear function of the conditioning variable; Gaussianity collapses it to a line. This is why Gaussian models — linear regression, the Kalman filter, Gaussian processes — are so tractable: projection onto *all* $\sigma(W)$-measurable functions gives the same answer as projection onto the *linear* span of $W$.
+**For jointly Gaussian variables, conditional expectation is *linear* — the best predictor equals the best *linear* predictor.** This is the Gaussian world's defining simplification: $\mathbb{E}[X\mid W]=\frac{\mathrm{Cov}(X,W)}{\mathrm{Var}(W)}W$, the regression line, with the coefficient pinned by orthogonality ([[Thm - Conditional Expectation as L2 Projection|L²-projection]]). In general, conditional expectation is some complicated nonlinear function of the conditioning variable; Gaussianity collapses it to a line. This is why Gaussian models — linear regression, the Kalman filter, Gaussian processes — are so tractable: projection onto *all* $\sigma(W)$-measurable functions gives the same answer as projection onto the *linear* span of $W$.
 
 **The engine is "jointly Gaussian $+$ uncorrelated $\Rightarrow$ independent" — a property unique to the Gaussian family.** Choosing the coefficient to make the residual *uncorrelated* with $W$ is just $L^2$-orthogonality, available for any $X,W$; but for Gaussians that orthogonality *upgrades to full independence*, which is what makes the conditional law itself Gaussian with a $W$-independent variance. For non-Gaussian variables, orthogonality of the residual does *not* give independence, and the conditional expectation need not be linear. Whenever a problem says "jointly Gaussian," reach for "uncorrelated $=$ independent" and expect everything to linearise.

@@ -54,4 +54,4 @@ Calibration: (i) Is every measure a pre-measure? Yes — restrict the domain fro
 # Unlocked by This
 
 > [!tip] The extension machine
-> A pre-measure feeds into the [[Thm - Hahn-Carathéodory Extension Theorem|Hahn–Carathéodory extension theorem]]: it is extended first to an [[Def - Outer Measure|outer measure]] on all of $2^X$, then restricted to the [[Def - Carathéodory Measurable Sets|Carathéodory $\sigma$-algebra]], on which it becomes a genuine measure.
+> A pre-measure feeds into the [[Thm - Hahn-Carathéodory Extension Theorem|Hahn–Carathéodory extension theorem]]: it is extended first to an [[Def - Outer Measure|outer measure]] on all of $2^X$, then restricted to the [[Def - Carathéodory Measurable Sets|Carathéodory σ-algebra]], on which it becomes a genuine measure.

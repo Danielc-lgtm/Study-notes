@@ -19,7 +19,7 @@ tags: [analysis, measure-theory]
 
 **Recall:**
 
-[[Def - The Integral|Lebesgue integral]]; [[Def - Lebesgue Measure|$\lambda(\mathbb{Q})=0$]]. A bounded $f$ is Riemann-integrable iff $\sup_P L(f,P)=\inf_P U(f,P)$ over partitions $P$.
+[[Def - The Integral|Lebesgue integral]]; [[Def - Lebesgue Measure|λ(ℚ)=0]]. A bounded $f$ is Riemann-integrable iff $\sup_P L(f,P)=\inf_P U(f,P)$ over partitions $P$.
 
 ---
 
@@ -58,7 +58,7 @@ tags: [analysis, measure-theory]
 
 # Solution
 
-**Step 1 — (a) Lebesgue side.** $\lambda(\mathbb{Q}\cap[0,1])=0$ ([[Def - Lebesgue Measure|countable set]]), so $\mathbf{1}_{\mathbb{Q}\cap[0,1]}=0$ $\lambda$-a.e. Hence it is measurable, non-negative, and $\int\mathbf{1}_{\mathbb{Q}\cap[0,1]}\,d\lambda=0$ ([[Ex - Markov's inequality|the integral of an a.e.-zero function is $0$]]).
+**Step 1 — (a) Lebesgue side.** $\lambda(\mathbb{Q}\cap[0,1])=0$ ([[Def - Lebesgue Measure|countable set]]), so $\mathbf{1}_{\mathbb{Q}\cap[0,1]}=0$ $\lambda$-a.e. Hence it is measurable, non-negative, and $\int\mathbf{1}_{\mathbb{Q}\cap[0,1]}\,d\lambda=0$ ([[Ex - Markov's inequality|the integral of an a.e.-zero function is 0]]).
 
 *Riemann side.* For any partition $P$ of $[0,1]$ and any subinterval $[t_{i-1},t_i]$: $\inf f=0$ (it contains an irrational) and $\sup f=1$ (it contains a rational). So the lower sum $L(f,P)=\sum(t_i-t_{i-1})\cdot0=0$ and the upper sum $U(f,P)=\sum(t_i-t_{i-1})\cdot1=1$. Thus $\sup_P L=0\neq1=\inf_P U$ — $f$ is **not Riemann-integrable**.
 

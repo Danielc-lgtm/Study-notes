@@ -11,7 +11,7 @@ tags: [analysis, measure-theory, probability]
 
 # Notation
 
-$(X_1,\mathcal{A}_1,\mu_1)$, $(X_2,\mathcal{A}_2,\mu_2)$ are $\sigma$-finite measure spaces; $X=X_1\times X_2$, $\mathcal{A}=\mathcal{A}_1\otimes\mathcal{A}_2$ the [[Def - Product σ-Algebra|product $\sigma$-algebra]]. For $E\subseteq X$, $E_{x_1}=\{x_2:(x_1,x_2)\in E\}$ is the slice.
+$(X_1,\mathcal{A}_1,\mu_1)$, $(X_2,\mathcal{A}_2,\mu_2)$ are $\sigma$-finite measure spaces; $X=X_1\times X_2$, $\mathcal{A}=\mathcal{A}_1\otimes\mathcal{A}_2$ the [[Def - Product σ-Algebra|product σ-algebra]]. For $E\subseteq X$, $E_{x_1}=\{x_2:(x_1,x_2)\in E\}$ is the slice.
 
 ---
 
@@ -23,7 +23,7 @@ To integrate functions of two variables, or to model a *pair* of independent ran
 
 # Sources and Targets
 
-**Sources.** Hypotheses: $\mu_1,\mu_2$ **$\sigma$-finite**. $\sigma$-finiteness is essential — for uniqueness (via [[Thm - Dynkin's π-λ Theorem|$\pi$–$\lambda$]]) and for the slice-integral to be well-defined. Probability measures are finite, hence $\sigma$-finite, so product *probability* measures always exist.
+**Sources.** Hypotheses: $\mu_1,\mu_2$ **$\sigma$-finite**. $\sigma$-finiteness is essential — for uniqueness (via [[Thm - Dynkin's π-λ Theorem|π–λ]]) and for the slice-integral to be well-defined. Probability measures are finite, hence $\sigma$-finite, so product *probability* measures always exist.
 
 **Targets.** $\mu_1\otimes\mu_2$ feeds [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] (double integral $=$ iterated integral); it gives $\lambda_m\otimes\lambda_n=\lambda_{m+n}$ (Lebesgue measure is a product); and the joint law of [[Def - Independence|independent]] random variables is, by definition, the product of the marginal laws.
 
@@ -41,7 +41,7 @@ For Lebesgue measure, $\lambda_m\otimes\lambda_n=\lambda_{m+n}$.
 
 # Why Is It True
 
-**Existence by the slice formula.** Define directly $\sigma(E)=\int_{X_1}\mu_2(E_{x_1})\,d\mu_1(x_1)$ — "sweep a vertical line across $E$, integrate the heights." Two things must be checked. First, the integrand $x_1\mapsto\mu_2(E_{x_1})$ is measurable: this is a [[Thm - Dynkin's π-λ Theorem|$\pi$–$\lambda$]] argument — it holds for rectangles ($\mu_2((A_1\times A_2)_{x_1})=\mu_2(A_2)\mathbf{1}_{A_1}(x_1)$, measurable), the family of $E$ for which it holds is a $\lambda$-system, and the rectangles are a $\pi$-system generating $\mathcal{A}$. Second, $\sigma$ is $\sigma$-additive: $E=\bigsqcup E_n\Rightarrow E_{x_1}=\bigsqcup(E_n)_{x_1}$, so $\mu_2(E_{x_1})=\sum\mu_2((E_n)_{x_1})$, and [[Thm - Monotone Convergence Theorem|MCT]] (partial sums increase) pulls the sum out of the $d\mu_1$-integral. On rectangles $\sigma(A_1\times A_2)=\int\mu_2(A_2)\mathbf{1}_{A_1}\,d\mu_1=\mu_1(A_1)\mu_2(A_2)$ — the desired normalisation.
+**Existence by the slice formula.** Define directly $\sigma(E)=\int_{X_1}\mu_2(E_{x_1})\,d\mu_1(x_1)$ — "sweep a vertical line across $E$, integrate the heights." Two things must be checked. First, the integrand $x_1\mapsto\mu_2(E_{x_1})$ is measurable: this is a [[Thm - Dynkin's π-λ Theorem|π–λ]] argument — it holds for rectangles ($\mu_2((A_1\times A_2)_{x_1})=\mu_2(A_2)\mathbf{1}_{A_1}(x_1)$, measurable), the family of $E$ for which it holds is a $\lambda$-system, and the rectangles are a $\pi$-system generating $\mathcal{A}$. Second, $\sigma$ is $\sigma$-additive: $E=\bigsqcup E_n\Rightarrow E_{x_1}=\bigsqcup(E_n)_{x_1}$, so $\mu_2(E_{x_1})=\sum\mu_2((E_n)_{x_1})$, and [[Thm - Monotone Convergence Theorem|MCT]] (partial sums increase) pulls the sum out of the $d\mu_1$-integral. On rectangles $\sigma(A_1\times A_2)=\int\mu_2(A_2)\mathbf{1}_{A_1}\,d\mu_1=\mu_1(A_1)\mu_2(A_2)$ — the desired normalisation.
 
 **Uniqueness by $\pi$–$\lambda$.** The rectangles form a $\pi$-system generating $\mathcal{A}$. Any two measures agreeing on them agree on $\mathcal{A}$ — by [[Thm - Dynkin's π-λ Theorem|Dynkin's lemma]], provided $\sigma$-finiteness supplies a countable exhaustion of $X$ by finite-measure rectangles $X_{1,k}\times X_{2,k}$. This is the *sole* role of $\sigma$-finiteness in uniqueness.
 
@@ -51,7 +51,7 @@ The slogan: **the product measure is "integrate the slice measure"; that this is
 
 # What Makes This Hard
 
-Two non-elementary inputs, neither obvious. (i) **Measurability of the slice-measure function** $x_1\mapsto\mu_2(E_{x_1})$ — one cannot check this set-by-set; it *must* go through the [[Thm - Dynkin's π-λ Theorem|$\pi$–$\lambda$ theorem]] (true on rectangles, $\lambda$-system, generate). (ii) The need for **$\sigma$-finiteness**: without it, uniqueness fails and the slice integral can be ill-defined. The common error is to treat the slice formula as a definition without verifying the integrand is measurable, or to forget $\sigma$-finiteness and lose uniqueness.
+Two non-elementary inputs, neither obvious. (i) **Measurability of the slice-measure function** $x_1\mapsto\mu_2(E_{x_1})$ — one cannot check this set-by-set; it *must* go through the [[Thm - Dynkin's π-λ Theorem|π–λ theorem]] (true on rectangles, $\lambda$-system, generate). (ii) The need for **$\sigma$-finiteness**: without it, uniqueness fails and the slice integral can be ill-defined. The common error is to treat the slice formula as a definition without verifying the integrand is measurable, or to forget $\sigma$-finiteness and lose uniqueness.
 
 ---
 

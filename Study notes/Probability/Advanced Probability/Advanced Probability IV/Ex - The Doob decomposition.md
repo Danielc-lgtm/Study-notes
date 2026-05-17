@@ -65,7 +65,7 @@ Each summand is $\mathcal{F}_{k-1}$-measurable, so $A_n$ is $\mathcal{F}_{n-1}$-
 
 **Step 2 — (b).** The increment $A_n-A_{n-1}=\mathbb{E}[X_n-X_{n-1}\mid\mathcal{F}_{n-1}]$ is $\ge0$ a.s. *exactly when* $\mathbb{E}[X_n\mid\mathcal{F}_{n-1}]\ge X_{n-1}$ — i.e. exactly when $(X_n)$ is a [[Def - Martingale|submartingale]]. So $(X_n)$ is a submartingale iff $(A_n)$ is a.s. non-decreasing; the predictable part $A_n$ *is* the accumulated drift, and a submartingale is "a fair game plus an increasing predictable trend."
 
-**Step 3 — (c).** For $X_n=S_n^2$: $\mathbb{E}[S_n^2-S_{n-1}^2\mid\mathcal{F}_{n-1}]=\mathbb{E}[(S_{n-1}+X_n)^2-S_{n-1}^2\mid\mathcal{F}_{n-1}]=2S_{n-1}\mathbb{E}[X_n]+\mathbb{E}[X_n^2]=\sigma^2$. So $A_n=n\sigma^2$, and the Doob decomposition is $S_n^2=(S_n^2-n\sigma^2)+n\sigma^2$ — the [[Ex - Martingales of the random walk|martingale $S_n^2-n\sigma^2$]] plus the predictable increasing $n\sigma^2$.
+**Step 3 — (c).** For $X_n=S_n^2$: $\mathbb{E}[S_n^2-S_{n-1}^2\mid\mathcal{F}_{n-1}]=\mathbb{E}[(S_{n-1}+X_n)^2-S_{n-1}^2\mid\mathcal{F}_{n-1}]=2S_{n-1}\mathbb{E}[X_n]+\mathbb{E}[X_n^2]=\sigma^2$. So $A_n=n\sigma^2$, and the Doob decomposition is $S_n^2=(S_n^2-n\sigma^2)+n\sigma^2$ — the [[Ex - Martingales of the random walk|martingale Sₙ²-nσ²]] plus the predictable increasing $n\sigma^2$.
 
 > [!note]- Complete formal solution
 > (a) $A_n=\sum_{k\le n}\mathbb{E}[X_k-X_{k-1}\mid\mathcal{F}_{k-1}]$ is predictable; $M_n=X_n-X_0-A_n$ has $\mathbb{E}[M_n-M_{n-1}\mid\mathcal{F}_{n-1}]=0$, a martingale; uniqueness because a predictable martingale started at $0$ is $0$. (b) $A_n-A_{n-1}\ge0\iff\mathbb{E}[X_n\mid\mathcal{F}_{n-1}]\ge X_{n-1}\iff$ submartingale. (c) For $S_n^2$, the drift is $\sigma^2$ per step, so $A_n=n\sigma^2$. $\blacksquare$

@@ -21,7 +21,7 @@ Let $(Y_k)$ be i.i.d. with $\mathbb{P}(Y_k=0)=\mathbb{P}(Y_k=2)=\tfrac12$, and $
 
 **Recall:**
 
-[[Thm - Almost Sure Martingale Convergence|A.s. convergence]]: an $L^1$-bounded martingale converges a.s. [[Thm - Lp and L1 Martingale Convergence|$L^1$-convergence]] needs [[Def - Uniform Integrability|uniform integrability]].
+[[Thm - Almost Sure Martingale Convergence|A.s. convergence]]: an $L^1$-bounded martingale converges a.s. [[Thm - Lp and L1 Martingale Convergence|L¹-convergence]] needs [[Def - Uniform Integrability|uniform integrability]].
 
 ---
 
@@ -64,7 +64,7 @@ So $(X_n)$ is a martingale, and $\mathbb{E}[X_n]=\mathbb{E}[X_0]=1$ for every $n
 $$X_n\xrightarrow{\text{a.s.}}0.$$
 (Consistent with the [[Thm - Almost Sure Martingale Convergence|a.s. convergence theorem]]: an $L^1$-bounded martingale converges a.s.)
 
-**Step 3 — (c).** The limit is $X_\infty=0$ a.s., so $\mathbb{E}[X_\infty]=0$. But $\mathbb{E}[X_n]=1$ for every $n$, so $\mathbb{E}[X_n]=1\not\to0=\mathbb{E}[X_\infty]$ — in particular $\mathbb{E}|X_n-X_\infty|=\mathbb{E}[X_n]=1\not\to0$: **$(X_n)$ does not converge in $L^1$**. The failed hypothesis of the [[Thm - Lp and L1 Martingale Convergence|$L^1$-convergence theorem]] is *uniform integrability*: $(X_n)$ is $L^1$-bounded but not UI. (Indeed $X_n$ takes the value $2^n$ with probability $2^{-n}$ — a tall, rare spike — so $\mathbb{E}[X_n\mathbf{1}_{X_n>M}]=1$ for all $n$ with $2^n>M$; mass concentrates and escapes.)
+**Step 3 — (c).** The limit is $X_\infty=0$ a.s., so $\mathbb{E}[X_\infty]=0$. But $\mathbb{E}[X_n]=1$ for every $n$, so $\mathbb{E}[X_n]=1\not\to0=\mathbb{E}[X_\infty]$ — in particular $\mathbb{E}|X_n-X_\infty|=\mathbb{E}[X_n]=1\not\to0$: **$(X_n)$ does not converge in $L^1$**. The failed hypothesis of the [[Thm - Lp and L1 Martingale Convergence|L¹-convergence theorem]] is *uniform integrability*: $(X_n)$ is $L^1$-bounded but not UI. (Indeed $X_n$ takes the value $2^n$ with probability $2^{-n}$ — a tall, rare spike — so $\mathbb{E}[X_n\mathbf{1}_{X_n>M}]=1$ for all $n$ with $2^n>M$; mass concentrates and escapes.)
 
 > [!note]- Complete formal solution
 > (a) $\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n\mathbb{E}[Y_{n+1}]=X_n$; $\mathbb{E}[X_n]=1$, non-negative, $L^1$-bounded. (b) $X_n$ is absorbed at $0$ once any $Y_k=0$, and $\mathbb{P}(\text{no }Y_k=0)=\prod\tfrac12=0$, so $X_n\to0$ a.s. (c) $\mathbb{E}[X_n]=1\not\to0=\mathbb{E}[X_\infty]$, so no $L^1$-convergence; $(X_n)$ is $L^1$-bounded but not UI (the spike $2^n$ at probability $2^{-n}$). $\blacksquare$
@@ -75,4 +75,4 @@ $$X_n\xrightarrow{\text{a.s.}}0.$$
 
 **The martingale convergence theorem gives *only* almost-sure convergence — $L^1$-convergence is a strictly stronger conclusion needing uniform integrability.** This product martingale is the canonical witness: non-negative, constant expectation $1$, hence $L^1$-bounded and a.s.-convergent — but it converges a.s. to $0$, while $\mathbb{E}[X_n]\equiv1$. The expectation does *not* survive the limit, so there is no $L^1$-convergence. The lesson: after invoking [[Thm - Almost Sure Martingale Convergence|a.s. martingale convergence]], one has a pointwise limit but *cannot* conclude $\mathbb{E}[X_n]\to\mathbb{E}[X_\infty]$ — that requires separately checking [[Def - Uniform Integrability|uniform integrability]] (or $L^p$-boundedness, $p>1$).
 
-**The failure is escape of mass through a tall, rare spike — $X_n=2^n$ with probability $2^{-n}$.** $L^1$-boundedness controls only *average* mass; it cannot prevent that mass concentrating into an ever-taller, ever-rarer spike that vanishes pointwise yet keeps $\mathbb{E}[X_n]=1$. Uniform integrability is precisely the no-spike condition. This is the same escape mechanism as the [[Ex - Optional stopping fails for unbounded times|doubling strategy]] and every failed limit–integral interchange — and it is why the [[Thm - Lp and L1 Martingale Convergence|$L^1$ martingale convergence theorem]] identifies the *uniformly integrable* martingales as exactly the well-behaved (closed) ones.
+**The failure is escape of mass through a tall, rare spike — $X_n=2^n$ with probability $2^{-n}$.** $L^1$-boundedness controls only *average* mass; it cannot prevent that mass concentrating into an ever-taller, ever-rarer spike that vanishes pointwise yet keeps $\mathbb{E}[X_n]=1$. Uniform integrability is precisely the no-spike condition. This is the same escape mechanism as the [[Ex - Optional stopping fails for unbounded times|doubling strategy]] and every failed limit–integral interchange — and it is why the [[Thm - Lp and L1 Martingale Convergence|L¹ martingale convergence theorem]] identifies the *uniformly integrable* martingales as exactly the well-behaved (closed) ones.

@@ -9,7 +9,7 @@ tags: [analysis, measure-theory, probability]
 # Notation Registry
 
 - $(X_i,\mathcal{A}_i,\mu_i)$ — measure spaces, usually $\sigma$-finite; $X=X_1\times X_2$
-- $\mathcal{A}_1\otimes\mathcal{A}_2$ — the [[Def - Product σ-Algebra|product $\sigma$-algebra]]; $\mu_1\otimes\mu_2$ — the [[Thm - Product Measure|product measure]]
+- $\mathcal{A}_1\otimes\mathcal{A}_2$ — the [[Def - Product σ-Algebra|product σ-algebra]]; $\mu_1\otimes\mu_2$ — the [[Thm - Product Measure|product measure]]
 - $Z_i$ — coordinate projections; $E_{x_1}=\{x_2:(x_1,x_2)\in E\}$ — the slice of $E$ at $x_1$
 - $\mathcal{P}$ — a $\pi$-system; $\mathcal{L}$ — a $\lambda$-system (see [[Thm - Dynkin's π-λ Theorem]])
 - $B(x,r)$ — open ball; $\fint_B=\frac1{\lambda(B)}\int_B$ — the average; $f^*$ — the [[Def - Hardy-Littlewood Maximal Function|Hardy–Littlewood maximal function]]
@@ -24,7 +24,7 @@ tags: [analysis, measure-theory, probability]
 
 [[Measure Theory I — §1 Measure Spaces|Measure Theory I]] built measures; [[Measure Theory II — §2 Integration|Measure Theory II]] built the integral. This chapter is the *calculus* of the theory — how to integrate in several variables, how to differentiate, and how one measure relates to another.
 
-**Product measures and Fubini–Tonelli** (§3) answer: how do you integrate a function of two variables? You build a measure $\mu_1\otimes\mu_2$ on the product space — the unique one giving rectangles the product of side-measures — and [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] reduces the double integral to an iterated one, computable a variable at a time. Tonelli handles non-negative integrands with no further hypothesis; Fubini handles signed integrands under absolute integrability. The technical tool that makes both work is [[Thm - Dynkin's π-λ Theorem|Dynkin's $\pi$–$\lambda$ theorem]] — the induction principle that pushes facts from the generating rectangles to the whole product $\sigma$-algebra, and the standard route to uniqueness of measures.
+**Product measures and Fubini–Tonelli** (§3) answer: how do you integrate a function of two variables? You build a measure $\mu_1\otimes\mu_2$ on the product space — the unique one giving rectangles the product of side-measures — and [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] reduces the double integral to an iterated one, computable a variable at a time. Tonelli handles non-negative integrands with no further hypothesis; Fubini handles signed integrands under absolute integrability. The technical tool that makes both work is [[Thm - Dynkin's π-λ Theorem|Dynkin's π–λ theorem]] — the induction principle that pushes facts from the generating rectangles to the whole product $\sigma$-algebra, and the standard route to uniqueness of measures.
 
 **Differentiation** (§4.1) answers: is the fundamental theorem of calculus true for merely integrable functions? The [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]] says *yes, almost everywhere* — the local averages $\fint_{B(x,r)}f$ recover $f(x)$ a.e. The proof introduces the [[Def - Hardy-Littlewood Maximal Function|Hardy–Littlewood maximal function]] and its weak maximal inequality, the prototype of harmonic analysis and the device that bounds the exceptional set in any a.e.-convergence theorem.
 
@@ -136,7 +136,7 @@ For **Radon–Nikodym** problems, the recognitions are: is $\nu\ll\mu$ (check "$
 
 # Most Reusable Properties
 
-- **[[Thm - Dynkin's π-λ Theorem|Dynkin's $\pi$–$\lambda$ theorem]]**: agree on a generating $\pi$-system $\Rightarrow$ agree on the $\sigma$-algebra. The induction principle for generated $\sigma$-algebras and the universal route to *measure uniqueness*. Typical use: prove two measures (a law and a candidate, a product measure and a construction) coincide by checking them on rectangles, rays, or cylinder sets.
+- **[[Thm - Dynkin's π-λ Theorem|Dynkin's π–λ theorem]]**: agree on a generating $\pi$-system $\Rightarrow$ agree on the $\sigma$-algebra. The induction principle for generated $\sigma$-algebras and the universal route to *measure uniqueness*. Typical use: prove two measures (a law and a candidate, a product measure and a construction) coincide by checking them on rectangles, rays, or cylinder sets.
 
 - **[[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]]**: double integral $=$ iterated integral. The workhorse of multivariable integration. Typical use: evaluate or estimate a double integral; prove the layer-cake formula; compute $\mathbb{E}[XY]$ for [[Def - Independence|independent]] variables; swap a sum and an integral. Always paired with the discipline "Tonelli on $|f|$, then Fubini."
 

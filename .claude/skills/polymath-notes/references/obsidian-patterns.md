@@ -18,6 +18,8 @@ $$|G| = |G_x| \cdot |G \cdot x|$$
 
 **Important:** Every variable name, mathematical symbol, and equation in prose must be in LaTeX. Do not use bare Unicode math symbols (∈, ∇, ∂, ℝ, etc.) in prose — always wrap them in `$...$`. Write `$\in$`, `$\nabla$`, `$\partial$`, `$\mathbb{R}$`.
 
+**Exception — never use `$...$` inside a wikilink.** LaTeX is for prose, formal statements, and callout bodies only. Obsidian renders `$...$` literally inside `[[ ]]`, so wikilink display text (and targets) must use Unicode characters instead — see the Wikilinks section below.
+
 ## Wikilinks
 
 Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the primary linking mechanism in the vault.
@@ -32,6 +34,17 @@ Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the p
 [[Def - Group|group]]
 [[Def - Compactness|compact]]
 ```
+
+**Never put LaTeX (`$...$`) in wikilink display text — or anywhere inside `[[...]]`.** Obsidian does *not* render math inside a wikilink: `[[Def - Sigma-Algebra|$\sigma$-algebra]]` displays the literal characters `$\sigma$-algebra`, dollar signs and all. The same applies to the target and to section anchors. Inside `[[...]]`, write mathematical symbols as **Unicode characters**, not LaTeX:
+
+```markdown
+[[Def - Sigma-Algebra|σ-algebra]]            not  |$\sigma$-algebra]]
+[[Thm - Dynkin's π-λ Theorem|π–λ theorem]]   not  |$\pi$–$\lambda$ theorem]]
+[[Def - Lp Spaces|Lᵖ space]]                 not  |$L^p$ space]]
+[[Thm - ...|σ-subadditivity]]                not  |$\sigma$-subadditivity]]
+```
+
+Common substitutions for display text: `\sigma`→σ, `\pi`→π, `\lambda`→λ, `\mu`→μ, `\nu`→ν, `\varphi`→φ, `\mathbb{P}`→ℙ, `\mathbb{R}`→ℝ, `\mathbb{N}`→ℕ, `\mathbb{Q}`→ℚ, `\mathcal{F}`→ℱ; superscripts `^1 ^2 ^p ^k ^n`→¹ ² ᵖ ᵏ ⁿ; subscripts `_n _k`→ₙ ₖ; `\le`→≤, `\ge`→≥, `\to`→→, `\infty`→∞, `\leftrightarrow`→↔. Filenames likewise use the Unicode character (e.g. `Def - σ-Finite Measure.md`), so the link target is a plain Unicode string too. LaTeX `$...$` is *only* for ordinary prose, formal statements, and callout bodies — never within `[[ ]]`.
 
 **Link to a specific section:**
 ```markdown

@@ -48,7 +48,7 @@ A family has [[Def - Absolute Continuity and Density|uniformly absolutely contin
 # Hints
 
 > [!note]- Hint 1
-> (a): $\int_A|f_i|\le\int_A g$ uniformly in $i$. A single $g\in L^1$ has absolutely continuous integral ([[Def - Absolute Continuity and Density|$\varepsilon$–$\delta$ form]]).
+> (a): $\int_A|f_i|\le\int_A g$ uniformly in $i$. A single $g\in L^1$ has absolutely continuous integral ([[Def - Absolute Continuity and Density|ε–δ form]]).
 
 > [!note]- Hint 2
 > (b): $\int_A|f_i|=\int|f_i|\mathbf{1}_A\le\|f_i\|_p\|\mathbf{1}_A\|_q$ by Hölder. Compute $\|\mathbf{1}_A\|_q$.
@@ -60,7 +60,7 @@ A family has [[Def - Absolute Continuity and Density|uniformly absolutely contin
 
 # Solution
 
-**Step 1 — (a) Domination $\Rightarrow$ UI.** For any $A$ and any $i$, $|f_i|\le g$ gives $\int_A|f_i|\,d\mu\le\int_A g\,d\mu$. Since $g\in L^1$, by the [[Def - Absolute Continuity and Density|$\varepsilon$–$\delta$ characterisation]] there is $\delta>0$ with $\mu(A)<\delta\Rightarrow\int_A g<\varepsilon$. Then $\sup_i\int_A|f_i|\le\int_A g<\varepsilon$ — the same $\delta$ works for every $i$, so $(f_i)$ is UI.
+**Step 1 — (a) Domination $\Rightarrow$ UI.** For any $A$ and any $i$, $|f_i|\le g$ gives $\int_A|f_i|\,d\mu\le\int_A g\,d\mu$. Since $g\in L^1$, by the [[Def - Absolute Continuity and Density|ε–δ characterisation]] there is $\delta>0$ with $\mu(A)<\delta\Rightarrow\int_A g<\varepsilon$. Then $\sup_i\int_A|f_i|\le\int_A g<\varepsilon$ — the same $\delta$ works for every $i$, so $(f_i)$ is UI.
 
 **Step 2 — (b) $L^p$-boundedness ($p>1$) $\Rightarrow$ UI.** Let $q$ be conjugate to $p$ ($1/p+1/q=1$, $q<\infty$) and $M=\sup_i\|f_i\|_p$. By [[Thm - Hölder and Minkowski Inequalities|Hölder]],
 $$\int_A|f_i|\,d\mu=\int|f_i|\,\mathbf{1}_A\,d\mu\le\|f_i\|_p\,\|\mathbf{1}_A\|_q=\|f_i\|_p\,\mu(A)^{1/q}\le M\,\mu(A)^{1/q}.$$

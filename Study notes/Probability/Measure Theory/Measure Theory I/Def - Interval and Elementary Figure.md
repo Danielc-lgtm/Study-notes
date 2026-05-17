@@ -40,7 +40,7 @@ and extended additively: $\widetilde\lambda(\bigsqcup_{k=1}^m I_k)=\sum_{k=1}^m\
 
 # Relate to Other Fields / Compression
 
-Elementary figures are to Lebesgue measure what *step functions* are to the integral and what *simple functions* are to integration theory: the explicitly-computable building blocks on which the theory is *defined*, before any limiting process. The pattern "define on a hand-computable algebra/class, extend by approximation" is universal — step functions $\to$ Riemann integral, [[Def - Simple Function|simple functions]] $\to$ Lebesgue integral, elementary figures $\to$ Lebesgue measure. The half-open convention is the same device that makes the algebra of half-open intervals work in the one-dimensional [[Def - Algebra and σ-Algebra|algebra/$\sigma$-algebra]] counterexample.
+Elementary figures are to Lebesgue measure what *step functions* are to the integral and what *simple functions* are to integration theory: the explicitly-computable building blocks on which the theory is *defined*, before any limiting process. The pattern "define on a hand-computable algebra/class, extend by approximation" is universal — step functions $\to$ Riemann integral, [[Def - Simple Function|simple functions]] $\to$ Lebesgue integral, elementary figures $\to$ Lebesgue measure. The half-open convention is the same device that makes the algebra of half-open intervals work in the one-dimensional [[Def - Algebra and σ-Algebra|algebra/σ-algebra]] counterexample.
 
 ---
 

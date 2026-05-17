@@ -50,7 +50,7 @@ A family is [[Def - Uniform Integrability|uniformly integrable]] if $\sup_n\math
 > (b): the spike $X_n=n\mathbf{1}_{[0,1/n]}$ is $L^1$-bounded ($\mathbb{E}X_n=1$) but not UI.
 
 > [!note]- Hint 3
-> (c): $L^2$-bounded $\Rightarrow$ UI by the [[Ex - Lp boundedness implies uniform integrability|$\mu(A)^{1/q}$ estimate]].
+> (c): $L^2$-bounded $\Rightarrow$ UI by the [[Ex - Lp boundedness implies uniform integrability|μ(A)¹ᐟq estimate]].
 
 ---
 
@@ -71,4 +71,4 @@ A family is [[Def - Uniform Integrability|uniformly integrable]] if $\sup_n\math
 
 **Uniform integrability is the precise condition upgrading convergence in probability (or a.s.) to convergence in $L^1$ — and hence licensing $\lim\mathbb{E}[X_n]=\mathbb{E}[\lim X_n]$.** By the [[Thm - Vitali Convergence Theorem|Vitali theorem]], "in probability $+$ UI" is *equivalent* to $L^1$-convergence — UI is not a sufficient technicality but the exact missing ingredient. Whenever a proof has pointwise or in-probability convergence and *wants* convergence of expectations, the question to ask is: *is the sequence uniformly integrable?*
 
-**$L^1$-boundedness is never enough — mass can escape — but $L^p$-boundedness for any $p>1$ is.** The escaping spike is $L^1$-bounded yet loses its mass in the limit; the *extra* integrability of $p>1$ forbids the concentration, supplying UI by a one-line Hölder estimate. This $p>1$ threshold recurs throughout: it is why [[Thm - Almost Sure Martingale Convergence|$L^p$-bounded martingales]] ($p>1$) converge in $L^p$ automatically while $L^1$-bounded ones need UI bolted on, and why finite *variance* (an $L^2$ condition) makes the [[Thm - Weak Law of Large Numbers|weak law]] and many estimates effortless.
+**$L^1$-boundedness is never enough — mass can escape — but $L^p$-boundedness for any $p>1$ is.** The escaping spike is $L^1$-bounded yet loses its mass in the limit; the *extra* integrability of $p>1$ forbids the concentration, supplying UI by a one-line Hölder estimate. This $p>1$ threshold recurs throughout: it is why [[Thm - Almost Sure Martingale Convergence|Lᵖ-bounded martingales]] ($p>1$) converge in $L^p$ automatically while $L^1$-bounded ones need UI bolted on, and why finite *variance* (an $L^2$ condition) makes the [[Thm - Weak Law of Large Numbers|weak law]] and many estimates effortless.

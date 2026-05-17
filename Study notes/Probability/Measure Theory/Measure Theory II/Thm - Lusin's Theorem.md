@@ -25,7 +25,7 @@ How "wild" can a measurable function be? Lusin's theorem gives the reassuring an
 
 **Sources.** Hypotheses: $f$ measurable, $\lambda(\Omega)<\infty$. Automatic on a probability space.
 
-**Targets.** "Continuous off a small set" justifies *approximating measurable functions by continuous ones* — combined with Tietze extension it gives the density of $C_c(\mathbb{R}^n)$ in [[Def - Lp Spaces|$L^p$]], the density lever for countless proofs.
+**Targets.** "Continuous off a small set" justifies *approximating measurable functions by continuous ones* — combined with Tietze extension it gives the density of $C_c(\mathbb{R}^n)$ in [[Def - Lp Spaces|Lᵖ]], the density lever for countless proofs.
 
 ---
 
@@ -93,7 +93,7 @@ The non-obvious idea is the *two-layer reduction*: one does not attack $f$ direc
 
 # Cross-Field Exercise Suggestions
 
-Lusin + the Tietze extension theorem yields: every measurable $f$ agrees, off a set of measure $<\delta$, with a *globally continuous* function — hence $C_c(\mathbb{R}^n)$ is dense in [[Def - Lp Spaces|$L^p(\mathbb{R}^n)$]] for $p<\infty$. This density is the standard reduction "prove it for continuous functions, pass to the $L^p$ limit," used throughout Fourier analysis and PDE.
+Lusin + the Tietze extension theorem yields: every measurable $f$ agrees, off a set of measure $<\delta$, with a *globally continuous* function — hence $C_c(\mathbb{R}^n)$ is dense in [[Def - Lp Spaces|Lᵖ(ℝⁿ)]] for $p<\infty$. This density is the standard reduction "prove it for continuous functions, pass to the $L^p$ limit," used throughout Fourier analysis and PDE.
 
 ---
 

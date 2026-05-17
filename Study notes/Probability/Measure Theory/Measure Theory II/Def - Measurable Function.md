@@ -10,7 +10,7 @@ tags: [analysis, measure-theory, probability]
 
 # Notation
 
-$(X,\mathcal{A})$ and $(Y,\mathcal{A}')$ are [[Def - Measurable Space|measurable spaces]]. For $f:X\to Y$ and $S\subseteq Y$, $f^{-1}(S)=\{x\in X:f(x)\in S\}$. When $Y=\mathbb{R}$ or $[-\infty,\infty]$ we use the [[Def - Borel σ-Algebra|Borel $\sigma$-algebra]].
+$(X,\mathcal{A})$ and $(Y,\mathcal{A}')$ are [[Def - Measurable Space|measurable spaces]]. For $f:X\to Y$ and $S\subseteq Y$, $f^{-1}(S)=\{x\in X:f(x)\in S\}$. When $Y=\mathbb{R}$ or $[-\infty,\infty]$ we use the [[Def - Borel σ-Algebra|Borel σ-algebra]].
 
 ---
 
@@ -20,7 +20,7 @@ A measurable space gives us measurable *sets*. To do analysis we need measurable
 
 Why preimages and not images? Because $\sigma$-algebra operations commute with preimage but not with image: $f^{-1}(\bigcup S_k)=\bigcup f^{-1}(S_k)$ and $f^{-1}(S^c)=f^{-1}(S)^c$, identities with no analogue for direct images. Preimage is the algebraically faithful direction. This is the identical reason continuity is defined by preimages of open sets — measurability is "continuity for $\sigma$-algebras," and the analogy is exact.
 
-The decisive practical fact: one need not check the preimage condition for *all* measurable target sets, only for a *generating* family. The collection $\{S:f^{-1}(S)\in\mathcal{A}\}$ is itself a $\sigma$-algebra (preimage commutes with the operations), so if it contains a generating set it contains the whole $\sigma$-algebra. For real-valued $f$ this means checking only $f^{-1}((-\infty,a))\in\mathcal{A}$ for each $a$ — a one-parameter family. This is the [[Def - Generated σ-Algebra|"minimality of $\sigma(\mathcal{C})$"]] principle cashed out, and it makes measurability cheap to verify.
+The decisive practical fact: one need not check the preimage condition for *all* measurable target sets, only for a *generating* family. The collection $\{S:f^{-1}(S)\in\mathcal{A}\}$ is itself a $\sigma$-algebra (preimage commutes with the operations), so if it contains a generating set it contains the whole $\sigma$-algebra. For real-valued $f$ this means checking only $f^{-1}((-\infty,a))\in\mathcal{A}$ for each $a$ — a one-parameter family. This is the [[Def - Generated σ-Algebra|"minimality of σ(𝒞)"]] principle cashed out, and it makes measurability cheap to verify.
 
 ---
 
