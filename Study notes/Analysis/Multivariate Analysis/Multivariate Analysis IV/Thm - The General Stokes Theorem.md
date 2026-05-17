@@ -16,6 +16,18 @@ Throughout, $M$ is a compact oriented $k$-dimensional surface ([[Def - Submanifo
 
 ---
 
+# Statement
+
+> **The General Stokes Theorem.** Let $M$ be a compact oriented $k$-dimensional surface of class $C^2$ with boundary $\partial M$, where $\partial M$ carries the orientation induced from $M$ (outward-normal-first convention). Let $\beta$ be a compactly supported [[Def - Differential Form|differential]] $(k-1)$-form of class $C^1$ on $M$. Then
+> $$\int_M d\beta = \int_{\partial M}\beta.$$
+> The integral of the [[Def - The Exterior Derivative|exterior derivative]] of $\beta$ over $M$ equals the integral of $\beta$ over the boundary $\partial M$.
+>
+> The theorem also holds when $M$ is a $C^2$ surface **with corners** (the boundary a locally finite union of cornered pieces), and — under the weaker hypothesis that both $\beta$ and $d\beta$ are continuous — when $M$ is only of class $C^1$. When $\partial M = \emptyset$, the right side is zero, so $\int_M d\beta = 0$ for any closed surface $M$.
+>
+> The classical [[Thm - Green's Theorem|Green]], [[Thm - The Divergence Theorem|Gauss (divergence)]], and [[Thm - The Kelvin-Stokes Theorem|Kelvin-Stokes]] theorems, and the Fundamental Theorem of Calculus, are the cases $k = 2, n, 2, 1$.
+
+---
+
 # Motivation
 
 The Fundamental Theorem of Calculus says $\int_a^b f'\,dx = f(b) - f(a)$. Stare at the right-hand side: $f(b) - f(a)$ is the integral of $f$ over the *boundary* of the interval $[a,b]$, the two-point set $\{a, b\}$, with $b$ counted positively and $a$ negatively. So the theorem already has the shape "integral of a derivative over a region equals integral of the original object over the boundary". The question this theorem answers is: *is that shape an accident of one dimension, or a universal law?* It is a universal law, and the general Stokes theorem is its statement.
