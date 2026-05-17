@@ -12,13 +12,13 @@ tags: [algebra, group-theory]
 
 # Notation
 
-Throughout, $G$ is a finite group and $p$ a prime, with order in the **standard $p$-factorization** $|G| = p^a m$, $p \nmid m$. A [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] is a subgroup of order exactly $p^a$; the set of all of them is $\operatorname{Syl}_p(G)$, and $n_p = |\operatorname{Syl}_p(G)|$ is their number. A subgroup $N \leq G$ is [[Def - Normal Subgroup|normal]], written $N \trianglelefteq G$, if $gNg^{-1} = N$ for every $g \in G$ — equivalently, $N$ is invariant under conjugation. Two subgroups $H, K$ are **conjugate** if $K = gHg^{-1}$ for some $g \in G$ (see [[Def - Conjugacy Class]]). A group with no [[Def - Normal Subgroup|normal subgroup]] other than $\{e\}$ and itself is [[Def - Simple Group|simple]]. The full notation registry lives on the parent page [[Group Theory III — §1.5–1.7]].
+Throughout, $G$ is a finite group and $p$ a prime, with order in the **standard $p$-factorization** $|G| = p^a m$, $p \nmid m$. A [[Def - Sylow p-Subgroup|Sylow p-subgroup]] is a subgroup of order exactly $p^a$; the set of all of them is $\operatorname{Syl}_p(G)$, and $n_p = |\operatorname{Syl}_p(G)|$ is their number. A subgroup $N \leq G$ is [[Def - Normal Subgroup|normal]], written $N \trianglelefteq G$, if $gNg^{-1} = N$ for every $g \in G$ — equivalently, $N$ is invariant under conjugation. Two subgroups $H, K$ are **conjugate** if $K = gHg^{-1}$ for some $g \in G$ (see [[Def - Conjugacy Class]]). A group with no [[Def - Normal Subgroup|normal subgroup]] other than $\{e\}$ and itself is [[Def - Simple Group|simple]]. The full notation registry lives on the parent page [[Group Theory III — §1.5–1.7]].
 
 ---
 
 # Statement
 
-> **Theorem (a unique Sylow $p$-subgroup is normal).** Let $G$ be a finite group and $p$ a prime. If $G$ has exactly one [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] — that is, if $n_p = 1$ — then that subgroup is [[Def - Normal Subgroup|normal]] in $G$.
+> **Theorem (a unique Sylow $p$-subgroup is normal).** Let $G$ be a finite group and $p$ a prime. If $G$ has exactly one [[Def - Sylow p-Subgroup|Sylow p-subgroup]] — that is, if $n_p = 1$ — then that subgroup is [[Def - Normal Subgroup|normal]] in $G$.
 >
 > Conversely, if a Sylow $p$-subgroup $P$ is normal in $G$, then it is the *only* Sylow $p$-subgroup, so $n_p = 1$. Thus $n_p = 1$ if and only if some (equivalently, every) Sylow $p$-subgroup is normal.
 
@@ -114,7 +114,7 @@ Conjugation by any $g \in G$ sends a Sylow $p$-subgroup to a subgroup of the sam
 Each lemma below is independently practiceable in roughly five minutes.
 
 > [!note]- Lemma 1: Conjugation preserves the property of being a Sylow $p$-subgroup
-> **Statement:** Let $P$ be a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $G$ and let $g \in G$. Then the conjugate $gPg^{-1}$ is also a Sylow $p$-subgroup of $G$.
+> **Statement:** Let $P$ be a [[Def - Sylow p-Subgroup|Sylow p-subgroup]] of $G$ and let $g \in G$. Then the conjugate $gPg^{-1}$ is also a Sylow $p$-subgroup of $G$.
 >
 > **Hint:** The map $c_g : x \mapsto gxg^{-1}$ is an automorphism of $G$; automorphisms carry subgroups to subgroups of equal order.
 >
@@ -138,7 +138,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 # Formal Proof
 
 > [!note]- Complete formal proof
-> **Theorem.** Let $G$ be a finite group, $p$ a prime, $|G| = p^a m$ with $p \nmid m$. If $n_p = 1$ — that is, if $G$ has a unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] $P$ — then $P \trianglelefteq G$. Conversely, if a Sylow $p$-subgroup is normal then $n_p = 1$.
+> **Theorem.** Let $G$ be a finite group, $p$ a prime, $|G| = p^a m$ with $p \nmid m$. If $n_p = 1$ — that is, if $G$ has a unique [[Def - Sylow p-Subgroup|Sylow p-subgroup]] $P$ — then $P \trianglelefteq G$. Conversely, if a Sylow $p$-subgroup is normal then $n_p = 1$.
 >
 > *Proof (of the main statement).* Let $P$ be the unique Sylow $p$-subgroup of $G$, so $|P| = p^a$, and let $g \in G$ be arbitrary. Consider the conjugate subgroup $g^{-1}Pg$.
 >
@@ -176,7 +176,7 @@ The aim is to find settings where the theorem applies but is not advertised — 
 
 - **[[Def - Simple Group|Simple groups]]** — the theorem is the primary engine for proving a group of given order is *not* simple. A simple group has no proper non-trivial [[Def - Normal Subgroup|normal subgroup]]; this theorem produces exactly such a subgroup whenever some $n_p$ is forced to $1$ and $|G|$ is not a prime power. Every "no simple group of order $n$" exercise that is settled by arithmetic alone is settled by this theorem.
 
-- **[[Thm - p-Groups Have Non-Trivial Centre|$p$-groups have non-trivial centre]]** — a complementary non-simplicity tool for the *other* case. When $|G|$ is itself a prime power, there are no Sylow subgroup constraints to exploit (the group is its own Sylow $p$-subgroup); instead the non-trivial centre supplies the normal subgroup. Between them, the two results cover non-simplicity for prime-power orders and for orders with several prime factors.
+- **[[Thm - p-Groups Have Non-Trivial Centre|p-groups have non-trivial centre]]** — a complementary non-simplicity tool for the *other* case. When $|G|$ is itself a prime power, there are no Sylow subgroup constraints to exploit (the group is its own Sylow $p$-subgroup); instead the non-trivial centre supplies the normal subgroup. Between them, the two results cover non-simplicity for prime-power orders and for orders with several prime factors.
 
 - **[[Thm - First Isomorphism Theorem|First isomorphism theorem]]** — when this theorem yields a normal Sylow $p$-subgroup $P$, the quotient $G/P$ becomes available, and the first isomorphism theorem and the [[Def - Direct Product|direct product]] / semidirect product machinery turn $P \trianglelefteq G$ into a structural decomposition of $G$. Normality is the gateway to quotients, and quotients are where classification proceeds.
 

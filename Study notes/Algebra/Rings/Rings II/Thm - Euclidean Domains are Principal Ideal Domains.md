@@ -178,7 +178,7 @@ Take an arbitrary ideal $I$; dispose of $I = \{0\}$ separately. For $I \neq \{0\
 
 - **The Euclidean algorithm for $\gcd$** — the same hypothesis, used algorithmically rather than structurally. Division with remainder, axiom (ii), is exactly what makes the iterative gcd algorithm terminate; here the same axiom is used in a single non-iterative step to locate a generator.
 
-- **Noetherian rings and the ascending chain condition** — a PID satisfies the ACC on ideals, so a Euclidean domain is Noetherian. This is the link by which "Euclidean" feeds into the *existence* half of factorisation in [[Thm - Principal Ideal Domains are Unique Factorization Domains|the PID $\Rightarrow$ UFD theorem]].
+- **Noetherian rings and the ascending chain condition** — a PID satisfies the ACC on ideals, so a Euclidean domain is Noetherian. This is the link by which "Euclidean" feeds into the *existence* half of factorisation in [[Thm - Principal Ideal Domains are Unique Factorization Domains|the PID Rightarrow UFD theorem]].
 
 ---
 

@@ -13,7 +13,7 @@ tags: [algebra, module-theory]
 
 # Notation
 
-$R$ is a commutative ring with $1_R$, $M$ is an [[Def - Module|$R$-module]], and $N \leq M$ is a [[Def - Submodule|submodule]]. The quotient module is written $M/N$. Its elements are **cosets** $m + N := \{m + n : n \in N\}$; the coset $m + N$ is also written $\bar m$ when the submodule is fixed and clear. Two cosets satisfy $m + N = m' + N$ if and only if $m - m' \in N$. The zero element of $M/N$ is the coset $0_M + N = N$. See [[Modules I — §3.1–3.2]] for the full notation registry.
+$R$ is a commutative ring with $1_R$, $M$ is an [[Def - Module|R-module]], and $N \leq M$ is a [[Def - Submodule|submodule]]. The quotient module is written $M/N$. Its elements are **cosets** $m + N := \{m + n : n \in N\}$; the coset $m + N$ is also written $\bar m$ when the submodule is fixed and clear. Two cosets satisfy $m + N = m' + N$ if and only if $m - m' \in N$. The zero element of $M/N$ is the coset $0_M + N = N$. See [[Modules I — §3.1–3.2]] for the full notation registry.
 
 ---
 
@@ -33,7 +33,7 @@ A complementary way to see why $M/N$ should exist: it is the universal recipient
 
 # The Definition
 
-Let $M$ be an [[Def - Module|$R$-module]] and $N \leq M$ a [[Def - Submodule|submodule]]. The **quotient module** $M/N$ is the [[Def - Module|$R$-module]] whose:
+Let $M$ be an [[Def - Module|R-module]] and $N \leq M$ a [[Def - Submodule|submodule]]. The **quotient module** $M/N$ is the [[Def - Module|R-module]] whose:
 
 - **Underlying set** is the set of cosets $\{m + N : m \in M\}$, where $m + N = \{m + n : n \in N\}$ and two cosets are equal, $m + N = m' + N$, exactly when $m - m' \in N$;
 - **Addition** is $(m_1 + N) + (m_2 + N) = (m_1 + m_2) + N$, with zero element $0_{M/N} = 0_M + N = N$ and additive inverse $-(m + N) = (-m) + N$ — this is the quotient of the abelian group $(M, +, 0_M)$ by the subgroup $N$;

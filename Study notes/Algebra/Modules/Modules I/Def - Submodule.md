@@ -12,7 +12,7 @@ tags: [algebra, module-theory]
 
 # Notation
 
-$R$ is a commutative ring with $1_R$, and $M = (M, +, 0_M, \cdot)$ is an [[Def - Module|$R$-module]]. A submodule $N$ of $M$ is written $N \leq M$, the same symbol used for "subgroup" and "subspace" — deliberately, since a submodule is both at once. Elements of $M$ are $m, n$; scalars are $r, s$. The action is written by juxtaposition, $rn$. See [[Modules I — §3.1–3.2]] for the full notation registry.
+$R$ is a commutative ring with $1_R$, and $M = (M, +, 0_M, \cdot)$ is an [[Def - Module|R-module]]. A submodule $N$ of $M$ is written $N \leq M$, the same symbol used for "subgroup" and "subspace" — deliberately, since a submodule is both at once. Elements of $M$ are $m, n$; scalars are $r, s$. The action is written by juxtaposition, $rn$. See [[Modules I — §3.1–3.2]] for the full notation registry.
 
 ---
 
@@ -30,7 +30,7 @@ There is one more thing the definition should make you anticipate: a submodule i
 
 # The Definition
 
-Let $M$ be an [[Def - Module|$R$-module]]. A subset $N \subseteq M$ is an **$R$-submodule of $M$**, written $N \leq M$, if:
+Let $M$ be an [[Def - Module|R-module]]. A subset $N \subseteq M$ is an **$R$-submodule of $M$**, written $N \leq M$, if:
 
 1. **Subgroup.** $N$ is a subgroup of the abelian group $(M, +, 0_M)$ — equivalently, $N$ is non-empty and $n_1 - n_2 \in N$ whenever $n_1, n_2 \in N$ (this single condition gives closure under addition, inverses, and membership of $0_M$).
 
@@ -52,7 +52,7 @@ So the inclusion-of-concepts reads: subgroup $\supseteq$ submodule, and submodul
 
 # Examples / Corollaries
 
-**Is an instance: the trivial submodules.** In any [[Def - Module|$R$-module]] $M$, both $\{0_M\}$ and $M$ are submodules. The set $\{0_M\}$ is a subgroup and $r \cdot 0_M = 0_M \in \{0_M\}$ for every $r$; the set $M$ is closed under everything by definition. A module whose *only* submodules are these two (and $M \neq \{0_M\}$) is called **simple** — the module-theoretic analogue of a simple group or a field.
+**Is an instance: the trivial submodules.** In any [[Def - Module|R-module]] $M$, both $\{0_M\}$ and $M$ are submodules. The set $\{0_M\}$ is a subgroup and $r \cdot 0_M = 0_M \in \{0_M\}$ for every $r$; the set $M$ is closed under everything by definition. A module whose *only* submodules are these two (and $M \neq \{0_M\}$) is called **simple** — the module-theoretic analogue of a simple group or a field.
 
 **Is an instance: submodules of $R$ are exactly the ideals.** Regard $R$ as a module over itself. A subset $N \subseteq R$ is an $R$-submodule precisely when it is an additive subgroup of $R$ and $rn \in N$ for all $r \in R, n \in N$ — and that is *word for word* the definition of an [[Def - Ideal|ideal]] $N \trianglelefteq R$. So the lattice of submodules of $R$ and the lattice of ideals of $R$ are the same object. For example, in $\mathbb{Z}$ the submodules of $\mathbb{Z}$ (as a $\mathbb{Z}$-module) are exactly the subsets $n\mathbb{Z}$, the ideals of $\mathbb{Z}$.
 

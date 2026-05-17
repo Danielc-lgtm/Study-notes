@@ -32,7 +32,7 @@ A **$p$-group** is a finite group $G$ whose order is a power of a prime: $|G| = 
 
 Equivalently, by [[Thm - Lagrange's Theorem|Lagrange's theorem]] and [[Group Theory II — §1.3–1.4|Cauchy's theorem]], a finite group $G$ is a $p$-group if and only if **every element of $G$ has order a power of $p$**. (Lagrange gives the forward direction: each $\operatorname{ord}(g)$ divides $p^n$, hence is a power of $p$. Cauchy gives the converse: if a prime $q \neq p$ divided $|G|$ there would be an element of order $q$, contradicting $p$-power order.)
 
-A subgroup $H \leq G$ is called a **$p$-subgroup** of an arbitrary finite group $G$ if $H$ is itself a $p$-group, that is, if $|H|$ is a power of $p$ — even when $|G|$ itself is not a prime power. The largest possible $p$-subgroups are the [[Def - Sylow p-Subgroup|Sylow $p$-subgroups]].
+A subgroup $H \leq G$ is called a **$p$-subgroup** of an arbitrary finite group $G$ if $H$ is itself a $p$-group, that is, if $|H|$ is a power of $p$ — even when $|G|$ itself is not a prime power. The largest possible $p$-subgroups are the [[Def - Sylow p-Subgroup|Sylow p-subgroups]].
 
 ---
 
@@ -54,7 +54,7 @@ Against probability, there is no useful analogy: $p$-groups are an arithmetic-st
 
 **Is an instance: the dihedral group $D_8$ and the quaternion group $Q_8$.** Both have order $8 = 2^3$, so both are $2$-groups, and both are *non-abelian*. They are the two non-abelian groups of order $8$, and they illustrate the rigidity claimed below: each has centre of order exactly $2$ (non-trivial, as it must be), and each has subgroups of orders $1, 2, 4, 8$. They are the standard test objects for any statement about non-abelian $p$-groups.
 
-**Is an instance: the unitriangular group $U_n(\mathbb{Z}/p)$.** The $n \times n$ upper-triangular matrices over the field $\mathbb{Z}/p$ with all diagonal entries equal to $1$ form a group of order $p^{\binom{n}{2}}$ — a $p$-group, and the canonical [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $\mathrm{GL}_n(\mathbb{Z}/p)$. Its central series is visible: conjugation pushes non-zero entries toward the top-right corner.
+**Is an instance: the unitriangular group $U_n(\mathbb{Z}/p)$.** The $n \times n$ upper-triangular matrices over the field $\mathbb{Z}/p$ with all diagonal entries equal to $1$ form a group of order $p^{\binom{n}{2}}$ — a $p$-group, and the canonical [[Def - Sylow p-Subgroup|Sylow p-subgroup]] of $\mathrm{GL}_n(\mathbb{Z}/p)$. Its central series is visible: conjugation pushes non-zero entries toward the top-right corner.
 
 **Is NOT an instance: the symmetric group $S_3$.** Its order is $6 = 2 \cdot 3$, divisible by *two* distinct primes, so it is not a $p$-group for any $p$. Concretely it contains an element of order $2$ (a transposition) and an element of order $3$ (a $3$-cycle); the presence of orders that are powers of different primes is exactly the obstruction. Note $S_3$ does have $2 \mid |S_3|$, but "$p$ divides $|G|$" is far weaker than "$|G|$ is a power of $p$" — this non-example probes that distinction.
 
@@ -71,7 +71,7 @@ Against probability, there is no useful analogy: $p$-groups are an arithmetic-st
 # Unlocked by This
 
 > [!tip] Sylow $p$-Subgroup *(from §1.7)*
-> Once "$p$-group" is in hand, an arbitrary finite group of order $p^a m$ ($p \nmid m$) can be probed prime-by-prime: a [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] is a $p$-subgroup of the largest order Lagrange permits, $p^a$. [[Thm - Sylow's Theorems|Sylow's theorems]] govern their existence, conjugacy, and number, turning the local study of $p$-groups into a tool for all finite groups.
+> Once "$p$-group" is in hand, an arbitrary finite group of order $p^a m$ ($p \nmid m$) can be probed prime-by-prime: a [[Def - Sylow p-Subgroup|Sylow p-subgroup]] is a $p$-subgroup of the largest order Lagrange permits, $p^a$. [[Thm - Sylow's Theorems|Sylow's theorems]] govern their existence, conjugacy, and number, turning the local study of $p$-groups into a tool for all finite groups.
 
 > [!tip] Nilpotent and Solvable Groups *(from Galois Theory)*
 > Every finite $p$-group is nilpotent — its [[Thm - p-Groups Have Non-Trivial Centre|non-trivial centre]] supplies an abelian normal layer at every stage of a central series — and therefore solvable. A finite group turns out to be nilpotent exactly when it is the [[Def - Direct Product|direct product]] of its Sylow $p$-subgroups. Solvability of the relevant Galois group is what decides whether a polynomial is soluble by radicals.

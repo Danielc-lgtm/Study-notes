@@ -88,7 +88,7 @@ The plan is a proof by contradiction in three stages: pin $n_{11} = 12$; pin $n_
 Assume $G$ is simple, so no $n_p = 1$. For $p = 11$ the constraints $n_{11} \equiv 1 \pmod{11}$, $n_{11} \mid 12$ leave $\{1, 12\}$; deleting $1$ gives $n_{11} = 12$. Since $11$ appears to the first power, this gives $12 \cdot 10 = 120$ elements of order $11$.
 
 > [!note]- Derivation
-> Factor $|G| = 132 = 2^2 \cdot 3 \cdot 11$. Suppose for contradiction that $G$ is [[Def - Simple Group|simple]]. If any $n_p = 1$, the unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] would be [[Thm - A Unique Sylow Subgroup is Normal|normal]] and proper non-trivial (its order is $p^a$ with $1 < p^a < 132$), contradicting simplicity. So
+> Factor $|G| = 132 = 2^2 \cdot 3 \cdot 11$. Suppose for contradiction that $G$ is [[Def - Simple Group|simple]]. If any $n_p = 1$, the unique [[Def - Sylow p-Subgroup|Sylow p-subgroup]] would be [[Thm - A Unique Sylow Subgroup is Normal|normal]] and proper non-trivial (its order is $p^a$ with $1 < p^a < 132$), contradicting simplicity. So
 > $$n_p \neq 1 \quad \text{for all } p \in \{2, 3, 11\}.$$
 >
 > *The prime $11$.* With respect to $11$, $|G| = 11^1 \cdot 12$, so $m = 12$. [[Thm - Sylow's Theorems|Sylow III]] gives $n_{11} \mid 12$ and $n_{11} \equiv 1 \pmod{11}$. The divisors of $12$ are $1, 2, 3, 4, 6, 12$; modulo $11$ these are $1, 2, 3, 4, 6, 1$, so only $1$ and $12$ are $\equiv 1$. The constraints leave $n_{11} \in \{1, 12\}$, and simplicity deletes $1$, so
@@ -145,7 +145,7 @@ By the [[Ex - Counting elements of prime order with Sylow subgroups|counting fac
 > Every line since Step 1 used the standing assumption that $G$ is [[Def - Simple Group|simple]]; the contradiction refutes it. Therefore $G$ is **not simple**: no group of order $132$ is simple. $\blacksquare$
 
 > [!note]- Complete formal solution
-> Let $|G| = 132 = 2^2 \cdot 3 \cdot 11$ and suppose, for contradiction, that $G$ is [[Def - Simple Group|simple]]. Then no $n_p = 1$, since a unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] would be a proper non-trivial [[Thm - A Unique Sylow Subgroup is Normal|normal subgroup]].
+> Let $|G| = 132 = 2^2 \cdot 3 \cdot 11$ and suppose, for contradiction, that $G$ is [[Def - Simple Group|simple]]. Then no $n_p = 1$, since a unique [[Def - Sylow p-Subgroup|Sylow p-subgroup]] would be a proper non-trivial [[Thm - A Unique Sylow Subgroup is Normal|normal subgroup]].
 >
 > *The prime $11$.* Here $|G| = 11^1 \cdot 12$. By [[Thm - Sylow's Theorems|Sylow III]], $n_{11} \mid 12$ and $n_{11} \equiv 1 \pmod{11}$, leaving $n_{11} \in \{1, 12\}$; since $n_{11} \neq 1$, $n_{11} = 12$. As $11^2 \nmid 132$, distinct Sylow $11$-subgroups (cyclic of order $11$) meet only in $\{e\}$, so $G$ has exactly $n_{11}(11-1) = 12 \cdot 10 = 120$ elements of order $11$.
 >

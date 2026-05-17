@@ -13,7 +13,7 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $G$ be a finite group and let $p$ be a prime such that $p$ divides $|G|$ but $p^2$ does not — so that every [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] of $G$ has order exactly $p$. Write $n_p$ for the number of Sylow $p$-subgroups. Prove that $G$ contains exactly $n_p(p-1)$ elements of order $p$.
+Let $G$ be a finite group and let $p$ be a prime such that $p$ divides $|G|$ but $p^2$ does not — so that every [[Def - Sylow p-Subgroup|Sylow p-subgroup]] of $G$ has order exactly $p$. Write $n_p$ for the number of Sylow $p$-subgroups. Prove that $G$ contains exactly $n_p(p-1)$ elements of order $p$.
 
 **Recall:**
 
@@ -119,7 +119,7 @@ The order-$p$ elements form a disjoint union of $n_p$ sets, each of size $p - 1$
 > That is the claimed count. $\blacksquare$
 
 > [!note]- Complete formal solution
-> Let $|G| = p^a m$ with $p \nmid m$. The hypothesis $p \mid |G|$, $p^2 \nmid |G|$ gives $a = 1$, so every [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] has order $p$.
+> Let $|G| = p^a m$ with $p \nmid m$. The hypothesis $p \mid |G|$, $p^2 \nmid |G|$ gives $a = 1$, so every [[Def - Sylow p-Subgroup|Sylow p-subgroup]] has order $p$.
 >
 > *Each Sylow $p$-subgroup contributes $p - 1$ elements of order $p$.* Let $P$ be a Sylow $p$-subgroup, $|P| = p$. By [[Thm - Lagrange's Theorem|Lagrange]], every $x \in P$ has $\operatorname{ord}(x) \mid p$, so $\operatorname{ord}(x) \in \{1, p\}$. Only $e$ has order $1$, so each of the $p - 1$ non-identity elements of $P$ has order exactly $p$.
 >

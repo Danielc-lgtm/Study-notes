@@ -129,7 +129,7 @@ A Sylow $2$-subgroup has order $8$ and contains no element of order $7$, so it l
 >
 > With respect to $7$, $|G| = 7^1 \cdot 8$. By [[Thm - Sylow's Theorems|Sylow III]], $n_7 \mid 8$ and $n_7 \equiv 1 \pmod 7$; the divisors of $8$ congruent to $1$ modulo $7$ are $1$ and $8$, so $n_7 \in \{1, 8\}$.
 >
-> *Case $n_7 = 1$.* The unique [[Def - Sylow p-Subgroup|Sylow $7$-subgroup]] is [[Thm - A Unique Sylow Subgroup is Normal|normal]]; it has order $7$, so it is a proper non-trivial normal subgroup, and $G$ is not [[Def - Simple Group|simple]].
+> *Case $n_7 = 1$.* The unique [[Def - Sylow p-Subgroup|Sylow 7-subgroup]] is [[Thm - A Unique Sylow Subgroup is Normal|normal]]; it has order $7$, so it is a proper non-trivial normal subgroup, and $G$ is not [[Def - Simple Group|simple]].
 >
 > *Case $n_7 = 8$.* Since $7$ divides $56$ to the first power, distinct Sylow $7$-subgroups (each of order $7$, hence cyclic) intersect only in $\{e\}$, so the number of elements of order $7$ is exactly $n_7(7-1) = 8 \cdot 6 = 48$. Call this set $E$; then $L := G \setminus E$ has $|L| = 56 - 48 = 8$, and every element of $L$ has order $\neq 7$.
 >

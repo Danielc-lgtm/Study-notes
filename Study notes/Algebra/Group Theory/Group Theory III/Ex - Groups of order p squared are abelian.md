@@ -20,13 +20,13 @@ Let $p$ be a prime number and let $G$ be a group of order $p^2$. Prove that $G$ 
 
 Three objects are in play: the order of a group, the centre, and the quotient by the centre.
 
-A [[Def - p-group|$p$-group]] is a finite group whose order is a power $p^n$ of a prime, with $n \geq 1$. A group of order $p^2$ is the case $n = 2$, the smallest $p$-group order that is not prime.
+A [[Def - p-group|p-group]] is a finite group whose order is a power $p^n$ of a prime, with $n \geq 1$. A group of order $p^2$ is the case $n = 2$, the smallest $p$-group order that is not prime.
 
 A group $G$ is [[Def - Abelian Group|abelian]] when $xy = yx$ for every pair of elements $x, y \in G$ — the multiplication does not depend on the order of the factors.
 
 ![[Def - Centraliser and Centre#The Definition]]
 
-The centre $Z(G)$ is itself a subgroup, and it is always normal, so the quotient group $G/Z(G)$ is defined. We will need two facts about it. First, by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], a non-trivial finite [[Def - p-group|$p$-group]] has $Z(G) \neq \{e\}$ — its centre contains more than just the identity. Second:
+The centre $Z(G)$ is itself a subgroup, and it is always normal, so the quotient group $G/Z(G)$ is defined. We will need two facts about it. First, by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], a non-trivial finite [[Def - p-group|p-group]] has $Z(G) \neq \{e\}$ — its centre contains more than just the identity. Second:
 
 ![[Thm - Quotient by the Centre and Commutativity#Statement]]
 
@@ -36,7 +36,7 @@ Finally, [[Thm - Lagrange's Theorem|Lagrange's theorem]] states that the order o
 
 # Convergent Strategy
 
-**Problem class.** This is a *prove a group is abelian from its order alone* problem, the §1.5 archetype. As the [[Group Theory III — §1.5–1.7#Problem-Solving Strategy|problem-solving strategy]] of the topic page records, every structural fact about [[Def - p-group|$p$-groups]] is extracted from one source — the centre is non-trivial — and the input here is nothing but the integer $p^2$. The whole content of the problem is the conversion of that arithmetic into commutativity.
+**Problem class.** This is a *prove a group is abelian from its order alone* problem, the §1.5 archetype. As the [[Group Theory III — §1.5–1.7#Problem-Solving Strategy|problem-solving strategy]] of the topic page records, every structural fact about [[Def - p-group|p-groups]] is extracted from one source — the centre is non-trivial — and the input here is nothing but the integer $p^2$. The whole content of the problem is the conversion of that arithmetic into commutativity.
 
 **Assumption pattern.** The single hypothesis is $|G| = p^2$: an order that is a prime *squared*. Two features of this number do the work. It is a prime power, which triggers [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] and forces $Z(G) \neq \{e\}$. And it has exactly three divisors — $1$, $p$, $p^2$ — which means [[Thm - Lagrange's Theorem|Lagrange]] confines $|Z(G)|$ to a list of only three values, one of which is immediately excluded. A short list of candidate orders is a rigid object, and rigidity is what makes the argument go through.
 
@@ -61,7 +61,7 @@ This solution deploys the following legal operations from [[Group Theory III —
 # Hints
 
 > [!note]- Hint 1
-> The hypothesis is a prime power, so the first thing to write down is what every [[Def - p-group|$p$-group]] problem starts with: the centre is non-trivial. Then ask what [[Thm - Lagrange's Theorem|Lagrange's theorem]] permits the *order* of that centre to be.
+> The hypothesis is a prime power, so the first thing to write down is what every [[Def - p-group|p-group]] problem starts with: the centre is non-trivial. Then ask what [[Thm - Lagrange's Theorem|Lagrange's theorem]] permits the *order* of that centre to be.
 
 > [!note]- Hint 2
 > Lagrange and non-triviality together leave only two possibilities, $|Z(G)| = p$ or $|Z(G)| = p^2$. The case $|Z(G)| = p^2$ is the conclusion you want, so it needs no work. Spend all your effort ruling out $|Z(G)| = p$.
@@ -80,7 +80,7 @@ The strategy is to pin the order of the centre. [[Thm - Lagrange's Theorem|Lagra
 $G$ is a $p$-group, so $Z(G) \neq \{e\}$. By [[Thm - Lagrange's Theorem|Lagrange]] the order $|Z(G)|$ divides $p^2$, hence lies in $\{1, p, p^2\}$; non-triviality removes $1$.
 
 > [!note]- Derivation
-> By definition $G$ has order $p^2 = p^2$, a prime power with exponent $2 \geq 1$, so $G$ is a [[Def - p-group|$p$-group]]. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] states that every non-trivial finite $p$-group has a non-trivial [[Def - Centraliser and Centre|centre]]; since $|G| = p^2 > 1$, the group $G$ is non-trivial, and therefore
+> By definition $G$ has order $p^2 = p^2$, a prime power with exponent $2 \geq 1$, so $G$ is a [[Def - p-group|p-group]]. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] states that every non-trivial finite $p$-group has a non-trivial [[Def - Centraliser and Centre|centre]]; since $|G| = p^2 > 1$, the group $G$ is non-trivial, and therefore
 > $$Z(G) \neq \{e\}.$$
 >
 > The centre $Z(G)$ is a subgroup of $G$. [[Thm - Lagrange's Theorem|Lagrange's theorem]] says the order of any subgroup of a finite group divides the order of the group, so $|Z(G)|$ divides $|G| = p^2$. The positive divisors of $p^2$ are exactly $1$, $p$, and $p^2$ — these and no others, because $p$ is prime. Hence
@@ -115,7 +115,7 @@ Steps 1 and 2 leave only $|Z(G)| = p^2$. Then $|Z(G)| = |G|$ with $Z(G) \leq G$ 
 > [!note]- Complete formal solution
 > Let $p$ be prime and $|G| = p^2$.
 >
-> Since $|G| = p^2$ is a prime power, $G$ is a [[Def - p-group|$p$-group]], and as $|G| > 1$ it is non-trivial. By [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], $Z(G) \neq \{e\}$.
+> Since $|G| = p^2$ is a prime power, $G$ is a [[Def - p-group|p-group]], and as $|G| > 1$ it is non-trivial. By [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], $Z(G) \neq \{e\}$.
 >
 > The centre $Z(G)$ is a subgroup of $G$, so by [[Thm - Lagrange's Theorem|Lagrange's theorem]] its order divides $|G| = p^2$. The divisors of $p^2$ are $1, p, p^2$, and $Z(G) \neq \{e\}$ rules out $1$. Hence
 > $$|Z(G)| \in \{p,\ p^2\}.$$
@@ -130,7 +130,7 @@ Steps 1 and 2 leave only $|Z(G)| = p^2$. Then $|Z(G)| = |G|$ with $Z(G) \leq G$ 
 
 # Key Takeaways
 
-**To prove a $p$-group is abelian, do not exhibit commuting elements — squeeze the order of the centre.** Commutativity looks like a statement about *pairs* of elements, and the naive instinct is to take an arbitrary $x, y$ and show $xy = yx$. That instinct is almost never the right one for [[Def - p-group|$p$-groups]], because there is no handle on a general pair. The reusable move is to recast "abelian" as the single equation $Z(G) = G$, and then prove that equation by *trapping the integer $|Z(G)|$*: [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] supplies a lower bound (the centre is not trivial), [[Thm - Lagrange's Theorem|Lagrange]] supplies a short candidate list (the centre's order divides $|G|$), and a structural obstruction deletes the middle candidates until only $|Z(G)| = |G|$ survives. The trigger for this whole manoeuvre is the phrase "prime power order" — whenever you must prove a $p$-group has some property, ask first whether the property is equivalent to a statement about $Z(G)$, because the centre is the only part of a $p$-group you get information about for free.
+**To prove a $p$-group is abelian, do not exhibit commuting elements — squeeze the order of the centre.** Commutativity looks like a statement about *pairs* of elements, and the naive instinct is to take an arbitrary $x, y$ and show $xy = yx$. That instinct is almost never the right one for [[Def - p-group|p-groups]], because there is no handle on a general pair. The reusable move is to recast "abelian" as the single equation $Z(G) = G$, and then prove that equation by *trapping the integer $|Z(G)|$*: [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] supplies a lower bound (the centre is not trivial), [[Thm - Lagrange's Theorem|Lagrange]] supplies a short candidate list (the centre's order divides $|G|$), and a structural obstruction deletes the middle candidates until only $|Z(G)| = |G|$ survives. The trigger for this whole manoeuvre is the phrase "prime power order" — whenever you must prove a $p$-group has some property, ask first whether the property is equivalent to a statement about $Z(G)$, because the centre is the only part of a $p$-group you get information about for free.
 
 **A cyclic $G/Z(G)$ is a contradiction waiting to happen — never an admissible end state.** The decisive lever in this problem is [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]], and the right way to hold it in memory is not as a neutral implication but as a *self-destruct rule*: the moment $G/Z(G)$ is cyclic, $G$ becomes abelian, which makes $Z(G)$ the whole group, which makes $G/Z(G)$ *trivial*. So a non-trivial cyclic $G/Z(G)$ cannot exist. This converts the theorem into a powerful proof-by-contradiction engine. Any time an argument produces a quotient $G/Z(G)$ of prime order — or, more generally, any cyclic $G/Z(G)$ — you have reached a contradiction, because prime-order groups are automatically cyclic and a cyclic quotient by the centre is impossible unless it was trivial to begin with. The pattern recurs throughout $p$-group theory: it is why a group of order $p^2$ cannot have a centre of order exactly $p$, and the same reasoning shows a group of order $p^3$ cannot have a centre of index $p^2$.
 

@@ -14,7 +14,7 @@ tags: [algebra, module-theory]
 
 # Notation
 
-$R$ is a commutative ring with $1_R$, and $M, N$ are [[Def - Module|$R$-modules]]. A module homomorphism is written $f : M \to N$. Its **kernel** is $\ker f = \{m \in M : f(m) = 0_N\} \subseteq M$ and its **image** is $\operatorname{im} f = f(M) = \{f(m) : m \in M\} \subseteq N$. An isomorphism is denoted $f : M \xrightarrow{\sim} N$, and $M \cong N$ means there exists an isomorphism between them. On the left of the defining identity $f(rm) = rf(m)$ the action is that of $M$; on the right it is that of $N$. See [[Modules I — §3.1–3.2]] for the full notation registry.
+$R$ is a commutative ring with $1_R$, and $M, N$ are [[Def - Module|R-modules]]. A module homomorphism is written $f : M \to N$. Its **kernel** is $\ker f = \{m \in M : f(m) = 0_N\} \subseteq M$ and its **image** is $\operatorname{im} f = f(M) = \{f(m) : m \in M\} \subseteq N$. An isomorphism is denoted $f : M \xrightarrow{\sim} N$, and $M \cong N$ means there exists an isomorphism between them. On the left of the defining identity $f(rm) = rf(m)$ the action is that of $M$; on the right it is that of $N$. See [[Modules I — §3.1–3.2]] for the full notation registry.
 
 This is a **compound page**: it defines four interlocking notions — module homomorphism, isomorphism, kernel, and image — because they are introduced together and none is fully usable without the others.
 
@@ -36,7 +36,7 @@ An **isomorphism** is then the natural notion of "the two modules are the same":
 
 # The Definition
 
-Let $M$ and $N$ be [[Def - Module|$R$-modules]].
+Let $M$ and $N$ be [[Def - Module|R-modules]].
 
 **Module homomorphism.** A function $f : M \to N$ is an **$R$-module homomorphism** (or **$R$-linear map**) if:
 

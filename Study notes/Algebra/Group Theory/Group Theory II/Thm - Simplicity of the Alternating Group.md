@@ -144,7 +144,7 @@ Each lemma below is independently practiceable in roughly five minutes (the case
 > **Why needed:** It upgrades a single $3$-cycle in $H$ to all $3$-cycles, which by Lemma 1 makes $H = A_n$.
 >
 > > [!note]- Full proof
-> > Suppose $(a\,b\,c) \in H$; we show an arbitrary $3$-cycle, say $(1\,2\,3)$, also lies in $H$. Since $(a\,b\,c)$ and $(1\,2\,3)$ have the same cycle type, by [[Thm - Conjugacy Classes of the Symmetric Group|conjugacy in $S_n$]] there is $\sigma \in S_n$ with $(a\,b\,c) = \sigma(1\,2\,3)\sigma^{-1}$.
+> > Suppose $(a\,b\,c) \in H$; we show an arbitrary $3$-cycle, say $(1\,2\,3)$, also lies in $H$. Since $(a\,b\,c)$ and $(1\,2\,3)$ have the same cycle type, by [[Thm - Conjugacy Classes of the Symmetric Group|conjugacy in Sₙ]] there is $\sigma \in S_n$ with $(a\,b\,c) = \sigma(1\,2\,3)\sigma^{-1}$.
 > >
 > > If $\sigma$ is even, $\sigma \in A_n$, and by normality of $H$,
 > > $$(1\,2\,3) = \sigma^{-1}(a\,b\,c)\,\sigma \in \sigma^{-1} H \sigma = H.$$
@@ -204,7 +204,7 @@ Each lemma below is independently practiceable in roughly five minutes (the case
 > $$(a\,b)(a\,b) = e, \qquad (a\,b)(b\,c) = (a\,b\,c), \qquad (a\,b)(c\,d) = (a\,c\,b)(a\,c\,d).$$
 > These three identities cover all overlap patterns of two transpositions, so every element of $A_n$ is a product of $3$-cycles.
 >
-> **Claim 2: if $H$ contains one $3$-cycle, it contains every $3$-cycle.** Suppose $(a\,b\,c) \in H$; let $(1\,2\,3)$ be an arbitrary $3$-cycle. Since the two have equal cycle type, [[Thm - Conjugacy Classes of the Symmetric Group|conjugacy in $S_n$]] gives $\sigma \in S_n$ with $(a\,b\,c) = \sigma(1\,2\,3)\sigma^{-1}$. If $\sigma \in A_n$, normality of $H$ gives $(1\,2\,3) = \sigma^{-1}(a\,b\,c)\sigma \in H$. If $\sigma$ is odd, set $\bar\sigma = \sigma\cdot(4\,5)$ (this needs $n \geq 5$); then $\bar\sigma$ is even, and since $(4\,5)$ commutes with $(1\,2\,3)$,
+> **Claim 2: if $H$ contains one $3$-cycle, it contains every $3$-cycle.** Suppose $(a\,b\,c) \in H$; let $(1\,2\,3)$ be an arbitrary $3$-cycle. Since the two have equal cycle type, [[Thm - Conjugacy Classes of the Symmetric Group|conjugacy in Sₙ]] gives $\sigma \in S_n$ with $(a\,b\,c) = \sigma(1\,2\,3)\sigma^{-1}$. If $\sigma \in A_n$, normality of $H$ gives $(1\,2\,3) = \sigma^{-1}(a\,b\,c)\sigma \in H$. If $\sigma$ is odd, set $\bar\sigma = \sigma\cdot(4\,5)$ (this needs $n \geq 5$); then $\bar\sigma$ is even, and since $(4\,5)$ commutes with $(1\,2\,3)$,
 > $$\bar\sigma(1\,2\,3)\bar\sigma^{-1} = \sigma(4\,5)(1\,2\,3)(4\,5)\sigma^{-1} = \sigma(1\,2\,3)\sigma^{-1} = (a\,b\,c),$$
 > so by normality $(1\,2\,3) = \bar\sigma^{-1}(a\,b\,c)\bar\sigma \in H$. Hence $H$ contains all $3$-cycles, and by Claim 1, $H = A_n$.
 >

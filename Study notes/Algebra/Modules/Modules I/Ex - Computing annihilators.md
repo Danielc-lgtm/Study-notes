@@ -61,7 +61,7 @@ This solution deploys the following legal operations from [[Modules I — §3.1�
 
 4. **Compute an annihilator of a module as an intersection of element-annihilators.** $\operatorname{Ann}(M)=\bigcap_{m}\operatorname{Ann}(m)$; for $M=\mathbb{Z}/n\mathbb{Z}$ this intersection of principal ideals is taken via least common multiple of generators.
 
-5. **Use that an ideal of $\mathbb{Z}$ has a unique non-negative generator.** Since [[Ex - Every ideal of the integers is principal|every ideal of $\mathbb{Z}$ is principal]], the annihilator — known abstractly to be an ideal — is fully determined once one generator is found; this licenses "find the generator and stop."
+5. **Use that an ideal of $\mathbb{Z}$ has a unique non-negative generator.** Since [[Ex - Every ideal of the integers is principal|every ideal of ℤ is principal]], the annihilator — known abstractly to be an ideal — is fully determined once one generator is found; this licenses "find the generator and stop."
 
 ---
 

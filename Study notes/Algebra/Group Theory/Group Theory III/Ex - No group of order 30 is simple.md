@@ -112,7 +112,7 @@ An element of order $5$ cannot have order $3$, so the two sets are disjoint and 
 > [!note]- Complete formal solution
 > Let $|G| = 30 = 2 \cdot 3 \cdot 5$ and suppose, for contradiction, that $G$ is [[Def - Simple Group|simple]].
 >
-> If any $n_p = 1$, the unique [[Def - Sylow p-Subgroup|Sylow $p$-subgroup]] would be a proper non-trivial [[Thm - A Unique Sylow Subgroup is Normal|normal subgroup]], contradicting simplicity. So $n_p \neq 1$ for $p \in \{2, 3, 5\}$.
+> If any $n_p = 1$, the unique [[Def - Sylow p-Subgroup|Sylow p-subgroup]] would be a proper non-trivial [[Thm - A Unique Sylow Subgroup is Normal|normal subgroup]], contradicting simplicity. So $n_p \neq 1$ for $p \in \{2, 3, 5\}$.
 >
 > By [[Thm - Sylow's Theorems|Sylow III]]: for $p = 5$, $n_5 \mid 6$ and $n_5 \equiv 1 \pmod 5$, leaving $n_5 \in \{1, 6\}$, hence $n_5 = 6$. For $p = 3$, $n_3 \mid 10$ and $n_3 \equiv 1 \pmod 3$, leaving $n_3 \in \{1, 10\}$, hence $n_3 = 10$.
 >

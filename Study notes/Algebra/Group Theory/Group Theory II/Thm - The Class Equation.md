@@ -52,7 +52,7 @@ The cleanest source is **the order $|G|$ is a prime power**, $|G| = p^n$. The br
 
 A subtler source is **a problem about whether the group is abelian, or how far it is from abelian**. Property $B$ is any constraint on $Z(G)$ or on commutativity. The bridge is that $Z(G)$ appears *explicitly* and isolated in the class equation — it is the only term not of the form "non-trivial index". So any handle on the other terms is automatically a handle on $|Z(G)|$. This is non-obvious because most identities involving a group do not feature the centre at all; the class equation is the one that puts it in the open. For instance, knowing that $G/Z(G)$ is cyclic forces $G$ abelian, and the class equation is often the route to pinning down $|Z(G)|$ in the first place.
 
-A third source is **a problem that supplies the conjugacy class sizes, or the centraliser orders, of a specific group**. Property $B$ is a table of class sizes — common for symmetric and alternating groups, where [[Thm - Conjugacy Classes of the Symmetric Group|cycle type makes every class size computable]]. The bridge is that the class equation is then a numerical *consistency check and completeness check*: the sizes must sum to $|G|$, the singletons must account for $|Z(G)|$, and any sub-collection of classes that could form a normal subgroup must include the identity's class and sum to a divisor of $|G|$. This is the source behind the brute-force proof that [[Thm - Simplicity of the Alternating Group|$A_5$ is simple]].
+A third source is **a problem that supplies the conjugacy class sizes, or the centraliser orders, of a specific group**. Property $B$ is a table of class sizes — common for symmetric and alternating groups, where [[Thm - Conjugacy Classes of the Symmetric Group|cycle type makes every class size computable]]. The bridge is that the class equation is then a numerical *consistency check and completeness check*: the sizes must sum to $|G|$, the singletons must account for $|Z(G)|$, and any sub-collection of classes that could form a normal subgroup must include the identity's class and sum to a divisor of $|G|$. This is the source behind the brute-force proof that [[Thm - Simplicity of the Alternating Group|A₅ is simple]].
 
 A fourth source is **a counting problem that asks how many conjugates a given element has**. Property $B$ is "an element $x$ is distinguished and its conjugates matter". The bridge is the proposition directly: the number of conjugates is $|G : C_G(x)|$, so the count reduces to "how many elements commute with $x$". This is non-obvious because conjugates are defined by an existential ("$\exists g$ with $gxg^{-1} = y$") while the centraliser is a concrete subgroup you can write down and measure.
 
@@ -135,7 +135,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 > > *Compatibility:* for $g, h \in G$,
 > > $$g \ast (h \ast x) = g(hxh^{-1})g^{-1} = (gh)\,x\,(h^{-1}g^{-1}) = (gh)\,x\,(gh)^{-1} = (gh) \ast x.$$
 > >
-> > Both axioms hold, so conjugation is an action. (Its [[Thm - Actions Correspond to Homomorphisms|permutation representation]] $\varphi : G \to \operatorname{Sym}(G)$ even lands in [[Def - Automorphism Group|$\operatorname{Aut}(G)$]], since each $\varphi(g)$ is a homomorphism: $\varphi(g)(x_1 x_2) = g x_1 x_2 g^{-1} = (g x_1 g^{-1})(g x_2 g^{-1}) = \varphi(g)(x_1)\,\varphi(g)(x_2)$.)
+> > Both axioms hold, so conjugation is an action. (Its [[Thm - Actions Correspond to Homomorphisms|permutation representation]] $\varphi : G \to \operatorname{Sym}(G)$ even lands in [[Def - Automorphism Group|operatornameAut(G)]], since each $\varphi(g)$ is a homomorphism: $\varphi(g)(x_1 x_2) = g x_1 x_2 g^{-1} = (g x_1 g^{-1})(g x_2 g^{-1}) = \varphi(g)(x_1)\,\varphi(g)(x_2)$.)
 
 > [!note]- Lemma 2: The stabiliser of $x$ under conjugation is $C_G(x)$
 > **Statement:** For the conjugation action, the stabiliser of $x \in G$ is the [[Def - Centraliser and Centre|centraliser]] $C_G(x) = \{g \in G : gx = xg\}$.
@@ -196,7 +196,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 > $$|G| = |Z(G)| + \sum_i |G : C_G(x_i)|,$$
 > with the stated properties of the summands. $\qquad\blacksquare$
 >
-> **Remark (the lever).** If $|G| = p^n$ for a prime $p$, then by the proposition every class size divides $p^n$, so every non-central summand $|G : C_G(x_i)|$ is a positive power of $p$, hence divisible by $p$. Reducing the class equation modulo $p$ kills the sum, leaving $0 \equiv |Z(G)| \pmod p$. Therefore $p \mid |Z(G)|$, and since $e \in Z(G)$ gives $|Z(G)| \geq 1$, in fact $|Z(G)| \geq p$: a finite [[Group Theory III — §1.5–1.7|$p$-group has non-trivial centre]].
+> **Remark (the lever).** If $|G| = p^n$ for a prime $p$, then by the proposition every class size divides $p^n$, so every non-central summand $|G : C_G(x_i)|$ is a positive power of $p$, hence divisible by $p$. Reducing the class equation modulo $p$ kills the sum, leaving $0 \equiv |Z(G)| \pmod p$. Therefore $p \mid |Z(G)|$, and since $e \in Z(G)$ gives $|Z(G)| \geq 1$, in fact $|Z(G)| \geq p$: a finite [[Group Theory III — §1.5–1.7|p-group has non-trivial centre]].
 
 ---
 

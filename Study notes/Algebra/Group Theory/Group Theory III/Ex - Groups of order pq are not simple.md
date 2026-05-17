@@ -13,7 +13,7 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $p < q$ be prime numbers and let $G$ be a group of order $|G| = pq$. Prove that $G$ has a normal [[Def - Sylow p-Subgroup|Sylow $q$-subgroup]]. Conclude that $G$ is not [[Def - Simple Group|simple]].
+Let $p < q$ be prime numbers and let $G$ be a group of order $|G| = pq$. Prove that $G$ has a normal [[Def - Sylow p-Subgroup|Sylow q-subgroup]]. Conclude that $G$ is not [[Def - Simple Group|simple]].
 
 **Recall:**
 
@@ -113,7 +113,7 @@ With $n_q = 1$ there is exactly one Sylow $q$-subgroup; by [[Thm - A Unique Sylo
 > [!note]- Complete formal solution
 > Let $p < q$ be primes and $|G| = pq$.
 >
-> With respect to the prime $q$, write $|G| = q^a m$. Since $q \nmid p$ (as $0 < p < q$), we have $a = 1$ and $m = p$. By [[Thm - Sylow's Theorems|Sylow's third theorem]], the number $n_q$ of [[Def - Sylow p-Subgroup|Sylow $q$-subgroups]] satisfies $n_q \mid p$ and $n_q \equiv 1 \pmod q$.
+> With respect to the prime $q$, write $|G| = q^a m$. Since $q \nmid p$ (as $0 < p < q$), we have $a = 1$ and $m = p$. By [[Thm - Sylow's Theorems|Sylow's third theorem]], the number $n_q$ of [[Def - Sylow p-Subgroup|Sylow q-subgroups]] satisfies $n_q \mid p$ and $n_q \equiv 1 \pmod q$.
 >
 > From $n_q \mid p$ and $p$ prime, $n_q \in \{1, p\}$. The candidate $n_q = p$ would require $q \mid (p - 1)$; but $0 < p - 1 < q$, so no positive multiple of $q$ equals $p - 1$, and this is impossible. Hence $n_q = 1$.
 >

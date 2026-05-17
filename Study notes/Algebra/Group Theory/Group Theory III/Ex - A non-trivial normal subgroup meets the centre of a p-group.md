@@ -15,7 +15,7 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $G$ be a finite [[Def - p-group|$p$-group]] and let $N \trianglelefteq G$ be a normal subgroup with $N \neq \{e\}$. Prove that
+Let $G$ be a finite [[Def - p-group|p-group]] and let $N \trianglelefteq G$ be a normal subgroup with $N \neq \{e\}$. Prove that
 $$N \cap Z(G) \neq \{e\},$$
 that is, $N$ contains a non-identity element of the centre of $G$.
 
@@ -23,7 +23,7 @@ that is, $N$ contains a non-identity element of the centre of $G$.
 
 The objects in play are a $p$-group, a normal subgroup, the centre, and the action of a group on a set by conjugation.
 
-A [[Def - p-group|$p$-group]] is a finite group of order $p^n$ for a prime $p$ and $n \geq 1$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]] every subgroup of $G$ has order a power of $p$, so in particular $|N|$ is a power of $p$; since $N \neq \{e\}$ this power is at least $p^1$, and therefore $p \mid |N|$.
+A [[Def - p-group|p-group]] is a finite group of order $p^n$ for a prime $p$ and $n \geq 1$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]] every subgroup of $G$ has order a power of $p$, so in particular $|N|$ is a power of $p$; since $N \neq \{e\}$ this power is at least $p^1$, and therefore $p \mid |N|$.
 
 ![[Def - Normal Subgroup#The Definition]]
 
@@ -37,7 +37,7 @@ A group [[Def - Group Action|acts]] on a set $X$ when each $g \in G$ permutes $X
 
 # Convergent Strategy
 
-**Problem class.** This is a *fixed-point counting* problem dressed as a statement about subgroups. The [[Group Theory III — §1.5–1.7#Insights|topic page]] isolates the principle that powers it — the **fixed-point congruence**: a [[Def - p-group|$p$-group]] acting on a finite set $X$ has $|X^G| \equiv |X| \pmod p$, where $X^G$ is the set of fixed points. This exercise is exactly that congruence, applied to a cleverly chosen $X$. It is the same engine that drives [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] — indeed this exercise *generalises* that theorem, which is the case $N = G$.
+**Problem class.** This is a *fixed-point counting* problem dressed as a statement about subgroups. The [[Group Theory III — §1.5–1.7#Insights|topic page]] isolates the principle that powers it — the **fixed-point congruence**: a [[Def - p-group|p-group]] acting on a finite set $X$ has $|X^G| \equiv |X| \pmod p$, where $X^G$ is the set of fixed points. This exercise is exactly that congruence, applied to a cleverly chosen $X$. It is the same engine that drives [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] — indeed this exercise *generalises* that theorem, which is the case $N = G$.
 
 **Assumption pattern.** Two hypotheses combine. First, $G$ is a $p$-group, so every orbit of any $G$-action has size a power of $p$ — hence size $1$ or a multiple of $p$, with no middle ground. Second, $N$ is *normal*, which is precisely the condition that makes conjugation by $G$ map $N$ into itself: without normality there would be no action of $G$ on the set $N$ to speak of. The hypothesis $N \neq \{e\}$ contributes the arithmetic fact $p \mid |N|$, the seed of the counting argument.
 
@@ -102,7 +102,7 @@ By the orbit–stabiliser theorem each orbit size divides $|G| = p^n$, so it is 
 > $$|\mathcal{O}_x| = \frac{|G|}{|G_x|},$$
 > where $G_x = \{g \in G : g \ast x = x\}$ is the stabiliser. In particular $|\mathcal{O}_x|$ divides $|G|$.
 >
-> Since $G$ is a [[Def - p-group|$p$-group]], $|G| = p^n$. The divisors of $p^n$ are exactly $1, p, p^2, \dots, p^n$. So every orbit size is one of these. An orbit size therefore falls into exactly one of two cases: it equals $1$ (the divisor $p^0$), or it is one of $p, p^2, \dots, p^n$, every one of which is divisible by $p$. There is no third possibility — this dichotomy is the whole reason a $p$-group hypothesis is so powerful in counting arguments.
+> Since $G$ is a [[Def - p-group|p-group]], $|G| = p^n$. The divisors of $p^n$ are exactly $1, p, p^2, \dots, p^n$. So every orbit size is one of these. An orbit size therefore falls into exactly one of two cases: it equals $1$ (the divisor $p^0$), or it is one of $p, p^2, \dots, p^n$, every one of which is divisible by $p$. There is no third possibility — this dichotomy is the whole reason a $p$-group hypothesis is so powerful in counting arguments.
 
 **Step 3: The size-$1$ orbits are exactly the elements of $N \cap Z(G)$.**
 
@@ -155,7 +155,7 @@ The orbits partition $N$, so $|N| = |N \cap Z(G)| + (\text{multiples of } p)$. S
 
 **When you must place a special element inside a given subset, act on that subset — not on the whole group.** The reflexive version of the centre argument acts $G$ on $G$ by conjugation and concludes $Z(G) \neq \{e\}$. But the target here is sharper: the central element must lie inside the prescribed $N$. The reusable insight is that *the conclusion of a fixed-point count is confined to whatever set you acted on* — the fixed points are a subset of $X$, so if you want them inside $N$, make $X = N$. The price of choosing $X = N$ is that the action must be well-defined on $N$, and this is exactly what the normality hypothesis buys you: conjugation preserves a subset precisely when that subset is normal. So the pattern is: identify the set the conclusion must live in, check that the natural action stabilises it (this is where a "normal" or "invariant" hypothesis gets consumed), and run the count there. This is the same logic by which Sylow's theorems act on cleverly restricted sets — subsets of a given size, cosets of a fixed subgroup — rather than on the group at large.
 
-**The fixed-point congruence is one tool: a $p$-group acting on a finite set has $|X^G| \equiv |X| \pmod p$.** Strip away the specifics and every §1.5 counting argument is this single statement. A [[Def - p-group|$p$-group]] $G$ acting on a finite set $X$ has all orbit sizes equal to powers of $p$, so the non-singleton orbits contribute a multiple of $p$, and the partition identity gives $|X^G| \equiv |X| \pmod p$ where $X^G$ is the fixed-point set. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] is this with $X = G$ under conjugation ($X^G = Z(G)$). This exercise is this with $X = N$ under conjugation ($X^G = N \cap Z(G)$). Sylow III is this with $X = \operatorname{Syl}_p(G)$. Once you recognise a problem as "a $p$-group acting on a finite set, and I care about the fixed points", the conclusion is automatic: count $|X| \bmod p$, and the number of fixed points matches it. The skill being drilled is *seeing the action* — naming the set $X$, the $p$-group, and the fixed-point set you actually want — after which the arithmetic writes itself.
+**The fixed-point congruence is one tool: a $p$-group acting on a finite set has $|X^G| \equiv |X| \pmod p$.** Strip away the specifics and every §1.5 counting argument is this single statement. A [[Def - p-group|p-group]] $G$ acting on a finite set $X$ has all orbit sizes equal to powers of $p$, so the non-singleton orbits contribute a multiple of $p$, and the partition identity gives $|X^G| \equiv |X| \pmod p$ where $X^G$ is the fixed-point set. [[Thm - p-Groups Have Non-Trivial Centre|The non-trivial centre theorem]] is this with $X = G$ under conjugation ($X^G = Z(G)$). This exercise is this with $X = N$ under conjugation ($X^G = N \cap Z(G)$). Sylow III is this with $X = \operatorname{Syl}_p(G)$. Once you recognise a problem as "a $p$-group acting on a finite set, and I care about the fixed points", the conclusion is automatic: count $|X| \bmod p$, and the number of fixed points matches it. The skill being drilled is *seeing the action* — naming the set $X$, the $p$-group, and the fixed-point set you actually want — after which the arithmetic writes itself.
 
 **Distinguish "central in the subgroup" from "central in the ambient group" — the quantifier is everything.** The single most dangerous error in this problem is to identify the fixed points with $Z(N)$, the centre of $N$ as a group in its own right. They are not: a fixed point satisfies $gxg^{-1} = x$ for all $g \in \mathbf{G}$, the entire ambient group, whereas membership in $Z(N)$ would only require commuting with elements of $N$. The fixed-point set is $N \cap Z(G)$, the elements of $N$ that are central in *all* of $G$ — a much stronger and much smaller condition. Whenever an argument involves a conjugation action restricted to a subset, pause and read off precisely which elements the action's group ranges over: that quantifier determines whether you land in $Z(N)$, in $N \cap Z(G)$, or somewhere else, and getting it wrong silently invalidates the count. This vigilance about the scope of a "for all $g$" is a transferable discipline — the same care separates the normaliser $N_G(H)$ from the centraliser $C_G(H)$, and the stabiliser of a point from the stabiliser of a set.
 
