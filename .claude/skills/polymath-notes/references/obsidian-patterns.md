@@ -20,6 +20,8 @@ $$|G| = |G_x| \cdot |G \cdot x|$$
 
 **Exception — never use `$...$` inside a wikilink.** LaTeX is for prose, formal statements, and callout bodies only. Obsidian renders `$...$` literally inside `[[ ]]`, so wikilink display text (and targets) must use Unicode characters instead — see the Wikilinks section below.
 
+**Use only core MathJax/KaTeX commands — never amsmath/physics-package macros.** Obsidian's math renderer supports the *core* TeX command set, not the full set a LaTeX document with `\usepackage{...}` provides. Commands defined by amsmath or other packages render as raw red error text. The most common offender is `\fint` (the average-integral, `⨍`): it is **not** a core command and does not render. Write the average explicitly instead — `\frac{1}{\lambda(B)}\int_B f` rather than `\fint_B f`. Other non-core commands to avoid: `\xfrac`, `\sfrac`, `\abs`, `\norm`, `\bra`, `\ket`, `\dv`, `\pdv` (physics package), `\eqref`, `\numberwithin`, and custom `\newcommand` macros (Obsidian has no preamble — every note is rendered in isolation, so a macro defined in one note is undefined everywhere). When in doubt, prefer the explicit primitive form: `\frac`, `\int`, `\sum`, `\left|...\right|`, `\lVert...\rVert`, `\langle...\rangle`, `\frac{d}{dx}`, `\frac{\partial}{\partial x}`. If a compact notation is genuinely needed repeatedly, spell it out in full each time rather than relying on a macro.
+
 ## Wikilinks
 
 Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the primary linking mechanism in the vault.

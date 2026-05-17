@@ -30,7 +30,7 @@ when the limit exists.
 
 **Assumption pattern:** $d_E(x)$ is precisely the average of $f=\mathbf{1}_E$ over $B(x,r)$; the differentiation theorem says this average $\to f(x)=\mathbf{1}_E(x)$ a.e.
 
-**Theorem routing:** $\mathbf{1}_E\in L^1_{loc}$; differentiation theorem $\Rightarrow\fint_{B(x,r)}\mathbf{1}_E\to\mathbf{1}_E(x)$ a.e., which is $1$ on $E$, $0$ off $E$.
+**Theorem routing:** $\mathbf{1}_E\in L^1_{loc}$; differentiation theorem $\Rightarrow\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E\to\mathbf{1}_E(x)$ a.e., which is $1$ on $E$, $0$ off $E$.
 
 ---
 
@@ -44,10 +44,10 @@ when the limit exists.
 # Hints
 
 > [!note]- Hint 1
-> $\dfrac{\lambda(E\cap B(x,r))}{\lambda(B(x,r))}=\fint_{B(x,r)}\mathbf{1}_E$. What does the differentiation theorem say about this average?
+> $\dfrac{\lambda(E\cap B(x,r))}{\lambda(B(x,r))}=\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E$. What does the differentiation theorem say about this average?
 
 > [!note]- Hint 2
-> The theorem gives $\fint_{B(x,r)}\mathbf{1}_E\to\mathbf{1}_E(x)$ a.e. — and $\mathbf{1}_E(x)$ is $1$ on $E$, $0$ off $E$.
+> The theorem gives $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E\to\mathbf{1}_E(x)$ a.e. — and $\mathbf{1}_E(x)$ is $1$ on $E$, $0$ off $E$.
 
 > [!note]- Hint 3
 > For (b): a "half-dense" $E$ would have $d_E(x)\le1/2$ everywhere — but a.e. point of $E$ has density $1$.
@@ -57,13 +57,13 @@ when the limit exists.
 # Solution
 
 **Step 1 — (a).** $\mathbf{1}_E$ is locally integrable ($|\mathbf{1}_E|\le1$). The [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]] gives, for a.e. $x$,
-$$d_E(x)=\lim_{r\downarrow0}\fint_{B(x,r)}\mathbf{1}_E\,d\lambda=\mathbf{1}_E(x).$$
+$$d_E(x)=\lim_{r\downarrow0}\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E\,d\lambda=\mathbf{1}_E(x).$$
 And $\mathbf{1}_E(x)=1$ for $x\in E$, $=0$ for $x\notin E$. So $d_E=1$ a.e. on $E$ and $d_E=0$ a.e. off $E$ — almost every point of a measurable set is a point of *full density*, and almost every point outside is of *zero density*.
 
-**Step 2 — (b).** Suppose $E$ is measurable with $0<\lambda(E\cap I)<\lambda(I)$ for every interval $I$. Then for every $x$ and every $r$, $0<\fint_{B(x,r)}\mathbf{1}_E<1$, so whenever $d_E(x)$ exists it lies in $[0,1]$ and — by the strict inequalities, taking $r\to0$ — one might hope to force $d_E(x)\notin\{0,1\}$. By (a), however, $d_E(x)\in\{0,1\}$ for a.e. $x$. So a.e. $x$ has $d_E(x)\in\{0,1\}$, and $E$ has positive measure, so a.e. point of $E$ has density exactly $1$. Pick such an $x\in E$: then $\fint_{B(x,r)}\mathbf{1}_E\to1$, contradicting $\fint_{B(x,r)}\mathbf{1}_E<1$ being bounded away from $1$? — more carefully: $d_E(x)=1$ means the averages *approach* $1$, which is compatible with each being $<1$; the genuine contradiction is with a *uniform* gap. If $\lambda(E\cap I)\le(1-\delta)\lambda(I)$ for all $I$ and a fixed $\delta>0$, then $d_E(x)\le1-\delta<1$ everywhere, contradicting (a). So no set is *uniformly bounded away from full density* on all intervals — a measurable set is, near a.e. of its points, *almost all* of every small ball.
+**Step 2 — (b).** Suppose $E$ is measurable with $0<\lambda(E\cap I)<\lambda(I)$ for every interval $I$. Then for every $x$ and every $r$, $0<\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E<1$, so whenever $d_E(x)$ exists it lies in $[0,1]$ and — by the strict inequalities, taking $r\to0$ — one might hope to force $d_E(x)\notin\{0,1\}$. By (a), however, $d_E(x)\in\{0,1\}$ for a.e. $x$. So a.e. $x$ has $d_E(x)\in\{0,1\}$, and $E$ has positive measure, so a.e. point of $E$ has density exactly $1$. Pick such an $x\in E$: then $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E\to1$, contradicting $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E<1$ being bounded away from $1$? — more carefully: $d_E(x)=1$ means the averages *approach* $1$, which is compatible with each being $<1$; the genuine contradiction is with a *uniform* gap. If $\lambda(E\cap I)\le(1-\delta)\lambda(I)$ for all $I$ and a fixed $\delta>0$, then $d_E(x)\le1-\delta<1$ everywhere, contradicting (a). So no set is *uniformly bounded away from full density* on all intervals — a measurable set is, near a.e. of its points, *almost all* of every small ball.
 
 > [!note]- Complete formal solution
-> (a) $d_E(x)=\lim_r\fint_{B(x,r)}\mathbf{1}_E$; the differentiation theorem gives this limit $=\mathbf{1}_E(x)$ a.e., i.e. $1$ on $E$, $0$ off $E$. (b) If $\lambda(E\cap I)\le(1-\delta)\lambda(I)$ for all intervals $I$, then every average $\fint_{B(x,r)}\mathbf{1}_E\le1-\delta$, so $d_E\le1-\delta<1$ everywhere — contradicting that a.e. point of the positive-measure set $E$ has density $1$. $\blacksquare$
+> (a) $d_E(x)=\lim_r\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E$; the differentiation theorem gives this limit $=\mathbf{1}_E(x)$ a.e., i.e. $1$ on $E$, $0$ off $E$. (b) If $\lambda(E\cap I)\le(1-\delta)\lambda(I)$ for all intervals $I$, then every average $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E\le1-\delta$, so $d_E\le1-\delta<1$ everywhere — contradicting that a.e. point of the positive-measure set $E$ has density $1$. $\blacksquare$
 
 ---
 

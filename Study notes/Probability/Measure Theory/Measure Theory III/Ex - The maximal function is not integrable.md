@@ -20,7 +20,7 @@ Let $f^*$ be the [[Def - Hardy-Littlewood Maximal Function|Hardy–Littlewood ma
 
 **Recall:**
 
-$f^*(x)=\sup_{r>0}\fint_{B(x,r)}|f|$; the maximal inequality $\lambda(\{f^*>a\})\le\frac{5^n}{a}\|f\|_1$.
+$f^*(x)=\sup_{r>0}\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f|$; the maximal inequality $\lambda(\{f^*>a\})\le\frac{5^n}{a}\|f\|_1$.
 
 ---
 
@@ -47,7 +47,7 @@ $f^*(x)=\sup_{r>0}\fint_{B(x,r)}|f|$; the maximal inequality $\lambda(\{f^*>a\})
 > For $|x|>1$, the ball $B(x,|x|+1)$ contains $B(0,1)$, so $\int_{B(x,|x|+1)}|f|=\int_{B(0,1)}|f|=:c_1>0$.
 
 > [!note]- Hint 2
-> $f^*(x)\ge\fint_{B(x,|x|+1)}|f|=\frac{c_1}{\lambda(B(x,|x|+1))}\ge\frac{c_1}{C(|x|+1)^n}\ge c\,|x|^{-n}$.
+> $f^*(x)\ge\frac{1}{\lambda(B(x,|x|+1))}\int_{B(x,|x|+1)}|f|=\frac{c_1}{\lambda(B(x,|x|+1))}\ge\frac{c_1}{C(|x|+1)^n}\ge c\,|x|^{-n}$.
 
 > [!note]- Hint 3
 > $\int_{|x|>1}|x|^{-n}\,dx=\infty$ (in polar coordinates, $\int_1^\infty r^{-n}r^{n-1}\,dr=\int_1^\infty r^{-1}\,dr$).
@@ -57,7 +57,7 @@ $f^*(x)=\sup_{r>0}\fint_{B(x,r)}|f|$; the maximal inequality $\lambda(\{f^*>a\})
 # Solution
 
 **Step 1 — (a).** Let $f\in L^1$, $f\neq0$, and pick $r_0$ with $c_1:=\int_{B(0,r_0)}|f|>0$. For $|x|>r_0$, the ball $B(x,|x|+r_0)$ contains $B(0,r_0)$ (any $y$ with $|y|<r_0$ has $|y-x|\le|y|+|x|<|x|+r_0$). Hence
-$$f^*(x)\ge\fint_{B(x,|x|+r_0)}|f|=\frac{1}{\lambda(B(x,|x|+r_0))}\int_{B(x,|x|+r_0)}|f|\ge\frac{c_1}{\omega_n(|x|+r_0)^n}\ge c\,|x|^{-n}$$
+$$f^*(x)\ge\frac{1}{\lambda(B(x,|x|+r_0))}\int_{B(x,|x|+r_0)}|f|=\frac{1}{\lambda(B(x,|x|+r_0))}\int_{B(x,|x|+r_0)}|f|\ge\frac{c_1}{\omega_n(|x|+r_0)^n}\ge c\,|x|^{-n}$$
 for $|x|$ large, with $c>0$ and $\omega_n=\lambda(B(0,1))$. Now $\int_{|x|>r_0}|x|^{-n}\,dx=\omega_n'\int_{r_0}^\infty r^{-n}\cdot r^{n-1}\,dr=\omega_n'\int_{r_0}^\infty\frac{dr}{r}=\infty$. So $\int f^*\ge c\int_{|x|>r_0}|x|^{-n}\,dx=\infty$ — $f^*\notin L^1$.
 
 **Step 2 — (b).** A *strong* $L^1\to L^1$ bound would assert $\|f^*\|_1\le C\|f\|_1$. Part (a) shows $\|f^*\|_1=\infty$ for every $f\neq0$ — so no strong bound can hold. The best possible is the **weak-type $(1,1)$** bound $\lambda(\{f^*>a\})\le\frac{C}{a}\|f\|_1$, which controls the *level sets* of $f^*$ without controlling its integral. The decay $f^*\sim|x|^{-n}$ is *exactly borderline*: $|x|^{-n}$ just fails to be integrable, and correspondingly $\lambda(\{|x|^{-n}>a\})\sim a^{-1}$ — the level sets shrink at precisely the rate the weak bound permits.

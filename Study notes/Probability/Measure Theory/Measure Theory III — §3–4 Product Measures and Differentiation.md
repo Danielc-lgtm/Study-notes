@@ -12,7 +12,7 @@ tags: [analysis, measure-theory, probability]
 - $\mathcal{A}_1\otimes\mathcal{A}_2$ — the [[Def - Product σ-Algebra|product σ-algebra]]; $\mu_1\otimes\mu_2$ — the [[Thm - Product Measure|product measure]]
 - $Z_i$ — coordinate projections; $E_{x_1}=\{x_2:(x_1,x_2)\in E\}$ — the slice of $E$ at $x_1$
 - $\mathcal{P}$ — a $\pi$-system; $\mathcal{L}$ — a $\lambda$-system (see [[Thm - Dynkin's π-λ Theorem]])
-- $B(x,r)$ — open ball; $\fint_B=\frac1{\lambda(B)}\int_B$ — the average; $f^*$ — the [[Def - Hardy-Littlewood Maximal Function|Hardy–Littlewood maximal function]]
+- $B(x,r)$ — open ball; $\frac{1}{\lambda(B)}\int_B$ — the average over $B$; $f^*$ — the [[Def - Hardy-Littlewood Maximal Function|Hardy–Littlewood maximal function]]
 - $L^1_{loc}$ — locally integrable functions
 - $\alpha$ — a [[Def - Signed Measure|signed measure]]; $\alpha^+,\alpha^-$ — its Jordan parts; $|\alpha|=\alpha^++\alpha^-$ — total variation
 - $\nu\ll\mu$ — [[Def - Absolute Continuity and Density|absolute continuity]]; $\nu\perp\mu$ — [[Def - Mutual Singularity|mutual singularity]]; $\mathrm{d}\nu/\mathrm{d}\mu$ — the Radon–Nikodym derivative
@@ -26,7 +26,7 @@ tags: [analysis, measure-theory, probability]
 
 **Product measures and Fubini–Tonelli** (§3) answer: how do you integrate a function of two variables? You build a measure $\mu_1\otimes\mu_2$ on the product space — the unique one giving rectangles the product of side-measures — and [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] reduces the double integral to an iterated one, computable a variable at a time. Tonelli handles non-negative integrands with no further hypothesis; Fubini handles signed integrands under absolute integrability. The technical tool that makes both work is [[Thm - Dynkin's π-λ Theorem|Dynkin's π–λ theorem]] — the induction principle that pushes facts from the generating rectangles to the whole product $\sigma$-algebra, and the standard route to uniqueness of measures.
 
-**Differentiation** (§4.1) answers: is the fundamental theorem of calculus true for merely integrable functions? The [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]] says *yes, almost everywhere* — the local averages $\fint_{B(x,r)}f$ recover $f(x)$ a.e. The proof introduces the [[Def - Hardy-Littlewood Maximal Function|Hardy–Littlewood maximal function]] and its weak maximal inequality, the prototype of harmonic analysis and the device that bounds the exceptional set in any a.e.-convergence theorem.
+**Differentiation** (§4.1) answers: is the fundamental theorem of calculus true for merely integrable functions? The [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]] says *yes, almost everywhere* — the local averages $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}f$ recover $f(x)$ a.e. The proof introduces the [[Def - Hardy-Littlewood Maximal Function|Hardy–Littlewood maximal function]] and its weak maximal inequality, the prototype of harmonic analysis and the device that bounds the exceptional set in any a.e.-convergence theorem.
 
 **Radon–Nikodym** (§4.2) answers: when is one measure a *density* times another? A [[Def - Signed Measure|signed measure]] is first decomposed ([[Thm - Hahn and Jordan Decomposition|Hahn/Jordan]]) into positive and negative parts; then the [[Thm - Radon-Nikodym Theorem|Radon–Nikodym theorem]] shows every $\nu\ll\mu$ (with $\mu,\nu$ $\sigma$-finite) has a density $\mathrm{d}\nu/\mathrm{d}\mu$, and every $\nu$ splits canonically into a part with a density and a part [[Def - Mutual Singularity|singular]] to $\mu$. This is the theorem that *constructs* [[Def - Conditional Expectation|conditional expectation]] and gives probability densities and likelihood ratios their meaning — the keystone linking measure theory to probability.
 
@@ -57,9 +57,9 @@ tags: [analysis, measure-theory, probability]
 ## §4.1 Differentiation of the Lebesgue Integral
 
 - **[[Def - Hardy-Littlewood Maximal Function]]**
-	- $f^*(x)=\sup_r\fint_{B(x,r)}|f|$ — the worst-case local average. Measurable, satisfies the weak **maximal inequality** $\lambda(f^*>a)\le\frac{5^n}{a}\|f\|_1$, but $f^*\notin L^1$ (it decays only like $|x|^{-n}$). The prototype of harmonic analysis; the device that bounds exceptional sets.
+	- $f^*(x)=\sup_r\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f|$ — the worst-case local average. Measurable, satisfies the weak **maximal inequality** $\lambda(f^*>a)\le\frac{5^n}{a}\|f\|_1$, but $f^*\notin L^1$ (it decays only like $|x|^{-n}$). The prototype of harmonic analysis; the device that bounds exceptional sets.
 - **[[Thm - Lebesgue Differentiation Theorem]]**
-	- For every $f\in L^1_{loc}(\mathbb{R}^n)$, $\fint_{B(x,r)}f\to f(x)$ for a.e. $x$ — the measure-theoretic fundamental theorem of calculus. Proved by "dense class (continuous functions) + maximal inequality to kill the exceptional set," the maximal inequality itself proved by the Vitali covering lemma. Gives Lebesgue points and the density theorem.
+	- For every $f\in L^1_{loc}(\mathbb{R}^n)$, $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}f\to f(x)$ for a.e. $x$ — the measure-theoretic fundamental theorem of calculus. Proved by "dense class (continuous functions) + maximal inequality to kill the exceptional set," the maximal inequality itself proved by the Vitali covering lemma. Gives Lebesgue points and the density theorem.
 
 > [!note] Exercise Index — §4.1
 > [[Exercise Index - §4.1 Differentiation of the Integral]]
