@@ -13,22 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/Group Theory/Group Theory I/Def - Group.md",
+                "file": "Probability/Advanced Probability/Advanced Probability I — Probability Spaces and Random Variables.md",
                 "mode": "preview",
                 "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Def - Group"
+              "title": "Advanced Probability I — Probability Spaces and Random Variables"
             }
           }
         ]
@@ -195,10 +186,16 @@
   },
   "active": "10f9f8cf081b9403",
   "lastOpenFiles": [
+    "Probability/Measure Theory/Measure Theory III — §3–4 Product Measures and Differentiation.md",
+    "Probability/Measure Theory/Measure Theory II — §2 Integration.md",
+    "Probability/Measure Theory/Measure Theory I — §1 Measure Spaces.md",
+    "Probability/Measure Theory/Measure Theory III/Exercise Index - §3.1 Product Measures.md",
+    "Probability/Measure Theory/Measure Theory I/Def - Algebra and σ-Algebra.md",
+    "Probability/Measure Theory/Measure Theory I/Def - Pre-Measure.md",
+    "Algebra/Group Theory/Group Theory I/Def - Group.md",
     "Algebra/Group Theory/Group Theory I/Exercise Index - §1.1 Basic Concepts.md",
     "Algebra/Group Theory/Group Theory I — §1.1–1.2.md",
     "Algebra/Group Theory/Group Theory II/Thm - Cayley's Theorem.md",
-    "Algebra/Group Theory/Group Theory I/Def - Group.md",
     "[Def - Group.md",
     "Algebra/Group Theory/Group Theory I/Ex - Groups of prime order are cyclic.md",
     "Algebra/Group Theory/Group Theory II — §1.3–1.4.md",
