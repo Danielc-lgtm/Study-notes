@@ -5,7 +5,7 @@ section: "3.2"
 tags: [analysis, multivariate-analysis]
 ---
 
-## §3.2 Fubini's Theorem — Exercises
+## §3.2 Fubini's Theorem and Iterated Integrals — Exercises
 
 - [[Ex - An iterated integral over a non-rectangular region]] — evaluate $\iint_T xy\,dA$ over a triangle by describing the region as "between two graphs", reading its edges $y = 0$ and $y = x$ off as the inner limits, and reducing to nested one-variable integrals; cross-checked by the other order ([[Thm - Fubini's Theorem]], [[Def - The Riemann Integral in Several Variables]], [[Def - Jordan Measure]]).
 

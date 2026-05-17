@@ -25,7 +25,7 @@ The framework is Taylor's theorem and its remainder estimate, pushed to $k \to \
 
 [[Thm - Taylor's Theorem in Several Variables|Taylor's theorem]] gives, for $f \in C^{k+1}$, the expansion $f(x_0+h) = P_k(h) + R_{k+1}(x_0,h)$ with $R_{k+1}$ an explicit integral. Real-analyticity is the statement that $R_{k+1} \to 0$ as $k \to \infty$, so the partial sums $P_k$ converge to $f$.
 
-A function is [[Def - Higher-Order Derivatives and Ck Maps|$C^\infty$]] (smooth) if it has continuous partials of every order. Real-analytic $\Rightarrow C^\infty$, but not conversely.
+A function is [[Def - Higher-Order Derivatives and Ck Maps|smooth]], denoted $C^\infty$, if it has continuous partials of every order. Real-analytic $\Rightarrow C^\infty$, but not conversely.
 
 ---
 

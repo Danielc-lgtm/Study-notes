@@ -69,7 +69,7 @@ So this topic answers two questions that one-variable calculus never had to ask:
 > [!note] Exercise Index — §3.1 Jordan Measure and the Riemann Integral
 > [[Exercise Index - §3.1 Jordan Measure and the Riemann Integral]]
 
-## §3.2 Fubini's Theorem
+## §3.2 Fubini's Theorem and Iterated Integrals
 
 - **[[Thm - Fubini's Theorem]]**
 	- For an integrable function on a product of cells, the multiple integral equals the **iterated integral**: $\int_{A \times B} f \, dV = \int_A \big( \int_B f(x,y) \, dy \big) dx$, and one may integrate in either order. For a region of the form $\Omega = \{(x,y) : x \in \Sigma, \ g_0(x) \leq y \leq g_1(x)\}$ between two continuous graphs over a Jordan-measurable base $\Sigma$, the integral of a continuous $f$ reduces to $\int_\Sigma \int_{g_0(x)}^{g_1(x)} f(x,y) \, dy \, dx$. Fubini is what makes multiple integrals computable: it converts one $n$-dimensional limit-of-sums into $n$ nested one-dimensional integrals. The hypothesis — integrability on the product, or boundedness with a nil discontinuity set — cannot be dropped.
@@ -86,8 +86,8 @@ So this topic answers two questions that one-variable calculus never had to ask:
 - **[[Ex - A parameter integral by differentiation under the integral sign]]**
 	- Compute $\int_0^\infty \frac{e^{-ax} - e^{-bx}}{x} \, dx = \ln(b/a)$ by differentiating with respect to a parameter to collapse the integrand. (⭐⭐)
 
-> [!note] Exercise Index — §3.2 Fubini's Theorem
-> [[Exercise Index - §3.2 Fubini's Theorem]]
+> [!note] Exercise Index — §3.2 Fubini's Theorem and Iterated Integrals
+> [[Exercise Index - §3.2 Fubini's Theorem and Iterated Integrals]]
 
 ## §3.3 The Change of Variables Formula
 

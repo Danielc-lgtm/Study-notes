@@ -24,7 +24,7 @@ The objects in tension are the mixed second partials and the hypothesis of Schwa
 
 The first [[Def - Partial Derivatives and the Jacobian Matrix|partial derivative]] $\partial_x f$ is the one-variable derivative in $x$ with $y$ frozen; the **mixed second partial** $\partial_y\partial_x f$ is $\partial_y(\partial_x f)$ — first differentiate in $x$, then in $y$.
 
-A function is [[Def - Higher-Order Derivatives and Ck Maps|of class $C^2$]] when all its first and second partials exist *and are continuous*.
+A function is [[Def - Higher-Order Derivatives and Ck Maps|of class C²]] when all its first and second partials exist *and are continuous*.
 
 ![[Thm - Schwarz's Theorem on Mixed Partials#Statement]]
 

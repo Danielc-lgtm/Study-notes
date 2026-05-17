@@ -134,7 +134,7 @@ Relativise Newton's law by the standard recipe — proper-time derivative of the
 > > [!note]- Full proof
 > > The spatial part of the four-momentum is $\mathbf{p} = \gamma m\mathbf{u}$, and the spatial part of $F^\mu$ is, by definition of the four-force components, $\gamma\mathbf{f}$ where $\mathbf{f}$ is the ordinary three-force. The spatial part of the equation $F^\mu = dP^\mu/d\tau$ is therefore
 > > $$\gamma\mathbf{f} = \frac{d\mathbf{p}}{d\tau} = \frac{dt}{d\tau}\frac{d\mathbf{p}}{dt} = \gamma\,\frac{d\mathbf{p}}{dt},$$
-> > using [[Def - Proper Time|$dt/d\tau = \gamma$]]. Cancelling $\gamma$:
+> > using the [[Def - Proper Time|proper-time]] relation $dt/d\tau = \gamma$. Cancelling $\gamma$:
 > > $$\mathbf{f} = \frac{d\mathbf{p}}{dt}, \qquad \mathbf{p} = \gamma m\mathbf{u}.$$
 > > Newton's second law survives verbatim, provided "momentum" is the relativistic momentum $\gamma m\mathbf{u}$. Note that $\mathbf{f}\neq m\mathbf{a}$ in general: differentiating $\mathbf{p} = \gamma m\mathbf{u}$ gives $\mathbf{f} = \gamma m\mathbf{a} + (d\gamma/dt)m\mathbf{u}$, so the force has a component along $\mathbf{u}$ in addition to the $m\mathbf{a}$ term, and force and acceleration are not parallel unless $\mathbf{u}$ and $\mathbf{a}$ are. $\square$
 
