@@ -215,7 +215,7 @@ Take the minimal polynomial $f_\alpha \in \mathbb{Z}[X]$ of the rational algebra
 > The lemma is the statement that the ring $\mathbb{Z}$ is **integrally closed** in its field of fractions $\mathbb{Q}$ — no element of $\mathbb{Q}$ outside $\mathbb{Z}$ is a root of a monic integer polynomial. This is the prototype of the integral-closure property.
 
 > [!tip] Integrally closed domains and normalisation *(from Algebraic Number Theory)*
-> A domain integrally closed in its fraction field is called **normal**; rings of integers of number fields are normal, and the process of enlarging a non-normal ring to a normal one is *normalisation*. This lemma is the first example, and the same Gauss's-lemma argument shows every [[Def - Unique Factorization Domain|UFD]] is normal. See [[Def - Integrally Closed Domain]].
+> A domain integrally closed in its fraction field is called **normal**; rings of integers of number fields are normal, and the process of enlarging a non-normal ring to a normal one is *normalisation*. This lemma is the first example, and the same Gauss's-lemma argument shows every [[Def - Unique Factorization Domain|UFD]] is normal.
 
 > [!tip] The rational root test as an irreducibility tool *(from Field Theory)*
 > Because a rational root of a monic integer polynomial must be an integer dividing the constant term, checking a monic integer polynomial for rational (hence linear) factors becomes a finite search — a basic step in proving polynomials irreducible over $\mathbb{Q}$ and constructing field extensions.

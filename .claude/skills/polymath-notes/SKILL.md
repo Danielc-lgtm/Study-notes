@@ -165,7 +165,7 @@ When generating content:
 - Permeate the notes with the Conceptual Insight Standards — unifying frames, true names, trigger-reaction patterns, input-type broadening, and the other insight types described above.
 - **Follow the source material's structure by default.** The skill's elements (axiom motivations, sources and targets, legal operations, insights, etc.) are added to the source material's structure, not imposed over it.
 - **Include every element when suitable, but do not force it.** Every section described in the templates should be included when there is genuine content for it. If a particular theorem genuinely has no good cross-field exercise suggestions, omit that section rather than padding with weak content.
-- **Aim just above the user's range.** For each chapter, when the definitions and theorems are sufficient to define or understand concepts from a more advanced field (e.g., group theory unlocks definitions in algebraic geometry), include those advanced concepts in the chapter's concept map. Use web search to identify what is unlocked. State them concisely, linked to their eventual home in the DAG. Do not include full axiom motivations or proofs for these; those belong in future topic pages. The purpose is forward motivation, early exposure, and working-memory exploitation.
+- **Aim just above the user's range.** For each chapter, when the definitions and theorems are sufficient to define or understand concepts from a more advanced field (e.g., group theory unlocks definitions in algebraic geometry), include those advanced concepts in the chapter's concept map. Use web search to identify what is unlocked. State them concisely, naming the downstream concept in bold; wikilink it only if its page already exists in the vault, since clicking a wikilink to a missing page creates an empty stub in Obsidian. Do not include full axiom motivations or proofs for these; those belong in future topic pages. The purpose is forward motivation, early exposure, and working-memory exploitation.
 - **Add YAML frontmatter to every page.** See `references/obsidian-patterns.md` for the schema.
 
 ### Step 5: Write all pages to the vault
@@ -183,11 +183,13 @@ Study notes/
       Exercise Index - §X.Y.md   # exercise index
 ```
 
-All pages use wikilinks (`[[Def - Group]]`) for internal cross-references. After writing all pages, verify that every wikilink resolves to an existing file. If a link target does not exist yet (it refers to a definition from another topic not yet written), the wikilink is left as-is — Obsidian will show it as an unresolved link, which is fine and serves as a natural TODO indicator.
+All pages use wikilinks (`[[Def - Group]]`) for internal cross-references. Only wikilink a page that exists or that is being created in the same batch. A forward reference to a concept from a subject not yet in the vault — for instance in an "Unlocked by This" preview — must be written as **bold plain text**, not a wikilink: in Obsidian, clicking a wikilink whose target file does not exist creates an empty stub page. Verification that every wikilink resolves happens in Step 6.
 
 ### Step 6: Cross-link
 
 After all pages are created, scan every page for references to defined concepts and ensure they use wikilinks. This includes references in Legal Operations, Problem-Solving Strategy, Most Reusable Properties, Bridges, Insights, and prose throughout. The same concept may be linked with different display text: `[[Def - Compactness|compact]]` and `[[Def - Compactness|compactness]]` both linking to the same page.
+
+Then run a mechanical link audit over the whole vault. After stripping `$...$` / `$$...$$` math and code spans — where `[[...]]` can be ordinary notation such as the power-series ring `R[[X]]` — every remaining `[[wikilink]]` must resolve to an existing `.md` file, and every `![[transclusion]]` (including its `#section` anchor) must point to real content. Any unresolved wikilink is a bug: either the target filename is wrong (fix the link) or it is a forward reference that should be bold plain text (unlink it). The audit must come back clean before Step 7.
 
 ### Step 7: Commit to repository
 
@@ -306,7 +308,7 @@ Before finalizing, evaluate against this checklist. For each item, verify compli
 1. **Source coverage.** Every definition, theorem, proof, and exercise in the uploaded source material appears in the notes. If anything was omitted, add it.
 2. **Exercise coverage.** Each sub-chapter section has at least 3 exercises. If any section has fewer, search the web for additional exercises.
 3. **Per-section exercise index exists.** Each sub-chapter section has a dedicated exercise index page integrated into the concept map as a callout.
-4. **Cross-linking.** Every reference to a defined concept throughout all pages uses a wikilink to the relevant subpage. Spot-check at least 5 references in Legal Operations, Problem-Solving Strategy, and Bridges.
+4. **Cross-linking and link audit.** Every reference to a defined concept throughout all pages uses a wikilink to the relevant subpage. The vault-wide link audit from Step 6 returns zero unresolved wikilinks and zero broken transclusions — every `[[...]]` resolves to an existing file, with forward references to not-yet-written subjects written as bold plain text instead.
 5. **Frontmatter present.** Every page has YAML frontmatter with type, subject, and prereqs fields.
 
 **Quality — Self-Containedness:**

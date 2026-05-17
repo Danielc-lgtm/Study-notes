@@ -56,7 +56,7 @@ tags: [area-tag, subject-tag]
 	- If $X$ is compact and $f : X \to \mathbb{R}$ is continuous, then $f$ attains its maximum and minimum. This is a direct consequence of two facts: continuous images of compact sets are compact, and compact subsets of $\mathbb{R}$ are closed and bounded (Heine-Borel). The theorem fails without compactness: $f(x) = x$ on $(0,1)$ has no maximum.
 
 > [!tip] Unlocked: Affine Variety *(from Algebraic Geometry)*
-> Now that you have ideals and the Zariski topology, you can define affine varieties as zero sets of ideals. See [[Def - Affine Variety]].
+> Now that you have ideals and the Zariski topology, you can define **affine varieties** as zero sets of ideals.
 
 - **[[Ex - Proving compactness of the closed unit interval]]**
 	- Show that $[0,1]$ is compact in the standard topology. (⭐⭐)
@@ -222,7 +222,7 @@ tags: [area-tag, subject-tag]
 [INCLUDE ONLY IF this definition (together with its neighbors) unlocks concepts from downstream topics in the prereq DAG.]
 
 > [!tip] [Concept Name] *(from [Advanced Field])*
-> [1–3 sentence preview: now that you have this definition, you can understand this more advanced concept. Wikilink to its eventual page.]
+> [1–3 sentence preview: now that you have this definition, you can understand this more advanced concept. Name the downstream concept in **bold**; do NOT wikilink it unless its page already exists in the vault — a wikilink to a missing page creates an empty stub when clicked in Obsidian.]
 ```
 
 ---
@@ -349,7 +349,7 @@ tags: [area-tag, subject-tag]
 [INCLUDE ONLY IF this theorem unlocks downstream concepts.]
 
 > [!tip] [Concept Name] *(from [Advanced Field])*
-> [1–3 sentence preview with wikilink.]
+> [1–3 sentence preview. Name the downstream concept in **bold**; do NOT wikilink it unless its page already exists in the vault.]
 ```
 
 ---

@@ -206,7 +206,7 @@ Reduce "simple" to "no proper non-trivial subgroups" using that an abelian group
 # Unlocked by This
 
 > [!tip] Elementary Abelian Groups *(from Group Theory / Sylow Theory)*
-> A minimal normal subgroup of a finite solvable group is *elementary abelian* — a direct product $C_p \times \cdots \times C_p$ — and this theorem is the single-factor base case identifying the only abelian simple group as $C_p$. See [[Def - Elementary Abelian Group]].
+> A minimal normal subgroup of a finite solvable group is *elementary abelian* — a direct product $C_p \times \cdots \times C_p$ — and this theorem is the single-factor base case identifying the only abelian simple group as $C_p$.
 
 > [!tip] The Prime Field $\mathbb{F}_p$ *(from Field Theory)*
-> The additive group of the prime field $\mathbb{F}_p$ is the abelian simple group $C_p$; this theorem underlies why a field of prime order has its characteristic forced to be prime. See [[Def - Finite Field]].
+> The additive group of the prime field $\mathbb{F}_p$ is the abelian simple group $C_p$; this theorem underlies why a field of prime order has its characteristic forced to be prime.

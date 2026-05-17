@@ -256,4 +256,4 @@ Pick $f_\alpha \in I$ of *minimal degree*, arranged to be primitive. To show $I 
 > With $I = (f_\alpha)$ proved, the [[Thm - First Isomorphism Theorem for Rings|first isomorphism theorem]] presents the subring $\mathbb{Z}[\alpha] \subseteq \mathbb{C}$ as the explicit quotient $\mathbb{Z}[X]/(f_\alpha)$ — arithmetic in $\mathbb{Z}[\alpha]$ becomes polynomial arithmetic reduced modulo the minimal polynomial.
 
 > [!tip] Rings of integers of number fields *(from Algebraic Number Theory)*
-> A well-defined minimal polynomial for each algebraic integer is the starting point for studying the ring of integers $\mathcal{O}_K$ of a number field $K$ — its elements are algebraic integers, classified up to conjugacy by their minimal polynomials. See [[Def - Ring of Integers]].
+> A well-defined minimal polynomial for each algebraic integer is the starting point for studying the ring of integers $\mathcal{O}_K$ of a number field $K$ — its elements are algebraic integers, classified up to conjugacy by their minimal polynomials.

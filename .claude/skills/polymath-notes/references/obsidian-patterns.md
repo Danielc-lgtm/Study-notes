@@ -42,7 +42,7 @@ Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the p
 
 **All definition, theorem, and exercise references throughout the notes should use wikilinks.** The same concept may be linked with different display text in different contexts.
 
-**A wikilink target must resolve.** Only write `[[Page Name]]` when that page exists, is being created in the same batch of notes, or is a deliberate forward reference inside an `[!tip]` "Unlocked" callout (those carry a `*(from [Subject])*` attribution, and an unresolved link there is expected — it resolves once the downstream subject is built). Do **not** wikilink an in-scope concept that has no page of its own — write it as plain text — and do **not** wikilink a "companion" definition or theorem in body prose or the Bridges list unless that page actually exists. A `[[...]]` pointing at a nonexistent page that is not a flagged forward reference is a dead link.
+**A wikilink target must resolve.** Only write `[[Page Name]]` when that page already exists or is being created in the same batch of notes. Everything else must be written as **bold plain text**, not a wikilink: an in-scope concept that has no page of its own, a "companion" definition or theorem mentioned in body prose or the Bridges list, and — importantly — a forward reference to a downstream subject in an `[!tip]` "Unlocked" callout. In Obsidian, clicking a wikilink whose target file does not exist *creates* an empty stub page, so a `[[...]]` to a nonexistent page is never harmless. When the downstream page is eventually written, the link can be added then.
 
 ## Transclusion (Embedding)
 
@@ -121,8 +121,7 @@ Obsidian has a native callout syntax using `>` blocks:
 
 ```markdown
 > [!tip] Unlocked: Affine Variety
-> Now that you have ideals and the Zariski topology, you can define affine varieties...
-> See [[Def - Affine Variety]] *(from Algebraic Geometry)*.
+> Now that you have ideals and the Zariski topology, you can define **affine varieties** as zero sets of ideals *(from Algebraic Geometry)*.
 ```
 
 ```markdown

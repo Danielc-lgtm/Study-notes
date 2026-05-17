@@ -91,7 +91,7 @@ So $\alpha$ is a root of the **monic** polynomial $X^2 - X + 1 \in \mathbb{Z}[X]
 > The non-example $\tfrac12$ is justified by [[Thm - Rational Algebraic Integers are Integers|the theorem]] that an algebraic integer lying in $\mathbb{Q}$ already lies in $\mathbb{Z}$ — the statement that $\mathbb{Z}$ is integrally closed in $\mathbb{Q}$.
 
 > [!tip] The Algebraic Integers Form a Ring *(from Algebraic Number Theory)*
-> Although it is far from obvious — given monic $f, g$ with $f(\alpha) = g(\beta) = 0$ there is no easy monic polynomial vanishing at $\alpha + \beta$ — the algebraic integers are closed under addition and multiplication, forming a subring $\overline{\mathbb{Z}} \subseteq \mathbb{C}$. The proof routes through finitely generated modules; see [[Thm - The Algebraic Integers Form a Subring]].
+> Although it is far from obvious — given monic $f, g$ with $f(\alpha) = g(\beta) = 0$ there is no easy monic polynomial vanishing at $\alpha + \beta$ — the algebraic integers are closed under addition and multiplication, forming a subring $\overline{\mathbb{Z}} \subseteq \mathbb{C}$. The proof routes through finitely generated modules.
 
 > [!tip] Rings of Integers and Dedekind Domains *(from Algebraic Number Theory)*
 > Intersecting the algebraic integers with a number field $K$ gives its **ring of integers** $\mathcal{O}_K$ — for $K = \mathbb{Q}(i)$ this is $\mathbb{Z}[i]$, for $K = \mathbb{Q}(\sqrt{-3})$ it is $\mathbb{Z}[\tfrac12(1+\sqrt{-3})]$. These rings need not be unique factorisation domains, and repairing factorisation by passing to *ideals* is the subject of Dedekind domains.

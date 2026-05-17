@@ -206,7 +206,7 @@ Induct on $|G|$. If $G$ is simple, done. Otherwise pick a *maximal* proper norma
 # Unlocked by This
 
 > [!tip] Jordan–Hölder Theorem *(from Group Theory)*
-> Existence of a composition series is only half the story. The **Jordan–Hölder theorem** asserts uniqueness: any two composition series of a finite group $G$ have the same length and the same multiset of composition factors (up to isomorphism and reordering). Together with this existence theorem, it makes the composition factors a genuine invariant of $G$ — the true analogue of the prime factorisation. See [[Thm - Jordan-Hölder Theorem]].
+> Existence of a composition series is only half the story. The **Jordan–Hölder theorem** asserts uniqueness: any two composition series of a finite group $G$ have the same length and the same multiset of composition factors (up to isomorphism and reordering). Together with this existence theorem, it makes the composition factors a genuine invariant of $G$ — the true analogue of the prime factorisation.
 
 > [!tip] Solvable Groups and Galois' Criterion *(from Galois Theory)*
-> A finite group is **solvable** exactly when all its composition factors are cyclic of prime order. Galois' theorem says a polynomial is solvable by radicals if and only if its Galois group is solvable — so the composition series, with its factors classified by [[Thm - Abelian Simple Groups are Cyclic of Prime Order]], is the algebraic heart of why the general quintic has no radical formula. See [[Def - Solvable Group]].
+> A finite group is **solvable** exactly when all its composition factors are cyclic of prime order. Galois' theorem says a polynomial is solvable by radicals if and only if its Galois group is solvable — so the composition series, with its factors classified by [[Thm - Abelian Simple Groups are Cyclic of Prime Order]], is the algebraic heart of why the general quintic has no radical formula.

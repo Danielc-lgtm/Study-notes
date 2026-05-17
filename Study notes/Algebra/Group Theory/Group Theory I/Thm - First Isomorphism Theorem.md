@@ -214,4 +214,4 @@ Define the candidate map $f$ on cosets by applying $\varphi$ to a representative
 > The first isomorphism theorem for rings says $R/\ker\varphi \cong \operatorname{im}\varphi$ for a ring homomorphism $\varphi$. Combined with evaluation maps it identifies quotient rings such as $\mathbb{R}[x]/(x^2+1) \cong \mathbb{C}$. See [[Def - Quotient Ring]].
 
 > [!tip] Rank–Nullity Theorem *(from Linear Algebra)*
-> For a linear map $T : V \to W$, the first isomorphism theorem gives $V/\ker T \cong \operatorname{im} T$; taking dimensions yields $\dim V = \dim\ker T + \dim\operatorname{im} T$, the rank–nullity theorem. See [[Thm - Rank-Nullity]].
+> For a linear map $T : V \to W$, the first isomorphism theorem gives $V/\ker T \cong \operatorname{im} T$; taking dimensions yields $\dim V = \dim\ker T + \dim\operatorname{im} T$, the rank–nullity theorem.
