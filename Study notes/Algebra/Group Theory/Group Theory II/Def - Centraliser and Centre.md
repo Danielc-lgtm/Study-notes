@@ -96,7 +96,7 @@ So the compression is: the centraliser is "the commutant of one element", the ce
 
 **Corollary — $G$ abelian if and only if $Z(G) = G$ if and only if every centraliser is all of $G$.** A group is [[Def - Abelian Group|abelian]] exactly when every pair commutes, i.e. every element commutes with every element, i.e. $C_G(g) = G$ for all $g$, i.e. $\bigcap_g C_G(g) = Z(G) = G$. The three conditions are restatements of one another, and verifying their equivalence is the calibration check for understanding both definitions.
 
-**Corollary — $G/Z(G)$ cyclic forces $G$ abelian.** A famous and useful consequence: if the quotient $G/Z(G)$ is [[Def - Cyclic Group|cyclic]], then $G$ is abelian (so in fact $G/Z(G)$ was trivial). The reason is that if $G/Z(G) = \langle gZ(G)\rangle$, every element of $G$ has the form $g^k z$ with $z$ central, and any two such elements commute because powers of $g$ commute with each other and central elements commute with everything. The contrapositive is the working form: a non-abelian group can *never* have cyclic central quotient — so for a non-abelian group of order $p^3$, the centre has order exactly $p$, not $p^2$.
+**Corollary — $G/Z(G)$ cyclic forces $G$ abelian.** A famous and useful consequence: if the quotient $G/Z(G)$ is cyclic, then $G$ is abelian (so in fact $G/Z(G)$ was trivial). The reason is that if $G/Z(G) = \langle gZ(G)\rangle$, every element of $G$ has the form $g^k z$ with $z$ central, and any two such elements commute because powers of $g$ commute with each other and central elements commute with everything. The contrapositive is the working form: a non-abelian group can *never* have cyclic central quotient — so for a non-abelian group of order $p^3$, the centre has order exactly $p$, not $p^2$.
 
 ---
 

@@ -42,6 +42,8 @@ Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the p
 
 **All definition, theorem, and exercise references throughout the notes should use wikilinks.** The same concept may be linked with different display text in different contexts.
 
+**A wikilink target must resolve.** Only write `[[Page Name]]` when that page exists, is being created in the same batch of notes, or is a deliberate forward reference inside an `[!tip]` "Unlocked" callout (those carry a `*(from [Subject])*` attribution, and an unresolved link there is expected — it resolves once the downstream subject is built). Do **not** wikilink an in-scope concept that has no page of its own — write it as plain text — and do **not** wikilink a "companion" definition or theorem in body prose or the Bridges list unless that page actually exists. A `[[...]]` pointing at a nonexistent page that is not a flagged forward reference is a dead link.
+
 ## Transclusion (Embedding)
 
 Obsidian can embed the content of another page (or a specific section) inline. This is ideal for Recall sections in exercises and for restating definitions at point of use.
