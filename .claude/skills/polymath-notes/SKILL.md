@@ -139,6 +139,24 @@ In Pass 2, use your judgment to combine sources in whatever way produces the bes
 
 ---
 
+## Working Memory (`.scratch/`)
+
+Creating a full topic page is a long task: many source pages skimmed, a content map built, dozens of subpages written, a filename manifest to keep consistent, a link audit to run. Far more passes through this material than fit comfortably in one context window. Use a `.scratch/` directory at the repository root as persistent working memory to extend your effective context.
+
+`.scratch/` is for your own working notes, not vault content — it must be listed in the repository's `.gitignore` so it is never committed. If the directory or the `.gitignore` entry does not exist yet, create them. Within `.scratch/` you have full freedom of structure; organize it however serves the task.
+
+Write to it proactively, whenever future-you would benefit. Useful things to cache:
+
+- **The Pass 1 content map** — the inventory of every chapter, theorem, definition, and exercise across the sources, with notes on each source's strengths. This is the master plan for Pass 2 and is referred to constantly; losing it means re-skimming the PDFs.
+- **The filename manifest** — the exact intended filename of every page being created, so wikilinks resolve and cross-references stay consistent. Recoverable with `find`, but cheaper to keep written down.
+- **A running log** — decisions made, the section currently being written, what is done and what remains, problems hit and how they were fixed.
+- **Source digests** — condensed summaries of source material already read, so it need not be re-read.
+- **Reusable tooling** — for instance the link-audit script, so it does not have to be reconstructed.
+
+Read from `.scratch/` whenever you need to recall earlier context — on returning to a task, consult it before re-reading sources or re-deriving a plan. Treat reading and writing `.scratch/` as a normal part of the workflow; no need to ask permission.
+
+---
+
 ## Workflow
 
 ### Step 1: Determine scope and mode
