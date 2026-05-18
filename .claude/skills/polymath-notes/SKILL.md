@@ -121,6 +121,20 @@ What NOT to write: labeled headers within explanations ("Trigger:", "Action:", "
 
 ---
 
+## Source Material
+
+PDF source materials — lecture notes, textbook chapters, papers — are stored in the `sources/` directory of the repository. These are the primary inputs the notes are built from.
+
+When a prompt places a partial-content restriction on a particular PDF (for example, "use only up to Chapter 4" or "only the special relativity sections"), do not read the whole file. First inspect the table of contents to identify the page range covering the relevant chapters — extract the front matter with a tool such as `pdftotext <file> - | head -150`, or read the bookmarks/outline. Then use `qpdf` to extract only the needed pages into a trimmed file before reading:
+
+```
+qpdf <file> --pages . <start>-<end> -- /tmp/<name>-trimmed.pdf
+```
+
+Read only the trimmed file. This keeps the context window lean and avoids pulling in chapters that are out of scope. The same approach is worthwhile even for PDFs without an explicit restriction: extracting the chapters currently being worked on, rather than reading a large PDF in full, preserves detail fidelity for the section being written.
+
+---
+
 ## Workflow
 
 ### Step 1: Determine scope and mode
@@ -157,6 +171,7 @@ Read the templates in `references/templates.md` for the exact structure of each 
 
 When generating content:
 
+- **Work through source material sequentially.** Read one chapter or section at a time, write all pages for that section, then move to the next chapter. Do not read all source PDFs upfront. This keeps context lean and preserves detail fidelity for the section currently being written. Cross-linking to earlier pages only requires filenames, which can be recovered with `find`.
 - Write mathematical notation using standard LaTeX: `$...$` for inline math, `$$...$$` for display math. Obsidian uses MathJax/KaTeX and renders both correctly.
 - Be precise and formal in definitions and theorem statements.
 - Write all other content in David Tong style prose (see Writing Style above).
