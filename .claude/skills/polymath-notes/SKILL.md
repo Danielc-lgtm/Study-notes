@@ -171,7 +171,9 @@ Read the templates in `references/templates.md` for the exact structure of each 
 
 When generating content:
 
-- **Work through source material sequentially.** Read one chapter or section at a time, write all pages for that section, then move to the next chapter. Do not read all source PDFs upfront. This keeps context lean and preserves detail fidelity for the section currently being written. Cross-linking to earlier pages only requires filenames, which can be recovered with `find`.
+- **Work through source material in two passes.**
+  - *Pass 1 (skim):* For each source PDF, extract the table of contents and skim each chapter lightly — read only theorem statements, definition names, and section summaries, not full proofs or exposition. Write a content map listing every key concept, theorem, and definition across all chapters.
+  - *Pass 2 (write):* Work through sequentially — read one chapter in full, write all pages for that section, then move to the next. Use the content map from Pass 1 to add forward references and identify cross-chapter connections while working on early chapters.
 - Write mathematical notation using standard LaTeX: `$...$` for inline math, `$$...$$` for display math. Obsidian uses MathJax/KaTeX and renders both correctly.
 - Be precise and formal in definitions and theorem statements.
 - Write all other content in David Tong style prose (see Writing Style above).
