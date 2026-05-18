@@ -133,6 +133,10 @@ qpdf <file> --pages . <start>-<end> -- /tmp/<name>-trimmed.pdf
 
 Read only the trimmed file. This keeps the context window lean and avoids pulling in chapters that are out of scope. The same approach is worthwhile even for PDFs without an explicit restriction: extracting the chapters currently being worked on, rather than reading a large PDF in full, preserves detail fidelity for the section being written.
 
+When multiple source PDFs cover the same topic (e.g., two different lecture notes on group theory), do not default to following one source and ignoring the others. During Pass 1, skim all sources and build a unified content map that identifies the strengths of each — clearer expositions, better exercises, unique coverage, alternative proofs or perspectives.
+
+In Pass 2, use your judgment to combine sources in whatever way produces the best notes. This might mean following one source's structure while pulling exercises from another, interleaving sections from different sources, synthesizing a hybrid ordering, or any other approach. The goal is notes that are better than any single source alone. When sources offer genuinely different proofs or perspectives on the same result, consider including both.
+
 ---
 
 ## Workflow
