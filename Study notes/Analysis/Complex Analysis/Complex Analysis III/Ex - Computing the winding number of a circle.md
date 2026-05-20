@@ -56,6 +56,8 @@ The integer-valuedness follows because $\gamma$ is closed and the lift $\tilde\g
 
 # Solution
 
+The proof breaks into two short steps that compute the winding number directly from the integral formula. Step 1 substitutes the parametrization $\gamma(t) = e^{2\pi i k t}$ into $I(\gamma;0) = (2\pi i)^{-1}\int dz/z$, observes that $\gamma'/\gamma$ is the constant $2\pi i k$, and reads off $k$; Step 2 handles the case $|w| > 1$ either via the unbounded-component property of winding numbers or via Cauchy's theorem on the disc. The non-obvious move is the cancellation in Step 1 — the parametrization is chosen so that $\gamma'(t)/\gamma(t)$ is a constant, which is what makes the integer-valuedness manifest.
+
 **Step 1: $I(\gamma; 0) = k$**
 
 Apply the integral formula with $w = 0$:
