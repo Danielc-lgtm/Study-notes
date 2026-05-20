@@ -55,6 +55,8 @@ Let $D=\{(x,x):x\in[0,1]\}$ be the diagonal of the unit square.
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) observes $D$ is the zero set of the continuous map $(x, y) \mapsto x - y$, hence closed, hence Borel, hence in the product $\sigma$-algebra; Step 2 (part b) applies Tonelli (both $\lambda$ factors are $\sigma$-finite) to compute $(\lambda \otimes \lambda)(D) = \int \lambda(\{x\})\,d\lambda = 0$; Step 3 (part c) computes the two iterated integrals for $\mu \otimes \lambda$ where $\mu$ is counting measure on $[0,1]$ — one gives $0$, the other $1$ — and identifies the failed Tonelli hypothesis as $\sigma$-finiteness of $\mu$ on the uncountable $[0,1]$. The non-obvious move is in Step 3 — counting measure on an *uncountable* set is not $\sigma$-finite, precisely because any countable union of finite sets stays countable, which is what fails Tonelli's hypothesis even on non-negative integrands.
+
 **Step 1 — (a).** $D$ is the zero set of the continuous $(x,y)\mapsto x-y$, hence closed in $[0,1]^2$, hence Borel; and $\mathcal{B}([0,1])\otimes\mathcal{B}([0,1])=\mathcal{B}([0,1]^2)$, so $D$ is product-measurable.
 
 **Step 2 — (b).** Both factors are $\lambda$, finite on $[0,1]$, hence $\sigma$-finite. By [[Thm - Fubini-Tonelli Theorem|Tonelli]] on $\mathbf{1}_D\ge0$,

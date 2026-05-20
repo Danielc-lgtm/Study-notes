@@ -52,6 +52,8 @@ A gambler starts with $k$ pounds and bets £1 on fair coin tosses, stopping on r
 
 # Solution
 
+The proof breaks into two steps. Step 1 (part a) applies optional stopping to the martingale $S_n$ at the bounded exit time $T$: $\mathbb{E}[S_T] = k$, and since $S_T \in \{0, N\}$, this single equation gives $\mathbb{P}(S_T = N) = k/N$; Step 2 (part b) applies optional stopping to the compensated martingale $S_n^2 - n$ to get $\mathbb{E}[S_T^2] - \mathbb{E}[T] = k^2$, then substitutes $\mathbb{E}[S_T^2] = N^2 \cdot (k/N) = Nk$ to read off $\mathbb{E}[T] = k(N-k)$. The non-obvious move is the *pair* of martingales — $S_n$ supplies one equation that pins the hitting probability, and $S_n^2 - n$ supplies a second equation that, *after the probability is known*, pins the expected hitting time.
+
 **Step 1 — (a) Ruin probability.** $T$ is a.s. finite (the walk a.s. exits a bounded interval), and the stopped fortune $S_{T\wedge n}\in[0,N]$ is bounded — so the [[Thm - Optional Stopping Theorem|optional stopping theorem]] applies to the martingale $(S_n)$:
 $$\mathbb{E}[S_T]=\mathbb{E}[S_0]=k.$$
 But $S_T\in\{0,N\}$, so $\mathbb{E}[S_T]=0\cdot\mathbb{P}(S_T=0)+N\cdot\mathbb{P}(S_T=N)=N\,\mathbb{P}(S_T=N)$. Equating,

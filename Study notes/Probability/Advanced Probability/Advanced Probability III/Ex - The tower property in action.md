@@ -55,6 +55,8 @@ tags: [probability, advanced-probability]
 
 # Solution
 
+The proof breaks into two steps. Step 1 (combined a and b) applies the tower property $\mathbb{E}[X] = \mathbb{E}[\mathbb{E}[X \mid N]]$, then computes the inner conditional expectation $\mathbb{E}[X \mid N] = Nm$ using "take out what is known" (the random count $N$ becomes a constant once conditioned on) and independence of $Y_k$ from $N$; the outer expectation gives Wald's identity $\mathbb{E}[X] = m \cdot \mathbb{E}[N]$; Step 2 extracts the general "condition-compute-average" principle. The non-obvious move is the choice of conditioning variable — $N$ is selected precisely because $X$ becomes a *deterministic-structure* sum once $N$ is fixed, the universal recipe for using the tower property as a computational device.
+
 **Step 1 — (a),(b) Wald's identity.** By the [[Thm - Properties of Conditional Expectation|tower property]],
 $$\mathbb{E}[X]=\mathbb{E}\big[\mathbb{E}[X\mid N]\big].$$
 Compute the inner conditional expectation. On $\{N=n\}$, $X=\sum_{k=1}^n Y_k$; since $N$ is independent of $(Y_k)$,

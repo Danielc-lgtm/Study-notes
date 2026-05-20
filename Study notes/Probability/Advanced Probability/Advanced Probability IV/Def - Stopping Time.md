@@ -51,7 +51,7 @@ A stopping time is a *non-anticipating random time* — the discrete shadow of t
 
 **Stopped process.** If $(M_n)$ is a martingale and $T$ a stopping time, the stopped process $(M_n^T)=(M_{T\wedge n})$ is again a martingale ([[Thm - Optional Stopping Theorem|optional stopping]]).
 
-Calibration: (i) Is a constant time $T\equiv m$ a stopping time? Yes — $\{m\le n\}$ is $\emptyset$ or $\Omega$. (ii) Is $T_B$ a stopping time? Yes. (iii) Is $\inf\{n:X_{n+1}>X_n\}$ a stopping time? No — it peeks one step ahead.
+**Calibration check.** Verify that a constant time $T \equiv m$ is a stopping time, because $\{m \leq n\}$ is either $\emptyset$ or $\Omega$, both in $\mathcal{F}_n$. Verify that the hitting time $T_B = \inf\{n : X_n \in B\}$ is a stopping time, by writing $\{T_B \leq n\} = \bigcup_{k \leq n} \{X_k \in B\}$ as a finite union of $\mathcal{F}_n$-events. And verify that $\inf\{n : X_{n+1} > X_n\}$ is *not* a stopping time, because deciding whether to stop at time $n$ requires knowing $X_{n+1}$ — a one-step peek into the future, exactly the anticipation that the definition forbids.
 
 ---
 

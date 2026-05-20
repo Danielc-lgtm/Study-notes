@@ -7,6 +7,8 @@ tags: [physics, special-relativity]
 
 ## §1.2 The Lorentz Group — Exercises
 
+The exercises of §1.2 drill the Lorentz group structure. Boosts become hyperbolic rotations parametrised by rapidity, with the additive composition law $\varphi_1 + \varphi_2$ replacing the awkward velocity-addition formula; the pseudo-orthogonal characterisation $L^T \eta L = \eta$ exhibits the group structure and its four connected components; aberration of light shows how the headlight effect emerges from velocity-direction transformation; and the field-strength tensor unifies electric and magnetic fields into a single Lorentz-covariant object, with the magnetic field's existence emerging from boosting a pure electric field.
+
 - [[Ex - Composing boosts with rapidity]] — rewrite the boost as the hyperbolic-rotation matrix $\begin{pmatrix}\cosh\varphi & \sinh\varphi\\\sinh\varphi & \cosh\varphi\end{pmatrix}$, prove collinear boosts compose by adding rapidities, deduce the velocity-addition law as $\tanh$ of a sum, and analyse the relativistic rocket — speed $\tanh(n\varphi_w) \to c$ as the number of bursts grows (⭐⭐) ([[Def - Rapidity]], [[Def - The Lorentz Group]], [[Thm - Relativistic Velocity Addition]]).
 
 - [[Ex - The Lorentz group as pseudo-orthogonal transformations]] — verify that the matrices satisfying $L^{\mathsf T}\eta L = \eta$ form a group directly from the defining equation, show $\det L = \pm 1$ and $(L^0{}_0)^2 \ge 1$ split it into four components, solve the condition explicitly to recover the boosts as the proper orthochronous piece, and identify the other three via parity and time reversal (⭐⭐) ([[Def - The Lorentz Group]], [[Def - Rapidity]], [[Def - The Spacetime Interval]], [[Def - Group]]).

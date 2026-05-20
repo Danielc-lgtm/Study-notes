@@ -54,6 +54,8 @@ Let $(M_n)$ be a [[Def - Martingale|martingale]] and $\varphi:\mathbb{R}\to\math
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) combines conditional Jensen $\mathbb{E}[\varphi(M_{n+1}) \mid \mathcal{F}_n] \geq \varphi(\mathbb{E}[M_{n+1} \mid \mathcal{F}_n])$ with the martingale identity $\mathbb{E}[M_{n+1} \mid \mathcal{F}_n] = M_n$ to read off the submartingale property; Step 2 (part b) handles the submartingale case by additionally invoking monotonicity of $\varphi$ to chain $\varphi(\mathbb{E}[M_{n+1} \mid \mathcal{F}_n]) \geq \varphi(M_n)$; Step 3 (part c) explains why this is the bridge that lets Doob's inequalities (stated for non-negative submartingales) apply to martingales via $\varphi(x) = |x|^p$. The non-obvious move in Step 2 is the role of monotonicity — without it, applying $\varphi$ to the submartingale inequality could flip it.
+
 **Step 1 — (a).** $\varphi(M_n)$ is adapted and integrable by hypothesis. By [[Thm - Properties of Conditional Expectation|conditional Jensen]] and the martingale identity,
 $$\mathbb{E}[\varphi(M_{n+1})\mid\mathcal{F}_n]\ \ge\ \varphi\big(\mathbb{E}[M_{n+1}\mid\mathcal{F}_n]\big)\ =\ \varphi(M_n).$$
 So $(\varphi(M_n))$ is a submartingale. Taking $\varphi(x)=|x|$ and $\varphi(x)=x^2$: $(|M_n|)$ and $(M_n^2)$ are submartingales.

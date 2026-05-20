@@ -58,6 +58,8 @@ On $X=[0,1]$ with the Borel $\sigma$-algebra, let $\mu=\#$ be **counting measure
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) observes that $\#(A) = 0 \iff A = \emptyset$, so $\lambda \ll \#$ holds vacuously; Step 2 (part b) negates $\sigma$-finiteness by noting that finite $\#$-measure means literally finite, and a countable union of finite sets cannot cover the uncountable $[0, 1]$; Step 3 (part c) shows a candidate density $f$ must satisfy $f(x) = \lambda(\{x\}) = 0$ for every $x$, hence $f \equiv 0$, contradicting $\lambda([0, 1]) = 1$. The non-obvious move is in Step 3 — testing the density at *singletons* exploits the fact that $\#$ has atoms at every point, which is exactly the structural feature that breaks Radon-Nikodym.
+
 **Step 1 — (a).** For counting measure, $\#(A)=0$ if and only if $A=\emptyset$. So the implication "$\#(A)=0\Rightarrow\lambda(A)=0$" has only the trivial premise $A=\emptyset$, where it holds. Hence $\lambda\ll\#$ — absolute continuity is satisfied.
 
 **Step 2 — (b).** A set of finite $\#$-measure is a *finite* set. If $\#$ were $\sigma$-finite, $[0,1]=\bigcup_k S_k$ with each $S_k$ finite — but a countable union of finite sets is countable, while $[0,1]$ is uncountable. So $\#$ is **not $\sigma$-finite**.

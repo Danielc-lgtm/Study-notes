@@ -56,6 +56,8 @@ $f^*(x)=\sup_{r>0}\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f|$; the maximal inequa
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) lower-bounds $f^*(x)$ by the average over the single large ball $B(x, |x| + r_0)$ which contains the support of $|f|$, yielding $f^*(x) \geq c|x|^{-n}$ for $|x|$ large, and integrating in polar coordinates shows $\int f^* = \infty$; Step 2 (part b) deduces no strong $L^1 \to L^1$ bound is possible, only a weak-type bound on level sets, because $|x|^{-n}$ is borderline non-integrable; Step 3 (part c) verifies the weak bound is sufficient for the differentiation theorem's $\varepsilon/3$-style exceptional-set argument. The non-obvious move is in Step 1 — picking the *single* ball $B(x, |x| + r_0)$ as the lower bound (rather than the sup over all balls) is what makes the decay $|x|^{-n}$ explicit.
+
 **Step 1 — (a).** Let $f\in L^1$, $f\neq0$, and pick $r_0$ with $c_1:=\int_{B(0,r_0)}|f|>0$. For $|x|>r_0$, the ball $B(x,|x|+r_0)$ contains $B(0,r_0)$ (any $y$ with $|y|<r_0$ has $|y-x|\le|y|+|x|<|x|+r_0$). Hence
 $$f^*(x)\ge\frac{1}{\lambda(B(x,|x|+r_0))}\int_{B(x,|x|+r_0)}|f|=\frac{1}{\lambda(B(x,|x|+r_0))}\int_{B(x,|x|+r_0)}|f|\ge\frac{c_1}{\omega_n(|x|+r_0)^n}\ge c\,|x|^{-n}$$
 for $|x|$ large, with $c>0$ and $\omega_n=\lambda(B(0,1))$. Now $\int_{|x|>r_0}|x|^{-n}\,dx=\omega_n'\int_{r_0}^\infty r^{-n}\cdot r^{n-1}\,dr=\omega_n'\int_{r_0}^\infty\frac{dr}{r}=\infty$. So $\int f^*\ge c\int_{|x|>r_0}|x|^{-n}\,dx=\infty$ — $f^*\notin L^1$.

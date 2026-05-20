@@ -53,6 +53,8 @@ tags: [analysis, measure-theory]
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) computes the two iterated sums directly: the $n$-first order gives $0$ (each $m$-column cancels), while the $m$-first order gives $1$ (only the $n = 1$ row survives because $m = n - 1 = 0$ is excluded); Step 2 (part b) identifies the failed hypothesis as $f \notin L^1$ by computing $\iint|f| = \infty$ via Tonelli, and notes Tonelli does not save signed integrands; Step 3 (part c) extracts the practical rule "Tonelli first on $|f|$, Fubini second on $f$." The non-obvious move is in Step 1 — the asymmetry comes from the boundary index $m = 0$ being excluded from $\mathbb{N}$, which is what breaks the symmetry between the two orders.
+
 **Step 1 — (a) The two iterated sums.** Sum over $n$ first: for fixed $m\ge1$, the only nonzero terms are $f(m,m)=1$ and $f(m+1,m)=-1$, so $\sum_n f(n,m)=0$, and
 $$\sum_m\Big(\sum_n f(n,m)\Big)=\sum_m 0=0.$$
 Sum over $m$ first: for fixed $n$, the nonzero terms are $f(n,n)=1$ and $f(n,n-1)=-1$ — but the term $m=n-1$ exists only for $n\ge2$. So $\sum_m f(1,m)=1$ and $\sum_m f(n,m)=0$ for $n\ge2$, giving

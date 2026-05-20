@@ -78,6 +78,8 @@ In **PDE theory**, "domain" is the standard name for the region on which a PDE i
 
 **Corollary — a holomorphic function on a domain with zero derivative is constant.** This is the prototype consequence: see [[Thm - Constant on a Domain if Derivative is Zero]]. The path-connectedness is essential — without it, the function can be different constants on different components.
 
+**Calibration check.** Verify that the closed disc $\overline{D(0, 1)}$ is *not* a domain, because boundary points have no disc neighbourhood — complex differentiability at the boundary is not well-defined. Verify that the union of two disjoint open discs $D(0, 1) \cup D(3, 1)$ is *not* a domain, because path-connectedness fails — a holomorphic function on this set decouples into two independent functions on the two components. And verify that the slit plane $\mathbb{C} \setminus (-\infty, 0]$ *is* a domain (open, path-connected via detours around the slit, non-empty), but the punctured plane $\mathbb{C}^\times$ is a domain that is *not simply connected* — loops around the origin cannot be contracted.
+
 ---
 
 # Unlocked by This

@@ -55,6 +55,8 @@ Let $(U,V)$ have joint density $f_{U,V}$ on $\mathbb{R}^2$, and $h:\mathbb{R}\to
 
 # Solution
 
+The proof breaks into two steps. Step 1 (combined a and b) proposes the candidate $g(U) = \int h(v)\,f_{V\mid U}(v\mid u)\,dv$, observes it is $\sigma(U)$-measurable, and verifies the averaging identity over generic $\sigma(U)$-sets $\{U \in B\}$ by writing $f_{U, V} = f_{V\mid U} f_U$ and applying Fubini to extract $\mathbb{E}[g(U)\mathbf{1}_A]$; Step 2 reads off the concrete computational rule. The non-obvious move is in Step 1 — using the identity $f_{U, V} = f_{V \mid U} f_U$ to split the double integral is what allows Fubini to factor the $v$-integral out, recovering $g$ as a function of $u$.
+
 **Step 1 — (a),(b).** Set $g(u)=\int_\mathbb{R}h(v)f_{V\mid U}(v\mid u)\,\mathrm{d}v$ and consider the candidate $g(U)$.
 
 > [!note]- Derivation

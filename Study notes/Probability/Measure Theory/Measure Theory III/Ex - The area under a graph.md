@@ -57,6 +57,8 @@ $$\Gamma_f=\{(x,t)\in X\times[0,\infty):0\le t<f(x)\}.$$
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) shows $\Gamma_f$ is product-measurable by writing it as the intersection of two measurable sets; Step 2 (part b) applies Tonelli to $\mathbf{1}_{\Gamma_f}$ twice — integrating $t$ first gives $\int f\,d\mu$ via $\lambda([0, f(x))) = f(x)$, integrating $x$ first gives $\int_0^\infty \mu(\{f > t\})\,dt$ via the horizontal slice — and equates them; Step 3 (part c) reads off the two interpretations: integral = area under the graph, and integral = integral of the survival function. The non-obvious move is in Step 2 — the same indicator $\mathbf{1}_{\Gamma_f}$ integrated in two orders gives the layer-cake identity, exposing that the integral depends only on the distribution of $f$.
+
 **Step 1 — (a).** $\Gamma_f=\{(x,t):t<f(x)\}\cap\{t\ge0\}$. The function $(x,t)\mapsto f(x)-t$ is $\mathcal{A}\otimes\mathcal{B}$-measurable (composition of projections with measurable maps), so $\{(x,t):t<f(x)\}$ is measurable; intersecting with $\{t\ge0\}$ keeps it in $\mathcal{A}\otimes\mathcal{B}([0,\infty))$.
 
 **Step 2 — (b).** Apply [[Thm - Fubini-Tonelli Theorem|Tonelli]] to $\mathbf{1}_{\Gamma_f}\ge0$:

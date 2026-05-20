@@ -57,6 +57,8 @@ Let $(X_1,\mathcal{A}_1)$, $(X_2,\mathcal{A}_2)$ be measurable spaces and $E\in\
 
 # Solution
 
+The proof breaks into two steps, one per sub-part. Step 1 (part a) defines the family $\mathcal{C}$ of sets with measurable slices, verifies it is a $\sigma$-algebra (using that slicing commutes with complement and countable union), checks rectangles lie in $\mathcal{C}$, and invokes minimality of the generated $\sigma$-algebra; Step 2 (part b) deduces slice-measurability of $f(x_1, \cdot)$ from slice-measurability of the level sets $\{f < a\}$. The non-obvious move is the recognition in Step 1 that slicing is a *Boolean homomorphism* — once that is in place, the entire proof is "the good sets form a $\sigma$-algebra containing the generators."
+
 **Step 1 — (a).** Fix $x_1$ and let $\mathcal{C}=\{E\subseteq X_1\times X_2:E_{x_1}\in\mathcal{A}_2\}$.
 
 > [!note]- Derivation

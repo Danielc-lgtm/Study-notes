@@ -75,6 +75,8 @@ In **PDE**, locally uniform convergence of solutions to elliptic equations is th
 
 **Corollary — Cauchy criterion.** A sequence $f_n$ is locally uniformly Cauchy iff it is locally uniformly convergent (when the codomain is complete, which $\mathbb{C}$ is). So local uniform convergence is testable without knowing the limit.
 
+**Calibration check.** Verify that the partial sums of $\sum z^n$ converge to $1/(1-z)$ *locally uniformly* on $|z| < 1$ but *not uniformly*, because the error $|z|^{n+1}/(1-z)$ blows up as $z \to 1$ within the disc. Verify that pointwise convergence is strictly weaker — for instance $\sin(nz)$ on $\mathbb{R}$ converges nowhere, but even where pointwise limits exist, holomorphicity need not be preserved. And verify that locally uniform convergence is exactly the *compact-open topology* on $C(U, \mathbb{C})$, the seminorm topology with one seminorm per compact subset — the same Fréchet structure that makes the space of holomorphic functions on $U$ a complete topological vector space.
+
 ---
 
 # Unlocked by This

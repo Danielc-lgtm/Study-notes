@@ -53,6 +53,8 @@ $$\mathbb{E}[h(X,Y)\mid\mathcal{G}]=g(X),\qquad g(x)=\mathbb{E}[h(x,Y)].$$
 
 # Solution
 
+The proof breaks into three steps, one per sub-part, each a propose-and-verify against the conditional-expectation characterisation. Step 1 (part a) proposes the constant $\mathbb{E}[X]$ and verifies the averaging identity using $X \perp \mathcal{G}$; Step 2 (part b) proposes $g(X) = \mathbb{E}[h(x, Y)]|_{x = X}$ and verifies the identity via Fubini against the product law of $((X, \mathbf{1}_A), Y)$; Step 3 (part c) shows $\mathbb{E}[X\mid\mathcal{G}]$ already satisfies the averaging identity for the larger $\sigma$-algebra by checking on the $\pi$-system $\{A \cap B\}$ and extending via Dynkin. The non-obvious move is "freeze what is known, average what is independent" (Step 2) — this is the conditional analogue of Fubini and the engine of all Markov-property calculations.
+
 **Step 1 — (a).** The constant $\mathbb{E}[X]$ is $\mathcal{G}$-measurable. For $A\in\mathcal{G}$, $X$ and $\mathbf{1}_A$ are independent, so $\mathbb{E}[X\mathbf{1}_A]=\mathbb{E}[X]\mathbb{E}[\mathbf{1}_A]=\mathbb{E}[\mathbb{E}[X]\mathbf{1}_A]$ — the averaging identity. By [[Thm - Existence and Uniqueness of Conditional Expectation|uniqueness]], $\mathbb{E}[X\mid\mathcal{G}]=\mathbb{E}[X]$.
 
 **Step 2 — (b).** Define $g(x)=\mathbb{E}[h(x,Y)]$ — average out $Y$ with $x$ frozen. Then $g(X)$ is $\mathcal{G}$-measurable ($X$ is, $g$ Borel). For $A\in\mathcal{G}$: since $X,\mathbf{1}_A$ are $\mathcal{G}$-measurable and $Y$ is independent of $\mathcal{G}$, [[Thm - Fubini-Tonelli Theorem|Fubini]] against the product law of $((X,\mathbf{1}_A),Y)$ gives

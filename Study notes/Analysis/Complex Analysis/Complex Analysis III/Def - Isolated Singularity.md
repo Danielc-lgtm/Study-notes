@@ -71,9 +71,7 @@ In **dynamical systems**, the analog is a **fixed point** of a holomorphic map o
 
 **Corollary — the punctured-disc condition is exactly what gives a Laurent series.** $f$ holomorphic on $D(a, R) \setminus \{a\}$ ⟺ $f$ admits a Laurent expansion around $a$ converging on that punctured disc. This is the *true name* of the isolated singularity assumption: it is exactly the regularity needed for the Laurent expansion to exist.
 
----
-
-# Unlocked by This
+**Calibration check.** Verify that $1/\sin(1/z)$ has a *non-isolated* singularity at $z = 0$ — every punctured disc around $0$ contains the poles $z = 1/(n\pi)$ for arbitrarily large $n$, so the function fails the punctured-disc holomorphy required by the definition. Verify that $(\sin z)/z$ has a *removable* singularity at $z = 0$, since its Laurent expansion has no negative-power terms — the function extends holomorphically by setting $f(0) = 1$. And verify that $1/(z^2 + 1)$ has no singularity at $z = 0$ at all, because $0$ is not in the singular set $\{\pm i\}$ — "singularity at the origin" requires the origin to *be* singular.
 
 > [!tip] Classification of Singularities *(from §3.3)*
 > The [[Def - Removable Singularity, Pole, Essential Singularity|trichotomy]] classifying isolated singularities by their principal part: zero, finite, or infinite. Every isolated singularity falls into exactly one bucket.

@@ -7,6 +7,8 @@ tags: [analysis, topology]
 
 ## §2 Topological Spaces — Exercises
 
+The exercises of §2 drill the abstract topological-space framework beyond metric spaces. The Sorgenfrey line and cofinite topology calibrate non-metrisable topologies; equivalent metrics on $\mathbb{R}^n$ all give the same topology (Lipschitz comparison); and generating a topology from a subbasis exposes the universal property that makes subbasis-based continuity checks possible. The unifying observation: topology is the right level of abstraction for studying continuity, with metrics being one concrete instantiation.
+
 - [[Ex - The half-open interval topology on the real line]] (⭐⭐) — constructing the Sorgenfrey line as a non-standard topology on $\mathbb{R}$, showing every half-open interval is clopen, comparing finer-than-standard refinement via identity-map continuity ([[Def - Topological Space]], [[Def - Basis and Subbasis for a Topology]], [[Def - Open and Closed Sets in a Metric Space]], [[Def - Continuous Map]], [[Def - Homeomorphism]]).
 
 - [[Ex - Three equivalent metrics on Rn]] (⭐) — proving the $\ell^1, \ell^2, \ell^\infty$ comparison inequalities and deducing topological equivalence via Lipschitz comparison, with the infinite-dimensional contrast ([[Def - Metric Space]], [[Def - Equivalent Metrics]], [[Def - Open and Closed Sets in a Metric Space]]).

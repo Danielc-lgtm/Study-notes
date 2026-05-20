@@ -54,6 +54,8 @@ Let $S_n=X_1+\cdots+X_n$ ($S_0=0$) be a random walk with i.i.d. steps $X_k$, and
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) verifies $\mathbb{E}[S_{n+1} \mid \mathcal{F}_n] = S_n + \mathbb{E}[X_{n+1}] = S_n$ by splitting into "$\mathcal{F}_n$-measurable + independent increment"; Step 2 (part b) expands $S_{n+1}^2 = (S_n + X_{n+1})^2$, conditions out the known $S_n$, sees the cross-term vanish, and absorbs $\mathbb{E}[X_{n+1}^2] = \sigma^2$ into the predictable compensator $-n\sigma^2$; Step 3 (part c) constructs the exponential martingale $e^{uS_n}/\mathbb{E}[e^{uX_1}]^n$ by the same independence-of-increment computation. The non-obvious move is the choice of normaliser in each case — the constant $\sigma^2$ in Step 2 and the moment-generating function in Step 3 are the *exactly right* compensators that drive the conditional mean back to the current value.
+
 **Step 1 — (a).** $(S_n)$ is adapted and integrable ($\mathbb{E}|S_n|\le n\mathbb{E}|X_1|$). Since $X_{n+1}\perp\mathcal{F}_n$,
 $$\mathbb{E}[S_{n+1}\mid\mathcal{F}_n]=\mathbb{E}[S_n+X_{n+1}\mid\mathcal{F}_n]=S_n+\mathbb{E}[X_{n+1}]=S_n+0=S_n.$$
 A mean-zero random walk is a martingale.

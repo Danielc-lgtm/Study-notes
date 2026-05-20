@@ -93,6 +93,8 @@ The harmonic conjugate of $\log|z|$ on the simply connected domain $\mathbb{C}\s
 
 **Corollary — mean value property.** A harmonic function $u$ on $D(a, R)$ satisfies $u(a) = (1/(2\pi))\int_0^{2\pi} u(a + re^{i\theta})\,d\theta$ for any $0 < r < R$ — value at the centre equals the average on a surrounding circle.
 
+**Calibration check.** Verify that $u(x, y) = x^2 - y^2$ is harmonic by computing $u_{xx} = 2$ and $u_{yy} = -2$, then identify it as $\operatorname{Re}(z^2)$ to find the harmonic conjugate $v = 2xy$. Verify that $u = x^2 + y^2 = |z|^2$ is *not* harmonic ($\Delta u = 4$), and that the failure traces to $|z|^2 = z \bar z$ having both holomorphic and antiholomorphic parts. And verify that $\log|z|$ is harmonic on $\mathbb{C} \setminus \{0\}$ but has no *global* harmonic conjugate, because $\arg z$ is multi-valued — the obstruction is exactly the non-simply-connectedness of the punctured plane.
+
 ---
 
 # Unlocked by This

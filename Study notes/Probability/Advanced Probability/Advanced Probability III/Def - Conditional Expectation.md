@@ -61,7 +61,7 @@ Conditional expectation is **orthogonal projection** in the Hilbert space $L^2$ 
 
 **Trivial $\sigma$-algebra:** $\mathbb{E}[X\mid\{\emptyset,\Omega\}]=\mathbb{E}[X]$ — no information, the conditional expectation collapses to the constant mean. **Full $\sigma$-algebra:** $\mathbb{E}[X\mid\mathcal{F}]=X$ — total information, nothing to average. **Discrete conditioning:** if $\mathcal{G}=\sigma(G_1,G_2,\dots)$ for a partition, $\mathbb{E}[X\mid\mathcal{G}]=\sum_n\mathbb{E}[X\mid G_n]\mathbf{1}_{G_n}$ — constant on each block, equal to the elementary conditional expectation there. **Independence:** if $X$ is independent of $\mathcal{G}$, $\mathbb{E}[X\mid\mathcal{G}]=\mathbb{E}[X]$ — irrelevant information averages to the unconditional mean.
 
-Calibration: (i) Is $\mathbb{E}[X\mid\mathcal{G}]$ a number? No — a $\mathcal{G}$-measurable random variable. (ii) Is it unique? Yes, up to a.s. equality. (iii) If $X$ is $\mathcal{G}$-measurable, what is $\mathbb{E}[X\mid\mathcal{G}]$? $X$ itself — $X$ is already known to $\mathcal{G}$.
+**Calibration check.** Verify that $\mathbb{E}[X\mid\mathcal{G}]$ is a $\mathcal{G}$-measurable *random variable*, not a single number — the shift from scalar to function is the central conceptual leap from the elementary definition. Verify that $\mathbb{E}[X\mid\mathcal{G}]$ is unique only up to $\mathbb{P}$-a.s. equality (two versions can differ on null sets but no more). And verify that if $X$ is itself $\mathcal{G}$-measurable, then $\mathbb{E}[X\mid\mathcal{G}] = X$ a.s. — $X$ is "already known" to $\mathcal{G}$, so the conditional expectation has nothing to average out.
 
 ---
 

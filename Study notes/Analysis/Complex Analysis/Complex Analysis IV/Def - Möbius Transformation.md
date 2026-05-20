@@ -87,6 +87,8 @@ In **special relativity**, the Möbius transformations on the celestial sphere c
 
 **Corollary — every Möbius transformation is a composition of standard pieces.** Every Möbius transformation factors as a composition of: translations ($z + b$), scalings ($az$), and inversion ($1/z$). Specifically: if $c \neq 0$, $T(z) = a/c + (bc - ad)/(c^2)\cdot 1/(z + d/c)$, a composition of a translation, an inversion, a scaling, and another translation.
 
+**Calibration check.** Verify the non-degeneracy condition $ad - bc \neq 0$ is what excludes constant maps (when $ad = bc$, numerator and denominator are proportional and the ratio degenerates). Verify that the matrices $M$ and $\lambda M$ for any $\lambda \neq 0$ give the *same* Möbius transformation, which is why $\operatorname{Möb}(\hat{\mathbb{C}}) \cong \operatorname{PGL}_2(\mathbb{C})$ and not $\operatorname{GL}_2(\mathbb{C})$. And verify triple transitivity by constructing the unique Möbius transformation that sends three given distinct points to $\{0, 1, \infty\}$ — the normalisation that makes Möbius geometry tractable.
+
 ---
 
 # Unlocked by This

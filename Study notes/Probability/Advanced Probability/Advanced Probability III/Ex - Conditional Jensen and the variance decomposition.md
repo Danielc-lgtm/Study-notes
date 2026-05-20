@@ -56,6 +56,8 @@ $$\mathrm{Var}(X)=\underbrace{\mathrm{Var}\big(\mathbb{E}[X\mid\mathcal{G}]\big)
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) applies conditional Jensen with $\varphi(x) = x^2$ to get $\mathbb{E}[X^2 \mid \mathcal{G}] \geq \mathbb{E}[X \mid \mathcal{G}]^2$, then takes unconditional expectations using the tower property to read off the $L^2$-contraction; Step 2 (part b) rearranges the conditional variance identity $\mathbb{E}[X^2\mid\mathcal{G}] = \mathrm{Var}(X\mid\mathcal{G}) + \mathbb{E}[X\mid\mathcal{G}]^2$, takes $\mathbb{E}$, and subtracts $(\mathbb{E}X)^2$ to extract the total variance decomposition; Step 3 (part c) interprets the result as the Pythagorean split into explained and unexplained variance. The non-obvious move is the tower-property bridge — turning every conditional statement into an unconditional one is the only way to convert "Jensen at a.s." into a global norm inequality.
+
 **Step 1 — (a) $L^2$-contraction.** [[Thm - Properties of Conditional Expectation|Conditional Jensen]] with the convex $\varphi(x)=x^2$:
 $$\mathbb{E}[X^2\mid\mathcal{G}]\ge\big(\mathbb{E}[X\mid\mathcal{G}]\big)^2\quad\text{a.s.}$$
 Take unconditional expectations and apply the [[Thm - Properties of Conditional Expectation|tower property]] to the left side:

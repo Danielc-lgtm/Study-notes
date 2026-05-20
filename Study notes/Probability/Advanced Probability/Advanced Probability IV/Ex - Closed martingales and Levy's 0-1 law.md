@@ -56,6 +56,8 @@ Let $Z\in L^1(\Omega,\mathcal{F},\mathbb{P})$ and $(\mathcal{F}_n)$ a [[Def - Fi
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) observes $X_n = \mathbb{E}[Z \mid \mathcal{F}_n]$ is a UI martingale (closed martingales are UI), so it converges a.s. and in $L^1$ to some $X_\infty$, then identifies $X_\infty = \mathbb{E}[Z \mid \mathcal{F}_\infty]$ via the averaging identity on the generating $\pi$-system $\bigcup_m \mathcal{F}_m$ and Dynkin's lemma; Step 2 (part b) specialises to $Z = \mathbf{1}_A$ for $A \in \mathcal{F}_\infty$, where the limit is $\mathbf{1}_A$; Step 3 (part c) recovers Kolmogorov by noting that for a tail event of an independent sequence, $\mathbb{P}(A \mid \mathcal{F}_n) = \mathbb{P}(A)$ is constant, which forces $\mathbf{1}_A = \mathbb{P}(A)$ a.s. The non-obvious move is in Step 1 — the identification of $X_\infty$ uses *Dynkin* to extend the averaging identity from the $\pi$-system to all of $\mathcal{F}_\infty$, which is what makes "closed martingale converges to the conditional expectation it closes to" rigorous.
+
 **Step 1 — (a) Lévy's upward theorem.** $X_n=\mathbb{E}[Z\mid\mathcal{F}_n]$ is a [[Thm - Lp and L1 Martingale Convergence|uniformly integrable]] martingale (conditional expectations of the fixed $Z\in L^1$), so $X_n\to X_\infty$ a.s. and in $L^1$ for some $X_\infty\in L^1$.
 
 > [!note]- Derivation

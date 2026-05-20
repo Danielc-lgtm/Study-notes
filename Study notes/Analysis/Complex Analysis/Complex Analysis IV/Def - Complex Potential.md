@@ -80,6 +80,8 @@ In **stokes flow** (very low Reynolds number, almost no inertia), the streamline
 
 **Is NOT an instance — compressible flow.** When the density varies, $\nabla \cdot \vec v \neq 0$, breaking the incompressibility assumption.
 
+**Calibration check.** Verify that the complex velocity is the *conjugate* $\bar v = v_x - iv_y$, not $v + iv_y$ — the conjugation is forced by the Cauchy-Riemann identification of $dw/dz$ with the gradient of the real part. Verify that a simple pole of $w$ at $a$ corresponds physically to a *source* (positive real residue) or *sink* (negative), while a logarithmic singularity gives a *vortex* with circulation equal to the imaginary part of the coefficient. And verify that the solid boundary of a 2D inviscid flow is always a *streamline* $\psi = \text{const}$ — fluid cannot cross it, so the imaginary part of $w$ must be constant on the boundary, which is what conformal mapping methods exploit.
+
 ---
 
 # Unlocked by This

@@ -54,6 +54,8 @@ $$\mathbb{E}[X\mid\mathcal{G}]=\sum_n\frac{\mathbb{E}[X\mathbf{1}_{G_n}]}{\mathb
 
 # Solution
 
+The proof breaks into two steps. Step 1 (combined a and b) builds the candidate $Y = \sum_n c_n \mathbf{1}_{G_n}$ with $c_n = \mathbb{E}[X\mathbf{1}_{G_n}]/\mathbb{P}(G_n)$, verifies it is $\mathcal{G}$-measurable (constant on each block) and integrable, then checks the averaging identity on generators $G_m$ (immediate by construction) and extends by $\sigma$-additivity to all $A \in \mathcal{G}$; uniqueness identifies $Y$ as the conditional expectation; Step 2 recovers the extremes $\mathbb{E}[X \mid \{\emptyset, \Omega\}] = \mathbb{E}[X]$ and $\mathbb{E}[X \mid \mathcal{F}] = X$. The non-obvious point is the role of the partition — every $A \in \mathcal{G}$ is *exactly* a union of blocks, which is what allows the averaging identity to be verified one block at a time and reassembled by $\sigma$-additivity.
+
 **Step 1 — (a),(b).** Let $Y=\sum_n c_n\mathbf{1}_{G_n}$ with $c_n=\mathbb{E}[X\mathbf{1}_{G_n}]/\mathbb{P}(G_n)$ — note $c_n=\mathbb{E}[X\mid G_n]$, the elementary conditional expectation. $Y$ is constant ($=c_n$) on each block $G_n$, hence **$\mathcal{G}$-measurable** (its level sets are unions of blocks). It is integrable: $\mathbb{E}|Y|\le\sum_n|c_n|\mathbb{P}(G_n)\le\sum_n\mathbb{E}[|X|\mathbf{1}_{G_n}]=\mathbb{E}|X|<\infty$.
 
 > [!note]- Derivation

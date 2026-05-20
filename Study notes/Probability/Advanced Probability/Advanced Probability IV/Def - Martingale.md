@@ -57,7 +57,7 @@ A martingale is [[Def - Conditional Expectation|conditional expectation]] frozen
 
 **Convex functions.** If $(M_n)$ is a martingale and $\varphi$ convex with $\varphi(M_n)\in L^1$, then $(\varphi(M_n))$ is a *submartingale* — by [[Thm - Properties of Conditional Expectation|conditional Jensen]]. In particular $|M_n|$ and $M_n^2$ are submartingales.
 
-Calibration: (i) Is $n\mapsto\mathbb{E}[X_n]$ constant for a martingale? Yes. (ii) Is a martingale a Markov process? Not necessarily — the two notions are independent. (iii) Is $|M_n|$ a martingale? No — a submartingale (convex $\varphi$).
+**Calibration check.** Verify that $n \mapsto \mathbb{E}[X_n]$ is constant for a martingale, non-increasing for a supermartingale, non-decreasing for a submartingale — the scalar consequence of the conditional identity after taking unconditional expectations. Verify that the martingale property is *independent* of the Markov property — a process can be one without being the other, since the martingale identity only constrains conditional means while the Markov property constrains entire conditional distributions. And verify that $|M_n|$ is *not* a martingale but a *submartingale*, because $\varphi(x) = |x|$ is convex and conditional Jensen gives $\mathbb{E}[|M_{n+1}| \mid \mathcal{F}_n] \geq |\mathbb{E}[M_{n+1} \mid \mathcal{F}_n]| = |M_n|$.
 
 ---
 

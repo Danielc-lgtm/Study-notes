@@ -56,6 +56,8 @@ Let $(Y_k)$ be i.i.d. with $\mathbb{P}(Y_k=0)=\mathbb{P}(Y_k=2)=\tfrac12$, and $
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) verifies $X_n$ is a martingale by $\mathbb{E}[X_{n+1} \mid \mathcal{F}_n] = X_n \mathbb{E}[Y_{n+1}] = X_n$ (independence + $\mathbb{E}[Y] = 1$), with constant mean $1$; Step 2 (part b) uses the absorption-at-zero structure — once any $Y_k = 0$ the process stays $0$ — and $\mathbb{P}(\text{no } Y_k = 0) = \prod 1/2 = 0$ to deduce $X_n \to 0$ a.s.; Step 3 (part c) reads off the discrepancy $\mathbb{E}[X_n] = 1 \not\to 0 = \mathbb{E}[X_\infty]$ and identifies the failed hypothesis as uniform integrability, witnessed by the tall-rare-spike $X_n = 2^n$ at probability $2^{-n}$. The non-obvious move is recognising the *spike* in Step 3 — $L^1$-boundedness alone is too weak; UI is the no-spike condition that the convergence theorem requires.
+
 **Step 1 — (a).** $X_n\ge0$, adapted, integrable. Since $Y_{n+1}\perp\mathcal{F}_n$ and $X_n$ is $\mathcal{F}_n$-measurable,
 $$\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=\mathbb{E}[X_nY_{n+1}\mid\mathcal{F}_n]=X_n\,\mathbb{E}[Y_{n+1}]=X_n\cdot1=X_n.$$
 So $(X_n)$ is a martingale, and $\mathbb{E}[X_n]=\mathbb{E}[X_0]=1$ for every $n$ — it is non-negative and $L^1$-bounded.

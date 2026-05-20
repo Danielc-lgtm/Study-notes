@@ -55,6 +55,8 @@ by computing $I^2$, where $I=\int_\mathbb{R}e^{-x^2/2}\,dx$, as a double integra
 
 # Solution
 
+The proof breaks into three steps. Step 1 squares $I$ and uses Tonelli to merge the two factors into a double integral $\int_{\mathbb{R}^2} e^{-(x^2+y^2)/2}\,d\lambda_2$; Step 2 switches to polar coordinates (Jacobian $r$, with $x^2 + y^2 = r^2$) and evaluates to $2\pi$, hence $I = \sqrt{2\pi}$; Step 3 normalises by $(2\pi)^{-1/2}$ to obtain the standard Gaussian density. The non-obvious move is in Step 1 — squaring the integral exposes a rotational symmetry that is invisible in one dimension, and Tonelli is what converts the product into a single integral where the symmetry can be exploited.
+
 **Step 1 — Square and merge.** $I=\int_\mathbb{R}e^{-x^2/2}\,dx>0$. Then
 $$I^2=\Big(\int_\mathbb{R}e^{-x^2/2}dx\Big)\Big(\int_\mathbb{R}e^{-y^2/2}dy\Big)=\int_\mathbb{R}\Big(\int_\mathbb{R}e^{-x^2/2}e^{-y^2/2}\,dx\Big)dy.$$
 The integrand $e^{-(x^2+y^2)/2}\ge0$ is Borel measurable, so by [[Thm - Fubini-Tonelli Theorem|Tonelli]] this iterated integral equals the double integral over $\mathbb{R}^2$:

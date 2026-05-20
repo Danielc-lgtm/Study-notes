@@ -90,6 +90,8 @@ In **operator theory**, the Poisson kernel implements the **harmonic extension o
 
 **Sanity check — concentration as $r \to 1$.** For $u_0$ continuous, $\lim_{r \to 1^-} u(re^{i\theta}) = u_0(e^{i\theta})$ pointwise. This is the recovery of boundary values from the harmonic extension.
 
+**Calibration check.** Verify that $P_0(\theta) = 1$ identically, so the Poisson formula at the centre reduces to the mean value property — the Poisson kernel is the deformation of the uniform measure that biases toward boundary points near the interior evaluation point. Verify $\int_0^{2\pi} P_r(\theta)\,d\theta = 2\pi$ (normalisation), which is what makes the Poisson integral a weighted *average*. And verify that as $r \to 1^-$, $P_r$ concentrates as a Dirac delta at $\theta = 0$ — $P_r(0) \to \infty$ while $P_r(\theta) \to 0$ for $\theta \neq 0$ — so the Poisson integral *recovers* boundary values in the limit.
+
 ---
 
 # Unlocked by This

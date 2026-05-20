@@ -47,7 +47,7 @@ The conditional density is the *density* version of the elementary $\mathbb{P}(A
 
 **Bivariate Gaussian.** For $(U,V)$ jointly Gaussian, $f_{V\mid U}(\cdot\mid u)$ is again Gaussian, with mean *linear* in $u$ and variance *not depending on $u$*: $\mathbb{E}[V\mid U]=\mathbb{E}V+\frac{\mathrm{Cov}(U,V)}{\mathrm{Var}(U)}(U-\mathbb{E}U)$. The conditional expectation of a Gaussian is the *linear regression*.
 
-Calibration: (i) Is $f_{V\mid U}(\cdot\mid u)$ a probability density? Yes, in $v$, for each fixed $u$ with $f_U(u)>0$. (ii) Does the conditional density need $\mathbb{P}(U=u)>0$? No — that is the whole point; it is defined where the *marginal density* is positive. (iii) For independent $U,V$, what is $\mathbb{E}[V\mid U]$? The constant $\mathbb{E}[V]$.
+**Calibration check.** Verify that for each fixed $u$ with $f_U(u) > 0$, the function $v \mapsto f_{V\mid U}(v\mid u)$ is a probability density (non-negative and integrates to $1$ in $v$). Verify that the conditional density is defined where the *marginal density* is positive, *not* where $\mathbb{P}(U = u) > 0$ — that distinction is the whole point of the construction, since the conditioning event has probability zero. And verify that for independent $U, V$, $f_{V\mid U}(v\mid u) = f_V(v)$, so $\mathbb{E}[V\mid U]$ is the constant $\mathbb{E}[V]$.
 
 ---
 

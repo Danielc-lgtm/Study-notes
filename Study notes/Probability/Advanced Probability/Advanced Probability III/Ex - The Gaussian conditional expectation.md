@@ -57,6 +57,8 @@ Let $(X,W)$ be jointly Gaussian, mean zero, with $\mathrm{Var}(W)>0$.
 
 # Solution
 
+The proof breaks into two steps. Step 1 (combined a and b) proposes the linear candidate $Y = aW$ with $a = \mathrm{Cov}(X, W)/\mathrm{Var}(W)$, chosen to make the residual $R = X - aW$ uncorrelated with $W$; jointly Gaussian + uncorrelated upgrades to independent; the averaging identity follows by independence; uniqueness pins $Y$ as the conditional expectation; Step 2 reads off the consequences — "best predictor = best linear predictor" and conditioning preserves Gaussianity. The non-obvious move is the "uncorrelated implies independent" upgrade — true only for jointly Gaussian variables, and the reason the conditional law of $X$ given $W$ is itself Gaussian with $W$-independent variance, which is the foundation of the Kalman filter.
+
 **Step 1 — (a),(b).** Set $a=\mathrm{Cov}(X,W)/\mathrm{Var}(W)$ and $R=X-aW$. Then
 $$\mathrm{Cov}(R,W)=\mathrm{Cov}(X,W)-a\,\mathrm{Var}(W)=\mathrm{Cov}(X,W)-\mathrm{Cov}(X,W)=0,$$
 so $R$ and $W$ are *uncorrelated*. Crucially, $R$ and $W$ are jointly Gaussian — both are linear combinations of the jointly Gaussian pair $(X,W)$ — and **for jointly Gaussian variables, uncorrelated implies independent**. So $R=X-\mathbb{E}[X\mid W]$ is *independent* of $W$, the conclusion of (b).

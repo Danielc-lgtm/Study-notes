@@ -55,6 +55,8 @@ An urn starts with one red and one black ball. At each step a ball is drawn unif
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) computes $\mathbb{E}[R_{n+1} \mid \mathcal{F}_n] = R_n + X_n = R_n \cdot \frac{n+3}{n+2}$ by conditioning on the urn composition, then divides by the new total to read off $\mathbb{E}[X_{n+1} \mid \mathcal{F}_n] = X_n$; Step 2 (part b) uses $X_n \in [0, 1]$ to invoke both convergence theorems simultaneously — bounded $\Rightarrow$ $L^1$-bounded (a.s. convergence) *and* UI ($L^1$-convergence); Step 3 (part c) states the additional Beta-Binomial computation showing $X_\infty \sim \text{Uniform}[0, 1]$. The non-obvious move is in Step 1 — taking the martingale to be the *fraction* (not the count) is what works, because the fraction is conserved in conditional mean even as the count grows.
+
 **Step 1 — (a).** Condition on $\mathcal{F}_n$ (the history through step $n$); the urn has $R_n$ red of $n+2$ balls, so the next draw is red with probability $X_n=R_n/(n+2)$. Thus $R_{n+1}=R_n+1$ with probability $X_n$ and $R_{n+1}=R_n$ otherwise:
 $$\mathbb{E}[R_{n+1}\mid\mathcal{F}_n]=(R_n+1)\,X_n+R_n\,(1-X_n)=R_n+X_n=R_n+\frac{R_n}{n+2}=R_n\cdot\frac{n+3}{n+2}.$$
 Dividing by the new total $n+3$:

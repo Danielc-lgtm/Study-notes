@@ -74,9 +74,7 @@ In **physics — gauge theory**, simply-connectedness controls whether one can g
 
 **Corollary — every closed curve bounds.** If $U$ is simply connected and $\gamma$ is a closed curve in $U$, then $\gamma$ bounds a region inside $U$ in the homological sense — the integer-valued function $w \mapsto I(\gamma; w)$ extends to all of $\mathbb{C}$, vanishes outside $U$, and equals the "filled in" interior of $\gamma$.
 
----
-
-# Unlocked by This
+**Calibration check.** Verify that the punctured plane $\mathbb{C}^\times$ is *not* simply connected by exhibiting the unit circle as a closed curve with winding number $1$ around the missing point $0$ — and that this is exactly why there is no global branch of $\log$ on $\mathbb{C}^\times$. Verify that the slit plane $\mathbb{C} \setminus (-\infty, 0]$ *is* simply connected, since the removed ray "blocks" any closed curve from winding around its points. And verify that $\mathbb{C} \setminus \{0, 1\}$ has fundamental group the *free* group on two generators (not $\mathbb{Z} \times \mathbb{Z}$), because the two punctures are independent obstructions and the free product structure tracks the order in which they are encircled.
 
 > [!tip] Cauchy's Theorem in Full Generality *(from §3.2)*
 > The full form of [[Thm - Cauchy's Theorem for Simply Connected Domains|Cauchy's theorem]]: on a simply connected open $U$, every holomorphic function has a primitive and every closed integral vanishes. This is what we needed to motivate the definition.

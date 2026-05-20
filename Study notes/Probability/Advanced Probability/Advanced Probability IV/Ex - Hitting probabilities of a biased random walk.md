@@ -54,6 +54,8 @@ A biased random walk on $\mathbb{Z}$ takes steps $+1$ with probability $p$ and $
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) verifies $(q/p)^{S_n}$ is a martingale by computing $\mathbb{E}[(q/p)^X] = q + p = 1$, the choice of base that tunes the per-step multiplier to mean $1$; Step 2 (part b) applies optional stopping at the exit time $T$ to get the single linear equation $(q/p)^k = (1-\pi) + (q/p)^N \pi$, solving for $\pi = \mathbb{P}(S_T = N)$; Step 3 (part c) shows the biased formula degenerates continuously to $k/N$ as $p \to 1/2$. The non-obvious move is the choice of base $q/p$ in Step 1 — it is the unique root of $\mathbb{E}[r^X] = 1$, the "Cramér root" that also governs exponential change of measure and large-deviation rates.
+
 **Step 1 — (a).** Let $r=q/p$. For one step, $\mathbb{E}[r^{X_{n+1}}]=p\cdot r+q\cdot r^{-1}=p\cdot\frac qp+q\cdot\frac pq=q+p=1$. Since $S_{n+1}=S_n+X_{n+1}$, $X_{n+1}\perp\mathcal{F}_n$, and $r^{S_n}$ is $\mathcal{F}_n$-measurable,
 $$\mathbb{E}[M_{n+1}\mid\mathcal{F}_n]=\mathbb{E}[r^{S_n}r^{X_{n+1}}\mid\mathcal{F}_n]=r^{S_n}\,\mathbb{E}[r^{X_{n+1}}]=r^{S_n}\cdot1=M_n.$$
 So $M_n=(q/p)^{S_n}$ is a martingale — the base $q/p$ is *exactly* the value making the multiplier fair.

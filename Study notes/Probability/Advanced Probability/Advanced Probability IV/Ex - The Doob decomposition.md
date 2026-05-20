@@ -55,6 +55,8 @@ Let $(X_n)_{n\ge0}$ be an integrable adapted process.
 
 # Solution
 
+The proof breaks into three steps, one per sub-part. Step 1 (part a) defines $A_n$ as the running sum of conditional one-step drifts (predictable by construction), sets $M_n = X_n - X_0 - A_n$, verifies it is a martingale by computing $\mathbb{E}[M_n - M_{n-1} \mid \mathcal{F}_{n-1}] = 0$, and proves uniqueness via the lemma "a predictable martingale started at $0$ is identically $0$"; Step 2 (part b) reads off the submartingale-iff-increasing-drift equivalence directly from the definition of $A_n - A_{n-1}$; Step 3 (part c) computes the drift of $S_n^2$ as $\sigma^2$ per step, giving $A_n = n\sigma^2$. The non-obvious move is the uniqueness argument in Step 1 — a process that is simultaneously *predictable* and a *martingale* with $A_0 = 0$ must be identically $0$, because predictability lets the martingale increment be pulled out of the conditional expectation.
+
 **Step 1 — (a).** Define the predictable process $A$ by $A_0=0$ and
 $$A_n-A_{n-1}=\mathbb{E}[X_n-X_{n-1}\mid\mathcal{F}_{n-1}],\qquad\text{so}\qquad A_n=\sum_{k=1}^n\mathbb{E}[X_k-X_{k-1}\mid\mathcal{F}_{k-1}].$$
 Each summand is $\mathcal{F}_{k-1}$-measurable, so $A_n$ is $\mathcal{F}_{n-1}$-measurable — *predictable*. Set $M_n=X_n-X_0-A_n$.
