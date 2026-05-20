@@ -92,6 +92,8 @@ The conceptual hurdle is keeping straight which closure property is used where. 
 >
 > **Hint:** "$\ge$" needs disjointifying the cover *inside* $\mathcal{A}$ and the pre-measure's countable additivity.
 >
+> **Why needed:** This is statement (1) of the theorem — it certifies that the constructed measure $\mu^*$ actually agrees with the given pre-measure $\widetilde\mu$ on $\mathcal{A}$, so the extension genuinely extends the original data rather than recording something different.
+>
 > > [!note]- Full proof
 > > "$\le$": take the single-set cover $K_1=A$, cost $\widetilde\mu(A)$. "$\ge$": let $K_j\in\mathcal{A}$ cover $A$. Disjointify: $\widetilde K_1=K_1$, $\widetilde K_j=K_j\setminus\bigcup_{l<j}K_l\in\mathcal{A}$. The sets $\widetilde K_j\cap A\in\mathcal{A}$ are pairwise disjoint with $\bigsqcup_j(\widetilde K_j\cap A)=A\in\mathcal{A}$. By countable additivity *within $\mathcal{A}$* (the pre-measure axiom),
 > > $$\widetilde\mu(A)=\sum_j\widetilde\mu(\widetilde K_j\cap A)\le\sum_j\widetilde\mu(\widetilde K_j)\le\sum_j\widetilde\mu(K_j),$$

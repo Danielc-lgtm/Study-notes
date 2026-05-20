@@ -75,6 +75,10 @@ The proof has exactly one non-obvious move and it is everything: **apply Fatou n
 > [!note]- Lemma 1: Domination forces integrability
 > **Statement:** Under the hypotheses, $f,f_n\in L^1$ and $|f_n-f|\le2g$ a.e.
 >
+> **Hint:** Pass the bound $|f_n|\le g$ to the pointwise limit to get $|f|\le g$ a.e., then use the triangle inequality on $f_n-f$.
+>
+> **Why needed:** It produces the non-negative measurable sequence $2g-|f_n-f|\ge 0$ that Fatou's lemma requires as input — without integrability of $g$, the cancellation step at the end of the main proof is illegal because $\int 2g$ might be infinite.
+>
 > > [!note]- Full proof
 > > $|f_n|\le g$ a.e. and $f_n\to f$ a.e. give $|f|=\lim|f_n|\le g$ a.e. By [[Thm - Properties of the Integral|monotonicity]], $\int|f|\le\int g<\infty$ and $\int|f_n|\le\int g<\infty$, so $f,f_n\in L^1$. Then $|f_n-f|\le|f_n|+|f|\le2g$ a.e. $\square$
 
@@ -82,6 +86,8 @@ The proof has exactly one non-obvious move and it is everything: **apply Fatou n
 > **Statement:** $\limsup_n\int|f_n-f|\,d\mu\le0$.
 >
 > **Hint:** Apply Fatou to $2g-|f_n-f|\ge0$.
+>
+> **Why needed:** This is the substantive content of DCT — once $\limsup\int|f_n-f|\le 0$ is established, the triangle inequality $|\int f_n - \int f|\le\int|f_n-f|$ immediately gives $\int f_n\to\int f$.
 >
 > > [!note]- Full proof
 > > By Lemma 1, $h_n:=2g-|f_n-f|\ge0$ a.e. and is measurable. [[Thm - Fatou's Lemma|Fatou]]: $\int\liminf h_n\le\liminf\int h_n$. Since $f_n\to f$ a.e., $|f_n-f|\to0$ a.e., so $\liminf h_n=2g$ a.e., and the left side is $\int 2g$. By [[Thm - Properties of the Integral|linearity]], $\int h_n=\int 2g-\int|f_n-f|$, so $\liminf\int h_n=\int 2g-\limsup\int|f_n-f|$. Thus $\int 2g\le\int 2g-\limsup\int|f_n-f|$; since $\int 2g<\infty$, cancel to get $\limsup\int|f_n-f|\le0$. $\square$

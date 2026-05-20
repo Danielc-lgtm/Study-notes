@@ -52,6 +52,12 @@ The chapter then confronts the central technical problem: measures are hard to *
 - **[[Thm - Properties of Measures]]**
 	- From the two axioms alone follow monotonicity, finite additivity, continuity from below ($A_k\uparrow A\Rightarrow\mu(A_k)\to\mu(A)$, unconditional), continuity from above ($A_k\downarrow A\Rightarrow\mu(A_k)\to\mu(A)$, *needs $\mu(A_1)<\infty$*), and $\sigma$-subadditivity. Continuity from below is $\sigma$-additivity re-dressed; the proofs all run on the disjointification trick. The first Borel–Cantelli lemma is a one-line corollary.
 
+> [!tip] Unlocked: The Borel Hierarchy *(from Descriptive Set Theory)*
+> The non-constructive definition $\sigma(\mathcal{C})=\bigcap\{\mathcal{A}\supseteq\mathcal{C}:\mathcal{A}\text{ is a $\sigma$-algebra}\}$ has a constructive counterpart: iterate "countable union" and "complement" transfinitely starting from the open sets. The resulting stratification $\boldsymbol{\Sigma}^0_1\subset\boldsymbol{\Pi}^0_1\subset\boldsymbol{\Sigma}^0_2\subset\cdots$ — open, closed, $F_\sigma$, $G_\delta$, and so on through every countable ordinal — is the **Borel hierarchy**, and it does not stabilise until level $\omega_1$. Descriptive set theory is the study of this hierarchy and its analytic and projective extensions, and it is the natural home of the question "how complicated is this set?"
+
+> [!tip] Unlocked: Random Variables and Filtrations *(from Probability Theory)*
+> A measurable space $(X,\mathcal{A})$ is exactly the abstract structure underlying a [[Def - Probability Space|probability space]] once a probability measure is added — events live in $\mathcal{A}$ and a [[Def - Random Variable|random variable]] is a measurable function. A sub-$\sigma$-algebra $\mathcal{G}\subseteq\mathcal{A}$ is *partial information*, and an increasing chain $\mathcal{F}_0\subseteq\mathcal{F}_1\subseteq\cdots$ is a [[Def - Filtration|filtration]] — the central data structure of every discrete-time stochastic process. Without §1.1 there is no Kolmogorov framework.
+
 > [!note] Exercise Index — §1.1
 > [[Exercise Index - §1.1 Abstract Measure Theory]]
 
@@ -72,6 +78,12 @@ The chapter then confronts the central technical problem: measures are hard to *
 - **[[Thm - Uniqueness of the Hahn-Carathéodory Extension]]**
 	- If $\widetilde\mu$ is $\sigma$-finite, the extension is unique. Proof: any extension is $\le$ the Carathéodory one by subadditivity; equality on finite-measure windows by a subtraction argument; globalise by the $\sigma$-finite decomposition. The $\sigma$-finite hypothesis is exactly the licence to subtract; uniqueness genuinely fails without it.
 
+> [!tip] Unlocked: Hausdorff Measure *(from Geometric Measure Theory)*
+> The Carathéodory construction does not need a pre-measure on an algebra — it accepts *any* outer measure built from a gauge by infimising over covers. Choosing the gauge $h^s(\text{box})=(\text{diameter})^s$ and infimising over $\delta$-fine covers produces the **$s$-dimensional Hausdorff outer measure** $\mathcal{H}^s$, and the resulting Carathéodory $\sigma$-algebra contains every Borel set. The critical exponent at which $\mathcal{H}^s$ jumps from $\infty$ to $0$ is the **Hausdorff dimension** — a real number assigned to every metric set, agreeing with the integer dimension on submanifolds but giving $\log_3 2$ for the Cantor set. Geometric measure theory is the study of this measure and the rectifiable sets that look smooth at $\mathcal{H}^s$-almost every point.
+
+> [!tip] Unlocked: Product Measures and Fubini *(from this topic, §3)*
+> The extension machine of §1.2 is exactly the engine that builds **product measures**. Given $\sigma$-finite measure spaces $(X,\mathcal{A},\mu)$ and $(Y,\mathcal{B},\nu)$, the assignment $A\times B\mapsto \mu(A)\nu(B)$ defines a pre-measure on the algebra of finite disjoint unions of measurable rectangles; Hahn–Carathéodory extends it to the unique $\sigma$-finite measure $\mu\otimes\nu$ on the product $\sigma$-algebra. **Fubini's theorem** then licenses the exchange of iterated integrals — see [[Measure Theory III — §3–4 Product Measures and Differentiation|Measure Theory III §3]]. $\sigma$-finiteness, the very hypothesis needed for uniqueness here, is also exactly what Fubini needs.
+
 > [!note] Exercise Index — §1.2
 > [[Exercise Index - §1.2 Construction of Measures]]
 
@@ -89,6 +101,12 @@ The chapter then confronts the central technical problem: measures are hard to *
 	- $\lambda(x_0+A)=\lambda(A)$ for all Borel $A$ — volume is independent of position. True on boxes by definition, carried to all Borel sets because every step of the construction commutes with translation. Conversely it *characterises* $\lambda$ among normalised Borel measures, and it is the property exploited by Vitali.
 - **[[Thm - Existence of a Non-Measurable Set]]**
 	- There is a set $V\subseteq(0,1]$ not in the Lebesgue $\sigma$-algebra: $\mathcal{B}^*(\mathbb{R})\neq 2^{\mathbb{R}}$. The proof clashes translation invariance (all rational translates of $V$ have equal measure) with countable additivity (their sum is $0$ or $\infty$) against a geometric sandwich (the sum lies in $[1,3]$). Uses the axiom of choice essentially.
+
+> [!tip] Unlocked: Harmonic Measure *(from Complex Analysis IV)*
+> The regularity statement "$\lambda(A)=\sup\{\lambda(K):K\subseteq A\text{ compact}\}=\inf\{\lambda(G):G\supseteq A\text{ open}\}$" is the prototype for a whole family of **Radon measures** — locally finite Borel measures that are inner regular by compacts and outer regular by opens. **Harmonic measure** $\omega_z$ on the boundary of a planar domain $\Omega$, defined as the distribution of the first hitting point of Brownian motion started at $z\in\Omega$, is such a Radon measure, and it is the right notion of "size" for boundary subsets in potential theory and conformal mapping — see [[Complex Analysis IV — Mapping Theory and Applications]].
+
+> [!tip] Unlocked: Radon–Nikodym Densities *(from Measure Theory III)*
+> Once Lebesgue measure exists as a complete, $\sigma$-finite reference measure, every $\sigma$-finite measure $\nu$ on $\mathbb{R}^n$ that vanishes on Lebesgue null sets can be written as $\nu(A)=\int_A f\,d\lambda$ for a measurable density $f\ge 0$ — the **Radon–Nikodym theorem** of [[Measure Theory III — §3–4 Product Measures and Differentiation|Measure Theory III]] (see [[Thm - Radon-Nikodym Theorem]]). This is the bridge from sets to densities, and it is what lets probability theory replace "the distribution of $X$" by "the density of $X$" whenever the distribution is absolutely continuous.
 
 > [!note] Exercise Index — §1.3
 > [[Exercise Index - §1.3 The Lebesgue Measure]]

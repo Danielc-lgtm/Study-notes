@@ -44,6 +44,9 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 - **[[Thm - Approximation by Simple Functions]]**
 	- $f\ge0$ is measurable iff there are simple $s_n\uparrow f$. The construction *dyadically slices the range* and is explicit and monotone, so it interlocks with MCT to define and compute the integral. The basis of the "standard machine": prove for indicators, extend to simple, extend to $f\ge0$, extend to signed.
 
+> [!tip] Unlocked: The Standard Machine *(across Measure Theory and Probability)*
+> Simple-function approximation is the engine of the **standard machine** — the universal route for proving any identity $P(f)$ about the integral. Establish $P$ for indicators (where it is typically obvious), lift by linearity to simple functions, lift to $f\ge 0$ by MCT and monotone approximation, lift to signed $f$ via $f=f^+-f^-$. Every theorem of integration — linearity, change of variables, Fubini's theorem, properties of conditional expectation, the disintegration theorem — is proved by turning this machine. Recognising a target as "an identity stable under the four steps" reduces an apparent integration problem to the indicator case.
+
 > [!note] Exercise Index — §2.1
 > [[Exercise Index - §2.1 Measurable Functions]]
 
@@ -55,6 +58,9 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 	- On a finite-measure space, a.e. convergence is *uniform off a set of arbitrarily small measure*. Proof: doubly-indexed bad sets shrink to null by continuity from above ($\mu(X)<\infty$ spent here), removed on a $\delta2^{-i}$ budget. Fails on infinite-measure spaces (escape to infinity).
 - **[[Thm - Lusin's Theorem]]**
 	- A measurable function on a finite-measure subset of $\mathbb{R}^n$ is *continuous off a set of arbitrarily small measure*. Two layers: simple functions are continuous off a small set (regularity of level sets); general $f$ by simple approximation plus Egorov. Measurability is continuity up to a small set.
+
+> [!tip] Unlocked: Density of $C_c$ in $L^p$ *(from Functional Analysis)*
+> Lusin's theorem is the input that proves **continuous compactly-supported functions $C_c(\mathbb{R}^n)$ are dense in $L^p(\mathbb{R}^n)$ for $1\le p<\infty$**. The proof: approximate any $f\in L^p$ by a bounded function with compact support (DCT-style truncation), then apply Lusin to find a continuous function agreeing off a small-measure set; the $L^p$-difference is controlled by the boundedness and the small measure. This density is the lever that reduces every $L^p$-statement to a statement about smooth functions and is the foundation of the **mollifier technique** in PDE and harmonic analysis.
 
 > [!note] Exercise Index — §2.2
 > [[Exercise Index - §2.2 Measurability and Continuity]]
@@ -68,6 +74,9 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 - **[[Thm - Properties of the Integral]]**
 	- Linearity, monotonicity, and the triangle inequality $|\int f|\le\int|f|$. Linearity is the non-trivial one: the integral of $f\ge0$ is a supremum, and sups do not add — linearity is carried up from simple functions (where it is obvious) by MCT.
 
+> [!tip] Unlocked: Expectation of a Random Variable *(from Probability Theory)*
+> The integral against a probability measure $\mathbb{P}$ is exactly the **expectation** $\mathbb{E}[X]=\int X\,d\mathbb{P}$ of a [[Def - Random Variable|random variable]]. The whole §2.3 construction — indicators give probabilities, simple functions give weighted averages of values, monotone limits give the expectation of any non-negative random variable — is the rigorous foundation that turns probability from a calculus on densities and discrete sums into a single uniform theory. Linearity of expectation, which is taken for granted in undergraduate probability, is exactly the linearity statement here, proved by MCT for non-negative variables.
+
 > [!note] Exercise Index — §2.3
 > [[Exercise Index - §2.3 The Integral]]
 
@@ -77,6 +86,12 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 	- $\int\liminf f_n\le\liminf\int f_n$ for $f_n\ge0$ — a one-sided inequality holding with *no* hypothesis beyond non-negativity. It is MCT applied to $g_n=\inf_{k\ge n}f_k\uparrow\liminf f_n$. The universal safety net; strict exactly when mass escapes.
 - **[[Thm - Dominated Convergence Theorem]]**
 	- $f_n\to f$ a.e. and $|f_n|\le g\in L^1\Rightarrow\int|f_n-f|\to0$. The general limit-interchange theorem, proved by applying Fatou to $2g-|f_n-f|\ge0$. The dominating $g$ pins the mass down, forbidding escape. Differentiation under the integral sign is its main corollary.
+
+> [!tip] Unlocked: Martingale Convergence Theorems *(from Advanced Probability IV)*
+> The MCT/Fatou/DCT triple promotes to the **martingale convergence theorems**: an $L^1$-bounded martingale converges almost surely ([[Thm - Almost Sure Martingale Convergence]]), and a uniformly integrable martingale converges in $L^1$ to its almost-sure limit ([[Thm - Lp and L1 Martingale Convergence]]). The proof of the $L^1$ version is literally the Vitali theorem of §2.5 applied to the martingale; the proof of the a.s. version uses Doob's upcrossing inequality together with Fatou. Without §2.4 there is no theory of stochastic processes converging at all.
+
+> [!tip] Unlocked: Smoothness of the Fourier Transform *(from Harmonic Analysis)*
+> DCT is what licenses **differentiation under the integral sign** $\partial_t \int f(x,t)\,d\mu(x) = \int \partial_t f(x,t)\,d\mu(x)$, provided the partial derivative is dominated by an integrable function uniformly in $t$. Applied to the **Fourier transform** $\hat f(\xi)=\int e^{-2\pi i x\cdot\xi}f(x)\,dx$, this gives $\partial_\xi^\alpha \hat f(\xi)= ((-2\pi i x)^\alpha f)\,\hat{}\,(\xi)$ whenever $x^\alpha f\in L^1$ — the precise *decay-controls-smoothness* duality between a function and its transform. The same DCT-under-the-integral move is the routine technique in PDE, generating functions, and analytic continuation of integral transforms.
 
 > [!note] Exercise Index — §2.4
 > [[Exercise Index - §2.4 Convergence Theorems]]
