@@ -74,11 +74,19 @@ The leap is *seeing* that the abstract averaging identity is a geometric orthogo
 > [!note]- Lemma 1: $L^2(\mathcal{G})$ is a closed subspace
 > **Statement:** $L^2(\Omega,\mathcal{G},\mathbb{P})$ is a closed linear subspace of $L^2(\Omega,\mathcal{F},\mathbb{P})$.
 >
+> **Hint:** $L^2$-convergence has an a.s.-convergent subsequence (the standard $L^p$-to-a.s. extraction), and an a.s. limit of $\mathcal{G}$-measurable functions is $\mathcal{G}$-measurable.
+>
+> **Why needed:** Closedness is the precondition for the Hilbert-space projection theorem to apply — without it, the orthogonal projection $P_{L^2(\mathcal{G})}$ does not exist, and the construction of conditional expectation as a projection is illegal.
+>
 > > [!note]- Full proof
 > > It is a linear subspace. If $W_n\in L^2(\mathcal{G})$ and $W_n\to W$ in $L^2(\mathcal{F})$, then ([[Ex - Lp convergence and almost-everywhere subsequences|L²-convergence gives an a.s.-convergent subsequence]]) $W_{n_k}\to W$ a.s.; each $W_{n_k}$ is $\mathcal{G}$-measurable, and an a.s.-limit of $\mathcal{G}$-measurable functions is $\mathcal{G}$-measurable (in the completed $\mathcal{G}$). So $W\in L^2(\mathcal{G})$ — the subspace is closed. $\square$
 
 > [!note]- Lemma 2: The projection is the conditional expectation
 > **Statement:** The orthogonal projection $W=P_{L^2(\mathcal{G})}X$ equals $\mathbb{E}[X\mid\mathcal{G}]$.
+>
+> **Hint:** The defining condition $X-W\perp L^2(\mathcal{G})$ tested against indicators $\mathbf{1}_A$ for $A\in\mathcal{G}$ gives $\mathbb{E}[W\mathbf{1}_A]=\mathbb{E}[X\mathbf{1}_A]$, which is exactly the averaging characterisation of conditional expectation.
+>
+> **Why needed:** This is the actual identification — the Hilbert-space projection is not just *some* good $\mathcal{G}$-measurable approximation to $X$, it is literally $\mathbb{E}[X\mid\mathcal{G}]$. From this identification flow the variance decomposition, the contraction property, and the geometric intuition for all conditional-expectation manipulations.
 >
 > > [!note]- Full proof
 > > By the Hilbert-space [[Ex - The Cauchy-Schwarz inequality and L2 geometry|projection theorem]] (Lemma 1 gives the closed subspace), $W\in L^2(\mathcal{G})$ exists with $X-W\perp L^2(\mathcal{G})$. For $A\in\mathcal{G}$, $\mathbf{1}_A\in L^2(\mathcal{G})$, so $\mathbb{E}[(X-W)\mathbf{1}_A]=0$, i.e. $\mathbb{E}[W\mathbf{1}_A]=\mathbb{E}[X\mathbf{1}_A]$. With $W$ $\mathcal{G}$-measurable and integrable, $W$ satisfies the [[Def - Conditional Expectation|characterisation]] of $\mathbb{E}[X\mid\mathcal{G}]$; [[Thm - Existence and Uniqueness of Conditional Expectation|uniqueness]] gives $W=\mathbb{E}[X\mid\mathcal{G}]$. $\square$

@@ -66,6 +66,8 @@ This is the **arctan integral**: $u(x, y) = (1/\pi)\arctan((\text{something})/y)
 
 # Solution
 
+The proof breaks into four steps. Step 1 guesses the form $u(x,y) = (1/\pi)\arctan(x/y) + 1/2$, the natural candidate for a step-function boundary value; Step 2 checks the boundary values $u(x, 0^+) = 1$ for $x > 0$ and $0$ for $x < 0$ using $\arctan(\pm\infty) = \pm\pi/2$; Step 3 verifies harmonicity by rewriting $\arctan(x/y) = \pi/2 - \arg z$ and observing $\arg z = \operatorname{Im}\log z$ is harmonic; Step 4 cross-checks via the Poisson integral on $\mathbb{H}$ with kernel $y/(\pi((x-t)^2 + y^2))$. The non-obvious move is in Step 3 — recognising $\arctan(x/y)$ as the imaginary part of $\log$ (up to a constant) is what links the elementary trigonometric identity to the structural fact "imaginary parts of holomorphic functions are harmonic."
+
 **Step 1: Direct guess**
 
 > [!note]- Derivation

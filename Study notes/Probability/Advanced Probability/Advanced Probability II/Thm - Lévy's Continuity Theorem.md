@@ -78,11 +78,19 @@ The whole subtlety is the **tightness step** — and it is where the hypothesis 
 > [!note]- Lemma 1: Tails are controlled by the characteristic function near 0
 > **Statement:** For any law with characteristic function $\varphi$ and $\lambda>0$, $\ \mu(|x|\ge\lambda)\le C\lambda\int_0^{1/\lambda}(1-\operatorname{Re}\varphi(t))\,dt$ with $C=(1-\sin1)^{-1}$.
 >
+> **Hint:** The trick is the elementary scalar bound $\int_0^M(1-\cos u)\,du=M-\sin M\ge M(1-\sin 1)$ for $M\ge 1$ — substitute $M=|x|/\lambda$ and use Fubini to convert the integrated $1-\cos(tx)$ into $1-\operatorname{Re}\varphi(t)$.
+>
+> **Why needed:** It is the Fourier-side dictionary entry "characteristic function near $0$ controls the tail of the measure". Without it the proof has no mechanism for translating pointwise convergence of $\varphi_n$ near $0$ into mass control — which is exactly what tightness requires.
+>
 > > [!note]- Full proof
 > > From $\int_0^M(1-\cos u)\,du=M-\sin M\ge M(1-\sin1)$ for $M\ge1$, substituting $M=|x|/\lambda$ and changing variables, $\mathbf{1}_{\{|x|\ge\lambda\}}\le C\lambda\int_0^{1/\lambda}(1-\cos(tx))\,dt$. Integrate over $\mu$ and use $\operatorname{Re}\varphi(t)=\int\cos(tx)\,d\mu$ (Fubini). $\square$
 
 > [!note]- Lemma 2: Tightness from continuity at 0
 > **Statement:** If $\varphi_n\to\psi$ pointwise and $\psi$ is continuous at $0$ with $\psi(0)=1$, then $(\mu_n)$ is tight.
+>
+> **Hint:** Pick $\lambda$ so the $\psi$-side integral in Lemma 1 is small (this uses continuity of $\psi$ at $0$), then push the pointwise convergence $\varphi_n\to\psi$ across the integral by dominated convergence using $|1-\operatorname{Re}\varphi_n|\le 2$.
+>
+> **Why needed:** Tightness is the bridge to Prokhorov's theorem — once $(\mu_n)$ is tight, every subsequence has a weakly convergent further subsequence, and the easy direction pins each subsequential limit's characteristic function to $\psi$, forcing convergence of the whole sequence.
 >
 > > [!note]- Full proof
 > > Given $\varepsilon$, continuity of $\psi$ at $0$ and $\psi(0)=1$ give $\lambda$ with $C\lambda\int_0^{1/\lambda}(1-\operatorname{Re}\psi(t))\,dt<\varepsilon/2$. Since $|\varphi_n|\le1$ and $\varphi_n\to\psi$, dominated convergence gives $C\lambda\int_0^{1/\lambda}(1-\operatorname{Re}\varphi_n)\,dt\to C\lambda\int_0^{1/\lambda}(1-\operatorname{Re}\psi)\,dt<\varepsilon/2$, so $<\varepsilon$ for all large $n$ (the finitely many small $n$ are individually tight). By Lemma 1, $\sup_n\mu_n(|x|\ge\lambda)<\varepsilon$ — tightness. $\square$

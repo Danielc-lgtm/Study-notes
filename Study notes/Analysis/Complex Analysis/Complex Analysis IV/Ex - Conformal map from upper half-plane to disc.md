@@ -63,6 +63,8 @@ Möbius transformations $T(z) = (az + b)/(cz + d)$ with $ad - bc \neq 0$ are bih
 
 # Solution
 
+The proof breaks into six short verification steps that confirm the Cayley transform $T(z) = (z-i)/(z+i)$ is a biholomorphism $\mathbb{H} \to \mathbb{D}$. Steps 1–4 verify the explicit boundary behaviour — $T(i) = 0$, $|T(x)| = 1$ for real $x$, $T(\infty) = 1$, and $T(\mathbb{R} \cup \{\infty\}) = S^1$ via the Möbius "preserves generalized circles" theorem; Step 5 nails down the target region as the disc rather than its complement by testing one interior point ($T(i) = 0 \in \mathbb{D}$); Step 6 invokes the explicit inverse to confirm biholomorphy. The non-obvious move is in Step 5 — Möbius theory plus connectedness gives "boundary maps to boundary, interior to one of the two components" but doesn't say *which*, so a single sample point is what closes the argument.
+
 **Step 1: $T(i) = 0$**
 
 $T(i) = (i - i)/(i + i) = 0/(2i) = 0$. ✓

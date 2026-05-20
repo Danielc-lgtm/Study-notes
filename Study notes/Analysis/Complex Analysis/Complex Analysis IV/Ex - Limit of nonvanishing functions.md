@@ -65,6 +65,8 @@ Hurwitz: if $f_n$ holomorphic and nonvanishing on $U$, $f_n \to f$ locally unifo
 
 # Solution
 
+The proof breaks into three steps. Step 1 establishes locally uniform convergence $(1 + z/n)^n \to e^z$ on $\mathbb{C}$ via the Taylor expansion $n\log(1+z/n) = z + O(R^2/n)$ on each disc $|z| \leq R$; Step 2 identifies the zeros of $(1+z/n)^n$ at $z = -n$ and notes they escape every compact set as $n \to \infty$; Step 3 applies Hurwitz on each disc $D(0,R)$ and uses $e^0 = 1$ to exclude the identically-zero alternative. The non-obvious move is in Step 2 — Hurwitz needs the approximants to be nonvanishing *on the compact set in question*, and the zero at $z = -n$ obligingly walks off to infinity.
+
 **Step 1: Locally uniform convergence $(1 + z/n)^n \to e^z$**
 
 > [!note]- Derivation

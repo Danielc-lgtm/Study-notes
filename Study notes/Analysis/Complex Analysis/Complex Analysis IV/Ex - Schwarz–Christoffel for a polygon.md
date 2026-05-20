@@ -65,6 +65,8 @@ The Schwarz–Christoffel formula gives an *explicit* conformal map to a polygon
 
 # Solution
 
+The proof breaks into four steps. Step 1 states the Schwarz–Christoffel formula and the constraint $\sum \alpha_k = n - 2$; Step 2 sketches the angle-tracking argument that motivates the formula — the $(\alpha_k - 1)\pi$ jump in $\arg f'$ as $z$ crosses $x_k$ matches the polygon's turning angle; Steps 3–4 specialize to the equilateral triangle with $\alpha_k = 1/3$, normalize three preimages to $\{0, 1, \infty\}$, and identify the resulting incomplete-beta integral. The non-obvious move is in Step 2 — the heuristic angle-tracking via $\arg f' = \sum (\alpha_k - 1) \arg(z - x_k)$ is what reveals the integrand structure; once seen, the formula is forced.
+
 **Step 1: The Schwarz–Christoffel formula**
 
 > [!note]- Statement

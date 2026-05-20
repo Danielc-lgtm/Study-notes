@@ -67,6 +67,8 @@ $\pi\cot(\pi z) = \pi\cos(\pi z)/\sin(\pi z)$ has simple poles at every integer 
 
 # Solution
 
+The proof breaks into four steps that execute the "$\pi\cot(\pi z)$ generates sums over integers" technique. Step 1 identifies the poles at every integer and computes the residue $1/n^2$ at each $n \neq 0$ and $-\pi^2/3$ at $n = 0$ (from the Laurent expansion of $\pi\cot(\pi z)$); Step 2 applies the residue theorem on a square contour of side $2(N+1/2)$; Step 3 shows the contour integral vanishes as $N \to \infty$, the crucial step that turns the residue sum into an identity; Step 4 solves the resulting equation for the sum. The non-obvious move is in Step 3 — the square contour of side $2(N+1/2)$ is chosen precisely to avoid the zeros of $\sin(\pi z)$, which is what makes $\pi\cot(\pi z)$ uniformly bounded there.
+
 **Step 1: Identify poles and compute residues**
 
 The function $f(z) = \pi\cot(\pi z)/z^2$ has poles at every integer $n \in \mathbb{Z}$.

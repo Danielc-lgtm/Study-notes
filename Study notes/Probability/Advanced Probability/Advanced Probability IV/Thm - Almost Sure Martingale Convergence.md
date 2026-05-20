@@ -76,11 +76,17 @@ The genuinely clever step is the **upcrossing lemma** and its gambling interpret
 >
 > **Hint:** Buy when the process hits $a$, sell when it hits $b$ — a predictable strategy.
 >
+> **Why needed:** This converts the abstract supermartingale property into a quantitative bound on upcrossings, which is the only quantity a non-convergent sequence is forced to make infinite. Bounding $\mathbb{E}[U_n[a,b]]$ uniformly in $n$ rules out infinitely many oscillations across $[a,b]$, the only obstruction to convergence.
+>
 > > [!note]- Full proof
 > > Define the predictable strategy $C_k\in\{0,1\}$: $C_k=1$ ("invested") if the process is, at time $k-1$, in an interval it entered below $a$ and has not yet pushed above $b$; $C_k=0$ otherwise. $C_k$ is $\mathcal{F}_{k-1}$-measurable. The gambler's fortune $G_n=\sum_{k=1}^n C_k(X_k-X_{k-1})$ is a [[Def - Martingale|martingale transform]] of a supermartingale by a non-negative predictable $C$, hence a supermartingale with $\mathbb{E}[G_n]\le\mathbb{E}[G_0]=0$. Each completed upcrossing of $[a,b]$ contributes $\ge(b-a)$ to $G_n$; an incomplete final upcrossing contributes $\ge-(X_n-a)^-$. So $G_n\ge(b-a)U_n[a,b]-(X_n-a)^-$. Take expectations: $0\ge\mathbb{E}[G_n]\ge(b-a)\mathbb{E}[U_n[a,b]]-\mathbb{E}[(X_n-a)^-]$. $\square$
 
 > [!note]- Lemma 2: From finite upcrossings to convergence
 > **Statement:** If $\sup_n\mathbb{E}|X_n|<\infty$, then $X_n$ converges a.s. to a finite limit.
+>
+> **Hint:** Lemma 1 plus the $L^1$-bound forces $\mathbb{E}[U_\infty[a,b]]<\infty$ for every rational pair $a<b$; outside the countable union of null sets where some $U_\infty[a,b]=\infty$, oscillation across every rational interval is finite, so $X_n$ has a limit. Fatou keeps the limit in $L^1$ hence a.s. finite.
+>
+> **Why needed:** This is the main theorem — Lemma 1 provides the inequality, but Lemma 2 actually performs the "no infinite oscillation across rationals $\Rightarrow$ pointwise limit exists" argument that concludes a.s. convergence to a finite limit. It is the input-broadening step that turns Doob's quantitative bound into the qualitative convergence statement.
 >
 > > [!note]- Full proof
 > > By Lemma 1 and $(X_n-a)^-\le|X_n|+|a|$, $(b-a)\mathbb{E}[U_n[a,b]]\le\sup_n\mathbb{E}|X_n|+|a|<\infty$; monotone convergence gives $\mathbb{E}[U_\infty[a,b]]<\infty$, so $U_\infty[a,b]<\infty$ a.s. The union $N=\bigcup_{a<b\text{ rational}}\{U_\infty[a,b]=\infty\}$ is a countable union of null sets, null. Off $N$, $(X_n)$ upcrosses no rational interval infinitely often, so $X_n\to X_\infty\in[-\infty,\infty]$. By [[Thm - Fatou's Lemma|Fatou]], $\mathbb{E}|X_\infty|\le\liminf\mathbb{E}|X_n|<\infty$, so $X_\infty\in L^1$, a.s. finite. $\square$

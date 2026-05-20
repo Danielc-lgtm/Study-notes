@@ -73,11 +73,19 @@ The diagonal extraction is standard; the *crux* is recognising that diagonalisat
 > [!note]- Lemma 1: Helly selection
 > **Statement:** Any sequence of distribution functions has a subsequence converging at every continuity point of a non-decreasing right-continuous limit $F$.
 >
+> **Hint:** Diagonalise over the rationals: extract a subsequence that converges $F_n(q)\to F(q)$ for every $q\in\mathbb{Q}$ (Bolzano-Weierstrass at each $q$), then right-continuise to $\mathbb{R}$ by $F(x)=\inf_{q>x}F(q)$.
+>
+> **Why needed:** This is the existence-of-a-limit half of Prokhorov: it produces a candidate distribution function $F$ from any sequence $(F_n)$, with no hypothesis other than the values $F_n(q)\in[0,1]$. But $F$ may sub-probability mass (escape to infinity) — Lemma 2 closes that gap.
+>
 > > [!note]- Full proof
 > > $F_n(q)\in[0,1]$; by Bolzano–Weierstrass and a diagonal argument over an enumeration of $\mathbb{Q}$, a subsequence has $F_n(q)\to F(q)$ for all rational $q$. $F$ is non-decreasing on $\mathbb{Q}$; extend to $\mathbb{R}$ by $F(x)=\inf_{q>x}F(q)$, making it right-continuous and non-decreasing. At a continuity point $x$ of $F$, sandwiching $x$ between rationals shows $F_n(x)\to F(x)$. $\square$
 
 > [!note]- Lemma 2: Tightness gives a probability limit
 > **Statement:** If $(\mu_n)$ is tight, the Helly limit $F$ satisfies $F(-\infty)=0$, $F(+\infty)=1$.
+>
+> **Hint:** Tightness directly says $F_n(R)-F_n(-R)\ge 1-\varepsilon$ for $R=R(\varepsilon)$ uniform in $n$; pass to the Helly subsequence at continuity points $\pm R'$ near $\pm R$ to inherit this bound for $F$.
+>
+> **Why needed:** Without tightness, the Helly limit $F$ in Lemma 1 may be a sub-probability ("mass escapes to infinity"). Tightness rules out this escape mechanism, certifying that $F$ corresponds to a genuine probability measure $\mu$ — which is the conclusion of Prokhorov's relative compactness.
 >
 > > [!note]- Full proof
 > > Given $\varepsilon$, tightness supplies $R$ with $\mu_n([-R,R]^c)\le\varepsilon$, i.e. $F_n(R)-F_n(-R)\ge1-\varepsilon$, for all $n$. Taking limits along the subsequence at continuity points $R'>R$, $-R'<-R$: $F(R')-F(-R')\ge1-\varepsilon$. Hence $F(+\infty)-F(-\infty)\ge1-\varepsilon$ for every $\varepsilon$, so $=1$; with $0\le F\le1$ this forces $F(-\infty)=0$, $F(+\infty)=1$. So $F$ is a genuine distribution function. $\square$

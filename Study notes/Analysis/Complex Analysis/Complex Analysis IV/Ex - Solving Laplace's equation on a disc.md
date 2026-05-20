@@ -62,6 +62,8 @@ $$u(re^{i\theta}) = \frac{1}{2\pi}\int_0^{2\pi} P_r(\theta - \phi) u_0(e^{i\phi}
 
 # Solution
 
+The proof breaks into four steps. Step 1 rewrites the boundary data $\cos(2\theta) = \operatorname{Re}(e^{2i\theta}) = \operatorname{Re}(z^2)|_{S^1}$, recognizing it as the real part of a holomorphic function; Step 2 extends to the interior by taking $u(z) = \operatorname{Re}(z^2)$, automatically harmonic; Step 3 converts to polar form to read off $u(re^{i\theta}) = r^2\cos(2\theta)$; Step 4 invokes max-principle uniqueness to conclude. The non-obvious move is in Step 1 — Fourier modes $\cos(n\theta)$ on the boundary correspond to $\operatorname{Re}(z^n)$ in the interior, so the entire Dirichlet problem reduces to "extend by multiplying the $n$-th Fourier coefficient by $r^n$."
+
 **Step 1: Identify the boundary data as the real part of holomorphic**
 
 > [!note]- Derivation

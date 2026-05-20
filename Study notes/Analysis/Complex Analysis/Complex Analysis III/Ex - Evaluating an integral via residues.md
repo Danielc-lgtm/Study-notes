@@ -63,6 +63,8 @@ For $P/Q$ rational with $\deg Q \geq \deg P + 2$ and $Q$ having no real zeros, $
 
 # Solution
 
+The proof breaks into four steps that execute the canonical rational-integral-via-residues recipe. Step 1 extends the integrand to $f(z) = 1/(1+z^2)$ and closes the real axis with the upper semicircle, identifying $z = i$ as the only enclosed pole; Step 2 applies the residue theorem to get $\pi$; Step 3 bounds the semicircle by ML estimate using $|1+z^2| \geq R^2 - 1$; Step 4 takes $R \to \infty$ to read off the real-axis integral. The non-obvious move is in Step 3 — the integrand must decay faster than $1/R$ on the semicircle ($\deg Q \geq \deg P + 2$), which is the structural reason the recipe works for rational integrands.
+
 **Step 1: Set up the contour and identify the upper-half-plane poles**
 
 The function $f(z) = 1/(1 + z^2) = 1/((z - i)(z + i))$ has simple poles at $z = \pm i$. Only $z = i$ is in the upper half-plane.

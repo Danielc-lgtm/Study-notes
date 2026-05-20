@@ -66,6 +66,8 @@ Reversal property: traversing a circle clockwise gives the negative of the count
 
 # Solution
 
+The proof breaks into four short steps. Step 1 decomposes the figure-eight as the concatenation $\gamma_1 \cdot \gamma_2$ and invokes additivity of winding number; Steps 2–4 compute each loop's contribution at the three test points $w = 1, -1, 3$ using the single-circle result plus the unbounded-component property. The non-obvious move is in the orientation tracking — the left loop is clockwise, so its winding number around its centre is $-1$, not $+1$, which is what produces the figure-eight's signature: three regions with winding numbers $1, -1, 0$.
+
 **Step 1: Decompose**
 
 By additivity, $I(\gamma; w) = I(\gamma_1; w) + I(\gamma_2; w)$ for any $w$ not on either loop.

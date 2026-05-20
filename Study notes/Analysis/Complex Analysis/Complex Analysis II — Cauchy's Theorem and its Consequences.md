@@ -66,6 +66,9 @@ The unifying frame for §2: **Cauchy's theorem is rigidity**. The vanishing of c
 - **[[Ex - Computing zn dz on a circle]]** (⭐)
 	- Compute $\int_{|z|=1} z^n\,dz$ for integer $n$. For $n \neq -1$, $z^{n+1}/(n+1)$ is a primitive, so the integral is zero. For $n = -1$, parametrize $\gamma(t) = e^{it}$ and compute directly: $\int_0^{2\pi} e^{-it} \cdot ie^{it}\,dt = 2\pi i$. The single nonzero integral $\int 1/z\,dz = 2\pi i$ is the seed of the entire residue theory.
 
+> [!tip] Unlocked: de Rham Cohomology of Punctured Domains *(from Differential Topology)*
+> The single non-zero integral $\int_{|z|=1}dz/z=2\pi i$ versus the zero integrals $\int z^n\,dz$ for $n\ne -1$ is the first appearance of a topological invariant: the integral of $f\,dz$ around a closed loop depends only on the homotopy class of the loop in the domain of holomorphy. The 1-form $dz/z$ is **closed but not exact** on $\mathbb{C}^\times$ — there is no global primitive, since the primitive would be $\log z$, multi-valued. This is the prototype of a non-trivial **de Rham cohomology class**: $H^1_{dR}(\mathbb{C}^\times)\cong\mathbb{R}$, generated exactly by $[dz/z]$. The whole subsequent theory of winding numbers and residues in [[Complex Analysis III — Winding, Laurent, Residues]] is the calculus of $H^1_{dR}$ of a punctured plane.
+
 > [!note] Exercise Index — §2.1
 > [[Exercise Index - §2.1 Contour Integration]]
 
@@ -83,6 +86,9 @@ The unifying frame for §2: **Cauchy's theorem is rigidity**. The vanishing of c
 - **[[Ex - Verifying Cauchy on a triangle in C minus 0]]** (⭐⭐)
 	- Show that for any triangle $T$ not enclosing $0$, $\int_{\partial T} \frac{1}{z}\,dz = 0$, by exhibiting a primitive (branch of $\log$) on a star-shaped neighborhood of $T$.
 
+> [!tip] Unlocked: Simply-Connected Domains and the Monodromy Theorem *(from Riemann Surfaces)*
+> Cauchy's theorem on a star-shaped domain is the seed of the **monodromy theorem**: on a simply-connected domain, every closed holomorphic 1-form $f\,dz$ has a single-valued primitive $F=\int_a^z f\,dw$. Failing simple-connectedness, the primitive becomes a *multi-valued* function — distinct branches along distinct homotopy classes of paths — and the natural domain on which it becomes single-valued is a **Riemann surface** built by gluing copies of the domain along branch cuts. The Riemann surface of $\log z$ has infinitely many sheets stacked over $\mathbb{C}^\times$, each shifted by $2\pi i$; the Riemann surface of $\sqrt{z}$ has two. This is the genesis of complex algebraic geometry and the theory of holomorphic covering maps.
+
 > [!note] Exercise Index — §2.2
 > [[Exercise Index - §2.2 Cauchy's Theorem]]
 
@@ -96,6 +102,14 @@ The unifying frame for §2: **Cauchy's theorem is rigidity**. The vanishing of c
 
 - **[[Ex - Computing an integral via CIF]]** (⭐)
 	- Evaluate $\int_{|z| = 2} \frac{e^z}{z - 1}\,dz$ by CIF: the integrand is $f(z)/(z - 1)$ with $f(z) = e^z$ holomorphic, and $w = 1$ is inside the disc $|z| < 2$. So the integral is $2\pi i \cdot f(1) = 2\pi i e$.
+
+> [!tip] Unlocked: The Holomorphic Functional Calculus *(from Operator Theory and Functional Analysis)*
+> The reproduction formula generalises spectacularly from complex numbers to operators. For a bounded linear operator $T$ on a Banach space with **spectrum** $\sigma(T)\subset\mathbb{C}$, and a function $f$ holomorphic on a neighbourhood of $\sigma(T)$, define
+> $$ f(T) = \frac{1}{2\pi i}\oint_\Gamma f(z)(z-T)^{-1}\,dz $$
+> where $\Gamma$ is any contour enclosing $\sigma(T)$. This is the **holomorphic functional calculus**, and it produces well-defined operators $\exp(T)$, $\log(T)$, $\sqrt{T}$, etc., reproducing $f$ "at $T$" exactly as CIF reproduces $f$ at a point. It is the analytic core of the spectral theorem for normal operators, the construction of operator semigroups (solutions to $\dot u = Tu$ via $u(t)=e^{tT}u_0$), and the Riesz–Dunford projection onto a spectral piece. The whole infinite-dimensional functional calculus of mathematical physics rests on this contour-integral construction.
+
+> [!tip] Unlocked: Harmonic Measure and Brownian Motion *(from Complex Analysis IV and Potential Theory)*
+> The mean value property $f(a) = \frac{1}{2\pi}\int_0^{2\pi}f(a+re^{i\theta})d\theta$ says the value at the centre is the *uniform* average over the boundary circle. For a general domain $\Omega$ this is replaced by the **Poisson integral formula** $u(z) = \int_{\partial\Omega} u(\zeta)\,d\omega_z(\zeta)$, where $\omega_z$ is the **harmonic measure** on $\partial\Omega$ seen from $z$ — the distribution of the first hitting point of Brownian motion started at $z$. Harmonic measure is the natural Radon measure on $\partial\Omega$ for boundary-value problems, and the Poisson formula is the harmonic-function analogue of CIF — see [[Complex Analysis IV — Mapping Theory and Applications]] for the disc case and the Schwarz reflection principle.
 
 > [!note] Exercise Index — §2.3
 > [[Exercise Index - §2.3 CIF and Mean Value]]
@@ -116,6 +130,12 @@ The unifying frame for §2: **Cauchy's theorem is rigidity**. The vanishing of c
 
 - **[[Ex - Liouville for harmonic functions]]** (⭐⭐)
 	- A bounded harmonic function $u : \mathbb{R}^2 \to \mathbb{R}$ is constant. Idea: let $v$ be a harmonic conjugate (exists locally; need to argue globally on $\mathbb{R}^2$ via simple-connectedness), so $f = u + iv$ is entire. If $u$ is bounded, $e^f$ is bounded entire (since $|e^f| = e^u$). By Liouville, $e^f$ constant, so $f$ is constant (up to $2\pi i$ branch), so $u$ is constant.
+
+> [!tip] Unlocked: The Schwarz Lemma and Hyperbolic Geometry *(from Complex Analysis IV)*
+> The maximum modulus principle, applied to $f(z)/z$ on the unit disc when $f:\mathbb{D}\to\mathbb{D}$ with $f(0)=0$, gives the **Schwarz lemma**: $|f(z)|\le|z|$ everywhere and $|f'(0)|\le 1$, with equality iff $f$ is a rotation. This single application of max modulus is the foundation of **hyperbolic geometry on the disc**: the **Poincaré metric** $ds^2=|dz|^2/(1-|z|^2)^2$ is the unique conformal Riemannian metric whose isometries are exactly the holomorphic automorphisms of $\mathbb{D}$, and the Schwarz lemma is the statement that holomorphic self-maps of $\mathbb{D}$ are *contractions* of the Poincaré distance. The whole theory of Kobayashi and Carathéodory hyperbolic complex manifolds rests on this — see [[Thm - Schwarz Lemma]].
+
+> [!tip] Unlocked: Hardy Spaces and Boundary Behaviour *(from Harmonic Analysis)*
+> The maximum modulus principle is the input to the theory of **Hardy spaces** $H^p(\mathbb{D})$ — holomorphic functions on the unit disc whose $L^p$-norms on circles $|z|=r$ stay bounded as $r\to 1$. The fact that $\|f\|_{L^p(|z|=r)}$ is *monotonically increasing* in $r$ (a consequence of subharmonicity of $|f|^p$, itself a max-modulus statement) makes $H^p$ a well-defined Banach space, and every $H^p$-function has **boundary values** $f^*(e^{i\theta})\in L^p(\partial\mathbb{D})$ almost everywhere. The whole theory of bounded boundary behaviour, Blaschke products, and inner-outer factorisation in $H^p$ is downstream of this monotonicity, and is the bridge from complex analysis to harmonic analysis on the circle and the half-plane.
 
 > [!note] Exercise Index — §2.4
 > [[Exercise Index - §2.4 Liouville and Max Modulus]]
@@ -143,6 +163,12 @@ The unifying frame for §2: **Cauchy's theorem is rigidity**. The vanishing of c
 - **[[Ex - Power series expansion of log(1+z) around 0]]** (⭐⭐)
 	- $\operatorname{Log}(1+z) = z - z^2/2 + z^3/3 - \ldots = \sum_{n=1}^\infty (-1)^{n-1} z^n/n$ on $|z| < 1$. Derivation: differentiate to get $1/(1+z)$, geometric series, integrate termwise.
 
+> [!tip] Unlocked: Laurent Series and the Residue Theorem *(from Complex Analysis III)*
+> The local power-series expansion holds on any *disc* where $f$ is holomorphic. On an *annulus* $r<|z-a|<R$ — a disc with a hole — one allows negative powers and obtains the **Laurent series** $f(z)=\sum_{n=-\infty}^{\infty}c_n(z-a)^n$, with the coefficient of $(z-a)^{-1}$ playing a special role: it is the **residue** $\operatorname{Res}_a f$, and $\oint_\gamma f\,dz = 2\pi i\cdot\operatorname{Res}_a f$ for a small loop around the singularity. The **residue theorem** of [[Complex Analysis III — Winding, Laurent, Residues|Complex Analysis III]] uses CIF and the Taylor expansion of §2.5 to compute Laurent coefficients and reduce contour integrals to algebra.
+
+> [!tip] Unlocked: Elliptic Regularity for the Cauchy–Riemann Equations *(from PDE Theory)*
+> The fact that holomorphic $\Rightarrow C^\infty$ — *one* complex derivative implies *all* — is the simplest case of **elliptic regularity**: solutions of an elliptic PDE inherit higher smoothness than the equation requires. The Cauchy–Riemann equations form an elliptic system, with the Laplacian $\Delta = 4\partial\bar\partial$ as its symbol; the integral kernel $1/(z-w)$ of CIF is essentially the **fundamental solution** of $\bar\partial$. Elliptic regularity for general elliptic operators is proved by the same template: a parametrix (analogue of $1/(z-w)$), an integral representation, and bootstrap differentiation. Cauchy's higher-derivative formula is the first instance of this PDE phenomenon, and it is the right template for understanding **Schauder estimates** and the **Calderón–Zygmund** theory of singular integrals.
+
 > [!note] Exercise Index — §2.5
 > [[Exercise Index - §2.5 Analytic = Holomorphic]]
 
@@ -159,6 +185,14 @@ The unifying frame for §2: **Cauchy's theorem is rigidity**. The vanishing of c
 
 - **[[Ex - Uniqueness of sin from real values]]** (⭐⭐)
 	- Show that the complex $\sin z$ is the unique entire function agreeing with the real $\sin$ on $\mathbb{R}$. By identity theorem applied to any candidate entire extension minus our $\sin$.
+
+> [!tip] Unlocked: Analytic Continuation and Riemann Surfaces *(from Algebraic Geometry and Number Theory)*
+> The identity theorem makes **analytic continuation** a uniquely defined operation: given $f$ holomorphic on a domain $U$ and a connected domain $V\supseteq U$ on which a holomorphic extension exists, the extension is unique. The natural object on which a function is "globally" defined is its **Riemann surface** — the maximal domain to which it can be analytically continued, possibly with monodromy producing distinct sheets. The Riemann surface of $\sqrt{z}$ is a two-sheeted cover of $\mathbb{C}^\times$; of $\log z$, an infinite-sheeted cover; of an algebraic function $w(z)$ satisfying $P(w,z)=0$, a compact Riemann surface (the algebraic curve $\{P=0\}$). The **Riemann existence theorem** identifies compact Riemann surfaces with smooth projective algebraic curves — the foundational equivalence underlying all of complex algebraic geometry.
+>
+> The same identity-theorem mechanism produces analytic continuation of the **Riemann zeta function** $\zeta(s)=\sum n^{-s}$ from $\operatorname{Re}(s)>1$ to all of $\mathbb{C}\setminus\{1\}$, with the functional equation linking $\zeta(s)$ and $\zeta(1-s)$. The non-trivial zeros of this analytic continuation are the subject of the **Riemann hypothesis** — and the entire $L$-function technology of modern number theory rests on the identity-theorem rigidity that makes analytic continuation a meaningful operation in the first place.
+
+> [!tip] Unlocked: The Open Mapping Theorem and the Argument Principle *(from Complex Analysis IV)*
+> The principle of isolated zeros is the technical core of the **open mapping theorem**: a non-constant holomorphic map between domains is *open* — it sends open sets to open sets ([[Thm - Open Mapping Theorem]]). The proof uses isolated zeros applied to $f(z)-w_0$ to control how $f$ behaves near a value $w_0$ and conclude that $f^{-1}$ has no isolated obstruction. From this springs the **argument principle** (zeros minus poles counted by winding number), **Rouché's theorem** (perturbation of zero count), and the **inverse function theorem for holomorphic maps** — the working toolkit of [[Complex Analysis IV — Mapping Theory and Applications|Complex Analysis IV]].
 
 > [!note] Exercise Index — §2.6
 > [[Exercise Index - §2.6 Isolated Zeros and Identity]]

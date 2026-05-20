@@ -59,6 +59,8 @@ Bromwich inverse: $f(t) = (1/(2\pi i))\int_{c - i\infty}^{c + i\infty}F(s) e^{st
 
 # Solution
 
+The proof breaks into four steps that execute the Bromwich-via-residues recipe. Step 1 identifies the simple poles of $F(s) = 1/(s^2+1)$ at $s = \pm i$; Step 2 computes the residues of $F(s) e^{st}$ at each pole using the quotient formula, yielding $e^{\pm it}/(\pm 2i)$; Step 3 verifies the left semicircle vanishes (the contour-closure step that licenses Bromwich); Step 4 applies the residue theorem and recognizes the sum as $\sin t$ via the Euler-identity decomposition $(e^{it} - e^{-it})/(2i)$. The non-obvious move is in Step 3 — closing the Bromwich contour to the *left* for $t > 0$ uses that $|e^{st}|$ decays exponentially when $\operatorname{Re} s \to -\infty$ and $t > 0$, which encodes causality.
+
 **Step 1: Identify poles**
 
 $F(s) = 1/(s^2 + 1) = 1/((s - i)(s + i))$. Simple poles at $s = i$ and $s = -i$.

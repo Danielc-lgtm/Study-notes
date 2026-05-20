@@ -59,6 +59,8 @@ For meromorphic $f$, $\frac{1}{2\pi i}\oint f'/f\,dz = N - P$, the number of zer
 
 # Solution
 
+The proof breaks into four steps. Step 1 expands $p'(z)/p(z)$ asymptotically as $n/z + O(1/z^2)$ for $|z|$ large, exploiting that $p(z) \sim a_n z^n$; Step 2 evaluates the integral asymptotically — the $n/z$ term contributes $2\pi i n$ and the $O(1/z^2)$ error vanishes as $R \to \infty$ by ML; Step 3 observes that the integral is constant in $R$ once $R$ encloses all zeros of $p$, pinning the value at exactly $n$; Step 4 invokes the argument principle to read this as "$p$ has $n$ zeros," which is FTA. The non-obvious move is in Step 3 — combining "integral constant for $R$ large" with "asymptotic limit is $n$" is what forces the integral to be *exactly* $n$, not just close to it.
+
 **Step 1: Asymptotic expansion of $p'/p$**
 
 Let $p(z) = a_n z^n + a_{n-1}z^{n-1} + \ldots + a_0$ with $a_n \neq 0$. Then $p'(z) = na_n z^{n-1} + (n-1)a_{n-1}z^{n-2} + \ldots$.

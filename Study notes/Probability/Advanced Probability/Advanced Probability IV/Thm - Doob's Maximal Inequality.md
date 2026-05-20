@@ -76,11 +76,19 @@ The maximal inequality's idea — *the first-passage time is a stopping time, fe
 > [!note]- Lemma 1: The weak-type maximal inequality
 > **Statement:** $\lambda\,\mathbb{P}(X_n^*\ge\lambda)\le\mathbb{E}[|X_n|\mathbf{1}_{\{X_n^*\ge\lambda\}}]$.
 >
+> **Hint:** Stop at $T=\inf\{k:|X_k|\ge\lambda\}$; on the bad event $\{X_n^*\ge\lambda\}=\{T\le n\}$, optional stopping for the submartingale $|X_k|$ at the bounded time $T\wedge n$ gives the lower bound $\mathbb{E}[|X_n|\mathbf{1}_{\{T\le n\}}]\ge\lambda\,\mathbb{P}(T\le n)$.
+>
+> **Why needed:** This is the weak-$(1,1)$-type maximal inequality — it controls the *probability* of the maximum being large by an expectation, which is the kind of fact one would normally need much finer structure for. The whole $L^p$ inequality is built by integrating it via layer-cake.
+>
 > > [!note]- Full proof
 > > $|X_n|$ is a non-negative submartingale ([[Thm - Properties of Conditional Expectation|conditional Jensen]] if $X_n$ is a martingale). Let $T=\inf\{k:|X_k|\ge\lambda\}$, a [[Def - Stopping Time|stopping time]]; $A:=\{X_n^*\ge\lambda\}=\{T\le n\}\in\mathcal{F}_n$, and on $A$, $|X_T|\ge\lambda$. By the submartingale [[Thm - Optional Stopping Theorem|optional stopping]] inequality at the bounded times $T\wedge n\le n$, $\mathbb{E}[|X_n|\mathbf{1}_A]\ge\mathbb{E}[|X_{T\wedge n}|\mathbf{1}_A]=\mathbb{E}[|X_T|\mathbf{1}_A]\ge\lambda\,\mathbb{P}(A)$. $\square$
 
 > [!note]- Lemma 2: Doob's $L^p$ inequality
 > **Statement:** $\|X_n^*\|_p\le\frac{p}{p-1}\|X_n\|_p$ for $1<p<\infty$.
+>
+> **Hint:** Use the layer-cake formula $\mathbb{E}[(X_n^*)^p]=\int_0^\infty p\lambda^{p-1}\mathbb{P}(X_n^*\ge\lambda)\,d\lambda$, insert Lemma 1, swap order of integration (Fubini), and finish with Hölder using conjugate exponents $(p,p/(p-1))$.
+>
+> **Why needed:** This is what makes $X_n\mapsto X_n^*$ a bounded operator on $L^p$ for $1<p<\infty$ — exactly the right tool for $L^p$-martingale convergence (where it controls the maximal function by the terminal $L^p$-norm) and for Burkholder-Davis-Gundy-type inequalities.
 >
 > > [!note]- Full proof
 > > By the [[Ex - The area under a graph|layer-cake formula]], $\mathbb{E}[(X_n^*)^p]=\int_0^\infty p\lambda^{p-1}\mathbb{P}(X_n^*\ge\lambda)\,d\lambda$. Insert Lemma 1, $\mathbb{P}(X_n^*\ge\lambda)\le\lambda^{-1}\mathbb{E}[|X_n|\mathbf{1}_{X_n^*\ge\lambda}]$, and apply [[Thm - Fubini-Tonelli Theorem|Fubini]]: $\mathbb{E}[(X_n^*)^p]\le\int_0^\infty p\lambda^{p-2}\mathbb{E}[|X_n|\mathbf{1}_{X_n^*\ge\lambda}]\,d\lambda=\mathbb{E}[|X_n|\int_0^{X_n^*}p\lambda^{p-2}d\lambda]=\frac{p}{p-1}\mathbb{E}[|X_n|(X_n^*)^{p-1}]$. [[Thm - Hölder and Minkowski Inequalities|Hölder]] with $p,q=\frac{p}{p-1}$: $\le\frac{p}{p-1}\|X_n\|_p\|X_n^*\|_p^{p-1}$. Divide by $\|X_n^*\|_p^{p-1}<\infty$. $\square$

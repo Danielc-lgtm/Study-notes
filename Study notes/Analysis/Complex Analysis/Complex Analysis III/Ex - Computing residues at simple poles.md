@@ -58,6 +58,8 @@ For a quotient $f = g/h$ with $h$ having a simple zero at $a$ ($h(a) = 0$, $h'(a
 
 # Solution
 
+The proof is the canonical residue-at-simple-poles drill in four steps. Step 1 factors $z^2 - 1 = (z-1)(z+1)$ to identify the two simple poles; Steps 2–3 compute the residues at each pole using both the limit form $\lim (z-a)f(z)$ and the quotient form $g(a)/h'(a)$, confirming they agree; Step 4 sanity-checks via the sum-of-residues-equals-zero fact for rational functions on $\hat{\mathbb{C}}$. The non-obvious move is the sanity check — it is the structural fact that for a rational function the residues sum to zero (counting the residue at infinity), which catches arithmetic errors automatically.
+
 **Step 1: Identify the poles**
 
 $f(z) = 1/(z^2 - 1) = 1/((z - 1)(z + 1))$, so the poles are at $z = 1$ and $z = -1$, both simple.

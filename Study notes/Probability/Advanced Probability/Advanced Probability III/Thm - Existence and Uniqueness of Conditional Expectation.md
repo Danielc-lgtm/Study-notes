@@ -67,11 +67,19 @@ The conceptual hurdle is that conditional expectation is *not constructed by a f
 > [!note]- Lemma 1: Uniqueness
 > **Statement:** If $Y_1,Y_2$ are $\mathcal{G}$-measurable, integrable, with $\mathbb{E}[Y_i\mathbf{1}_A]=\mathbb{E}[X\mathbf{1}_A]$ for all $A\in\mathcal{G}$, then $Y_1=Y_2$ a.s.
 >
+> **Hint:** Test the difference $D=Y_1-Y_2$ on the $\mathcal{G}$-measurable sets $A_+=\{D>0\}$ and $A_-=\{D<0\}$: each side integrates to $0$, but the integrand has a fixed sign, so the integrand vanishes a.s.
+>
+> **Why needed:** It is the half of the theorem that makes conditional expectation an honest *function* of $(X,\mathcal{G})$ up to a.s. equivalence — without uniqueness, the symbol $\mathbb{E}[X\mid\mathcal{G}]$ would have no determinate meaning, and tower/linearity properties would not even be well-formed.
+>
 > > [!note]- Full proof
 > > $D=Y_1-Y_2$ is $\mathcal{G}$-measurable with $\mathbb{E}[D\mathbf{1}_A]=0$ for all $A\in\mathcal{G}$. The set $A_+=\{D>0\}\in\mathcal{G}$, so $\mathbb{E}[D\mathbf{1}_{A_+}]=0$; the integrand $D\mathbf{1}_{A_+}\ge0$, so $D\mathbf{1}_{A_+}=0$ a.s., i.e. $\mathbb{P}(D>0)=0$. Likewise $\mathbb{P}(D<0)=0$ via $A_-=\{D<0\}$. So $D=0$ a.s. $\square$
 
 > [!note]- Lemma 2: Existence via Radon–Nikodym
 > **Statement:** For $X\ge0$ in $L^1$, a $\mathcal{G}$-measurable $Y\ge0$ with $\int_A Y\,d\mathbb{P}=\int_A X\,d\mathbb{P}$ ($A\in\mathcal{G}$) exists.
+>
+> **Hint:** Build the auxiliary finite measure $\nu(A)=\int_A X\,d\mathbb{P}$ on $(\Omega,\mathcal{G})$; observe $\nu\ll\mathbb{P}|_\mathcal{G}$, and let Radon-Nikodym hand you the $\mathcal{G}$-measurable density $Y=d\nu/d\mathbb{P}|_\mathcal{G}$.
+>
+> **Why needed:** This is where conditional expectation is *constructed*, not merely characterised — the abstract Radon-Nikodym theorem does all the work, and extending from $X\ge0$ to general $X\in L^1$ by splitting $X=X^+-X^-$ then gives the general object.
 >
 > > [!note]- Full proof
 > > $\nu(A)=\int_A X\,d\mathbb{P}$ for $A\in\mathcal{G}$ is a measure on $(\Omega,\mathcal{G})$ ($\sigma$-additivity by [[Thm - Monotone Convergence Theorem|MCT]]), finite ($\nu(\Omega)=\mathbb{E}X<\infty$). If $A\in\mathcal{G}$, $\mathbb{P}(A)=0$, then $X\mathbf{1}_A=0$ a.s., so $\nu(A)=0$: $\nu\ll\mathbb{P}|_\mathcal{G}$. Both finite, so $\sigma$-finite; the [[Thm - Radon-Nikodym Theorem|Radon–Nikodym theorem]] on $(\Omega,\mathcal{G})$ produces a $\mathcal{G}$-measurable density $Y\ge0$ with $\int_A Y\,d\mathbb{P}=\nu(A)$. $\square$

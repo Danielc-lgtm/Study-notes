@@ -56,6 +56,8 @@ Rouché: if $|f - g| < |f|$ on $\gamma$, then $f, g$ have the same zero count in
 
 # Solution
 
+The proof breaks into three short steps. Step 1 sets up the Rouché comparison by choosing the dominant term $f(z) = 3z$ on the unit circle; Step 2 verifies the strict inequality $|p - 3z| = |z^5 + 1| \leq 2 < 3 = |3z|$ on $|z| = 1$; Step 3 applies Rouché to conclude $p$ has the same zero count as $3z$ in $|z| < 1$, namely $1$. The non-obvious move is in Step 1 — choosing $3z$ (the *linear*, not highest-degree, term) as the dominant comparison is what works on $|z| = 1$, because on a small circle low-degree terms tend to dominate, the opposite of the $R \to \infty$ regime.
+
 **Step 1: Set up the comparison**
 
 We compare $p(z) = z^5 + 3z + 1$ with $f(z) = 3z$ on the circle $|z| = 1$. The difference is $p(z) - 3z = z^5 + 1$.

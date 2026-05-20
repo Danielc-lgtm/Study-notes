@@ -64,6 +64,8 @@ Alternative: **Laurent-expand $e^z = \sum z^n/n!$ and read off the $1/z$ coeffic
 
 # Solution
 
+The proof breaks into three steps. Step 1 determines the pole order is exactly $3$ (numerator $e^z$ non-vanishing at $0$, triple zero of $z^3$); Step 2 applies the order-$k$ residue formula by multiplying by $z^3$, differentiating twice, and dividing by $2!$, giving $1/2$; Step 3 verifies by Laurent-expanding $e^z = \sum z^n/n!$ and reading off the coefficient of $z^{-1}$. The non-obvious move is the recognition that the derivative formula and the Laurent-coefficient approach are *the same fact* in disguise — the $(k-1)$-th derivative is exactly what extracts the $1/z$ coefficient.
+
 **Step 1: Determine pole order**
 
 $f(z) = e^z/z^3$. At $z = 0$: $e^z$ is holomorphic and $e^0 = 1 \neq 0$, while $z^3$ has a zero of order $3$. Hence $f$ has a pole of order $3$ at $z = 0$.
