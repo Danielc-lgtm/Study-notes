@@ -27,7 +27,7 @@ For a pole of order $k$ at $a$, $\operatorname{Res}_a f = \frac{1}{(k-1)!}\lim_{
 
 **Assumption pattern:** $e^z/z^3$ has a pole of order $3$ at $z = 0$ (numerator $e^z$ is holomorphic with $e^0 = 1 \neq 0$, denominator $z^3$ has a zero of order $3$).
 
-**Theorem routing:** [[Thm - Computing Residues|order-$k$ formula]] with $k = 3$. Multiply by $z^3$, take the second derivative ($k - 1 = 2$), evaluate at $z = 0$, divide by $2!$.
+**Theorem routing:** [[Thm - Computing Residues|order-k formula]] with $k = 3$. Multiply by $z^3$, take the second derivative ($k - 1 = 2$), evaluate at $z = 0$, divide by $2!$.
 
 **Key decision point:** Recognize the pole order from the explicit form $1/z^3$. The numerator $e^z$ does not vanish at $0$ (it equals $1$ there), so the order is exactly $3$.
 
@@ -70,7 +70,7 @@ $f(z) = e^z/z^3$. At $z = 0$: $e^z$ is holomorphic and $e^0 = 1 \neq 0$, while $
 
 **Step 2: Apply the order-$3$ formula**
 
-By [[Thm - Computing Residues|the order-$k$ residue formula]] with $k = 3$:
+By [[Thm - Computing Residues|the order-k residue formula]] with $k = 3$:
 $$\operatorname{Res}_0 f = \frac{1}{2!}\lim_{z \to 0}\frac{d^2}{dz^2}\left[z^3 \cdot \frac{e^z}{z^3}\right] = \frac{1}{2}\lim_{z \to 0}\frac{d^2}{dz^2}\,e^z.$$
 
 > [!note]- Derivation
