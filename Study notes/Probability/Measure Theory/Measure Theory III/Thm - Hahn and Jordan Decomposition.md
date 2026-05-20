@@ -27,7 +27,7 @@ A [[Def - Signed Measure|signed measure]] mixes positive and negative "charge." 
 
 ---
 
-# Formal Statement
+# Statement
 
 **(Hahn decomposition.)** For any signed measure $\alpha$ on $(X,\mathcal{A})$ there exist a [[Def - Signed Measure|positive set]] $P$ and a negative set $N$ with $X=P\sqcup N$. The decomposition is unique up to $\alpha$-null sets: if $(P',N')$ is another, then $\alpha(P\,\triangle\,P')=0$.
 

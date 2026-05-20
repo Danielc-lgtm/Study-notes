@@ -28,7 +28,7 @@ A central question about an infinite sequence of events $(A_n)$: do *infinitely 
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(A_n)_{n\ge1}$ be events.
 

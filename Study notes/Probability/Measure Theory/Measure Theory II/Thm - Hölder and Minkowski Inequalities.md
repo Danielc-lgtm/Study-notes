@@ -27,7 +27,7 @@ For $L^p$ to be a *normed* vector space, $\|\cdot\|_p$ must satisfy the triangle
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $1\le p,q\le\infty$ with $\tfrac1p+\tfrac1q=1$, and $f,g$ measurable.
 

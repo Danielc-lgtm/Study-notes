@@ -28,7 +28,7 @@ $X_n,X$ random variables; $\varphi_n=\varphi_{X_n}$, $\varphi=\varphi_X$ their [
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)$ be random variables with characteristic functions $\varphi_n$.
 

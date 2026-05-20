@@ -28,7 +28,7 @@ The [[Thm - Strong Law of Large Numbers|law of large numbers]] says $S_n/n\to\mu
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)_{n\ge1}$ be **independent and identically distributed** with $\mathbb{E}[X_1]=\mu$ and $0<\sigma^2=\mathrm{Var}(X_1)<\infty$. Then
 $$\frac{S_n-n\mu}{\sigma\sqrt n}\ \xrightarrow{\ d\ }\ N(0,1)\qquad\text{as }n\to\infty,$$

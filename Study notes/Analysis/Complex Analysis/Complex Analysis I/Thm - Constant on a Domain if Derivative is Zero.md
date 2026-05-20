@@ -14,6 +14,12 @@ $D \subseteq \mathbb{C}$ — a [[Def - Domain in the Complex Plane|domain]] (non
 
 ---
 
+# Statement
+
+> **Theorem (constant on a domain if derivative is zero).** Let $D \subseteq \mathbb{C}$ be a [[Def - Domain in the Complex Plane|domain]] (non-empty connected open subset) and $f : D \to \mathbb{C}$ a holomorphic function with $f'(z) = 0$ for every $z \in D$. Then $f$ is constant on $D$.
+
+---
+
 # Motivation
 
 In real analysis, a $C^1$ function on an interval whose derivative is identically zero is constant — proved by the mean value theorem. The natural complex analog: on a *connected* domain, holomorphic + zero derivative implies constant. The connectedness is essential — without it, the function can take different constant values on each connected component, in which case the conclusion holds *component-wise* but not globally.

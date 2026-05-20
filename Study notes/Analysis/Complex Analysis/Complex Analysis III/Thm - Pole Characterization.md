@@ -14,6 +14,19 @@ $a \in \mathbb{C}$ is an isolated singularity of $f$, holomorphic on $D(a, R) \s
 
 ---
 
+# Statement
+
+> **Theorem (Pole Characterization).** Let $f$ be holomorphic on $D(a, R) \setminus \{a\}$ with an isolated singularity at $a$. The following are equivalent:
+>
+> 1. $a$ is a pole of $f$ (of some order $k \geq 1$);
+> 2. $|f(z)| \to \infty$ as $z \to a$;
+> 3. there exist an integer $k \geq 1$ and a function $g$ holomorphic on $D(a, R)$ with $g(a) \neq 0$ such that $f(z) = (z - a)^{-k} g(z)$ on $D(a, R) \setminus \{a\}$;
+> 4. $1/f$ extends to a holomorphic function on $D(a, r)$ for some $r > 0$, with a zero of order $k$ at $a$.
+>
+> The integer $k$ in (1), (3), (4) is the same — the **order of the pole**.
+
+---
+
 # Motivation
 
 We have three types of isolated singularities — removable, pole, essential. Riemann's theorem characterized the removable case by boundedness. The corresponding characterization of poles is: $a$ is a pole of $f$ if and only if $|f(z)| \to \infty$ as $z \to a$.

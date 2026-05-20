@@ -28,7 +28,7 @@ The fundamental theorem of calculus says $\frac{d}{dx}\int_a^x f=f(x)$ for *cont
 
 ---
 
-# Formal Statement
+# Statement
 
 For every $f\in L^1_{loc}(\mathbb{R}^n)$,
 $$\lim_{r\downarrow0}\ \frac{1}{\lambda(B(x,r))}\int_{B(x,r)}f(y)\,dy\ =\ f(x)\qquad\text{for }\lambda\text{-a.e. }x\in\mathbb{R}^n.$$

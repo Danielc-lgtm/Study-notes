@@ -289,16 +289,17 @@ A page for a single theorem. Contains the material needed to understand, apply, 
 
 Contains:
 1. **Notation** — restated for self-containedness
-2. **Motivation** — what question this answers, what gap existed before
-3. **Sources and Targets (theorem-level)** — fundamentally different from a simple "assumptions and conclusions" list. See detailed description below.
-4. **Why Is It True** — intuition independent of the formal proof, NOT a proof sketch. No length constraint.
-5. **What Makes This Hard** — 2–3 sentences identifying where most people get stuck, what the non-obvious step is, and what the common errors are. Directly useful for spaced practice: when returning after months, this tells the reader where to focus.
-6. **Rederivation Scaffold** — high-level strategy (2–3 sentences) plus subgoal decomposition with minimal hints. Self-sufficient: reading only this section should let the reader reconstruct the full proof.
-7. **Lemma Decomposition** — each lemma independently practiceable in approximately 5 minutes, in collapsible sections with statement, hint, why needed, and full proof
-8. **Formal Proof** — complete proof in a collapsible section (ground truth for verification)
-9. **Cross-Field Exercise Suggestions** — intentionally loose: find the most out-of-distribution, least obvious contexts where the theorem applies, to battle-test the Sources. Does not have to be from a different field. Use web search to find surprising applications.
-10. **Bridges** — links to related theorems/concepts
-11. **Unlocked by This** — downstream concepts (optional)
+2. **Statement** — **required.** The precise, formal statement of the theorem, written as a blockquote starting `> **Theorem (name).**` (or `> **Lemma.**`, `> **Corollary.**`). Hypotheses and conclusion in one block; corollaries or companion statements may follow as additional blockquotes. The Statement section comes immediately after Notation and before Motivation — a reader returning after months should find the formal statement at the top of the page, not buried as a display equation inside Motivation. **Do not skip this section: every theorem page must contain one.**
+3. **Motivation** — what question this answers, what gap existed before. Should *not* re-state the formal statement (the Statement section above is for that); it explains the *role* and *importance* of the theorem.
+4. **Sources and Targets (theorem-level)** — fundamentally different from a simple "assumptions and conclusions" list. See detailed description below.
+5. **Why Is It True** — intuition independent of the formal proof, NOT a proof sketch. No length constraint.
+6. **What Makes This Hard** — 2–3 sentences identifying where most people get stuck, what the non-obvious step is, and what the common errors are. Directly useful for spaced practice: when returning after months, this tells the reader where to focus.
+7. **Rederivation Scaffold** — high-level strategy (2–3 sentences) plus subgoal decomposition with minimal hints. Self-sufficient: reading only this section should let the reader reconstruct the full proof.
+8. **Lemma Decomposition** — each lemma independently practiceable in approximately 5 minutes, in collapsible sections with statement, hint, why needed, and full proof
+9. **Formal Proof** — complete proof in a collapsible section (ground truth for verification)
+10. **Cross-Field Exercise Suggestions** — intentionally loose: find the most out-of-distribution, least obvious contexts where the theorem applies, to battle-test the Sources. Does not have to be from a different field. Use web search to find surprising applications.
+11. **Bridges** — links to related theorems/concepts
+12. **Unlocked by This** — downstream concepts (optional)
 
 **Detailed description of Sources and Targets for theorems:**
 
@@ -380,5 +381,6 @@ Before finalizing, evaluate against this checklist. For each item, verify compli
 22. **Insights section exists.** The topic page has an Insights section with at least 2 substantive prose paragraphs.
 23. **Web search supplementation.** At least 2 web searches were performed for additional exercises, perspectives, or "aim above range" concepts beyond the uploaded source material.
 24. **Topic-level Sources and Targets.** The topic page has a Sources and Targets section with recurring proof targets and assumption patterns, written as prose and derived from the exercises.
+25. **Theorem Statement section present and formal.** Every theorem subpage has a `# Statement` section, placed immediately after `# Notation` and before `# Motivation`, containing the precise formal statement of the theorem in a `> **Theorem.**` blockquote. The Statement section must not be empty, must not be a paraphrase or motivation, and must not be the same header under another name (`# Formal Statement`, `# The Statement`, etc.). Mechanical check: `grep -L "^# Statement$" Thm-*.md` should return no files.
 
-**Report:** After checking, briefly report which items passed and any that required fixes. If all items pass, state "Self-evaluation passed: all 24 checklist items verified."
+**Report:** After checking, briefly report which items passed and any that required fixes. If all items pass, state "Self-evaluation passed: all 25 checklist items verified."

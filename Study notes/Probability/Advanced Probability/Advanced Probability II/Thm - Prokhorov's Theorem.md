@@ -27,7 +27,7 @@ To prove a sequence of laws has a [[Def - Weak Convergence|weak]] limit, one nee
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(\mu_n)$ be probability measures on $\mathbb{R}^d$ (more generally a Polish space).
 

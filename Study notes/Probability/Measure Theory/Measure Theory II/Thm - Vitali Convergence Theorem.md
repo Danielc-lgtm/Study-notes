@@ -29,7 +29,7 @@ The [[Thm - Dominated Convergence Theorem|DCT]] gives $L^1$-convergence under a 
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $\mu(X)<\infty$ and $f,f_n\in L^1(\mu)$. The following are equivalent:
 

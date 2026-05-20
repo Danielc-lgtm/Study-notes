@@ -12,6 +12,14 @@ $f$ is a function holomorphic on $\{|z| > R_0\}$, $C_R$ denotes the upper semici
 
 ---
 
+# Statement
+
+> **Theorem (Jordan's Lemma).** Let $\alpha > 0$, and let $f$ be holomorphic on $\{|z| > R_0\}$ with $M_R := \sup_{|z|=R,\,\operatorname{Im} z \geq 0}|f(z)| \to 0$ as $R \to \infty$. Let $C_R$ denote the upper semicircle $\{|z| = R, \operatorname{Im} z \geq 0\}$. Then
+> $$\int_{C_R} f(z)\, e^{i\alpha z}\, dz \to 0 \qquad \text{as } R \to \infty.$$
+> Quantitatively, $\left|\int_{C_R} f(z) e^{i\alpha z}\,dz\right| \leq \pi M_R/\alpha$.
+
+---
+
 # Motivation
 
 The semicircle technique for rational integrals (close real-axis integral with a large upper semicircle) requires the integrand to decay sufficiently at infinity. For purely rational integrands $P/Q$, this means $\deg Q \geq \deg P + 2$, so that $|P/Q| = O(1/|z|^2)$ on the semicircle and the ML estimate forces the semicircle integral to vanish.

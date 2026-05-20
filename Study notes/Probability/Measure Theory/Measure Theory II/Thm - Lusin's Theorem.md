@@ -29,7 +29,7 @@ How "wild" can a measurable function be? Lusin's theorem gives the reassuring an
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $\Omega\subseteq\mathbb{R}^n$ be measurable with $\lambda(\Omega)<\infty$ and $f:\Omega\to\mathbb{R}$ measurable. Then for every $\delta>0$ there exists a **compact** set $F\subseteq\Omega$ with
 $$\lambda(\Omega\setminus F)<\delta\qquad\text{and}\qquad f|_F:F\to\mathbb{R}\ \text{is continuous}.$$

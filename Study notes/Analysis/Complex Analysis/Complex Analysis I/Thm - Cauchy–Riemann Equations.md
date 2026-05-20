@@ -13,6 +13,19 @@ $U \subseteq \mathbb{C}$ open; $f : U \to \mathbb{C}$; $w = c + id \in U$. We wr
 
 ---
 
+# Statement
+
+> **Theorem (Cauchy–Riemann equations).** Let $U \subseteq \mathbb{C}$ be open, $w = c + id \in U$, and $f = u + iv : U \to \mathbb{C}$ with $u, v : U \to \mathbb{R}$ the real and imaginary parts.
+>
+> **($\Rightarrow$)** If $f$ is complex differentiable at $w$, then $u, v$ are real differentiable at $(c, d)$ and satisfy the **Cauchy–Riemann equations**
+> $$u_x(c, d) = v_y(c, d), \qquad u_y(c, d) = -v_x(c, d),$$
+> and the complex derivative is given by
+> $$f'(w) = u_x(c, d) + i v_x(c, d) = v_y(c, d) - i u_y(c, d).$$
+>
+> **($\Leftarrow$)** Conversely, if $u, v$ are real differentiable at $(c, d)$ and the Cauchy–Riemann equations hold at $(c, d)$, then $f$ is complex differentiable at $w$ with the same derivative formula.
+
+---
+
 # Motivation
 
 [[Def - Holomorphic Function|Complex differentiability]] is defined via a limit that is *direction-independent*: $(f(z) - f(w))/(z - w)$ must have the same limit as $z \to w$ from every direction in $\mathbb{C}$. This is two real-valued conditions on top of the real differentiability of the pair $(u, v)$ — and the question is, *which* two? The Cauchy–Riemann theorem identifies them: they are $u_x = v_y$ and $u_y = -v_x$. These are the *operational form* of complex differentiability, and every concrete check of holomorphicity goes through them.

@@ -14,6 +14,15 @@ $(X, d)$ and $(Y, \rho)$ are metric spaces, $f : X \to Y$ a function. $B_\vareps
 
 ---
 
+# Statement
+
+> **Theorem (continuity via open sets).** Let $(X, d)$ and $(Y, \rho)$ be metric spaces and $f : X \to Y$ a function. The following are equivalent:
+>
+> 1. $f$ is **continuous at every point** in the $\varepsilon$–$\delta$ sense: for every $x \in X$ and every $\varepsilon > 0$ there exists $\delta > 0$ such that $d(x, x') < \delta$ implies $\rho(f(x), f(x')) < \varepsilon$;
+> 2. **$f^{-1}(U)$ is open in $X$ for every open set $U \subseteq Y$.**
+
+---
+
 # Motivation
 
 The whole point of topology is to forget the metric and keep only the open sets, but we have to *earn* the right to forget. The earning happens here: this theorem is the bridge that proves continuity — the central notion of analysis — depends only on which sets are open, not on the particular numerical distances. Two metrics that produce the same open sets give exactly the same continuous functions, even though they may have wildly different "shapes" of balls (Euclidean versus taxicab metric in $\mathbb{R}^n$ being the standard example). The theorem licenses the abstraction from metric spaces to topological spaces.

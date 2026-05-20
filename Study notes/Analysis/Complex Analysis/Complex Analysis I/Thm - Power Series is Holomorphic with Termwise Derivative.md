@@ -14,6 +14,15 @@ $f(z) = \sum_{n=0}^\infty c_n (z - a)^n$ — a power series with radius of conve
 
 ---
 
+# Statement
+
+> **Theorem (power series is holomorphic with termwise derivative).** Let $f(z) = \sum_{n=0}^\infty c_n (z - a)^n$ be a power series with radius of convergence $R > 0$. Then $f$ is holomorphic on the open disc $D(a, R)$, and its derivative is obtained by termwise differentiation:
+> $$f'(z) = \sum_{n=1}^\infty n c_n (z - a)^{n-1}, \qquad z \in D(a, R),$$
+> with the differentiated series also having radius of convergence $R$. Iterating, $f \in C^\infty(D(a, R))$ and
+> $$f^{(k)}(z) = \sum_{n=k}^\infty n(n-1)\cdots(n-k+1)\, c_n (z - a)^{n-k}, \qquad f^{(k)}(a) = k!\, c_k \quad (k \geq 0).$$
+
+---
+
 # Motivation
 
 A power series with positive radius of convergence defines a function on its disc of convergence — but in what sense is this function "nice"? The strongest possible answer: it is *holomorphic*, with the derivative obtained by differentiating term-by-term, and this derivative is itself a power series with the *same* radius of convergence. Iterating, we get $f \in C^\infty$ on $D(a, R)$, with $f^{(n)}(a) = n! c_n$ — the coefficient formula.

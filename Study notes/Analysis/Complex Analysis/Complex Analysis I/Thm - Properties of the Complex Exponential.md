@@ -14,6 +14,18 @@ $\exp(z) = \sum_{n=0}^\infty z^n/n!$ — the complex exponential. We write $e^z$
 
 ---
 
+# Statement
+
+> **Theorem (properties of the complex exponential).** Let $\exp(z) = \sum_{n=0}^\infty z^n/n!$, defined by its power series (which has radius of convergence $\infty$). Then:
+>
+> 1. **(Holomorphicity and derivative.)** $\exp$ is entire and $\exp'(z) = \exp(z)$ for all $z \in \mathbb{C}$.
+> 2. **(Addition formula.)** $\exp(z + w) = \exp(z) \exp(w)$ for all $z, w \in \mathbb{C}$.
+> 3. **(Non-vanishing.)** $\exp(z) \neq 0$ for every $z \in \mathbb{C}$, and $\exp(z) \exp(-z) = 1$.
+> 4. **(Periodicity.)** $\exp(z + 2\pi i) = \exp(z)$ for all $z \in \mathbb{C}$, and $\exp(z) = 1$ if and only if $z \in 2\pi i \mathbb{Z}$.
+> 5. **(Surjectivity onto $\mathbb{C}^\times$.)** For every $w \in \mathbb{C}^\times = \mathbb{C} \setminus \{0\}$, there exists $z \in \mathbb{C}$ with $\exp(z) = w$; the set of such pre-images is $\{z_0 + 2\pi i k : k \in \mathbb{Z}\}$ for any single pre-image $z_0$.
+
+---
+
 # Motivation
 
 The complex exponential, defined by its power series $\sum z^n/n!$, is the single most important entire function. The "properties" theorem packages the algebraic and analytic identities of $\exp$ — addition formula, derivative formula, non-vanishing, periodicity, surjectivity onto $\mathbb{C}^\times$ — into a single statement. From these, *everything* about complex exponentials, trigonometric identities, the logarithm and its branches, and the complex powers $z^\alpha$ follows.

@@ -12,6 +12,20 @@ $\sum_{n=0}^\infty c_n (z - a)^n$ — a power series with centre $a \in \mathbb{
 
 ---
 
+# Statement
+
+> **Theorem (radius of convergence formula and uniform convergence on sub-discs).** Let $\sum_{n=0}^\infty c_n (z - a)^n$ be a power series with centre $a \in \mathbb{C}$ and coefficients $\{c_n\} \subseteq \mathbb{C}$, and define
+> $$R = \frac{1}{\limsup_{n \to \infty} |c_n|^{1/n}} \in [0, \infty]$$
+> (with the conventions $1/0 = \infty$ and $1/\infty = 0$). Then:
+>
+> 1. **(Absolute convergence inside.)** The series converges absolutely for every $z$ with $|z - a| < R$.
+> 2. **(Divergence outside.)** The series diverges for every $z$ with $|z - a| > R$.
+> 3. **(Uniform convergence on closed sub-discs.)** For every $0 < r < R$, the series converges uniformly on the closed disc $\overline{D(a, r)} = \{z : |z - a| \leq r\}$.
+>
+> The number $R$ is called the **radius of convergence** of the series. No claim is made about convergence on the circle $|z - a| = R$ itself.
+
+---
+
 # Motivation
 
 A power series $\sum c_n (z - a)^n$ is a formal object — a sequence of coefficients — and we want to interpret it as a function. The first question: where does the series *converge*? The radius of convergence formula answers this *quantitatively* via the coefficient growth, and the uniform convergence statement says *how strongly* it converges on each closed subdisc.

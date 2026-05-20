@@ -32,7 +32,7 @@ The construction uses the **axiom of choice** essentially: in Solovay's model of
 
 ---
 
-# Formal Statement
+# Statement
 
 There exists a set $V\subseteq(0,1]$ that is **not Lebesgue-measurable**: $V\notin\mathcal{B}^*(\mathbb{R})$. Consequently $\mathcal{B}^*(\mathbb{R})\neq 2^{\mathbb{R}}$, and there is no countably additive, translation-invariant extension of $\lambda$ to all of $2^{\mathbb{R}}$.
 

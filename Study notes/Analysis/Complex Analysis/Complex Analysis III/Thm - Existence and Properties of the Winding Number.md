@@ -13,6 +13,21 @@ $\gamma : [a, b] \to \mathbb{C}$ is a closed continuous curve; $w \in \mathbb{C}
 
 ---
 
+# Statement
+
+> **Theorem (Existence and Properties of the Winding Number).** Let $\gamma : [a, b] \to \mathbb{C}$ be a closed continuous curve and $w \in \mathbb{C} \setminus \gamma^*$. Then:
+>
+> 1. **(Existence of a continuous lift.)** There exists a continuous $\theta : [a, b] \to \mathbb{R}$ with $\gamma(t) - w = |\gamma(t) - w|\,e^{i\theta(t)}$ for all $t$.
+> 2. **(Integer-valuedness.)** $\theta(b) - \theta(a) \in 2\pi\mathbb{Z}$, and the winding number $I(\gamma; w) := \frac{\theta(b) - \theta(a)}{2\pi}$ is an integer independent of the chosen lift.
+> 3. **(Integral formula.)** If $\gamma$ is piecewise $C^1$, then
+> $$I(\gamma; w) = \frac{1}{2\pi i}\int_\gamma \frac{dz}{z - w}.$$
+> 4. **(Local constancy in $w$.)** The function $w \mapsto I(\gamma; w)$ is locally constant on $\mathbb{C} \setminus \gamma^*$ — i.e., constant on each connected component of the complement.
+> 5. **(Vanishing on the unbounded component.)** $I(\gamma; w) = 0$ for all $w$ in the unbounded connected component of $\mathbb{C} \setminus \gamma^*$.
+> 6. **(Concatenation and reversal.)** $I(\gamma_1 \cdot \gamma_2; w) = I(\gamma_1; w) + I(\gamma_2; w)$ and $I(\gamma^{-1}; w) = -I(\gamma; w)$.
+> 7. **(Homotopy invariance.)** If $H : [a, b] \times [0, 1] \to \mathbb{C} \setminus \{w\}$ is a continuous homotopy of closed curves $\gamma_s = H(\cdot, s)$, then $I(\gamma_s; w)$ is independent of $s$.
+
+---
+
 # Motivation
 
 The winding number was *defined* topologically (continuous lift of the angle) and computationally (integral formula). Two key questions remain: does the topological definition actually make sense (does a continuous lift always exist), and do the two definitions agree? Beyond these foundational questions, the theorem gathers the basic properties that make the winding number a useful invariant — integer-valued, locally constant in $w$, zero in the unbounded component, additive under concatenation, sign-reversed under reversal, and homotopy-invariant.

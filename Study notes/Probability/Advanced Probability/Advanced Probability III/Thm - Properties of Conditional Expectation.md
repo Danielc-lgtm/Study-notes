@@ -28,7 +28,7 @@ $X,Y\in L^1(\Omega,\mathcal{F},\mathbb{P})$; $\mathcal{H}\subseteq\mathcal{G}\su
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $X,Y\in L^1$, $\alpha,\beta\in\mathbb{R}$, $\mathcal{H}\subseteq\mathcal{G}$. All identities hold $\mathbb{P}$-a.s.
 

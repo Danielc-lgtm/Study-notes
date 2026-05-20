@@ -29,7 +29,7 @@ A normed space is *useful* in analysis only if it is **complete** — if Cauchy 
 
 ---
 
-# Formal Statement
+# Statement
 
 For every measure space $(X,\mathcal{A},\mu)$ and every $1\le p\le\infty$, the normed space $(L^p(\mu),\|\cdot\|_p)$ is **complete**: every Cauchy sequence in $L^p(\mu)$ converges in $\|\cdot\|_p$ to an element of $L^p(\mu)$. Hence $L^p(\mu)$ is a **Banach space**, and $L^2(\mu)$ a **Hilbert space**.
 

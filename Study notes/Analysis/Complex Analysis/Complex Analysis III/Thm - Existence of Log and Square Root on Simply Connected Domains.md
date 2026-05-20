@@ -14,6 +14,16 @@ $U \subseteq \mathbb{C}$ is open and simply connected, with $0 \notin U$. A **br
 
 ---
 
+# Statement
+
+> **Theorem (Existence of Log and Square Root on Simply Connected Domains).** Let $U \subseteq \mathbb{C}$ be open and simply connected with $0 \notin U$. Then there exists a holomorphic function $\ell : U \to \mathbb{C}$ — a **branch of the logarithm** — with
+> $$e^{\ell(z)} = z \qquad\text{and}\qquad \ell'(z) = \frac{1}{z} \qquad\text{for all } z \in U.$$
+> The branch $\ell$ is unique up to addition of an integer multiple of $2\pi i$. Once $\ell$ is fixed, for every $\alpha \in \mathbb{C}$ the function $z^\alpha := e^{\alpha\ell(z)}$ is a holomorphic branch of the $\alpha$-power on $U$, satisfying $(z^{1/n})^n = z$ for every positive integer $n$.
+>
+> More generally, if $f : U \to \mathbb{C}^\times$ is any nowhere-vanishing holomorphic function on a simply connected $U$, then there exists holomorphic $g : U \to \mathbb{C}$ with $e^{g(z)} = f(z)$.
+
+---
+
 # Motivation
 
 The complex logarithm and complex powers are multi-valued: $e^{i\theta} = e^{i(\theta + 2\pi)}$, so $\log z$ has infinitely many possible values differing by $2\pi i k$. A *branch* of $\log$ is a choice of one value at each point, depending continuously on $z$. The question: on what domains does such a continuous choice exist?

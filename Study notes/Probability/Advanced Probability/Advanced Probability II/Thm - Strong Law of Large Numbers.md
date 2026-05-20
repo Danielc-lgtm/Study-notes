@@ -28,7 +28,7 @@ The [[Thm - Weak Law of Large Numbers|weak law]] says the sample mean is *probab
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)_{n\ge1}$ be **independent and identically distributed** with $\mathbb{E}|X_1|<\infty$ and $\mu=\mathbb{E}[X_1]$. Then
 $$\frac{S_n}{n}=\frac{X_1+\cdots+X_n}{n}\ \xrightarrow{\ \text{a.s.}\ }\ \mu\qquad\text{(and also in }L^1\text{)}.$$

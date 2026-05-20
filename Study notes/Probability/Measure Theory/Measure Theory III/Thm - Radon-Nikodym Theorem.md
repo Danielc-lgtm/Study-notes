@@ -32,7 +32,7 @@ This is the theorem that makes **conditional expectation** exist, that gives pro
 
 ---
 
-# Formal Statement
+# Statement
 
 **(Lebesgue decomposition.)** Let $\mu,\nu$ be $\sigma$-finite measures on $(X,\mathcal{A})$. There is a *unique* pair of measures with
 $$\nu=\nu_{ac}+\nu_s,\qquad \nu_{ac}\ll\mu,\qquad \nu_s\perp\mu.$$

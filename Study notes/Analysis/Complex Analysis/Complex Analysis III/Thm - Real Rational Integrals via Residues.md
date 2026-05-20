@@ -13,6 +13,14 @@ $P, Q$ are polynomials in $z$, $R = P/Q$ is a rational function. The degree of $
 
 ---
 
+# Statement
+
+> **Theorem (Real Rational Integrals via Residues).** Let $R(x) = P(x)/Q(x)$ be a rational function with $P, Q$ polynomials such that $\deg Q \geq \deg P + 2$ and $Q$ has no real zeros. Then
+> $$\int_{-\infty}^\infty R(x)\,dx = 2\pi i \sum_{w:\,\operatorname{Im} w > 0}\operatorname{Res}_w R,$$
+> the sum being over all poles of $R$ in the open upper half-plane.
+
+---
+
 # Motivation
 
 A classical question: how to evaluate $\int_{-\infty}^\infty P(x)/Q(x)\,dx$ when $P/Q$ is a rational function? Direct real-variable methods (partial fractions, trigonometric substitutions) work but are often tedious for polynomial degrees $\geq 3$. The residue theorem provides a slick alternative: extend the real-axis integral to a complex contour, apply residue calculus, and read off the answer.

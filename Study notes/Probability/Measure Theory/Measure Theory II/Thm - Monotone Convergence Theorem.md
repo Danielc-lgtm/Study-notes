@@ -29,7 +29,7 @@ The single deepest fact distinguishing Lebesgue's integral from Riemann's is tha
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $f_n:X\to[0,\infty]$ be measurable with $f_n\uparrow f$ (pointwise, or $\mu$-a.e.). Then $f$ is measurable and
 $$\int_X f_n\,d\mu\ \xrightarrow[n\to\infty]{}\ \int_X f\,d\mu,\qquad\text{equivalently}\qquad \lim_{n\to\infty}\int f_n\,d\mu=\int\lim_{n\to\infty}f_n\,d\mu.$$

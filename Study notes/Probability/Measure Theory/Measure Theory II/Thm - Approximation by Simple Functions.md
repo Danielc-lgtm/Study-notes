@@ -28,7 +28,7 @@ The Lebesgue [[Def - The Integral|integral]] is *defined* on [[Def - Simple Func
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X,\mathcal{A})$ be measurable and $f:X\to[0,\infty]$. Then **$f$ is measurable if and only if** there is a sequence $(s_n)$ of measurable simple functions $s_n:X\to[0,\infty)$ with
 $$0\le s_1\le s_2\le\cdots\le f,\qquad s_n(x)\xrightarrow[n\to\infty]{}f(x)\quad\text{for every }x\in X.$$

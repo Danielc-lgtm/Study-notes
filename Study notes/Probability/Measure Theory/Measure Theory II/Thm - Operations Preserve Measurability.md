@@ -27,7 +27,7 @@ Measurability would be a useless notion if it were fragile — if adding two mea
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $f,g:X\to\mathbb{R}$ be measurable and $(f_k)$ a sequence of measurable functions.
 

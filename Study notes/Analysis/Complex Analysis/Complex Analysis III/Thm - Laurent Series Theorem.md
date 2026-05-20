@@ -14,6 +14,16 @@ $a \in \mathbb{C}$, $0 \leq r_0 < R_0 \leq \infty$, $A(a; r_0, R_0) = \{z : r_0 
 
 ---
 
+# Statement
+
+> **Theorem (Laurent Series).** Let $a \in \mathbb{C}$, $0 \leq r_0 < R_0 \leq \infty$, and let $f$ be holomorphic on the annulus $A(a; r_0, R_0) = \{z : r_0 < |z - a| < R_0\}$. Then $f$ admits a unique two-sided power series expansion
+> $$f(z) = \sum_{n=-\infty}^\infty c_n (z - a)^n,$$
+> converging absolutely on $A(a; r_0, R_0)$ and uniformly on every closed sub-annulus. The coefficients are given by
+> $$c_n = \frac{1}{2\pi i}\oint_{|z - a| = \rho}\frac{f(z)}{(z - a)^{n+1}}\,dz, \qquad n \in \mathbb{Z},$$
+> for any $\rho \in (r_0, R_0)$ (the integral is independent of $\rho$).
+
+---
+
 # Motivation
 
 A holomorphic function on a disc has a Taylor series — a power series converging on the disc and equal to the function pointwise. The Laurent series theorem is the analog for an *annular* domain: a function holomorphic on an annulus has a two-sided power series converging there.

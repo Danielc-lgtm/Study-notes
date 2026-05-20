@@ -28,7 +28,7 @@ A [[Def - Martingale|martingale]] is a fair game: $\mathbb{E}[X_n]=\mathbb{E}[X_
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)$ be a martingale and $S\le T$ stopping times.
 

@@ -29,7 +29,7 @@ The two continuity statements are the heart of it. $\sigma$-additivity is a stat
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X,\mathcal{A},\mu)$ be a measure space and $A, B, A_k \in \mathcal{A}$.
 

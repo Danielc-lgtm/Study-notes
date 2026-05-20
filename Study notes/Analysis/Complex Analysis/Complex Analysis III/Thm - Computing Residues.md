@@ -13,6 +13,21 @@ $f$ holomorphic on $D(a, R) \setminus \{a\}$ with isolated singularity at $a$. $
 
 ---
 
+# Statement
+
+> **Theorem (Computing Residues).** Let $f$ be holomorphic on $D(a, R) \setminus \{a\}$ with an isolated singularity at $a$.
+>
+> 1. **(Simple pole, limit form.)** If $a$ is a simple pole of $f$, then
+> $$\operatorname{Res}_a f = \lim_{z \to a}(z - a)\, f(z).$$
+>
+> 2. **(Pole of order $k$, derivative form.)** If $a$ is a pole of $f$ of order $k \geq 1$, then
+> $$\operatorname{Res}_a f = \frac{1}{(k-1)!}\,\lim_{z \to a}\,\frac{d^{k-1}}{dz^{k-1}}\Big[(z - a)^k\, f(z)\Big].$$
+>
+> 3. **(Quotient form, simple pole.)** If $f = g/h$ where $g, h$ are holomorphic at $a$ with $g(a) \neq 0$, $h(a) = 0$, and $h'(a) \neq 0$, then $a$ is a simple pole of $f$ and
+> $$\operatorname{Res}_a (g/h) = \frac{g(a)}{h'(a)}.$$
+
+---
+
 # Motivation
 
 The residue theorem reduces contour integrals to sums of residues — but only if you can *compute* the residues. The residue at an isolated singularity is, by definition, the coefficient $c_{-1}$ of the Laurent expansion. In principle this requires constructing the entire Laurent expansion; in practice, several standard formulas collapse the residue computation to one or two derivative evaluations.

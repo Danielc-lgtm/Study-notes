@@ -15,6 +15,16 @@ $X, Y$ are topological spaces. $A, B \subseteq X$ are subsets with $X = A \cup B
 
 ---
 
+# Statement
+
+> **Theorem (Pasting Lemma).** Let $X, Y$ be topological spaces and suppose $X = A \cup B$, where $A$ and $B$ are **both closed in $X$** (or, alternatively, **both open in $X$**). Let $f : A \to Y$ and $g : B \to Y$ be continuous (with $A$ and $B$ carrying the subspace topology), and suppose they agree on the overlap:
+> $$f|_{A \cap B} = g|_{A \cap B}.$$
+> Then the **glued function** $h : X \to Y$ defined by
+> $$h(x) = \begin{cases} f(x) & \text{if } x \in A, \\ g(x) & \text{if } x \in B, \end{cases}$$
+> is well-defined and continuous.
+
+---
+
 # Motivation
 
 Piecewise-defined functions appear everywhere in analysis and topology. We often describe a map $X \to Y$ by saying "do one thing on part of $X$, another on the rest". The natural question is: when does the resulting glued function inherit continuity from its pieces? Setting things up carefully — agreement on the overlap, and a suitable hypothesis on how the pieces sit in $X$ — gives a clean answer: yes, the function is continuous, provided the pieces are *closed* (or both *open*, by symmetry).

@@ -28,7 +28,7 @@ The [[Thm - Almost Sure Martingale Convergence|a.s. convergence theorem]] gives 
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)$ be a martingale.
 

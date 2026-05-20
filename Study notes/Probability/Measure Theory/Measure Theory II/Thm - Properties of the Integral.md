@@ -28,7 +28,7 @@ The [[Def - The Integral|integral]] was *defined* in three stages (simple, non-n
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $f,g$ be measurable.
 

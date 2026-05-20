@@ -27,7 +27,7 @@ The [[Thm - Monotone Convergence Theorem|MCT]] handles *monotone* sequences. For
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $f_n:X\to[0,\infty]$ be measurable, $n\in\mathbb{N}$. Then
 $$\int_X\Big(\liminf_{n\to\infty}f_n\Big)\,d\mu\ \le\ \liminf_{n\to\infty}\int_X f_n\,d\mu.$$

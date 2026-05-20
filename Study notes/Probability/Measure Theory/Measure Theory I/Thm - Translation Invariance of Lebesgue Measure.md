@@ -29,7 +29,7 @@ It is also the hinge of the [[Thm - Existence of a Non-Measurable Set|Vitali arg
 
 ---
 
-# Formal Statement
+# Statement
 
 For every $x_0\in\mathbb{R}^n$ and every $A\in\mathcal{B}(\mathbb{R}^n)$,
 $$\lambda(x_0+A)=\lambda(A).$$

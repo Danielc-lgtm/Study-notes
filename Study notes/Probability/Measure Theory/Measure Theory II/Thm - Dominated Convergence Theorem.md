@@ -28,7 +28,7 @@ The central practical question of integration: *when may one interchange a limit
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $g\in L^1(\mu)$, $g\ge0$, and let $f,f_n:X\to[-\infty,\infty]$ be measurable with
 $$|f_n|\le g\ \ \mu\text{-a.e. (all }n),\qquad f_n\to f\ \ \mu\text{-a.e.}$$

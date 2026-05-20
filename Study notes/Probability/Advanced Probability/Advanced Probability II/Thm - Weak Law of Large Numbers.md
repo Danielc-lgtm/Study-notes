@@ -28,7 +28,7 @@ The intuitive content of probability: *the average of many independent repetitio
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)_{n\ge1}$ be identically distributed and **pairwise uncorrelated**, with $\mu=\mathbb{E}[X_1]$ and $\sigma^2=\mathrm{Var}(X_1)<\infty$. Then
 $$\frac{S_n}{n}=\frac{X_1+\cdots+X_n}{n}\ \xrightarrow{\ \mathbb{P}\ }\ \mu\qquad\text{as }n\to\infty,$$

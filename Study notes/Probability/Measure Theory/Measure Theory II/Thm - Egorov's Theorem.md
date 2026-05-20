@@ -28,7 +28,7 @@ Pointwise (or [[Def - Almost Everywhere|a.e.]]) convergence is a *local* stateme
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $\mu(\Omega)<\infty$ and let $f_k,f:\Omega\to\mathbb{R}$ be measurable with $f_k\to f$ $\mu$-a.e. on $\Omega$. Then for every $\delta>0$ there exists a measurable set $F\subseteq\Omega$ with
 $$\mu(\Omega\setminus F)<\delta\qquad\text{and}\qquad \sup_{x\in F}|f_k(x)-f(x)|\xrightarrow[k\to\infty]{}0,$$

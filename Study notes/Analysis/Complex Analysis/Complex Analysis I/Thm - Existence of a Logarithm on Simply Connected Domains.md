@@ -14,6 +14,14 @@ $U \subseteq \mathbb{C}^\times = \mathbb{C} \setminus \{0\}$ — an open subset 
 
 ---
 
+# Statement
+
+> **Theorem (existence of a logarithm on simply connected domains).** Let $U \subseteq \mathbb{C}^\times = \mathbb{C} \setminus \{0\}$ be a simply connected domain. Then there exists a holomorphic [[Def - Branch of the Logarithm|branch of the logarithm]] $\lambda : U \to \mathbb{C}$, i.e., a holomorphic function satisfying $\exp(\lambda(z)) = z$ for all $z \in U$, and its derivative is $\lambda'(z) = 1/z$. The branch is unique up to an additive constant in $2\pi i \mathbb{Z}$, fixed by choosing a base point $z_0 \in U$ and a value $\lambda_0 \in \exp^{-1}(z_0)$.
+>
+> Conversely, if a branch of $\log$ exists on a domain $U \subseteq \mathbb{C}^\times$, then every closed piecewise $C^1$ curve $\gamma$ in $U$ has winding number zero around the origin: $\int_\gamma dw/w = 0$.
+
+---
+
 # Motivation
 
 We want a function $\log z$ on the largest possible domain. Since $\exp : \mathbb{C} \to \mathbb{C}^\times$ is surjective but $2\pi i$-periodic, a continuous inverse — a [[Def - Branch of the Logarithm|branch of the logarithm]] — must "choose" one of the infinitely many pre-images at each $z$, consistently. This choice obstructs at *loops* in the domain: tracing a path around the origin once, the argument changes by $2\pi$ continuously, and the chosen branch must change by $2\pi i$ — but a single-valued function on a domain cannot do that.

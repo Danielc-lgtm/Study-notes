@@ -28,7 +28,7 @@ An outer measure is defined everywhere but is only subadditive — not a measure
 
 ---
 
-# Formal Statement
+# Statement
 
 **(A) Outer measure from a cover.** Let $\mathcal{K}$ be a cover of $X$ and $\widetilde\mu:\mathcal{K}\to[0,\infty]$ with $\widetilde\mu(\emptyset)=0$. Then
 $$\mu^*(A) = \inf\Big\{\sum_{j=1}^\infty\widetilde\mu(K_j) : K_j\in\mathcal{K},\ A\subseteq\textstyle\bigcup_j K_j\Big\}, \qquad A\subseteq X,$$

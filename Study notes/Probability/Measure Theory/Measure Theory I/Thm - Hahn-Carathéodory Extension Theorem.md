@@ -31,7 +31,7 @@ The mechanism is the [[Thm - Carathéodory's σ-Algebra|Carathéodory machine]]:
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $X$ be a set, $\mathcal{A}$ an algebra over $X$, and $\widetilde\mu:\mathcal{A}\to[0,\infty]$ a pre-measure. Build $\mu^*$ by the cover formula with $\mathcal{K}=\mathcal{A}$, let $\Sigma$ be its Carathéodory $\sigma$-algebra, and set $\mu=\mu^*|_\Sigma$. Then:
 

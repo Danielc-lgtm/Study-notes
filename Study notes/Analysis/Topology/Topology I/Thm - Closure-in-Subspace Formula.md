@@ -15,6 +15,19 @@ $X$ is a topological space, $Y \subseteq X$ a subspace (carrying the subspace to
 
 ---
 
+# Statement
+
+> **Theorem (closure-in-subspace formula).** Let $X$ be a topological space, $Y \subseteq X$ a subspace carrying the subspace topology, and $A \subseteq Y$. Then
+> $$\overline{A}^Y = \overline{A}^X \cap Y,$$
+> where $\overline{A}^Y$ is the closure of $A$ taken inside $Y$ and $\overline{A}^X$ the closure of $A$ taken inside $X$.
+
+> [!warning] The analogous formula for interior fails
+> The corresponding equality for the interior, $A^{\circ, Y} = A^{\circ, X} \cap Y$, is **false in general**. Only the one-sided containment
+> $$A^{\circ, Y} \supseteq A^{\circ, X} \cap Y$$
+> holds, and it can be strict. The asymmetry arises because the subspace topology on $Y$ has *more* open sets than the trace of opens from $X$ allows the interior to witness — a point can be $Y$-interior to $A$ via a $Y$-open set that is not the trace of any $X$-open subset of $A$. A canonical counterexample is $X = \mathbb{R}$, $Y = [0, 2)$, $A = [0, 1)$, where $A^{\circ, Y} = [0, 1) \supsetneq (0, 1) = A^{\circ, X} \cap Y$.
+
+---
+
 # Motivation
 
 When we restrict attention from an ambient space $X$ to a subspace $Y$, the topology on $Y$ changes (it gains sets that were not open in $X$ — see [[Def - Subspace Topology]]), and we must ask how the standard topological operations transform. The first natural question is how the closure operation behaves: given a subset $A \subseteq Y$, does its closure in $Y$ equal its closure in $X$, or differ?

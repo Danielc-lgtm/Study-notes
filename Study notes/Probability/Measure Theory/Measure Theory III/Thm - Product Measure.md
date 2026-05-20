@@ -29,7 +29,7 @@ To integrate functions of two variables, or to model a *pair* of independent ran
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_i,\mathcal{A}_i,\mu_i)$, $i=1,2$, be $\sigma$-finite measure spaces. Then there exists a **unique** measure $\mu_1\otimes\mu_2$ on $(X,\mathcal{A}_1\otimes\mathcal{A}_2)$ with
 $$(\mu_1\otimes\mu_2)(A_1\times A_2)=\mu_1(A_1)\,\mu_2(A_2)\qquad\text{for all }A_i\in\mathcal{A}_i.$$

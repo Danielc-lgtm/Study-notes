@@ -247,9 +247,21 @@ tags: [area-tag, subject-tag]
 
 ---
 
+# Statement
+
+[**Required.** A precise, formal statement of the theorem, written as a blockquote starting `> **Theorem (name).**` (or `> **Lemma.**`, `> **Corollary.**`). The Statement is the canonical formal statement of the result, the thing a returning reader looks at first. Do not bury the statement inside Motivation as a passing display equation, and do not skip this section. Hypotheses and conclusion in one block; corollaries/companion statements may follow as additional blockquotes.
+
+Example:
+
+> **Theorem (Inverse Function Theorem).** Let $U \subseteq \mathbb{R}^n$ be open, $f \in C^k(U, \mathbb{R}^n)$ with $k \geq 1$, and $x_0 \in U$ a point where $Df_{x_0} : \mathbb{R}^n \to \mathbb{R}^n$ is invertible. Then there is an open neighbourhood $U_0$ of $x_0$ such that $f|_{U_0}$ is a $C^k$-diffeomorphism onto its image, with $D(f|_{U_0})^{-1}_{f(x)} = (Df_x)^{-1}$.
+
+One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") may follow the blockquote when they aid recognition.]
+
+---
+
 # Motivation
 
-[What question does this theorem answer? What mathematical problem or gap existed before it? Why should one expect a result like this to exist? Written as prose paragraphs.]
+[What question does this theorem answer? What mathematical problem or gap existed before it? Why should one expect a result like this to exist? Written as prose paragraphs. The motivation should *not* re-state the formal statement — the Statement section above is for that. The motivation explains the *role* and *importance* of the theorem in human terms.]
 
 ---
 

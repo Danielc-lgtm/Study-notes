@@ -27,7 +27,7 @@ Some events depend on the *entire* infinite sequence $(X_n)$ but are unaffected 
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)_{n\ge1}$ be independent random variables and $\mathcal{T}=\bigcap_{n\ge1}\sigma(X_{n+1},X_{n+2},\dots)$ the **tail $\sigma$-algebra**. Then $\mathcal{T}$ is **trivial**:
 $$\mathbb{P}(A)\in\{0,1\}\qquad\text{for every }A\in\mathcal{T}.$$

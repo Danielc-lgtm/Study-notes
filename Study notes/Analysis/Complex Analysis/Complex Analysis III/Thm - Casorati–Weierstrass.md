@@ -14,6 +14,14 @@ $a \in \mathbb{C}$ is an essential singularity of $f$, holomorphic on $D(a, R) \
 
 ---
 
+# Statement
+
+> **Theorem (Casorati–Weierstrass).** Let $f$ be holomorphic on $D(a, R) \setminus \{a\}$ with an essential singularity at $a$. Then for every $\rho \in (0, R)$, the image $f(D(a, \rho) \setminus \{a\})$ is **dense** in $\mathbb{C}$.
+>
+> Equivalently, for every $w_0 \in \mathbb{C}$ and every $\varepsilon, \rho > 0$, there exists $z \in D(a, \rho) \setminus \{a\}$ with $|f(z) - w_0| < \varepsilon$.
+
+---
+
 # Motivation
 
 We have characterized removable singularities (bounded near $a$) and poles ($|f| \to \infty$). The remaining case — essential singularities — has neither behaviour: $|f|$ neither tends to a finite limit nor to infinity. *What does $f$ look like* near an essential singularity?

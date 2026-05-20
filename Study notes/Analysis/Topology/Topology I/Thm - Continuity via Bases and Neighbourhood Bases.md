@@ -15,6 +15,20 @@ $X, Y$ are topological spaces, $f : X \to Y$ a function. A **basis** $\mathcal{B
 
 ---
 
+# Statement
+
+> **Theorem (continuity via bases and neighbourhood bases).** Let $f : X \to Y$ be a function between topological spaces.
+>
+> **(a) Basis / subbasis criterion (global).** Let $\mathcal{B}$ be a **basis** for the topology of $Y$, and $\mathcal{S}$ a **subbasis**. Then the following are equivalent:
+>
+> 1. $f$ is continuous;
+> 2. $f^{-1}(B)$ is open in $X$ for every $B \in \mathcal{B}$;
+> 3. $f^{-1}(S)$ is open in $X$ for every $S \in \mathcal{S}$.
+>
+> **(b) Neighbourhood-basis criterion (local).** Fix $x \in X$ and let $\mathcal{B}_{f(x)}$ be a **neighbourhood basis** at $f(x)$. Then $f$ is continuous at $x$ if and only if for every $N \in \mathcal{B}_{f(x)}$, the preimage $f^{-1}(N)$ is a neighbourhood of $x$ in $X$.
+
+---
+
 # Motivation
 
 The definition of continuity demands "$f^{-1}(U)$ open for every open $U$" — a quantification over potentially uncountably many open sets, most of which are complicated unions of basis elements. Checking this directly is rarely tractable. This theorem says we do not have to: a *much* smaller verification suffices. It is enough to check $f^{-1}(B)$ is open for $B$ in any basis (or even any subbasis) of the target topology, and the rest follows by abstract nonsense from how $f^{-1}$ interacts with unions and intersections.

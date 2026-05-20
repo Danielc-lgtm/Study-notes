@@ -29,7 +29,7 @@ A double integral $\int_{X_1\times X_2}f\,d(\mu_1\otimes\mu_2)$ is, in principle
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_i,\mathcal{A}_i,\mu_i)$ be $\sigma$-finite and $f:X_1\times X_2\to[-\infty,\infty]$ be $\mathcal{A}_1\otimes\mathcal{A}_2$-measurable.
 

@@ -28,7 +28,7 @@ The [[Thm - Hahn-Carathéodory Extension Theorem|extension theorem]] proves a pr
 
 ---
 
-# Formal Statement
+# Statement
 
 Under the hypotheses of the [[Thm - Hahn-Carathéodory Extension Theorem|extension theorem]], suppose in addition that $\widetilde\mu$ is **$\sigma$-finite**: there exist pairwise disjoint $S_k\in\mathcal{A}$ with $X=\bigsqcup_k S_k$ and $\widetilde\mu(S_k)<\infty$. Then the extension is **unique** in the following sense: if $\nu:2^X\to[0,\infty]$ is any outer measure with $\nu|_\mathcal{A}=\widetilde\mu$, then $\nu|_\Sigma=\mu$.
 

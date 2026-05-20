@@ -28,7 +28,7 @@ $(\Omega,\mathcal{F},\mathbb{P})$ a probability space, $\mathcal{G}\subseteq\mat
 
 ---
 
-# Formal Statement
+# Statement
 
 For every $X\in L^1(\Omega,\mathcal{F},\mathbb{P})$ and every sub-$\sigma$-algebra $\mathcal{G}\subseteq\mathcal{F}$, there exists a random variable $Y$ that is **$\mathcal{G}$-measurable**, **integrable**, and satisfies $\mathbb{E}[Y\mathbf{1}_A]=\mathbb{E}[X\mathbf{1}_A]$ for all $A\in\mathcal{G}$. Moreover $Y$ is **unique up to $\mathbb{P}$-almost-sure equality**: any two such variables agree a.s. We write $Y=\mathbb{E}[X\mid\mathcal{G}]$.
 

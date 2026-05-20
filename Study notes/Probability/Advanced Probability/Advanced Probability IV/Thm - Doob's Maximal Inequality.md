@@ -28,7 +28,7 @@ $(X_n)$ a [[Def - Martingale|martingale]] or non-negative submartingale; $X_n^*=
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)$ be a martingale or a non-negative submartingale, $X_n^*=\max_{k\le n}|X_k|$.
 

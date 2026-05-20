@@ -14,6 +14,14 @@ $U \subseteq \mathbb{C}$ is open and simply connected. $f : U \to \mathbb{C}$ is
 
 ---
 
+# Statement
+
+> **Theorem (Cauchy's Theorem for Simply Connected Domains).** Let $U \subseteq \mathbb{C}$ be open and simply connected, and let $f : U \to \mathbb{C}$ be holomorphic. Then for every closed piecewise $C^1$ curve $\gamma$ in $U$,
+> $$\int_\gamma f(z)\, dz = 0.$$
+> Equivalently, $f$ has a primitive on $U$: there exists a holomorphic $F : U \to \mathbb{C}$ with $F' = f$.
+
+---
+
 # Motivation
 
 The local Cauchy theorem of [[Complex Analysis II — Cauchy's Theorem and its Consequences|CA II]] says that on a star-shaped domain, every closed integral of a holomorphic function vanishes. This is enough to derive the Cauchy integral formula, Taylor series expansion, and many other foundational results — but the star-shaped hypothesis is awkward in applications. Many natural domains (the slit plane, the strip $\{|\operatorname{Im} z| < \pi\}$, the union of two overlapping discs) are simply connected but not star-shaped, and we want Cauchy's theorem on them too.

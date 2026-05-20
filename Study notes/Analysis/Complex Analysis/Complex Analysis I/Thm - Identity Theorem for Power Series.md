@@ -13,6 +13,14 @@ $\sum c_n (z - a)^n, \sum d_n (z - a)^n$ — two power series with the same cent
 
 ---
 
+# Statement
+
+> **Theorem (identity theorem for power series).** Let $\sum_{n=0}^\infty c_n (z - a)^n$ and $\sum_{n=0}^\infty d_n (z - a)^n$ be two power series with the same centre $a \in \mathbb{C}$ and positive radii of convergence. If they agree as functions on some non-empty open subset of their common disc of convergence, then their coefficients are equal: $c_n = d_n$ for every $n \geq 0$.
+>
+> Equivalently: if $\sum_{n=0}^\infty c_n (z - a)^n = 0$ on a non-empty open subset of its disc of convergence, then $c_n = 0$ for every $n \geq 0$.
+
+---
+
 # Motivation
 
 A power series $\sum c_n (z - a)^n$ is given by an infinite sequence of coefficients. The natural uniqueness question: if two power series define the *same function* on a common disc of convergence, must they have the *same coefficients*? The answer is yes — and stronger: it is enough that they agree on a non-empty *open subset* of the common disc.

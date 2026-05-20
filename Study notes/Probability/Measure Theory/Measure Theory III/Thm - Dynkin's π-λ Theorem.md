@@ -27,7 +27,7 @@ A recurring obstacle: one wants to prove a property holds for *all* sets in a $\
 
 ---
 
-# Formal Statement
+# Statement
 
 **(Dynkin's $\pi$–$\lambda$ theorem.)** Let $\mathcal{P}$ be a $\pi$-system and $\mathcal{L}$ a $\lambda$-system on $X$ with $\mathcal{P}\subseteq\mathcal{L}$. Then $\sigma(\mathcal{P})\subseteq\mathcal{L}$.
 

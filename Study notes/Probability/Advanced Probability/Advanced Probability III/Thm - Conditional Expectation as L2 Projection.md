@@ -28,7 +28,7 @@ $X\in L^2(\Omega,\mathcal{F},\mathbb{P})$; $\mathcal{G}\subseteq\mathcal{F}$ a s
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $X\in L^2(\Omega,\mathcal{F},\mathbb{P})$. Then $L^2(\mathcal{G})$ is a **closed subspace** of the Hilbert space $L^2(\mathcal{F})$, and the [[Def - Conditional Expectation|conditional expectation]] $\mathbb{E}[X\mid\mathcal{G}]$ is the **orthogonal projection** of $X$ onto $L^2(\mathcal{G})$:
 $$\mathbb{E}[X\mid\mathcal{G}]=\operatorname*{arg\,min}_{W\in L^2(\mathcal{G})}\ \mathbb{E}\big[(X-W)^2\big].$$

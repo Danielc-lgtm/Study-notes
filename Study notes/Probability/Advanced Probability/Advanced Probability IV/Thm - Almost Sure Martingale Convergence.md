@@ -28,7 +28,7 @@ The single most useful structural theorem about [[Def - Martingale|martingales]]
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $(X_n)$ be a supermartingale (in particular, a martingale) **bounded in $L^1$**: $\sup_n\mathbb{E}|X_n|<\infty$. Then there is an $\mathcal{F}_\infty$-measurable random variable $X_\infty\in L^1$ with
 $$X_n\ \xrightarrow{\ \text{a.s.}\ }\ X_\infty\qquad\text{as }n\to\infty.$$

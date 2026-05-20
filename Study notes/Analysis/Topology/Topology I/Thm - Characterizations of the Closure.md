@@ -16,6 +16,23 @@ $X$ is a topological space, $A \subseteq X$ a subset, and $x \in X$ a point. The
 
 ---
 
+# Statement
+
+> **Theorem (characterizations of the closure).** Let $X$ be a topological space, $A \subseteq X$, and $x \in X$. The following conditions are equivalent:
+>
+> (i) $x \in \overline{A}$;
+> (ii) every **open set** $U \subseteq X$ containing $x$ meets $A$, i.e. $U \cap A \neq \emptyset$;
+> (iii) every **neighbourhood** $N$ of $x$ meets $A$;
+> (iv) every **basis element** $B$ of the topology of $X$ that contains $x$ meets $A$ (equivalently, every element of any neighbourhood basis $\mathcal{B}_x$ at $x$ meets $A$).
+>
+> If, in addition, $X$ is **first countable** at $x$ (e.g. $X$ is a metric space), then these are also equivalent to:
+>
+> (v) there exists a sequence $\{a_n\}_{n \geq 1} \subseteq A$ with $a_n \to x$.
+>
+> In a general topological space, (v) is **strictly weaker** than (i)–(iv): the sequential closure can be a proper subset of the topological closure.
+
+---
+
 # Motivation
 
 The definition of closure is set-theoretic and global: $\overline{A}$ is the intersection of all closed supersets, equivalently the smallest closed superset. This is the *right* definition — it makes closure exist for every subset of every topological space and reveals its universal-property nature — but it is not the most useful for actual computations. When we want to decide whether a particular point $x$ lies in $\overline{A}$, the global definition tells us to range over *every* closed superset of $A$, which is in general an enormous family. We need a *local* criterion: a condition checkable at $x$ alone, in terms of the open sets near $x$.

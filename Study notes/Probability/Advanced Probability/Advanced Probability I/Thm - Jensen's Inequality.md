@@ -27,7 +27,7 @@ Expectation is linear: $\mathbb{E}[aX+b]=a\mathbb{E}[X]+b$. What happens under a
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $I\subseteq\mathbb{R}$ be an open interval, $X$ a random variable with $X\in I$ a.s. and $X\in L^1$ (so $\mathbb{E}X\in I$), and $\varphi:I\to\mathbb{R}$ **convex**. Then $\varphi(X)^-\in L^1$ (so $\mathbb{E}[\varphi(X)]$ is well-defined in $(-\infty,\infty]$) and
 $$\mathbb{E}[\varphi(X)]\ \ge\ \varphi(\mathbb{E}[X]).$$

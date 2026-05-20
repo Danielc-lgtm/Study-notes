@@ -13,6 +13,13 @@ $U \subseteq \mathbb{C}$ open; $f = u + iv : U \to \mathbb{C}$ holomorphic with 
 
 ---
 
+# Statement
+
+> **Theorem (real and imaginary parts of a holomorphic function are harmonic).** Let $U \subseteq \mathbb{C}$ be open and $f = u + iv : U \to \mathbb{C}$ a holomorphic function, with $u = \operatorname{Re} f, v = \operatorname{Im} f$ its real and imaginary parts viewed as real-valued functions on $U \subseteq \mathbb{R}^2$. Then $u$ and $v$ are $C^\infty$ on $U$ and each is **harmonic**, i.e.,
+> $$\Delta u = u_{xx} + u_{yy} = 0, \qquad \Delta v = v_{xx} + v_{yy} = 0 \quad \text{on } U.$$
+
+---
+
 # Motivation
 
 The Cauchy–Riemann equations $u_x = v_y, u_y = -v_x$ are first-order PDEs linking $u$ and $v$. Differentiating once more (legitimate because $f$ holomorphic implies $u, v$ are $C^\infty$, by the regularity theorem of [[Complex Analysis II — Cauchy's Theorem and its Consequences|CA II]]) gives a *second-order* consequence: both $u$ and $v$ separately satisfy Laplace's equation $\Delta u = 0$. This is the bridge between complex analysis and the classical theory of **harmonic functions** in two variables — and through it, to potential theory, electrostatics, fluid dynamics, and the maximum principle.

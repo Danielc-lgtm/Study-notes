@@ -30,7 +30,7 @@ This is the workhorse approximation principle of the subject. Want to prove some
 
 ---
 
-# Formal Statement
+# Statement
 
 Let $A\in\mathcal{B}(\mathbb{R}^n)$ (or $A$ Lebesgue-measurable).
 
