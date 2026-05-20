@@ -58,6 +58,8 @@ $D^n$ is the closed unit ball in the Euclidean norm. $[-1, 1]^n$ is the closed c
 
 # Solution
 
+The proof breaks into five steps that build an explicit radial homeomorphism between the ball and the cube. Step 1 defines $f(x) = x \cdot \|x\|/\|x\|_\infty$ (with $f(0) = 0$), the "norm-swap" map that rescales each ray from $0$; Step 2 verifies $f$ maps $D^n$ into the cube using $\|f(x)\|_\infty = \|x\|$; Step 3 checks continuity (including at the origin, via the norm bound); Step 4 exhibits the inverse $g(y) = y \cdot \|y\|_\infty/\|y\|$ and verifies $g \circ f = 1$; Step 5 concludes homeomorphism. The non-obvious move is in Step 1 — the homeomorphism swaps the *parametrization* of each ray while preserving the ray itself, which is what makes the algebra of norms ($\|f(x)\|_\infty = \|x\|$) work out cleanly.
+
 **Step 1: Define the explicit map.**
 
 For $x \in D^n$, define

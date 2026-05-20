@@ -64,6 +64,8 @@ $\Delta^n$ sits in the affine hyperplane $\{\sum x_i = 1\} \subseteq \mathbb{R}^
 
 # Solution
 
+The proof breaks into four steps. Step 1 builds an affine homeomorphism $\Phi: H \to \mathbb{R}^n$ from the hyperplane $\{\sum x_i = 1\}$ to $\mathbb{R}^n$ by forgetting $x_0$ (since $x_0 = 1 - \sum_{i \geq 1} x_i$ is determined); Step 2 checks that $\Phi(\Delta^n)$ is a compact convex body in $\mathbb{R}^n$ with nonempty interior (the centroid is interior); Step 3 invokes [[Thm - Compact Convex Body is Homeomorphic to a Disk]] to conclude $\Phi(\Delta^n) \cong D^n$; Step 4 composes to obtain $\Delta^n \cong D^n$. The non-obvious move is in Step 1 — the simplex's intrinsic dimension is $n$, not $n+1$, and the affine identification is what reduces the problem to the standard convex-body theorem.
+
 **Step 1: Identify $\Delta^n$ with a subset of $\mathbb{R}^n$.**
 
 > [!note]- Derivation

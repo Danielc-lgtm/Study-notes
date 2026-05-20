@@ -63,6 +63,8 @@ The [[Thm - Baire Category Theorem|Baire category theorem]] says: a complete met
 
 # Solution
 
+The proof breaks into four short steps. Step 1 observes each singleton $\{q\} \subseteq \mathbb{R}$ is nowhere dense (closed with empty interior, since open subsets of $\mathbb{R}$ are uncountable); Step 2 writes $\mathbb{Q} = \bigcup_n \{q_n\}$ as a countable union of nowhere dense singletons, concluding $\mathbb{Q}$ is meager; Step 3 applies Baire to the complete metric space $\mathbb{R}$ to conclude $\mathbb{R}$ is not meager in itself; Step 4 deduces that $\mathbb{R} \setminus \mathbb{Q}$ is non-meager by complementation. The non-obvious move is in Step 4 — the irrationals' non-emptiness comes from Baire, not from a cardinality count, giving a *structural* reason that generalises to Banach spaces.
+
 **Step 1: Each singleton $\{q\}$ is nowhere dense in $\mathbb{R}$.**
 
 > [!note]- Derivation

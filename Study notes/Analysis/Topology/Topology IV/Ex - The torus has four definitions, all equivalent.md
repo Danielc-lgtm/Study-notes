@@ -67,6 +67,8 @@ A [[Def - Quotient Topology and Identification Map|quotient topology]] is the fi
 
 # Solution
 
+The proof breaks into three steps, each executing the "construct + descend + upgrade" recipe to identify a quotient with a product or embedded space. Step 1 builds $T_1 \cong T_3$ via $(x,y) \mapsto (e^{2\pi i x}, e^{2\pi i y})$, descending from $\mathbb{R}^2$ to $\mathbb{R}^2/\mathbb{Z}^2$ and upgrading to homeomorphism by the compact-to-Hausdorff theorem; Step 2 does $T_2 \cong T_3$ using the same exponential map restricted to $[0,1]^2$, which respects the edge identifications; Step 3 does $T_3 \cong T_4$ via the standard anchor-ring parametrization $\Theta(\theta, \phi) = ((R + r\cos\phi)\cos\theta, (R + r\cos\phi)\sin\theta, r\sin\phi)$. The non-obvious move is the universal compact-Hausdorff upgrade — it lets us avoid constructing inverse maps explicitly, since a continuous bijection from a compact space into a Hausdorff space is automatically a homeomorphism.
+
 **Step 1: $T_1 \cong T_3$.**
 
 Define $\Phi : \mathbb{R}^2 \to S^1 \times S^1$ by $\Phi(x, y) = (e^{2\pi i x}, e^{2\pi i y})$. Continuous (each component is the composition $\mathbb{R} \to \mathbb{C}$, $t \mapsto e^{2\pi i t}$). Respects $\mathbb{Z}^2$: $\Phi(x + m, y + n) = (e^{2\pi i (x + m)}, e^{2\pi i (y + n)}) = (e^{2\pi i x}, e^{2\pi i y}) = \Phi(x, y)$ for $m, n \in \mathbb{Z}$.
