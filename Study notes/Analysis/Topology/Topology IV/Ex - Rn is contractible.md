@@ -55,6 +55,8 @@ $\mathbb{R}^n$ is [[Def - Homotopy Equivalence and Contractible Space|contractib
 
 # Solution
 
+The proof breaks into four short steps that exhibit a contraction homotopy on $\mathbb{R}^n$ via linear interpolation. Step 1 defines $F(x,t) = (1-t)x$; Step 2 checks continuity (polynomial in the coordinates); Step 3 verifies $F(\cdot, 0) = 1_{\mathbb{R}^n}$ and $F(\cdot, 1) = c_0$; Step 4 concludes contractibility. The non-obvious move is that there is no non-obvious move — convexity does all the work, because the straight-line segment from $x$ to $0$ stays inside $\mathbb{R}^n$, and the same recipe generalises to any star-shaped subset.
+
 **Step 1: Define the contraction homotopy.**
 
 Let $F : \mathbb{R}^n \times I \to \mathbb{R}^n$ be $F(x, t) = (1 - t) x$.

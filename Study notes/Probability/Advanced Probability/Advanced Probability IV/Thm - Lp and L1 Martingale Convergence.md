@@ -72,11 +72,19 @@ The crux is the $p=1$ versus $p>1$ dichotomy. For $p>1$, [[Thm - Doob's Maximal 
 > [!note]- Lemma 1: $L^p$ convergence for $p>1$
 > **Statement:** $L^p$-bounded martingale ($p>1$) converges a.s. and in $L^p$.
 >
+> **Hint:** Doob's $L^p$ inequality produces an $L^p$ dominator $X^*=\sup_n|X_n|$, and $X^*\in L^p$ gives the integrable envelope DCT needs to convert a.s. convergence into $L^p$-convergence.
+>
+> **Why needed:** For $p>1$ the $L^p$ bound buys uniform integrability automatically (by de la Vallée Poussin / direct Doob argument), so a.s. convergence upgrades to $L^p$-convergence — this is the "easy" regime where no separate uniform-integrability hypothesis is required.
+>
 > > [!note]- Full proof
 > > $L^p$-bounded $\Rightarrow L^1$-bounded; [[Thm - Almost Sure Martingale Convergence|a.s. convergence]] gives $X_n\to X_\infty$ a.s. [[Thm - Doob's Maximal Inequality|Doob's Lᵖ inequality]] gives $\|X^*\|_p\le\frac{p}{p-1}\sup_n\|X_n\|_p<\infty$, $X^*=\sup_n|X_n|$. Then $|X_n-X_\infty|^p\le(2X^*)^p\in L^1$ and $|X_n-X_\infty|^p\to0$ a.s.; [[Thm - Dominated Convergence Theorem|DCT]] gives $\mathbb{E}|X_n-X_\infty|^p\to0$. $\square$
 
 > [!note]- Lemma 2: Closed martingales are exactly the UI ones
 > **Statement:** $(X_n)$ is UI iff $X_n=\mathbb{E}[Z\mid\mathcal{F}_n]$ for some $Z\in L^1$; then $X_n\to X_\infty$ in $L^1$ and $X_n=\mathbb{E}[X_\infty\mid\mathcal{F}_n]$.
+>
+> **Hint:** UI $\Rightarrow$ closed: a.s. convergence plus UI upgrades to $L^1$ via Vitali, and the martingale identity $\mathbb{E}[X_n\mathbf{1}_A]=\mathbb{E}[X_m\mathbf{1}_A]$ for $A\in\mathcal{F}_m$ passes through the $L^1$-limit to identify $X_\infty$ as the closer $Z$. Closed $\Rightarrow$ UI: conditional Jensen $|X_n|\le\mathbb{E}[|Z|\mid\mathcal{F}_n]$ plus uniform absolute continuity of $|Z|\in L^1$.
+>
+> **Why needed:** This is the dichotomy at $p=1$ that separates "convergence is automatic" (UI / closed) from "convergence happens a.s. but not in $L^1$" (general $L^1$-bounded — e.g. Pólya's urn limit). It identifies UI as the *true name* of the $L^1$-convergence regime, and closure as its operational characterisation.
 >
 > > [!note]- Full proof
 > > UI $\Rightarrow$: $L^1$-bounded, so $X_n\to X_\infty$ a.s.; UI $+$ a.s. $\Rightarrow$ ([[Thm - Vitali Convergence Theorem|Vitali]]) $L^1$-convergence. For $A\in\mathcal{F}_m$, $n\ge m$: $\mathbb{E}[X_n\mathbf{1}_A]=\mathbb{E}[X_m\mathbf{1}_A]$ (martingale); $L^1$-convergence lets $n\to\infty$: $\mathbb{E}[X_\infty\mathbf{1}_A]=\mathbb{E}[X_m\mathbf{1}_A]$, i.e. $X_m=\mathbb{E}[X_\infty\mid\mathcal{F}_m]$, so $(X_n)$ is closed by $Z=X_\infty$. Conversely, if $X_n=\mathbb{E}[Z\mid\mathcal{F}_n]$, the family $\{\mathbb{E}[Z\mid\mathcal{G}]:\mathcal{G}\}$ is UI: $|X_n|\le\mathbb{E}[|Z|\mid\mathcal{F}_n]$ ([[Thm - Properties of Conditional Expectation|conditional Jensen]]), and on $\{|X_n|>M\}$ — an $\mathcal{F}_n$-event — $\mathbb{E}[|X_n|\mathbf{1}_{|X_n|>M}]\le\mathbb{E}[|Z|\mathbf{1}_{|X_n|>M}]$, which is small since $\mathbb{P}(|X_n|>M)\le M^{-1}\mathbb{E}|Z|$ is small and $|Z|\in L^1$ is [[Def - Absolute Continuity and Density|uniformly absolutely continuous]]. $\square$
