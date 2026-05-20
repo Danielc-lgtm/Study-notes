@@ -64,6 +64,8 @@ A subset $A \subseteq X$ is a retract if there is a continuous $r : X \to A$ wit
 
 # Solution
 
+The proof breaks into five short steps that transport the contraction of $X$ down to $A$ via the retraction. Step 1 invokes contractibility of $X$ to obtain a homotopy $H: 1_X \simeq c_{x_0}$; Step 2 defines $G(a, t) := r(H(a, t))$ as the candidate contraction of $A$; Steps 3–4 verify continuity (composition of continuous maps) and check the endpoint conditions $G(a, 0) = a$ (using $r|_A = 1_A$) and $G(a, 1) = r(x_0) =: a_0$; Step 5 concludes $A$ is contractible. The non-obvious move is in Step 2 — composing with $r$ at every time $t$ (rather than just at the endpoint) is what keeps the homotopy *inside* $A$, which is exactly what the retraction property of $r$ buys.
+
 **Step 1: Set up the contraction on $X$.**
 
 By contractibility of $X$, there is a continuous $H : X \times I \to X$ with $H(x, 0) = x$ for all $x$, and $H(x, 1) = x_0$ for some fixed $x_0 \in X$.

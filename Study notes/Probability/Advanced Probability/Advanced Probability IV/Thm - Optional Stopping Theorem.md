@@ -80,11 +80,19 @@ The clean idea — *the stopped process is a martingale* — is easy *once* one 
 > [!note]- Lemma 1: The stopped process is a martingale
 > **Statement:** For a martingale $(X_n)$ and stopping time $T$, $(X_n^T)=(X_{T\wedge n})$ is a martingale.
 >
+> **Hint:** The increment $X_{(n+1)\wedge T}-X_{n\wedge T}=(X_{n+1}-X_n)\mathbf{1}_{\{T>n\}}$ telescopes, and $\{T>n\}\in\mathcal{F}_n$ is the defining property of a stopping time — pull it out of the conditional expectation.
+>
+> **Why needed:** Stopped processes preserve the martingale structure, so $\mathbb{E}[X_{T\wedge n}]=\mathbb{E}[X_0]$ for *every* $n$. This is the basic identity that the unbounded case (Lemma 2) extends by sending $n\to\infty$ — without preservation of martingaleness under stopping, there would be no anchor identity to pass to the limit.
+>
 > > [!note]- Full proof
 > > $X_{(n+1)\wedge T}-X_{n\wedge T}=(X_{n+1}-X_n)\mathbf{1}_{\{T>n\}}$: if $T\le n$ both stopped values are $X_T$, difference $0$; if $T>n$ the difference is the genuine increment. Now $\{T>n\}=\{T\le n\}^c\in\mathcal{F}_n$ since $T$ is a [[Def - Stopping Time|stopping time]], so by [[Thm - Properties of Conditional Expectation|taking out what is known]], $\mathbb{E}[X_{(n+1)\wedge T}-X_{n\wedge T}\mid\mathcal{F}_n]=\mathbf{1}_{\{T>n\}}\,\mathbb{E}[X_{n+1}-X_n\mid\mathcal{F}_n]=0$. With $(X_n^T)$ adapted and integrable ($|X_{T\wedge n}|\le\max_{k\le n}|X_k|$), it is a martingale. $\square$
 
 > [!note]- Lemma 2: Passing to the limit
 > **Statement:** If $T<\infty$ a.s. and $(X_n^T)$ is uniformly integrable, $\mathbb{E}[X_T]=\mathbb{E}[X_0]$.
+>
+> **Hint:** $T<\infty$ a.s. forces $X_{T\wedge n}\to X_T$ a.s.; Vitali (a.s. + UI $\Rightarrow$ $L^1$) upgrades convergence of the random variables to convergence of their expectations.
+>
+> **Why needed:** This is where uniform integrability earns its keep — without UI, the gambler's-ruin counterexample (asymmetric random walks reaching $1$ with probability $1$) shows $\mathbb{E}[X_T]\ne\mathbb{E}[X_0]$ even though $T<\infty$ a.s. UI rules out the escape-of-mass mechanism that prevents expectations from passing to the limit.
 >
 > > [!note]- Full proof
 > > By Lemma 1, $\mathbb{E}[X_{T\wedge n}]=\mathbb{E}[X_{T\wedge 0}]=\mathbb{E}[X_0]$ for all $n$. Since $T<\infty$ a.s., $T\wedge n=T$ for $n$ large, so $X_{T\wedge n}\to X_T$ a.s. Uniform integrability of $(X_{T\wedge n})_n$ upgrades a.s. convergence to $L^1$-convergence ([[Thm - Vitali Convergence Theorem|Vitali]]), so $\mathbb{E}[X_T]=\lim_n\mathbb{E}[X_{T\wedge n}]=\mathbb{E}[X_0]$. $\square$
