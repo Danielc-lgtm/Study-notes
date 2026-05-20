@@ -15,6 +15,14 @@ $\mathbb{D} = \{|z| < 1\}$, $P_r(\theta) = (1 - r^2)/(1 - 2r\cos\theta + r^2)$ i
 
 ---
 
+# Statement
+
+> **Theorem (Poisson Integral Formula).** Let $u_0 : S^1 \to \mathbb{R}$ be continuous, and define $u : \mathbb{D} \to \mathbb{R}$ by
+> $$u(re^{i\theta}) := \frac{1}{2\pi}\int_0^{2\pi} P_r(\theta - \phi)\, u_0(e^{i\phi})\,d\phi, \qquad 0 \leq r < 1,$$
+> where $P_r(\psi) = (1 - r^2)/(1 - 2r\cos\psi + r^2)$ is the Poisson kernel. Then $u$ is harmonic on $\mathbb{D}$, extends continuously to $\overline{\mathbb{D}}$, and satisfies $u|_{S^1} = u_0$. Moreover, $u$ is the **unique** harmonic function on $\mathbb{D}$ with continuous extension to $\overline{\mathbb{D}}$ and prescribed boundary values $u_0$.
+
+---
+
 # Motivation
 
 The Poisson integral formula solves the **Dirichlet problem on the unit disc**: given continuous boundary values $u_0 : S^1 \to \mathbb{R}$, find a harmonic function $u : \overline{\mathbb{D}} \to \mathbb{R}$ continuous up to the boundary with $u|_{S^1} = u_0$.

@@ -13,6 +13,14 @@ $u : U \to \mathbb{R}$ is harmonic on an open set containing the closed disc $\o
 
 ---
 
+# Statement
+
+> **Theorem (Mean Value Property of Harmonic Functions).** Let $u : U \to \mathbb{R}$ be harmonic on an open set $U$, and let $a \in U$ and $R > 0$ be such that $\overline{D(a, R)} \subset U$. Then for every $r \in (0, R]$,
+> $$u(a) = \frac{1}{2\pi}\int_0^{2\pi} u(a + r e^{i\theta})\,d\theta.$$
+> Equivalently, the value of $u$ at the centre of any disc is the average of its values on the bounding circle. Integrating in $r$ also yields the **volume mean value formula** $u(a) = \frac{1}{\pi R^2}\iint_{D(a, R)} u\,dA$.
+
+---
+
 # Motivation
 
 The mean value property says: a harmonic function's value at the centre of any disc equals the average of its values on the boundary circle. Equivalently, harmonic functions have *no local sources or sinks* — they are perfectly balanced.

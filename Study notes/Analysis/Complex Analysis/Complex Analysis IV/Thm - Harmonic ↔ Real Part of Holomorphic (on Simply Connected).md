@@ -15,6 +15,14 @@ $U \subseteq \mathbb{R}^2 \cong \mathbb{C}$ is a simply connected open set. $u :
 
 ---
 
+# Statement
+
+> **Theorem (Harmonic ↔ Real Part of Holomorphic).** Let $U \subseteq \mathbb{C}$ be open and simply connected, and let $u : U \to \mathbb{R}$ be a $C^2$ function. Then $u$ is harmonic on $U$ if and only if there exists a holomorphic function $f : U \to \mathbb{C}$ with $\operatorname{Re} f = u$ on $U$.
+>
+> The imaginary part $v = \operatorname{Im} f$ is called a **harmonic conjugate** of $u$, and is unique up to an additive real constant. Conversely, on any open set (not necessarily simply connected), the real and imaginary parts of every holomorphic function are harmonic.
+
+---
+
 # Motivation
 
 We know: real and imaginary parts of holomorphic functions are harmonic. The converse direction is more subtle: given a harmonic $u$, is there a holomorphic $f$ whose real part is $u$?

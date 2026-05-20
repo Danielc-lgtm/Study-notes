@@ -13,6 +13,16 @@ $u : D \to \mathbb{R}$ is harmonic on a domain (open, connected) $D \subseteq \m
 
 ---
 
+# Statement
+
+> **Theorem (Maximum Principle for Harmonic Functions).** Let $u : D \to \mathbb{R}$ be harmonic on a domain (i.e., connected open set) $D \subseteq \mathbb{C}$.
+>
+> 1. **(Strong maximum principle.)** If $u$ attains its supremum on $D$ at some interior point $a \in D$ (i.e., $u(a) = \sup_D u$), then $u$ is constant on $D$.
+> 2. **(Strong minimum principle.)** Applying (1) to $-u$: if $u$ attains its infimum at an interior point, then $u$ is constant.
+> 3. **(Boundary form.)** If $D$ is bounded and $u$ is continuous on $\overline{D}$, then $\sup_{\overline{D}} u = \sup_{\partial D} u$ and $\inf_{\overline{D}} u = \inf_{\partial D} u$. If $u$ is non-constant, the supremum and infimum on $\overline{D}$ are attained only on $\partial D$.
+
+---
+
 # Motivation
 
 The maximum principle says: a non-constant harmonic function on a domain does not attain a local maximum (or minimum) in the interior. All maxima and minima are on the boundary.

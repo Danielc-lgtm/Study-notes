@@ -13,6 +13,18 @@ The **Joukowski transformation** is $w = J(z) = z + 1/z$. Complex variables: $z$
 
 ---
 
+# Statement
+
+> **Theorem (Joukowski Aerofoil Construction).** The **Joukowski transformation** $J(z) = z + 1/z$ has the following properties:
+>
+> 1. $J$ is holomorphic on $\hat{\mathbb{C}} \setminus \{0\}$ and conformal except at the critical points $z = \pm 1$, where $J'(z) = 1 - 1/z^2 = 0$.
+> 2. $J$ satisfies the symmetry $J(z) = J(1/z)$ and restricts to a biholomorphism $\{|z| > 1\} \to \hat{\mathbb{C}} \setminus [-2, 2]$ (and likewise $\{|z| < 1\} \to \hat{\mathbb{C}} \setminus [-2, 2]$).
+> 3. The unit circle $\{|z| = 1\}$ maps onto the segment $[-2, 2]$ via $J(e^{i\theta}) = 2\cos\theta$.
+> 4. For a circle $C$ in the $z$-plane chosen to pass through (or near) $z = 1$ with centre $z_0$ slightly off the origin, the image $J(C)$ is a closed curve in the $\zeta$-plane bounding an **aerofoil-shaped** region — a *Joukowski aerofoil* — with a sharp cusp at $\zeta = J(1) = 2$ (the **trailing edge**).
+> 5. Pulling back the cylinder flow with complex potential $w_z(z) = U((z - z_0) + a^2/(z - z_0)) - i(\Gamma/(2\pi))\log((z - z_0)/a)$ via $J^{-1}$ yields the flow past the aerofoil. The **Kutta condition** — that $dw_z/dz$ vanishes at $z = 1$ — uniquely selects the physical circulation $\Gamma$, and the **Kutta–Joukowski theorem** gives the resulting lift per unit span as $L = \rho U \Gamma$.
+
+---
+
 # Motivation
 
 In the early 20th century, the **Joukowski transformation** $w = z + 1/z$ was discovered as a way to construct 2D aerofoil-like shapes from circles. Combined with the known flow past a cylinder (in the $z$-plane), this gave the *first analytical model of flow past an aerofoil*, leading to the **Kutta–Joukowski theorem** relating lift to circulation.
