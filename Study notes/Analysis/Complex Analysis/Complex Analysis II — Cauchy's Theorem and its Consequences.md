@@ -137,7 +137,7 @@ The unifying frame for §2: **Cauchy's theorem is rigidity**. The vanishing of c
 - **[[Thm - Holomorphic Dependence on a Parameter]]**
 	- Let $\varphi : D \times [a, b] \to \mathbb{C}$ be continuous with $\varphi(\cdot, s)$ holomorphic for each $s$. Then $g(z) = \int_a^b \varphi(z, s)\,ds$ is holomorphic on $D$, with $g'(z) = \int_a^b (\partial \varphi/\partial z)(z, s)\,ds$. The proof uses Morera plus Fubini to swap the orders of integration. Workhorse for showing integrals depending on a complex parameter are holomorphic.
 
-- **[[Ex - Power series expansion of 1/(1-z) around 0]]** (⭐)
+- **[[Ex - Power series expansion of 1 over (1-z) around 0]]** (⭐)
 	- $1/(1-z) = \sum_{n=0}^\infty z^n$ on $|z| < 1$, by geometric series. Verify $c_n = f^{(n)}(0)/n! = n!/n! = 1$.
 
 - **[[Ex - Power series expansion of log(1+z) around 0]]** (⭐⭐)
