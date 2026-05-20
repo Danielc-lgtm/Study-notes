@@ -10,7 +10,7 @@ tags: [analysis, topology, compactness, separation]
 
 # Notation
 
-$X$ is a [[Def - Topological Space|topological space]], $A \subseteq X$ a subset, both equipped with the appropriate topology ($X$ its own, $A$ the [[Def - Subspace Topology|subspace topology]]). $A$ is **compact** (see [[Def - Compact Space]]) if every open cover has a finite subcover. $X$ is **Hausdorff** ([[Def - Separation Axioms|$T_2$]]) if any two distinct points have disjoint open neighborhoods. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
+$X$ is a [[Def - Topological Space|topological space]], $A \subseteq X$ a subset, both equipped with the appropriate topology ($X$ its own, $A$ the [[Def - Subspace Topology|subspace topology]]). $A$ is **compact** (see [[Def - Compact Space]]) if every open cover has a finite subcover. $X$ is **Hausdorff** ([[Def - Separation Axioms|T₂]]) if any two distinct points have disjoint open neighborhoods. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
 
 ---
 

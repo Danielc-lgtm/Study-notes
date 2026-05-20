@@ -139,7 +139,7 @@ The unifying frame for §8–12: we are taking the bare topological axioms of §
 - **[[Def - Locally Compact Space]]**
 	- $X$ is **locally compact** if every point has a compact neighborhood. In a Hausdorff space this is equivalent to: every point has a neighborhood basis of compact neighborhoods. $\mathbb{R}^n$ is locally compact; infinite-dimensional Banach spaces and most function spaces are not. Locally compact Hausdorff (LCH) spaces are the natural setting for much of measure theory, harmonic analysis, and the theory of locally compact groups.
 
-- **[[Thm - LCH Implies Completely Regular]]**
+- ****Thm - LCH Implies Completely Regular****
 	- A locally compact Hausdorff space is completely regular. The proof: given $x$ and closed $C$ not containing $x$, find a compact neighborhood $K$ of $x$ disjoint from $C$; on the compact Hausdorff $K^+$ (one-point compactification), normality gives a Urysohn function; restrict back. This places LCH spaces in the function-rich part of the separation hierarchy and explains why measure theory and harmonic analysis can do without normality assumptions when the underlying space is locally compact Hausdorff.
 
 - **[[Thm - One-Point Compactification]]**

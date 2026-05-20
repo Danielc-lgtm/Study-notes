@@ -10,7 +10,7 @@ tags: [analysis, topology]
 
 # Problem Statement
 
-Let $\{X_\alpha\}_{\alpha \in A}$ be a family of [[Def - Hausdorff Space|Hausdorff]] topological spaces. Show that the [[Def - Product Topology|product]] $\prod_{\alpha \in A} X_\alpha$ is Hausdorff in the product topology.
+Let $\{X_\alpha\}_{\alpha \in A}$ be a family of **Hausdorff** topological spaces. Show that the [[Def - Product Topology|product]] $\prod_{\alpha \in A} X_\alpha$ is Hausdorff in the product topology.
 
 **Recall:**
 
@@ -70,7 +70,7 @@ Suppose $x = (x_\alpha)_{\alpha \in A}$ and $y = (y_\alpha)_{\alpha \in A}$ are 
 
 **Step 2: Separate the disagreeing coordinate by disjoint opens in $X_{\alpha_0}$.**
 
-By the [[Def - Hausdorff Space|Hausdorff]] property of $X_{\alpha_0}$, there exist open sets $U_0, V_0 \subseteq X_{\alpha_0}$ with $x_{\alpha_0} \in U_0$, $y_{\alpha_0} \in V_0$, and $U_0 \cap V_0 = \emptyset$.
+By the **Hausdorff** property of $X_{\alpha_0}$, there exist open sets $U_0, V_0 \subseteq X_{\alpha_0}$ with $x_{\alpha_0} \in U_0$, $y_{\alpha_0} \in V_0$, and $U_0 \cap V_0 = \emptyset$.
 
 > [!note]- Derivation
 > This is the *direct application* of the Hausdorff hypothesis on $X_{\alpha_0}$: distinct points $x_{\alpha_0} \neq y_{\alpha_0}$ get separated by disjoint opens. The whole proof would collapse if the factor were not Hausdorff — and indeed, products of non-Hausdorff spaces need not be Hausdorff.

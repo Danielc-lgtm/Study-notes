@@ -11,7 +11,7 @@ tags: [analysis, topology, separation, nets]
 
 # Notation
 
-$X$ is a [[Def - Topological Space|topological space]]. A **net** in $X$ is a function $\Phi : D \to X$ from a [[Def - Directed Set and Net|directed set]] $(D, \leq)$ to $X$; we write $\{x_\alpha\}_{\alpha \in D}$ for $\Phi$. The net **converges to** $x \in X$, written $x_\alpha \to x$, if for every neighborhood $U$ of $x$ there is $\alpha_0 \in D$ with $x_\alpha \in U$ for all $\alpha \geq \alpha_0$ (see [[Def - Net Convergence]]). The space $X$ is **Hausdorff** ([[Def - Separation Axioms|$T_2$]]) if for any two distinct points $x, y \in X$ there exist disjoint open sets $U \ni x$, $V \ni y$. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
+$X$ is a [[Def - Topological Space|topological space]]. A **net** in $X$ is a function $\Phi : D \to X$ from a [[Def - Directed Set and Net|directed set]] $(D, \leq)$ to $X$; we write $\{x_\alpha\}_{\alpha \in D}$ for $\Phi$. The net **converges to** $x \in X$, written $x_\alpha \to x$, if for every neighborhood $U$ of $x$ there is $\alpha_0 \in D$ with $x_\alpha \in U$ for all $\alpha \geq \alpha_0$ (see [[Def - Net Convergence]]). The space $X$ is **Hausdorff** ([[Def - Separation Axioms|T₂]]) if for any two distinct points $x, y \in X$ there exist disjoint open sets $U \ni x$, $V \ni y$. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
 
 ---
 

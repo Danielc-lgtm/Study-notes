@@ -84,7 +84,7 @@ In **probability**, the **characteristic function** $\varphi(t) = E[e^{itX}]$ us
 # Unlocked by This
 
 > [!tip] Logarithm and Powers *(from this topic)*
-> The exponential is the bridge to [[Def - Branch of the Logarithm|branches of $\log$]] and [[Def - Complex Power|complex powers]] $z^\alpha = \exp(\alpha \log z)$. The multivalued character of $\log$ (and of $z^\alpha$ for non-integer $\alpha$) reflects the periodicity of $\exp$.
+> The exponential is the bridge to [[Def - Branch of the Logarithm|branches of log]] and [[Def - Complex Power|complex powers]] $z^\alpha = \exp(\alpha \log z)$. The multivalued character of $\log$ (and of $z^\alpha$ for non-integer $\alpha$) reflects the periodicity of $\exp$.
 
 > [!tip] Möbius Transformations and Conformal Maps *(from CA IV)*
 > The conformal maps of standard regions are built from compositions of $\exp$, $\log$, $z^\alpha$, and Möbius transformations. The exponential maps strips to sectors, and the logarithm undoes this.

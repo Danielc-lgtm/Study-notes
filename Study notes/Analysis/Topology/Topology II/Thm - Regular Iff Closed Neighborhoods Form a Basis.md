@@ -10,7 +10,7 @@ tags: [analysis, topology, separation]
 
 # Notation
 
-$X$ is a Hausdorff [[Def - Topological Space|topological space]]. A **neighborhood** of $x \in X$ is a set $N$ such that $x$ lies in the interior of $N$; a [[Def - Neighbourhood and Neighbourhood Basis|neighborhood basis]] at $x$ is a family of neighborhoods such that every neighborhood of $x$ contains one of them. A neighborhood is **closed** if it is a closed set in $X$ (which contains an open neighborhood of $x$ as its interior). The space $X$ is **regular** ([[Def - Separation Axioms|$T_3$]]) if it is $T_1$ and for any point $x$ and disjoint closed set $C$ not containing $x$, there exist disjoint open sets $U \ni x$ and $V \supseteq C$. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
+$X$ is a Hausdorff [[Def - Topological Space|topological space]]. A **neighborhood** of $x \in X$ is a set $N$ such that $x$ lies in the interior of $N$; a [[Def - Neighbourhood and Neighbourhood Basis|neighborhood basis]] at $x$ is a family of neighborhoods such that every neighborhood of $x$ contains one of them. A neighborhood is **closed** if it is a closed set in $X$ (which contains an open neighborhood of $x$ as its interior). The space $X$ is **regular** ([[Def - Separation Axioms|T₃]]) if it is $T_1$ and for any point $x$ and disjoint closed set $C$ not containing $x$, there exist disjoint open sets $U \ni x$ and $V \supseteq C$. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
 
 ---
 

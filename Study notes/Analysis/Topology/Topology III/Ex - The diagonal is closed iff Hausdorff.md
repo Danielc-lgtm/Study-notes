@@ -12,7 +12,7 @@ tags: [analysis, topology]
 
 Let $X$ be a topological space and let $\Delta = \{(x, x) : x \in X\} \subseteq X \times X$ denote the **diagonal** of $X$, regarded as a subset of $X \times X$ with the [[Def - Product Topology|product topology]]. Show that the following are equivalent:
 
-1. $X$ is [[Def - Hausdorff Space|Hausdorff]].
+1. $X$ is **Hausdorff**.
 2. $\Delta$ is closed in $X \times X$.
 
 **Recall:**
@@ -80,7 +80,7 @@ An open rectangle $U \times V \subseteq X \times X$ is disjoint from $\Delta$ if
 Assume $X$ is Hausdorff. For any $(x, y) \notin \Delta$, find an open neighborhood of $(x, y)$ in $X \times X \setminus \Delta$ — this shows the complement is open, so $\Delta$ is closed.
 
 > [!note]- Derivation
-> Take $(x, y) \notin \Delta$, meaning $x \neq y$. By [[Def - Hausdorff Space|Hausdorffness]], there exist disjoint open $U, V \subseteq X$ with $x \in U$ and $y \in V$. The rectangle $U \times V$ is open in $X \times X$ (basic open set in the [[Def - Product Topology|product topology]]) and contains $(x, y)$. By Step 1, $U \cap V = \emptyset$ implies $(U \times V) \cap \Delta = \emptyset$, so $U \times V \subseteq X \times X \setminus \Delta$. Every point of the complement has an open neighborhood inside the complement, so the complement is open, so $\Delta$ is closed.
+> Take $(x, y) \notin \Delta$, meaning $x \neq y$. By **Hausdorffness**, there exist disjoint open $U, V \subseteq X$ with $x \in U$ and $y \in V$. The rectangle $U \times V$ is open in $X \times X$ (basic open set in the [[Def - Product Topology|product topology]]) and contains $(x, y)$. By Step 1, $U \cap V = \emptyset$ implies $(U \times V) \cap \Delta = \emptyset$, so $U \times V \subseteq X \times X \setminus \Delta$. Every point of the complement has an open neighborhood inside the complement, so the complement is open, so $\Delta$ is closed.
 
 **Step 3: $\Delta$ closed ⇒ Hausdorff.**
 

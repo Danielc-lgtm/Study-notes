@@ -26,7 +26,7 @@ Conclude that $T$ is Hausdorff but *not* normal, and in particular Urysohn's lem
 
 **Recall:**
 
-A space $X$ is **normal** if for every pair of disjoint closed sets $F, G \subseteq X$ there exist disjoint open sets $U \supseteq F$ and $V \supseteq G$. Equivalently (by [[Thm - Urysohn's Lemma|Urysohn's lemma]]), there exists a continuous $f : X \to [0, 1]$ with $f \equiv 0$ on $F$ and $f \equiv 1$ on $G$. *Normal* is strictly stronger than [[Def - Hausdorff Space|Hausdorff]] — the Tychonoff plank is the canonical counterexample.
+A space $X$ is **normal** if for every pair of disjoint closed sets $F, G \subseteq X$ there exist disjoint open sets $U \supseteq F$ and $V \supseteq G$. Equivalently (by [[Thm - Urysohn's Lemma|Urysohn's lemma]]), there exists a continuous $f : X \to [0, 1]$ with $f \equiv 0$ on $F$ and $f \equiv 1$ on $G$. *Normal* is strictly stronger than **Hausdorff** — the Tychonoff plank is the canonical counterexample.
 
 An **ordinal** is the order type of a well-ordered set. $\omega_0$ is the first infinite ordinal; $\omega_1$ the first uncountable ordinal. Any countable union of countable sets below $\omega_1$ remains below $\omega_1$ (regularity of $\omega_1$). The order topology on an ordinal $[0, \alpha]$ has basis the open intervals $(\beta, \gamma)$ together with the initial intervals $[0, \beta)$ and final intervals $(\beta, \alpha]$.
 

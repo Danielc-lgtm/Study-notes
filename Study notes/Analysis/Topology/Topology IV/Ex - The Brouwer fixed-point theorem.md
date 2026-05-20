@@ -15,7 +15,7 @@ tags: [analysis, topology, fixed-point, brouwer]
 
 By [[Thm - Compact Convex Body is Homeomorphic to a Disk]], the same conclusion holds for every continuous self-map of any compact convex body in $\mathbb{R}^n$.
 
-(a) **Prove the case $n = 1$** using only the [[Thm - Intermediate Value Theorem|intermediate value theorem]].
+(a) **Prove the case $n = 1$** using only the **intermediate value theorem**.
 
 (b) **Outline the case $n = 2$** using the no-retraction argument: assume $f$ has no fixed point and use this to construct a retraction $D^2 \to S^1$, which is impossible because $S^1$ is not a retract of $D^2$.
 
@@ -34,7 +34,7 @@ A [[Def - Continuous Map|continuous map]] $f : X \to X$ has a *fixed point* if $
 **Assumption pattern:** $D^n$ is compact and convex; $f$ is continuous; we want to show there *must* be a fixed point.
 
 **Theorem routing:**
-- $n = 1$: direct application of [[Thm - Intermediate Value Theorem|IVT]] to $g(x) = f(x) - x$.
+- $n = 1$: direct application of **IVT** to $g(x) = f(x) - x$.
 - $n = 2$: assume no fixed point, define a retraction $D^2 \to S^1$ using the "fixed-point–to-boundary projection", derive a contradiction with the (deep) fact that $S^1$ is not a retract of $D^2$ (equivalent to $\pi_1(S^1) = \mathbb{Z} \neq 0$).
 - General $n$: same no-retraction argument with $\pi_{n-1}(S^{n-1}) = \mathbb{Z}$, or simplicial approximation, or degree theory.
 

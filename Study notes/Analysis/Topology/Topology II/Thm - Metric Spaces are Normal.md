@@ -10,7 +10,7 @@ tags: [analysis, topology, separation, metric]
 
 # Notation
 
-$(X, d)$ is a [[Def - Metric Space|metric space]]; $d : X \times X \to [0, \infty)$ is the metric. For a nonempty $A \subseteq X$, the **distance from a point to $A$** is $d(x, A) = \inf\{d(x, a) : a \in A\}$. A space is **normal** ([[Def - Separation Axioms|$T_4$]]) if it is $T_1$ and any two disjoint closed sets $F, G$ have disjoint open neighborhoods. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
+$(X, d)$ is a [[Def - Metric Space|metric space]]; $d : X \times X \to [0, \infty)$ is the metric. For a nonempty $A \subseteq X$, the **distance from a point to $A$** is $d(x, A) = \inf\{d(x, a) : a \in A\}$. A space is **normal** ([[Def - Separation Axioms|T₄]]) if it is $T_1$ and any two disjoint closed sets $F, G$ have disjoint open neighborhoods. The full registry is on [[Topology II — §4–7 Connectivity, Separation, Nets, Compactness]].
 
 ---
 

@@ -69,7 +69,7 @@ Suppose for contradiction $\lambda : \mathbb{C}^\times \to \mathbb{C}$ continuou
 
 Parametrize the unit circle by $\gamma(t) = e^{it}$ for $t \in [0, 2\pi]$. The composition $\lambda \circ \gamma : [0, 2\pi] \to \mathbb{C}$ is continuous, and $\exp(\lambda(\gamma(t))) = e^{it}$.
 
-By [[Thm - Properties of the Complex Exponential|properties of $\exp$]], $\exp(\lambda(\gamma(t))) = \exp(it)$ means $\lambda(\gamma(t)) - it \in 2\pi i\mathbb{Z}$. So $\lambda(\gamma(t)) = it + 2\pi i \cdot k(t)$ for some function $k : [0, 2\pi] \to \mathbb{Z}$.
+By [[Thm - Properties of the Complex Exponential|properties of exp]], $\exp(\lambda(\gamma(t))) = \exp(it)$ means $\lambda(\gamma(t)) - it \in 2\pi i\mathbb{Z}$. So $\lambda(\gamma(t)) = it + 2\pi i \cdot k(t)$ for some function $k : [0, 2\pi] \to \mathbb{Z}$.
 
 > [!note]- $k$ is continuous, hence constant
 > $k(t) = (\lambda(\gamma(t)) - it)/(2\pi i)$ is continuous as a composition of continuous functions. A continuous map from a connected set $[0, 2\pi]$ to the discrete set $\mathbb{Z}$ is constant.
