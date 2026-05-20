@@ -63,6 +63,8 @@ A "residual" set is the complement of a meager set; equivalently, it contains a 
 
 # Solution
 
+The proof breaks into five steps that execute the standard Baire-genericity template. Step 1 defines $U_n$ as the set of functions whose difference quotients exceed $n$ at some witness near every point; Step 2 shows $U_n$ is open via strict-inequality stability and a finite subcover using compactness of $[0,1]$; Step 3 shows $U_n$ is dense via zig-zag approximation, where any continuous function is uniformly approximated by a sawtooth with arbitrarily steep slopes; Step 4 invokes Baire to conclude $\bigcap U_n$ is residual; Step 5 verifies that membership in $\bigcap U_n$ contradicts differentiability at any point. The non-obvious move is in Step 3 — the zig-zag construction simultaneously approximates uniformly *and* enforces large local slopes, which is what couples "dense in $C[0,1]$" to "kinky everywhere."
+
 **Step 1: Define the candidate residual set.**
 
 For each positive integer $n$, define
