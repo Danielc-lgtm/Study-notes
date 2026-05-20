@@ -19,7 +19,9 @@ tags: [area-tag, subject-tag]
 
 # Notation Registry
 
-[List every symbol, convention, and notational choice used anywhere in this topic's subpages. This section is always visible — NOT in a collapsible section. It is the first thing the reader sees when returning after a long absence. Format as a definition list or bullet list.]
+[List every symbol, convention, and notational choice used anywhere in this topic's subpages. This section is always visible — NOT in a collapsible section. It is the first thing the reader sees when returning after a long absence. Format as a definition list or bullet list.
+
+**Standing-convention preamble (when applicable):** When the topic relies on a convention (units, sign, default-assumption such as "all rings commutative with 1", "$c = 1$ throughout", "all manifolds Hausdorff second countable"), open the registry with a paragraph explaining the choice, with a recipe for converting between conventions if relevant. When conventions diverge between standard sources, include a `> [!warning] Convention:` callout. Example: `Special Relativity I` line 11.]
 
 [Example format:]
 - $G, H, K, N$ — groups (typically finite unless stated otherwise)
@@ -37,7 +39,11 @@ tags: [area-tag, subject-tag]
 
 [Write so that someone who has forgotten everything about the topic can read this and understand why they should care. Be specific — not "this is important because it generalizes X" but "without this, we cannot do Y, and the specific obstacle is Z."]
 
-[Write in David Tong style: conversational, precise, building from the concrete problem to the abstract solution.]
+[Write in David Tong style: conversational, precise, building from the concrete problem to the abstract solution. Open with a hook in the first sentence: `Modules I` opens "Here is the entire topic in one sentence: a module is a vector space over a ring."]
+
+[**Structural-backbone display equation (when applicable):** When the topic has a hierarchy or classification at its core, state it as a single display equation in Motivation that the rest of the chapter references. Example: `Rings II` line 41 places `field ⊂ ED ⊂ PID ⊂ UFD ⊂ ID` as a display.]
+
+[**Audience-assumption paragraph (closing):** State what the reader is assumed to know — which background topics they should have refreshed before working through this one. This is the most useful single addition for spaced re-entry. Example: `Special Relativity I` line 48.]
 
 ---
 
@@ -58,13 +64,17 @@ tags: [area-tag, subject-tag]
 > [!tip] Unlocked: Affine Variety *(from Algebraic Geometry)*
 > Now that you have ideals and the Zariski topology, you can define **affine varieties** as zero sets of ideals.
 
-- **[[Ex - Proving compactness of the closed unit interval]]**
-	- Show that $[0,1]$ is compact in the standard topology. (⭐⭐)
+- **[[Ex - Proving compactness of the closed unit interval]]** (⭐⭐)
+	- Show that $[0,1]$ is compact in the standard topology.
+
+[Every exercise in the topic's exercise list must appear in the concept map at the appropriate sub-chapter section, with an inline difficulty tag `(⭐)`/`(⭐⭐)`/`(⭐⭐⭐)` after the wikilink and a one-line description below. Exercises are interleaved with the definitions and theorems they drill, not segregated below them.]
 
 > [!note] Exercise Index — §X.1
 > [[Exercise Index - §X.1 Section Title]]
 
 [The wikilink in this callout must be byte-identical to the filename of the Exercise Index page it points to. Choose one `[Section Title]` string per section and use it verbatim in all three places — the `## §X.1 [Section Title]` concept-map header, this callout's wikilink, and the Exercise Index page's filename — so the link always resolves. A mismatch (a fuller title in the header than in the filename, say) silently breaks the link.]
+
+[**`Unlocked:` callout placement:** every sub-chapter section in the concept map should contain at least one `> [!tip] Unlocked: [Concept Name] *(from [Advanced Field])*` callout, unless the section genuinely unlocks nothing downstream. No cap on the number of unlocks per section — `Special Relativity I §1.3` has three. Multi-paragraph callouts are permitted when the downstream concept is paradigm-shifting (e.g., the equivalence principle unlocking from Minkowski space — `Def - Minkowski Space.md` line 87 is the model). Forward references to pages that do not yet exist must be **bold plain text**, not wikilinks.]
 
 ## §X.2 [Section Title]
 
@@ -94,21 +104,21 @@ tags: [area-tag, subject-tag]
 
 **Legal operations:**
 
-1. **[Operation name]** — [Full prose description: how it works, when to use it (trigger condition), the typical pattern of application, input type, and an example problem where this is the key step. Include wikilinks to relevant definitions and theorems. Written as a self-contained paragraph.]
+1. **[Operation name]** — [Full prose description: how it works, when to use it, the typical pattern of application, input type, and an example problem where this is the key step. Include wikilinks to relevant definitions and theorems. Written as a self-contained paragraph. Inline `*Trigger:*` and `*Pattern:*` italic markers at the end of the prose are **permitted and encouraged** — they aid spaced-retrieval scanning. Example pattern: `Topology II` line 211 "*Trigger:* compactness + a sequence/net... *Pattern:* 'by compactness, pass to a convergent subnet $x_{\alpha_k} \to x_\infty$' and continue with the limit."]
 
 2. **[Operation name]** — [...]
 
-[Aim for 7+ legal operations.]
+[Aim for 7+ legal operations. No upper cap.]
 
 **Illegal but tempting operations:**
 
 > [!warning] 1. [Operation name]
-> [Why it is tempting. Why it fails — with a concrete counterexample. What additional condition would make it legal. Written as a self-contained paragraph with wikilinks.]
+> [Why it is tempting. Why it fails — with a **concrete counterexample**. **What additional condition would make it legal** — naming the repair condition explicitly is the gold-standard pattern (`Rings II` lines 145–158 demonstrates "becomes legal exactly when the ring is a PID"). Written as a self-contained paragraph with wikilinks.]
 
 > [!warning] 2. [Operation name]
 > [...]
 
-[Aim for 3+ illegal-but-tempting operations.]
+[Aim for 3+ illegal-but-tempting operations. No upper cap.]
 
 ---
 
@@ -170,7 +180,11 @@ tags: [area-tag, subject-tag]
 
 # Notation
 
-[Any notation specific to this definition. Always restate the essential symbols — the reader may jump directly to this page. Written as a brief paragraph or concise list. Link to the parent topic page for the full registry.]
+[Any notation specific to this definition. Always restate the essential symbols — the reader may jump directly to this page. Written as a brief paragraph or concise list. Link to the parent topic page for the full registry.
+
+**Standing-convention preamble (when applicable):** When the topic depends on a convention, open the Notation section with a paragraph stating the convention before the symbol list. Include `> [!warning] Convention:` callouts where the convention diverges between sources (e.g., signature convention in `Def - Minkowski Space and the Metric.md` line 44).]
+
+[**Compound page preamble (when applicable):** If the page title lists multiple concepts, add one explanatory sentence after Notation: "This is a compound page: it defines [N] interlocking notions — [list] — because they are introduced together and none is fully usable without the others." Pattern: `Def - Module Homomorphism.md` line 19.]
 
 ---
 
@@ -178,9 +192,11 @@ tags: [area-tag, subject-tag]
 
 [The minimal information needed to INVENT this definition. Written as flowing prose paragraphs.]
 
-[Address these questions in natural prose flow: What are the desiderata — what properties do we want a thing satisfying this definition to have? What examples should it capture, and what should it exclude? What breaks if we weaken any part (give a concrete undesirable thing that would be included)? What breaks if we strengthen any part (give a concrete desirable thing that would be excluded)? Sometimes the best motivation is to jump ahead: show a theorem that relies on this definition and explain which part would fail with a different definition.]
+[**Per-axiom failure analysis is required for any definition with $n \geq 2$ independent axioms.** Each axiom must get its own "what breaks if dropped" treatment with a concrete counterexample. A single "what if weakened" sentence at the end does not suffice.]
 
-[The goal is not just "why is this definition useful" but "why THIS SPECIFIC definition and not a nearby variant."]
+[Address these questions in natural prose flow: What are the desiderata — what properties do we want a thing satisfying this definition to have? What examples should it capture, and what should it exclude? For each axiom: what breaks if we drop it? What is excluded if we strengthen it? Sometimes the best motivation is to jump ahead: show a theorem that relies on this definition and explain which part would fail with a different definition.]
+
+[The goal is not just "why is this definition useful" but "why THIS SPECIFIC definition and not a nearby variant." The test: "Could a reader who has never seen this definition invent it from the motivation alone?" Calibration bars: `Def - Group.md`, `Def - Normal Subgroup.md`, `Def - The Total Derivative.md`, `Def - Topological Space.md`. Aim for 4+ paragraphs for any non-trivial definition.]
 
 ---
 
@@ -192,7 +208,9 @@ tags: [area-tag, subject-tag]
 
 # Categorical Definition
 
-[INCLUDE ONLY IF a natural categorical formulation exists.]
+[**Required when a natural categorical or structural formulation exists**; optional otherwise. Heading may be relabelled `# Categorical / Structural Definition` when more structural than category-theoretic.]
+
+[Definitions that should typically have one: group, ring, module, ring homomorphism, ideal, topological space, continuous map, σ-algebra, measurable function, holomorphic function, manifold, Lie group, sheaf, any definition with a natural universal property / morphism structure.]
 
 [State the categorical definition and explain it self-containedly: define the relevant categorical concepts (universal property, functor, adjunction, etc.) enough that a reader unfamiliar with category theory can follow the construction. Then explain how the categorical definition relates to the concrete definition above.]
 
@@ -205,6 +223,10 @@ tags: [area-tag, subject-tag]
 - "This is the analogue of X when you replace condition A with condition B"
 - "This generalizes X by dropping assumption Z"
 
+[**"True name" callout:** when the definition has a true name — the operational characterisation distinct from the formal definition — state it explicitly as a short labelled paragraph here:]
+
+**True name:** [The operational form. Example: `Def - Compact Space.md` line 63: "The 'true name' of compactness in analysis is the net-subnet form: every net has a convergent subnet, and in metric spaces, every sequence has a convergent subsequence (Bolzano–Weierstrass)."]
+
 [If the concept is genuinely novel and not analogous to anything, say so explicitly rather than forcing a bad analogy.]
 
 ---
@@ -213,16 +235,18 @@ tags: [area-tag, subject-tag]
 
 [Concrete examples and non-examples, followed by immediate corollaries. Written as prose paragraphs, one per example or corollary.]
 
-[Examples should include both "is an instance" and "is NOT an instance" cases, each probing a different aspect of the definition. Corollaries serve as calibration checks: if the reader can verify each one after reading the definition, they have understood it correctly. Choose corollaries that test different aspects or axioms of the definition.]
+[Examples should include both "is an instance" and "is NOT an instance" cases, each probing a different aspect of the definition. **At least one "is NOT" example** is required for any non-trivial definition. Corollaries serve as calibration checks: if the reader can verify each one after reading the definition, they have understood it correctly. Choose corollaries that test different aspects or axioms of the definition.]
+
+[**End the section with an explicit `**Calibration check.**` paragraph** naming 2–3 small verifications the reader should be able to perform. Patterns: `Def - Group.md` line 94, `Def - Topological Space.md` line 110, `Def - Compact Space.md` line 101.]
 
 ---
 
 # Unlocked by This
 
-[INCLUDE ONLY IF this definition (together with its neighbors) unlocks concepts from downstream topics in the prereq DAG.]
+[INCLUDE ONLY IF this definition (together with its neighbors) unlocks concepts from downstream topics in the prereq DAG. **No upper length cap.**]
 
 > [!tip] [Concept Name] *(from [Advanced Field])*
-> [1–3 sentence preview: now that you have this definition, you can understand this more advanced concept. Name the downstream concept in **bold**; do NOT wikilink it unless its page already exists in the vault — a wikilink to a missing page creates an empty stub when clicked in Obsidian.]
+> [Preview of any length appropriate to the downstream concept. For routine downstream concepts a 1–3 sentence preview suffices; for paradigm-shifting downstream concepts, write extended-form multi-paragraph callouts that essentially deliver a mini-essay on the downstream theory (e.g., `Def - Minkowski Space and the Metric.md` line 87's "Metric as the Central Object of Physics" callout walks from $\eta_{\mu\nu}$ to $g_{\mu\nu}(x)$ to the equivalence principle to curvature). Name the downstream concept in **bold**; do NOT wikilink it unless its page already exists in the vault — a wikilink to a missing page creates an empty stub when clicked in Obsidian.]
 ```
 
 ---
@@ -269,6 +293,8 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 
 [This is NOT a simple "Input: X, Output: Y" list. This section is about recognizing when the theorem applies (sources) and how to use its conclusion (targets), with emphasis on nonobvious connections.]
 
+[**Aim for at least 3 disguised sources and 3 target combinations, each as a multi-sentence prose paragraph.** A one-paragraph Sources block that names the precondition without giving B → A bridges is a quality failure. Gold-standard examples: `Thm - First Isomorphism Theorem.md`, `Thm - Orbit-Stabiliser Theorem.md`, `Thm - The Inverse Function Theorem.md`.]
+
 **Sources (Input Broadening)**
 
 [The theorem requires precondition $A$. For each source property $B$:]
@@ -287,6 +313,8 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 
 [An explanation for why one should EXPECT this theorem to be true, independent of the formal proof. This is NOT a proof sketch — it is the intuition that makes the proof unsurprising. Written as prose paragraphs. No length constraint — write as much as needed for the full intuition.]
 
+[**Include at least one bolded one-liner mechanism summary** capturing the entire intuition in a single sentence. Patterns: `Thm - Dominated Convergence Theorem.md` line 50 "**the dominator $g$ does two jobs — it makes $2g \pm (f_n - f) \geq 0$ so Fatou is legal, and it is integrable so $\int 2g$ can be cancelled.**"; `Thm - Central Limit Theorem.md` line 55; `Thm - Orbit-Stabiliser Theorem.md` line 80.]
+
 ---
 
 # What Makes This Hard
@@ -297,7 +325,7 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 
 # Rederivation Scaffold
 
-[The key section for spaced practice. Self-sufficient: reading ONLY this section should let the reader reconstruct the full proof without any other reference.]
+[The key section for spaced practice. Open with an explicit reader contract: "**This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**"]
 
 **High-level strategy:**
 [2–3 sentences: the overall approach and the key idea or trick.]
@@ -318,6 +346,8 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 
 [Each lemma independently practiceable in approximately 5 minutes. Each lemma is a collapsible callout; the full proof is a nested collapsible callout inside it.]
 
+[**Every lemma callout must contain all four fields**: `**Statement:**`, `**Hint:**`, `**Why needed:**`, and a nested `> [!note]- Full proof` callout. Omitting Hint or Why-needed is a quality failure. The Algebra / Multivariate / Topology lemma decompositions set the bar.]
+
 > [!note]- Lemma 1: [Statement]
 > **Statement:** [Precise statement]
 >
@@ -337,6 +367,8 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 
 > [!note]- Complete formal proof
 > [The complete, formal proof. Ground truth for verification after attempting rederivation from the scaffold.]
+>
+> [**When the theorem has well-posedness preconditions** (e.g. "the quotient exists", "the integral converges"), open the proof with **"Step 0 — [precondition]"** verifying it, separately from the substantive proof. See `Thm - First Isomorphism Theorem.md` line 163 for the pattern.]
 
 ---
 
@@ -344,24 +376,24 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 
 [Intentionally loose: find the most out-of-distribution, least obvious contexts where the theorem can be applied. This battle-tests the Sources — can you recognize the theorem's applicability in unfamiliar settings? Does not have to involve a different field; surprising applications within the same field count.]
 
-[For each suggestion, written as a prose paragraph: describe the problem context, explain why the theorem applies (which property $B$ maps to the theorem's precondition $A$), and why this application is nonobvious.]
+[Aim for 3+ genuinely different fields/contexts. For each suggestion, written as a prose paragraph: describe the problem context, explain why the theorem applies (which property $B$ maps to the theorem's precondition $A$), and why this application is nonobvious. Use web search to find surprising applications.]
 
 ---
 
 # Bridges
 
-[Links to related theorems and concepts. Written as prose paragraphs.]
+[Links to related theorems and concepts. **Each bridge must be a self-contained prose paragraph that explains the construction**, not a chain of wikilinks. A bridge of the form "X is the Y of Z; W is the V; Q runs on R" without unpacking is too compressed — every clause must be unpacked enough that a reader unfamiliar with the identification gets actual help. Gold-standard pattern: `Rings II` line 198 — "this ideal is principal, generated by a single polynomial $m$ — and that generator is the minimal polynomial of $A$".]
 
-- **[Related theorem/concept]** — [How it relates: generalization, special case, dual, analogue in a different category, etc. With wikilinks.]
+- **[Related theorem/concept]** — [How it relates: generalization, special case, dual, analogue in a different category, etc. With wikilinks. Multiple sentences, not a one-line tag.]
 
 ---
 
 # Unlocked by This
 
-[INCLUDE ONLY IF this theorem unlocks downstream concepts.]
+[INCLUDE ONLY IF this theorem unlocks downstream concepts. **No upper length cap.**]
 
 > [!tip] [Concept Name] *(from [Advanced Field])*
-> [1–3 sentence preview. Name the downstream concept in **bold**; do NOT wikilink it unless its page already exists in the vault.]
+> [Preview of any length appropriate to the downstream concept; 1–3 sentences for routine concepts, multi-paragraph mini-essays for paradigm-shifting downstream concepts. Name the downstream concept in **bold**; do NOT wikilink it unless its page already exists in the vault.]
 ```
 
 ---
@@ -401,27 +433,27 @@ A [[Def - Normal Subgroup|normal subgroup]] $H \trianglelefteq G$ is a subgroup 
 
 # Convergent Strategy
 
-[Written as prose paragraphs. Focus on what it is about the problem that makes a particular technique suitable or helpful.]
+[Written as four labelled paragraphs, each substantive prose (multiple sentences). One-phrase content under any label is a quality failure.]
 
-**Problem class:** [Which type of problem this is, referencing the topic page's problem-solving strategy.]
+**Problem class:** [Which type of problem this is, referencing the topic page's problem-solving strategy. Multiple sentences naming the class and why the routine of that class applies.]
 
-**Assumption pattern:** [What makes this instance recognizable — which assumptions are present and what they unlock.]
+**Assumption pattern:** [What makes this instance recognizable — which assumptions are present and what they unlock. Multiple sentences naming the assumptions and tracing what each is good for.]
 
-**Theorem routing:** [Which theorem or theorems convert the assumptions to the target. State the route explicitly with wikilinks.]
+**Theorem routing:** [Which theorem or theorems convert the assumptions to the target. State the route explicitly with wikilinks. Multiple sentences naming each link of the route and why the chain is correct.]
 
-**Key decision point:** [The non-obvious choice that makes this problem interesting — what makes it harder than direct application of the theorem.]
+**Key decision point:** [The non-obvious choice that makes this problem interesting — what makes it harder than direct application of the theorem. Multiple sentences identifying the choice and why the natural alternative fails.]
 
 ---
 
 # Legal Operations Used
 
-[Which legal operations from the topic page are deployed, and in what order. Written as a numbered list with prose descriptions of how each is applied in this specific problem.]
+[Which legal operations from the topic page are deployed, and in what order. Written as a numbered list. Each entry **references the topic page's Legal Operations by number** ("operation 4 from the topic page") and is followed by a prose paragraph explaining how that operation is applied in this exercise.]
 
 ---
 
 # Hints
 
-[Progressive hints as collapsible callouts, from gentle nudge to near-giveaway. 2–4 hints.]
+[Progressive hints as collapsible callouts, from gentle nudge to near-giveaway. **No upper cap on the number of hints** — use as many as the problem requires for a graduated descent (typically 2–5 hints). Each hint must be strictly more revealing than the previous.]
 
 > [!note]- Hint 1
 > [Identifies the problem class or key technique.]
@@ -436,7 +468,15 @@ A [[Def - Normal Subgroup|normal subgroup]] $H \trianglelefteq G$ is a subgroup 
 
 # Solution
 
-[Hierarchical structure: the top level shows the highest-density insight — the key idea and result of each step. Collapsible callouts reveal progressively more detail.]
+**Three-tier structure (all four elements mandatory):**
+1. A **plan paragraph** between `# Solution` and Step 1 summarizing the entire route (~3 sentences).
+2. Per-step bolded summary lines stating the result of each step.
+3. A `> [!note]- Derivation` callout under each step with the full computation.
+4. A final `> [!note]- Complete formal solution` callout giving a clean self-contained proof.
+
+Collapsing the derivation layer into a single block (no per-step structure) is a quality failure. `Rings II/Ex - In a principal ideal domain irreducibles are prime.md`, `Group Theory III/Ex - No group of order 132 is simple.md`, and `Modules II/Ex - Computing the Smith normal form.md` set the bar.
+
+[Plan paragraph: ~3 sentences naming the route. "The proof breaks into three steps. Step 1 establishes [X] using [Y]; Step 2 leverages [X] to derive [Z]; Step 3 combines [Z] with [W] to get the conclusion. The non-obvious move is in Step 2, where we [...]."]
 
 **Step 1: [Name — what this step achieves]**
 
@@ -455,19 +495,31 @@ A [[Def - Normal Subgroup|normal subgroup]] $H \trianglelefteq G$ is a subgroup 
 > [!note]- Complete formal solution
 > [Complete, cleaned-up solution as a single self-contained proof. Every step justified, no gaps.]
 
+[**Optional add-ons used in upper-tier exercises:**]
+
+[**"Illegal but tempting alternative route"** — a `> [!warning]` callout at the end of Solution explaining why an obvious alternative approach fails. Example: `Ex - Cauchy's theorem via a cyclic action.md` lines 157–158 — "Why the auxiliary group must be $\mathbb{Z}/p$, not $G$ and not $S_p$".]
+
+[**Sanity-check via independent route** — compute the answer by a second method as confidence check. `Ex - Evaluating an integral via residues.md` lines 105–106: "Verification via real-variable calculus: $\int dx/(1+x^2) = \arctan x$, so the result is $\pi$".]
+
+[**Frame-invariance check (physics)** — verify two reference frames or coordinate choices give the same physical answer.]
+
 ---
 
 # Key Takeaways
 
-[Elaborate prose paragraphs — NOT terse bullets. Each takeaway is a self-contained insight paragraph focusing on what makes the technique suitable for this type of problem and maximizing generalization.]
+[Elaborate prose paragraphs — **NOT terse bullets, and NOT section headings with sub-bullets**. Each takeaway is a self-contained insight paragraph of at least 6 lines of prose. The reader should finish each takeaway knowing how to solve a class of problems, not just this one.]
+
+[Aim for 3+ takeaways.]
 
 **[Takeaway 1 — a descriptive phrase]**
 
-[Full paragraph: what feature of the problem signals this approach? When else does this pattern apply? Give concrete examples of other problems where the same technique works. Explain what to look for — the "trigger" — and what the general pattern of application is. The reader should finish this paragraph knowing how to solve a class of problems, not just this one.]
+[Full paragraph: what feature of the problem signals this approach? When else does this pattern apply? Give concrete examples of other problems where the same technique works. Explain what to look for — the "trigger" — and what the general pattern of application is.]
 
 **[Takeaway 2 — a descriptive phrase]**
 
 [Full paragraph...]
+
+[**Optional cross-link to companion exercises:** a closing paragraph naming related exercises that drill the same or complementary techniques. Example: `Rings I/Ex - Boolean rings are commutative.md` line 165 references "see [[Ex - Generating sets that are not bases]]".]
 ```
 
 ---
@@ -486,7 +538,9 @@ tags: [area-tag, subject-tag]
 
 ## §X.Y [Section Title] — Exercises
 
-- [[Ex - Exercise Name]] — one-line description of technique/pattern drilled ([[Def - A]], [[Thm - B]], [[Def - C]])
+[**Contextualizing preamble paragraph** framing the section's purpose and naming the techniques drilled across its exercises. One paragraph before the bullet list. `Group Theory I/Exercise Index - §1.1 Basic Concepts.md` and `Group Theory III/Exercise Index - §1.7 Sylow's Theorems.md` demonstrate the pattern.]
+
+- [[Ex - Exercise Name]] (⭐⭐) — one-line description of technique/pattern drilled ([[Def - A]], [[Thm - B]], [[Def - C]])
 - [[Ex - Exercise Name]] — one-line description ([[Thm - D]], [[Def - E]])
 - [[Ex - Exercise Name]] — one-line description ([[Def - F]], [[Thm - G]], [[Thm - H]])
 
