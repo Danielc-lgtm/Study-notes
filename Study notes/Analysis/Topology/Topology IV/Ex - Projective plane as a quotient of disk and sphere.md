@@ -66,6 +66,8 @@ The disk $D^2$ embeds into the sphere $S^2$ as the upper closed hemisphere (unde
 
 # Solution
 
+The proof breaks into six steps that execute the "construct + descend + upgrade" recipe with the hemisphere embedding as the bridge. Step 1 builds the embedding $\iota: D^2 \to S^2$ via $\iota(x,y) = (x, y, \sqrt{1 - x^2 - y^2})$, mapping the disk onto the upper hemisphere; Step 2 composes with the antipodal quotient projection $\pi: S^2 \to P_1$; Step 3 verifies that the resulting $f = \pi \circ \iota$ respects the boundary antipodal identification (since the equator maps to itself and antipodes there are identified in $P_1$); Step 4 descends via the universal property; Step 5 checks bijectivity by case-analysing what $\iota(x, y) = \pm \iota(x', y')$ forces; Step 6 upgrades by compact-to-Hausdorff. The non-obvious move is in Step 5 — the case $z = -z'$ forces both to be zero (boundary points), revealing exactly why the boundary identification on $D^2$ has to match the antipodal identification on the equator of $S^2$.
+
 **Step 1: Define the embedding $D^2 \to S^2$.**
 
 Let $\iota : D^2 \to S^2$, $\iota(x, y) := (x, y, \sqrt{1 - x^2 - y^2})$, the upper hemisphere parametrization. Continuous (square-root of nonnegative continuous function is continuous). Image is exactly the upper closed hemisphere $H^+ = \{(x, y, z) \in S^2 : z \geq 0\}$. Bijective onto $H^+$: $z = \sqrt{1 - x^2 - y^2}$ determined by $(x, y) \in D^2$.

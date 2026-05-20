@@ -61,6 +61,8 @@ A [[Thm - Compact to Hausdorff Continuous Bijection is Homeomorphism|continuous 
 
 # Solution
 
+The proof breaks into six steps that build $\varphi: S^1 \to \operatorname{SO}(2)$, $e^{i\theta} \mapsto R(\theta)$, and verify it is a topological-group isomorphism. Step 1 defines $\varphi$; Step 2 checks well-definedness (both sides depend only on $\theta \mod 2\pi$); Step 3 verifies the group-homomorphism property via the angle-addition formula $R(\theta_1+\theta_2) = R(\theta_1)R(\theta_2)$; Step 4 checks continuity using the explicit formula $\varphi(z) = \begin{pmatrix} \operatorname{Re}(z) & -\operatorname{Im}(z) \\ \operatorname{Im}(z) & \operatorname{Re}(z) \end{pmatrix}$; Step 5 verifies bijectivity; Step 6 invokes compact-to-Hausdorff to upgrade to a homeomorphism. The non-obvious move is in Step 6 — the compact-to-Hausdorff lemma saves the explicit construction of $\varphi^{-1}$, which would require continuous extraction of the angle from a rotation matrix.
+
 **Step 1: Define $\varphi$.**
 
 $\varphi : S^1 \to \operatorname{SO}(2)$, $\varphi(e^{i\theta}) := R(\theta) = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$.

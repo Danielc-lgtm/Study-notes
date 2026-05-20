@@ -65,6 +65,8 @@ A subset $A \subseteq \mathbb{R}$ is **$\mathbb{Q}$-saturated** if $a \in A$ and
 
 # Solution
 
+The proof breaks into four steps. Step 1 establishes $|X| = |\mathbb{R}|$ by a cardinality count of $\mathbb{Q}$-cosets; Step 2 shows each coset $a + \mathbb{Q}$ is dense in $\mathbb{R}$, using density of $\mathbb{Q}$; Step 3 shows every nonempty $\mathbb{Q}$-saturated open in $\mathbb{R}$ must be all of $\mathbb{R}$ (because a saturated set contains a dense coset, and a saturated complement would also be dense, making both meet); Step 4 translates this into the trivial topology on $X$. The non-obvious move is in Step 3 — the complement of a nonempty saturated open is *also* saturated, so the proof reduces to "two dense saturated sets can't be disjoint."
+
 **Step 1: $X$ has uncountably many points.**
 
 The cosets $a + \mathbb{Q}$ for $a \in \mathbb{R}$ partition $\mathbb{R}$. The number of cosets is $|\mathbb{R}|/|\mathbb{Q}| = |\mathbb{R}|/\aleph_0 = |\mathbb{R}|$ (since $\mathbb{R}$ has cardinality $2^{\aleph_0}$ and $\mathbb{Q}$ is countable, removing countably many points from $\mathbb{R}$ doesn't reduce its cardinality). So $|X| = |\mathbb{R}| = 2^{\aleph_0}$, uncountable.

@@ -62,6 +62,8 @@ $\operatorname{O}(n)$ is a [[Def - Topological Group|topological group]] under m
 
 # Solution
 
+The proof breaks into five steps that use the determinant as a continuous invariant separating components. Step 1 verifies $\det: \operatorname{O}(n) \to \{+1, -1\}$ is continuous (polynomial in the entries, image in the discrete two-point set); Step 2 reads off that the preimages are clopen and partition $\operatorname{O}(n)$; Step 3 identifies $\det^{-1}(\{-1\}) = \operatorname{SO}(n) \cdot D$ for any fixed reflection $D$; Step 4 establishes path-connectedness of each piece (one by appeal to the connectedness of $\operatorname{SO}(n)$, the other by the right-translation homeomorphism); Step 5 concludes there are exactly two components. The non-obvious move is in Step 4 — translating $\operatorname{SO}(n)$ by $D$ via a *homeomorphism* (right multiplication in a topological group) immediately transports path-connectedness to the other coset, without any new construction.
+
 **Step 1: $\det : \operatorname{O}(n) \to \{+1, -1\}$ is continuous.**
 
 > [!note]- Derivation

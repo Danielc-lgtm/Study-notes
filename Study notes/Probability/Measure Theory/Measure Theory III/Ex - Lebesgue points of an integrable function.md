@@ -56,6 +56,8 @@ A point $x$ is a **Lebesgue point** of $f\in L^1_{loc}(\mathbb{R}^n)$ if $\displ
 
 # Solution
 
+The proof breaks into three steps, one per sub-part of the exercise. Step 1 (part a) applies the Lebesgue differentiation theorem to $|f - c|$ for every rational $c$, intersects the resulting full-measure sets, and uses the triangle inequality to deduce the Lebesgue-point property a.e.; Step 2 (part b) gets convergence of averages of $f$ from the stronger absolute-value averages by the triangle inequality on integrals; Step 3 (part c) exhibits the sign function at $0$ as a counterexample where averages converge but the absolute averages do not. The non-obvious move is in Step 1 — running the theorem over a *countable dense* family of constants and intersecting (countably many null sets stay null) is the standard amplifier that promotes a value-by-value a.e. statement to a "for every $c$" a.e. statement.
+
 **Step 1 — (a).** For each $c\in\mathbb{Q}$, the function $|f-c|$ is locally integrable, so by the [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]],
 $$\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f(y)-c|\,dy\xrightarrow[r\downarrow0]{}|f(x)-c|\quad\text{for }x\notin N_c,\ \lambda(N_c)=0.$$
 Let $N=\bigcup_{c\in\mathbb{Q}}N_c$ — a countable union of null sets, hence null. Fix $x\notin N$ and $\varepsilon>0$; choose $c\in\mathbb{Q}$ with $|f(x)-c|<\varepsilon$. Then

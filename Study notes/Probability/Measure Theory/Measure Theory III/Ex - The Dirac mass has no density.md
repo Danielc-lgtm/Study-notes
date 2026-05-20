@@ -58,6 +58,8 @@ $\nu\ll\mu$: $\mu(A)=0\Rightarrow\nu(A)=0$. [[Thm - Radon-Nikodym Theorem|Lebesg
 
 # Solution
 
+The proof breaks into three short steps, one per sub-part. Step 1 (part a) refutes $\delta_0 \ll \lambda$ at the single point $A = \{0\}$, where $\lambda(A) = 0$ but $\delta_0(A) = 1$, and observes that a density would force $1 = \int_{\{0\}} f\, d\lambda = 0$; Step 2 (part b) exhibits mutual singularity by partitioning $\mathbb{R}$ into $\{0\}$ (the support of $\delta_0$) and $\mathbb{R} \setminus \{0\}$ (a set of full $\lambda$-measure that $\delta_0$ ignores); Step 3 (part c) reads off the Lebesgue decomposition of $\nu = \delta_0 + g\lambda$ as $\nu_{ac} = g\lambda$ and $\nu_s = \delta_0$. The single non-obvious move is the recognition that a single $\lambda$-null set is enough to certify both failure of absolute continuity and mutual singularity — there is no need for a complicated test set.
+
 **Step 1 — (a).** $\{0\}$ is a $\lambda$-null set: $\lambda(\{0\})=0$. But $\delta_0(\{0\})=1\neq0$. So absolute continuity $\delta_0\ll\lambda$ — which would require $\lambda(A)=0\Rightarrow\delta_0(A)=0$ — *fails* at $A=\{0\}$. Hence $\delta_0$ has no density: if $\delta_0=f\lambda$ for some $f\ge0$, then $1=\delta_0(\{0\})=\int_{\{0\}}f\,d\lambda=0$, since the integral over a $\lambda$-null set vanishes. Contradiction.
 
 **Step 2 — (b).** Take $A=\{0\}$: $\lambda(A)=0$ and $\delta_0(A^c)=\delta_0(\mathbb{R}\setminus\{0\})=0$. So $\delta_0$ is concentrated on $\{0\}$, $\lambda$ on $\{0\}^c$ — they are [[Def - Mutual Singularity|mutually singular]], $\delta_0\perp\lambda$.

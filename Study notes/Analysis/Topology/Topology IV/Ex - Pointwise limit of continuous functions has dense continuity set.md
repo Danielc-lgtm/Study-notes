@@ -66,6 +66,8 @@ The **oscillation** of $f$ at $x$ is $\omega_f(x) := \limsup_{r \to 0^+} \operat
 
 # Solution
 
+The proof breaks into six steps that use Baire to identify a residual continuity set. Step 1 defines the "slow convergence" open sets $U_{m,k}$ capturing pairs $(n, x)$ where $|f_n(x) - f_m(x)| > 1/k$; Step 2 shows $\bigcap_m U_{m,k} = \emptyset$ by Cauchyness of $f_n(x)$ at each point; Step 3 reduces the closure intersection to a countable union of boundary-of-open sets, each nowhere dense, hence meager; Step 4 takes the residual set $C$ as the intersection over $k$ of the complements; Step 5 verifies that $f$ is continuous at every $y \in C$ via an $\varepsilon/3$ argument combining the local uniform convergence and continuity of $f_{m_k}$; Step 6 concludes. The non-obvious move is in Step 3 — recognising that $\overline{U} \setminus U$ (the topological boundary of an open set) is automatically nowhere dense, which is what unlocks the Baire-meagerness conclusion.
+
 **Step 1: Set up the relevant open sets.**
 
 For positive integers $m, k$, define

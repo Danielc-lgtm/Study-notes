@@ -56,6 +56,8 @@ A strong deformation retract gives a homotopy equivalence: $A \simeq X$.
 
 # Solution
 
+The proof breaks into six steps that build and verify the radial-projection homotopy. Step 1 defines $F(x, t) = (1-t)x + t(x/\|x\|)$; Step 2 verifies the image stays in $\mathbb{R}^n \setminus \{0\}$ by writing $F(x, t) = \lambda x$ with $\lambda > 0$; Step 3 checks continuity (continuity of the norm on $\mathbb{R}^n \setminus \{0\}$); Step 4 confirms the endpoint conditions $F(x, 0) = x$ and $F(x, 1) = x/\|x\| \in S^{n-1}$; Step 5 verifies $S^{n-1}$ is fixed throughout (since $x/\|x\| = x$ when $\|x\| = 1$); Step 6 concludes. The non-obvious move is in Step 2 — checking that the interpolation never hits the origin, because if either endpoint were lost the deformation would fail.
+
 **Step 1: Define the deformation homotopy.**
 
 For $x \in \mathbb{R}^n \setminus \{0\}$ and $t \in I$, set

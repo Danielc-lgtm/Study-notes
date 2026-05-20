@@ -66,6 +66,8 @@ Alternative (the "constructive" route in Bredon Problem 8): every rotation is a 
 
 # Solution
 
+The proof presents two routes. Step 1 handles the base case $\operatorname{SO}(1) = \{1\}$; Step 2 gives the inductive route via the homogeneous space $\operatorname{SO}(n)/\operatorname{SO}(n-1) \cong S^{n-1}$, lifting paths in the sphere back to paths in the rotation group; Step 3 gives the alternative constructive route, decomposing any rotation as a block diagonal of plane rotations $R(\theta_i)$ and using $\gamma(s) = \bigoplus R(s\theta_i)$ to interpolate to the identity. The non-obvious move is in Step 3 — the real-Jordan-form decomposition combined with the fact that the pairs of $-1$ eigenvalues combine into $R(\pi)$ is what makes the explicit path construction work for *every* element of $\operatorname{SO}(n)$, including reflections that don't look like rotations at first glance.
+
 **Step 1: Base case.**
 
 $\operatorname{SO}(1) = \{(1)\}$ is a single point, trivially path-connected.
