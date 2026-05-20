@@ -58,6 +58,8 @@ A function $u : \mathbb{R}^2 \to \mathbb{R}$ is **harmonic** if $u \in C^2$ and 
 
 # Solution
 
+The proof breaks into six steps that together lift the harmonic statement to a holomorphic one and apply complex Liouville. Steps 1–2 build a holomorphic $f = u + iv$ on $\mathbb{R}^2$ via harmonic conjugate and form $g = e^f$; Steps 3–4 use $|g| = e^u \leq e^M$ to apply Liouville and conclude $g$ is constant; Steps 5–6 propagate "g constant" back to $f$ via discreteness of $\exp^{-1}(c)$ and connectedness of $\mathbb{R}^2$, then read off $u = \operatorname{Re} f$ constant. The non-obvious move is in Step 2 — using the exponential to convert a bound on $\operatorname{Re} f$ into a bound on $|e^f|$, since $f$ itself need not be bounded.
+
 **Step 1: Harmonic conjugate.**
 
 $\mathbb{R}^2$ is simply connected, so by the standard construction of harmonic conjugates, there exists a harmonic $v : \mathbb{R}^2 \to \mathbb{R}$ such that $f := u + iv$ is holomorphic on $\mathbb{R}^2 \cong \mathbb{C}$.

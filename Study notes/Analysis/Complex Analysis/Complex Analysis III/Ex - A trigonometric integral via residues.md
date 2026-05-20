@@ -66,6 +66,8 @@ Substitution $z = e^{i\theta}$, $d\theta = dz/(iz)$, $\cos\theta = (z + 1/z)/2$.
 
 # Solution
 
+The proof breaks into four steps. Step 1 substitutes $z = e^{i\theta}$ to convert the real trigonometric integral into a contour integral on the unit circle; Step 2 factors the resulting quadratic denominator $(2z+1)(z+2)$ and identifies $z = -1/2$ as the only pole inside; Step 3 computes the simple-pole residue; Step 4 applies the residue theorem to read off $2\pi/3$. The non-obvious move is in Step 1 — recognizing that $\cos\theta = (z + 1/z)/2$ produces a polynomial denominator only after multiplying through by $z$, which is also exactly what $d\theta = dz/(iz)$ supplies.
+
 **Step 1: Substitute $z = e^{i\theta}$**
 
 With $\cos\theta = (z + 1/z)/2$ and $d\theta = dz/(iz)$:

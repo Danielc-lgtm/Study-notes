@@ -81,11 +81,19 @@ The proof, *given* [[Thm - Lévy's Continuity Theorem|Lévy's theorem]] and the 
 > [!note]- Lemma 1: The characteristic function factors and expands
 > **Statement:** For i.i.d. $X_k$ with $\mathbb{E}X=0$, $\mathbb{E}X^2=1$: $\varphi_{S_n/\sqrt n}(t)=\varphi_X(t/\sqrt n)^n$ and $\varphi_X(s)=1-s^2/2+o(s^2)$.
 >
+> **Hint:** Two independent observations: independence turns the characteristic function of a sum into a product, and finite second moment lets you Taylor-expand $\varphi_X$ around $0$ with the derivatives read off from the moments.
+>
+> **Why needed:** The product form is what allows the Fourier transform to "see" the central limit phenomenon — convolutions of densities (sums of independent variables) become powers of characteristic functions, and second-order Taylor data is exactly what survives the $1/\sqrt n$ rescaling.
+>
 > > [!note]- Full proof
 > > Independence and the [[Ex - Independence and the factorisation of expectation|convolution-to-product]] property give $\varphi_{S_n/\sqrt n}(t)=\mathbb{E}[\prod_k e^{i(t/\sqrt n)X_k}]=\prod_k\varphi_X(t/\sqrt n)=\varphi_X(t/\sqrt n)^n$. Since $\mathbb{E}X^2<\infty$, $\varphi_X\in C^2$ with $\varphi_X(0)=1$, $\varphi_X'(0)=i\mathbb{E}X=0$, $\varphi_X''(0)=-\mathbb{E}X^2=-1$; Taylor's theorem gives $\varphi_X(s)=1-s^2/2+o(s^2)$. $\square$
 
 > [!note]- Lemma 2: The $n$-th power converges to the Gaussian
 > **Statement:** $\varphi_X(t/\sqrt n)^n\to e^{-t^2/2}$ for every $t$.
+>
+> **Hint:** Take logarithms (legal for large $n$ since the argument is near $1$) and use $\log(1+u)=u+o(u)$: the leading term $-t^2/(2n)$ multiplied by $n$ converges to $-t^2/2$ while the remainder $o(1/n)\cdot n\to 0$.
+>
+> **Why needed:** This is the explicit Gaussian limit at the characteristic-function level. Combined with Lévy's continuity theorem, pointwise convergence of characteristic functions to $e^{-t^2/2}$ (continuous at $0$) upgrades to weak convergence of distributions to $N(0,1)$ — which is the CLT.
 >
 > > [!note]- Full proof
 > > By Lemma 1, $\varphi_X(t/\sqrt n)=1-\frac{t^2}{2n}+o(1/n)$. Taking logarithms (defined for large $n$, since the argument $\to1$), $n\log\varphi_X(t/\sqrt n)=n(-\frac{t^2}{2n}+o(1/n))=-\frac{t^2}{2}+o(1)\to-\frac{t^2}{2}$. Exponentiate: $\varphi_X(t/\sqrt n)^n\to e^{-t^2/2}$. $\square$

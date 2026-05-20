@@ -53,6 +53,8 @@ $$f(w) = \frac{1}{2\pi i}\oint_{|z - a| = \rho}\frac{f(z)}{z - w}\,dz.$$
 
 # Solution
 
+The proof breaks into three short steps. Step 1 recognizes the integrand as the canonical CIF shape $f(z)/(z-w)$; Step 2 verifies that the hypotheses (holomorphy of $f$ on a disc containing the contour, $w$ inside the contour) are met; Step 3 reads off the value as $2\pi i \cdot f(w)$. The only non-obvious move is the pattern match — once $f$ and $w$ are named, the rest is mechanical.
+
 **Step 1: Identify the CIF structure.**
 
 The integrand $e^z/(z - 1) = f(z)/(z - w)$ with $f(z) = e^z$ and $w = 1$.

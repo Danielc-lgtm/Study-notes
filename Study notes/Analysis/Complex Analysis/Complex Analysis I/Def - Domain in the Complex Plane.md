@@ -38,6 +38,18 @@ A **simply connected domain** is a domain in which every closed curve is contrac
 
 ---
 
+# Categorical Definition
+
+A domain in $\mathbb{C}$ is a **connected non-empty open subobject of $\mathbb{C}$** in the category $\mathbf{Top}$, equipped with the additional complex-analytic structure inherited from $\mathbb{C}$. The categorical viewpoint usefully separates two pieces of data: the underlying topological subobject and the [[Def - Holomorphic Function|holomorphic]] structure.
+
+The vocabulary: in any category $\mathcal{C}$, a *subobject* of an object $X$ is an equivalence class of monomorphisms into $X$. In $\mathbf{Top}$, the monomorphisms into $\mathbb{C}$ are exactly the injective continuous maps, and the subobjects relevant for analysis are the topological subspaces — pairs $(D, \iota)$ where $D \subseteq \mathbb{C}$ carries the [[Def - Subspace Topology|subspace topology]] and $\iota : D \hookrightarrow \mathbb{C}$ is the inclusion. Among all such subobjects, the *open* ones are distinguished by the further condition that $D \in \tau_{\mathbb{C}}$; equivalently, the inclusion $\iota$ is an *open embedding*, meaning it is a topological embedding whose image is open. Open subobjects form a sub-poset of the subobject lattice — closed under finite intersection and arbitrary union, in line with the topology axioms.
+
+Connectedness is the further categorical property: in $\mathbf{Top}$, an object $D$ is **connected** if $\operatorname{Hom}_{\mathbf{Top}}(D, \{0, 1\}_{\text{disc}})$ has exactly two elements (the two constant maps) — i.e., no non-trivial continuous map to the two-point discrete space. Equivalently, $D$ is connected if it cannot be written as the coproduct $D \cong A \sqcup B$ of two non-empty open subobjects of itself. Path-connectedness is the stronger condition that the connected component of every pair of points contains a path, expressible as: the canonical map $\pi_0^{\text{path}}(D) \to \pi_0(D)$ from path-components to connected components is a bijection. For open subobjects of $\mathbb{C} \cong \mathbb{R}^2$ — which is locally path-connected — the two notions agree, so a domain is unambiguously a connected non-empty open subobject.
+
+The complex structure adds another layer. Above $\mathbf{Top}$ sits the category $\mathbf{CplxMan}$ of complex manifolds (one-dimensional), and $\mathbb{C}$ is its tautological object of complex dimension $1$. Every open subobject $D \hookrightarrow \mathbb{C}$ inherits a unique complex structure from $\mathbb{C}$ such that the inclusion is holomorphic — this is the *pullback of the complex structure along the inclusion*, the complex-analytic counterpart of the subspace topology. A domain is thus precisely a connected non-empty open subobject of $\mathbb{C}$ *in $\mathbf{CplxMan}$* — a 1-dimensional complex submanifold of $\mathbb{C}$ that happens to be an open subset. Simply connected domains form an even more restrictive subclass, distinguished by the categorical condition $\pi_1(D) = 0$ (the trivial fundamental group), which is the universal cover condition that makes every multi-valued holomorphic function on $D$ (such as the logarithm or fractional powers) split into single-valued branches.
+
+---
+
 # Relate to Other Fields / Compression
 
 In **topology**, a domain in $\mathbb{C}$ is a connected open subset of a metric space — the standard setting in which one does analysis. The same notion appears in real multivariable analysis: a "domain" in $\mathbb{R}^n$ is a connected open subset, and statements like "a $C^1$ function on a domain with zero gradient is constant" require exactly this hypothesis.

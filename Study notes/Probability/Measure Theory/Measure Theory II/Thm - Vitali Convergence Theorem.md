@@ -74,11 +74,19 @@ The proof of (1)$\Rightarrow$(2) is a *three-way split* and one must see why eac
 > [!note]- Lemma 1: $L^1$-convergence implies uniform integrability
 > **Statement:** If $\int|f_n-f|\to0$, then $(f_n)$ is uniformly integrable.
 >
+> **Hint:** Split the tail at a fixed index $n_0$: the finitely many functions $\{f,f_1,\dots,f_{n_0}\}$ are automatically UI, and the late terms borrow UI from $f$ plus the small $L^1$-error.
+>
+> **Why needed:** This is the easy direction (1)$\Leftarrow$(2) of the Vitali equivalence — once Markov's inequality gives in-measure convergence, this lemma supplies the missing UI piece so the pair (in-measure + UI) is established.
+>
 > > [!note]- Full proof
 > > Given $\varepsilon$, pick $n_0$ with $\int|f_n-f|<\varepsilon/2$ for $n\ge n_0$. The finite family $\{f,f_1,\dots,f_{n_0}\}\subseteq L^1$ is UI ([[Def - Absolute Continuity and Density|finite families are UI]]), giving $\delta$ with $\mu(A)<\delta\Rightarrow\int_A(|f|\vee\max_{n\le n_0}|f_n|)<\varepsilon/2$. For $n>n_0$, $\int_A|f_n|\le\int_A|f|+\int|f_n-f|<\varepsilon/2+\varepsilon/2$. So $\sup_n\int_A|f_n|<\varepsilon$. $\square$
 
 > [!note]- Lemma 2: Uniform integrability + in-measure ⇒ $L^1$
 > **Statement:** If $\mu(X)<\infty$, $f_n\xrightarrow{\mu}f$, $(f_n)$ UI, then $\int|f_n-f|\to0$.
+>
+> **Hint:** Argue by contradiction along a subsequence so that $f_n\to f$ a.e.; then Egorov gives a "good set" $F$ where convergence is uniform, while UI controls the "bad set" $X\setminus F$ of small measure.
+>
+> **Why needed:** This is the substantive direction (1)$\Rightarrow$(2) — it is where uniform integrability does its work, converting in-measure convergence (which is too weak for $L^1$) into actual $L^1$-convergence by killing the escape-to-infinity mode.
 >
 > > [!note]- Full proof
 > > Suppose not: a subsequence has $\int|f_n-f|\ge c>0$; refine it ([[Def - Convergence in Measure|subsequence principle]]) so $f_n\to f$ a.e. Fix $\varepsilon>0$; let $\delta$ witness UI of $(f_n)\cup\{f\}$. [[Thm - Egorov's Theorem|Egorov]] gives measurable $F$, $\mu(X\setminus F)<\delta$, $f_n\to f$ uniformly on $F$. Then $\int_F|f_n-f|\le\mu(F)\sup_F|f_n-f|\le\mu(X)\sup_F|f_n-f|\to0$, and $\int_{X\setminus F}|f_n-f|\le\int_{X\setminus F}|f_n|+\int_{X\setminus F}|f|<2\varepsilon$ by choice of $\delta$. So $\limsup\int|f_n-f|\le2\varepsilon$; $\varepsilon\downarrow0$ contradicts $\ge c$. $\square$

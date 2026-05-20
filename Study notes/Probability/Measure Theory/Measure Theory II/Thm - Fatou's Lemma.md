@@ -70,11 +70,19 @@ There is one idea and missing it leaves you stuck: **$\liminf_n f_n$ is itself t
 > [!note]- Lemma 1: The infimum envelopes increase to the liminf
 > **Statement:** $g_n=\inf_{k\ge n}f_k$ is measurable, $g_n\le g_{n+1}$, and $g_n\uparrow\liminf_n f_n$.
 >
+> **Hint:** Unfold the definition $\liminf_n f_n=\sup_n\inf_{k\ge n}f_k$ — the envelopes $g_n$ are exactly the inner infima, and the outer supremum is monotone, so the sup equals the limit.
+>
+> **Why needed:** It converts the inscrutable object $\liminf_n f_n$ into a monotone increasing sequence of non-negative measurable functions, which is exactly the input type MCT consumes.
+>
 > > [!note]- Full proof
 > > Measurability: countable infimum of measurable functions ([[Thm - Operations Preserve Measurability]]). Monotone: $\{f_k:k\ge n+1\}\subseteq\{f_k:k\ge n\}$, and an infimum over a smaller set is $\ge$, so $g_{n+1}\ge g_n$. Limit: $\liminf_n f_n=\sup_n\inf_{k\ge n}f_k=\sup_n g_n=\lim_n g_n$ since $g_n$ increases. $\square$
 
 > [!note]- Lemma 2: Integral comparison
 > **Statement:** $\int g_n\,d\mu\le\inf_{k\ge n}\int f_k\,d\mu$.
+>
+> **Hint:** From $g_n\le f_k$ pointwise for each $k\ge n$, monotonicity of the integral gives $\int g_n\le\int f_k$, then take the infimum over $k$.
+>
+> **Why needed:** It is the inequality that survives the limit and produces the right-hand side $\liminf_n\int f_n$ of Fatou — Lemma 1 turns the left-hand integral into $\int\liminf f_n$ via MCT, and this lemma turns the right-hand integral into $\liminf\int f_n$.
 >
 > > [!note]- Full proof
 > > For each $k\ge n$, $g_n=\inf_{j\ge n}f_j\le f_k$ pointwise, so by [[Thm - Properties of the Integral|monotonicity of the integral]] $\int g_n\le\int f_k$. As this holds for every $k\ge n$, $\int g_n\le\inf_{k\ge n}\int f_k$. $\square$

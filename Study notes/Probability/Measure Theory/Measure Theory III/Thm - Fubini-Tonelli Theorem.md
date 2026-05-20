@@ -79,11 +79,19 @@ Tonelli itself is routine *once* one accepts that "Tonelli for indicators $=$ th
 > [!note]- Lemma 1: Tonelli for non-negative functions
 > **Statement:** For $f\ge0$ measurable, the three integrals coincide in $[0,\infty]$.
 >
+> **Hint:** Standard machine: verify it for indicators (this is the product measure identity), extend by linearity to non-negative simple functions, then climb to general $f\ge0$ by MCT applied separately in each variable.
+>
+> **Why needed:** Tonelli is the unconditional version — it always holds for $f\ge0$, even when the integrals are $+\infty$. Fubini for signed integrable $f$ then follows by splitting $f=f^+-f^-$ and applying Tonelli to each piece, with no $\infty-\infty$ obstruction.
+>
 > > [!note]- Full proof
 > > For $f=\mathbf{1}_E$ this is the [[Thm - Product Measure|product measure]] identity $(\mu_1\otimes\mu_2)(E)=\int\mu_2(E_{x_1})\,d\mu_1=\int\mu_1(E_{x_2})\,d\mu_2$. Linearity extends it to non-negative simple functions. For general $f\ge0$, take simple $s_n\uparrow f$; the slices $s_n(x_1,\cdot)\uparrow f(x_1,\cdot)$, so [[Thm - Monotone Convergence Theorem|MCT]] gives $\int s_n(x_1,\cdot)d\mu_2\uparrow\int f(x_1,\cdot)d\mu_2$ (measurable in $x_1$ as a limit of measurables); MCT again in $d\mu_1$ and in $d(\mu_1\otimes\mu_2)$ carries the three-way equality to the limit. $\square$
 
 > [!note]- Lemma 2: Fubini from Tonelli
 > **Statement:** $f\in L^1(\mu_1\otimes\mu_2)\Rightarrow$ the iterated integrals exist a.e., are finite, and equal $\int f\,d(\mu_1\otimes\mu_2)$.
+>
+> **Hint:** First Tonelli on $|f|$ certifies that the slice $f(x_1,\cdot)\in L^1(\mu_2)$ for a.e. $x_1$; then split $f=f^+-f^-$ and apply Tonelli to each non-negative piece — since both have finite integral, subtraction is legal.
+>
+> **Why needed:** This is the signed-and-integrable version that practitioners actually use — swapping the order of integration for a real- or complex-valued $L^1$ function, justified once Tonelli has provided the $\sigma$-finite-style finiteness control.
 >
 > > [!note]- Full proof
 > > By Lemma 1 applied to $|f|\ge0$, $\iint|f|=\int|f|\,d(\mu_1\otimes\mu_2)<\infty$, so the iterated integral of $|f|$ is finite — hence $\int|f(x_1,\cdot)|\,d\mu_2<\infty$ for $\mu_1$-a.e. $x_1$, i.e. $f(x_1,\cdot)\in L^1(\mu_2)$ a.e. Apply Lemma 1 to $f^+$ and $f^-$ (both $\ge0$, both with finite integral $\le\int|f|$). Subtracting the two finite iterated integrals (no $\infty-\infty$) gives $\iint f=\int f\,d(\mu_1\otimes\mu_2)$, in either order. $\square$

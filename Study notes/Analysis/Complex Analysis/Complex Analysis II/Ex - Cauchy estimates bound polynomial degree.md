@@ -58,6 +58,8 @@ Prove that $f$ is a polynomial of degree at most $n$.
 
 # Solution
 
+The proof breaks into four steps that use Cauchy estimates plus a "let $r \to \infty$" trick. Step 1 writes $f$ as a globally convergent Taylor series at $0$ (entire = analytic everywhere); Step 2 applies Cauchy estimates with the bound $M(r) \leq A r^n$ to get $|c_k| \leq A r^{n-k}$; Step 3 sends $r \to \infty$ to force $c_k = 0$ whenever $k > n$; Step 4 reads off the polynomial. The non-obvious move is in Step 3 — Cauchy estimates hold for *every* radius, so the optimization $r \to \infty$ converts the polynomial growth bound into vanishing of high-degree coefficients.
+
 **Step 1: Power series at $0$.**
 
 $f$ is entire, so by [[Thm - Holomorphic Functions are Analytic (Local Power Series Expansion)]], $f(z) = \sum_{k=0}^\infty c_k z^k$ on all of $\mathbb{C}$, with $c_k = f^{(k)}(0)/k!$. The series converges for every $z$.

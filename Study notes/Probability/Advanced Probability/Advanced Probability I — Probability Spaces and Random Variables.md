@@ -46,6 +46,12 @@ This chapter assembles the vocabulary (space, variable, law, distribution functi
 - **[[Thm - Jensen's Inequality]]**
 	- For convex $\varphi$, $\mathbb{E}[\varphi(X)]\ge\varphi(\mathbb{E}X)$. Proved by the supporting line at the mean. Yields moment monotonicity, $\mathrm{Var}\ge0$, non-negativity of entropy, and (in conditional form) the $L^p$-theory of martingales.
 
+> [!tip] Unlocked: Filtrations and Information Flow *(from Advanced Probability IV)*
+> A sub-$\sigma$-algebra $\mathcal{G}\subseteq\mathcal{F}$ encodes *partial information*: the $\mathcal{G}$-measurable random variables are exactly the random variables that can be determined from the information $\mathcal{G}$ carries. An increasing chain $\mathcal{F}_0\subseteq\mathcal{F}_1\subseteq\cdots\subseteq\mathcal{F}$ is a **filtration** — the data structure of every discrete-time stochastic process and the prerequisite for [[Def - Martingale|martingales]], [[Def - Stopping Time|stopping times]], and [[Def - Conditional Expectation|conditional expectation]] (see [[Advanced Probability IV — Martingales in Discrete Time]]). The Doob–Dynkin lemma — "$\sigma(X)$-measurable random variables are exactly measurable functions of $X$" — is the technical content that makes "information" a manipulable quantity.
+
+> [!tip] Unlocked: Information Theory and the Non-negativity of KL-divergence *(from Information Theory)*
+> Jensen's inequality applied to the convex function $\varphi(t)=-\log t$ proves the non-negativity of the **Kullback–Leibler divergence** $D(p\|q) = \mathbb{E}_p[\log(p/q)] \ge 0$, with equality iff $p=q$. This single inequality is the root of information theory: it gives Gibbs's inequality, the data-processing inequality, the non-negativity of entropy, the non-negativity of mutual information, and the asymptotic-equipartition property of the entropy rate. Variational expressions for $D(p\|q)$ (Donsker–Varadhan, Gibbs) are convex-duality statements of the same Jensen fact and are the bridge to large-deviations theory.
+
 > [!note] Exercise Index — §1.1
 > [[Exercise Index - §1.1 Probability Spaces and Random Variables]]
 
@@ -57,6 +63,15 @@ This chapter assembles the vocabulary (space, variable, law, distribution functi
 	- If $\sum\mathbb{P}(A_n)<\infty$ then $\mathbb{P}(A_n\text{ i.o.})=0$ (first lemma, no independence); if $\sum\mathbb{P}(A_n)=\infty$ and the $A_n$ are independent then $\mathbb{P}(A_n\text{ i.o.})=1$ (second lemma). A zero–one dichotomy; the standard route to almost-sure statements.
 - **[[Thm - Kolmogorov 0-1 Law]]**
 	- For independent $(X_n)$, every tail event has probability $0$ or $1$ — asymptotic behaviour is deterministic. Proved by showing a tail event is independent of itself ($\pi$–$\lambda$). Makes the SLLN limit a constant.
+
+> [!tip] Unlocked: Product Probability Spaces and Infinite-Sequence Constructions *(from Stochastic Processes)*
+> Independence is *exactly* [[Thm - Product Measure|product-measure]] structure, and the natural habitat of an infinite independent sequence is an infinite product space $(\mathbb{R}^\infty,\mathcal{B}^{\otimes\infty},\bigotimes\mu_n)$. The **Kolmogorov extension theorem** lifts the §3.1 finite-product construction to such infinite products by checking only the finite-dimensional marginals — and this is what guarantees an i.i.d. sequence with prescribed law actually *exists* on some probability space. Every construction of Brownian motion, of a Poisson process, of an i.i.d. random field rests on this extension, and Kolmogorov's 0–1 law is its tail-behaviour companion.
+
+> [!tip] Unlocked: Almost-Sure Convergence and the First Step of the SLLN *(from Advanced Probability II)*
+> Borel–Cantelli is the standard route from a *summable* probability statement to an *almost-sure* statement: $\sum_n\mathbb{P}(|X_n-X|>\varepsilon)<\infty$ for every $\varepsilon$ forces $X_n\to X$ almost surely. This converts almost-sure convergence questions into series computations and is one step of the standard proof of the **strong law of large numbers** ([[Thm - Strong Law of Large Numbers]]) — combined with truncation and Kolmogorov's three-series criterion. The same template proves a.s. convergence of martingales in [[Advanced Probability IV — Martingales in Discrete Time|Advanced Probability IV]] and of the empirical process to the true distribution function (Glivenko–Cantelli).
+
+> [!tip] Unlocked: Tail $\sigma$-algebras and Exchangeability *(from Probability and Statistical Mechanics)*
+> The tail $\sigma$-algebra $\mathcal{T}=\bigcap_n\sigma(X_{n+1},X_{n+2},\dots)$ is one of two canonical $\sigma$-algebras with a strong rigidity property — the other being the **exchangeable $\sigma$-algebra** $\mathcal{E}$ of events invariant under finite permutations. **De Finetti's theorem** is the exchangeable analogue of the Kolmogorov 0–1 law: an exchangeable sequence is a *mixture* of i.i.d. sequences, with the mixing measure $\mathcal{E}$-measurable. The Hewitt–Savage 0–1 law is the i.i.d. exchangeable version: every event in $\mathcal{E}$ has probability $0$ or $1$ when the sequence is i.i.d. — strictly stronger than the Kolmogorov 0–1 law. These results are foundational in **Bayesian statistics** (the parameter in a Bayesian model is exactly the de Finetti mixing measure) and in **percolation theory**, where percolation events on translation-invariant lattices are exchangeable-like and inherit a $\{0,1\}$ dichotomy.
 
 > [!note] Exercise Index — §1.2
 > [[Exercise Index - §1.2 Independence and the 0-1 Law]]

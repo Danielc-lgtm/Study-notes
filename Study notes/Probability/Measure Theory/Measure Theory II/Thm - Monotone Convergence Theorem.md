@@ -74,11 +74,19 @@ The reverse inequality is where everyone stalls. The non-obvious move is the **c
 > [!note]- Lemma 1: The catching-up sets exhaust $X$
 > **Statement:** For simple $s\le f$ and $\varepsilon\in(0,1)$, $G_n=\{f_n\ge(1-\varepsilon)s\}$ satisfies $G_n\subseteq G_{n+1}$ and $\bigcup_n G_n=X$.
 >
+> **Hint:** The slack $\varepsilon$ is the trick: $f_n(x)\to f(x)\ge s(x)$ means $f_n(x)$ will eventually exceed $(1-\varepsilon)s(x)$ strictly for every $x$, even though it might never reach $s(x)$.
+>
+> **Why needed:** It supplies an exhausting increasing sequence of sets on which $f_n\ge(1-\varepsilon)s$ holds pointwise, so the inequality survives integration and continuity from below converts pointwise convergence into a measure-theoretic statement.
+>
 > > [!note]- Full proof
 > > $f_n\le f_{n+1}\Rightarrow G_n\subseteq G_{n+1}$. Fix $x$. If $s(x)=0$ then $f_n(x)\ge0=(1-\varepsilon)s(x)$, so $x\in G_1$. If $s(x)>0$ then $(1-\varepsilon)s(x)<s(x)\le f(x)=\lim f_n(x)$, so $f_n(x)\ge(1-\varepsilon)s(x)$ for large $n$, i.e. $x\in G_n$ eventually. Hence $\bigcup_n G_n=X$. $\square$
 
 > [!note]- Lemma 2: The lower bound and its limit
 > **Statement:** $\lim_n\int f_n\,d\mu\ge(1-\varepsilon)\int s\,d\mu$ for every simple $s\le f$ and $\varepsilon\in(0,1)$.
+>
+> **Hint:** Integrate $f_n$ only over $G_n$, expand the simple function $s=\sum_i\alpha_i\mathbf{1}_{A_i}$, and use continuity from below on each $A_i\cap G_n\uparrow A_i$.
+>
+> **Why needed:** This is the only nontrivial inequality in MCT — combining it with the trivial $\lim\int f_n\le\int f$ (by monotonicity), then letting $\varepsilon\downarrow 0$ and taking the supremum over simple $s\le f$, gives the full equality $\lim\int f_n=\int f$.
 >
 > > [!note]- Full proof
 > > On $G_n$, $f_n\ge(1-\varepsilon)s$, so by monotonicity $\int f_n\ge\int f_n\mathbf{1}_{G_n}\ge(1-\varepsilon)\int s\,\mathbf{1}_{G_n}=(1-\varepsilon)\sum_i\alpha_i\mu(A_i\cap G_n)$, writing $s=\sum_i\alpha_i\mathbf{1}_{A_i}$. By Lemma 1, $A_i\cap G_n\uparrow A_i$; [[Thm - Properties of Measures|continuity from below]] gives $\mu(A_i\cap G_n)\uparrow\mu(A_i)$. Letting $n\to\infty$: $\lim_n\int f_n\ge(1-\varepsilon)\sum_i\alpha_i\mu(A_i)=(1-\varepsilon)\int s$. $\square$

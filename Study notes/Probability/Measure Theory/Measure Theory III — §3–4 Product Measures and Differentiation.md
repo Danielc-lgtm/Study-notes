@@ -43,6 +43,12 @@ tags: [analysis, measure-theory, probability]
 - **[[Thm - Product Measure]]**
 	- For $\sigma$-finite $\mu_i$, a unique measure $\mu_1\otimes\mu_2$ with $(\mu_1\otimes\mu_2)(A_1\times A_2)=\mu_1(A_1)\mu_2(A_2)$, given by integrating the slice measure. Existence is the slice formula plus MCT; uniqueness is $\pi$–$\lambda$. $\lambda_m\otimes\lambda_n=\lambda_{m+n}$.
 
+> [!tip] Unlocked: Independence and Joint Distributions *(from Probability Theory)*
+> The product measure is exactly the law of an **independent pair** of random variables: $X$ and $Y$ are independent on $(\Omega,\mathcal{F},\mathbb{P})$ if and only if the joint law $\mathcal{L}(X,Y)$ on $\mathbb{R}^2$ equals the product $\mathcal{L}(X)\otimes\mathcal{L}(Y)$ of the marginals. The whole theory of joint distributions, marginalisation, and independence is the §3.1 construction restated. Dynkin's theorem then reduces verifying independence to checking $\pi$-systems — a one-line proof that pairwise independence on rays $\{X\le a\}$ implies full independence.
+
+> [!tip] Unlocked: Infinite Product Measures and Kolmogorov Extension *(from Stochastic Processes)*
+> Iterating the finite product construction together with a consistency check yields **infinite product measures** — the law of an i.i.d. sequence on $\mathbb{R}^\infty$ — and more generally the **Kolmogorov extension theorem** that constructs a probability measure on $\mathbb{R}^T$ from any consistent family of finite-dimensional marginals. This is what guarantees a stochastic process with prescribed finite-dimensional distributions actually exists, and it is the foundation under Brownian motion and every other process built from i.i.d. inputs.
+
 > [!note] Exercise Index — §3.1
 > [[Exercise Index - §3.1 Product Measures]]
 
@@ -50,6 +56,12 @@ tags: [analysis, measure-theory, probability]
 
 - **[[Thm - Fubini-Tonelli Theorem]]**
 	- A double integral equals an iterated integral, in either order. **Tonelli**: for $f\ge0$, unconditionally. **Fubini**: for $f\in L^1(\mu_1\otimes\mu_2)$. Tonelli is the standard machine (indicators $=$ product-measure theorem, simple, $f\ge0$ by MCT); Fubini splits $f=f^+-f^-$. The discipline: Tonelli on $|f|$ first, then Fubini. Without absolute integrability the iterated integrals can disagree.
+
+> [!tip] Unlocked: The Fourier Transform Exchange of Integrals *(from Harmonic Analysis)*
+> Fubini's theorem is what licenses the foundational manipulations of the **Fourier transform**: identities like $\int(\widehat{f\ast g})(\xi)\overline{h(\xi)}\,d\xi = \int f(x)\overline{(\widehat{g\ast h})(x)}\,dx$ (the **Parseval identity**) and the **Fourier inversion formula** $f(x) = \int \hat f(\xi)e^{2\pi i x\cdot\xi}\,d\xi$ all rest on swapping the order of integration in a double integral involving $e^{-2\pi i x\xi}$. Without Fubini, the convolution theorem $\widehat{f\ast g}=\hat f\cdot\hat g$ — itself an exchange of $\int\int$ — has no rigorous justification. The discipline "Tonelli on $|f|$ first" is what keeps these manipulations honest in $L^1$.
+
+> [!tip] Unlocked: The Layer-Cake Formula *(from Probability and PDE)*
+> Applied to $E=\{(x,t): 0\le t< |f(x)|\}\subseteq X\times[0,\infty)$, Tonelli gives the **layer-cake identity** $\int|f|^p\,d\mu = p\int_0^\infty t^{p-1}\mu(\{|f|>t\})\,dt$, expressing the $L^p$-norm of $f$ as an integral of its distribution function. This is the device behind every interpolation argument, every weak-type-to-strong-type passage, every moment-tail equivalence in probability $\mathbb{E}[|X|^p] = p\int_0^\infty t^{p-1}\mathbb{P}(|X|>t)\,dt$, and the standard route to proving the Hardy–Littlewood–Sobolev and Marcinkiewicz inequalities.
 
 > [!note] Exercise Index — §3.2
 > [[Exercise Index - §3.2 Fubini's Theorem]]
@@ -60,6 +72,14 @@ tags: [analysis, measure-theory, probability]
 	- $f^*(x)=\sup_r\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f|$ — the worst-case local average. Measurable, satisfies the weak **maximal inequality** $\lambda(f^*>a)\le\frac{5^n}{a}\|f\|_1$, but $f^*\notin L^1$ (it decays only like $|x|^{-n}$). The prototype of harmonic analysis; the device that bounds exceptional sets.
 - **[[Thm - Lebesgue Differentiation Theorem]]**
 	- For every $f\in L^1_{loc}(\mathbb{R}^n)$, $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}f\to f(x)$ for a.e. $x$ — the measure-theoretic fundamental theorem of calculus. Proved by "dense class (continuous functions) + maximal inequality to kill the exceptional set," the maximal inequality itself proved by the Vitali covering lemma. Gives Lebesgue points and the density theorem.
+
+> [!tip] Unlocked: Lebesgue Points and a.e. Pointwise Behaviour *(from Real Analysis and PDE)*
+> A point $x$ where the local averages $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|f-f(x)|\to 0$ as $r\to 0$ is called a **Lebesgue point** of $f$, and the differentiation theorem says *almost every* point is a Lebesgue point. This justifies treating "the value of $f$ at $x$" as a meaningful quantity for any $L^1_{loc}$ function — even though $f$ is only an equivalence class modulo a.e.-equality — and is the rigorous foundation for Sobolev space trace theorems, the precise representative of a Sobolev function, and the pointwise meaning of solutions to PDE.
+>
+> The closely related **density theorem** says that for any measurable $A\subseteq\mathbb{R}^n$, almost every point of $A$ is a *point of density* $1$ — meaning local averages of $\mathbf{1}_A$ tend to $1$ as the radius shrinks. This is what makes "measurable sets look locally like full sets at almost every point of themselves" a rigorous statement and is the input to **rectifiability** theorems in geometric measure theory.
+
+> [!tip] Unlocked: a.e. Differentiability of Monotone Functions *(from Real Analysis)*
+> Applied to $f=F'$ where $F$ is monotone, the differentiation theorem combines with a covering argument to give **Lebesgue's theorem on the differentiation of monotone functions**: every monotone function on $\mathbb{R}$ is differentiable almost everywhere. This is the entry point to the theory of **functions of bounded variation** and **absolutely continuous functions**, and to the fundamental theorem of calculus in its modern form $F(b)-F(a)=\int_a^b F'$ — which holds precisely when $F$ is absolutely continuous, the integrable-derivative condition that the density-and-singular Lebesgue decomposition picks out.
 
 > [!note] Exercise Index — §4.1
 > [[Exercise Index - §4.1 Differentiation of the Integral]]
@@ -74,6 +94,15 @@ tags: [analysis, measure-theory, probability]
 	- Every signed measure splits its space into a positive and a negative set (Hahn), equivalently writes as $\alpha=\alpha^+-\alpha^-$ with $\alpha^+\perp\alpha^-$ (Jordan). Proved by taking a maximally-negative set; gives the total-variation measure $|\alpha|$.
 - **[[Thm - Radon-Nikodym Theorem]]**
 	- For $\sigma$-finite $\mu,\nu$: every $\nu$ splits as $\nu_{ac}+\nu_s$ ($\nu_{ac}\ll\mu$, $\nu_s\perp\mu$, Lebesgue decomposition), and $\nu_{ac}$ has a density $f=\mathrm{d}\nu_{ac}/\mathrm{d}\mu$. If $\nu\ll\mu$ then $\nu=f\mu$. Proved by maximising a sub-density; constructs conditional expectation.
+
+> [!tip] Unlocked: Conditional Expectation *(from Advanced Probability III)*
+> The Radon–Nikodym theorem is what *constructs* [[Def - Conditional Expectation|conditional expectation]] $\mathbb{E}[X\mid\mathcal{G}]$: given an integrable random variable $X$ on $(\Omega,\mathcal{F},\mathbb{P})$ and a sub-$\sigma$-algebra $\mathcal{G}\subseteq\mathcal{F}$, define $\nu(A)=\int_A X\,d\mathbb{P}$ for $A\in\mathcal{G}$. Then $\nu$ is a signed measure on $(\Omega,\mathcal{G})$ absolutely continuous with respect to $\mathbb{P}\big|_\mathcal{G}$, and its Radon–Nikodym derivative is, by definition, $\mathbb{E}[X\mid\mathcal{G}]$. Without this theorem, conditional expectation can only be defined in elementary special cases (discrete $\mathcal{G}$ or by Hilbert-space projection in $L^2$); Radon–Nikodym is what gives it general $L^1$-existence — see [[Advanced Probability III — Conditional Expectation]].
+
+> [!tip] Unlocked: Change of Probability Measure *(from Mathematical Finance)*
+> In financial mathematics one repeatedly changes from the **physical measure** $\mathbb{P}$ (under which prices have drift) to a **risk-neutral measure** $\mathbb{Q}$ (under which discounted prices are martingales). The connection is a Radon–Nikodym derivative: $\mathbb{Q}\ll\mathbb{P}$ and $d\mathbb{Q}/d\mathbb{P} = Z$ is the **Radon–Nikodym density** linking the two, with $\mathbb{E}_\mathbb{Q}[X] = \mathbb{E}_\mathbb{P}[XZ]$. **Girsanov's theorem** identifies $Z$ explicitly in the Brownian-motion setting and is the analytic engine of every no-arbitrage pricing argument and every importance-sampling Monte Carlo simulation. Likelihood ratios in statistics ($d\mathbb{P}_{\theta_1}/d\mathbb{P}_{\theta_0}$) and the Kullback–Leibler divergence $\int \log(d\mathbb{P}/d\mathbb{Q})\,d\mathbb{P}$ are the same object viewed from inference and information theory.
+
+> [!tip] Unlocked: Probability Densities *(from Statistics and Probability)*
+> A random variable $X$ on $\mathbb{R}$ has a **probability density function** $f_X$ exactly when its law $\mathbb{P}_X$ is absolutely continuous with respect to Lebesgue measure $\lambda$, and then $f_X = d\mathbb{P}_X/d\lambda$. This is the definition that *unifies* discrete distributions (densities against counting measure) and continuous distributions (densities against Lebesgue measure) into a single framework — every probability distribution is a Radon–Nikodym derivative against some natural reference. The **Lebesgue decomposition** $\mathbb{P}_X = \mathbb{P}_X^{ac} + \mathbb{P}_X^s$ then classifies distributions into "purely continuous" (has density) and "purely singular" (concentrated on a Lebesgue-null set, e.g. a Cantor distribution), and one can iterate the singular part into atomic plus singular-continuous to obtain the standard distribution-type trichotomy of probability theory.
 
 > [!note] Exercise Index — §4.2
 > [[Exercise Index - §4.2 Radon-Nikodym]]

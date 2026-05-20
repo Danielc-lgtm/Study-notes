@@ -54,6 +54,8 @@ Alternative: directly construct a branch of $\log z$ on a neighbourhood of $T$ a
 
 # Solution
 
+The proof breaks into two steps. Step 1 finds a star-shaped open neighbourhood of the triangle that excludes $0$, by picking a ray from $0$ in a direction not subtended by $T$ and removing it from the plane; Step 2 applies Cauchy's theorem (or Goursat) on this star-shaped slit plane, where $1/z$ has a primitive (a branch of $\log$). The non-obvious move is in Step 1 — the geometric argument that "does not enclose $0$" forces the angular set $\{\arg z : z \in T\}$ to be a proper closed subset of $S^1$, which is exactly what guarantees a clean ray.
+
 **Step 1: Find a star-shaped neighbourhood.**
 
 The triangle $T$ is a compact set in $\mathbb{C}^\times$ that does not enclose $0$. "Does not enclose" means $0$ is in the unbounded component of $\mathbb{C} \setminus T$ (or, equivalently, in the complement of the closed convex hull of $T$... actually we need care: "enclose" means $0$ is in the interior of $T$. Since $T$ is the closed triangle including its interior, "does not enclose $0$" means $0 \notin T$). Plus, since the interior of $T$ is bounded, "does not enclose $0$" means $0$ is in the exterior of the simple closed curve $\partial T$.

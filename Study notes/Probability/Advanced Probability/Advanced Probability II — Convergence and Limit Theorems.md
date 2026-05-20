@@ -40,6 +40,9 @@ The CLT is a [[Def - Weak Convergence|weak-convergence]] statement, so the chapt
 - **[[Def - Uniform Integrability]]**
 	- $\sup_i\mathbb{E}[|X_i|\mathbf{1}_{|X_i|>M}]\to0$ — the tail mass is uniformly negligible. The exact condition (with convergence in probability) for $L^1$-convergence ([[Thm - Vitali Convergence Theorem|Vitali]]). Supplied by domination, or $L^p$-boundedness for $p>1$; *not* by $L^1$-boundedness.
 
+> [!tip] Unlocked: Martingale Closure and Backward Martingales *(from Advanced Probability IV)*
+> Uniform integrability is the *exact* criterion for an $L^1$-bounded martingale to **close at infinity**: a UI martingale $(X_n)$ has an a.s.-and-$L^1$ limit $X_\infty$ with $X_n = \mathbb{E}[X_\infty\mid\mathcal{F}_n]$ ([[Thm - Lp and L1 Martingale Convergence]]). Without UI, an $L^1$-bounded martingale converges almost surely but the convergence need not be in $L^1$ and the limit need not be a conditional expectation of any single random variable. Likewise, the backward-martingale proof of the [[Thm - Strong Law of Large Numbers|strong law]] uses UI to upgrade a.s. convergence to $L^1$ convergence at the very last step.
+
 > [!note] Exercise Index — §2.1
 > [[Exercise Index - §2.1 Modes of Convergence]]
 
@@ -49,6 +52,9 @@ The CLT is a [[Def - Weak Convergence|weak-convergence]] statement, so the chapt
 	- $S_n/n\xrightarrow{\mathbb{P}}\mu$ for identically distributed, uncorrelated, finite-variance summands. One-line proof: averaging divides variance by $n$, [[Ex - Markov's inequality|Chebyshev]] turns vanishing variance into concentration.
 - **[[Thm - Strong Law of Large Numbers]]**
 	- $S_n/n\xrightarrow{\text{a.s.}}\mu$ for i.i.d. summands with $\mathbb{E}|X_1|<\infty$ — the rigorous law of averages. The [[Thm - Kolmogorov 0-1 Law|0–1 law]] makes the limit a constant; the [[Def - Martingale|backward-martingale]] structure identifies it as $\mu$. An elementary fourth-moment proof exists.
+
+> [!tip] Unlocked: The Ergodic Theorem and Glivenko–Cantelli *(from Ergodic Theory and Statistics)*
+> The SLLN is the i.i.d. special case of **Birkhoff's pointwise ergodic theorem**: for an ergodic measure-preserving transformation $T$ on $(\Omega,\mathcal{F},\mathbb{P})$ and integrable $f$, the time averages $\tfrac1n\sum_{k=0}^{n-1}f(T^k\omega)$ converge a.s. to the space average $\mathbb{E}f$. The proof template — the maximal-ergodic-inequality plus a dense class — is the *exact* dense-class-plus-maximal-inequality pattern from [[Measure Theory III — §3–4 Product Measures and Differentiation|Measure Theory III §4]]. Specialised to indicators of half-rays, the SLLN becomes the **Glivenko–Cantelli theorem**: the empirical distribution function $\hat F_n(t)=\tfrac1n\#\{i\le n: X_i\le t\}$ converges uniformly a.s. to the true distribution function — the foundational consistency result of nonparametric statistics.
 
 > [!note] Exercise Index — §2.2
 > [[Exercise Index - §2.2 Laws of Large Numbers]]
@@ -65,6 +71,15 @@ The CLT is a [[Def - Weak Convergence|weak-convergence]] statement, so the chapt
 	- $X_n\xrightarrow{d}X\iff\varphi_{X_n}\to\varphi_X$ pointwise (with the limit continuous at $0$). Reduces weak convergence to a pointwise computation; the bridge from characteristic functions back to probability.
 - **[[Thm - Central Limit Theorem]]**
 	- $\frac{S_n-n\mu}{\sigma\sqrt n}\xrightarrow{d}N(0,1)$ for i.i.d. finite-variance summands — the Gaussian as universal attractor. Proof: factor $\varphi$ by independence, Taylor-expand to second order, $(1-\frac{t^2}{2n})^n\to e^{-t^2/2}$, Lévy.
+
+> [!tip] Unlocked: Skorokhod's Representation Theorem *(from Probability Theory)*
+> Weak convergence $\mu_n\Rightarrow\mu$ is a statement about *laws*, not random variables — the $X_n$ defining $\mu_n$ may live on entirely different probability spaces. **Skorokhod's representation theorem** repairs this: whenever $\mu_n\Rightarrow\mu$ on a Polish space, one can construct random variables $\widetilde X_n,\widetilde X$ on a *single* probability space with $\widetilde X_n\sim\mu_n$, $\widetilde X\sim\mu$, and $\widetilde X_n\to\widetilde X$ almost surely. This couples weak convergence to a.s. convergence, and it is the technical lever that licenses passing limits through continuous functionals (the **continuous mapping theorem**) and obtaining a.s. corollaries of in-distribution statements.
+
+> [!tip] Unlocked: The Invariance Principle and Donsker's Theorem *(from Stochastic Processes)*
+> The CLT generalises from a single rescaled sum $S_n/\sqrt n$ to the entire **rescaled random walk path** $W_n(t)=S_{\lfloor nt\rfloor}/\sqrt n$, $t\in[0,1]$. **Donsker's invariance principle** asserts that $W_n$ converges in distribution, as random elements of $C[0,1]$, to **Brownian motion** — the standard continuous Gaussian path with independent stationary increments. The proof needs §2.3's full machinery: tightness on the path space via a moment estimate, Prokhorov for subsequential limits, finite-dimensional CLT to identify them. This is the functional CLT, and it is the construction of Brownian motion via random walks; Donsker's theorem is the bridge from discrete-time to continuous-time stochastic processes.
+
+> [!tip] Unlocked: Infinitely Divisible Distributions and Lévy Processes *(from Probability Theory)*
+> A characteristic function $\varphi$ such that every $\varphi^{1/n}$ is again a characteristic function is called **infinitely divisible**; the corresponding laws are exactly the possible limit laws of triangular-array sums (Khinchine), and they form the **Lévy–Khinchine class**, characterised by a triple (drift, Gaussian variance, jump measure). The CLT is the special case "Gaussian limit when only the variance part is non-zero"; Poisson limits appear when only the jump-measure part is non-zero; stable laws appear from heavy-tailed summands. The continuous-time stochastic processes with independent stationary increments — **Lévy processes** — are in bijection with infinitely divisible laws (their unit-time marginal), giving Brownian motion, Poisson processes, compound Poisson, and stable processes a unified treatment.
 
 > [!note] Exercise Index — §2.3
 > [[Exercise Index - §2.3 Weak Convergence and the CLT]]

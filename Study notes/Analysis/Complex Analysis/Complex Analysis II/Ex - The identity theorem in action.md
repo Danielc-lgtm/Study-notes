@@ -54,6 +54,8 @@ A point $z_\infty$ is an **accumulation point** of $S$ if every neighbourhood of
 
 # Solution
 
+The proof breaks into four short steps that verify the hypotheses of the identity theorem and then invoke it. Step 1 names the agreement set $S = \{1/n\}$; Step 2 checks that the tail of $S$ lies in the open $D$ using a small disc around $0$; Step 3 verifies that $0$ is an accumulation point of $S$ and lies *in* $D$; Step 4 applies the identity theorem. The non-obvious move is in Step 3 — the identity theorem's force depends on the accumulation point being *inside the domain*, not merely a limit of points in the domain, and the proof must check this explicitly.
+
 **Step 1: Identify the set of agreement.**
 
 Let $S = \{1/n : n = 1, 2, 3, \ldots\} = \{1, 1/2, 1/3, \ldots\}$. By hypothesis, $f(z) = g(z)$ for all $z \in S$.

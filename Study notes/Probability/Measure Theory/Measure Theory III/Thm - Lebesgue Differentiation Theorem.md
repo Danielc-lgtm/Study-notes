@@ -75,17 +75,29 @@ The architecture — dense class, then maximal inequality to kill the exceptiona
 > [!note]- Lemma 1: Vitali covering lemma
 > **Statement:** Let $\mathcal{F}$ be a family of balls in $\mathbb{R}^n$ with $\sup_{B\in\mathcal{F}}\operatorname{diam}B<\infty$. There is a countable *disjoint* subfamily $\mathcal{G}\subseteq\mathcal{F}$ with $\bigcup_{B\in\mathcal{F}}B\subseteq\bigcup_{B\in\mathcal{G}}\widehat B$, where $\widehat B$ is $B$ concentrically dilated by $5$.
 >
+> **Hint:** Greedy selection: at each step pick a ball of (nearly) maximal radius among those disjoint from all previously chosen; the factor $5$ exists so the triangle inequality forces any unchosen ball into a chosen dilate.
+>
+> **Why needed:** It is the combinatorial heart of the maximal inequality — converting an arbitrary cover by balls into a disjoint subcover whose dilates still cover, so volumes can be added without double-counting, at the price of a controllable dimensional constant $5^n$.
+>
 > > [!note]- Full proof
 > > Greedily select disjoint balls, at each stage taking one of (nearly) maximal radius among those disjoint from all chosen so far. Any $B_0\in\mathcal{F}$ meets some chosen $B$ of radius $\ge\frac12\operatorname{rad}B_0$ (else $B_0$ would have been selectable); then $B_0\subseteq\widehat B$ by the triangle inequality. $\square$
 
 > [!note]- Lemma 2: The maximal inequality
 > **Statement:** For $f\in L^1(\mathbb{R}^n)$, $a>0$: $\lambda(\{f^*>a\})\le\frac{5^n}{a}\|f\|_1$.
 >
+> **Hint:** For each $x$ in the bad set pick a witness ball with average exceeding $a$, then apply Lemma 1 to thin the cover to a disjoint subfamily whose $5$-dilates still cover.
+>
+> **Why needed:** This weak-$(1,1)$ bound on the Hardy-Littlewood maximal function is the substitute for an honest pointwise bound on averages, and it is what makes the density-of-$C_c$ approximation work: small $L^1$-error implies small bad-set measure for the averages, so the discrepancy $|\text{avg}-f|$ vanishes a.e. in the limit.
+>
 > > [!note]- Full proof
 > > For each $x$ with $f^*(x)>a$ pick a ball $B_x$ with $\frac{1}{\lambda(B_x)}\int_{B_x}|f|>a$, so $\lambda(B_x)<\frac1a\int_{B_x}|f|$. These balls cover $\{f^*>a\}$; by Lemma 1 extract disjoint $B_1,B_2,\dots$ with $5\times$-dilates covering. Then $\lambda(f^*>a)\le\sum_j\lambda(\widehat B_j)=5^n\sum_j\lambda(B_j)\le\frac{5^n}{a}\sum_j\int_{B_j}|f|\le\frac{5^n}{a}\|f\|_1$, the last step by disjointness. $\square$
 
 > [!note]- Lemma 3: The continuous case
 > **Statement:** For $g$ continuous, $\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}g\to g(x)$ at every $x$.
+>
+> **Hint:** Direct from continuity: $|g(y)-g(x)|<\varepsilon$ for $y$ close to $x$ forces the average over $B(x,r)$ to lie within $\varepsilon$ of $g(x)$ once $r$ is small.
+>
+> **Why needed:** This handles the dense subclass $C_c\subseteq L^1$. The Lebesgue Differentiation Theorem for general $f\in L^1$ then follows by the density strategy: approximate $f$ by continuous $g$ in $L^1$, use Lemma 3 to control the average of $g$, and use Lemma 2 to control the remainder $f-g$.
 >
 > > [!note]- Full proof
 > > Given $\varepsilon$, continuity gives $\delta$ with $|g(y)-g(x)|<\varepsilon$ for $|y-x|<\delta$; then for $r<\delta$, $|\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}g-g(x)|\le\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}|g-g(x)|<\varepsilon$. $\square$

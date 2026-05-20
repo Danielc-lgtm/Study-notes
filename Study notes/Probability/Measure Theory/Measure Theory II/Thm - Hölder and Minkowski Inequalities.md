@@ -75,17 +75,29 @@ The genuine ideas: (i) the **conjugate-exponent bookkeeping** $\tfrac1p+\tfrac1q
 > [!note]- Lemma 1: Young's inequality
 > **Statement:** $ab\le a^p/p+b^q/q$ for $a,b\ge0$, $1<p,q<\infty$, $\tfrac1p+\tfrac1q=1$.
 >
+> **Hint:** Apply concavity of $\log$ (equivalently, convexity of $-\log$) at $a^p$ and $b^q$ with weights $1/p$ and $1/q$ — this is the cleanest derivation and immediately exposes the equality condition $a^p=b^q$.
+>
+> **Why needed:** It is the scalar pointwise inequality that, after rescaling $\tilde f=f/\|f\|_p$ and $\tilde g=g/\|g\|_q$ and integrating, becomes Hölder. Without it Hölder has no pointwise input to integrate.
+>
 > > [!note]- Full proof
 > > If $a=0$ or $b=0$ trivial. Else, by convexity of $-\log$ on $(0,\infty)$ with weights $\tfrac1p+\tfrac1q=1$: $-\log\big(\tfrac1p a^p+\tfrac1q b^q\big)\le\tfrac1p(-\log a^p)+\tfrac1q(-\log b^q)=-\log a-\log b=-\log(ab)$. Since $-\log$ is decreasing, $\tfrac1p a^p+\tfrac1q b^q\ge ab$. Equality in convexity iff $a^p=b^q$. $\square$
 
 > [!note]- Lemma 2: Hölder's inequality
 > **Statement:** $\int|fg|\,d\mu\le\|f\|_p\|g\|_q$.
 >
+> **Hint:** Normalise $\tilde f=f/\|f\|_p$ and $\tilde g=g/\|g\|_q$ so both have unit norm, apply Young pointwise, then integrate to get $\int|\tilde f\tilde g|\le 1$.
+>
+> **Why needed:** Hölder is the workhorse: with the substitution $|f+g|^{p-1}\in L^q$ (using $(p-1)q=p$), it bounds each of the two terms $\int|f|\,|f+g|^{p-1}$ and $\int|g|\,|f+g|^{p-1}$ that arise when expanding $|f+g|^p$, which is exactly what Minkowski needs.
+>
 > > [!note]- Full proof
 > > If $p=1,q=\infty$: $|fg|\le|f|\,\|g\|_\infty$ a.e., integrate. For $1<p,q<\infty$: if $\|f\|_p$ or $\|g\|_q$ is $0$ or $\infty$ the inequality is trivial; otherwise set $\tilde f=f/\|f\|_p$, $\tilde g=g/\|g\|_q$. By Lemma 1 pointwise, $|\tilde f\tilde g|\le\tfrac1p|\tilde f|^p+\tfrac1q|\tilde g|^q$; integrate: $\int|\tilde f\tilde g|\le\tfrac1p\|\tilde f\|_p^p+\tfrac1q\|\tilde g\|_q^q=\tfrac1p+\tfrac1q=1$. Multiply by $\|f\|_p\|g\|_q$. $\square$
 
 > [!note]- Lemma 3: Minkowski's inequality
 > **Statement:** $\|f+g\|_p\le\|f\|_p+\|g\|_p$.
+>
+> **Hint:** Write $|f+g|^p\le(|f|+|g|)|f+g|^{p-1}$ and apply Hölder to each summand with conjugate exponents $(p,q)$, exploiting $(p-1)q=p$ so that $|f+g|^{p-1}\in L^q$ with norm $\|f+g\|_p^{p-1}$.
+>
+> **Why needed:** Minkowski is the triangle inequality for $\|\cdot\|_p$ — without it $L^p$ is not a normed space and the whole machinery of completeness, duality, and Banach-space methods on $L^p$ collapses.
 >
 > > [!note]- Full proof
 > > $p\in\{1,\infty\}$: from $|f+g|\le|f|+|g|$, integrate or take ess-sup. $1<p<\infty$: $\|f+g\|_p^p=\int|f+g|^p\le\int(|f|+|g|)|f+g|^{p-1}=\int|f|\,|f+g|^{p-1}+\int|g|\,|f+g|^{p-1}$. Apply Lemma 2 to each term with exponents $p,q$: $|f+g|^{p-1}\in L^q$ since $(p-1)q=p$ and $\big\||f+g|^{p-1}\big\|_q=\|f+g\|_p^{p/q}=\|f+g\|_p^{p-1}$. So $\|f+g\|_p^p\le(\|f\|_p+\|g\|_p)\|f+g\|_p^{p-1}$. If $\|f+g\|_p\in(0,\infty)$ divide; the cases $0,\infty$ are direct. $\square$

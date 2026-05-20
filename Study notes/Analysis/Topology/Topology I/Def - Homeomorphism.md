@@ -59,6 +59,16 @@ Two topological spaces $X$ and $Y$ are **homeomorphic**, written $X \cong Y$ or 
 
 ---
 
+# Categorical Definition
+
+A homeomorphism is precisely an **isomorphism in the category $\mathbf{Top}$**. The vocabulary: in any category $\mathcal{C}$, an *isomorphism* is an arrow $f : X \to Y$ that admits an arrow $g : Y \to X$ — also a morphism of the category — such that $g \circ f = \mathrm{id}_X$ and $f \circ g = \mathrm{id}_Y$. The two-sided-inverse condition is what distinguishes "isomorphism" from "bijection": isomorphism demands that the inverse exist *as an arrow of the same category*, not merely as a set-theoretic inverse function. Applied to $\mathbf{Top}$, whose arrows are [[Def - Continuous Map|continuous maps]], a categorical isomorphism is a continuous map $f : X \to Y$ admitting a continuous two-sided inverse — which is exactly the three-clause definition above.
+
+This categorical formulation immediately explains the asymmetry that the winding-map counterexample exposed. In the category $\mathbf{Set}$, where the arrows are *all* functions, every bijection is an isomorphism, because the set-theoretic inverse is automatically an arrow (every function is). But in a category with structured arrows — $\mathbf{Top}$, $\mathbf{Grp}$, $\mathbf{Ring}$, $\mathbf{Mod}_R$ — "set-theoretic inverse exists" and "set-theoretic inverse is an arrow" are *different* conditions, and only the latter gives an isomorphism. The phenomenon "continuous bijection need not be a homeomorphism" is the topological face of "the forgetful functor $\mathbf{Top} \to \mathbf{Set}$ does not reflect isomorphisms". The forgetful functors $\mathbf{Grp} \to \mathbf{Set}$ and $\mathbf{Ring} \to \mathbf{Set}$ *do* reflect isomorphisms (a bijective group or ring homomorphism is automatically an isomorphism), and that algebraic peculiarity is itself a special fact about purely algebraic categories.
+
+From the [[Def - Topological Space#Categorical Definition|frame perspective]], a homeomorphism corresponds to an **isomorphism of frames** $f^{-1} : \tau_Y \xrightarrow{\sim} \tau_X$ — a bijection of open-set lattices preserving arbitrary joins and finite meets in both directions. The two topologies are equal *as lattices*, with the points merely relabelled. Homeomorphism invariants — connectedness, compactness, Hausdorffness, the fundamental group — are then exactly the properties of the frame that survive frame isomorphism, which is precisely why they are computable from the open-set lattice without reference to the underlying point set.
+
+---
+
 # Relate to Other Fields / Compression
 
 A homeomorphism is the **isomorphism** in the category $\mathsf{Top}$ of topological spaces and continuous maps. The notion is *strictly* parallel to:

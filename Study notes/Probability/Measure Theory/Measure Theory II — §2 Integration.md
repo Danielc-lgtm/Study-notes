@@ -105,6 +105,9 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 - **[[Thm - Vitali Convergence Theorem]]**
 	- On a finite-measure space, $f_n\to f$ in $L^1$ **iff** $f_n\xrightarrow{\mu}f$ and $(f_n)$ is uniformly integrable. The *exact* characterisation of $L^1$-convergence: convergence in measure (closeness) plus uniform integrability (no escape). DCT is the special case "dominated $\Rightarrow$ UI."
 
+> [!tip] Unlocked: Uniform Integrability and Martingale Closure *(from Advanced Probability IV)*
+> Uniform integrability is the exact condition for an $L^1$-bounded martingale to **close at infinity** — to have an $L^1$-limit $X_\infty$ such that $X_n = \mathbb{E}[X_\infty\mid\mathcal{F}_n]$, recovering the martingale as conditional expectations of a single random variable. The criterion is decisive in option pricing and in statistical-inference proofs: a martingale that is merely $L^1$-bounded need not close, but a uniformly integrable one does. The Vitali theorem is the analytic core of this closure statement.
+
 > [!note] Exercise Index — §2.5
 > [[Exercise Index - §2.5 Vitali's Theorem]]
 
@@ -116,6 +119,14 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 	- Hölder $\int|fg|\le\|f\|_p\|g\|_q$ (the $L^p$–$L^q$ pairing, Cauchy–Schwarz at $p=q=2$); Minkowski $\|f+g\|_p\le\|f\|_p+\|g\|_p$ (the triangle inequality, making $\|\cdot\|_p$ a norm). Both are convexity statements — Young's inequality, $t\mapsto t^p$ — run through the integral.
 - **[[Thm - Completeness of Lp Spaces]]**
 	- $L^p(\mu)$ is complete: every Cauchy sequence converges (Riesz–Fischer). Proved by extracting a rapidly-Cauchy subsequence, dominating it by the sum of its gaps, and invoking DCT. Completeness of $\mathbb{R}$ transmitted through the integral; what makes $L^p$ a Banach space.
+
+> [!tip] Unlocked: Banach Spaces and Dual Spaces *(from Functional Analysis)*
+> The completeness of $L^p$ makes it a **Banach space** — a complete normed vector space — and $L^p$ for $1<p<\infty$ is the prototypical example. The Hölder inequality identifies the **dual space** $(L^p)^* \cong L^q$ where $\tfrac{1}{p}+\tfrac{1}{q}=1$: every continuous linear functional on $L^p$ is integration against an $L^q$ function. This $L^p$–$L^q$ duality is the structural input to the Hahn–Banach theorem in concrete form, to the weak-$*$ topology on $L^\infty$, and to every convex-duality argument in optimal transport, calculus of variations, and convex analysis.
+>
+> The case $p=2$ is more: $L^2$ is a **Hilbert space** under the inner product $\langle f,g\rangle = \int f\bar g\,d\mu$, with $(L^2)^*\cong L^2$ self-dually via Riesz representation. The orthogonal-projection structure of a Hilbert space *is* conditional expectation in [[Advanced Probability III — Conditional Expectation|Advanced Probability III]] — and Plancherel's theorem for the Fourier transform, the spectral theorem for self-adjoint operators, and the entire theory of orthogonal polynomials live in $L^2$. $L^2$ is the central object of analysis, and §2.6 is where it is constructed.
+
+> [!tip] Unlocked: Interpolation Theory *(from Harmonic Analysis)*
+> Hölder's inequality, applied with care, gives the **log-convexity of $L^p$-norms**: $\|f\|_p$ is a log-convex function of $1/p$, so a function in two $L^p$ spaces lies in every intermediate $L^p$. This baby case is the seed of two profound theorems: the **Riesz–Thorin interpolation theorem** (a linear operator bounded on $L^{p_0}$ and on $L^{p_1}$ is automatically bounded on every $L^p$ in between, with norm controlled by log-convexity) and the **Marcinkiewicz interpolation theorem** (the same conclusion from weaker hypotheses — boundedness on $L^p$-weak). These two theorems are the engine of harmonic analysis: every singular-integral or maximal-function bound is obtained by interpolating between a trivial $L^2$-estimate and a delicate weak $L^1$-estimate.
 
 > [!note] Exercise Index — §2.6
 > [[Exercise Index - §2.6 Lp Spaces]]

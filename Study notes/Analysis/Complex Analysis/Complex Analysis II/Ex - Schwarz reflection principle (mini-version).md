@@ -60,6 +60,8 @@ The conjugate of a holomorphic function is *anti-holomorphic*; but $z \mapsto \o
 
 # Solution
 
+The proof breaks into four steps that build the extension by reflection and verify holomorphy via Morera. Step 1 shows the reflection $g(z) = \overline{f(\bar z)}$ is holomorphic on the lower half-disc (the double-conjugation trick); Step 2 defines $\tilde f$ piecewise; Step 3 checks continuity across the real diameter using $f(x) \in \mathbb{R}$; Step 4 applies Morera by analysing triangles that lie in one half versus triangles that cross the axis. The non-obvious move is in Step 4 — for triangles crossing the axis, splitting into upper and lower polygons and using boundary-continuity limits is what closes the argument, because Goursat alone only handles the interior.
+
 **Step 1: Check the reflection $g(z) := \overline{f(\bar z)}$ is holomorphic on $D^-$.**
 
 Let $z \in D^-$. Then $\bar z \in D^+$, so $f(\bar z)$ is defined. Compute:

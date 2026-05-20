@@ -37,6 +37,12 @@ The chapter develops the calculus: the [[Def - Filtration|filtration]] (accumula
 - **[[Def - Martingale]]**
 	- An adapted integrable process with $\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n$ — a fair game; super-/sub- for unfavourable/favourable. Conditional expectation iterated along a filtration; the tower property in motion. A convex function of a martingale is a submartingale.
 
+> [!tip] Unlocked: Continuous-Time Martingales and Itô Calculus *(from Stochastic Analysis)*
+> Filtrations and martingales generalise from the discrete index $n\in\mathbb{N}$ to the continuous index $t\in[0,\infty)$, producing **continuous-time martingales**: $\mathbb{E}[X_t\mid\mathcal{F}_s]=X_s$ for $s\le t$. **Brownian motion** $B_t$ is the canonical example, and the **Itô stochastic integral** $\int_0^t H_s\,dB_s$ is built so that the integral against any predictable integrand remains a martingale — the fundamental property that makes Itô calculus the calculus of fair games. Itô's formula, the change-of-variables rule, is the chain rule respecting the quadratic-variation correction $dt$, and the entire theory of **stochastic differential equations** and **mathematical finance** is erected on it. Discrete-time martingales are the indispensable training ground.
+
+> [!tip] Unlocked: Harmonic Functions and the Martingale Problem *(from Markov Processes and PDE)*
+> A function $h:S\to\mathbb{R}$ is **harmonic** for a Markov chain with transition kernel $P$ if $h(X_n)$ is a martingale under every starting point — equivalently $Ph = h$ ($h$ is in the kernel of the discrete Laplacian $I-P$). This is the discrete version of $\Delta h = 0$, and the martingale convergence theorem applied to $h(X_n)$ gives the **maximum principle** and Liouville-type theorems for the chain. The **martingale problem** of Stroock–Varadhan characterises a continuous-time Markov process as the unique solution to "$f(X_t) - \int_0^t Lf(X_s)\,ds$ is a martingale for every $f$ in the domain of the generator $L$" — converting the analytic problem of solving a PDE into the probabilistic problem of constructing a martingale.
+
 > [!note] Exercise Index — §4.1
 > [[Exercise Index - §4.1 Filtrations and Martingales]]
 
@@ -46,6 +52,12 @@ The chapter develops the calculus: the [[Def - Filtration|filtration]] (accumula
 	- A random time $T$ with $\{T\le n\}\in\mathcal{F}_n$ — decidable from current information, non-anticipating. Hitting times are stopping times; last-exit times are not. The stopped process and $\mathcal{F}_T$ are built on it.
 - **[[Thm - Optional Stopping Theorem]]**
 	- A martingale stopped at a stopping time is a martingale; for $T$ bounded (or a.s. finite with the stopped process uniformly integrable), $\mathbb{E}[X_T]=\mathbb{E}[X_0]$ — fairness survives random stopping. The tool that computes hitting probabilities and times.
+
+> [!tip] Unlocked: Gambler's Ruin and Wald's Identities *(from Probability and Random Walks)*
+> Applied to the simple random walk $S_n$ on $\{0,1,\dots,N\}$ with absorbing boundaries, optional stopping at the exit time $T$ instantly yields the **gambler's ruin formula**: the probability of ruin starting from $k$ is $(N-k)/N$ for the fair walk, and $((q/p)^k - (q/p)^N)/(1 - (q/p)^N)$ for the biased walk (using $(q/p)^{S_n}$ as the geometric martingale). The compensated-square martingale $S_n^2 - n$ then gives the **expected exit time** $k(N-k)$. **Wald's identity** $\mathbb{E}[S_T] = \mathbb{E}[T]\mathbb{E}[X_1]$ for any stopping time of finite expectation is the same calculation applied to $S_n - n\mu$; **Wald's second identity** gives $\mathbb{E}[(S_T - T\mu)^2]=\sigma^2\mathbb{E}[T]$ from the compensated square. These are the foundation of sequential analysis in statistics and of every queueing-theory mean-value calculation.
+
+> [!tip] Unlocked: American Option Pricing and Snell Envelopes *(from Mathematical Finance)*
+> An **American option** can be exercised at any stopping time $\tau\le T$, and its fair price is $\sup_\tau \mathbb{E}^\mathbb{Q}[e^{-r\tau}\,\text{payoff}(\tau)]$ under a risk-neutral measure $\mathbb{Q}$ — an *optimal stopping* problem. The solution is the **Snell envelope**, the smallest supermartingale dominating the payoff process, and the optimal stopping time is the first hitting time of the set where the envelope equals the payoff. The whole theory rests on the optional-stopping theorem applied to the Snell envelope: at the optimal stopping time fairness becomes equality, at suboptimal stopping times it becomes inequality. This is the discrete analogue of the free-boundary PDE arising in continuous-time American option pricing, and it is also the structural framework of **dynamic programming** more generally.
 
 > [!note] Exercise Index — §4.2
 > [[Exercise Index - §4.2 Stopping Times and Optional Stopping]]

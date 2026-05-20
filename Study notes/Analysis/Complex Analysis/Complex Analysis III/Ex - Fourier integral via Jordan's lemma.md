@@ -64,6 +64,8 @@ Jordan's lemma: if $f$ is holomorphic on $\{|z| > R_0\}$ in the upper half-plane
 
 # Solution
 
+The proof breaks into four steps. Step 1 promotes the real integrand $\cos x/(1+x^2)$ to the complex $e^{iz}/(1+z^2)$, using $\cos x = \operatorname{Re}(e^{ix})$; Step 2 closes the contour with the upper semicircle and applies the residue theorem, picking up the pole at $z = i$; Step 3 invokes Jordan's lemma to show the semicircle integral vanishes; Step 4 takes the real part of $\pi/e$. The non-obvious move is in Step 1 — switching to $e^{iz}$ (and choosing the upper half-plane) is what makes Jordan's lemma applicable, because the bare $\cos$ has no decay in either half-plane.
+
 **Step 1: Setup — extend to the complex plane**
 
 Recognize $\cos x = \operatorname{Re}(e^{ix})$, so

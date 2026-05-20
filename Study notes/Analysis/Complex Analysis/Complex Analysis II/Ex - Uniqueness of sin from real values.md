@@ -55,6 +55,8 @@ More precisely: if $g : \mathbb{C} \to \mathbb{C}$ is entire and $g(x) = \sin x$
 
 # Solution
 
+The proof is the canonical "difference of two candidates vanishes on a set with an accumulation point" pattern, in three steps. Step 1 builds the entire difference $h = g - \sin$ and verifies it vanishes on $\mathbb{R}$ via Euler's formula identifying complex and real sine on the real axis; Step 2 notes that every real point is an accumulation point of $\mathbb{R}$ in $\mathbb{C}$; Step 3 applies the identity theorem to conclude $h \equiv 0$. The non-obvious point is that the *complex* sine genuinely agrees with the real sine on $\mathbb{R}$ — without that, the identity theorem would be applied to a different agreement set.
+
 **Step 1: Define $h$ and verify properties.**
 
 Let $h(z) := g(z) - \sin z$. Both $g$ and $\sin$ are entire (by hypothesis and by definition), so $h$ is entire.

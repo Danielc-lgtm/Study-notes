@@ -85,6 +85,10 @@ Two non-obvious moves. (i) The **right object to maximise**: not "a density" dir
 > [!note]- Lemma 1: The sub-density family has a maximiser
 > **Statement:** $\mathcal{G}=\{g\ge0:\int_A g\,d\mu\le\nu(A)\,\forall A\}$ is closed under $\vee$, and $f:=\lim_n(g_1\vee\cdots\vee g_n)$ with $\int g_n\to M=\sup_\mathcal{G}\int g\,d\mu$ satisfies $f\in\mathcal{G}$, $\int f\,d\mu=M$.
 >
+> **Hint:** Closure under $\vee$ follows by splitting the integration domain along $\{g>h\}$ and $\{g\le h\}$; then take a maximising sequence, replace it by its running maxima (still in $\mathcal{G}$, still bounded by $\nu$), and pass to the limit via MCT.
+>
+> **Why needed:** This produces the candidate density $f$ — the largest "sub-density" of $\nu$ relative to $\mu$. Once $f$ is in hand, the remainder $\nu-f\mu$ must be singular (Lemma 2), giving the Lebesgue decomposition with $f$ as the Radon-Nikodym derivative of the absolutely continuous part.
+>
 > > [!note]- Full proof
 > > For $g,h\in\mathcal{G}$, $\int_A(g\vee h)=\int_{A\cap\{g>h\}}g+\int_{A\cap\{g\le h\}}h\le\nu(A\cap\{g>h\})+\nu(A\cap\{g\le h\})=\nu(A)$, so $g\vee h\in\mathcal{G}$. The functions $h_n=g_1\vee\cdots\vee g_n$ increase, lie in $\mathcal{G}$, with $\int h_n\ge\int g_n\to M$; by [[Thm - Monotone Convergence Theorem|MCT]], $f=\lim h_n$ has $\int_A f=\lim\int_A h_n\le\nu(A)$, so $f\in\mathcal{G}$, and $\int f=M$. $\square$
 
@@ -92,6 +96,8 @@ Two non-obvious moves. (i) The **right object to maximise**: not "a density" dir
 > **Statement:** $\nu_s=\nu-f\mu$ satisfies $\nu_s\perp\mu$.
 >
 > **Hint:** If not, Hahn-decompose $\nu_s-\varepsilon\mu$ to find a set on which the density can be enlarged.
+>
+> **Why needed:** Once $\nu_s\perp\mu$, the decomposition $\nu=f\mu+\nu_s$ is the Lebesgue decomposition of $\nu$ into an absolutely-continuous-with-respect-to-$\mu$ part (with density $f$) and a singular part. Under the hypothesis $\nu\ll\mu$ of Radon-Nikodym, the singular part vanishes and $\nu=f\mu$.
 >
 > > [!note]- Full proof
 > > $\nu_s\ge0$ since $f\in\mathcal{G}$. Suppose $\nu_s\not\perp\mu$. For each $n$ let $(P_n,N_n)$ be a [[Thm - Hahn and Jordan Decomposition|Hahn decomposition]] of the signed measure $\nu_s-\tfrac1n\mu$, and $P=\bigcup_n P_n$. On $N=\bigcap N_n=P^c$, $\nu_s\le\tfrac1n\mu$ for all $n$, so $\nu_s(N)=0$; if also $\mu(P)=0$ then $\nu_s\perp\mu$ — contrary to assumption. So $\mu(P)>0$, hence $\mu(P_{n_0})>0$ for some $n_0$, and on $P_{n_0}$, $\nu_s\ge\tfrac1{n_0}\mu$. Then $f+\tfrac1{n_0}\mathbf{1}_{P_{n_0}}$ still lies in $\mathcal{G}$ (its excess over $f\mu$ on any $A$ is $\le\nu_s(A\cap P_{n_0})$), yet has integral $M+\tfrac1{n_0}\mu(P_{n_0})>M$ — contradicting maximality. So $\nu_s\perp\mu$. $\square$

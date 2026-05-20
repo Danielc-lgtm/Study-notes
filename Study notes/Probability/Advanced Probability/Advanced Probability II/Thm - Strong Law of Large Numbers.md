@@ -71,11 +71,19 @@ Unlike the [[Thm - Weak Law of Large Numbers|weak law]], the strong law is genui
 > [!note]- Lemma 1: The sample mean is a backward martingale
 > **Statement:** With $\mathcal{G}_n=\sigma(S_n,S_{n+1},\dots)$, $\mathbb{E}[X_1\mid\mathcal{G}_n]=S_n/n$.
 >
+> **Hint:** Use exchangeability — conditioning on the symmetric statistic $S_n$ makes $X_1,\dots,X_n$ have identical conditional law, so averaging $n$ identical conditional expectations recovers $S_n/n$.
+>
+> **Why needed:** Recognising $S_n/n$ as a (backward) martingale is the *unifying frame* of this proof: convergence then comes for free from the backward martingale convergence theorem, with no quantitative truncation/variance argument needed (unlike Kolmogorov's original proof).
+>
 > > [!note]- Full proof
 > > Given $S_n$, the summands $X_1,\dots,X_n$ are *exchangeable* (i.i.d. $\Rightarrow$ their joint law is invariant under permutation, and conditioning on the symmetric function $S_n$ preserves this). So $\mathbb{E}[X_k\mid\mathcal{G}_n]$ is the same for all $k\le n$; averaging, $\mathbb{E}[X_k\mid\mathcal{G}_n]=\frac1n\mathbb{E}[\sum_{j\le n}X_j\mid\mathcal{G}_n]=\frac1n\mathbb{E}[S_n\mid\mathcal{G}_n]=S_n/n$. Adding $X_{n+1},\dots$ as "independent information" does not change this, so $(S_n/n)$ is a backward martingale for the decreasing filtration $(\mathcal{G}_n)$. $\square$
 
 > [!note]- Lemma 2: Identification of the limit
 > **Statement:** The backward-martingale limit equals $\mu$.
+>
+> **Hint:** The tail $\sigma$-algebra $\mathcal{G}_\infty=\bigcap_n\sigma(S_n,S_{n+1},\dots)$ is contained in the i.i.d. tail $\sigma$-algebra, which is trivial by Kolmogorov's 0-1 law; conditional expectation with respect to a trivial $\sigma$-algebra collapses to the unconditional expectation.
+>
+> **Why needed:** The backward martingale convergence theorem only tells you that $S_n/n$ converges — it does not say *what* the limit is. This lemma pins the limit down as the deterministic constant $\mu$, which is the entire conclusion of SLLN.
 >
 > > [!note]- Full proof
 > > The backward martingale convergence theorem gives $S_n/n=\mathbb{E}[X_1\mid\mathcal{G}_n]\to\mathbb{E}[X_1\mid\mathcal{G}_\infty]$ a.s. and in $L^1$, where $\mathcal{G}_\infty=\bigcap_n\mathcal{G}_n$. By the [[Thm - Kolmogorov 0-1 Law|Kolmogorov 0–1 law]], $\mathcal{G}_\infty$ (the tail $\sigma$-algebra) is trivial, so $\mathbb{E}[X_1\mid\mathcal{G}_\infty]$ is a.s. the constant $\mathbb{E}[X_1]=\mu$. $\square$

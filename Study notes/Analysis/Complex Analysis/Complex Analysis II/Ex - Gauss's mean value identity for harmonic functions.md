@@ -53,6 +53,8 @@ That is, the value at the centre equals the average over any surrounding circle.
 
 # Solution
 
+The proof breaks into three steps. Step 1 promotes the harmonic $u$ to a holomorphic $f = u + iv$ on a slightly larger disc using the existence of a harmonic conjugate on a simply connected domain; Step 2 invokes the mean value property for holomorphic functions, which gives a complex-valued identity at the centre $a$; Step 3 takes real parts to extract the harmonic statement. The non-obvious move is in Step 1 — recognizing that the harmonic mean value property is just MVP for $f$ in disguise, and that the harmonic conjugate is the bridge.
+
 **Step 1: Harmonic conjugate.**
 
 Since $\overline{D(a, r)} \subseteq \Omega$ and $\Omega$ open, there is a slightly larger disc $D(a, R)$ with $r < R$ and $D(a, R) \subseteq \Omega$. The disc $D(a, R)$ is simply connected, so the harmonic $u$ has a harmonic conjugate $v$ on $D(a, R)$: $v$ is harmonic, and $f := u + iv$ is holomorphic on $D(a, R)$.

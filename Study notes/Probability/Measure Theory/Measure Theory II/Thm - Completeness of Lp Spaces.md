@@ -76,11 +76,19 @@ The whole proof is one strategic idea — **pass to a rapidly-Cauchy subsequence
 > [!note]- Lemma 1: A rapidly-Cauchy subsequence has an $L^p$ dominator
 > **Statement:** If $\|f_{n_{k+1}}-f_{n_k}\|_p\le2^{-k}$, then $g=\sum_k|f_{n_{k+1}}-f_{n_k}|$ satisfies $\|g\|_p\le1$, so $g\in L^p$ and $g<\infty$ a.e.
 >
+> **Hint:** Bound each term of the series by $2^{-k}$ so the partial sums are Minkowski-controlled by the geometric series $\sum 2^{-k}=1$, then push the bound through monotone convergence.
+>
+> **Why needed:** The dominator $g$ is the universal envelope of the telescoping series: it makes the rearranged tail $|f-f_{n_k}|\le\sum_{j\ge k}|f_{n_{j+1}}-f_{n_j}|\le g$ pointwise, supplying the integrable bound that DCT requires in Lemma 2.
+>
 > > [!note]- Full proof
 > > Let $g_m=\sum_{k=1}^m|f_{n_{k+1}}-f_{n_k}|\uparrow g$. By [[Thm - Hölder and Minkowski Inequalities|Minkowski]], $\|g_m\|_p\le\sum_{k=1}^m\|f_{n_{k+1}}-f_{n_k}\|_p\le\sum_{k=1}^\infty2^{-k}=1$. By [[Thm - Monotone Convergence Theorem|MCT]] ($g_m^p\uparrow g^p$), $\|g\|_p^p=\lim\|g_m\|_p^p\le1$. So $g\in L^p$; an $L^p$ function is finite a.e. (else $\int g^p=\infty$). $\square$
 
 > [!note]- Lemma 2: Pointwise limit and $L^p$ convergence of the subsequence
 > **Statement:** $f_{n_k}$ converges a.e. to a measurable $f\in L^p$, and $\|f-f_{n_k}\|_p\to0$.
+>
+> **Hint:** Use absolute convergence in the complete field $\mathbb{R}$ at each $x$ with $g(x)<\infty$ to produce $f(x)$, then control the $L^p$-distance via DCT with dominator $g^p$.
+>
+> **Why needed:** This is the actual completeness conclusion for the subsequence; once $f_{n_k}\to f$ in $L^p$, a Cauchy-plus-convergent-subsequence argument upgrades it to $f_n\to f$ in $L^p$ for the original sequence, which is the theorem.
 >
 > > [!note]- Full proof
 > > Where $g(x)<\infty$ (a.e., by Lemma 1) the telescoping series $f_{n_1}(x)+\sum_k(f_{n_{k+1}}(x)-f_{n_k}(x))$ is absolutely convergent in the complete field $\mathbb{R}$, so $f(x)=\lim_k f_{n_k}(x)$ exists; set $f=0$ on the null exceptional set. Then $|f-f_{n_k}|=|\sum_{j\ge k}(f_{n_{j+1}}-f_{n_j})|\le g$, so $f\in L^p$ ($|f|\le|f_{n_1}|+g$) and $|f-f_{n_k}|^p\le g^p\in L^1$ with $|f-f_{n_k}|^p\to0$ a.e. [[Thm - Dominated Convergence Theorem|DCT]] gives $\|f-f_{n_k}\|_p^p\to0$. $\square$

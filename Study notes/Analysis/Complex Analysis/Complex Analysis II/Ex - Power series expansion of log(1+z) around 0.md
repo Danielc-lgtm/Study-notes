@@ -54,6 +54,8 @@ Find the power series expansion of $f(z) = \operatorname{Log}(1 + z)$ around $z 
 
 # Solution
 
+The route is "differentiate, expand the derivative as a geometric series, then integrate termwise." Step 1 differentiates $\operatorname{Log}(1+z)$ to $1/(1+z)$; Step 2 expands this as $\sum (-1)^n z^n$ for $|z| < 1$; Step 3 integrates termwise; Step 4 fixes the integration constant using $f(0) = 0$; Steps 5–6 conclude the formula and identify the radius of convergence as the distance to the singularity at $z = -1$. The non-obvious move is in Step 3 — termwise integration produces a power series with the same radius of convergence, an instance of the general principle that integration and differentiation of power series are termwise legal inside the disc of convergence.
+
 **Step 1: Differentiate.**
 
 By the chain rule and $\operatorname{Log}'(w) = 1/w$:

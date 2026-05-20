@@ -54,6 +54,8 @@ Show that $g$ is holomorphic on $\mathbb{C} \setminus [0, 1]$, and compute its d
 
 # Solution
 
+The proof breaks into five short steps that together verify the hypotheses of the parameter-dependent holomorphy theorem and then read off the derivative. Steps 1–3 identify the integrand $\varphi(z,t) = \phi(t)/(t-z)$ and check that it is continuous in $(z,t)$ on the relevant domain and holomorphic in $z$ for each fixed $t$; Step 4 invokes [[Thm - Holomorphic Dependence on a Parameter]] to conclude holomorphy of $g$; Step 5 differentiates under the integral sign to obtain $g'(z) = \int \phi(t)/(t-z)^2\,dt$. The non-obvious move is in Step 2 — controlling the singular denominator uniformly using $\text{dist}(z, [0,1]) > 0$, which is what fails as $z$ approaches the path.
+
 **Step 1: Setup and identify $\varphi$.**
 
 The integrand is $\varphi(z, t) := \phi(t)/(t - z)$, considered as a function of $(z, t)$ with $z \in \mathbb{C} \setminus [0, 1]$ and $t \in [0, 1]$.
