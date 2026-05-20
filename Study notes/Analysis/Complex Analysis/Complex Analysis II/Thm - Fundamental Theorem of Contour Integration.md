@@ -14,6 +14,14 @@ $U \subseteq \mathbb{C}$ open; $f : U \to \mathbb{C}$ continuous; $F : U \to \ma
 
 ---
 
+# Statement
+
+> **Theorem (fundamental theorem of contour integration).** Let $U \subseteq \mathbb{C}$ be open, $f : U \to \mathbb{C}$ continuous, and $F : U \to \mathbb{C}$ a primitive of $f$ on $U$ (i.e., $F$ holomorphic with $F'(z) = f(z)$ for all $z \in U$). Then for every piecewise $C^1$ curve $\gamma : [a, b] \to U$:
+> $$\int_\gamma f(z)\,dz = F(\gamma(b)) - F(\gamma(a)).$$
+> In particular, the integral depends only on the endpoints of $\gamma$, and $\int_\gamma f(z)\,dz = 0$ for every closed piecewise $C^1$ curve $\gamma$ in $U$.
+
+---
+
 # Motivation
 
 The complex analog of the fundamental theorem of calculus. In real one-variable analysis, $\int_a^b f(x)\,dx = F(b) - F(a)$ where $F' = f$. The complex version: $\int_\gamma f\,dz = F(\gamma(b)) - F(\gamma(a))$, where the integral is along *any* curve $\gamma$ from $\gamma(a)$ to $\gamma(b)$ in $U$. The integral depends only on the endpoints, not on the path — *provided $f$ has a primitive on $U$*. This is the "path-independence" theorem.

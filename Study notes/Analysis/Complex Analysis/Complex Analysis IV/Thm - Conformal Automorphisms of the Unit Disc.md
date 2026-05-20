@@ -14,6 +14,14 @@ $\mathbb{D} = \{z : |z| < 1\}$ is the open unit disc. $\operatorname{Aut}(\mathb
 
 ---
 
+# Statement
+
+> **Theorem (Conformal Automorphisms of the Unit Disc).** A holomorphic map $f : \mathbb{D} \to \mathbb{D}$ is a biholomorphic automorphism if and only if there exist $\theta \in \mathbb{R}$ and $a \in \mathbb{D}$ such that
+> $$f(z) = e^{i\theta}\,\frac{z - a}{1 - \bar a\, z}, \qquad z \in \mathbb{D}.$$
+> Equivalently, $\operatorname{Aut}(\mathbb{D})$ consists exactly of the compositions of rotations $z \mapsto e^{i\theta}z$ and Blaschke factors $B_a(z) = (z - a)/(1 - \bar a z)$, and is a real $3$-parameter Lie group isomorphic to $\operatorname{PSU}(1,1) \cong \operatorname{PSL}_2(\mathbb{R})$.
+
+---
+
 # Motivation
 
 Once we know that the unit disc has biholomorphic automorphisms (e.g., rotations $z \mapsto e^{i\theta}z$), we ask: what *are* all of them? The answer is striking and clean: the group $\operatorname{Aut}(\mathbb{D})$ consists exactly of the Möbius transformations of the form $e^{i\theta}(z - a)/(1 - \bar a z)$ for $\theta \in \mathbb{R}, a \in \mathbb{D}$.

@@ -14,6 +14,16 @@ $U \subseteq \mathbb{C}$ open; $f : U \to \mathbb{C}$ holomorphic on $U$. $T \su
 
 ---
 
+# Statement
+
+> **Theorem (Goursat).** Let $U \subseteq \mathbb{C}$ be open and $f : U \to \mathbb{C}$ holomorphic. Then for every closed triangle $T \subseteq U$ (the convex hull of three points, lying in $U$ together with its interior):
+> $$\int_{\partial T} f(z)\,dz = 0,$$
+> where $\partial T$ is the boundary of $T$ traversed once counterclockwise.
+>
+> **(Extended form.)** The conclusion still holds under the weaker hypothesis that $f$ is continuous on $U$ and holomorphic on $U \setminus S$ for some finite set $S \subseteq U$.
+
+---
+
 # Motivation
 
 Goursat's theorem is the *building block* of Cauchy's theorem. The most basic possible closed curve is a triangle, and the most basic statement of "the integral of a holomorphic function around a closed curve is zero" is the one for triangles. Once Goursat is proved, Cauchy's theorem on more general domains follows by approximating closed curves with polygonal paths and decomposing into triangles.

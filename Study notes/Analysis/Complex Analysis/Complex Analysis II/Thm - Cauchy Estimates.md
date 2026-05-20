@@ -13,6 +13,14 @@ $f : D(a, R) \to \mathbb{C}$ holomorphic; $M(r) = \sup_{|z - a| = r}|f(z)|$; $n 
 
 ---
 
+# Statement
+
+> **Theorem (Cauchy estimates).** Let $f : D(a, R) \to \mathbb{C}$ be holomorphic, $0 < r < R$, and $M(r) = \sup_{|z - a| = r}|f(z)|$. Then for every $n \geq 0$:
+> $$|f^{(n)}(a)| \leq \frac{n!\, M(r)}{r^n}.$$
+> Equivalently, the Taylor coefficients $c_n = f^{(n)}(a)/n!$ satisfy $|c_n| \leq M(r)/r^n$.
+
+---
+
 # Motivation
 
 The Cauchy estimates bound the Taylor coefficients of a holomorphic function by the sup-norm on a surrounding circle:

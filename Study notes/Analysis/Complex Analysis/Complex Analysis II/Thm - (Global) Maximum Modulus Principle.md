@@ -13,6 +13,14 @@ $D \subseteq \mathbb{C}$ a bounded domain; $f : D \to \mathbb{C}$ holomorphic an
 
 ---
 
+# Statement
+
+> **Theorem (global maximum modulus principle).** Let $D \subseteq \mathbb{C}$ be a bounded domain and $f : \overline{D} \to \mathbb{C}$ continuous on the closure $\overline{D}$ and holomorphic on $D$. Then $|f|$ attains its maximum on the boundary $\partial D$:
+> $$\max_{z \in \overline{D}} |f(z)| = \max_{z \in \partial D} |f(z)|.$$
+> Moreover, if $|f|$ attains its maximum at any interior point $z^* \in D$, then $f$ is constant on $\overline{D}$.
+
+---
+
 # Motivation
 
 The global maximum modulus principle is the natural propagation of the local version: if $f$ is holomorphic on a bounded domain, continuous on the closure, then the maximum of $|f|$ on $\overline D$ is attained *on the boundary $\partial D$*. The maximum *can* be attained inside, but only if $f$ is constant.

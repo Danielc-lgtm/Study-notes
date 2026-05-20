@@ -13,6 +13,14 @@ $f : D(a, R) \to \mathbb{C}$ holomorphic; $k = \operatorname{ord}_a(f - f(a))$ i
 
 ---
 
+# Statement
+
+> **Theorem (Local Mapping Degree).** Let $f$ be holomorphic on $D(a, R)$, set $w_0 := f(a)$, and let $k \geq 1$ be the order of the zero of $f - w_0$ at $a$ (so $f(z) - w_0 = (z - a)^k g(z)$ with $g$ holomorphic and $g(a) \neq 0$). Then there exist $r, \delta > 0$ such that for every $w$ with $0 < |w - w_0| < \delta$, the equation $f(z) = w$ has exactly $k$ solutions in $D(a, r)$, and all of them are simple (i.e., $f'(z) \neq 0$ at each solution).
+>
+> Equivalently, on a small punctured neighbourhood, $f$ is a $k$-to-$1$ covering of a punctured neighbourhood of $w_0$.
+
+---
+
 # Motivation
 
 How does a holomorphic function look locally near a point? If $f'(a) \neq 0$, the holomorphic inverse function theorem says $f$ is locally a biholomorphism — a neighborhood of $a$ is mapped bijectively to a neighborhood of $f(a)$. But what if $f'(a) = 0$?

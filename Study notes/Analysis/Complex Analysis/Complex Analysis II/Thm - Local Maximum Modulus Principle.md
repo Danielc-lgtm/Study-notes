@@ -13,6 +13,12 @@ $f : D(a, r) \to \mathbb{C}$ holomorphic on the open disc. "Local maximum" of $|
 
 ---
 
+# Statement
+
+> **Theorem (local maximum modulus principle).** Let $f : D(a, r) \to \mathbb{C}$ be holomorphic on an open disc and suppose $|f|$ attains a local maximum at the centre $a$, i.e., $|f(z)| \leq |f(a)|$ for all $z \in D(a, r)$. Then $f$ is constant on $D(a, r)$.
+
+---
+
 # Motivation
 
 The local maximum modulus principle says: a holomorphic function whose modulus attains a local maximum at an interior point of its domain must be *constant* on a neighbourhood of that point. There is no "interior maximum" for a non-constant holomorphic function.

@@ -13,6 +13,12 @@ $p(z) = z^n + a_{n-1}z^{n-1} + \ldots + a_1 z + a_0$ is a monic polynomial of de
 
 ---
 
+# Statement
+
+> **Theorem (Fundamental Theorem of Algebra).** Every nonconstant polynomial $p(z) \in \mathbb{C}[z]$ of degree $n \geq 1$ has exactly $n$ roots in $\mathbb{C}$, counted with multiplicity. Equivalently, $\mathbb{C}$ is algebraically closed: every nonconstant complex polynomial has at least one root in $\mathbb{C}$.
+
+---
+
 # Motivation
 
 The **Fundamental Theorem of Algebra (FTA)** states: every nonconstant polynomial with complex coefficients has at least one complex root. Equivalently, a degree-$n$ polynomial has exactly $n$ roots in $\mathbb{C}$, counted with multiplicity. Equivalently, $\mathbb{C}$ is algebraically closed.

@@ -13,6 +13,13 @@ $D = D(a, r) \subseteq \mathbb{C}$ — an open disc; $f : D \to \mathbb{C}$ holo
 
 ---
 
+# Statement
+
+> **Theorem (Cauchy's theorem for a disc).** Let $D = D(a, r) \subseteq \mathbb{C}$ be an open disc and $f : D \to \mathbb{C}$ holomorphic. Then $f$ has a primitive on $D$, and for every closed piecewise $C^1$ curve $\gamma$ in $D$:
+> $$\int_\gamma f(z)\,dz = 0.$$
+
+---
+
 # Motivation
 
 The disc version of Cauchy's theorem is the *workhorse* of practical complex analysis. Most local arguments — building primitives, justifying CIF, deriving local power series — happen on a disc, where Cauchy's theorem is automatic. This is a special case of the star-shaped theorem (a disc is star-shaped about any of its points, indeed convex), but it deserves a separate statement because of its universality.

@@ -14,6 +14,16 @@ $f : D(a, R) \to \mathbb{C}$ holomorphic; $c_n = f^{(n)}(a)/n!$. Full registry o
 
 ---
 
+# Statement
+
+> **Theorem (holomorphic functions are analytic).** Let $f : D(a, R) \to \mathbb{C}$ be holomorphic on the open disc $D(a, R)$. Then $f$ has a convergent power series expansion centred at $a$ on the entire disc:
+> $$f(z) = \sum_{n=0}^\infty c_n (z - a)^n, \qquad z \in D(a, R),$$
+> with coefficients $c_n = f^{(n)}(a)/n!$ given by Taylor's formula and equivalently by the Cauchy integral formula
+> $$c_n = \frac{1}{2\pi i}\oint_{|z - a| = r}\frac{f(z)}{(z - a)^{n+1}}\,dz \quad \text{for any } 0 < r < R.$$
+> Combined with the converse from CA I, this gives the equivalence: a function is holomorphic on $D(a, R)$ if and only if it is given by a convergent power series on $D(a, R)$.
+
+---
+
 # Motivation
 
 The structural theorem of complex analysis: **every holomorphic function on a disc is given by a convergent power series**, with coefficients $c_n = f^{(n)}(a)/n!$. Combined with the converse from [[Complex Analysis I — Basic Notions]] ([[Thm - Power Series is Holomorphic with Termwise Derivative]]: every power series is holomorphic on its disc), this gives the central equivalence:

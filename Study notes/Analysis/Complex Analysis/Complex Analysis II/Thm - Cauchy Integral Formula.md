@@ -15,6 +15,14 @@ $D = D(a, r)$ — an open disc; $f : D \to \mathbb{C}$ holomorphic; $w \in D$ wi
 
 ---
 
+# Statement
+
+> **Theorem (Cauchy integral formula).** Let $D = D(a, r) \subseteq \mathbb{C}$ be an open disc and $f : D \to \mathbb{C}$ holomorphic. For every $w \in D$ and every $\rho$ with $|w - a| < \rho < r$:
+> $$f(w) = \frac{1}{2\pi i} \oint_{|z - a| = \rho} \frac{f(z)}{z - w}\,dz,$$
+> where the contour is traversed once counterclockwise. The value of $f$ at the interior point $w$ is recovered as a contour integral of $f$ along any surrounding circle.
+
+---
+
 # Motivation
 
 The Cauchy integral formula (CIF) is *the* central formula of complex analysis. It reads:

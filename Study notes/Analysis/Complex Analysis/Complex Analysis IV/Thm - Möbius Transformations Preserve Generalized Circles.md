@@ -12,6 +12,12 @@ A **generalized circle** in $\hat{\mathbb{C}} = \mathbb{C} \cup \{\infty\}$ is e
 
 ---
 
+# Statement
+
+> **Theorem (Möbius Transformations Preserve Generalized Circles).** Let $T(z) = (az + b)/(cz + d)$ with $ad - bc \neq 0$ be a Möbius transformation, regarded as a bijection $\hat{\mathbb{C}} \to \hat{\mathbb{C}}$. Then $T$ maps every generalized circle (i.e., every circle or line in $\mathbb{C}$, viewed as a circle on the Riemann sphere) to a generalized circle.
+
+---
+
 # Motivation
 
 Möbius transformations have a beautiful geometric property: they map **generalized circles** (circles and lines) to generalized circles. So a circle gets sent to either a circle or a line; a line gets sent to either a circle or a line. The class of circle-or-line is preserved as a single class.

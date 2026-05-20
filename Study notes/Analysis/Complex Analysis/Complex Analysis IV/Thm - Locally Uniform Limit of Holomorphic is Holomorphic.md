@@ -14,6 +14,13 @@ $U \subseteq \mathbb{C}$ is open, $f_n : U \to \mathbb{C}$ is a sequence of holo
 
 ---
 
+# Statement
+
+> **Theorem (Locally Uniform Limit of Holomorphic is Holomorphic).** Let $U \subseteq \mathbb{C}$ be open, and let $f_n : U \to \mathbb{C}$ be a sequence of holomorphic functions converging locally uniformly on $U$ to a function $f : U \to \mathbb{C}$. Then $f$ is holomorphic on $U$, and for every $k \geq 1$, the derivatives converge locally uniformly:
+> $$f_n^{(k)} \to f^{(k)} \quad \text{locally uniformly on } U.$$
+
+---
+
 # Motivation
 
 This is the cornerstone fact making locally uniform convergence the "right" convergence for complex analysis: *limits preserve holomorphicity*. If a sequence $f_n$ of holomorphic functions converges locally uniformly to $f$, then $f$ is also holomorphic, and moreover all derivatives converge: $f_n^{(k)} \to f^{(k)}$ locally uniformly for every $k$.

@@ -13,6 +13,14 @@ $\mathbb{D} = \{z : |z| < 1\}$ is the open unit disc. $f : \mathbb{D} \to \mathb
 
 ---
 
+# Statement
+
+> **Theorem (Schwarz Lemma).** Let $f : \mathbb{D} \to \mathbb{D}$ be holomorphic with $f(0) = 0$. Then
+> $$|f(z)| \leq |z| \text{ for all } z \in \mathbb{D}, \qquad\text{and}\qquad |f'(0)| \leq 1.$$
+> Moreover, if equality $|f(z_0)| = |z_0|$ holds at some $z_0 \in \mathbb{D} \setminus \{0\}$, or if $|f'(0)| = 1$, then $f$ is a rotation: there exists $\theta \in \mathbb{R}$ with $f(z) = e^{i\theta} z$ for all $z \in \mathbb{D}$.
+
+---
+
 # Motivation
 
 Schwarz's lemma is a deceptively simple but powerful constraint on holomorphic self-maps of the unit disc fixing the origin. It says: such a map must contract the disc — $|f(z)| \leq |z|$ for all $z$, and $|f'(0)| \leq 1$. Moreover, equality (anywhere) forces $f$ to be a rotation.

@@ -15,6 +15,17 @@ $D \subseteq \mathbb{C}$ a [[Def - Domain in the Complex Plane|domain]] (open an
 
 ---
 
+# Statement
+
+> **Theorem (existence of a primitive iff closed integrals vanish).** Let $D \subseteq \mathbb{C}$ be a [[Def - Domain in the Complex Plane|domain]] (open and path-connected) and $f : D \to \mathbb{C}$ continuous. Then the following are equivalent:
+>
+> 1. $f$ has a primitive on $D$: there exists a holomorphic $F : D \to \mathbb{C}$ with $F'(z) = f(z)$ for every $z \in D$.
+> 2. $\int_\gamma f(z)\,dz = 0$ for every closed piecewise $C^1$ curve $\gamma$ in $D$.
+>
+> When these conditions hold, a primitive is given explicitly, after choosing a base point $a_0 \in D$, by $F(w) = \int_{\gamma_w} f(z)\,dz$ along any piecewise $C^1$ curve $\gamma_w$ in $D$ from $a_0$ to $w$.
+
+---
+
 # Motivation
 
 The forward direction — primitives give path-independence — is the fundamental theorem of contour integration. The converse — *path-independence forces a primitive to exist* — is the deeper and more useful result. Together they give a characterization: $f$ has a primitive on $D$ if and only if $\int_\gamma f\,dz = 0$ for every closed loop $\gamma$. This converts the analytic question "does $F$ exist with $F' = f$?" into the integral question "do all closed-loop integrals vanish?", which is checkable theorem-by-theorem (e.g., Cauchy's theorem, Goursat).

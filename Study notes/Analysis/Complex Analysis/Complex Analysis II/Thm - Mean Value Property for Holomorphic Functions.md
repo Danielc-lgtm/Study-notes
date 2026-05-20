@@ -12,6 +12,13 @@ $f$ holomorphic on $D(a, R)$, $0 < r < R$. Full registry on [[Complex Analysis I
 
 ---
 
+# Statement
+
+> **Theorem (mean value property for holomorphic functions).** Let $f : D(a, R) \to \mathbb{C}$ be holomorphic and let $0 < r < R$. Then the value of $f$ at the centre $a$ equals the average of $f$ over the circle of radius $r$:
+> $$f(a) = \frac{1}{2\pi}\int_0^{2\pi} f(a + re^{i\theta})\,d\theta.$$
+
+---
+
 # Motivation
 
 The mean value property is the special case of CIF at the centre: the value of $f$ at the centre equals the average over any surrounding circle. This is the *complex* analog of the mean value property of harmonic functions in real analysis — and is the same statement, applied to either component $u$ or $v$ of $f = u + iv$.

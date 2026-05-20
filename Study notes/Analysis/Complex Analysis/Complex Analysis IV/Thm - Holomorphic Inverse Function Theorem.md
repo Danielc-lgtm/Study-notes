@@ -14,6 +14,14 @@ $f$ is holomorphic at $a$ with $f'(a) \neq 0$. Full registry on [[Complex Analys
 
 ---
 
+# Statement
+
+> **Theorem (Holomorphic Inverse Function Theorem).** Let $f$ be holomorphic on an open neighbourhood of $a \in \mathbb{C}$ with $f'(a) \neq 0$. Then there exist open neighbourhoods $U_0$ of $a$ and $V_0$ of $f(a)$ such that $f$ restricts to a holomorphic bijection $U_0 \to V_0$, the inverse $g := (f|_{U_0})^{-1} : V_0 \to U_0$ is holomorphic, and
+> $$g'(w) = \frac{1}{f'(g(w))} \qquad\text{for all } w \in V_0.$$
+> In particular, $f$ is a local conformal equivalence at every point where $f' \neq 0$.
+
+---
+
 # Motivation
 
 The holomorphic inverse function theorem is the complex-analytic analog of the [[Thm - The Inverse Function Theorem|real inverse function theorem]]. It says: if $f$ is holomorphic at $a$ with $f'(a) \neq 0$, then $f$ is locally a biholomorphism — there exist neighborhoods of $a$ and $f(a)$ between which $f$ is a holomorphic bijection with holomorphic inverse.

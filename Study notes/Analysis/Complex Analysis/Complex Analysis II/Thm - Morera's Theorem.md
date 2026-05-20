@@ -15,6 +15,14 @@ $D \subseteq \mathbb{C}$ a domain (or just a disc); $f : D \to \mathbb{C}$ conti
 
 ---
 
+# Statement
+
+> **Theorem (Morera).** Let $D \subseteq \mathbb{C}$ be a domain (or any open set) and $f : D \to \mathbb{C}$ continuous. If
+> $$\int_{\partial \Delta} f(z)\,dz = 0$$
+> for every closed triangle $\Delta \subseteq D$, then $f$ is holomorphic on $D$.
+
+---
+
 # Motivation
 
 Morera's theorem is the partial converse to Goursat: it says vanishing of triangle integrals (or equivalently, all closed-curve integrals) of a *continuous* function $f$ forces $f$ to be holomorphic. This converts a hypothesis about *integrals* into a conclusion about *differentiability*.

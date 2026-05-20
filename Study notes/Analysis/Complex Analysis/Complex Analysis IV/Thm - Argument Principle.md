@@ -14,6 +14,16 @@ $f$ meromorphic on an open set containing the closed curve $\gamma$ (with no zer
 
 ---
 
+# Statement
+
+> **Theorem (Argument Principle).** Let $f$ be meromorphic on an open set $U$, and let $\gamma$ be a closed piecewise $C^1$ curve in $U$ that is null-homotopic in $U$ and avoids the zeros and poles of $f$. Then
+> $$\frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\,dz = \sum_a I(\gamma; a)\,\operatorname{ord}_a f = I(f\circ\gamma;\, 0),$$
+> the sum running over zeros and poles $a$ of $f$ in $U$ (where $\operatorname{ord}_a f$ equals the order of the zero, or minus the order of the pole). In particular, when $\gamma$ bounds a domain $D$ with $I(\gamma; \cdot) = 1$ on $D$ and $0$ outside,
+> $$\frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\,dz = N - P,$$
+> where $N$ and $P$ are the numbers of zeros and poles of $f$ in $D$, each counted with multiplicity.
+
+---
+
 # Motivation
 
 The argument principle says: integrating the logarithmic derivative $f'/f$ around a closed curve $\gamma$ counts the zeros minus poles of $f$ inside $\gamma$, weighted by winding numbers. Stated as a topological identity, it equals the winding number of $f \circ \gamma$ around $0$.

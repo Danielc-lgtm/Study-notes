@@ -15,6 +15,14 @@ $U \subseteq \mathbb{C}$ is open, $f_n : U \to \mathbb{C}$ is a sequence of holo
 
 ---
 
+# Statement
+
+> **Theorem (Hurwitz).** Let $U \subseteq \mathbb{C}$ be a domain (connected open set) and let $f_n : U \to \mathbb{C}$ be a sequence of holomorphic functions, each nowhere zero on $U$, converging locally uniformly to a function $f : U \to \mathbb{C}$. Then either $f$ is identically zero on $U$, or $f$ has no zeros on $U$.
+>
+> **Corollary (limit of injective is injective or constant).** If each $f_n$ is injective on $U$ and $f_n \to f$ locally uniformly, then $f$ is either injective or constant on $U$.
+
+---
+
 # Motivation
 
 A natural question about locally uniform convergence: if each $f_n$ has *no zeros* on $U$, what can we say about the zeros of the limit $f$?

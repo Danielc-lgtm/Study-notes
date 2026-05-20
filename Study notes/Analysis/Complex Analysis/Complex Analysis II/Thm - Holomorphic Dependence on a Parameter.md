@@ -13,6 +13,15 @@ $D \subseteq \mathbb{C}$ open; $[a, b] \subseteq \mathbb{R}$; $\varphi : D \time
 
 ---
 
+# Statement
+
+> **Theorem (holomorphic dependence on a parameter).** Let $D \subseteq \mathbb{C}$ be open, $[a, b] \subseteq \mathbb{R}$ a closed interval, and $\varphi : D \times [a, b] \to \mathbb{C}$ a continuous function such that for each fixed $s \in [a, b]$, the function $z \mapsto \varphi(z, s)$ is holomorphic on $D$. Then
+> $$g(z) := \int_a^b \varphi(z, s)\,ds$$
+> is holomorphic on $D$. If moreover $\partial\varphi/\partial z$ is continuous on $D \times [a, b]$, then
+> $$g'(z) = \int_a^b \frac{\partial \varphi}{\partial z}(z, s)\,ds.$$
+
+---
+
 # Motivation
 
 Many functions in complex analysis are defined by integrals depending on a complex parameter:

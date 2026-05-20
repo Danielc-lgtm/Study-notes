@@ -14,6 +14,15 @@ $D \subseteq \mathbb{C}$ is a bounded domain with closed curve boundary $\gamma$
 
 ---
 
+# Statement
+
+> **Theorem (Rouché).** Let $D \subseteq \mathbb{C}$ be a bounded domain whose boundary $\gamma$ is a closed piecewise $C^1$ curve, and let $f, g$ be holomorphic on an open set containing $\overline{D}$. If
+> $$|f(z) - g(z)| < |f(z)| \qquad\text{for every } z \in \gamma,$$
+> then $f$ and $g$ have no zeros on $\gamma$ and the same number of zeros in $D$, counted with multiplicity:
+> $$N(f, D) = N(g, D).$$
+
+---
+
 # Motivation
 
 How do you count the zeros of a complicated function without finding them explicitly? Rouché's theorem provides a powerful technique: if you have a *simpler* function $f$ whose zeros you know how to count, and the difference $|f - g|$ is small enough on the boundary, then $g$ has the same number of zeros as $f$ in the region.

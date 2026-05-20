@@ -13,6 +13,13 @@ $\gamma : [a, b] \to \mathbb{C}$ a piecewise $C^1$ curve; $f$ continuous on the 
 
 ---
 
+# Statement
+
+> **Theorem (ML estimate).** Let $\gamma : [a, b] \to \mathbb{C}$ be a piecewise $C^1$ curve with trace $\gamma^*$ and length $L = L(\gamma) = \int_a^b |\gamma'(t)|\,dt$, and let $f$ be continuous on $\gamma^*$ with $M = \sup_{z \in \gamma^*}|f(z)| < \infty$. Then
+> $$\left|\int_\gamma f(z)\,dz\right| \leq M\, L.$$
+
+---
+
 # Motivation
 
 The ML estimate is the universal *bound* on contour integrals. It says: $|\int_\gamma f\,dz|$ cannot exceed $M$ (a bound on $|f|$ on the path) times $L$ (the length of the path). This is the single most-used tool for bounding contour integrals, especially when proving an integral is small (e.g., a limit goes to zero).

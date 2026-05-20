@@ -12,6 +12,14 @@ $f : D(w, R) \to \mathbb{C}$ holomorphic; $w \in \mathbb{C}$ a candidate zero; $
 
 ---
 
+# Statement
+
+> **Theorem (principle of isolated zeros).** Let $f : D(w, R) \to \mathbb{C}$ be holomorphic with $f(w) = 0$, and suppose $f$ is not identically zero on any sub-disc of $D(w, R)$. Then there exist a unique integer $k \geq 1$ (the **order** of the zero) and a holomorphic function $g : D(w, R) \to \mathbb{C}$ with $g(w) \neq 0$ such that
+> $$f(z) = (z - w)^k g(z) \quad \text{for all } z \in D(w, R).$$
+> Consequently, $w$ is an **isolated zero** of $f$: there exists $r > 0$ such that $f(z) \neq 0$ for every $z$ with $0 < |z - w| < r$.
+
+---
+
 # Motivation
 
 A non-trivial holomorphic function has *isolated* zeros: each zero $w$ is contained in some small punctured disc on which $f$ has no other zeros. This is in stark contrast to real $C^\infty$ functions, which can have non-isolated zeros (e.g., $\sin(1/x) \cdot x$ at $0$ has the zeros $\{1/(n\pi) : n \in \mathbb{Z} \setminus \{0\}\}$ accumulating at $0$).

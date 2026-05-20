@@ -14,6 +14,12 @@ $U \subseteq \mathbb{C}$ is open (a domain), $f : U \to \mathbb{C}$ is holomorph
 
 ---
 
+# Statement
+
+> **Theorem (Open Mapping).** Let $U \subseteq \mathbb{C}$ be a domain (connected open set) and let $f : U \to \mathbb{C}$ be a non-constant holomorphic function. Then $f$ is an **open map**: for every open subset $V \subseteq U$, the image $f(V) \subseteq \mathbb{C}$ is open.
+
+---
+
 # Motivation
 
 The open mapping theorem says: a non-constant holomorphic function on a domain $U$ is an **open map** — it sends open sets in $U$ to open sets in $\mathbb{C}$. This means images of holomorphic functions are *not flattened*: they have full 2-dimensional "thickness" wherever they are defined.

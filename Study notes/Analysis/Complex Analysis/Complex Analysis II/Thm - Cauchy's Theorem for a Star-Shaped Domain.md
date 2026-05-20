@@ -15,6 +15,13 @@ $D \subseteq \mathbb{C}$ open, **star-shaped** with respect to $a_0$ (every line
 
 ---
 
+# Statement
+
+> **Theorem (Cauchy's theorem for a star-shaped domain).** Let $D \subseteq \mathbb{C}$ be a star-shaped open set (there exists $a_0 \in D$ such that for every $w \in D$, the line segment $[a_0, w]$ lies in $D$) and $f : D \to \mathbb{C}$ holomorphic. Then $f$ has a primitive on $D$ — explicitly, $F(w) = \int_{[a_0, w]} f(z)\,dz$ — and for every closed piecewise $C^1$ curve $\gamma$ in $D$:
+> $$\int_\gamma f(z)\,dz = 0.$$
+
+---
+
 # Motivation
 
 The leap from Goursat (vanishing of integrals around *triangles*) to vanishing of integrals around *all closed curves* requires a topological hypothesis on the domain. The simplest such hypothesis is *star-shaped*: there is a "center" $a_0$ such that every point of $D$ can be reached from $a_0$ by a line segment. This allows a clean construction of primitives, via integration along line segments from $a_0$.

@@ -14,6 +14,12 @@ $f : \mathbb{C} \to \mathbb{C}$ entire (holomorphic on all of $\mathbb{C}$), bou
 
 ---
 
+# Statement
+
+> **Theorem (Liouville).** Every bounded entire function is constant. That is, if $f : \mathbb{C} \to \mathbb{C}$ is holomorphic on all of $\mathbb{C}$ and there exists $M > 0$ with $|f(z)| \leq M$ for every $z \in \mathbb{C}$, then $f$ is constant.
+
+---
+
 # Motivation
 
 Liouville's theorem is the prototype rigidity statement of complex analysis: **the only bounded entire functions are constants**. Compare with real analysis, where $\sin x$ is bounded, smooth, and certainly not constant. The complex setting is *rigid* in a way the real one is not.

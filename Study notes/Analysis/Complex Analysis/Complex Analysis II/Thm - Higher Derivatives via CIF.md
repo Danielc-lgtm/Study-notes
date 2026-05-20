@@ -13,6 +13,14 @@ $f : D(a, R) \to \mathbb{C}$ holomorphic; $w \in D(a, \rho)$ with $\rho < R$; $n
 
 ---
 
+# Statement
+
+> **Theorem (higher derivatives via CIF).** Let $f : D(a, R) \to \mathbb{C}$ be holomorphic. Then $f$ has derivatives of all orders on $D(a, R)$, and for every $n \geq 0$, every $\rho$ with $0 < \rho < R$, and every $w$ with $|w - a| < \rho$:
+> $$f^{(n)}(w) = \frac{n!}{2\pi i}\oint_{|z - a| = \rho}\frac{f(z)}{(z - w)^{n+1}}\,dz.$$
+> In particular, every holomorphic function is automatically $C^\infty$ as a function of the underlying real variables $(x, y)$.
+
+---
+
 # Motivation
 
 The Cauchy integral formula expresses $f(w)$ as a contour integral over a surrounding circle. Differentiating both sides with respect to $w$ — under the integral sign — gives an integral representation for $f'(w)$, $f''(w)$, and all higher derivatives. The result:

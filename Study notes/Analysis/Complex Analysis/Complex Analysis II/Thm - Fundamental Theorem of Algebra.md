@@ -13,6 +13,14 @@ $p(z) = a_n z^n + \ldots + a_1 z + a_0 \in \mathbb{C}[z]$ a polynomial of degree
 
 ---
 
+# Statement
+
+> **Theorem (fundamental theorem of algebra).** Every non-constant polynomial $p(z) = a_n z^n + \cdots + a_1 z + a_0 \in \mathbb{C}[z]$ with $n \geq 1$ and $a_n \neq 0$ has a root in $\mathbb{C}$: there exists $z_0 \in \mathbb{C}$ with $p(z_0) = 0$.
+>
+> Equivalently, $\mathbb{C}$ is **algebraically closed**: every degree-$n$ polynomial factors as $p(z) = a_n \prod_{i=1}^n (z - z_i)$ for some $z_1, \dots, z_n \in \mathbb{C}$ (counted with multiplicity).
+
+---
+
 # Motivation
 
 The Fundamental Theorem of Algebra (FTA): **every non-constant polynomial with complex coefficients has a complex root**. From this, every degree-$n$ polynomial factors as $a_n(z - z_1)(z - z_2)\ldots(z - z_n)$ for some $z_1, \ldots, z_n \in \mathbb{C}$ (allowing repeats). Algebraically: $\mathbb{C}$ is **algebraically closed**.

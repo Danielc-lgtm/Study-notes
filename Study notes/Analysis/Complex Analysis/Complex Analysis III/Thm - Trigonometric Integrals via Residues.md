@@ -13,6 +13,14 @@ $R(\cos\theta, \sin\theta)$ is a rational function of $\cos\theta$ and $\sin\the
 
 ---
 
+# Statement
+
+> **Theorem (Trigonometric Integrals via Residues).** Let $R(x, y)$ be a rational function of two variables, and suppose $R(\cos\theta, \sin\theta)$ has no singularities for $\theta \in \mathbb{R}$ (equivalently, the associated rational function $\tilde R$ below has no poles on $|z| = 1$). Then
+> $$\int_0^{2\pi} R(\cos\theta, \sin\theta)\,d\theta = 2\pi i \sum_{|w| < 1}\operatorname{Res}_w \tilde R(z), \qquad \tilde R(z) := \frac{1}{iz}\, R\!\left(\frac{z + z^{-1}}{2},\, \frac{z - z^{-1}}{2i}\right),$$
+> the sum being over all poles of $\tilde R$ inside the open unit disc.
+
+---
+
 # Motivation
 
 Trigonometric integrals $\int_0^{2\pi} R(\cos\theta, \sin\theta)\,d\theta$ — over a full period — have a natural complex-analytic reformulation. The unit circle $z = e^{i\theta}$ parametrizes $[0, 2\pi)$, and on it, $\cos\theta$ and $\sin\theta$ become rational functions of $z$. The integral $\int_0^{2\pi}\ldots d\theta$ becomes a contour integral $\oint_{|z|=1}\ldots dz$, and the residue theorem evaluates it in terms of the poles inside the unit disc.

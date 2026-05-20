@@ -13,6 +13,14 @@ $D \subseteq \mathbb{C}$ a (connected) [[Def - Domain in the Complex Plane|domai
 
 ---
 
+# Statement
+
+> **Theorem (identity theorem).** Let $D \subseteq \mathbb{C}$ be a connected [[Def - Domain in the Complex Plane|domain]] and $f, g : D \to \mathbb{C}$ holomorphic. Suppose the set $S = \{z \in D : f(z) = g(z)\}$ has an **accumulation point** in $D$ — i.e., some $w \in D$ such that every neighbourhood of $w$ contains points of $S$ different from $w$. Then $f = g$ on all of $D$.
+>
+> Equivalent reformulations: a holomorphic function on a connected domain whose zero set has an accumulation point in $D$ is identically zero; two holomorphic functions on a connected domain agreeing on a non-empty open subset, on a non-trivial curve, or on a convergent sequence with limit in $D$ are equal everywhere on $D$.
+
+---
+
 # Motivation
 
 The identity theorem is the strongest rigidity statement in complex analysis: **two holomorphic functions on a connected domain that agree on a set with an accumulation point are equal everywhere**. Compare with real analysis, where $C^\infty$ functions can agree on a half-line and disagree on the other half ("bump functions"). The complex setting has no such flexibility.
