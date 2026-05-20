@@ -16,6 +16,14 @@ $U \subseteq \mathbb{C}$ is open, $f$ meromorphic on $U$ with poles $w_1, w_2, \
 
 ---
 
+# Statement
+
+> **Theorem (Residue Theorem).** Let $U \subseteq \mathbb{C}$ be open and simply connected, and let $f$ be meromorphic on $U$ with poles $w_1, w_2, \ldots$ (a discrete set in $U$). Let $\gamma$ be a closed piecewise $C^1$ curve in $U$ avoiding the poles, and assume only finitely many poles $w_i$ satisfy $I(\gamma; w_i) \neq 0$. Then
+> $$\int_\gamma f(z)\,dz = 2\pi i \sum_{i} I(\gamma; w_i)\,\operatorname{Res}_{w_i} f,$$
+> the sum being over all poles $w_i$ with nonzero winding number (equivalently, over all isolated singularities of $f$ in $U$, the others contributing zero).
+
+---
+
 # Motivation
 
 The residue theorem is the master theorem of contour integration. Cauchy's theorem says closed integrals of *holomorphic* functions vanish; the residue theorem extends this to *meromorphic* functions, giving an explicit formula for the closed integral in terms of the function's local data (residues at poles) and the contour's topology (winding numbers around poles).

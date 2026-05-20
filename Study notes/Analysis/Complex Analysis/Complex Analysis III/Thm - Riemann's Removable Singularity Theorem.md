@@ -14,6 +14,17 @@ $a \in \mathbb{C}$ is an isolated singularity of $f$, holomorphic on $D(a, R) \s
 
 ---
 
+# Statement
+
+> **Theorem (Riemann's Removable Singularity Theorem).** Let $f$ be holomorphic on $D(a, R) \setminus \{a\}$ with an isolated singularity at $a$. The following are equivalent:
+>
+> 1. $a$ is a removable singularity of $f$ (i.e., $f$ extends to a holomorphic function on $D(a, R)$);
+> 2. $f$ is bounded on $D(a, r) \setminus \{a\}$ for some $0 < r \leq R$;
+> 3. $(z - a)\, f(z) \to 0$ as $z \to a$;
+> 4. $\lim_{z \to a} f(z)$ exists in $\mathbb{C}$.
+
+---
+
 # Motivation
 
 Faced with a holomorphic function on a punctured disc, the first question is: does the puncture matter? Sometimes the function is well-defined and well-behaved as you approach the puncture; sometimes it blows up; sometimes it does worse. Riemann's removable singularity theorem gives the cleanest possible characterization of the first case — *the singularity is removable if and only if $f$ is bounded near $a$*.
