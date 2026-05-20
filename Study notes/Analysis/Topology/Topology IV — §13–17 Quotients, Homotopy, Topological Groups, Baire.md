@@ -2,7 +2,7 @@
 type: topic
 subject: topology
 chapter: "13-17"
-title: "Topology IV — §13–17 Quotients, Homotopy, Topological Groups, Convex Bodies, Baire"
+title: "Topology IV — §13–17 Quotients, Homotopy, Topological Groups, Baire"
 tags: [analysis, topology]
 ---
 
