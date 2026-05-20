@@ -14,6 +14,14 @@ $U \subseteq \mathbb{C}$ is a nonempty, simply connected, proper open subset (pr
 
 ---
 
+# Statement
+
+> **Theorem (Riemann Mapping).** Let $U \subseteq \mathbb{C}$ be a nonempty, simply connected open subset with $U \neq \mathbb{C}$. Then there exists a **biholomorphism** $\phi : U \to \mathbb{D}$ — a holomorphic bijection whose inverse is also holomorphic.
+>
+> **Uniqueness (normalization).** For any $z_0 \in U$, there is a unique such biholomorphism $\phi$ with $\phi(z_0) = 0$ and $\phi'(z_0) > 0$ (real and positive). Any two biholomorphisms $U \to \mathbb{D}$ differ by an element of $\operatorname{Aut}(\mathbb{D})$.
+
+---
+
 # Motivation
 
 The **Riemann mapping theorem** is one of the deepest classical theorems in complex analysis. It says: every simply connected, proper open subset of $\mathbb{C}$ is biholomorphically equivalent to the unit disc. So all such domains — circles, ellipses, polygons, even fractal-boundary shapes — are *the same* from the point of view of complex analysis.
