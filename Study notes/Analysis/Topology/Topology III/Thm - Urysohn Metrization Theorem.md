@@ -53,7 +53,7 @@ A different perspective: **the Hilbert cube is "universal"** for second countabl
 
 The precondition is "second countable + Hausdorff + regular". The skill is recognizing this triple in problems where metrizability is needed.
 
-The first source is **second countable + locally compact Hausdorff**. Property $B$: an LCH space with countable basis. The bridge: LCH implies regular (in fact completely regular, by [[Thm - LCH Implies Completely Regular]]); combined with second countable, we get the Urysohn hypotheses, so $X$ is metrizable. *Example:* a $\sigma$-compact LCH space is automatically second countable (one can show), so it is metrizable. This is the standard route to metrizability of nice topological spaces.
+The first source is **second countable + locally compact Hausdorff**. Property $B$: an LCH space with countable basis. The bridge: LCH implies regular (in fact completely regular, by **LCH implies completely regular**); combined with second countable, we get the Urysohn hypotheses, so $X$ is metrizable. *Example:* a $\sigma$-compact LCH space is automatically second countable (one can show), so it is metrizable. This is the standard route to metrizability of nice topological spaces.
 
 The second source is **a topological manifold (Hausdorff, locally Euclidean, second countable)**. Property $B$: a manifold in the standard sense. The bridge: manifolds are LCH (locally Euclidean), Hausdorff, second countable by definition; the Urysohn hypotheses are satisfied. So every topological manifold is metrizable — a fact often taken for granted but actually a Urysohn-metrization consequence. *Example:* the existence of a Riemannian metric on a smooth manifold relies first on topological metrizability.
 

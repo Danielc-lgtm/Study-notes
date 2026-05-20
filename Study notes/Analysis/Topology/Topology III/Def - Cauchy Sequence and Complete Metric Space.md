@@ -82,7 +82,7 @@ In **number theory** and **$p$-adic analysis**, the **$p$-adic numbers** $\mathb
 # Unlocked by This
 
 > [!tip] The Banach Fixed Point Theorem *(from Functional Analysis)*
-> A strict contraction $T : X \to X$ on a complete metric space has a unique fixed point. The proof iterates the contraction to produce a Cauchy sequence and uses completeness to extract a limit, which is the fixed point. This is the engine of the Picard–Lindelöf theorem, the implicit function theorem, and dozens of other existence proofs. See [[Thm - The Contraction Mapping Principle]].
+> A strict contraction $T : X \to X$ on a complete metric space has a unique fixed point. The proof iterates the contraction to produce a Cauchy sequence and uses completeness to extract a limit, which is the fixed point. This is the engine of the Picard–Lindelöf theorem, the implicit function theorem, and dozens of other existence proofs. See **Banach contraction mapping principle**.
 
 > [!tip] Baire Category Theorem *(from Functional Analysis)*
 > In a complete metric space, the intersection of countably many dense open sets is dense. This is the topological foundation for the **open mapping theorem**, the **closed graph theorem**, and the **uniform boundedness principle** in functional analysis. Completeness is the hypothesis.

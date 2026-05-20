@@ -83,7 +83,7 @@ In **information theory and statistics**, the **metric entropy** $H(\varepsilon)
 > The equivalence **compact = complete + totally bounded** decomposes the metric notion of compactness into a topological/limit condition (completeness) and a geometric/scale condition (total boundedness). See [[Thm - Compactness in Metric Spaces (Three Equivalents)]].
 
 > [!tip] Arzelà–Ascoli Theorem *(from Functional Analysis)*
-> In $C(K)$ for $K$ compact metric, the totally bounded subsets are exactly the **equicontinuous, pointwise bounded** families. This is the workhorse compactness criterion in function space analysis — see [[Thm - Arzelà–Ascoli Theorem]].
+> In $C(K)$ for $K$ compact metric, the totally bounded subsets are exactly the **equicontinuous, pointwise bounded** families. This is the workhorse compactness criterion in function space analysis — see **Arzelà–Ascoli theorem**.
 
 > [!tip] Metric Entropy and Statistical Learning *(from Statistics)*
 > The minimal size of an $\varepsilon$-net of a hypothesis class controls its **VC dimension** and **Rademacher complexity**, hence the sample complexity of PAC learning. Metric entropy $\log N(\varepsilon)$ is the quantitative form of total boundedness — see **Dudley's entropy integral**.

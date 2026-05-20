@@ -37,7 +37,7 @@ A topological space $X$ is **locally compact** if every point $x \in X$ has a **
 
 In a **Hausdorff** space, local compactness is equivalent to: every point $x$ has a neighborhood basis consisting of compact neighborhoods. (Bredon's Theorem 11.2: if $X$ is locally compact Hausdorff, then every neighborhood of every point contains a compact neighborhood of that point.)
 
-The acronym **LCH** stands for **Locally Compact Hausdorff**, the combination that is the standard setting for most of measure theory, harmonic analysis, and the theory of topological groups. LCH spaces are completely regular (see [[Thm - LCH Implies Completely Regular]]).
+The acronym **LCH** stands for **Locally Compact Hausdorff**, the combination that is the standard setting for most of measure theory, harmonic analysis, and the theory of topological groups. LCH spaces are completely regular (see **LCH implies completely regular**).
 
 A subspace $A \subseteq X$ is **locally closed** if every point $a \in A$ has an open neighborhood $V_a$ in $X$ such that $V_a \cap A$ is closed in $V_a$. Equivalently, $A = C \cap U$ for some closed $C$ and open $U$ in $X$. Locally closed subspaces of locally compact Hausdorff spaces are again locally compact Hausdorff — this is the standard inheritance theorem.
 
@@ -81,7 +81,7 @@ In **functional analysis**, F. Riesz's theorem says a normed vector space is loc
 
 **Is NOT an instance — the long line.** The **long line** $L$ — the order topology on $[0, \omega_1) \times [0, 1)$ with lexicographic order — is locally compact at most points but fails paracompactness, so it does not embed nicely in compact spaces.
 
-**Corollary — locally compact Hausdorff implies completely regular.** This is [[Thm - LCH Implies Completely Regular]]. The argument: separate locally via compactness, use the normality of the compact neighborhood, restrict back.
+**Corollary — locally compact Hausdorff implies completely regular.** This is **LCH implies completely regular**. The argument: separate locally via compactness, use the normality of the compact neighborhood, restrict back.
 
 **Corollary — products of locally compact spaces.** A finite product of locally compact spaces is locally compact (the product of compact neighborhoods is a compact neighborhood). An infinite product of locally compact spaces is *almost never* locally compact, because basic open sets in the product topology have cofinitely many full factors, which are typically non-compact. Exception: a product of locally compact spaces where all but finitely many factors are compact is locally compact.
 
