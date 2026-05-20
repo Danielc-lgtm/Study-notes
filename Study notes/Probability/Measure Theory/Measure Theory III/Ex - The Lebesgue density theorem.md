@@ -56,6 +56,8 @@ when the limit exists.
 
 # Solution
 
+The proof breaks into two steps, one per sub-part. Step 1 (part a) recognises $d_E(x)$ as the local average of $\mathbf{1}_E$ over $B(x, r)$ and applies the Lebesgue differentiation theorem to read off $d_E(x) = \mathbf{1}_E(x)$ a.e., which is $1$ on $E$ and $0$ off $E$; Step 2 (part b) supposes a "uniformly half-dense" $E$ exists, leading to $d_E \leq 1 - \delta$ everywhere, in contradiction with the a.e. density-$1$ at points of the positive-measure set $E$. The non-obvious move is in Step 1 — the entire density theorem is "differentiation theorem evaluated at an indicator," a striking case where a function-level theorem specialises down to a set-level rigidity statement.
+
 **Step 1 — (a).** $\mathbf{1}_E$ is locally integrable ($|\mathbf{1}_E|\le1$). The [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]] gives, for a.e. $x$,
 $$d_E(x)=\lim_{r\downarrow0}\frac{1}{\lambda(B(x,r))}\int_{B(x,r)}\mathbf{1}_E\,d\lambda=\mathbf{1}_E(x).$$
 And $\mathbf{1}_E(x)=1$ for $x\in E$, $=0$ for $x\notin E$. So $d_E=1$ a.e. on $E$ and $d_E=0$ a.e. off $E$ — almost every point of a measurable set is a point of *full density*, and almost every point outside is of *zero density*.
