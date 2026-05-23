@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Probability/Advanced Probability/Advanced Probability I — Probability Spaces and Random Variables.md",
+                "file": "Algebra/Linear Algebra/Linear Algebra IX — §9 Multilinear Algebra and Determinants.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Advanced Probability I — Probability Spaces and Random Variables"
+              "title": "Linear Algebra IX — §9 Multilinear Algebra and Determinants"
             }
           }
         ]
@@ -185,6 +185,14 @@
   },
   "active": "28731305ca23332c",
   "lastOpenFiles": [
+    "Algebra/Linear Algebra/Linear Algebra VI — §6 Inner Product Spaces.md",
+    "Algebra/Linear Algebra/Linear Algebra VII — §7 Operators on Inner Product Spaces.md",
+    "Algebra/Linear Algebra/Linear Algebra VIII — §8 Operators on Complex Vector Spaces.md",
+    "Algebra/Linear Algebra/Linear Algebra X — Applied I — Vectors, Distance, Equations, Dynamics.md",
+    "Algebra/Linear Algebra/Linear Algebra V — §4–5 Polynomials and Eigenvalues.md",
+    "Algebra/Linear Algebra/Linear Algebra II — §2 Finite-Dimensional Vector Spaces.md",
+    "Algebra/Linear Algebra/Linear Algebra I — §1 Vector Spaces.md",
+    "Probability/Advanced Probability/Advanced Probability I — Probability Spaces and Random Variables.md",
     "Algebra/Rings/Rings IV — §2.7–2.8.md",
     "Algebra/Rings/Rings I/Ex - A power series is a unit if and only if its constant term is.md",
     "Algebra/Rings/Rings I/Exercise Index - §2.1 Definitions and Examples.md",
@@ -202,14 +210,6 @@
     "Analysis/Complex Analysis/Complex Analysis II/Thm - Existence of a Primitive iff Closed Integrals Vanish.md",
     "Analysis/Complex Analysis/Complex Analysis I — Basic Notions.md",
     "Analysis/Complex Analysis/Complex Analysis I/Thm - Constant on a Domain if Derivative is Zero.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - ML Estimate.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Def - Contour Integral.md",
-    "Analysis/Complex Analysis/Complex Analysis I/Def - Domain in the Complex Plane.md",
-    "Probability/Advanced Probability/Advanced Probability IV — Martingales in Discrete Time.md",
-    "Probability/Advanced Probability/Advanced Probability III — Conditional Expectation.md",
-    "Probability/Advanced Probability/Advanced Probability II — Convergence and Limit Theorems.md",
-    "Analysis/Complex Analysis/Complex Analysis IV — Mapping Theory and Applications.md",
-    "Analysis/Topology/Topology III — §8–12 Products, Metric Spaces, Locally Compact, Paracompact.md",
-    "Analysis/Topology/Topology II — §4–7 Connectivity, Separation, Nets, Compactness.md"
+    "Analysis/Complex Analysis/Complex Analysis II/Thm - ML Estimate.md"
   ]
 }
