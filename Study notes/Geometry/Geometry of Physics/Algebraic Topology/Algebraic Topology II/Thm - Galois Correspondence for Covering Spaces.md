@@ -173,12 +173,12 @@ A common error: assuming the deck group of a cover equals $\pi_1(X) / p_*\pi_1(\
 > [!note]- Lemma 3: $p_*\pi_1(\widetilde X / H) = H$
 > **Statement:** Let $\tilde X' := \widetilde X / H$, with base point $\tilde x_0' := H \cdot \tilde x_0$ (the $H$-orbit). Then $p_*\pi_1(\tilde X', \tilde x_0') = H$ as a subgroup of $\pi_1(X, x_0)$.
 >
-> **Hint:** A loop $\tilde\gamma'$ in $\tilde X'$ at $\tilde x_0'$ lifts (via $q : \widetilde X \to \tilde X'$) to a path in $\widetilde X$ starting at $\tilde x_0$ and ending in the $H$-orbit $H \cdot \tilde x_0$. Projecting down to $X$ gives a loop classified by an element of $H$ (since the endpoint differs from $\tilde x_0$ by an element of $H \leq \pi_1(X) = $ fibre).
+> **Hint:** A loop $\tilde\gamma'$ in $\tilde X'$ at $\tilde x_0'$ lifts (via $q : \widetilde X \to \tilde X'$) to a path in $\widetilde X$ starting at $\tilde x_0$ and ending in the $H$-orbit $H \cdot \tilde x_0$. Projecting down to $X$ gives a loop classified by an element of $H$ (since the endpoint differs from $\tilde x_0$ by an element of $H \leq \pi_1(X) =$ fibre).
 >
 > **Why needed:** Verifies that the cover-construction inverts subgroup-extraction.
 >
 > > [!note]- Full proof
-> > A loop $\tilde\gamma'$ in $\tilde X' = \widetilde X / H$ at $\tilde x_0'$ lifts uniquely (via $q : \widetilde X \to \tilde X'$, which is a cover with deck group $H$) to a path $\tilde\gamma$ in $\widetilde X$ starting at $\tilde x_0$. The endpoint $\tilde\gamma(1)$ lies in $q^{-1}(\tilde x_0') = H \cdot \tilde x_0$, so $\tilde\gamma(1) = h \cdot \tilde x_0$ for some $h \in H$. Now $p \circ \tilde\gamma$ is a loop in $X$ at $x_0$; its homotopy class corresponds (via the universal-cover identification $\pi_1(X) = $ fibre $p^{-1}(x_0)$) to the deck transformation taking $\tilde x_0$ to $\tilde\gamma(1) = h \cdot \tilde x_0$, which is exactly $h \in H$. So $p_*[\tilde\gamma'] = h \in H$, giving $p_*\pi_1(\tilde X', \tilde x_0') \subseteq H$.
+> > A loop $\tilde\gamma'$ in $\tilde X' = \widetilde X / H$ at $\tilde x_0'$ lifts uniquely (via $q : \widetilde X \to \tilde X'$, which is a cover with deck group $H$) to a path $\tilde\gamma$ in $\widetilde X$ starting at $\tilde x_0$. The endpoint $\tilde\gamma(1)$ lies in $q^{-1}(\tilde x_0') = H \cdot \tilde x_0$, so $\tilde\gamma(1) = h \cdot \tilde x_0$ for some $h \in H$. Now $p \circ \tilde\gamma$ is a loop in $X$ at $x_0$; its homotopy class corresponds (via the universal-cover identification $\pi_1(X) =$ fibre $p^{-1}(x_0)$) to the deck transformation taking $\tilde x_0$ to $\tilde\gamma(1) = h \cdot \tilde x_0$, which is exactly $h \in H$. So $p_*[\tilde\gamma'] = h \in H$, giving $p_*\pi_1(\tilde X', \tilde x_0') \subseteq H$.
 > >
 > > Conversely, any $h \in H$ corresponds to a loop $\gamma$ in $X$ at $x_0$ whose lift to $\widetilde X$ starting at $\tilde x_0$ ends at $h \cdot \tilde x_0 \in H \cdot \tilde x_0$. Projecting that lift via $q$ gives a loop in $\tilde X'$ at $\tilde x_0'$. So $H \subseteq p_*\pi_1(\tilde X', \tilde x_0')$.
 
@@ -202,7 +202,7 @@ A common error: assuming the deck group of a cover equals $\pi_1(X) / p_*\pi_1(\
 > **Why needed:** Refines the bijection to the regular subset.
 >
 > > [!note]- Full proof
-> > $\mathrm{Deck}(\widetilde X / H \to X) = N_{\pi_1(X)}(H)/H$ (a deck transformation of $\widetilde X / H$ must come from a self-map of $\widetilde X$ commuting with $H$-action and with the projection to $X$; this is precisely an element of $N_{\pi_1(X)}(H)$ modulo $H$). The fibre of $\widetilde X / H \to X$ has cardinality $[\pi_1(X) : H]$; the deck group acts transitively on the fibre iff $|\mathrm{Deck}| = $ fibre size, i.e., $|N_{\pi_1(X)}(H)/H| = [\pi_1(X) : H]$, i.e., $N_{\pi_1(X)}(H) = \pi_1(X)$, i.e., $H \trianglelefteq \pi_1(X)$.
+> > $\mathrm{Deck}(\widetilde X / H \to X) = N_{\pi_1(X)}(H)/H$ (a deck transformation of $\widetilde X / H$ must come from a self-map of $\widetilde X$ commuting with $H$-action and with the projection to $X$; this is precisely an element of $N_{\pi_1(X)}(H)$ modulo $H$). The fibre of $\widetilde X / H \to X$ has cardinality $[\pi_1(X) : H]$; the deck group acts transitively on the fibre iff $|\mathrm{Deck}| =$ fibre size, i.e., $|N_{\pi_1(X)}(H)/H| = [\pi_1(X) : H]$, i.e., $N_{\pi_1(X)}(H) = \pi_1(X)$, i.e., $H \trianglelefteq \pi_1(X)$.
 
 ---
 

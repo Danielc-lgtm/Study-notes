@@ -19,7 +19,7 @@ $p : \tilde X \to X$ is a [[Def - Covering Space|covering map]]. A **path** in $
 
 > **Theorem (Homotopy Lifting Property for Coverings).** Let $p : \tilde X \to X$ be a covering map and $Y$ any topological space. For every continuous homotopy $H : Y \times I \to X$ and every continuous lift $\tilde H_0 : Y \to \tilde X$ of $H|_{Y \times \{0\}}$ (i.e., $p \circ \tilde H_0 = H(\cdot, 0)$), there exists a *unique* continuous lift $\tilde H : Y \times I \to \tilde X$ with $p \circ \tilde H = H$ and $\tilde H|_{Y \times \{0\}} = \tilde H_0$.
 
-Path lifting is the special case $Y = $ point of homotopy lifting (or more precisely, $Y = \{*\}$ and $I$ playing the role of homotopy parameter), but it is often easier to state and prove separately because the indexing is simpler. The two together are the foundation of all covering-space theory.
+Path lifting is the special case $Y =$ point of homotopy lifting (or more precisely, $Y = \{*\}$ and $I$ playing the role of homotopy parameter), but it is often easier to state and prove separately because the indexing is simpler. The two together are the foundation of all covering-space theory.
 
 ---
 

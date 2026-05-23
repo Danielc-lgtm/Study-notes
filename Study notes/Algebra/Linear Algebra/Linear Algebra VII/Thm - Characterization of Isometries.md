@@ -116,7 +116,7 @@ Use polarisation for (1) ⇔ (2). Use the defining relation of the adjoint for (
 
 3. **(3) ⇔ (4) and (5)**: $S^* S = I$ iff $S$ sends some/every orthonormal basis to orthonormal. Direct calculation in (3) ⇒ (4), and (4) ⇒ (3) by expanding $S^*S$ on basis vectors.
 
-4. **(3) ⇔ (6)**: matrix form. Column orthonormality of $M = $ matrix of $S$ is $M^* M = I$.
+4. **(3) ⇔ (6)**: matrix form. Column orthonormality of $M =$ matrix of $S$ is $M^* M = I$.
 
 5. **In finite dimensions with $V = W$ (case (7))**: (3) implies $S$ injective, hence surjective by dimension, hence $S$ invertible. Then $S^* = S^{-1}$, so $SS^* = I$ also.
 

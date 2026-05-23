@@ -37,7 +37,7 @@ The adjoint representation $\mathrm{Ad}_g = d(C_g)_e$ where $C_g(h) = ghg^{-1}$.
 
 # Legal Operations Used
 
-1. **Use the adjoint representation to convert group conjugation to a linear action (operation 6 from the topic page).** Applied directly: $\mathrm{Ad}_g = $ conjugation-by-$g$ on $\mathfrak{g}$, here $\mathfrak{so}(3)$.
+1. **Use the adjoint representation to convert group conjugation to a linear action (operation 6 from the topic page).** Applied directly: $\mathrm{Ad}_g =$ conjugation-by-$g$ on $\mathfrak{g}$, here $\mathfrak{so}(3)$.
 
 2. **Use matrix exponential identities (operation 12 from the topic page).** As a sanity check, the relation $\mathrm{Ad}_{\exp X} = \exp(\mathrm{ad}_X)$ in matrix form $g \widehat v g^{-1} = e^{\mathrm{ad}_{\log g}} \widehat v$ provides an alternative verification path via the Lie algebra adjoint $\mathrm{ad}_{\widehat u}(\widehat v) = [\widehat u, \widehat v] = \widehat{u \times v}$.
 

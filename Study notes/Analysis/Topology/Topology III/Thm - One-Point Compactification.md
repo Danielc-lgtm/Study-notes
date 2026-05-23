@@ -51,7 +51,7 @@ Classical examples:
 - $(\mathbb{R}^n)^+ = S^n$ via stereographic projection.
 - $(\mathbb{C})^+ = \widehat{\mathbb{C}} = S^2$ = Riemann sphere, the standard setting for complex analysis on $\mathbb{C}$.
 - If $X$ is already compact, $X^+$ is $X$ plus an isolated point — not interesting.
-- $(\mathbb{N})^+ = $ a convergent sequence with its limit, the simplest infinite compact Hausdorff space.
+- $(\mathbb{N})^+ =$ a convergent sequence with its limit, the simplest infinite compact Hausdorff space.
 
 ---
 
@@ -94,7 +94,7 @@ Why does this give a topology? Two checks:
 
 **Compactness.** Take an open cover of $X^+$. One element must contain $\infty$, so has form $X^+ \setminus K$ for compact $K$. The other elements cover $K$ (or some of them do); restrict to opens in $X$ if necessary; by compactness of $K$, finite subcover. Add $X^+ \setminus K$ back, get finite subcover of $X^+$.
 
-**Uniqueness.** Let $Y$ be another compact Hausdorff space with $X$ embedded as open with $Y \setminus X = \{*\}$. Define $h : X^+ \to Y$ by $h|_X = $ embedding, $h(\infty) = *$. The map is continuous: open sets in $Y$ are either contained in $X$ (open in $X$, mapped to open in $X \subseteq X^+$) or of the form $Y \setminus K$ with $K$ closed; $K \subseteq Y$ compact (since closed in compact $Y$); under $h$, $K$ is identified with a closed subset of $X$ that is compact (compactness is intrinsic), so $h^{-1}(Y \setminus K) = X^+ \setminus K$ open. Hence $h$ is a continuous bijection from compact to Hausdorff, hence a homeomorphism.
+**Uniqueness.** Let $Y$ be another compact Hausdorff space with $X$ embedded as open with $Y \setminus X = \{*\}$. Define $h : X^+ \to Y$ by $h|_X =$ embedding, $h(\infty) = *$. The map is continuous: open sets in $Y$ are either contained in $X$ (open in $X$, mapped to open in $X \subseteq X^+$) or of the form $Y \setminus K$ with $K$ closed; $K \subseteq Y$ compact (since closed in compact $Y$); under $h$, $K$ is identified with a closed subset of $X$ that is compact (compactness is intrinsic), so $h^{-1}(Y \setminus K) = X^+ \setminus K$ open. Hence $h$ is a continuous bijection from compact to Hausdorff, hence a homeomorphism.
 
 **Stereographic projection.** The explicit homeomorphism $(\mathbb{R}^n)^+ \cong S^n$ is constructed via stereographic projection from the north pole $N$ of $S^n$: each point of $S^n \setminus \{N\}$ projects to a unique point of $\mathbb{R}^n$ (the line through $N$ and the sphere point hits the equatorial hyperplane at a unique point); $N$ corresponds to $\infty$. The map is a continuous bijection from compact $S^n$ to Hausdorff $(\mathbb{R}^n)^+$, hence a homeomorphism.
 
@@ -185,7 +185,7 @@ Define the topology on $X^+$ as the disjoint union of "opens in $X$" and "comple
 >
 > For density (when $X$ is non-compact): every neighborhood of $\infty$ is $X^+ \setminus K$ for some compact $K \subsetneq X$ (proper since $X$ non-compact), so contains $X \setminus K \neq \emptyset$, i.e., meets $X$. Hence $\infty \in \overline X$, and $\overline X = X^+$.
 >
-> **(4) Uniqueness.** Let $Y$ be a compact Hausdorff space with an open embedding $X \hookrightarrow Y$ such that $Y \setminus X = \{*\}$. Define $h : X^+ \to Y$ by $h|_X = $ embedding, $h(\infty) = *$.
+> **(4) Uniqueness.** Let $Y$ be a compact Hausdorff space with an open embedding $X \hookrightarrow Y$ such that $Y \setminus X = \{*\}$. Define $h : X^+ \to Y$ by $h|_X =$ embedding, $h(\infty) = *$.
 >
 > $h$ is bijective by construction. Continuous: open sets in $Y$ either lie in $X$ (open in $X \subseteq X^+$ — open in $X^+$) or contain $*$. An open in $Y$ containing $*$ is $Y \setminus C$ for some closed $C \subseteq Y$, with $* \notin C$, so $C \subseteq X$; $C$ closed in $Y$ compact, hence compact; under $h$, $C$ corresponds to the same compact subset of $X$; so $h^{-1}(Y \setminus C) = X^+ \setminus C$, open in $X^+$. So $h$ is continuous.
 >

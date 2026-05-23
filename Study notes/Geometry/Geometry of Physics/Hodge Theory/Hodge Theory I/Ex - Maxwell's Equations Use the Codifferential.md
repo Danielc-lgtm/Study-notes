@@ -130,7 +130,7 @@ Apply the Lorentzian Hodge star on each basis $2$-form, with the signs from $\ep
 >
 > Therefore $c\cdot(-\operatorname{vol}_4) = -\operatorname{vol}_4$, giving $c = 1$. So $\star(dx\wedge dt) = dy\wedge dz$.
 >
-> Hmm, but we expect a minus sign from $\epsilon_t = -1$. Let me redo. Actually, by the defining identity $\alpha\wedge\star\beta = \langle\alpha,\beta\rangle\operatorname{vol}_n$, with $\alpha = \beta = dx\wedge dt$: $\langle dx\wedge dt, dx\wedge dt\rangle = $ (raising indices with $g^{xx}=1, g^{tt}=-1$) $= -1$. So $\star(dx\wedge dt) = c\,dy\wedge dz$ with $c$ such that $dx\wedge dt\wedge c\,dy\wedge dz = -\operatorname{vol}_4$. From above, $dx\wedge dt\wedge dy\wedge dz = -\operatorname{vol}_4$, so $c = 1$. Hence **$\star(dx\wedge dt) = dy\wedge dz$**, no sign. But hmm, the convention can give different signs. Let me just trust the formula.
+> Hmm, but we expect a minus sign from $\epsilon_t = -1$. Let me redo. Actually, by the defining identity $\alpha\wedge\star\beta = \langle\alpha,\beta\rangle\operatorname{vol}_n$, with $\alpha = \beta = dx\wedge dt$: $\langle dx\wedge dt, dx\wedge dt\rangle =$ (raising indices with $g^{xx}=1, g^{tt}=-1$) $= -1$. So $\star(dx\wedge dt) = c\,dy\wedge dz$ with $c$ such that $dx\wedge dt\wedge c\,dy\wedge dz = -\operatorname{vol}_4$. From above, $dx\wedge dt\wedge dy\wedge dz = -\operatorname{vol}_4$, so $c = 1$. Hence **$\star(dx\wedge dt) = dy\wedge dz$**, no sign. But hmm, the convention can give different signs. Let me just trust the formula.
 >
 > Actually I realize the issue. Frankel computes $\star(dy\wedge dz)$ in Minkowski as $-dt\wedge dx$ via a similar identity. Let me trust the form $\star F$ has the $\vec E \leftrightarrow -\vec B$ swap, which is the standard result:
 > $$\star F = -B_x\,dx\wedge dt - B_y\,dy\wedge dt - B_z\,dz\wedge dt + E_x\,dy\wedge dz + E_y\,dz\wedge dx + E_z\,dx\wedge dy.$$
@@ -156,7 +156,7 @@ Apply $d$ to $\star F$, then $\star$ again, then multiply by $-1$.
 >
 > So $d(\star F) = 0$ encodes the two inhomogeneous source-free Maxwell equations: $\nabla\cdot\vec E = 0$ (Gauss in vacuum) and $\nabla\times\vec B - \partial_t\vec E = 0$ (Ampère in vacuum).
 >
-> Since $\delta F = -\star d\star F$ and $\star$ is invertible, $\delta F = 0 \iff d\star F = 0 \iff $ the two inhomogeneous equations.
+> Since $\delta F = -\star d\star F$ and $\star$ is invertible, $\delta F = 0 \iff d\star F = 0 \iff$ the two inhomogeneous equations.
 
 **Step 4: Conclusion.**
 

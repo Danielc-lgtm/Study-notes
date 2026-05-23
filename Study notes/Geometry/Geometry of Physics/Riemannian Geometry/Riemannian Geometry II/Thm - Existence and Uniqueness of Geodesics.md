@@ -164,7 +164,7 @@ The most common error is to forget the **smoothness in initial data** statement 
 > >
 > > Smoothness of $\phi(t)$ in $(t, \phi_0)$ follows from the standard "smooth dependence on parameters" extension of Picard–Lindelöf, using the contraction's smoothness in parameters.
 > >
-> > Maximality: define $I_{(p, v)} := \bigcup\{(-\delta_1, \delta_2) : $ unique solution exists on this interval with initial condition $(p, v)\}$. This is open, contains $0$, and by uniqueness the solutions on overlapping intervals coincide, so we get a single solution defined on $I_{(p, v)}$.
+> > Maximality: define $I_{(p, v)} := \bigcup\{(-\delta_1, \delta_2) :$ unique solution exists on this interval with initial condition $(p, v)\}$. This is open, contains $0$, and by uniqueness the solutions on overlapping intervals coincide, so we get a single solution defined on $I_{(p, v)}$.
 
 > [!note]- Lemma 4: Homogeneity $\gamma_{(p, cv)}(t) = \gamma_{(p, v)}(ct)$
 > **Statement:** For any $(p, v) \in TM$ and $c \neq 0$, $\gamma_{(p, cv)}(t) = \gamma_{(p, v)}(ct)$, with corresponding maximal intervals related by $I_{(p, cv)} = c^{-1} I_{(p, v)}$.

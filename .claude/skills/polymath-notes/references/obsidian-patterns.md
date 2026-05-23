@@ -48,6 +48,17 @@ Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the p
 
 Common substitutions for display text: `\sigma`→σ, `\pi`→π, `\lambda`→λ, `\mu`→μ, `\nu`→ν, `\varphi`→φ, `\mathbb{P}`→ℙ, `\mathbb{R}`→ℝ, `\mathbb{N}`→ℕ, `\mathbb{Q}`→ℚ, `\mathcal{F}`→ℱ; superscripts `^1 ^2 ^p ^k ^n`→¹ ² ᵖ ᵏ ⁿ; subscripts `_n _k`→ₙ ₖ; `\le`→≤, `\ge`→≥, `\to`→→, `\infty`→∞, `\leftrightarrow`→↔. Filenames likewise use the Unicode character (e.g. `Def - σ-Finite Measure.md`), so the link target is a plain Unicode string too. LaTeX `$...$` is *only* for ordinary prose, formal statements, and callout bodies — never within `[[ ]]`.
 
+**Whitespace rule for inline math (mandatory).** KaTeX/Pandoc require that the character immediately AFTER an opening `$` is NOT whitespace, and the character immediately BEFORE a closing `$` is NOT whitespace. Violating either rule makes Obsidian fail to close the math region, silently swallowing following prose into one runaway math block. The classic offender is writing `$X = $ (some prose)` — the closing `$` is preceded by a space, so KaTeX does not treat it as a close; the math region extends through the prose until the next `$`, which then captures the prose as math (rendering it without spaces). Fix patterns:
+
+- **Trailing operator inside math.** Never end math with `= ` (or `+ `, `- `, `\mapsto `, etc.) right before the closing `$`. Either remove the trailing whitespace (`$X =$` is valid and renders fine, with the dangling `=` shown — this is the mechanical fix), or move the operator into prose: `$X$ = (some prose)`. The mechanical fix is what the auto-fixer applies.
+- **Leading whitespace inside math.** Never write `$ X$` (space after opening `$`). Just `$X$`.
+- **Empty math.** Never write `$$` inline (zero content); write the content or remove the dollars.
+- **Escaped dollars near math.** `\$` inside math is a literal dollar that does NOT close the region. If you write `$...X_n\$ for all...$`, KaTeX keeps math open past the `\$`. Fix by removing the spurious backslash: `$...X_n$ for all...`.
+
+The skill ships two scripts to enforce this:
+- `.claude/skills/polymath-notes/scripts/find-math-bugs.py` — scans the whole vault, reports every offending math region with file:line. Run it after any batch.
+- `.claude/skills/polymath-notes/scripts/fix-math-bugs.py` — applies the mechanical fix (strip whitespace inside math at both ends) across the vault. Run with `--apply` after dry-run review.
+
 **Link to a specific section:**
 ```markdown
 [[Thm - Lagrange's Theorem#Why Is It True]]

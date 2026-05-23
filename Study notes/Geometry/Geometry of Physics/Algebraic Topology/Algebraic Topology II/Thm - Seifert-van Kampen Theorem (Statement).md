@@ -55,7 +55,7 @@ The theorem also has a *negative* content: when $U \cap V$ is not path-connected
 
 The hypothesis "$X = U \cup V$ with appropriate path-connectedness" can be recognised in many decomposition scenarios.
 
-The first source is **a CW complex built cell-by-cell**. Each $n$-cell is attached to the previous skeleton along a map $S^{n-1} \to (\text{previous skeleton})$. Applying Seifert-van Kampen with $U = $ slight thickening of the new cell, $V = $ slight thickening of the previous skeleton, and $U \cap V = $ a thin collar (homotopy equivalent to $S^{n-1}$), one gets a recursive formula for $\pi_1$ of the new skeleton in terms of $\pi_1$ of the old skeleton and the attaching map. For $n = 2$, this gives presentations; for $n \geq 3$, $\pi_1$ is unchanged.
+The first source is **a CW complex built cell-by-cell**. Each $n$-cell is attached to the previous skeleton along a map $S^{n-1} \to (\text{previous skeleton})$. Applying Seifert-van Kampen with $U =$ slight thickening of the new cell, $V =$ slight thickening of the previous skeleton, and $U \cap V =$ a thin collar (homotopy equivalent to $S^{n-1}$), one gets a recursive formula for $\pi_1$ of the new skeleton in terms of $\pi_1$ of the old skeleton and the attaching map. For $n = 2$, this gives presentations; for $n \geq 3$, $\pi_1$ is unchanged.
 
 The second source is **a wedge $X \vee Y$ of two well-pointed spaces**. Take small neighbourhoods of each space; $U \cap V$ is contractible (a small open star around the wedge point). The amalgamation collapses, and $\pi_1(X \vee Y) = \pi_1(X) \ast \pi_1(Y)$ — the free product, no relations. This is why $\pi_1$ of the figure-eight is $F_2$.
 
@@ -127,7 +127,7 @@ The proof is technical and beyond the scope of this scaffold. We instead focus o
 
 4. **Sphere $S^n$ for $n \geq 2$.** $U$ = open upper hemisphere minus a tiny disc at the south pole, $V$ = open lower hemisphere minus a tiny disc at the north pole. Both are contractible. $U \cap V$ is an open annulus (homotopy equivalent to $S^{n-1}$).
    - For $n \geq 2$: $\pi_1(U \cap V) = \pi_1(S^{n-1}) = 0$, so the amalgamation collapses to $\pi_1(U) \ast \pi_1(V) = 0$. Hence $\pi_1(S^n) = 0$ for $n \geq 2$.
-   - For $n = 1$: $\pi_1(U \cap V) = \pi_1(\text{two arcs}) = $ not path-connected! Theorem in this form does not directly apply, hence $\pi_1(S^1) = \mathbb{Z}$ requires a separate argument (the lift-to-$\mathbb{R}$ proof). See [[Thm - Pi_1 of S^1 is Z]].
+   - For $n = 1$: $\pi_1(U \cap V) = \pi_1(\text{two arcs}) =$ not path-connected! Theorem in this form does not directly apply, hence $\pi_1(S^1) = \mathbb{Z}$ requires a separate argument (the lift-to-$\mathbb{R}$ proof). See [[Thm - Pi_1 of S^1 is Z]].
 
 ---
 

@@ -33,11 +33,11 @@ Why is the design forced? The construction is, up to isomorphism, the **only** n
 
 There are three other ways to express the same construction, each illuminating:
 
-1. **Quaternionic.** $S^3 = $ unit quaternions; the Hopf map sends a unit quaternion $q$ to $q i q^{-1}$, which lies on the unit 2-sphere in the imaginary quaternions $\mathbb{R}^3 = \mathrm{Im}\,\mathbb{H}$. The fibres are the conjugacy classes of unit quaternions, all isomorphic to $S^1$.
+1. **Quaternionic.** $S^3 =$ unit quaternions; the Hopf map sends a unit quaternion $q$ to $q i q^{-1}$, which lies on the unit 2-sphere in the imaginary quaternions $\mathbb{R}^3 = \mathrm{Im}\,\mathbb{H}$. The fibres are the conjugacy classes of unit quaternions, all isomorphic to $S^1$.
 
 2. **Group-theoretic.** $S^3 = SU(2)$; the adjoint action of $SU(2)$ on $\mathfrak{su}(2) = \mathbb{R}^3$ gives a homomorphism $SU(2) \to SO(3)$ whose kernel is $\{\pm I\}$ — the double cover. Restricting the action to the orbit through $\sigma_3 \in \mathfrak{su}(2)$ (a sphere $S^2 \subset \mathbb{R}^3$) gives the Hopf map: $SU(2)$ acts transitively, the stabiliser of $\sigma_3$ is the diagonal subgroup $\{\mathrm{diag}(e^{i\theta}, e^{-i\theta})\} \cong U(1)$, and the map $SU(2) \to SU(2)/U(1) = S^2$ is the Hopf fibration.
 
-3. **Topological.** $S^3 = $ join $S^1 * S^1$, the topological join of two circles. The Hopf map is the quotient that collapses each fibre $S^1$ to a point.
+3. **Topological.** $S^3 =$ join $S^1 * S^1$, the topological join of two circles. The Hopf map is the quotient that collapses each fibre $S^1$ to a point.
 
 The viewpoint shifts but the bundle is the same.
 

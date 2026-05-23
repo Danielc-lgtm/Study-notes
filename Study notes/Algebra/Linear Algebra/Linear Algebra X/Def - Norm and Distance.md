@@ -77,7 +77,7 @@ In functional analysis, the Euclidean norm is the special case $p = 2$ of the **
 
 **Is an instance — three-dimensional Euclidean distance.** For $a = (1, 2, 3)$ and $b = (4, 0, 3)$ in $\mathbb{R}^3$, $\operatorname{dist}(a, b) = \sqrt{9 + 4 + 0} = \sqrt{13} \approx 3.606$. This is the classical formula from analytic geometry, recovered as a special case of the general Euclidean distance.
 
-**Is an instance — Boolean vector distance.** If $x, y \in \{0, 1\}^n$ are two Boolean vectors, then $\|x - y\|^2 = $ (number of indices where they differ), so $\|x - y\| = \sqrt{\operatorname{dist}_H(x, y)}$, where $\operatorname{dist}_H$ is the **Hamming distance**. The Euclidean distance between Boolean vectors is the square root of the count of disagreements.
+**Is an instance — Boolean vector distance.** If $x, y \in \{0, 1\}^n$ are two Boolean vectors, then $\|x - y\|^2 =$ (number of indices where they differ), so $\|x - y\| = \sqrt{\operatorname{dist}_H(x, y)}$, where $\operatorname{dist}_H$ is the **Hamming distance**. The Euclidean distance between Boolean vectors is the square root of the count of disagreements.
 
 **Is an instance — RMS of a constant vector.** For $x = \alpha \mathbf{1}$ (every entry equal to $\alpha$), $\|x\| = |\alpha| \sqrt n$ and $\operatorname{rms}(x) = |\alpha|$. The RMS is independent of $n$, which is what justifies its use as a "typical entry" measure.
 

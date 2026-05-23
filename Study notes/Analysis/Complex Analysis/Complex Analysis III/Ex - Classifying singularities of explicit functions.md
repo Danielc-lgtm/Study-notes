@@ -99,7 +99,7 @@ Boundedness ⟹ removable ([[Thm - Riemann's Removable Singularity Theorem|Riema
 > [!note]- Complete formal solution
 > **(a)** $\sin z = z(1 - z^2/6 + \ldots)$ has a simple zero at $0$, so $1/\sin z$ has a *simple pole* at $0$. The residue, by the quotient formula with $g = 1, h = \sin z$, $h'(0) = \cos 0 = 1$: $\operatorname{Res}_0(1/\sin z) = 1$.
 >
-> **(b)** Laurent expansion $\sin(1/z) = 1/z - 1/(6z^3) + 1/(120 z^5) - \ldots$ has *infinitely many* negative-power terms, so $0$ is an *essential singularity*. Residue: $\operatorname{Res}_0\sin(1/z) = $ coefficient of $1/z$ = $1$.
+> **(b)** Laurent expansion $\sin(1/z) = 1/z - 1/(6z^3) + 1/(120 z^5) - \ldots$ has *infinitely many* negative-power terms, so $0$ is an *essential singularity*. Residue: $\operatorname{Res}_0\sin(1/z) =$ coefficient of $1/z$ = $1$.
 >
 > **(c)** Laurent expansion $(\sin z)/z = 1 - z^2/6 + z^4/120 - \ldots$ has *no* negative-power terms, so $0$ is *removable*. The function extends to $f_3(0) = 1$. Residue $= 0$. $\blacksquare$
 

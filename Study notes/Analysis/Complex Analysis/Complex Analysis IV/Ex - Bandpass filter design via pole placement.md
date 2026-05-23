@@ -150,12 +150,12 @@ For a 2nd-order bandpass, the transfer function has the form $H(s) = (\omega_0/Q
 **Pole-zero placement geometry.**
 - **Poles** in left half-plane = stable. Closer to imaginary axis = higher Q, less damping.
 - **Zeros** affect the passband shape (e.g., a zero at $s = 0$ for high-pass filters; zeros at $s = \pm i\omega_0$ for notch filters).
-- **Distance from imaginary axis** $= $ damping rate (real part magnitude).
-- **Distance from origin** $\approx \omega_0$ $= $ resonant frequency.
+- **Distance from imaginary axis** $=$ damping rate (real part magnitude).
+- **Distance from origin** $\approx \omega_0$ $=$ resonant frequency.
 
 **Bode plot interpretation.** For a 2nd-order bandpass, the magnitude $|H(i\omega)|$:
 - At $\omega = 0$: $|H| = 0$ (zero at origin).
-- At $\omega = \omega_0$: $|H| = $ maximum $= 1$ (for the normalization above).
+- At $\omega = \omega_0$: $|H| =$ maximum $= 1$ (for the normalization above).
 - At $\omega \to \infty$: $|H| \to 0$.
 - Bandwidth $\Delta\omega = \omega_0/Q$.
 

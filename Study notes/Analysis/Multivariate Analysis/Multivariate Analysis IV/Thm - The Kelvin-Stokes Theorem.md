@@ -70,7 +70,7 @@ Tile the surface $M$ with a fine mesh of tiny patches. For each tiny patch, the 
 
 This is the meaning of curl: $\operatorname{curl} F$ at a point, dotted with a unit normal $N$, is the limiting circulation-per-unit-area of $F$ around a tiny loop in the plane perpendicular to $N$. The theorem says local circulation densities, summed, give global circulation — and the summing works because internal edges, traversed twice in opposite directions, contribute nothing. One should *expect* the theorem to hold once one accepts that curl measures local rotation: local rotations accumulate into global circulation precisely because circulation is additive over a tiling and internal walls cancel.
 
-The surface-independence of the flux of the curl is then no surprise. If two surfaces share a boundary, the difference of their curl-fluxes is the flux through the *closed* surface they together bound, which is zero — either because a closed surface has no boundary loop, or because the flux of a curl through a closed surface is $\iint_{\text{closed}}\operatorname{div}\operatorname{curl} F\,dV = 0$. The form-theoretic proof packages all of this: the patch-cancellation is the partition of unity, and "$\operatorname{curl} F$ is the circulation density" is the identity $d\varphi_F = $ (curl $2$-form).
+The surface-independence of the flux of the curl is then no surprise. If two surfaces share a boundary, the difference of their curl-fluxes is the flux through the *closed* surface they together bound, which is zero — either because a closed surface has no boundary loop, or because the flux of a curl through a closed surface is $\iint_{\text{closed}}\operatorname{div}\operatorname{curl} F\,dV = 0$. The form-theoretic proof packages all of this: the patch-cancellation is the partition of unity, and "$\operatorname{curl} F$ is the circulation density" is the identity $d\varphi_F =$ (curl $2$-form).
 
 ---
 
@@ -82,7 +82,7 @@ The genuine difficulty is the **orientation pairing between the surface and its 
 
 # Rederivation Scaffold
 
-**High-level strategy:** Recognize Kelvin-Stokes as the general Stokes theorem for the $1$-form $\varphi_F$; the identity $d\varphi_F = $ (curl $2$-form) makes the left side a curl flux, and parametrizing by a single chart reduces the whole statement to Green's theorem in the parameter plane.
+**High-level strategy:** Recognize Kelvin-Stokes as the general Stokes theorem for the $1$-form $\varphi_F$; the identity $d\varphi_F =$ (curl $2$-form) makes the left side a curl flux, and parametrizing by a single chart reduces the whole statement to Green's theorem in the parameter plane.
 
 **Subgoal decomposition:**
 
@@ -174,7 +174,7 @@ The genuine difficulty is the **orientation pairing between the surface and its 
 
 # Bridges
 
-- **[[Thm - The General Stokes Theorem|The General Stokes Theorem]]** — Kelvin-Stokes is its case of a $1$-form on a $2$-surface in $\mathbb{R}^3$, with $\beta = \varphi_F$. The identity $d\varphi_F = $ (curl $2$-form) is what specializes the abstract theorem to the classical one.
+- **[[Thm - The General Stokes Theorem|The General Stokes Theorem]]** — Kelvin-Stokes is its case of a $1$-form on a $2$-surface in $\mathbb{R}^3$, with $\beta = \varphi_F$. The identity $d\varphi_F =$ (curl $2$-form) is what specializes the abstract theorem to the classical one.
 
 - **[[Thm - Green's Theorem|Green's Theorem]]** — Green's theorem is Kelvin-Stokes for a *flat* surface in the plane. Conversely, the proof of Kelvin-Stokes reduces, via a chart, to Green's theorem on the parameter disk: the three-dimensional theorem is the two-dimensional one pulled back.
 

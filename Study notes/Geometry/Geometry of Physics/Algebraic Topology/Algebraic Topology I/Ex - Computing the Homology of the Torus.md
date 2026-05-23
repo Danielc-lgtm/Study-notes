@@ -134,7 +134,7 @@ Hence $H_1(T^2; \mathbb{Z}) = \mathbb{Z} A \oplus \mathbb{Z} B = \mathbb{Z}^2$.
 
 **Step 4: Compute $\chi(T^2) = 0$.**
 
-$\chi(T^2) = \sum_p (-1)^p b_p = 1 - 2 + 1 = 0$. Equivalently from the triangulation: $V - E + F$, where $V = $ number of vertices, $E = $ edges, $F = $ faces in the triangulation, after accounting for identifications. The Frankel triangulation has after-identification counts $V = 9$ (the vertices $Q_0, \dots, Q_8$, with $Q_0$ a single vertex), $E = 27$ (each interior + boundary edge counted once), $F = 18$. Compute $9 - 27 + 18 = 0$. ✓
+$\chi(T^2) = \sum_p (-1)^p b_p = 1 - 2 + 1 = 0$. Equivalently from the triangulation: $V - E + F$, where $V =$ number of vertices, $E =$ edges, $F =$ faces in the triangulation, after accounting for identifications. The Frankel triangulation has after-identification counts $V = 9$ (the vertices $Q_0, \dots, Q_8$, with $Q_0$ a single vertex), $E = 27$ (each interior + boundary edge counted once), $F = 18$. Compute $9 - 27 + 18 = 0$. ✓
 
 > [!note]- Derivation
 > *From homology:* $b_0 = \dim H_0(T^2; \mathbb{R}) = 1$, $b_1 = \dim H_1(T^2; \mathbb{R}) = 2$, $b_2 = \dim H_2(T^2; \mathbb{R}) = 1$. Alternating sum: $1 - 2 + 1 = 0$.

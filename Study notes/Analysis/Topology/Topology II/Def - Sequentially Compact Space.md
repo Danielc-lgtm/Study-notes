@@ -25,7 +25,7 @@ The reason they diverge: sequences are *too short* in non-first-countable spaces
 
 Concrete examples of the divergence:
 
-1. **Compact but NOT sequentially compact:** The product space $\{0, 1\}^{[0, 1]}$ — functions from $[0, 1]$ to $\{0, 1\}$ with the product topology. This is compact by Tychonoff. But it is *not* sequentially compact: the sequence $f_n(x) = $ "the $n$-th binary digit of $x$" has no convergent subsequence (one can construct an $x$ whose binary digits are arranged so any subsequence of $f_n(x)$ oscillates). The proof uses a diagonal-style argument.
+1. **Compact but NOT sequentially compact:** The product space $\{0, 1\}^{[0, 1]}$ — functions from $[0, 1]$ to $\{0, 1\}$ with the product topology. This is compact by Tychonoff. But it is *not* sequentially compact: the sequence $f_n(x) =$ "the $n$-th binary digit of $x$" has no convergent subsequence (one can construct an $x$ whose binary digits are arranged so any subsequence of $f_n(x)$ oscillates). The proof uses a diagonal-style argument.
 
 2. **Sequentially compact but NOT compact:** The first uncountable ordinal $\omega_1$ with the order topology. Every sequence in $\omega_1$ has a sup which is a countable ordinal, hence in $\omega_1$, and the sequence has a convergent subsequence (consisting of suitably chosen elements). So $\omega_1$ is sequentially compact. But it is *not* compact: the cover by $\{[0, \alpha) : \alpha < \omega_1\}$ has no finite subcover.
 
@@ -88,7 +88,7 @@ In **dynamical systems**, the compactness of a phase space is what guarantees th
 
 **Is an instance of sequential compactness but NOT compactness — $\omega_1$ with the order topology.** Every sequence in $\omega_1$ has a countable supremum $\alpha < \omega_1$, hence lives in $[0, \alpha]$ which is compact (closed bounded subset of a well-ordered set), so the sequence has a convergent subsequence. But the cover $\{[0, \beta) : \beta < \omega_1\}$ has no finite subcover.
 
-**Is an instance of compactness but NOT sequential compactness — $\{0, 1\}^{[0, 1]}$.** The product is compact by Tychonoff. But the sequence $f_n(x) = $ "$n$-th binary digit of $x$" has no convergent subsequence: given any subsequence $\{f_{n_k}\}$, construct $x \in [0, 1]$ with binary expansion arranged so $f_{n_k}(x) = 0$ for $k$ even and $1$ for $k$ odd — then $f_{n_k}(x)$ does not converge. Hence no subsequence converges pointwise everywhere, and pointwise convergence is what convergence means in the product topology.
+**Is an instance of compactness but NOT sequential compactness — $\{0, 1\}^{[0, 1]}$.** The product is compact by Tychonoff. But the sequence $f_n(x) =$ "$n$-th binary digit of $x$" has no convergent subsequence: given any subsequence $\{f_{n_k}\}$, construct $x \in [0, 1]$ with binary expansion arranged so $f_{n_k}(x) = 0$ for $k$ even and $1$ for $k$ odd — then $f_{n_k}(x)$ does not converge. Hence no subsequence converges pointwise everywhere, and pointwise convergence is what convergence means in the product topology.
 
 **Is NOT an instance of either — the open interval $(0, 1)$.** Sequential compactness fails: $x_n = 1/n$ has no convergent subsequence in $(0, 1)$ (every subsequence converges to $0 \notin (0, 1)$). Compactness fails similarly. So compactness and sequential compactness fail *together* in this case.
 

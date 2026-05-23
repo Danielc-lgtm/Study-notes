@@ -82,7 +82,7 @@ Now exactness. Consider the three-term piece $\pi_k(F) \xrightarrow{i_*} \pi_k(E
 
 - **$\pi_* \circ i_* = 0$:** if $f : S^k \to F \subseteq E$, then $\pi \circ f : S^k \to B$ is constant (because $F = \pi^{-1}(b_0)$ collapses to $b_0$ under $\pi$). So the image of $i_*$ lies in $\ker \pi_*$.
 
-- **$\ker \pi_* \subseteq \mathrm{im}\, i_*$:** if $f : S^k \to E$ has $\pi \circ f \simeq $ constant, then the homotopy can be lifted (by HLP) to a homotopy in $E$ that deforms $f$ to a map landing in $F$. So $f$ is homotopic to a map factoring through $F$, hence $[f] \in \mathrm{im}\, i_*$.
+- **$\ker \pi_* \subseteq \mathrm{im}\, i_*$:** if $f : S^k \to E$ has $\pi \circ f \simeq$ constant, then the homotopy can be lifted (by HLP) to a homotopy in $E$ that deforms $f$ to a map landing in $F$. So $f$ is homotopic to a map factoring through $F$, hence $[f] \in \mathrm{im}\, i_*$.
 
 The other exactness statements follow similar patterns: at each group, the "obstruction to triviality" of one map is precisely what is detected by the next map in the sequence, via HLP.
 

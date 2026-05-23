@@ -63,7 +63,7 @@ Combine the decomposition with the **structure of nilpotent operators**. On each
 
 Combine the decomposition with **the Taylor series of a function holomorphic on the spectrum**. On each $G(\lambda_k, T)$, the operator $f(T)|_{G(\lambda_k, T)} = \sum_j \frac{f^{(j)}(\lambda_k)}{j!} N_k^j$ is well-defined as a *finite* sum (the nilpotent vanishes after at most $d_k$ powers). The further result $E$ is the **holomorphic functional calculus** in finite dimensions: for any function $f$ holomorphic on a neighbourhood of the spectrum of $T$, the operator $f(T)$ is uniquely defined and the assignment $f \mapsto f(T)$ is a ring homomorphism. Square roots, logarithms, exponentials, and roots of unity of $T$ all fall out of this construction.
 
-Combine the decomposition with the **dimension formula**. $\dim V = \sum_k \dim G(\lambda_k, T) = \sum_k d_k$, where $d_k$ is the algebraic multiplicity. The further result $E$ is that the characteristic polynomial $p_T(z) = \prod (z - \lambda_k)^{d_k}$ has degree $\dim V$ — see [[Def - Algebraic and Geometric Multiplicity]] and the chapter's [[Linear Algebra VIII — §8 Operators on Complex Vector Spaces#Concept Map|concept map]] for the §8B treatment of the characteristic polynomial. Combined with $\operatorname{tr} T = $ negative coefficient of $z^{\dim V - 1}$ and $\det T = (-1)^{\dim V}$ times the constant term, this gives the elementary symmetric polynomials of the eigenvalues with multiplicity.
+Combine the decomposition with the **dimension formula**. $\dim V = \sum_k \dim G(\lambda_k, T) = \sum_k d_k$, where $d_k$ is the algebraic multiplicity. The further result $E$ is that the characteristic polynomial $p_T(z) = \prod (z - \lambda_k)^{d_k}$ has degree $\dim V$ — see [[Def - Algebraic and Geometric Multiplicity]] and the chapter's [[Linear Algebra VIII — §8 Operators on Complex Vector Spaces#Concept Map|concept map]] for the §8B treatment of the characteristic polynomial. Combined with $\operatorname{tr} T =$ negative coefficient of $z^{\dim V - 1}$ and $\det T = (-1)^{\dim V}$ times the constant term, this gives the elementary symmetric polynomials of the eigenvalues with multiplicity.
 
 ---
 
@@ -79,7 +79,7 @@ But wait — we need $\lambda_1$ to be an eigenvalue, which on $\mathbb{C}$ is a
 
 **Mechanism summary: the Fitting decomposition for $T - \lambda I$ peels off the $\lambda$-generalized eigenspace and leaves a $T$-invariant complement on which $\lambda$ is no longer an eigenvalue, allowing induction on the number of eigenvalues.**
 
-The deeper insight is that **the generalized eigenspaces are forced** — they are not a choice but a consequence of two facts: (i) every operator on a complex space has an eigenvalue (FTA); (ii) once one eigenvalue is "peeled off" via the Fitting decomposition, the rest decomposes the same way by induction. The construction is canonical: the generalized eigenspaces depend only on $T$ and not on any choice of basis or representative. They are the *only* way to write $V$ as a direct sum of $T$-invariant subspaces on each of which $T - $ (some scalar) is nilpotent.
+The deeper insight is that **the generalized eigenspaces are forced** — they are not a choice but a consequence of two facts: (i) every operator on a complex space has an eigenvalue (FTA); (ii) once one eigenvalue is "peeled off" via the Fitting decomposition, the rest decomposes the same way by induction. The construction is canonical: the generalized eigenspaces depend only on $T$ and not on any choice of basis or representative. They are the *only* way to write $V$ as a direct sum of $T$-invariant subspaces on each of which $T -$ (some scalar) is nilpotent.
 
 The connection to module theory makes the inevitability transparent. Regard $V$ as a $\mathbb{C}[x]$-module via $T$ (`[[Def - The Module of a Linear Operator]]`). The structure theorem for finitely generated [[Def - Module|modules]] over a PID ([[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain]]) decomposes $V$ into a direct sum of primary cyclic [[Def - Module|modules]] $\mathbb{C}[x]/(x - \lambda_k)^{n_{k, i}}$, where the primes of $\mathbb{C}[x]$ are exactly the linear polynomials $(x - \lambda)$. The **primary decomposition** ([[Thm - Primary Decomposition Theorem]]) [[Def - Group|groups]] summands by prime, and the $(x - \lambda_k)$-primary component is exactly $G(\lambda_k, T)$. So the generalized eigenspace decomposition is the linear-algebra incarnation of the primary decomposition for $\mathbb{C}[x]$-modules — a result that is forced by general algebraic principles, not specific to linear algebra.
 
@@ -107,7 +107,7 @@ The most common error is to confuse the algebraic and geometric multiplicities, 
 
 2. **Nilpotence of the shift.** Show that $(T - \lambda_k I)|_{G(\lambda_k, T)}$ is nilpotent — specifically, that $((T - \lambda_k I)|_{G(\lambda_k, T)})^{\dim V} = 0$.
    - *Hint:* Directly from $G(\lambda_k, T) = \operatorname{null}(T - \lambda_k I)^{\dim V}$.
-   - *Why needed:* This is the structural content "$T = \lambda_k I + $ nilpotent" on each piece.
+   - *Why needed:* This is the structural content "$T = \lambda_k I +$ nilpotent" on each piece.
 
 3. **Linear independence of generalized eigenvectors.** Show that nonzero generalized eigenvectors for distinct eigenvalues are linearly independent.
    - *Hint:* Suppose $v_1 + \cdots + v_m = 0$ with each $v_k \in G(\lambda_k, T)$. Apply $(T - \lambda_m I)^{\dim V}$ to kill $v_m$; iterate. Use uniqueness of the eigenvalue associated with a generalized eigenvector (LADR 8.11).
@@ -144,7 +144,7 @@ The most common error is to confuse the algebraic and geometric multiplicities, 
 >
 > **Hint:** Directly: $G(\lambda, T) = \operatorname{null}(T - \lambda I)^{\dim V}$, so $(T - \lambda I)^{\dim V}|_{G(\lambda, T)} = 0$.
 >
-> **Why needed:** This is the structural conclusion "$T = \lambda I + $ nilpotent on $G(\lambda, T)$", the central content of the theorem.
+> **Why needed:** This is the structural conclusion "$T = \lambda I +$ nilpotent on $G(\lambda, T)$", the central content of the theorem.
 >
 > > [!note]- Full proof
 > > By Lemma 1, the restriction $(T - \lambda I)|_{G(\lambda, T)}$ is a well-defined operator on $G(\lambda, T)$.

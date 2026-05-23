@@ -125,7 +125,7 @@ The decomposition follows from the spectral theory of the self-adjoint elliptic 
    - *Why needed:* Gives the $L^2$-orthogonal decomposition.
 
 5. **Identify $\operatorname{ran}\Delta$ with $d\Omega^{k-1} + \delta\Omega^{k+1}$.** $\Delta = d\delta + \delta d$, so $\operatorname{ran}\Delta \subseteq dL^2\Omega^{k-1} + \delta L^2\Omega^{k+1}$. The other direction uses the orthogonal complement argument.
-   - *Hint:* If $\omega = d\eta$ is exact (so $\eta = \delta G\zeta$ for some $\zeta$), then $\omega = d\delta G\zeta = (\Delta - \delta d)G\zeta = $ harmonic-free piece + coexact piece. With more care, $d\Omega^{k-1} + \delta\Omega^{k+1} \subseteq \operatorname{ran}\Delta$.
+   - *Hint:* If $\omega = d\eta$ is exact (so $\eta = \delta G\zeta$ for some $\zeta$), then $\omega = d\delta G\zeta = (\Delta - \delta d)G\zeta =$ harmonic-free piece + coexact piece. With more care, $d\Omega^{k-1} + \delta\Omega^{k+1} \subseteq \operatorname{ran}\Delta$.
    - *Why needed:* Identifies the range of $\Delta$ with the exact-plus-coexact subspace, completing the algebraic identification.
 
 6. **$d\Omega^{k-1}$ and $\delta\Omega^{k+1}$ are $L^2$-orthogonal.** Show $\langle d\alpha, \delta\gamma\rangle = 0$ for all $\alpha, \gamma$.

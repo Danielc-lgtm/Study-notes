@@ -39,7 +39,7 @@ What is forced by demanding the operator $d : C^\infty(M) \to \Omega^1(M)$ be **
 
 What is forced by demanding $df$ identify with the **differential of a smooth map** in the sense of [[Def - The Differential of a Smooth Map]]? For $f : M \to \mathbb{R}$, the bundle differential $df : TM \to T\mathbb{R} = \mathbb{R} \times \mathbb{R}$ is a bundle homomorphism over $f$. Restricting to a fibre $T_pM$, $df_p : T_pM \to T_{f(p)}\mathbb{R}$, and identifying $T_{f(p)}\mathbb{R} \cong \mathbb{R}$ (since $\mathbb{R}$ has a canonical basis $\partial/\partial t$), $df_p$ becomes a linear map $T_pM \to \mathbb{R}$ — an element of $T_p^*M$. This identification is the bridge between the bundle-homomorphism perspective on $df$ and the covector-field perspective.
 
-What if we **strengthened** by demanding $df$ also be exact in the sense of $df = $ differential of another function? It already is — $f$ itself is that function. The point of the definition is that $df$ produces *the* canonical exact 1-form associated with $f$.
+What if we **strengthened** by demanding $df$ also be exact in the sense of $df =$ differential of another function? It already is — $f$ itself is that function. The point of the definition is that $df$ produces *the* canonical exact 1-form associated with $f$.
 
 What if we **weakened** by allowing $df$ to be only continuous? Then we would need $f$ to be only $C^1$, losing the smooth-bundle apparatus.
 

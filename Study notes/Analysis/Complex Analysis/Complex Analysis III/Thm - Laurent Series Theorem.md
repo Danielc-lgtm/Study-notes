@@ -87,7 +87,7 @@ For $w$ in the annulus, write $f(w)$ as a contour integral using Cauchy's formul
 
 1. **Apply Cauchy's integral formula to the sub-annulus.** Choose $r_0 < \rho_1 < |w - a| < \rho_2 < R_0$; on the sub-annulus, $f$ is holomorphic; apply CIF to the boundary.
    - *Hint:* The boundary is $\gamma_2 - \gamma_1$ where $\gamma_i$ is the circle $|z - a| = \rho_i$ counterclockwise.
-   - *Why needed:* Gives $f(w) = $ outer integral $-$ inner integral.
+   - *Why needed:* Gives $f(w) =$ outer integral $-$ inner integral.
 
 2. **Expand $1/(z - w)$ as a geometric series on the outer circle.** On $|z - a| = \rho_2 > |w - a|$, write $1/(z - w) = \sum_{n \geq 0}(w - a)^n/(z - a)^{n+1}$.
    - *Hint:* $z - w = (z - a) - (w - a)$, factor out $z - a$, geometric series in $(w-a)/(z-a)$.

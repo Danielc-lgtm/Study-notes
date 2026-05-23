@@ -63,7 +63,7 @@ The cross product $\vec u \times \vec v = \det\begin{pmatrix} e_1 & e_2 & e_3 \\
 > For part (b), expand $u^\flat\wedge v^\flat$ as a sum of basis $2$-forms: $u^\flat\wedge v^\flat = \sum_{i<j}(u_i v_j - u_j v_i)dx^i\wedge dx^j$. Apply $\star$ to each basis $2$-form using part (a). The result is a $1$-form whose coefficients are exactly the cross-product components.
 
 > [!note]- Hint 3
-> For part (c), $u^\flat\wedge v^\flat\wedge w^\flat$ is a top-degree form on $\mathbb{R}^3$. Use the determinant identity for the wedge of three $1$-forms to express it as $\det(u_i, v_j, w_k)dx\wedge dy\wedge dz = (\text{determinant}) \cdot \operatorname{vol}_3$. Applying $\star$ to $\operatorname{vol}_3$ gives $1$, so $\star(u^\flat\wedge v^\flat\wedge w^\flat) = $ the determinant.
+> For part (c), $u^\flat\wedge v^\flat\wedge w^\flat$ is a top-degree form on $\mathbb{R}^3$. Use the determinant identity for the wedge of three $1$-forms to express it as $\det(u_i, v_j, w_k)dx\wedge dy\wedge dz = (\text{determinant}) \cdot \operatorname{vol}_3$. Applying $\star$ to $\operatorname{vol}_3$ gives $1$, so $\star(u^\flat\wedge v^\flat\wedge w^\flat) =$ the determinant.
 
 ---
 

@@ -35,13 +35,13 @@ The Cayley transform $T : \mathbb{H} \to \mathbb{D}$ maps real axis to unit circ
 
 **Key decision point:** Use the **direct formula** for the Poisson integral on the upper half-plane (no need to go through $\mathbb{D}$): for $\mathbb{H}$, the Poisson kernel is $P(x, y; t) = y/(\pi((x - t)^2 + y^2))$, and the harmonic extension of $u_0$ is $u(x, y) = \int_{-\infty}^\infty P(x, y; t) u_0(t)\,dt$.
 
-This is the **arctan integral**: $u(x, y) = (1/\pi)\arctan((\text{something})/y) + $ constant.
+This is the **arctan integral**: $u(x, y) = (1/\pi)\arctan((\text{something})/y) +$ constant.
 
 ---
 
 # Legal Operations Used
 
-1. **Recognize the harmonic function** $u(x, y) = (1/\pi)\arctan(x/y) + 1/2$ has $u(x, y \to 0^+) = $ step function ($1$ for $x > 0$, $0$ for $x < 0$, with value $1/2$ on the boundary itself).
+1. **Recognize the harmonic function** $u(x, y) = (1/\pi)\arctan(x/y) + 1/2$ has $u(x, y \to 0^+) =$ step function ($1$ for $x > 0$, $0$ for $x < 0$, with value $1/2$ on the boundary itself).
 2. **Alternative: explicit Poisson on $\mathbb{H}$** — verify with the formula.
 3. **Optional: pull back from disc.** Express $u$ on $\mathbb{D}$ in terms of the Cayley-transformed boundary data, then pull back via $T^{-1}$.
 
@@ -100,7 +100,7 @@ The proof breaks into four steps. Step 1 guesses the form $u(x,y) = (1/\pi)\arct
 >
 > Since $\log z$ is holomorphic on $\mathbb{H}$ (which is simply connected and avoids $0$), $\operatorname{Im}\log z$ is harmonic. Hence $u$ is harmonic.
 >
-> Equivalently: $u = (1/\pi)\arctan(x/y) + 1/2 = (1/\pi)\operatorname{Im}\log(-iz) + 1/2$ (computing: $-iz = y - ix$ for $z = x + iy$, $\log(-iz) = (1/2)\log(x^2 + y^2) + i\arg(-iz) = $ etc.; the calculation works out the same way).
+> Equivalently: $u = (1/\pi)\arctan(x/y) + 1/2 = (1/\pi)\operatorname{Im}\log(-iz) + 1/2$ (computing: $-iz = y - ix$ for $z = x + iy$, $\log(-iz) = (1/2)\log(x^2 + y^2) + i\arg(-iz) =$ etc.; the calculation works out the same way).
 
 **Step 4: Verify via the Poisson integral on $\mathbb{H}$**
 

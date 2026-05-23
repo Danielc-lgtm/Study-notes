@@ -112,7 +112,7 @@ A secondary difficulty: the optimal $\lambda^*$ depends on unknown quantities ($
    - *Why needed:* Quantifies bias and variance.
 
 3. **MSE decomposition.** Combine bias squared and variance.
-   - *Hint:* MSE $= \|$bias$\|^2 + $ variance $= \sum_i \big(\text{singular component of bias}\big)^2 + \sum_i \big(\text{singular component of variance}\big)$.
+   - *Hint:* MSE $= \|$bias$\|^2 +$ variance $= \sum_i \big(\text{singular component of bias}\big)^2 + \sum_i \big(\text{singular component of variance}\big)$.
    - *Why needed:* Combines into a single tractable formula.
 
 4. **Derivative at $\lambda = 0$.** Compute $\frac{d \mathrm{MSE}}{d\lambda} |_{\lambda = 0}$ and show it is negative.

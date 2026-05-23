@@ -11,7 +11,7 @@ tags: [geometry, differential-geometry, pullback, naturality]
 
 # Notation
 
-$F : M \to N$ is a smooth map between smooth manifolds. $\omega \in \Omega^1(N)$ is a covector field (1-form) on $N$. The pullback is denoted $F^*\omega \in \Omega^1(M)$, with $F^*\omega \in $ the space of 1-forms on $M$. At a point $p \in M$, $(F^*\omega)_p$ is a covector at $p$, paired with tangent vectors at $p$. The differential $dF_p : T_pM \to T_{F(p)}N$ is the bundle differential at $p$ (see [[Def - The Differential of a Smooth Map]]).
+$F : M \to N$ is a smooth map between smooth manifolds. $\omega \in \Omega^1(N)$ is a covector field (1-form) on $N$. The pullback is denoted $F^*\omega \in \Omega^1(M)$, with $F^*\omega \in$ the space of 1-forms on $M$. At a point $p \in M$, $(F^*\omega)_p$ is a covector at $p$, paired with tangent vectors at $p$. The differential $dF_p : T_pM \to T_{F(p)}N$ is the bundle differential at $p$ (see [[Def - The Differential of a Smooth Map]]).
 
 ---
 
@@ -90,7 +90,7 @@ In **physics**, pullback is the natural operation for restricting a field on a "
 
 **Is an instance — pullback by the inclusion of a submanifold.** Let $\iota : S \hookrightarrow M$ be a smooth embedding of a submanifold. For $\omega \in \Omega^1(M)$, the pullback $\iota^*\omega \in \Omega^1(S)$ is the **restriction** of $\omega$ to $S$ — for $v \in T_pS \subseteq T_pM$, $(\iota^*\omega)_p(v) = \omega_p(v)$. Restriction is a special case of pullback.
 
-**Is an instance — pullback of $dr$ by polar-to-Cartesian.** Define $F : (0, \infty) \times (0, 2\pi) \to \mathbb{R}^2$ by $F(r, \theta) = (r\cos\theta, r\sin\theta)$. On Cartesian $\mathbb{R}^2$, the 1-form $dx = $ standard differential. The pullback $F^*(dx) = \cos\theta \, dr - r \sin\theta \, d\theta$ — using $x = r\cos\theta$, $\partial x/\partial r = \cos\theta$, $\partial x/\partial \theta = -r\sin\theta$. Similarly $F^*(dy) = \sin\theta \, dr + r \cos\theta \, d\theta$.
+**Is an instance — pullback of $dr$ by polar-to-Cartesian.** Define $F : (0, \infty) \times (0, 2\pi) \to \mathbb{R}^2$ by $F(r, \theta) = (r\cos\theta, r\sin\theta)$. On Cartesian $\mathbb{R}^2$, the 1-form $dx =$ standard differential. The pullback $F^*(dx) = \cos\theta \, dr - r \sin\theta \, d\theta$ — using $x = r\cos\theta$, $\partial x/\partial r = \cos\theta$, $\partial x/\partial \theta = -r\sin\theta$. Similarly $F^*(dy) = \sin\theta \, dr + r \cos\theta \, d\theta$.
 
 **Is an instance — pullback of $d\theta$ on $S^1$ by the squaring map.** Let $F : S^1 \to S^1$, $F(e^{i\theta}) = e^{2i\theta}$ (the squaring map, which has degree $2$). Then $F^*(d\theta) = 2 d\theta$ — the pullback covers $S^1$ "twice", and the integral over $S^1$ doubles accordingly: $\int_{S^1} F^*(d\theta) = 2 \int_{S^1} d\theta$.
 

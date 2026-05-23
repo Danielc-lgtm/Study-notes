@@ -67,7 +67,7 @@ The theorem itself is *easy*: it just says block matrices multiply like matrices
 
 # Why Is It True
 
-**The mechanism in one bolded line: the entry $(M_1 M_2)_{ij}$ in the standard matrix-multiplication formula is the sum over an index $k$ of products $(M_1)_{ik} (M_2)_{kj}$; partitioning $k$ into blocks reorganises this sum into a sum of inner products of *block-row*$ \cdot$ *block-column* products, which is exactly the block-multiplication formula.**
+**The mechanism in one bolded line: the entry $(M_1 M_2)_{ij}$ in the standard matrix-multiplication formula is the sum over an index $k$ of products $(M_1)_{ik} (M_2)_{kj}$; partitioning $k$ into blocks reorganises this sum into a sum of inner products of *block-row*$\cdot$ *block-column* products, which is exactly the block-multiplication formula.**
 
 Concretely: if $M_1$ is $m \times p$ and $M_2$ is $p \times n$, then $(M_1 M_2)_{ij} = \sum_{k=1}^p (M_1)_{ik}(M_2)_{kj}$ is a sum over $p$ inner terms. Partition the inner index $k$ into blocks $K_1 = \{1, \dots, p_1\}$, $K_2 = \{p_1 + 1, \dots, p_1 + p_2\}$, etc., with $p = p_1 + p_2 + \cdots$. Then
 $$\sum_{k=1}^p (M_1)_{ik}(M_2)_{kj} = \sum_{l} \sum_{k \in K_l}(M_1)_{ik}(M_2)_{kj}.$$

@@ -86,7 +86,7 @@ The intuition is that the tensor product is *constructed* to make the universal 
 
 **Existence.** Given a bilinear $\Gamma : V \times W \to U$, we need to construct a linear $\hat\Gamma : V \otimes W \to U$. Using LADR's construction $V \otimes W = \mathcal{B}(V', W')$:
 
-Choose bases $(e_i)$ of $V$ and $(f_j)$ of $W$, with dual bases $(\varphi_i)$ of $V'$ and $(\tau_j)$ of $W'$. Then $\{e_i \otimes f_j\}$ is a basis of $V \otimes W$, and the elementary tensor $e_i \otimes f_j$ corresponds to the bilinear form $(\varphi, \tau) \mapsto \varphi(e_i) \tau(f_j) = $ Kronecker $\delta_{i\cdot}\delta_{j\cdot}$.
+Choose bases $(e_i)$ of $V$ and $(f_j)$ of $W$, with dual bases $(\varphi_i)$ of $V'$ and $(\tau_j)$ of $W'$. Then $\{e_i \otimes f_j\}$ is a basis of $V \otimes W$, and the elementary tensor $e_i \otimes f_j$ corresponds to the bilinear form $(\varphi, \tau) \mapsto \varphi(e_i) \tau(f_j) =$ Kronecker $\delta_{i\cdot}\delta_{j\cdot}$.
 
 Define $\hat\Gamma$ on basis elements: $\hat\Gamma(e_i \otimes f_j) := \Gamma(e_i, f_j)$. Extend linearly to all of $V \otimes W$. Check the universal property: for any $v = \sum v_i e_i \in V$ and $w = \sum w_j f_j \in W$,
 

@@ -98,7 +98,7 @@ This is $\mathbb{R}$-linear by linearity of integration.
 
 We claim $\Phi$ descends to a linear functional $\widetilde\Phi : H^1_{dR}(S^1) \to \mathbb{R}$ — that is, $\Phi$ vanishes on exact forms. Indeed, for $\omega = d\eta$ with $\eta \in \Omega^0(S^1) = C^\infty(S^1)$, by Stokes
 $$\Phi(d\eta) = \int_{S^1}d\eta = \int_{\partial S^1}\eta = 0.$$
-So $\Phi$ vanishes on $\mathrm{im}(d : \Omega^0 \to \Omega^1) = $ exact 1-forms, hence descends to the quotient $\Omega^1/\mathrm{im}\,d = H^1_{dR}(S^1)$.
+So $\Phi$ vanishes on $\mathrm{im}(d : \Omega^0 \to \Omega^1) =$ exact 1-forms, hence descends to the quotient $\Omega^1/\mathrm{im}\,d = H^1_{dR}(S^1)$.
 
 > [!note]- Derivation
 > The de Rham cohomology in degree 1 is $H^1_{dR}(S^1) = \ker(d : \Omega^1 \to \Omega^2)/\mathrm{im}(d : \Omega^0 \to \Omega^1)$. The numerator $\ker(d : \Omega^1 \to \Omega^2)$ is all of $\Omega^1$ (since $\Omega^2 = 0$ on $S^1$). The denominator $\mathrm{im}(d : \Omega^0 \to \Omega^1)$ is the space of exact 1-forms. So $H^1_{dR}(S^1) = \Omega^1(S^1) / d\Omega^0(S^1)$.

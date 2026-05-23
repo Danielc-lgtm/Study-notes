@@ -26,7 +26,7 @@ The integrand $R\sqrt{-g}$ is the simplest scalar density (a scalar times the vo
 
 1. *Scalar density*: $R$ is a scalar (a coordinate-invariant function on $M$), and $\sqrt{-g}\, d^4x$ is the unique coordinate-invariant volume measure (transforming with a Jacobian factor that exactly cancels the inverse Jacobian from $d^4x$). So $\int R\sqrt{-g}\, d^4x$ is a coordinate-invariant number, a well-defined action.
 
-2. *Simplest non-trivial choice*: The only simpler scalar is a constant (giving just $\int \Lambda \sqrt{-g}\, d^4x$, the cosmological-constant term with $\Lambda = $ const). The next-simplest is $R$ itself. Higher-curvature scalars ($R^2$, $R_{\mu\nu} R^{\mu\nu}$, $R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}$) give higher-order field equations with generic instabilities (Ostrogradsky's theorem).
+2. *Simplest non-trivial choice*: The only simpler scalar is a constant (giving just $\int \Lambda \sqrt{-g}\, d^4x$, the cosmological-constant term with $\Lambda =$ const). The next-simplest is $R$ itself. Higher-curvature scalars ($R^2$, $R_{\mu\nu} R^{\mu\nu}$, $R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}$) give higher-order field equations with generic instabilities (Ostrogradsky's theorem).
 
 3. *Second-order field equations*: Variation of $R$ gives $R_{\mu\nu}\delta g^{\mu\nu} + g^{\mu\nu}\delta R_{\mu\nu}$; the second piece is a total divergence (Palatini identity), which would normally be discarded. After dropping the boundary term, the variation gives terms involving up to second derivatives of $g$ — and *only* second derivatives, despite $R$ containing second derivatives in its definition. The miraculous cancellation that achieves this is what makes $R$ special.
 

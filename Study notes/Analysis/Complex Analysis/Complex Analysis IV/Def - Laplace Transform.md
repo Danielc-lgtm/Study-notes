@@ -16,7 +16,7 @@ $f : [0, \infty) \to \mathbb{R}$ (or $\mathbb{C}$) is a function defined on the 
 
 The Laplace transform converts functions of time $t \in [0, \infty)$ into functions of a complex frequency $s \in \mathbb{C}$. Its motivation has three threads:
 
-**Engineering motivation: solving linear ODEs with initial conditions.** A differential equation like $f''(t) + 3f'(t) + 2f(t) = 0$ with $f(0) = a, f'(0) = b$ is hard to attack directly but trivial after Laplace transform: it becomes the algebraic equation $(s^2 + 3s + 2)F(s) = $ (terms involving initial conditions), which solves for $F(s)$, and then $f(t)$ is recovered by inverse transform. The Laplace transform converts calculus on $[0, \infty)$ to algebra on $\mathbb{C}$.
+**Engineering motivation: solving linear ODEs with initial conditions.** A differential equation like $f''(t) + 3f'(t) + 2f(t) = 0$ with $f(0) = a, f'(0) = b$ is hard to attack directly but trivial after Laplace transform: it becomes the algebraic equation $(s^2 + 3s + 2)F(s) =$ (terms involving initial conditions), which solves for $F(s)$, and then $f(t)$ is recovered by inverse transform. The Laplace transform converts calculus on $[0, \infty)$ to algebra on $\mathbb{C}$.
 
 **Function-theoretic motivation: meromorphic extension and pole structure.** The integral $F(s) = \int_0^\infty f(t) e^{-st}\,dt$ converges absolutely in a half-plane $\{\operatorname{Re} s > c\}$ for some real $c$ (the "abscissa of convergence"), and gives a holomorphic function there. Typically, $F$ extends meromorphically to a larger region, with the poles encoding the *modes* of $f$ (e.g., $f(t) = e^{-t}$ has Laplace transform $1/(s + 1)$, with a pole at $s = -1$, encoding the exponential decay rate).
 

@@ -22,7 +22,7 @@ A **convex body** is a convex set that is additionally **closed** and has **none
 
 Why these three conditions specifically? Each rules out a degenerate case:
 
-- **Drop closedness:** open convex sets (the open ball, an open half-space) are convex but not "bodies" — they lack a boundary. The classification theorem says $C \cong D^n$, the *closed* ball; for open convex sets, the result would say $C \cong \operatorname{int}(D^n) = $ open ball, which is true but is a special case of the closed version.
+- **Drop closedness:** open convex sets (the open ball, an open half-space) are convex but not "bodies" — they lack a boundary. The classification theorem says $C \cong D^n$, the *closed* ball; for open convex sets, the result would say $C \cong \operatorname{int}(D^n) =$ open ball, which is true but is a special case of the closed version.
 
 - **Drop convexity:** a closed set with interior need not be homeomorphic to a disk — think of an annulus or a figure-eight neighborhood. Convexity is the essential geometric input.
 

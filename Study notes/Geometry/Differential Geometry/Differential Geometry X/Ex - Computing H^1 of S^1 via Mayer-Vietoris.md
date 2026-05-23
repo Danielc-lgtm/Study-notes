@@ -78,7 +78,7 @@ The plan: cover $S^1$ by two open arcs, identify each as contractible, identify 
 **Step 2: Compute cohomologies of the pieces.**
 
 > [!note]- Derivation
-> By [[Thm - The Poincaré Lemma on a Star-Shaped Region]] (or homotopy invariance from $U \simeq $ point, $V \simeq $ point):
+> By [[Thm - The Poincaré Lemma on a Star-Shaped Region]] (or homotopy invariance from $U \simeq$ point, $V \simeq$ point):
 > $$H^0(U) = H^0(V) = \mathbb{R}, \qquad H^k(U) = H^k(V) = 0 \text{ for } k \geq 1.$$
 >
 > For $U \cap V$ (two contractible components):

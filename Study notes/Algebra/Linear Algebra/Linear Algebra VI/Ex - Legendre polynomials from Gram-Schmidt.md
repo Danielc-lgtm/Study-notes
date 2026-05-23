@@ -43,9 +43,9 @@ $$
 
 **Theorem routing.** Direct application of the [[Thm - Gram-Schmidt Procedure|Gram-Schmidt procedure]]:
 1. $f_1 = 1$, $\|f_1\|^2 = 2$, $e_1 = 1/\sqrt{2}$.
-2. $f_2 = x - $ (projection of $x$ onto $\operatorname{span}(e_1)$). By parity, $\langle x, 1\rangle = \int_{-1}^1 x\, dx = 0$, so $f_2 = x$. Normalize: $\|x\|^2 = 2/3$, so $e_2 = x\sqrt{3/2}$.
-3. $f_3 = x^2 - $ (projection of $x^2$ onto $\operatorname{span}(e_1, e_2)$). The projection onto $e_2$ vanishes by parity; the projection onto $e_1$ gives $\langle x^2, e_1\rangle = (2/3)/\sqrt{2}$, so $f_3 = x^2 - 1/3$.
-4. $f_4 = x^3 - $ (projection of $x^3$ onto $\operatorname{span}(e_1, e_2, e_3)$). The projection onto $e_1, e_3$ vanishes by parity; the projection onto $e_2$ involves $\langle x^3, x\rangle = 2/5$, leading to $f_4 = x^3 - (3/5)x$.
+2. $f_2 = x -$ (projection of $x$ onto $\operatorname{span}(e_1)$). By parity, $\langle x, 1\rangle = \int_{-1}^1 x\, dx = 0$, so $f_2 = x$. Normalize: $\|x\|^2 = 2/3$, so $e_2 = x\sqrt{3/2}$.
+3. $f_3 = x^2 -$ (projection of $x^2$ onto $\operatorname{span}(e_1, e_2)$). The projection onto $e_2$ vanishes by parity; the projection onto $e_1$ gives $\langle x^2, e_1\rangle = (2/3)/\sqrt{2}$, so $f_3 = x^2 - 1/3$.
+4. $f_4 = x^3 -$ (projection of $x^3$ onto $\operatorname{span}(e_1, e_2, e_3)$). The projection onto $e_1, e_3$ vanishes by parity; the projection onto $e_2$ involves $\langle x^3, x\rangle = 2/5$, leading to $f_4 = x^3 - (3/5)x$.
 
 **Key decision point.** Whether to normalize at each step or carry the un-normalized $f_k$'s through and normalize at the end. The procedure formula uses $\langle v_k, f_j\rangle/\|f_j\|^2$ if you use un-normalized $f_j$, or $\langle v_k, e_j\rangle$ if you use normalized $e_j$. Both are correct.
 

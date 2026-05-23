@@ -50,7 +50,7 @@ In spherical coordinates $\hat n = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos
 
 2. **Operation 4 from the topic page (Pfaffian / invariant polynomial of curvature).** Apply: the curvature $\theta$ for the spin-$\tfrac{1}{2}$ Berry line bundle is a globally defined 2-form on $S^2$, and integrating over the full $S^2$ gives the first Chern number (here, $\frac{i}{2\pi}\int_{S^2}\theta = -1/2$... wait that's not integer; see calibration).
 
-3. **Operation 2 from the topic page (Lift to principal bundle).** Apply: the Hopf bundle structure $S^3 \to S^2$ underlies the geometry — the spin-$\tfrac{1}{2}$ Hilbert space $\mathbb{C}^2$ has the unit sphere $S^3$, projectivized to $\mathbb{CP}^1 = S^2 = $ space of physical states. The Berry connection is exactly the Hopf-bundle connection.
+3. **Operation 2 from the topic page (Lift to principal bundle).** Apply: the Hopf bundle structure $S^3 \to S^2$ underlies the geometry — the spin-$\tfrac{1}{2}$ Hilbert space $\mathbb{C}^2$ has the unit sphere $S^3$, projectivized to $\mathbb{CP}^1 = S^2 =$ space of physical states. The Berry connection is exactly the Hopf-bundle connection.
 
 ---
 
@@ -60,7 +60,7 @@ In spherical coordinates $\hat n = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos
 > Write the lowest-energy eigenstate $|+\hat n\rangle = (\cos(\theta/2), \sin(\theta/2)e^{i\phi})^T$ in spherical coordinates. Verify $\hat n\cdot\hat\sigma|+\hat n\rangle = +|+\hat n\rangle$.
 
 > [!note]- Hint 2
-> Compute $\omega = \langle+\hat n | d|+\hat n\rangle\rangle$. The derivative is $d|+\hat n\rangle = $ partial derivatives in $\theta$ and $\phi$. Result: $\omega = i\sin^2(\theta/2)d\phi$ (a pure-imaginary 1-form on the parameter $S^2$, with a singularity at the south pole $\theta = \pi$).
+> Compute $\omega = \langle+\hat n | d|+\hat n\rangle\rangle$. The derivative is $d|+\hat n\rangle =$ partial derivatives in $\theta$ and $\phi$. Result: $\omega = i\sin^2(\theta/2)d\phi$ (a pure-imaginary 1-form on the parameter $S^2$, with a singularity at the south pole $\theta = \pi$).
 
 > [!note]- Hint 3
 > Compute $\theta = d\omega = i\sin(\theta/2)\cos(\theta/2)d\theta\wedge d\phi = (i/2)\sin\theta\,d\theta\wedge d\phi$.

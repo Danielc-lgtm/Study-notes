@@ -94,7 +94,7 @@ If $|f| = c = 0$ on $D$, then $f \equiv 0$, constant. Otherwise, $c > 0$.
 >
 > If $c > 0$: $f(D) \subseteq \{w \in \mathbb{C} : |w| = c\}$, the circle of radius $c$. This circle has empty interior in $\mathbb{C}$, so the only open subset of the circle is $\emptyset$.
 >
-> If $f$ is non-constant, by the [[Thm - Open Mapping Theorem|open mapping theorem]] $f(D)$ is open. But $f(D) \subseteq $ (set with empty interior), so $f(D) = \emptyset$. Contradiction with $f(D) \neq \emptyset$.
+> If $f$ is non-constant, by the [[Thm - Open Mapping Theorem|open mapping theorem]] $f(D)$ is open. But $f(D) \subseteq$ (set with empty interior), so $f(D) = \emptyset$. Contradiction with $f(D) \neq \emptyset$.
 >
 > So $f$ is constant. $\blacksquare$
 
@@ -129,5 +129,5 @@ If $|f| = c = 0$ on $D$, then $f \equiv 0$, constant. Otherwise, $c > 0$.
 
 **Generalization — image in any non-open set forces constancy.** A non-constant holomorphic function has open image. So if the image is constrained to *any* set with empty interior — a line, a curve, a countable set — the function must be constant. Examples:
 - $f : D \to \mathbb{R}$ holomorphic ⟹ $f$ constant.
-- $f : D \to $ (countable set) holomorphic ⟹ $f$ constant.
-- $f : D \to $ (a smooth curve in $\mathbb{C}$) holomorphic ⟹ $f$ constant.
+- $f : D \to$ (countable set) holomorphic ⟹ $f$ constant.
+- $f : D \to$ (a smooth curve in $\mathbb{C}$) holomorphic ⟹ $f$ constant.

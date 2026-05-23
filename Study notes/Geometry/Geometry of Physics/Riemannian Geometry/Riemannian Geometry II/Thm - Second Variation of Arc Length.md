@@ -115,7 +115,7 @@ The most common error is to **forget the orthogonality assumption** $V \perp T$.
 
 **Subgoal decomposition:**
 
-1. **Write the first variation for general $\gamma$.** $\frac{d}{ds} L(\gamma_s) = \int g(\nabla_T V_s, T_s)\, dt + $ boundary terms, where $V_s = \partial_s \Gamma$ and $T_s = \partial_t \Gamma$.
+1. **Write the first variation for general $\gamma$.** $\frac{d}{ds} L(\gamma_s) = \int g(\nabla_T V_s, T_s)\, dt +$ boundary terms, where $V_s = \partial_s \Gamma$ and $T_s = \partial_t \Gamma$.
    - *Hint:* the formula generalises trivially; just don't yet assume $\gamma$ is a geodesic.
    - *Why needed:* sets up the framework for differentiating again.
 

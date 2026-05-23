@@ -76,7 +76,7 @@ Let $\gamma$ be the unique geodesic on $S^n$ with $\gamma(0) = p$ and $\dot\gamm
 >
 > By [[Def - Geodesic|the geodesic equation]] and [[Thm - Existence and Uniqueness of Geodesics|existence and uniqueness]], the curve $\sigma \circ \gamma$ is also a geodesic, with $(\sigma \circ \gamma)(0) = \sigma(p) = p$ and $(\sigma \circ \gamma)'(0) = d\sigma_p(\dot\gamma(0)) = d\sigma_p(v) = v$. Both $\gamma$ and $\sigma \circ \gamma$ are geodesics with the same initial data, so by uniqueness $\sigma \circ \gamma = \gamma$.
 >
-> This means $\gamma(t) = \sigma(\gamma(t))$ for all $t$, so $\gamma(t)$ lies in the fixed-point set of $\sigma$ for all $t$. The fixed-point set of $\sigma$ in $\mathbb{R}^{n+1}$ is exactly the 2-plane $P$. So $\gamma(t) \in P \cap S^n = $ the great circle of $S^n$ through $p$ in direction $v$ (the intersection of $S^n$ with the 2-plane $P$).
+> This means $\gamma(t) = \sigma(\gamma(t))$ for all $t$, so $\gamma(t)$ lies in the fixed-point set of $\sigma$ for all $t$. The fixed-point set of $\sigma$ in $\mathbb{R}^{n+1}$ is exactly the 2-plane $P$. So $\gamma(t) \in P \cap S^n =$ the great circle of $S^n$ through $p$ in direction $v$ (the intersection of $S^n$ with the 2-plane $P$).
 >
 > So the image of $\gamma$ is contained in this great circle.
 

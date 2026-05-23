@@ -54,7 +54,7 @@ For a $1$-form $\beta$ on $Q$, the graph $\{(q, \beta_q)\} \subset T^*Q$ pulls b
 
 1. **Operation 1 from the topic page (Compute $X_H$ from $\iota_{X_H}\omega = dH$).** Used twice, once for each formulation.
 
-2. **Operation 4 from the topic page (Recognize $\omega = -d\theta$ on a cotangent bundle).** Used to relate the tautological form $\theta = p\,dq$ to the canonical $\omega_0$ via $\omega_0 = -d\theta$, and to interpret the twisted form $\omega = \omega_0 + e\pi^*F = -d(\theta - e\pi^*A) + e\pi^*F - e\pi^*F = $ ... wait, let me think. $\omega = \omega_0 + e\pi^*F = -d\theta + e\pi^*dA = -d(\theta - e\pi^*A)$. So $\omega = -d\theta'$ where $\theta' := \theta - e\pi^*A$. The twisted form is **still exact** when $A$ is globally defined!
+2. **Operation 4 from the topic page (Recognize $\omega = -d\theta$ on a cotangent bundle).** Used to relate the tautological form $\theta = p\,dq$ to the canonical $\omega_0$ via $\omega_0 = -d\theta$, and to interpret the twisted form $\omega = \omega_0 + e\pi^*F = -d(\theta - e\pi^*A) + e\pi^*F - e\pi^*F =$ ... wait, let me think. $\omega = \omega_0 + e\pi^*F = -d\theta + e\pi^*dA = -d(\theta - e\pi^*A)$. So $\omega = -d\theta'$ where $\theta' := \theta - e\pi^*A$. The twisted form is **still exact** when $A$ is globally defined!
 
 3. **Operation 7 from the topic page (Identify a Lagrangian submanifold).** The crux of the exercise: the graph $L_A$ is Lagrangian iff the appropriate exterior derivative vanishes.
 

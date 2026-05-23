@@ -180,7 +180,7 @@ The proof breaks into three steps. Step 1 computes the first fundamental form. S
 >
 > Gauss curvature: $K = \kappa_1\kappa_2 = -1/(a^2\cosh^4(v/a)) < 0$. The catenoid is hyperbolic everywhere, with curvature concentrating at the "throat" $v = 0$ (where $K = -1/a^2$) and decaying exponentially as $|v| \to \infty$.
 
-> [!warning] Illegal but tempting: "Surfaces of revolution with $K = $ constant negative are minimal"
+> [!warning] Illegal but tempting: "Surfaces of revolution with $K =$ constant negative are minimal"
 > This is false. The catenoid has variable $K = -1/(a^2\cosh^4(v/a))$ but $H = 0$ — minimal. The **pseudosphere** (see [[Ex - Gauss Curvature of the Pseudosphere is -1]]) has constant $K = -1/a^2$ but $H \neq 0$ — *not* minimal. The properties "constant negative curvature" and "minimal" are independent on a surface of revolution; the catenoid is the unique minimal surface of revolution (up to scaling), while constant-negative-curvature surfaces of revolution form a different one-parameter family.
 
 > [!tip] Frame-invariance check: hairy-ball-style independence of the choice of normal

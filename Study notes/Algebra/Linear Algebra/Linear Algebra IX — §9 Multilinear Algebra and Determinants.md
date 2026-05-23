@@ -186,7 +186,7 @@ These are the moves out of which almost every exercise in the chapter is assembl
 
 6. **Compute a determinant via cofactor expansion when the matrix has zeros or block structure.** Expand along the row or column with the most zeros, so that most cofactors vanish from the sum. *Trigger:* the matrix has at least one row or column with $\leq 2$ nonzero entries. *Pattern:* "expand along the sparse row; recurse."
 
-7. **Compute a determinant via eigenvalues when the operator has known spectrum.** $\det T = \prod \lambda_i$ (with multiplicity). *Trigger:* you know the eigenvalues or the operator is given as a diagonal/triangular form. *Pattern:* "$\det = $ product of eigenvalues — no further computation needed."
+7. **Compute a determinant via eigenvalues when the operator has known spectrum.** $\det T = \prod \lambda_i$ (with multiplicity). *Trigger:* you know the eigenvalues or the operator is given as a diagonal/triangular form. *Pattern:* "$\det =$ product of eigenvalues — no further computation needed."
 
 8. **Apply multiplicativity $\det(ST) = \det S \cdot \det T$.** Either to factorise a hard determinant into easier ones, or to derive constraints (e.g., $\det T \cdot \det T^{-1} = 1$). *Trigger:* the matrix factors naturally (LU, QR, change-of-basis $C^t M C$, etc.). *Pattern:* "factor and multiply the determinants."
 

@@ -148,7 +148,7 @@ The second hard part is **verifying $C^\infty$-linearity of the right side in $Z
 > **Why needed:** This is the uniqueness half of the fundamental theorem; together with the existence half (Lemma 3), it gives the full statement.
 >
 > > [!note]- Full proof
-> > Apply the Koszul formula to $\nabla$: $2g(\nabla_X Y, Z) = $ RHS of Koszul, expressed in $g$ and Lie brackets. Apply it to $\tilde\nabla$: $2g(\tilde\nabla_X Y, Z) = $ the *same* RHS. So $g(\nabla_X Y, Z) = g(\tilde\nabla_X Y, Z)$ for every $Z$, i.e., $g(\nabla_X Y - \tilde\nabla_X Y, Z) = 0$ for every $Z$. By non-degeneracy of $g$ (every vector that pairs to zero with every $Z$ must be zero), $\nabla_X Y = \tilde\nabla_X Y$. This holds for arbitrary $X, Y$, so $\nabla = \tilde\nabla$. $\blacksquare$
+> > Apply the Koszul formula to $\nabla$: $2g(\nabla_X Y, Z) =$ RHS of Koszul, expressed in $g$ and Lie brackets. Apply it to $\tilde\nabla$: $2g(\tilde\nabla_X Y, Z) =$ the *same* RHS. So $g(\nabla_X Y, Z) = g(\tilde\nabla_X Y, Z)$ for every $Z$, i.e., $g(\nabla_X Y - \tilde\nabla_X Y, Z) = 0$ for every $Z$. By non-degeneracy of $g$ (every vector that pairs to zero with every $Z$ must be zero), $\nabla_X Y = \tilde\nabla_X Y$. This holds for arbitrary $X, Y$, so $\nabla = \tilde\nabla$. $\blacksquare$
 
 > [!note]- Lemma 3: The Koszul formula defines a torsion-free metric-compatible connection (existence of Levi-Civita)
 > **Statement:** Define $\nabla_X Y$ to be the unique vector field with $g(\nabla_X Y, Z) = \tfrac{1}{2}K(Z)$ for all $Z$, where $K(Z)$ is the right side of the Koszul formula. Then $\nabla$ is an affine connection on $TM$ that is torsion-free and metric-compatible.

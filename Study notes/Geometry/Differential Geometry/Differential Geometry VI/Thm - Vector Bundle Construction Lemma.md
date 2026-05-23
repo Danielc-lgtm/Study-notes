@@ -48,7 +48,7 @@ The role of the cocycle condition is to certify *consistency* of the gluing data
 
 The hypothesis the construction lemma needs is "a manifold, fibre vector spaces, an open cover, candidate trivializations, and a cocycle of transition functions". The skill is recognising, in a problem that does not yet present a bundle, that this data is implicitly available.
 
-The most common source is **a smoothly varying fibrewise multilinear-algebra construction**. Given a vector bundle $E$ and a functor $F$ on finite-dimensional vector spaces (dual, tensor product, exterior power, symmetric power, Hom), the bundle $F(E)$ exists and has the same base manifold, with fibres $F(E_p)$ and transition functions $F(\tau_{\alpha\beta})$. The cocycle inherits from the cocycle of $E$. This is the source behind every construction of derived bundles: the cotangent bundle ($F = $ dual), tensor bundles ($F = $ tensor product), form bundles ($F = $ exterior power), etc.
+The most common source is **a smoothly varying fibrewise multilinear-algebra construction**. Given a vector bundle $E$ and a functor $F$ on finite-dimensional vector spaces (dual, tensor product, exterior power, symmetric power, Hom), the bundle $F(E)$ exists and has the same base manifold, with fibres $F(E_p)$ and transition functions $F(\tau_{\alpha\beta})$. The cocycle inherits from the cocycle of $E$. This is the source behind every construction of derived bundles: the cotangent bundle ($F =$ dual), tensor bundles ($F =$ tensor product), form bundles ($F =$ exterior power), etc.
 
 A second source is **a smoothly varying family of linear subspaces of constant dimension**. Given $E \to M$ and a smoothly varying subspace $D_p \subseteq E_p$ of constant dimension $m$, with the local-frame criterion satisfied ([[Def - Subbundle]]), the subspaces assemble into a subbundle $D \subseteq E$. The construction lemma applied to the candidate trivializations adapted to $D$ provides the smooth structure on $D$.
 
@@ -106,7 +106,7 @@ Use the smooth-manifold chart lemma to construct the smooth structure on $E$. Fo
    - *Why needed:* The chart lemma needs candidate charts to even begin.
 
 2. **Verify smooth compatibility on overlaps.** Compute $\tilde\varphi \circ \tilde\psi^{-1}$ for two such charts and show it is smooth, using the cocycle condition and the smoothness of chart transitions on $M$.
-   - *Hint:* The composite is $(\varphi \circ \psi^{-1}) \times $ matrix multiplication by $\tau_{\alpha\beta}$, both smooth.
+   - *Hint:* The composite is $(\varphi \circ \psi^{-1}) \times$ matrix multiplication by $\tau_{\alpha\beta}$, both smooth.
    - *Why needed:* This is the manifold chart lemma's compatibility hypothesis.
 
 3. **Check Hausdorff and second-countable.** Verify that the topology induced on $E$ by the charts is Hausdorff (two points in $E$ can be separated by disjoint chart neighbourhoods) and second-countable (a countable atlas suffices).

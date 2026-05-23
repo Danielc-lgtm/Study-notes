@@ -101,7 +101,7 @@ The calculation is long; we summarise it in stages and verify the key conclusion
 
 > [!note]- Derivation
 > Lorentzian skew-symmetry: $\omega_{ab} = -\omega_{ba}$ with the Lorentzian metric raising/lowering indices, giving $\omega^a_{\;b}$ such that $\omega^0_{\;1} = \omega^1_{\;0}$ (note: $+$ sign because of $g^{00} = -1$). Working through:
-> - $\omega^0_{\;1} = (M/(r^2 f^2))\hat\sigma^0 = $ proportional to $dt$, capturing time-dilation effects.
+> - $\omega^0_{\;1} = (M/(r^2 f^2))\hat\sigma^0 =$ proportional to $dt$, capturing time-dilation effects.
 > - $\omega^2_{\;1} = -(f/r)\hat\sigma^2 = -f\,d\theta$.
 > - $\omega^3_{\;1} = -(f/r)\hat\sigma^3 = -f\sin\theta\,d\varphi$.
 > - $\omega^3_{\;2} = -(\cot\theta/r)\hat\sigma^3 = -\cos\theta\,d\varphi$.

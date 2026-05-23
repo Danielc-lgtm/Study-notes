@@ -82,7 +82,7 @@ This solution deploys the following legal operations from [[Linear Algebra VI â€
 > Specifically: the Gram-Schmidt basis splits into even and odd components. Let $e_2, e_4, e_6$ be the orthonormal basis vectors built from $x, x^3, x^5$. Then $P_U(\sin x) = \langle \sin x, e_2\rangle e_2 + \langle \sin x, e_4\rangle e_4 + \langle \sin x, e_6\rangle e_6$.
 
 > [!note]- Hint 5
-> The relevant integrals are $\int_{-\pi}^\pi x \sin x\, dx$, $\int_{-\pi}^\pi x^3 \sin x\, dx$, $\int_{-\pi}^\pi x^5 \sin x\, dx$. Each can be computed by integration by parts (with $u = $ polynomial, $dv = \sin x \, dx$); the answer involves $\pi$ to various powers.
+> The relevant integrals are $\int_{-\pi}^\pi x \sin x\, dx$, $\int_{-\pi}^\pi x^3 \sin x\, dx$, $\int_{-\pi}^\pi x^5 \sin x\, dx$. Each can be computed by integration by parts (with $u =$ polynomial, $dv = \sin x \, dx$); the answer involves $\pi$ to various powers.
 
 ---
 

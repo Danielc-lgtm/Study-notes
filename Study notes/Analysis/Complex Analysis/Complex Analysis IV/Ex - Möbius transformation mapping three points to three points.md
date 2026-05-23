@@ -127,7 +127,7 @@ $T(z) = (az + b)/(cz + d)$ with $ad - bc \neq 0$. We have 4 unknowns, but scalar
 
 **The cross-ratio is the Möbius-invariant.** $(z, z_1, z_2, z_3)$ is preserved by every Möbius transformation. This is the conceptual organizing principle for Möbius theory: the cross-ratio classifies four-point configurations up to Möbius equivalence.
 
-**The standard normalization is $\{0, 1, \infty\}$.** The Möbius transformation $M_{z_1, z_2, z_3}(z) := $ unique Möbius sending $(z_1, z_2, z_3)$ to $(0, 1, \infty)$ is the "canonical" Möbius for any triple. Composing with another such normalization gives the answer to any "three to three" problem.
+**The standard normalization is $\{0, 1, \infty\}$.** The Möbius transformation $M_{z_1, z_2, z_3}(z) :=$ unique Möbius sending $(z_1, z_2, z_3)$ to $(0, 1, \infty)$ is the "canonical" Möbius for any triple. Composing with another such normalization gives the answer to any "three to three" problem.
 
 **Verify with a fourth point.** A common error in Möbius problems is to mishandle the $\infty$ point or sign conventions. Always verify your $T$ against a known correspondence — for instance, in this case, check that the unit interval $[0, 1]$ on the real axis maps to a specific arc (an arc of the unit circle, by Möbius preservation of generalized circles).
 

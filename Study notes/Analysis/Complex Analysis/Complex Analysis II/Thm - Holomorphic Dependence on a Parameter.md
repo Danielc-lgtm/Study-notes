@@ -115,7 +115,7 @@ For any triangle in $D$, swap $\int_\Delta \int_a^b = \int_a^b \int_\Delta$ via 
 
 # Cross-Field Exercise Suggestions
 
-**Higher-derivative CIF revisited.** $f^{(n)}(w) = (n!/2\pi i)\oint f(z)/(z - w)^{n+1}\,dz$ — this is "$f^{(n)}$ is a holomorphic-parameter integral", with $\varphi(w, z) = f(z)/(z - w)^{n+1}$. The theorem confirms $w \mapsto $ integral is holomorphic in $w$.
+**Higher-derivative CIF revisited.** $f^{(n)}(w) = (n!/2\pi i)\oint f(z)/(z - w)^{n+1}\,dz$ — this is "$f^{(n)}$ is a holomorphic-parameter integral", with $\varphi(w, z) = f(z)/(z - w)^{n+1}$. The theorem confirms $w \mapsto$ integral is holomorphic in $w$.
 
 **The Gamma function is holomorphic.** $\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}\,dt$ is holomorphic for $\operatorname{Re}(z) > 0$. The integrand $t^{z-1}e^{-t} = e^{(z-1)\log t - t}$ is holomorphic in $z$, continuous in $(z, t)$ on $\{\operatorname{Re} z > 0\} \times (0, \infty)$. The integral converges absolutely and uniformly on compacts of $\{\operatorname{Re} z > 0\}$. Modifying the theorem statement for improper integrals (need to verify uniform convergence at the endpoints) gives the holomorphy.
 

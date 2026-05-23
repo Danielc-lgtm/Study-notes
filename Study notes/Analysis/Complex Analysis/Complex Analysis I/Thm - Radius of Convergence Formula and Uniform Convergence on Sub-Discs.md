@@ -132,7 +132,7 @@ Apply the root test pointwise to determine $R$. Apply the Weierstrass $M$-test o
 
 **Power series of generating functions.** In **combinatorics**, generating functions $\sum a_n z^n$ for counting sequences have radii of convergence reflecting the growth rate of $a_n$. Catalan numbers $C_n \sim 4^n/n^{3/2}$ give $R = 1/4$, while $a_n = n!$ gives $R = 0$ (the series is a formal object, not a function).
 
-**Spectral radius in operator theory.** For a bounded linear operator $T$ on a Banach space, the resolvent $(zI - T)^{-1}$ has a power series expansion $\sum T^n/z^{n+1}$ valid for $|z| > $ the spectral radius. The spectral radius is exactly $\limsup \lVert T^n\rVert^{1/n}$ — same formula, in operator norms.
+**Spectral radius in operator theory.** For a bounded linear operator $T$ on a Banach space, the resolvent $(zI - T)^{-1}$ has a power series expansion $\sum T^n/z^{n+1}$ valid for $|z| >$ the spectral radius. The spectral radius is exactly $\limsup \lVert T^n\rVert^{1/n}$ — same formula, in operator norms.
 
 **Radius limited by nearest singularity.** A function holomorphic on a region with singularities has a power series at any interior point whose radius is exactly the distance to the *nearest singularity*. This is a stronger statement (proved with CIF in [[Complex Analysis II — Cauchy's Theorem and its Consequences|CA II]]) that gives geometric meaning to the radius formula.
 

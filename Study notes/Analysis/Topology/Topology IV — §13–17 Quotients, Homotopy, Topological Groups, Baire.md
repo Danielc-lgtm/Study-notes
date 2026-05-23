@@ -249,7 +249,7 @@ The standard sources are: a *quotient structure* (an equivalence relation on a k
 **Illegal but tempting operations:**
 
 > [!warning] 1. Treating "homotopy equivalent" as "homeomorphic"
-> $\mathbb{R}^n$ is contractible, hence homotopy equivalent to a point. But $\mathbb{R}^n \neq $ a point (and is not homeomorphic to one). Homotopy equivalence is *much* coarser than homeomorphism — it forgets dimension, manifold-ness, properness, almost everything except "shape information seen by fundamental groups and homology". Always check the kind of equivalence relevant to the conclusion you want.
+> $\mathbb{R}^n$ is contractible, hence homotopy equivalent to a point. But $\mathbb{R}^n \neq$ a point (and is not homeomorphic to one). Homotopy equivalence is *much* coarser than homeomorphism — it forgets dimension, manifold-ness, properness, almost everything except "shape information seen by fundamental groups and homology". Always check the kind of equivalence relevant to the conclusion you want.
 
 > [!warning] 2. Treating "deformation retract" without checking $A \subseteq X$
 > A deformation retract requires $A$ to be a subspace of $X$, with the retraction $r$ satisfying $r|_A = 1_A$. Without this, the conclusion $X \simeq A$ may still hold but for a different reason (homotopy equivalence in general). The setup matters — sometimes the inclusion $A \hookrightarrow X$ does not factor through a retraction at all.

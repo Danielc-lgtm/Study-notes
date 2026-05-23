@@ -96,7 +96,7 @@ A covering map is also the **topological analogue of a Galois extension of field
 
 **Corollary (uniqueness of path lifts):** for a covering $p : \tilde X \to X$, any continuous path $\gamma : I \to X$ together with a chosen starting lift $\tilde x_0 \in p^{-1}(\gamma(0))$ has a unique lift $\tilde\gamma : I \to \tilde X$ with $\tilde\gamma(0) = \tilde x_0$ — see [[Thm - Path Lifting and Homotopy Lifting]].
 
-**Corollary (fibre cardinality is locally constant):** for a covering $p : \tilde X \to X$, the function $x \mapsto |p^{-1}(x)|$ is locally constant — so constant on connected components of $X$. Proof: on each evenly covered $U$, $|p^{-1}(x)| = $ number of sheets above $U$, independent of $x \in U$.
+**Corollary (fibre cardinality is locally constant):** for a covering $p : \tilde X \to X$, the function $x \mapsto |p^{-1}(x)|$ is locally constant — so constant on connected components of $X$. Proof: on each evenly covered $U$, $|p^{-1}(x)| =$ number of sheets above $U$, independent of $x \in U$.
 
 **Corollary (covering of a covering):** if $p : \tilde X \to X$ and $q : \tilde{\tilde X} \to \tilde X$ are covering maps and $X$ is locally path-connected, then $p \circ q : \tilde{\tilde X} \to X$ is also a covering map. This makes "covering" closed under composition.
 

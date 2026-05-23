@@ -112,7 +112,7 @@ The proof breaks into four steps. Step 1 states the Schwarz–Christoffel formul
 > For our equilateral case with $\alpha = \beta = 1/3$: $\int_0^1 z^{-2/3}(1 - z)^{-2/3}\,dz = B(1/3, 1/3) = \Gamma(1/3)^2/\Gamma(2/3)$. With this and analogous expressions for the integral from $1$ to $\infty$, one can verify the third vertex is at $e^{i\pi/3}$ (up to choice of constants $A, C$).
 
 > [!note]- Complete formal solution
-> **Schwarz–Christoffel formula:** for a polygon with vertices $w_1, \ldots, w_n$ and interior angles $\alpha_1\pi, \ldots, \alpha_n\pi$ (with $\sum\alpha_k = n - 2$), the conformal map $f : \mathbb{H} \to $ polygon interior is
+> **Schwarz–Christoffel formula:** for a polygon with vertices $w_1, \ldots, w_n$ and interior angles $\alpha_1\pi, \ldots, \alpha_n\pi$ (with $\sum\alpha_k = n - 2$), the conformal map $f : \mathbb{H} \to$ polygon interior is
 > $$f(z) = A + C\int_{z_0}^z \prod_{k=1}^n(\zeta - x_k)^{\alpha_k - 1}\,d\zeta,$$
 > with $x_k \in \mathbb{R}$ the preimages of $w_k$, and $A, C$ determined by translation/rotation. Three of the $x_k$ can be chosen freely (by Möbius normalization of $\mathbb{H}$); the rest constitute the *parameter problem* and are determined by the polygon's geometry.
 >

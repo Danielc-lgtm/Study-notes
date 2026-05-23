@@ -138,7 +138,7 @@ In particular, $c_n(T\mathbb{CP}^n) = (n+1) h^n$, and $\int_{\mathbb{CP}^n} c_n 
 
 **Is NOT an instance: a single odd-degree form.** Chern forms are always of even degree (since curvature is a 2-form and the determinant in differential forms produces even degrees), so there is no $c_{1/2}$ or $c_{3/2}$. The total Chern class lives in even cohomology only.
 
-**Corollary: $c(E^*) = $ conjugate.** For the dual bundle $E^*$, $c_r(E^*) = (-1)^r c_r(E)$, so
+**Corollary: $c(E^*) =$ conjugate.** For the dual bundle $E^*$, $c_r(E^*) = (-1)^r c_r(E)$, so
 
 $$c(E^*) = \sum_r (-1)^r c_r(E) = c(E)|_{c_r \to (-c_r)}.$$
 

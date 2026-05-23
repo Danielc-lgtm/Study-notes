@@ -49,7 +49,7 @@ When $R > 0$, the series defines a function $f : D(a, R) \to \mathbb{C}$ by $f(z
 
 In **real analysis**, the same definition gives the radius of convergence of a real power series. The decisive difference is the *geometry* of the convergence set: in the complex case it is an open disc; in the real case it is an open interval $(a - R, a + R)$. This is because $\mathbb{R}$ has only the one-dimensional notion of "near $a$", while $\mathbb{C}$ has the two-dimensional notion.
 
-In **functional analysis**, the radius of convergence is the inverse of the *spectral radius* of an operator — given a bounded operator $T$ on a Banach space, the series $\sum T^n z^n / n!$ defines $e^{zT}$ for $|z| < $ something, related to the spectral radius. The convergence is the same root-test convergence, transported to operator norms.
+In **functional analysis**, the radius of convergence is the inverse of the *spectral radius* of an operator — given a bounded operator $T$ on a Banach space, the series $\sum T^n z^n / n!$ defines $e^{zT}$ for $|z| <$ something, related to the spectral radius. The convergence is the same root-test convergence, transported to operator norms.
 
 In **algebraic geometry**, the formal power series ring $\mathbb{C}[[z - a]]$ is the completion of $\mathbb{C}[z]$ at the maximal ideal $(z - a)$. Power series with positive radius of convergence form a subring — the convergent power series ring — which is the ring of germs of holomorphic functions at $a$.
 

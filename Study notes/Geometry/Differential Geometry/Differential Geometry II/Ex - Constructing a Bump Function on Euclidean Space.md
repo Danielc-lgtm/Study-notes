@@ -144,7 +144,7 @@ Both functions satisfy: equal to $1$ on $\overline{B(0, 1)}$, equal to $0$ on $\
 > The radial bump $H(x) = h(|x|)$ on $\mathbb{R}^n$ has the same properties: smooth, equal to $1$ on $\overline{B(0, 1)}$, equal to $0$ outside $B(0, 2)$, in $[0, 1]$. The argument is identical, with $|x|$ now the Euclidean norm.
 
 > [!warning] Illegal but tempting alternative route
-> One might try to define a smooth cutoff by a polynomial spline — e.g., $h(t) = $ cubic on $[1, 2]$ matching the endpoint values and slopes. But cubic splines, no matter how clever, can only be $C^k$ for finite $k$ at the gluing points (they fail to be $C^\infty$ unless they are *constants*, which won't transition $1$ to $0$). The polynomial approach fundamentally cannot produce a smooth cutoff that transitions between two different constants — only the $\psi_0$-trick can, because of the magical "all derivatives vanish at $0$" property of $e^{-1/t^2}$. The non-analyticity of $\psi_0$ is essential and irreplaceable by polynomials or rational functions.
+> One might try to define a smooth cutoff by a polynomial spline — e.g., $h(t) =$ cubic on $[1, 2]$ matching the endpoint values and slopes. But cubic splines, no matter how clever, can only be $C^k$ for finite $k$ at the gluing points (they fail to be $C^\infty$ unless they are *constants*, which won't transition $1$ to $0$). The polynomial approach fundamentally cannot produce a smooth cutoff that transitions between two different constants — only the $\psi_0$-trick can, because of the magical "all derivatives vanish at $0$" property of $e^{-1/t^2}$. The non-analyticity of $\psi_0$ is essential and irreplaceable by polynomials or rational functions.
 
 ---
 

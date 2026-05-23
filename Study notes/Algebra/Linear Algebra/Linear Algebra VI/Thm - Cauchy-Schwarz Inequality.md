@@ -55,7 +55,7 @@ The second source is **an integral $\int fg$ of a product**. Property $B$: the i
 
 The third source is **a covariance $E[(X - EX)(Y - EY)]$**. Property $B$: covariance is the inner product on mean-zero random variables. The bridge: $|\operatorname{Cov}(X, Y)| \leq \sigma_X \sigma_Y$, equivalently the correlation coefficient $|\rho(X, Y)| \leq 1$. This is the source for statistical bounds and the proof that "correlation is between $-1$ and $1$".
 
-The fourth source is **a discrete sum with weights, $\sum_k c_k a_k b_k$ with $c_k > 0$**. Property $B$: this is the weighted inner product $\langle a, b\rangle = \sum c_k a_k b_k$ on $\mathbb{R}^n$. The bridge: Cauchy-Schwarz applies, giving inequalities like $|\sum c_k a_k b_k|^2 \leq (\sum c_k a_k^2)(\sum c_k b_k^2)$, often used in probability ($c_k = $ probabilities) and physics ($c_k = $ density weights).
+The fourth source is **a discrete sum with weights, $\sum_k c_k a_k b_k$ with $c_k > 0$**. Property $B$: this is the weighted inner product $\langle a, b\rangle = \sum c_k a_k b_k$ on $\mathbb{R}^n$. The bridge: Cauchy-Schwarz applies, giving inequalities like $|\sum c_k a_k b_k|^2 \leq (\sum c_k a_k^2)(\sum c_k b_k^2)$, often used in probability ($c_k =$ probabilities) and physics ($c_k =$ density weights).
 
 A fifth, more disguised source is **a sum $\sum_k a_k / b_k$ of ratios** when each $b_k > 0$. Property $B$: write $a_k / b_k = (a_k / \sqrt{b_k}) \cdot (1 / \sqrt{b_k})$, then $\sum a_k / b_k = \langle (a_k/\sqrt{b_k})_k, (1/\sqrt{b_k})_k\rangle$. This is the source behind Cauchy-Schwarz applications like "$\sum (a_k^2 / b_k) \geq (\sum a_k)^2 / \sum b_k$", which is the **Titu's lemma** or **Engel form** of Cauchy-Schwarz, used extensively in mathematical-olympiad inequality problems.
 

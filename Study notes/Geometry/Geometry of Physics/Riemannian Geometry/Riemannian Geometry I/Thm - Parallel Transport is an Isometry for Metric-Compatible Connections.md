@@ -97,7 +97,7 @@ The mechanical hard part is **the converse direction (ii) ⟹ (i)**, which requi
    - *Hint:* Directly from the definition of parallel transport.
    - *Why needed:* Establishes the isometry property.
 
-3. **(ii) ⟹ (i).** Take vector fields $X, Y, Z$. At a point $p$, consider the curve $\gamma$ with $\dot\gamma(0) = X_p$, and consider $Y, Z$ as vector fields on $M$. Apply $X g(Y, Z) = \frac{d}{dt}\big|_{t=0} g(Y(\gamma(t)), Z(\gamma(t)))$. Using parallel-transport coordinates (a frame parallel-transported along $\gamma$), $Y$ and $Z$ have components $Y^a(t), Z^a(t)$, and $g_{ab}(\gamma(t)) = g_{ab}(p) = $ constant by the isometry condition (parallel transport is isometric). So $\frac{d}{dt}g(Y, Z) = \frac{d}{dt}(g_{ab}Y^a Z^b) = g_{ab}(\dot Y^a Z^b + Y^a \dot Z^b) = g(\nabla_X Y, Z) + g(Y, \nabla_X Z)$ — the Leibniz rule.
+3. **(ii) ⟹ (i).** Take vector fields $X, Y, Z$. At a point $p$, consider the curve $\gamma$ with $\dot\gamma(0) = X_p$, and consider $Y, Z$ as vector fields on $M$. Apply $X g(Y, Z) = \frac{d}{dt}\big|_{t=0} g(Y(\gamma(t)), Z(\gamma(t)))$. Using parallel-transport coordinates (a frame parallel-transported along $\gamma$), $Y$ and $Z$ have components $Y^a(t), Z^a(t)$, and $g_{ab}(\gamma(t)) = g_{ab}(p) =$ constant by the isometry condition (parallel transport is isometric). So $\frac{d}{dt}g(Y, Z) = \frac{d}{dt}(g_{ab}Y^a Z^b) = g_{ab}(\dot Y^a Z^b + Y^a \dot Z^b) = g(\nabla_X Y, Z) + g(Y, \nabla_X Z)$ — the Leibniz rule.
    - *Hint:* Work in parallel-transport coordinates; the metric components are constant in such coordinates.
    - *Why needed:* Establishes metric-compatibility from the isometry condition.
 
@@ -116,7 +116,7 @@ The mechanical hard part is **the converse direction (ii) ⟹ (i)**, which requi
 > > Locally extend $V, W$ to vector fields $\tilde V, \tilde W$ in a neighbourhood of $\gamma$. The function $f(t) = g_{\gamma(t)}(V(t), W(t)) = g(\tilde V, \tilde W)(\gamma(t))$. Its derivative is $f'(t) = \dot\gamma g(\tilde V, \tilde W) = g(\nabla_{\dot\gamma}\tilde V, \tilde W) + g(\tilde V, \nabla_{\dot\gamma}\tilde W)$ by metric-compatibility. Evaluated at $\gamma(t)$, $\nabla_{\dot\gamma}\tilde V$ at $\gamma(t)$ equals $\nabla_t V(t)$, which is zero by the parallel condition. Similarly for $W$. Hence $f'(t) = 0$, so $f$ is constant. $\blacksquare$
 
 > [!note]- Lemma 2: Parallel-transport coordinates
-> **Statement:** Along any smooth curve $\gamma : [a, b] \to M$, there exists a parallel orthonormal frame $(E_1(t), \ldots, E_n(t))$ with $\nabla_t E_a = 0$ and $g(E_a, E_b) = $ constant (in fact $= \delta_{ab}$ or $\eta_{ab}$).
+> **Statement:** Along any smooth curve $\gamma : [a, b] \to M$, there exists a parallel orthonormal frame $(E_1(t), \ldots, E_n(t))$ with $\nabla_t E_a = 0$ and $g(E_a, E_b) =$ constant (in fact $= \delta_{ab}$ or $\eta_{ab}$).
 >
 > **Hint:** Choose any orthonormal frame at $p = \gamma(a)$ and parallel-transport each member along $\gamma$. Use Lemma 1 to verify the orthonormality is preserved along the curve.
 >

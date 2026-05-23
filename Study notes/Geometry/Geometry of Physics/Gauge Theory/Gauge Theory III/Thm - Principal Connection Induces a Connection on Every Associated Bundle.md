@@ -43,7 +43,7 @@ The geometric content: a connection on $P$ provides a horizontal lift of base cu
 
 The algebraic content: in a local trivialisation with gauge potential $A$, sections of $E$ are locally $V$-valued functions $\psi$, and the covariant derivative is $\nabla^\rho\psi = d\psi + d\rho(A)\psi$ — the gauge potential's action via the representation differential. The Lie-algebra map $d\rho : \mathfrak{g} \to \mathfrak{gl}(V)$ is the *infinitesimal* version of the representation $\rho$; it converts $\mathfrak{g}$-valued gauge potentials into $\mathfrak{gl}(V)$-valued connection 1-forms for the vector bundle $E$.
 
-The unifying picture: every matter field's covariant derivative is "$d + $ representation-of-gauge-potential". This explains:
+The unifying picture: every matter field's covariant derivative is "$d +$ representation-of-gauge-potential". This explains:
 
 - **QED**: $D_\mu\psi = (\partial_\mu + iqA_\mu)\psi$ for an electron field $\psi$ of charge $q$ in the defining rep of $U(1)$.
 - **QCD**: $D_\mu\psi^a = (\partial_\mu + ig_s A^A_\mu T^A)^a{}_b\psi^b$ for a quark colour triplet $\psi$ in the defining rep of $SU(3)$, with $T^A$ the Gell-Mann matrices.
@@ -99,13 +99,13 @@ which is the expected gauge-covariant transformation of $\nabla^\rho\psi$ as a s
 
 So the formula $\nabla^\rho = d + d\rho(A)$ is *consistent* across gauges — exactly the condition for it to define a global connection on $E$, not just a local 1-form.
 
-For the **curvature**, $R^{\nabla^\rho}(\psi) := \nabla^\rho \circ \nabla^\rho \psi - $ (the tensorial part). Direct computation in local trivialisation: $\nabla^\rho \nabla^\rho \psi = d_{d\rho(A)}(d_{d\rho(A)}\psi) = (d^2 + d \circ d\rho(A) + d\rho(A) \wedge d + d\rho(A) \wedge d\rho(A))\psi = (d\rho(dA) + d\rho(A) \wedge d\rho(A))\psi = d\rho(dA + \tfrac{1}{2}[A, A])\psi = d\rho(F)\psi$, using that $d\rho$ is a Lie algebra homomorphism (it preserves the bracket). So $R^{\nabla^\rho} = d\rho(F)$ as a 2-form section of $\mathrm{End}(E)$.
+For the **curvature**, $R^{\nabla^\rho}(\psi) := \nabla^\rho \circ \nabla^\rho \psi -$ (the tensorial part). Direct computation in local trivialisation: $\nabla^\rho \nabla^\rho \psi = d_{d\rho(A)}(d_{d\rho(A)}\psi) = (d^2 + d \circ d\rho(A) + d\rho(A) \wedge d + d\rho(A) \wedge d\rho(A))\psi = (d\rho(dA) + d\rho(A) \wedge d\rho(A))\psi = d\rho(dA + \tfrac{1}{2}[A, A])\psi = d\rho(F)\psi$, using that $d\rho$ is a Lie algebra homomorphism (it preserves the bracket). So $R^{\nabla^\rho} = d\rho(F)$ as a 2-form section of $\mathrm{End}(E)$.
 
 ---
 
 # What Makes This Hard
 
-The conceptual challenge is keeping track of *which Lie-algebra* and *which representation* you are in. The principal data is a $\mathfrak{g}$-valued 1-form $A$. The induced data on the vector bundle is a $\mathfrak{gl}(V)$-valued 1-form $d\rho(A) = A^a T_a$ where $T_a = d\rho(E_a)$ are the representation matrices. For the defining rep of $U(1)$, $T = i$; for the adjoint rep of any $G$, $T_a = \mathrm{ad}(E_a)$; for the spinor rep, $T_a = $ spinor generators. Switching among reps is the standard place to get confused.
+The conceptual challenge is keeping track of *which Lie-algebra* and *which representation* you are in. The principal data is a $\mathfrak{g}$-valued 1-form $A$. The induced data on the vector bundle is a $\mathfrak{gl}(V)$-valued 1-form $d\rho(A) = A^a T_a$ where $T_a = d\rho(E_a)$ are the representation matrices. For the defining rep of $U(1)$, $T = i$; for the adjoint rep of any $G$, $T_a = \mathrm{ad}(E_a)$; for the spinor rep, $T_a =$ spinor generators. Switching among reps is the standard place to get confused.
 
 The technical challenge is the gauge covariance verification — the cocycle calculation. The matter field transforms as $\psi_\beta = \rho(g^{-1})\psi_\alpha$ (in the dual-of-defining-style convention used here), and the gauge potential transforms as $A_\beta = g^{-1}A_\alpha g + g^{-1}dg$. Showing that $\nabla^\rho\psi$ transforms correctly is a matrix-algebra exercise; getting all the sign and ordering conventions right is the main hurdle.
 

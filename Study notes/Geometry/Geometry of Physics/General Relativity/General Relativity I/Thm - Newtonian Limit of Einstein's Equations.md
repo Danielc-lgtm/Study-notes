@@ -93,7 +93,7 @@ In signature $(+,-,-,-)$, $\eta_{00} = +1$. For an asymptotically flat metric wh
 
 In the alternative signature $(-,+,+,+)$, $\eta_{00} = -1$ and $g_{00} \to -1$ at infinity, $g_{00} = -1 + h_{00}$ with $h_{00} < 0$ near a mass (further negative). Identification $h_{00} = -2\phi$ gives $g_{00} = -1 - 2\phi = -(1 + 2\phi)$, with $\phi < 0$ near mass so $g_{00}$ more negative. Correct.
 
-So in both signatures, the identification is $\phi = $ half the deviation of $g_{00}$ from its asymptotic value, with sign convention adjusted. In our convention $(+,-,-,-)$: $g_{00} = 1 + 2\phi$, so $h_{00} = 2\phi$, and Newton's gravity has $\phi < 0$ near mass (attractive potential).
+So in both signatures, the identification is $\phi =$ half the deviation of $g_{00}$ from its asymptotic value, with sign convention adjusted. In our convention $(+,-,-,-)$: $g_{00} = 1 + 2\phi$, so $h_{00} = 2\phi$, and Newton's gravity has $\phi < 0$ near mass (attractive potential).
 
 **Piece 4: Poisson equation from Einstein.** Now compute the $(0,0)$ component of the linearised Einstein equations. The linearised Ricci tensor for a static weak metric is $R_{00} \approx -\frac{1}{2}\nabla^2 h_{00}$ (where $\nabla^2$ is the spatial Laplacian). The linearised Ricci scalar is $R = g^{\mu\nu} R_{\mu\nu} \approx \eta^{\mu\nu} R_{\mu\nu} = R_{00} - R^i{}_i = -\frac{1}{2}\nabla^2 h_{00} - R^i{}_i$. To leading order in the static limit (with appropriate gauge choice), $R^i{}_i \approx -\frac{1}{2}\nabla^2 h_{00}$ as well (using the trace), so $R \approx -\nabla^2 h_{00}$ ... let me just use the simpler argument:
 

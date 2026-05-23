@@ -121,7 +121,7 @@ In functional analysis, the dual-space identification on a Hilbert space (the Ri
 
 **Corollary — the gradient of the standard coordinate function $x^k$.** $df = dx^k$, so $(dx^k)^\sharp = g^{kj}\partial_j$. In particular on Euclidean $\mathbb{R}^n$ with Cartesian coordinates, $\mathrm{grad}\, x^k = \partial_k$ — the gradient of the $k$th coordinate is the $k$th coordinate vector. In polar coordinates on $\mathbb{R}^2$, $\mathrm{grad}\, r = \partial_r$ (since $g^{rr} = 1$) but $\mathrm{grad}\, \theta = (1/r^2)\partial_\theta$ (since $g^{\theta\theta} = 1/r^2$).
 
-**Corollary — the gradient is orthogonal to level sets.** For $f \in C^\infty(M)$, if $\gamma : I \to M$ is a curve with $f \circ \gamma = $ const (so $\gamma$ lies in a level set of $f$), then $0 = (f \circ \gamma)'(t) = df(\dot\gamma) = g(\mathrm{grad}\, f, \dot\gamma)$. So $\mathrm{grad}\, f$ is $g$-orthogonal to every tangent vector to a level set, hence to the level set itself.
+**Corollary — the gradient is orthogonal to level sets.** For $f \in C^\infty(M)$, if $\gamma : I \to M$ is a curve with $f \circ \gamma =$ const (so $\gamma$ lies in a level set of $f$), then $0 = (f \circ \gamma)'(t) = df(\dot\gamma) = g(\mathrm{grad}\, f, \dot\gamma)$. So $\mathrm{grad}\, f$ is $g$-orthogonal to every tangent vector to a level set, hence to the level set itself.
 
 **Corollary — the gradient points in the direction of steepest increase.** Among unit tangent vectors $v \in T_pM$ with $g_p(v, v) = 1$, the directional derivative $v(f) = g(\mathrm{grad}\, f, v)$ is maximised when $v$ is the unit vector in the direction of $\mathrm{grad}\, f$, and the maximum value is $|\mathrm{grad}\, f|_g$.
 

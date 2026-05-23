@@ -78,7 +78,7 @@ This solution deploys the following legal operations from the [[Topology II — 
 
 # Solution
 
-The example refines the usual Euclidean topology on $\mathbb{R}^2$ by adding extra opens at the origin, in a way that *separates* the origin from the rest of the $x$-axis. The trade-off is that the same opens *connect* the origin to the rest of the $y$-axis (every $D_a$ contains $y$-axis points near $0$). So the closed set $F = $ "small $y$-axis without origin" still has the origin in its closure-via-neighbourhoods, even though pointwise the origin can be separated. The result is a closed $F$ and a point $(0, 0)$ that cannot be separated by disjoint opens.
+The example refines the usual Euclidean topology on $\mathbb{R}^2$ by adding extra opens at the origin, in a way that *separates* the origin from the rest of the $x$-axis. The trade-off is that the same opens *connect* the origin to the rest of the $y$-axis (every $D_a$ contains $y$-axis points near $0$). So the closed set $F =$ "small $y$-axis without origin" still has the origin in its closure-via-neighbourhoods, even though pointwise the origin can be separated. The result is a closed $F$ and a point $(0, 0)$ that cannot be separated by disjoint opens.
 
 **Step 1: Part (a) — Hausdorff.**
 

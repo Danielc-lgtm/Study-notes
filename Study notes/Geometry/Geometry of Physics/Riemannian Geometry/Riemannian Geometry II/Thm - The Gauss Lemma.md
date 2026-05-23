@@ -74,7 +74,7 @@ A third combination is **Gauss lemma + the second variation formula ⟹ index fo
 
 Here is the intuition with all the moving parts in place.
 
-The radial direction in $T_pM$ at the point $v$ is the line $\mathbb{R} v$ (the direction of $v$ itself). Under $d(\exp_p)_v$, this maps to the velocity of the geodesic $\gamma_v$ at time $1$: indeed, $d(\exp_p)_v(tv) = \frac{d}{ds}\big|_{s=0}\exp_p(v + s \cdot tv) = $ (some computation) $= t \dot\gamma_v(1)$.
+The radial direction in $T_pM$ at the point $v$ is the line $\mathbb{R} v$ (the direction of $v$ itself). Under $d(\exp_p)_v$, this maps to the velocity of the geodesic $\gamma_v$ at time $1$: indeed, $d(\exp_p)_v(tv) = \frac{d}{ds}\big|_{s=0}\exp_p(v + s \cdot tv) =$ (some computation) $= t \dot\gamma_v(1)$.
 
 The orthogonal direction in $T_pM$ — a vector $w \perp v$ — maps to the value at $t = 1$ of a Jacobi field. Specifically, $d(\exp_p)_v(w) = J(1)$ where $J$ is the Jacobi field along $\gamma_v$ with $J(0) = 0$ and $J'(0) = w$. This is the Jacobi-field identity stated in [[Def - Jacobi Field]].
 
@@ -86,7 +86,7 @@ because $\gamma$ is a geodesic. So $\frac{d}{dt}\langle \dot\gamma, J\rangle = \
 
 Now differentiate again:
 $$\frac{d^2}{dt^2}\langle \dot\gamma, J\rangle = \langle \nabla_{\dot\gamma}\dot\gamma, J'\rangle + \langle \dot\gamma, J''\rangle = \langle \dot\gamma, J''\rangle = -\langle \dot\gamma, R(J, \dot\gamma)\dot\gamma\rangle = 0,$$
-using the Jacobi equation $J'' + R(J, \dot\gamma)\dot\gamma = 0$ and the *antisymmetry* of $R(\cdot, \cdot)Z$ in the first two arguments (so $R(\dot\gamma, J)\dot\gamma = -R(J, \dot\gamma)\dot\gamma$, but more directly, $\langle \dot\gamma, R(J, \dot\gamma)\dot\gamma\rangle = $ — well, this is $0$ because the (1,3)-curvature $R$ has the symmetry $g(R(X, Y)Z, W) = -g(R(X, Y)W, Z)$ from metric-compatibility, so with $X = J, Y = Z = W = \dot\gamma$, $g(R(J, \dot\gamma)\dot\gamma, \dot\gamma) = -g(R(J, \dot\gamma)\dot\gamma, \dot\gamma)$, hence $= 0$).
+using the Jacobi equation $J'' + R(J, \dot\gamma)\dot\gamma = 0$ and the *antisymmetry* of $R(\cdot, \cdot)Z$ in the first two arguments (so $R(\dot\gamma, J)\dot\gamma = -R(J, \dot\gamma)\dot\gamma$, but more directly, $\langle \dot\gamma, R(J, \dot\gamma)\dot\gamma\rangle =$ — well, this is $0$ because the (1,3)-curvature $R$ has the symmetry $g(R(X, Y)Z, W) = -g(R(X, Y)W, Z)$ from metric-compatibility, so with $X = J, Y = Z = W = \dot\gamma$, $g(R(J, \dot\gamma)\dot\gamma, \dot\gamma) = -g(R(J, \dot\gamma)\dot\gamma, \dot\gamma)$, hence $= 0$).
 
 So $\langle \dot\gamma, J\rangle$ is a *linear* function of $t$, of the form $at + b$. The initial conditions: $\langle \dot\gamma(0), J(0)\rangle = \langle v, 0\rangle = 0$ (so $b = 0$), and $\frac{d}{dt}\langle \dot\gamma, J\rangle\big|_0 = \langle \dot\gamma(0), J'(0)\rangle = \langle v, w\rangle = 0$ (so $a = 0$, using the hypothesis $w \perp v$). Hence $\langle \dot\gamma(t), J(t)\rangle \equiv 0$ for all $t$, in particular at $t = 1$:
 $$\langle d(\exp_p)_v(v), d(\exp_p)_v(w)\rangle = \langle \dot\gamma_v(1), J(1)\rangle = 0,$$
@@ -213,7 +213,7 @@ The most common error is to forget the **antisymmetry of the curvature operator*
 
 **PDE: the eikonal equation.** The distance function $u(q) := d_g(p, q)$ satisfies the **eikonal equation** $|\nabla u|^2 = 1$ wherever it is smooth (inside the injectivity radius). The Gauss lemma is exactly what makes this true: $\nabla u = \partial_r$ has $|\partial_r|^2 = 1$, hence the eikonal equation. The eikonal equation is the prototype of Hamilton–Jacobi PDEs, and viscosity solutions, the method of characteristics, and the analysis of singular sets (cut locus) all interact with this setup.
 
-**Optimal transport: cost functions and $c$-convexity.** In optimal transport on Riemannian manifolds, the cost function $c(x, y) = d_g(x, y)^2/2$ has properties (regularity, convexity of $c$-transforms) controlled by the geometry of the distance function. The Gauss lemma is involved in showing $c$ is smooth on $\{c < $ injectivity radius$^2/2\}$, and in deriving the Ma–Trudinger–Wang condition for regularity of optimal-transport maps. This is a deep recent application of classical Riemannian geometry to a PDE-flavoured problem.
+**Optimal transport: cost functions and $c$-convexity.** In optimal transport on Riemannian manifolds, the cost function $c(x, y) = d_g(x, y)^2/2$ has properties (regularity, convexity of $c$-transforms) controlled by the geometry of the distance function. The Gauss lemma is involved in showing $c$ is smooth on $\{c <$ injectivity radius$^2/2\}$, and in deriving the Ma–Trudinger–Wang condition for regularity of optimal-transport maps. This is a deep recent application of classical Riemannian geometry to a PDE-flavoured problem.
 
 **Geometric analysis: harmonic coordinates.** Normal coordinates are smooth but the metric is only $C^\infty$, and the *regularity* of $g_{ij}$ in these coordinates is controlled by the Ricci tensor. Refined coordinate systems — **harmonic coordinates** — are designed to make $\Delta_g x^i = 0$, and the resulting metric is more regular (e.g., $C^{1, \alpha}$ if $\mathrm{Ric}$ is bounded). The Gauss lemma underlies the comparison between normal and harmonic coordinates and the regularity transfer.
 

@@ -27,7 +27,7 @@ $\mathbb{D} = \{|z| < 1\}$, $P_r(\theta) = (1 - r^2)/(1 - 2r\cos\theta + r^2)$ i
 
 The Poisson integral formula solves the **Dirichlet problem on the unit disc**: given continuous boundary values $u_0 : S^1 \to \mathbb{R}$, find a harmonic function $u : \overline{\mathbb{D}} \to \mathbb{R}$ continuous up to the boundary with $u|_{S^1} = u_0$.
 
-The mean value property tells us that *at the centre* $z = 0$, $u(0) = $ average of $u_0$. The Poisson integral generalizes this: $u(re^{i\theta}) = $ a *weighted* average of $u_0$, with weight $P_r(\theta - \phi)/(2\pi)$ at the boundary point $e^{i\phi}$.
+The mean value property tells us that *at the centre* $z = 0$, $u(0) =$ average of $u_0$. The Poisson integral generalizes this: $u(re^{i\theta}) =$ a *weighted* average of $u_0$, with weight $P_r(\theta - \phi)/(2\pi)$ at the boundary point $e^{i\phi}$.
 
 This is one of the most useful results in classical analysis. It gives:
 - *Existence* of harmonic extension of any continuous boundary data.
@@ -136,7 +136,7 @@ The Poisson integral is harmonic by the harmonicity of $P_r$ in $z$. Boundary va
 
 **Conformal pullback.** Dirichlet problem on the half-plane $\mathbb{H}$: map $\mathbb{H}$ to $\mathbb{D}$ via $z \mapsto (z - i)/(z + i)$, transfer boundary data, apply Poisson on $\mathbb{D}$, pull back. See [[Ex - Solving Dirichlet on a half-plane via conformal mapping]].
 
-**Harmonic measure interpretation.** The Poisson kernel $P_r(\theta - \phi)/(2\pi)$ is the density of the exit distribution of a Brownian motion starting at $re^{i\theta}$ from $\mathbb{D}$. The Poisson integral $u = $ expectation of $u_0$ at the exit point — a probabilistic representation of the Dirichlet problem.
+**Harmonic measure interpretation.** The Poisson kernel $P_r(\theta - \phi)/(2\pi)$ is the density of the exit distribution of a Brownian motion starting at $re^{i\theta}$ from $\mathbb{D}$. The Poisson integral $u =$ expectation of $u_0$ at the exit point — a probabilistic representation of the Dirichlet problem.
 
 ---
 

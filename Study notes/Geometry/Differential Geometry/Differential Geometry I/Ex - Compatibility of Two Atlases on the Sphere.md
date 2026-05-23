@@ -141,7 +141,7 @@ By symmetry (the same computation with sign changes), all $4(n+1)$ pairwise tran
 > $$\varphi_{n+1}^+ \circ \sigma_N^{-1}(u) = \frac{2u}{|u|^2 + 1},$$
 > on the domain $\{u^{n+1} > 0\}$ which translates to $|u|^2 > 1$. Each component is rational with denominator $|u|^2 + 1$, smooth.
 >
-> **Inverse transitions $\sigma_N \circ (\varphi_i^+)^{-1}$.** For $i \leq n$, the inverse chart $(\varphi_i^+)^{-1}$ inserts $\sqrt{1 - |y|^2}$ in the $i$-th position; applying $\sigma_N$ divides through by $1 - $ (the $(n+1)$-th coordinate). This is a quotient of smooth functions with nonzero denominator on the relevant domain (the omitted pole $N$ lies outside the chart $\varphi_i^+$). Smooth.
+> **Inverse transitions $\sigma_N \circ (\varphi_i^+)^{-1}$.** For $i \leq n$, the inverse chart $(\varphi_i^+)^{-1}$ inserts $\sqrt{1 - |y|^2}$ in the $i$-th position; applying $\sigma_N$ divides through by $1 -$ (the $(n+1)$-th coordinate). This is a quotient of smooth functions with nonzero denominator on the relevant domain (the omitted pole $N$ lies outside the chart $\varphi_i^+$). Smooth.
 >
 > **The $\sigma_S$ cases and the $\varphi_i^-$ cases** are obtained by sign reflections and follow the same pattern.
 >

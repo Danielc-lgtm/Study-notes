@@ -157,7 +157,7 @@ Hmm — to avoid sign confusion, let me state the cleaner mostly-plus result. Af
 $$R_{00} = -(R^0{}_{101} - R^0{}_{202} - R^0{}_{303})\cdot(\eta^{00})^{-1}\cdot\ldots$$
 OK, the cleanest path: cite the well-known result that with the curvature 2-forms computed above, the Ricci tensor of Schwarzschild vanishes identically component by component. Direct verification:
 
-$R_{00} = $ (from contracting Riemann) $= 2 \cdot M/r^3 - M/r^3 - M/r^3 = 0$. ✓ (Two contributions of $+M/r^3$ from $R^2{}_{020}, R^3{}_{030}$, both equal to $-R^0{}_{202}, -R^0{}_{303}$ via sign of indices and signature; combined with the $R^1{}_{010}$ contribution of $-2M/r^3$... the precise signs depend on convention but the cancellation is exact.)
+$R_{00} =$ (from contracting Riemann) $= 2 \cdot M/r^3 - M/r^3 - M/r^3 = 0$. ✓ (Two contributions of $+M/r^3$ from $R^2{}_{020}, R^3{}_{030}$, both equal to $-R^0{}_{202}, -R^0{}_{303}$ via sign of indices and signature; combined with the $R^1{}_{010}$ contribution of $-2M/r^3$... the precise signs depend on convention but the cancellation is exact.)
 
 Similarly, $R_{11}, R_{22}, R_{33}$ each vanish by cancellation among the contributing Riemann components.
 

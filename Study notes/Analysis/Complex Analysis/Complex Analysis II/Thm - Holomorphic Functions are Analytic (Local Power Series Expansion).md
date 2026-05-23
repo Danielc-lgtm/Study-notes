@@ -28,7 +28,7 @@ $f : D(a, R) \to \mathbb{C}$ holomorphic; $c_n = f^{(n)}(a)/n!$. Full registry o
 
 The structural theorem of complex analysis: **every holomorphic function on a disc is given by a convergent power series**, with coefficients $c_n = f^{(n)}(a)/n!$. Combined with the converse from [[Complex Analysis I — Basic Notions]] ([[Thm - Power Series is Holomorphic with Termwise Derivative]]: every power series is holomorphic on its disc), this gives the central equivalence:
 $$\text{holomorphic on a disc} \quad \Longleftrightarrow \quad \text{convergent power series on that disc}.$$
-Holomorphic and analytic are the *same thing* in complex analysis (in stark contrast to real analysis, where $C^\infty \neq $ analytic).
+Holomorphic and analytic are the *same thing* in complex analysis (in stark contrast to real analysis, where $C^\infty \neq$ analytic).
 
 This theorem is the engine of every rigidity result: identity theorem, principle of isolated zeros, factorization at zeros, Schwarz lemma. All rely on the local power-series structure.
 

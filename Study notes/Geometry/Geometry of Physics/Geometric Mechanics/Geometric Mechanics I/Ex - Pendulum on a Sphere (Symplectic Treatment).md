@@ -66,7 +66,7 @@ For motion on $S^2$, the kinetic energy is $T = \tfrac{1}{2}m(\dot\theta^2 + \si
 > The Hamiltonian comes out to $H = \tfrac{1}{2m}\big(p_\theta^2 + p_\phi^2/\sin^2\theta\big) + mg\cos\theta$. Since $H$ does not depend on $\phi$, the partial derivative $\partial H/\partial\phi = 0$, and by Hamilton's equations $\dot p_\phi = -\partial H/\partial\phi = 0$ — $p_\phi$ is conserved.
 
 > [!note]- Hint 4
-> Use the two conservation laws to reduce: from $H = E$ and $p_\phi = $ constant, solve $\dot\theta = \pm\sqrt{\tfrac{2}{m}(E - V_{\rm eff}(\theta))}$ where $V_{\rm eff}(\theta) = mg\cos\theta + p_\phi^2/(2m\sin^2\theta)$. This is now a one-dimensional problem.
+> Use the two conservation laws to reduce: from $H = E$ and $p_\phi =$ constant, solve $\dot\theta = \pm\sqrt{\tfrac{2}{m}(E - V_{\rm eff}(\theta))}$ where $V_{\rm eff}(\theta) = mg\cos\theta + p_\phi^2/(2m\sin^2\theta)$. This is now a one-dimensional problem.
 
 ---
 

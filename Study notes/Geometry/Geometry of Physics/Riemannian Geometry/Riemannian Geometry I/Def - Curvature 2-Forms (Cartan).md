@@ -29,7 +29,7 @@ $$
 $$
 where $\Omega = d\omega + \omega \wedge \omega$ is the curvature matrix. The remarkable feature: **the result depends only on $v$, not on $dv$**. So $\nabla\nabla v = \Omega v$ is an algebraic (not differential) operation on $v$ — meaning $\nabla\nabla$ is a *tensor* operation, $\nabla\nabla \in \Gamma(\Lambda^2 T^*M \otimes \mathrm{End}\,TM)$. The curvature 2-form $\Omega$ measures this "second-order non-commutativity" of $\nabla$.
 
-Equivalently, the Riemann curvature tensor $R(X, Y)Z$ defined by $R(X, Y)Z = \nabla_X\nabla_Y Z - \nabla_Y\nabla_X Z - \nabla_{[X, Y]}Z$ has components in the frame given by $\Omega^a{}_b(X, Y) = $ the $(a, b)$-component of $\nabla\nabla$ applied to $e_b$:
+Equivalently, the Riemann curvature tensor $R(X, Y)Z$ defined by $R(X, Y)Z = \nabla_X\nabla_Y Z - \nabla_Y\nabla_X Z - \nabla_{[X, Y]}Z$ has components in the frame given by $\Omega^a{}_b(X, Y) =$ the $(a, b)$-component of $\nabla\nabla$ applied to $e_b$:
 $$
 \Omega^a{}_b(X, Y) = g(R(X, Y)e_b, \sigma^a) = R^a{}_{bcd}\,\sigma^c(X)\sigma^d(Y) \cdot (1/2)
 $$

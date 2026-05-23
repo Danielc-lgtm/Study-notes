@@ -155,7 +155,7 @@ The unifying frame for §3.5–3.6 and the applied material: **holomorphic funct
 	- Given boundary values $u(e^{i\theta}) = \cos(2\theta)$, find the harmonic function $u(re^{i\theta})$ on the disc. Recognize: $\cos(2\theta) = \operatorname{Re}(e^{2i\theta}) = \operatorname{Re}(z^2)$ on the boundary. The harmonic extension is $\operatorname{Re}(z^2) = r^2 \cos(2\theta)$.
 
 - **[[Ex - Solving Dirichlet on a half-plane via conformal mapping]]** (⭐⭐⭐)
-	- Solve Laplace's equation on $\mathbb{H}$ with $u(x, 0) = $ a step function. Map $\mathbb{H} \to \mathbb{D}$ by $z \mapsto (z - i)/(z + i)$, transfer the boundary data, apply Poisson on $\mathbb{D}$, pull back.
+	- Solve Laplace's equation on $\mathbb{H}$ with $u(x, 0) =$ a step function. Map $\mathbb{H} \to \mathbb{D}$ by $z \mapsto (z - i)/(z + i)$, transfer the boundary data, apply Poisson on $\mathbb{D}$, pull back.
 
 > [!note] Exercise Index — §3.6 Harmonic Functions and Poisson
 > [[Exercise Index - §3.6 Harmonic and Poisson]]
@@ -184,7 +184,7 @@ The unifying frame for §3.5–3.6 and the applied material: **holomorphic funct
 	- Show that $w(z) = U(z + a^2/z) - i\Gamma \log z / (2\pi)$ is the complex potential for flow past a cylinder of radius $a$ in a uniform stream $U$ with circulation $\Gamma$. Identify the velocity field by $\bar v = w'$, verify boundary conditions ($\psi$ constant on the cylinder), compute the lift via residues / Kutta–Joukowski.
 
 - **[[Ex - Schwarz–Christoffel for a polygon]]** (⭐⭐⭐)
-	- State the Schwarz–Christoffel formula for a conformal map $\mathbb{H} \to $ interior of a polygon. Verify it for a simple case (e.g. mapping $\mathbb{H}$ to the interior of an isoceles triangle, identifying corners with prescribed images on $\mathbb{R}$).
+	- State the Schwarz–Christoffel formula for a conformal map $\mathbb{H} \to$ interior of a polygon. Verify it for a simple case (e.g. mapping $\mathbb{H}$ to the interior of an isoceles triangle, identifying corners with prescribed images on $\mathbb{R}$).
 
 > [!note] Exercise Index — Applications
 > [[Exercise Index - Applications Signal and Fluid]]

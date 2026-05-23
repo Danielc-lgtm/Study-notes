@@ -171,7 +171,7 @@ The hardest step is recognizing that the **right action is well-defined globally
 > [!note]- Complete formal proof
 > **Forward direction** (fibre-bundle $\Rightarrow$ free right action):
 >
-> Let $P \to M$ be a principal $G$-bundle with structure-group cocycle $\{c_{UV}\}$ acting on $F = G$ by left translation. Define the right action $u \cdot h$ in each trivialization $\Phi_U$ by Lemma 2's prescription; the lemma establishes consistency across overlaps and smoothness. Freeness, fibre-preservation, and fibrewise transitivity are immediate from group cancellation and the structure of $G \cong $ fibre.
+> Let $P \to M$ be a principal $G$-bundle with structure-group cocycle $\{c_{UV}\}$ acting on $F = G$ by left translation. Define the right action $u \cdot h$ in each trivialization $\Phi_U$ by Lemma 2's prescription; the lemma establishes consistency across overlaps and smoothness. Freeness, fibre-preservation, and fibrewise transitivity are immediate from group cancellation and the structure of $G \cong$ fibre.
 >
 > **Lemma 3** establishes the bijection between local sections and local trivializations.
 >

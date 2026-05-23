@@ -126,7 +126,7 @@ Forward direction: Cauchy-Riemann + equality of mixed partials gives harmonicity
 
 **The non-simply-connected obstruction.** On $\mathbb{C}^\times$, $u(x, y) = \log\sqrt{x^2 + y^2} = \log|z|$ is harmonic. Compute $-u_y = -y/(x^2 + y^2), u_x = x/(x^2 + y^2)$. So $v_x = -y/(x^2 + y^2), v_y = x/(x^2 + y^2)$. Integrate $v$ along the path $\gamma$ from $1$ to $z$: $v(z) = \int_\gamma (-y\,dx + x\,dy)/(x^2 + y^2)$. This integral depends on the path's winding number around $0$ (it's $2\pi$ times the winding number). So $v$ is multivalued on $\mathbb{C}^\times$, with values differing by $2\pi k$. On a simply connected subset (e.g., the slit plane), $v = \arg z$ is well-defined.
 
-**Solving Laplace's equation by complex analysis.** Find a harmonic function $u$ on the upper half-plane with $u(x, 0) = $ a specified function $f(x)$. Strategy: find a holomorphic $g$ on $\mathbb{H}$ with $\operatorname{Re} g(x) = f(x)$ on the boundary; then $u = \operatorname{Re} g$.
+**Solving Laplace's equation by complex analysis.** Find a harmonic function $u$ on the upper half-plane with $u(x, 0) =$ a specified function $f(x)$. Strategy: find a holomorphic $g$ on $\mathbb{H}$ with $\operatorname{Re} g(x) = f(x)$ on the boundary; then $u = \operatorname{Re} g$.
 
 ---
 

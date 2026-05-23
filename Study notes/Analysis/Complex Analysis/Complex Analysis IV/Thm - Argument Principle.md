@@ -60,7 +60,7 @@ The argument principle is a direct application of the residue theorem to $f'/f$.
 
 If $f$ has a zero of order $k$ at $a$, then $f(z) = (z - a)^k g(z)$ with $g$ holomorphic and $g(a) \neq 0$ near $a$. Computing:
 $$\frac{f'(z)}{f(z)} = \frac{k(z - a)^{k-1}g(z) + (z - a)^k g'(z)}{(z - a)^k g(z)} = \frac{k}{z - a} + \frac{g'(z)}{g(z)}.$$
-The second term is holomorphic at $a$ (since $g(a) \neq 0$); the first term gives a simple pole with residue $k$. So $\operatorname{Res}_a(f'/f) = k = $ order of the zero of $f$ at $a$.
+The second term is holomorphic at $a$ (since $g(a) \neq 0$); the first term gives a simple pole with residue $k$. So $\operatorname{Res}_a(f'/f) = k =$ order of the zero of $f$ at $a$.
 
 Similarly, if $f$ has a pole of order $k$ at $a$, then $f(z) = (z - a)^{-k}h(z)$ with $h$ holomorphic and $h(a) \neq 0$. Computation gives $\operatorname{Res}_a(f'/f) = -k$.
 
@@ -110,7 +110,7 @@ Compute residue of $f'/f$ at each zero and pole of $f$. At a zero of order $k$: 
 > $$\frac{1}{2\pi i}\oint_\gamma \frac{f'(z)}{f(z)}\,dz = \sum_a I(\gamma; a) \operatorname{Res}_a(f'/f) = \sum_a I(\gamma; a) \operatorname{ord}_a f.$$
 > When $\gamma$ bounds a domain $D$ with $I(\gamma; \cdot) = 1$ on $D$ and $0$ outside, the sum collapses to $\sum_{\text{zeros in } D}(\text{order}) - \sum_{\text{poles in } D}(\text{order}) = N - P$.
 >
-> **Topological interpretation.** $\frac{f'(z)}{f(z)} dz = d[\log f(z)]$ on any branch where $\log f$ exists. The closed integral $\oint d[\log f] = $ "net change in $\log f$ around $\gamma$" $= i \cdot \Delta(\arg f) = 2\pi i \cdot I(f \circ \gamma; 0)$. So $\frac{1}{2\pi i}\oint f'/f\,dz = I(f \circ \gamma; 0)$, the winding number of the image curve around $0$. $\blacksquare$
+> **Topological interpretation.** $\frac{f'(z)}{f(z)} dz = d[\log f(z)]$ on any branch where $\log f$ exists. The closed integral $\oint d[\log f] =$ "net change in $\log f$ around $\gamma$" $= i \cdot \Delta(\arg f) = 2\pi i \cdot I(f \circ \gamma; 0)$. So $\frac{1}{2\pi i}\oint f'/f\,dz = I(f \circ \gamma; 0)$, the winding number of the image curve around $0$. $\blacksquare$
 
 ---
 

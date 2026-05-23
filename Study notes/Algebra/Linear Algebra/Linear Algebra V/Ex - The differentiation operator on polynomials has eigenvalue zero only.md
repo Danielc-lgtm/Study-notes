@@ -85,7 +85,7 @@ $E(0, D) = \ker D = \mathbb{R} \cdot 1 = \{c : c \in \mathbb{R}\}$, the constant
 > [!note]- Derivation
 > $\ker D = \{p \in \mathcal{P}(\mathbb{R}) : p' = 0\}$. A polynomial $p(x) = a_0 + a_1 x + \cdots + a_m x^m$ has derivative $p'(x) = a_1 + 2 a_2 x + \cdots + m a_m x^{m-1}$. For $p' = 0$, all coefficients $a_1, 2 a_2, \ldots, m a_m$ must vanish, hence $a_k = 0$ for $k \geq 1$. So $p = a_0$ is constant.
 >
-> Conversely, every constant satisfies $p' = 0$, hence $\ker D = $ the space of constants, which is one-dimensional as a real vector space.
+> Conversely, every constant satisfies $p' = 0$, hence $\ker D =$ the space of constants, which is one-dimensional as a real vector space.
 
 > [!note]- Complete formal solution
 > Let $D : \mathcal{P}(\mathbb{R}) \to \mathcal{P}(\mathbb{R})$ be defined by $Dp = p'$.
@@ -101,7 +101,7 @@ $E(0, D) = \ker D = \mathbb{R} \cdot 1 = \{c : c \in \mathbb{R}\}$, the constant
 >
 > The smallest such $k$ is the smallest exponent for which $D^k = 0$. But $D^n(x^n) = n!$ (the constant polynomial), which is nonzero. So $D^n \neq 0$ and $m_D \neq z^k$ for $k \leq n$. Hence $m_D = z^{n+1}$.
 >
-> By [[Thm - Eigenvalues are Zeros of the Minimal Polynomial]], the eigenvalues of $D$ are the roots of $m_D = z^{n+1}$, which is just $\{0\}$. So $0$ is the only eigenvalue, with $E(0, D) = \ker D = $ constants — a one-dimensional eigenspace, despite the algebraic multiplicity being $n+1$.
+> By [[Thm - Eigenvalues are Zeros of the Minimal Polynomial]], the eigenvalues of $D$ are the roots of $m_D = z^{n+1}$, which is just $\{0\}$. So $0$ is the only eigenvalue, with $E(0, D) = \ker D =$ constants — a one-dimensional eigenspace, despite the algebraic multiplicity being $n+1$.
 
 ---
 

@@ -14,7 +14,7 @@ tags: [geometry, gauge-theory, riemannian-geometry, principal-bundles]
 
 Let $(M, g)$ be a Riemannian manifold of dimension $n$, and let $F^O(M) \to M$ be the **orthonormal frame bundle** — the principal $O(n)$-bundle whose fibre over $x \in M$ consists of orthonormal frames of $T_xM$ (linear isometries $\mathbb{R}^n \to T_xM$). Let $\nabla$ be the [[Def - Levi-Civita Connection|Levi-Civita connection]] of $(M, g)$.
 
-**Show that the Levi-Civita connection — defined in [[Riemannian Geometry I — Connections and Covariant Differentiation|Riemannian Geometry I]] as the unique torsion-free metric-compatible connection on $TM$ — corresponds (via [[Thm - Principal Connection Induces a Connection on Every Associated Bundle]]) to a unique principal connection $\omega$ on $F^O(M)$ with values in $\mathfrak{o}(n) = $ antisymmetric $n \times n$ matrices.**
+**Show that the Levi-Civita connection — defined in [[Riemannian Geometry I — Connections and Covariant Differentiation|Riemannian Geometry I]] as the unique torsion-free metric-compatible connection on $TM$ — corresponds (via [[Thm - Principal Connection Induces a Connection on Every Associated Bundle]]) to a unique principal connection $\omega$ on $F^O(M)$ with values in $\mathfrak{o}(n) =$ antisymmetric $n \times n$ matrices.**
 
 **(a)** Construct $\omega$ explicitly: for a frame $f = (e_1, \ldots, e_n) \in F^O(M)$ at $x$, define $\omega$ by specifying $\omega(X) \in \mathfrak{o}(n)$ for $X \in T_f F^O(M)$. *Hint:* split $X$ into vertical (rotation of frame) and horizontal (parallel transport) components.
 
@@ -110,7 +110,7 @@ At each frame $f = (e_1, \ldots, e_n) \in F^O(M)_x$, define $\omega \in T_f^* F^
 > 
 > Decompose $X = X^V + X^H$. The right action $R_g$ carries vertical to vertical (preserves the fibre) and horizontal to horizontal (this is the *key step*, and follows from the metric-compatibility of Levi-Civita: parallel transport preserves orthonormality, so $O(n)$-action commutes with horizontal lifts). So $(R_g)_*X = (R_g)_*X^V + (R_g)_*X^H$ with the first vertical at $f \cdot g$ and the second horizontal.
 > 
-> $\omega_{f \cdot g}((R_g)_*X) = (\text{inverse vertical iso at } f \cdot g)((R_g)_*X^V) = $ ?
+> $\omega_{f \cdot g}((R_g)_*X) = (\text{inverse vertical iso at } f \cdot g)((R_g)_*X^V) =$ ?
 > 
 > The vertical iso at $f \cdot g$ sends $\eta \in \mathfrak{o}(n)$ to the fundamental vector field $\eta^*$ at $f \cdot g$, which is the velocity of $t \mapsto (f \cdot g)\exp(t\eta) = f \cdot (g\,\exp(t\eta)) = f \cdot \exp(t\,g\eta g^{-1})\cdot g$ (for the orthonormal frame bundle, the right action is matrix multiplication of frame components). So $\eta^*_{f \cdot g} = (R_g)_*(g\eta g^{-1})^*_f = (R_g)_*(\mathrm{Ad}_g\eta)^*_f$. Inverting: the vertical iso at $f \cdot g$ sends a vertical vector $(R_g)_*\eta^*_f$ to $\mathrm{Ad}_{g^{-1}}\eta$.
 > 
@@ -123,7 +123,7 @@ At each frame $f = (e_1, \ldots, e_n) \in F^O(M)_x$, define $\omega \in T_f^* F^
 > [!note]- Derivation
 > Let $s = (e_1, \ldots, e_n) : U \to F^O(M)$ be a local orthonormal frame. The local gauge potential is $A := s^*\omega \in \Omega^1(U; \mathfrak{o}(n))$.
 > 
-> By [[Thm - Principal Connection Induces a Connection on Every Associated Bundle|the induced-connection theorem]], the connection on the associated bundle $TM = F^O(M) \times_\rho \mathbb{R}^n$ (with $\rho : O(n) \hookrightarrow \mathrm{GL}(n)$ the defining rep) is $\nabla^\rho \psi = d\psi + d\rho(A)\psi$. For $\rho$ the defining rep, $d\rho = $ identity on $\mathfrak{o}(n) \subset \mathfrak{gl}(n)$. So $\nabla^\rho\psi = d\psi + A\psi$ where $A$ acts on $\psi \in \mathbb{R}^n$ as a matrix.
+> By [[Thm - Principal Connection Induces a Connection on Every Associated Bundle|the induced-connection theorem]], the connection on the associated bundle $TM = F^O(M) \times_\rho \mathbb{R}^n$ (with $\rho : O(n) \hookrightarrow \mathrm{GL}(n)$ the defining rep) is $\nabla^\rho \psi = d\psi + d\rho(A)\psi$. For $\rho$ the defining rep, $d\rho =$ identity on $\mathfrak{o}(n) \subset \mathfrak{gl}(n)$. So $\nabla^\rho\psi = d\psi + A\psi$ where $A$ acts on $\psi \in \mathbb{R}^n$ as a matrix.
 > 
 > In the basis $(e_a)$, a section $V \in \Gamma(TM)$ has components $V^a$, and the covariant derivative is $\nabla_X V = (X V^a + A^a{}_b(X) V^b)e_a$. This matches the standard formula $\nabla_X V^a = X V^a + \omega^a{}_b(X) V^b$ from [[Riemannian Geometry I — Connections and Covariant Differentiation|RG I]] iff $A^a{}_b = \omega^a{}_b$.
 > 

@@ -48,7 +48,7 @@ Equivalent characterizations:
 2. The component functions $A_{i_1\cdots i_k}$ in every chart are smooth and satisfy $A_{i_{\sigma(1)}\cdots i_{\sigma(k)}} = (\operatorname{sgn}\sigma)\,A_{i_1\cdots i_k}$.
 3. The $C^\infty(M)$-multilinear map $\mathfrak{X}(M)^k \to C^\infty(M)$ induced by $A$ is alternating: $A(X_{\sigma(1)}, \dots, X_{\sigma(k)}) = (\operatorname{sgn}\sigma)\, A(X_1, \dots, X_k)$.
 
-The space of smooth alternating covariant $k$-tensor fields is the space of smooth sections of $\Lambda^k(T^*M)$, denoted $\Omega^k(M)$ in the forms convention. So $\Omega^0(M) = C^\infty(M), \Omega^1(M) = $ 1-forms, etc.
+The space of smooth alternating covariant $k$-tensor fields is the space of smooth sections of $\Lambda^k(T^*M)$, denoted $\Omega^k(M)$ in the forms convention. So $\Omega^0(M) = C^\infty(M), \Omega^1(M) =$ 1-forms, etc.
 
 **Dimension of the fibre.** $\dim \Lambda^k(V^*) = \binom{n}{k}$ for $0 \leq k \leq n$, and $\Lambda^k(V^*) = 0$ for $k > n$. In particular, $\dim \Lambda^n(V^*) = 1$: the "top" alternating space is 1-dimensional.
 

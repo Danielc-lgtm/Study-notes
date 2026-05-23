@@ -133,7 +133,7 @@ diverges logarithmically. **Infinite.** As seen from infinity (in Schwarzschild 
 This is the "frozen star" phenomenon: from outside, the infaller appears to slow down and asymptotically freeze at the horizon; from the infaller's perspective, they cross the horizon in finite time and reach the singularity at $r = 0$ shortly after.
 
 > [!note]- Derivation
-> The infalling timelike geodesic uses conservation of energy ($E = -g_{t\mu}\dot x^\mu = $ const along geodesic) and the normalisation $g_{\mu\nu}\dot x^\mu \dot x^\nu = 1$ (for proper-time parametrisation). For an observer at rest at infinity, $E = 1$ (the "binding energy" is zero). The reduced equation $\dot r^2 = 2M/r$ integrates to give finite proper time. The coordinate time, computed by $dt/dr = \dot t/\dot r$, includes the factor $1/(1 - 2M/r)$ that diverges at the horizon, giving infinite coordinate time.
+> The infalling timelike geodesic uses conservation of energy ($E = -g_{t\mu}\dot x^\mu =$ const along geodesic) and the normalisation $g_{\mu\nu}\dot x^\mu \dot x^\nu = 1$ (for proper-time parametrisation). For an observer at rest at infinity, $E = 1$ (the "binding energy" is zero). The reduced equation $\dot r^2 = 2M/r$ integrates to give finite proper time. The coordinate time, computed by $dt/dr = \dot t/\dot r$, includes the factor $1/(1 - 2M/r)$ that diverges at the horizon, giving infinite coordinate time.
 
 > [!note]- Complete formal solution
 > **Part (a)** — Kretschmann scalar $K = 48 M^2/r^6$: finite at $r = 2M$ (value $3/(4M^4)$), divergent at $r = 0$. So the horizon is a coordinate singularity, $r = 0$ is a genuine curvature singularity.

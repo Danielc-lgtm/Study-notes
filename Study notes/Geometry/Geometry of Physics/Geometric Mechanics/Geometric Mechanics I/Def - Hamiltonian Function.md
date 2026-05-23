@@ -94,7 +94,7 @@ From the Lagrangian perspective, a Hamiltonian is the **Legendre transform of a 
 
 # Examples / Corollaries
 
-**Is an instance: the harmonic oscillator.** $H(q, p) = \tfrac{1}{2}(p^2 + \omega_0^2 q^2)$ on $T^*\mathbb{R} = \mathbb{R}^2$, where $\omega_0$ is the angular frequency (not to be confused with the symplectic form $\omega$!). Hamilton's equations give $\dot q = p$, $\dot p = -\omega_0^2 q$, with solutions $(q(t), p(t)) = $ ellipses in phase space.
+**Is an instance: the harmonic oscillator.** $H(q, p) = \tfrac{1}{2}(p^2 + \omega_0^2 q^2)$ on $T^*\mathbb{R} = \mathbb{R}^2$, where $\omega_0$ is the angular frequency (not to be confused with the symplectic form $\omega$!). Hamilton's equations give $\dot q = p$, $\dot p = -\omega_0^2 q$, with solutions $(q(t), p(t)) =$ ellipses in phase space.
 
 **Is an instance: the free particle.** $H(q, p) = |p|^2/(2m)$ on $T^*\mathbb{R}^n$. Hamilton's equations give $\dot q^i = p_i/m$, $\dot p_i = 0$, so $q(t) = q(0) + (p/m)t$ — straight-line motion at constant velocity.
 

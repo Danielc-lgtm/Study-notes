@@ -191,7 +191,7 @@ The conceptual obstacle is the **duality between brackets and exterior derivativ
 > $$d\omega^i(X, Y) = X(\omega^i(Y)) - Y(\omega^i(X)) - \omega^i([X, Y]).$$
 > The first two terms vanish (since $\omega^i$ annihilates sections of $D$); the LHS vanishes by hypothesis; so $\omega^i([X, Y]) = 0$ for each $i$. This means $[X, Y] \in \bigcap_i \ker \omega^i = D$. Hence $D$ is involutive.
 >
-> **(b) $\Longleftrightarrow$ (c):** By Lemma 2 applied with $\eta = $ any element of $\mathcal{I}^p(D)$, $\eta$ annihilates $D$ iff $\eta = \sum_i \omega^i \wedge \beta^i$. Then $d\eta = \sum_i (d\omega^i \wedge \beta^i - \omega^i \wedge d\beta^i)$. The second sum lies in $\mathcal{I}(D)$ (each term has an $\omega^i$ factor). The first sum lies in $\mathcal{I}(D)$ iff each $d\omega^i \wedge \beta^i$ does, iff each $d\omega^i \in \mathcal{I}^2(D)$ (since the $\beta^i$ are arbitrary).
+> **(b) $\Longleftrightarrow$ (c):** By Lemma 2 applied with $\eta =$ any element of $\mathcal{I}^p(D)$, $\eta$ annihilates $D$ iff $\eta = \sum_i \omega^i \wedge \beta^i$. Then $d\eta = \sum_i (d\omega^i \wedge \beta^i - \omega^i \wedge d\beta^i)$. The second sum lies in $\mathcal{I}(D)$ (each term has an $\omega^i$ factor). The first sum lies in $\mathcal{I}(D)$ iff each $d\omega^i \wedge \beta^i$ does, iff each $d\omega^i \in \mathcal{I}^2(D)$ (since the $\beta^i$ are arbitrary).
 >
 > **(b) $\Longleftrightarrow$ (d):** By Lemma 2 with $\eta = d\omega^i$, $d\omega^i$ annihilates $D$ iff $d\omega^i = \sum_j \omega^j \wedge \alpha^i_j$ for some $1$-forms $\alpha^i_j$.
 >

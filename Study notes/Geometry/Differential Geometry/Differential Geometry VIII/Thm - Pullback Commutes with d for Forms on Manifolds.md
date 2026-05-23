@@ -75,7 +75,7 @@ The fourth target combination is **$F^*d = dF^*$ + homotopy invariance = pullbac
 
 There are two ways to see this, and both are illuminating.
 
-**First route (slick, via uniqueness).** The exterior derivative $d_M$ on $M$ is uniquely characterized as the operator satisfying: linearity, $df = $ standard differential on functions, graded Leibniz, $d^2 = 0$. Define a candidate operator $D : \Omega^k(M) \to \Omega^{k+1}(M)$ for forms in the image of $F^* : \Omega^k(N) \to \Omega^k(M)$ by $D(F^*\omega) = F^*(d_N \omega)$. Show $D$ satisfies the four axioms:
+**First route (slick, via uniqueness).** The exterior derivative $d_M$ on $M$ is uniquely characterized as the operator satisfying: linearity, $df =$ standard differential on functions, graded Leibniz, $d^2 = 0$. Define a candidate operator $D : \Omega^k(M) \to \Omega^{k+1}(M)$ for forms in the image of $F^* : \Omega^k(N) \to \Omega^k(M)$ by $D(F^*\omega) = F^*(d_N \omega)$. Show $D$ satisfies the four axioms:
 
 - *Linearity:* $D(F^*(\omega + \eta)) = F^*d_N(\omega + \eta) = F^*(d_N\omega + d_N\eta) = D F^*\omega + D F^*\eta$. ✓
 - *Functions:* For $f \in C^\infty(N)$, $F^*f = f \circ F$. The differential is $d(F^*f)(v) = (dF^*f)(v) = (d(f\circ F))(v) = (f \circ F)$ evaluated as the directional derivative... let's compute. Actually $D(F^*f) = F^*(d_N f)$ — does this equal $d_M(F^*f)$? We need $d_M(f \circ F)$. By the chain rule, $d_M(f \circ F)_p(v) = (d_N f)_{F(p)}(dF_p(v)) = (F^* d_N f)_p(v)$. ✓
@@ -198,7 +198,7 @@ The proof's challenge is choosing the right level of abstraction. The slick "uni
 >
 > *Proof (slick, via uniqueness of $d$).*
 >
-> By [[Thm - Uniqueness of the Exterior Derivative]], the exterior derivative $d_M : \Omega^k(M) \to \Omega^{k+1}(M)$ is the unique $\mathbb{R}$-linear operator satisfying: (i) $d_M f = $ standard differential on $f \in C^\infty(M)$; (ii) graded Leibniz; (iii) $d_M^2 = 0$.
+> By [[Thm - Uniqueness of the Exterior Derivative]], the exterior derivative $d_M : \Omega^k(M) \to \Omega^{k+1}(M)$ is the unique $\mathbb{R}$-linear operator satisfying: (i) $d_M f =$ standard differential on $f \in C^\infty(M)$; (ii) graded Leibniz; (iii) $d_M^2 = 0$.
 >
 > Define $D : \Omega^k(M) \to \Omega^{k+1}(M)$ by $D = F^* \circ d_N \circ (F^*)^{-1}$ — but $F^*$ is not generally invertible, so we instead reinterpret: we want to show $D := d_M$ agrees with $F^* \circ d_N$ on the image of $F^*$. The slickest version: we will show that the operator $\Omega^k(N) \to \Omega^{k+1}(M)$ defined by $\omega \mapsto d_M(F^*\omega)$ agrees with the operator $\omega \mapsto F^*(d_N\omega)$. The first is the composition $d_M \circ F^*$; the second is $F^* \circ d_N$.
 >

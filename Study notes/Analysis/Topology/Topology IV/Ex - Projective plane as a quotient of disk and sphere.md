@@ -78,7 +78,7 @@ Let $\pi : S^2 \to P_1 = S^2/\{\pm x\}$ be the quotient projection. Define $f :=
 
 **Step 3: Verify $f$ respects the boundary antipodal identification.**
 
-The boundary of $D^2$ is $S^1 = \{(x, y, 0) : x^2 + y^2 = 1\}$, and $\iota|_{S^1}$ is the identity (since $z = 0$ on the boundary). So $\iota(S^1) = $ equator of $S^2$. For $u \in S^1$ on the boundary of $D^2$: $f(u) = \pi(\iota(u)) = \pi(u)$ (treating $u$ as a point on the equator of $S^2$). For $-u \in S^1$ on the boundary of $D^2$ (antipodal): $f(-u) = \pi(-u) = \pi(u)$ since the antipodal map identifies $u$ and $-u$ on $S^2$. So $f(u) = f(-u)$ for antipodal boundary points. Hence $f$ respects the equivalence on $D^2$ that identifies $u \sim -u$ on $S^1$.
+The boundary of $D^2$ is $S^1 = \{(x, y, 0) : x^2 + y^2 = 1\}$, and $\iota|_{S^1}$ is the identity (since $z = 0$ on the boundary). So $\iota(S^1) =$ equator of $S^2$. For $u \in S^1$ on the boundary of $D^2$: $f(u) = \pi(\iota(u)) = \pi(u)$ (treating $u$ as a point on the equator of $S^2$). For $-u \in S^1$ on the boundary of $D^2$ (antipodal): $f(-u) = \pi(-u) = \pi(u)$ since the antipodal map identifies $u$ and $-u$ on $S^2$. So $f(u) = f(-u)$ for antipodal boundary points. Hence $f$ respects the equivalence on $D^2$ that identifies $u \sim -u$ on $S^1$.
 
 **Step 4: Descend to $\bar f : P_2 \to P_1$ via universal property.**
 

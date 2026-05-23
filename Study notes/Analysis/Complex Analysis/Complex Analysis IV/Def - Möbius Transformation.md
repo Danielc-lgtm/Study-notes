@@ -73,7 +73,7 @@ In **special relativity**, the Möbius transformations on the celestial sphere c
 
 **Is an instance — inversion $z \mapsto 1/z$.** With $a = d = 0, b = c = 1$: $T(z) = 1/z$. This swaps $0$ and $\infty$, and is its own inverse.
 
-**Is an instance — Cayley transform $z \mapsto (z - i)/(z + i)$.** Maps the upper half-plane $\mathbb{H}$ to the unit disc $\mathbb{D}$, with $i \mapsto 0$, $\infty \mapsto 1$, $\pm 1 \mapsto $ specific points on the unit circle.
+**Is an instance — Cayley transform $z \mapsto (z - i)/(z + i)$.** Maps the upper half-plane $\mathbb{H}$ to the unit disc $\mathbb{D}$, with $i \mapsto 0$, $\infty \mapsto 1$, $\pm 1 \mapsto$ specific points on the unit circle.
 
 **Is an instance — automorphism of the disc.** $T(z) = e^{i\theta}(z - a)/(1 - \bar a z)$ for $|a| < 1, \theta \in \mathbb{R}$. Maps $\mathbb{D}$ to itself with $T(a) = 0$.
 

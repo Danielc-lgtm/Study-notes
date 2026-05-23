@@ -75,11 +75,11 @@ The equivalence is also a generalisation of a similar equivalence in **vector-bu
 
 The proof is essentially a bookkeeping exercise. The vertical subspace $V_p P$ is canonical (it is the kernel of $d\pi_p$). A *choice* of complement $H_p$ gives a splitting $T_p P = V_p P \oplus H_p$, equivalently a projection $T_p P \to V_p P$ along $H_p$. Composed with the inverse vertical-space isomorphism $V_p P \xrightarrow{\sim} \mathfrak{g}$, the projection is exactly a $\mathfrak{g}$-valued 1-form $\omega$ on $P$ — the connection 1-form whose kernel is $H_p$.
 
-The verticality axiom of $\omega$ is automatic from the construction: $\omega(\xi^*_p) = $ projection of $\xi^*$ onto $V_p P$ along $H$, identified with $\mathfrak{g}$ via the inverse vertical-space isomorphism = $\xi$ (since $\xi^*$ is already vertical).
+The verticality axiom of $\omega$ is automatic from the construction: $\omega(\xi^*_p) =$ projection of $\xi^*$ onto $V_p P$ along $H$, identified with $\mathfrak{g}$ via the inverse vertical-space isomorphism = $\xi$ (since $\xi^*$ is already vertical).
 
 The equivariance axiom of $\omega$ is equivalent to the $G$-equivariance of the distribution: $R_g^*\omega = \mathrm{Ad}_{g^{-1}}\omega$ iff $\ker(R_g^*\omega)_p = (R_g)_*^{-1}\ker\omega_{p \cdot g}$ iff $H$ is $G$-equivariant.
 
-The reverse direction is just as direct: given $\omega$, define $H = \ker\omega$; verify transversality (from verticality + surjectivity of $\omega$ onto $\mathfrak{g}$) and equivariance (from equivariance of $\omega$). The two operations $\omega \mapsto \ker\omega$ and $H \mapsto $ "the $\omega$ with kernel $H$" are mutually inverse.
+The reverse direction is just as direct: given $\omega$, define $H = \ker\omega$; verify transversality (from verticality + surjectivity of $\omega$ onto $\mathfrak{g}$) and equivariance (from equivariance of $\omega$). The two operations $\omega \mapsto \ker\omega$ and $H \mapsto$ "the $\omega$ with kernel $H$" are mutually inverse.
 
 So the equivalence is structural: both pictures are *the same data*, packaged differently. The 1-form picture packages it as "an element of $\Omega^1(P; \mathfrak{g})$"; the distribution picture as "a subbundle of $TP$".
 
@@ -106,7 +106,7 @@ The technical challenge is making the equivalence precise: explicitly constructi
    - *Why needed:* This is the forward direction of the bijection.
 
 2. **Subgoal 2:** Given $H$ satisfying (B)(i)–(ii), construct $\omega$ satisfying (A)(i)–(ii).
-   - *Hint:* For each $X \in T_p P$, decompose $X = X^V + X^H$ along $V_p P \oplus H_p$, and set $\omega_p(X) := $ the $\mathfrak{g}$-image of $X^V$ under the inverse vertical-space isomorphism.
+   - *Hint:* For each $X \in T_p P$, decompose $X = X^V + X^H$ along $V_p P \oplus H_p$, and set $\omega_p(X) :=$ the $\mathfrak{g}$-image of $X^V$ under the inverse vertical-space isomorphism.
    - *Why needed:* This is the reverse direction.
 
 3. **Subgoal 3:** Verify the two maps are mutually inverse.
@@ -174,7 +174,7 @@ The technical challenge is making the equivalence precise: explicitly constructi
 > 
 > **(⇒) From (A) to (B):** Suppose $\omega$ satisfies the connection axioms. Define $H := \ker\omega$. By Lemma 1, $T_p P = V_p P \oplus H_p$ at every $p$ (transversality). By Lemma 2, $(R_g)_* H_p = H_{p\cdot g}$ (equivariance). Smoothness of $H$ follows from smoothness of $\omega$ (as the kernel of a smooth surjective bundle map of constant rank). So $H$ satisfies the axioms of (B).
 > 
-> **(⇐) From (B) to (A):** Suppose $H$ satisfies the distribution axioms. Define $\omega$ as in Lemma 3: for $X \in T_p P$ with decomposition $X = X^V + X^H$, set $\omega_p(X) := $ inverse vertical-space isomorphism applied to $X^V$. By Lemma 3, $\omega$ is smooth and satisfies verticality and equivariance. So $\omega$ satisfies the axioms of (A).
+> **(⇐) From (B) to (A):** Suppose $H$ satisfies the distribution axioms. Define $\omega$ as in Lemma 3: for $X \in T_p P$ with decomposition $X = X^V + X^H$, set $\omega_p(X) :=$ inverse vertical-space isomorphism applied to $X^V$. By Lemma 3, $\omega$ is smooth and satisfies verticality and equivariance. So $\omega$ satisfies the axioms of (A).
 > 
 > **Mutual inversion:** By Lemma 4, the two maps are mutually inverse.
 > 

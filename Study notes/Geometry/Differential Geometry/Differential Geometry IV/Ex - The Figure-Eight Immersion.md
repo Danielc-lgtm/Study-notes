@@ -134,7 +134,7 @@ The proof breaks into four parts. (a) Verify $\beta$ is an injective smooth imme
 >
 > In the topology $\tau$ (the pulled-back topology from $(-\pi, \pi)$), $\beta(t_n) \to \beta(t_\infty)$ would require $t_n \to t_\infty$ in $(-\pi, \pi)$ — but $t_n \to \pi \notin (-\pi, \pi)$, so $t_n$ does not converge in $(-\pi, \pi)$, hence $\beta(t_n)$ does not converge in $(S, \tau)$.
 >
-> So $\beta(t_n) \to (0, 0)$ in the subspace topology but $\beta(t_n)$ does *not* converge in $\tau$. Hence $\tau \neq $ subspace topology. The two topologies disagree, and $\iota : (S, \tau) \to \mathbb{R}^2$ is not a topological embedding.
+> So $\beta(t_n) \to (0, 0)$ in the subspace topology but $\beta(t_n)$ does *not* converge in $\tau$. Hence $\tau \neq$ subspace topology. The two topologies disagree, and $\iota : (S, \tau) \to \mathbb{R}^2$ is not a topological embedding.
 
 > [!note]- Complete formal solution
 >

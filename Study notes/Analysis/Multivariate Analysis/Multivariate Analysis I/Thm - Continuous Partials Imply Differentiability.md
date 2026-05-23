@@ -43,7 +43,7 @@ The second disguised source is **$f$ is a sum, product, or composite of $C^1$ fu
 
 **Targets (Output Amplification)**
 
-The conclusion is "$f$ is differentiable on $U$, with $Df = $ the Jacobian".
+The conclusion is "$f$ is differentiable on $U$, with $Df =$ the Jacobian".
 
 Combine the conclusion with **[[Thm - Differentiability Implies Continuity|differentiability implies continuity]]**. The further result $E$: a $C^1$ function is continuous — and one gets the *value* of the derivative as a bonus. This is the standard route to continuity of explicitly-given functions: differentiate, check the partials are continuous, conclude continuity. The combination is useful because it is far cheaper than an $\varepsilon$–$\delta$ estimate.
 
@@ -122,7 +122,7 @@ Reduce to a scalar $f$ by componentwise differentiability. Walk from $x_\circ$ t
 > **Why needed:** It expresses each staircase step through the $j$-th partial derivative — this is where the hypothesis "$\partial_j f$ exists" enters.
 >
 > > [!note]- Full proof
-> > Fix $j$ and define $\varphi : [0, h_j] \to \mathbb{R}$ (or $[h_j, 0]$ if $h_j < 0$) by $\varphi(t) = f(z_{j-1} + t e_j)$ — the function $f$ along the $j$-th step, a function of one real variable. By hypothesis $\partial_j f$ exists on $U$, so $\varphi$ is differentiable with $\varphi'(t) = \partial_j f(z_{j-1} + t e_j)$. The one-variable mean value theorem gives $t^* $ strictly between $0$ and $h_j$ with $\varphi(h_j) - \varphi(0) = \varphi'(t^*)\,h_j$. Writing $\xi_j = z_{j-1} + t^* e_j$, a point on the segment $[z_{j-1}, z_j]$, this reads $f(z_j) - f(z_{j-1}) = \partial_j f(\xi_j)\,h_j$.
+> > Fix $j$ and define $\varphi : [0, h_j] \to \mathbb{R}$ (or $[h_j, 0]$ if $h_j < 0$) by $\varphi(t) = f(z_{j-1} + t e_j)$ — the function $f$ along the $j$-th step, a function of one real variable. By hypothesis $\partial_j f$ exists on $U$, so $\varphi$ is differentiable with $\varphi'(t) = \partial_j f(z_{j-1} + t e_j)$. The one-variable mean value theorem gives $t^*$ strictly between $0$ and $h_j$ with $\varphi(h_j) - \varphi(0) = \varphi'(t^*)\,h_j$. Writing $\xi_j = z_{j-1} + t^* e_j$, a point on the segment $[z_{j-1}, z_j]$, this reads $f(z_j) - f(z_{j-1}) = \partial_j f(\xi_j)\,h_j$.
 
 > [!note]- Lemma 3: The remainder is $o(|h|)$
 > **Statement:** With $L(h) = \sum_j \partial_j f(x_\circ) h_j$, the remainder $R(h) = \sum_{j=1}^n \big(\partial_j f(\xi_j) - \partial_j f(x_\circ)\big) h_j$ satisfies $|R(h)|/|h| \to 0$ as $h \to 0$.

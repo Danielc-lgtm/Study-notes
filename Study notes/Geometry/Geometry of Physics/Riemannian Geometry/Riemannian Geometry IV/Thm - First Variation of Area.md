@@ -10,7 +10,7 @@ tags: [geometry, riemannian-geometry, surfaces, variational, minimal-surfaces]
 
 # Notation
 
-Let $M \subset \mathbb{R}^3$ be a compact (possibly with boundary) oriented regular surface, with first fundamental form $g_{\alpha\beta}$, unit normal $N$, mean curvature $H$. A **one-parameter family of surfaces** $\{M(t)\}_{t \in (-\epsilon, \epsilon)}$ is given by a smooth map $\mathbf{x}(u, v, t)$ with $\mathbf{x}(u, v, 0) = \mathbf{x}_0(u, v) = $ the original $M$. The **variation field** is $v(u, v) = \partial\mathbf{x}/\partial t|_{t=0}$, a vector field along $M$. For boundary problems, $n$ denotes the outward conormal to $\partial M$ (the unit tangent to $M$, normal to $\partial M$, pointing out of $M$). Full registry on [[Riemannian Geometry IV — Classical Geometry of Surfaces in R^3]].
+Let $M \subset \mathbb{R}^3$ be a compact (possibly with boundary) oriented regular surface, with first fundamental form $g_{\alpha\beta}$, unit normal $N$, mean curvature $H$. A **one-parameter family of surfaces** $\{M(t)\}_{t \in (-\epsilon, \epsilon)}$ is given by a smooth map $\mathbf{x}(u, v, t)$ with $\mathbf{x}(u, v, 0) = \mathbf{x}_0(u, v) =$ the original $M$. The **variation field** is $v(u, v) = \partial\mathbf{x}/\partial t|_{t=0}$, a vector field along $M$. For boundary problems, $n$ denotes the outward conormal to $\partial M$ (the unit tangent to $M$, normal to $\partial M$, pointing out of $M$). Full registry on [[Riemannian Geometry IV — Classical Geometry of Surfaces in R^3]].
 
 ---
 
@@ -34,7 +34,7 @@ This is the **fundamental variational identity** of classical surface theory. It
 
 The physical content is direct: a soap film stretched on a wire frame minimises area subject to the boundary constraint, so the first variation must vanish for all variations fixing the boundary. By the fundamental lemma of the calculus of variations, $\delta A = 0$ for all such variations iff $H \equiv 0$ on $M$. This characterises **minimal surfaces** as the critical points of the area functional.
 
-For soap bubbles (closed surfaces with an enclosed volume), the variational problem is constrained: $\delta A = 0$ subject to $\delta V = $ given. The Lagrange-multiplier approach gives $\delta(A - \lambda V) = 0$, which forces $H = \lambda/2$ — a constant. So **equilibrium bubbles have constant mean curvature**, and by Alexandrov's theorem (1958), the only closed embedded CMC surfaces in $\mathbb{R}^3$ are round spheres.
+For soap bubbles (closed surfaces with an enclosed volume), the variational problem is constrained: $\delta A = 0$ subject to $\delta V =$ given. The Lagrange-multiplier approach gives $\delta(A - \lambda V) = 0$, which forces $H = \lambda/2$ — a constant. So **equilibrium bubbles have constant mean curvature**, and by Alexandrov's theorem (1958), the only closed embedded CMC surfaces in $\mathbb{R}^3$ are round spheres.
 
 Beyond minimal surfaces, the formula is the entry point to **geometric flows** ([[Def - Minimal Surface|minimal surfaces]], **mean curvature flow** $\partial_t\mathbf{x} = HN$ — the gradient flow of area), **isoperimetric inequalities**, and the **first variation formulas** for other geometric functionals (volume, energy, Willmore energy).
 

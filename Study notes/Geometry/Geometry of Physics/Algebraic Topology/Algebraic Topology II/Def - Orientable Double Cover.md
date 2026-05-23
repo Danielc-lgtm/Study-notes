@@ -89,7 +89,7 @@ In bundle theory, the orientable double cover is the **frame-bundle reduction**:
 
 **Is an instance: orientable double cover of any non-orientable surface $N_g$ (connected sum of $g$ projective planes) is the orientable surface $\Sigma_{g-1}$ (genus $g-1$).** Specifically:
 - $N_1 = \mathbb{RP}^2$, double cover is $S^2 = \Sigma_0$.
-- $N_2 = $ Klein bottle, double cover is $T^2 = \Sigma_1$.
+- $N_2 =$ Klein bottle, double cover is $T^2 = \Sigma_1$.
 - $N_3$, double cover is $\Sigma_2$.
 - In general, $\widetilde{N_g}^{\mathrm{or}} = \Sigma_{g-1}$.
 

@@ -94,7 +94,7 @@ A third compression — and the connection to Lie theory — is that the trace i
 
 # Examples / Corollaries
 
-**Is an instance — diagonal matrix.** For $A = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$, $\operatorname{tr} A = \lambda_1 + \cdots + \lambda_n$. This is the simplest case, and it is the form that makes the spectral formula "$\operatorname{tr} T = $ sum of eigenvalues" most transparent.
+**Is an instance — diagonal matrix.** For $A = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$, $\operatorname{tr} A = \lambda_1 + \cdots + \lambda_n$. This is the simplest case, and it is the form that makes the spectral formula "$\operatorname{tr} T =$ sum of eigenvalues" most transparent.
 
 **Is an instance — upper-triangular matrix.** For $A$ upper-triangular with diagonal entries $\lambda_1, \dots, \lambda_n$, $\operatorname{tr} A = \lambda_1 + \cdots + \lambda_n$. Because the diagonal entries of an upper-triangular matrix of $T$ are exactly the eigenvalues of $T$ counted with multiplicity ([[Thm - Upper-Triangular Form on Complex Vector Spaces]] + [[Def - Algebraic and Geometric Multiplicity]]), this confirms $\operatorname{tr} T = \sum d_k \lambda_k$ even before invoking the full spectral theorem.
 

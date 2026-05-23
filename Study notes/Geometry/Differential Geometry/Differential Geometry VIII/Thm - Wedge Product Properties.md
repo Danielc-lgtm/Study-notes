@@ -216,7 +216,7 @@ The hardest property is associativity, because in the determinant convention the
 
 # Cross-Field Exercise Suggestions
 
-**Linear algebra: the determinant of a product equals the product of determinants.** $\det(AB) = \det A \cdot \det B$ for square matrices $A, B$ is the wedge-product-applied-to-the-rows identity, read in top degree. The proof: let $\omega^i = $ row-$i$ of $A$, $\tau^j = $ row-$j$ of $B$; then the rows of $AB$ are $\sum_j A_{ij}\tau^j$, and computing the wedge product of these rows via property (e) gives $\det(AB)$, which factors by bilinearity into $\det A \cdot \det B$ times the wedge of the $\tau^j$'s.
+**Linear algebra: the determinant of a product equals the product of determinants.** $\det(AB) = \det A \cdot \det B$ for square matrices $A, B$ is the wedge-product-applied-to-the-rows identity, read in top degree. The proof: let $\omega^i =$ row-$i$ of $A$, $\tau^j =$ row-$j$ of $B$; then the rows of $AB$ are $\sum_j A_{ij}\tau^j$, and computing the wedge product of these rows via property (e) gives $\det(AB)$, which factors by bilinearity into $\det A \cdot \det B$ times the wedge of the $\tau^j$'s.
 
 **Physics: angular momentum as a $2$-form.** In Hamiltonian mechanics, angular momentum is naturally a $2$-form on phase space, not a vector. The components $L_{ij} = x_i p_j - x_j p_i$ are antisymmetric, encoding the alternating-tensor structure. The wedge product is the algebraic content of "$L = x \wedge p$" if we view position and momentum as $1$-forms. Vector cross product disguises this structure in $\mathbb{R}^3$.
 

@@ -53,7 +53,7 @@ The set of all deck transformations forms a group $\mathrm{Deck}(\tilde X / X)$ 
 $$
 \mathrm{Deck}(\widetilde X / X) \cong \pi_1(X, x_0)
 $$
-canonically. The isomorphism sends a loop $[\gamma] \in \pi_1(X, x_0)$ to the deck transformation $\varphi_{[\gamma]}$ defined by $\varphi_{[\gamma]}(\tilde x_0) = $ endpoint of the lift of $\gamma$ starting at $\tilde x_0$.
+canonically. The isomorphism sends a loop $[\gamma] \in \pi_1(X, x_0)$ to the deck transformation $\varphi_{[\gamma]}$ defined by $\varphi_{[\gamma]}(\tilde x_0) =$ endpoint of the lift of $\gamma$ starting at $\tilde x_0$.
 
 4. (**Quotient is the base**) For a [[Def - Regular (Galois) Covering|regular cover]] $p : \tilde X \to X$, the quotient $\tilde X / \mathrm{Deck}(\tilde X / X) = X$ (as topological spaces). For non-regular covers, the quotient is strictly smaller than $X$ — only the regular ones have this clean quotient structure.
 

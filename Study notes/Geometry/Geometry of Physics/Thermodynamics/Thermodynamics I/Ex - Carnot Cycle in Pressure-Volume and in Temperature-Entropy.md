@@ -66,7 +66,7 @@ For an ideal gas, $S = (f/2) nR \log T + nR \log V + \text{const}$.
 > Start by sketching each leg. In $(p, V)$ coordinates: isotherms are hyperbolas $pV = \text{const}$, adiabats are steeper curves $pV^\gamma = \text{const}$ where $\gamma = 1 + 2/f > 1$. In $(T, S)$ coordinates: isotherms are horizontal lines ($T = \text{const}$), adiabats are vertical lines ($S = \text{const}$).
 
 > [!note]- Hint 2
-> The net work done by the gas around the cycle equals the area enclosed by the cycle in $(p, V)$ coordinates (since $\oint p\, dV$ = enclosed area, by Stokes/Green). Similarly, the net heat absorbed equals the area in $(T, S)$ coordinates (since $\oint T\, dS = $ enclosed area). By the first law, these two areas are equal.
+> The net work done by the gas around the cycle equals the area enclosed by the cycle in $(p, V)$ coordinates (since $\oint p\, dV$ = enclosed area, by Stokes/Green). Similarly, the net heat absorbed equals the area in $(T, S)$ coordinates (since $\oint T\, dS =$ enclosed area). By the first law, these two areas are equal.
 
 > [!note]- Hint 3
 > Compute $Q_h$ as the heat absorbed during the isothermal expansion at $T_h$. Use $\delta Q = T\, dS$ with $T = T_h$ constant: $Q_h = T_h (S_2 - S_1) = T_h \Delta S$ where $\Delta S$ is the entropy change along the hot isotherm. Compute $Q_c$ similarly as heat released at $T_c$.

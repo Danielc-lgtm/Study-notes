@@ -92,7 +92,7 @@ A variation gives the nonnegative case: with $\operatorname{Ric} \geq 0$, both $
 
 The proof is compressed. The Weitzenböck formula is the conceptual bottleneck — its derivation involves the Ricci identity on covariant derivatives of forms, which uses the formula for the commutator $[\nabla_i, \nabla_j]$ on a form (giving a Riemann tensor contraction that reduces to Ricci on $1$-forms). Most expositions cite the formula and verify it; deriving it from scratch is a several-line calculation.
 
-The most common error: **forgetting the integration step**. The Bochner technique requires *integrating* the Weitzenböck calculation over the closed manifold to kill the rough Laplacian's integral via Stokes' theorem. Without the integration, "$\Delta|h|^2 = $ something" is just a pointwise identity with no topological consequence. The integration is what converts the local PDE identity into a global vanishing.
+The most common error: **forgetting the integration step**. The Bochner technique requires *integrating* the Weitzenböck calculation over the closed manifold to kill the rough Laplacian's integral via Stokes' theorem. Without the integration, "$\Delta|h|^2 =$ something" is just a pointwise identity with no topological consequence. The integration is what converts the local PDE identity into a global vanishing.
 
 A second error: **conflating "harmonic form" on a closed manifold with "harmonic function" on $\mathbb{R}^n$**. The Bochner argument is for *forms* on a *closed* manifold; harmonic functions on $\mathbb{R}^n$ (like $e^x\cos y$) need not vanish under positive curvature. The closed-manifold hypothesis is essential to apply Stokes / integration by parts.
 
@@ -161,7 +161,7 @@ Take a harmonic $1$-form $h$. The Weitzenböck formula gives $\Delta h = \nabla^
 > **Why needed:** Converts the rough Laplacian's contribution to a manifestly nonnegative integral.
 >
 > > [!note]- Full proof
-> > $\nabla^*$ is the formal $L^2$-adjoint of the connection $\nabla : \Omega^1(M) \to \Omega^1(M) \otimes \Omega^1(M) = $ sections of $T^*M\otimes T^*M$. The pairing $\langle\nabla^*\eta, \omega\rangle_{L^2} = \langle\eta, \nabla\omega\rangle_{L^2}$ for $\omega \in \Omega^1(M)$ and $\eta$ a $(0,2)$-tensor.
+> > $\nabla^*$ is the formal $L^2$-adjoint of the connection $\nabla : \Omega^1(M) \to \Omega^1(M) \otimes \Omega^1(M) =$ sections of $T^*M\otimes T^*M$. The pairing $\langle\nabla^*\eta, \omega\rangle_{L^2} = \langle\eta, \nabla\omega\rangle_{L^2}$ for $\omega \in \Omega^1(M)$ and $\eta$ a $(0,2)$-tensor.
 > >
 > > Applied with $\eta = \nabla\omega$: $\langle\nabla^*\nabla\omega, \omega\rangle = \langle\nabla\omega, \nabla\omega\rangle = \|\nabla\omega\|^2 = \int_M|\nabla\omega|^2\operatorname{vol}_g \geq 0$.
 

@@ -110,7 +110,7 @@ In **algebraic geometry and Hodge theory**, the **holomorphic** version of $d_\n
 
 **Example (trivial bundle, trivial connection).** For $E = M \times V$ with $A = 0$, the connection is $\nabla\psi = d\psi$ and the exterior covariant derivative is $d_\nabla = d$ — the ordinary exterior derivative. $d_\nabla^2 = d^2 = 0$ — flat connection.
 
-**Example (electromagnetic covariant derivative on a wave function).** For $E = $ complex line bundle of a $U(1)$-connection (the charged scalar bundle), with connection $A_\mu dx^\mu$ (the EM 4-potential), the exterior covariant derivative on a wave function $\psi$ (a section of $E$) is
+**Example (electromagnetic covariant derivative on a wave function).** For $E =$ complex line bundle of a $U(1)$-connection (the charged scalar bundle), with connection $A_\mu dx^\mu$ (the EM 4-potential), the exterior covariant derivative on a wave function $\psi$ (a section of $E$) is
 $$
 d_\nabla\psi = d\psi + iA\psi = (\partial_\mu\psi + iA_\mu\psi)\,dx^\mu.
 $$
@@ -118,7 +118,7 @@ This is the standard minimally-coupled covariant derivative of QED. Squaring: $d
 
 **Example (adjoint bundle).** For $E = \mathrm{Ad}\,P$ and $\rho = \mathrm{Ad}$, the exterior covariant derivative on a section $\psi$ is $d_\nabla\psi = d\psi + [A, \psi]$. On the curvature $F \in \Omega^2(M; \mathrm{Ad}\,P)$, this gives $d_\nabla F = dF + [A, F]$, which equals zero by the [[Thm - Bianchi Identity for Principal Connections|Bianchi identity]]. So $F$ is "closed" with respect to $d_\nabla$ — the field strength is a $d_\nabla$-cocycle.
 
-**Example (spinor covariant derivative).** For $E = $ spinor bundle on a spin manifold with $\rho = $ spin representation, the exterior covariant derivative on a spinor field $\psi$ is $d_\nabla\psi = d\psi + \tfrac{1}{4}\omega^a{}_b \gamma_a\gamma^b \psi$, where $\omega^a{}_b$ is the spin connection and $\gamma_a$ are Dirac gamma matrices. This is the operator that appears in the curved-spacetime Dirac equation. See [[Spinors and the Dirac Equation]].
+**Example (spinor covariant derivative).** For $E =$ spinor bundle on a spin manifold with $\rho =$ spin representation, the exterior covariant derivative on a spinor field $\psi$ is $d_\nabla\psi = d\psi + \tfrac{1}{4}\omega^a{}_b \gamma_a\gamma^b \psi$, where $\omega^a{}_b$ is the spin connection and $\gamma_a$ are Dirac gamma matrices. This is the operator that appears in the curved-spacetime Dirac equation. See [[Spinors and the Dirac Equation]].
 
 **Is NOT an instance:** the ordinary exterior derivative $d$ on $E$-valued forms (defined component-wise in a chart) is not the exterior covariant derivative — it depends on the chart and does not transform correctly under gauge transformations. The exterior covariant derivative is the gauge-covariant extension.
 
@@ -130,9 +130,9 @@ d_\nabla(\varphi \wedge \psi) = d_\nabla\varphi \wedge \psi + (-1)^p \varphi \we
 $$
 for $\varphi \in \Omega^p(M; \mathrm{Ad}\,P)$ and $\psi \in \Omega^q(M; E)$, where $\varphi \wedge \psi$ means: $\mathrm{Ad}\,P$ acts on $E$ via $d\rho$ pointwise. This is the "full" graded Leibniz, generalising the ordinary-form case.
 
-**Corollary (Bianchi from $d_\nabla^2$).** The Bianchi identity $d_\nabla F = 0$ can be derived from $d_\nabla^2 = d\rho(F)\wedge$ as follows: applying $d_\nabla$ to $F$ (a section of $\Lambda^2 T^*M \otimes \mathrm{Ad}\,P$) and using the second Bianchi-like identity for $d_\nabla$ on $\mathrm{Ad}\,P$-valued forms, plus the structural equation, gives $d_\nabla F = d_\nabla(d_\nabla \omega) = $ (something involving Jacobi) $= 0$. Explicitly: $dF + [A, F] = d^2 A + d[A, A]/2 + [A, dA] + [A, [A, A]]/2 = 0$ using $d^2 = 0$, graded Leibniz of bracket with $d$, and Jacobi $[A, [A, A]] = 0$.
+**Corollary (Bianchi from $d_\nabla^2$).** The Bianchi identity $d_\nabla F = 0$ can be derived from $d_\nabla^2 = d\rho(F)\wedge$ as follows: applying $d_\nabla$ to $F$ (a section of $\Lambda^2 T^*M \otimes \mathrm{Ad}\,P$) and using the second Bianchi-like identity for $d_\nabla$ on $\mathrm{Ad}\,P$-valued forms, plus the structural equation, gives $d_\nabla F = d_\nabla(d_\nabla \omega) =$ (something involving Jacobi) $= 0$. Explicitly: $dF + [A, F] = d^2 A + d[A, A]/2 + [A, dA] + [A, [A, A]]/2 = 0$ using $d^2 = 0$, graded Leibniz of bracket with $d$, and Jacobi $[A, [A, A]] = 0$.
 
-**Calibration check.** If you have understood the definition, you should be able to: (i) verify the formula $d_\nabla\psi = d\psi + A\wedge\psi$ (in matrix-group notation) by checking the graded Leibniz with an ordinary form factor; (ii) compute $d_\nabla^2\psi$ explicitly in components and obtain $F\wedge\psi$ (with appropriate representation action), confirming that $d_\nabla^2 = 0$ iff $F = 0$; (iii) derive the Bianchi identity $d_\nabla F = 0$ from $d_\nabla^2 = d\rho(F)\wedge$ applied to a section of $\mathrm{Ad}\,P$, using the consistency $d_\nabla(d_\nabla\psi) = d_\nabla(\nabla\psi) = $ curvature-times-$\psi$.
+**Calibration check.** If you have understood the definition, you should be able to: (i) verify the formula $d_\nabla\psi = d\psi + A\wedge\psi$ (in matrix-group notation) by checking the graded Leibniz with an ordinary form factor; (ii) compute $d_\nabla^2\psi$ explicitly in components and obtain $F\wedge\psi$ (with appropriate representation action), confirming that $d_\nabla^2 = 0$ iff $F = 0$; (iii) derive the Bianchi identity $d_\nabla F = 0$ from $d_\nabla^2 = d\rho(F)\wedge$ applied to a section of $\mathrm{Ad}\,P$, using the consistency $d_\nabla(d_\nabla\psi) = d_\nabla(\nabla\psi) =$ curvature-times-$\psi$.
 
 ---
 

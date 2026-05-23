@@ -52,7 +52,7 @@ the **Euler characteristic** — see [[Thm - Gauss-Bonnet-Chern Theorem]].
 
 # Relate to Other Fields / Compression
 
-The Euler class is **the obstruction to a global section**. For a rank-$k$ bundle over a $k$-dimensional base, $e(E) = 0$ in $H^k(M)$ is precisely the condition that the bundle admits a nowhere-vanishing section. This generalizes the **Poincaré-Hopf theorem**: $\chi(M) = e(TM) \cdot [M] = $ sum of indices of any vector field — when $\chi(M) = 0$ there exists a nowhere-vanishing vector field, when $\chi(M) \neq 0$ no such vector field exists.
+The Euler class is **the obstruction to a global section**. For a rank-$k$ bundle over a $k$-dimensional base, $e(E) = 0$ in $H^k(M)$ is precisely the condition that the bundle admits a nowhere-vanishing section. This generalizes the **Poincaré-Hopf theorem**: $\chi(M) = e(TM) \cdot [M] =$ sum of indices of any vector field — when $\chi(M) = 0$ there exists a nowhere-vanishing vector field, when $\chi(M) \neq 0$ no such vector field exists.
 
 The Euler class is the **top Chern class of a complex vector bundle, viewed as a real oriented bundle**. For a complex rank-$n$ bundle $E_\mathbb{C}$ (= real rank-$2n$ oriented), $e(E_\mathbb{C}) = c_n(E_\mathbb{C}) \in H^{2n}(M; \mathbb{Z})$. So Euler classes specialize Chern classes; the Pfaffian formula in the real case becomes the determinant formula $c_n(E) = \det(\Omega/2\pi i)^{n}/n!$ in the complex case (the $n$-th elementary symmetric polynomial of the eigenvalues of $\Omega/2\pi i$).
 

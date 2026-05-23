@@ -103,13 +103,13 @@ Reduce to the case $F : U \to \mathbb{R}^n$ on $U \subseteq \mathbb{R}^m$ open b
 2. **Induct on $m$.** Base case $m = 0$: trivial (the critical set is countable, hence its image is). Inductive step: assume the theorem for sources of dimension $< m$, prove for dimension $m$.
    - *Hint:* The induction parameter is the source dimension, not the codimension.
 
-3. **Define the nested critical sets.** $C \supseteq C_1 \supseteq C_2 \supseteq \cdots$ where $C_k = \{p \in C : $ all derivatives of $F$ up to order $k$ vanish at $p\}$. Each $C_k$ is closed.
+3. **Define the nested critical sets.** $C \supseteq C_1 \supseteq C_2 \supseteq \cdots$ where $C_k = \{p \in C :$ all derivatives of $F$ up to order $k$ vanish at $p\}$. Each $C_k$ is closed.
    - *Hint:* $C_1$ requires all *first* partial derivatives to vanish (so $dF = 0$); $C_2$ adds vanishing of all second partials; etc.
 
 4. **Bound $F(C \setminus C_1)$.** This is the simple-rank-drop case. At a point $p \in C \setminus C_1$, some first partial of $F$ is nonzero. Use this to define new coordinates near $p$ in which one of the original coordinates becomes $F^1$ (a partial-IFT change). Then apply the inductive hypothesis to slice maps $F_c$ defined on hyperplanes $\{x^1 = c\}$, and use Fubini-style integration to conclude.
    - *Hint:* The slicing reduces to lower-dimensional source.
 
-5. **Bound $F(C_k \setminus C_{k+1})$ for $k \geq 1$.** At such a point, some $k$-th partial of $F$ is nonzero but all lower partials vanish. Let $y = $ that partial; its zero set near $p$ is a smooth hypersurface. The set $C_k$ lies in this hypersurface, so the image of $C_k \setminus C_{k+1}$ near $p$ is bounded by the image of a critical set on a lower-dimensional manifold. Apply the inductive hypothesis.
+5. **Bound $F(C_k \setminus C_{k+1})$ for $k \geq 1$.** At such a point, some $k$-th partial of $F$ is nonzero but all lower partials vanish. Let $y =$ that partial; its zero set near $p$ is a smooth hypersurface. The set $C_k$ lies in this hypersurface, so the image of $C_k \setminus C_{k+1}$ near $p$ is bounded by the image of a critical set on a lower-dimensional manifold. Apply the inductive hypothesis.
    - *Hint:* Restrict $F$ to the hypersurface and apply Sard inductively.
 
 6. **Bound $F(C_k)$ for $k > m/n - 1$.** This is the packing argument. Cover the closure of $C_k$ in a compact subset by cubes of side $R/K$. By Taylor's theorem with the constant-on-$C_k$ derivatives, $F$ restricted to a cube intersecting $C_k$ has image contained in a ball of radius $A(R/K)^{k+1}$. Summing over $K^m$ cubes, the total volume is bounded by $K^m \cdot (A(R/K)^{k+1})^n = A^n R^{n(k+1)} K^{m - n(k+1)}$, which goes to $0$ as $K \to \infty$ when $m - n(k+1) < 0$, i.e., $k + 1 > m/n$.
@@ -158,7 +158,7 @@ Reduce to the case $F : U \to \mathbb{R}^n$ on $U \subseteq \mathbb{R}^m$ open b
 >
 > **Step 1 (induction on $m$).** Base case $m = 0$: $M$ is a discrete set, so $F(M)$ is countable, hence has measure zero (assuming $n \geq 1$).
 >
-> **Inductive step.** Assume the theorem for source dimensions $< m$. Define $C_k = \{p \in U : $ all partial derivatives of $F$ at $p$ up to order $k$ vanish$\}$, $C_0 = C =$ critical set.
+> **Inductive step.** Assume the theorem for source dimensions $< m$. Define $C_k = \{p \in U :$ all partial derivatives of $F$ at $p$ up to order $k$ vanish$\}$, $C_0 = C =$ critical set.
 >
 > **Step 2 ($F(C \setminus C_1)$ has measure zero).** At $p \in C \setminus C_1$, some first partial $\partial F^1 / \partial x^1$, say, is nonzero. By the inverse function theorem applied to the carry-along map $(x^1, x^2, \dots, x^m) \mapsto (F^1(x), x^2, \dots, x^m)$, change coordinates so that $F^1(x) = x^1$. Then $F(x^1, \dots, x^m) = (x^1, F^2_{x^1}(x^2, \dots, x^m), \dots, F^n_{x^1}(x^2, \dots, x^m))$, and the critical set of $F$ in the new coordinates restricted to $\{x^1 = c\}$ is exactly the critical set of $F_c = (F^2_c, \dots, F^n_c) : \{x^1 = c\} \to \mathbb{R}^{n-1}$. By the inductive hypothesis (source dim $m - 1$), $F_c(\text{critical set of } F_c)$ has measure zero in $\mathbb{R}^{n-1}$ for each $c$. By Lemma 6.2 of Lee (a Fubini-style lemma), $F(C \setminus C_1) \cap U$ has measure zero in $\mathbb{R}^n$.
 >

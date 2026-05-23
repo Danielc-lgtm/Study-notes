@@ -23,7 +23,7 @@ These two conditions together force $\vec v$ to be the gradient of a scalar pote
 
 Specifically: irrotationality means $\vec v = \nabla \phi$ for some scalar $\phi$ (the **velocity potential**). Incompressibility then gives $\Delta \phi = 0$, so $\phi$ is harmonic. On a simply connected $D$, $\phi$ has a harmonic conjugate $\psi$ (the **stream function**), and $w = \phi + i\psi$ is holomorphic. The complex velocity is $\bar v = v_x - iv_y$ (note the conjugate), and computation shows $\bar v = dw/dz = \phi_x + i\psi_x = \phi_x - i\phi_y = v_x - iv_y$. So the holomorphic function $w$ encodes the entire velocity field via differentiation.
 
-Why "complex" and not just the gradient $\nabla\phi$? Because the complex structure $w = \phi + i\psi$ packages *both* the velocity potential and the stream function into one object, and the holomorphicity is the geometric content of incompressibility + irrotationality together. The stream function has an important physical meaning: level curves $\psi = $ const are *streamlines* — paths the fluid follows. So $w$ encodes both the dynamics ($\phi$, velocity) and the geometry ($\psi$, streamlines) in one holomorphic function.
+Why "complex" and not just the gradient $\nabla\phi$? Because the complex structure $w = \phi + i\psi$ packages *both* the velocity potential and the stream function into one object, and the holomorphicity is the geometric content of incompressibility + irrotationality together. The stream function has an important physical meaning: level curves $\psi =$ const are *streamlines* — paths the fluid follows. So $w$ encodes both the dynamics ($\phi$, velocity) and the geometry ($\psi$, streamlines) in one holomorphic function.
 
 This is one of the most productive ideas in applied mathematics: **2D incompressible irrotational flow is exactly holomorphic function theory**. Every theorem about holomorphic functions translates to a fact about fluid flow. Singularities of $w$ correspond to physical objects: simple pole = source/sink, logarithmic singularity = vortex, dipole = doublet. Conformal mapping pulls back flows: flow around an obstacle is computed by mapping the exterior of the obstacle to a simple domain.
 
@@ -37,16 +37,16 @@ Let $D \subseteq \mathbb{C}$ be a simply connected domain representing the flow 
 $$w(z) = \phi(z) + i\psi(z), \quad z \in D,$$
 where:
 - $\phi : D \to \mathbb{R}$ is the **velocity potential**: $\nabla\phi = (v_x, v_y) = \vec v$, the fluid velocity field.
-- $\psi : D \to \mathbb{R}$ is the **stream function**: the harmonic conjugate of $\phi$. Level curves $\psi = $ const are streamlines of the flow.
+- $\psi : D \to \mathbb{R}$ is the **stream function**: the harmonic conjugate of $\phi$. Level curves $\psi =$ const are streamlines of the flow.
 
 **Complex velocity.** The velocity is recovered from $w$ by
 $$\bar v(z) := v_x(z) - iv_y(z) = \frac{dw}{dz}.$$
 (Note the complex conjugate: it is $v_x - iv_y$, not $v_x + iv_y$, because of the way the gradient maps under the complex-to-real identification.)
 
-**Boundary condition.** For flow past a solid obstacle $\partial D$, the boundary is a *streamline* — fluid cannot penetrate it. So $\psi = $ constant on $\partial D$ (typically $\psi = 0$).
+**Boundary condition.** For flow past a solid obstacle $\partial D$, the boundary is a *streamline* — fluid cannot penetrate it. So $\psi =$ constant on $\partial D$ (typically $\psi = 0$).
 
 **Singularities and their physical meaning.**
-- **Simple pole** at $a$: $w(z) \sim c/(z - a)$ near $a$. Physically a *source* (if $c$ has the right sign) or *sink*. The "flux" out of a small loop around $a$ is $\operatorname{Re}\oint \bar v\,d\bar z \cdot $ (real factor) = $2\pi \operatorname{Im} c$ (mass flux).
+- **Simple pole** at $a$: $w(z) \sim c/(z - a)$ near $a$. Physically a *source* (if $c$ has the right sign) or *sink*. The "flux" out of a small loop around $a$ is $\operatorname{Re}\oint \bar v\,d\bar z \cdot$ (real factor) = $2\pi \operatorname{Im} c$ (mass flux).
 - **Logarithmic singularity** at $a$: $w(z) \sim -i(\Gamma/(2\pi))\log(z - a)$. Physically a *vortex* with circulation $\Gamma = \oint \vec v\cdot d\vec\ell$. The stream function has a logarithmic singularity at the vortex centre; the velocity decays like $1/|z - a|$.
 - **Higher-order pole** (dipole, multipole): doublet flows, used in modeling more complex flow geometries.
 
@@ -68,7 +68,7 @@ In **stokes flow** (very low Reynolds number, almost no inertia), the streamline
 
 **Is an instance — uniform flow.** $w(z) = U z$ for real $U > 0$. Velocity $\bar v = U$, so $v_x = U, v_y = 0$ — uniform flow in the $x$-direction with speed $U$. Streamlines: $\psi = \operatorname{Im}(Uz) = Uy$, horizontal lines.
 
-**Is an instance — point source at origin.** $w(z) = (m/(2\pi))\log z$ for $m > 0$. Velocity $\bar v = m/(2\pi z)$, magnitude $m/(2\pi|z|)$, direction outward from origin. Streamlines: $\psi = (m/(2\pi))\arg z = $ const → radial lines. The mass flux through any loop around the origin is $m$ (the source strength). Note: $\log z$ requires choosing a branch; on simply connected domains avoiding the origin, this is fine.
+**Is an instance — point source at origin.** $w(z) = (m/(2\pi))\log z$ for $m > 0$. Velocity $\bar v = m/(2\pi z)$, magnitude $m/(2\pi|z|)$, direction outward from origin. Streamlines: $\psi = (m/(2\pi))\arg z =$ const → radial lines. The mass flux through any loop around the origin is $m$ (the source strength). Note: $\log z$ requires choosing a branch; on simply connected domains avoiding the origin, this is fine.
 
 **Is an instance — point vortex at origin.** $w(z) = -i(\Gamma/(2\pi))\log z$. Velocity $\bar v = -i\Gamma/(2\pi z) = (-i\Gamma/(2\pi)) \cdot 1/z$. Magnitude $\Gamma/(2\pi|z|)$. Direction: rotating around the origin (the factor $-i$ rotates by $-\pi/2$). Streamlines: circles around the origin. Circulation: $\oint \vec v \cdot d\vec\ell = \Gamma$ (independent of loop choice, by the residue theorem).
 

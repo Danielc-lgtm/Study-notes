@@ -42,7 +42,7 @@ The precondition is "$f$ meromorphic, $\gamma$ closed curve avoiding poles, $\ga
 
 **$f$ a rational function and $\gamma$ any standard closed contour.** Property $B$: $f = P/Q$ with $P, Q$ polynomials and $Q$ has only isolated zeros. Bridge: rational functions are meromorphic on $\mathbb{C}$ (poles only at zeros of $Q$). Closed curves in $\mathbb{C}$ that avoid these poles are valid. Triggers most computational applications.
 
-**$f = g e^{ih}$ or other oscillatory product, $\gamma = $ real axis closed by a semicircle.** Property $B$: $f$ is a rational function times an exponential factor. Bridge: still meromorphic with isolated poles; the semicircle closure transforms a real-axis integral into a contour integral, applying the residue theorem to evaluate. The exponential factor controls the semicircle's contribution (Jordan's lemma).
+**$f = g e^{ih}$ or other oscillatory product, $\gamma =$ real axis closed by a semicircle.** Property $B$: $f$ is a rational function times an exponential factor. Bridge: still meromorphic with isolated poles; the semicircle closure transforms a real-axis integral into a contour integral, applying the residue theorem to evaluate. The exponential factor controls the semicircle's contribution (Jordan's lemma).
 
 **$f$ has an essential singularity inside the contour.** Property $B$: $f$ is "meromorphic" except for some essential singularities, but the contour avoids them. Bridge: the residue theorem applies to all isolated singularities, including essential ones — the residue is just $c_{-1}$ of the Laurent expansion, defined whether the singularity is a pole or essential. The "meromorphic" hypothesis can be relaxed to "holomorphic except for isolated singularities".
 
@@ -144,7 +144,7 @@ Subtract from $f$ its principal parts at all poles inside the contour. The resul
 
 **Real integral evaluation.** Show $\int_{-\infty}^\infty dx/(1 + x^2) = \pi$ by closing the real axis with an upper semicircle. The function $1/(1 + z^2)$ has poles at $\pm i$; only $z = i$ is enclosed; $\operatorname{Res}_i 1/(1 + z^2) = 1/(2i)$. Semicircle contribution vanishes as radius $\to \infty$. Result: $2\pi i \cdot 1/(2i) = \pi$.
 
-**Argument principle.** For $g$ meromorphic, $g'/g$ is meromorphic with simple poles at zeros and poles of $g$, with residues equal to the orders. The integral $\frac{1}{2\pi i}\oint g'/g\,dz = $ "sum of residues" = (zeros of $g$) − (poles of $g$) counted with multiplicity. This is the argument principle, derivable from the residue theorem.
+**Argument principle.** For $g$ meromorphic, $g'/g$ is meromorphic with simple poles at zeros and poles of $g$, with residues equal to the orders. The integral $\frac{1}{2\pi i}\oint g'/g\,dz =$ "sum of residues" = (zeros of $g$) − (poles of $g$) counted with multiplicity. This is the argument principle, derivable from the residue theorem.
 
 **Summing series via $\pi \cot(\pi z)$.** The function $\pi\cot(\pi z)$ has simple poles at integers with residue $1$. For a function $g$ holomorphic on $\mathbb{C}$ and decaying at $\infty$, $\oint_{\Gamma_N} \pi\cot(\pi z) g(z)\,dz = 0$ (large square contour, integral vanishes by decay), so by the residue theorem the sum of residues vanishes, giving $\sum_n g(n) = -\sum_{\text{poles of } g} \operatorname{Res}_{w}[\pi\cot(\pi z) g(z)]$. Evaluates $\sum 1/n^2 = \pi^2/6$ and similar.
 

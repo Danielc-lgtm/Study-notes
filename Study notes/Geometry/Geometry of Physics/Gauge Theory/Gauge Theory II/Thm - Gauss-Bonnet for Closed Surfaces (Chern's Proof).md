@@ -53,7 +53,7 @@ Chern's proof, given here, is **intrinsic**: it uses only the intrinsic Riemanni
 
 *Target 1: Compute $\chi(M)$ from any chosen metric.* Once the theorem is established, choosing a convenient metric on $M$ and integrating $K\,dA$ gives $\chi(M)$. For a Riemannian surface presented abstractly, this is the route. Combined with the **Riemannian distance theorem** (chosen metric independent of presentation), $\chi$ is computable from the metric.
 
-*Target 2: Compute $\sum j_v(p_\alpha)$ for any vector field $v$.* The theorem says the *sum* of Kronecker indices is independent of $v$ — a remarkable consequence. Combined with the choice $v = $ gradient of a Morse function, this gives $\chi(M) = \sum_p (-1)^{\mathrm{index}_p(f)}$ — Morse theory's Euler characteristic formula.
+*Target 2: Compute $\sum j_v(p_\alpha)$ for any vector field $v$.* The theorem says the *sum* of Kronecker indices is independent of $v$ — a remarkable consequence. Combined with the choice $v =$ gradient of a Morse function, this gives $\chi(M) = \sum_p (-1)^{\mathrm{index}_p(f)}$ — Morse theory's Euler characteristic formula.
 
 *Target 3: Bound $\chi(M)$ from sectional curvature.* On a surface with $|K| \leq K_0$, $|\chi(M)| \leq K_0 \cdot \mathrm{Area}(M)/(2\pi)$. This is a curvature-topology bound, the prototype of all comparison theorems in Riemannian geometry. (Generalizations include Bonnet–Myers, Synge, and Bishop comparison.)
 
@@ -197,7 +197,7 @@ The most common error is to try to apply Stokes' theorem on $M$ directly, observ
 
 # Cross-Field Exercise Suggestions
 
-1. **Algebraic topology / Morse theory.** Take $v = \nabla f$ for $f : M \to \mathbb{R}$ a Morse function. Then the zeros of $v$ are the critical points of $f$, and $j_v(p) = (-1)^{\mathrm{index}_p(f)}$ where $\mathrm{index}_p(f)$ is the Morse index (number of negative eigenvalues of the Hessian). So $\chi(M) = \sum_p(-1)^{\mathrm{index}_p(f)}$. Apply to $f = $ height function on the standard torus $T^2 \subset \mathbb{R}^3$: 4 critical points (top, bottom, two saddles) with indices $(2, 0, 1, 1)$, giving $\chi(T^2) = 1 + 1 - 1 - 1 = 0$. ✓
+1. **Algebraic topology / Morse theory.** Take $v = \nabla f$ for $f : M \to \mathbb{R}$ a Morse function. Then the zeros of $v$ are the critical points of $f$, and $j_v(p) = (-1)^{\mathrm{index}_p(f)}$ where $\mathrm{index}_p(f)$ is the Morse index (number of negative eigenvalues of the Hessian). So $\chi(M) = \sum_p(-1)^{\mathrm{index}_p(f)}$. Apply to $f =$ height function on the standard torus $T^2 \subset \mathbb{R}^3$: 4 critical points (top, bottom, two saddles) with indices $(2, 0, 1, 1)$, giving $\chi(T^2) = 1 + 1 - 1 - 1 = 0$. ✓
 
 2. **Complex analysis / Riemann sphere.** Take $M = S^2 = \mathbb{CP}^1$ with the Fubini-Study metric, and $v = z\partial_z$ (holomorphic vector field with double zero at $z = 0$ and another at $z = \infty$). Compute $j_v(0) = 1$ and $j_v(\infty) = 1$, summing to $\chi(S^2) = 2$. ✓ Cross-check by computing $\int_{S^2} K\,dA = 4\pi$ for the Fubini-Study metric.
 
@@ -220,7 +220,7 @@ The most common error is to try to apply Stokes' theorem on $M$ directly, observ
 # Unlocked by This
 
 > [!tip] Atiyah-Singer Index Theorem *(from Index Theory)*
-> Gauss-Bonnet is the first nontrivial example of an index theorem: $\chi(M) = \int_M e(TM) = \mathrm{index}(d + d^*)$. The full **Atiyah-Singer index theorem** generalizes this to any elliptic operator $D$ on a closed manifold, equating $\mathrm{index}(D) = \dim\ker D - \dim\mathrm{coker}\,D$ with a topological invariant computed from characteristic classes of $D$'s symbol. Specific cases: Hirzebruch signature ($D = $ signature operator), Riemann-Roch ($D = \bar\partial$), Atiyah-Singer-Dirac ($D = $ Dirac operator on a spin manifold). The geometric proof technique — lift to a principal bundle, integrate by parts — is the prototype for all heat-kernel proofs of index theorems.
+> Gauss-Bonnet is the first nontrivial example of an index theorem: $\chi(M) = \int_M e(TM) = \mathrm{index}(d + d^*)$. The full **Atiyah-Singer index theorem** generalizes this to any elliptic operator $D$ on a closed manifold, equating $\mathrm{index}(D) = \dim\ker D - \dim\mathrm{coker}\,D$ with a topological invariant computed from characteristic classes of $D$'s symbol. Specific cases: Hirzebruch signature ($D =$ signature operator), Riemann-Roch ($D = \bar\partial$), Atiyah-Singer-Dirac ($D =$ Dirac operator on a spin manifold). The geometric proof technique — lift to a principal bundle, integrate by parts — is the prototype for all heat-kernel proofs of index theorems.
 
 > [!tip] Chern Number Quantization and the Quantum Hall Effect *(from Condensed Matter)*
 > The same template — integral of a curvature equals an integer — applies to the magnetic Brillouin zone in a 2D electron gas with magnetic field: $\sigma_{xy} = (e^2/h) \cdot c_1(L)$, where $c_1$ is the first Chern class of the lowest-energy Berry line bundle. The integer character of the Hall conductance is exactly the integer character of the Gauss-Bonnet integral in this geometric setup. See [[Def - Berry Connection]] and the discussion of the TKNN formula.

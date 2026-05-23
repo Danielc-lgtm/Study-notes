@@ -16,7 +16,7 @@ Equivalently, show that $\mathbb{R}^n$ is homotopy equivalent to a point.
 
 **Recall:**
 
-$\mathbb{R}^n$ is [[Def - Homotopy Equivalence and Contractible Space|contractible]] if it is homotopy equivalent to a one-point space; equivalently, the identity $1_{\mathbb{R}^n}$ is [[Def - Homotopy|homotopic]] to a constant map. A homotopy is a continuous map $F : \mathbb{R}^n \times I \to \mathbb{R}^n$ with $F(x, 0) = $ identity and $F(x, 1) = $ constant.
+$\mathbb{R}^n$ is [[Def - Homotopy Equivalence and Contractible Space|contractible]] if it is homotopy equivalent to a one-point space; equivalently, the identity $1_{\mathbb{R}^n}$ is [[Def - Homotopy|homotopic]] to a constant map. A homotopy is a continuous map $F : \mathbb{R}^n \times I \to \mathbb{R}^n$ with $F(x, 0) =$ identity and $F(x, 1) =$ constant.
 
 ---
 

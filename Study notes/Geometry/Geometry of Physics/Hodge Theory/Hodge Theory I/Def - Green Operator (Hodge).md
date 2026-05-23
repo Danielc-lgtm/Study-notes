@@ -30,7 +30,7 @@ The Green operator is the partial inverse of $\Delta$: it inverts $\Delta$ on th
 
 **What if we strengthen — demand $G$ invertible?** $G$ is *not* invertible: it has the same kernel as $\Delta$, namely $\mathcal{H}^k$. To make $G$ invertible, we would need to restrict to the orthogonal complement of $\mathcal{H}^k$, and then $G$ is a bijection on this [[Def - Subspace|subspace]], with inverse $\Delta$. This is the structural statement "$\Delta$ has closed range, and $G$ is its inverse on the range".
 
-**What if we weaken — drop the closedness of $M$?** On a noncompact manifold, $\Delta$ may not have closed range, and the Green operator may not be a bounded operator on $L^2$. The construction of $G$ uses Fredholm theory, which requires compactness. On $\mathbb{R}^n$, the Green's function for the Laplacian on functions is $G(x, y) = $ const$\cdot |x - y|^{2-n}$ (for $n \geq 3$), an integral operator that is not bounded as an operator on $L^2(\mathbb{R}^n)$. The fix is to work in Sobolev spaces or weighted $L^2$, which complicates the theory.
+**What if we weaken — drop the closedness of $M$?** On a noncompact manifold, $\Delta$ may not have closed range, and the Green operator may not be a bounded operator on $L^2$. The construction of $G$ uses Fredholm theory, which requires compactness. On $\mathbb{R}^n$, the Green's function for the Laplacian on functions is $G(x, y) =$ const$\cdot |x - y|^{2-n}$ (for $n \geq 3$), an integral operator that is not bounded as an operator on $L^2(\mathbb{R}^n)$. The fix is to work in Sobolev spaces or weighted $L^2$, which complicates the theory.
 
 ---
 

@@ -139,7 +139,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 > [!note]- Lemma 2: Coprime means the lcm is the product
 > **Statement:** For positive integers $m, n$, one always has $\gcd(m, n) \cdot \operatorname{lcm}(m, n) = mn$. Consequently $\gcd(m, n) = 1$ if and only if $\operatorname{lcm}(m, n) = mn$.
 >
-> **Hint:** Compare prime factorisations: at each prime, the gcd takes the minimum exponent and the lcm the maximum, and $\min + \max = $ sum of the two exponents.
+> **Hint:** Compare prime factorisations: at each prime, the gcd takes the minimum exponent and the lcm the maximum, and $\min + \max =$ sum of the two exponents.
 >
 > **Why needed:** It is subgoal 3 — the single point at which the coprimality hypothesis enters, upgrading $\operatorname{lcm}(m,n)$ to the full product $mn$.
 >

@@ -17,7 +17,7 @@ The $2$-torus $T^2$ has four standard definitions:
 1. $T_1 := \mathbb{R}^2 / \mathbb{Z}^2$, the quotient of the plane by the equivalence relation $(x, y) \sim (x', y')$ iff $x - x', y - y' \in \mathbb{Z}$.
 2. $T_2 := [0, 1]^2 / {\sim}$, the unit square with the equivalence relation identifying opposite edges: $(0, y) \sim (1, y)$ and $(x, 0) \sim (x, 1)$.
 3. $T_3 := S^1 \times S^1$, the product of two circles.
-4. $T_4 := $ the "anchor ring" — the surface of revolution obtained by rotating a circle around a coplanar axis disjoint from it, sitting in $\mathbb{R}^3$.
+4. $T_4 :=$ the "anchor ring" — the surface of revolution obtained by rotating a circle around a coplanar axis disjoint from it, sitting in $\mathbb{R}^3$.
 
 Show that $T_1 \cong T_2 \cong T_3 \cong T_4$ as topological spaces.
 

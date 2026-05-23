@@ -54,7 +54,7 @@ A vector bundle $E \to M$ is **trivial** iff it admits a global frame (equivalen
 > A global frame $(\sigma_1, \ldots, \sigma_n)$ of $T\mathbb{R}^n$ is the same data as a global section of $\mathrm{Fr}(T\mathbb{R}^n)$ — namely $p \mapsto (\sigma_1(p), \ldots, \sigma_n(p))$.
 
 > [!note]- Hint 3
-> The trivialization $\Phi : \mathbb{R}^n \times \mathrm{GL}(n) \to \mathrm{Fr}(T\mathbb{R}^n)$ is given by $\Phi(p, g) = $ "the frame obtained by transforming the standard frame at $p$ by $g$".
+> The trivialization $\Phi : \mathbb{R}^n \times \mathrm{GL}(n) \to \mathrm{Fr}(T\mathbb{R}^n)$ is given by $\Phi(p, g) =$ "the frame obtained by transforming the standard frame at $p$ by $g$".
 
 ---
 

@@ -72,7 +72,7 @@ The proof has three steps. Step 1 writes down the dynamics matrix $A$ from the r
 > [!note]- Derivation
 > Each row of $A$ encodes one component of the next state $x_{t+1}$:
 >
-> **Row 1 (newborns).** $(x_{t+1})_1 = $ total newborns $= b^T x_t = b_1 (x_t)_1 + b_2 (x_t)_2 + b_3 (x_t)_3 + b_4 (x_t)_4 = 0 \cdot (x_t)_1 + 0 \cdot (x_t)_2 + 0.4 \cdot (x_t)_3 + 0.1 \cdot (x_t)_4$.
+> **Row 1 (newborns).** $(x_{t+1})_1 =$ total newborns $= b^T x_t = b_1 (x_t)_1 + b_2 (x_t)_2 + b_3 (x_t)_3 + b_4 (x_t)_4 = 0 \cdot (x_t)_1 + 0 \cdot (x_t)_2 + 0.4 \cdot (x_t)_3 + 0.1 \cdot (x_t)_4$.
 > So row 1 of $A$ is $(0, 0, 0.4, 0.1)$.
 >
 > **Row 2 (age 1 survivors).** $(x_{t+1})_2 = (1 - d_1)(x_t)_1 = 0.95 (x_t)_1$.

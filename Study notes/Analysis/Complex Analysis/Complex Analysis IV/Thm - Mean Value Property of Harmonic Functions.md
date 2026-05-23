@@ -39,13 +39,13 @@ The proof is short and elegant: harmonic functions are real parts of holomorphic
 
 **$u$ continuous + has mean value property locally.** Reverse direction: continuous functions with the mean value property are harmonic. This is the *Bôcher characterization* and is the basis of the Perron method.
 
-**$u$ subharmonic ($\Delta u \geq 0$).** Property $B$: weaker than harmonic. Bridge: subharmonic implies the mean value *inequality* — $u(a) \leq $ average on a circle, not equality.
+**$u$ subharmonic ($\Delta u \geq 0$).** Property $B$: weaker than harmonic. Bridge: subharmonic implies the mean value *inequality* — $u(a) \leq$ average on a circle, not equality.
 
 **Targets (Output Amplification)**
 
 Combine with **continuity in $r$.** Property $D$: $u(a)$ equals the average for all $r$. Amplified result $E$: $u$ is *real-analytic* (smooth + mean value property + analytic continuation gives real-analyticity).
 
-Combine with **the maximum modulus principle.** Property $D$: $u$ attains a max at $a$. Amplified result $E$: $u(a) \geq u(a + re^{i\theta})$ for all small $r$. But $u(a) = $ average, forcing $u$ to be constant on the circle, hence locally constant.
+Combine with **the maximum modulus principle.** Property $D$: $u$ attains a max at $a$. Amplified result $E$: $u(a) \geq u(a + re^{i\theta})$ for all small $r$. But $u(a) =$ average, forcing $u$ to be constant on the circle, hence locally constant.
 
 ---
 
@@ -114,7 +114,7 @@ Write $u = \operatorname{Re} f$ for holomorphic $f$ on a small disc. Apply Cauch
 
 # Cross-Field Exercise Suggestions
 
-**Maximum principle as a corollary.** A non-constant harmonic $u$ on a domain $D$ has no interior maximum. *Proof:* if $u(a)$ is a local max, then $u(a) \geq u(a + re^{i\theta})$ on a small circle, and $u(a) = $ average. So $u(a + re^{i\theta}) = u(a)$ on the entire circle (average equality requires pointwise equality). $u$ is locally constant; by connectedness, globally constant. Contradiction with non-constant.
+**Maximum principle as a corollary.** A non-constant harmonic $u$ on a domain $D$ has no interior maximum. *Proof:* if $u(a)$ is a local max, then $u(a) \geq u(a + re^{i\theta})$ on a small circle, and $u(a) =$ average. So $u(a + re^{i\theta}) = u(a)$ on the entire circle (average equality requires pointwise equality). $u$ is locally constant; by connectedness, globally constant. Contradiction with non-constant.
 
 **Volume mean value formula.** The mean value property extends to *volume* averages: $u(a) = (1/\pi r^2)\int_{D(a, r)} u\,dA$ — the average over the *disc*, not just the boundary circle. *Proof:* integrate the circle-average formula over radii.
 
@@ -140,7 +140,7 @@ Write $u = \operatorname{Re} f$ for holomorphic $f$ on a small disc. Apply Cauch
 > The mean value property is the foundation of [[Thm - Maximum Principle for Harmonic Functions|max/min principles]].
 
 > [!tip] Poisson Integral *(from §3.6+)*
-> The mean value formula is the special case $a = $ centre of disc; [[Thm - Poisson Integral Formula|Poisson]] gives the general case.
+> The mean value formula is the special case $a =$ centre of disc; [[Thm - Poisson Integral Formula|Poisson]] gives the general case.
 
 > [!tip] Subharmonic and Perron Method *(from PDE)*
 > The mean value *inequality* defines **subharmonic functions** ($\Delta u \geq 0$), used in the Perron method for solving Dirichlet problems on general domains.

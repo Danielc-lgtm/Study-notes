@@ -80,19 +80,19 @@ A common mistake is to forget that max principle applies to *non-constant* harmo
 # Rederivation Scaffold
 
 **High-level strategy:**
-Suppose $u$ attains an interior max at $a$. By mean value, $u(a) = $ average on a small circle. Average = max implies pointwise equality, so $u \equiv u(a)$ locally. By connectedness, $u$ constant.
+Suppose $u$ attains an interior max at $a$. By mean value, $u(a) =$ average on a small circle. Average = max implies pointwise equality, so $u \equiv u(a)$ locally. By connectedness, $u$ constant.
 
 **Subgoal decomposition:**
 
 1. **Suppose $u(a) = \max u$ over $D$**, with $a \in D$.
 
-2. **Apply mean value on a small circle.** $u(a) = $ average of $u$ on $|z - a| = r$.
+2. **Apply mean value on a small circle.** $u(a) =$ average of $u$ on $|z - a| = r$.
 
 3. **Average $=$ max implies pointwise equality.** $u(a + re^{i\theta}) = u(a)$ for all $\theta$.
 
 4. **Locally constant.** $u \equiv u(a)$ on a small disc around $a$.
 
-5. **By connectedness, globally constant.** The set $\{u = u(a)\}$ is open (Step 4), closed (continuity), nonempty ($a \in $); by connectedness of $D$, this set is all of $D$.
+5. **By connectedness, globally constant.** The set $\{u = u(a)\}$ is open (Step 4), closed (continuity), nonempty ($a \in$); by connectedness of $D$, this set is all of $D$.
 
 ---
 
@@ -103,7 +103,7 @@ Suppose $u$ attains an interior max at $a$. By mean value, $u(a) = $ average on 
 >
 > Define $S = \{z \in D : u(z) = u(a)\}$.
 > - **$S$ nonempty**: $a \in S$.
-> - **$S$ closed in $D$**: $S = u^{-1}(\{u(a)\}) = $ preimage of a single point under the continuous $u$, hence closed.
+> - **$S$ closed in $D$**: $S = u^{-1}(\{u(a)\}) =$ preimage of a single point under the continuous $u$, hence closed.
 > - **$S$ open in $D$**: take $a' \in S$, so $u(a') = u(a)$. Choose $r > 0$ with $\overline{D(a', r)} \subset D$. By the mean value property:
 >   $$u(a') = \frac{1}{2\pi}\int_0^{2\pi} u(a' + re^{i\theta})\,d\theta.$$
 >   Since $u(a' + re^{i\theta}) \leq u(a) = u(a')$ for all $\theta$, the integral equals $u(a')$ only if $u(a' + re^{i\theta}) = u(a')$ for all $\theta$. Hence $u \equiv u(a)$ on the entire circle $|z - a'| = r$. The same argument applies for all smaller radii, giving $u \equiv u(a)$ on the entire closed disc $\overline{D(a', r)}$. So $D(a', r) \subset S$, hence $a'$ is interior to $S$. So $S$ is open.

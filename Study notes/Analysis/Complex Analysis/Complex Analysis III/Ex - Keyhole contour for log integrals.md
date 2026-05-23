@@ -148,7 +148,7 @@ For (b):
 
 **Trigger-reaction pattern — "$\int_0^\infty f(x) \log x\,dx$" → "substitute $x = 1/u$ and check symmetry"; if symmetric, the answer is $0$.** Many "$\log$-times-rational" integrals on the positive half-line vanish by this substitution. The key is that $\log(1/u) = -\log u$ provides the sign flip.
 
-**Choice of contour reflects symmetry of the integrand.** For symmetric problems on $(-\infty, \infty)$, use a semicircle. For symmetric problems on $[0, \infty)$ with $n$-fold symmetry $f(\omega x) = $ phase $\cdot f(x)$, use a sector of angle $2\pi/n$. For problems with logarithmic singularities or branch cuts on the positive real axis, use a *keyhole contour* (full circle minus a small slit along the cut).
+**Choice of contour reflects symmetry of the integrand.** For symmetric problems on $(-\infty, \infty)$, use a semicircle. For symmetric problems on $[0, \infty)$ with $n$-fold symmetry $f(\omega x) =$ phase $\cdot f(x)$, use a sector of angle $2\pi/n$. For problems with logarithmic singularities or branch cuts on the positive real axis, use a *keyhole contour* (full circle minus a small slit along the cut).
 
 **The arc/ray contributions must vanish for the technique to work.** Always verify ML-type estimates on the arc, and identify the ray relationship to the real-axis integral via the symmetry of the integrand. Mistakes in the orientation or phase factor lead to wrong answers.
 

@@ -83,7 +83,7 @@ $D$ is connected (a domain). $f, g$ are holomorphic on $D$ and agree on $S$ (spe
 
 If $D$ does not contain the accumulation point of the agreement set, the identity theorem fails. Counterexample: let $D = \{z : \operatorname{Re} z > 0\}$ (right half-plane). The sequence $\{1/n\}$ lies in $D$ but accumulates at $0$, which is *on the boundary*. The functions $f(z) = z$ and $g(z) = z\sin(\pi/z)/(\pi/z)$ both satisfy $f(1/n) = g(1/n) = 1/n$ (for the right factor) but are *not* equal on $D$ — there's no contradiction because the accumulation is at a boundary point, not an interior point.
 
-(Wait — checking more carefully: $g(z) = z \sin(\pi/z)/(\pi/z) = (1/\pi) \sin(\pi/z) \cdot z^2/... $ — this is essentially $\sin(\pi z')$ in a different variable, oscillating near $0$. The point: holomorphic functions can have wildly different boundary behaviour, and uniqueness on a sequence requires the limit to be *in* the domain.)
+(Wait — checking more carefully: $g(z) = z \sin(\pi/z)/(\pi/z) = (1/\pi) \sin(\pi/z) \cdot z^2/...$ — this is essentially $\sin(\pi z')$ in a different variable, oscillating near $0$. The point: holomorphic functions can have wildly different boundary behaviour, and uniqueness on a sequence requires the limit to be *in* the domain.)
 
 **Sequences accumulating in the domain.**
 

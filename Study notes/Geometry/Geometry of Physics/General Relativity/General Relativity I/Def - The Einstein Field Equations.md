@@ -129,7 +129,7 @@ The difference is the nonlinearity: $F_{\mu\nu}$ is linear in $A_\mu$, but $G_{\
 
 **Corollary — conservation is automatic.** Taking the covariant divergence of the field equations and using $\nabla^\mu G_{\mu\nu} = 0$ (Bianchi) gives $\nabla^\mu T_{\mu\nu} = 0$ — local conservation of energy-momentum is a *consequence* of the field equations, not an independent postulate. This is structurally beautiful and a key consistency check.
 
-**Calibration check.** (i) Verify dimensional consistency: $[G_{\mu\nu}] = \text{length}^{-2}$ and $[T_{\mu\nu}] = \text{energy/volume} = \text{mass}\cdot c^2/\text{length}^3$, so the coupling $[8\pi G/c^4] = \text{length}/\text{mass} = $ length$^{-1}/$mass$\cdot$length$^{-1}$ giving consistent inverse-length-squared on both sides. (ii) Count degrees of freedom: 10 metric components $-$ 4 gauge $-$ 4 constraint $= 2$ physical, matching the two gravitational wave polarisations. (iii) Verify that the Einstein equations are consistent with vanishing $T_{\mu\nu}$ by the trivial solution $g = \eta$ (Minkowski).
+**Calibration check.** (i) Verify dimensional consistency: $[G_{\mu\nu}] = \text{length}^{-2}$ and $[T_{\mu\nu}] = \text{energy/volume} = \text{mass}\cdot c^2/\text{length}^3$, so the coupling $[8\pi G/c^4] = \text{length}/\text{mass} =$ length$^{-1}/$mass$\cdot$length$^{-1}$ giving consistent inverse-length-squared on both sides. (ii) Count degrees of freedom: 10 metric components $-$ 4 gauge $-$ 4 constraint $= 2$ physical, matching the two gravitational wave polarisations. (iii) Verify that the Einstein equations are consistent with vanishing $T_{\mu\nu}$ by the trivial solution $g = \eta$ (Minkowski).
 
 ---
 

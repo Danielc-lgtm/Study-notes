@@ -114,7 +114,7 @@ The most common error is to **drop the boundary terms** without checking the var
    - *Why needed:* converts variation of length to variation of a vector quantity.
 
 2. **Swap covariant derivatives.** $\nabla_{\partial_s}\dot\gamma_s = \nabla_{\partial_t}V$, using torsion-freeness and $[\partial_s, \partial_t] = 0$.
-   - *Hint:* in coordinates, $\nabla_{\partial_s}\partial_t \Gamma - \nabla_{\partial_t}\partial_s \Gamma = $ torsion $T(\partial_s, \partial_t) + [\partial_s, \partial_t]$ — both vanish.
+   - *Hint:* in coordinates, $\nabla_{\partial_s}\partial_t \Gamma - \nabla_{\partial_t}\partial_s \Gamma =$ torsion $T(\partial_s, \partial_t) + [\partial_s, \partial_t]$ — both vanish.
    - *Why needed:* converts the awkward $\nabla_{\partial_s}T$ to the natural $T V'$ where $V' = \nabla_T V$.
 
 3. **Specialise to unit speed.** For $|T| = 1$, the integrand becomes $g(V', T)$.

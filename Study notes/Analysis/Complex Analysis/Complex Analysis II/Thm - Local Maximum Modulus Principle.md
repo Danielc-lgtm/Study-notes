@@ -59,7 +59,7 @@ Alternative argument: $|f|$ constant on a disc + CR + $f$ holomorphic forces $f$
 
 # What Makes This Hard
 
-The non-obvious step is the *equality case* analysis of the mean value inequality. The standard reasoning ("MVP gives $|f(a)| \leq $ max on circle") needs strengthening: equality in the integral inequality $|\int g| \leq \int |g|$ forces $\arg g$ constant. Once $|f|$ and $\arg f$ are both constant on a circle, the disc-version follows by varying the radius.
+The non-obvious step is the *equality case* analysis of the mean value inequality. The standard reasoning ("MVP gives $|f(a)| \leq$ max on circle") needs strengthening: equality in the integral inequality $|\int g| \leq \int |g|$ forces $\arg g$ constant. Once $|f|$ and $\arg f$ are both constant on a circle, the disc-version follows by varying the radius.
 
 ---
 

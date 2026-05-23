@@ -123,7 +123,7 @@ A subsidiary difficulty is the local-to-global passage from "local entropy $S$ o
 
 5. **Extract the integrating factor.** By the [[Thm - Frobenius Theorem in Forms Language|forms-language Frobenius theorem]], $\theta \wedge d\theta = 0$ implies the existence locally of smooth $\lambda \neq 0$ and $f$ with $\theta = \lambda\, df$.
    - *Hint:* Frobenius coordinates have leaves as $y = \text{const}$; $\theta$ pulled back to a leaf vanishes, so $\theta$ is a multiple of $dy$; write $\theta = \lambda(x, y)\, dy$.
-   - *Why needed:* this produces the entropy ($f = $ entropy) and integrating factor ($\lambda = $ temperature).
+   - *Why needed:* this produces the entropy ($f =$ entropy) and integrating factor ($\lambda =$ temperature).
 
 ---
 

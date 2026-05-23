@@ -131,7 +131,7 @@ Identify the order of the pole. For simple poles, use the limit or quotient form
 
 **Residues at higher-order poles, complicated cases.** $\operatorname{Res}_i 1/(z^2 + 1)^2 = ?$. The pole at $i$ is of order $2$: $1/(z^2 + 1)^2 = 1/((z - i)(z + i))^2$. $(z - i)^2 \cdot 1/((z - i)(z + i))^2 = 1/(z + i)^2$. Derivative at $z = i$: $d/dz[1/(z+i)^2] = -2/(z+i)^3$. At $z = i$: $-2/(2i)^3 = -2/(-8i) = 1/(4i) = -i/4$. So $\operatorname{Res}_i 1/(z^2+1)^2 = -i/4$.
 
-**Residue at an essential singularity.** $\operatorname{Res}_0 e^{1/z} = $ coefficient of $1/z$ in $\sum z^{-n}/n! = 1$ (from the $n = 1$ term). $\operatorname{Res}_0 \sin(1/z) = $ coefficient of $1/z$ in $1/z - 1/(6z^3) + \ldots = 1$.
+**Residue at an essential singularity.** $\operatorname{Res}_0 e^{1/z} =$ coefficient of $1/z$ in $\sum z^{-n}/n! = 1$ (from the $n = 1$ term). $\operatorname{Res}_0 \sin(1/z) =$ coefficient of $1/z$ in $1/z - 1/(6z^3) + \ldots = 1$.
 
 ---
 

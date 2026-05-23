@@ -31,7 +31,7 @@ $E \to M$ is a complex rank-$n$ vector bundle with structure group $G \subseteq 
 > 3. **Naturality:** for a smooth map $f : N \to M$ and the pullback bundle $f^* E$ with pullback connection $f^* \omega$,
 > $$P((f^*\omega)\text{-curvature}) = f^* P(\theta), \qquad [P((f^*\omega)\text{-curvature})] = f^* [P(\theta)].$$
 
-> **Corollary (Chern forms).** For $G = U(n)$ and $P = $ the $r$-th elementary symmetric polynomial of $(i/2\pi)$ times eigenvalues, $P(\theta) = c_r(E)$ is the $r$-th Chern form. The total Chern form $c(E) = \det(I + i\theta/2\pi)$ realises the determinant polynomial.
+> **Corollary (Chern forms).** For $G = U(n)$ and $P =$ the $r$-th elementary symmetric polynomial of $(i/2\pi)$ times eigenvalues, $P(\theta) = c_r(E)$ is the $r$-th Chern form. The total Chern form $c(E) = \det(I + i\theta/2\pi)$ realises the determinant polynomial.
 
 > **Corollary (other classes).** Replacing $P$ with: $\mathrm{Tr}(\exp(i\theta/2\pi))$ gives the Chern character $\mathrm{ch}(E)$; with the Hirzebruch–Todd polynomial gives the Todd class $\mathrm{Td}(E)$; with $\mathrm{Pf}(\theta/2\pi)$ for $G = SO(2n)$ gives the Euler class.
 
@@ -168,7 +168,7 @@ Closedness uses the Bianchi identity $\nabla\theta = 0$ and $\mathrm{Ad}$-invari
 > [!note]- Lemma 2: The closedness of $P(\theta)$
 > **Statement:** $dP(\theta) = 0$.
 >
-> **Hint:** Combine the Bianchi identity $d\theta = [\theta, \omega]$ (in the appropriate sign convention) with $\mathrm{Ad}$-invariance, expressed infinitesimally as $P([X, Y]) + $ (cyclic permutations) = 0.
+> **Hint:** Combine the Bianchi identity $d\theta = [\theta, \omega]$ (in the appropriate sign convention) with $\mathrm{Ad}$-invariance, expressed infinitesimally as $P([X, Y]) +$ (cyclic permutations) = 0.
 >
 > **Why needed:** Closedness gives a cohomology class.
 >
@@ -177,7 +177,7 @@ Closedness uses the Bianchi identity $\nabla\theta = 0$ and $\mathrm{Ad}$-invari
 > > $$dP(\theta) = r \, \tilde P(\theta, \ldots, \theta, d\theta),$$
 > > where $\tilde P$ is the symmetrisation of $P$ to a multilinear form. By the Bianchi identity $d\theta = [\theta, \omega]$ (with appropriate signs from being a 2-form), the right side becomes a bracket commutator. The $\mathrm{Ad}$-invariance of $P$ (infinitesimally: $\tilde P([X, A], B, \ldots) + \tilde P(A, [X, B], \ldots) + \cdots = 0$) makes this sum vanish. So $dP(\theta) = 0$.
 > >
-> > (A more explicit version of this argument is Frankel's calculation for $P = $ trace polynomial: $d\mathrm{Tr}(\theta^r) = r \mathrm{Tr}(\theta^{r-1} d\theta) = r \mathrm{Tr}(\theta^{r-1}[\theta, \omega]) = 0$ since the trace of a commutator vanishes.)
+> > (A more explicit version of this argument is Frankel's calculation for $P =$ trace polynomial: $d\mathrm{Tr}(\theta^r) = r \mathrm{Tr}(\theta^{r-1} d\theta) = r \mathrm{Tr}(\theta^{r-1}[\theta, \omega]) = 0$ since the trace of a commutator vanishes.)
 
 > [!note]- Lemma 3: Connection independence via transgression
 > **Statement:** For two connections $\omega_0, \omega_1$ with curvatures $\theta_0, \theta_1$, and for the convex path $\omega_t = (1-t)\omega_0 + t\omega_1$ with curvature $\theta_t$, there is a globally defined $(2r-1)$-form $\nu$ on $M$ with $P(\theta_1) - P(\theta_0) = d\nu$.
@@ -231,7 +231,7 @@ Closedness uses the Bianchi identity $\nabla\theta = 0$ and $\mathrm{Ad}$-invari
 
 - **[[Algebraic Topology I — Singular Homology and the de Rham Theorem|de Rham cohomology]]** — The Chern–Weil construction realises classes in real de Rham cohomology. The integer lift uses additional structure (classifying spaces, Čech-de Rham comparison). The bridge to integer cohomology is the universal coefficient theorem: $H^*_{\mathrm{dR}}(M; \mathbb{R}) = H^*(M; \mathbb{Z}) \otimes \mathbb{R}$, and the de Rham Chern class is the image of the integer Chern class. So Chern–Weil produces *real* representatives of *integer* classes — and the integrality is an *additional* fact (proven via the integrality of universal classes in $H^*(BU(n); \mathbb{Z})$).
 
-- **Equivariant cohomology and the Cartan model.** For a compact connected Lie group $G$, $H^*_G(\mathrm{pt}; \mathbb{R}) = \mathbb{R}[\mathfrak{g}]^G = $ invariant polynomials. The Chern–Weil construction is the de Rham realisation of equivariant cohomology of a point — when you push down from $G$-equivariant cohomology of the trivial $G$-action on a point to ordinary cohomology of $BG$. The structure of $H^*(BG; \mathbb{R})$ is *literally* the algebra of invariant polynomials on $\mathfrak{g}$, and the Chern–Weil map is the pullback by the classifying map $M \to BG$.
+- **Equivariant cohomology and the Cartan model.** For a compact connected Lie group $G$, $H^*_G(\mathrm{pt}; \mathbb{R}) = \mathbb{R}[\mathfrak{g}]^G =$ invariant polynomials. The Chern–Weil construction is the de Rham realisation of equivariant cohomology of a point — when you push down from $G$-equivariant cohomology of the trivial $G$-action on a point to ordinary cohomology of $BG$. The structure of $H^*(BG; \mathbb{R})$ is *literally* the algebra of invariant polynomials on $\mathfrak{g}$, and the Chern–Weil map is the pullback by the classifying map $M \to BG$.
 
 - **[[Gauge Theory III — Connections in Principal and Associated Bundles|Connections on principal bundles]]** — The geometric input to Chern–Weil is a connection on a principal $G$-bundle. Frankel's formulation in Ch 17–18 (principal bundles, connections, curvature) is exactly the geometric setup for Chern–Weil, with the curvature 2-form $\theta$ being the central object.
 

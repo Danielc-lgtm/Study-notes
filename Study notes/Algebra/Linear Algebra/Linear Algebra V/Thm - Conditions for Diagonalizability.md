@@ -69,7 +69,7 @@ Combined with **a commuting operator $S$**, the theorem amplifies to **simultane
 The mechanism for (e) $\iff$ (a) is the **factorisation-based decomposition argument**: if $m_T = (z - \lambda_1) \cdots (z - \lambda_m)$ with distinct $\lambda_k$, then applying the operator-version of partial fraction decomposition (using the Chinese Remainder Theorem for $F[x]$) constructs **projection operators** onto each eigenspace, and these projections sum to the identity, decomposing $V$ as a direct sum of eigenspaces.
 
 More concretely, define the polynomials $q_k(z) = \prod_{j \neq k}(z - \lambda_j)$. The polynomials $q_k$ have no common roots (no $\lambda_j$ is a root of $q_j$ but each $\lambda_i$ ($i \neq j$) is). By the CRT (or by computing directly: by Bézout, there exist $r_k \in F[x]$ with $\sum_k r_k(z) q_k(z) = 1$, since $\gcd$ of the $q_k$ is $1$). Then $P_k = r_k(T) q_k(T)$ acts as the identity on $E(\lambda_k, T)$ and as zero on every other $E(\lambda_j, T)$:
-- On $E(\lambda_k, T)$: $q_k(T) v = q_k(\lambda_k) v \neq 0$, and $r_k(T) q_k(T) v = r_k(\lambda_k) q_k(\lambda_k) v = $ (the $k$th term of $\sum r_j q_j = 1$ at $\lambda_k$) $ = 1 \cdot v = v$.
+- On $E(\lambda_k, T)$: $q_k(T) v = q_k(\lambda_k) v \neq 0$, and $r_k(T) q_k(T) v = r_k(\lambda_k) q_k(\lambda_k) v =$ (the $k$th term of $\sum r_j q_j = 1$ at $\lambda_k$) $= 1 \cdot v = v$.
 - On $E(\lambda_j, T)$ ($j \neq k$): $q_k(T) v = q_k(\lambda_j) v = 0$ (since $(z - \lambda_j)$ is a factor of $q_k$ for $j \neq k$).
 
 So $V = \bigoplus_k E(\lambda_k, T)$.
@@ -116,7 +116,7 @@ The non-obvious direction is **(e) $\Rightarrow$ (a)**: showing that distinct li
 > **Why needed:** (b) $\Rightarrow$ (c).
 >
 > > [!note]- Full proof
-> > Let $\lambda_1, \ldots, \lambda_m$ be the distinct eigenvalues of $T$, and partition $\{v_1, \ldots, v_n\}$ by eigenvalue: $V_k = $ the set of $v_i$ with eigenvalue $\lambda_k$. Then $V_k \subseteq E(\lambda_k, T)$, and the union $\bigcup V_k = \{v_1, \ldots, v_n\}$ is a basis of $V$.
+> > Let $\lambda_1, \ldots, \lambda_m$ be the distinct eigenvalues of $T$, and partition $\{v_1, \ldots, v_n\}$ by eigenvalue: $V_k =$ the set of $v_i$ with eigenvalue $\lambda_k$. Then $V_k \subseteq E(\lambda_k, T)$, and the union $\bigcup V_k = \{v_1, \ldots, v_n\}$ is a basis of $V$.
 > >
 > > Claim: $V = E(\lambda_1, T) + \cdots + E(\lambda_m, T)$. Every $v \in V$ is a linear combination of the basis vectors $v_i$, grouped by eigenvalue: $v = \sum_k (\sum_{v_i \in V_k} a_i v_i)$, with $\sum_{v_i \in V_k} a_i v_i \in E(\lambda_k, T)$. So $v$ is a sum of vectors in the eigenspaces.
 > >

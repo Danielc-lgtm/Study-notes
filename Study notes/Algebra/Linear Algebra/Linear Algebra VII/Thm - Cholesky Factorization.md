@@ -87,7 +87,7 @@ $$R^* R = \begin{pmatrix} \sqrt{t_{11}} & 0 \\ u/\sqrt{t_{11}} & R_{22}^* \end{p
 
 The diagonal entries of $R$ are $\sqrt{t_{11}}$ and the diagonal entries of $R_{22}$ — all positive by the inductive hypothesis and the base case.
 
-**Uniqueness** follows from the uniqueness of QR (since $T = A^*A$ for $A = $ some matrix, and the QR of $A$ gives $R$ uniquely with positive diagonal).
+**Uniqueness** follows from the uniqueness of QR (since $T = A^*A$ for $A =$ some matrix, and the QR of $A$ gives $R$ uniquely with positive diagonal).
 
 ---
 

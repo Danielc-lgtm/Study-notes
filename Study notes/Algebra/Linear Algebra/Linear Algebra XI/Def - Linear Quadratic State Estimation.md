@@ -85,7 +85,7 @@ This is the same construction as:
 
 # Examples / Corollaries
 
-*Example 1 (constant-velocity tracking).* For a mass moving in 1D with state $x_t = (\text{position}_t, \text{velocity}_t)$ and dynamics $x_{t+1} = \begin{pmatrix} 1 & \Delta t \\ 0 & 1 \end{pmatrix} x_t + B w_t$ (with $B$ governing how the noise drives the state), and measurements $y_t = $ position $+ v_t$, the Kalman filter recovers smoothed position and velocity estimates from noisy position measurements. The choice of $\lambda$ controls how much smoothing is applied.
+*Example 1 (constant-velocity tracking).* For a mass moving in 1D with state $x_t = (\text{position}_t, \text{velocity}_t)$ and dynamics $x_{t+1} = \begin{pmatrix} 1 & \Delta t \\ 0 & 1 \end{pmatrix} x_t + B w_t$ (with $B$ governing how the noise drives the state), and measurements $y_t =$ position $+ v_t$, the Kalman filter recovers smoothed position and velocity estimates from noisy position measurements. The choice of $\lambda$ controls how much smoothing is applied.
 
 *Example 2 (2D position tracking with noisy radar).* The example in Boyd §17.3.1 has a 4D state (2D position + 2D velocity), 2D measurements (noisy position), and shows the filtered trajectory $\hat{x}_t$ as $\lambda$ varies. For $\lambda = 1$, the filter trusts measurements too much (jumpy); for $\lambda = 10^5$, it trusts the dynamics too much (over-smoothed); the right value (around $\lambda = 10^3$) gives a smooth trajectory close to the true path.
 

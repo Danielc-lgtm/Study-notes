@@ -67,7 +67,7 @@ A third combination is **$0 \cdot v = 0$ plus a linear independence argument for
 
 The intuition is **algebraic cancellation: in any structure with associative addition and inverses, "having two of something" forces the two to coincide**.
 
-For the additive identity: suppose $0$ and $0'$ are both identities. Then $0 = 0 + 0' = 0'$. The first equality uses that $0'$ is an identity (acts as $+0'$); the second uses that $0$ is an identity (acts as $0 + $). Each identity makes the other invisible, and the chain forces them equal.
+For the additive identity: suppose $0$ and $0'$ are both identities. Then $0 = 0 + 0' = 0'$. The first equality uses that $0'$ is an identity (acts as $+0'$); the second uses that $0$ is an identity (acts as $0 +$). Each identity makes the other invisible, and the chain forces them equal.
 
 For inverses: suppose $w, w'$ are both inverses of $v$. Then $w = w + 0 = w + (v + w') = (w + v) + w' = 0 + w' = w'$. The crucial step is the parenthesization in the middle: associativity lets us re-bracket so the cancellation $w + v = 0$ is exposed. Without associativity the argument would fail; this is why associativity is more than bookkeeping.
 

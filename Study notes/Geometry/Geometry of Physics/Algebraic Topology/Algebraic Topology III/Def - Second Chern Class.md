@@ -121,7 +121,7 @@ In **string theory**, $c_2$ of the spacetime tangent bundle appears in the **ano
 
 **Example: trivial bundle.** $c_2(M \times \mathbb{C}^n) = 0$ for any $n$, since the curvature vanishes.
 
-**Example: $T\mathbb{CP}^2$.** From the Euler-sequence calculation $c(T\mathbb{CP}^n) = (1+h)^{n+1}$, the second Chern class of $T\mathbb{CP}^2$ is $c_2 = \binom{3}{2} h^2 = 3 h^2$, and $\int_{\mathbb{CP}^2} c_2 = 3 = \chi(\mathbb{CP}^2)$. So the second Chern number of the tangent bundle of $\mathbb{CP}^2$ is its Euler characteristic — confirming the special case of $c_n = $ Euler class for complex manifolds.
+**Example: $T\mathbb{CP}^2$.** From the Euler-sequence calculation $c(T\mathbb{CP}^n) = (1+h)^{n+1}$, the second Chern class of $T\mathbb{CP}^2$ is $c_2 = \binom{3}{2} h^2 = 3 h^2$, and $\int_{\mathbb{CP}^2} c_2 = 3 = \chi(\mathbb{CP}^2)$. So the second Chern number of the tangent bundle of $\mathbb{CP}^2$ is its Euler characteristic — confirming the special case of $c_n =$ Euler class for complex manifolds.
 
 **Example: $S^4$ as $SU(2)$ instanton base.** Every $SU(2)$ principal bundle on $S^4$ is classified by $c_2 \in H^4(S^4; \mathbb{Z}) = \mathbb{Z}$. The bundle of instanton number $k$ has $\int_{S^4} c_2 = k$. The space of $SU(2)$ bundles on $S^4$ is in bijection with $\mathbb{Z}$, recovering the classification by gauge transformations at infinity (since $S^4 = \mathbb{R}^4 \cup \{\infty\}$).
 

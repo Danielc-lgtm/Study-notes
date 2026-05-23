@@ -61,7 +61,7 @@ The **index** of $\gamma$ on $[a, b]$ is the dimension of a maximal subspace of 
 $$\mathrm{ind}(\gamma) := \dim_{\max}\{W \subseteq \mathcal V_0^\perp : I|_W < 0\}.$$
 By the **Morse index theorem**, $\mathrm{ind}(\gamma)$ equals the number of points strictly inside $(a, b)$ that are conjugate to $\gamma(a)$ along $\gamma$, counted with multiplicity.
 
-The **nullity** of $I$ on $\mathcal V_0^\perp$ is the dimension of $\ker I = $ Jacobi fields in $\mathcal V_0^\perp$, equal to the multiplicity of the conjugate pair $(\gamma(a), \gamma(b))$ if it exists, else zero.
+The **nullity** of $I$ on $\mathcal V_0^\perp$ is the dimension of $\ker I =$ Jacobi fields in $\mathcal V_0^\perp$, equal to the multiplicity of the conjugate pair $(\gamma(a), \gamma(b))$ if it exists, else zero.
 
 ---
 
@@ -91,7 +91,7 @@ The **nullity** of $I$ on $\mathcal V_0^\perp$ is the dimension of $\ker I = $ J
 
 **Corollary (positivity for short geodesics).** If the parameter interval $[a, b]$ is short enough that no conjugate point lies in $(a, b]$, then $I|_{\mathcal V_0^\perp} > 0$, so $\gamma$ is a strict local length-minimiser. *Calibration check:* the Morse index is the count of interior conjugate points; if there are none, the index is zero and there is no negative direction.
 
-**Corollary (nullity = multiplicity of conjugate pair).** If $\gamma(b)$ is the first conjugate point to $\gamma(a)$ along $\gamma$, then $\dim \ker I|_{\mathcal V_0^\perp} = $ multiplicity of the conjugate pair. *Calibration check:* the kernel is the space of Jacobi fields vanishing at both endpoints, which is by definition the multiplicity space.
+**Corollary (nullity = multiplicity of conjugate pair).** If $\gamma(b)$ is the first conjugate point to $\gamma(a)$ along $\gamma$, then $\dim \ker I|_{\mathcal V_0^\perp} =$ multiplicity of the conjugate pair. *Calibration check:* the kernel is the space of Jacobi fields vanishing at both endpoints, which is by definition the multiplicity space.
 
 **Corollary (index = sum of conjugate-point multiplicities).** $\mathrm{ind}(\gamma) = \sum_{t \in (a, b) : \text{conjugate}} \mathrm{mult}(\gamma(a), \gamma(t))$. *Calibration check:* this is the **Morse Index Theorem**, the main result connecting conjugate points to the variational analysis.
 

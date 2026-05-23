@@ -71,7 +71,7 @@ The left side is a "total derivative" — it is $d$ of something. Stokes' theore
 $$\int_M d(\alpha\wedge\star\beta) = \int_{\partial M}\alpha\wedge\star\beta.$$
 On a closed manifold ($\partial M = \emptyset$), the boundary integral vanishes, so
 $$0 = \int_M d\alpha\wedge\star\beta + (-1)^{k-1}\int_M\alpha\wedge d\star\beta.$$
-The first term is $\langle d\alpha,\beta\rangle$ by the defining identity of $\star$. The second term needs more work: $\alpha\wedge d\star\beta$ should be rewritten as $\alpha\wedge\star(\star^{-1}d\star\beta) = \langle\alpha, \star^{-1}d\star\beta\rangle_g\operatorname{vol}_n$. By the double-star formula on $(k-1)$-forms in degree $n - k + 1 = $ shifted appropriately, $\star^{-1} = (-1)^{(k-1)(n-k+1)+s}\star$. So
+The first term is $\langle d\alpha,\beta\rangle$ by the defining identity of $\star$. The second term needs more work: $\alpha\wedge d\star\beta$ should be rewritten as $\alpha\wedge\star(\star^{-1}d\star\beta) = \langle\alpha, \star^{-1}d\star\beta\rangle_g\operatorname{vol}_n$. By the double-star formula on $(k-1)$-forms in degree $n - k + 1 =$ shifted appropriately, $\star^{-1} = (-1)^{(k-1)(n-k+1)+s}\star$. So
 $$(-1)^{k-1}\int_M\alpha\wedge d\star\beta = (-1)^{k-1}(-1)^{(k-1)(n-k+1)+s}\langle\alpha,\star d\star\beta\rangle = (\text{sign})\langle\alpha, \star d\star\beta\rangle.$$
 The total sign combines to $(-1)^{n(k+1)+1}$ in Riemannian signature ($s = 0$ — the calculation gets messier with $s > 0$). So the equation becomes
 $$\langle d\alpha,\beta\rangle = (-1)^{n(k+1)}\langle\alpha,\star d\star\beta\rangle = -(-1)^{n(k+1)+1}\langle\alpha,\star d\star\beta\rangle = \langle\alpha, \delta\beta\rangle$$

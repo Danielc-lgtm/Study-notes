@@ -33,9 +33,9 @@ A final remark on the **structural unity** the three axioms produce. A martingal
 
 Let $(X_n)_{n\ge0}$ be a process that is **adapted** to $(\mathcal{F}_n)$ and **integrable** ($X_n\in L^1$ for all $n$). It is a:
 
-- **martingale** if $\ \mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n\ $ for all $n\ge0$;
-- **supermartingale** if $\ \mathbb{E}[X_{n+1}\mid\mathcal{F}_n]\le X_n$;
-- **submartingale** if $\ \mathbb{E}[X_{n+1}\mid\mathcal{F}_n]\ge X_n$.
+- **martingale** if $\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]=X_n$ for all $n\ge0$;
+- **supermartingale** if $\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]\le X_n$;
+- **submartingale** if $\mathbb{E}[X_{n+1}\mid\mathcal{F}_n]\ge X_n$.
 
 (All a.s.) By the [[Thm - Properties of Conditional Expectation|tower property]] this extends to $\mathbb{E}[X_m\mid\mathcal{F}_n]=X_n$ (resp. $\le,\ge$) for all $m\ge n$, and taking expectations, $n\mapsto\mathbb{E}[X_n]$ is constant (resp. non-increasing, non-decreasing). $(X_n)$ is a martingale iff it is both a sub- and a supermartingale; $(X_n)$ is a supermartingale iff $(-X_n)$ is a submartingale.
 

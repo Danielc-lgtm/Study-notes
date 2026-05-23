@@ -83,7 +83,7 @@ In the theory of [[Def - Distribution on a Manifold|distributions]] on a manifol
 
 **Is an instance — the full bundle as a subbundle of itself.** $E$ is a rank-$k$ subbundle of itself.
 
-**Is NOT a subbundle — a varying-rank family.** Consider $M = \mathbb{R}$, $E = \mathbb{R} \times \mathbb{R}^2$, and $D_p = $ the line spanned by $(1, p)$ when $p \neq 0$, $D_0 = \{0\}$. The dimension drops at $p = 0$, so $D$ is not a subbundle. Even though $D$ is a smooth family of subspaces away from $0$, the rank-jump destroys local triviality near the origin.
+**Is NOT a subbundle — a varying-rank family.** Consider $M = \mathbb{R}$, $E = \mathbb{R} \times \mathbb{R}^2$, and $D_p =$ the line spanned by $(1, p)$ when $p \neq 0$, $D_0 = \{0\}$. The dimension drops at $p = 0$, so $D$ is not a subbundle. Even though $D$ is a smooth family of subspaces away from $0$, the rank-jump destroys local triviality near the origin.
 
 **Is NOT a subbundle — a discontinuous family.** Take $E = \mathbb{R} \times \mathbb{R}^2$ and $D_p = \mathbb{R} \times \{0\}$ for $p \leq 0$, $D_p = \{0\} \times \mathbb{R}$ for $p > 0$. Same rank everywhere, but the assignment $p \mapsto D_p$ is not continuous (the subspace flips abruptly at $0$). No local sections can span $D$ near $0$, so the local-frame criterion fails.
 

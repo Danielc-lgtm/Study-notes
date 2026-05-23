@@ -121,11 +121,11 @@ The Stone–Čech compactification of the natural numbers admits a beautiful exp
 >
 > So $\mathcal{U}_\xi$ is an ultrafilter on $\mathbb{N}$.
 >
-> Conversely, given an ultrafilter $\mathcal{U}$ on $\mathbb{N}$, define $\xi_\mathcal{U}$ by $\xi_\mathcal{U}(f) = \mathcal{U}\text{-}\lim f := $ the unique $r \in [0, 1]$ such that $\{n : |f(n) - r| < \varepsilon\} \in \mathcal{U}$ for every $\varepsilon > 0$ (existence and uniqueness: subdivide $[0, 1]$ into finitely many intervals of length $< \varepsilon$; by the filter property, exactly one contains a $\mathcal{U}$-set; intersect to refine). This $\xi_\mathcal{U}$ lies in the closure $\beta\mathbb{N}$, and $\mathcal{U}_{\xi_\mathcal{U}} = \mathcal{U}$.
+> Conversely, given an ultrafilter $\mathcal{U}$ on $\mathbb{N}$, define $\xi_\mathcal{U}$ by $\xi_\mathcal{U}(f) = \mathcal{U}\text{-}\lim f :=$ the unique $r \in [0, 1]$ such that $\{n : |f(n) - r| < \varepsilon\} \in \mathcal{U}$ for every $\varepsilon > 0$ (existence and uniqueness: subdivide $[0, 1]$ into finitely many intervals of length $< \varepsilon$; by the filter property, exactly one contains a $\mathcal{U}$-set; intersect to refine). This $\xi_\mathcal{U}$ lies in the closure $\beta\mathbb{N}$, and $\mathcal{U}_{\xi_\mathcal{U}} = \mathcal{U}$.
 >
 > The two maps $\xi \leftrightarrow \mathcal{U}_\xi$ are mutual inverses, so $\beta\mathbb{N}$ is in bijection with the set of ultrafilters on $\mathbb{N}$.
 >
-> *Principal ultrafilters correspond to $\mathbb{N}$.* For $n \in \mathbb{N}$, $\iota(n) = (f(n))_f$, so $\xi = \iota(n)$ has $\xi_{1_A} = 1_A(n) = 1 \iff n \in A$. Hence $\mathcal{U}_{\iota(n)} = \{A : n \in A\} = $ the principal ultrafilter at $n$.
+> *Principal ultrafilters correspond to $\mathbb{N}$.* For $n \in \mathbb{N}$, $\iota(n) = (f(n))_f$, so $\xi = \iota(n)$ has $\xi_{1_A} = 1_A(n) = 1 \iff n \in A$. Hence $\mathcal{U}_{\iota(n)} = \{A : n \in A\} =$ the principal ultrafilter at $n$.
 
 **Step 4: Cardinality of $\beta\mathbb{N}$ is $2^{2^{\aleph_0}}$.**
 
@@ -150,7 +150,7 @@ The Stone–Čech compactification of the natural numbers admits a beautiful exp
 >
 > *(b)* Embedding $\iota(n) = (f(n))_f$ into $[0, 1]^{C_b(\mathbb{N}, [0, 1])}$ is continuous injective; image's closure is compact Hausdorff containing $\mathbb{N}$ densely. This is $\beta\mathbb{N}$.
 >
-> *(c)* Each $\xi \in \beta\mathbb{N}$ has $\xi_{1_A} \in \{0, 1\}$ for $A \subseteq \mathbb{N}$; the set $\mathcal{U}_\xi = \{A : \xi_{1_A} = 1\}$ is an ultrafilter, and the map $\xi \mapsto \mathcal{U}_\xi$ is a bijection between $\beta\mathbb{N}$ and the ultrafilters on $\mathbb{N}$, with $\iota(n) \leftrightarrow $ principal ultrafilter at $n$.
+> *(c)* Each $\xi \in \beta\mathbb{N}$ has $\xi_{1_A} \in \{0, 1\}$ for $A \subseteq \mathbb{N}$; the set $\mathcal{U}_\xi = \{A : \xi_{1_A} = 1\}$ is an ultrafilter, and the map $\xi \mapsto \mathcal{U}_\xi$ is a bijection between $\beta\mathbb{N}$ and the ultrafilters on $\mathbb{N}$, with $\iota(n) \leftrightarrow$ principal ultrafilter at $n$.
 >
 > *(d)* Pospíšil: independent families of size $2^{\aleph_0}$ in $\mathcal{P}(\mathbb{N})$ produce $2^{2^{\aleph_0}}$ ultrafilters; upper bound is trivial. So $|\beta\mathbb{N}| = 2^{2^{\aleph_0}}$.
 >
@@ -160,7 +160,7 @@ The Stone–Čech compactification of the natural numbers admits a beautiful exp
 
 # Key Takeaways
 
-**The Stone–Čech compactification of $\mathbb{N}$ is the universal home of "limits of bounded sequences via ultrafilters".** A bounded sequence $\{a_n\}$ in $\mathbb{R}$ may not converge, but every bounded sequence has a unique *ultrafilter limit* along any free ultrafilter $\mathcal{U}$: $\mathcal{U}\text{-}\lim a_n = $ the unique $r$ with $\{n : |a_n - r| < \varepsilon\} \in \mathcal{U}$ for all $\varepsilon$. This is the structural reason every bounded continuous function $\mathbb{N} \to \mathbb{R}$ extends to $\beta\mathbb{N}$: the extension at the ultrafilter $\mathcal{U} \in \beta\mathbb{N} \setminus \mathbb{N}$ is just the ultrafilter limit. This perspective on $\beta\mathbb{N}$ — as the space of "limiting modes" of $\mathbb{N}$ — generalizes to $\beta X$ for any completely regular $X$, where points of $\beta X$ are "z-ultrafilters" of zero-sets.
+**The Stone–Čech compactification of $\mathbb{N}$ is the universal home of "limits of bounded sequences via ultrafilters".** A bounded sequence $\{a_n\}$ in $\mathbb{R}$ may not converge, but every bounded sequence has a unique *ultrafilter limit* along any free ultrafilter $\mathcal{U}$: $\mathcal{U}\text{-}\lim a_n =$ the unique $r$ with $\{n : |a_n - r| < \varepsilon\} \in \mathcal{U}$ for all $\varepsilon$. This is the structural reason every bounded continuous function $\mathbb{N} \to \mathbb{R}$ extends to $\beta\mathbb{N}$: the extension at the ultrafilter $\mathcal{U} \in \beta\mathbb{N} \setminus \mathbb{N}$ is just the ultrafilter limit. This perspective on $\beta\mathbb{N}$ — as the space of "limiting modes" of $\mathbb{N}$ — generalizes to $\beta X$ for any completely regular $X$, where points of $\beta X$ are "z-ultrafilters" of zero-sets.
 
 **Ultrafilters generalize "the point you are converging to" beyond the usual limit notion.** Convergence along an ultrafilter $\mathcal{U}$ produces a limit for *every* bounded sequence, even sequences with no ordinary limit (e.g. $(-1)^n$ has $\mathcal{U}$-limit $0, 1$, or $-1$ depending on which ultrafilter contains the even or odd integers). This is what makes ultrafilter limits a powerful trick: any "compactness argument" that wants a limit gets one automatically along any ultrafilter. The cost: the limit depends on $\mathcal{U}$, so the ultrafilter choice is part of the data. Applications: nonstandard analysis (ultraproducts of $\mathbb{R}$ give the hyperreals $^*\mathbb{R}$), proving the Hindman theorem and other combinatorial results, the compactness theorem in logic (via the construction of ultrafilters on the set of finite consistent theories).
 

@@ -123,7 +123,7 @@ Rewrite connectedness in its operational form: *every continuous map to a discre
 > [!note]- Complete formal proof
 > Let $f : X \to Y$ be continuous with $X$ connected; consider the image $f(X) \subseteq Y$ with the subspace topology.
 >
-> Let $d : f(X) \to D$ be a continuous map to a discrete space $D$. By Lemma 2, $d \circ f : X \to D$ is continuous, so it is a discrete-valued map on $X$. By Lemma 1 (using that $X$ is connected), $d \circ f$ is constant. Since $f$ is surjective onto its image $f(X)$, this means $d$ takes the same value on every point of $f(X)$: for any $y \in f(X)$, choose $x \in X$ with $f(x) = y$, and $d(y) = (d \circ f)(x) = $ the constant value.
+> Let $d : f(X) \to D$ be a continuous map to a discrete space $D$. By Lemma 2, $d \circ f : X \to D$ is continuous, so it is a discrete-valued map on $X$. By Lemma 1 (using that $X$ is connected), $d \circ f$ is constant. Since $f$ is surjective onto its image $f(X)$, this means $d$ takes the same value on every point of $f(X)$: for any $y \in f(X)$, choose $x \in X$ with $f(x) = y$, and $d(y) = (d \circ f)(x) =$ the constant value.
 >
 > Hence every continuous map from $f(X)$ to a discrete space is constant. By Lemma 1 applied to $f(X)$, $f(X)$ is connected. $\blacksquare$
 

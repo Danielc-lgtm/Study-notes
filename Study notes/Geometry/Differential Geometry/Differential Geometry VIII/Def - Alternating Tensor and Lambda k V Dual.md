@@ -87,7 +87,7 @@ The bridge to homological algebra is via [[Def - Tensor Product of Vector Spaces
 
 **True name:** An alternating $k$-tensor on $V$ is "a $k$-dimensional signed-volume measuring functional" — it accepts $k$ vectors and returns a number that flips sign under any permutation, vanishes on linearly dependent inputs, and on a basis spanning $V$ (in the case $k = n$) returns the determinant of the change-of-basis.
 
-A trigger-reaction pattern: **see "alternating $k$-tensor / $k$-covector" → think "signed $k$-volume / exterior power $(\Lambda^k V)^* / $ basis $\varepsilon^I$ for increasing $I$ / determinant when $k = n$"**. This pattern is the bridge from the algebraic definition to every downstream construction (wedge product, differential form, integration with orientation, determinant of a linear map).
+A trigger-reaction pattern: **see "alternating $k$-tensor / $k$-covector" → think "signed $k$-volume / exterior power $(\Lambda^k V)^* /$ basis $\varepsilon^I$ for increasing $I$ / determinant when $k = n$"**. This pattern is the bridge from the algebraic definition to every downstream construction (wedge product, differential form, integration with orientation, determinant of a linear map).
 
 ---
 

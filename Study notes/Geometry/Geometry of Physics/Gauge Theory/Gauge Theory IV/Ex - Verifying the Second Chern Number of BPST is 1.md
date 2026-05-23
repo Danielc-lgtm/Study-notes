@@ -121,7 +121,7 @@ So $k = 1$ for the BPST instanton. $\blacksquare$
 
 **Step 4: Bulk method (verification).**
 
-Substituting the explicit $F^a_{\mu\nu} = -\frac{4\rho^2}{(\rho^2 + r^2)^2}\bar\eta^a_{\mu\nu}$ from [[Ex - Computing the Field Strength of the BPST Instanton]], compute $\operatorname{tr}(F\wedge F) = $ a specific 4-form depending on $r$. Integrating over $\mathbb{R}^4$ in spherical coordinates gives $8\pi^2\cdot 1$, consistent with $k = 1$.
+Substituting the explicit $F^a_{\mu\nu} = -\frac{4\rho^2}{(\rho^2 + r^2)^2}\bar\eta^a_{\mu\nu}$ from [[Ex - Computing the Field Strength of the BPST Instanton]], compute $\operatorname{tr}(F\wedge F) =$ a specific 4-form depending on $r$. Integrating over $\mathbb{R}^4$ in spherical coordinates gives $8\pi^2\cdot 1$, consistent with $k = 1$.
 
 > [!note]- Derivation
 > $\operatorname{tr}(F\wedge F)$ is a 4-form. In components, $F = F^a_{\mu\nu}(T^a/2)\,dx^\mu\wedge dx^\nu$ with $T^a = \sigma_a$ and $\operatorname{tr}(T^aT^b) = 2\delta^{ab}$. So $\operatorname{tr}(F\wedge F) = \tfrac14 F^a_{\mu\nu}F^{a,\rho\sigma}\cdot\operatorname{tr}(T^aT^a)\cdot\epsilon_{\mu\nu\rho\sigma}/4! \cdot d^4x \cdot (\text{factor for self-duality}) = \tfrac14 \cdot \tfrac12 F^a_{\mu\nu}F^{a,\rho\sigma}\epsilon^{\mu\nu\rho\sigma}\cdot d^4x$ — the precise factor depends on conventions for the wedge of 2-forms and on the symbol $\epsilon^{\mu\nu\rho\sigma}$.

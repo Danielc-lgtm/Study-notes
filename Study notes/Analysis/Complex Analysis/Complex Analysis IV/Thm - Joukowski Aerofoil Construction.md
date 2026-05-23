@@ -124,7 +124,7 @@ The Joukowski transformation $w = z + 1/z$ maps a circle in the $z$-plane to an 
 > - Has a rounded leading edge near $\zeta = J(z_0 - a) \approx 2\operatorname{Re}(z_0) - 2a$ (or similar, depending on $z_0$).
 > - Is the boundary of a region resembling an aerofoil profile.
 >
-> **Flow past the aerofoil (informal).** The flow past a cylinder $|z - z_0| = a$ in the $z$-plane is known: complex potential $w_z(z) = U((z - z_0) + a^2/(z - z_0)) - i(\Gamma/(2\pi))\log((z - z_0)/a)$, where $U$ is the uniform stream speed at $\infty$ and $\Gamma$ is the circulation. The boundary of the cylinder is a streamline ($\psi = $ const).
+> **Flow past the aerofoil (informal).** The flow past a cylinder $|z - z_0| = a$ in the $z$-plane is known: complex potential $w_z(z) = U((z - z_0) + a^2/(z - z_0)) - i(\Gamma/(2\pi))\log((z - z_0)/a)$, where $U$ is the uniform stream speed at $\infty$ and $\Gamma$ is the circulation. The boundary of the cylinder is a streamline ($\psi =$ const).
 >
 > Pulling back via $J^{-1}$ (using the exterior branch): $w_\zeta(\zeta) = w_z(J^{-1}(\zeta))$. This is the complex potential for flow past the Joukowski aerofoil $J(C)$ in the $\zeta$-plane.
 >

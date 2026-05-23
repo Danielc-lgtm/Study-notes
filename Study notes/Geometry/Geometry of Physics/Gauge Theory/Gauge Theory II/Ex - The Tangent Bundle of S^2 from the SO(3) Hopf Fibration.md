@@ -63,7 +63,7 @@ $$TS^2 \cong \mathrm{SO}(3) \times_{\mathrm{SO}(2)} \mathbb{R}^2.$$
 > Think of a positively oriented orthonormal frame on $S^2$ as a "rotation that puts the standard $z$-axis basis at the point $p$, with the choice of in-plane rotation tracking the frame orientation". This identifies the frame bundle with $\mathrm{SO}(3)$.
 
 > [!note]- Hint 2
-> For part (b), the fibre of $\mathrm{SO}(3) \times_{\mathrm{SO}(2)} \mathbb{R}^2$ over $p \in S^2$ is the set of equivalence classes $[g, v]$ with $g \cdot e_3 = p$ and $v \in \mathbb{R}^2$. Map $[g, v] \in $ fibre over $p$ to the tangent vector at $p$ obtained by transporting $v$ via the frame $g$.
+> For part (b), the fibre of $\mathrm{SO}(3) \times_{\mathrm{SO}(2)} \mathbb{R}^2$ over $p \in S^2$ is the set of equivalence classes $[g, v]$ with $g \cdot e_3 = p$ and $v \in \mathbb{R}^2$. Map $[g, v] \in$ fibre over $p$ to the tangent vector at $p$ obtained by transporting $v$ via the frame $g$.
 
 > [!note]- Hint 3
 > For part (c), use Gauss-Bonnet: $\chi(S^2) = 2 \neq 0$, so by Poincaré-Hopf no nowhere-vanishing vector field exists, hence no global frame, hence no global section of the principal bundle.

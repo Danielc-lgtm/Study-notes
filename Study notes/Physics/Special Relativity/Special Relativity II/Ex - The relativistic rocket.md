@@ -91,7 +91,7 @@ In the initial rest frame, $P^{\text{init}}_{\text{rocket}} = P^{\text{final}}_{
 
 **Step 2: Isolate and square the photon exhaust.**
 
-Isolating $Q = P^{\text{init}} - P^{\text{final}}$ and squaring ($Q\cdot Q = 0$) gives $M_0^2c^2 = M^2c^2 + 2P^{\text{init}}\cdot P^{\text{final}}\cdot(-1)$... yielding $M_0 M\gamma(1) = $ — see below.
+Isolating $Q = P^{\text{init}} - P^{\text{final}}$ and squaring ($Q\cdot Q = 0$) gives $M_0^2c^2 = M^2c^2 + 2P^{\text{init}}\cdot P^{\text{final}}\cdot(-1)$... yielding $M_0 M\gamma(1) =$ — see below.
 
 > [!note]- Derivation
 > Isolate the photon total:

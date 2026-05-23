@@ -29,7 +29,7 @@ Use the duality machinery of §3F: interpret $A$ as the matrix of a linear map $
 
 The **rank** of a matrix $A$ is the dimension of the range of the linear map $A$ acts as. For a linear map $T \in \mathcal{L}(V, W)$, $\operatorname{rank} T = \dim \operatorname{range} T$.
 
-The **column rank** of $A$ equals $\dim \operatorname{range} T$ when $T : \mathbb{F}^{n,1} \to \mathbb{F}^{m,1}$ is defined by $Tx = Ax$, because $\operatorname{range} T$ is spanned by the columns of $A$ (as $T e_k = $ the $k$-th column of $A$ for standard basis $e_k$).
+The **column rank** of $A$ equals $\dim \operatorname{range} T$ when $T : \mathbb{F}^{n,1} \to \mathbb{F}^{m,1}$ is defined by $Tx = Ax$, because $\operatorname{range} T$ is spanned by the columns of $A$ (as $T e_k =$ the $k$-th column of $A$ for standard basis $e_k$).
 
 ![[Thm - Matrix of Dual Map is Transpose#Statement]]
 
@@ -100,14 +100,14 @@ Define $T : \mathbb{F}^{n,1} \to \mathbb{F}^{m,1}$ by $Tx = Ax$. Then column ran
 >
 > The matrix of $T$ in the standard bases of $\mathbb{F}^{n,1}$ and $\mathbb{F}^{m,1}$ is $A$ itself, because $Te_k = Ae_k$ equals the $k$-th column of $A$.
 >
-> The range of $T$ is $\{Ax : x \in \mathbb{F}^{n,1}\} = \operatorname{span}(\text{columns of } A)$, because every $Ax$ is a linear combination of the columns of $A$ (with coefficients the entries of $x$). So $\dim \operatorname{range} T = \dim \operatorname{span}(\text{columns of } A) = $ column rank of $A$.
+> The range of $T$ is $\{Ax : x \in \mathbb{F}^{n,1}\} = \operatorname{span}(\text{columns of } A)$, because every $Ax$ is a linear combination of the columns of $A$ (with coefficients the entries of $x$). So $\dim \operatorname{range} T = \dim \operatorname{span}(\text{columns of } A) =$ column rank of $A$.
 
 **Step 2: $\dim \operatorname{range} T = \dim \operatorname{range} T'$.**
 
 By [[Thm - Null Space and Range of Dual Map]], the rank of $T$ equals the rank of its dual.
 
 > [!note]- Derivation
-> [[Thm - Null Space and Range of Dual Map]] states $\dim \operatorname{range} T' = \dim \operatorname{range} T$ for any linear map between finite-dimensional spaces. So $\dim \operatorname{range} T' = $ column rank of $A$.
+> [[Thm - Null Space and Range of Dual Map]] states $\dim \operatorname{range} T' = \dim \operatorname{range} T$ for any linear map between finite-dimensional spaces. So $\dim \operatorname{range} T' =$ column rank of $A$.
 
 **Step 3: $\mathcal{M}(T') = A^t$.**
 
@@ -116,12 +116,12 @@ By [[Thm - Matrix of Dual Map is Transpose]], the matrix of the dual map in dual
 > [!note]- Derivation
 > Let $\varphi_1, \dots, \varphi_n$ be the dual basis of the standard basis of $\mathbb{F}^{n,1}$, and $\psi_1, \dots, \psi_m$ be the dual basis of the standard basis of $\mathbb{F}^{m,1}$. By [[Thm - Matrix of Dual Map is Transpose]], the matrix of $T' : (\mathbb{F}^{m,1})' \to (\mathbb{F}^{n,1})'$ in these dual bases is $\mathcal{M}(T') = (\mathcal{M}(T))^t = A^t$.
 
-**Step 4: $\dim \operatorname{range} T' = $ column rank of $A^t = $ row rank of $A$.**
+**Step 4: $\dim \operatorname{range} T' =$ column rank of $A^t =$ row rank of $A$.**
 
 The dimension of the range of $T'$ is the column rank of its matrix $A^t$. The columns of $A^t$ are the rows of $A$, so this equals the row rank of $A$.
 
 > [!note]- Derivation
-> By the same reasoning as Step 1 applied to $T'$ and its matrix $A^t$: $\dim \operatorname{range} T' = \dim \operatorname{span}(\text{columns of } A^t) = $ column rank of $A^t$.
+> By the same reasoning as Step 1 applied to $T'$ and its matrix $A^t$: $\dim \operatorname{range} T' = \dim \operatorname{span}(\text{columns of } A^t) =$ column rank of $A^t$.
 >
 > The columns of $A^t$ are, by definition of the transpose, the rows of $A$: the $j$-th column of $A^t$ is the vector $((A^t)_{1,j}, (A^t)_{2,j}, \dots)^t = (A_{j,1}, A_{j,2}, \dots)^t$, which is the $j$-th row of $A$ written as a column. So $\operatorname{span}(\text{columns of } A^t) = \operatorname{span}(\text{rows of } A)$ (as [[Def - Subspace|subspaces]] of $\mathbb{F}^{n,1}$, identifying row vectors with column vectors via transpose).
 >

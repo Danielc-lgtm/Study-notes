@@ -111,7 +111,7 @@ Apply the vector-bundle construction lemma. The fibres are $T_p^*M$ (defined lin
    - *Why needed:* Candidate trivializations of $T^*M$.
 
 3. **Compute the transition functions.** For two charts $(U, x^i), (\tilde U, \tilde x^j)$ with overlap, compute the composition $\Phi \circ \tilde\Phi^{-1}$ and read off the transition.
-   - *Hint:* Use $dx^i = (\partial x^i/\partial \tilde x^j) d\tilde x^j$, so the components transform $\tilde\omega_j = (\partial x^i/\partial \tilde x^j) \omega_i$, with matrix $(\partial x^i/\partial \tilde x^j) = $ inverse transpose of the Jacobian.
+   - *Hint:* Use $dx^i = (\partial x^i/\partial \tilde x^j) d\tilde x^j$, so the components transform $\tilde\omega_j = (\partial x^i/\partial \tilde x^j) \omega_i$, with matrix $(\partial x^i/\partial \tilde x^j) =$ inverse transpose of the Jacobian.
    - *Why needed:* Identifies the cocycle.
 
 4. **Verify the cocycle condition.** For three overlapping charts, check $\tau_{13} = \tau_{12} \tau_{23}$ (or its appropriate form).

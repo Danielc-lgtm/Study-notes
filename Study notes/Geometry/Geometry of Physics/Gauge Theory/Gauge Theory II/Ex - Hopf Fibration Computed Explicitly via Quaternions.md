@@ -84,7 +84,7 @@ The proof has four parts, each a direct algebraic or geometric computation. The 
 **Part (b): $\pi$ matches the standard Hopf map.**
 
 > [!note]- Derivation
-> Identify $\mathbb{H} = \mathbb{C}^2$ via $q = z_0 + z_1\mathbf{j}$ for $z_0 = a + b\mathbf{i}$, $z_1 = c + d\mathbf{i}$. The standard Hopf map sends $(z_0, z_1) \mapsto [z_0 : z_1] \in \mathbb{CP}^1 = S^2$. Identify $\mathbb{CP}^1 \cong S^2 \subset \mathrm{Im}\,\mathbb{H}$ via $[z_0 : z_1] \mapsto $ unit vector pointing in the direction of $(2\bar z_0 z_1, \ldots) \in \mathbb{R}^3$ (the standard formula).
+> Identify $\mathbb{H} = \mathbb{C}^2$ via $q = z_0 + z_1\mathbf{j}$ for $z_0 = a + b\mathbf{i}$, $z_1 = c + d\mathbf{i}$. The standard Hopf map sends $(z_0, z_1) \mapsto [z_0 : z_1] \in \mathbb{CP}^1 = S^2$. Identify $\mathbb{CP}^1 \cong S^2 \subset \mathrm{Im}\,\mathbb{H}$ via $[z_0 : z_1] \mapsto$ unit vector pointing in the direction of $(2\bar z_0 z_1, \ldots) \in \mathbb{R}^3$ (the standard formula).
 >
 > Compute: $\pi(q) = q\mathbf{i}q^{-1}$ for $q = z_0 + z_1\mathbf{j}$. Use the quaternionic multiplication rules: $\mathbf{j}\mathbf{i} = -\mathbf{i}\mathbf{j} = -\mathbf{k}$, $\mathbf{j}^2 = -1$. Then $q\mathbf{i} = (z_0 + z_1\mathbf{j})\mathbf{i} = z_0\mathbf{i} - z_1\mathbf{k}$. And $q^{-1} = \bar q = \bar z_0 - z_1\mathbf{j}$ (using $\overline{a\mathbf{j}} = -a\mathbf{j} = -\bar a \mathbf{j}$ for $a \in \mathbb{C}$). So $\pi(q) = (z_0\mathbf{i} - z_1\mathbf{k})(\bar z_0 - z_1\mathbf{j}) = z_0\bar z_0\mathbf{i} - z_0 z_1\mathbf{i}\mathbf{j} - z_1\bar z_0\mathbf{k} + z_1 z_1\mathbf{k}\mathbf{j}$. Use $\mathbf{i}\mathbf{j} = \mathbf{k}$ and $\mathbf{k}\mathbf{j} = -\mathbf{i}$:
 > $$\pi(q) = |z_0|^2\mathbf{i} - z_0 z_1\mathbf{k} - z_1\bar z_0\mathbf{k} - z_1^2\mathbf{i} = (|z_0|^2 - z_1^2)\mathbf{i} - (z_0z_1 + z_1\bar z_0)\mathbf{k}.$$
@@ -108,7 +108,7 @@ The proof has four parts, each a direct algebraic or geometric computation. The 
 **Part (d): Linking number of distinct fibres is $\pm 1$.**
 
 > [!note]- Derivation
-> Take two distinct fibres $\pi^{-1}(\mathbf{i})$ and $\pi^{-1}(\mathbf{j})$. The first is the circle $\{e^{i\theta} \in S^3 : \theta \in [0, 2\pi)\} \subset $ "real-imaginary plane".  The second, using a representative $q_{\mathbf{j}}$ with $q_{\mathbf{j}}\mathbf{i}q_{\mathbf{j}}^{-1} = \mathbf{j}$ (e.g., $q_{\mathbf{j}} = (1 + \mathbf{k})/\sqrt 2$), is $q_{\mathbf{j}}\cdot U(1) \subset S^3$, another great circle.
+> Take two distinct fibres $\pi^{-1}(\mathbf{i})$ and $\pi^{-1}(\mathbf{j})$. The first is the circle $\{e^{i\theta} \in S^3 : \theta \in [0, 2\pi)\} \subset$ "real-imaginary plane".  The second, using a representative $q_{\mathbf{j}}$ with $q_{\mathbf{j}}\mathbf{i}q_{\mathbf{j}}^{-1} = \mathbf{j}$ (e.g., $q_{\mathbf{j}} = (1 + \mathbf{k})/\sqrt 2$), is $q_{\mathbf{j}}\cdot U(1) \subset S^3$, another great circle.
 >
 > *Compute the linking number.* The two great circles lie in *complementary* 2-planes of $\mathbb{R}^4 \supset S^3$: the first in the $(1, \mathbf{i})$-plane, the second in the $(\mathbf{j}, \mathbf{k})$-plane (up to rotation). Two great circles of $S^3$ in complementary planes have linking number $\pm 1$: any 2-disc in $S^3$ bounded by one circle intersects the other transversally in exactly one point.
 >

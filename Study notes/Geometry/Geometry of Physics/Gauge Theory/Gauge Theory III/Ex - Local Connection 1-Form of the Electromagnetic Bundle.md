@@ -11,7 +11,7 @@ tags: [geometry, gauge-theory, electromagnetism, principal-bundles]
 
 # Problem Statement
 
-Consider a principal $U(1)$-bundle $P \to M$ over a manifold $M$ (for concreteness, take $M = $ Minkowski space $\mathbb{R}^{1,3}$ and assume $P = M \times U(1)$ is trivial).
+Consider a principal $U(1)$-bundle $P \to M$ over a manifold $M$ (for concreteness, take $M =$ Minkowski space $\mathbb{R}^{1,3}$ and assume $P = M \times U(1)$ is trivial).
 
 **(a)** Write down a global connection 1-form $\omega$ on the total space $P$ in a local trivialisation using the fibre coordinate $e^{i\theta}$. Verify the two axioms of a principal connection.
 

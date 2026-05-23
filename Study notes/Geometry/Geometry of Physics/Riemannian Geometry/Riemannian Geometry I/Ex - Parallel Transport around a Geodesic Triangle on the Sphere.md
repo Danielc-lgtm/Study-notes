@@ -57,7 +57,7 @@ The Gaussian curvature of the unit sphere is $K = 1$ everywhere. The triangle in
 > The holonomy angle is the **angle defect** of the geodesic triangle: the sum of interior angles minus $\pi$ (the Euclidean value). For this triangle: $3 \cdot (\pi/2) - \pi = \pi/2$. So the parallel-transported vector returns rotated by $\pi/2$.
 
 > [!note]- Hint 4
-> Verify via Gauss-Bonnet: $\int_T K\,dA = $ area $= \pi/2$ on the unit sphere (the triangle is one octant), confirming the holonomy angle is $\pi/2$.
+> Verify via Gauss-Bonnet: $\int_T K\,dA =$ area $= \pi/2$ on the unit sphere (the triangle is one octant), confirming the holonomy angle is $\pi/2$.
 
 ---
 
@@ -67,7 +67,7 @@ The Gaussian curvature of the unit sphere is $K = 1$ everywhere. The triangle in
 
 **Step 1: Set up the geodesic triangle.**
 
-Vertices: $N = $ north pole (parametrised as $\theta = 0$), $A = (\theta = \pi/2, \varphi = 0)$, $B = (\theta = \pi/2, \varphi = \pi/2)$.
+Vertices: $N =$ north pole (parametrised as $\theta = 0$), $A = (\theta = \pi/2, \varphi = 0)$, $B = (\theta = \pi/2, \varphi = \pi/2)$.
 
 Sides (all great-circle arcs):
 - **Side $NA$:** the meridian from $N$ to $A$, with $\varphi = 0$ fixed and $\theta$ varying from $0$ to $\pi/2$. Velocity direction: $\partial_\theta$ (southward).

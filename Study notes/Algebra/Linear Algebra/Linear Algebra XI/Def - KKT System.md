@@ -40,7 +40,7 @@ The bottom-right zero block has an important consequence: the KKT matrix is *not
 The two assumptions ensuring invertibility — rows of $C$ linearly independent, and stacked $\binom{A}{C}$ with linearly independent columns — together imply the KKT matrix is *non-singular*. Without them, multiple LS minimizers or unsolvable constraint systems make the unique-solution claim fail.
 
 The further structural insight: the KKT system has the form of a *block 2x2* linear system, and there are efficient solution techniques exploiting this. The Schur-complement approach eliminates $\nu$ first:
-- From the bottom block, $\nu = (CC^T)^{-1}(d - $ (whatever depends on $x$));
+- From the bottom block, $\nu = (CC^T)^{-1}(d -$ (whatever depends on $x$));
 - Substituting into the top block gives a smaller system for $x$ alone.
 
 This is equivalent to the QR-based algorithm in Boyd §16.3 (algorithm 16.2). The total cost is $O((m + p) n^2)$ flops, dominated by the QR factorization of the stacked $(m + p) \times n$ matrix $\binom{A}{C}$.

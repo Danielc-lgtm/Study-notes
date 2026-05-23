@@ -38,11 +38,11 @@ The proof — the **Eckmann–Hilton argument** — is one of the most elegant i
 
 The theorem requires only that $k \geq 2$ — no connectivity, no smoothness, no further hypothesis on $X$. The "source" is therefore the *dimension* of the spheres being mapped in.
 
-**Source 1: any pointed space with $k \geq 2$.** Trivially the input. But the *interpretation* of the theorem changes with the space: for $X = $ Lie group, $\pi_k(X) = \pi_k(X)$ regardless of $G$'s commutativity (the group operation on $G$ does not enter $\pi_k$); for $X = $ classifying space, $\pi_k(BG) = \pi_{k-1}(G)$ shifts the degree by one.
+**Source 1: any pointed space with $k \geq 2$.** Trivially the input. But the *interpretation* of the theorem changes with the space: for $X =$ Lie group, $\pi_k(X) = \pi_k(X)$ regardless of $G$'s commutativity (the group operation on $G$ does not enter $\pi_k$); for $X =$ classifying space, $\pi_k(BG) = \pi_{k-1}(G)$ shifts the degree by one.
 
 **Source 2: a loop space.** $\pi_k(X) = \pi_{k-1}(\Omega X)$ for $k \geq 1$. So $\pi_2(X) = \pi_1(\Omega X)$ — the fundamental group of the loop space. The Eckmann–Hilton argument applied to $\pi_1(\Omega X)$ uses both the loop-space concatenation and the additional operation from the loop space structure (which is itself an $H$-space). This is the *categorical* way to derive the abelianness: $\Omega X$ is naturally a *grouplike $A_\infty$-space*, and its $\pi_0$ is therefore an abelian group when there are two compatible structures.
 
-**Source 3: an $H$-space.** An $H$-space is a space $X$ with a multiplication $\mu : X \times X \to X$ that has a unit *up to homotopy*. For an $H$-space, the multiplication $\mu$ on $\pi_k$ and the concatenation on $\pi_k$ are two compatible structures with the same unit (the basepoint). The Eckmann–Hilton argument then forces $\pi_k$ to be abelian *and* the two operations to coincide — even for $k = 1$. So $\pi_1(G) $ for a topological group $G$ is automatically abelian; the abelianness of $\pi_1(S^1) = \mathbb{Z}$, $\pi_1(\mathrm{SU}(n))$, $\pi_1(\mathrm{Lie group})$ all follow from this.
+**Source 3: an $H$-space.** An $H$-space is a space $X$ with a multiplication $\mu : X \times X \to X$ that has a unit *up to homotopy*. For an $H$-space, the multiplication $\mu$ on $\pi_k$ and the concatenation on $\pi_k$ are two compatible structures with the same unit (the basepoint). The Eckmann–Hilton argument then forces $\pi_k$ to be abelian *and* the two operations to coincide — even for $k = 1$. So $\pi_1(G)$ for a topological group $G$ is automatically abelian; the abelianness of $\pi_1(S^1) = \mathbb{Z}$, $\pi_1(\mathrm{SU}(n))$, $\pi_1(\mathrm{Lie group})$ all follow from this.
 
 **Targets (Output Amplification)**
 
@@ -96,7 +96,7 @@ The end result is a configuration where $g$ is on the left and $f$ is on the rig
 
 The formal statement of this argument is the **Eckmann–Hilton theorem**: any set $S$ equipped with two binary operations $\cdot_1$ and $\cdot_2$ satisfying (a) both have the same unit $e$, and (b) the **interchange law** $(a \cdot_1 b) \cdot_2 (c \cdot_1 d) = (a \cdot_2 c) \cdot_1 (b \cdot_2 d)$, must have $\cdot_1 = \cdot_2$, and the common operation is commutative and associative.
 
-For $\pi_2(X)$, $\cdot_1 = $ concatenation along $t_1$ and $\cdot_2 = $ concatenation along $t_2$. Both have the constant map as unit. The interchange law holds because the four-square picture
+For $\pi_2(X)$, $\cdot_1 =$ concatenation along $t_1$ and $\cdot_2 =$ concatenation along $t_2$. Both have the constant map as unit. The interchange law holds because the four-square picture
 
 ```
 +---+---+

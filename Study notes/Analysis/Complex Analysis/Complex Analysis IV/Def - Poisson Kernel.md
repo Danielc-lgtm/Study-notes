@@ -84,9 +84,9 @@ In **operator theory**, the Poisson kernel implements the **harmonic extension o
 
 **Fourier series interpretation.** $P_r(\theta) = \sum_{n\in\mathbb{Z}}r^{|n|}e^{in\theta}$, so the Poisson integral of a Fourier series $u_0(e^{i\phi}) = \sum_n a_n e^{in\phi}$ is $u(re^{i\theta}) = \sum_n a_n r^{|n|} e^{in\theta}$. The "Poisson extension" sends $a_n e^{in\phi}$ to $r^{|n|}a_n e^{in\theta} = a_n z^n$ for $n \geq 0$ and $a_n \bar z^{-n}$ for $n < 0$. Holomorphic and anti-holomorphic parts.
 
-**Boundary values $u_0 = $ Heaviside (step).** $u_0(e^{i\phi}) = 1$ for $\phi \in (0, \pi)$, $0$ otherwise. The Poisson integral gives a harmonic function $u$ inside the disc with these boundary values. The result is $u(re^{i\theta}) = \arg(\text{something})/\pi$ — a function involving the argument, related to the Cayley transform.
+**Boundary values $u_0 =$ Heaviside (step).** $u_0(e^{i\phi}) = 1$ for $\phi \in (0, \pi)$, $0$ otherwise. The Poisson integral gives a harmonic function $u$ inside the disc with these boundary values. The result is $u(re^{i\theta}) = \arg(\text{something})/\pi$ — a function involving the argument, related to the Cayley transform.
 
-**Sanity check — at $r = 0$, $u(0) = $ average of $u_0$.** $u(0\cdot e^{i\theta}) = (1/(2\pi))\int u_0(e^{i\phi}) P_0(\theta - \phi)\,d\phi = (1/(2\pi))\int u_0(e^{i\phi})\,d\phi$ — the mean of $u_0$, as expected.
+**Sanity check — at $r = 0$, $u(0) =$ average of $u_0$.** $u(0\cdot e^{i\theta}) = (1/(2\pi))\int u_0(e^{i\phi}) P_0(\theta - \phi)\,d\phi = (1/(2\pi))\int u_0(e^{i\phi})\,d\phi$ — the mean of $u_0$, as expected.
 
 **Sanity check — concentration as $r \to 1$.** For $u_0$ continuous, $\lim_{r \to 1^-} u(re^{i\theta}) = u_0(e^{i\theta})$ pointwise. This is the recovery of boundary values from the harmonic extension.
 

@@ -102,7 +102,7 @@ In **stable homotopy theory**, characteristic classes generalise further to **co
 - $w_1$ obstructs orientability (vanishes iff the bundle is orientable).
 - $w_2$ obstructs spin structure (vanishes iff a $\mathrm{Spin}$-lift exists).
 - $c_1$ obstructs a global non-vanishing section (for line bundles).
-- $c_n = $ Euler class obstructs a global non-vanishing section (for top-rank).
+- $c_n =$ Euler class obstructs a global non-vanishing section (for top-rank).
 - Higher $c_r$ obstruct $r$-fold-linearly-independent global sections.
 - $p_1$ relates to signature and curvature integrals.
 
@@ -171,4 +171,4 @@ For $\mathbb{RP}^2$ (real projective plane), $w_1 \neq 0$ (it is non-orientable)
 > Two closed oriented $n$-manifolds $M, N$ are **cobordant** if there is a compact oriented $(n+1)$-manifold $W$ with $\partial W = M \sqcup \bar N$. The set of cobordism classes forms the **cobordism ring** $\Omega^{\mathrm{SO}}_n$. **Pontryagin numbers** $\int_M p_{i_1} \cdots p_{i_k}$ are cobordism invariants, and Thom's theorem identifies $\Omega^{\mathrm{SO}}_* \otimes \mathbb{Q}$ as a polynomial ring on classes detected by Pontryagin numbers. This makes characteristic classes the *complete invariant* for rational cobordism.
 
 > [!tip] String Theory Anomaly Cancellation *(from Theoretical Physics)*
-> In Type I superstring theory, the **Green–Schwarz mechanism** cancels gauge anomalies via a counterterm involving the *eight*-form combination of Pontryagin and Chern classes of the spacetime tangent bundle and the gauge bundle. Specifically, for $E_8 \times E_8$ heterotic strings, the anomaly is proportional to $\mathrm{Tr}\, R^4 + \mathrm{Tr}\, F^4 - $ (cross terms), and cancellation requires these polynomials to *split* as products of lower-degree characteristic classes — a stringent topological condition that selected $E_8 \times E_8$ as one of two consistent gauge groups for 10D heterotic strings.
+> In Type I superstring theory, the **Green–Schwarz mechanism** cancels gauge anomalies via a counterterm involving the *eight*-form combination of Pontryagin and Chern classes of the spacetime tangent bundle and the gauge bundle. Specifically, for $E_8 \times E_8$ heterotic strings, the anomaly is proportional to $\mathrm{Tr}\, R^4 + \mathrm{Tr}\, F^4 -$ (cross terms), and cancellation requires these polynomials to *split* as products of lower-degree characteristic classes — a stringent topological condition that selected $E_8 \times E_8$ as one of two consistent gauge groups for 10D heterotic strings.

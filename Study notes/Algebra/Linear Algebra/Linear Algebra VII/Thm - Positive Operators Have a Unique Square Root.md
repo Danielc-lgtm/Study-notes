@@ -73,7 +73,7 @@ The uniqueness is *not* in the existence of *some* operator $R$ with $R^2 = T$ �
 
 # What Makes This Hard
 
-The non-obvious step is **uniqueness**. Many operators square to a given positive operator; for example, $I = R^2$ has many self-adjoint solutions — $R = $ any orthogonal reflection. The positivity condition narrows this down to the unique non-negative square root. Forgetting that uniqueness requires the positivity of $R$ — not just that $R^2 = T$ — is the most common error.
+The non-obvious step is **uniqueness**. Many operators square to a given positive operator; for example, $I = R^2$ has many self-adjoint solutions — $R =$ any orthogonal reflection. The positivity condition narrows this down to the unique non-negative square root. Forgetting that uniqueness requires the positivity of $R$ — not just that $R^2 = T$ — is the most common error.
 
 The second subtlety is that **the square root is not analytic in $T$**. Two positive matrices that are close need not have close square roots if their eigenvalues are close to zero (the square root has infinite derivative at $0$). For positive *definite* operators (eigenvalues bounded away from zero), the square root is smooth in $T$; for merely positive (allowing zero eigenvalues), continuity holds but smoothness fails.
 

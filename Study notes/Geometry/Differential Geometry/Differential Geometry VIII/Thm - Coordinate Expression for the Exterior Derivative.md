@@ -38,7 +38,7 @@ The coordinate formula is what you actually use in calculations. To compute $d\o
 
 The invariant formula is what you use to prove theorems about $d$ in a chart-independent way. The most important use is to verify identities like $F^* d = d F^*$ without computing in coordinates — both sides of the identity can be checked against the invariant formula, term by term.
 
-The two formulas agree because $d$ is uniquely characterized by its algebraic properties (linearity, $df = $ ordinary differential, graded Leibniz, $d^2 = 0$), and both formulas satisfy these properties. So they must give the same operator.
+The two formulas agree because $d$ is uniquely characterized by its algebraic properties (linearity, $df =$ ordinary differential, graded Leibniz, $d^2 = 0$), and both formulas satisfy these properties. So they must give the same operator.
 
 The deeper reason the invariant formula exists is that the right-hand side is *manifestly* multilinear over $C^\infty(M)$ and alternating in the vector field arguments, hence (by the tensor characterization lemma) defines a smooth $(k+1)$-form. The fact that this form equals $d\omega$ — defined coordinate-by-coordinate — is the content of the theorem. The invariant formula thus provides a *chart-free definition* of $d$, and one can prove existence and uniqueness of $d$ using this formula as the starting point, then verify the coordinate formula as a consequence.
 
@@ -74,7 +74,7 @@ The fourth target combination is **invariant formula + Frobenius = the forms-lan
 
 # Why Is It True
 
-**The one-liner mechanism:** **the coordinate formula is forced by linearity, graded Leibniz, and the definition $df = $ ordinary differential; the invariant formula is then a consequence of multilinearity over $C^\infty(M)$ and the tensor characterization lemma, combined with verification on a coordinate frame.**
+**The one-liner mechanism:** **the coordinate formula is forced by linearity, graded Leibniz, and the definition $df =$ ordinary differential; the invariant formula is then a consequence of multilinearity over $C^\infty(M)$ and the tensor characterization lemma, combined with verification on a coordinate frame.**
 
 **Coordinate formula.** Take $\omega = \sum'_I \omega_I\,dx^I$ in a chart. By linearity, $d\omega = \sum'_I d(\omega_I\,dx^I)$. By graded Leibniz with $\omega_I$ a $0$-form,
 $$d(\omega_I \cdot dx^I) = (d\omega_I) \cdot dx^I + \omega_I \cdot d(dx^I) = (d\omega_I) \wedge dx^I + \omega_I \cdot 0 = d\omega_I \wedge dx^I,$$
@@ -98,7 +98,7 @@ So the invariant formula holds on $u\,dv$, hence by linearity on all $1$-forms.
 
 **Invariant formula on higher-degree forms.** By induction on degree, using the graded Leibniz rule for $d$ and careful sign tracking. Lee's proof (Proposition 14.32) reduces to a coordinate computation in a chart with vanishing Lie brackets ($[\partial_i, \partial_j] = 0$), where the formula simplifies dramatically, then propagates by tensor multilinearity to all vector field inputs. The detailed proof is bookkeeping-heavy but mechanical.
 
-**Why the two formulas agree.** Both define $\mathbb{R}$-linear operators $\Omega^k(M) \to \Omega^{k+1}(M)$ satisfying linearity, $df = $ ordinary differential on functions, graded Leibniz, and $d^2 = 0$. By [[Thm - Uniqueness of the Exterior Derivative]], any such operator equals $d$. So both formulas compute the same form.
+**Why the two formulas agree.** Both define $\mathbb{R}$-linear operators $\Omega^k(M) \to \Omega^{k+1}(M)$ satisfying linearity, $df =$ ordinary differential on functions, graded Leibniz, and $d^2 = 0$. By [[Thm - Uniqueness of the Exterior Derivative]], any such operator equals $d$. So both formulas compute the same form.
 
 ---
 

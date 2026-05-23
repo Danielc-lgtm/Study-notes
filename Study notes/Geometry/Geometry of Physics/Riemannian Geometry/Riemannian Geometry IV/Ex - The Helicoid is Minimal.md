@@ -104,7 +104,7 @@ The proof breaks into three steps. Step 1 computes the first fundamental form. S
 > $$
 > = (-a\sin u, a\cos u, -v).
 > $$
-> Hmm let me redo: the cross product formula. $\mathbf{x}_u\times\mathbf{x}_v = $ determinant.
+> Hmm let me redo: the cross product formula. $\mathbf{x}_u\times\mathbf{x}_v =$ determinant.
 >
 > $i$-component: $(\mathbf{x}_u)_y(\mathbf{x}_v)_z - (\mathbf{x}_u)_z(\mathbf{x}_v)_y = (v\cos u)(0) - (a)(\sin u) = -a\sin u$.
 >
@@ -182,7 +182,7 @@ The proof breaks into three steps. Step 1 computes the first fundamental form. S
 
 # Key Takeaways
 
-**Ruled surfaces have one principal curvature equal to zero along the ruling — except the helicoid.** A ruled surface $\mathbf{x}(u, v) = \alpha(u) + v\beta(u)$ has $\mathbf{x}_{vv} = 0$, so $g_\mathrm{II} = 0$. If additionally $\beta(u)$ has constant length (so $G = |\beta|^2 = $ const) and the ruling direction is asymptotic, both diagonal entries of $\mathrm{II}$ vanish and the surface is minimal — but this is restrictive. The helicoid satisfies these conditions: $\beta(u) = (\cos u, \sin u, 0)$ has constant length $1$, and the ruling direction $\partial/\partial v$ is asymptotic (the normal curvature in this direction vanishes). **Catalan's theorem (1842)** asserts that the helicoid and the plane are the *only* ruled minimal surfaces in $\mathbb{R}^3$; all other ruled surfaces (cylinders, cones, tangent-developable surfaces) have $H \neq 0$.
+**Ruled surfaces have one principal curvature equal to zero along the ruling — except the helicoid.** A ruled surface $\mathbf{x}(u, v) = \alpha(u) + v\beta(u)$ has $\mathbf{x}_{vv} = 0$, so $g_\mathrm{II} = 0$. If additionally $\beta(u)$ has constant length (so $G = |\beta|^2 =$ const) and the ruling direction is asymptotic, both diagonal entries of $\mathrm{II}$ vanish and the surface is minimal — but this is restrictive. The helicoid satisfies these conditions: $\beta(u) = (\cos u, \sin u, 0)$ has constant length $1$, and the ruling direction $\partial/\partial v$ is asymptotic (the normal curvature in this direction vanishes). **Catalan's theorem (1842)** asserts that the helicoid and the plane are the *only* ruled minimal surfaces in $\mathbb{R}^3$; all other ruled surfaces (cylinders, cones, tangent-developable surfaces) have $H \neq 0$.
 
 **The helicoid is the "twisted plane" — locally isometric to the catenoid via Bonnet deformation.** Two surfaces are **conjugate** in the Weierstrass–Enneper sense if their data $(g, \eta)$ are related by $\eta \to i\eta$ (multiplication by $i$); the resulting surface immersions are then real and imaginary parts of the same complex integral. The catenoid and helicoid are conjugate ($g = e^z, \eta = -e^{-z}dz$ for the catenoid; same $g$, $\eta \to i\eta$ for the helicoid). The interpolating Bonnet family $\mathbf{x}_\theta = \mathrm{Re}(e^{i\theta}\int)$ for $\theta \in [0, \pi/2]$ gives a continuous deformation between them — all minimal, all locally isometric. This is one of the most beautiful classical results in minimal-surface theory.
 

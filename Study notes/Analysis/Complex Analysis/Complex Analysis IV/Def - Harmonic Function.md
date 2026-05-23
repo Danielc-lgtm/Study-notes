@@ -27,7 +27,7 @@ Several reasons converge:
 
 **Mathematically, harmonic functions are the "imaginary half" of holomorphic functions.** If $f = u + iv$ is holomorphic, then $u$ and $v$ are both harmonic (by Cauchy-Riemann: $u_{xx} = v_{yx} = v_{xy} = -u_{yy}$, so $u_{xx} + u_{yy} = 0$; similarly for $v$). Conversely, on a simply connected domain, every harmonic $u$ is the real part of some holomorphic $f$ — the **harmonic conjugate** $v$ exists, unique up to additive constants.
 
-This $u \leftrightarrow $ holomorphic connection means harmonic functions inherit all the rigidity of holomorphic ones. They are real-analytic, satisfy maximum/minimum principles, have unique continuation, and are determined by boundary values on any closed curve (the Dirichlet problem). All of these are facts about holomorphic functions translated to real-variable language.
+This $u \leftrightarrow$ holomorphic connection means harmonic functions inherit all the rigidity of holomorphic ones. They are real-analytic, satisfy maximum/minimum principles, have unique continuation, and are determined by boundary values on any closed curve (the Dirichlet problem). All of these are facts about holomorphic functions translated to real-variable language.
 
 **The Laplacian $\Delta = \partial_x^2 + \partial_y^2$ is the unique (up to scaling) rotation-invariant second-order linear differential operator.** Any other second-order linear operator like $a u_{xx} + 2b u_{xy} + c u_{yy}$ with $b \neq 0$ would not be rotation-invariant, and would have eigenstructure that depends on direction. Asking for "function whose averaging over rotations matches its centre value" forces $\Delta = 0$.
 
@@ -35,7 +35,7 @@ What would break with a different definition?
 
 - Defining "harmonic" as $u_{xx} = 0$ alone: would give "linear in $x$", not the right notion.
 - Defining as $u_{xx} - u_{yy} = 0$: would give the *wave equation* in 2D space-time, a different theory (hyperbolic, not elliptic).
-- Defining as $\Delta u = $ a nonzero source: gives the Poisson equation, useful but not "harmonic".
+- Defining as $\Delta u =$ a nonzero source: gives the Poisson equation, useful but not "harmonic".
 
 The Laplace equation $\Delta u = 0$ is the unique condition that simultaneously characterizes equilibrium, encodes the real part of holomorphic functions, and gives the right rigidity properties for the theory.
 

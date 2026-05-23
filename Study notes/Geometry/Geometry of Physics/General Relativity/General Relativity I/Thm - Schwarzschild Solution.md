@@ -151,14 +151,14 @@ A common error is to assume staticness from the start without invoking Birkhoff 
 > > From Lemma 1: $G_{tt} = (1/r^2)[1 - (d/dr)(r e^{-2\Lambda})] = 0$. So $(d/dr)(r e^{-2\Lambda}) = 1$, integrating to $r e^{-2\Lambda} = r - 2M$ for an integration constant $-2M$ (writing it as $-2M$ for later convenience). Hence $e^{-2\Lambda} = 1 - 2M/r$, equivalently $e^{2\Lambda} = (1 - 2M/r)^{-1}$.
 
 > [!note]- Lemma 3: Second ODE — solving for $\Phi(r)$
-> **Statement:** $G_{rr} = 0$, with $\Lambda$ from Lemma 2, implies $\Phi(r) = -\Lambda(r) + $ const, i.e., $e^{2\Phi} = 1 - 2M/r$ after absorbing the constant by rescaling $t$.
+> **Statement:** $G_{rr} = 0$, with $\Lambda$ from Lemma 2, implies $\Phi(r) = -\Lambda(r) +$ const, i.e., $e^{2\Phi} = 1 - 2M/r$ after absorbing the constant by rescaling $t$.
 >
 > **Hint:** Combine $G_{rr} = 0$ with the result of Lemma 2; the equation simplifies to $\Phi' + \Lambda' = 0$, integrating immediately.
 >
 > **Why needed:** Provides $\Phi(r)$ and hence $g_{tt}$.
 >
 > > [!note]- Full proof
-> > From Lemma 1: $G_{rr} = (1/r^2)[2r e^{-2\Lambda}\Phi' + e^{-2\Lambda} - 1] = 0$. Using $e^{-2\Lambda} = 1 - 2M/r$: $G_{rr} = (1/r^2)[2r(1 - 2M/r)\Phi' + (1 - 2M/r) - 1] = (1/r^2)[2r(1 - 2M/r)\Phi' - 2M/r] = 0$. So $2r(1 - 2M/r)\Phi' = 2M/r$, hence $\Phi' = M/(r^2(1 - 2M/r))$. Integrating: $\Phi = -\frac{1}{2}\ln|1 - 2M/r| + $ const, after which choosing the constant by demanding $\Phi(r) \to 0$ as $r \to \infty$ (asymptotic flatness with standard time normalisation), $\Phi(r) = \frac{1}{2}\ln(1 - 2M/r)$, hence $e^{2\Phi} = 1 - 2M/r$ for $r > 2M$. Note that the sign of the constant is fixed by demanding $g_{tt} \to -1$ as $r \to \infty$, the asymptotic Minkowski form.
+> > From Lemma 1: $G_{rr} = (1/r^2)[2r e^{-2\Lambda}\Phi' + e^{-2\Lambda} - 1] = 0$. Using $e^{-2\Lambda} = 1 - 2M/r$: $G_{rr} = (1/r^2)[2r(1 - 2M/r)\Phi' + (1 - 2M/r) - 1] = (1/r^2)[2r(1 - 2M/r)\Phi' - 2M/r] = 0$. So $2r(1 - 2M/r)\Phi' = 2M/r$, hence $\Phi' = M/(r^2(1 - 2M/r))$. Integrating: $\Phi = -\frac{1}{2}\ln|1 - 2M/r| +$ const, after which choosing the constant by demanding $\Phi(r) \to 0$ as $r \to \infty$ (asymptotic flatness with standard time normalisation), $\Phi(r) = \frac{1}{2}\ln(1 - 2M/r)$, hence $e^{2\Phi} = 1 - 2M/r$ for $r > 2M$. Note that the sign of the constant is fixed by demanding $g_{tt} \to -1$ as $r \to \infty$, the asymptotic Minkowski form.
 
 > [!note]- Lemma 4: Consistency check via $G_{\theta\theta} = 0$
 > **Statement:** With $\Lambda, \Phi$ as above, $G_{\theta\theta} = 0$ automatically.

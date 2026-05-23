@@ -94,7 +94,7 @@ The proof has two methods. Method (a) uses topology: count cells. Method (b) use
 **Method (b): Chern-class formula via the Euler sequence.**
 
 > [!note]- Derivation: The Euler sequence
-> Recall the tautological line bundle $\mathcal{O}(-1) = $ the line bundle whose fibre over $[z_0 : \ldots : z_n] \in \mathbb{CP}^n$ is the line through $(z_0, \ldots, z_n)$ in $\mathbb{C}^{n+1}$. Its dual is $\mathcal{O}(1) = \mathcal{O}(-1)^*$.
+> Recall the tautological line bundle $\mathcal{O}(-1) =$ the line bundle whose fibre over $[z_0 : \ldots : z_n] \in \mathbb{CP}^n$ is the line through $(z_0, \ldots, z_n)$ in $\mathbb{C}^{n+1}$. Its dual is $\mathcal{O}(1) = \mathcal{O}(-1)^*$.
 >
 > The **Euler sequence** is the short exact sequence of holomorphic vector bundles on $\mathbb{CP}^n$:
 > $$0 \;\to\; \mathcal{O} \;\to\; \mathcal{O}(1)^{\oplus(n+1)} \;\to\; T\mathbb{CP}^n \;\to\; 0,$$

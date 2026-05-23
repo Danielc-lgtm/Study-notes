@@ -9,7 +9,7 @@ tags: [analysis, topology, homotopy, fundamental-group]
 
 # Notation
 
-$X, Y$ topological spaces. $F, G, H : X \times I \to Y$ homotopies with compatible endpoints: $F(x, 1) = G(x, 0)$ and $G(x, 1) = H(x, 0)$. Concatenation $F * G$ defined by running $F$ at double speed on $[0, 1/2]$ then $G$ at double speed on $[1/2, 1]$. The constant homotopy $C(x, t) = $ some constant value. Inversion $F^{-1}(x, t) = F(x, 1-t)$. The full registry is on the topic page.
+$X, Y$ topological spaces. $F, G, H : X \times I \to Y$ homotopies with compatible endpoints: $F(x, 1) = G(x, 0)$ and $G(x, 1) = H(x, 0)$. Concatenation $F * G$ defined by running $F$ at double speed on $[0, 1/2]$ then $G$ at double speed on $[1/2, 1]$. The constant homotopy $C(x, t) =$ some constant value. Inversion $F^{-1}(x, t) = F(x, 1-t)$. The full registry is on the topic page.
 
 ---
 
@@ -121,7 +121,7 @@ Both sides of the desired homotopy are reparametrizations of a common "three-pie
 > $$K(x, u) = \begin{cases} F(x, u) & u \in [0, 1] \\ G(x, u - 1) & u \in [1, 2] \\ H(x, u - 2) & u \in [2, 3] \end{cases}$$
 > Continuous by the pasting lemma (consistent on overlaps: $F(x, 1) = G(x, 0)$, $G(x, 1) = H(x, 0)$).
 >
-> Define $\phi_1 : I \to [0, 3]$ piecewise linearly: $\phi_1(t) = 4t$ for $t \in [0, 1/4]$, $\phi_1(t) = 4t$ for $t \in [1/4, 1/2]$ (so $\phi_1(1/4) = 1, \phi_1(1/2) = 2$), $\phi_1(t) = 2t + 1$ for $t \in [1/2, 1]$ (so $\phi_1(1/2) = 2, \phi_1(1) = 3$). (Continuous, piecewise-linear, $\phi_1(0) = 0$, $\phi_1(1) = 3$.) Explicitly $\phi_1(t) = $ slope-4 on $[0, 1/2]$ and slope-2 on $[1/2, 1]$.
+> Define $\phi_1 : I \to [0, 3]$ piecewise linearly: $\phi_1(t) = 4t$ for $t \in [0, 1/4]$, $\phi_1(t) = 4t$ for $t \in [1/4, 1/2]$ (so $\phi_1(1/4) = 1, \phi_1(1/2) = 2$), $\phi_1(t) = 2t + 1$ for $t \in [1/2, 1]$ (so $\phi_1(1/2) = 2, \phi_1(1) = 3$). (Continuous, piecewise-linear, $\phi_1(0) = 0$, $\phi_1(1) = 3$.) Explicitly $\phi_1(t) =$ slope-4 on $[0, 1/2]$ and slope-2 on $[1/2, 1]$.
 >
 > Similarly $\phi_2 : I \to [0, 3]$: $\phi_2(t) = 2t$ for $t \in [0, 1/2]$, $\phi_2(t) = 4t - 1$ for $t \in [1/2, 3/4]$, $\phi_2(t) = 4t - 1$ for $t \in [3/4, 1]$ (matches at $t = 3/4$: $\phi_2(3/4) = 2$; $\phi_2(1) = 3$). (Continuous, $\phi_2(0) = 0$, $\phi_2(1) = 3$.)
 >

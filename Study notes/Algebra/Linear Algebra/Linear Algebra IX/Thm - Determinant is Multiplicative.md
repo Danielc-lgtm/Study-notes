@@ -46,7 +46,7 @@ The reason multiplicativity is *not* obvious from the Leibniz formula is that th
 
 The theorem's precondition is mild — any pair of operators on the same finite-dimensional space — so the "source" question is: when does a problem secretly hand you a factorisation $T = ST'$?
 
-**A matrix factorisation (LU, QR, SVD, etc.).** Any time a matrix is given as a product, multiplicativity reduces the determinant computation to factor-by-factor computation. The bridge: $A = L U$ for triangular $L, U$ gives $\det A = \det L \cdot \det U = $ product of diagonal entries — turning an arbitrary determinant into a trivial one via Gaussian elimination. Example problem: compute $\det$ of a matrix by LU decomposition.
+**A matrix factorisation (LU, QR, SVD, etc.).** Any time a matrix is given as a product, multiplicativity reduces the determinant computation to factor-by-factor computation. The bridge: $A = L U$ for triangular $L, U$ gives $\det A = \det L \cdot \det U =$ product of diagonal entries — turning an arbitrary determinant into a trivial one via Gaussian elimination. Example problem: compute $\det$ of a matrix by LU decomposition.
 
 **A change-of-basis formula $A_{\text{new}} = C^{-1} A_{\text{old}} C$.** Multiplicativity gives $\det A_{\text{new}} = \det(C^{-1}) \det A_{\text{old}} \det C = \det A_{\text{old}}$ (because $\det C^{-1} = 1/\det C$). So the determinant of an operator is basis-independent — exactly the similarity invariance. Example problem: prove that the determinant of an operator is well-defined independent of any matrix representation.
 

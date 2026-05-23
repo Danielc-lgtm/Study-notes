@@ -94,7 +94,7 @@ The claim: $\bigcap_{n \geq 1} U_n$ is residual in $C[0, 1]$, and every function
 >
 > *Uniform bound:* $|g(t) - f(t)| \leq |g(t) - y_i| + |y_i - f(t)| \leq 1/m + 1/m = 2/m < \epsilon$ (after taking $m$ large enough). So $\|g - f\|_\infty < \epsilon$.
 >
-> *Steep slopes:* on each segment of length $1/(3k)$, $g$ varies by $1/m$. Slope = $(1/m)/(1/(3k)) = 3k/m > 3n$. So for any $t \in [a_i, a_{i+1}]$, choose $s = $ adjacent kink point; then $|g(t) - g(s)|/|t - s|$ is at least $n$ (a bit more, by the slope).
+> *Steep slopes:* on each segment of length $1/(3k)$, $g$ varies by $1/m$. Slope = $(1/m)/(1/(3k)) = 3k/m > 3n$. So for any $t \in [a_i, a_{i+1}]$, choose $s =$ adjacent kink point; then $|g(t) - g(s)|/|t - s|$ is at least $n$ (a bit more, by the slope).
 >
 > Hence $g \in U_n$, and $\|g - f\|_\infty < \epsilon$. So $U_n$ is dense.
 

@@ -71,7 +71,7 @@ The Berry connection is the **bridge from quantum mechanics to gauge theory**: t
 
 **Is an instance: Berry connection on $T\mathbb{CP}^n$ via the Fubini-Study metric.** $\mathbb{CP}^n$ is itself a parameter space (parametrizing 1-dimensional subspaces of $\mathbb{C}^{n+1}$), and the Berry connection on the tautological bundle $\mathcal{O}(-1) \to \mathbb{CP}^n$ is the standard Hermitian connection. The curvature is the Fubini-Study Kähler form (up to factor of $i/2\pi$).
 
-**Is an instance: the Hopf bundle connection.** Take $\mathcal{H} = \mathbb{C}^2$, $V = \mathbb{CP}^1 = S^2$, $E_\alpha = $ line through $(z_0, z_1)$ for $\alpha = [z_0 : z_1]$. The Berry connection on this tautological line bundle is the Hopf-bundle connection; the curvature has $\int_{S^2}(i\theta/2\pi) = -1$. See [[Def - The Hopf Bundle]] and [[Thm - First Chern Class of the Hopf Bundle is One]].
+**Is an instance: the Hopf bundle connection.** Take $\mathcal{H} = \mathbb{C}^2$, $V = \mathbb{CP}^1 = S^2$, $E_\alpha =$ line through $(z_0, z_1)$ for $\alpha = [z_0 : z_1]$. The Berry connection on this tautological line bundle is the Hopf-bundle connection; the curvature has $\int_{S^2}(i\theta/2\pi) = -1$. See [[Def - The Hopf Bundle]] and [[Thm - First Chern Class of the Hopf Bundle is One]].
 
 **Is an instance: spin-$\tfrac{1}{2}$ in a magnetic field.** $\mathcal{H} = \mathbb{C}^2$, $H(\mathbf{B}) = -\tfrac{\mu}{2}\mathbf{B}\cdot\hat\sigma$, parameter space $V = S^2$ (directions of $\mathbf{B}$). Berry curvature is $\theta = (i/2)\sin\theta\,d\theta\wedge d\phi$, integrating to half the area of $S^2$ — the half-solid-angle Berry phase. See [[Ex - Berry Phase for a Spin-Half in a Magnetic Field]].
 

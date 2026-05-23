@@ -111,7 +111,7 @@ Reduce to the upper-triangular case by Schur, then use the Leibniz formula to co
    - *Hint:* The diagonal entries of the upper-triangular form are the eigenvalues (with algebraic multiplicity).
    - *Why needed:* Once $T$ is upper-triangular, $\det T$ is straightforward.
 
-2. **Compute the determinant of an upper-triangular matrix.** Show $\det A = $ product of diagonal entries via Leibniz formula.
+2. **Compute the determinant of an upper-triangular matrix.** Show $\det A =$ product of diagonal entries via Leibniz formula.
    - *Hint:* Only the identity permutation contributes to the Leibniz sum, because any other permutation has $\sigma(k) > k$ for some $k$, making $A_{\sigma(k), k}$ a below-diagonal entry, hence zero.
    - *Why needed:* This is the explicit computation that reads off $\det$ from diagonal entries.
 
@@ -131,7 +131,7 @@ Reduce to the upper-triangular case by Schur, then use the Leibniz formula to co
 > > [!note]- Full proof
 > > By the Leibniz formula,
 > > $$\det A = \sum_{\sigma \in \operatorname{perm}(n)} \operatorname{sign}(\sigma) A_{\sigma(1), 1} A_{\sigma(2), 2} \cdots A_{\sigma(n), n}.$$
-> > Suppose $\sigma \neq \operatorname{id}$. Then there is some index $k$ with $\sigma(k) \neq k$. The smallest such $k$ satisfies $\sigma(k) > k$ (because $\sigma$ is a permutation: $\sigma(1), \dots, \sigma(k-1)$ together with $\sigma(k)$ all lie in $\{1, \dots, n\}$, and by choice of $k$, $\sigma(1) = 1, \dots, \sigma(k-1) = k - 1$, so $\sigma(k) \in \{k, k+1, \dots, n\} \setminus \{k\} = \{k+1, \dots, n\}$, hence $\sigma(k) > k$). For this $k$, $A_{\sigma(k), k}$ is an entry strictly below the diagonal (row index $\sigma(k) > k = $ column index), hence zero since $A$ is upper-triangular. Therefore the product $A_{\sigma(1), 1} \cdots A_{\sigma(n), n}$ contains a zero factor and equals zero. Only the identity permutation contributes:
+> > Suppose $\sigma \neq \operatorname{id}$. Then there is some index $k$ with $\sigma(k) \neq k$. The smallest such $k$ satisfies $\sigma(k) > k$ (because $\sigma$ is a permutation: $\sigma(1), \dots, \sigma(k-1)$ together with $\sigma(k)$ all lie in $\{1, \dots, n\}$, and by choice of $k$, $\sigma(1) = 1, \dots, \sigma(k-1) = k - 1$, so $\sigma(k) \in \{k, k+1, \dots, n\} \setminus \{k\} = \{k+1, \dots, n\}$, hence $\sigma(k) > k$). For this $k$, $A_{\sigma(k), k}$ is an entry strictly below the diagonal (row index $\sigma(k) > k =$ column index), hence zero since $A$ is upper-triangular. Therefore the product $A_{\sigma(1), 1} \cdots A_{\sigma(n), n}$ contains a zero factor and equals zero. Only the identity permutation contributes:
 > > $$\det A = \operatorname{sign}(\operatorname{id}) A_{1, 1} A_{2, 2} \cdots A_{n, n} = (+1) \lambda_1 \lambda_2 \cdots \lambda_n.$$
 
 > [!note]- Lemma 2: Diagonal entries of the upper-triangular form are the eigenvalues with multiplicity

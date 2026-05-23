@@ -84,7 +84,7 @@ $T(i) = (i - i)/(i + i) = 0/(2i) = 0$. ✓
 **Step 4: $T(\infty) = 1$**
 
 > [!note]- Derivation
-> $T(\infty) = $ limit of $T(z)$ as $|z| \to \infty$ $= \lim_{|z| \to \infty}(z - i)/(z + i) = \lim 1 \cdot (1 - i/z)/(1 + i/z) = 1$.
+> $T(\infty) =$ limit of $T(z)$ as $|z| \to \infty$ $= \lim_{|z| \to \infty}(z - i)/(z + i) = \lim 1 \cdot (1 - i/z)/(1 + i/z) = 1$.
 >
 > Alternatively, by the Möbius formula $T(\infty) = a/c$ with $a = 1, c = 1$: $T(\infty) = 1$. ✓
 

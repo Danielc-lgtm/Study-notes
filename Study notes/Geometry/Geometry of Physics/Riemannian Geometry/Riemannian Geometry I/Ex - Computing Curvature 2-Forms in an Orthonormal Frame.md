@@ -119,7 +119,7 @@ $$
 All other $\omega^a{}_b = 0$.
 
 > [!note]- Derivation
-> The system of four structural equations with antisymmetric $\omega_{ab}$ (6 independent components in 4D) determines the connection. The key is recognising the structure: $\omega^{\hat 0}{}_{\hat 1}$ comes from the time-warp $f^{1/2}$; the $\omega^{\hat 2}{}_{\hat 1}, \omega^{\hat 3}{}_{\hat 1}$ come from the radial-angular warp $r$; the $\omega^{\hat 3}{}_{\hat 2}$ comes from the sphere geometry within the $r = $ const surface. The off-diagonal $\omega^{\hat 0}{}_{\hat 2}, \omega^{\hat 0}{}_{\hat 3}, \omega^{\hat 2}{}_{\hat 0}, \omega^{\hat 3}{}_{\hat 0}$ are all zero (no mixed time-angular structure because the metric is static and spherically symmetric). The computation is bookkeeping; the structural insight is the spherical-symmetry simplification.
+> The system of four structural equations with antisymmetric $\omega_{ab}$ (6 independent components in 4D) determines the connection. The key is recognising the structure: $\omega^{\hat 0}{}_{\hat 1}$ comes from the time-warp $f^{1/2}$; the $\omega^{\hat 2}{}_{\hat 1}, \omega^{\hat 3}{}_{\hat 1}$ come from the radial-angular warp $r$; the $\omega^{\hat 3}{}_{\hat 2}$ comes from the sphere geometry within the $r =$ const surface. The off-diagonal $\omega^{\hat 0}{}_{\hat 2}, \omega^{\hat 0}{}_{\hat 3}, \omega^{\hat 2}{}_{\hat 0}, \omega^{\hat 3}{}_{\hat 0}$ are all zero (no mixed time-angular structure because the metric is static and spherically symmetric). The computation is bookkeeping; the structural insight is the spherical-symmetry simplification.
 
 **Step 3: Curvature 2-forms via Cartan's second equation.**
 
@@ -129,7 +129,7 @@ Apply $\Omega^a{}_b = d\omega^a{}_b + \omega^a{}_c \wedge \omega^c{}_b$ to each 
 
 The $\omega \wedge \omega$ piece: $\omega^{\hat 0}{}_{\hat c} \wedge \omega^{\hat c}{}_{\hat 1}$ for $\hat c = 1, 2, 3$. $\omega^{\hat 0}{}_{\hat 1} \wedge \omega^{\hat 1}{}_{\hat 1} = 0$; $\omega^{\hat 0}{}_{\hat 2} \wedge \omega^{\hat 2}{}_{\hat 1} = 0$ (since $\omega^{\hat 0}{}_{\hat 2} = 0$); $\omega^{\hat 0}{}_{\hat 3} \wedge \omega^{\hat 3}{}_{\hat 1} = 0$ (since $\omega^{\hat 0}{}_{\hat 3} = 0$). So $\omega \wedge \omega$ vanishes for $\Omega^{\hat 0}{}_{\hat 1}$. Therefore $\Omega^{\hat 0}{}_{\hat 1} = d\omega^{\hat 0}{}_{\hat 1}$ directly.
 
-Final calculation: $\Omega^{\hat 0}{}_{\hat 1} = (\tfrac{f'}{2f^{1/2}})'\,dr \wedge \sigma^{\hat 0} + \tfrac{f'}{2f^{1/2}}\,d\sigma^{\hat 0}$. With $dr = f^{1/2}\sigma^{\hat 1}$: $(\tfrac{f'}{2f^{1/2}})'\,dr \wedge \sigma^{\hat 0} = (\tfrac{f'}{2f^{1/2}})' \cdot f^{1/2}\sigma^{\hat 1} \wedge \sigma^{\hat 0}$. And $d\sigma^{\hat 0} = -\tfrac{f'}{2f^{1/2}}\sigma^{\hat 0} \wedge \sigma^{\hat 1}$. After simplification (using $f''/2 + (f')^2/(4f) = $ ... involves algebraic manipulations; the standard result):
+Final calculation: $\Omega^{\hat 0}{}_{\hat 1} = (\tfrac{f'}{2f^{1/2}})'\,dr \wedge \sigma^{\hat 0} + \tfrac{f'}{2f^{1/2}}\,d\sigma^{\hat 0}$. With $dr = f^{1/2}\sigma^{\hat 1}$: $(\tfrac{f'}{2f^{1/2}})'\,dr \wedge \sigma^{\hat 0} = (\tfrac{f'}{2f^{1/2}})' \cdot f^{1/2}\sigma^{\hat 1} \wedge \sigma^{\hat 0}$. And $d\sigma^{\hat 0} = -\tfrac{f'}{2f^{1/2}}\sigma^{\hat 0} \wedge \sigma^{\hat 1}$. After simplification (using $f''/2 + (f')^2/(4f) =$ ... involves algebraic manipulations; the standard result):
 $$
 \Omega^{\hat 0}{}_{\hat 1} = -\tfrac{2M}{r^3}\sigma^{\hat 0} \wedge \sigma^{\hat 1}.
 $$
