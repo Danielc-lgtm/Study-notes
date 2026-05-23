@@ -21,22 +21,22 @@ $$A = \begin{pmatrix} 2 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{pmatrix} \in M_{3
 Compute the **Jordan normal form** of $A$:
 
 1. Factor the **characteristic polynomial** $\chi_A(X) = \det(XI-A)$ into linear factors over $\mathbb{C}$.
-2. Find the **elementary divisors** of the $\mathbb{C}[X]$-module $V_A$ — the prime-power factors $(X-\lambda)^m$ — by either (a) reducing $XI-A$ to **Smith normal form** and splitting each invariant factor into prime powers, or (b) computing, for each eigenvalue $\lambda$, the dimensions of the generalised eigenspaces $\ker(A-\lambda I)^k$.
+2. Find the **elementary divisors** of the $\mathbb{C}[X]$-[[Def - Module|module]] $V_A$ — the prime-power factors $(X-\lambda)^m$ — by either (a) reducing $XI-A$ to **Smith normal form** and splitting each invariant factor into prime powers, or (b) computing, for each eigenvalue $\lambda$, the [[Def - Dimension|dimensions]] of the generalised eigenspaces $\ker(A-\lambda I)^k$.
 3. Assemble the corresponding **Jordan blocks** $J_m(\lambda)$ into the Jordan normal form, and read off the minimal polynomial.
 
-Use *both* routes — Smith normal form and eigenspace dimensions — and confirm they agree.
+Use *both* routes — Smith normal form and eigenspace [[Def - Dimension|dimensions]] — and confirm they agree.
 
 The point of the exercise is to see that the Jordan normal form is nothing more than the [[Thm - Primary Decomposition Theorem|primary decomposition]] of the $\mathbb{C}[X]$-module $V_A$, made matrix-explicit, and to practise the two complementary ways of extracting it.
 
 **Recall:**
 
-The objects in play are the field $\mathbb{C}$, a matrix $A \in M_{n,n}(\mathbb{C})$, the polynomial ring $\mathbb{C}[X]$, and the $\mathbb{C}[X]$-module $V_A$.
+The objects in play are the field $\mathbb{C}$, a matrix $A \in M_{n,n}(\mathbb{C})$, the polynomial [[Def - Ring|ring]] $\mathbb{C}[X]$, and the $\mathbb{C}[X]$-module $V_A$.
 
 ![[Def - The Module of a Linear Operator#The Definition]]
 
 Concretely $V_A = \mathbb{C}^n$, with $\mathbb{C}[X]$ acting by letting $X$ act as the matrix $A$, so a polynomial $f(X)$ acts as $f(A)$. The crucial fact about $\mathbb{C}[X]$ is that its **prime elements are exactly the linear polynomials $X - \lambda$** (up to units): by the fundamental theorem of algebra every non-constant polynomial has a root, so every irreducible polynomial has degree $1$. This is precisely why the Jordan normal form lives over $\mathbb{C}$ (or any algebraically closed field) and not over $\mathbb{Q}$ or $\mathbb{R}$.
 
-The **primary decomposition theorem** for finitely generated modules over a Euclidean domain $R$ says that such a module is a direct sum of *primary* cyclic pieces $R/(p^a)$, one for each prime power, where $p$ ranges over primes of $R$. The prime powers $p^a$ appearing are the **elementary divisors**. For $V_A$ over $\mathbb{C}[X]$, every prime is $X-\lambda$, so
+The **primary decomposition theorem** for finitely generated [[Def - Module|modules]] over a Euclidean domain $R$ says that such a module is a direct sum of *primary* cyclic pieces $R/(p^a)$, one for each prime power, where $p$ ranges over primes of $R$. The prime powers $p^a$ appearing are the **elementary divisors**. For $V_A$ over $\mathbb{C}[X]$, every prime is $X-\lambda$, so
 
 $$V_A \cong \frac{\mathbb{C}[X]}{\big((X-\lambda_1)^{a_1}\big)} \oplus \cdots \oplus \frac{\mathbb{C}[X]}{\big((X-\lambda_t)^{a_t}\big)},$$
 
@@ -58,9 +58,9 @@ The **Smith normal form** of $XI - A$ over $\mathbb{C}[X]$ has non-constant diag
 
 **Assumption pattern.** The hypotheses are concrete: the field is $\mathbb{C}$ and $A$ is explicit. The structurally decisive fact is that $\mathbb{C}$ is *algebraically closed*, so every prime of $\mathbb{C}[X]$ is linear and the primary decomposition consists entirely of pieces $\mathbb{C}[X]/((X-\lambda)^m)$ — each of which is a single Jordan block. Over a non-closed field this fails and one only gets the rational canonical form.
 
-**Theorem routing.** Two routes converge on the same answer. *Route A (Smith normal form):* $A \rightsquigarrow XI-A \rightsquigarrow$ [[Thm - Smith Normal Form|Smith normal form]] $\rightsquigarrow$ invariant factors $\rightsquigarrow$ split each into linear powers $\rightsquigarrow$ elementary divisors $\rightsquigarrow$ Jordan blocks via [[Thm - Jordan Normal Form|the Jordan theorem]]. *Route B (eigenspaces):* factor $\chi_A$ to find the eigenvalues, then for each $\lambda$ compute $\dim\ker(A-\lambda I)^k$ for $k = 1, 2, \dots$; the number of Jordan $\lambda$-blocks is $\dim\ker(A-\lambda I)$ and the jumps in $\dim\ker(A-\lambda I)^k$ determine the block sizes. The route through [[Thm - Primary Decomposition Theorem|primary decomposition]] is what makes Route B legitimate: $\ker(A-\lambda I)^k$ is exactly the submodule of $V_A$ killed by $(X-\lambda)^k$.
+**Theorem routing.** Two routes converge on the same answer. *Route A (Smith normal form):* $A \rightsquigarrow XI-A \rightsquigarrow$ [[Thm - Smith Normal Form|Smith normal form]] $\rightsquigarrow$ invariant factors $\rightsquigarrow$ split each into linear powers $\rightsquigarrow$ elementary divisors $\rightsquigarrow$ Jordan blocks via [[Thm - Jordan Normal Form|the Jordan theorem]]. *Route B (eigenspaces):* factor $\chi_A$ to find the eigenvalues, then for each $\lambda$ compute $\dim\ker(A-\lambda I)^k$ for $k = 1, 2, \dots$; the number of Jordan $\lambda$-blocks is $\dim\ker(A-\lambda I)$ and the jumps in $\dim\ker(A-\lambda I)^k$ determine the block sizes. The route through [[Thm - Primary Decomposition Theorem|primary decomposition]] is what makes Route B legitimate: $\ker(A-\lambda I)^k$ is exactly the [[Def - Submodule|submodule]] of $V_A$ killed by $(X-\lambda)^k$.
 
-**Key decision point.** The non-obvious idea is that block *sizes* are determined by *how the kernels grow*, not by the kernels themselves. A single eigenvalue with algebraic multiplicity $3$ could be one $3\times 3$ block, or a $2\times 2$ plus a $1\times 1$, or three $1\times 1$ blocks; the geometric multiplicity $\dim\ker(A-\lambda I)$ counts the blocks, and the *successive differences* $\dim\ker(A-\lambda I)^{k} - \dim\ker(A-\lambda I)^{k-1}$ count the blocks of size $\ge k$. Knowing to look at the *filtration* of generalised eigenspaces, rather than a single eigenspace, is the crux.
+**Key decision point.** The non-obvious idea is that block *sizes* are determined by *how the kernels grow*, not by the kernels themselves. A single eigenvalue with algebraic multiplicity $3$ could be one $3\times 3$ block, or a $2\times 2$ plus a $1\times 1$, or three $1\times 1$ blocks; the geometric multiplicity $\dim\ker(A-\lambda I)$ counts the blocks, and the *successive differences* $\dim\ker(A-\lambda I)^{k} - \dim\ker(A-\lambda I)^{k-1}$ count the blocks of size $\ge k$. Knowing to look at the *[[Def - Filtration|filtration]]* of generalised eigenspaces, rather than a single eigenspace, is the crux.
 
 ---
 
@@ -128,7 +128,7 @@ For $\lambda = 2$: $\dim\ker(A-2I) = 1$, so there is exactly **one** Jordan $2$-
 > $$A - 2I = \begin{pmatrix} 0 & 1 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix}.$$
 > This matrix has two non-zero rows that are linearly independent (one is $(0,1,0)$, the other $(0,0,1)$), so $\operatorname{rank}(A-2I) = 2$, and by rank-nullity $\dim\ker(A-2I) = 3 - 2 = 1$. So there is exactly one Jordan block for $\lambda = 2$. Its size must be the algebraic multiplicity $2$ (the $2$-blocks sum to $2$ and there is only one of them). The single block is $J_2(2)$.
 >
-> A confirming look at the kernel filtration: $(A-2I)^2 = \begin{pmatrix} 0&1&0\\0&0&0\\0&0&1\end{pmatrix}^2 = \begin{pmatrix} 0&0&0\\0&0&0\\0&0&1\end{pmatrix}$, which has rank $1$, nullity $2$. The dimensions $\dim\ker(A-2I)^k$ for $k=1,2,3$ are $1, 2, 2$ — the chain stabilises at $2$, the algebraic multiplicity. The number of $2$-blocks of size $\ge k$ is the jump $\dim\ker(A-2I)^k - \dim\ker(A-2I)^{k-1}$: jumps are $1, 1, 0$, so there is one block of size $\ge 1$, one of size $\ge 2$, none of size $\ge 3$ — a single block of size exactly $2$. Consistent.
+> A confirming look at the kernel [[Def - Filtration|filtration]]: $(A-2I)^2 = \begin{pmatrix} 0&1&0\\0&0&0\\0&0&1\end{pmatrix}^2 = \begin{pmatrix} 0&0&0\\0&0&0\\0&0&1\end{pmatrix}$, which has rank $1$, nullity $2$. The dimensions $\dim\ker(A-2I)^k$ for $k=1,2,3$ are $1, 2, 2$ — the chain stabilises at $2$, the algebraic multiplicity. The number of $2$-blocks of size $\ge k$ is the jump $\dim\ker(A-2I)^k - \dim\ker(A-2I)^{k-1}$: jumps are $1, 1, 0$, so there is one block of size $\ge 1$, one of size $\ge 2$, none of size $\ge 3$ — a single block of size exactly $2$. Consistent.
 >
 > *Eigenvalue $\lambda = 3$.* Compute
 > $$A - 3I = \begin{pmatrix} -1 & 1 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 0 \end{pmatrix}.$$

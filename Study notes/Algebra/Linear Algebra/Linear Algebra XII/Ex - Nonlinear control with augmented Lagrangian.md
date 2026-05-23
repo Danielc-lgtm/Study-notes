@@ -25,7 +25,7 @@ $$x_2 = f(0, u_1), \quad x_{k+1} = f(x_k, u_k) \;\; (k = 2, \ldots, N-1), \quad 
 
 (The initial state is $x_1 = 0$; the final state $x^\text{final}$ is prescribed.)
 
-**(a)** Identify the variable $\xi$, the residual map $r(\xi)$, the constraint map $c(\xi)$, and the dimensions of each, in the form of an equality-constrained nonlinear LS problem $\min \|r(\xi)\|^2$ s.t. $c(\xi) = 0$.
+**(a)** Identify the variable $\xi$, the residual map $r(\xi)$, the constraint map $c(\xi)$, and the [[Def - Dimension|dimensions]] of each, in the form of an equality-constrained nonlinear LS problem $\min \|r(\xi)\|^2$ s.t. $c(\xi) = 0$.
 
 **(b)** Set up the augmented Lagrangian iteration. Specifically, write down the inner-loop nonlinear LS subproblem $\min \|h_{\mu, z}(\xi)\|^2$ that needs to be solved at each outer iteration, and the multiplier update rule.
 
@@ -65,7 +65,7 @@ This solution deploys the following legal operations from [[Linear Algebra XII �
 
 2. **Estimate a Lagrange multiplier by the augmented Lagrangian update** (operation 8). After each inner LM solve, update $z^{(k+1)} = z^{(k)} + 2\mu^{(k)} c(\xi^{(k+1)})$ to track the multiplier.
 
-3. **Group state and control variables together as a single block** (operation 9). The unknowns are concatenated into a single vector $\xi$ that LM treats as a generic vector of optimization variables.
+3. **[[Def - Group|Group]] state and control variables together as a single block** (operation 9). The unknowns are concatenated into a single vector $\xi$ that LM treats as a generic vector of optimization variables.
 
 4. **Linearize the residual at the current iterate** (operation 1). Each inner LM subproblem linearizes both $r$ and $c$ at the current iterate to produce a linear LS problem.
 
@@ -110,7 +110,7 @@ Residual map for the *objective*:
 Constraint map: $c_k(\xi) = x_{k+1} - f(x_k, u_k)$ for $k = 1, \ldots, N$, with $x_1 = 0$ and $x_{N+1} = x^\text{final}$ given. So $c(\xi)$ has dimension $3N$.
 
 > [!note]- Derivation
-> Boyd's problem statement (Equation 19.12 of §19.4) groups the unknowns as the inputs $u_1, \ldots, u_N$ and the intermediate states $x_2, \ldots, x_N$. The initial state $x_1 = 0$ and the final state $x^\text{final}$ are given, not optimized over.
+> Boyd's problem statement (Equation 19.12 of §19.4) [[Def - Group|groups]] the unknowns as the inputs $u_1, \ldots, u_N$ and the intermediate states $x_2, \ldots, x_N$. The initial state $x_1 = 0$ and the final state $x^\text{final}$ are given, not optimized over.
 >
 > The objective is $\sum_{k=1}^N \|u_k\|^2 + \gamma \sum_{k=1}^{N-1} \|u_{k+1} - u_k\|^2$. To match the form $\|r(\xi)\|^2$, we identify each $\|u_k\|^2$ with the squared norm of a 2-vector residual $r^u_k = u_k$ and each $\gamma \|u_{k+1} - u_k\|^2$ with the squared norm of $r^\Delta_k = \sqrt\gamma (u_{k+1} - u_k)$. Stacking gives the full residual map $r : \mathbb{R}^{2N + 3(N-1)} \to \mathbb{R}^{4N - 2}$.
 >
@@ -121,7 +121,7 @@ Constraint map: $c_k(\xi) = x_{k+1} - f(x_k, u_k)$ for $k = 1, \ldots, N$, with 
 >
 > Each $c_k$ is a vector in $\mathbb{R}^3$, so the total constraint map $c : \mathbb{R}^{2N + 3(N-1)} \to \mathbb{R}^{3N}$.
 >
-> For $N = 50$: $\xi$ has $\sim 250$ dimensions, $r$ has $\sim 200$, $c$ has $150$. The combined $h$ map has $\sim 350$ components.
+> For $N = 50$: $\xi$ has $\sim 250$ [[Def - Dimension|dimensions]], $r$ has $\sim 200$, $c$ has $150$. The combined $h$ map has $\sim 350$ components.
 
 **Step 2: Augmented Lagrangian iteration.**
 

@@ -28,7 +28,7 @@ $(M, g)$ — a (semi-)Riemannian manifold. $\nabla$ — a connection on $TM$: an
 > 2 g(\nabla_X Y, Z) = X g(Y, Z) + Y g(X, Z) - Z g(X, Y) + g([X, Y], Z) - g([X, Z], Y) - g([Y, Z], X).
 > $$
 
-We state this without proof; the full proof, and the entire development of the Levi-Civita connection (geodesics, parallel transport, curvature, exponential map) is the content of a future "Riemannian Geometry I" topic.
+We state this without proof; the full proof, and the entire development of the Levi-Civita connection ([[Def - Geodesic|geodesics]], parallel transport, curvature, exponential map) is the content of a future "Riemannian Geometry I" topic.
 
 ---
 
@@ -36,7 +36,7 @@ We state this without proof; the full proof, and the entire development of the L
 
 A Riemannian metric installs an inner product on every tangent space, which is enough for *static* notions — length, angle, distance, gradient. But for *dynamic* notions — how to differentiate a vector field along a curve, how to compare tangent vectors at different points, what a "straight line" is on a curved manifold — the metric alone is not enough. We need a **connection**: an additional piece of data that tells us how to differentiate vector fields.
 
-The trouble is that there are *many* connections on $TM$. The space of connections is an affine space (the difference of two connections is a tensor field, the **difference tensor**), so given any one connection, the others form a huge family parametrised by tensor fields. Choosing a connection is therefore choosing one out of an infinite-dimensional family. This is unsatisfactory: without a canonical choice, every construction depending on the connection (geodesics, curvature, parallel transport) becomes ambiguous.
+The trouble is that there are *many* connections on $TM$. The space of connections is an affine space (the difference of two connections is a tensor field, the **difference tensor**), so given any one connection, the others form a huge family parametrised by tensor fields. Choosing a connection is therefore choosing one out of an infinite-dimensional family. This is unsatisfactory: without a canonical choice, every construction depending on the connection ([[Def - Geodesic|geodesics]], curvature, parallel transport) becomes ambiguous.
 
 The fundamental theorem resolves this completely: among all connections, *exactly one* is "compatible with the metric" in the two precise senses of torsion-freeness and metric-compatibility. So the metric *selects* a canonical connection — the **Levi-Civita connection** — and all of Riemannian geometry (geodesics, curvature, exponential map, Bonnet–Myers, Cartan–Hadamard, ...) refers to this canonical choice.
 
@@ -177,7 +177,7 @@ Memorising this formula is a rite of passage; the symmetrisation pattern $(i, j,
 
 # Formal Proof
 
-The full proof is the content of a Riemannian Geometry course; we have provided the rederivation scaffold and lemma decomposition above. The full proof appears in Lee's *Riemannian Manifolds* (Theorem 5.10), do Carmo's *Riemannian Geometry* (Theorem 3.6), and most other standard references.
+The full proof is the content of a Riemannian Geometry course; we have provided the rederivation scaffold and lemma decomposition above. The full proof appears in Lee's *[[Def - Riemannian Manifold|Riemannian Manifolds]]* (Theorem 5.10), do Carmo's *Riemannian Geometry* (Theorem 3.6), and most other standard references.
 
 We do not include a complete formal proof here. The statement is the contribution to this chapter; the proof is the entry to the next.
 
@@ -185,7 +185,7 @@ We do not include a complete formal proof here. The statement is the contributio
 
 # Cross-Field Exercise Suggestions
 
-*1. The connection on a Lie group is determined by the metric (if bi-invariant).* For a bi-invariant Riemannian metric on a Lie group $G$, the Levi-Civita connection on left-invariant vector fields is $\nabla_X Y = \tfrac{1}{2}[X, Y]$. The geodesics through the identity are one-parameter subgroups, and the Riemannian exponential map equals the Lie group exponential. This is one of the cleanest examples of the Levi-Civita connection in action.
+*1. The connection on a Lie [[Def - Group|group]] is determined by the metric (if bi-invariant).* For a bi-invariant Riemannian metric on a Lie [[Def - Group|group]] $G$, the Levi-Civita connection on left-invariant vector fields is $\nabla_X Y = \tfrac{1}{2}[X, Y]$. The geodesics through the identity are one-parameter [[Def - Subgroup|subgroups]], and the Riemannian exponential map equals the Lie group exponential. This is one of the cleanest examples of the Levi-Civita connection in action.
 
 *2. Christoffel symbols in polar coordinates.* For $(\mathbb{R}^2 \setminus \{0\}, \bar g)$ in polar coordinates $(r, \theta)$, $g = dr^2 + r^2 d\theta^2$. Computing $\Gamma^k_{ij}$ gives the nonzero entries $\Gamma^r_{\theta\theta} = -r$, $\Gamma^\theta_{r\theta} = \Gamma^\theta_{\theta r} = 1/r$. This is the canonical first computation that illustrates how Christoffel symbols capture the "non-trivial" part of the connection in non-Cartesian coordinates.
 

@@ -12,7 +12,7 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $G$ be a finite group and let $p$ be a prime dividing $|G|$. Prove **Cauchy's theorem**: $G$ contains an element of order exactly $p$.
+Let $G$ be a finite [[Def - Group|group]] and let $p$ be a prime dividing $|G|$. Prove **Cauchy's theorem**: $G$ contains an element of order exactly $p$.
 
 You should give **McKay's proof**: consider the set of $p$-tuples of elements of $G$ whose product is the identity, let the cyclic group $\mathbb{Z}/p$ act on it by cyclically rotating the coordinates, and count fixed points.
 
@@ -129,7 +129,7 @@ By the orbit-stabiliser theorem each orbit size divides $|\mathbb{Z}/p| = p$; as
 Counting $|X|$ over its orbits modulo $p$, the size-$p$ orbits contribute multiples of $p$, so $|F| \equiv |X| \equiv 0 \pmod p$. The tuple $(e, \dots, e)$ shows $|F| \geq 1$, hence $|F| \geq p \geq 2$, so $F$ contains some $g \neq e$. That $g$ satisfies $g^p = e$ with $g \neq e$, so its order divides $p$ and is not $1$ — its order is exactly $p$.
 
 > [!note]- Derivation
-> *The fixed-point count is $\equiv 0 \pmod p$.* The orbits of the $\mathbb{Z}/p$-action [[Def - Orbit and Stabiliser|partition]] $X$, so $|X|$ is the sum of all orbit sizes. Group the orbits by size, which by Step 3 is $1$ or $p$. If there are $|F|$ orbits of size $1$ and $m$ orbits of size $p$, then
+> *The fixed-point count is $\equiv 0 \pmod p$.* The orbits of the $\mathbb{Z}/p$-action [[Def - Orbit and Stabiliser|partition]] $X$, so $|X|$ is the sum of all orbit sizes. [[Def - Group|Group]] the orbits by size, which by Step 3 is $1$ or $p$. If there are $|F|$ orbits of size $1$ and $m$ orbits of size $p$, then
 > $$|X| = \underbrace{1 \cdot |F|}_{\text{size-}1\text{ orbits}} + \underbrace{p \cdot m}_{\text{size-}p\text{ orbits}}.$$
 > Reducing modulo $p$, the term $p \cdot m$ vanishes, so $|X| \equiv |F| \pmod p$. By Step 1, $p \mid |X|$, i.e. $|X| \equiv 0 \pmod p$. Therefore
 > $$|F| \equiv 0 \pmod p.$$

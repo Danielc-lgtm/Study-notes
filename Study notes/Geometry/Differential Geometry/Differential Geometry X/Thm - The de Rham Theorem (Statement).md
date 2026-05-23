@@ -22,9 +22,9 @@ $M$ is a smooth manifold. $H^k_{dR}(M)$ is the de Rham cohomology — see [[Def 
 
 In words: *integration of closed forms over smooth cycles gives a natural isomorphism between de Rham cohomology and singular cohomology with real coefficients.* Two paradigmatically different definitions of cohomology — one from smooth structure and calculus, the other from topology and combinatorics — produce the same answer.
 
-> **Corollary (de Rham cohomology is a topological invariant).** Homeomorphic smooth manifolds have isomorphic de Rham cohomology. More: homotopy equivalent smooth manifolds have isomorphic de Rham cohomology. The de Rham cohomology, although defined smoothly, depends only on the homotopy type.
+> **Corollary (de Rham cohomology is a topological invariant).** Homeomorphic smooth manifolds have isomorphic de Rham cohomology. More: [[Def - Homotopy|homotopy]] equivalent smooth manifolds have isomorphic de Rham cohomology. The de Rham cohomology, although defined smoothly, depends only on the [[Def - Homotopy|homotopy]] type.
 
-> **Corollary (Betti numbers from forms).** The dimensions $b_k(M) := \dim_\mathbb{R} H^k_{dR}(M)$ are the **Betti numbers** of $M$ — the topological invariants whose alternating sum is the **Euler characteristic** $\chi(M) = \sum_k (-1)^k b_k$.
+> **Corollary (Betti numbers from forms).** The [[Def - Dimension|dimensions]] $b_k(M) := \dim_\mathbb{R} H^k_{dR}(M)$ are the **Betti numbers** of $M$ — the topological invariants whose alternating sum is the **Euler characteristic** $\chi(M) = \sum_k (-1)^k b_k$.
 
 We state but do not prove this theorem; the proof — a Mayer–Vietoris induction on good covers, reducing to the case of Euclidean balls where the Poincaré lemma trivializes both sides — is given in Lee Chapter 18. The point of this page is the statement and its consequences for our overall picture of cohomology.
 
@@ -116,16 +116,16 @@ The conceptual obstacle is recognizing that the smooth-structure-dependent de Rh
    - *Hint:* Use the Poincaré lemma for de Rham and the contractibility of $U$ for singular.
    - *Why needed:* The base case for the induction.
 
-4. **Naturality and commutativity with Mayer–Vietoris.** $\mathcal{I}$ commutes with pullback by smooth maps, with the connecting homomorphisms of de Rham and singular Mayer–Vietoris sequences. Verify both naturalities.
+4. **Naturality and commutativity with Mayer–Vietoris.** $\mathcal{I}$ commutes with pullback by smooth maps, with the connecting [[Def - Homomorphism|homomorphisms]] of de Rham and singular Mayer–Vietoris sequences. Verify both naturalities.
    - *Hint:* Naturality with respect to maps follows from pullback of forms equals pullback of cycles; commutativity with Mayer–Vietoris is a chain-level verification using the explicit form of $\delta$.
    - *Why needed:* These are needed to apply the five lemma.
 
 5. **Five lemma argument.** Given Mayer–Vietoris cover $U \cup V = M$ with $\mathcal{I}$ an isomorphism on $U$, $V$, $U \cap V$ — by the commutative diagram of Mayer–Vietoris sequences, the five lemma forces $\mathcal{I}$ to be an isomorphism on $M$.
-   - *Hint:* The five lemma is a standard fact of homological algebra: in a commutative diagram of long exact sequences, if four out of five vertical maps are isomorphisms, the fifth is too.
+   - *Hint:* The five lemma is a standard fact of homological algebra: in a commutative diagram of long exact sequences, if four out of five vertical maps are [[Def - Isomorphism|isomorphisms]], the fifth is too.
    - *Why needed:* This is the inductive step.
 
 6. **Finite good cover induction.** Every smooth manifold admits a good cover (by convex open sets, all finite intersections convex). For compact $M$, the cover is finite; iterate the five lemma to propagate from convex to $M$. For non-compact $M$, use a partition-of-unity argument and a colimit construction (Step 4 in Lee's proof).
-   - *Hint:* Existence of a good cover comes from any Riemannian metric on $M$ — geodesic balls work, by `Theorem 1.34` in Lee.
+   - *Hint:* Existence of a good cover comes from any Riemannian metric on $M$ — [[Def - Geodesic|geodesic]] balls work, by `Theorem 1.34` in Lee.
    - *Why needed:* This completes the proof.
 
 ---

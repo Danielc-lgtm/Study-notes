@@ -31,7 +31,7 @@ two factorisations of $6$ into irreducibles whose factors are pairwise non-assoc
 
 > In an integral domain where every non-zero non-unit factors into irreducibles, the factorisation is unique (clause (ii) holds) **if and only if** every irreducible element is prime.
 
-This equivalence is why "in a UFD, irreducible $=$ prime" is not an extra axiom but a *theorem* — it is logically the same as the uniqueness clause. It also explains the role of the [[Def - Principal Ideal Domain|principal ideal domain]] in the chapter: a PID is where one *proves* irreducible $\Rightarrow$ prime (via Bézout on the ideal $(p, a)$) and where the ascending chain condition delivers existence, so [[Thm - Principal Ideal Domains are Unique Factorization Domains|every PID is a UFD]].
+This equivalence is why "in a UFD, irreducible $=$ prime" is not an extra axiom but a *theorem* — it is logically the same as the uniqueness clause. It also explains the role of the [[Def - Principal Ideal Domain|principal ideal domain]] in the chapter: a PID is where one *proves* irreducible $\Rightarrow$ prime (via Bézout on the [[Def - Ideal|ideal]] $(p, a)$) and where the ascending chain condition delivers existence, so [[Thm - Principal Ideal Domains are Unique Factorization Domains|every PID is a UFD]].
 
 To see the definition is exactly right, weigh the alternatives. If you defined a UFD by "every element factors into *primes* uniquely" you would have a correct but circular-feeling definition, since you would then need primes to exist in abundance. The chosen definition factors into *irreducibles* — the notion that is *easy to verify* (you just check the element does not split) — and then *derives* that irreducibles are prime as a consequence of uniqueness. That is the right division of labour: assume the cheap-to-check thing, conclude the powerful thing.
 
@@ -76,7 +76,7 @@ Compared with linear algebra, factoring into irreducibles is the analogue of exp
 
 **Is an instance — every principal ideal domain.** By [[Thm - Principal Ideal Domains are Unique Factorization Domains]], every PID is a UFD. So $\mathbb{Z}$, $F[X]$, and the Gaussian integers $\mathbb{Z}[i]$ are all unique factorization domains, each via the route Euclidean $\Rightarrow$ PID $\Rightarrow$ UFD.
 
-**Is an instance — $\mathbb{Z}[X]$, a UFD that is not a PID.** The polynomial ring over the integers is a unique factorization domain (Gauss's theorem: if $R$ is a UFD then so is $R[X]$). But it is *not* a principal ideal domain — the ideal $(2, X)$ is not principal. So $\mathbb{Z}[X]$ separates the two classes: it witnesses that the inclusion (PID) $\subsetneq$ (UFD) is strict, and that unique factorisation is genuinely weaker than "every ideal principal".
+**Is an instance — $\mathbb{Z}[X]$, a UFD that is not a PID.** The polynomial [[Def - Ring|ring]] over the integers is a unique factorization domain (Gauss's theorem: if $R$ is a UFD then so is $R[X]$). But it is *not* a principal ideal domain — the ideal $(2, X)$ is not principal. So $\mathbb{Z}[X]$ separates the two classes: it witnesses that the inclusion (PID) $\subsetneq$ (UFD) is strict, and that unique factorisation is genuinely weaker than "every ideal principal".
 
 **Is NOT an instance — $\mathbb{Z}[\sqrt{-5}]$.** The central non-example of the chapter. In $R = \mathbb{Z}[\sqrt{-5}]$,
 $$6 = 2 \cdot 3 = (1 + \sqrt{-5})(1 - \sqrt{-5}).$$

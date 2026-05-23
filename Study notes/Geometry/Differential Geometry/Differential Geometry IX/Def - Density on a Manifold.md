@@ -43,7 +43,7 @@ This is the strategic content of densities: they trade the *sign* of integration
 
 # The Definition
 
-Let $V$ be a real vector space of dimension $n \geq 1$.
+Let $V$ be a real vector space of [[Def - Dimension|dimension]] $n \geq 1$.
 
 **Density at a point (the algebraic version).** A **density** (of order 1) on $V$ is a function $\mu : V^n \to \mathbb{R}$ satisfying:
 - (Alternation) $\mu(v_1, \ldots, v_n) = 0$ if $v_1, \ldots, v_n$ are linearly dependent.
@@ -102,7 +102,7 @@ In **mathematical physics**, half-densities ($s = 1/2$ densities) are the natura
 
 **Is an instance — densities on $\mathbb{RP}^n$ for $n$ even.** $\mathbb{RP}^{2k}$ is non-orientable but admits a positive density. With the round metric inherited from $S^{2k}$ via the antipodal quotient, the Riemannian density $|\omega_g|$ exists; its total integral is half the area of $S^{2k}$ (since $\mathbb{RP}^{2k}$ is a 2-to-1 quotient).
 
-**Is an instance — Haar measure on a (not necessarily orientable) topological group.** On any locally compact topological group $G$, the Haar measure is a left-invariant Radon measure unique up to scaling. For a Lie group with a left-invariant orientation, it is induced by the left-invariant volume form; in general, it is induced by a left-invariant *density*.
+**Is an instance — Haar measure on a (not necessarily orientable) topological [[Def - Group|group]].** On any locally compact topological [[Def - Group|group]] $G$, the Haar measure is a left-invariant Radon measure unique up to scaling. For a Lie group with a left-invariant orientation, it is induced by the left-invariant volume form; in general, it is induced by a left-invariant *density*.
 
 **Is NOT an instance — a top-form on the Möbius strip.** As established: no nowhere-vanishing 2-form exists on the Möbius strip, so no top-form integration. But the *density* $|dx\wedge dy|$ (the absolute value of a candidate top-form that would-fail-to-glue) does exist, because absolute values glue under sign-flipping transitions.
 

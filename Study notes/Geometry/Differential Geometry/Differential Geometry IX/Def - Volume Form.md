@@ -34,7 +34,7 @@ The crucial extra requirement is that the volume meter be **nowhere zero**. Why?
 
 # The Definition
 
-Let $M$ be a smooth manifold of dimension $n \geq 1$.
+Let $M$ be a smooth manifold of [[Def - Dimension|dimension]] $n \geq 1$.
 
 **Volume form.** A **volume form** (also called an **orientation form** or a **top-degree form**) on $M$ is a smooth nowhere-vanishing $n$-form $\omega \in \Omega^n(M)$.
 
@@ -54,7 +54,7 @@ A volume form is a **nowhere-vanishing section of the line bundle $\Lambda^n(T^*
 
 **The space of all volume forms (with no orientation chosen)** has the structure of a $C^\infty(M, \mathbb{R}^*)$-torsor — any two are related by a nowhere-vanishing scalar function. Restricting to *positively oriented* volume forms gives a $C^\infty(M, \mathbb{R}_{>0})$-torsor — the convex cone of positive volume forms.
 
-In the language of **affine bundles** / **principal bundles**: choosing a volume form on an oriented manifold is a section of a principal $\mathbb{R}_{>0}$-bundle. Demanding the integral of the volume form to be 1 (when $M$ is compact) cuts this down to a single canonical representative — this is what produces the [[#Unlocked by This|Haar volume form]] on a compact Lie group.
+In the language of **affine bundles** / **principal bundles**: choosing a volume form on an oriented manifold is a section of a principal $\mathbb{R}_{>0}$-bundle. Demanding the integral of the volume form to be 1 (when $M$ is compact) cuts this down to a single canonical representative — this is what produces the [[#Unlocked by This|Haar volume form]] on a compact Lie [[Def - Group|group]].
 
 ---
 
@@ -76,7 +76,7 @@ On a **Riemannian manifold**, the metric singles out a canonical equivalence cla
 
 **Is an instance — the angular form $d\theta$ on $S^1$.** On the circle $S^1$, the 1-form $d\theta$ (locally well-defined, although $\theta$ itself is only defined modulo $2\pi$) is nowhere zero. It is the standard volume form / length form on $S^1$, with total integral $\int_{S^1}d\theta = 2\pi$.
 
-**Is an instance — the wedge of a left-invariant coframe on a Lie group.** If $G$ is a Lie group of dimension $n$ with basis of left-invariant 1-forms $\theta^1, \ldots, \theta^n$, then $\omega_{Haar} = \theta^1\wedge\cdots\wedge\theta^n$ is left-invariant, nowhere zero, hence a volume form. On compact $G$, normalizing $\int_G\omega_{Haar} = 1$ singles it out canonically — this is the **Haar volume form**.
+**Is an instance — the wedge of a left-invariant coframe on a Lie [[Def - Group|group]].** If $G$ is a Lie group of [[Def - Dimension|dimension]] $n$ with basis of left-invariant 1-forms $\theta^1, \ldots, \theta^n$, then $\omega_{Haar} = \theta^1\wedge\cdots\wedge\theta^n$ is left-invariant, nowhere zero, hence a volume form. On compact $G$, normalizing $\int_G\omega_{Haar} = 1$ singles it out canonically — this is the **Haar volume form**.
 
 **Is an instance — the symplectic top-power $\omega^n / n!$ on a symplectic manifold.** If $(M^{2n}, \omega)$ is a symplectic manifold (closed nondegenerate 2-form), then $\omega^n = \omega\wedge\cdots\wedge\omega$ ($n$ factors) is a volume form on $M^{2n}$ — the **symplectic volume form** or **Liouville volume**. Nondegeneracy of $\omega$ is exactly what guarantees $\omega^n$ is nowhere zero.
 

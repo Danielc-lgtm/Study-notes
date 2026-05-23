@@ -50,7 +50,7 @@ When the additional regularity is required, the map $X : M \to TM$ is called **c
 
 A vector field on $M$ is precisely a **section of the tangent bundle** $\pi : TM \to M$ in the category of smooth manifolds (or topological spaces, when no regularity is imposed). In categorical language: $\pi : TM \to M$ is a morphism in the slice category $\mathbf{Man}/M$, and a section is a right inverse — a morphism $X : M \to TM$ with $\pi \circ X = \mathrm{id}_M$.
 
-This formulation generalizes immediately to other bundles. Sections of the cotangent bundle $T^*M$ are *covector fields* or *one-forms*; sections of tensor product bundles are *tensor fields*; sections of a general vector bundle $E \to M$ are simply called *sections of $E$*. The whole apparatus of this chapter — module structure, Lie bracket, derivations — extends in some form to all of these, with $TM$ being the prototypical and richest case because of the bracket. See [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]].
+This formulation generalizes immediately to other bundles. Sections of the cotangent bundle $T^*M$ are *covector fields* or *one-forms*; sections of tensor product bundles are *tensor fields*; sections of a general vector bundle $E \to M$ are simply called *sections of $E$*. The whole apparatus of this chapter — [[Def - Module|module]] structure, Lie bracket, derivations — extends in some form to all of these, with $TM$ being the prototypical and richest case because of the bracket. See [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]].
 
 ---
 
@@ -72,7 +72,7 @@ In linear algebra terms, a vector field $X$ is a **choice of element from each f
 
 **Is an instance: the rotation field on $\mathbb{R}^2$.** Define $W = -y\,\partial/\partial x + x\,\partial/\partial y$. Its integral curves are circles centred at the origin, traversed counterclockwise. The flow is rotation: $\phi_t(x, y) = (x\cos t - y\sin t, x\sin t + y\cos t)$.
 
-**Is an instance: the velocity field of a flow.** Given any smooth one-parameter family of diffeomorphisms $\phi_t : M \to M$ with $\phi_0 = \mathrm{id}$, the assignment $p \mapsto \frac{d}{dt}\big|_{t=0} \phi_t(p)$ is a smooth vector field on $M$. The flow recovers the vector field by differentiation at $t = 0$ — see [[Def - Flow of a Vector Field]].
+**Is an instance: the velocity field of a flow.** Given any smooth one-parameter family of [[Def - Diffeomorphism|diffeomorphisms]] $\phi_t : M \to M$ with $\phi_0 = \mathrm{id}$, the assignment $p \mapsto \frac{d}{dt}\big|_{t=0} \phi_t(p)$ is a smooth vector field on $M$. The flow recovers the vector field by differentiation at $t = 0$ — see [[Def - Flow of a Vector Field]].
 
 **Is an instance: the angle vector field $d/d\theta$ on $S^1$.** Choose an angle coordinate $\theta$ on any proper open subset of $S^1$; the coordinate vector field $d/d\theta$ extends to a globally defined nonvanishing smooth vector field on $S^1$ (because $d\theta$ is determined up to additive constants by any choice of angle coordinate). $S^1$ is therefore *parallelizable*: it admits a global nonvanishing vector field.
 

@@ -66,7 +66,7 @@ $$
 $$
 Positive $\kappa_g$ means the curve turns left (relative to the orientation); negative means right.
 
-**Characterisation of geodesics.** A smooth curve $C$ on $M$ (parametrised by arc length) is a [[Def - Geodesic|geodesic]] iff $\kappa_g \equiv 0$, iff $\nabla T/ds \equiv 0$ (the tangent is parallel-transported along $C$).
+**Characterisation of [[Def - Geodesic|geodesics]].** A smooth curve $C$ on $M$ (parametrised by arc length) is a [[Def - Geodesic|geodesic]] iff $\kappa_g \equiv 0$, iff $\nabla T/ds \equiv 0$ (the tangent is parallel-transported along $C$).
 
 ---
 

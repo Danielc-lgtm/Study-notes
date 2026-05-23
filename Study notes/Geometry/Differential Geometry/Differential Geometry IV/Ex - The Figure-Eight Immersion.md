@@ -19,15 +19,15 @@ $$\beta(t) = (\sin 2t, \sin t).$$
 
 (b) Show that the image $S = \beta((-\pi, \pi)) \subseteq \mathbb{R}^2$ is *not* an embedded submanifold of $\mathbb{R}^2$. In particular, $\beta$ is not a smooth embedding.
 
-(c) Show that $S$, equipped with the topology and smooth structure that make $\beta$ a diffeomorphism onto $S$ (i.e., the pulled-back topology from $(-\pi, \pi)$), is an **immersed submanifold** of $\mathbb{R}^2$ diffeomorphic to $(-\pi, \pi) \cong \mathbb{R}$.
+(c) Show that $S$, equipped with the topology and smooth structure that make $\beta$ a [[Def - Diffeomorphism|diffeomorphism]] onto $S$ (i.e., the pulled-back topology from $(-\pi, \pi)$), is an **immersed submanifold** of $\mathbb{R}^2$ diffeomorphic to $(-\pi, \pi) \cong \mathbb{R}$.
 
-(d) Verify that the immersed-submanifold structure on $S$ from part (c) is *not* compatible with the subspace topology from $\mathbb{R}^2$: the two topologies disagree.
+(d) Verify that the immersed-submanifold structure on $S$ from part (c) is *not* compatible with the [[Def - Subspace|subspace]] topology from $\mathbb{R}^2$: the two topologies disagree.
 
 This is the canonical counterexample showing that injective smooth immersions are not always embeddings. It is the simplest illustration of the [[Def - Immersed Submanifold|immersed-but-not-embedded]] phenomenon and a key example in the foundations of submanifold theory.
 
 **Recall:**
 
-An **immersion** has injective differential at every point; an **embedding** is an immersion that is also a topological embedding (homeomorphism onto image with the subspace topology). For [[Def - Immersion, Submersion, and Embedding|the precise definitions]], see the topic page.
+An **immersion** has injective differential at every point; an **embedding** is an immersion that is also a topological embedding ([[Def - Homeomorphism|homeomorphism]] onto image with the subspace topology). For [[Def - Immersion, Submersion, and Embedding|the precise definitions]], see the topic page.
 
 The image of an embedding is an [[Def - Embedded Submanifold|embedded submanifold]] of the target; the image of an injective immersion (with the pulled-back topology) is an [[Def - Immersed Submanifold|immersed submanifold]] of the target. The two notions coincide when the parametrising map is also a topological embedding.
 
@@ -114,7 +114,7 @@ The proof breaks into four parts. (a) Verify $\beta$ is an injective smooth imme
 >
 > In the subspace topology of $\mathbb{R}^2$, the crossing point $(0, 0) \in S$ has neighbourhoods that include pieces of *both* branches — but the two branches have different tangent directions $(2, 1)$ and $(2, -1)$, which are linearly independent. So any small ball around $(0, 0)$ intersected with $S$ contains points from two distinct tangent lines, meaning $S$ near $(0, 0)$ has a "two-tangent-line" structure — not the "one-tangent-line" structure of a smooth $1$-submanifold.
 >
-> More precisely: a $1$-submanifold has a unique tangent line at each point. If $S$ were a $1$-submanifold of $\mathbb{R}^2$, $T_{(0,0)} S$ would be a $1$-dimensional subspace of $\mathbb{R}^2$. But sequences in $S$ from the two branches have velocities approaching $(2, 1)$ and $(2, -1)$ respectively, both of which would have to be in $T_{(0,0)} S$ — forcing $T_{(0,0)} S$ to contain both directions, hence have dimension $\geq 2$. Contradiction. So $S$ is not an embedded $1$-submanifold of $\mathbb{R}^2$.
+> More precisely: a $1$-submanifold has a unique tangent line at each point. If $S$ were a $1$-submanifold of $\mathbb{R}^2$, $T_{(0,0)} S$ would be a $1$-dimensional subspace of $\mathbb{R}^2$. But sequences in $S$ from the two branches have velocities approaching $(2, 1)$ and $(2, -1)$ respectively, both of which would have to be in $T_{(0,0)} S$ — forcing $T_{(0,0)} S$ to contain both directions, hence have [[Def - Dimension|dimension]] $\geq 2$. Contradiction. So $S$ is not an embedded $1$-submanifold of $\mathbb{R}^2$.
 
 **Step (c): The image $S$ admits an immersed-submanifold structure.**
 
@@ -170,4 +170,4 @@ The proof breaks into four parts. (a) Verify $\beta$ is an injective smooth imme
 
 **The general pattern: bounded domain + unboundary-approaches.** The figure-eight fails to be embedded because the parametrisation approaches the same limit point $(0,0)$ from two different ends of the open domain $(-\pi, \pi)$. The general pattern: when a parametrisation's image has limit points approached from sequences that diverge in the domain, the immersion is not an embedding. This is what compactness of the domain prevents: a compact domain has no "escape to the boundary".
 
-**Cross-link to companion exercises.** This is the canonical injective-immersion-non-embedding. The companion [[Ex - An Injective Immersion is Not Always an Embedding]] develops both the figure-eight and the irrational-line-on-torus examples in parallel; this exercise focuses on the figure-eight in detail. The lessons from this example recur in Lie theory (closed-vs-non-closed Lie subgroups), foliation theory (leaves can be densely wound), and dynamical systems (orbits can be quasi-periodic).
+**Cross-link to companion exercises.** This is the canonical injective-immersion-non-embedding. The companion [[Ex - An Injective Immersion is Not Always an Embedding]] develops both the figure-eight and the irrational-line-on-torus examples in parallel; this exercise focuses on the figure-eight in detail. The lessons from this example recur in Lie theory (closed-vs-non-closed Lie [[Def - Subgroup|subgroups]]), [[Def - Foliation|foliation]] theory (leaves can be densely wound), and dynamical systems (orbits can be quasi-periodic).

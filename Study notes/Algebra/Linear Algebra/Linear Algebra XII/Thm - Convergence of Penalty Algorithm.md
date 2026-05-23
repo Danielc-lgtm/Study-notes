@@ -129,7 +129,7 @@ The proof has three subtleties. **First**, the assertion that the inner subprobl
 > [!note]- Lemma 2: Boundedness of the multiplier sequence
 > **Statement:** Under the hypotheses of the theorem, the sequence $z^{(k+1)} = 2\mu^{(k)} g(x^{(k+1)})$ is bounded.
 >
-> **Hint:** From the KKT stationarity, $Dg^T z = -2 Df^T f$, so $z$ is determined (modulo nullspace of $Dg^T$) by the bounded right-hand side; LICQ ensures $Dg^T$ has trivial nullspace on the relevant subspace.
+> **Hint:** From the KKT stationarity, $Dg^T z = -2 Df^T f$, so $z$ is determined (modulo nullspace of $Dg^T$) by the bounded right-hand side; LICQ ensures $Dg^T$ has trivial nullspace on the relevant [[Def - Subspace|subspace]].
 >
 > **Why needed:** Boundedness allows extraction of a convergent subsequence in the next lemma, and gives the $O(1/\mu)$ feasibility rate as a corollary.
 >

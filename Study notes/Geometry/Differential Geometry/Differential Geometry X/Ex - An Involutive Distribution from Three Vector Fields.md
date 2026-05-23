@@ -44,7 +44,7 @@ $$[X, Y]^k = \sum_j (X^j\partial_jY^k - Y^j\partial_jX^k).$$
 
 1. **Test involutivity by Lie brackets on a local frame** (operation 4 from the topic page). Compute the three brackets $[X, Y]$, $[X, Z]$, $[Y, Z]$ and check membership in $\mathrm{span}(X, Y, Z)$.
 
-2. **Generate a subgroup/subspace from elements you possess** (analogous to operation 8). The frame $\{X, Y, Z\}$ generates the distribution $D = \mathrm{span}(X, Y, Z)$ at every point.
+2. **Generate a [[Def - Subgroup|subgroup]]/[[Def - Subspace|subspace]] from elements you possess** (analogous to operation 8). The frame $\{X, Y, Z\}$ generates the distribution $D = \mathrm{span}(X, Y, Z)$ at every point.
 
 3. **Invoke Frobenius to manufacture integral manifolds** (operation 6 from the topic page). If $D$ is involutive, [[Thm - The Frobenius Theorem|Frobenius]] guarantees a flat chart; we then find functions whose level sets are the integral manifolds.
 
@@ -82,7 +82,7 @@ The plan: verify the three fields are linearly independent, compute the three pa
 > $$\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & x & y \end{pmatrix}.$$
 > The top three rows are the identity, so the columns are linearly independent at every point — for any $(x, y, z, w)$.
 >
-> Hence $D = \mathrm{span}(X, Y, Z)$ is a smooth rank-$3$ subbundle of $T\mathbb{R}^4$.
+> Hence $D = \mathrm{span}(X, Y, Z)$ is a smooth rank-$3$ [[Def - Subbundle|subbundle]] of $T\mathbb{R}^4$.
 
 **Step 2: Compute the three Lie brackets.**
 

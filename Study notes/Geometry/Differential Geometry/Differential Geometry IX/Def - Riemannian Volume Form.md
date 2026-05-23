@@ -43,7 +43,7 @@ This is the famous formula. It expresses $\omega_g$ entirely in terms of metric 
 
 # The Definition
 
-Let $(M, g)$ be an oriented Riemannian manifold of dimension $n \geq 1$, possibly with boundary.
+Let $(M, g)$ be an oriented Riemannian manifold of [[Def - Dimension|dimension]] $n \geq 1$, possibly with boundary.
 
 **Riemannian volume form.** The **Riemannian volume form** $\omega_g \in \Omega^n(M)$ is the unique positively-oriented smooth $n$-form on $M$ satisfying
 $$\omega_g(E_1, \ldots, E_n) = 1$$
@@ -73,7 +73,7 @@ On Minkowski space $(\mathbb{R}^4, \eta)$ with $\eta = \mathrm{diag}(-1, 1, 1, 1
 
 # Categorical / Structural Definition
 
-The Riemannian volume form is the **canonical section of the orientation line bundle $\Lambda^n(T^*M)$ determined by the Riemannian metric and orientation**. More structurally: a Riemannian metric reduces the structure group of $TM$ from $\mathrm{GL}(n, \mathbb{R})$ to $\mathrm{O}(n)$; an orientation further reduces it to $\mathrm{SO}(n)$; and $\mathrm{SO}(n)$ has a canonical homomorphism $\det : \mathrm{SO}(n) \to \{1\}$ (the trivial map, since $\det = 1$ on $\mathrm{SO}(n)$). The associated bundle $\Lambda^n(T^*M)$ becomes the trivial line bundle, and the constant section $1$ corresponds to the Riemannian volume form.
+The Riemannian volume form is the **canonical section of the orientation line bundle $\Lambda^n(T^*M)$ determined by the Riemannian metric and orientation**. More structurally: a Riemannian metric reduces the structure [[Def - Group|group]] of $TM$ from $\mathrm{GL}(n, \mathbb{R})$ to $\mathrm{O}(n)$; an orientation further reduces it to $\mathrm{SO}(n)$; and $\mathrm{SO}(n)$ has a canonical homomorphism $\det : \mathrm{SO}(n) \to \{1\}$ (the trivial map, since $\det = 1$ on $\mathrm{SO}(n)$). The associated bundle $\Lambda^n(T^*M)$ becomes the trivial line bundle, and the constant section $1$ corresponds to the Riemannian volume form.
 
 In the **Hodge star** language: on an oriented Riemannian $n$-manifold, the Hodge star $\star : \Omega^k \to \Omega^{n-k}$ is defined by $\alpha\wedge\star\beta = \langle\alpha,\beta\rangle_g\,\omega_g$. The volume form $\omega_g$ enters this formula as the "natural normalization" — it is the Hodge dual of the constant function $1$: $\omega_g = \star 1$.
 
@@ -111,7 +111,7 @@ In **information geometry**, the Fisher information metric on a statistical mani
 
 **Is NOT an instance — on a non-orientable Riemannian manifold.** The Möbius strip with a metric admits a *density* $|\omega_g|$ but no *form* $\omega_g$. The non-orientability prevents the existence of the form; only the density survives.
 
-**Corollary — local isometries pull back the volume form.** If $F : (M, g_M) \to (N, g_N)$ is a local isometry of oriented Riemannian manifolds, then $F^*\omega_{g_N} = \omega_{g_M}$. In particular, the volume of $M$ equals the volume of $F(M)$ counted with multiplicity. This is the form-side statement of "isometries preserve volume".
+**Corollary — local [[Def - Isometry|isometries]] pull back the volume form.** If $F : (M, g_M) \to (N, g_N)$ is a local isometry of oriented Riemannian manifolds, then $F^*\omega_{g_N} = \omega_{g_M}$. In particular, the volume of $M$ equals the volume of $F(M)$ counted with multiplicity. This is the form-side statement of "[[Def - Isometry|isometries]] preserve volume".
 
 **Corollary — conformal rescaling.** Under $g \mapsto e^{2\phi}g$, the volume form scales as $\omega_g \mapsto e^{n\phi}\omega_g$. The volume of a compact region $K$ scales as $\mathrm{vol}_{\widetilde g}(K) = \int_K e^{n\phi}\omega_g$. This is the conformal-invariance-or-lack-thereof discussion of integrals.
 

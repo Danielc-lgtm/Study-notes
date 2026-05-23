@@ -32,7 +32,7 @@ This is the central structural payoff of Hodge theory. The Hodge decomposition t
 
 Three consequences make this the most-used theorem in the chapter.
 
-**First, harmonic representatives are canonical.** A de Rham class $[\omega]$ is an equivalence class of closed forms — an infinite-dimensional affine subspace, with no preferred member. After choosing a Riemannian metric, exactly one form in the class satisfies $\Delta\omega = 0$. The choice is not arbitrary: the harmonic representative is the *$L^2$-minimum* of the class, the unique form that achieves the minimum norm subject to the constraint $[\omega] = c$. It is also the unique form satisfying both $d\omega = 0$ (closed, automatic since in the class) and $\delta\omega = 0$ (coclosed, the variational equation).
+**First, harmonic representatives are canonical.** A de Rham class $[\omega]$ is an equivalence class of closed forms — an infinite-dimensional affine [[Def - Subspace|subspace]], with no preferred member. After choosing a Riemannian metric, exactly one form in the class satisfies $\Delta\omega = 0$. The choice is not arbitrary: the harmonic representative is the *$L^2$-minimum* of the class, the unique form that achieves the minimum norm subject to the constraint $[\omega] = c$. It is also the unique form satisfying both $d\omega = 0$ (closed, automatic since in the class) and $\delta\omega = 0$ (coclosed, the variational equation).
 
 **Second, the Betti numbers become PDE-theoretic.** The dimension $b_k(M) = \dim H^k_{dR}(M)$ is, by this theorem, equal to the dimension of the solution space of an elliptic PDE: $b_k = \dim\ker\Delta$. This converts a topological invariant into an analytic one. It is the foundation of **spectral geometry**: the Betti numbers are the multiplicities of the eigenvalue $0$ in the spectrum of $\Delta$, and the positive-eigenvalue part of the spectrum encodes metric information (lengths, curvatures).
 
@@ -117,7 +117,7 @@ Take the Hodge decomposition of a closed form, observe that closedness forces th
    - *Hint:* Linearity is immediate; bijectivity comes from steps 2 and 3.
    - *Why needed:* Concludes the isomorphism.
 
-5. **Dimensions.** $\dim\mathcal{H}^k = \dim H^k_{dR} = b_k$.
+5. **[[Def - Dimension|Dimensions]].** $\dim\mathcal{H}^k = \dim H^k_{dR} = b_k$.
    - *Hint:* Immediate from the isomorphism, using the definition of the Betti number.
    - *Why needed:* Provides the most-used corollary: $\dim\mathcal{H}^k$ is a topological invariant.
 

@@ -13,14 +13,14 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $\mathbb{F}$ be a field and let $n \geq 1$. Write $\mathrm{GL}_n(\mathbb{F})$ for the group of invertible $n \times n$ matrices over $\mathbb{F}$ under multiplication, and $\mathrm{SL}_n(\mathbb{F})$ for the subgroup of matrices of determinant $1$. Write $\mathbb{F}^\times = \mathbb{F} \setminus \{0\}$ for the group of nonzero elements of $\mathbb{F}$ under multiplication.
+Let $\mathbb{F}$ be a field and let $n \geq 1$. Write $\mathrm{GL}_n(\mathbb{F})$ for the [[Def - Group|group]] of invertible $n \times n$ matrices over $\mathbb{F}$ under multiplication, and $\mathrm{SL}_n(\mathbb{F})$ for the [[Def - Subgroup|subgroup]] of matrices of determinant $1$. Write $\mathbb{F}^\times = \mathbb{F} \setminus \{0\}$ for the group of nonzero elements of $\mathbb{F}$ under multiplication.
 
-Prove that $\mathrm{SL}_n(\mathbb{F})$ is a normal subgroup of $\mathrm{GL}_n(\mathbb{F})$ and that
+Prove that $\mathrm{SL}_n(\mathbb{F})$ is a normal [[Def - Subgroup|subgroup]] of $\mathrm{GL}_n(\mathbb{F})$ and that
 $$\mathrm{GL}_n(\mathbb{F}) \big/ \mathrm{SL}_n(\mathbb{F}) \;\cong\; \mathbb{F}^\times.$$
 
 **Recall:**
 
-The problem mentions a quotient, so the objects to have in mind are homomorphisms, their kernels and images, normality, and the quotient group.
+The problem mentions a quotient, so the objects to have in mind are [[Def - Homomorphism|homomorphisms]], their kernels and images, normality, and the quotient group.
 
 ![[Def - Homomorphism#The Definition]]
 
@@ -28,17 +28,17 @@ The problem mentions a quotient, so the objects to have in mind are homomorphism
 
 The two facts about kernels and images used below are that $\ker\varphi$ is always a [[Def - Normal Subgroup|normal subgroup]] of $G$, and that $\varphi$ is surjective exactly when $\operatorname{im}\varphi$ is the whole codomain.
 
-A [[Def - Quotient Group|quotient group]] $G/N$, defined when $N \trianglelefteq G$, is the group whose elements are the cosets $gN$, with multiplication $(g_1 N)(g_2 N) = g_1 g_2 N$. It is the group "$G$ with the distinctions $N$ erases collapsed away".
+A [[Def - Quotient Group|quotient group]] $G/N$, defined when $N \trianglelefteq G$, is the group whose elements are the [[Def - Coset|cosets]] $gN$, with multiplication $(g_1 N)(g_2 N) = g_1 g_2 N$. It is the group "$G$ with the distinctions $N$ erases collapsed away".
 
 ![[Thm - First Isomorphism Theorem#Statement]]
 
-The two standard groups in the problem: $\mathrm{GL}_n(\mathbb{F})$ is a group because the product of invertible matrices is invertible and the identity matrix is invertible; $\mathbb{F}^\times$ is a group because in a field every nonzero element has a multiplicative inverse and the product of nonzero elements is nonzero (a field has no zero divisors).
+The two standard [[Def - Group|groups]] in the problem: $\mathrm{GL}_n(\mathbb{F})$ is a group because the product of invertible matrices is invertible and the identity matrix is invertible; $\mathbb{F}^\times$ is a group because in a field every nonzero element has a multiplicative inverse and the product of nonzero elements is nonzero (a field has no zero divisors).
 
 ---
 
 # Convergent Strategy
 
-**Problem class.** This is the central problem class of the chapter: *identify a quotient*. You are handed an abstract quotient group $\mathrm{GL}_n(\mathbb{F})/\mathrm{SL}_n(\mathbb{F})$ — a group whose elements are cosets of matrices, which is hard to picture directly — and asked to recognise it as a familiar group, here the multiplicative group of the field. As the [[Group Theory I — §1.1–1.2#Problem-Solving Strategy|topic page strategy]] states, you never analyse such a quotient head-on; you route around it.
+**Problem class.** This is the central problem class of the chapter: *identify a quotient*. You are handed an abstract quotient group $\mathrm{GL}_n(\mathbb{F})/\mathrm{SL}_n(\mathbb{F})$ — a group whose elements are [[Def - Coset|cosets]] of matrices, which is hard to picture directly — and asked to recognise it as a familiar group, here the multiplicative group of the field. As the [[Group Theory I — §1.1–1.2#Problem-Solving Strategy|topic page strategy]] states, you never analyse such a quotient head-on; you route around it.
 
 **Assumption pattern.** The recognisable signal is that the normal subgroup being quotiented out, $\mathrm{SL}_n(\mathbb{F})$, is *defined as a level set*: it is exactly the matrices whose determinant equals $1$. Whenever the subgroup you must quotient by is "the elements on which some natural quantity takes its trivial value", that quantity is secretly a homomorphism and the subgroup is secretly its kernel. The determinant is multiplicative, $\det(AB) = \det(A)\det(B)$ — that is precisely the homomorphism property — and $\mathrm{SL}_n(\mathbb{F})$ is the set where it equals the identity $1$ of $\mathbb{F}^\times$.
 
@@ -52,7 +52,7 @@ The two standard groups in the problem: $\mathrm{GL}_n(\mathbb{F})$ is a group b
 
 This solution deploys the following legal operations from [[Group Theory I — §1.1–1.2#Legal Operations|the topic page's Legal Operations]]:
 
-1. **Build a homomorphism to expose structure** (operation 3). The whole solution turns on producing the determinant homomorphism $\det : \mathrm{GL}_n(\mathbb{F}) \to \mathbb{F}^\times$. The determinant is one of the standard stock homomorphisms the topic page explicitly recommends keeping on hand.
+1. **Build a homomorphism to expose structure** (operation 3). The whole solution turns on producing the determinant homomorphism $\det : \mathrm{GL}_n(\mathbb{F}) \to \mathbb{F}^\times$. The determinant is one of the standard stock [[Def - Homomorphism|homomorphisms]] the topic page explicitly recommends keeping on hand.
 
 2. **Apply the first isomorphism theorem to identify a quotient** (operation 4). Once the surjection is in place with the correct kernel, this operation reads off $\mathrm{GL}_n(\mathbb{F})/\mathrm{SL}_n(\mathbb{F}) \cong \mathbb{F}^\times$ directly.
 

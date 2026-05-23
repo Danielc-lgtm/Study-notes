@@ -15,7 +15,7 @@ You are given $N$ data points $\{(x^{(i)}, y^{(i)})\}_{i=1}^N$ with $x^{(i)} \in
 1. *Train.* Fit a real-valued linear-in-features regression model $\tilde{f}(x) = x^T \beta + v$ to the labels $y^{(i)}$ (treating them as continuous) by ordinary least squares.
 2. *Classify.* Define $\hat{f}(x) = \mathrm{sign}(\tilde{f}(x))$.
 
-Apply this to Fisher's Iris dataset (150 samples, 4 features, 3 classes), distinguishing Iris Virginica ($y = +1$) from the other two species ($y = -1$). Compute the confusion matrix and error rate. Use 5-fold cross-validation to estimate the test error rate.
+Apply this to Fisher's Iris dataset (150 samples, 4 features, 3 classes), distinguishing Iris Virginica ($y = +1$) from the other two species ($y = -1$). Compute the confusion matrix and error rate. Use 5-fold cross-[[Def - Validation (Training and Test Error)|validation]] to estimate the test error rate.
 
 Then construct the *receiver operating characteristic* (ROC) curve by varying the decision threshold $\alpha$: $\hat{f}(x) = \mathrm{sign}(\tilde{f}(x) - \alpha)$.
 
@@ -61,7 +61,7 @@ A [[Def - Least Squares Classifier|least squares classifier]] is built by fittin
 > For the Iris Virginica vs. others problem, Boyd reports coefficients $\beta = (-0.0918, 0.406, 0.00798, 1.10)$ and $v = -2.39$, with overall error rate $\approx 7.3\%$. The largest-magnitude coefficient is $\beta_4 = 1.10$, on the petal width feature — petal width is the most discriminative attribute.
 
 > [!note]- Hint 4
-> For 5-fold cross-validation: partition the 150 samples into 5 folds of 30 each (10 Virginica + 20 other in each, if stratified). Fit on 4 folds, evaluate on the 5th, rotate. The cross-validated test error rates vary from $\approx 3.3\%$ to $\approx 17\%$ across folds (the variation is large because of the small fold size — only 30 test points), with a mean cross-validation error $\approx 7-10\%$ — consistent with the training error.
+> For 5-fold cross-[[Def - Validation (Training and Test Error)|validation]]: partition the 150 samples into 5 folds of 30 each (10 Virginica + 20 other in each, if stratified). Fit on 4 folds, evaluate on the 5th, rotate. The cross-validated test error rates vary from $\approx 3.3\%$ to $\approx 17\%$ across folds (the variation is large because of the small fold size — only 30 test points), with a mean cross-validation error $\approx 7-10\%$ — consistent with the training error.
 
 > [!note]- Hint 5 (for ROC)
 > The ROC curve is constructed by varying $\alpha \in (-\infty, +\infty)$ and plotting (FPR($\alpha$), TPR($\alpha$)) for each. As $\alpha$ increases, both FPR and TPR decrease; as $\alpha$ decreases, both increase. The ROC has the canonical concave shape, with the area under the curve (AUC) being a summary measure of classifier quality.

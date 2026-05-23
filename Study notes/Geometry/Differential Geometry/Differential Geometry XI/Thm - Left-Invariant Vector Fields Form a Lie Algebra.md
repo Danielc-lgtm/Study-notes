@@ -17,7 +17,7 @@ $G$ is a Lie group; $\mathfrak{X}(G)$ is the space of smooth vector fields on $G
 
 # Statement
 
-> **Theorem.** Let $G$ be a Lie group. The space of smooth left-invariant vector fields on $G$ is closed under the Lie bracket of vector fields, hence is a Lie subalgebra of $\mathfrak{X}(G)$. The evaluation map $\varepsilon : \mathrm{Lie}(G) \to T_e G$, $X \mapsto X_e$, is a vector space isomorphism, and the transported bracket on $T_e G$ makes $T_e G$ into a finite-dimensional Lie algebra of dimension $\dim G$.
+> **Theorem.** Let $G$ be a Lie group. The space of smooth left-invariant vector fields on $G$ is closed under the Lie bracket of vector fields, hence is a Lie subalgebra of $\mathfrak{X}(G)$. The evaluation map $\varepsilon : \mathrm{Lie}(G) \to T_e G$, $X \mapsto X_e$, is a vector space isomorphism, and the transported bracket on $T_e G$ makes $T_e G$ into a finite-dimensional Lie algebra of [[Def - Dimension|dimension]] $\dim G$.
 
 > **Corollary (dimension).** $\dim \mathfrak{g} = \dim G$.
 
@@ -31,7 +31,7 @@ The fundamental observation that makes Lie group theory work is that a Lie group
 
 This theorem performs two functions simultaneously:
 
-1. **Closure of left-invariance under the bracket.** A priori, left-invariant vector fields form only a vector subspace of $\mathfrak{X}(G)$. The theorem says they form a *Lie* subspace — closed under the bracket. This is what makes the bracket on $\mathfrak{g}$ well-defined.
+1. **Closure of left-invariance under the bracket.** A priori, left-invariant vector fields form only a vector [[Def - Subspace|subspace]] of $\mathfrak{X}(G)$. The theorem says they form a *Lie* [[Def - Subspace|subspace]] — closed under the bracket. This is what makes the bracket on $\mathfrak{g}$ well-defined.
 
 2. **Isomorphism with $T_e G$.** The evaluation map "value at $e$" is a vector space isomorphism, so a left-invariant vector field is the same data as a tangent vector at the identity. Concretely, every tangent vector at $e$ extends uniquely to a left-invariant vector field on all of $G$. This is the rigidity statement that makes the theory tractable.
 
@@ -65,7 +65,7 @@ A third combination is **bracket on $\mathfrak{g}$ + matrix realization** $\impl
 
 # Why Is It True
 
-The theorem rests on a single fact about pushforward of vector fields: **pushforward by a diffeomorphism commutes with the Lie bracket** (Lee Cor 8.31). For any diffeomorphism $\phi : M \to N$ and vector fields $X, Y$ on $M$,
+The theorem rests on a single fact about pushforward of vector fields: **pushforward by a [[Def - Diffeomorphism|diffeomorphism]] commutes with the Lie bracket** (Lee Cor 8.31). For any [[Def - Diffeomorphism|diffeomorphism]] $\phi : M \to N$ and vector fields $X, Y$ on $M$,
 
 $$\phi_*[X, Y] = [\phi_* X, \phi_* Y].$$
 
@@ -110,7 +110,7 @@ Show that pushforward by a left translation $(L_g)_*$ preserves the bracket of v
    - *Hint:* Define $v^L|_g := d(L_g)_e(v)$. Check this is smooth (via curves at $e$) and satisfies $d(L_h)_g(v^L|_g) = v^L|_{hg}$ (by chain rule and $L_h \circ L_g = L_{hg}$).
    - *Why needed:* It shows every tangent vector at $e$ produces a left-invariant vector field, so the evaluation map is onto.
 
-4. **Dimension.** Conclude $\dim \mathrm{Lie}(G) = \dim T_e G = \dim G$.
+4. **[[Def - Dimension|Dimension]].** Conclude $\dim \mathrm{Lie}(G) = \dim T_e G = \dim G$.
    - *Hint:* Vector space isomorphism preserves dimension.
 
 ---
@@ -177,11 +177,11 @@ Show that pushforward by a left translation $(L_g)_*$ preserves the bracket of v
 
 # Cross-Field Exercise Suggestions
 
-**Algebraic topology — parallelizability of Lie groups.** Every Lie group $G$ is parallelizable: its tangent bundle $TG$ is trivializable, with the trivialization $TG \cong G \times \mathfrak{g}$ given by $(g, X) \mapsto d(L_g)_e(X) = X^L|_g$. As a consequence, $TG \to G$ admits a smooth global frame given by any basis of $\mathfrak{g}$. The implications: spheres $S^n$ that are not parallelizable cannot be Lie groups. By the Bott–Milnor and Kervaire theorems, only $S^0, S^1, S^3, S^7$ are parallelizable, and only $S^0, S^1, S^3$ are Lie groups ($S^7$ is an "H-space" but not a Lie group, lacking associativity).
+**Algebraic topology — parallelizability of Lie [[Def - Group|groups]].** Every Lie group $G$ is parallelizable: its tangent bundle $TG$ is trivializable, with the trivialization $TG \cong G \times \mathfrak{g}$ given by $(g, X) \mapsto d(L_g)_e(X) = X^L|_g$. As a consequence, $TG \to G$ admits a smooth global frame given by any basis of $\mathfrak{g}$. The implications: spheres $S^n$ that are not parallelizable cannot be Lie [[Def - Group|groups]]. By the Bott–Milnor and Kervaire theorems, only $S^0, S^1, S^3, S^7$ are parallelizable, and only $S^0, S^1, S^3$ are Lie groups ($S^7$ is an "H-space" but not a Lie group, lacking associativity).
 
 **Algebraic structure theory — the bracket on matrix Lie algebras.** Compute the bracket on $\mathfrak{gl}(n) = T_I \mathrm{GL}(n)$ via two routes: (a) the abstract definition via left-invariant vector fields, and (b) the matrix commutator $[A, B] = AB - BA$. Show they agree. This is the content of [[Ex - The Lie Bracket on a Matrix Lie Algebra is the Commutator]]. The agreement is not automatic — it relies on the formula $X^L|_g = gX$ for matrix groups, which then gives the bracket via the vector-field bracket on matrix-valued functions.
 
-**Differential equations — completeness of left-invariant vector fields.** Every left-invariant vector field on a Lie group is **complete**: its flow is defined for all time $t \in \mathbb{R}$ (Lee Cor 9.18). The proof uses that the flow of $X^L$ is right-translation by the one-parameter subgroup, which is defined globally. This completeness is crucial for the definition of the exponential map ($\exp(X) = \phi_1^{X^L}(e)$), since otherwise we could only evaluate $\exp$ on a small disk around $0$.
+**Differential equations — completeness of left-invariant vector fields.** Every left-invariant vector field on a Lie group is **complete**: its flow is defined for all time $t \in \mathbb{R}$ (Lee Cor 9.18). The proof uses that the flow of $X^L$ is right-translation by the one-parameter [[Def - Subgroup|subgroup]], which is defined globally. This completeness is crucial for the definition of the exponential map ($\exp(X) = \phi_1^{X^L}(e)$), since otherwise we could only evaluate $\exp$ on a small disk around $0$.
 
 ---
 

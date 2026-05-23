@@ -19,7 +19,7 @@ Throughout, $V$ is a finite-dimensional nonzero vector space over $\mathbb{C}$ a
 
 # Statement
 
-> **Theorem (Generalized Eigenspace Decomposition).** Suppose $\mathbf{F} = \mathbb{C}$ and $T \in \mathcal{L}(V)$. Let $\lambda_1, \dots, \lambda_m$ be the distinct eigenvalues of $T$. Then:
+> **Theorem ([[Def - Generalized Eigenspace|Generalized Eigenspace]] Decomposition).** Suppose $\mathbf{F} = \mathbb{C}$ and $T \in \mathcal{L}(V)$. Let $\lambda_1, \dots, \lambda_m$ be the distinct eigenvalues of $T$. Then:
 >
 > (a) Each generalized eigenspace $G(\lambda_k, T)$ is invariant under $T$.
 >
@@ -33,7 +33,7 @@ In particular, every operator on a finite-dimensional complex vector space is, o
 
 # Motivation
 
-This is the headline theorem of the chapter — the structural backbone of operators on complex vector spaces. It says: every operator $T$ on $V$ decomposes $V$ into a direct sum of $T$-invariant subspaces, one per eigenvalue, and on each of these subspaces $T$ looks like the simplest possible thing: a scalar $\lambda_k$ plus a nilpotent operator $N_k$.
+This is the headline theorem of the chapter — the structural backbone of operators on complex vector spaces. It says: every operator $T$ on $V$ decomposes $V$ into a direct sum of $T$-invariant [[Def - Subspace|subspaces]], one per eigenvalue, and on each of these [[Def - Subspace|subspaces]] $T$ looks like the simplest possible thing: a scalar $\lambda_k$ plus a nilpotent operator $N_k$.
 
 The theorem is the answer to the question "what is an operator on a complex space?" Eigenvectors alone are not enough: when $T$ is not diagonalisable, the sum of eigenspaces $\bigoplus E(\lambda_k, T)$ falls short of $V$. The remedy is to replace eigenspaces by generalized eigenspaces, and the remedy succeeds: $\bigoplus G(\lambda_k, T)$ always equals $V$. This is the gain.
 
@@ -75,13 +75,13 @@ The question is why the generalized eigenspaces *fill out all of $V$*. The eigen
 
 The answer is the **Fitting decomposition**, the corollary of [[Thm - Null Spaces of Powers Stabilize]]: for any operator $S$ on $V$, $V = \operatorname{null} S^{\dim V} \oplus \operatorname{range} S^{\dim V}$. Apply this with $S = T - \lambda_1 I$, where $\lambda_1$ is an eigenvalue of $T$. Then $\operatorname{null} S^{\dim V} = G(\lambda_1, T)$ is the first generalized eigenspace, and $\operatorname{range} S^{\dim V}$ is a complementary $T$-invariant subspace. The operator $T$ on this complement has *one fewer* eigenvalue than on $V$ (since $\lambda_1$ has been "removed" — the restriction of $T$ to the range has $\lambda_1$ no longer as an eigenvalue), so by induction on the number of eigenvalues, the complement decomposes into the remaining generalized eigenspaces, and assembling gives $V = G(\lambda_1, T) \oplus G(\lambda_2, T) \oplus \cdots$.
 
-But wait — we need $\lambda_1$ to be an eigenvalue, which on $\mathbb{C}$ is automatic (every operator has at least one eigenvalue, by the Fundamental Theorem of Algebra). And we need the restriction of $T$ to the complement to have one fewer eigenvalue, which requires that $\lambda_1$ is *not* an eigenvalue of $T|_{\operatorname{range} S^{\dim V}}$ — this is the slightly subtle step, and it is where the proof needs care.
+But wait — we need $\lambda_1$ to be an eigenvalue, which on $\mathbb{C}$ is automatic (every operator has at least one eigenvalue, by the [[Thm - Fundamental Theorem of Algebra|Fundamental Theorem of Algebra]]). And we need the restriction of $T$ to the complement to have one fewer eigenvalue, which requires that $\lambda_1$ is *not* an eigenvalue of $T|_{\operatorname{range} S^{\dim V}}$ — this is the slightly subtle step, and it is where the proof needs care.
 
 **Mechanism summary: the Fitting decomposition for $T - \lambda I$ peels off the $\lambda$-generalized eigenspace and leaves a $T$-invariant complement on which $\lambda$ is no longer an eigenvalue, allowing induction on the number of eigenvalues.**
 
 The deeper insight is that **the generalized eigenspaces are forced** — they are not a choice but a consequence of two facts: (i) every operator on a complex space has an eigenvalue (FTA); (ii) once one eigenvalue is "peeled off" via the Fitting decomposition, the rest decomposes the same way by induction. The construction is canonical: the generalized eigenspaces depend only on $T$ and not on any choice of basis or representative. They are the *only* way to write $V$ as a direct sum of $T$-invariant subspaces on each of which $T - $ (some scalar) is nilpotent.
 
-The connection to module theory makes the inevitability transparent. Regard $V$ as a $\mathbb{C}[x]$-module via $T$ (`[[Def - The Module of a Linear Operator]]`). The structure theorem for finitely generated modules over a PID ([[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain]]) decomposes $V$ into a direct sum of primary cyclic modules $\mathbb{C}[x]/(x - \lambda_k)^{n_{k, i}}$, where the primes of $\mathbb{C}[x]$ are exactly the linear polynomials $(x - \lambda)$. The **primary decomposition** ([[Thm - Primary Decomposition Theorem]]) groups summands by prime, and the $(x - \lambda_k)$-primary component is exactly $G(\lambda_k, T)$. So the generalized eigenspace decomposition is the linear-algebra incarnation of the primary decomposition for $\mathbb{C}[x]$-modules — a result that is forced by general algebraic principles, not specific to linear algebra.
+The connection to module theory makes the inevitability transparent. Regard $V$ as a $\mathbb{C}[x]$-module via $T$ (`[[Def - The Module of a Linear Operator]]`). The structure theorem for finitely generated [[Def - Module|modules]] over a PID ([[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain]]) decomposes $V$ into a direct sum of primary cyclic [[Def - Module|modules]] $\mathbb{C}[x]/(x - \lambda_k)^{n_{k, i}}$, where the primes of $\mathbb{C}[x]$ are exactly the linear polynomials $(x - \lambda)$. The **primary decomposition** ([[Thm - Primary Decomposition Theorem]]) [[Def - Group|groups]] summands by prime, and the $(x - \lambda_k)$-primary component is exactly $G(\lambda_k, T)$. So the generalized eigenspace decomposition is the linear-algebra incarnation of the primary decomposition for $\mathbb{C}[x]$-modules — a result that is forced by general algebraic principles, not specific to linear algebra.
 
 ---
 
@@ -179,7 +179,7 @@ The most common error is to confuse the algebraic and geometric multiplicities, 
 > [!note]- Lemma 4: $V$ has a basis of generalized eigenvectors (when $\mathbf{F} = \mathbb{C}$)
 > **Statement:** Suppose $\mathbf{F} = \mathbb{C}$ and $T \in \mathcal{L}(V)$. Then $V$ has a basis consisting of generalized eigenvectors of $T$.
 >
-> **Hint:** Induct on $\dim V$. Use the Fundamental Theorem of Algebra to get an eigenvalue $\lambda$. Apply [[Thm - Null Spaces of Powers Stabilize]] to $T - \lambda I$ to split $V = G(\lambda, T) \oplus \operatorname{range}(T - \lambda I)^{\dim V}$. If the range is zero, $V = G(\lambda, T)$. Otherwise, apply induction to the range (which is strictly smaller-dimensional and $T$-invariant).
+> **Hint:** Induct on $\dim V$. Use the [[Thm - Fundamental Theorem of Algebra|Fundamental Theorem of Algebra]] to get an eigenvalue $\lambda$. Apply [[Thm - Null Spaces of Powers Stabilize]] to $T - \lambda I$ to split $V = G(\lambda, T) \oplus \operatorname{range}(T - \lambda I)^{\dim V}$. If the range is zero, $V = G(\lambda, T)$. Otherwise, apply induction to the range (which is strictly smaller-dimensional and $T$-invariant).
 >
 > **Why needed:** This is the *existence* heart of the theorem: that generalized eigenspaces span $V$ on a complex space. It requires the complex field crucially (via FTA).
 >

@@ -28,7 +28,7 @@ $$\nabla^\mu G_{\mu\nu} = \nabla^\mu(R_{\mu\nu} - \tfrac{1}{2} g_{\mu\nu} R) = \
 
 Identically. The Einstein tensor is divergence-free as a geometric identity — no equations of motion needed, no constraint on the geometry. This is the structural payoff of the $-\frac{1}{2} g_{\mu\nu} R$ subtraction, and it is the unique correction (at the level of symmetric $(0,2)$-tensors built linearly from Ricci and the metric) that makes Einstein's field equations automatically consistent with conservation. Einstein arrived at this in November 1915, after weeks of struggle, and it is the formula that closed the search for the field equations.
 
-**Why is this the unique answer?** **Lovelock's theorem** (1971) makes the uniqueness precise: in four spacetime dimensions, the only symmetric, divergence-free $(0,2)$-tensor built from $g_{\mu\nu}$ and its derivatives, linear in the second derivatives (i.e., yielding second-order field equations), is
+**Why is this the unique answer?** **Lovelock's theorem** (1971) makes the uniqueness precise: in four spacetime [[Def - Dimension|dimensions]], the only symmetric, divergence-free $(0,2)$-tensor built from $g_{\mu\nu}$ and its derivatives, linear in the second derivatives (i.e., yielding second-order field equations), is
 $$\alpha G_{\mu\nu} + \beta g_{\mu\nu},$$
 with $\alpha, \beta$ constants — the Einstein tensor plus a possible cosmological constant. Higher-dimensional generalisations (the **Lovelock gravities**) admit richer choices (the **Gauss–Bonnet** term in 5D and higher), but in 4D the form is forced by these structural requirements.
 
@@ -78,7 +78,7 @@ The variation of this action with respect to the inverse metric $g^{\mu\nu}$ is
 $$\frac{\delta S_\text{grav}}{\delta g^{\mu\nu}} = \frac{1}{16\pi G} \sqrt{-g}\, G_{\mu\nu}$$
 (see [[Thm - Hilbert's Variational Principle Yields Einstein Equations]]). The Bianchi identity $\nabla^\mu G_{\mu\nu} = 0$ is then the **Noether identity** associated with diffeomorphism invariance of the gravitational action — exactly analogous to the gauge identity $\nabla_\mu F^{\mu\nu} \cdot J_\nu \propto \nabla^\nu \partial_\nu (\nabla_\mu A^\mu)$ in electromagnetism, where the antisymmetry of $F$ forces the identity.
 
-From the **fibre bundle** perspective: the Einstein tensor is the moment map for diffeomorphism transformations on the configuration space of Lorentzian metrics, with respect to the symplectic structure induced by the Hilbert action. Its vanishing is the condition that the gauge transformations (diffeomorphisms) be a symmetry of the dynamics — the source of Einstein equation constraint structure.
+From the **fibre bundle** perspective: the Einstein tensor is the moment map for diffeomorphism transformations on the configuration space of Lorentzian metrics, with respect to the symplectic structure induced by the Hilbert action. Its vanishing is the condition that the gauge transformations ([[Def - Diffeomorphism|diffeomorphisms]]) be a symmetry of the dynamics — the source of Einstein equation constraint structure.
 
 ---
 

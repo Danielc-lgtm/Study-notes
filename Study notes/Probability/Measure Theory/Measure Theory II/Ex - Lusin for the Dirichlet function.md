@@ -28,7 +28,7 @@ The Dirichlet function $f=\mathbf{1}_{\mathbb{Q}\cap[0,1]}$ on $[0,1]$ is measur
 
 **Problem class:** making an abstract theorem concrete on a worst-case example.
 
-**Assumption pattern:** $f$ is constant ($=0$) on the irrationals and ($=1$) on the rationals. It is *continuous on the irrationals as a subspace* — on $[0,1]\setminus\mathbb{Q}$ it is identically $0$. The bad points are $\mathbb{Q}$, a countable set; cover it by intervals of total length $<\delta$ — the [[Ex - A fat Cantor set of positive measure|convergent-budget]] device.
+**Assumption pattern:** $f$ is constant ($=0$) on the irrationals and ($=1$) on the rationals. It is *continuous on the irrationals as a [[Def - Subspace|subspace]]* — on $[0,1]\setminus\mathbb{Q}$ it is identically $0$. The bad points are $\mathbb{Q}$, a countable set; cover it by intervals of total length $<\delta$ — the [[Ex - A fat Cantor set of positive measure|convergent-budget]] device.
 
 **Theorem routing:** delete a small open neighbourhood of $\mathbb{Q}$; on the closed remainder $f$ is constantly $0$, hence continuous.
 

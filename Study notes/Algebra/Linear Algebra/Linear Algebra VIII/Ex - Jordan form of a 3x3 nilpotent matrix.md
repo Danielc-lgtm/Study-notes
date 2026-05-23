@@ -27,7 +27,7 @@ The objects are an operator on a $3$-dimensional complex space, its iterates, an
 
 A Jordan basis (see [[Def - Jordan Basis and Jordan Form]]) is a basis in which the matrix of $T$ is block-diagonal with each block a Jordan block — entries $\lambda$ on the diagonal, $1$ on the superdiagonal, $0$ elsewhere. For a nilpotent operator, every Jordan block is $J_k(0)$ (only eigenvalue $0$). The block sizes form a partition of $\dim V$; for $\dim V = 3$ the only partitions are $(3), (2, 1), (1, 1, 1)$, corresponding to Jordan forms $J_3(0)$, $J_2(0) \oplus J_1(0)$, and the zero matrix respectively.
 
-The block partition is read off the dimensions $\dim \operatorname{null} A^j$: the number of blocks of size $\geq j$ is $\dim \operatorname{null} A^j - \dim \operatorname{null} A^{j-1}$.
+The block partition is read off the [[Def - Dimension|dimensions]] $\dim \operatorname{null} A^j$: the number of blocks of size $\geq j$ is $\dim \operatorname{null} A^j - \dim \operatorname{null} A^{j-1}$.
 
 To find an explicit Jordan basis: identify a vector $v$ with $A^{n-1} v \neq 0$ where $n$ is the nilpotency index; the chain $A^{n-1} v, A^{n-2} v, \dots, A v, v$ (read in this order) is the basis for the longest Jordan block. If $\dim V$ is larger than $n$, find additional chains for the smaller blocks.
 
@@ -35,7 +35,7 @@ To find an explicit Jordan basis: identify a vector $v$ with $A^{n-1} v \neq 0$ 
 
 # Convergent Strategy
 
-**Problem class.** This is a *compute the Jordan form of a small nilpotent matrix* problem — the simplest version of the canonical-form-finding task, with the small dimension ($n = 3$) making explicit computations tractable. The general routine is: (i) verify nilpotence and find the nilpotency index $m$; (ii) compute the dimensions $\dim \operatorname{null} A^j$ for $j = 1, 2, \dots, m$; (iii) read off the block partition; (iv) find an explicit Jordan basis.
+**Problem class.** This is a *compute the Jordan form of a small nilpotent matrix* problem — the simplest version of the canonical-form-finding task, with the small dimension ($n = 3$) making explicit computations tractable. The general routine is: (i) verify nilpotence and find the nilpotency index $m$; (ii) compute the [[Def - Dimension|dimensions]] $\dim \operatorname{null} A^j$ for $j = 1, 2, \dots, m$; (iii) read off the block partition; (iv) find an explicit Jordan basis.
 
 **Assumption pattern.** The matrix has $3 \times 3$ entries, eigenvalues are not immediately visible (it is not upper-triangular), and the problem hints that the matrix is nilpotent by asking us to verify $A^3 = 0$. The hypothesis "nilpotent with nilpotency index $3$" pins down the block partition: the only partition of $3$ with a part of size $3$ is $(3)$ itself, so the Jordan form must be $J_3(0)$. Once we know this, the problem reduces to finding an explicit Jordan basis.
 

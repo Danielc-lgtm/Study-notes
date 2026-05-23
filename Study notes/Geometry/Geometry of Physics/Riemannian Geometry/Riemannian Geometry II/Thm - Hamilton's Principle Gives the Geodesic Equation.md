@@ -37,7 +37,7 @@ $(M, g)$ a Riemannian manifold with local coordinates $(q^1, \ldots, q^n)$ and i
 
 This theorem is the formal bridge between three different formulations of the same dynamical system:
 
-- **Geometric:** geodesics, defined by $\nabla_{\dot\gamma}\dot\gamma = 0$ — the covariant-acceleration formulation.
+- **Geometric:** [[Def - Geodesic|geodesics]], defined by $\nabla_{\dot\gamma}\dot\gamma = 0$ — the covariant-acceleration formulation.
 - **Lagrangian:** trajectories of a particle with Lagrangian $L = T$, derived via Hamilton's principle.
 - **Hamiltonian:** flow of the Hamiltonian $H = \tfrac12 |p|^2_{g^{-1}}$ on the symplectic manifold $T^*M$.
 
@@ -49,7 +49,7 @@ First, **it explains "why" the geodesic equation is the right physics**: it is t
 
 Second, **it makes the entire machinery of classical mechanics available for Riemannian geometry**: action–angle coordinates, KAM theory, the variational principle of minimum action, Noether's theorem for conservation laws, Poisson brackets, symplectic reduction. Conversely, the Riemannian-geometric tools (curvature, comparison geometry, the Bonnet–Myers bound) become applicable to all conservative mechanical systems via Jacobi's principle.
 
-Third, **it makes precise the duality between $TM$ and $T^*M$**, the velocity and momentum formulations. The Legendre transform $\dot q \mapsto p$ is a diffeomorphism (and a *symplectic* map in an appropriate sense), and the choice between formulations is just the choice of which variables are more convenient. For the kinetic-energy Lagrangian/Hamiltonian, the Hamiltonian on $T^*M$ has a particularly clean form ($\tfrac12 g^{ij}p_i p_j$), so the cotangent-bundle formulation is preferred for symplectic-geometry analyses; the tangent-bundle formulation is preferred for variational derivations.
+Third, **it makes precise the duality between $TM$ and $T^*M$**, the velocity and momentum formulations. The Legendre transform $\dot q \mapsto p$ is a [[Def - Diffeomorphism|diffeomorphism]] (and a *symplectic* map in an appropriate sense), and the choice between formulations is just the choice of which variables are more convenient. For the kinetic-energy Lagrangian/Hamiltonian, the Hamiltonian on $T^*M$ has a particularly clean form ($\tfrac12 g^{ij}p_i p_j$), so the cotangent-bundle formulation is preferred for symplectic-geometry analyses; the tangent-bundle formulation is preferred for variational derivations.
 
 The equivalence (i) ⟺ (ii) is the standard calculus-of-variations result: critical points of a Lagrangian action are solutions of the Euler–Lagrange equations. The equivalence (ii) ⟺ (iii) is the *content* of the theorem: computing the Euler–Lagrange equations of $L = \tfrac12 g_{ij}\dot q^i\dot q^j$ produces the geodesic equation. The equivalence (iii) ⟺ (iv) is the Legendre transform: converting from velocity formulation $(q, \dot q)$ on $TM$ to momentum formulation $(q, p)$ on $T^*M$, with $H = p\dot q - L$.
 

@@ -18,13 +18,13 @@ We often want to stop a process at a *random* time — the moment a stock first 
 
 A **stopping time** is the formalisation: a random time $T$ such that $\{T\le n\}\in\mathcal{F}_n$ for every $n$. Equivalently $\{T=n\}\in\mathcal{F}_n$ — at each instant one can *decide, from current information, whether $T$ has occurred*. The hitting time of a set is a stopping time ("have I reached it yet?" is answerable now); the *last* visit to a set is not ("is this the last time?" needs the future).
 
-The point of the definition is everything it unlocks. Stopping times can be combined ($T\wedge S$, $T\vee S$ are stopping times); the *stopped process* $X_n^T=X_{T\wedge n}$ inherits adaptedness and the (sub/super)martingale property; the $\sigma$-algebra $\mathcal{F}_T$ of "information up to the random time $T$" makes sense; and — the headline — the [[Thm - Optional Stopping Theorem|optional stopping theorem]] says a martingale's fairness *survives* being stopped: $\mathbb{E}[X_T]=\mathbb{E}[X_0]$ for bounded $T$. Non-anticipation is exactly the property that makes this true; without it, "stop just before the peak" would manufacture a free lunch.
+The point of the definition is everything it unlocks. Stopping times can be combined ($T\wedge S$, $T\vee S$ are stopping times); the *stopped process* $X_n^T=X_{T\wedge n}$ inherits adaptedness and the (sub/super)[[Def - Martingale|martingale]] property; the $\sigma$-algebra $\mathcal{F}_T$ of "information up to the random time $T$" makes sense; and — the headline — the [[Thm - Optional Stopping Theorem|optional stopping theorem]] says a martingale's fairness *survives* being stopped: $\mathbb{E}[X_T]=\mathbb{E}[X_0]$ for bounded $T$. Non-anticipation is exactly the property that makes this true; without it, "stop just before the peak" would manufacture a free lunch.
 
 ---
 
 # The Definition
 
-Let $(\mathcal{F}_n)_{n\ge0}$ be a filtration. A random variable $T:\Omega\to\{0,1,2,\dots\}\cup\{\infty\}$ is a **stopping time** if
+Let $(\mathcal{F}_n)_{n\ge0}$ be a [[Def - Filtration|filtration]]. A random variable $T:\Omega\to\{0,1,2,\dots\}\cup\{\infty\}$ is a **stopping time** if
 $$\{T\le n\}\in\mathcal{F}_n\qquad\text{for every }n\ge0,$$
 equivalently $\{T=n\}\in\mathcal{F}_n$ for every $n$.
 

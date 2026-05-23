@@ -18,7 +18,7 @@ This is a compound page: it defines two interlocking notions — **coordinate ch
 
 # Axiom Motivation
 
-A topological manifold $M$ is defined by the existence of local homeomorphisms to $\mathbb{R}^n$ near every point. The next step is to give those local homeomorphisms a name, organize them into a structure, and use them as a tool for doing calculus. The pair $(U, \varphi)$ of a chart is the basic unit of this tool — it converts an opaque patch $U$ of the manifold into a concrete open subset of $\mathbb{R}^n$, where every computation of multivariable calculus is available. The atlas is the global organization: a family of charts whose domains cover $M$, so that every point lies in at least one chart.
+A topological manifold $M$ is defined by the existence of local [[Def - Homeomorphism|homeomorphisms]] to $\mathbb{R}^n$ near every point. The next step is to give those local [[Def - Homeomorphism|homeomorphisms]] a name, organize them into a structure, and use them as a tool for doing calculus. The pair $(U, \varphi)$ of a chart is the basic unit of this tool — it converts an opaque patch $U$ of the manifold into a concrete open subset of $\mathbb{R}^n$, where every computation of multivariable calculus is available. The atlas is the global organization: a family of charts whose domains cover $M$, so that every point lies in at least one chart.
 
 Consider the alternatives. We could specify a single global homeomorphism $\varphi : M \to \widehat{M} \subseteq \mathbb{R}^n$ — but only the simplest manifolds (Euclidean spaces and their open subsets, graphs of functions) admit such a global chart. Already $S^1$ does not: a global chart would be a homeomorphism between the compact circle and an open subset of $\mathbb{R}$, which is impossible because the open subset is non-compact. So for most manifolds the local data of charts is essential, and the global manifold emerges only by gluing.
 
@@ -66,10 +66,10 @@ A chart $(U, \varphi)$ on $M$ is, equivalently, an open immersion $\varphi : U \
 
 This structural framing makes it clear how charts and atlases generalize:
 
-- For a **smooth manifold**, replace "homeomorphism" with "diffeomorphism onto the open subset of $\mathbb{R}^n$" (in a sense made precise once a smooth structure is in place), and the structure sheaf is the sheaf of smooth functions.
+- For a **smooth manifold**, replace "homeomorphism" with "[[Def - Diffeomorphism|diffeomorphism]] onto the open subset of $\mathbb{R}^n$" (in a sense made precise once a smooth structure is in place), and the structure sheaf is the sheaf of smooth functions.
 - For a **complex manifold**, replace the model $\mathbb{R}^n$ with $\mathbb{C}^n$, and the structure sheaf is the sheaf of holomorphic functions.
 - For a **vector bundle** of rank $k$ over $M$, replace the model with $U \times \mathbb{R}^k$ (or $U \times \mathbb{C}^k$), and the local trivialization is a fibre-preserving homeomorphism.
-- For a **principal $G$-bundle**, replace the model with $U \times G$ for a Lie group $G$.
+- For a **principal $G$-bundle**, replace the model with $U \times G$ for a Lie [[Def - Group|group]] $G$.
 
 In all cases the categorical pattern is: a space is locally modelled on a chosen model, the local trivializations form an atlas, and the global structure is the (equivalence class of) atlases. This is the same pattern as scheme theory in algebraic geometry, $\infty$-topos theory in higher category theory, and physical model-building in mathematical physics.
 

@@ -16,9 +16,9 @@ Throughout, $G$ is a group with identity $e$, and $H, N, K$ denote subgroups. We
 
 # Axiom Motivation
 
-The right way to discover this definition is not to be handed it, but to *need* it. So suppose we have a subgroup $H \leq G$ and we want to do something with the [[Def - Coset|cosets]] of $H$ — specifically, we want to make the collection of cosets $G/H = \{gH : g \in G\}$ into a group in its own right. This is the single most useful construction in group theory, because it lets us "divide" a group by a piece of itself. The question is whether it can be done at all, and the answer will *force* the definition of normality upon us.
+The right way to discover this definition is not to be handed it, but to *need* it. So suppose we have a subgroup $H \leq G$ and we want to do something with the [[Def - Coset|cosets]] of $H$ — specifically, we want to make the collection of [[Def - Coset|cosets]] $G/H = \{gH : g \in G\}$ into a [[Def - Group|group]] in its own right. This is the single most useful construction in group theory, because it lets us "divide" a group by a piece of itself. The question is whether it can be done at all, and the answer will *force* the definition of normality upon us.
 
-To make $G/H$ a group we need a multiplication on cosets. There is exactly one formula that has any chance of being natural, namely
+To make $G/H$ a group we need a multiplication on [[Def - Coset|cosets]]. There is exactly one formula that has any chance of being natural, namely
 $$(g_1 H)(g_2 H) := g_1 g_2 H,$$
 multiply the representatives, then take the coset. The desideratum is simply that this be a sensible operation — and the danger is hiding in plain sight. A coset has many names: $gH = g'H$ whenever $g$ and $g'$ differ by an element of $H$ (precisely, whenever $g^{-1}g' \in H$). The formula above is written in terms of *representatives* $g_1, g_2$, but the *output* must depend only on the cosets themselves, not on which names we happened to pick. An operation that gives different answers for different names of the same input is not an operation at all. So the entire question is: **is coset multiplication well-defined?**
 
@@ -32,7 +32,7 @@ So the multiplication of cosets is well-defined **if and only if** $g^{-1} h g \
 
 What goes wrong if we *weaken* the condition — drop it and try to quotient by an arbitrary subgroup anyway? Take $G = S_3$ and $H = \langle (1\,2)\rangle = \{e, (1\,2)\}$, a subgroup of order $2$. Conjugating $(1\,2)$ by $(1\,3)$ gives $(1\,3)(1\,2)(1\,3) = (2\,3) \notin H$, so $H$ is not normal. Concretely, the coset products clash: $(1\,3)H$ and $(2\,3)H$ are both well-defined cosets, but $\big((1\,3)H\big)\big((1\,2)H\big)$ comes out differently depending on whether we write the first coset as $(1\,3)H$ or as $\big((1\,3)(1\,2)\big)H = (1\,3\,2)H$ — and $(1\,3)(1\,2) = (1\,3\,2)$ does name the same coset, since $(1\,2) \in H$. The "group" $G/H$ simply does not exist. The set of cosets still exists, and $G$ still acts on it, but there is no group structure.
 
-There is no useful *strengthening* to consider: normality is already exactly the kernel-like subgroups, the most permissive condition that makes quotients work. If you strengthen it to "every element of $G$ commutes with every element of $H$" you get the much smaller class of *central* subgroups, and you would lose most interesting quotients — for instance you could no longer form $S_n / A_n$, because $A_n$ is normal but very far from central. The lesson is that normality is the Goldilocks condition: weaker and quotients break, stronger and quotients become rare.
+There is no useful *strengthening* to consider: normality is already exactly the kernel-like [[Def - Subgroup|subgroups]], the most permissive condition that makes quotients work. If you strengthen it to "every element of $G$ commutes with every element of $H$" you get the much smaller class of *central* [[Def - Subgroup|subgroups]], and you would lose most interesting quotients — for instance you could no longer form $S_n / A_n$, because $A_n$ is normal but very far from central. The lesson is that normality is the Goldilocks condition: weaker and quotients break, stronger and quotients become rare.
 
 ---
 
@@ -67,7 +67,7 @@ A second compression: normality is exactly the condition that the conjugation ac
 
 **Is an instance — $A_n \trianglelefteq S_n$.** The alternating group $A_n$ of even permutations is normal in the symmetric group $S_n$. Again the slick argument is (4): $A_n = \ker(\operatorname{sgn})$ for the sign homomorphism $\operatorname{sgn} : S_n \to \{\pm 1\}$. One could also note that $A_n$ has [[Def - Coset|index]] $2$ in $S_n$, and any index-$2$ subgroup is normal (corollary below).
 
-**Is an instance — every subgroup of an abelian group.** If $G$ is [[Def - Abelian Group|abelian]] then for any subgroup $H$ and any $g$, $g^{-1}hg = g^{-1}gh = h \in H$, so $H \trianglelefteq G$ automatically. This is why abelian groups are so quotient-rich: there is no normality obstruction at all, and every subgroup gives a quotient.
+**Is an instance — every subgroup of an abelian group.** If $G$ is [[Def - Abelian Group|abelian]] then for any subgroup $H$ and any $g$, $g^{-1}hg = g^{-1}gh = h \in H$, so $H \trianglelefteq G$ automatically. This is why abelian [[Def - Group|groups]] are so quotient-rich: there is no normality obstruction at all, and every subgroup gives a quotient.
 
 **Is NOT an instance — $\langle(1\,2)\rangle$ in $S_3$.** The subgroup $H = \{e, (1\,2)\}$ of $S_3$ is *not* normal. Conjugating: $(1\,3)(1\,2)(1\,3)^{-1} = (1\,3)(1\,2)(1\,3) = (2\,3)$, which is not in $H$. Equivalently the left coset $(1\,3)H = \{(1\,3),(1\,3\,2)\}$ and the right coset $H(1\,3) = \{(1\,3),(1\,2\,3)\}$ differ. This is the canonical witness that quotients can fail: $S_3 / H$ is not a group.
 

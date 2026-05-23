@@ -15,15 +15,15 @@ The blocks $A, B, C, D$ are themselves matrices whose dimensions must fit togeth
 
 # Statement
 
-> **Theorem (Block Matrix Multiplication).** Let
+> **Theorem (Block [[Def - Matrix Multiplication|Matrix Multiplication]]).** Let
 > $$M_1 = \begin{pmatrix} A & B \\ C & D \end{pmatrix}, \quad M_2 = \begin{pmatrix} E & F \\ G & H \end{pmatrix}$$
-> be block matrices such that the inner block dimensions are compatible — that is, $A E$, $A F$, $B G$, $B H$, $C E$, $C F$, $D G$, $D H$ all make sense as matrix products. Then the product $M_1 M_2$ is the block matrix
+> be block matrices such that the inner block [[Def - Dimension|dimensions]] are compatible — that is, $A E$, $A F$, $B G$, $B H$, $C E$, $C F$, $D G$, $D H$ all make sense as matrix products. Then the product $M_1 M_2$ is the block matrix
 > $$M_1 M_2 = \begin{pmatrix} A E + B G & A F + B H \\ C E + D G & C F + D H \end{pmatrix},$$
 > computed by the usual matrix-multiplication formula treating each block as if it were a single entry.
 
 > **Generalisation.** For block matrices with an arbitrary number of block rows and columns, the analogous formula holds: $(M_1 M_2)_{ij} = \sum_k (M_1)_{ik} (M_2)_{kj}$, where the indices $i, j, k$ range over block indices and each "entry" is itself a matrix-product.
 
-This is sometimes also called the **Cayley block-matrix rule** or the **Schur block formula**. The crucial caveat is that the inner block dimensions must match — multiplication of *blocks* must be defined.
+This is sometimes also called the **Cayley block-matrix rule** or the **Schur block formula**. The crucial caveat is that the inner block [[Def - Dimension|dimensions]] must match — multiplication of *blocks* must be defined.
 
 ---
 
@@ -75,7 +75,7 @@ If we further partition the row indices into blocks $I_1, I_2, \dots$ and the co
 
 So block multiplication is *just matrix multiplication with the inner sum reorganised by block-partitioning the indices*. The dimensions of the blocks must be such that the inner products make sense — this is the compatibility requirement.
 
-The non-obvious depth is that **the formula looks the same whether the entries are numbers or matrices**, as long as the block dimensions are compatible. This is the universal phenomenon of multiplication being associative: matrix multiplication is itself a "multiplication in a non-commutative ring", and matrix multiplication of block matrices is multiplication in that same ring, just viewed at a coarser granularity.
+The non-obvious depth is that **the formula looks the same whether the entries are numbers or matrices**, as long as the block dimensions are compatible. This is the universal phenomenon of multiplication being associative: matrix multiplication is itself a "multiplication in a non-commutative [[Def - Ring|ring]]", and matrix multiplication of block matrices is multiplication in that same [[Def - Ring|ring]], just viewed at a coarser granularity.
 
 ---
 

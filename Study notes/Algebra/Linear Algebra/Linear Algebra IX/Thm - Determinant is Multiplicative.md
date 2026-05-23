@@ -32,7 +32,7 @@ Throughout, $V$ is a finite-dimensional vector space over a field $\mathbb{F}$ w
 
 # Motivation
 
-This is the single most-used theorem about determinants — and the one that makes the determinant a genuinely *useful* operation rather than just a number you compute. The multiplicativity says $\det$ is a **group homomorphism** from $\mathrm{GL}(V)$ to $\mathbb{F}^\times$, with kernel the special linear group $\mathrm{SL}(V)$. This is what makes $\det$ a similarity invariant, an invertibility test, and the source of every "compute this hard determinant by factoring" technique.
+This is the single most-used theorem about [[Def - Determinant|determinants]] — and the one that makes the determinant a genuinely *useful* operation rather than just a number you compute. The multiplicativity says $\det$ is a **[[Def - Group|group]] homomorphism** from $\mathrm{GL}(V)$ to $\mathbb{F}^\times$, with kernel the special linear group $\mathrm{SL}(V)$. This is what makes $\det$ a similarity invariant, an invertibility test, and the source of every "compute this hard determinant by factoring" technique.
 
 The conceptual content: the determinant measures how an operator scales $n$-dimensional volume, and composing two operators *multiplies* their scalings — that is the algebraic statement. Geometrically: applying $T$ first scales volume by $\det T$, then applying $S$ scales it by $\det S$, so the composition scales by $\det S \cdot \det T$. Sign-tracking is the same: orientation reversal composes as multiplication in $\{\pm 1\}$.
 
@@ -113,7 +113,7 @@ The action of an operator on alternating $n$-linear forms is "compose with the o
    - *Why needed:* The abstract definition is what makes multiplicativity a one-line computation.
 
 2. **Compute $\alpha_{ST}(v_1, \dots, v_n)$.** Apply $\alpha$ to the tuple $(ST v_1, \dots, ST v_n)$ and rewrite.
-   - *Hint:* Group $ST v_i = S(T v_i)$, and pull out $\det S$ from the $S$-application, then $\det T$ from the $T$-application.
+   - *Hint:* [[Def - Group|Group]] $ST v_i = S(T v_i)$, and pull out $\det S$ from the $S$-application, then $\det T$ from the $T$-application.
    - *Why needed:* This is the core of the computation.
 
 3. **Read off $\det(ST) = \det S \cdot \det T$.** By the abstract definition, the scalar by which $ST$ acts on $\alpha$ is by definition $\det(ST)$.

@@ -27,7 +27,7 @@ The Riesz representation theorem identifies $V$ with its dual via the inner prod
 
 # Motivation
 
-The Riesz representation theorem is the structural result that makes an inner product space deserve the description "self-dual". In a general vector space $V$, the dual $V'$ is a different space — abstractly isomorphic to $V$ in finite dimensions (both have the same dimension), but there is no *canonical* isomorphism. To identify $V$ with $V'$, you have to *choose* a basis and use the dual basis, but the choice is arbitrary — a different basis gives a different isomorphism. The inner product fixes this: it provides a single canonical isomorphism, the Riesz map, that does not depend on any further choice.
+The Riesz representation theorem is the structural result that makes an inner product space deserve the description "self-dual". In a general vector space $V$, the dual $V'$ is a different space — abstractly isomorphic to $V$ in finite [[Def - Dimension|dimensions]] (both have the same dimension), but there is no *canonical* isomorphism. To identify $V$ with $V'$, you have to *choose* a basis and use the dual basis, but the choice is arbitrary — a different basis gives a different isomorphism. The inner product fixes this: it provides a single canonical isomorphism, the Riesz map, that does not depend on any further choice.
 
 The practical consequence is enormous. Every linear functional on $V$ is "an inner product with something", which lets you replace abstract functionals (functions from $V$ to $\mathbf{F}$) with concrete vectors. The mapping is **mechanical**: given $\varphi$, the representing vector is $v = \sum_k \overline{\varphi(e_k)}\, e_k$ in any orthonormal basis $e_1, \dots, e_n$, with the overline being the complex conjugate (which disappears over $\mathbb{R}$).
 
@@ -91,13 +91,13 @@ But by linearity of $\varphi$, the right-hand side is $\varphi(\sum_k \langle u,
 
 The uniqueness is easier: if $\varphi(u) = \langle u, v_1\rangle = \langle u, v_2\rangle$ for all $u$, then $\langle u, v_1 - v_2\rangle = 0$ for all $u$, so taking $u = v_1 - v_2$ gives $\|v_1 - v_2\|^2 = 0$, hence $v_1 = v_2$.
 
-There is a second, more conceptual proof using orthogonal complements. If $\varphi = 0$ then $v = 0$ trivially. Otherwise $\ker\varphi$ is a hyperplane of codimension $1$, and $(\ker\varphi)^\perp$ is a $1$-dimensional subspace. Pick any nonzero $w \in (\ker\varphi)^\perp$; the representing vector must be a scalar multiple of $w$, and the scalar is determined by the requirement that $\varphi(w) = \langle w, v\rangle$. Explicitly, $v = \frac{\overline{\varphi(w)}}{\|w\|^2} w$. This proof (LADR's "revisited" proof, 6.58) emphasizes the geometric content: the representing vector lives in $(\ker\varphi)^\perp$, the perpendicular to the hyperplane on which $\varphi$ vanishes.
+There is a second, more conceptual proof using orthogonal complements. If $\varphi = 0$ then $v = 0$ trivially. Otherwise $\ker\varphi$ is a hyperplane of codimension $1$, and $(\ker\varphi)^\perp$ is a $1$-dimensional [[Def - Subspace|subspace]]. Pick any nonzero $w \in (\ker\varphi)^\perp$; the representing vector must be a scalar multiple of $w$, and the scalar is determined by the requirement that $\varphi(w) = \langle w, v\rangle$. Explicitly, $v = \frac{\overline{\varphi(w)}}{\|w\|^2} w$. This proof (LADR's "revisited" proof, 6.58) emphasizes the geometric content: the representing vector lives in $(\ker\varphi)^\perp$, the perpendicular to the hyperplane on which $\varphi$ vanishes.
 
 ---
 
 # What Makes This Hard
 
-The proof is straightforward in finite dimensions but has two genuinely subtle points.
+The proof is straightforward in finite [[Def - Dimension|dimensions]] but has two genuinely subtle points.
 
 First, **the conjugate in the construction formula**. Over $\mathbb{R}$, $v = \sum_k \varphi(e_k) e_k$ is correct. Over $\mathbb{C}$, the formula is $v = \sum_k \overline{\varphi(e_k)} e_k$ — the conjugates are essential because of "linear in first slot, conjugate-linear in second". A common mistake is to drop the conjugates and get a *similar* but wrong representing vector.
 
@@ -202,7 +202,7 @@ Pick an orthonormal basis. Define the representing vector by stacking up conjuga
 
 **Construction of the adjoint operator.** For a linear map $T : V \to W$ between inner product spaces, the adjoint $T^* : W \to V$ is defined by $\langle Tv, w\rangle = \langle v, T^*w\rangle$ for all $v, w$. The existence of $T^*$ relies on Riesz: for each fixed $w$, the functional $v \mapsto \langle Tv, w\rangle$ on $V$ is linear, so Riesz gives a unique $T^*w \in V$ representing it. The linearity of $w \mapsto T^*w$ is automatic from uniqueness. This construction is the engine of the spectral theory in [[Linear Algebra VII — §7 Operators on Inner Product Spaces]].
 
-**Probability: conditional expectation as orthogonal projection.** The conditional expectation $E[X | \mathcal{G}]$ of a random variable $X$ given a $\sigma$-algebra $\mathcal{G}$ is, in the $L^2$ inner product space, the orthogonal projection of $X$ onto $L^2(\mathcal{G})$ — the subspace of $\mathcal{G}$-measurable random variables. The defining property — $E[X 1_A] = E[E[X|\mathcal{G}] 1_A]$ for every $A \in \mathcal{G}$ — is exactly the Riesz characterization of $E[X|\mathcal{G}]$ as the representing vector for the linear functional $Y \mapsto E[XY]$ restricted to $L^2(\mathcal{G})$.
+**Probability: conditional expectation as orthogonal projection.** The conditional expectation $E[X | \mathcal{G}]$ of a random variable $X$ given a $\sigma$-algebra $\mathcal{G}$ is, in the $L^2$ inner product space, the orthogonal projection of $X$ onto $L^2(\mathcal{G})$ — the [[Def - Subspace|subspace]] of $\mathcal{G}$-measurable random variables. The defining property — $E[X 1_A] = E[E[X|\mathcal{G}] 1_A]$ for every $A \in \mathcal{G}$ — is exactly the Riesz characterization of $E[X|\mathcal{G}]$ as the representing vector for the linear functional $Y \mapsto E[XY]$ restricted to $L^2(\mathcal{G})$.
 
 ---
 

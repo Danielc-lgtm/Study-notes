@@ -32,13 +32,13 @@ $V$ is a finite-dimensional [[Def - Inner Product Space|inner product space]] ov
 > **In SVD terms.** If $T = U \Sigma V^*$ is the singular value decomposition, then $S = UV^*$ and $R = V \Sigma V^*$.
 
 > [!warning] Both "left" and "right" polar decompositions exist.
-> One can also write $T = R' S$ with $R' = \sqrt{TT^*}$ positive and $S$ an isometry — the **left polar decomposition** (with the positive factor on the left). The two decompositions agree when $T$ is normal: $R = R'$ and the isometric factors coincide. We use the right polar decomposition $T = SR$ as the standard form.
+> One can also write $T = R' S$ with $R' = \sqrt{TT^*}$ positive and $S$ an [[Def - Isometry|isometry]] — the **left polar decomposition** (with the positive factor on the left). The two decompositions agree when $T$ is normal: $R = R'$ and the isometric factors coincide. We use the right polar decomposition $T = SR$ as the standard form.
 
 ---
 
 # Motivation
 
-The polar decomposition is the **operator analogue of $z = e^{i\theta} \cdot r$ for complex numbers**: every operator factors uniquely (up to gauge in the singular case) as an isometric "phase" times a positive "magnitude". The positive operator $|T| = \sqrt{T^*T}$ is the operator-theoretic absolute value; the isometry $S$ is the operator-theoretic phase.
+The polar decomposition is the **operator analogue of $z = e^{i\theta} \cdot r$ for complex numbers**: every operator factors uniquely (up to gauge in the singular case) as an isometric "phase" times a positive "magnitude". The positive operator $|T| = \sqrt{T^*T}$ is the operator-theoretic absolute value; the [[Def - Isometry|isometry]] $S$ is the operator-theoretic phase.
 
 This factorisation gives a **canonical decomposition of every operator** into pieces with distinct geometric meanings:
 - The positive factor $R = |T|$ encodes the **stretching information**: its eigenvalues are the singular values of $T$, the principal stretching factors.
@@ -98,7 +98,7 @@ Verification: $SR = (UV^*)(V\Sigma V^*) = U(V^*V)\Sigma V^* = U\Sigma V^* = T$. 
 
 The non-obvious step is recognising that **the positive factor $|T| = \sqrt{T^*T}$, not $T$ itself, encodes the stretching information**. For self-adjoint $T$, $|T|$ is essentially $T$ (with absolute values of eigenvalues); for general $T$, $|T|$ is a derived object — the spectral data lives in $T^*T$, not $T$.
 
-The second subtlety is that the **isometric factor's domain matters**: $S$ is an isometry on $\operatorname{range} R$, which is a subspace of $V$. To extend to a full unitary, one chooses arbitrary orthonormal extension on the orthogonal complement. For invertible $T$, the orthogonal complement is trivial and $S$ is already a full unitary; for non-invertible $T$, the choice exists and the polar decomposition is non-unique on this part.
+The second subtlety is that the **isometric factor's domain matters**: $S$ is an isometry on $\operatorname{range} R$, which is a [[Def - Subspace|subspace]] of $V$. To extend to a full unitary, one chooses arbitrary orthonormal extension on the orthogonal complement. For invertible $T$, the orthogonal complement is trivial and $S$ is already a full unitary; for non-invertible $T$, the choice exists and the polar decomposition is non-unique on this part.
 
 The third subtlety is the **left vs right polar decomposition**. $T = SR$ with $R = \sqrt{T^*T}$ (right polar) and $T = R'S$ with $R' = \sqrt{TT^*}$ (left polar) are both decompositions but use different positive operators. For normal $T$ they coincide; for general $T$ they are related by $R' = SRS^{-1}$ — conjugation by the isometric factor.
 
@@ -179,7 +179,7 @@ Construct $R = \sqrt{T^*T}$ via the spectral theorem and uniqueness of positive 
 
 1. **Continuum mechanics — deformation gradient.** The deformation of a continuum body is described by a deformation gradient $F$, a $3 \times 3$ invertible matrix at each point. Polar decomposition $F = RU$ separates rotation $R$ from stretch $U$ (symmetric positive definite). The eigenvalues of $U$ are the **principal stretches**, and the eigenvectors are the **principal directions of stretch**. The Cauchy–Green deformation tensor $C = F^t F = U^2$ encodes all the strain information. This is polar decomposition applied at every spacetime point of a deforming body.
 
-2. **Computer graphics — extracting rotation from a matrix.** When animating a rigid body, the orientation is parameterised by a $3 \times 3$ rotation matrix, but numerical error during transformations can make the matrix drift away from $SO(3)$. Polar decomposition $M = RP$ extracts the closest rotation $R$, snapping the matrix back to the rotation group. This is "rotation re-orthogonalisation" in graphics pipelines.
+2. **Computer graphics — extracting rotation from a matrix.** When animating a rigid body, the orientation is parameterised by a $3 \times 3$ rotation matrix, but numerical error during transformations can make the matrix drift away from $SO(3)$. Polar decomposition $M = RP$ extracts the closest rotation $R$, snapping the matrix back to the rotation [[Def - Group|group]]. This is "rotation re-orthogonalisation" in graphics pipelines.
 
 3. **Quantum mechanics — purification of mixed states.** A density matrix $\rho$ has a unique positive square root $\sqrt{\rho}$. The "polar decomposition" perspective on purification: a pure state $|\psi\rangle = \sum \sqrt{\lambda_j} |j\rangle_A \otimes |j\rangle_B$ has reduced density matrix $\rho_A = \sum \lambda_j |j\rangle\langle j|$ on subsystem $A$, and the positive operator $\sqrt{\rho_A}$ is the "magnitude" half of $|\psi\rangle$ in the Schmidt decomposition.
 

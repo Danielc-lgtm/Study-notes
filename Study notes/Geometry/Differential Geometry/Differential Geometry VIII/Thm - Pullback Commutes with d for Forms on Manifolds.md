@@ -229,7 +229,7 @@ The proof's challenge is choosing the right level of abstraction. The slick "uni
 
 **Cohomology of fibre bundles.** For a fibre bundle $\pi : E \to B$ with fibre $F$, the pullback $\pi^* : H^k_{dR}(B) \to H^k_{dR}(E)$ is the start of the **Leray–Serre spectral sequence**, which computes $H^k_{dR}(E)$ from $H^k_{dR}(B)$ and $H^k_{dR}(F)$. The naturality of $d$ is what makes $\pi^*$ well-defined on cohomology, and is the starting input to the spectral sequence.
 
-**Index theorems.** The Atiyah–Singer index theorem expresses the index of an elliptic operator on a compact manifold as an integral of a polynomial in the curvature of the underlying bundles. The naturality of $d$ (and the analogous naturality of covariant exterior derivatives) is what makes the index a topological invariant — pullbacks under diffeomorphisms preserve the index, with the integrand being a closed form.
+**Index theorems.** The Atiyah–Singer index theorem expresses the index of an elliptic operator on a compact manifold as an integral of a polynomial in the curvature of the underlying bundles. The naturality of $d$ (and the analogous naturality of covariant exterior derivatives) is what makes the index a topological invariant — pullbacks under [[Def - Diffeomorphism|diffeomorphisms]] preserve the index, with the integrand being a closed form.
 
 ---
 

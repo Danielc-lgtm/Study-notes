@@ -36,7 +36,7 @@ This lemma is the reassurance. It says the worry is unfounded: a rational algebr
 
 Why should one expect this to be true? Because there is a classical shadow of it: the **rational root theorem**, which says any rational root $p/q$ (in lowest terms) of an integer polynomial has $q$ dividing the leading coefficient. For a *monic* polynomial the leading coefficient is $1$, so $q$ divides $1$, so $q = \pm 1$, so the root is an integer. The lemma is exactly this, and the elegance of the abstract proof is that it does not even need to invoke the rational root theorem as a separate fact — it gets the same conclusion from [[Thm - Gauss's Lemma|Gauss's lemma]] and the structure of the minimal polynomial, which is the more conceptual route and the one that generalises.
 
-The deeper framing — and the one to remember — is *integral closure*. A subring $A \subseteq B$ is **integrally closed** in $B$ when no element of $B$ outside $A$ satisfies a monic polynomial over $A$: the monic-root operation does not escape $A$. This lemma says $\mathbb{Z}$ is integrally closed in $\mathbb{Q}$. It is the prototype of a property that, when it holds for a ring's *own* field of fractions, marks that ring as "saturated" — already containing everything it morally should. Rings of integers of number fields have it; unique factorisation domains have it; and recognising integral closure as the right name turns a one-off check into an instance of a structural pattern.
+The deeper framing — and the one to remember — is *integral closure*. A [[Def - Subring|subring]] $A \subseteq B$ is **integrally closed** in $B$ when no element of $B$ outside $A$ satisfies a monic polynomial over $A$: the monic-root operation does not escape $A$. This lemma says $\mathbb{Z}$ is integrally closed in $\mathbb{Q}$. It is the prototype of a property that, when it holds for a ring's *own* field of fractions, marks that ring as "saturated" — already containing everything it morally should. [[Def - Ring|Rings]] of integers of number fields have it; unique factorisation domains have it; and recognising integral closure as the right name turns a one-off check into an instance of a structural pattern.
 
 ---
 
@@ -116,7 +116,7 @@ Take the minimal polynomial $f_\alpha \in \mathbb{Z}[X]$ of the rational algebra
 > [!note]- Lemma 1: The minimal polynomial of $\alpha$ is monic and irreducible in $\mathbb{Z}[X]$
 > **Statement:** A rational algebraic integer $\alpha$ has a minimal polynomial $f_\alpha \in \mathbb{Z}[X]$ that is monic and irreducible in $\mathbb{Z}[X]$.
 >
-> **Hint:** This is not proved here — it is imported from the structure theorem for the kernel ideal.
+> **Hint:** This is not proved here — it is imported from the structure theorem for the kernel [[Def - Ideal|ideal]].
 >
 > **Why needed:** It is the object the whole argument manipulates; in particular its *integer* coefficients are what the conclusion reads off.
 >

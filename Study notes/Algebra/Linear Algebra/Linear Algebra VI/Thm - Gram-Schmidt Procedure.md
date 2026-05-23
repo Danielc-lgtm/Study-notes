@@ -94,7 +94,7 @@ and the orthogonal residual is $f_k = v_k - \sum_j \frac{\langle v_k, f_j\rangle
 
 The reason linear independence is essential: if $v_k$ were in $\operatorname{span}(v_1, \dots, v_{k-1})$, the residual $f_k$ would be zero (the projection would be all of $v_k$), and we could not normalize. Linear independence guarantees that each $v_k$ brings something genuinely new, hence each $f_k$ is nonzero.
 
-The reason the partial spans match: by induction, $\operatorname{span}(e_1, \dots, e_{k-1}) = \operatorname{span}(v_1, \dots, v_{k-1})$ (induction hypothesis), and $f_k = v_k - \sum_j (\ldots) e_j$ is a linear combination of $v_k$ and $e_1, \dots, e_{k-1}$, hence is in $\operatorname{span}(v_1, \dots, v_k)$. Adding $e_k = f_k/\|f_k\|$ to the list keeps everything in $\operatorname{span}(v_1, \dots, v_k)$, and the new vector is not in the previous span, so dimensions match.
+The reason the partial spans match: by induction, $\operatorname{span}(e_1, \dots, e_{k-1}) = \operatorname{span}(v_1, \dots, v_{k-1})$ (induction hypothesis), and $f_k = v_k - \sum_j (\ldots) e_j$ is a linear combination of $v_k$ and $e_1, \dots, e_{k-1}$, hence is in $\operatorname{span}(v_1, \dots, v_k)$. Adding $e_k = f_k/\|f_k\|$ to the list keeps everything in $\operatorname{span}(v_1, \dots, v_k)$, and the new vector is not in the previous span, so [[Def - Dimension|dimensions]] match.
 
 The procedure is **unique up to signs/phases**: an orthonormal list with the same partial spans and with $\langle v_k, e_k\rangle > 0$ for each $k$ is determined by the input list (LADR Exercise 6B.10).
 
@@ -134,7 +134,7 @@ Induction on $k$. At each step, subtract from $v_k$ its projection onto the span
    - *Why needed:* completes the inductive step with a genuinely orthonormal new vector.
 
 4. **Match partial spans.** Verify $\operatorname{span}(e_1, \dots, e_k) = \operatorname{span}(v_1, \dots, v_k)$.
-   - *Hint:* $e_k$ is a linear combination of $v_k$ and $e_1, \dots, e_{k-1}$, hence in $\operatorname{span}(v_1, \dots, v_k)$. The two spans have the same dimension $k$ and one is contained in the other; hence they coincide.
+   - *Hint:* $e_k$ is a linear combination of $v_k$ and $e_1, \dots, e_{k-1}$, hence in $\operatorname{span}(v_1, \dots, v_k)$. The two spans have the same [[Def - Dimension|dimension]] $k$ and one is contained in the other; hence they coincide.
    - *Why needed:* the partial-span condition in the theorem.
 
 ---

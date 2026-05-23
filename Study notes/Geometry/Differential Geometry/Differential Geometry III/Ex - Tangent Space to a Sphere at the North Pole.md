@@ -29,7 +29,7 @@ Let $N = (0, 0, 1)$ be the north pole.
 
 ![[Def - Coordinate Tangent Vectors#The Definition]]
 
-For a submanifold $M \subseteq \mathbb{R}^{N}$ at $p$, the **tangent space** $T_{p}M \subseteq \mathbb{R}^{N}$ as a Euclidean subspace consists of velocity vectors $\gamma'(0)$ of curves $\gamma$ in $M$ with $\gamma(0) = p$; see [[Def - The Tangent Space to a Submanifold]].
+For a submanifold $M \subseteq \mathbb{R}^{N}$ at $p$, the **tangent space** $T_{p}M \subseteq \mathbb{R}^{N}$ as a Euclidean [[Def - Subspace|subspace]] consists of velocity vectors $\gamma'(0)$ of curves $\gamma$ in $M$ with $\gamma(0) = p$; see [[Def - The Tangent Space to a Submanifold]].
 
 The **stereographic projection from $S$** sends a point $(x, y, z) \neq S$ to the point of the equatorial plane $z = 0$ where the line from $S$ through $(x, y, z)$ crosses the plane.
 
@@ -141,7 +141,7 @@ Compute $\ker df_{N}$ for $f(x, y, z) = x^{2} + y^{2} + z^{2} - 1$ and check the
 
 # Key Takeaways
 
-**Stereographic projection from the opposite pole is the canonical chart for computations at a pole.** This is a recurring trick in differential geometry: to compute at a point $p$, use a chart that has $p$ in its domain and ideally puts $p$ at the origin. For the sphere, stereographic projection from the antipodal point is the natural choice, because the antipodal point is missing from the domain — exactly what you need. The chart $\varphi_{N}$ projects from the south pole, putting $N$ at the chart origin, where the inverse $\varphi_{N}^{-1}$ simplifies to $(0, 0, 1)$ plus low-order corrections. The "use a chart that excludes the target point and places it at the chart origin" trick recurs throughout differential geometry — for projective space, Lie groups, and more.
+**Stereographic projection from the opposite pole is the canonical chart for computations at a pole.** This is a recurring trick in differential geometry: to compute at a point $p$, use a chart that has $p$ in its domain and ideally puts $p$ at the origin. For the sphere, stereographic projection from the antipodal point is the natural choice, because the antipodal point is missing from the domain — exactly what you need. The chart $\varphi_{N}$ projects from the south pole, putting $N$ at the chart origin, where the inverse $\varphi_{N}^{-1}$ simplifies to $(0, 0, 1)$ plus low-order corrections. The "use a chart that excludes the target point and places it at the chart origin" trick recurs throughout differential geometry — for projective space, Lie [[Def - Group|groups]], and more.
 
 **The differential of an inclusion just reads off Euclidean velocity.** For a submanifold $M \subseteq \mathbb{R}^{N}$, the inclusion $\iota : M \to \mathbb{R}^{N}$ has differential $d\iota_{p}(v) = \gamma'(0) \in \mathbb{R}^{N}$ for any curve $\gamma$ on $M$ realizing $v$. So the embedded tangent vectors are *just* the Euclidean velocities of curves on $M$. This is the cleanest way to identify abstract tangent vectors with their concrete Euclidean realizations — and it is exactly the bridge between [[Def - The Tangent Space|abstract TₚM]] and [[Def - The Tangent Space to a Submanifold|embedded TₚM ⊂ ℝᴺ]]. Whenever you have a manifold sitting in Euclidean space, this is the route to make the abstract tangent space concrete.
 

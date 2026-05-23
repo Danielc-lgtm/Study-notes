@@ -66,7 +66,7 @@ The coefficient of $dx^i$ is the pullback of the coefficient $\omega_j$ composed
 - **Functoriality:** $(G \circ F)^* = F^* \circ G^*$ for composable smooth maps $F : M \to N$, $G : N \to P$, and $\mathrm{id}_M^* = \mathrm{id}_{\Omega^1(M)}$.
 - **Naturality with $d$:** $F^*(dg) = d(F^*g) = d(g \circ F)$ for $g \in C^\infty(N)$.
 
-The pullback **does not** require $F$ to be a diffeomorphism, an immersion, an embedding, or anything other than smooth. This is the structural feature distinguishing covector fields (which pull back universally) from vector fields (which can be pushed forward only along diffeomorphisms).
+The pullback **does not** require $F$ to be a diffeomorphism, an immersion, an embedding, or anything other than smooth. This is the structural feature distinguishing covector fields (which pull back universally) from vector fields (which can be pushed forward only along [[Def - Diffeomorphism|diffeomorphisms]]).
 
 ---
 

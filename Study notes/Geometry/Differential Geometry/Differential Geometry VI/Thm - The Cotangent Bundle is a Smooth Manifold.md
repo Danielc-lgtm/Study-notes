@@ -17,7 +17,7 @@ $M$ is a smooth $n$-manifold, $T^*M = \bigsqcup_{p \in M} T_p^*M$, $\pi : T^*M \
 
 # Statement
 
-> **Theorem (Smooth structure on $T^*M$).** Let $M$ be a smooth manifold of dimension $n$. The cotangent bundle $T^*M = \bigsqcup_{p \in M} T_p^*M$ has a unique smooth manifold structure of dimension $2n$, and a unique smooth vector bundle structure of rank $n$ over $M$, with the following property:
+> **Theorem (Smooth structure on $T^*M$).** Let $M$ be a smooth manifold of [[Def - Dimension|dimension]] $n$. The cotangent bundle $T^*M = \bigsqcup_{p \in M} T_p^*M$ has a unique smooth manifold structure of dimension $2n$, and a unique smooth vector bundle structure of rank $n$ over $M$, with the following property:
 >
 > - For every smooth chart $(U, \varphi)$ on $M$ with coordinate functions $x^1, \dots, x^n$, the coordinate covector fields $dx^1, \dots, dx^n$ are smooth local sections of $T^*M$ over $U$, and the map
 > $$\Phi_{(U, \varphi)} : \pi^{-1}(U) \to U \times \mathbb{R}^n, \quad \omega_i \, dx^i|_p \mapsto (p, \omega_1, \dots, \omega_n)$$

@@ -40,7 +40,7 @@ where $Q(t) = \int_V\rho(t, \vec x)\,d^3x$ is the total charge in $V$ at time $t
 
 The Hodge star on Minkowski space $\mathbb{R}^4$ with signature $(-,+,+,+)$ acts on the basic 2-forms as $\star(dx\wedge dt) = -dy\wedge dz$, $\star(dy\wedge dt) = -dz\wedge dx$, $\star(dz\wedge dt) = -dx\wedge dy$, $\star(dy\wedge dz) = -dx\wedge dt$, $\star(dz\wedge dx) = -dy\wedge dt$, $\star(dx\wedge dy) = -dz\wedge dt$.
 
-Minkowski space and the Lorentz group:
+Minkowski space and the Lorentz [[Def - Group|group]]:
 
 ![[Def - Minkowski Space and the Metric]]
 
@@ -231,7 +231,7 @@ $$\boxed{Q(t_2) - Q(t_1) = \int_{t_1}^{t_2}\oint_{\partial V}\vec j\cdot d\vec A
 
 **Form-language Maxwell equations are manifestly Lorentz-invariant; vector-calculus Maxwell equations only *appear* to depend on a choice of frame.** The deep insight: electromagnetism is intrinsically a *2-form theory* on Minkowski space. The Faraday tensor $F$ is a single mathematical object that decomposes into electric and magnetic fields *only after* a choice of inertial frame. Under a Lorentz transformation, the components of $F$ mix (electric becomes magnetic and vice versa), which is the celebrated "[[Ex - Transforming electric and magnetic fields between frames|transformation of E and B between frames]]". The mathematical structure of $F$ is invariant; only its decomposition into spatial components changes. This is the universal lesson: when a physical theory has a "natural" relativistic formulation in terms of forms, the form-language is *simpler* and more revealing than the component-language.
 
-**The four classical Maxwell equations are bundled into two form equations, $dF = 0$ and $d{\star}F = J$, via the Hodge star.** $dF = 0$ packages the two *homogeneous* equations (Gauss for $B$ and Faraday's law); $d{\star}F = J$ packages the two *inhomogeneous* equations (Gauss for $E$ and Ampère–Maxwell). The reason for the bundling: $dF$ has 4 independent components (one for each 3-form basis element), and the four components are exactly the four equations. The bundling is structurally forced by the dimension of $\Omega^3(\mathbb{R}^4) = \binom{4}{3} = 4$.
+**The four classical Maxwell equations are bundled into two form equations, $dF = 0$ and $d{\star}F = J$, via the Hodge star.** $dF = 0$ packages the two *homogeneous* equations (Gauss for $B$ and Faraday's law); $d{\star}F = J$ packages the two *inhomogeneous* equations (Gauss for $E$ and Ampère–Maxwell). The reason for the bundling: $dF$ has 4 independent components (one for each 3-form basis element), and the four components are exactly the four equations. The bundling is structurally forced by the [[Def - Dimension|dimension]] of $\Omega^3(\mathbb{R}^4) = \binom{4}{3} = 4$.
 
 **Charge conservation is the Bianchi-style identity $d^2 = 0$.** From $d{\star}F = J$ we automatically get $dJ = d^2{\star}F = 0$ — there is no separate "conservation law" to impose; it is *forced* by the form structure. This is one of the cleanest insights of form-language electromagnetism: a physically nontrivial conservation law is a mathematical identity. The pattern recurs in Yang–Mills theory ($d_A F_A = 0$ is the Bianchi identity, hence $d_A{\star}F_A$-conservation), in general relativity (the second Bianchi identity for the Riemann tensor implies energy-momentum conservation via the Einstein equations), and in any gauge theory.
 

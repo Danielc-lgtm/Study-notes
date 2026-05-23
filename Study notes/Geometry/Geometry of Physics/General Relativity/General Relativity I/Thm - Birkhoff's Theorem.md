@@ -88,7 +88,7 @@ The reason for this "extra" enforcement of staticness is, deeper, the absence of
 
 The technical difficulty is the computation of the Ricci tensor for the time-dependent spherical ansatz, requiring all four diagonal and the $tr$ component. The off-diagonal $R_{tr} = 0$ equation is the key — it is what kills the time-dependence of $\lambda$. A common error is to start with the *static* ansatz from the beginning (assuming staticness rather than deriving it), which collapses Birkhoff's theorem to "spherically symmetric static vacuum implies Schwarzschild" — true but missing the deeper statement that staticness is *forced*, not assumed. The full theorem (Birkhoff) is the time-dependent statement, and that requires actually computing the Ricci tensor with time-dependent metric functions.
 
-Another subtle point: the theorem is *local* — it asserts local isometry to Schwarzschild in any neighbourhood. Globally, identifications of the maximal extension give other spacetimes (e.g., Schwarzschild with the spatial slice replaced by $S^1 \times S^2$ instead of $\mathbb{R} \times S^2$ — a topologically distinct spacetime with the same local metric). The theorem says nothing about global topology.
+Another subtle point: the theorem is *local* — it asserts local [[Def - Isometry|isometry]] to Schwarzschild in any neighbourhood. Globally, identifications of the maximal extension give other spacetimes (e.g., Schwarzschild with the spatial slice replaced by $S^1 \times S^2$ instead of $\mathbb{R} \times S^2$ — a topologically distinct spacetime with the same local metric). The theorem says nothing about global topology.
 
 ---
 
@@ -134,7 +134,7 @@ Another subtle point: the theorem is *local* — it asserts local isometry to Sc
 > **Statement:** The most general spherically symmetric Lorentzian metric in 4D, after coordinate adaptation, takes the form
 > $$ds^2 = -e^{2\nu(t, r)} dt^2 + e^{2\lambda(t, r)} dr^2 + r^2 d\Omega^2.$$
 >
-> **Hint:** Spherical symmetry means there is an $SO(3)$ isometry group whose orbits are spacelike 2-spheres. Adapt coordinates so the angular part is the standard round 2-sphere $r^2 d\Omega^2$ with $r$ the areal radius. The remaining metric is on the $(t, r)$ plane with two free functions; the $g_{tr}$ component can be killed by a coordinate change $t \to t + f(r)$.
+> **Hint:** Spherical symmetry means there is an $SO(3)$ isometry [[Def - Group|group]] whose orbits are spacelike 2-spheres. Adapt coordinates so the angular part is the standard round 2-sphere $r^2 d\Omega^2$ with $r$ the areal radius. The remaining metric is on the $(t, r)$ plane with two free functions; the $g_{tr}$ component can be killed by a coordinate change $t \to t + f(r)$.
 >
 > **Why needed:** Sets up the problem with explicit metric components.
 >
@@ -217,7 +217,7 @@ Another subtle point: the theorem is *local* — it asserts local isometry to Sc
 
 **Application 2: Spherical EM field — Reissner–Nordström.** The Einstein–Maxwell equations with a spherically symmetric electromagnetic source yield the **Reissner–Nordström metric** $ds^2 = -(1 - 2M/r + Q^2/r^2) dt^2 + (\ldots)^{-1} dr^2 + r^2 d\Omega^2$ with $A = (Q/r) dt$. This is the EM-generalisation of Birkhoff (Birkhoff–Hoffmann): the unique spherical solution of Einstein–Maxwell vacuum (no other matter, but with EM field) is Reissner–Nordström, characterised by mass $M$ and charge $Q$.
 
-**Application 3: Higher dimensions.** The higher-dimensional Schwarzschild solution (Tangherlini, 1963) in $D$ dimensions is $g_{tt} = -(1 - r_s^{D-3}/r^{D-3})$, $g_{rr} = -(g_{tt})^{-1}$, with $d\Omega^2_{D-2}$ the metric on the unit $(D-2)$-sphere. Birkhoff's theorem holds in higher dimensions: spherical symmetry in vacuum forces this solution.
+**Application 3: Higher [[Def - Dimension|dimensions]].** The higher-dimensional Schwarzschild solution (Tangherlini, 1963) in $D$ dimensions is $g_{tt} = -(1 - r_s^{D-3}/r^{D-3})$, $g_{rr} = -(g_{tt})^{-1}$, with $d\Omega^2_{D-2}$ the metric on the unit $(D-2)$-sphere. Birkhoff's theorem holds in higher dimensions: spherical symmetry in vacuum forces this solution.
 
 **Application 4: Cosmological perturbations.** When studying small-scale density perturbations in cosmology, the spherical-perturbation regime is governed by Birkhoff-type reasoning: the exterior of a spherical overdensity behaves like Schwarzschild, with $M$ being the enclosed mass. This is the GR justification for treating small-scale clustering "Newtonianly" — the spherical exterior is just Schwarzschild around the enclosed mass.
 

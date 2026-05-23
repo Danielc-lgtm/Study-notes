@@ -28,7 +28,7 @@ In the language of de Rham cohomology, this says $H^1_{dR}(M) = 0$ for any simpl
 
 # Motivation
 
-This theorem is the **first-degree de Rham vanishing theorem**: it gives a complete answer to "when is a closed 1-form exact?" — namely, when the manifold's fundamental group $\pi_1(M)$ is trivial. The theorem makes the obstruction to exactness explicit and topological, providing the first concrete instance of the bridge between differential geometry (the closed-exact distinction for 1-forms) and topology (the simple-connectivity of $M$).
+This theorem is the **first-degree de Rham vanishing theorem**: it gives a complete answer to "when is a closed 1-form exact?" — namely, when the manifold's fundamental [[Def - Group|group]] $\pi_1(M)$ is trivial. The theorem makes the obstruction to exactness explicit and topological, providing the first concrete instance of the bridge between differential geometry (the closed-exact distinction for 1-forms) and topology (the simple-connectivity of $M$).
 
 The motivation is direct. Exact 1-forms automatically satisfy $d\omega = d^2 f = 0$ (since $d^2 = 0$, which is the well-defined cancellation $d \circ d = 0$). So "exact implies closed". The converse — "closed implies exact" — is the substantive content, and the theorem says it holds when the topology of $M$ is trivial.
 
@@ -90,7 +90,7 @@ So the theorem's logic is: closed $\omega$ + simply connected $M$ + Stokes ⟹ p
 
 # What Makes This Hard
 
-The substantive technical step is the **smoothness of the homotopy connecting any loop to a constant**, used in the application of Stokes's theorem. Simple connectivity is by definition a *topological* condition (continuous homotopy), but Stokes's theorem requires *smooth* surfaces. The bridge is the smooth-approximation theorem: every continuous map from a manifold-with-boundary to a smooth manifold is homotopic to a smooth one, with the boundary behavior preserved. This is a non-trivial result in differential topology.
+The substantive technical step is the **smoothness of the [[Def - Homotopy|homotopy]] connecting any loop to a constant**, used in the application of Stokes's theorem. Simple connectivity is by definition a *topological* condition (continuous homotopy), but Stokes's theorem requires *smooth* surfaces. The bridge is the smooth-approximation theorem: every continuous map from a manifold-with-boundary to a smooth manifold is homotopic to a smooth one, with the boundary behavior preserved. This is a non-trivial result in differential topology.
 
 A second source of difficulty is the **proof that $df = \omega$ pointwise**. The natural argument is to compute $f(p + \epsilon v) - f(p)$ to first order in $\epsilon$, but the careful version requires a coordinate chart, a smooth path, and Taylor expansion of the integrand — bookkeeping that beginners often skip.
 

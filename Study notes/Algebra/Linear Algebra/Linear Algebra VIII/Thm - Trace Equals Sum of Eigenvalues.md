@@ -121,7 +121,7 @@ The other potential confusion is that "multiplicity" in the statement refers to 
 > **Why needed:** The proof of the trace theorem uses upper-triangular form as the privileged basis.
 >
 > > [!note]- Full proof
-> > See [[Thm - Upper-Triangular Form on Complex Vector Spaces]]. The proof is by induction on $\dim V$: find an eigenvalue $\lambda$ (Fundamental Theorem of Algebra), an eigenvector $v$, an invariant complement of the line spanned by $v$, and induct.
+> > See [[Thm - Upper-Triangular Form on Complex Vector Spaces]]. The proof is by induction on $\dim V$: find an eigenvalue $\lambda$ ([[Thm - Fundamental Theorem of Algebra|Fundamental Theorem of Algebra]]), an eigenvector $v$, an invariant complement of the line spanned by $v$, and induct.
 
 > [!note]- Lemma 2: Diagonal of upper-triangular = eigenvalues with multiplicity
 > **Statement:** Suppose $T \in \mathcal{L}(V)$ on a complex space and $T$ has upper-triangular matrix $A$ in some basis. Then for each eigenvalue $\lambda$ of $T$, the number of times $\lambda$ appears on the diagonal of $A$ equals the (algebraic) multiplicity of $\lambda$.
@@ -175,7 +175,7 @@ The other potential confusion is that "multiplicity" in the statement refers to 
 
 **Statistical mechanics — partition function.** The partition function $Z(\beta) = \operatorname{tr}(e^{-\beta H})$ for a Hamiltonian $H$ with eigenvalues $E_n$ (energy levels) equals $\sum_n e^{-\beta E_n}$ — a sum over the spectrum of $H$. The trace identity is exactly the spectral formula here, recovering the canonical partition function as a sum of Boltzmann factors. The generating function for the moments of energy is $\log Z(\beta)$.
 
-**Newton's identities and symmetric polynomials.** The traces $\operatorname{tr}(T^k) = \sum_j \lambda_j^k$ for $k = 1, 2, \dots, n$ are the **power sums** of the eigenvalues. Newton's identities recursively convert these into the elementary symmetric polynomials $e_k$. So the traces of powers of $T$ determine the characteristic polynomial — and hence the eigenvalues — even without diagonalising. This is the algebraic foundation of *moment-method spectral algorithms*: estimate $\operatorname{tr}(T^k)$ for small $k$ by sampling, then back-solve for the eigenvalues. The technique generalises to infinite dimensions via heat-kernel traces.
+**Newton's identities and symmetric polynomials.** The traces $\operatorname{tr}(T^k) = \sum_j \lambda_j^k$ for $k = 1, 2, \dots, n$ are the **power sums** of the eigenvalues. Newton's identities recursively convert these into the elementary symmetric polynomials $e_k$. So the traces of powers of $T$ determine the characteristic polynomial — and hence the eigenvalues — even without diagonalising. This is the algebraic foundation of *moment-method spectral algorithms*: estimate $\operatorname{tr}(T^k)$ for small $k$ by sampling, then back-solve for the eigenvalues. The technique generalises to infinite [[Def - Dimension|dimensions]] via heat-kernel traces.
 
 ---
 

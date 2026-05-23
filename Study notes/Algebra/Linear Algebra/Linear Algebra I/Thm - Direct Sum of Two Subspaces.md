@@ -12,13 +12,13 @@ tags: [algebra, linear-algebra]
 
 # Notation
 
-$V$ is a vector space over a [[Def - Field|field]] $\mathbb{F}$; $U$ and $W$ are subspaces of $V$. The sum $U + W = \{u + w : u \in U, w \in W\}$ is a subspace, and is a [[Def - Direct Sum|direct sum]] $U \oplus W$ exactly when every element has a unique decomposition $u + w$. The intersection $U \cap W$ is a subspace, and the zero subspace is $\{0\}$. See [[Linear Algebra I — §1 Vector Spaces]] for the full notation registry.
+$V$ is a vector space over a field $\mathbb{F}$; $U$ and $W$ are subspaces of $V$. The sum $U + W = \{u + w : u \in U, w \in W\}$ is a subspace, and is a [[Def - Direct Sum|direct sum]] $U \oplus W$ exactly when every element has a unique decomposition $u + w$. The intersection $U \cap W$ is a subspace, and the zero subspace is $\{0\}$. See [[Linear Algebra I — §1 Vector Spaces]] for the full notation registry.
 
 ---
 
 # Statement
 
-> **Theorem (Direct Sum of Two Subspaces).** Let $U$ and $W$ be subspaces of a vector space $V$. Then
+> **Theorem ([[Def - Direct Sum|Direct Sum]] of Two [[Def - Subspace|Subspaces]]).** Let $U$ and $W$ be [[Def - Subspace|subspaces]] of a vector space $V$. Then
 > $$U + W \text{ is a direct sum} \quad \Longleftrightarrow \quad U \cap W = \{0\}.$$
 
 This is the simplest and most-used criterion for direct sums, applying only in the two-subspace case. For three or more subspaces, pairwise trivial intersection is **not** enough — see [[Thm - Conditions for a Direct Sum]] and [[Def - Direct Sum]] for the right generalization.
@@ -139,11 +139,11 @@ The criterion is a biconditional. For the forward direction, use that $v \in U \
 
 # Cross-Field Exercise Suggestions
 
-**Subgroups of an abelian group.** The theorem holds verbatim for two subgroups $H, K$ of an abelian group $G$ (or two submodules of a module): $H + K$ is a direct sum if and only if $H \cap K = \{0\}$. This is the criterion used in classifying finite abelian groups: a cyclic subgroup of order $p$ and a cyclic subgroup of order $q$ with $\gcd(p, q) = 1$ have trivial intersection (by [[Thm - Lagrange's Theorem]], the intersection's order divides both $p$ and $q$, hence is $1$), so their sum is direct. The application bridges from coprime orders to direct-sum decomposition.
+**[[Def - Subgroup|Subgroups]] of an abelian [[Def - Group|group]].** The theorem holds verbatim for two [[Def - Subgroup|subgroups]] $H, K$ of an abelian group $G$ (or two [[Def - Submodule|submodules]] of a [[Def - Module|module]]): $H + K$ is a direct sum if and only if $H \cap K = \{0\}$. This is the criterion used in classifying finite abelian [[Def - Group|groups]]: a cyclic subgroup of order $p$ and a cyclic subgroup of order $q$ with $\gcd(p, q) = 1$ have trivial intersection (by [[Thm - Lagrange's Theorem]], the intersection's order divides both $p$ and $q$, hence is $1$), so their sum is direct. The application bridges from coprime orders to direct-sum decomposition.
 
 **Orthogonal decomposition in a Hilbert space.** For a closed subspace $U$ of a Hilbert space $H$, the orthogonal complement $U^\perp$ satisfies $U \cap U^\perp = \{0\}$ — any $v$ in both has $\langle v, v \rangle = 0$, forcing $v = 0$. Hence by this theorem $U + U^\perp$ is a direct sum, and the projection theorem of functional analysis upgrades this to $H = U \oplus U^\perp$ (the sum exhausts $H$). The theorem is the algebraic skeleton of the projection theorem.
 
-**Idempotent operators and complementary subspaces.** For an idempotent $P : V \to V$, the kernel and image satisfy $\operatorname{im} P \cap \ker P = \{0\}$ — any $v$ in both has $v = Pv = 0$. So this theorem gives $\operatorname{im} P + \ker P$ as a direct sum, and a dimension count shows it exhausts $V$ in finite dimensions: $V = \operatorname{im} P \oplus \ker P$. The bridge from idempotency to direct-sum decomposition is the basis of the structural classification of projections.
+**Idempotent operators and complementary subspaces.** For an idempotent $P : V \to V$, the kernel and image satisfy $\operatorname{im} P \cap \ker P = \{0\}$ — any $v$ in both has $v = Pv = 0$. So this theorem gives $\operatorname{im} P + \ker P$ as a direct sum, and a [[Def - Dimension|dimension]] count shows it exhausts $V$ in finite [[Def - Dimension|dimensions]]: $V = \operatorname{im} P \oplus \ker P$. The bridge from idempotency to direct-sum decomposition is the basis of the structural classification of projections.
 
 **Decomposing solution spaces of differential equations.** The space of solutions of a linear ODE $L y = 0$ decomposes as the direct sum of solution spaces of its irreducible factors, provided the factors share no common solutions. The pairwise triviality of intersection is the criterion of this theorem, and the application gives the standard "general solution = sum of particular solutions to component equations" of ODE theory.
 

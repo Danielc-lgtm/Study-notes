@@ -68,7 +68,7 @@ Combine the conclusion with **the polar decomposition over $\mathbb{R}$**: every
 
 # Why Is It True
 
-The proof must produce a real eigenvalue at each step of the induction, even though the FTA only gives complex eigenvalues over $\mathbb{R}$. The trick is to **complexify**: extend $V$ to $V_\mathbb{C} = V \otimes_\mathbb{R} \mathbb{C}$, extend $T$ to a $\mathbb{C}$-linear operator on $V_\mathbb{C}$, apply the FTA to get a complex eigenvalue, then use self-adjointness to force the eigenvalue real and the eigenvector to live in the real subspace.
+The proof must produce a real eigenvalue at each step of the induction, even though the FTA only gives complex eigenvalues over $\mathbb{R}$. The trick is to **complexify**: extend $V$ to $V_\mathbb{C} = V \otimes_\mathbb{R} \mathbb{C}$, extend $T$ to a $\mathbb{C}$-linear operator on $V_\mathbb{C}$, apply the FTA to get a complex eigenvalue, then use self-adjointness to force the eigenvalue real and the eigenvector to live in the real [[Def - Subspace|subspace]].
 
 **The one-liner mechanism: complexify, get a complex eigenvalue from the FTA, and use $\lambda \|v\|^2 = \langle Tv, v \rangle = \langle v, Tv \rangle = \overline{\lambda \|v\|^2}$ to force $\lambda \in \mathbb{R}$; the eigenvector then descends to the real subspace and induction proceeds as in the complex case.**
 
@@ -95,7 +95,7 @@ The third subtle step is **descending the eigenvector to the real subspace**. Th
 **This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
 
 **High-level strategy:**
-Show that every self-adjoint operator on a finite-dimensional real inner product space has at least one real eigenvalue (by complexification and the FTA, forcing the eigenvalue real via self-adjointness). Then induct on dimension as in the complex case.
+Show that every self-adjoint operator on a finite-dimensional real inner product space has at least one real eigenvalue (by complexification and the FTA, forcing the eigenvalue real via self-adjointness). Then induct on [[Def - Dimension|dimension]] as in the complex case.
 
 **Subgoal decomposition:**
 
@@ -112,10 +112,10 @@ Show that every self-adjoint operator on a finite-dimensional real inner product
    - *Why needed:* Inductive step engine.
 
 4. **Restriction of $T$ to an invariant subspace is self-adjoint.** A subspace $U$ that is $T$-invariant has $T|_U$ self-adjoint with respect to the inherited inner product (since $T^*|_U = T|_U$ trivially when $T = T^*$).
-   - *Hint:* Self-adjointness restricts to invariant subspaces for free.
+   - *Hint:* Self-adjointness restricts to invariant [[Def - Subspace|subspaces]] for free.
    - *Why needed:* For induction to work.
 
-5. **Induction on dimension.** Combine 1–4 with the orthogonality of distinct-eigenvalue eigenvectors (same as the complex case).
+5. **Induction on [[Def - Dimension|dimension]].** Combine 1–4 with the orthogonality of distinct-eigenvalue eigenvectors (same as the complex case).
 
 ---
 

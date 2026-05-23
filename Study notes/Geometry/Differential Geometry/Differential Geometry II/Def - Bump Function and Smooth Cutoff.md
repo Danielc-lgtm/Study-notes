@@ -22,7 +22,7 @@ This is a compound page: it defines two interlocking notions — **bump function
 
 We want a smooth function on a smooth manifold that is constantly equal to $1$ on a prescribed closed set $A$ and constantly equal to $0$ outside a prescribed open neighbourhood $U$ of $A$. Such a function is a *smooth interpolation* between "all the way on" and "all the way off" — a smooth version of a step function. The challenge is that the natural step function ($1$ on $A$, $0$ off $U$) is discontinuous, while continuous interpolations (such as a linear ramp between $A$ and $\partial U$) are not smooth.
 
-The fix begins in one dimension. We need a smooth function $\eta : \mathbb{R} \to [0, 1]$ that equals $1$ on $(-\infty, r_1]$ and $0$ on $[r_2, \infty)$, smoothly transitioning in between. The naive linear ramp fails at $r_1$ and $r_2$. The naive polynomial fix — say, a cubic spline — fails because polynomials are not $C^\infty$ at their transition points unless they are constant.
+The fix begins in one [[Def - Dimension|dimension]]. We need a smooth function $\eta : \mathbb{R} \to [0, 1]$ that equals $1$ on $(-\infty, r_1]$ and $0$ on $[r_2, \infty)$, smoothly transitioning in between. The naive linear ramp fails at $r_1$ and $r_2$. The naive polynomial fix — say, a cubic spline — fails because polynomials are not $C^\infty$ at their transition points unless they are constant.
 
 The key insight is the existence of a *single* smooth function whose derivatives at one endpoint all vanish: the function
 $$\psi_0(t) = e^{-1/t}, \quad t > 0; \quad \psi_0(t) = 0, \quad t \leq 0.$$
@@ -34,7 +34,7 @@ From $\psi_0$ we build a *smooth cutoff* — a smooth function transitioning fro
 $$h(t) = \frac{\psi_0(r_2 - t)}{\psi_0(r_2 - t) + \psi_0(t - r_1)}.$$
 The denominator is positive for all $t$ (one of $r_2 - t$, $t - r_1$ is always positive, so one of the $\psi_0$ values is positive). For $t \leq r_1$, $\psi_0(t - r_1) = 0$, so the denominator equals the numerator, hence $h(t) = 1$. For $t \geq r_2$, $\psi_0(r_2 - t) = 0$, so the numerator is $0$ and $h(t) = 0$. In between, $h$ is smooth (ratio of smooth functions with nonzero denominator) and takes values strictly between $0$ and $1$.
 
-In higher dimensions, take a radial bump: $H : \mathbb{R}^n \to [0, 1]$, $H(x) = h(|x|)$ with $h$ a cutoff transitioning from $1$ on $|x| \leq r_1$ to $0$ on $|x| \geq r_2$. This $H$ is smooth (composition of the smooth cutoff with the smooth norm — except at $0$, where $H$ is constant $1$, hence smooth). The support of $H$ is $\overline{B(0, r_2)}$.
+In higher [[Def - Dimension|dimensions]], take a radial bump: $H : \mathbb{R}^n \to [0, 1]$, $H(x) = h(|x|)$ with $h$ a cutoff transitioning from $1$ on $|x| \leq r_1$ to $0$ on $|x| \geq r_2$. This $H$ is smooth (composition of the smooth cutoff with the smooth norm — except at $0$, where $H$ is constant $1$, hence smooth). The support of $H$ is $\overline{B(0, r_2)}$.
 
 To upgrade to a manifold, pull the Euclidean bump back through a chart. Given $A \subseteq U \subseteq M$ with $A$ closed and $U$ open, cover $A$ by charts (using paracompactness if $A$ is non-compact), build Euclidean bumps on each chart, weight by a partition of unity, sum. The result is a smooth manifold-level bump.
 

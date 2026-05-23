@@ -15,7 +15,7 @@ $(M, g)$ a Riemannian manifold, $\gamma : I \to M$ a [[Def - Geodesic|geodesic]]
 
 # Axiom Motivation
 
-The motivating question is: **how do nearby geodesics behave relative to a given geodesic, to first order?** We have $\gamma$, fixed. We perturb it by a one-parameter family $\gamma_s$ of nearby geodesics, with $\gamma_0 = \gamma$. The variation field
+The motivating question is: **how do nearby [[Def - Geodesic|geodesics]] behave relative to a given geodesic, to first order?** We have $\gamma$, fixed. We perturb it by a one-parameter family $\gamma_s$ of nearby geodesics, with $\gamma_0 = \gamma$. The variation field
 $$J(t) := \frac{\partial}{\partial s}\bigg|_{s=0} \gamma_s(t)$$
 is a vector field along $\gamma$ that captures "the first-order separation of $\gamma_s$ from $\gamma$". What equation does $J$ satisfy?
 
@@ -31,7 +31,7 @@ Why $R(J, T)T$ and not, say, $R(T, J)T$ or some other index ordering? It comes o
 
 A subtler question is **which Jacobi fields arise as variations of geodesics?** The answer is: *all of them*. Given any initial data $(J(0), J'(0)) \in T_pM \times T_pM$, there is a one-parameter family $\gamma_s$ of geodesics with $\gamma_0 = \gamma$ whose variation field $J$ has these initial values. The construction: take $\gamma_s(t) := \exp_p((1 + s\, a)(v + s b\, t))$ for appropriate $a, b$ — or more simply, fix $\gamma_s(t) := \exp_{\gamma_s(0)}(t\, \dot\gamma_s(0))$ where $\gamma_s(0), \dot\gamma_s(0)$ are chosen so that the resulting $J(0) = J_0$ and $J'(0) = J'_0$ are the prescribed data. So the space of Jacobi fields along $\gamma$ is exactly $T_pM \times T_pM$, dimension $2n$ — matching the dimension of the second-order linear ODE.
 
-A useful split: **tangential vs normal Jacobi fields**. A Jacobi field $J$ that is parallel to $T$ (i.e. $J = f(t) T$ for some scalar function $f$) corresponds to varying the *parametrisation* of $\gamma$ or its initial speed — it does not represent a "geometric" variation of the geodesic image. Substituting $J = f T$ into the Jacobi equation gives $f'' T = 0$ (since $R(T, T) T = 0$ by antisymmetry of $R(\cdot, \cdot)$), so $f$ is linear in $t$: $J = (a + bt) T$. Tangential Jacobi fields are therefore a $2$-dimensional subspace of the $2n$-dimensional space of Jacobi fields. The remaining $2(n-1)$ dimensions are the **normal Jacobi fields**, $J \perp T$, which capture the "actual" geometric variation transverse to $\gamma$. For the index form and conjugate points, only normal Jacobi fields matter.
+A useful split: **tangential vs normal Jacobi fields**. A Jacobi field $J$ that is parallel to $T$ (i.e. $J = f(t) T$ for some scalar function $f$) corresponds to varying the *parametrisation* of $\gamma$ or its initial speed — it does not represent a "geometric" variation of the geodesic image. Substituting $J = f T$ into the Jacobi equation gives $f'' T = 0$ (since $R(T, T) T = 0$ by antisymmetry of $R(\cdot, \cdot)$), so $f$ is linear in $t$: $J = (a + bt) T$. Tangential Jacobi fields are therefore a $2$-dimensional [[Def - Subspace|subspace]] of the $2n$-dimensional space of Jacobi fields. The remaining $2(n-1)$ [[Def - Dimension|dimensions]] are the **normal Jacobi fields**, $J \perp T$, which capture the "actual" geometric variation transverse to $\gamma$. For the index form and conjugate points, only normal Jacobi fields matter.
 
 ---
 
@@ -50,7 +50,7 @@ $$J'' + R(J, T) T = 0.$$
 
 **Relation to the exponential map.** If $\gamma = \gamma_v$ with $\gamma_v(0) = p$, then for $w \in T_pM$ the Jacobi field along $\gamma_v$ with $J(0) = 0$ and $J'(0) = w$ is
 $$J(t) = d(\exp_p)_{tv}(tw).$$
-So Jacobi fields with $J(0) = 0$ are exactly the *radial* derivatives of the exponential map; this is the link by which conjugate points (where $J(t) = 0$) detect failures of $\exp_p$ to be a local diffeomorphism.
+So Jacobi fields with $J(0) = 0$ are exactly the *radial* derivatives of the exponential map; this is the link by which conjugate points (where $J(t) = 0$) detect failures of $\exp_p$ to be a local [[Def - Diffeomorphism|diffeomorphism]].
 
 ---
 
@@ -76,7 +76,7 @@ So Jacobi fields with $J(0) = 0$ are exactly the *radial* derivatives of the exp
 
 **Is an instance: tangential Jacobi fields are always linear.** Even on a curved manifold, the Jacobi field $J = (a + bt) T$ along any geodesic satisfies the equation: $J'' = 0$ (since $T' = 0$), and $R(J, T)T = (a+bt) R(T, T) T = 0$ by antisymmetry of $R$. So the tangential Jacobi fields are the "trivial" linear ones in any geometry; only normal Jacobi fields see the curvature.
 
-**Is an instance: the Jacobi field on a Lie group with bi-invariant metric.** For a geodesic $\gamma(t) = \exp(tX)$ (a one-parameter subgroup), the normal Jacobi fields along $\gamma$ are governed by the Lie algebra structure: writing $J(t) = (\exp(tX))_* Y(t)$ for left-translated fields, the Jacobi equation becomes $Y'' + \tfrac14 [X, [X, Y]] = 0$ — the curvature $R(Y, X)X$ being equal to $\tfrac14 [X, [X, Y]]$ on a bi-invariant metric. Conjugate points along $\gamma$ are determined by the eigenvalues of $\mathrm{ad}_X^2$ on the orthogonal complement of $X$.
+**Is an instance: the Jacobi field on a Lie [[Def - Group|group]] with bi-invariant metric.** For a geodesic $\gamma(t) = \exp(tX)$ (a one-parameter [[Def - Subgroup|subgroup]]), the normal Jacobi fields along $\gamma$ are governed by the Lie algebra structure: writing $J(t) = (\exp(tX))_* Y(t)$ for left-translated fields, the Jacobi equation becomes $Y'' + \tfrac14 [X, [X, Y]] = 0$ — the curvature $R(Y, X)X$ being equal to $\tfrac14 [X, [X, Y]]$ on a bi-invariant metric. Conjugate points along $\gamma$ are determined by the eigenvalues of $\mathrm{ad}_X^2$ on the orthogonal complement of $X$.
 
 **Is NOT an instance: a non-Jacobi variation field.** Take a geodesic $\gamma$ and a vector field $V$ along $\gamma$ that does not satisfy the Jacobi equation — e.g., a constant non-parallel field on a curved manifold. Then $V$ is *not* a Jacobi field, even though it is a perfectly good vector field along $\gamma$. Such $V$ does not arise from a geodesic variation, only from variations through *non*-geodesic curves; it gives a nonzero second variation $I(V, V)$.
 

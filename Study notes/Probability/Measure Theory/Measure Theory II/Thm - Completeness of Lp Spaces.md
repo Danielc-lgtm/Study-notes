@@ -104,7 +104,7 @@ The whole proof is one strategic idea — **pass to a rapidly-Cauchy subsequence
 
 # Cross-Field Exercise Suggestions
 
-Completeness of $L^2$ makes it a **Hilbert space**, which gives orthogonal projection onto closed subspaces — and projecting a random variable onto $L^2(\mathcal{G})$ for a sub-$\sigma$-algebra $\mathcal{G}$ *is* [[Def - Conditional Expectation|conditional expectation]]. Completeness of $L^p$ also makes the [[Thm - Almost Sure Martingale Convergence|Lᵖ-bounded martingale]]'s limit a genuine $L^p$ random variable, and is the property invoked whenever a function is constructed as the $L^p$-limit of approximants (Fourier series, solutions of PDE).
+Completeness of $L^2$ makes it a **Hilbert space**, which gives orthogonal projection onto closed [[Def - Subspace|subspaces]] — and projecting a random variable onto $L^2(\mathcal{G})$ for a sub-$\sigma$-algebra $\mathcal{G}$ *is* [[Def - Conditional Expectation|conditional expectation]]. Completeness of $L^p$ also makes the [[Thm - Almost Sure Martingale Convergence|Lᵖ-bounded martingale]]'s limit a genuine $L^p$ random variable, and is the property invoked whenever a function is constructed as the $L^p$-limit of approximants (Fourier series, solutions of PDE).
 
 ---
 

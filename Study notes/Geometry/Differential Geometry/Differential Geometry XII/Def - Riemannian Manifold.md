@@ -15,9 +15,9 @@ $(M, g)$ — a Riemannian manifold: $M$ is a smooth $n$-manifold (Hausdorff, sec
 
 # Axiom Motivation
 
-The need for this definition is purely terminological: once we have decided to study geometry on manifolds, we want a name for "a smooth manifold together with a chosen Riemannian metric". The pair $(M, g)$ is more than just $M$: every geometric quantity — length, angle, distance, curvature, geodesic — depends on $g$ as well as on $M$. To talk about isometries, to define geodesics, to compute curvature, the metric is part of the object, not auxiliary data.
+The need for this definition is purely terminological: once we have decided to study geometry on manifolds, we want a name for "a smooth manifold together with a chosen Riemannian metric". The pair $(M, g)$ is more than just $M$: every geometric quantity — length, angle, distance, curvature, [[Def - Geodesic|geodesic]] — depends on $g$ as well as on $M$. To talk about [[Def - Isometry|isometries]], to define [[Def - Geodesic|geodesics]], to compute curvature, the metric is part of the object, not auxiliary data.
 
-The decision to bundle $M$ and $g$ into one object is the same decision one makes in linear algebra when one writes "inner product space $(V, \langle\cdot,\cdot\rangle)$" rather than "vector space $V$ with an inner product $\langle\cdot,\cdot\rangle$": the inner product is part of the structure being studied, not external to it. A *vector space isomorphism* preserves only the linear structure; an *inner product space isomorphism* (linear isometry) preserves both linear structure and inner product, and is a more restrictive notion. Similarly, *a diffeomorphism* of smooth manifolds preserves only the smooth structure, while a [[Def - Isometry of Riemannian Manifolds|Riemannian isometry]] preserves the metric as well — and the round sphere and the ellipsoid, while diffeomorphic as smooth manifolds, are not isometric as Riemannian manifolds.
+The decision to bundle $M$ and $g$ into one object is the same decision one makes in linear algebra when one writes "inner product space $(V, \langle\cdot,\cdot\rangle)$" rather than "vector space $V$ with an inner product $\langle\cdot,\cdot\rangle$": the inner product is part of the structure being studied, not external to it. A *vector space isomorphism* preserves only the linear structure; an *inner product space isomorphism* (linear isometry) preserves both linear structure and inner product, and is a more restrictive notion. Similarly, *a [[Def - Diffeomorphism|diffeomorphism]]* of smooth manifolds preserves only the smooth structure, while a [[Def - Isometry of Riemannian Manifolds|Riemannian isometry]] preserves the metric as well — and the round sphere and the ellipsoid, while diffeomorphic as smooth manifolds, are not isometric as Riemannian manifolds.
 
 There is no question of which axioms to impose — the data is exactly $(M, g)$ with $M$ a smooth manifold and $g$ a Riemannian metric — but the conceptual move is to commit to the metric as part of the structure rather than as external choice.
 
@@ -27,11 +27,11 @@ There is no question of which axioms to impose — the data is exactly $(M, g)$ 
 
 > **Definition (Riemannian Manifold).** A **Riemannian manifold** is a pair $(M, g)$, where $M$ is a smooth manifold (Hausdorff, second-countable) and $g$ is a [[Def - Riemannian Metric|Riemannian metric]] on $M$.
 
-The dimension of $(M, g)$ is the dimension of $M$ as a smooth manifold. By abuse of language one often refers to "the Riemannian manifold $M$" when the metric is clear from context, but strictly speaking the object is the pair.
+The [[Def - Dimension|dimension]] of $(M, g)$ is the [[Def - Dimension|dimension]] of $M$ as a smooth manifold. By abuse of language one often refers to "the Riemannian manifold $M$" when the metric is clear from context, but strictly speaking the object is the pair.
 
 **Subobjects:** A **Riemannian submanifold** of $(M, g)$ is a pair $(S, \iota^* g)$ where $S \subseteq M$ is an immersed or embedded submanifold and $\iota^* g$ is the [[Def - Induced Metric on a Submanifold|induced metric]] obtained by pulling back $g$ along the inclusion $\iota : S \hookrightarrow M$.
 
-**Morphisms:** A **smooth map of Riemannian manifolds** is a smooth map $F : (M, g) \to (N, h)$, where smoothness is in the manifold sense. The map is a **Riemannian isometry** if $F$ is a diffeomorphism with $F^*h = g$; see [[Def - Isometry of Riemannian Manifolds]]. The isometries form a group $\mathrm{Isom}(M, g)$.
+**Morphisms:** A **smooth map of Riemannian manifolds** is a smooth map $F : (M, g) \to (N, h)$, where smoothness is in the manifold sense. The map is a **Riemannian isometry** if $F$ is a [[Def - Diffeomorphism|diffeomorphism]] with $F^*h = g$; see [[Def - Isometry of Riemannian Manifolds]]. The [[Def - Isometry|isometries]] form a [[Def - Group|group]] $\mathrm{Isom}(M, g)$.
 
 **Completeness:** A Riemannian manifold $(M, g)$ is **complete** (or **metrically complete**) if the [[Def - Length of a Curve and Riemannian Distance|Riemannian distance]] $d_g$ makes $(M, d_g)$ a complete metric space — every Cauchy sequence converges. Equivalently (Hopf–Rinow) — but this is the content of Riemannian Geometry, not this chapter — $M$ is **geodesically complete**: every geodesic extends to all parameter values.
 
@@ -59,7 +59,7 @@ The analogue in physics: in [[Special Relativity I — Lorentz Transformations a
 
 **Is an instance — Euclidean space $(\mathbb{R}^n, \bar g)$.** With the standard Euclidean metric $\bar g = \sum (dx^i)^2$. This is the prototypical Riemannian manifold, the flat case. Every other Riemannian manifold is, at each point, locally modelled on the Euclidean structure of the tangent space (with the metric serving as the inner product there).
 
-**Is an instance — the round sphere $(S^n, \mathring g)$.** With the induced metric from $\mathbb{R}^{n+1}$. The simplest *curved* Riemannian manifold: positive constant sectional curvature, finite total volume, compact, with isometry group $O(n+1)$.
+**Is an instance — the round sphere $(S^n, \mathring g)$.** With the induced metric from $\mathbb{R}^{n+1}$. The simplest *curved* Riemannian manifold: positive constant sectional curvature, finite total volume, compact, with isometry [[Def - Group|group]] $O(n+1)$.
 
 **Is an instance — the hyperbolic plane $(\mathbb{H}^2, g_{\mathbb{H}})$.** Either as the upper half-plane $\{y > 0\} \subseteq \mathbb{R}^2$ with $g_{\mathbb{H}} = (dx^2 + dy^2)/y^2$, or as the Poincaré disk model. Constant negative sectional curvature, non-compact, with isometry group $\mathrm{PSL}(2, \mathbb{R})$.
 

@@ -21,7 +21,7 @@ is a **composition series** if each $H_{i+1} \trianglelefteq H_i$ and each succe
 
 # Statement
 
-> **Existence of a Composition Series.** Every finite group $G$ admits a composition series: a chain of subgroups
+> **Existence of a Composition Series.** Every finite group $G$ admits a composition series: a chain of [[Def - Subgroup|subgroups]]
 > $$G = H_1 \;\trianglerighteq\; H_2 \;\trianglerighteq\; \cdots \;\trianglerighteq\; H_n = \{e\}$$
 > in which each $H_{i+1}$ is normal in $H_i$ and each quotient $H_i / H_{i+1}$ is simple.
 
@@ -31,11 +31,11 @@ is a **composition series** if each $H_{i+1} \trianglelefteq H_i$ and each succe
 
 The recurring strategy of this whole topic is: to understand a complicated group $G$, find a [[Def - Normal Subgroup|normal subgroup]] $N$ and break $G$ into the two simpler pieces $N$ and the [[Def - Quotient Group|quotient]] $G/N$. But this raises an obvious question — *can you always keep going?* You break $G$ into $N$ and $G/N$; can you break those, and their pieces, and so on, until nothing breaks any further? And what do the indivisible pieces at the end look like?
 
-A composition series is the answer. It is a maximal record of the breaking-apart process: a chain descending from $G$ to the trivial group, in which each step quotients out a normal subgroup, and — crucially — each successive quotient $H_i/H_{i+1}$ is *simple*, meaning it cannot be broken any further. The composition factors are the indivisible residue, the pieces at which the process halts.
+A composition series is the answer. It is a maximal record of the breaking-apart process: a chain descending from $G$ to the trivial group, in which each step quotients out a normal subgroup, and — crucially — each successive quotient $H_i/H_{i+1}$ is *simple*, meaning it cannot be broken any further. The composition factors are the indivisible [[Def - Residue|residue]], the pieces at which the process halts.
 
-This is the **prime factorisation analogy** made exact. To understand an integer $n$ you write it as a product of primes — numbers that cannot be factored further. To understand a finite group you write a composition series, whose factors are simple groups — groups that cannot be quotiented further. The simple groups are the "primes" of finite group theory, and this theorem is the assertion that the factorisation always *exists*: every finite group, no matter how intricate, is assembled from simple pieces.
+This is the **prime factorisation analogy** made exact. To understand an integer $n$ you write it as a product of primes — numbers that cannot be factored further. To understand a finite group you write a composition series, whose factors are simple [[Def - Group|groups]] — [[Def - Group|groups]] that cannot be quotiented further. The simple groups are the "primes" of finite group theory, and this theorem is the assertion that the factorisation always *exists*: every finite group, no matter how intricate, is assembled from simple pieces.
 
-The theorem has a famous companion, the **Jordan–Hölder theorem**, which says the factorisation is moreover *unique*: although a group may have many different composition series, the multiset of composition factors — counted with multiplicity, ignoring order — is an invariant of $G$. Existence (this theorem) plus uniqueness (Jordan–Hölder) together say that the composition factors are a genuine, well-defined invariant, the true analogue of the prime factorisation. That is why classifying the simple groups — the Classification of Finite Simple Groups — is so fundamental: it is the project of writing down the periodic table from which every finite group is built.
+The theorem has a famous companion, the **Jordan–Hölder theorem**, which says the factorisation is moreover *unique*: although a group may have many different composition series, the multiset of composition factors — counted with multiplicity, ignoring order — is an invariant of $G$. Existence (this theorem) plus uniqueness (Jordan–Hölder) together say that the composition factors are a genuine, well-defined invariant, the true analogue of the prime factorisation. That is why classifying the simple groups — the Classification of Finite [[Def - Simple Group|Simple Groups]] — is so fundamental: it is the project of writing down the periodic table from which every finite group is built.
 
 ---
 
@@ -67,7 +67,7 @@ Combine the conclusion with **induction on $|G|$**. A composition series exhibit
 
 The existence of a composition series should not be surprising at all, and the reason is a simple **finiteness** argument: you keep chopping, and because the group is finite you cannot chop forever.
 
-Here is the picture. Start with $G$. If $G$ is already simple, the chain $G \trianglerighteq \{e\}$ is a composition series and you are done. If $G$ is *not* simple, it has *some* proper non-trivial normal subgroup. The clever move is not to pick any such subgroup, but to pick a **maximal** one — a proper normal subgroup $H_2 \trianglelefteq G$ of largest possible order. (Such a maximal one exists because there are only finitely many subgroups to compare.)
+Here is the picture. Start with $G$. If $G$ is already simple, the chain $G \trianglerighteq \{e\}$ is a composition series and you are done. If $G$ is *not* simple, it has *some* proper non-trivial normal subgroup. The clever move is not to pick any such subgroup, but to pick a **maximal** one — a proper normal subgroup $H_2 \trianglelefteq G$ of largest possible order. (Such a maximal one exists because there are only finitely many [[Def - Subgroup|subgroups]] to compare.)
 
 Why maximal? Because maximality is *exactly* the condition that makes the quotient $G/H_2$ simple. Suppose $G/H_2$ were not simple. Then $G/H_2$ would have a proper non-trivial normal subgroup. By the [[Thm - Correspondence Theorem|correspondence theorem]], normal subgroups of $G/H_2$ correspond to normal subgroups of $G$ lying *between* $H_2$ and $G$ — and a proper non-trivial one of $G/H_2$ would correspond to a normal subgroup $K$ of $G$ with $H_2 \subsetneq K \subsetneq G$. But that $K$ is a proper normal subgroup of $G$ *strictly larger than* $H_2$, contradicting the choice of $H_2$ as maximal. So $G/H_2$ has no proper non-trivial normal subgroup: it is simple.
 

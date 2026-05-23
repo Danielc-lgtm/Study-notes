@@ -17,7 +17,7 @@ $\pi : E \to M$ is a smooth rank-$k$ vector bundle. $(\sigma_1, \dots, \sigma_k)
 
 # Statement
 
-> **Theorem (Local Frames Span Sections).** Let $\pi : E \to M$ be a smooth vector bundle of rank $k$, and let $(\sigma_1, \dots, \sigma_k)$ be a smooth local frame for $E$ over an open set $U \subseteq M$. Then every smooth local section $\tau \in \Gamma(U, E)$ has a unique expression
+> **Theorem ([[Def - Local Frame|Local Frames]] Span Sections).** Let $\pi : E \to M$ be a smooth vector bundle of rank $k$, and let $(\sigma_1, \dots, \sigma_k)$ be a smooth local frame for $E$ over an open set $U \subseteq M$. Then every smooth local section $\tau \in \Gamma(U, E)$ has a unique expression
 > $$\tau = f^i \sigma_i = \sum_{i=1}^{k} f^i \sigma_i$$
 > for smooth functions $f^1, \dots, f^k \in C^\infty(U)$, called the **component functions of $\tau$ in the frame** $(\sigma_i)$. Conversely, every $k$-tuple of smooth functions on $U$ defines a smooth local section by this formula. Equivalently, $\Gamma(U, E)$ is a free $C^\infty(U)$-module of rank $k$, with basis $(\sigma_1, \dots, \sigma_k)$.
 
@@ -29,7 +29,7 @@ This theorem says, in one sentence: **a local frame realises the space of smooth
 
 The theorem is implicit every time one writes a vector field as $X = X^i \partial/\partial x^i$ or a 1-form as $\omega = \omega_i \, dx^i$. The coordinate frame is the local frame; the coefficients $X^i$ or $\omega_i$ are the component functions; their smoothness is exactly what the theorem asserts. Without the theorem, the validity of these coordinate expressions would require proof every time.
 
-The deeper reason the theorem matters is that it makes **sections behave like vectors over the ring $C^\infty(U)$**. In linear algebra, a vector in an $n$-dimensional space has unique coordinates in any basis, with smooth functions of the point playing no role. The bundle version replaces "scalars from $\mathbb{R}$" with "scalars from $C^\infty(U)$", and the theorem says the analog of "every vector has unique coordinates" holds. This is the foundation of the **tensoriality criterion** for bundle homomorphisms ([[Def - Bundle Homomorphism]]): a map of sections that is $C^\infty(M)$-linear comes from a bundle homomorphism, while a $C^\infty(M)$-nonlinear map (like the Lie derivative) does not.
+The deeper reason the theorem matters is that it makes **sections behave like vectors over the [[Def - Ring|ring]] $C^\infty(U)$**. In linear algebra, a vector in an $n$-dimensional space has unique coordinates in any basis, with smooth functions of the point playing no role. The bundle version replaces "scalars from $\mathbb{R}$" with "scalars from $C^\infty(U)$", and the theorem says the analog of "every vector has unique coordinates" holds. This is the foundation of the **tensoriality criterion** for bundle [[Def - Homomorphism|homomorphisms]] ([[Def - Bundle Homomorphism]]): a map of sections that is $C^\infty(M)$-linear comes from a bundle homomorphism, while a $C^\infty(M)$-nonlinear map (like the Lie derivative) does not.
 
 ---
 
@@ -173,7 +173,7 @@ Use a local trivialization to convert the abstract bundle into a product $U \tim
 >
 > **Step 4 — Converse.** Given $f^1, \dots, f^k \in C^\infty(U)$, define $\tau(p) := f^i(p) \sigma_i(p)$. In a local trivialization, $\Phi(\tau(p)) = (p, A(p) f(p))$, a smooth $V \times \mathbb{R}^k$-valued function. So $\tau$ is a smooth local section.
 >
-> **Step 5 — Free module of rank $k$.** The map $C^\infty(U)^k \to \Gamma(U, E)$, $(f^1, \dots, f^k) \mapsto f^i \sigma_i$, is bijective by Steps 0–4, and clearly $C^\infty(U)$-linear. So $\Gamma(U, E) \cong C^\infty(U)^k$ as $C^\infty(U)$-modules — i.e., $\Gamma(U, E)$ is a free $C^\infty(U)$-module of rank $k$ with basis $(\sigma_1, \dots, \sigma_k)$.
+> **Step 5 — Free module of rank $k$.** The map $C^\infty(U)^k \to \Gamma(U, E)$, $(f^1, \dots, f^k) \mapsto f^i \sigma_i$, is bijective by Steps 0–4, and clearly $C^\infty(U)$-linear. So $\Gamma(U, E) \cong C^\infty(U)^k$ as $C^\infty(U)$-[[Def - Module|modules]] — i.e., $\Gamma(U, E)$ is a free $C^\infty(U)$-module of rank $k$ with basis $(\sigma_1, \dots, \sigma_k)$.
 >
 > $\qquad\blacksquare$
 

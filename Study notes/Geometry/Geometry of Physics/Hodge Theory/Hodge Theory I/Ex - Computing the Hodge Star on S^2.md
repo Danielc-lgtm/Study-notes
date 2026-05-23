@@ -28,9 +28,9 @@ The round metric on $S^2$ has the orthonormal coframe $(\sigma^1, \sigma^2) = (d
 
 ![[Def - The Hodge Star Operator#The Definition]]
 
-The codifferential on a Riemannian $2$-manifold is $\delta = -\star d\star$ on $1$-forms (sign convention $(-1)^{2\cdot 2 + 1} = -1$). On functions: $\delta f = 0$.
+The [[Def - The Codifferential|codifferential]] on a Riemannian $2$-manifold is $\delta = -\star d\star$ on $1$-forms (sign convention $(-1)^{2\cdot 2 + 1} = -1$). On functions: $\delta f = 0$.
 
-The Hodge Laplacian on functions is $\Delta f = \delta(df) + d(\delta f) = \delta(df) = -\star d\star df$, since $\delta f = 0$ for $f$ a function. The standard (Laplace–Beltrami) Laplacian on functions is $\nabla^2 f = -\Delta f$ in the Hodge sign convention.
+The [[Def - Hodge Laplacian|Hodge Laplacian]] on functions is $\Delta f = \delta(df) + d(\delta f) = \delta(df) = -\star d\star df$, since $\delta f = 0$ for $f$ a function. The standard (Laplace–Beltrami) Laplacian on functions is $\nabla^2 f = -\Delta f$ in the Hodge sign convention.
 
 ---
 

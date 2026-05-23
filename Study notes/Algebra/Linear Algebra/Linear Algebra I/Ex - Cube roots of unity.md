@@ -15,7 +15,7 @@ Show that $\omega = \dfrac{-1 + \sqrt{3} i}{2}$ is a cube root of $1$ — that i
 
 **Recall:**
 
-$\mathbb{C}$ is the [[Def - Field|field]] of complex numbers with $i^2 = -1$ and the usual arithmetic. The cube roots of $1$ are the solutions of $z^3 = 1$ in $\mathbb{C}$.
+$\mathbb{C}$ is the field of complex numbers with $i^2 = -1$ and the usual arithmetic. The cube roots of $1$ are the solutions of $z^3 = 1$ in $\mathbb{C}$.
 
 ---
 
@@ -80,7 +80,7 @@ Plan: compute $\omega^2$ directly, then $\omega \cdot \omega^2$.
 
 # Key Takeaways
 
-**Roots of unity in $\mathbb{C}$ form a cyclic group under multiplication.** The three cube roots $1, \omega, \omega^2$ satisfy $\omega^3 = 1$ and form a [[Def - Group|group]] of order $3$ under multiplication. More generally, the $n$th roots of unity form a cyclic group of order $n$, isomorphic to $\mathbb{Z}/n\mathbb{Z}$. This is the foundational example in the study of cyclotomic fields and is one of the first appearances of group theory inside complex analysis.
+**Roots of unity in $\mathbb{C}$ form a cyclic [[Def - Group|group]] under multiplication.** The three cube roots $1, \omega, \omega^2$ satisfy $\omega^3 = 1$ and form a [[Def - Group|group]] of order $3$ under multiplication. More generally, the $n$th roots of unity form a cyclic [[Def - Group|group]] of order $n$, isomorphic to $\mathbb{Z}/n\mathbb{Z}$. This is the foundational example in the study of cyclotomic fields and is one of the first appearances of group theory inside complex analysis.
 
 **Polar form makes roots of unity transparent.** Writing $\omega = e^{2\pi i/3}$, $\omega^k = e^{2\pi i k/3}$, and the $n$th roots of unity are $\{e^{2 \pi i k/n} : k = 0, 1, \dots, n-1\}$. The cartesian form $\frac{-1 + \sqrt{3} i}{2}$ is unilluminating; the polar form $e^{2\pi i/3}$ exposes the geometric structure (equally spaced points on the unit circle). Switching between cartesian and polar form is one of the basic conversions in complex analysis, and recognizing when to use which is a transferable skill.
 

@@ -28,9 +28,9 @@ $F : M \to N$ is a smooth map between smooth manifolds, $m = \dim M$, $n = \dim 
 
 This theorem is the topological consequence of the [[Thm - Local Submersion Theorem|local submersion theorem]]'s coordinate normal form. It says that submersions are not just *locally* nice (locally projections), but *globally* open as maps — they preserve openness in both directions. This makes submersions the smooth-category analogue of topological quotient maps: in topology, a quotient map is the prototypical "open + surjective" map characterising the quotient topology; in differential geometry, a surjective submersion is the prototype of the smooth quotient construction.
 
-The result is short but consequential. It tells us that the image of a submersion is automatically a topologically nice subset of the target — open if the domain is open. So when we apply the [[Thm - Regular Value Theorem on Manifolds|regular value theorem]] to a submersion, the conclusion "$F^{-1}(c)$ is a properly embedded submanifold" implies *not just* the manifold structure on the preimage, but a useful topological property of the map itself: surjective submersions exhibit their codomains as quotients of their domains. This is the foundation of the **smooth quotient theorem** (Lie group actions producing homogeneous spaces) and of **fibre bundle theory** (locally trivial submersions).
+The result is short but consequential. It tells us that the image of a submersion is automatically a topologically nice subset of the target — open if the domain is open. So when we apply the [[Thm - Regular Value Theorem on Manifolds|regular value theorem]] to a submersion, the conclusion "$F^{-1}(c)$ is a properly embedded submanifold" implies *not just* the manifold structure on the preimage, but a useful topological property of the map itself: surjective submersions exhibit their codomains as quotients of their domains. This is the foundation of the **smooth quotient theorem** (Lie [[Def - Group|group]] actions producing homogeneous spaces) and of **fibre bundle theory** (locally trivial submersions).
 
-The result also fails dramatically for *immersions* — providing a useful contrast. An immersion's image, with the subspace topology, need not be open (the inclusion of the sphere into Euclidean space is the canonical example: $S^n \hookrightarrow \mathbb{R}^{n+1}$ is a smooth embedding but its image is closed and lower-dimensional, hence not open). Immersions preserve the *injection* direction of openness (an embedding is a homeomorphism onto its image), while submersions preserve the *surjection* direction.
+The result also fails dramatically for *immersions* — providing a useful contrast. An immersion's image, with the [[Def - Subspace|subspace]] topology, need not be open (the inclusion of the sphere into Euclidean space is the canonical example: $S^n \hookrightarrow \mathbb{R}^{n+1}$ is a smooth embedding but its image is closed and lower-dimensional, hence not open). Immersions preserve the *injection* direction of openness (an embedding is a homeomorphism onto its image), while submersions preserve the *surjection* direction.
 
 ---
 
@@ -104,7 +104,7 @@ A point $q \in F(U)$ has a preimage $p \in U$. Apply the local submersion theore
    - *Hint:* This is the [[Thm - Local Submersion Theorem|local submersion theorem]]'s output.
 
 3. **Restrict to the open intersection.** Replace $U_p$ by $U_p \cap U$, still open, still containing $p$. In coordinates, $\varphi(U_p \cap U)$ is an open subset of $\mathbb{R}^m$ containing $0$ (the origin, since the chart was centred at $p$).
-   - *Hint:* Intersection of open sets is open; chart maps are homeomorphisms.
+   - *Hint:* Intersection of open sets is open; chart maps are [[Def - Homeomorphism|homeomorphisms]].
 
 4. **Project to $\mathbb{R}^n$.** The image $\hat F(\varphi(U_p \cap U))$ is open in $\mathbb{R}^n$ because the standard projection of an open set in $\mathbb{R}^m$ onto its first $n$ coordinates is open. Specifically: for any open box $B = \prod_i (a_i, b_i) \subseteq \mathbb{R}^m$, the projection $\hat F(B) = \prod_{i \leq n}(a_i, b_i)$ is an open box in $\mathbb{R}^n$.
    - *Hint:* Projections in product topologies are open.
@@ -166,7 +166,7 @@ A point $q \in F(U)$ has a preimage $p \in U$. Apply the local submersion theore
 
 **The smooth quotient theorem.** A free, proper smooth action of a Lie group $G$ on $M$ has the quotient map $\pi : M \to M/G$ a surjective submersion, hence a quotient map. The openness of $\pi$ is what gives the orbit space its quotient topology, and the manifold structure on $M/G$ depends on this in subtle ways (the smooth structure must be consistent with the open-projection topology).
 
-**The Hopf fibration's open structure.** The Hopf map $h : S^3 \to S^2$ is a surjective submersion, hence open. Hence open neighbourhoods on $S^2$ pull back to open neighbourhoods on $S^3$, and any "patch" of $S^2$ admits a local product structure $h^{-1}(U) \cong U \times S^1$. See [[Ex - The Hopf Map is a Submersion]].
+**The Hopf [[Def - Fibration|fibration]]'s open structure.** The Hopf map $h : S^3 \to S^2$ is a surjective submersion, hence open. Hence open neighbourhoods on $S^2$ pull back to open neighbourhoods on $S^3$, and any "patch" of $S^2$ admits a local product structure $h^{-1}(U) \cong U \times S^1$. See [[Ex - The Hopf Map is a Submersion]].
 
 ---
 

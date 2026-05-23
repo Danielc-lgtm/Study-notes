@@ -39,7 +39,7 @@ Without this theorem, regularization could look like an arbitrary trick: why pen
 
 The deeper conceptual content is twofold.
 
-First, *the optimal $\lambda^*$ depends on $x^*$ and $\sigma^2$ — quantities we don't know.* The theorem gives the form of the MSE as a function of $\lambda$, but minimizing it requires the true parameter $x^*$ and noise variance $\sigma^2$, which are not observable. In practice, $\lambda$ is chosen by cross-validation, which estimates the MSE empirically without needing $x^*$.
+First, *the optimal $\lambda^*$ depends on $x^*$ and $\sigma^2$ — quantities we don't know.* The theorem gives the form of the MSE as a function of $\lambda$, but minimizing it requires the true parameter $x^*$ and noise variance $\sigma^2$, which are not observable. In practice, $\lambda$ is chosen by cross-[[Def - Validation (Training and Test Error)|validation]], which estimates the MSE empirically without needing $x^*$.
 
 Second, *the Bayesian interpretation is exact*. Under Gaussian noise + Gaussian prior on $x$, the MAP estimator is the Tikhonov solution with $\lambda = \sigma^2/\tau^2$ (noise/prior variance ratio). The "optimal $\lambda$" — minimizing MSE under the prior — coincides with the MSE-optimal $\lambda$ when averaged over $x^*$'s drawn from the prior. The bias-variance tradeoff is the *frequentist* face of the Bayesian shrinkage estimator; both perspectives lead to the same recommendation: regularize.
 
@@ -81,7 +81,7 @@ The Tikhonov solution replaces $1/\sigma_i$ with $\sigma_i/(\sigma_i^2 + \lambda
 
 Quantitatively: the variance reduction at small $\lambda$ is $O(\lambda)$, while the bias introduction is $O(\lambda)$ in each parameter. Squared bias is $O(\lambda^2)$, smaller than the variance reduction at first order. So the *net* MSE change at $\lambda = 0$ is negative — MSE strictly decreases as we move $\lambda$ away from 0.
 
-The deeper story is the *Stein paradox*: in dimension $\geq 3$, the maximum-likelihood estimator (which is ordinary LS for Gaussian noise) is *inadmissible* — there exists a better estimator with strictly lower MSE everywhere. The James-Stein estimator and Tikhonov are two examples; both are *shrinkage* estimators that trade bias for variance reduction. This is one of the most counterintuitive results in classical statistics, and it is the deeper justification for why regularization is *always* a good idea (in dimension $\geq 3$).
+The deeper story is the *Stein paradox*: in [[Def - Dimension|dimension]] $\geq 3$, the maximum-likelihood estimator (which is ordinary LS for Gaussian noise) is *inadmissible* — there exists a better estimator with strictly lower MSE everywhere. The James-Stein estimator and Tikhonov are two examples; both are *shrinkage* estimators that trade bias for variance reduction. This is one of the most counterintuitive results in classical statistics, and it is the deeper justification for why regularization is *always* a good idea (in [[Def - Dimension|dimension]] $\geq 3$).
 
 ---
 
@@ -91,7 +91,7 @@ The hard step is the *SVD-based decomposition* of the MSE. Most students are com
 $$\hat{x}(\lambda) = V \mathrm{diag}\!\left(\frac{\sigma_i}{\sigma_i^2 + \lambda}\right) U^T b,$$
 which makes both the bias and variance transparent — each singular component is filtered by the factor $\sigma_i/(\sigma_i^2 + \lambda)$. The MSE is the sum of squared filtered-noise contributions plus squared signal-attenuation contributions, both expressed in singular-value coordinates.
 
-A secondary difficulty: the optimal $\lambda^*$ depends on unknown quantities ($x^*$, $\sigma^2$). The *theorem* says an optimal $\lambda^*$ exists; the *practice* uses cross-validation to estimate it. Many students miss this distinction.
+A secondary difficulty: the optimal $\lambda^*$ depends on unknown quantities ($x^*$, $\sigma^2$). The *theorem* says an optimal $\lambda^*$ exists; the *practice* uses cross-[[Def - Validation (Training and Test Error)|validation]] to estimate it. Many students miss this distinction.
 
 ---
 

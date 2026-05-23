@@ -21,11 +21,11 @@ $G$ is a finite group with identity $e$, and $p$ is a prime; $G$ is a [[Def - p-
 
 # Statement
 
-> **Theorem (subgroups of a $p$-group, of every order).** Let $G$ be a group of order $p^a$, where $p$ is prime and $a \geq 1$. Then for *every* exponent $b$ with $0 \leq b \leq a$, the group $G$ has a [[Def - Subgroup|subgroup]] of order $p^b$. Moreover such a subgroup can be chosen [[Def - Normal Subgroup|normal]] in $G$.
+> **Theorem ([[Def - Subgroup|subgroups]] of a $p$-group, of every order).** Let $G$ be a group of order $p^a$, where $p$ is prime and $a \geq 1$. Then for *every* exponent $b$ with $0 \leq b \leq a$, the group $G$ has a [[Def - Subgroup|subgroup]] of order $p^b$. Moreover such a subgroup can be chosen [[Def - Normal Subgroup|normal]] in $G$.
 
-In words: a $p$-group has a (normal) subgroup of *every* order permitted by [[Thm - Lagrange's Theorem|Lagrange's theorem]] — the divisors of $|G| = p^a$ are exactly $p^0, p^1, \dots, p^a$, and every one of them is realised. This is the **converse of Lagrange's theorem, holding in full** for $p$-groups.
+In words: a $p$-group has a (normal) subgroup of *every* order permitted by [[Thm - Lagrange's Theorem|Lagrange's theorem]] — the divisors of $|G| = p^a$ are exactly $p^0, p^1, \dots, p^a$, and every one of them is realised. This is the **converse of Lagrange's theorem, holding in full** for $p$-[[Def - Group|groups]].
 
-> **Warning (the converse of Lagrange fails for general groups).** For an arbitrary finite group, a divisor of $|G|$ need not be the order of any subgroup. The standard counterexample is the alternating group $A_5$, of order $60$: it has no subgroup of order $30$. (A subgroup of order $30$ would have index $2$, hence be normal, but $A_5$ is [[Def - Simple Group|simple]] and has no proper non-trivial normal subgroup.) Likewise $A_4$, of order $12$, has no subgroup of order $6$.
+> **Warning (the converse of Lagrange fails for general [[Def - Group|groups]]).** For an arbitrary finite group, a divisor of $|G|$ need not be the order of any subgroup. The standard counterexample is the alternating group $A_5$, of order $60$: it has no subgroup of order $30$. (A subgroup of order $30$ would have index $2$, hence be normal, but $A_5$ is [[Def - Simple Group|simple]] and has no proper non-trivial normal subgroup.) Likewise $A_4$, of order $12$, has no subgroup of order $6$.
 
 ---
 
@@ -35,7 +35,7 @@ In words: a $p$-group has a (normal) subgroup of *every* order permitted by [[Th
 
 This theorem is the most satisfying rescue. It says: for $p$-groups, the converse of Lagrange holds **completely**. Not for some divisors, not for prime divisors only (that would be Cauchy's theorem), but for *every* divisor — and $p$-groups have a particularly simple divisor set, since the divisors of $p^a$ are exactly the chain $p^0 \mid p^1 \mid \cdots \mid p^a$. So a $p$-group has a subgroup of every order from $1$ up to $|G|$, with nothing skipped. And not merely a subgroup — a *normal* subgroup. The result is a complete answer to the existence question for an entire class of groups.
 
-Why should one expect prime-power order to be the boundary at which the converse becomes true? Because the obstruction to the converse is the existence of [[Def - Simple Group|simple]] groups: a subgroup of index $2$ is automatically normal, and a simple group has no proper non-trivial normal subgroup, which is exactly why $A_5$ (simple) has no index-$2$ — i.e. order-$30$ — subgroup. But [[Thm - p-Groups Have Non-Trivial Centre|the previous theorem]] tells us $p$-groups are *never* simple (for $a \geq 2$): they always have a non-trivial centre, hence a normal subgroup. So $p$-groups are precisely the groups in which the simplicity obstruction is absent at every stage, and one should expect the converse of Lagrange to go through by induction — peel off a normal subgroup, descend to a smaller $p$-group, repeat. The non-trivial-centre theorem is what guarantees there is always a normal subgroup to peel off. This theorem is the cleanest demonstration that the rigidity of $p$-groups, sourced entirely from the class equation, has real constructive force: it builds subgroups, not just constrains them.
+Why should one expect prime-power order to be the boundary at which the converse becomes true? Because the obstruction to the converse is the existence of [[Def - Simple Group|simple]] groups: a subgroup of index $2$ is automatically normal, and a simple group has no proper non-trivial normal subgroup, which is exactly why $A_5$ (simple) has no index-$2$ — i.e. order-$30$ — subgroup. But [[Thm - p-Groups Have Non-Trivial Centre|the previous theorem]] tells us $p$-groups are *never* simple (for $a \geq 2$): they always have a non-trivial centre, hence a normal subgroup. So $p$-groups are precisely the groups in which the simplicity obstruction is absent at every stage, and one should expect the converse of Lagrange to go through by induction — peel off a normal subgroup, descend to a smaller $p$-group, repeat. The non-trivial-centre theorem is what guarantees there is always a normal subgroup to peel off. This theorem is the cleanest demonstration that the rigidity of $p$-groups, sourced entirely from the class equation, has real constructive force: it builds [[Def - Subgroup|subgroups]], not just constrains them.
 
 ---
 
@@ -139,12 +139,12 @@ Each lemma below is independently practiceable in roughly five minutes.
 > [!note]- Lemma 3: Lifting a subgroup through the correspondence theorem multiplies its order by $|N|$
 > **Statement:** Let $N \trianglelefteq G$ and let $L \leq G/N$. Then there is a unique subgroup $K$ with $N \leq K \leq G$ and $K/N = L$, and $|K| = |L| \cdot |N|$.
 >
-> **Hint:** $K$ is the union of the cosets of $N$ that constitute $L$; count.
+> **Hint:** $K$ is the union of the [[Def - Coset|cosets]] of $N$ that constitute $L$; count.
 >
 > **Why needed:** It converts the inductive hypothesis's subgroup-in-the-quotient into an honest subgroup of $G$ of the desired order.
 >
 > > [!note]- Full proof
-> > By the [[Thm - Correspondence Theorem|correspondence theorem]], the subgroups of $G/N$ are exactly the sets $K/N$ for subgroups $K$ with $N \leq K \leq G$, and this correspondence $K \leftrightarrow K/N$ is a bijection. So there is a unique $K$ with $N \leq K \leq G$ and $K/N = L$. For the order: $K$ is partitioned into the cosets of $N$ it contains, and the cosets of $N$ lying inside $K$ are precisely the elements of $K/N = L$. So $K$ is a disjoint union of $|L|$ cosets, each of size $|N|$, giving $|K| = |L| \cdot |N|$.
+> > By the [[Thm - Correspondence Theorem|correspondence theorem]], the subgroups of $G/N$ are exactly the sets $K/N$ for subgroups $K$ with $N \leq K \leq G$, and this correspondence $K \leftrightarrow K/N$ is a bijection. So there is a unique $K$ with $N \leq K \leq G$ and $K/N = L$. For the order: $K$ is partitioned into the [[Def - Coset|cosets]] of $N$ it contains, and the cosets of $N$ lying inside $K$ are precisely the elements of $K/N = L$. So $K$ is a disjoint union of $|L|$ cosets, each of size $|N|$, giving $|K| = |L| \cdot |N|$.
 
 ---
 
@@ -187,7 +187,7 @@ The aim is to find settings where the theorem applies but is not advertised — 
 
 **Solvability: every $p$-group has a chief series with cyclic factors.** Iterating this theorem (in its normal-subgroup form) threads $G$ into a chain $\{e\} = G_0 \trianglelefteq G_1 \trianglelefteq \cdots \trianglelefteq G_a = G$ with $|G_i| = p^i$, so each factor $G_{i+1}/G_i$ has order $p$ and is cyclic. This exhibits every finite $p$-group as **solvable** — indeed nilpotent — which is the input to the Galois-theoretic statement that a polynomial with $p$-group Galois group is soluble by radicals. The application is non-obvious because "solvable" is a Galois-theory word; the bridge is that this theorem builds the very normal chain solvability requires.
 
-**Linear algebra: flags inside the unitriangular group.** The unitriangular group $U_n(\mathbb{Z}/p)$ — upper-triangular matrices over $\mathbb{Z}/p$ with $1$s on the diagonal — is a $p$-group of order $p^{\binom n2}$, so it has subgroups of every intermediate prime-power order. These subgroups can be realised concretely as stabilisers of partial flags of subspaces, and the theorem guarantees the chain of orders is unbroken. The application is non-obvious because the natural language is geometric (flags, subspaces) while the theorem is a counting statement about abstract subgroups; the source is the order count $p^{\binom n 2}$.
+**Linear algebra: flags inside the unitriangular group.** The unitriangular group $U_n(\mathbb{Z}/p)$ — upper-triangular matrices over $\mathbb{Z}/p$ with $1$s on the diagonal — is a $p$-group of order $p^{\binom n2}$, so it has subgroups of every intermediate prime-power order. These subgroups can be realised concretely as stabilisers of partial flags of [[Def - Subspace|subspaces]], and the theorem guarantees the chain of orders is unbroken. The application is non-obvious because the natural language is geometric (flags, [[Def - Subspace|subspaces]]) while the theorem is a counting statement about abstract subgroups; the source is the order count $p^{\binom n 2}$.
 
 ---
 

@@ -13,11 +13,11 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $G$ be a finite group and let $p$ be a prime such that $p$ divides $|G|$ but $p^2$ does not — so that every [[Def - Sylow p-Subgroup|Sylow p-subgroup]] of $G$ has order exactly $p$. Write $n_p$ for the number of Sylow $p$-subgroups. Prove that $G$ contains exactly $n_p(p-1)$ elements of order $p$.
+Let $G$ be a finite [[Def - Group|group]] and let $p$ be a prime such that $p$ divides $|G|$ but $p^2$ does not — so that every [[Def - Sylow p-Subgroup|Sylow p-subgroup]] of $G$ has order exactly $p$. Write $n_p$ for the number of Sylow $p$-[[Def - Subgroup|subgroups]]. Prove that $G$ contains exactly $n_p(p-1)$ elements of order $p$.
 
 **Recall:**
 
-The objects in play are Sylow subgroups, the order of an element, and the elementary arithmetic of subgroups of prime order.
+The objects in play are Sylow [[Def - Subgroup|subgroups]], the order of an element, and the elementary arithmetic of subgroups of prime order.
 
 ![[Def - Sylow p-Subgroup#The Definition]]
 
@@ -35,7 +35,7 @@ A subgroup of **prime order** $p$ is automatically cyclic, and every one of its 
 
 **Problem class.** This is a *counting* problem in the sense of the [[Group Theory III — §1.5–1.7#Sources and Targets|Sources and Targets]] of the topic page — specifically, counting the elements of a given order. But its real role is infrastructural: it is the lemma that powers the *element-counting tactic* in the non-simplicity playbook. Almost every non-simplicity proof that proceeds by tallying elements (orders $30$, $56$, $132$, and many more) silently invokes the formula proved here. The exercise isolates that formula so the later proofs can cite it cleanly.
 
-**Assumption pattern.** The decisive hypothesis is the small one hiding in plain sight: $p \mid |G|$ but $p^2 \nmid |G|$. This is exactly the condition that Sylow $p$-subgroups have *prime* order $p$. A group of prime order has no proper non-trivial subgroups at all, so the lattice of subgroups it can share with another such group is as thin as possible. That thinness is what makes the count exact rather than an inequality — the assumption $a = 1$ is doing all the work.
+**Assumption pattern.** The decisive hypothesis is the small one hiding in plain sight: $p \mid |G|$ but $p^2 \nmid |G|$. This is exactly the condition that Sylow $p$-subgroups have *prime* order $p$. A [[Def - Group|group]] of prime order has no proper non-trivial subgroups at all, so the lattice of subgroups it can share with another such group is as thin as possible. That thinness is what makes the count exact rather than an inequality — the assumption $a = 1$ is doing all the work.
 
 **Theorem routing.** The route does not run through a named theorem so much as through [[Thm - Lagrange's Theorem|Lagrange's theorem]] applied to an intersection. Two distinct Sylow $p$-subgroups $P \neq Q$ have an intersection $P \cap Q$, which is a subgroup of $P$; by Lagrange $|P \cap Q|$ divides $|P| = p$, so $|P \cap Q| \in \{1, p\}$. The value $p$ would force $P \cap Q = P = Q$, contradicting $P \neq Q$. Hence $|P \cap Q| = 1$: distinct Sylow $p$-subgroups meet only in the identity. The non-identity elements then partition cleanly, and the count is immediate.
 

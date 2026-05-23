@@ -18,7 +18,7 @@ $F : M \to N$ is a smooth map between smooth manifolds. $dF_p : T_pM \to T_{F(p)
 
 # Axiom Motivation
 
-The motivation is to **transport a tensor field defined on $N$ back to a tensor field on $M$, given a smooth map $F : M \to N$**. The classical motivation is the change-of-variables formula in integration: if $\omega$ is a volume form on $N$ and we want to compute $\int_N \omega$ via a coordinate chart $F : U \subset \mathbb{R}^n \to N$, we need to express $\omega$ in coordinates on $\mathbb{R}^n$ — i.e., we need to *pull $\omega$ back* through $F$. The change-of-variables formula then says $\int_U F^*\omega = \int_N \omega$ (when $F$ is an oriented diffeomorphism onto $N$), and the Jacobian of $F$ appears automatically in the components of $F^*\omega$ — there is no need to multiply by a separate Jacobian factor.
+The motivation is to **transport a tensor field defined on $N$ back to a tensor field on $M$, given a smooth map $F : M \to N$**. The classical motivation is the change-of-variables formula in integration: if $\omega$ is a volume form on $N$ and we want to compute $\int_N \omega$ via a coordinate chart $F : U \subset \mathbb{R}^n \to N$, we need to express $\omega$ in coordinates on $\mathbb{R}^n$ — i.e., we need to *pull $\omega$ back* through $F$. The change-of-variables formula then says $\int_U F^*\omega = \int_N \omega$ (when $F$ is an oriented [[Def - Diffeomorphism|diffeomorphism]] onto $N$), and the Jacobian of $F$ appears automatically in the components of $F^*\omega$ — there is no need to multiply by a separate Jacobian factor.
 
 The construction for covariant tensors is forced by what one wants pullback to do. A covariant $k$-tensor $\alpha$ at a point $q \in N$ is a multilinear functional on $T_qN^k$. To define $(F^*\alpha)_p$ at a point $p \in M$, we need a multilinear functional on $T_pM^k$. The natural thing to do is **use the differential $dF_p : T_pM \to T_{F(p)}N$ to push the vectors of $T_pM$ forward to $T_{F(p)}N$, then evaluate $\alpha$ at the image**. So
 
@@ -52,7 +52,7 @@ for $p \in M$ and $v_1, \dots, v_k \in T_pM$.
 
 For $k = 0$ (a smooth function $f$ on $N$), the formula reduces to $F^*f = f \circ F$. For $k = 1$ (a 1-form $\omega$ on $N$), it reduces to the [[Def - Pullback of a Covector Field|pullback of a covector field]] from [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]].
 
-**Pullback exists and is smooth for any smooth $F$.** Even if $dF_p$ has nonzero kernel or fails to be surjective, the formula is well-defined: it only requires evaluating $A_{F(p)}$ on vectors that lie in the image of $dF_p$, which is a subspace of $T_{F(p)}N$. The smoothness of $F^*A$ as a section of $T^kT^*M$ is automatic because all the ingredients ($A$, $F$, $dF$) are smooth.
+**Pullback exists and is smooth for any smooth $F$.** Even if $dF_p$ has nonzero kernel or fails to be surjective, the formula is well-defined: it only requires evaluating $A_{F(p)}$ on vectors that lie in the image of $dF_p$, which is a [[Def - Subspace|subspace]] of $T_{F(p)}N$. The smoothness of $F^*A$ as a section of $T^kT^*M$ is automatic because all the ingredients ($A$, $F$, $dF$) are smooth.
 
 **Coordinate expression.** Let $(U, x^a)$ be a chart on $M$, $(V, y^i)$ a chart on $N$ with $F(U) \subseteq V$, and let $y^i = F^i(x)$ be the coordinate functions of $F$. If $A = A_{i_1\cdots i_k}(y)\, dy^{i_1}\otimes\cdots\otimes dy^{i_k}$, then
 
@@ -84,7 +84,7 @@ In categorical language: for any smooth map $F : M \to N$, the differential $dF 
 
 $$F^* : \Gamma(T^kT^*N) \to \Gamma(T^kT^*M), \quad A \mapsto (dF^*)^{\otimes k} \circ (A \circ F).$$
 
-The whole construction is functorial: it is a contravariant functor on the category of smooth manifolds, valued in the category of $C^\infty$-modules.
+The whole construction is functorial: it is a contravariant functor on the category of smooth manifolds, valued in the category of $C^\infty$-[[Def - Module|modules]].
 
 The **universal property** of pullback: for any tensor field $B$ on $M$ and any "compatible" data, $F^*A$ is uniquely characterized by the requirement $F^*A(v_1, \dots, v_k) = A(dF v_1, \dots, dF v_k)$. This makes pullback the natural construction "make a tensor field on $M$ that agrees with $A$ when its inputs are differentials of $F$-pushed-forward vectors".
 

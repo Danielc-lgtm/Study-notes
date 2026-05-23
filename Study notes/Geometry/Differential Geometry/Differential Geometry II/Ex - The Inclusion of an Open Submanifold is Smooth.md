@@ -31,7 +31,7 @@ The inherited smooth structure on an open submanifold $U \subseteq M$: if $(W, \
 
 # Convergent Strategy
 
-**Problem class:** Verification of smoothness, plus checking that a smooth bijection is a diffeomorphism. The two together test the most basic structural property of open submanifolds: the inclusion is not just continuous (which is obvious from the open-subspace topology) but smooth, and the restriction is moreover a diffeomorphism in the strong sense.
+**Problem class:** Verification of smoothness, plus checking that a smooth bijection is a diffeomorphism. The two together test the most basic structural property of open submanifolds: the inclusion is not just continuous (which is obvious from the open-[[Def - Subspace|subspace]] topology) but smooth, and the restriction is moreover a diffeomorphism in the strong sense.
 
 **Assumption pattern:** $U \subseteq M$ is open. $U$ carries the smooth structure inherited from $M$. The smoothness of $\iota$ is then almost tautological — but the *almost* requires us to verify the chart-by-chart condition explicitly.
 
@@ -86,7 +86,7 @@ So the chart pair $((W \cap U, \varphi|_{W \cap U}), (W, \varphi))$ witnesses th
 > [!note]- Derivation
 > Each verification:
 >
-> - $W \cap U$ open in $U$: $W$ is open in $M$, $U$ is open in $M$, so $W \cap U$ is open in $M$, hence open in the open submanifold $U$ (since $U$ has the subspace topology and $W \cap U \subseteq U$).
+> - $W \cap U$ open in $U$: $W$ is open in $M$, $U$ is open in $M$, so $W \cap U$ is open in $M$, hence open in the open submanifold $U$ (since $U$ has the [[Def - Subspace|subspace]] topology and $W \cap U \subseteq U$).
 > - $(W \cap U, \varphi|_{W \cap U})$ is a smooth chart on $U$: the restriction of a smooth chart on $M$ to an open subset of $M$ contained in the chart's domain is a smooth chart on the open submanifold. The image of the restriction is $\varphi(W \cap U) \subseteq \mathbb{R}^m$, an open subset.
 > - $\widehat \iota$ is the identity: direct computation as above.
 > - The identity map on a Euclidean open set is smooth: trivial.
@@ -132,6 +132,6 @@ Therefore $\iota$ is a diffeomorphism from $U$ (smooth submanifold) onto $U$ (su
 
 **Smoothness of the identity-in-coordinates is the simplest verification.** When the coordinate representation of a map is literally the identity, smoothness is immediate (the identity is the simplest smooth function). This recurs in many situations: the inclusion of an open submanifold, the chart map of a chart (which is a diffeomorphism onto its image), the canonical projection to a quotient that admits a section. Whenever the coordinate representation is the identity, smoothness is one line. The trigger is recognizing the situation; the reaction is "it's the identity, hence smooth".
 
-**Diffeomorphism in the open-submanifold case is bootstrap-trivial.** $\iota$ and $\iota^{-1}$ are both identity-in-coordinates, hence both smooth, hence $\iota$ is a diffeomorphism. This is in stark contrast to the general situation where smooth bijection $\not\Rightarrow$ diffeomorphism (e.g., $x \mapsto x^3$ on $\mathbb{R}$). The reason the inclusion works is that the smooth structure on $U$ is *defined* to be the restriction of the smooth structure on $M$ — there is no opportunity for the structures on the two sides to disagree.
+**[[Def - Diffeomorphism|Diffeomorphism]] in the open-submanifold case is bootstrap-trivial.** $\iota$ and $\iota^{-1}$ are both identity-in-coordinates, hence both smooth, hence $\iota$ is a diffeomorphism. This is in stark contrast to the general situation where smooth bijection $\not\Rightarrow$ diffeomorphism (e.g., $x \mapsto x^3$ on $\mathbb{R}$). The reason the inclusion works is that the smooth structure on $U$ is *defined* to be the restriction of the smooth structure on $M$ — there is no opportunity for the structures on the two sides to disagree.
 
-The exercise is the simplest case of a general principle: smoothness checks for "tautological" maps (inclusion, projection to a quotient, chart maps) reduce to identity-in-coordinates and are immediate. The more interesting cases — quotient maps, smooth bijections that fail to be diffeomorphisms, compositions — are where the chart-pull-back machinery does real work. Companion exercises: [[Ex - Composition of Smooth Maps is Smooth]] establishes the composition routine that this exercise simplifies trivially; [[Ex - A Continuous Function on a Compact Manifold Attains its Maximum]] uses compactness on an open submanifold to derive continuity facts.
+The exercise is the simplest case of a general principle: smoothness checks for "tautological" maps (inclusion, projection to a quotient, chart maps) reduce to identity-in-coordinates and are immediate. The more interesting cases — quotient maps, smooth bijections that fail to be [[Def - Diffeomorphism|diffeomorphisms]], compositions — are where the chart-pull-back machinery does real work. Companion exercises: [[Ex - Composition of Smooth Maps is Smooth]] establishes the composition routine that this exercise simplifies trivially; [[Ex - A Continuous Function on a Compact Manifold Attains its Maximum]] uses compactness on an open submanifold to derive continuity facts.

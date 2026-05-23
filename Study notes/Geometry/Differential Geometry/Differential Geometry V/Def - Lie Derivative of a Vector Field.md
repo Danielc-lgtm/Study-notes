@@ -25,7 +25,7 @@ evaluable because $Y(p + tv)$ and $Y(p)$ are both elements of $\mathbb{R}^n$, so
 
 On a manifold the difficulty is severe: $Y_{\phi_t(p)} \in T_{\phi_t(p)} M$ and $Y_p \in T_p M$, and these are different vector spaces. There is no canonical way to subtract $Y_p$ from $Y_{\phi_t(p)}$. We need to *transport* one to live in the other's tangent space before we can compare them.
 
-The "transport" available without any extra structure (no metric, no connection) is the **flow of $X$**: $\phi^X_t$ is a diffeomorphism (locally), so its differential $d(\phi^X_t)_p : T_p M \to T_{\phi^X_t(p)} M$ identifies the tangent spaces. The transport of $Y_{\phi^X_t(p)}$ back to $T_p M$ is therefore
+The "transport" available without any extra structure (no metric, no connection) is the **flow of $X$**: $\phi^X_t$ is a [[Def - Diffeomorphism|diffeomorphism]] (locally), so its differential $d(\phi^X_t)_p : T_p M \to T_{\phi^X_t(p)} M$ identifies the tangent spaces. The transport of $Y_{\phi^X_t(p)}$ back to $T_p M$ is therefore
 
 $$\big(d(\phi^X_{-t})_{\phi^X_t(p)}\big) \big(Y_{\phi^X_t(p)}\big) \;\in\; T_p M,$$
 
@@ -97,7 +97,7 @@ In physics, the Lie derivative measures how a tensor field changes under a "drag
 
 **Is an instance: $\mathcal{L}_X Y = -\mathcal{L}_Y X$.** From $\mathcal{L}_X Y = [X, Y]$ and antisymmetry of the bracket. Even though the geometric definitions of $\mathcal{L}_X Y$ and $\mathcal{L}_Y X$ are not visibly antisymmetric (one uses the flow of $X$, the other the flow of $Y$), their values match via the bracket identification.
 
-**Is an instance: $\mathcal{L}_X (fY) = (Xf) Y + f \mathcal{L}_X Y$ — Leibniz rule.** The Lie derivative is a derivation of the $C^\infty(M)$-module $\mathfrak{X}(M)$. Proof: from the bracket, $[X, fY] = X(f)Y + f[X, Y] = (Xf)Y + f \mathcal{L}_X Y$. The Leibniz rule holds in any module-with-derivation structure on tensor fields.
+**Is an instance: $\mathcal{L}_X (fY) = (Xf) Y + f \mathcal{L}_X Y$ — Leibniz rule.** The Lie derivative is a derivation of the $C^\infty(M)$-[[Def - Module|module]] $\mathfrak{X}(M)$. Proof: from the bracket, $[X, fY] = X(f)Y + f[X, Y] = (Xf)Y + f \mathcal{L}_X Y$. The Leibniz rule holds in any module-with-derivation structure on tensor fields.
 
 **Is NOT an instance: the Lie derivative as a "directional derivative of $Y$ along a fixed tangent vector $v$".** The Lie derivative requires a **vector field** $X$, not just a tangent vector $v$ at $p$, because we use the flow of $X$ (which exists in a neighbourhood). One cannot define "$\mathcal{L}_v Y$" for a single tangent vector $v$; the closest available analogue would require a connection, giving $\nabla_v Y$.
 

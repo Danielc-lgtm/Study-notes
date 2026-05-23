@@ -11,4 +11,4 @@ The exercises of §1.2 drill independence and its strict gradations. Bernstein's
 
 - [[Ex - Pairwise versus mutual independence]] (⭐⭐) — Bernstein's XOR example: pairwise independent, not mutually ([[Def - Independence]])
 - [[Ex - The infinite monkey theorem]] (⭐⭐) — disjoint blocks + second Borel–Cantelli; a fixed string appears infinitely often a.s. ([[Thm - Borel-Cantelli Lemmas]], [[Def - Independence]], [[Thm - Kolmogorov 0-1 Law]])
-- [[Ex - Independence and the factorisation of expectation]] (⭐⭐) — $\mathbb{E}[f(X)g(Y)]=\mathbb{E}f(X)\,\mathbb{E}g(Y)$; the law of a sum is a convolution ([[Def - Independence]], [[Thm - Fubini-Tonelli Theorem]], [[Thm - Product Measure]])
+- [[Ex - Independence and the factorisation of expectation]] (⭐⭐) — $\mathbb{E}[f(X)g(Y)]=\mathbb{E}f(X)\,\mathbb{E}g(Y)$; the law of a sum is a [[Def - Convolution|convolution]] ([[Def - Independence]], [[Thm - Fubini-Tonelli Theorem]], [[Thm - Product Measure]])

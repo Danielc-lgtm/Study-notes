@@ -46,7 +46,7 @@ This theorem establishes general relativity as a **Lagrangian field theory** —
 
 (iii) **Symmetry-conservation correspondence.** Diffeomorphism invariance of $S_\text{matter}$ implies (via Noether) $\nabla^\mu T_{\mu\nu} = 0$ — local energy-momentum conservation. Diffeomorphism invariance of $S_\text{grav}$ implies (via Noether) $\nabla^\mu G_{\mu\nu} = 0$ — the contracted Bianchi identity. So *both* sides of the field equations are automatically divergence-free, making the equations consistent.
 
-(iv) **Quantisation.** The variational principle is the starting point for any quantum theory of gravity: **canonical quantisation** (the Wheeler–DeWitt equation), **path integral** ($Z = \int \mathcal{D}g\, e^{iS/\hbar}$), **functional renormalisation group** (Weinberg's asymptotic safety). Without an action, none of these approaches is available.
+(iv) **Quantisation.** The variational principle is the starting point for any quantum theory of gravity: **canonical quantisation** (the Wheeler–DeWitt equation), **path integral** ($Z = \int \mathcal{D}g\, e^{iS/\hbar}$), **functional renormalisation [[Def - Group|group]]** (Weinberg's asymptotic safety). Without an action, none of these approaches is available.
 
 ---
 
@@ -90,7 +90,7 @@ Dropping the boundary term and requiring stationarity ($\int (\cdots) \delta g^{
 $$R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R = 0 \quad \text{(vacuum case)},$$
 the vacuum Einstein equations. Adding the matter action gives $G_{\mu\nu} = 8\pi G T_{\mu\nu}$.
 
-**The deep "why" is gauge symmetry.** The Hilbert action is invariant under diffeomorphisms of $M$, and this gauge invariance forces (via Noether's second theorem) the divergence-freeness of $G_{\mu\nu}$. So the structure $R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R$ that emerges from the variation is *not* a coincidence — it is forced by the requirement of gauge invariance, and the explicit calculation is the manifestation.
+**The deep "why" is gauge symmetry.** The Hilbert action is invariant under [[Def - Diffeomorphism|diffeomorphisms]] of $M$, and this gauge invariance forces (via Noether's second theorem) the divergence-freeness of $G_{\mu\nu}$. So the structure $R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R$ that emerges from the variation is *not* a coincidence — it is forced by the requirement of gauge invariance, and the explicit calculation is the manifestation.
 
 **The boundary term and Gibbons–Hawking–York.** For spacetimes with boundary, the boundary term $\int_{\partial M} W^\rho dS_\rho$ does *not* vanish even when $\delta g|_{\partial M} = 0$, because $W^\rho$ involves $\delta\Gamma$, which depends on $\partial\delta g$ — and these do not generally vanish at the boundary. The Gibbons-Hawking-York boundary term $S_\text{GHY} = \frac{1}{8\pi G}\int_{\partial M} K\sqrt{|h|}\, d^3 y$ is constructed to cancel exactly this offending boundary contribution, making the full action $S_\text{grav} + S_\text{GHY}$ stationary under compactly-supported metric variations.
 
@@ -208,7 +208,7 @@ Common errors: (i) Mistaking $\delta R_{\mu\nu}$ for a non-tensorial expression 
 > $$R_{\mu\nu} - \tfrac{1}{2} g_{\mu\nu} R = 8\pi G\, T_{\mu\nu},$$
 > the Einstein field equations $G_{\mu\nu} = 8\pi G\, T_{\mu\nu}$.
 >
-> **Step 4** (matter equations): Varying $\delta S_\text{matter}$ with respect to the matter fields $\psi$ gives, by the Euler-Lagrange equations of $S_\text{matter}$, the equations of motion of the matter (e.g., Maxwell's equations for the EM field, the Klein-Gordon equation for a scalar, the geodesic equation for a free particle, etc.). $\square$
+> **Step 4** (matter equations): Varying $\delta S_\text{matter}$ with respect to the matter fields $\psi$ gives, by the Euler-Lagrange equations of $S_\text{matter}$, the equations of motion of the matter (e.g., Maxwell's equations for the EM field, the Klein-Gordon equation for a scalar, the [[Def - Geodesic|geodesic]] equation for a free particle, etc.). $\square$
 
 ---
 
@@ -220,7 +220,7 @@ Common errors: (i) Mistaking $\delta R_{\mu\nu}$ for a non-tensorial expression 
 
 **Application 3: $f(R)$ gravity.** Replace the Hilbert action by $S_\text{grav} = (1/16\pi G)\int f(R)\sqrt{-g}\, d^4x$ and derive the modified field equations: $f'(R) R_{\mu\nu} - \frac{1}{2} f(R) g_{\mu\nu} - (\nabla_\mu\nabla_\nu - g_{\mu\nu}\Box) f'(R) = 8\pi G T_{\mu\nu}$. Show that for $f(R) = R - 2\Lambda$, this reduces to the Einstein equations with cosmological constant.
 
-**Application 4: Lovelock gravity in higher dimensions.** In 5D, add the **Gauss-Bonnet term** $\mathcal{G} = R^2 - 4R_{\mu\nu}R^{\mu\nu} + R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ to the action: $S = \int(R + \alpha \mathcal{G})\sqrt{-g}\, d^5x$. Show that the resulting field equations still have at most second-order derivatives of the metric — a feature of Lovelock theories.
+**Application 4: Lovelock gravity in higher [[Def - Dimension|dimensions]].** In 5D, add the **Gauss-Bonnet term** $\mathcal{G} = R^2 - 4R_{\mu\nu}R^{\mu\nu} + R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ to the action: $S = \int(R + \alpha \mathcal{G})\sqrt{-g}\, d^5x$. Show that the resulting field equations still have at most second-order derivatives of the metric — a feature of Lovelock theories.
 
 ---
 

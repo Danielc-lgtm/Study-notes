@@ -15,11 +15,11 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Prove that no group of order $132$ is [[Def - Simple Group|simple]].
+Prove that no [[Def - Group|group]] of order $132$ is [[Def - Simple Group|simple]].
 
 **Recall:**
 
-The objects in play are Sylow subgroups, simplicity, the Sylow count, the element-counting consequence of prime-order Sylow subgroups, and the conjugation action on the set of Sylow subgroups.
+The objects in play are Sylow [[Def - Subgroup|subgroups]], simplicity, the Sylow count, the element-counting consequence of prime-order Sylow [[Def - Subgroup|subgroups]], and the conjugation action on the set of Sylow subgroups.
 
 ![[Def - Sylow p-Subgroup#The Definition]]
 
@@ -41,7 +41,7 @@ The action step uses the **conjugation action on Sylow subgroups**: $G$ acts on 
 
 **Problem class.** This is a *non-simplicity* problem, the dominant target of [[Group Theory III — §1.5–1.7#Sources and Targets|the topic]] — and it is the worked summit case of the chapter, the one in the source lecture notes. It is harder than orders $30$ and $56$ because *no single tactic settles it*: the uniqueness step fails, raw element-counting is inconclusive on its own, and the Sylow-set action is needed to *eliminate a candidate value* before element-counting can finish. It drills the combination of all three playbook tactics in sequence.
 
-**Assumption pattern.** The factorization $132 = 2^2 \cdot 3 \cdot 11$ has two first-power primes, $3$ and $11$, so element-counting is available for both — but the Sylow $3$-count has *two* admissible values, $\{4, 22\}$, and only one of them ($22$) makes the element-count overflow. The smaller value $4$ must be killed by other means. The signature here is a small Sylow count ($n_3 = 4$) sitting next to a group too large to embed in the corresponding symmetric group ($132 \nmid 4! = 24$) — exactly the trigger for the *embedding-obstruction* tactic.
+**Assumption pattern.** The factorization $132 = 2^2 \cdot 3 \cdot 11$ has two first-power primes, $3$ and $11$, so element-counting is available for both — but the Sylow $3$-count has *two* admissible values, $\{4, 22\}$, and only one of them ($22$) makes the element-count overflow. The smaller value $4$ must be killed by other means. The signature here is a small Sylow count ($n_3 = 4$) sitting next to a [[Def - Group|group]] too large to embed in the corresponding symmetric group ($132 \nmid 4! = 24$) — exactly the trigger for the *embedding-obstruction* tactic.
 
 **Theorem routing.** The route is a proof by contradiction with three stages. *Assume $G$ is simple*, so no $n_p = 1$. **(a)** [[Thm - Sylow's Theorems|Sylow III]] on $p = 11$: $n_{11} \equiv 1 \pmod{11}$, $n_{11} \mid 12$, leaving $\{1, 12\}$; simplicity deletes $1$, so $n_{11} = 12$, giving (by the [[Ex - Counting elements of prime order with Sylow subgroups|counting fact]]) $12 \cdot 10 = 120$ elements of order $11$. **(b)** Sylow III on $p = 3$: $n_3 \equiv 1 \pmod 3$, $n_3 \mid 44$, leaving $\{1, 4, 22\}$; simplicity deletes $1$, leaving $\{4, 22\}$. The value $n_3 = 4$ is eliminated by the **Sylow-set action**: $G$ would act on its $4$ Sylow $3$-subgroups, and since $G$ is simple this action is faithful, embedding $G \hookrightarrow S_4$ via the [[Thm - Coset Action and the Normal Core|normal core]] and the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] — but $|G| = 132 \nmid 24 = |S_4|$, a contradiction. So $n_3 = 22$, giving $22 \cdot 2 = 44$ elements of order $3$. **(c)** Element-count: $120 + 44 = 164 > 132 = |G|$ — contradiction.
 

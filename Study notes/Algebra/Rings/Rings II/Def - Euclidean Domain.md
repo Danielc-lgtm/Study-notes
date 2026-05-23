@@ -18,7 +18,7 @@ Throughout, $R$ is an [[Def - Integral Domain|integral domain]] — a non-zero c
 
 # Axiom Motivation
 
-The single most powerful tool in elementary number theory is **division with remainder**: given integers $a$ and $b \neq 0$, you can write $a = bq + r$ with the remainder $r$ strictly smaller than $b$. Everything cascades from this — the Euclidean algorithm for greatest common divisors, Bézout's identity, the proof that every ideal of $\mathbb{Z}$ is principal, unique factorisation. The same machinery runs again, almost verbatim, for polynomials over a field, where "smaller" means "lower degree". A Euclidean domain is the abstraction that isolates *exactly* the structure these two examples share, so that all the cascading consequences can be proved once and for all.
+The single most powerful tool in elementary number theory is **division with remainder**: given integers $a$ and $b \neq 0$, you can write $a = bq + r$ with the remainder $r$ strictly smaller than $b$. Everything cascades from this — the Euclidean algorithm for greatest common divisors, Bézout's identity, the proof that every [[Def - Ideal|ideal]] of $\mathbb{Z}$ is principal, unique factorisation. The same machinery runs again, almost verbatim, for polynomials over a field, where "smaller" means "lower degree". A Euclidean domain is the abstraction that isolates *exactly* the structure these two examples share, so that all the cascading consequences can be proved once and for all.
 
 So the design question is: what must an integral domain carry in order to support a division-with-remainder algorithm? We need two ingredients.
 
@@ -46,7 +46,7 @@ $$\varphi(ab) \geq \varphi(b).$$
 2. **Division with remainder.** For all $a, b \in R$ with $b \neq 0$, there exist $q, r \in R$ — a **quotient** and a **remainder** — such that
 $$a = bq + r, \qquad \text{and either } r = 0 \text{ or } \varphi(r) < \varphi(b).$$
 
-The quotient and remainder need **not** be unique (they are unique in $\mathbb{Z}$ and $F[X]$, but uniqueness is not part of the definition and fails in $\mathbb{Z}[i]$). A ring may admit several different Euclidean functions; being a Euclidean domain only requires that *at least one* exists.
+The quotient and remainder need **not** be unique (they are unique in $\mathbb{Z}$ and $F[X]$, but uniqueness is not part of the definition and fails in $\mathbb{Z}[i]$). A [[Def - Ring|ring]] may admit several different Euclidean functions; being a Euclidean domain only requires that *at least one* exists.
 
 ---
 
@@ -75,7 +75,7 @@ Specialised to $\mathbb{Z}$ with $\varphi = |\cdot|$, the structure is ordinary 
 > $$a = bq + bc, \qquad r := bc = a - bq \in \mathbb{Z}[i],$$
 > and $\varphi(r) = N(bc) = N(b)N(c) = N(b)|c|^2 < N(b) = \varphi(b)$. So division with remainder holds. (Here $q$ and $r$ are genuinely non-unique: a complex number can be within distance $1$ of several lattice points.)
 >
-> The argument used nothing about $\mathbb{Z}[i]$ beyond "it is a subring of $\mathbb{C}$ such that every complex number is within distance $< 1$ of a point of the ring". The same proof makes $\mathbb{Z}[\omega]$ (the Eisenstein integers, $\omega = e^{2\pi i/3}$) a Euclidean domain — but it visibly *fails* for $\mathbb{Z}[\sqrt{-5}]$, whose lattice is too stretched: there are complex points more than distance $1$ from every lattice point.
+> The argument used nothing about $\mathbb{Z}[i]$ beyond "it is a [[Def - Subring|subring]] of $\mathbb{C}$ such that every complex number is within distance $< 1$ of a point of the ring". The same proof makes $\mathbb{Z}[\omega]$ (the Eisenstein integers, $\omega = e^{2\pi i/3}$) a Euclidean domain — but it visibly *fails* for $\mathbb{Z}[\sqrt{-5}]$, whose lattice is too stretched: there are complex points more than distance $1$ from every lattice point.
 
 **Is NOT an instance — $\mathbb{Z}[X]$.** The polynomial ring over the integers is an integral domain but admits no Euclidean function. Concretely, there is no way to "divide $X$ by $2$ with a smaller remainder": any expression $X = 2q + r$ in $\mathbb{Z}[X]$ has $r = X - 2q$, and no choice of $q \in \mathbb{Z}[X]$ makes $r$ vanish or shrink in a way consistent with a Euclidean function. The deeper reason is that $\mathbb{Z}[X]$ is not even a [[Def - Principal Ideal Domain|principal ideal domain]] — the ideal $(2, X)$ is not principal — and every Euclidean domain *is* a PID, so $\mathbb{Z}[X]$ cannot be Euclidean.
 

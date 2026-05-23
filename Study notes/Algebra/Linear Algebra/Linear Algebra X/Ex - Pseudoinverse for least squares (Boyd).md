@@ -10,7 +10,7 @@ tags: [algebra, linear-algebra, applied, least-squares]
 
 # Problem Statement
 
-Let $A \in \mathbb R^{m \times n}$ with $m \geq n$ and linearly independent columns. Define the **pseudoinverse**
+Let $A \in \mathbb R^{m \times n}$ with $m \geq n$ and linearly independent columns. Define the **[[Def - Pseudoinverse|pseudoinverse]]**
 $$A^\dagger = (A^T A)^{-1} A^T.$$
 
 (a) Show that $A^T A$ is invertible (so $(A^T A)^{-1}$ exists).
@@ -29,7 +29,7 @@ A vector $v \in \mathbb R^m$ is **orthogonal** to the columns of $A$ if $A^T v =
 
 # Convergent Strategy
 
-**Problem class.** This is a *core theorem of least-squares*, decomposed into a sequence of standard moves: invertibility of the Gram matrix, the pseudoinverse as a left inverse, and the orthogonality characterisation of the least-squares solution.
+**Problem class.** This is a *core theorem of least-squares*, decomposed into a sequence of standard moves: invertibility of the Gram matrix, the [[Def - Pseudoinverse|pseudoinverse]] as a left inverse, and the orthogonality characterisation of the least-squares solution.
 
 **Assumption pattern.** $A$ is tall ($m \geq n$) with linearly independent columns. The first hypothesis ensures $A^T A$ is $n \times n$ and the second ensures it is invertible.
 

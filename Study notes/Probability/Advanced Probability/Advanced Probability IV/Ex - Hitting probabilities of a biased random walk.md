@@ -20,7 +20,7 @@ A biased random walk on $\mathbb{Z}$ takes steps $+1$ with probability $p$ and $
 
 **Recall:**
 
-[[Thm - Optional Stopping Theorem|Optional stopping]]: $\mathbb{E}[M_T]=\mathbb{E}[M_0]$ for a martingale and a bounded-stopped-process stopping time.
+[[Thm - Optional Stopping Theorem|Optional stopping]]: $\mathbb{E}[M_T]=\mathbb{E}[M_0]$ for a [[Def - Martingale|martingale]] and a bounded-stopped-process stopping time.
 
 ---
 

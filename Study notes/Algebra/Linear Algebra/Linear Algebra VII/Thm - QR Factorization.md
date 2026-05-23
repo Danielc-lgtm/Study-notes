@@ -37,7 +37,7 @@ QR factorisation is the **Gram–Schmidt orthogonalisation procedure read in mat
 
 The motivation is computational. Linear systems $Ax = b$ for invertible square $A$ can be solved in three ways: by direct inversion ($x = A^{-1} b$, requiring full inversion); by LU factorisation ($A = LU$, half the work but requires non-zero pivots); or by QR factorisation ($A = QR$, requiring orthogonalisation but **numerically stable**). The QR approach computes $x = R^{-1} Q^* b$, where $R^{-1}$ requires back-substitution on a triangular system (linear in $n^2$ operations once $R$ is known). The crucial advantage is that the condition number of $R$ equals the condition number of $A$ (since $\|Q\|_{\text{op}} = 1$), so no spurious ill-conditioning is introduced.
 
-The QR factorisation also has theoretical applications: it constitutes a smooth parameterisation of the **Stiefel manifold** $V_n(\mathbb{F}^m)$ (the set of orthonormal $n$-frames in $\mathbb{F}^m$) as a quotient of $\operatorname{GL}_n(\mathbb{F})$. The map $A \mapsto Q$ (taking only the orthonormal part of QR) is a smooth retraction from $\operatorname{GL}_n$ onto its maximal compact subgroup (when $m = n$). This is the Iwasawa decomposition $\operatorname{GL}_n = U(n) \cdot N$ (with $N$ the upper-triangular matrices with positive diagonal) realised as QR.
+The QR factorisation also has theoretical applications: it constitutes a smooth parameterisation of the **Stiefel manifold** $V_n(\mathbb{F}^m)$ (the set of orthonormal $n$-frames in $\mathbb{F}^m$) as a quotient of $\operatorname{GL}_n(\mathbb{F})$. The map $A \mapsto Q$ (taking only the orthonormal part of QR) is a smooth retraction from $\operatorname{GL}_n$ onto its maximal compact [[Def - Subgroup|subgroup]] (when $m = n$). This is the Iwasawa decomposition $\operatorname{GL}_n = U(n) \cdot N$ (with $N$ the upper-triangular matrices with positive diagonal) realised as QR.
 
 ---
 
@@ -80,7 +80,7 @@ The orthonormality of $\{q_j\}$ is by construction (Gram–Schmidt's output is o
 
 The matrix form: setting $Q = [q_1, \ldots, q_n]$ and $R = (r_{jk})$ upper-triangular, the relations $a_k = \sum_j r_{jk} q_j$ for each $k$ are exactly $A = QR$. Done.
 
-**Uniqueness:** if $A = Q_1 R_1 = Q_2 R_2$ with both factorisations satisfying the conditions, then $Q_2^* Q_1 = R_2 R_1^{-1}$. The left side is an isometry (product of an isometry with the inverse of an isometry); the right side is upper-triangular (product of upper-triangular with the inverse of upper-triangular). An upper-triangular isometry is diagonal with unit-modulus diagonal entries. With the positive-diagonal constraint, this is the identity. So $Q_1 = Q_2$ and $R_1 = R_2$.
+**Uniqueness:** if $A = Q_1 R_1 = Q_2 R_2$ with both factorisations satisfying the conditions, then $Q_2^* Q_1 = R_2 R_1^{-1}$. The left side is an [[Def - Isometry|isometry]] (product of an [[Def - Isometry|isometry]] with the inverse of an isometry); the right side is upper-triangular (product of upper-triangular with the inverse of upper-triangular). An upper-triangular isometry is diagonal with unit-modulus diagonal entries. With the positive-diagonal constraint, this is the identity. So $Q_1 = Q_2$ and $R_1 = R_2$.
 
 ---
 

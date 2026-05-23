@@ -15,9 +15,9 @@ tags: [geometry, differential-geometry, algebra]
 
 # Problem Statement
 
-Let $V$ be an $n$-dimensional real vector space and let $0 < k < n$. The **Grassmannian** $G_k(V)$ is the set of all $k$-dimensional linear subspaces of $V$. Show that $G_k(V)$ can be given the structure of a smooth manifold of dimension $k(n-k)$, called the **Grassmann manifold**.
+Let $V$ be an $n$-dimensional real vector space and let $0 < k < n$. The **Grassmannian** $G_k(V)$ is the set of all $k$-dimensional linear [[Def - Subspace|subspaces]] of $V$. Show that $G_k(V)$ can be given the structure of a smooth manifold of [[Def - Dimension|dimension]] $k(n-k)$, called the **Grassmann manifold**.
 
-(a) For each choice of complementary subspaces $V = P \oplus Q$ with $\dim P = k$, $\dim Q = n - k$, construct a chart $\varphi_{P,Q}$ on the open subset $U_Q \subseteq G_k(V)$ consisting of $k$-dimensional subspaces $S$ with $S \cap Q = \{0\}$. The chart sends such an $S$ to the linear map $X : P \to Q$ whose graph is $S$.
+(a) For each choice of complementary [[Def - Subspace|subspaces]] $V = P \oplus Q$ with $\dim P = k$, $\dim Q = n - k$, construct a chart $\varphi_{P,Q}$ on the open subset $U_Q \subseteq G_k(V)$ consisting of $k$-dimensional subspaces $S$ with $S \cap Q = \{0\}$. The chart sends such an $S$ to the linear map $X : P \to Q$ whose graph is $S$.
 
 (b) Verify $\varphi_{P,Q}$ is a bijection onto $L(P, Q) \cong \mathbb{R}^{k(n-k)}$ (with basis choice).
 
@@ -90,7 +90,7 @@ The proof breaks into five steps. Step 1 sets up the bijection $U_Q \leftrightar
 
 **Step 1: The graph interpretation of subspaces near $P$.**
 
-Fix $V = P \oplus Q$ with $\dim P = k, \dim Q = n - k$. Let $U_Q = \{S \in G_k(V) : S \cap Q = \{0\}\}$. For $S \in U_Q$, the projection $\pi_P|_S : S \to P$ is a linear isomorphism (it is injective by $S \cap Q = 0$ and has rank $\leq k = \dim S$; equating dimensions makes it an isomorphism). Define $X = (\pi_Q|_S) \circ (\pi_P|_S)^{-1} : P \to Q$. Then $S = \{p + X(p) : p \in P\} = \mathrm{graph}(X)$.
+Fix $V = P \oplus Q$ with $\dim P = k, \dim Q = n - k$. Let $U_Q = \{S \in G_k(V) : S \cap Q = \{0\}\}$. For $S \in U_Q$, the projection $\pi_P|_S : S \to P$ is a linear isomorphism (it is injective by $S \cap Q = 0$ and has rank $\leq k = \dim S$; equating [[Def - Dimension|dimensions]] makes it an isomorphism). Define $X = (\pi_Q|_S) \circ (\pi_P|_S)^{-1} : P \to Q$. Then $S = \{p + X(p) : p \in P\} = \mathrm{graph}(X)$.
 
 > [!note]- Derivation
 > *Linear isomorphism $\pi_P|_S$.* Suppose $s \in S$ satisfies $\pi_P(s) = 0$; then $s \in Q$ (the kernel of $\pi_P$ is $Q$). Combined with $s \in S$, this gives $s \in S \cap Q = \{0\}$, so $s = 0$. Hence $\pi_P|_S$ is injective. By dimension equality $\dim S = \dim P = k$, it is bijective, so a linear isomorphism.
@@ -108,7 +108,7 @@ Define $\varphi_{P,Q}(S) = X$ as in Step 1. Conversely, given $X \in L(P, Q)$, l
 >
 > *Inversion verification.* The chart $\varphi_{P,Q}(S)$ for $S = \mathrm{graph}(X)$: $(\pi_P|_S)(p + X(p)) = p$, so $(\pi_P|_S)^{-1}(p) = p + X(p)$, so $X = \pi_Q \circ (\pi_P|_S)^{-1}$ sends $p$ to $\pi_Q(p + X(p)) = X(p)$. Hence $\varphi_{P,Q}(S) = X$. ✓
 >
-> *$L(P, Q)$ is a vector space of dimension $k(n-k)$.* Choose bases for $P$ and $Q$; each $X : P \to Q$ is a $(n-k) \times k$ matrix, so $L(P, Q) \cong \mathbb{R}^{k(n-k)}$ as a vector space, and the bijection is a homeomorphism in the standard topology.
+> *$L(P, Q)$ is a vector space of dimension $k(n-k)$.* Choose bases for $P$ and $Q$; each $X : P \to Q$ is a $(n-k) \times k$ matrix, so $L(P, Q) \cong \mathbb{R}^{k(n-k)}$ as a vector space, and the bijection is a [[Def - Homeomorphism|homeomorphism]] in the standard topology.
 
 **Step 3: Compute the transition function between two charts.**
 
@@ -207,10 +207,10 @@ By Lee 1.35, $G_k(V)$ inherits a unique topology and smooth manifold structure s
 
 **The transition is a *matrix-Möbius transformation* — the projective-geometry analogue of the Möbius transformation on $\mathbb{C}$.** Just as the Möbius transformations $z \mapsto (az + b)/(cz + d)$ are the natural transition functions between charts on the Riemann sphere $\mathbb{CP}^1 = G_1(\mathbb{C}^2)$, the matrix-Möbius transformations $X \mapsto (B + DX)(A + CX)^{-1}$ are the natural transitions on higher-dimensional Grassmannians. This is the deep reason that *the same algebraic structure governs* both classical projective geometry and modern Grassmannian geometry: both are quotients of $\mathrm{GL}$-actions.
 
-**Cramer's rule is the secret weapon for smoothness verification.** The inverse $(A + CX)^{-1}$ might look like a serious obstruction to smoothness, but Cramer's rule writes it as rational functions of the entries — and rational functions with nonvanishing denominators are smooth. This is the same trick used in $\mathbb{RP}^n$ transitions and in the verification that matrix groups are smooth manifolds. The pattern "matrix inverse via Cramer" appears constantly in differential geometry whenever transition functions involve matrix inversion.
+**Cramer's rule is the secret weapon for smoothness verification.** The inverse $(A + CX)^{-1}$ might look like a serious obstruction to smoothness, but Cramer's rule writes it as rational functions of the entries — and rational functions with nonvanishing denominators are smooth. This is the same trick used in $\mathbb{RP}^n$ transitions and in the verification that matrix [[Def - Group|groups]] are smooth manifolds. The pattern "matrix inverse via Cramer" appears constantly in differential geometry whenever transition functions involve matrix inversion.
 
-**The Grassmannian has dimension $k(n - k)$ — symmetric in $k$ and $n - k$.** The dimension formula $k(n-k)$ is symmetric in $k$ and $n - k$, reflecting the duality $G_k(V) \cong G_{n-k}(V^*)$ — a $k$-subspace of $V$ corresponds bijectively to an $(n-k)$-subspace of $V^*$ (its annihilator). This duality is one of the most beautiful structural features of Grassmannian geometry and is the starting point of *projective duality* in algebraic geometry.
+**The Grassmannian has dimension $k(n - k)$ — symmetric in $k$ and $n - k$.** The dimension formula $k(n-k)$ is symmetric in $k$ and $n - k$, reflecting the duality $G_k(V) \cong G_{n-k}(V^*)$ — a $k$-subspace of $V$ corresponds bijectively to an $(n-k)$-subspace of $V^*$ (its [[Def - Annihilator|annihilator]]). This duality is one of the most beautiful structural features of Grassmannian geometry and is the starting point of *projective duality* in algebraic geometry.
 
 **Grassmannians are the *classifying spaces* for vector bundles.** This is the deepest structural fact about Grassmannians. Every smooth rank-$k$ vector bundle $E \to M$ on a paracompact smooth manifold $M$ is the pullback of the *tautological bundle* on $G_k(\mathbb{R}^N)$ for some $N$ — specifically, the bundle whose fibre over $S \in G_k(\mathbb{R}^N)$ is $S$ itself. This is the foundation of **characteristic-class theory** (Chern classes, Stiefel-Whitney classes, Pontryagin classes), which assigns topological invariants to bundles via the cohomology of the Grassmannian. The Grassmannian is the simplest case where the smooth manifold framework crosses into the deep territory of algebraic topology.
 
-**The chart lemma (Lee 1.35) is the master tool for constructing smooth structures.** For most spaces in this chapter ($S^n$, $\mathbb{RP}^n$, $T^n$, matrix Lie groups), the topology comes "free" from an ambient space or quotient construction, and we don't need the chart lemma. The Grassmannian is an example where the topology is *constructed* from the chart maps — the chart lemma is the right tool. The lemma's five hypotheses are a checklist: bijection-onto-open-set, open chart-overlap-images, smooth transitions, countable cover, Hausdorff separation. Once verified, both topology and smooth structure are produced. This is the *most powerful* construction tool in the chapter.
+**The chart lemma (Lee 1.35) is the master tool for constructing smooth structures.** For most spaces in this chapter ($S^n$, $\mathbb{RP}^n$, $T^n$, matrix Lie [[Def - Group|groups]]), the topology comes "free" from an ambient space or quotient construction, and we don't need the chart lemma. The Grassmannian is an example where the topology is *constructed* from the chart maps — the chart lemma is the right tool. The lemma's five hypotheses are a checklist: bijection-onto-open-set, open chart-overlap-images, smooth transitions, countable cover, Hausdorff separation. Once verified, both topology and smooth structure are produced. This is the *most powerful* construction tool in the chapter.

@@ -16,7 +16,7 @@ $M$ is a smooth manifold. $X, Y, Z \in \mathfrak{X}(M)$ are smooth [[Def - Smoot
 
 # Axiom Motivation
 
-The challenge that the Lie bracket addresses is: **given two smooth vector fields $X$ and $Y$, what is the natural way to combine them into a third?** The space $\mathfrak{X}(M)$ already has two algebraic structures — addition $(X, Y) \mapsto X + Y$, and multiplication by smooth functions $(f, X) \mapsto fX$ — making it a module over $C^\infty(M)$. But these are "linear" combinations; nothing in the module structure gives a way to *multiply* two vector fields and obtain a third.
+The challenge that the Lie bracket addresses is: **given two smooth vector fields $X$ and $Y$, what is the natural way to combine them into a third?** The space $\mathfrak{X}(M)$ already has two algebraic structures — addition $(X, Y) \mapsto X + Y$, and multiplication by smooth functions $(f, X) \mapsto fX$ — making it a [[Def - Module|module]] over $C^\infty(M)$. But these are "linear" combinations; nothing in the module structure gives a way to *multiply* two vector fields and obtain a third.
 
 The first attempt — multiply $X$ and $Y$ as operators on functions, $XYf = X(Yf)$ — fails because the composition $XY$ is not a derivation of $C^\infty(M)$: applying the product rule twice gives second-derivative terms that violate Leibniz. Explicitly, $XY(fg) = X(f Yg + g Yf) = Xf \cdot Yg + f \cdot XYg + Xg \cdot Yf + g \cdot XYf$, which has the unwanted cross terms $Xf \cdot Yg + Xg \cdot Yf$ that no derivation produces. So $XY$ is not a vector field.
 
@@ -29,7 +29,7 @@ So $XY - YX$ *is* a derivation. We define $[X, Y] := XY - YX$, treating each sid
 
 Why is this *the* natural operation, and not just *an* operation? Four pieces of evidence cohere:
 
-1. **It is the unique natural binary operation up to scaling.** Among all binary operations $\mathfrak{X}(M) \otimes \mathfrak{X}(M) \to \mathfrak{X}(M)$ that are invariant under diffeomorphisms (i.e. natural in the categorical sense), the Lie bracket is essentially the only one — a theorem of Kirillov, Janyška, and others. This is why the bracket appears in so many disguises: it is the unique natural binary operation available.
+1. **It is the unique natural binary operation up to scaling.** Among all binary operations $\mathfrak{X}(M) \otimes \mathfrak{X}(M) \to \mathfrak{X}(M)$ that are invariant under [[Def - Diffeomorphism|diffeomorphisms]] (i.e. natural in the categorical sense), the Lie bracket is essentially the only one — a theorem of Kirillov, Janyška, and others. This is why the bracket appears in so many disguises: it is the unique natural binary operation available.
 
 2. **It captures the infinitesimal failure of flows to commute.** Geometrically, $[X, Y]$ measures, to leading order, how much the parallelogram fails to close when you flow along $X$ for time $\sqrt{t}$, then along $Y$ for time $\sqrt{t}$, then back along $X$ and back along $Y$. The gap at the corner is $t [X, Y]_p + O(t^{3/2})$. This is the operational meaning of the bracket — see [[Thm - Commuting Flows Theorem]].
 
@@ -77,7 +77,7 @@ This Lie algebra structure is *natural*: every diffeomorphism $F : M \to N$ indu
 
 Algebraically, $\mathfrak{X}(M)$ is isomorphic, as a Lie algebra, to the **derivation Lie algebra** $\mathrm{Der}_\mathbb{R}(C^\infty(M))$ — the set of $\mathbb{R}$-linear maps $C^\infty(M) \to C^\infty(M)$ satisfying the Leibniz rule, with bracket the commutator. The bijection sends a vector field $X$ to the derivation $f \mapsto Xf$, and the bracket on one side matches the commutator on the other.
 
-The Lie algebra $\mathfrak{X}(M)$ is infinite-dimensional in general. Its finite-dimensional subalgebras — for instance, the left-invariant vector fields on a Lie group — are the central objects of Lie theory. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
+The Lie algebra $\mathfrak{X}(M)$ is infinite-dimensional in general. Its finite-dimensional subalgebras — for instance, the left-invariant vector fields on a Lie [[Def - Group|group]] — are the central objects of Lie theory. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
 
 ---
 

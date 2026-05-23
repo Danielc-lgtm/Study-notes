@@ -141,7 +141,7 @@ The most common error is to forget the **smoothness in initial data** statement 
 > > Setting this to zero gives $\ddot x^l + \Gamma^l_{ik}\dot x^i \dot x^k = 0$ for each $l$, as claimed.
 
 > [!note]- Lemma 2: The geodesic vector field on $TM$ is smooth
-> **Statement:** In coordinates $(x, v)$ on $TM$ induced by a chart on $M$, the vector field $G_{(x, v)} = v^i \partial_{x^i} - \Gamma^k_{ij}(x) v^i v^j \partial_{v^k}$ is smooth, and the projections of its integral curves to $M$ are exactly the geodesics.
+> **Statement:** In coordinates $(x, v)$ on $TM$ induced by a chart on $M$, the vector field $G_{(x, v)} = v^i \partial_{x^i} - \Gamma^k_{ij}(x) v^i v^j \partial_{v^k}$ is smooth, and the projections of its integral curves to $M$ are exactly the [[Def - Geodesic|geodesics]].
 >
 > **Hint:** Smoothness is just smoothness of the Christoffel symbols. The integral curves satisfy $\dot x = v, \dot v = -\Gamma^k_{ij}(x)v^i v^j$, which is the geodesic equation written as a first-order system.
 >
@@ -199,7 +199,7 @@ The most common error is to forget the **smoothness in initial data** statement 
 
 **Number theory: continued fractions and geodesics on the modular surface.** The modular surface $\mathbb{H}^2 / \mathrm{PSL}(2, \mathbb{Z})$ is a Riemannian orbifold, and geodesic flow on it has a remarkable coding by continued-fraction expansions of real numbers — the **Artin coding**. The closed geodesics correspond to periodic continued fractions (i.e., quadratic irrationals), and the geodesic length spectrum is related to the regulators of orders in real quadratic fields. The existence theorem produces all these geodesics; the dynamical and number-theoretic content comes from the specific geometry.
 
-**Classical mechanics: Liouville integrability of the Euler top.** The Euler top is the geodesic flow of a left-invariant Riemannian metric on $\mathrm{SO}(3) \cong \mathbb{RP}^3$. The metric is generally not bi-invariant (it depends on the moments of inertia $I_1, I_2, I_3$), so geodesics are *not* one-parameter subgroups. But the system is integrable — the conserved quantities are the components of angular momentum in the body frame, which Poisson-commute with the energy. Geodesic flow on $\mathrm{SO}(3)$ with a left-invariant metric is the classical case in symplectic mechanics.
+**Classical mechanics: Liouville integrability of the Euler top.** The Euler top is the geodesic flow of a left-invariant Riemannian metric on $\mathrm{SO}(3) \cong \mathbb{RP}^3$. The metric is generally not bi-invariant (it depends on the moments of inertia $I_1, I_2, I_3$), so geodesics are *not* one-parameter [[Def - Subgroup|subgroups]]. But the system is integrable — the conserved quantities are the components of angular momentum in the body frame, which Poisson-commute with the energy. Geodesic flow on $\mathrm{SO}(3)$ with a left-invariant metric is the classical case in symplectic mechanics.
 
 **General relativity: Schwarzschild geodesics.** The existence theorem in Lorentzian signature gives unique timelike, null, and spacelike geodesics in the Schwarzschild spacetime starting from any initial event with any initial 4-velocity. The classical tests of GR — perihelion precession, light bending, the Shapiro delay — are all calculations of specific Schwarzschild geodesics. The theorem guarantees these exist and depend smoothly on the initial conditions, which is the precondition for "linearise around the Schwarzschild orbits".
 

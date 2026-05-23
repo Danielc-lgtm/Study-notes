@@ -12,7 +12,7 @@ tags: [algebra, linear-algebra]
 
 # Problem Statement
 
-(LADR 2B.10). Suppose $U$ and $W$ are subspaces of $V$ such that $V = U \oplus W$. Suppose also that $u_1, \ldots, u_m$ is a basis of $U$ and $w_1, \ldots, w_n$ is a basis of $W$. Prove that
+(LADR 2B.10). Suppose $U$ and $W$ are [[Def - Subspace|subspaces]] of $V$ such that $V = U \oplus W$. Suppose also that $u_1, \ldots, u_m$ is a basis of $U$ and $w_1, \ldots, w_n$ is a basis of $W$. Prove that
 $$u_1, \ldots, u_m, w_1, \ldots, w_n$$
 is a basis of $V$. In particular, $\dim V = \dim U + \dim W = m + n$.
 
@@ -28,7 +28,7 @@ A direct sum decomposition $V = U \oplus W$ is equivalent to: every $v \in V$ ha
 
 # Convergent Strategy
 
-**Problem class:** This is a *combine-bases* problem — given bases of two subspaces and a direct-sum structure between them, combine the bases into a basis of the sum. The problem class is one of the cleanest instances of how direct sums interact with the basis machinery, and it is the *constructive* counterpart of [[Thm - Dimension of a Sum of Subspaces|the dimension formula]] in the special case where the intersection is trivial.
+**Problem class:** This is a *combine-bases* problem — given bases of two [[Def - Subspace|subspaces]] and a direct-sum structure between them, combine the bases into a basis of the sum. The problem class is one of the cleanest instances of how direct sums interact with the basis machinery, and it is the *constructive* counterpart of [[Thm - Dimension of a Sum of Subspaces|the dimension formula]] in the special case where the intersection is trivial.
 
 **Assumption pattern:** Three ingredients: (a) $V = U \oplus W$, which by the direct-sum criterion means every $v \in V$ has a unique decomposition $v = u + w$ with $u \in U, w \in W$; (b) $u_1, \ldots, u_m$ basis of $U$, so every $u \in U$ has a unique expansion $\sum a_i u_i$; (c) $w_1, \ldots, w_n$ basis of $W$, so every $w \in W$ has a unique expansion $\sum b_j w_j$. The product of these three uniqueness conditions is exactly what we need to show the concatenated list is a basis of $V$.
 
@@ -57,7 +57,7 @@ A direct sum decomposition $V = U \oplus W$ is equivalent to: every $v \in V$ ha
 > Direct-sum gives $v = u + w$ uniquely. Then basis of $U$ gives $u = \sum a_i u_i$ uniquely. And basis of $W$ gives $w = \sum b_j w_j$ uniquely. So $v = \sum a_i u_i + \sum b_j w_j$ — does this combination depend on choices?
 
 > [!note]- Hint 3
-> If $v$ had two expansions in the concatenated list, $v = \sum a_i u_i + \sum b_j w_j = \sum a'_i u_i + \sum b'_j w_j$, group the $u$-part and the $w$-part on each side. Each side is a decomposition $v = u + w$ with $u \in U$ and $w \in W$; by direct-sum uniqueness, $\sum a_i u_i = \sum a'_i u_i$ in $U$ and $\sum b_j w_j = \sum b'_j w_j$ in $W$. Now apply basis-uniqueness within $U$ and within $W$.
+> If $v$ had two expansions in the concatenated list, $v = \sum a_i u_i + \sum b_j w_j = \sum a'_i u_i + \sum b'_j w_j$, [[Def - Group|group]] the $u$-part and the $w$-part on each side. Each side is a decomposition $v = u + w$ with $u \in U$ and $w \in W$; by direct-sum uniqueness, $\sum a_i u_i = \sum a'_i u_i$ in $U$ and $\sum b_j w_j = \sum b'_j w_j$ in $W$. Now apply basis-uniqueness within $U$ and within $W$.
 
 ---
 
@@ -85,7 +85,7 @@ A direct sum decomposition $V = U \oplus W$ is equivalent to: every $v \in V$ ha
 > $$v = a_1 u_1 + \cdots + a_m u_m + b_1 w_1 + \cdots + b_n w_n$$
 > and
 > $$v = a'_1 u_1 + \cdots + a'_m u_m + b'_1 w_1 + \cdots + b'_n w_n.$$
-> Group:
+> [[Def - Group|Group]]:
 > $$v = \underbrace{(a_1 u_1 + \cdots + a_m u_m)}_{\in U} + \underbrace{(b_1 w_1 + \cdots + b_n w_n)}_{\in W}$$
 > and similarly with primed coefficients. So $v$ has two decompositions $v = u + w = u' + w'$ with $u, u' \in U$ and $w, w' \in W$. By uniqueness of decomposition in the direct sum $V = U \oplus W$ (the direct-sum criterion), $u = u'$ and $w = w'$.
 >
@@ -93,7 +93,7 @@ A direct sum decomposition $V = U \oplus W$ is equivalent to: every $v \in V$ ha
 >
 > So the two expansions agree coefficient-by-coefficient, proving uniqueness of the expansion of $v$ in the concatenated list.
 
-**Step 3: The concatenated list is a basis. Dimension counts.**
+**Step 3: The concatenated list is a basis. [[Def - Dimension|Dimension]] counts.**
 
 > [!note]- Derivation
 > By Step 1 (existence) and Step 2 (uniqueness), every $v \in V$ has a unique expansion as a linear combination of $u_1, \ldots, u_m, w_1, \ldots, w_n$. By [[Def - Basis|the criterion for basis]] (LADR 2.28), this list is a basis of $V$.
@@ -127,7 +127,7 @@ A direct sum decomposition $V = U \oplus W$ is equivalent to: every $v \in V$ ha
 
 **Concatenating bases of summands gives a basis of a direct sum.** This is the chapter's first concrete *construction* of bases from existing ones. The pattern is: given a direct-sum decomposition of a space, the basis of the whole is the union of the bases of the pieces. The technique generalises to direct sums of more than two subspaces, $V = V_1 \oplus V_2 \oplus \cdots \oplus V_k$, where the basis of $V$ is the concatenation of bases of each $V_i$. This is the structural reason direct sums are dimension-additive: each piece contributes its own basis vectors, with no overlap.
 
-**Direct sums are the cleanest case of the dimension formula.** The general formula [[Thm - Dimension of a Sum of Subspaces|$\dim(V_1 + V_2) = \dim V_1 + \dim V_2 - \dim(V_1 \cap V_2)$]] has a correction term subtracting the intersection's dimension. In the direct-sum case the intersection is trivial, and the formula collapses to *additive*. This is why direct sums are the "right" form of sum for dimension-counting purposes — they are the case where dimensions add cleanly. Whenever a problem has a direct-sum decomposition explicitly, the dimension count is straightforward; without one, you must work harder via 2.43.
+**Direct sums are the cleanest case of the dimension formula.** The general formula [[Thm - Dimension of a Sum of Subspaces|$\dim(V_1 + V_2) = \dim V_1 + \dim V_2 - \dim(V_1 \cap V_2)$]] has a correction term subtracting the intersection's dimension. In the direct-sum case the intersection is trivial, and the formula collapses to *additive*. This is why direct sums are the "right" form of sum for dimension-counting purposes — they are the case where [[Def - Dimension|dimensions]] add cleanly. Whenever a problem has a direct-sum decomposition explicitly, the dimension count is straightforward; without one, you must work harder via 2.43.
 
 **Three layers of uniqueness compose into one.** The proof's structure is a chain: direct-sum uniqueness of the $V = U + W$ split, then basis uniqueness within $U$, then basis uniqueness within $W$. Each layer is one of LADR's structural uniqueness statements, and they compose to give uniqueness in the concatenated list. This compositional structure is the right way to think about how basis structures interact across direct-sum decompositions: each summand contributes its own basis-coordinate uniqueness, and the direct-sum structure stitches them together.
 

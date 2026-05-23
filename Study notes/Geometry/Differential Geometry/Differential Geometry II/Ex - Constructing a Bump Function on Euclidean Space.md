@@ -68,7 +68,7 @@ The function $\psi_0(t) = e^{-1/t^2}$ for $t > 0$, $\psi_0(t) = 0$ for $t \leq 0
 > For the radial bump on $\mathbb{R}^n$, set $H(x) = h(|x|)$. The function $|x|$ is smooth on $\mathbb{R}^n \setminus \{0\}$ (as a composition of smooth functions), but not differentiable at $0$. However, $h$ is constant $1$ in a neighbourhood of $0$ (specifically on $|x| \leq 1$), so $H$ is also constant $1$ there — and a constant function is smooth.
 
 > [!note]- Hint 4
-> For the one-dimensional bump $\psi : \mathbb{R} \to [0, 1]$, use $\psi(x) = h(|x|)$ — same as the radial bump, in dimension $1$. Verify directly: $|x| \leq 1 \Rightarrow \psi(x) = h(|x|) = 1$ (since $|x| \leq 1 \Rightarrow$ $h(|x|) = 1$); $|x| \geq 2 \Rightarrow \psi(x) = h(|x|) = 0$. Smoothness at $x = 0$: $\psi$ is constant $1$ near $0$, hence smooth there.
+> For the one-dimensional bump $\psi : \mathbb{R} \to [0, 1]$, use $\psi(x) = h(|x|)$ — same as the radial bump, in [[Def - Dimension|dimension]] $1$. Verify directly: $|x| \leq 1 \Rightarrow \psi(x) = h(|x|) = 1$ (since $|x| \leq 1 \Rightarrow$ $h(|x|) = 1$); $|x| \geq 2 \Rightarrow \psi(x) = h(|x|) = 0$. Smoothness at $x = 0$: $\psi$ is constant $1$ near $0$, hence smooth there.
 
 ---
 
@@ -126,7 +126,7 @@ Both functions satisfy: equal to $1$ on $\overline{B(0, 1)}$, equal to $0$ on $\
 >
 > *Smoothness on $|x| \neq 0$:* For $x \neq 0$, $|x|$ is a smooth function of $x$ (the Euclidean norm is smooth on $\mathbb{R}^n \setminus \{0\}$: it is the square root of $\sum x_i^2$, a smooth function with positive value, and $\sqrt{}$ is smooth on $(0, \infty)$). So $h \circ |\cdot|$ is a composition of smooth functions, hence smooth, on $\mathbb{R}^n \setminus \{0\}$.
 >
-> *Smoothness at $0$:* The function $|x|$ is *not* smooth at $0$ in general (in dimension $\geq 2$, it has a "conical" singularity, not differentiable). However, $h \circ |\cdot|$ is *constant equal to $1$* on $|x| \leq 1$ — and constant functions are smooth. So even though $|x|$ is not smooth at $0$, the composition $h(|x|)$ avoids the singularity by being constant in a neighbourhood of $0$.
+> *Smoothness at $0$:* The function $|x|$ is *not* smooth at $0$ in general (in [[Def - Dimension|dimension]] $\geq 2$, it has a "conical" singularity, not differentiable). However, $h \circ |\cdot|$ is *constant equal to $1$* on $|x| \leq 1$ — and constant functions are smooth. So even though $|x|$ is not smooth at $0$, the composition $h(|x|)$ avoids the singularity by being constant in a neighbourhood of $0$.
 >
 > More precisely: for any $x$ with $|x| < 1$, there is an open neighbourhood of $x$ in $\mathbb{R}^n$ where $|y| < 1$ (the open ball $B(x, 1 - |x|)$), and on this neighbourhood $\psi(y) = 1$ — a constant function, smooth. So $\psi$ is smooth at $x$. In particular at $x = 0$.
 >

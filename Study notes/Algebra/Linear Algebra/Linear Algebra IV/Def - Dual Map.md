@@ -100,7 +100,7 @@ For another $\varphi(p) = \int_0^1 p(x)\, dx$, the dual map gives $D'(\varphi)(p
 
 **Corollary — algebraic properties of the dual.** The identities $(R + T)' = R' + T'$, $(\lambda T)' = \lambda T'$, $(ST)' = T'S'$ exhibit the dual as a contravariant linear functor. The first two say $T \mapsto T'$ is itself linear; the third says it reverses composition.
 
-**Corollary — dualising is an isomorphism $\mathcal{L}(V, W) \cong \mathcal{L}(W', V')$.** When $V$ and $W$ are finite-dimensional, the map $T \mapsto T'$ is a linear isomorphism between these two spaces. Both have dimension $\dim V \cdot \dim W$. (See Exercise 18 of LADR §3F.)
+**Corollary — dualising is an isomorphism $\mathcal{L}(V, W) \cong \mathcal{L}(W', V')$.** When $V$ and $W$ are finite-dimensional, the map $T \mapsto T'$ is a linear isomorphism between these two spaces. Both have [[Def - Dimension|dimension]] $\dim V \cdot \dim W$. (See Exercise 18 of LADR §3F.)
 
 **Corollary — dualising preserves invertibility.** If $T : V \to W$ is invertible (necessarily $\dim V = \dim W$), then $T' : W' \to V'$ is also invertible, with $(T')^{-1} = (T^{-1})'$. Proof: $T T^{-1} = \operatorname{id}_W$ dualises to $(T^{-1})' T' = \operatorname{id}_{W'}$, and similarly $T^{-1} T = \operatorname{id}_V$ dualises to $T' (T^{-1})' = \operatorname{id}_{V'}$, exhibiting the inverse. The order reversal is exactly contravariance in action.
 

@@ -34,7 +34,7 @@ The cross product $\vec u \times \vec v = \det\begin{pmatrix} e_1 & e_2 & e_3 \\
 
 # Convergent Strategy
 
-**Problem class:** Concrete computation of the Hodge star in low dimensions, with the goal of recovering classical vector-calculus operations from Hodge-theoretic ones. The problem class is "translate between forms and vectors via $\flat$, $\sharp$, $\star$". The chapter's problem-solving strategy in §1.1 (compute $\star$ in coordinates) applies directly: use orthonormal-coframe formulas.
+**Problem class:** Concrete computation of the Hodge star in low [[Def - Dimension|dimensions]], with the goal of recovering classical vector-calculus operations from Hodge-theoretic ones. The problem class is "translate between forms and vectors via $\flat$, $\sharp$, $\star$". The chapter's problem-solving strategy in §1.1 (compute $\star$ in coordinates) applies directly: use orthonormal-coframe formulas.
 
 **Assumption pattern:** Euclidean $\mathbb{R}^3$ with standard metric and orientation. The orthonormal coframe is the coordinate coframe $(dx, dy, dz)$, with all metric signs $\epsilon_i = +1$. The orientation is positive, with $dx\wedge dy\wedge dz = \operatorname{vol}_3$. These standard choices simplify all signs and make the computation purely combinatorial.
 

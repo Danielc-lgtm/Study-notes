@@ -23,7 +23,7 @@ Let $G$ be a Lie group. Define a connection $\nabla$ on $TG$ by declaring all **
 
 **Recall:**
 
-A **Lie group** $G$ is a smooth manifold with a smooth group operation and inverse. A vector field $X$ on $G$ is **left-invariant** if $(L_g)_* X = X$ for all $g \in G$, where $L_g : G \to G$, $h \mapsto gh$ is left translation. Left-invariant vector fields form a Lie algebra $\mathfrak{g}$ (closed under the Lie bracket) of dimension equal to $\dim G$, and there is a canonical isomorphism $\mathfrak{g} \cong T_eG$.
+A **Lie group** $G$ is a smooth manifold with a smooth group operation and inverse. A vector field $X$ on $G$ is **left-invariant** if $(L_g)_* X = X$ for all $g \in G$, where $L_g : G \to G$, $h \mapsto gh$ is left translation. Left-invariant vector fields form a Lie algebra $\mathfrak{g}$ (closed under the Lie bracket) of [[Def - Dimension|dimension]] equal to $\dim G$, and there is a canonical isomorphism $\mathfrak{g} \cong T_eG$.
 
 ![[Def - Affine Connection on a Vector Bundle#The Definition]]
 
@@ -75,7 +75,7 @@ The **Riemann curvature tensor** of a connection $\nabla$ is $R(X, Y)Z := \nabla
 
 **Step 1: Construct the Weitzenböck connection.**
 
-Pick any basis $(X_1, \ldots, X_n)$ of $\mathfrak{g} \cong T_eG$. These extend uniquely to global left-invariant vector fields on $G$ via $X_a(g) := (dL_g)_e(X_a|_e)$. The $X_a$ form a global frame for $TG$ (linearly independent at every point because they form a basis of $T_eG$ and left translation is a diffeomorphism).
+Pick any basis $(X_1, \ldots, X_n)$ of $\mathfrak{g} \cong T_eG$. These extend uniquely to global left-invariant vector fields on $G$ via $X_a(g) := (dL_g)_e(X_a|_e)$. The $X_a$ form a global frame for $TG$ (linearly independent at every point because they form a basis of $T_eG$ and left translation is a [[Def - Diffeomorphism|diffeomorphism]]).
 
 Define $\nabla X_a := 0$ for each $a = 1, \ldots, n$. Extend to general $Y = Y^a X_a$ by the Leibniz axiom:
 $$
@@ -140,7 +140,7 @@ This illustrates that **flatness and torsion-freeness are independent**: each co
 
 # Key Takeaways
 
-**Flatness and torsion-freeness are completely independent.** The Weitzenböck connection on a non-abelian Lie group is the standard counterexample to the intuition that "a 'simple' connection should have both zero curvature and zero torsion". On non-abelian compact Lie groups like $SU(2) \cong S^3$, the Weitzenböck connection is flat but has substantial torsion, while the Levi-Civita connection of the bi-invariant metric is torsion-free but has substantial curvature. Each is a valid affine connection on $TG$, with different geometric content. The Levi-Civita's uniqueness theorem [[Thm - Fundamental Theorem of Riemannian Geometry (Full Proof)]] selects it as the unique connection that has *both* zero torsion *and* metric-compatibility — and it is the geometric default precisely because of this uniqueness.
+**Flatness and torsion-freeness are completely independent.** The Weitzenböck connection on a non-abelian Lie group is the standard counterexample to the intuition that "a 'simple' connection should have both zero curvature and zero torsion". On non-abelian compact Lie [[Def - Group|groups]] like $SU(2) \cong S^3$, the Weitzenböck connection is flat but has substantial torsion, while the Levi-Civita connection of the bi-invariant metric is torsion-free but has substantial curvature. Each is a valid affine connection on $TG$, with different geometric content. The Levi-Civita's uniqueness theorem [[Thm - Fundamental Theorem of Riemannian Geometry (Full Proof)]] selects it as the unique connection that has *both* zero torsion *and* metric-compatibility — and it is the geometric default precisely because of this uniqueness.
 
 **Parallelisable manifolds have a canonical "trivial" connection.** Any parallelisable manifold $M$ (i.e., $TM$ is a trivial bundle, equivalently has a global frame) admits a canonical flat connection: declare the global frame to be parallel. This is the Weitzenböck connection on a Lie group, but the same construction works for any global frame on any parallelisable manifold. Examples: $\mathbb{R}^n$ (Cartesian frame), $S^1, S^3, S^7$ (only spheres that are parallelisable, by Adams' theorem; $S^3 = SU(2), S^7 = $ unit octonions), all Lie groups. The conceptual takeaway: parallelisability has a strong "flatness" consequence — a canonical flat (but possibly torsionful) connection.
 

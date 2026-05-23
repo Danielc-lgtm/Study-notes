@@ -35,10 +35,10 @@ Upper-triangular form is **the basic structural reduction available for an opera
 
 The motivation in three steps:
 1. **Diagonalisation is too strong.** Many operators (those with repeated minimal-polynomial factors) are not diagonalizable. A weaker, more universally available reduction is needed.
-2. **Upper-triangular is the right weakening.** It still puts the matrix in a "structured" form (zeros below the diagonal), and the diagonal entries are still the eigenvalues. Computations of powers, traces, determinants, and characteristic polynomials remain simple in upper-triangular form.
+2. **Upper-triangular is the right weakening.** It still puts the matrix in a "structured" form (zeros below the diagonal), and the diagonal entries are still the eigenvalues. Computations of powers, traces, [[Def - Determinant|determinants]], and characteristic polynomials remain simple in upper-triangular form.
 3. **It exists over $\mathbb{C}$.** This is the substance of the theorem. The proof is iterative — find one eigenvalue and corresponding eigenvector $v_1$, then descend to a quotient and repeat.
 
-The theorem is the basis of **most induction-on-dimension proofs** in subsequent chapters. The Schur decomposition (the inner-product-space refinement), the Jordan form (the further refinement to "block diagonal of Jordan blocks"), and the spectral theorem (a further refinement for normal operators) all rest on upper-triangularizability as their foundation.
+The theorem is the basis of **most induction-on-[[Def - Dimension|dimension]] proofs** in subsequent chapters. The Schur decomposition (the inner-product-space refinement), the Jordan form (the further refinement to "block diagonal of Jordan blocks"), and the spectral theorem (a further refinement for normal operators) all rest on upper-triangularizability as their foundation.
 
 The general (field-independent) statement reveals the structural content: upper-triangularizability is **exactly equivalent to the minimal polynomial factoring into linear factors over $F$**. Over $\mathbb{C}$ this is automatic; over $\mathbb{R}$ it can fail (rotation has $m_T = z^2 + 1$, irreducible), and this failure is exactly the failure of upper-triangularisation over $\mathbb{R}$.
 
@@ -68,7 +68,7 @@ Combined with **inductive structural arguments**, the theorem is the foundation 
 
 # Why Is It True
 
-The mechanism is **iterative descent along a flag of invariant subspaces**. Over $\mathbb{C}$, every operator has an eigenvalue, hence a one-dimensional invariant subspace; quotient by it, the resulting operator on the smaller-dimensional quotient has an eigenvalue, hence a one-dimensional invariant subspace; continue. This builds a chain
+The mechanism is **iterative descent along a flag of invariant [[Def - Subspace|subspaces]]**. Over $\mathbb{C}$, every operator has an eigenvalue, hence a one-dimensional invariant subspace; quotient by it, the resulting operator on the smaller-dimensional quotient has an eigenvalue, hence a one-dimensional invariant subspace; continue. This builds a chain
 $$\{0\} = V_0 \subset V_1 \subset V_2 \subset \cdots \subset V_n = V$$
 with $\dim V_k = k$ and each $V_k$ $T$-invariant. Pick $v_k \in V_k \setminus V_{k-1}$; the resulting basis $v_1, \ldots, v_n$ satisfies $T v_k \in V_k$, which in matrix form says $T v_k$ has no components in directions $v_{k+1}, \ldots, v_n$ — that is, the matrix is upper triangular.
 
@@ -88,12 +88,12 @@ There are two non-obvious moves. First, the **induction must be on the quotient 
 
 **This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
 
-**High-level strategy.** Build a flag of $T$-invariant subspaces inductively, using the existence-of-eigenvalues theorem at each step. Pick a basis adapted to the flag; that basis triangulises $T$.
+**High-level strategy.** Build a flag of $T$-invariant [[Def - Subspace|subspaces]] inductively, using the existence-of-eigenvalues theorem at each step. Pick a basis adapted to the flag; that basis triangulises $T$.
 
 **Subgoal decomposition:**
 
 1. **Invariant flag from iterated eigenvalues.** Build $\{0\} = V_0 \subset V_1 \subset \cdots \subset V_n = V$ with $\dim V_k = k$ and each $V_k$ $T$-invariant.
-   - *Hint:* on $V/V_{k-1}$ (a complex vector space of dimension $n - k + 1$), the induced operator has an eigenvalue, hence a one-dimensional invariant subspace $\bar L = V_k / V_{k-1}$; lift to $V_k$.
+   - *Hint:* on $V/V_{k-1}$ (a complex vector space of [[Def - Dimension|dimension]] $n - k + 1$), the induced operator has an eigenvalue, hence a one-dimensional invariant subspace $\bar L = V_k / V_{k-1}$; lift to $V_k$.
    - *Why needed:* the flag is the data that produces the upper-triangular basis.
 
 2. **Basis adapted to the flag.** Pick $v_k \in V_k \setminus V_{k-1}$ for each $k$. Then $v_1, \ldots, v_n$ is a basis of $V$.

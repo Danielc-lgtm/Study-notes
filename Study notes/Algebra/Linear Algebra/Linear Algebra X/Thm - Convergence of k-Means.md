@@ -92,7 +92,7 @@ A third subtle point: the algorithm can converge to a state where one or more cl
    - *Why needed:* This is one half of the monotonicity argument.
 
 2. **Step 2 weakly decreases $J^\text{clust}$.** Given $(c, z)$, the new representatives $z'$ (centroids; Step 2) satisfy $J^\text{clust}(c, z') \leq J^\text{clust}(c, z)$.
-   - *Hint:* $J^\text{clust}(c, z) = (1/N)\sum_j \sum_{i \in G_j}\|x_i - z_j\|^2$ is a sum of $k$ groups of terms; the $j$-th group depends only on $z_j$. The minimiser of $\sum_{i \in G_j}\|x_i - z\|^2$ over $z$ is the centroid $\bar x_j = (1/|G_j|)\sum_{i \in G_j} x_i$.
+   - *Hint:* $J^\text{clust}(c, z) = (1/N)\sum_j \sum_{i \in G_j}\|x_i - z_j\|^2$ is a sum of $k$ [[Def - Group|groups]] of terms; the $j$-th group depends only on $z_j$. The minimiser of $\sum_{i \in G_j}\|x_i - z\|^2$ over $z$ is the centroid $\bar x_j = (1/|G_j|)\sum_{i \in G_j} x_i$.
    - *Why needed:* This is the other half of the monotonicity argument.
 
 3. **Centroid uniquely minimises the squared-distance sum.** $\sum_{i \in G}\|x_i - z\|^2$ has a unique minimiser at $z = \bar x = (1/|G|)\sum_{i \in G} x_i$.
@@ -158,7 +158,7 @@ A third subtle point: the algorithm can converge to a state where one or more cl
 >
 > Combining, each full iteration of $k$-means weakly decreases $J^\text{clust}$.
 >
-> **Finite termination.** At every iteration after Step 2, the state $(c, z)$ has $z$ uniquely determined by $c$ (via centroids on non-empty groups; empty groups are dropped). So the state space, post-Step-2, is in bijection with the set of partitions of $\{1, \dots, N\}$ into at most $k$ non-empty groups — a finite set of size at most $S(N, k) \leq k^N$ (Stirling-number bound).
+> **Finite termination.** At every iteration after Step 2, the state $(c, z)$ has $z$ uniquely determined by $c$ (via centroids on non-empty [[Def - Group|groups]]; empty groups are dropped). So the state space, post-Step-2, is in bijection with the set of partitions of $\{1, \dots, N\}$ into at most $k$ non-empty groups — a finite set of size at most $S(N, k) \leq k^N$ (Stirling-number bound).
 >
 > By Lemma 3, applied to the iteration map on this finite state space with objective $J^\text{clust}$, the sequence $(c^{(t)}, z^{(t)})$ becomes eventually constant: there is some $T$ with $(c^{(t)}, z^{(t)}) = (c^{(T)}, z^{(T)})$ for all $t \geq T$. At this $T$, Step 1 does not change the assignment (else $J^\text{clust}$ would strictly decrease), and Step 2 does not change the representatives (else $J^\text{clust}$ would strictly decrease). So the algorithm has converged.
 >

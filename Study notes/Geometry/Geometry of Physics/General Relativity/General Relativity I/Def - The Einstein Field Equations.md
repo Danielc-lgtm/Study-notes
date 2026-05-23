@@ -33,7 +33,7 @@ The first four requirements, by **Lovelock's theorem**, force the LHS to be of t
 
 **Why not just $R_{\mu\nu} = 8\pi T_{\mu\nu}$?** This was Einstein's first guess (October 1915), and it fails requirement 4: the Ricci tensor is *not* divergence-free in general; only the Einstein tensor is. The correction was Einstein's November 1915 breakthrough.
 
-**Why is the coupling constant $8\pi G$?** This is fixed by the Newtonian limit. Computing the linearised Einstein equations around Minkowski with weak source and slow motion, the $(0,0)$ component reduces to $\nabla^2 h_{00} = -16\pi G \rho$ (in suitable gauge). With the identification $h_{00} = -2\phi$ (from the equivalence principle and the geodesic equation), this becomes $\nabla^2 (-2\phi) = -16\pi G \rho$, i.e., $\nabla^2 \phi = 4\pi G \rho$ — Newton's Poisson equation. The factor of $8\pi$ in the field equation gives the factor of $4\pi$ in Poisson's equation, which is the correct factor for Newtonian gravity in 3D.
+**Why is the coupling constant $8\pi G$?** This is fixed by the Newtonian limit. Computing the linearised Einstein equations around Minkowski with weak source and slow motion, the $(0,0)$ component reduces to $\nabla^2 h_{00} = -16\pi G \rho$ (in suitable gauge). With the identification $h_{00} = -2\phi$ (from the equivalence principle and the [[Def - Geodesic|geodesic]] equation), this becomes $\nabla^2 (-2\phi) = -16\pi G \rho$, i.e., $\nabla^2 \phi = 4\pi G \rho$ — Newton's Poisson equation. The factor of $8\pi$ in the field equation gives the factor of $4\pi$ in Poisson's equation, which is the correct factor for Newtonian gravity in 3D.
 
 **The equations as a coupled system.** The Einstein equations are *ten* coupled nonlinear second-order PDEs for the ten components of $g_{\mu\nu}$. But:
 
@@ -91,7 +91,7 @@ The Einstein field equations are the **Euler–Lagrange equations** of the **Hil
 - The gravitational degrees of freedom are the metric $g^{\mu\nu}$ — a section of the bundle of inverse Lorentzian metrics over $M$.
 - The phase space (in the canonical formulation, on a spatial slice) is the cotangent bundle of the space of spatial metrics, with the second fundamental form $b_{\alpha\beta}$ as the conjugate momentum.
 - The Einstein equations are Hamilton's equations for this system, with the Hamiltonian being a sum of constraints (the **Hamiltonian constraint** $G_{00}$ and the **momentum constraints** $G_{0i}$).
-- The constraints generate the diffeomorphism gauge group, and the physical phase space is the cotangent bundle of the space of spatial metrics modulo spatial diffeomorphisms, restricted to the constraint surface.
+- The constraints generate the diffeomorphism gauge [[Def - Group|group]], and the physical phase space is the cotangent bundle of the space of spatial metrics modulo spatial [[Def - Diffeomorphism|diffeomorphisms]], restricted to the constraint surface.
 
 This is the framework of **Hamiltonian general relativity** and the basis of **canonical quantum gravity** (the Wheeler–DeWitt equation).
 

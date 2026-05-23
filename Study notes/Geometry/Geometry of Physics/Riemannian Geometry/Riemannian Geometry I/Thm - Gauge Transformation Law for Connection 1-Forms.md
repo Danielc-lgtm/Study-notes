@@ -16,7 +16,7 @@ $(M, \nabla)$ — smooth manifold with affine connection on a vector bundle $E \
 
 # Statement
 
-> **Theorem (Gauge Transformation Law for Connection 1-Forms).** Let $\nabla$ be an affine connection on a vector bundle $E \to M$, and let $e = (e_a)$, $e' = (e'_a)$ be two local frames on an open set $U$ related by $e' = e\,g$ for some smooth $g : U \to \mathrm{GL}(n, \mathbb{R})$. The matrices of connection 1-forms in the two frames are related by
+> **Theorem ([[Def - Gauge Transformation|Gauge Transformation]] Law for [[Def - Connection 1-Forms (Cartan)|Connection 1-Forms]]).** Let $\nabla$ be an affine connection on a vector bundle $E \to M$, and let $e = (e_a)$, $e' = (e'_a)$ be two local frames on an open set $U$ related by $e' = e\,g$ for some smooth $g : U \to \mathrm{GL}(n, \mathbb{R})$. The matrices of connection 1-forms in the two frames are related by
 > $$
 > \Gamma' = g^{-1}\,\Gamma\,g + g^{-1}\,dg.
 > $$
@@ -188,7 +188,7 @@ The mechanical hard part is **verifying $\Omega' = g^{-1}\Omega g$ from the conn
 
 **2. Maxwell equations as the $U(1)$ Bianchi identity.** For a $U(1)$ connection $\omega = iA$ with real 1-form $A$, the gauge transformation $g = e^{i\chi}$ gives $\omega' = e^{-i\chi}\,iA\,e^{i\chi} + e^{-i\chi}\,d(e^{i\chi}) = iA + i\,d\chi$. So $A' = A + d\chi$ — the standard $U(1)$ gauge transformation of electromagnetism. Verify the field strength $F = dA$ is gauge-invariant: $F' = dA' = dA + d^2\chi = dA = F$.
 
-**3. The instanton as a self-dual connection.** On Euclidean $\mathbb{R}^4$, the **BPST instanton** is a self-dual $SU(2)$ connection $A$ with $F = \star F$. Compute the explicit form of $A$ in two different trivialisations of the $SU(2)$-bundle over $S^4 = \mathbb{R}^4 \cup \{\infty\}$ (one centred at $0$, one centred at $\infty$), and verify they are related by an explicit gauge transformation $g : \mathbb{R}^4 \setminus \{0\} \to SU(2)$. The transition function $g$ is the "transition map" of the underlying $SU(2)$-bundle, and its winding number around any 3-sphere around $0$ is the **instanton number** (the second Chern number).
+**3. The [[Def - Instanton|instanton]] as a self-dual connection.** On Euclidean $\mathbb{R}^4$, the **BPST instanton** is a self-dual $SU(2)$ connection $A$ with $F = \star F$. Compute the explicit form of $A$ in two different trivialisations of the $SU(2)$-bundle over $S^4 = \mathbb{R}^4 \cup \{\infty\}$ (one centred at $0$, one centred at $\infty$), and verify they are related by an explicit gauge transformation $g : \mathbb{R}^4 \setminus \{0\} \to SU(2)$. The transition function $g$ is the "transition map" of the underlying $SU(2)$-bundle, and its winding number around any 3-sphere around $0$ is the **instanton number** (the second Chern number).
 
 **4. Polar vs Cartesian Christoffel symbols on $\mathbb{R}^2$.** Verify that the Christoffel symbols of the flat metric on $\mathbb{R}^2$ in polar coordinates ($\Gamma^r_{\theta\theta} = -r, \Gamma^\theta_{r\theta} = 1/r$) and in Cartesian coordinates (all zero) are related by the gauge transformation with $g$ the polar-to-Cartesian Jacobian. The $g^{-1}dg$ correction provides exactly the polar Christoffels.
 

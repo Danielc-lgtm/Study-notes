@@ -11,7 +11,7 @@ tags: [geometry, riemannian-geometry, geodesics, sphere]
 
 # Problem Statement
 
-Let $S^n \subseteq \mathbb{R}^{n+1}$ be the unit sphere with the Riemannian metric $g$ induced from the Euclidean metric on $\mathbb{R}^{n+1}$. Show that the geodesics of $(S^n, g)$ are exactly the *great circles*: parametrised at constant speed, they have the form $\gamma(t) = \cos(|v|\, t)\, p + \sin(|v|\, t)\, v/|v|$ for $p \in S^n$ and $v \in T_p S^n$.
+Let $S^n \subseteq \mathbb{R}^{n+1}$ be the unit sphere with the Riemannian metric $g$ induced from the Euclidean metric on $\mathbb{R}^{n+1}$. Show that the [[Def - Geodesic|geodesics]] of $(S^n, g)$ are exactly the *great circles*: parametrised at constant speed, they have the form $\gamma(t) = \cos(|v|\, t)\, p + \sin(|v|\, t)\, v/|v|$ for $p \in S^n$ and $v \in T_p S^n$.
 
 **Recall:**
 
@@ -27,11 +27,11 @@ For a submanifold $M \subseteq \tilde M$ with induced Riemannian metric, the cov
 
 **Problem class:** Identification of geodesics on a specific manifold. The exercise is in the class "given an explicit metric, characterise the geodesics" — see the [[Riemannian Geometry II — Geodesics, the Exponential Map, and Variational Principles#Problem-Solving Strategy|topic page's problem-solving strategy]]. Such problems typically yield to one of three approaches: direct ODE integration in coordinates, symmetry/uniqueness, or — for embedded submanifolds — projection of the ambient acceleration.
 
-**Assumption pattern:** The sphere $S^n$ comes with massive symmetry: the orthogonal group $O(n+1)$ acts by isometries. So we have a rich Killing-vector structure and many opportunities to apply the uniqueness theorem. Additionally, the sphere is *embedded* in $\mathbb{R}^{n+1}$, which lets us use the projection formula for the induced connection.
+**Assumption pattern:** The sphere $S^n$ comes with massive symmetry: the orthogonal group $O(n+1)$ acts by [[Def - Isometry|isometries]]. So we have a rich Killing-vector structure and many opportunities to apply the uniqueness theorem. Additionally, the sphere is *embedded* in $\mathbb{R}^{n+1}$, which lets us use the projection formula for the induced connection.
 
 **Theorem routing:** Two routes. **Route A (embedding):** for $\gamma \subseteq S^n \subseteq \mathbb{R}^{n+1}$, the covariant acceleration $\nabla_{\dot\gamma}\dot\gamma$ equals the tangential part of $\ddot\gamma$ (ambient second derivative). Compute $\ddot\gamma$ for the candidate $\gamma(t) = \cos(|v|t)p + \sin(|v|t)v/|v|$; show it is *parallel* to $\gamma$ (i.e., radial), hence its tangential part vanishes. **Route B (symmetry / uniqueness):** by [[Thm - Existence and Uniqueness of Geodesics|existence and uniqueness]], the geodesic with $\gamma(0) = p, \dot\gamma(0) = v$ is unique. Show that the reflection $\sigma$ across the plane through $p$ and $v$ is an isometry of $S^n$ fixing $p$ and $v$; then $\sigma \circ \gamma$ is also a geodesic with the same initial conditions, hence $\sigma \circ \gamma = \gamma$; the fixed-point set of $\sigma$ is exactly the great circle through $p$ in direction $v$, so the geodesic lies on that great circle.
 
-**Key decision point:** Route A is computational and works directly with the geodesic equation; Route B is the *uniqueness trick* that generalises to any symmetric space. Route B is more elegant and the technique transfers (e.g., to hyperbolic space, Schwarzschild, Lie groups with bi-invariant metric), so we present it as the main solution with Route A as a verification.
+**Key decision point:** Route A is computational and works directly with the geodesic equation; Route B is the *uniqueness trick* that generalises to any symmetric space. Route B is more elegant and the technique transfers (e.g., to hyperbolic space, Schwarzschild, Lie [[Def - Group|groups]] with bi-invariant metric), so we present it as the main solution with Route A as a verification.
 
 ---
 
@@ -112,7 +112,7 @@ Let $\gamma$ be the unique geodesic on $S^n$ with $\gamma(0) = p$ and $\dot\gamm
 
 # Key Takeaways
 
-**The uniqueness trick is the most efficient way to identify geodesics on symmetric spaces.** Whenever you have an isometry that fixes the initial point and initial velocity, the geodesic with that initial data must lie in the fixed-point set of the isometry — by uniqueness of geodesics from given initial data. On the sphere, the fixed set of a reflection across the 2-plane spanned by $p$ and $v$ is a great circle; on hyperbolic space, similar reflections give vertical lines and orthogonal semicircles; on a Lie group with bi-invariant metric, conjugation gives one-parameter subgroups. The pattern is the same: find a symmetry, identify its fixed-point set, conclude the geodesic lies there. This is much faster than computing Christoffel symbols and integrating the geodesic ODE.
+**The uniqueness trick is the most efficient way to identify geodesics on symmetric spaces.** Whenever you have an isometry that fixes the initial point and initial velocity, the geodesic with that initial data must lie in the fixed-point set of the isometry — by uniqueness of geodesics from given initial data. On the sphere, the fixed set of a reflection across the 2-plane spanned by $p$ and $v$ is a great circle; on hyperbolic space, similar reflections give vertical lines and orthogonal semicircles; on a Lie group with bi-invariant metric, conjugation gives one-parameter [[Def - Subgroup|subgroups]]. The pattern is the same: find a symmetry, identify its fixed-point set, conclude the geodesic lies there. This is much faster than computing Christoffel symbols and integrating the geodesic ODE.
 
 **The "tangential acceleration" formula for submanifold geodesics is the cleanest computational route.** For a submanifold $M \subseteq \tilde M$ with induced metric (the standard setting in differential geometry), the geodesic equation on $M$ reduces to "the tangential part of the ambient acceleration vanishes". For the sphere in Euclidean space, the ambient acceleration of $\cos(\omega t)p + \sin(\omega t)\hat v$ is $-\omega^2 \gamma$, pointing radially inward — entirely normal to the sphere, hence with zero tangential part. This three-line calculation replaces the entire Christoffel-symbol computation, and the same technique works for any surface or submanifold in $\mathbb{R}^N$.
 

@@ -28,7 +28,7 @@ This says concretely that $F[x]$ admits division with remainder analogous to the
 The division algorithm is the **engine** of polynomial algebra over a field. It is what makes every other structural result of [[Linear Algebra V — §4–5 Polynomials and Eigenvalues]] possible:
 
 - It is the proof that $F[x]$ is a [[Def - Principal Ideal Domain|principal ideal domain]] (since every Euclidean domain is a PID).
-- It is the proof that **the [[Def - Minimal Polynomial|minimal polynomial]] of an operator exists and is unique**: the set of polynomials annihilating $T$ is an ideal, principal because of the division algorithm, with a unique monic generator.
+- It is the proof that **the [[Def - Minimal Polynomial|minimal polynomial]] of an operator exists and is unique**: the set of polynomials annihilating $T$ is an [[Def - Ideal|ideal]], principal because of the division algorithm, with a unique monic generator.
 - It is the source of unique factorization in $F[x]$ (via PID $\Rightarrow$ UFD).
 - It is the algebraic content of the **factor theorem** ("$\lambda$ is a zero of $p$ iff $(x - \lambda)$ divides $p$"): apply the algorithm with $s = x - \lambda$ to get $p = (x - \lambda) q + r$ with $\deg r < 1$, so $r$ is constant, and $p(\lambda) = r$.
 - It is the rigorous form of "polynomial long division" learned in school: the iterative procedure for subtracting off multiples of $s$ until the remainder has degree less than $\deg s$.
@@ -81,7 +81,7 @@ This is the decomposition $p = sq + r$. **Uniqueness** is automatic: any other d
 
 # What Makes This Hard
 
-The conceptual content of the proof is clear once one sees the staircase argument; the non-obvious step is the **observation that polynomials of distinct degrees are linearly independent** — without this insight, the proof is forced to use the iterative subtraction algorithm, which is correct but less illuminating. The other common slip is to forget that $\deg(pq) = \deg p + \deg q$ uses the field hypothesis (in a ring with zero divisors, the formula can fail).
+The conceptual content of the proof is clear once one sees the staircase argument; the non-obvious step is the **observation that polynomials of distinct degrees are linearly independent** — without this insight, the proof is forced to use the iterative subtraction algorithm, which is correct but less illuminating. The other common slip is to forget that $\deg(pq) = \deg p + \deg q$ uses the field hypothesis (in a [[Def - Ring|ring]] with zero divisors, the formula can fail).
 
 ---
 
@@ -98,7 +98,7 @@ The conceptual content of the proof is clear once one sees the staircase argumen
    - *Why needed:* this is the underlying fact that makes the staircase argument work.
 
 2. **The list $1, x, \ldots, x^{m-1}, s, xs, \ldots, x^{n-m}s$ is a basis of $\mathcal{P}_n(F)$.** With $m = \deg s$ and $n = \deg p$, this list has $n+1$ elements of distinct degrees $0, 1, \ldots, n$.
-   - *Hint:* count the elements ($m + (n - m + 1) = n + 1$); verify the degrees are $\{0, 1, \ldots, n\}$; apply Subgoal 1 to get linear independence; compare to the dimension $n + 1$ of $\mathcal{P}_n(F)$.
+   - *Hint:* count the elements ($m + (n - m + 1) = n + 1$); verify the degrees are $\{0, 1, \ldots, n\}$; apply Subgoal 1 to get linear independence; compare to the [[Def - Dimension|dimension]] $n + 1$ of $\mathcal{P}_n(F)$.
    - *Why needed:* it is the basis in which $p$ has the right form.
 
 3. **Decompose $p$ in this basis to read off $q$ and $r$.** Since the basis splits as "low degrees" + "multiples of $s$", write $p = (\text{low-degree part}) + s \cdot (\text{remaining polynomial})$.
@@ -148,7 +148,7 @@ The conceptual content of the proof is clear once one sees the staircase argumen
 > $$1, x, \ldots, x^{m-1}, s, xs, \ldots, x^{n-m} s$$
 > is a basis of $\mathcal{P}_n(F)$. Since $p \in \mathcal{P}_n(F)$, there exist unique scalars $a_0, a_1, \ldots, a_{m-1}, b_0, b_1, \ldots, b_{n-m} \in F$ such that
 > $$p = a_0 + a_1 x + \cdots + a_{m-1} x^{m-1} + b_0 s + b_1 xs + \cdots + b_{n-m} x^{n-m} s.$$
-> Group the terms:
+> [[Def - Group|Group]] the terms:
 > $$p = \underbrace{(a_0 + a_1 x + \cdots + a_{m-1} x^{m-1})}_{r} + s \cdot \underbrace{(b_0 + b_1 x + \cdots + b_{n-m} x^{n-m})}_{q}.$$
 > Define $r = a_0 + a_1 x + \cdots + a_{m-1} x^{m-1}$ and $q = b_0 + b_1 x + \cdots + b_{n-m} x^{n-m}$.
 >

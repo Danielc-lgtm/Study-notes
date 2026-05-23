@@ -24,15 +24,15 @@ Prove the following.
 2. The kernel of $\gamma$ is the centre $Z(G)$.
 3. The image of $\gamma$ is the set $\operatorname{Inn}(G)$ of all inner automorphisms.
 4. Deduce $G / Z(G) \cong \operatorname{Inn}(G)$.
-5. Show $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$ — the inner automorphisms form a normal subgroup of the full automorphism group.
+5. Show $\operatorname{Inn}(G) \trianglelefteq \operatorname{Aut}(G)$ — the inner automorphisms form a normal [[Def - Subgroup|subgroup]] of the full automorphism group.
 
 **Recall:**
 
-The objects in play are the automorphism group, the centre, homomorphisms and their kernels and images, and the first isomorphism theorem.
+The objects in play are the automorphism group, the centre, [[Def - Homomorphism|homomorphisms]] and their kernels and images, and the first isomorphism theorem.
 
 ![[Def - Automorphism Group#The Definition]]
 
-An [[Def - Homomorphism|homomorphism]] is a map $\varphi : G \to H$ between groups with $\varphi(xy) = \varphi(x)\varphi(y)$. Its [[Def - Kernel and Image|kernel]] is $\ker\varphi = \{g : \varphi(g) = e_H\}$ — for the codomain $\operatorname{Aut}(G)$ the identity element $e_H$ is the **identity map** $\operatorname{id}_G$ — and its [[Def - Kernel and Image|image]] is $\operatorname{im}\varphi = \{\varphi(g) : g \in G\}$.
+An [[Def - Homomorphism|homomorphism]] is a map $\varphi : G \to H$ between [[Def - Group|groups]] with $\varphi(xy) = \varphi(x)\varphi(y)$. Its [[Def - Kernel and Image|kernel]] is $\ker\varphi = \{g : \varphi(g) = e_H\}$ — for the codomain $\operatorname{Aut}(G)$ the identity element $e_H$ is the **identity map** $\operatorname{id}_G$ — and its [[Def - Kernel and Image|image]] is $\operatorname{im}\varphi = \{\varphi(g) : g \in G\}$.
 
 ![[Def - Centraliser and Centre#The Definition]]
 
@@ -60,7 +60,7 @@ This solution deploys the following legal operations from [[Group Theory II — 
 
 1. **Act on the group itself by conjugation** (operation 5). The map $\gamma$ is precisely the permutation representation of the conjugation action of $G$ on itself; recognising conjugation-by-$g$ as a homomorphism's value is the foundation.
 
-2. **Convert an action into a homomorphism and take its kernel** (operation 3). The conjugation action *is* the homomorphism $\gamma : G \to \operatorname{Aut}(G)$; its kernel is the normal subgroup we want, and identifying that kernel is the central computation.
+2. **Convert an action into a homomorphism and take its kernel** (operation 3). The conjugation action *is* the homomorphism $\gamma : G \to \operatorname{Aut}(G)$; its kernel is the normal [[Def - Subgroup|subgroup]] we want, and identifying that kernel is the central computation.
 
 3. **Write down / apply the first isomorphism theorem** (a Group Theory I operation, used as a conversion device). With kernel $Z(G)$ and image $\operatorname{Inn}(G)$ in hand, [[Thm - First Isomorphism Theorem|the first isomorphism theorem]] delivers $G/Z(G) \cong \operatorname{Inn}(G)$ in one step.
 
@@ -159,7 +159,7 @@ Conjugating an inner automorphism $\gamma_g$ by any automorphism $\phi$ produces
 
 # Key Takeaways
 
-**To identify a quotient $G/N$, build a homomorphism out of $G$ with kernel $N$ — never analyse the quotient directly.** The reusable move on display is the standard use of [[Thm - First Isomorphism Theorem|the first isomorphism theorem]]: a quotient group $G/N$ is hard to understand from the inside (its elements are cosets, its multiplication is coset multiplication), but if you can produce *any* homomorphism $\varphi$ out of $G$ whose kernel is exactly $N$, then $G/N$ is instantly identified as the concrete group $\operatorname{im}\varphi$. The skill is *constructing the right homomorphism*. Here the construction is canonical — conjugation packages $G$ as the map $\gamma : G \to \operatorname{Aut}(G)$ — and it reveals that the abstract quotient $G/Z(G)$ is the tangible group $\operatorname{Inn}(G)$ of inner automorphisms. The trigger for this technique is any request to "describe" or "identify" a quotient: stop manipulating cosets and ask what natural map has the right kernel. The candidates are usually actions (giving maps into symmetric or automorphism groups), determinant or sign maps, or projections onto factors.
+**To identify a quotient $G/N$, build a homomorphism out of $G$ with kernel $N$ — never analyse the quotient directly.** The reusable move on display is the standard use of [[Thm - First Isomorphism Theorem|the first isomorphism theorem]]: a quotient group $G/N$ is hard to understand from the inside (its elements are [[Def - Coset|cosets]], its multiplication is coset multiplication), but if you can produce *any* homomorphism $\varphi$ out of $G$ whose kernel is exactly $N$, then $G/N$ is instantly identified as the concrete group $\operatorname{im}\varphi$. The skill is *constructing the right homomorphism*. Here the construction is canonical — conjugation packages $G$ as the map $\gamma : G \to \operatorname{Aut}(G)$ — and it reveals that the abstract quotient $G/Z(G)$ is the tangible group $\operatorname{Inn}(G)$ of inner automorphisms. The trigger for this technique is any request to "describe" or "identify" a quotient: stop manipulating [[Def - Coset|cosets]] and ask what natural map has the right kernel. The candidates are usually actions (giving maps into symmetric or automorphism [[Def - Group|groups]]), determinant or sign maps, or projections onto factors.
 
 **The centre is the kernel of conjugation — that single sentence explains everything the centre does.** This exercise makes precise *why* the centre is normal and *why* it measures non-commutativity. $Z(G)$ is the kernel of the conjugation homomorphism $\gamma$, and three facts follow immediately and for free. First, $Z(G) \trianglelefteq G$, because kernels are always normal — no separate verification needed. Second, $G/Z(G) \cong \operatorname{Inn}(G)$, so the quotient by the centre is exactly the group of symmetries that conjugation can actually produce: the centre is "the part of $G$ that conjugation cannot see", the elements that act invisibly. Third, $G$ is abelian precisely when $\gamma$ is trivial, precisely when $Z(G) = G$ — so the size of $Z(G)$ literally quantifies the failure of commutativity. The general lesson: when a standard subgroup is defined by a commuting or fixing condition, look for the homomorphism whose kernel it is — centralisers and centres are kernels of (restricted) conjugation actions, and recognising them as kernels imports normality and a quotient description at no cost.
 

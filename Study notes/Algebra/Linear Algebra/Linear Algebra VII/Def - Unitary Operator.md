@@ -19,19 +19,19 @@ This is a compound page: it defines two interlocking notions — the unitary ope
 
 # Axiom Motivation
 
-A unitary operator is a **surjective [[Def - Isometry|isometry]]** on $V$. The motivation runs as follows. Isometries are linear maps preserving the norm; the special case where the domain and codomain coincide (and the isometry is consequently surjective by dimension counting) is the case of operators that preserve the entire inner product structure of $V$ *and* are bijective. These operators form a group under composition — the **unitary group** $U(V)$ — and are precisely the "symmetries" of an inner product space, the analogue of rotations and reflections in Euclidean geometry.
+A unitary operator is a **surjective [[Def - Isometry|isometry]]** on $V$. The motivation runs as follows. Isometries are linear maps preserving the norm; the special case where the domain and codomain coincide (and the isometry is consequently surjective by dimension counting) is the case of operators that preserve the entire inner product structure of $V$ *and* are bijective. These operators form a [[Def - Group|group]] under composition — the **unitary [[Def - Group|group]]** $U(V)$ — and are precisely the "symmetries" of an inner product space, the analogue of rotations and reflections in Euclidean geometry.
 
 The condition $T^* T = I$ (equivalently $T^* = T^{-1}$, when $T$ is invertible) is the algebraic embodiment of "norm-preserving, invertible". The three equivalent conditions
 1. $T$ is a surjective isometry;
 2. $T^* T = T T^* = I$;
 3. $T^{-1} = T^*$ (i.e., $T$ is invertible and its inverse is its adjoint),
 
-are different views of the same object. In finite dimensions, $T^* T = I$ alone forces $T$ to be invertible (an isometry $V \to V$ is automatically surjective), so $T^* T = I$ suffices for unitarity. In infinite dimensions both $T^* T = I$ and $T T^* = I$ must be checked — the unilateral shift on $\ell^2$ is an example where $S^* S = I$ but $S S^* \neq I$, so $S$ is an isometry but not unitary.
+are different views of the same object. In finite [[Def - Dimension|dimensions]], $T^* T = I$ alone forces $T$ to be invertible (an isometry $V \to V$ is automatically surjective), so $T^* T = I$ suffices for unitarity. In infinite [[Def - Dimension|dimensions]] both $T^* T = I$ and $T T^* = I$ must be checked — the unilateral shift on $\ell^2$ is an example where $S^* S = I$ but $S S^* \neq I$, so $S$ is an isometry but not unitary.
 
 A unitary operator is automatically [[Def - Normal Operator|normal]]: $T T^* = I = T^* T$. The eigenvalues of a unitary operator have modulus $1$. Why? If $T v = \lambda v$ with $v \neq 0$, then $\|v\| = \|Tv\| = |\lambda| \|v\|$, forcing $|\lambda| = 1$. So unitary operators are precisely the **normal operators with eigenvalues on the unit circle of $\mathbb{C}$**. They are the operator analogue of complex numbers of modulus $1$ — points on the unit circle — and the spectral decomposition takes the form $T = \sum_j e^{i\theta_j} P_j$ with real phases $\theta_j$.
 
 Why is this class important? Three reasons:
-- **Unitaries are the symmetries of inner product spaces.** Any structural question about an inner product space — bases, subspaces, decompositions — has a meaning "up to unitary equivalence", and the unitary group acts on everything in the chapter.
+- **Unitaries are the symmetries of inner product spaces.** Any structural question about an inner product space — bases, [[Def - Subspace|subspaces]], decompositions — has a meaning "up to unitary equivalence", and the unitary group acts on everything in the chapter.
 - **Unitaries are the time evolution operators of quantum mechanics.** Schrödinger's equation has the solution $|\psi(t)\rangle = U(t) |\psi(0)\rangle$ where $U(t) = e^{-i \hat H t / \hbar}$ is unitary (because the Hamiltonian $\hat H$ is self-adjoint, and exponentials of $i$ times self-adjoint are unitary). The unitarity of time evolution is the algebraic encoding of probability conservation.
 - **Unitaries are the change-of-basis matrices between orthonormal bases.** A unitary operator $T$ is exactly the change-of-basis matrix from one orthonormal basis to another. So "the spectral decomposition diagonalises a normal operator in some orthonormal basis" is equivalent to "there is a unitary $U$ such that $U^* T U$ is diagonal".
 
@@ -39,9 +39,9 @@ What if you tried to drop the surjectivity? Then you get a (possibly non-surject
 
 What if you tried to drop $T^* T = I$ and demand only that $T$ preserves some specific basis? Then you have a permutation matrix (in that basis), a strict subset of the unitary operators. Permutation matrices are unitary, but most unitaries are not permutations — they mix basis vectors continuously.
 
-What if you tried to keep $T^* T = I$ but relax the codomain? Then you get linear isometries $V \to W$ with $\dim W \geq \dim V$. These form a "Stiefel manifold" of orthonormal $k$-frames in $\mathbb{F}^n$, which is important in algebraic topology but not in elementary linear algebra.
+What if you tried to keep $T^* T = I$ but relax the codomain? Then you get linear [[Def - Isometry|isometries]] $V \to W$ with $\dim W \geq \dim V$. These form a "Stiefel manifold" of orthonormal $k$-frames in $\mathbb{F}^n$, which is important in algebraic topology but not in elementary linear algebra.
 
-What if you tried to strengthen by demanding $\det T = 1$? You get the **special unitary group** $SU(V)$ (or **special orthogonal group** $SO(V)$ over $\mathbb{R}$). These are the orientation-preserving, "rotation"-type isometries: rotations in $\mathbb{R}^n$ are exactly the elements of $SO(n)$, while reflections sit in $O(n) \setminus SO(n)$ with $\det = -1$.
+What if you tried to strengthen by demanding $\det T = 1$? You get the **special unitary group** $SU(V)$ (or **special orthogonal group** $SO(V)$ over $\mathbb{R}$). These are the orientation-preserving, "rotation"-type [[Def - Isometry|isometries]]: rotations in $\mathbb{R}^n$ are exactly the elements of $SO(n)$, while reflections sit in $O(n) \setminus SO(n)$ with $\det = -1$.
 
 ---
 
@@ -67,7 +67,7 @@ A matrix is called a **unitary matrix** (over $\mathbb{C}$) or **orthogonal matr
 
 # Categorical / Structural Definition
 
-The unitary operators on $V$ form a group under composition: the **unitary group** $U(V)$, a closed Lie subgroup of $\operatorname{GL}(V)$. Over $\mathbb{C}$ with $V = \mathbb{C}^n$ this is $U(n) = \{T \in \operatorname{GL}_n(\mathbb{C}) : T^* T = I\}$, a compact real Lie group of (real) dimension $n^2$. Its Lie algebra $\mathfrak{u}(n)$ is the space of **skew-Hermitian** matrices $\{X : X^* = -X\}$, and the exponential map $\exp : \mathfrak{u}(n) \to U(n)$ is surjective.
+The unitary operators on $V$ form a group under composition: the **unitary group** $U(V)$, a closed Lie [[Def - Subgroup|subgroup]] of $\operatorname{GL}(V)$. Over $\mathbb{C}$ with $V = \mathbb{C}^n$ this is $U(n) = \{T \in \operatorname{GL}_n(\mathbb{C}) : T^* T = I\}$, a compact real Lie group of (real) dimension $n^2$. Its Lie algebra $\mathfrak{u}(n)$ is the space of **skew-Hermitian** matrices $\{X : X^* = -X\}$, and the exponential map $\exp : \mathfrak{u}(n) \to U(n)$ is surjective.
 
 Over $\mathbb{R}$ with $V = \mathbb{R}^n$ this is $O(n) = \{T \in \operatorname{GL}_n(\mathbb{R}) : T^t T = I\}$, a compact real Lie group of dimension $\binom{n}{2} = n(n-1)/2$. Its Lie algebra $\mathfrak{o}(n) = \mathfrak{so}(n)$ is the space of **antisymmetric** matrices.
 
@@ -75,7 +75,7 @@ The **determinant homomorphism** $\det : U(n) \to U(1) = S^1$ (or $O(n) \to \{\p
 $$1 \to SU(n) \to U(n) \to U(1) \to 1, \qquad 1 \to SO(n) \to O(n) \to \{\pm 1\} \to 1.$$
 By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]], $U(n)/SU(n) \cong U(1) = S^1$ and $O(n)/SO(n) \cong \mathbb{Z}/2$.
 
-**Categorical role:** the unitary group $U(V)$ is the **automorphism group** of $V$ as an inner product space — the group of structure-preserving self-isomorphisms. Just as $\operatorname{GL}(V)$ is the automorphism group of $V$ as a vector space (no inner product), $U(V)$ is the automorphism group when the inner product structure is preserved.
+**Categorical role:** the unitary group $U(V)$ is the **automorphism group** of $V$ as an inner product space — the group of structure-preserving self-[[Def - Isomorphism|isomorphisms]]. Just as $\operatorname{GL}(V)$ is the automorphism group of $V$ as a vector space (no inner product), $U(V)$ is the automorphism group when the inner product structure is preserved.
 
 ---
 
@@ -113,7 +113,7 @@ The **Pauli matrices** $\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$
 
 A unitary that is not self-adjoint: the **shift on $\mathbb{C}^n$**, $T(z_1, \ldots, z_n) = (z_n, z_1, \ldots, z_{n-1})$ (cyclic permutation). Its matrix is a permutation matrix, hence unitary. Eigenvalues are $n$-th roots of unity.
 
-A non-example: $T = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$. Not unitary (the columns are not orthonormal: $(1, 0)$ and $(1, 1)$ are not orthogonal). Determinant $1$ but not in $SL_2$ subgroup-of-$U$, so not unitary.
+A non-example: $T = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$. Not unitary (the columns are not orthonormal: $(1, 0)$ and $(1, 1)$ are not orthogonal). Determinant $1$ but not in $SL_2$ [[Def - Subgroup|subgroup]]-of-$U$, so not unitary.
 
 A subtle non-example: $T = \begin{pmatrix} 2 & 0 \\ 0 & 1/2 \end{pmatrix}$. Determinant $1$. Is normal (diagonal). But not unitary: the eigenvalues are $2$ and $1/2$, not on the unit circle. It is in $\operatorname{SL}_2(\mathbb{R})$ but not in $\operatorname{SO}(2)$.
 

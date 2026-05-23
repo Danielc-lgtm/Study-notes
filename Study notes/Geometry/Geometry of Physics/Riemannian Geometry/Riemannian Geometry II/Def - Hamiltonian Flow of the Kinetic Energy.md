@@ -20,7 +20,7 @@ The motivating question is: **what is the cleanest Hamiltonian formulation of ge
 
 The natural Lagrangian on $TM$ is $L(q, \dot q) = \tfrac12 g_{ij}(q) \dot q^i \dot q^j$ — the kinetic energy of a unit-mass particle. Its Euler–Lagrange equations are the geodesic equation (see [[Thm - Hamilton's Principle Gives the Geodesic Equation]]). To Hamilton-ise it, perform the **Legendre transform**: set
 $$p_i := \frac{\partial L}{\partial \dot q^i} = g_{ij}(q)\, \dot q^j.$$
-This is the **momentum** conjugate to the position $q^i$. The map $\dot q \mapsto p$ is a linear isomorphism $T_qM \to T_q^*M$ for each $q$ (it is the lowering-of-indices map of the metric, $\flat$), so it is a global diffeomorphism $TM \to T^*M$.
+This is the **momentum** conjugate to the position $q^i$. The map $\dot q \mapsto p$ is a linear isomorphism $T_qM \to T_q^*M$ for each $q$ (it is the lowering-of-indices map of the metric, $\flat$), so it is a global [[Def - Diffeomorphism|diffeomorphism]] $TM \to T^*M$.
 
 The Hamiltonian is obtained from the Lagrangian by the Legendre dual:
 $$H(q, p) = p_i \dot q^i - L(q, \dot q) = g_{ij}\dot q^i \dot q^j - \tfrac12 g_{ij}\dot q^i \dot q^j = \tfrac12 g_{ij}\dot q^i \dot q^j = \tfrac12 g^{ij}p_i p_j,$$
@@ -40,7 +40,7 @@ Second, **Poisson brackets**. The bracket $\{F, G\} := \omega(X_F, X_G) = \frac{
 
 Third, **integrability and KAM theory**. Action–angle coordinates exist exactly when the Hamiltonian system has enough commuting conserved quantities ($n$ functions in involution on a $2n$-dimensional phase space). The existence of these coordinates is the question of *integrability*. For geodesic flow, integrability is a special property — the round sphere is integrable (rotational symmetries provide enough Killing vectors), Schwarzschild is integrable (4 conserved quantities), but a generic compact manifold is *not* integrable. The Hamiltonian framework on $T^*M$ is the natural setting for these questions.
 
-A subtler design choice is **whether to use $H = \tfrac12 |p|^2$ or $H = |p|$**. The latter is also a Hamiltonian whose flow on the unit cotangent bundle is "the same" as geodesic flow up to reparametrisation; it is the **geodesic Hamiltonian** in the sub-Riemannian-geometry convention. The quadratic form $\tfrac12 |p|^2$ is smoother (the linear form $|p|$ has a singularity at $p = 0$) and gives a flow that respects the structure of $TM$ as a vector bundle, parametrising geodesics naturally at constant speed. The choice $\tfrac12 |p|^2$ is standard.
+A subtler design choice is **whether to use $H = \tfrac12 |p|^2$ or $H = |p|$**. The latter is also a Hamiltonian whose flow on the unit cotangent bundle is "the same" as geodesic flow up to reparametrisation; it is the **geodesic Hamiltonian** in the sub-Riemannian-geometry convention. The quadratic form $\tfrac12 |p|^2$ is smoother (the linear form $|p|$ has a singularity at $p = 0$) and gives a flow that respects the structure of $TM$ as a vector bundle, parametrising [[Def - Geodesic|geodesics]] naturally at constant speed. The choice $\tfrac12 |p|^2$ is standard.
 
 The **conserved energy**. Since $H$ does not depend on $t$ explicitly, $H$ is conserved along the flow: $H(q(t), p(t)) = \mathrm{const}$. This is the **energy conservation** law, and on the level set $\{H = E\}$ the flow is the time-rescaled geodesic flow on the constant-speed geodesics with $|\dot q|^2 = 2E$ (so the level $E = \tfrac12$ corresponds to unit-speed geodesics on the unit cotangent bundle $S^*M$).
 

@@ -40,7 +40,7 @@ The practical reason this matters: **computing $\mathcal{L}_X\omega$ from the fl
 
 The other reason this matters is structural: it organizes the operators on $\Omega^\bullet(M)$ into a coherent algebraic system. $d$ has degree $+1$ and is an anti-derivation; $\iota_X$ has degree $-1$ and is an anti-derivation; their anti-commutator $\{d, \iota_X\} = d\iota_X + \iota_X d$ has degree $0$ and is an ordinary derivation — and that derivation is $\mathcal{L}_X$. So the three operators form a Lie superalgebra structure, with Cartan's formula as the defining relation.
 
-The trigger that earns the name "magic" is the realization that what appears to be a substantial geometric concept (the Lie derivative, defined via a one-parameter group of diffeomorphisms and the differentiation of a family of forms) is captured by a one-line algebraic identity. The formula is so useful that, after first learning it, one rarely opens the flow definition again.
+The trigger that earns the name "magic" is the realization that what appears to be a substantial geometric concept (the Lie derivative, defined via a one-parameter [[Def - Group|group]] of [[Def - Diffeomorphism|diffeomorphisms]] and the differentiation of a family of forms) is captured by a one-line algebraic identity. The formula is so useful that, after first learning it, one rarely opens the flow definition again.
 
 ---
 
@@ -258,7 +258,7 @@ The other conceptual difficulty is the *meaning* of the formula. The Lie derivat
 
 **Hamiltonian mechanics: prove the symplectic form is invariant under Hamiltonian flow.** On a symplectic manifold $(M, \omega)$ with $d\omega = 0$, a Hamiltonian $H$ generates a vector field $X_H$ via $\iota_{X_H}\omega = dH$. By Cartan, $\mathcal{L}_{X_H}\omega = d(\iota_{X_H}\omega) + \iota_{X_H}(d\omega) = d(dH) + 0 = 0$. So $\omega$ is invariant under the Hamiltonian flow — Liouville's theorem in one line.
 
-**Killing equation in Riemannian geometry.** A vector field $X$ on a Riemannian manifold is **Killing** if $\mathcal{L}_X g = 0$, where $g$ is the metric (a symmetric $(0,2)$-tensor, not alternating, so this is "Cartan-style" but not literally Cartan). Computing $\mathcal{L}_X g$ in components gives the Killing equation $\nabla_a X_b + \nabla_b X_a = 0$. Killing fields encode continuous metric symmetries and (by Noether's theorem) conservation laws along geodesics.
+**Killing equation in Riemannian geometry.** A vector field $X$ on a Riemannian manifold is **Killing** if $\mathcal{L}_X g = 0$, where $g$ is the metric (a symmetric $(0,2)$-tensor, not alternating, so this is "Cartan-style" but not literally Cartan). Computing $\mathcal{L}_X g$ in components gives the Killing equation $\nabla_a X_b + \nabla_b X_a = 0$. Killing fields encode continuous metric symmetries and (by Noether's theorem) conservation laws along [[Def - Geodesic|geodesics]].
 
 **Reynolds transport in fluid dynamics.** The rate of change of a fluid quantity integrated over a moving region $V_t$ is $\frac{d}{dt}\int_{V_t}\rho\,d^3x = \int_{V_t}(\partial_t \rho + \nabla \cdot (\rho \vec u))\,d^3x$, the classical Reynolds transport theorem. In forms language: $\frac{d}{dt}\int_{V_t}\omega = \int_{V_t}\mathcal{L}_{X}\omega = \int_{V_t}(d\iota_X + \iota_X d)\omega$ where $X = \partial_t + \vec u\cdot\nabla$ is the spacetime velocity. The Cartan formula gives the textbook formula directly.
 

@@ -22,11 +22,11 @@ Show, as the heart of the argument, that for an odd prime $p$ the dichotomy is g
 
 **Recall:**
 
-The objects in play are the Gaussian integers and their norm, the notion of a prime element, the structure of the unit group of $\mathbb{F}_p$, and the resulting classification of Gaussian primes.
+The objects in play are the Gaussian integers and their norm, the notion of a prime element, the structure of the unit [[Def - Group|group]] of $\mathbb{F}_p$, and the resulting classification of Gaussian primes.
 
 ![[Def - Gaussian Integers#The Definition]]
 
-The [[Def - Gaussian Integers|Gaussian integers]] $\mathbb{Z}[i]=\{a+bi:a,b\in\mathbb{Z}\}$ form a subring of $\mathbb{C}$, with multiplicative **norm** $N(a+bi)=a^2+b^2=(a+bi)(a-bi)$ and units $\{\pm1,\pm i\}$ (the four elements of norm $1$). Since the norm is a Euclidean function, $\mathbb{Z}[i]$ is a Euclidean domain, hence a [[Def - Principal Ideal Domain|principal ideal domain]], hence a [[Def - Unique Factorization Domain|unique factorization domain]].
+The [[Def - Gaussian Integers|Gaussian integers]] $\mathbb{Z}[i]=\{a+bi:a,b\in\mathbb{Z}\}$ form a [[Def - Subring|subring]] of $\mathbb{C}$, with multiplicative **norm** $N(a+bi)=a^2+b^2=(a+bi)(a-bi)$ and units $\{\pm1,\pm i\}$ (the four elements of norm $1$). Since the norm is a Euclidean function, $\mathbb{Z}[i]$ is a Euclidean domain, hence a [[Def - Principal Ideal Domain|principal ideal domain]], hence a [[Def - Unique Factorization Domain|unique factorization domain]].
 
 ![[Def - Irreducible and Prime Elements#The Definition]]
 
@@ -44,9 +44,9 @@ The conclusion of this exercise, packaged as a theorem, is the [[Thm - Classific
 
 # Convergent Strategy
 
-**Problem class.** This is a *structural classification* problem from [[Rings III — §2.5–2.6]]: determine, as a function of $p$, whether a given element stays prime in a larger ring. The target is a clean trichotomy keyed to $p\bmod 4$, and the proof has two distinct flavours — a one-line *congruence obstruction* for inertness, and a genuine *existence argument* for splitting.
+**Problem class.** This is a *structural classification* problem from [[Rings III — §2.5–2.6]]: determine, as a function of $p$, whether a given element stays prime in a larger [[Def - Ring|ring]]. The target is a clean trichotomy keyed to $p\bmod 4$, and the proof has two distinct flavours — a one-line *congruence obstruction* for inertness, and a genuine *existence argument* for splitting.
 
-**Assumption pattern.** The input is a single rational prime $p$. Two facts make $p\bmod 4$ the deciding invariant. First, the norm form is $a^2+b^2$, and a square is $0$ or $1$ mod $4$, so the norm form *misses* every residue $3\bmod 4$ — this instantly blocks any Gaussian integer of norm $p$ when $p\equiv 3\pmod 4$. Second, $p$ splits exactly when $p=N(\pi)=a^2+b^2$ is solvable, and $a^2+b^2\equiv 0\pmod p$ with $b$ invertible rearranges to $(a/b)^2\equiv -1\pmod p$ — so splitting is equivalent to $-1$ being a **quadratic residue** mod $p$.
+**Assumption pattern.** The input is a single rational prime $p$. Two facts make $p\bmod 4$ the deciding invariant. First, the norm form is $a^2+b^2$, and a square is $0$ or $1$ mod $4$, so the norm form *misses* every [[Def - Residue|residue]] $3\bmod 4$ — this instantly blocks any Gaussian integer of norm $p$ when $p\equiv 3\pmod 4$. Second, $p$ splits exactly when $p=N(\pi)=a^2+b^2$ is solvable, and $a^2+b^2\equiv 0\pmod p$ with $b$ invertible rearranges to $(a/b)^2\equiv -1\pmod p$ — so splitting is equivalent to $-1$ being a **quadratic residue** mod $p$.
 
 **Theorem routing.** Inertness ($p\equiv 3$): the congruence obstruction. If $p=N(z)$ then $p$ is a sum of two squares, impossible mod $4$; and the only way $p$ could be non-prime in the unique factorization domain $\mathbb{Z}[i]$ is $p=uv$ with $N(u)=N(v)=p$, so no such factorisation exists and $p$ stays prime. Splitting ($p\equiv 1$): route through the unit group. The [[Thm - The Unit Group of a Finite Field is Cyclic|cyclicity of mathbbFptimescong Cp-₁]] guarantees, when $4\mid p-1$, an element $a$ of order $4$; then $a^2$ has order $2$, so $a^2\equiv -1\pmod p$, i.e. $p\mid a^2+1=(a+i)(a-i)$. Since $p$ divides a product but divides neither factor (the quotients $(a\pm i)/p$ have non-integer imaginary part), $p$ is not prime.
 

@@ -33,11 +33,11 @@ $(M, g)$ is a closed oriented Riemannian $n$-manifold. $\Omega^k(M)$ is the spac
 
 # Motivation
 
-The Hodge decomposition is the central structural theorem of the chapter. Its statement compresses a deep analytic result (the elliptic operator $\Delta$ has closed range with finite-dimensional kernel and cokernel) into a clean algebraic form: $\Omega^k$ is the orthogonal sum of three subspaces — the kernel of $\Delta$ (harmonics), and the images of $d$ and $\delta$ from neighboring degrees.
+The Hodge decomposition is the central structural theorem of the chapter. Its statement compresses a deep analytic result (the elliptic operator $\Delta$ has closed range with finite-dimensional kernel and cokernel) into a clean algebraic form: $\Omega^k$ is the orthogonal sum of three [[Def - Subspace|subspaces]] — the kernel of $\Delta$ (harmonics), and the images of $d$ and $\delta$ from neighboring degrees.
 
 The decomposition matters because **it gives a canonical splitting of forms into algebraically meaningful pieces**. Given a general $k$-form $\beta$, we now have an unambiguous procedure: project onto $\mathcal{H}^k$ (the "cohomologically interesting" part), project onto $d\Omega^{k-1}$ (the "exact" part, with no cohomological content), project onto $\delta\Omega^{k+1}$ (the "coexact" part, also cohomologically trivial). Each summand has a clear interpretation, and the splitting is constructive via the Green operator: $\beta = H\beta + d\delta G\beta + \delta d G\beta$.
 
-The most-used corollary is the **canonical harmonic representative**: every de Rham cohomology class has a unique form satisfying $\Delta\omega = 0$. This is the bridge between topology (cohomology, which is metric-independent) and analysis (elliptic PDEs, which are metric-dependent). The dimension $\dim\mathcal{H}^k = b_k$ is topological; the harmonic representative is metric-dependent, but for any given metric there is exactly one. This is what enables **spectral geometry** (extracting topological invariants from the spectrum of $\Delta$), **the heat-kernel approach to the Atiyah–Singer index theorem** (computing $\chi(M) = \sum_k(-1)^k\dim\mathcal{H}^k$ from heat-kernel asymptotics), and **the Bochner technique** (constraining $\dim\mathcal{H}^k$ from curvature conditions).
+The most-used corollary is the **canonical harmonic representative**: every de Rham cohomology class has a unique form satisfying $\Delta\omega = 0$. This is the bridge between topology (cohomology, which is metric-independent) and analysis (elliptic PDEs, which are metric-dependent). The [[Def - Dimension|dimension]] $\dim\mathcal{H}^k = b_k$ is topological; the harmonic representative is metric-dependent, but for any given metric there is exactly one. This is what enables **spectral geometry** (extracting topological invariants from the spectrum of $\Delta$), **the heat-kernel approach to the Atiyah–Singer index theorem** (computing $\chi(M) = \sum_k(-1)^k\dim\mathcal{H}^k$ from heat-kernel asymptotics), and **the Bochner technique** (constraining $\dim\mathcal{H}^k$ from curvature conditions).
 
 The deeper structural point is that **the decomposition holds because $\Delta$ is elliptic and $M$ is closed**. Both conditions are essential: the Riemannian (rather than Lorentzian) hypothesis is what makes $\Delta$ elliptic; the closed (compact, boundary-free) hypothesis is what makes the cokernel of $\Delta$ finite-dimensional. On a noncompact manifold or one with boundary, the decomposition fails (or requires modification with boundary conditions and reduced cohomology).
 
@@ -75,7 +75,7 @@ A fourth combination is **decomposition plus Weitzenböck inequality gives Bochn
 
 The proof is genuinely deep — it requires the full theory of elliptic operators on closed manifolds. Three structural facts conspire.
 
-**Fact 1: $\Delta$ is elliptic.** The Hodge Laplacian on a Riemannian manifold has principal symbol $|\xi|_g^2\cdot\mathrm{id}_{\Lambda^k}$ at a covector $\xi$, which is invertible for $\xi \neq 0$. Ellipticity is a local condition on the symbol, but it has dramatic consequences on a closed manifold via the elliptic regularity theory.
+**Fact 1: $\Delta$ is elliptic.** The [[Def - Hodge Laplacian|Hodge Laplacian]] on a Riemannian manifold has principal symbol $|\xi|_g^2\cdot\mathrm{id}_{\Lambda^k}$ at a covector $\xi$, which is invertible for $\xi \neq 0$. Ellipticity is a local condition on the symbol, but it has dramatic consequences on a closed manifold via the elliptic regularity theory.
 
 **Fact 2: $\Delta$ has closed range with finite-dimensional kernel and cokernel (the Fredholm property on a closed manifold).** This is a deep theorem in PDE — the **Fredholm alternative for elliptic operators on closed manifolds**. The argument uses a parametrix construction (or heat-kernel methods, or the Lax–Milgram approach in Sobolev spaces) to show that the elliptic operator $\Delta$ on the Hilbert space $L^2\Omega^k(M)$ is Fredholm: its kernel is finite-dimensional, its range is closed, and its cokernel is finite-dimensional. The cokernel is canonically identified with the kernel of the adjoint $\Delta^* = \Delta$ (self-adjoint), so kernel = cokernel = $\mathcal{H}^k$.
 
@@ -95,7 +95,7 @@ The conceptual content is clear, but the proof requires nontrivial PDE theory. T
 
 **Smoothness propagation needs elliptic regularity.** Solving the $L^2$ Hodge decomposition gives $L^2$ summands; to recover the *smooth* Hodge decomposition we need that the harmonic part of a smooth form is smooth (which is elliptic regularity for $\Delta$: if $\Delta\omega = 0$ and $\omega \in L^2$, then $\omega \in C^\infty$). This is what makes the smooth and $L^2$ versions of the theorem agree.
 
-**The closed-manifold hypothesis is essential.** On a noncompact manifold, $\Delta$ may not have closed range, and the simple orthogonal decomposition fails. The fix is reduced $L^2$-cohomology, where one replaces the image of $d$ with its $L^2$-closure, and computes a modified Hodge decomposition. This is the **$L^2$-Hodge theory** of Atiyah and others, used for example in **$L^2$-Betti numbers** of manifolds covered by infinite groups.
+**The closed-manifold hypothesis is essential.** On a noncompact manifold, $\Delta$ may not have closed range, and the simple orthogonal decomposition fails. The fix is reduced $L^2$-cohomology, where one replaces the image of $d$ with its $L^2$-closure, and computes a modified Hodge decomposition. This is the **$L^2$-Hodge theory** of Atiyah and others, used for example in **$L^2$-Betti numbers** of manifolds covered by infinite [[Def - Group|groups]].
 
 ---
 
@@ -108,7 +108,7 @@ The decomposition follows from the spectral theory of the self-adjoint elliptic 
 
 **Subgoal decomposition:**
 
-1. **$\Delta$ is elliptic and self-adjoint.** Compute the principal symbol, verify positivity; verify self-adjointness from the codifferential adjoint property.
+1. **$\Delta$ is elliptic and self-adjoint.** Compute the principal symbol, verify positivity; verify self-adjointness from the [[Def - The Codifferential|codifferential]] adjoint property.
    - *Hint:* The principal symbol of $\Delta = d\delta + \delta d$ at $\xi$ is the principal symbol of $\delta\circ d + d\circ\delta$, which on $\Lambda^k$ is $|\xi|^2\mathrm{id}$. Self-adjointness is from [[Thm - Codifferential is the Adjoint of d]] applied twice.
    - *Why needed:* Ellipticity gives the Fredholm property; self-adjointness gives the orthogonal complement decomposition.
 

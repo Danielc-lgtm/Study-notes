@@ -28,7 +28,7 @@ $(M, g)$ a connected Riemannian manifold, $d_g$ the [[Def - Length of a Curve an
 >
 > Furthermore, any of these conditions implies:
 >
-> (v) **Existence of minimising geodesics:** for every $p, q \in M$, there exists a geodesic $\gamma : [0, L] \to M$ from $p$ to $q$ with $L = d_g(p, q)$ — i.e., a length-minimising geodesic.
+> (v) **Existence of minimising [[Def - Geodesic|geodesics]]:** for every $p, q \in M$, there exists a geodesic $\gamma : [0, L] \to M$ from $p$ to $q$ with $L = d_g(p, q)$ — i.e., a length-minimising geodesic.
 
 ---
 
@@ -92,7 +92,7 @@ The unifying theme: **all four conditions express "the manifold has no missing l
 
 The conceptual difficulty is **the (iv) ⟹ (i) implication: "complete at one point ⟹ complete at every point"**. This is the deep statement, and it is not obvious from any one of the perspectives in isolation. It requires the construction of minimising geodesics from one point to every other (which uses (iv) and compactness of small geodesic spheres) and then extending the geodesics through those points.
 
-The technical difficulty is the **continuation argument**: showing that the locus of $r$ for which the radial geodesic is minimising is *open and closed* in $[\delta, \rho]$. Openness uses the local diffeomorphism property of $\exp$; closedness uses metric completeness (which is currently being proved!) or a careful triangle inequality / Gauss lemma argument.
+The technical difficulty is the **continuation argument**: showing that the locus of $r$ for which the radial geodesic is minimising is *open and closed* in $[\delta, \rho]$. Openness uses the local [[Def - Diffeomorphism|diffeomorphism]] property of $\exp$; closedness uses metric completeness (which is currently being proved!) or a careful triangle inequality / Gauss lemma argument.
 
 The most common error is to **confuse the Riemannian Hopf–Rinow theorem with the Lorentzian situation**. In Lorentzian signature the theorem *fails* in important ways: timelike geodesics can be incomplete in finite affine parameter (singularity theorems), and the "distance function" $d_g$ is not a metric (it does not satisfy the triangle inequality and can be zero between distinct events on null geodesics).
 
@@ -169,7 +169,7 @@ The most common error is to **confuse the Riemannian Hopf–Rinow theorem with t
 # Formal Proof
 
 > [!note]- Complete formal proof
-> The complete proof is in any standard Riemannian-geometry textbook (do Carmo's *Riemannian Geometry* Theorem 2.8 of Chapter 7, Lee's *Riemannian Manifolds* Theorem 6.13, Petersen's *Riemannian Geometry* Theorem 5.8.1). We have given the sketch in Lemmas 1–3. The full proof is omitted here; it is one of the cleanest in Riemannian geometry but takes several pages of careful case analysis.
+> The complete proof is in any standard Riemannian-geometry textbook (do Carmo's *Riemannian Geometry* Theorem 2.8 of Chapter 7, Lee's *[[Def - Riemannian Manifold|Riemannian Manifolds]]* Theorem 6.13, Petersen's *Riemannian Geometry* Theorem 5.8.1). We have given the sketch in Lemmas 1–3. The full proof is omitted here; it is one of the cleanest in Riemannian geometry but takes several pages of careful case analysis.
 >
 > **Theorem.** The four conditions (i)–(iv) are equivalent, and any of them implies (v).
 >
@@ -187,7 +187,7 @@ The most common error is to **confuse the Riemannian Hopf–Rinow theorem with t
 
 **General relativity: failure of Hopf–Rinow in Lorentzian signature.** In Lorentzian signature the theorem fails: even on a flat Minkowski spacetime, the "distance" (proper time along timelike geodesics) is not a metric (it can be zero between distinct events on null geodesics, and it fails the triangle inequality in the reversed sense). The Penrose–Hawking singularity theorems show that even under physically reasonable conditions, geodesic completeness *fails* — there are inextendible spacetimes with timelike incomplete geodesics, which physically are the spacetime singularities of black holes and the Big Bang.
 
-**Algebraic topology: complete metric spaces and contractibility.** A simply connected complete Riemannian manifold of non-positive sectional curvature is contractible (Cartan–Hadamard). The Hopf–Rinow part is the use of completeness; the curvature input gives the diffeomorphism with $\mathbb{R}^n$ via $\exp_p$. Contractibility implies vanishing of all higher homotopy groups, so e.g. the entire fundamental group of a closed non-positively curved manifold is the fundamental group of its universal cover, which is contractible — recovering the theorem that closed non-positively curved manifolds are $K(\pi, 1)$ spaces, with profound consequences in geometric group theory.
+**Algebraic topology: complete metric spaces and contractibility.** A simply connected complete Riemannian manifold of non-positive sectional curvature is contractible (Cartan–Hadamard). The Hopf–Rinow part is the use of completeness; the curvature input gives the diffeomorphism with $\mathbb{R}^n$ via $\exp_p$. Contractibility implies vanishing of all higher [[Def - Homotopy|homotopy]] [[Def - Group|groups]], so e.g. the entire fundamental group of a closed non-positively curved manifold is the fundamental group of its universal cover, which is contractible — recovering the theorem that closed non-positively curved manifolds are $K(\pi, 1)$ spaces, with profound consequences in geometric group theory.
 
 ---
 

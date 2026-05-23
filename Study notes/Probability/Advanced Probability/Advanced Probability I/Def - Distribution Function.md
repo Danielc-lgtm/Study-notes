@@ -59,4 +59,4 @@ Calibration: (i) Must $F$ be continuous? No — jumps encode atoms. (ii) Is $F$ 
 > $X_n\to X$ [[Def - Modes of Convergence|in distribution]] iff $F_{X_n}(t)\to F_X(t)$ at every continuity point of $F_X$ — the distribution-function criterion for [[Thm - Lévy's Continuity Theorem|weak convergence]].
 
 > [!tip] Putting all variables on one space
-> The quantile transform realises any law as $g(U)$; combined with an infinite [[Thm - Product Measure|product]] of uniforms it places *any* sequence of [[Def - Independence|independent]] variables on a single probability space.
+> The quantile transform realises any law as $g(U)$; combined with an infinite [[Thm - Product Measure|product]] of uniforms it places *any* sequence of independent variables on a single probability space.

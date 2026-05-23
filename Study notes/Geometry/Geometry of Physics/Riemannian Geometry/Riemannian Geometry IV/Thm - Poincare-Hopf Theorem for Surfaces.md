@@ -36,7 +36,7 @@ The immediate consequence is the **hairy ball theorem**: $\chi(S^2) = 2 \neq 0$ 
 
 The conceptual content is that **the Euler characteristic measures, among other things, the algebraic complexity of vector-field zero structures**. A surface with $\chi = 0$ (torus) can support a non-vanishing vector field (e.g., a constant translation in the universal cover). A surface with $\chi \neq 0$ cannot. The theorem gives a clean topological criterion.
 
-Historically, Poincaré (1885) proved the formula for surfaces in his famous "Sur les courbes définies par les équations différentielles", studying dynamical-system flows on surfaces. Hopf (1926) extended the result to higher dimensions via a careful argument using the Gauss map and degree theory. The theorem is foundational for **Morse theory** (Marston Morse, 1925–1934), where one applies it to gradient vector fields of generic smooth functions, obtaining the **Morse inequalities** as refinements.
+Historically, Poincaré (1885) proved the formula for surfaces in his famous "Sur les courbes définies par les équations différentielles", studying dynamical-system flows on surfaces. Hopf (1926) extended the result to higher [[Def - Dimension|dimensions]] via a careful argument using the Gauss map and degree theory. The theorem is foundational for **Morse theory** (Marston Morse, 1925–1934), where one applies it to gradient vector fields of generic smooth functions, obtaining the **Morse inequalities** as refinements.
 
 ---
 
@@ -146,7 +146,7 @@ The higher-dimensional Hopf version requires the **degree of the Gauss map for h
 > [!note]- Complete formal proof
 > Step 0 — Setup: $M$ is closed oriented smooth $2$-manifold (or $n$-manifold for the general case); $v$ is a smooth tangent vector field on $M$ with isolated zeros.
 >
-> Step 1: Homotopy invariance. Let $v_0 = v$ and $v_1 = \nabla f$ for a Morse function $f$ on $M$ (which exists by perturbation arguments — Morse functions are dense in $C^\infty(M)$). Take the homotopy $v_t = (1-t)v_0 + tv_1$, and perturb it (in the space of homotopies) to be transverse to the zero section in $TM \times [0, 1]$. By Sard's theorem, a generic perturbation is transverse, and the zero set $\{(p, t) : v_t(p) = 0\}$ is a smooth $1$-manifold in $M \times [0, 1]$ with boundary consisting of $(p, 0)$ for zeros of $v_0$ and $(p, 1)$ for zeros of $v_1$. By Lemma 1, the indices at birth/death points cancel in pairs. So $\sum\mathrm{Ind}(v_0) = \sum\mathrm{Ind}(v_1)$.
+> Step 1: Homotopy invariance. Let $v_0 = v$ and $v_1 = \nabla f$ for a Morse function $f$ on $M$ (which exists by perturbation arguments — Morse functions are dense in $C^\infty(M)$). Take the homotopy $v_t = (1-t)v_0 + tv_1$, and perturb it (in the space of [[Def - Homotopy|homotopies]]) to be transverse to the zero section in $TM \times [0, 1]$. By Sard's theorem, a generic perturbation is transverse, and the zero set $\{(p, t) : v_t(p) = 0\}$ is a smooth $1$-manifold in $M \times [0, 1]$ with boundary consisting of $(p, 0)$ for zeros of $v_0$ and $(p, 1)$ for zeros of $v_1$. By Lemma 1, the indices at birth/death points cancel in pairs. So $\sum\mathrm{Ind}(v_0) = \sum\mathrm{Ind}(v_1)$.
 >
 > Step 2: Evaluate at $v = \nabla f$. By Lemma 2, $\mathrm{Ind}_p(\nabla f) = (-1)^{\mathrm{ind}_M(p)}$ for each critical point $p$ of $f$. Summing: $\sum_p\mathrm{Ind}_p(\nabla f) = \sum_p(-1)^{\mathrm{ind}_M(p)} = \sum_k(-1)^kc_k$ where $c_k$ is the number of critical points of Morse index $k$.
 >

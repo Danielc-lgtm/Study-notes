@@ -15,7 +15,7 @@ $A$ is an $m \times n$ matrix (objective), $b$ an $m$-vector, $C$ a $p \times n$
 
 # Statement
 
-> **Theorem (Constrained Least Squares via KKT System).** Consider the constrained LS problem
+> **Theorem ([[Def - Constrained Least Squares|Constrained Least Squares]] via [[Def - KKT System|KKT System]]).** Consider the constrained LS problem
 > $$\min_x \|Ax - b\|^2 \quad \text{subject to} \quad Cx = d.$$
 > 1. *Existence and uniqueness*: This problem has a unique solution if and only if:
 >    (i) The rows of $C$ are linearly independent (the constraint system is consistent and non-redundant), and

@@ -17,7 +17,7 @@ Throughout, $V$ is a finite-dimensional vector space over $F$, $T \in \mathcal{L
 
 # Statement
 
-> **Theorem (Existence, Uniqueness, and Degree of the Minimal Polynomial).** Let $V$ be a finite-dimensional vector space over $F$ and $T \in \mathcal{L}(V)$. There exists a unique monic polynomial $m_T \in F[x]$ of smallest positive degree such that
+> **Theorem (Existence, Uniqueness, and Degree of the [[Def - Minimal Polynomial|Minimal Polynomial]]).** Let $V$ be a finite-dimensional vector space over $F$ and $T \in \mathcal{L}(V)$. There exists a unique monic polynomial $m_T \in F[x]$ of smallest positive degree such that
 > $$m_T(T) = 0.$$
 > Furthermore, $\deg m_T \leq \dim V$.
 
@@ -31,9 +31,9 @@ This theorem makes the [[Def - Minimal Polynomial|minimal polynomial]] well-defi
 
 Both potential problems are resolved by structural facts:
 - **Existence** rests on finite-dimensionality: the powers $I, T, T^2, \ldots$ of $T$ are vectors in the finite-dimensional space $\mathcal{L}(V)$, so they must eventually become linearly dependent, giving a polynomial relation.
-- **Uniqueness** rests on the [[Thm - Division Algorithm for Polynomials (LA)|division algorithm]] — equivalently, on $F[x]$ being a [[Def - Principal Ideal Domain|PID]]. The set of annihilating polynomials is an ideal, and a principal ideal has a unique monic generator.
+- **Uniqueness** rests on the [[Thm - Division Algorithm for Polynomials (LA)|division algorithm]] — equivalently, on $F[x]$ being a [[Def - Principal Ideal Domain|PID]]. The set of annihilating polynomials is an [[Def - Ideal|ideal]], and a principal [[Def - Ideal|ideal]] has a unique monic generator.
 
-The degree bound $\deg m_T \leq \dim V$ is more delicate than the naive bound $\deg m_T \leq (\dim V)^2$ (which comes from $\mathcal{L}(V)$ having dimension $(\dim V)^2$). The sharper bound uses a finer construction: instead of looking at all $T^k$ at once, look at iterates $v, Tv, T^2 v, \ldots, T^n v$ of a single nonzero vector $v$, where $n = \dim V$. These are $n + 1$ vectors in an $n$-dimensional space, hence dependent, giving a polynomial of degree at most $n$ that annihilates $v$. The proof then assembles such annihilator polynomials for each vector into a single annihilating polynomial of degree $\leq n$ for *all* of $V$.
+The degree bound $\deg m_T \leq \dim V$ is more delicate than the naive bound $\deg m_T \leq (\dim V)^2$ (which comes from $\mathcal{L}(V)$ having [[Def - Dimension|dimension]] $(\dim V)^2$). The sharper bound uses a finer construction: instead of looking at all $T^k$ at once, look at iterates $v, Tv, T^2 v, \ldots, T^n v$ of a single nonzero vector $v$, where $n = \dim V$. These are $n + 1$ vectors in an $n$-dimensional space, hence dependent, giving a polynomial of degree at most $n$ that annihilates $v$. The proof then assembles such annihilator polynomials for each vector into a single annihilating polynomial of degree $\leq n$ for *all* of $V$.
 
 ---
 
@@ -63,11 +63,11 @@ Combined with **the factorization theorem over $\mathbb{C}$**, the existence the
 
 The mechanism is **finite-dimensionality forces a polynomial relation, and the PID property of $F[x]$ provides a unique generator for the ideal of all such relations**.
 
-For existence: the space $\mathcal{L}(V)$ has dimension $(\dim V)^2 = n^2$, so the powers $I, T, T^2, \ldots, T^{n^2}$ are $n^2 + 1$ vectors in $\mathcal{L}(V)$ and must be linearly dependent. This is enough to prove existence of *some* annihilating polynomial — but with the crude degree bound $\deg m_T \leq n^2$. The sharper bound $\deg m_T \leq n$ comes from the **single-vector iterate approach**: for any nonzero $v \in V$, the vectors $v, Tv, T^2 v, \ldots, T^n v$ are $n + 1$ vectors in $V$ (dimension $n$), so dependent — giving a polynomial of degree $\leq n$ annihilating $v$. Inducting on dimension via the invariant subspace $\operatorname{range}(q(T))$ (where $q$ is the annihilator of $v$) and combining gives an annihilator of degree $\leq n$ for all of $V$.
+For existence: the space $\mathcal{L}(V)$ has [[Def - Dimension|dimension]] $(\dim V)^2 = n^2$, so the powers $I, T, T^2, \ldots, T^{n^2}$ are $n^2 + 1$ vectors in $\mathcal{L}(V)$ and must be linearly dependent. This is enough to prove existence of *some* annihilating polynomial — but with the crude degree bound $\deg m_T \leq n^2$. The sharper bound $\deg m_T \leq n$ comes from the **single-vector iterate approach**: for any nonzero $v \in V$, the vectors $v, Tv, T^2 v, \ldots, T^n v$ are $n + 1$ vectors in $V$ (dimension $n$), so dependent — giving a polynomial of degree $\leq n$ annihilating $v$. Inducting on dimension via the invariant [[Def - Subspace|subspace]] $\operatorname{range}(q(T))$ (where $q$ is the annihilator of $v$) and combining gives an annihilator of degree $\leq n$ for all of $V$.
 
 For uniqueness: the set of polynomials annihilating $T$ is
 $$\operatorname{Ann}(T) = \{p \in F[x] : p(T) = 0\} = \ker \Phi_T,$$
-where $\Phi_T : F[x] \to \mathcal{L}(V)$ is the evaluation map $p \mapsto p(T)$. This is an ideal of $F[x]$ (sums and ring multiples of annihilators are annihilators). By the [[Thm - Division Algorithm for Polynomials (LA)|division algorithm]], every ideal of $F[x]$ is principal, so $\operatorname{Ann}(T) = (g)$ for some $g \in F[x]$. The ideal $(g)$ has generators $\{cg : c \in F^\times\}$ (the nonzero scalar multiples of $g$), and among these there is a unique monic one — divide $g$ by its leading coefficient. This unique monic generator is $m_T$.
+where $\Phi_T : F[x] \to \mathcal{L}(V)$ is the evaluation map $p \mapsto p(T)$. This is an ideal of $F[x]$ (sums and [[Def - Ring|ring]] multiples of [[Def - Annihilator|annihilators]] are [[Def - Annihilator|annihilators]]). By the [[Thm - Division Algorithm for Polynomials (LA)|division algorithm]], every ideal of $F[x]$ is principal, so $\operatorname{Ann}(T) = (g)$ for some $g \in F[x]$. The ideal $(g)$ has generators $\{cg : c \in F^\times\}$ (the nonzero scalar multiples of $g$), and among these there is a unique monic one — divide $g$ by its leading coefficient. This unique monic generator is $m_T$.
 
 > **The mechanism in one sentence: finite dimension creates the ideal of annihilators; PID-ness of $F[x]$ gives the ideal a unique monic generator, which is $m_T$.**
 
@@ -85,7 +85,7 @@ The conceptual content is simple, but the proof has **two non-trivial moves**: (
 
 **This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
 
-**High-level strategy.** (a) Build an annihilator polynomial $q$ of a single nonzero vector $v$ via iterate dependence; (b) extend to an annihilator of all of $V$ by induction on dimension applied to the invariant subspace $\operatorname{range}(q(T))$; (c) extract the unique monic generator of the ideal of annihilators using the division algorithm.
+**High-level strategy.** (a) Build an annihilator polynomial $q$ of a single nonzero vector $v$ via iterate dependence; (b) extend to an annihilator of all of $V$ by induction on dimension applied to the invariant [[Def - Subspace|subspace]] $\operatorname{range}(q(T))$; (c) extract the unique monic generator of the ideal of annihilators using the division algorithm.
 
 **Subgoal decomposition:**
 
@@ -97,7 +97,7 @@ The conceptual content is simple, but the proof has **two non-trivial moves**: (
    - *Hint:* $\operatorname{range}(q(T))$ is $T$-invariant and has dimension $\leq \dim V - \deg q$; recurse on this subspace.
    - *Why needed:* assembles a global annihilator from local ones.
 
-3. **The annihilators form an ideal.** $\operatorname{Ann}(T) = \{p : p(T) = 0\}$ is closed under addition (sums of annihilators annihilate) and ring multiplication ($q \cdot p$ has $(qp)(T) = q(T) p(T) = 0$).
+3. **The annihilators form an ideal.** $\operatorname{Ann}(T) = \{p : p(T) = 0\}$ is closed under addition (sums of annihilators annihilate) and [[Def - Ring|ring]] multiplication ($q \cdot p$ has $(qp)(T) = q(T) p(T) = 0$).
    - *Hint:* both checks are one-line.
    - *Why needed:* identifies $\operatorname{Ann}(T)$ as an ideal of $F[x]$.
 

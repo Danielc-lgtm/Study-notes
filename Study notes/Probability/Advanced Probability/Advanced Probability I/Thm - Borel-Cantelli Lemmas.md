@@ -22,7 +22,7 @@ A central question about an infinite sequence of events $(A_n)$: do *infinitely 
 
 # Sources and Targets
 
-**Sources.** First lemma: hypothesis $\sum\mathbb{P}(A_n)<\infty$ — *no independence needed*. Second lemma: $\sum\mathbb{P}(A_n)=\infty$ *and* [[Def - Independence|independence]] — independence is essential (pairwise suffices, but some such hypothesis is needed). The standard *bridge into* the first lemma: to prove $X_n\to X$ a.s., set $A_n=\{|X_n-X|>\varepsilon\}$ and show $\sum\mathbb{P}(A_n)<\infty$.
+**Sources.** First lemma: hypothesis $\sum\mathbb{P}(A_n)<\infty$ — *no independence needed*. Second lemma: $\sum\mathbb{P}(A_n)=\infty$ *and* independence — independence is essential (pairwise suffices, but some such hypothesis is needed). The standard *bridge into* the first lemma: to prove $X_n\to X$ a.s., set $A_n=\{|X_n-X|>\varepsilon\}$ and show $\sum\mathbb{P}(A_n)<\infty$.
 
 **Targets.** The first lemma gives almost-sure convergence from a summable error series — the route from $L^p$ or in-probability convergence to an [[Ex - Lp convergence and almost-everywhere subsequences|a.e.-convergent subsequence]], and a step in the [[Thm - Strong Law of Large Numbers|SLLN]]. The second gives "rare independent events still happen infinitely often" — recurrence statements, the infinite-monkey theorem, the optimality of [[Thm - Kolmogorov 0-1 Law|0–1 laws]].
 
@@ -34,7 +34,7 @@ Let $(A_n)_{n\ge1}$ be events.
 
 **(First Borel–Cantelli lemma.)** If $\displaystyle\sum_{n=1}^\infty\mathbb{P}(A_n)<\infty$, then $\mathbb{P}(\limsup_n A_n)=0$ — almost surely only finitely many $A_n$ occur.
 
-**(Second Borel–Cantelli lemma.)** If the $(A_n)$ are [[Def - Independence|independent]] and $\displaystyle\sum_{n=1}^\infty\mathbb{P}(A_n)=\infty$, then $\mathbb{P}(\limsup_n A_n)=1$ — almost surely infinitely many $A_n$ occur.
+**(Second Borel–Cantelli lemma.)** If the $(A_n)$ are independent and $\displaystyle\sum_{n=1}^\infty\mathbb{P}(A_n)=\infty$, then $\mathbb{P}(\limsup_n A_n)=1$ — almost surely infinitely many $A_n$ occur.
 
 Hence for an independent sequence, $\mathbb{P}(A_n\text{ i.o.})\in\{0,1\}$, dichotomised by convergence/divergence of $\sum\mathbb{P}(A_n)$.
 

@@ -24,7 +24,7 @@ A Lorentzian manifold is a pair $(M, g)$ with $M$ a smooth $n$-manifold and $g$ 
 
 The desideratum is to install on a smooth manifold the kind of geometric structure that supports a *causal* distinction between time and space — a structure on which the light cone exists, on which "before" and "after" are meaningful (along timelike worldlines), on which the special-relativistic kinematics of [[Special Relativity I — Lorentz Transformations and Minkowski Space|SR I]] makes sense locally. The flat case of all of this is Minkowski space, the affine space $\mathbb{R}^4$ equipped with the indefinite metric $\eta$ of signature $(1, 3)$. The curved generalisation — the geometry of an arbitrary smooth manifold $M$ equipped with a metric of the same signature — is the **Lorentzian manifold**.
 
-The single design decision is signature, $(1, n-1)$. Everything else is forced. We need a smooth, symmetric, non-degenerate $(0, 2)$-tensor field (a [[Def - Semi-Riemannian Metric and Signature|semi-Riemannian metric]]) so that the inner-product-like machinery of Riemannian geometry — musical isomorphisms, Levi-Civita connection, geodesics, curvature — is available. The specific signature $(1, n-1)$ is what produces the causal structure: at every tangent space, one direction is "timelike" (positive $g$-norm-squared in our convention) and $n - 1$ directions are "spacelike" (negative). This is precisely the local structure of Minkowski space, repeated at every point of the manifold.
+The single design decision is signature, $(1, n-1)$. Everything else is forced. We need a smooth, symmetric, non-degenerate $(0, 2)$-tensor field (a [[Def - Semi-Riemannian Metric and Signature|semi-Riemannian metric]]) so that the inner-product-like machinery of Riemannian geometry — musical [[Def - Isomorphism|isomorphisms]], Levi-Civita connection, [[Def - Geodesic|geodesics]], curvature — is available. The specific signature $(1, n-1)$ is what produces the causal structure: at every tangent space, one direction is "timelike" (positive $g$-norm-squared in our convention) and $n - 1$ directions are "spacelike" (negative). This is precisely the local structure of Minkowski space, repeated at every point of the manifold.
 
 **Why signature $(1, n-1)$ in particular?** Because that is the signature of [[Def - Minkowski Space and the Metric|Minkowski space]], which is the *empirical* model for spacetime in special relativity. The Michelson–Morley experiment, the constancy of the speed of light, the Lorentz transformations — all of these tell us that the local structure of spacetime is Minkowski-like. So the signature is fixed by physics: there is one time direction and three space directions, and the indefinite form between them is what produces the causal structure. The mathematical generalisation, then, is to allow $g$ to *vary* from point to point, while keeping the signature constant.
 
@@ -34,7 +34,7 @@ The single design decision is signature, $(1, n-1)$. Everything else is forced. 
 
 **Why constant signature?** Because the causal structure must be globally coherent. If at some points the signature were $(1, 3)$ and at others $(3, 1)$ or $(2, 2)$, the notion of "timelike direction" would be inconsistent across $M$, and the causal structure of the manifold would not exist as a global notion. On a connected manifold, the signature of a non-degenerate symmetric form *is* automatically locally constant (eigenvalues vary continuously and cannot pass through zero), so the constraint is automatically satisfied — the constancy is a *consequence* of non-degeneracy plus connectivity, not an independent axiom.
 
-**Why "Lorentzian" and not "pseudo-Riemannian of signature $(1, n-1)$"?** The name "Lorentzian" reflects the physical origin: the signature $(1, n-1)$ is the one whose isometry group includes the **Lorentz group** $O(1, n-1)$, named after H. A. Lorentz, who derived the special-relativistic coordinate transformations in 1899–1904 before Einstein's interpretive synthesis of 1905. So "Lorentzian manifold" is "manifold whose local pseudo-orthogonal group is the Lorentz group" — the manifold on which the Lorentz transformations act locally at every tangent space, generalising the global Lorentz invariance of flat Minkowski space.
+**Why "Lorentzian" and not "pseudo-Riemannian of signature $(1, n-1)$"?** The name "Lorentzian" reflects the physical origin: the signature $(1, n-1)$ is the one whose [[Def - Isometry|isometry]] [[Def - Group|group]] includes the **Lorentz [[Def - Group|group]]** $O(1, n-1)$, named after H. A. Lorentz, who derived the special-relativistic coordinate transformations in 1899–1904 before Einstein's interpretive synthesis of 1905. So "Lorentzian manifold" is "manifold whose local pseudo-orthogonal group is the Lorentz group" — the manifold on which the Lorentz transformations act locally at every tangent space, generalising the global Lorentz invariance of flat Minkowski space.
 
 **Per-axiom failure analysis:**
 
@@ -64,15 +64,15 @@ A **pseudo-orthonormal frame** at $p$ is a basis $(e_0, e_1, \ldots, e_{n-1})$ o
 
 # Categorical / Structural Definition
 
-A Lorentzian manifold of dimension $n$ is a smooth manifold $M$ equipped with a reduction of the structure group of $TM$ from $GL(n, \mathbb{R})$ to the **Lorentz group** $O(1, n-1)$. This reduction is the data of a pseudo-orthonormal frame at every point, defined up to $O(1, n-1)$ changes of frame.
+A Lorentzian manifold of [[Def - Dimension|dimension]] $n$ is a smooth manifold $M$ equipped with a reduction of the structure group of $TM$ from $GL(n, \mathbb{R})$ to the **Lorentz group** $O(1, n-1)$. This reduction is the data of a pseudo-orthonormal frame at every point, defined up to $O(1, n-1)$ changes of frame.
 
-The Lorentz group $O(1, n-1)$ in $n$ dimensions has dimension $n(n-1)/2$ (the same as $O(n)$, since the dimension counts antisymmetric matrices in the relevant pseudo-orthonormal Lie algebra). For $n = 4$ it has dimension $6$: three boosts and three spatial rotations.
+The Lorentz group $O(1, n-1)$ in $n$ [[Def - Dimension|dimensions]] has dimension $n(n-1)/2$ (the same as $O(n)$, since the dimension counts antisymmetric matrices in the relevant pseudo-orthonormal Lie algebra). For $n = 4$ it has dimension $6$: three boosts and three spatial rotations.
 
-A **time orientation** is a further choice: at each point, a continuous choice of one of the two halves of the timelike cone (future-directed vs. past-directed). Equivalently, a smooth nowhere-vanishing timelike vector field, or a reduction of structure group from $O(1, n-1)$ to its orthochronous subgroup $O^\uparrow(1, n-1)$ (the subgroup preserving time orientation). Not every Lorentzian manifold is time-orientable, and time-orientability is an additional topological condition.
+A **time orientation** is a further choice: at each point, a continuous choice of one of the two halves of the timelike cone (future-directed vs. past-directed). Equivalently, a smooth nowhere-vanishing timelike vector field, or a reduction of structure group from $O(1, n-1)$ to its orthochronous [[Def - Subgroup|subgroup]] $O^\uparrow(1, n-1)$ (the [[Def - Subgroup|subgroup]] preserving time orientation). Not every Lorentzian manifold is time-orientable, and time-orientability is an additional topological condition.
 
 A **spacetime** in the most refined sense is a connected, oriented, time-oriented, 4-dimensional Lorentzian manifold.
 
-The category $\mathbf{Lor}$ has Lorentzian manifolds as objects and smooth maps preserving the Lorentzian metric (Lorentzian isometries) as morphisms. It is a higher-structured version of the smooth category, just as Riemannian manifolds form $\mathbf{Riem}$.
+The category $\mathbf{Lor}$ has Lorentzian manifolds as objects and smooth maps preserving the Lorentzian metric (Lorentzian [[Def - Isometry|isometries]]) as morphisms. It is a higher-structured version of the smooth category, just as Riemannian manifolds form $\mathbf{Riem}$.
 
 ---
 
@@ -96,7 +96,7 @@ The **causal structure** of a Lorentzian manifold — the partition of tangent v
 $$
 g = \left(1 - \frac{2GM}{r}\right) dt^2 - \left(1 - \frac{2GM}{r}\right)^{-1} dr^2 - r^2 \mathring g_{S^2}
 $$
-(in geometric units, $c = 1$). This is the exterior of a static, spherically symmetric black hole; it solves the vacuum Einstein equations. The Schwarzschild metric is *not* flat — its curvature decays as $1/r^3$ — and timelike geodesics are bent towards $r = 2GM$, the **event horizon**.
+(in geometric units, $c = 1$). This is the exterior of a static, spherically symmetric black hole; it solves the vacuum Einstein equations. The Schwarzschild metric is *not* flat — its curvature decays as $1/r^3$ — and timelike [[Def - Geodesic|geodesics]] are bent towards $r = 2GM$, the **event horizon**.
 
 **Is an instance — the de Sitter universe.** A 4-dimensional Lorentzian manifold with constant positive curvature, solving the Einstein equations with cosmological constant $\Lambda > 0$ and no matter. Topologically $\mathbb{R} \times S^3$, with metric in static coordinates
 $$

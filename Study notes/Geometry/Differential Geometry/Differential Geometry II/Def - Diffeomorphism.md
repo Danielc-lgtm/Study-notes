@@ -16,7 +16,7 @@ $M$ and $N$ denote smooth manifolds. $F : M \to N$ is a map. We write $M \approx
 
 # Axiom Motivation
 
-In every category, two objects are considered "the same" when there is an isomorphism between them. For sets, the isomorphisms are bijections; for groups, the isomorphisms are bijective homomorphisms; for topological spaces, the isomorphisms are homeomorphisms. The natural question for smooth manifolds: what should an isomorphism be?
+In every category, two objects are considered "the same" when there is an isomorphism between them. For sets, the [[Def - Isomorphism|isomorphisms]] are bijections; for [[Def - Group|groups]], the [[Def - Isomorphism|isomorphisms]] are bijective [[Def - Homomorphism|homomorphisms]]; for topological spaces, the isomorphisms are [[Def - Homeomorphism|homeomorphisms]]. The natural question for smooth manifolds: what should an isomorphism be?
 
 The smooth-manifold structure on a topological space $M$ consists of a maximal smooth atlas (see [[Def - Smooth Atlas and Smooth Structure]]). An isomorphism of smooth manifolds should preserve both the topology and the smooth structure. So it should be:
 
@@ -46,7 +46,7 @@ Let $M$ and $N$ be smooth manifolds. A map $F : M \to N$ is a **diffeomorphism**
 
 Two manifolds $M$ and $N$ are **diffeomorphic**, written $M \approx N$, if there exists a diffeomorphism $F : M \to N$.
 
-The set of diffeomorphisms $M \to M$ — *the diffeomorphism group* — is denoted $\operatorname{Diff}(M)$. Under composition it is a group with identity $\operatorname{id}_M$; for any $M$ of positive dimension, $\operatorname{Diff}(M)$ is an infinite-dimensional non-abelian group of central importance in geometry, topology, and physics (it is the symmetry group of $M$ as a smooth object, and the gauge group of general relativity is its restriction to spacetime).
+The set of diffeomorphisms $M \to M$ — *the diffeomorphism [[Def - Group|group]]* — is denoted $\operatorname{Diff}(M)$. Under composition it is a group with identity $\operatorname{id}_M$; for any $M$ of positive [[Def - Dimension|dimension]], $\operatorname{Diff}(M)$ is an infinite-dimensional non-abelian group of central importance in geometry, topology, and physics (it is the symmetry group of $M$ as a smooth object, and the gauge group of general relativity is its restriction to spacetime).
 
 **Equivalent characterization (Lee Proposition 2.15 / DG IV):** $F$ is a diffeomorphism if and only if $F$ is a smooth bijection whose differential $dF_p : T_p M \to T_{F(p)} N$ is invertible at every $p \in M$. The forward direction is straightforward; the reverse direction uses the inverse function theorem applied at every point. This characterization belongs more naturally to [[Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds|DG IV]].
 
@@ -56,7 +56,7 @@ The set of diffeomorphisms $M \to M$ — *the diffeomorphism group* — is denot
 
 A diffeomorphism is precisely an **isomorphism in the category $\mathbf{Man}^\infty$** of smooth manifolds and smooth maps. The categorical definition of isomorphism — an arrow with a two-sided inverse — unfolds, in this category, to (1) the arrow $F$ is smooth, (2) it has an inverse, and (3) the inverse is also smooth.
 
-The forgetful functor $\mathbf{Man}^\infty \to \mathbf{Top}$ sends a diffeomorphism to a homeomorphism, but is *not* full: there exist homeomorphisms between smooth manifolds that are not diffeomorphisms. The most spectacular instance is the existence of **exotic smooth structures on $\mathbb{R}^4$** (Donaldson–Freedman, 1984): there are uncountably many smooth manifold structures on the topological space $\mathbb{R}^4$, no two of which are diffeomorphic, but all of which are homeomorphic to standard $\mathbb{R}^4$. Even more startling: **Milnor's exotic spheres** (1956) — the topological $7$-sphere admits exactly $28$ distinct smooth structures up to orientation-preserving diffeomorphism. The category $\mathbf{Man}^\infty$ has strictly more isomorphism classes than $\mathbf{Top}$ restricted to manifold spaces.
+The forgetful functor $\mathbf{Man}^\infty \to \mathbf{Top}$ sends a diffeomorphism to a homeomorphism, but is *not* full: there exist [[Def - Homeomorphism|homeomorphisms]] between smooth manifolds that are not diffeomorphisms. The most spectacular instance is the existence of **exotic smooth structures on $\mathbb{R}^4$** (Donaldson–Freedman, 1984): there are uncountably many smooth manifold structures on the topological space $\mathbb{R}^4$, no two of which are diffeomorphic, but all of which are homeomorphic to standard $\mathbb{R}^4$. Even more startling: **Milnor's exotic spheres** (1956) — the topological $7$-sphere admits exactly $28$ distinct smooth structures up to orientation-preserving diffeomorphism. The category $\mathbf{Man}^\infty$ has strictly more isomorphism classes than $\mathbf{Top}$ restricted to manifold spaces.
 
 The **diffeomorphism group** $\operatorname{Diff}(M)$ is the automorphism group of $M$ in $\mathbf{Man}^\infty$. It carries no natural finite-dimensional smooth structure (it is genuinely infinite-dimensional), but it is a Fréchet manifold and a topological group.
 
@@ -90,7 +90,7 @@ A diffeomorphism is also **a change of coordinates** on a manifold. The chart ma
 
 **Corollary (diffeomorphic is an equivalence relation).** $M \approx M$ (the identity), $M \approx N \Rightarrow N \approx M$ (inverse), $M \approx N \approx P \Rightarrow M \approx P$ (composition). This is Lee's Proposition 2.15(e).
 
-**Corollary (diffeomorphism invariance of dimension).** If $F : M \to N$ is a diffeomorphism, then $\dim M = \dim N$. Proof: pick $p \in M$, charts $(U, \varphi)$ around $p$ and $(V, \psi)$ around $F(p)$; the coordinate representation $\widehat F = \psi \circ F \circ \varphi^{-1}$ is a diffeomorphism between open subsets of $\mathbb{R}^m$ and $\mathbb{R}^n$, and an elementary result (Brouwer's invariance of dimension, or simply that a $C^1$ diffeomorphism preserves dimension via the Jacobian) forces $m = n$.
+**Corollary (diffeomorphism invariance of [[Def - Dimension|dimension]]).** If $F : M \to N$ is a diffeomorphism, then $\dim M = \dim N$. Proof: pick $p \in M$, charts $(U, \varphi)$ around $p$ and $(V, \psi)$ around $F(p)$; the coordinate representation $\widehat F = \psi \circ F \circ \varphi^{-1}$ is a diffeomorphism between open subsets of $\mathbb{R}^m$ and $\mathbb{R}^n$, and an elementary result (Brouwer's invariance of dimension, or simply that a $C^1$ diffeomorphism preserves dimension via the Jacobian) forces $m = n$.
 
 **Corollary (restriction).** The restriction of a diffeomorphism to an open submanifold is a diffeomorphism onto its image.
 

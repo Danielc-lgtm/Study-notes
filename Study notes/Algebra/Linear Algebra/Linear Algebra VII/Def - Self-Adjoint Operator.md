@@ -61,7 +61,7 @@ $$T = \underbrace{\tfrac{1}{2}(T + T^*)}_{\text{self-adjoint}} + i \cdot \underb
 
 the operator analogue of $z = \operatorname{Re}(z) + i \operatorname{Im}(z)$. The first summand is self-adjoint; the second is *skew-adjoint* ($T^* = -T$), and $i$ times a skew-adjoint operator is self-adjoint. So every operator on a complex inner product space is, up to a sign, a complex linear combination of two self-adjoint operators. This is the precise sense in which self-adjoint operators are the "real coordinates" on $\mathcal{L}(V)$.
 
-The (real) vector space of self-adjoint operators on $\mathbb{C}^n$ has real dimension $n^2$ — even though $\mathcal{L}(\mathbb{C}^n)$ has complex dimension $n^2$ and so real dimension $2n^2$. Half the complex degrees of freedom are killed by the constraint $T = T^*$, and what remains is the *Hermitian matrix space*, the real Lie algebra $\mathfrak{u}(n)$ rotated by $i$.
+The (real) vector space of self-adjoint operators on $\mathbb{C}^n$ has real [[Def - Dimension|dimension]] $n^2$ — even though $\mathcal{L}(\mathbb{C}^n)$ has complex [[Def - Dimension|dimension]] $n^2$ and so real dimension $2n^2$. Half the complex degrees of freedom are killed by the constraint $T = T^*$, and what remains is the *Hermitian matrix space*, the real Lie algebra $\mathfrak{u}(n)$ rotated by $i$.
 
 ---
 
@@ -83,7 +83,7 @@ The simplest examples: the identity operator $I$, the zero operator $0$, any rea
 
 Over $\mathbb{C}$: the matrix $\begin{pmatrix} 2 & 3 + 4i \\ 3 - 4i & 7 \end{pmatrix}$ is self-adjoint (the off-diagonal entries are complex conjugates of each other). The matrix $\begin{pmatrix} 1 & i \\ i & 1 \end{pmatrix}$ is *not* self-adjoint (its conjugate transpose is $\begin{pmatrix} 1 & -i \\ -i & 1 \end{pmatrix}$, a different matrix); but $\begin{pmatrix} 1 & i \\ -i & 1 \end{pmatrix}$ *is* self-adjoint.
 
-A canonical family: **orthogonal projections** $P_U$ onto subspaces $U \leq V$. Orthogonal projection is self-adjoint and idempotent ($P^2 = P$), and conversely a projection (i.e., $P^2 = P$) is *orthogonal* in the sense of "projection along the orthogonal complement" if and only if it is self-adjoint. The two characterisations of orthogonal projection coincide. Eigenvalues: $0$ (on $U^{\perp}$) and $1$ (on $U$).
+A canonical family: **orthogonal projections** $P_U$ onto [[Def - Subspace|subspaces]] $U \leq V$. Orthogonal projection is self-adjoint and idempotent ($P^2 = P$), and conversely a projection (i.e., $P^2 = P$) is *orthogonal* in the sense of "projection along the orthogonal complement" if and only if it is self-adjoint. The two characterisations of orthogonal projection coincide. Eigenvalues: $0$ (on $U^{\perp}$) and $1$ (on $U$).
 
 Another family: the **density matrices** of quantum mechanics. A density matrix $\rho \in \mathcal{L}(V)$ on a finite-dimensional state space is a self-adjoint positive operator with $\operatorname{tr}(\rho) = 1$. Pure states are rank-1 density matrices; mixed states are convex combinations.
 

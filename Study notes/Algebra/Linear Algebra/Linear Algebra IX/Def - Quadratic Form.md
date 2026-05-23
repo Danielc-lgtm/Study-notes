@@ -98,7 +98,7 @@ where $H$ is the Hessian. The map $h \mapsto \tfrac{1}{2} h^t H h$ is a quadrati
 
 **Is an instance: $q(x, y) = x^2 + 2xy + 3y^2$ on $\mathbb{R}^2$.** A polynomial of degree 2, hence a quadratic form. The associated symmetric matrix is $\begin{pmatrix} 1 & 1 \\ 1 & 3 \end{pmatrix}$ (note the $2xy$ contributes $1$ to each off-diagonal entry, since $A_{12} x y + A_{21} y x = 2 A_{12} xy$ in the symmetric case). Diagonalising, the eigenvalues are $2 \pm \sqrt{2}$, both positive, so $q$ is positive definite with signature $(2, 0)$.
 
-**Is an instance: the determinant in two dimensions.** On $\mathbb{F}^2$ with $v = (x, y)$, the quadratic form $q(v) = \det(v\ v) = xy - yx = 0$ is identically zero — because the determinant of two equal columns is zero. This illustrates that *alternating* bilinear forms have *zero* associated quadratic form, which is why the quadratic form sees only the symmetric part.
+**Is an instance: the determinant in two [[Def - Dimension|dimensions]].** On $\mathbb{F}^2$ with $v = (x, y)$, the quadratic form $q(v) = \det(v\ v) = xy - yx = 0$ is identically zero — because the determinant of two equal columns is zero. This illustrates that *alternating* bilinear forms have *zero* associated quadratic form, which is why the quadratic form sees only the symmetric part.
 
 **Is NOT an instance: the function $f(v) = \|v\|$ on a real inner product space.** Degree-1 homogeneous, not degree-2: $f(\lambda v) = |\lambda| \|v\|$, not $\lambda^2 \|v\|$. So the norm itself is not a quadratic form; only its square is.
 
@@ -110,7 +110,7 @@ where $H$ is the Hessian. The map $h \mapsto \tfrac{1}{2} h^t H h$ is a quadrati
 
 **Corollary (positive definite quadratic forms ↔ inner products).** A quadratic form $q$ on a real vector space is **positive definite** if $q(v) > 0$ for all $v \neq 0$. The positive-definite quadratic forms are in bijection with the inner products on $V$, via $\rho_q$. Every choice of inner product is a choice of positive-definite quadratic form, and vice versa.
 
-**Calibration check.** If you have understood the definition, you should be able to: (i) starting from the quadratic form $q(x, y) = 3x^2 - 4xy + 7y^2$, recover the symmetric bilinear form $\rho((x, y), (x', y')) = 3xx' - 2(xy' + x'y) + 7yy'$ (note the factor of $\tfrac{1}{2}$ converts the $-4xy$ coefficient to $-2$ off-diagonal); (ii) verify the polarisation identity for the squared norm in two dimensions; and (iii) identify the signature of the quadratic form $q(x, y, z) = x^2 - y^2$ on $\mathbb{R}^3$ as $(1, 1, 1)$ (one positive, one negative, one zero — the form is degenerate because $z$ does not appear).
+**Calibration check.** If you have understood the definition, you should be able to: (i) starting from the quadratic form $q(x, y) = 3x^2 - 4xy + 7y^2$, recover the symmetric bilinear form $\rho((x, y), (x', y')) = 3xx' - 2(xy' + x'y) + 7yy'$ (note the factor of $\tfrac{1}{2}$ converts the $-4xy$ coefficient to $-2$ off-diagonal); (ii) verify the polarisation identity for the squared norm in two [[Def - Dimension|dimensions]]; and (iii) identify the signature of the quadratic form $q(x, y, z) = x^2 - y^2$ on $\mathbb{R}^3$ as $(1, 1, 1)$ (one positive, one negative, one zero — the form is degenerate because $z$ does not appear).
 
 ---
 

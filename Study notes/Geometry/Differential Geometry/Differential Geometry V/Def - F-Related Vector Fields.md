@@ -96,7 +96,7 @@ In linear algebra, the analogue is intertwining of linear maps: if $A : V \to V$
 
 **Is NOT an instance: $X = \partial_x$ on $\mathbb{R}^2$ and $X' = \partial_y$ on $\mathbb{R}$ under the projection $F(x, y) = x$.** Check: $dF_{(x, y)}(\partial_x) = \partial_x \neq \partial_y = X'_x$. The components do not match. There exists a vector field $X'$ on $\mathbb{R}$ that *is* $F$-related to $\partial_x$ (namely $X' = \partial_x$), but $\partial_y$ on the target is not it.
 
-**Corollary (existence of pushforward for diffeomorphisms).** If $F$ is a diffeomorphism, the pushforward $F_* X$ defined by $(F_*X)_q = dF_{F^{-1}(q)}(X_{F^{-1}(q)})$ is the unique vector field on $N$ $F$-related to $X$. Smoothness of $F_* X$ follows from the smoothness of $F$, $F^{-1}$, $dF$, and $X$.
+**Corollary (existence of pushforward for [[Def - Diffeomorphism|diffeomorphisms]]).** If $F$ is a diffeomorphism, the pushforward $F_* X$ defined by $(F_*X)_q = dF_{F^{-1}(q)}(X_{F^{-1}(q)})$ is the unique vector field on $N$ $F$-related to $X$. Smoothness of $F_* X$ follows from the smoothness of $F$, $F^{-1}$, $dF$, and $X$.
 
 **Corollary (bracket naturality).** If $X_1 \sim_F X'_1$ and $X_2 \sim_F X'_2$ for any smooth map $F$ (not necessarily a diffeomorphism), then $[X_1, X_2] \sim_F [X'_1, X'_2]$. This is the central functoriality of the bracket. Proof: act on $f \in C^\infty(N)$ and use characterization (1) twice.
 

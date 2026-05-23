@@ -18,7 +18,7 @@ Throughout, $G$ and $H$ are groups and $\varphi : G \to H$ is a [[Def - Homomorp
 
 # Statement
 
-> **First Isomorphism Theorem.** Let $\varphi : G \to H$ be a homomorphism of groups. Then $\ker\varphi$ is a normal subgroup of $G$, and the map
+> **First Isomorphism Theorem.** Let $\varphi : G \to H$ be a homomorphism of [[Def - Group|groups]]. Then $\ker\varphi$ is a normal [[Def - Subgroup|subgroup]] of $G$, and the map
 > $$f : G/\ker\varphi \longrightarrow \operatorname{im}\varphi, \qquad g\ker\varphi \longmapsto \varphi(g)$$
 > is a well-defined isomorphism. Hence $G/\ker\varphi \cong \operatorname{im}\varphi$.
 
@@ -28,7 +28,7 @@ Throughout, $G$ and $H$ are groups and $\varphi : G \to H$ is a [[Def - Homomorp
 
 A homomorphism $\varphi : G \to H$ is, on its face, just a function that respects multiplication. But it secretly carries a great deal of structural information about $G$, and the first isomorphism theorem is the statement that *extracts* that information in usable form.
 
-Here is the question the theorem answers. Suppose you are handed a [[Def - Quotient Group|quotient group]] $G/N$ — perhaps as the result of some construction — and asked what it *is*: which familiar group does it equal? Working directly with $G/N$ is awkward, because its elements are cosets, which are sets, and reasoning about a multiplication of sets is unpleasant. You would much rather recognise $G/N$ as a group you already know. The first isomorphism theorem says exactly when you may: $G/N$ is isomorphic to $Q$ precisely when there is a surjective homomorphism $G \to Q$ whose kernel is $N$. So instead of dissecting the quotient, you go hunting for a homomorphism.
+Here is the question the theorem answers. Suppose you are handed a [[Def - Quotient Group|quotient group]] $G/N$ — perhaps as the result of some construction — and asked what it *is*: which familiar group does it equal? Working directly with $G/N$ is awkward, because its elements are [[Def - Coset|cosets]], which are sets, and reasoning about a multiplication of sets is unpleasant. You would much rather recognise $G/N$ as a group you already know. The first isomorphism theorem says exactly when you may: $G/N$ is isomorphic to $Q$ precisely when there is a surjective homomorphism $G \to Q$ whose kernel is $N$. So instead of dissecting the quotient, you go hunting for a homomorphism.
 
 There is a second, more conceptual reading. Every homomorphism $\varphi$ fails to be injective in a way measured by $\ker\varphi$, and fails to be surjective in a way measured by $\operatorname{im}\varphi$. The theorem says these two failures are not independent: once you quotient out the kernel — that is, once you stop distinguishing elements that $\varphi$ already refuses to distinguish — the resulting map is a *perfect* match onto the image. Every homomorphism therefore factors canonically as
 
@@ -68,7 +68,7 @@ Forget the formal proof and picture what a homomorphism does to $G$. The map $\v
 
 > Two elements of $G$ have the same image under $\varphi$ **exactly when** they lie in the same coset of $\ker\varphi$.
 
-This single observation is the whole theorem. The cosets of $\ker\varphi$ are *literally* the fibres of $\varphi$ — the sets of elements sharing a common image. The kernel measures the redundancy in $\varphi$, and that redundancy is organised perfectly into cosets.
+This single observation is the whole theorem. The [[Def - Coset|cosets]] of $\ker\varphi$ are *literally* the fibres of $\varphi$ — the sets of elements sharing a common image. The kernel measures the redundancy in $\varphi$, and that redundancy is organised perfectly into cosets.
 
 Now the conclusion is forced. The quotient $G/\ker\varphi$ is, by construction, the set of these cosets, that is, the set of fibres. Sending each fibre to the common value of $\varphi$ on it is a bijection onto $\operatorname{im}\varphi$: it is surjective because every value of $\varphi$ is the value on *some* fibre, and injective because *distinct* fibres carry distinct values — that is what the boxed statement says. And it respects multiplication because $\varphi$ does. The map $f$ is not a clever construction one must be lucky to find; it is the only thing $\varphi$ could possibly be once you collapse its redundancy. A homomorphism, looked at the right way, *is* a quotient map. The first isomorphism theorem just says so out loud.
 
@@ -113,7 +113,7 @@ Define the candidate map $f$ on cosets by applying $\varphi$ to a representative
 
 # Lemma Decomposition
 
-> [!note]- Lemma 1: The kernel of a homomorphism is a normal subgroup
+> [!note]- Lemma 1: The kernel of a homomorphism is a normal [[Def - Subgroup|subgroup]]
 > **Statement:** For any homomorphism $\varphi : G \to H$, the set $\ker\varphi$ is a subgroup of $G$, and it is normal: $x^{-1}gx \in \ker\varphi$ for all $g \in \ker\varphi$, $x \in G$.
 >
 > **Hint:** Use the subgroup criterion ($\varphi(gh^{-1}) = e_H$) for the subgroup part; for normality, compute $\varphi(x^{-1}gx)$ and watch the $\varphi(g)$ in the middle become the identity.
@@ -142,7 +142,7 @@ Define the candidate map $f$ on cosets by applying $\varphi$ to a representative
 > > ($\Leftarrow$) Suppose $g^{-1}g' = n \in N$, so $g' = gn$. Then $g'N = gnN = gN$, because $nN = N$ as $n \in N$ and $N$ is closed under multiplication. (Explicitly, $nN \subseteq N$ by closure, and $N = n(n^{-1}N) \subseteq nN$, so $nN = N$.)
 
 > [!note]- Lemma 3: A well-defined surjective injective homomorphism is an isomorphism
-> **Statement:** A map $f : A \to B$ between groups that is a homomorphism and is bijective is an isomorphism; in particular its set-theoretic inverse is automatically a homomorphism.
+> **Statement:** A map $f : A \to B$ between [[Def - Group|groups]] that is a homomorphism and is bijective is an isomorphism; in particular its set-theoretic inverse is automatically a homomorphism.
 >
 > **Hint:** For elements $b_1, b_2 \in B$ write $b_i = f(a_i)$ and apply $f^{-1}$ to $f(a_1 a_2) = b_1 b_2$.
 >
@@ -190,7 +190,7 @@ Define the candidate map $f$ on cosets by applying $\varphi$ to a representative
 
 **The abelianisation of a group.** For any group $G$, the commutator subgroup $[G,G]$ is normal, and the quotient $G/[G,G]$ is abelian. If $\varphi : G \to A$ is *any* homomorphism into an abelian group, then $[G,G] \subseteq \ker\varphi$ (commutators die in an abelian target), and the first isomorphism theorem shows $\varphi$ factors through $G/[G,G]$. The non-obvious recognition is that "$A$ is abelian" is a source property forcing the commutator subgroup into the kernel — so the abelianisation is the universal abelian quotient, and every homomorphism to an abelian group is secretly a homomorphism out of it.
 
-**Evaluation of polynomials.** Fix a real number $a$ and consider the additive group $(\mathbb{R}[x], +)$ of polynomials. Evaluation $\operatorname{ev}_a : \mathbb{R}[x] \to \mathbb{R}$, $p \mapsto p(a)$, is an additive homomorphism, surjective (constants hit everything), with kernel the polynomials vanishing at $a$. The theorem gives $\mathbb{R}[x]/\ker(\operatorname{ev}_a) \cong \mathbb{R}$. This is a warm-up to the ring-theoretic version, where evaluation is a ring homomorphism and the same argument identifies a quotient ring; recognising the *additive group* structure first shows the isomorphism theorems are not specific to multiplication.
+**Evaluation of polynomials.** Fix a real number $a$ and consider the additive group $(\mathbb{R}[x], +)$ of polynomials. Evaluation $\operatorname{ev}_a : \mathbb{R}[x] \to \mathbb{R}$, $p \mapsto p(a)$, is an additive homomorphism, surjective (constants hit everything), with kernel the polynomials vanishing at $a$. The theorem gives $\mathbb{R}[x]/\ker(\operatorname{ev}_a) \cong \mathbb{R}$. This is a warm-up to the [[Def - Ring|ring]]-theoretic version, where evaluation is a [[Def - Ring|ring]] homomorphism and the same argument identifies a quotient ring; recognising the *additive group* structure first shows the isomorphism theorems are not specific to multiplication.
 
 ---
 

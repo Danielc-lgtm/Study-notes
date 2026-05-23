@@ -16,7 +16,7 @@ $(M, g)$ — a connected Riemannian manifold. $d_g$ — the [[Def - Length of a 
 
 # Statement
 
-> **Theorem (Riemannian Manifolds as Metric Spaces).** Let $(M, g)$ be a connected Riemannian manifold. With the Riemannian distance function $d_g$, $M$ is a [[Def - Metric Space|metric space]]. Moreover, the metric topology induced by $d_g$ coincides with the original manifold topology on $M$.
+> **Theorem ([[Def - Riemannian Manifold|Riemannian Manifolds]] as [[Def - Metric Space|Metric Spaces]]).** Let $(M, g)$ be a connected Riemannian manifold. With the Riemannian distance function $d_g$, $M$ is a [[Def - Metric Space|metric space]]. Moreover, the metric topology induced by $d_g$ coincides with the original manifold topology on $M$.
 
 This is Theorem 13.29 in Lee. The non-trivial content is the *positivity* of $d_g$ (that $p \neq q$ implies $d_g(p, q) > 0$) and the *topology coincidence* — the rest is routine.
 
@@ -209,9 +209,9 @@ The topology-coincidence half is then a relatively quick consequence, also resti
 
 *1. Metrisability of arbitrary smooth manifolds.* Combining this theorem with [[Thm - Existence of Riemannian Metrics via Partitions of Unity]], one obtains: every smooth manifold (with or without boundary) is metrisable. This is the standard proof of manifold metrisability — much cleaner than direct point-set arguments using partition-of-unity-based Urysohn-type constructions.
 
-*2. Hopf–Rinow theorem application.* On a connected Riemannian manifold, the following are equivalent: (i) $(M, d_g)$ is metrically complete; (ii) every geodesic extends to all parameter values (geodesic completeness); (iii) every closed bounded subset of $M$ is compact; (iv) for some $p \in M$, the exponential map $\exp_p$ is defined on all of $T_pM$. The implications use this theorem as a starting point, then layer in the Levi-Civita connection from [[Thm - Fundamental Theorem of Riemannian Geometry (Statement)]].
+*2. Hopf–Rinow theorem application.* On a connected Riemannian manifold, the following are equivalent: (i) $(M, d_g)$ is metrically complete; (ii) every [[Def - Geodesic|geodesic]] extends to all parameter values ([[Def - Geodesic|geodesic]] completeness); (iii) every closed bounded subset of $M$ is compact; (iv) for some $p \in M$, the exponential map $\exp_p$ is defined on all of $T_pM$. The implications use this theorem as a starting point, then layer in the Levi-Civita connection from [[Thm - Fundamental Theorem of Riemannian Geometry (Statement)]].
 
-*3. Distance function on Lie groups.* For a Lie group $G$ with a left-invariant Riemannian metric, the Riemannian distance is also left-invariant: $d_g(hp, hq) = d_g(p, q)$ for every $h \in G$. So $G$ acts on itself by isometries via left translation. This connects the topology of Lie groups to the geometry of their invariant metrics.
+*3. Distance function on Lie [[Def - Group|groups]].* For a Lie group $G$ with a left-invariant Riemannian metric, the Riemannian distance is also left-invariant: $d_g(hp, hq) = d_g(p, q)$ for every $h \in G$. So $G$ acts on itself by [[Def - Isometry|isometries]] via left translation. This connects the topology of Lie [[Def - Group|groups]] to the geometry of their invariant metrics.
 
 *4. Riemannian distance vs. graph-theoretic distance on a triangulated manifold.* On a smoothly triangulated manifold, one can compare the Riemannian distance to the path-distance on the 1-skeleton with edge lengths given by Riemannian lengths. The two are mutually quasi-isometric (with constants depending on the triangulation), illustrating how Riemannian geometry interfaces with combinatorial/PL geometry.
 

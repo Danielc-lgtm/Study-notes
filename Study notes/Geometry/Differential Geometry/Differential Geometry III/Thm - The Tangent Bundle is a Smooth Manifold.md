@@ -18,13 +18,13 @@ $M$ is a smooth $n$-manifold. The tangent bundle is $TM = \bigsqcup_{p \in M} T_
 
 # Statement
 
-> **Theorem (The Tangent Bundle is a Smooth Manifold).** Let $M$ be a smooth $n$-manifold. The disjoint-union set $TM = \bigsqcup_{p \in M} T_{p}M$ admits a unique topology and smooth structure such that:
-> 1. $TM$ is a smooth manifold of dimension $2n$;
+> **Theorem ([[Def - The Tangent Bundle|The Tangent Bundle]] is a [[Def - Smooth Manifold|Smooth Manifold]]).** Let $M$ be a smooth $n$-manifold. The disjoint-union set $TM = \bigsqcup_{p \in M} T_{p}M$ admits a unique topology and smooth structure such that:
+> 1. $TM$ is a smooth manifold of [[Def - Dimension|dimension]] $2n$;
 > 2. The natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \mathbb{R}^{n}$ induced by smooth charts $(U, \varphi)$ on $M$ are smoothly compatible and form a [[Def - Smooth Atlas and Smooth Structure|smooth atlas]];
 > 3. The projection $\pi : TM \to M$ is a smooth submersion;
 > 4. For any smooth map $F : M \to N$, the global differential $dF : TM \to TN$ is smooth.
 >
-> If $M$ has dimension $n$, then $TM$ has dimension $2n$. If $M$ has a smooth structure as a manifold with boundary, then $TM$ has a smooth structure as a manifold with boundary.
+> If $M$ has [[Def - Dimension|dimension]] $n$, then $TM$ has dimension $2n$. If $M$ has a smooth structure as a manifold with boundary, then $TM$ has a smooth structure as a manifold with boundary.
 
 > **Corollary (Global functoriality).** The assignment $M \mapsto TM$, $F \mapsto dF$ is a covariant functor from the category $\mathrm{Diff}$ of smooth manifolds to itself: $d(\mathrm{id}_{M}) = \mathrm{id}_{TM}$ and $d(G \circ F) = dG \circ dF$ as smooth maps.
 

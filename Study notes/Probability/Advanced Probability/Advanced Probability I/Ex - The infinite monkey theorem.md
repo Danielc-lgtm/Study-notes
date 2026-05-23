@@ -64,7 +64,7 @@ A monkey types an infinite i.i.d. sequence of characters, each uniform on a $K$-
 $$A_n=\{\text{block }n\text{ equals }w\}.$$
 
 > [!note]- Derivation
-> Since the characters are i.i.d. uniform on $K$ letters, the probability that the $L$ characters of block $n$ spell $w$ exactly is $\mathbb{P}(A_n)=K^{-L}$ — the same for every $n$. Crucially, distinct blocks use *disjoint* sets of characters, and the characters are independent, so the events $(A_n)_{n\ge1}$ are [[Def - Independence|mutually independent]]. (Had we used *overlapping* windows, they would share characters and independence would fail — this is exactly why disjoint blocks are chosen.)
+> Since the characters are i.i.d. uniform on $K$ letters, the probability that the $L$ characters of block $n$ spell $w$ exactly is $\mathbb{P}(A_n)=K^{-L}$ — the same for every $n$. Crucially, distinct blocks use *disjoint* sets of characters, and the characters are independent, so the events $(A_n)_{n\ge1}$ are mutually independent. (Had we used *overlapping* windows, they would share characters and independence would fail — this is exactly why disjoint blocks are chosen.)
 > Now $\sum_{n\ge1}\mathbb{P}(A_n)=\sum_n K^{-L}=\infty$. By the [[Thm - Borel-Cantelli Lemmas|second Borel–Cantelli lemma]] — divergent sum *plus independence* — $\mathbb{P}(A_n\text{ infinitely often})=1$. So a.s. infinitely many blocks equal $w$; in particular $w$ appears infinitely often in the sequence.
 
 The second lemma is used at the last step, and its independence hypothesis is supplied by the disjoint-block construction — without independence, a divergent sum gives *nothing* (the first lemma needs convergence; only the second exploits divergence, and only for independent events).

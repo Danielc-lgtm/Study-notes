@@ -14,7 +14,7 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $p$ be a prime number and let $G$ be a group of order $p^2$. Prove that $G$ is **abelian**.
+Let $p$ be a prime number and let $G$ be a [[Def - Group|group]] of order $p^2$. Prove that $G$ is **abelian**.
 
 **Recall:**
 
@@ -26,11 +26,11 @@ A group $G$ is [[Def - Abelian Group|abelian]] when $xy = yx$ for every pair of 
 
 ![[Def - Centraliser and Centre#The Definition]]
 
-The centre $Z(G)$ is itself a subgroup, and it is always normal, so the quotient group $G/Z(G)$ is defined. We will need two facts about it. First, by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], a non-trivial finite [[Def - p-group|p-group]] has $Z(G) \neq \{e\}$ — its centre contains more than just the identity. Second:
+The centre $Z(G)$ is itself a [[Def - Subgroup|subgroup]], and it is always normal, so the quotient group $G/Z(G)$ is defined. We will need two facts about it. First, by [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]], a non-trivial finite [[Def - p-group|p-group]] has $Z(G) \neq \{e\}$ — its centre contains more than just the identity. Second:
 
 ![[Thm - Quotient by the Centre and Commutativity#Statement]]
 
-Finally, [[Thm - Lagrange's Theorem|Lagrange's theorem]] states that the order of any subgroup of a finite group $G$ divides $|G|$; in particular $|Z(G)|$ must divide $p^2$.
+Finally, [[Thm - Lagrange's Theorem|Lagrange's theorem]] states that the order of any [[Def - Subgroup|subgroup]] of a finite group $G$ divides $|G|$; in particular $|Z(G)|$ must divide $p^2$.
 
 ---
 
@@ -132,6 +132,6 @@ Steps 1 and 2 leave only $|Z(G)| = p^2$. Then $|Z(G)| = |G|$ with $Z(G) \leq G$ 
 
 **To prove a $p$-group is abelian, do not exhibit commuting elements — squeeze the order of the centre.** Commutativity looks like a statement about *pairs* of elements, and the naive instinct is to take an arbitrary $x, y$ and show $xy = yx$. That instinct is almost never the right one for [[Def - p-group|p-groups]], because there is no handle on a general pair. The reusable move is to recast "abelian" as the single equation $Z(G) = G$, and then prove that equation by *trapping the integer $|Z(G)|$*: [[Thm - p-Groups Have Non-Trivial Centre|the non-trivial centre theorem]] supplies a lower bound (the centre is not trivial), [[Thm - Lagrange's Theorem|Lagrange]] supplies a short candidate list (the centre's order divides $|G|$), and a structural obstruction deletes the middle candidates until only $|Z(G)| = |G|$ survives. The trigger for this whole manoeuvre is the phrase "prime power order" — whenever you must prove a $p$-group has some property, ask first whether the property is equivalent to a statement about $Z(G)$, because the centre is the only part of a $p$-group you get information about for free.
 
-**A cyclic $G/Z(G)$ is a contradiction waiting to happen — never an admissible end state.** The decisive lever in this problem is [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]], and the right way to hold it in memory is not as a neutral implication but as a *self-destruct rule*: the moment $G/Z(G)$ is cyclic, $G$ becomes abelian, which makes $Z(G)$ the whole group, which makes $G/Z(G)$ *trivial*. So a non-trivial cyclic $G/Z(G)$ cannot exist. This converts the theorem into a powerful proof-by-contradiction engine. Any time an argument produces a quotient $G/Z(G)$ of prime order — or, more generally, any cyclic $G/Z(G)$ — you have reached a contradiction, because prime-order groups are automatically cyclic and a cyclic quotient by the centre is impossible unless it was trivial to begin with. The pattern recurs throughout $p$-group theory: it is why a group of order $p^2$ cannot have a centre of order exactly $p$, and the same reasoning shows a group of order $p^3$ cannot have a centre of index $p^2$.
+**A cyclic $G/Z(G)$ is a contradiction waiting to happen — never an admissible end state.** The decisive lever in this problem is [[Thm - Quotient by the Centre and Commutativity|the quotient-by-the-centre theorem]], and the right way to hold it in memory is not as a neutral implication but as a *self-destruct rule*: the moment $G/Z(G)$ is cyclic, $G$ becomes abelian, which makes $Z(G)$ the whole group, which makes $G/Z(G)$ *trivial*. So a non-trivial cyclic $G/Z(G)$ cannot exist. This converts the theorem into a powerful proof-by-contradiction engine. Any time an argument produces a quotient $G/Z(G)$ of prime order — or, more generally, any cyclic $G/Z(G)$ — you have reached a contradiction, because prime-order [[Def - Group|groups]] are automatically cyclic and a cyclic quotient by the centre is impossible unless it was trivial to begin with. The pattern recurs throughout $p$-group theory: it is why a group of order $p^2$ cannot have a centre of order exactly $p$, and the same reasoning shows a group of order $p^3$ cannot have a centre of index $p^2$.
 
 **A prime power has very few divisors, and that scarcity is the engine.** The reason the order $p^2$ is so tractable is purely arithmetical: it has exactly three divisors, $1, p, p^2$. [[Thm - Lagrange's Theorem|Lagrange]] turns "the centre is a subgroup" into "the centre's order is one of these three numbers", a list short enough that knocking out two entries finishes the problem. This is a general lesson about why prime-power orders are the docile case of finite group theory: every subgroup order is forced into a tiny totally-ordered ladder $1 \mid p \mid p^2 \mid \cdots \mid p^n$, with no branching and no surprises. Whenever the order in front of you is $p^n$, count the divisors first — there are only $n+1$ of them — and expect the proof to proceed by eliminating candidates from that short ladder one at a time. The same divisor-counting opens the proof that a $p$-group has a [[Thm - Subgroups of a p-Group|subgroup of every order]] $p^b$ and underlies the entire inductive structure of §1.5.

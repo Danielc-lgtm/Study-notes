@@ -78,13 +78,13 @@ For the easier direction (a) $\Rightarrow$ (e): if $T$ has a basis of eigenvecto
 
 > **The mechanism in one sentence: distinct linear factors of $m_T$ are coprime, so the Chinese Remainder Theorem decomposes $V$ into eigenspaces; conversely, eigenvector basis kills $\prod_k (T - \lambda_k I)$ and forces $m_T$ to have distinct linear factors.**
 
-The equivalence (b) $\iff$ (c) $\iff$ (d) is conceptually simpler. (b) $\Rightarrow$ (c): a basis of eigenvectors splits into groups by eigenvalue; group $k$ spans a subspace of $E(\lambda_k, T)$, and the groups together span $V$, with the eigenvector independence guaranteed by [[Thm - Eigenvectors with Distinct Eigenvalues are Linearly Independent]]. (c) $\Rightarrow$ (d): the direct sum's dimension equals the sum of dimensions. (d) $\Rightarrow$ (b): the union of bases of the eigenspaces has $\dim V$ vectors, all eigenvectors, and is linearly independent (eigenvectors of distinct eigenvalues are independent, and within each eigenspace the chosen basis is independent), hence a basis.
+The equivalence (b) $\iff$ (c) $\iff$ (d) is conceptually simpler. (b) $\Rightarrow$ (c): a basis of eigenvectors splits into [[Def - Group|groups]] by eigenvalue; group $k$ spans a subspace of $E(\lambda_k, T)$, and the [[Def - Group|groups]] together span $V$, with the eigenvector independence guaranteed by [[Thm - Eigenvectors with Distinct Eigenvalues are Linearly Independent]]. (c) $\Rightarrow$ (d): the direct sum's dimension equals the sum of [[Def - Dimension|dimensions]]. (d) $\Rightarrow$ (b): the union of bases of the eigenspaces has $\dim V$ vectors, all eigenvectors, and is linearly independent (eigenvectors of distinct eigenvalues are independent, and within each eigenspace the chosen basis is independent), hence a basis.
 
 ---
 
 # What Makes This Hard
 
-The non-obvious direction is **(e) $\Rightarrow$ (a)**: showing that distinct linear factors of $m_T$ imply diagonalizability. The argument requires either (i) the partial-fraction-decomposition construction of eigenspace projections, or (ii) the inductive argument: pick the largest eigenvalue $\lambda_m$, observe that $\ker(T - \lambda_m I)$ and $\operatorname{range}(T - \lambda_m I)$ are complementary $T$-invariant subspaces (because $m_T$'s distinct factors force this), induct on the dimension. Beginners often try to prove this direction directly by writing a vector as a linear combination and computing — without using the polynomial structure of $m_T$ — and get stuck.
+The non-obvious direction is **(e) $\Rightarrow$ (a)**: showing that distinct linear factors of $m_T$ imply diagonalizability. The argument requires either (i) the partial-fraction-decomposition construction of eigenspace projections, or (ii) the inductive argument: pick the largest eigenvalue $\lambda_m$, observe that $\ker(T - \lambda_m I)$ and $\operatorname{range}(T - \lambda_m I)$ are complementary $T$-invariant [[Def - Subspace|subspaces]] (because $m_T$'s distinct factors force this), induct on the dimension. Beginners often try to prove this direction directly by writing a vector as a linear combination and computing — without using the polynomial structure of $m_T$ — and get stuck.
 
 ---
 
@@ -133,7 +133,7 @@ The non-obvious direction is **(e) $\Rightarrow$ (a)**: showing that distinct li
 > > Take any $v_i$ in the basis. Its eigenvalue $\mu_i$ equals some $\lambda_k$, so $(T - \lambda_k I) v_i = (T - \mu_i I) v_i = 0$. Hence $\prod_j (T - \lambda_j I) v_i = 0$ (as the product contains the killing factor $(T - \lambda_k I)$, and any two polynomials in $T$ commute, so the product can be rearranged to apply the killing factor first). So $\prod_j (T - \lambda_j I)$ vanishes on each basis vector, hence is the zero operator.
 
 > [!note]- Lemma 3: For $m_T$ with distinct linear factors and $m \geq 2$, $V = \ker(T - \lambda_m I) \oplus \operatorname{range}(T - \lambda_m I)$
-> **Statement:** Suppose $m_T = (z - \lambda_1) \cdots (z - \lambda_m)$ with distinct $\lambda_k$ and $m \geq 2$. Then the subspaces $\ker(T - \lambda_m I)$ and $\operatorname{range}(T - \lambda_m I)$ are $T$-invariant, and $V = \ker(T - \lambda_m I) \oplus \operatorname{range}(T - \lambda_m I)$.
+> **Statement:** Suppose $m_T = (z - \lambda_1) \cdots (z - \lambda_m)$ with distinct $\lambda_k$ and $m \geq 2$. Then the [[Def - Subspace|subspaces]] $\ker(T - \lambda_m I)$ and $\operatorname{range}(T - \lambda_m I)$ are $T$-invariant, and $V = \ker(T - \lambda_m I) \oplus \operatorname{range}(T - \lambda_m I)$.
 >
 > **Hint:** $T$-invariance: $T$ commutes with $T - \lambda_m I$. Disjointness ($\ker \cap \operatorname{range} = 0$): if $u \in \ker(T - \lambda_m I) \cap \operatorname{range}(T - \lambda_m I)$, then $Tu = \lambda_m u$ and $u = (T - \lambda_m I) v$ for some $v$; apply $\prod_{j \neq m}(T - \lambda_j I)$ to $u$, get $(\lambda_m - \lambda_1) \cdots (\lambda_m - \lambda_{m-1}) u = 0$ — but this scalar product is nonzero (distinct eigenvalues), forcing $u = 0$. Dimension count: $\dim \ker + \dim \operatorname{range} = \dim V$ by [[Thm - Fundamental Theorem of Linear Maps|rank-nullity]].
 >
@@ -165,7 +165,7 @@ The non-obvious direction is **(e) $\Rightarrow$ (a)**: showing that distinct li
 >
 > **(b) $\Rightarrow$ (c).** Lemma 1.
 >
-> **(c) $\Rightarrow$ (d).** Direct sums add dimensions.
+> **(c) $\Rightarrow$ (d).** Direct sums add [[Def - Dimension|dimensions]].
 >
 > **(d) $\Rightarrow$ (b).** Pick a basis of each $E(\lambda_k, T)$. The union has $\sum_k \dim E(\lambda_k, T) = \dim V$ vectors, all eigenvectors. By [[Thm - Eigenvectors with Distinct Eigenvalues are Linearly Independent]], vectors from different eigenspaces are linearly independent; within each eigenspace the basis is independent. So the union is independent, hence a basis.
 >
@@ -183,7 +183,7 @@ The non-obvious direction is **(e) $\Rightarrow$ (a)**: showing that distinct li
 
 **Markov chain diagonalisation (probability).** A transition matrix $P$ of a Markov chain is in general not symmetric, hence not guaranteed diagonalizable by the spectral theorem. But many natural Markov chains *are* diagonalizable, and the eigenvalues determine the mixing rate. The condition (e) — minimal polynomial has distinct linear factors — is the cleanest practical check.
 
-**Spectral decomposition of an algebraically closed group ring (representation theory).** For a finite abelian group $G$ over $\mathbb{C}$, the group ring $\mathbb{C}[G]$ is a commutative algebra, hence a finite-dimensional commutative ring, hence (by Wedderburn-Artin) a product of copies of $\mathbb{C}$ — i.e. a diagonalisable algebra. The action of any group element $g$ is a finite-order operator (some power $g^k = 1$), hence diagonalizable by condition (e) applied to $z^k - 1$.
+**Spectral decomposition of an algebraically closed group [[Def - Ring|ring]] (representation theory).** For a finite abelian group $G$ over $\mathbb{C}$, the group [[Def - Ring|ring]] $\mathbb{C}[G]$ is a commutative algebra, hence a finite-dimensional commutative ring, hence (by Wedderburn-Artin) a product of copies of $\mathbb{C}$ — i.e. a diagonalisable algebra. The action of any group element $g$ is a finite-order operator (some power $g^k = 1$), hence diagonalizable by condition (e) applied to $z^k - 1$.
 
 ---
 

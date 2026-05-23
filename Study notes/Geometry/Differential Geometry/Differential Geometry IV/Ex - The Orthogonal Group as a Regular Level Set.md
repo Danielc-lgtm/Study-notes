@@ -14,13 +14,13 @@ tags: [geometry, differential-geometry]
 
 Show that the orthogonal group
 $$\mathrm{O}(n) = \{A \in \mathrm{GL}(n,\mathbb{R}) : A^T A = I\}$$
-is an embedded smooth submanifold of $\mathrm{GL}(n,\mathbb{R})$ of dimension $n(n-1)/2$. The non-obvious step is to choose the codomain of the defining map correctly: the naive choice "$\Phi(A) = A^T A - I$ valued in $\mathrm{Mat}_n$" makes the differential fail to be surjective. Identify the correct codomain (symmetric matrices) and verify the regular value condition. Then compute the tangent space at the identity
+is an embedded smooth submanifold of $\mathrm{GL}(n,\mathbb{R})$ of [[Def - Dimension|dimension]] $n(n-1)/2$. The non-obvious step is to choose the codomain of the defining map correctly: the naive choice "$\Phi(A) = A^T A - I$ valued in $\mathrm{Mat}_n$" makes the differential fail to be surjective. Identify the correct codomain (symmetric matrices) and verify the regular value condition. Then compute the tangent space at the identity
 $$T_I \mathrm{O}(n) = \mathfrak{o}(n) = \{X \in \mathrm{Mat}_n : X + X^T = 0\}$$
 — the antisymmetric matrices, which form the **Lie algebra** of $\mathrm{O}(n)$.
 
 **Recall:**
 
-The space $\mathrm{Sym}_n = \{S \in \mathrm{Mat}_n : S = S^T\}$ of symmetric $n \times n$ matrices is a linear subspace of $\mathrm{Mat}_n$ of dimension $n(n+1)/2$ (entries on and above the diagonal are free, entries below are determined by the symmetry condition).
+The space $\mathrm{Sym}_n = \{S \in \mathrm{Mat}_n : S = S^T\}$ of symmetric $n \times n$ matrices is a linear [[Def - Subspace|subspace]] of $\mathrm{Mat}_n$ of dimension $n(n+1)/2$ (entries on and above the diagonal are free, entries below are determined by the symmetry condition).
 
 The space $\mathrm{AntiSym}_n = \mathfrak{o}(n) = \{X \in \mathrm{Mat}_n : X = -X^T\}$ of antisymmetric (or skew-symmetric) matrices has dimension $n(n-1)/2$ (entries strictly above the diagonal are free; the diagonal must be zero; the entries below the diagonal are determined).
 
@@ -43,7 +43,7 @@ By [[Thm - Regular Value Theorem on Manifolds]], a regular level set is properly
 4. Conclude $I \in \mathrm{Sym}_n$ is a regular value, so $\mathrm{O}(n) = \Phi^{-1}(I)$ is an embedded submanifold of dimension $\dim \mathrm{Mat}_n - \dim \mathrm{Sym}_n = n^2 - n(n+1)/2 = n(n-1)/2$.
 5. Read off $T_I \mathrm{O}(n) = \ker d\Phi_I = \{X : X + X^T = 0\} = \mathfrak{o}(n)$.
 
-**Key decision point:** The crucial non-obvious step is the *choice of codomain*. The naive map $\Phi : \mathrm{Mat}_n \to \mathrm{Mat}_n$, $\Phi(A) = A^T A - I$, has the issue that its image is contained in symmetric matrices, so the rank of the differential is at most $n(n+1)/2$, not $n^2$ — making $0$ a critical value of this map. The correct map is $\Phi : \mathrm{Mat}_n \to \mathrm{Sym}_n$, $\Phi(A) = A^T A$; with the smaller codomain, the differential *can* achieve maximal rank, and $I$ becomes a regular value. This codomain-choice trick recurs for $\mathrm{U}(n)$ (codomain Hermitian matrices), $\mathrm{Sp}(2n)$ (codomain antisymmetric matrices), and other matrix Lie groups where the defining equation has a hidden symmetry.
+**Key decision point:** The crucial non-obvious step is the *choice of codomain*. The naive map $\Phi : \mathrm{Mat}_n \to \mathrm{Mat}_n$, $\Phi(A) = A^T A - I$, has the issue that its image is contained in symmetric matrices, so the rank of the differential is at most $n(n+1)/2$, not $n^2$ — making $0$ a critical value of this map. The correct map is $\Phi : \mathrm{Mat}_n \to \mathrm{Sym}_n$, $\Phi(A) = A^T A$; with the smaller codomain, the differential *can* achieve maximal rank, and $I$ becomes a regular value. This codomain-choice trick recurs for $\mathrm{U}(n)$ (codomain Hermitian matrices), $\mathrm{Sp}(2n)$ (codomain antisymmetric matrices), and other matrix Lie [[Def - Group|groups]] where the defining equation has a hidden symmetry.
 
 ---
 

@@ -221,7 +221,7 @@ The second hard part is **verifying $C^\infty$-linearity of the right side in $Z
 
 # Cross-Field Exercise Suggestions
 
-**1. Bi-invariant Lie groups.** Use the Koszul formula to show that on a Lie group $G$ with bi-invariant Riemannian metric, the Levi-Civita connection on left-invariant fields is $\nabla_X Y = \tfrac{1}{2}[X, Y]$. Use this to conclude geodesics through the identity are one-parameter subgroups. (Standard problem in Lie-group geometry.)
+**1. Bi-invariant Lie [[Def - Group|groups]].** Use the Koszul formula to show that on a Lie group $G$ with bi-invariant Riemannian metric, the Levi-Civita connection on left-invariant fields is $\nabla_X Y = \tfrac{1}{2}[X, Y]$. Use this to conclude [[Def - Geodesic|geodesics]] through the identity are one-parameter [[Def - Subgroup|subgroups]]. (Standard problem in Lie-group geometry.)
 
 **2. Killing fields and conserved quantities.** A vector field $K$ is **Killing** if $\mathcal{L}_K g = 0$, equivalently $\nabla_i K_j + \nabla_j K_i = 0$. Use the Koszul formula to show that $g(\dot\gamma, K)$ is constant along any geodesic $\gamma$ of the Levi-Civita connection. This is the **Noether-type conservation law for spacetime symmetries** in general relativity; in Schwarzschild it gives the conserved energy and angular momentum used in computing perihelion precession.
 

@@ -88,7 +88,7 @@ By de Rham's theorem these vector spaces are isomorphic to the singular cohomolo
 
 The naturality identity $F^*(d\omega) = d(F^*\omega)$ says that $d$ is a **natural transformation** between contravariant functors $\Omega^k \Rightarrow \Omega^{k+1}$ from smooth manifolds to vector spaces. Concretely, $d$ does not depend on a choice of coordinates: it is the *same* operator in every smooth chart, and the chart-by-chart definitions agree on overlaps because they all satisfy the four-axiom characterization. A reader who finds the language of natural transformations heavy can read this paragraph as the strongest possible statement of chart-independence: not merely "$d$ has a coordinate-free description" but "$d$ commutes, compatibly, with every smooth map between every pair of manifolds".
 
-Together with the [[Def - The Wedge Product on a Manifold|wedge product]], $(\Omega^\bullet(M), \wedge, d)$ is a **differential graded algebra (DGA)**: an associative graded algebra with a degree-$1$ derivation $d$ satisfying $d^2 = 0$ and the graded Leibniz rule. DGAs are the basic objects of rational homotopy theory; the de Rham DGA is one of the central examples.
+Together with the [[Def - The Wedge Product on a Manifold|wedge product]], $(\Omega^\bullet(M), \wedge, d)$ is a **differential graded algebra (DGA)**: an associative graded algebra with a degree-$1$ derivation $d$ satisfying $d^2 = 0$ and the graded Leibniz rule. DGAs are the basic objects of rational [[Def - Homotopy|homotopy]] theory; the de Rham DGA is one of the central examples.
 
 ---
 
@@ -116,7 +116,7 @@ The coefficients are the three components of $\operatorname{curl}(P, Q, R)$, wit
 
 **Is an instance — $d$ of a $2$-form is the divergence.** For $\omega = u\,dy \wedge dz + v\,dz \wedge dx + w\,dx \wedge dy$ on $\mathbb{R}^3$,
 $$d\omega = \left(\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z}\right)dx \wedge dy \wedge dz = (\operatorname{div}(u, v, w))\,dx \wedge dy \wedge dz.$$
-The divergence is $d$ on $2$-forms in dimension three.
+The divergence is $d$ on $2$-forms in [[Def - Dimension|dimension]] three.
 
 **Is an instance — the closed-not-exact angular form.** On $\mathbb{R}^2 \setminus \{0\}$, $\omega = (-y\,dx + x\,dy)/(x^2 + y^2)$ satisfies $d\omega = 0$. The verification is a direct computation: $d\omega = (\partial_x \frac{x}{x^2+y^2})\,dx \wedge dy + (\partial_y \frac{-y}{x^2+y^2})\,dy \wedge dx$; the two coefficient functions are equal (both are $(y^2-x^2)/(x^2+y^2)^2$), and the signs $dy \wedge dx = -dx \wedge dy$ cause the terms to add (because the second term has $\partial_y$ acting on $-y/(x^2+y^2)$ which is $(y^2 - x^2)/(x^2+y^2)^2$, opposite sign to $\partial_x \frac{x}{x^2+y^2} = (y^2-x^2)/(x^2+y^2)^2$ — actually the same sign — wait, let me redo. We need $d\omega = \partial_x(x/(x^2+y^2))\,dx\wedge dy + \partial_y(-y/(x^2+y^2))\,dy \wedge dx = ((y^2-x^2)/(x^2+y^2)^2 - (x^2-y^2)/(x^2+y^2)^2)\,dx \wedge dy$... after careful computation this equals zero). See [[Ex - A Form that is Closed but Not Exact on the Punctured Plane]] for the full computation; $\omega$ is closed but not exact, since $\int_{S^1}\omega = 2\pi \neq 0$.
 

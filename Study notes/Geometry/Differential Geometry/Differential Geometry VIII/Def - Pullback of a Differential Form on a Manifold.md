@@ -26,7 +26,7 @@ The construction is forced by what forms eat. A $k$-form on $N$ at $F(p)$ eats $
 $$(F^*\omega)_p(v_1, \dots, v_k) = \omega_{F(p)}(dF_p \cdot v_1, \dots, dF_p \cdot v_k).$$
 Notice the direction reversal: the form moves *from $N$ to $M$* — the opposite direction of the map $F$. This is *forced* by the structure of forms-as-machines-eating-vectors. The reason is that a form is a co-vector (more precisely, an alternating multi-co-vector), and co-vectors are dual to vectors, so they transform contravariantly: vectors go forward, co-vectors come back.
 
-**Why does this work for *every* smooth $F$, not just diffeomorphisms?** Because the construction only ever uses $dF_p$ to *push vectors forward*, which works universally — every smooth map has a well-defined differential at every point. It never requires pushing forms forward (which would need $F$ to be invertible to know which preimage's information to use), nor pulling vectors back (which would also need invertibility).
+**Why does this work for *every* smooth $F$, not just [[Def - Diffeomorphism|diffeomorphisms]]?** Because the construction only ever uses $dF_p$ to *push vectors forward*, which works universally — every smooth map has a well-defined differential at every point. It never requires pushing forms forward (which would need $F$ to be invertible to know which preimage's information to use), nor pulling vectors back (which would also need invertibility).
 
 By contrast, **a vector field on $M$ cannot generally be pushed forward to a vector field on $N$**: if $F$ collapses two points $p_1 \neq p_2$ of $M$ to one point of $N$, and the vector field has different values $X_{p_1} \neq X_{p_2}$, there is no canonical way to combine $dF_{p_1}(X_{p_1})$ and $dF_{p_2}(X_{p_2})$ into a single value at $F(p_1) = F(p_2)$. The pushforward of a vector field is only defined when $F$ is a diffeomorphism. This asymmetry — pullback for forms is universal, pushforward for vectors is restricted — is the *primary reason* differential geometry is built on forms rather than vector fields when global computation matters. **Whenever you can phrase a question in terms of forms and pullback, do so.**
 
@@ -83,7 +83,7 @@ Properties 1 and 2 say the pullback respects the algebra structure (it is a grad
 
 Because the pullback respects $d$, it descends to cohomology: $F^*$ sends closed forms to closed forms (since $F^*(d\omega) = d(F^*\omega)$) and exact forms to exact forms (since $F^*(d\eta) = d(F^*\eta)$). Therefore $F^*$ induces a linear map on de Rham cohomology, $F^* : H^k_{dR}(N) \to H^k_{dR}(M)$, and $H^k_{dR}$ is a **contravariant functor** from smooth manifolds to vector spaces (in fact to graded-commutative algebras when all $k$ are bundled together).
 
-The functoriality of $H^k_{dR}$ is a powerful tool. For instance, if $F : M \to N$ is a diffeomorphism, $F^*$ is an isomorphism on cohomology, so $H^k_{dR}(M) \cong H^k_{dR}(N)$ as vector spaces. More remarkably, **homotopic maps induce the same map on cohomology** (the homotopy invariance of de Rham cohomology, proved using the Poincaré lemma machinery in [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|DG X]]), so $F^* = G^*$ on $H^k_{dR}$ whenever $F$ and $G$ are smoothly homotopic.
+The functoriality of $H^k_{dR}$ is a powerful tool. For instance, if $F : M \to N$ is a diffeomorphism, $F^*$ is an isomorphism on cohomology, so $H^k_{dR}(M) \cong H^k_{dR}(N)$ as vector spaces. More remarkably, **homotopic maps induce the same map on cohomology** (the [[Def - Homotopy|homotopy]] invariance of de Rham cohomology, proved using the Poincaré lemma machinery in [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|DG X]]), so $F^* = G^*$ on $H^k_{dR}$ whenever $F$ and $G$ are smoothly homotopic.
 
 ---
 
@@ -121,7 +121,7 @@ The coefficient $r$ is precisely the polar Jacobian $\det DF = r\cos^2\theta + r
 
 **Corollary — pullback under a constant map.** If $F : M \to N$ is the constant map $F(p) = q_0$ for all $p$, then $dF_p = 0$, so $(F^*\omega)_p(v_1, \dots, v_k) = \omega_{q_0}(0, \dots, 0) = 0$ for $k \geq 1$, and $F^*\omega = 0$. On $0$-forms (functions), $F^*f = f \circ F = f(q_0)$, the constant function. So constant maps kill all positive-degree forms — the pullback "sees" only the value of a $0$-form at one point.
 
-**Corollary — pullback when the source has lower dimension.** If $\dim M < k$, then $\Omega^k(M) = 0$, and $F^*\omega = 0$ trivially for any $\omega \in \Omega^k(N)$. For example, the volume form $dx \wedge dy \wedge dz$ on $\mathbb{R}^3$ pulls back to zero along any smooth curve $\gamma : \mathbb{R} \to \mathbb{R}^3$, regardless of how the curve is parametrized.
+**Corollary — pullback when the source has lower [[Def - Dimension|dimension]].** If $\dim M < k$, then $\Omega^k(M) = 0$, and $F^*\omega = 0$ trivially for any $\omega \in \Omega^k(N)$. For example, the volume form $dx \wedge dy \wedge dz$ on $\mathbb{R}^3$ pulls back to zero along any smooth curve $\gamma : \mathbb{R} \to \mathbb{R}^3$, regardless of how the curve is parametrized.
 
 **Corollary — composition law.** If $F : M \to N$ and $G : N \to P$ are smooth maps, then $(G \circ F)^* = F^* \circ G^*$ on forms. Compositions of pullbacks compose in the reverse order — pure contravariance.
 

@@ -17,7 +17,7 @@ $V$ and $W$ are finite-dimensional vector spaces over $\mathbb{F}$. We fix bases
 
 # Statement
 
-> **Theorem (Matrix of the Dual Map).** Let $V$ and $W$ be finite-dimensional vector spaces over $\mathbb{F}$, with bases $v_1, \dots, v_n$ and $w_1, \dots, w_m$ and dual bases $\varphi_1, \dots, \varphi_n$ and $\psi_1, \dots, \psi_m$. For $T \in \mathcal{L}(V, W)$,
+> **Theorem (Matrix of the [[Def - Dual Map|Dual Map]]).** Let $V$ and $W$ be finite-dimensional vector spaces over $\mathbb{F}$, with bases $v_1, \dots, v_n$ and $w_1, \dots, w_m$ and dual bases $\varphi_1, \dots, \varphi_n$ and $\psi_1, \dots, \psi_m$. For $T \in \mathcal{L}(V, W)$,
 > $$\mathcal{M}(T') = \big( \mathcal{M}(T) \big)^t.$$
 > The matrix of the dual map, computed in the dual bases, is the *transpose* of the matrix of the original linear map.
 
@@ -181,7 +181,7 @@ So the identity $(AB)^t = B^t A^t$ is the matrix shadow of the structural fact $
 
 **Transpose of a product as inverse-pulled-back.** For $A \in \mathrm{GL}_n(\mathbb{F})$, the identity $(A^{-1})^t = (A^t)^{-1}$ follows from $A A^{-1} = I$ via $(A^{-1})^t A^t = I^t = I$ — dualising preserves invertibility and inverts. This is the matrix shadow of "$T$ invertible implies $T'$ invertible with $(T')^{-1} = (T^{-1})'$".
 
-**Numerical linear algebra — solving systems via transpose.** The system $Ax = b$ is solvable iff $b$ is in the column space of $A$; equivalently iff $b$ annihilates every $y$ with $A^t y = 0$ (the left null space). This is the present theorem at work, recognising $A^t$ as the matrix of the dual map and using the annihilator characterisation of the range.
+**Numerical linear algebra — solving systems via transpose.** The system $Ax = b$ is solvable iff $b$ is in the column space of $A$; equivalently iff $b$ annihilates every $y$ with $A^t y = 0$ (the left null space). This is the present theorem at work, recognising $A^t$ as the matrix of the dual map and using the [[Def - Annihilator|annihilator]] characterisation of the range.
 
 ---
 

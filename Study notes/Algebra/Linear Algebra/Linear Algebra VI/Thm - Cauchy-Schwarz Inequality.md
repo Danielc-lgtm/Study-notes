@@ -33,7 +33,7 @@ The two corollaries are the inequality applied to $(\mathbf{F}^n, \text{Euclidea
 
 The Cauchy-Schwarz inequality is the most-used inequality in inner product spaces and arguably in all of analysis. It plays three foundational roles.
 
-First, it **justifies the definition of angle** in inner product spaces of dimension $\geq 4$. The angle between two nonzero vectors $u, v$ is defined as $\theta = \arccos\bigl(\langle u, v\rangle / (\|u\|\,\|v\|)\bigr)$. For $\arccos$ to make sense, the argument must lie in $[-1, 1]$ — equivalently, $|\langle u, v\rangle| \leq \|u\|\,\|v\|$. Without Cauchy-Schwarz, "the angle in $\mathbb{R}^n$ for $n \geq 4$" would be ill-defined. With Cauchy-Schwarz, the geometric intuition from $\mathbb{R}^2$ and $\mathbb{R}^3$ extends to all inner product spaces.
+First, it **justifies the definition of angle** in inner product spaces of [[Def - Dimension|dimension]] $\geq 4$. The angle between two nonzero vectors $u, v$ is defined as $\theta = \arccos\bigl(\langle u, v\rangle / (\|u\|\,\|v\|)\bigr)$. For $\arccos$ to make sense, the argument must lie in $[-1, 1]$ — equivalently, $|\langle u, v\rangle| \leq \|u\|\,\|v\|$. Without Cauchy-Schwarz, "the angle in $\mathbb{R}^n$ for $n \geq 4$" would be ill-defined. With Cauchy-Schwarz, the geometric intuition from $\mathbb{R}^2$ and $\mathbb{R}^3$ extends to all inner product spaces.
 
 Second, it **proves the triangle inequality**. The triangle inequality $\|u + v\| \leq \|u\| + \|v\|$ is the geometric fact that makes the norm-induced metric a metric. Its proof routes through Cauchy-Schwarz: $\|u + v\|^2 = \|u\|^2 + 2\operatorname{Re}\langle u, v\rangle + \|v\|^2 \leq \|u\|^2 + 2|\langle u, v\rangle| + \|v\|^2 \leq \|u\|^2 + 2\|u\|\,\|v\| + \|v\|^2 = (\|u\| + \|v\|)^2$. The middle step is exactly Cauchy-Schwarz. Without it, the inner product space is just a bilinear-form-on-a-vector-space; with it, it is a metric space.
 
@@ -145,7 +145,7 @@ Consider the real-valued function $t \mapsto \|u - tv\|^2$. It is a non-negative
 > $$\|u - tv\|^2 = \|u\|^2 - t\overline{\langle u, v\rangle} - \bar t \langle u, v\rangle + |t|^2 \|v\|^2.$$
 > Over $\mathbb{R}$ this simplifies to $\|u - tv\|^2 = \|v\|^2 t^2 - 2\langle u, v\rangle t + \|u\|^2$, a non-negative real quadratic in $t$.
 >
-> **Hint:** Expand $\langle u - tv, u - tv\rangle$ using additivity in both slots and linearity (first slot)/conjugate-linearity (second slot). Group terms.
+> **Hint:** Expand $\langle u - tv, u - tv\rangle$ using additivity in both slots and linearity (first slot)/conjugate-linearity (second slot). [[Def - Group|Group]] terms.
 >
 > **Why needed:** This is the algebraic identity at the heart of the proof — without it there is no quadratic to minimise.
 >
@@ -191,7 +191,7 @@ Consider the real-valued function $t \mapsto \|u - tv\|^2$. It is a non-negative
 >
 > *Proof.* If $v = 0$, both sides are $0$ and the inequality holds with equality (trivially). Assume $v \neq 0$.
 >
-> Set $t^* = \langle u, v\rangle / \|v\|^2 \in \mathbf{F}$ and consider the orthogonal decomposition (an instance of [[Thm - Orthogonal Decomposition|orthogonal decomposition]] applied to the one-dimensional subspace $\operatorname{span}(v)$):
+> Set $t^* = \langle u, v\rangle / \|v\|^2 \in \mathbf{F}$ and consider the orthogonal decomposition (an instance of [[Thm - Orthogonal Decomposition|orthogonal decomposition]] applied to the one-dimensional [[Def - Subspace|subspace]] $\operatorname{span}(v)$):
 > $$u = t^* v + w, \qquad \text{where } w = u - t^* v.$$
 > By construction, $\langle w, v\rangle = \langle u, v\rangle - t^* \|v\|^2 = \langle u, v\rangle - \langle u, v\rangle = 0$, so $w \perp v$. The vectors $t^* v$ and $w$ are then orthogonal.
 >
@@ -213,7 +213,7 @@ Consider the real-valued function $t \mapsto \|u - tv\|^2$. It is a non-negative
 > For the full inequality $|\langle u, v\rangle| \leq \|u\|\,\|v\|$ over $\mathbb{C}$, replace $v$ by $\bar\alpha v$ where $\alpha = \langle u, v\rangle/|\langle u, v\rangle|$ (so $|\alpha| = 1$): then $\langle u, \bar\alpha v\rangle = \alpha \langle u, v\rangle$, and choosing $\alpha$ to rotate $\langle u, v\rangle$ to the positive real axis makes $\operatorname{Re}\langle u, \bar\alpha v\rangle = |\langle u, v\rangle|$. The previous inequality applied to $u, \bar\alpha v$ then gives $|\langle u, v\rangle|^2 \leq \|u\|^2 \|\bar\alpha v\|^2 = \|u\|^2 \|v\|^2$, as desired. $\qquad\blacksquare$
 
 > [!note]- Alternative proof: orthogonal projection
-> *Proof.* Assume $v \neq 0$. Let $U = \operatorname{span}(v)$ be the one-dimensional subspace. The orthogonal projection of $u$ onto $U$ is
+> *Proof.* Assume $v \neq 0$. Let $U = \operatorname{span}(v)$ be the one-dimensional [[Def - Subspace|subspace]]. The orthogonal projection of $u$ onto $U$ is
 > $$P_U u = \frac{\langle u, v\rangle}{\|v\|^2} v.$$
 > By [[Thm - Best Approximation by Orthogonal Projection|the best-approximation property]] or by direct computation,
 > $$\|P_U u\| \leq \|u\|.$$

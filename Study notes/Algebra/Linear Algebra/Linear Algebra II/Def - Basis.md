@@ -22,7 +22,7 @@ There are two desiderata. The list must be **complete** — every vector of $V$ 
 
 A basis is the conjunction of these two: a spanning list that is linearly independent. The two clauses do entirely different work, and we should stress what each is *for*. Spanning ensures every vector is reached at least once; independence ensures every vector is reached at most once. **Together** they say every vector is reached exactly once, which is the precise sense in which a basis identifies $V$ with $F^n$.
 
-The per-axiom failure analysis is illuminating. Drop **spanning** and keep independence: you get a linearly independent list whose span is a *proper* subspace of $V$. Such a list installs coordinates on its own span but on no more — the vectors of $V$ lying outside the span have no representation at all. The list is "honest but incomplete". Example: $(1, 0, 0)$ in $\mathbb{R}^3$ is independent but does not span; it installs coordinates on the $x$-axis only.
+The per-axiom failure analysis is illuminating. Drop **spanning** and keep independence: you get a linearly independent list whose span is a *proper* [[Def - Subspace|subspace]] of $V$. Such a list installs coordinates on its own span but on no more — the vectors of $V$ lying outside the span have no representation at all. The list is "honest but incomplete". Example: $(1, 0, 0)$ in $\mathbb{R}^3$ is independent but does not span; it installs coordinates on the $x$-axis only.
 
 Drop **independence** and keep spanning: you get a redundant spanning list. Every vector of $V$ has a representation, but the representation is *not unique* — multiple coefficient tuples name the same vector. The list is "complete but ambiguous". Example: $(1, 0), (0, 1), (1, 1)$ in $\mathbb{R}^2$ spans, but $(1, 1) = 1 \cdot (1, 0) + 1 \cdot (0, 1) + 0 \cdot (1, 1) = 0 \cdot (1, 0) + 0 \cdot (0, 1) + 1 \cdot (1, 1)$, and there is no canonical choice of coordinates for $(1, 1)$. Coordinates become a quotient over redundancies, not a faithful naming.
 
@@ -61,7 +61,7 @@ This map is well-defined and linear for any list. The list is a basis of $V$ if 
 
 So a basis is, categorically, the choice of an isomorphism $F^n \xrightarrow{\sim} V$, and the basis vectors are the images of the standard basis of $F^n$ under that isomorphism. This is the cleanest viewpoint: the role of the basis is to set up a privileged isomorphism between an abstract space and a concrete one.
 
-The universal-property version: an $n$-element list $v_1, \ldots, v_n$ in $V$ is a basis if and only if for every vector space $W$ and every list $w_1, \ldots, w_n$ in $W$, there exists a *unique* linear map $T : V \to W$ with $T v_i = w_i$. This is the **universal property of free modules** specialised to vector spaces: a basis exhibits $V$ as the free $F$-module on $n$ generators. The dual viewpoint is then the next chapter's "linear map lemma" (LADR 3.4).
+The universal-property version: an $n$-element list $v_1, \ldots, v_n$ in $V$ is a basis if and only if for every vector space $W$ and every list $w_1, \ldots, w_n$ in $W$, there exists a *unique* linear map $T : V \to W$ with $T v_i = w_i$. This is the **universal property of free [[Def - Module|modules]]** specialised to vector spaces: a basis exhibits $V$ as the free $F$-[[Def - Module|module]] on $n$ generators. The dual viewpoint is then the next chapter's "linear map lemma" (LADR 3.4).
 
 ---
 
@@ -83,7 +83,7 @@ Compression in the other direction: a basis is the **minimal spanning list** and
 
 **Example (standard basis of $\mathcal{P}_m(F)$).** $1, z, z^2, \ldots, z^m$ is a basis of the polynomial space $\mathcal{P}_m(F)$ — see [[Ex - Polynomials of degree at most n form a basis]]. The coordinate tuple of a polynomial is just its tuple of coefficients.
 
-**Example (a basis adapted to a subspace).** $(1, 1, 0), (0, 0, 1)$ is a basis of the subspace $\{(x, x, y) \in F^3 : x, y \in F\}$. Spanning: any $(x, x, y) = x(1, 1, 0) + y(0, 0, 1)$. Independence: $a(1, 1, 0) + b(0, 0, 1) = (a, a, b) = (0, 0, 0)$ forces $a = b = 0$.
+**Example (a basis adapted to a [[Def - Subspace|subspace]]).** $(1, 1, 0), (0, 0, 1)$ is a basis of the subspace $\{(x, x, y) \in F^3 : x, y \in F\}$. Spanning: any $(x, x, y) = x(1, 1, 0) + y(0, 0, 1)$. Independence: $a(1, 1, 0) + b(0, 0, 1) = (a, a, b) = (0, 0, 0)$ forces $a = b = 0$.
 
 **Example (a basis "by parametric solution").** The subspace $U = \{(x, y, z) \in F^3 : x + y + z = 0\}$ has basis $(1, -1, 0), (1, 0, -1)$. Set $z = 0$: solutions are $(x, -x, 0) = x(1, -1, 0)$. Set $y = 0$: solutions are $(x, 0, -x) = x(1, 0, -1)$. Two free parameters, two basis vectors. This is operation 4 from the topic page.
 

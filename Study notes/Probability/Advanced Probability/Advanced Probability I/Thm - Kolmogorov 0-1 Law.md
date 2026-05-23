@@ -21,7 +21,7 @@ Some events depend on the *entire* infinite sequence $(X_n)$ but are unaffected 
 
 # Sources and Targets
 
-**Sources.** Hypothesis: $(X_n)$ [[Def - Independence|independent]]. The key recognition is *which events are tail events* — those measurable with respect to $\mathcal{T}=\bigcap_n\sigma(X_{n+1},\dots)$, equivalently unchanged by altering finitely many coordinates: convergence of a series, of Cesàro averages, $\limsup/\liminf$ of $X_n$, $\{A_n\text{ i.o.}\}$ for $A_n\in\sigma(X_n)$.
+**Sources.** Hypothesis: $(X_n)$ independent. The key recognition is *which events are tail events* — those measurable with respect to $\mathcal{T}=\bigcap_n\sigma(X_{n+1},\dots)$, equivalently unchanged by altering finitely many coordinates: convergence of a series, of Cesàro averages, $\limsup/\liminf$ of $X_n$, $\{A_n\text{ i.o.}\}$ for $A_n\in\sigma(X_n)$.
 
 **Targets.** "$\mathbb{P}(A)\in\{0,1\}$ for tail $A$" yields: any tail *random variable* is a.s. constant (its distribution function jumps from $0$ to $1$) — so $\limsup_n X_n$, $\limsup\frac{S_n}{n}$, the radius of convergence of $\sum X_n z^n$ are all a.s. constant. This is what makes the limit in the [[Thm - Strong Law of Large Numbers|SLLN]] a genuine number, and it tells us in advance that a [[Thm - Borel-Cantelli Lemmas|Borel–Cantelli]] $\limsup$ is $0$ or $1$ before computing which.
 

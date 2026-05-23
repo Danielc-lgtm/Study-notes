@@ -28,9 +28,9 @@ The crucial observation: whether $\widehat{f}_\psi$ inherits the smoothness of $
 
 The transition function is therefore the diagnostic for whether two charts can coexist in a "calculus-compatible" atlas. The definition collects this:
 
-- $\varphi \circ \psi^{-1}$ has domain $\psi(U \cap V)$ (the image of the overlap in the $\psi$-chart) and codomain $\varphi(U \cap V)$ (the image of the overlap in the $\varphi$-chart). Both are open subsets of $\mathbb{R}^n$ (since $\varphi$ and $\psi$ are homeomorphisms).
-- $\varphi \circ \psi^{-1}$ is automatically a *homeomorphism* — composition of homeomorphisms. This much is free.
-- $\varphi \circ \psi^{-1}$ is *smooth* if both it and its inverse $\psi \circ \varphi^{-1}$ are smooth in the ordinary calculus sense — equivalently, $\varphi \circ \psi^{-1}$ is a diffeomorphism between open subsets of $\mathbb{R}^n$.
+- $\varphi \circ \psi^{-1}$ has domain $\psi(U \cap V)$ (the image of the overlap in the $\psi$-chart) and codomain $\varphi(U \cap V)$ (the image of the overlap in the $\varphi$-chart). Both are open subsets of $\mathbb{R}^n$ (since $\varphi$ and $\psi$ are [[Def - Homeomorphism|homeomorphisms]]).
+- $\varphi \circ \psi^{-1}$ is automatically a *homeomorphism* — composition of [[Def - Homeomorphism|homeomorphisms]]. This much is free.
+- $\varphi \circ \psi^{-1}$ is *smooth* if both it and its inverse $\psi \circ \varphi^{-1}$ are smooth in the ordinary calculus sense — equivalently, $\varphi \circ \psi^{-1}$ is a [[Def - Diffeomorphism|diffeomorphism]] between open subsets of $\mathbb{R}^n$.
 
 The first two are part of the definition; the third — smoothness — is the *smooth compatibility* condition that promotes a bare atlas to a smooth atlas (see [[Def - Smooth Atlas and Smooth Structure]]).
 
@@ -70,7 +70,7 @@ A transition function is a *morphism in the local model* — a morphism between 
 
 Equivalently: a topological manifold *is* a topological space together with a maximal atlas of charts to $\mathbb{R}^n$, and the transition functions are the structural data of this atlas. The category $\mathbf{TopMan}$ of topological manifolds is then a subcategory of the category of *spaces locally modelled on open subsets of $\mathbb{R}^n$*, where the local model class is open inclusions and the compatibility is "homeomorphism". A smooth manifold sharpens this to: local model class = open subsets of $\mathbb{R}^n$, compatibility = diffeomorphism; the transition functions then take values in the *diffeomorphism pseudogroup* of $\mathbb{R}^n$.
 
-This is the prototype of a **geometric structure** in the sense of Klein and Cartan: a manifold is given by a model, a *pseudogroup* of local automorphisms of the model, and an atlas of charts whose transition functions take values in the pseudogroup. The smooth structure on a manifold corresponds to the pseudogroup of local diffeomorphisms of $\mathbb{R}^n$; replacing this with the pseudogroup of local isometries of Euclidean space gives a Euclidean structure; with conformal local automorphisms, a conformal structure; with local affine maps, an affine structure; with local symplectomorphisms, a symplectic structure (see [[Differential Geometry IX — Orientation, Integration, and Stokes' Theorem|DG IX]]).
+This is the prototype of a **geometric structure** in the sense of Klein and Cartan: a manifold is given by a model, a *pseudogroup* of local automorphisms of the model, and an atlas of charts whose transition functions take values in the pseudogroup. The smooth structure on a manifold corresponds to the pseudogroup of local [[Def - Diffeomorphism|diffeomorphisms]] of $\mathbb{R}^n$; replacing this with the pseudogroup of local [[Def - Isometry|isometries]] of Euclidean space gives a Euclidean structure; with conformal local automorphisms, a conformal structure; with local affine maps, an affine structure; with local [[Def - Symplectomorphism (Canonical Transformation)|symplectomorphisms]], a symplectic structure (see [[Differential Geometry IX — Orientation, Integration, and Stokes' Theorem|DG IX]]).
 
 ---
 

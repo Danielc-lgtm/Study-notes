@@ -34,7 +34,7 @@ The definition of the manifold integral $\int_M\omega$ in [[Def - Integral of a 
 The well-definedness theorem says: the answer is the same regardless of the auxiliary data. This is what makes the manifold integral *intrinsic* to $M$ and $\omega$.
 
 The proof has two layers:
-- **Chart independence (single-chart case).** Two oriented charts $(U, \varphi)$ and $(U, \widetilde\varphi)$ covering the same support of $\omega$ are related by an orientation-preserving diffeomorphism (the transition map, restricted to $\varphi(U) \subseteq \mathbb{R}^n$). The form transforms by $\det DF$; the multivariable Riemann integral transforms by $|\det DF|$; these agree because the chart is *positively oriented*, hence $\det DF > 0$ and $|\det DF| = \det DF$. So the integral is independent of the chart.
+- **Chart independence (single-chart case).** Two oriented charts $(U, \varphi)$ and $(U, \widetilde\varphi)$ covering the same support of $\omega$ are related by an orientation-preserving [[Def - Diffeomorphism|diffeomorphism]] (the transition map, restricted to $\varphi(U) \subseteq \mathbb{R}^n$). The form transforms by $\det DF$; the multivariable Riemann integral transforms by $|\det DF|$; these agree because the chart is *positively oriented*, hence $\det DF > 0$ and $|\det DF| = \det DF$. So the integral is independent of the chart.
 - **Partition independence.** Two different partitions $\{\psi_i\}$ and $\{\widetilde\psi_j\}$ give two different sums; their equality follows by the standard refinement argument $\sum_i\psi_i\widetilde\omega = \sum_{i,j}\psi_i\widetilde\psi_j\widetilde\omega$, applied to both summations.
 
 The crucial step is the chart-independence: it is the exact place where the *orientation* hypothesis is used. Without orientation, the chart transitions could have negative Jacobian, and the integral would be sign-ambiguous. *This is the reason integration is restricted to oriented manifolds*: it is precisely the case where the chart-by-chart construction is well-defined.
@@ -184,7 +184,7 @@ A second subtlety is that the partition-independence argument uses the *finitene
 
 **Stochastic differential equations on manifolds.** Brownian motion on a Riemannian manifold is defined via the heat semigroup $e^{t\Delta_g}$, which uses the integral on $M$ (against $\omega_g$). Well-definedness of integration is what makes the heat kernel and Brownian motion intrinsic — independent of the local coordinate system used to set up the equations.
 
-**Diffeomorphism-invariant physical theories.** General relativity and other diffeomorphism-invariant theories use action integrals $\int_M\mathcal{L}\,\omega_g$ where $\mathcal{L}$ is a scalar Lagrangian density. The diffeomorphism invariance of the theory rests on the well-definedness of the integral.
+**[[Def - Diffeomorphism|Diffeomorphism]]-invariant physical theories.** General relativity and other diffeomorphism-invariant theories use action integrals $\int_M\mathcal{L}\,\omega_g$ where $\mathcal{L}$ is a scalar Lagrangian density. The diffeomorphism invariance of the theory rests on the well-definedness of the integral.
 
 ---
 

@@ -17,7 +17,7 @@ $G$ is a Lie group; $H \leq G$ is a closed Lie subgroup (automatically closed by
 
 # Statement
 
-> **Theorem (Homogeneous Space Manifold Structure; Lee Thm 21.17).** Let $G$ be a Lie group and $H \leq G$ a closed Lie subgroup. Then the coset space $G/H$ (with the quotient topology) carries a unique smooth manifold structure of dimension $\dim G - \dim H$ such that:
+> **Theorem ([[Def - Homogeneous Space|Homogeneous Space]] Manifold Structure; Lee Thm 21.17).** Let $G$ be a Lie [[Def - Group|group]] and $H \leq G$ a closed Lie subgroup. Then the [[Def - Coset|coset]] space $G/H$ (with the quotient topology) carries a unique smooth manifold structure of [[Def - Dimension|dimension]] $\dim G - \dim H$ such that:
 >
 > (a) the projection $\pi : G \to G/H$ is a smooth submersion, and
 >
@@ -31,7 +31,7 @@ $G$ is a Lie group; $H \leq G$ is a closed Lie subgroup (automatically closed by
 
 # Motivation
 
-This theorem is the structural foundation of homogeneous-space theory: it says that for any Lie group $G$ and closed Lie subgroup $H$, the coset space $G/H$ is automatically a smooth manifold, and the projection is automatically a submersion (in fact a principal $H$-bundle). Without this theorem, one would have to construct charts on $G/H$ by hand for each example — a tedious and error-prone process. With it, the construction is uniform, and the manifold structure on $G/H$ is determined by the smooth structure of $G$ and the closedness of $H$ alone.
+This theorem is the structural foundation of homogeneous-space theory: it says that for any Lie group $G$ and closed Lie subgroup $H$, the [[Def - Coset|coset]] space $G/H$ is automatically a smooth manifold, and the projection is automatically a submersion (in fact a principal $H$-bundle). Without this theorem, one would have to construct charts on $G/H$ by hand for each example — a tedious and error-prone process. With it, the construction is uniform, and the manifold structure on $G/H$ is determined by the smooth structure of $G$ and the closedness of $H$ alone.
 
 The two key inputs are:
 
@@ -94,7 +94,7 @@ The proof proceeds:
 
 The proof rests on the **properness of the right $H$-action on $G$**, which is where closedness of $H$ enters in an essential way. Without closedness, properness fails — the irrational winding $\mathbb{R} \hookrightarrow T^2$ provides the classical counterexample: $\mathbb{R}$ acts on $T^2$ by translation along the line, but the action is *not* proper (orbits are dense), and the quotient $T^2/\mathbb{R}$ has the trivial topology.
 
-The most common error is to underestimate this: thinking that "$G/H$ is a manifold for any Lie subgroup $H$". This is **false** — only for closed Lie subgroups. The closed subgroup theorem and this homogeneous-space theorem together restrict attention to the right class of subgroups.
+The most common error is to underestimate this: thinking that "$G/H$ is a manifold for any Lie subgroup $H$". This is **false** — only for closed Lie [[Def - Subgroup|subgroups]]. The closed subgroup theorem and this homogeneous-space theorem together restrict attention to the right class of [[Def - Subgroup|subgroups]].
 
 A second subtlety is the construction of the principal bundle structure. The fibres of $\pi : G \to G/H$ are exactly the right $H$-orbits, $\pi^{-1}(\bar g) = g H$ for any representative $g$ of $\bar g$. The right action of $H$ acts freely and transitively on each fibre, so each fibre is diffeomorphic to $H$.
 
@@ -185,7 +185,7 @@ Apply the quotient manifold theorem (Lee Thm 21.10) to the right action of $H$ o
 
 # Cross-Field Exercise Suggestions
 
-**Geometric topology — computing $\pi_k$ of homogeneous spaces.** The principal-bundle structure $H \to G \to G/H$ gives a long exact sequence of homotopy groups: $\cdots \to \pi_{k+1}(G/H) \to \pi_k(H) \to \pi_k(G) \to \pi_k(G/H) \to \pi_{k-1}(H) \to \cdots$. For $S^n = \mathrm{SO}(n+1)/\mathrm{SO}(n)$, this is used inductively to compute $\pi_k$ of spheres in low dimensions, and to recognize $\pi_1(\mathrm{SO}(n)) = \mathbb{Z}/2$ for $n \geq 3$ (the topological origin of spinors).
+**Geometric topology — computing $\pi_k$ of homogeneous spaces.** The principal-bundle structure $H \to G \to G/H$ gives a long exact sequence of [[Def - Homotopy|homotopy]] [[Def - Group|groups]]: $\cdots \to \pi_{k+1}(G/H) \to \pi_k(H) \to \pi_k(G) \to \pi_k(G/H) \to \pi_{k-1}(H) \to \cdots$. For $S^n = \mathrm{SO}(n+1)/\mathrm{SO}(n)$, this is used inductively to compute $\pi_k$ of spheres in low [[Def - Dimension|dimensions]], and to recognize $\pi_1(\mathrm{SO}(n)) = \mathbb{Z}/2$ for $n \geq 3$ (the topological origin of spinors).
 
 **Algebraic geometry — flag manifolds as homogeneous spaces of $\mathrm{GL}(n, \mathbb{C})$.** The full flag manifold $\mathrm{Fl}(n) = \mathrm{GL}(n, \mathbb{C})/B$ where $B$ is the Borel subgroup of upper-triangular matrices, by orbit-stabilizer (the action on complete flags is transitive, stabilizer of the standard flag is $B$). The smooth manifold structure comes from this theorem; it is also a smooth projective algebraic variety, and the structure of the Bruhat decomposition is read off the structure of $G/B$ as a union of Schubert cells.
 

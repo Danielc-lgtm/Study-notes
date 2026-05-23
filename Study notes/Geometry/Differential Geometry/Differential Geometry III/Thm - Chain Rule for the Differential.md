@@ -16,7 +16,7 @@ $M$, $N$, $P$ are smooth manifolds, $F : M \to N$ and $G : N \to P$ are smooth m
 
 # Statement
 
-> **Theorem (Chain Rule for the Differential, Functoriality of $T_{p}$).** Let $M$, $N$, $P$ be smooth manifolds, $F : M \to N$ and $G : N \to P$ smooth maps, and $p \in M$. Then
+> **Theorem ([[Thm - The Chain Rule|Chain Rule]] for the Differential, Functoriality of $T_{p}$).** Let $M$, $N$, $P$ be smooth manifolds, $F : M \to N$ and $G : N \to P$ smooth maps, and $p \in M$. Then
 > $$d(G \circ F)_{p} \;=\; dG_{F(p)} \circ dF_{p} \;\;\text{ as linear maps } T_{p}M \to T_{G(F(p))}P.$$
 > Furthermore, $d(\mathrm{id}_{M})_{p} = \mathrm{id}_{T_{p}M}$ for the identity map on $M$.
 
@@ -34,7 +34,7 @@ The motivation is to certify that the manifold differential behaves correctly un
 
 Without the chain rule, the differential would be a parochial construction — useful for one map at a time but giving no information about how maps combine. With the chain rule, complex computations can be broken into simple pieces: $d(G \circ F)_{p}$ is computed by computing $dF_{p}$ and $dG_{F(p)}$ separately and composing. This is the routine workflow of differential geometry.
 
-The corollary about diffeomorphisms is the practical payoff: any diffeomorphism's differential is automatically an isomorphism, with no extra work. This is what licenses the use of charts as "tangent-space isomorphisms" and underlies the proof of [[Thm - Dimension of the Tangent Space]].
+The corollary about [[Def - Diffeomorphism|diffeomorphisms]] is the practical payoff: any diffeomorphism's differential is automatically an isomorphism, with no extra work. This is what licenses the use of charts as "tangent-space [[Def - Isomorphism|isomorphisms]]" and underlies the proof of [[Thm - Dimension of the Tangent Space]].
 
 The functoriality content — that $T_{p}$ is a functor — is the categorical packaging of the chain rule and identity rule. It says the tangent-space construction is *natural*: it commutes with composition, so any computation done in one composition order matches the computation in another. This naturality is the technical heart of coordinate-independence in differential geometry.
 
@@ -88,7 +88,7 @@ In coordinates, the chain rule for differentials becomes the chain rule for Jaco
 
 The proof is straightforward — one line of associativity unfolding. The conceptual difficulty is recognizing that *this is the chain rule from multivariate calculus, made coordinate-free*. People who have studied multivariate calculus often expect the chain rule to involve Jacobian matrices and partial derivatives, and the manifold chain rule looks too abstract to be the same thing.
 
-The other subtlety is the corollary about diffeomorphisms: that $dF_{p}$ has $d(F^{-1})_{F(p)}$ as inverse. This is a one-line consequence of the chain rule applied to $F \circ F^{-1} = \mathrm{id}$, but it is the corollary used most often in practice — and the proof requires recognizing that the identity map's differential is the identity (which is a separate, easy lemma but essential).
+The other subtlety is the corollary about [[Def - Diffeomorphism|diffeomorphisms]]: that $dF_{p}$ has $d(F^{-1})_{F(p)}$ as inverse. This is a one-line consequence of the chain rule applied to $F \circ F^{-1} = \mathrm{id}$, but it is the corollary used most often in practice — and the proof requires recognizing that the identity map's differential is the identity (which is a separate, easy lemma but essential).
 
 ---
 
@@ -210,9 +210,9 @@ Unwind the precomposition definition of the differential. The chain rule for dif
 
 **Multivariate analysis — the chain rule for Jacobians.** In multivariate calculus, the chain rule states $D(g \circ f)_{x} = Dg_{f(x)} \cdot Df_{x}$ as a product of Jacobian matrices. This is the coordinate version of the manifold chain rule applied to maps between open subsets of Euclidean spaces. The manifold chain rule certifies that this matrix identity is *coordinate-independent* — under different chart pairs, the Jacobians change but their product remains the matrix of the same linear map.
 
-**Category theory — every covariant functor satisfies the chain rule.** The functor $T_{p}$ is one of many functors arising in differential geometry: the cotangent functor $T^{*}_{p}$ (contravariant), the Lie algebra functor on Lie groups, the de Rham cohomology functor on smooth manifolds, the singular cohomology functor on topological spaces. Each of these satisfies a chain rule of its own type, all instances of the same category-theoretic functoriality axiom. Recognizing the chain rule as functoriality makes its appearance in many fields a single phenomenon.
+**Category theory — every covariant functor satisfies the chain rule.** The functor $T_{p}$ is one of many functors arising in differential geometry: the cotangent functor $T^{*}_{p}$ (contravariant), the Lie algebra functor on Lie [[Def - Group|groups]], the de Rham cohomology functor on smooth manifolds, the singular cohomology functor on topological spaces. Each of these satisfies a chain rule of its own type, all instances of the same category-theoretic functoriality axiom. Recognizing the chain rule as functoriality makes its appearance in many fields a single phenomenon.
 
-**Lie theory — the chain rule and the Lie group homomorphism.** For a Lie group homomorphism $\phi : G \to H$, the differential $d\phi_{e} : \mathfrak{g} \to \mathfrak{h}$ at the identity is a Lie algebra homomorphism, *and* the composition rule $d(\phi \circ \psi)_{e} = d\phi_{e} \circ d\psi_{e}$ matches the corresponding rule for Lie algebra homomorphisms. The chain rule is what makes the Lie group $\to$ Lie algebra construction functorial. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
+**Lie theory — the chain rule and the Lie [[Def - Group|group]] homomorphism.** For a Lie group homomorphism $\phi : G \to H$, the differential $d\phi_{e} : \mathfrak{g} \to \mathfrak{h}$ at the identity is a Lie algebra homomorphism, *and* the composition rule $d(\phi \circ \psi)_{e} = d\phi_{e} \circ d\psi_{e}$ matches the corresponding rule for Lie algebra [[Def - Homomorphism|homomorphisms]]. The chain rule is what makes the Lie group $\to$ Lie algebra construction functorial. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
 
 **Differential equations — composing flows.** If $\Phi_{t}^{X}$ and $\Phi_{s}^{Y}$ are the flows of vector fields $X$ and $Y$ respectively, the composition $\Phi_{t}^{X} \circ \Phi_{s}^{Y}$ produces a curve in $M$ whose velocity satisfies a non-trivial relation — the **Baker-Campbell-Hausdorff formula** at the infinitesimal level. The chain rule applied to flow compositions is one input. See [[Differential Geometry V — Vector Fields, Flows, and the Lie Bracket]].
 

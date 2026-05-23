@@ -16,7 +16,7 @@ To estimate an integral $I=\int_{[0,1]^d}f(x)\,dx$ of a bounded measurable $f$, 
 
 **(b)** Show the error $\widehat I_n-I$ is of order $n^{-1/2}$, with $\sqrt n(\widehat I_n-I)\xrightarrow{d}N(0,\sigma^2)$, $\sigma^2=\mathrm{Var}(f(U_1))$.
 
-**(c)** Note that this $n^{-1/2}$ rate is **independent of the dimension $d$** — and explain why this beats grid-based quadrature in high dimensions.
+**(c)** Note that this $n^{-1/2}$ rate is **independent of the dimension $d$** — and explain why this beats grid-based quadrature in high [[Def - Dimension|dimensions]].
 
 **Recall:**
 

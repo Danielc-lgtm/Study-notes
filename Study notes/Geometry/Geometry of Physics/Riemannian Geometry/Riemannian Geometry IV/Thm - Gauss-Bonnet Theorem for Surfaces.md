@@ -27,7 +27,7 @@ Let $M$ be a closed (compact, no boundary) oriented Riemannian $2$-manifold with
 > $$
 > \int_M K\, dA + \int_{\partial M}\kappa_g\, ds + \sum_{i=1}^k \alpha_i = 2\pi\chi(M),
 > $$
-> where $\kappa_g$ is the geodesic curvature of $\partial M$ (taken with the outward-pointing tangent orientation).
+> where $\kappa_g$ is the [[Def - Geodesic|geodesic]] curvature of $\partial M$ (taken with the outward-pointing tangent orientation).
 
 > **Corollary.** The integral $\int_M K\, dA$ is invariant under any smooth deformation of the metric, even though $K$ itself changes pointwise.
 
@@ -39,7 +39,7 @@ Let $M$ be a closed (compact, no boundary) oriented Riemannian $2$-manifold with
 
 This is the prototypical **local-to-global theorem**: a pointwise local geometric quantity (curvature) integrates over a closed surface to a topological invariant (Euler characteristic). The left side depends on the *metric* (the geometry of $M$); the right side depends only on the *topology*. So the integral is "metric-independent" in the strong sense that any smooth deformation of the metric preserves it, even though it changes $K$ pointwise.
 
-Historically, this is the first theorem of its kind in mathematics, due to Bonnet (1848) building on Gauss's local results. It became the template for many subsequent "local equals global topological" theorems: the higher-dimensional Chern–Gauss–Bonnet (the **Pfaffian of the curvature** integrates to $\chi$ on any even-dimensional closed oriented Riemannian manifold), the **Hirzebruch–Riemann–Roch theorem** (the genus of a holomorphic line bundle equals a curvature integral plus the Chern character), the **Atiyah–Singer index theorem** (the analytical index of an elliptic operator equals the topological index, computed from characteristic classes of the underlying bundle).
+Historically, this is the first theorem of its kind in mathematics, due to Bonnet (1848) building on Gauss's local results. It became the template for many subsequent "local equals global topological" theorems: the higher-dimensional Chern–Gauss–Bonnet (the **[[Def - Pfaffian|Pfaffian]] of the curvature** integrates to $\chi$ on any even-dimensional closed oriented Riemannian manifold), the **Hirzebruch–Riemann–Roch theorem** (the genus of a holomorphic line bundle equals a curvature integral plus the Chern character), the **Atiyah–Singer index theorem** (the analytical index of an elliptic operator equals the topological index, computed from characteristic classes of the underlying bundle).
 
 The conceptual punchline is that **geometry and topology are linked through curvature**. On a closed orientable surface, the total curvature is locked by the genus — you can redistribute it (concentrate $K$ in small regions or spread it uniformly), but the total $\int K\, dA$ is fixed at $2\pi\chi(M)$. This is why the sphere ($\chi = 2$) can support metrics of positive curvature, the torus ($\chi = 0$) only flat or curvature-zero-on-average metrics, and the higher-genus surfaces ($\chi < 0$) only hyperbolic (constant negative curvature) metrics on the constant-curvature side.
 
@@ -185,7 +185,7 @@ The boundary integral $\int_{\partial M}\omega^1_{\;2}$ has two pieces: the **ro
 
 2. **Triangulated polyhedra (Descartes–Gauss–Bonnet).** For a convex polyhedron with $V$ vertices, $E$ edges, $F$ faces, the sum of angle defects at all vertices equals $2\pi(V - E + F) = 2\pi\chi(M) = 4\pi$ for the sphere. **Verification:** For the cube ($8$ vertices, each with $3$ square corners of $90°$, angle defect $= 2\pi - 3\cdot\pi/2 = \pi/2$ per vertex), sum is $8\cdot\pi/2 = 4\pi$. For the tetrahedron, dodecahedron, icosahedron — same result. **Why nonobvious:** Topology determines the angle defect total, independent of the polyhedron's shape.
 
-3. **Cosmological topology (toy general relativity).** In a $(2+1)$-dimensional spacetime with cosmological constant $\Lambda$, the spatial slice $\Sigma$ at any time is a closed orientable $2$-manifold of constant curvature $K = \Lambda$. Gauss–Bonnet then forces: $\Lambda > 0 \Rightarrow \chi > 0 \Rightarrow \Sigma = S^2$; $\Lambda = 0 \Rightarrow \chi = 0 \Rightarrow \Sigma = T^2$; $\Lambda < 0 \Rightarrow \chi < 0 \Rightarrow \Sigma$ is a higher-genus surface. So the **sign of the cosmological constant determines the topology of $(2+1)$-dimensional spatial slices**. This is a toy version of the deep cosmological-topology questions in $4$ dimensions. **Why nonobvious:** A purely topological consequence of a purely physical constant.
+3. **Cosmological topology (toy general relativity).** In a $(2+1)$-dimensional spacetime with cosmological constant $\Lambda$, the spatial slice $\Sigma$ at any time is a closed orientable $2$-manifold of constant curvature $K = \Lambda$. Gauss–Bonnet then forces: $\Lambda > 0 \Rightarrow \chi > 0 \Rightarrow \Sigma = S^2$; $\Lambda = 0 \Rightarrow \chi = 0 \Rightarrow \Sigma = T^2$; $\Lambda < 0 \Rightarrow \chi < 0 \Rightarrow \Sigma$ is a higher-genus surface. So the **sign of the cosmological constant determines the topology of $(2+1)$-dimensional spatial slices**. This is a toy version of the deep cosmological-topology questions in $4$ [[Def - Dimension|dimensions]]. **Why nonobvious:** A purely topological consequence of a purely physical constant.
 
 ---
 

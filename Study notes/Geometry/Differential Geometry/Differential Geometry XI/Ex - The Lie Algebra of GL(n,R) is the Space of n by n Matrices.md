@@ -15,7 +15,7 @@ Show that the Lie algebra of $\mathrm{GL}(n, \mathbb{R})$ is the space $\mathfra
 
 **Recall:**
 
-A [[Def - Lie Group|Lie group]] is a smooth manifold with smooth multiplication and inversion. The **Lie algebra** of a Lie group $G$ is the tangent space $T_e G$ with bracket inherited from left-invariant vector fields (see [[Def - The Lie Algebra of a Lie Group]]). The **general linear group** $\mathrm{GL}(n, \mathbb{R})$ is the set of invertible $n \times n$ real matrices under matrix multiplication, an open subset of $M(n, \mathbb{R}) \cong \mathbb{R}^{n^2}$.
+A [[Def - Lie Group|Lie group]] is a smooth manifold with smooth multiplication and inversion. The **Lie algebra** of a Lie [[Def - Group|group]] $G$ is the tangent space $T_e G$ with bracket inherited from left-invariant vector fields (see [[Def - The Lie Algebra of a Lie Group]]). The **general linear group** $\mathrm{GL}(n, \mathbb{R})$ is the set of invertible $n \times n$ real matrices under matrix multiplication, an open subset of $M(n, \mathbb{R}) \cong \mathbb{R}^{n^2}$.
 
 ---
 
@@ -27,7 +27,7 @@ A [[Def - Lie Group|Lie group]] is a smooth manifold with smooth multiplication 
 
 **Theorem routing:** The route uses one fact: for any open subset $U$ of a finite-dimensional vector space $V$, and any $p \in U$, $T_p U \cong V$ canonically (Lee Lemma 3.7 / standard tangent-space identification for vector spaces). Applied to $U = \mathrm{GL}(n, \mathbb{R})$, $V = M(n, \mathbb{R})$, $p = I$: $T_I \mathrm{GL}(n, \mathbb{R}) = M(n, \mathbb{R})$. Then by definition $\mathfrak{gl}(n, \mathbb{R}) = T_I \mathrm{GL}(n, \mathbb{R}) = M(n, \mathbb{R})$.
 
-**Key decision point:** The non-obvious move is recognizing that $\mathrm{GL}(n, \mathbb{R})$ is an *open* submanifold of $M(n, \mathbb{R}) \cong \mathbb{R}^{n^2}$ (not a closed submanifold or a level set), so its tangent spaces are identified with all of $M(n, \mathbb{R})$ — there is no constraint to differentiate. This is what makes the Lie algebra "all of $M(n, \mathbb{R})$" rather than a proper subspace.
+**Key decision point:** The non-obvious move is recognizing that $\mathrm{GL}(n, \mathbb{R})$ is an *open* submanifold of $M(n, \mathbb{R}) \cong \mathbb{R}^{n^2}$ (not a closed submanifold or a level set), so its tangent spaces are identified with all of $M(n, \mathbb{R})$ — there is no constraint to differentiate. This is what makes the Lie algebra "all of $M(n, \mathbb{R})$" rather than a proper [[Def - Subspace|subspace]].
 
 ---
 
@@ -59,7 +59,7 @@ The result follows from one structural fact about open submanifolds of vector sp
 The determinant map $\det : M(n, \mathbb{R}) \to \mathbb{R}$ is continuous (in fact polynomial in the matrix entries). The preimage of the open set $\mathbb{R} \setminus \{0\}$ is therefore open in $M(n, \mathbb{R}) \cong \mathbb{R}^{n^2}$. So $\mathrm{GL}(n, \mathbb{R}) = \det^{-1}(\mathbb{R} \setminus \{0\})$ is open.
 
 > [!note]- Derivation
-> The map $A \mapsto \det A$ is a sum of products of matrix entries, hence a polynomial $M(n, \mathbb{R}) \to \mathbb{R}$. Polynomials are smooth, hence continuous. The set $\mathbb{R} \setminus \{0\}$ is open in $\mathbb{R}$. So $\mathrm{GL}(n, \mathbb{R}) = \det^{-1}(\mathbb{R} \setminus \{0\})$ is open in $M(n, \mathbb{R})$. As an open subset of an $n^2$-dimensional real vector space, $\mathrm{GL}(n, \mathbb{R})$ is a smooth manifold of dimension $n^2$, with a single chart $\mathrm{id} : \mathrm{GL}(n, \mathbb{R}) \to \mathrm{GL}(n, \mathbb{R}) \subset M(n, \mathbb{R}) = \mathbb{R}^{n^2}$ (or any restriction thereof).
+> The map $A \mapsto \det A$ is a sum of products of matrix entries, hence a polynomial $M(n, \mathbb{R}) \to \mathbb{R}$. Polynomials are smooth, hence continuous. The set $\mathbb{R} \setminus \{0\}$ is open in $\mathbb{R}$. So $\mathrm{GL}(n, \mathbb{R}) = \det^{-1}(\mathbb{R} \setminus \{0\})$ is open in $M(n, \mathbb{R})$. As an open subset of an $n^2$-dimensional real vector space, $\mathrm{GL}(n, \mathbb{R})$ is a smooth manifold of [[Def - Dimension|dimension]] $n^2$, with a single chart $\mathrm{id} : \mathrm{GL}(n, \mathbb{R}) \to \mathrm{GL}(n, \mathbb{R}) \subset M(n, \mathbb{R}) = \mathbb{R}^{n^2}$ (or any restriction thereof).
 
 **Step 2: The tangent space at $I$ is all of $M(n, \mathbb{R})$.**
 
@@ -83,14 +83,14 @@ The dimension is $n^2$, agreeing with $\dim \mathrm{GL}(n, \mathbb{R}) = n^2$.
 
 # Key Takeaways
 
-**Open subgroups of vector spaces have trivial tangent-space computations.**
+**Open [[Def - Subgroup|subgroups]] of vector spaces have trivial tangent-space computations.**
 
 When a Lie group is realized as an open subset of a vector space — and not as a level set of equations — its Lie algebra is the entire ambient vector space, with no constraints to compute. This is the principle that makes $\mathfrak{gl}(n, \mathbb{R}) = M(n, \mathbb{R})$ a trivial calculation, distinguished from the more interesting cases like $\mathfrak{o}(n)$, $\mathfrak{sl}(n)$, $\mathfrak{u}(n)$, where the Lie algebra is a *proper* subspace of $\mathfrak{gl}(n)$ defined by differentiating equations at the identity. The trigger: a Lie group given as an open subset (rather than a level set) has Lie algebra equal to the ambient vector space.
 
 **$\mathfrak{gl}(n, \mathbb{R})$ is the "universe" containing all matrix Lie algebras.**
 
-Every matrix Lie group $G \leq \mathrm{GL}(n, \mathbb{R})$ has Lie algebra $\mathfrak{g} \subseteq \mathfrak{gl}(n, \mathbb{R}) = M(n, \mathbb{R})$, with the bracket inherited from the matrix commutator on $\mathfrak{gl}(n)$. So $\mathfrak{gl}(n)$ is the "biggest" matrix Lie algebra in dimension $n$, and the classical Lie algebras $\mathfrak{o}(n), \mathfrak{sl}(n), \mathfrak{u}(n), \mathfrak{su}(n), \mathfrak{sp}(2n)$ are computed as subspaces of $\mathfrak{gl}(n)$ cut out by linear conditions (antisymmetry, tracelessness, skew-Hermiticity, symplectic compatibility). The universality of $\mathfrak{gl}(n)$ as the ambient algebra is the structural fact that makes the classification of classical matrix Lie groups tractable.
+Every matrix Lie group $G \leq \mathrm{GL}(n, \mathbb{R})$ has Lie algebra $\mathfrak{g} \subseteq \mathfrak{gl}(n, \mathbb{R}) = M(n, \mathbb{R})$, with the bracket inherited from the matrix commutator on $\mathfrak{gl}(n)$. So $\mathfrak{gl}(n)$ is the "biggest" matrix Lie algebra in dimension $n$, and the classical Lie algebras $\mathfrak{o}(n), \mathfrak{sl}(n), \mathfrak{u}(n), \mathfrak{su}(n), \mathfrak{sp}(2n)$ are computed as [[Def - Subspace|subspaces]] of $\mathfrak{gl}(n)$ cut out by linear conditions (antisymmetry, tracelessness, skew-Hermiticity, symplectic compatibility). The universality of $\mathfrak{gl}(n)$ as the ambient algebra is the structural fact that makes the classification of classical matrix Lie [[Def - Group|groups]] tractable.
 
-**Dimension matching.**
+**[[Def - Dimension|Dimension]] matching.**
 
 $\dim \mathfrak{gl}(n, \mathbb{R}) = n^2 = \dim \mathrm{GL}(n, \mathbb{R})$. This is the general fact $\dim \mathfrak{g} = \dim G$ (Lee Thm 8.37), specialized here. The dimension check serves as a sanity verification: the calculation $\mathfrak{gl}(n, \mathbb{R}) = M(n, \mathbb{R})$ gives exactly $n^2$ free parameters in the matrix, matching the dimension of $\mathrm{GL}(n, \mathbb{R})$ as an open subset of $\mathbb{R}^{n^2}$.

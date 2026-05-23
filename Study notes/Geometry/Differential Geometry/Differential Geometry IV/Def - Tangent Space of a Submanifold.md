@@ -24,13 +24,13 @@ A submanifold $S \subseteq M$ is itself a smooth manifold, so by the standard ma
 
 The natural answer is via the inclusion. Since $\iota : S \hookrightarrow M$ is a smooth immersion (this is the very definition of submanifold), its differential $d\iota_p : T_p S \to T_p M$ is an injective linear map between tangent spaces. So $T_p S$ embeds canonically into $T_p M$ via $d\iota_p$, and we **identify $T_p S$ with its image $d\iota_p(T_p S) \subseteq T_p M$**.
 
-This identification is universally adopted in differential geometry. Without it, statements like "the tangent space of the sphere at $p$ is $\{v : v \cdot p = 0\}$" would be ambiguous — is it the intrinsic tangent space of $S^n$ as a $2$-dimensional manifold, or a subspace of $T_p\mathbb{R}^3$? The convention is that it is both, identified by $d\iota_p$. The conventions matches what one would compute: a velocity vector of a curve in $S$ is naturally a vector in $T_p M$ (since the curve lies in $M$), and it is also a vector in $T_p S$ (since the curve lies in $S$); the two views are related by $d\iota_p$, which by injectivity *identifies* the tangent vector as living in both spaces.
+This identification is universally adopted in differential geometry. Without it, statements like "the tangent space of the sphere at $p$ is $\{v : v \cdot p = 0\}$" would be ambiguous — is it the intrinsic tangent space of $S^n$ as a $2$-dimensional manifold, or a [[Def - Subspace|subspace]] of $T_p\mathbb{R}^3$? The convention is that it is both, identified by $d\iota_p$. The conventions matches what one would compute: a velocity vector of a curve in $S$ is naturally a vector in $T_p M$ (since the curve lies in $M$), and it is also a vector in $T_p S$ (since the curve lies in $S$); the two views are related by $d\iota_p$, which by injectivity *identifies* the tangent vector as living in both spaces.
 
 **Why does this work in the embedded case but require care in the immersed case?** When $S$ is embedded, the subspace topology and the intrinsic topology coincide, so curves smooth "into $M$" are the same as curves smooth "into $S$" (Corollary 5.30 of Lee). The identification is automatic. When $S$ is merely immersed (figure-eight, dense torus line), one needs to demand that the curve be smooth as a map *into $S$* — not just into $M$. This is a real distinction: the map $G : \mathbb{R} \to \mathbb{R}^2$, $G(t) = (\sin 2t, \sin t)$, with domain extended to all of $\mathbb{R}$ (not just $(-\pi, \pi)$), has image in the figure-eight, but it is *not* smooth (not even continuous) as a map into the figure-eight with its immersed-submanifold topology. So "curves in $S$" must mean "smooth as maps into $S$" for the curve characterisation to work.
 
 The three equivalent descriptions of $T_p S$ that we will give all reduce to the same subspace of $T_p M$, but each has a different computational sweet spot:
 1. **Image of $d\iota_p$** — the cleanest definition, but rarely usable for computation since one rarely has an explicit description of "the intrinsic tangent space of $S$" except via this identification anyway.
-2. **Velocities of curves in $S$** — the most flexible. Almost every actual tangent-space computation for matrix Lie groups (e.g. $T_I \mathrm{O}(n)$) uses this: write a smooth one-parameter family of group elements and differentiate.
+2. **Velocities of curves in $S$** — the most flexible. Almost every actual tangent-space computation for matrix Lie [[Def - Group|groups]] (e.g. $T_I \mathrm{O}(n)$) uses this: write a smooth one-parameter family of group elements and differentiate.
 3. **Kernel of the differential of a defining map / image of the differential of a parametrising map** — the most efficient when applicable. For a regular level set $\Phi^{-1}(c)$, $T_p S = \ker d\Phi_p$. For the image of an embedding $F : N \to M$, $T_p S = \mathrm{im}\, dF_q$ where $F(q) = p$.
 
 All three are equivalent for embedded submanifolds; for immersed submanifolds the curve characterisation must use curves smooth into $S$.
@@ -59,7 +59,7 @@ $$T_p S = \ker d\Phi_p \;\subseteq\; T_p M.$$
 **Image characterisation (parametric case).** If $F : N \to M$ is a smooth embedding and $S = F(N)$, then for every $p \in S$ with $F(q) = p$,
 $$T_p S = \mathrm{im}\, dF_q \;\subseteq\; T_p M.$$
 
-**Annihilator characterisation (embedded case).** If $S$ is embedded, then $v \in T_p S$ if and only if $v(f) = 0$ for every smooth function $f \in C^\infty(M)$ that vanishes on $S$.
+**[[Def - Annihilator|Annihilator]] characterisation (embedded case).** If $S$ is embedded, then $v \in T_p S$ if and only if $v(f) = 0$ for every smooth function $f \in C^\infty(M)$ that vanishes on $S$.
 
 ---
 
@@ -99,7 +99,7 @@ This is the **Lie algebra** of $\mathrm{SL}(n,\mathbb{R})$, the space of trace-z
 $$T_I \mathrm{O}(n) = \ker d\Phi_I = \{X \in \mathrm{Mat}_n : X + X^T = 0\} = \mathfrak{o}(n)$$
 — the antisymmetric matrices. See [[Ex - The Orthogonal Group as a Regular Level Set]].
 
-**Example — tangent space via curves: $T_I \mathrm{O}(n)$ revisited.** A curve $A : (-\varepsilon, \varepsilon) \to \mathrm{O}(n)$ with $A(0) = I$ satisfies $A(t)^T A(t) = I$ for all $t$. Differentiating at $t = 0$: $A'(0)^T + A'(0) = 0$, so $A'(0)$ is antisymmetric. By dimension count, every antisymmetric matrix arises this way (e.g., from $A(t) = e^{tX}$ for $X$ antisymmetric). So $T_I \mathrm{O}(n) = \mathfrak{o}(n)$, matching the kernel characterisation. This curve-based derivation is the workhorse for matrix Lie groups.
+**Example — tangent space via curves: $T_I \mathrm{O}(n)$ revisited.** A curve $A : (-\varepsilon, \varepsilon) \to \mathrm{O}(n)$ with $A(0) = I$ satisfies $A(t)^T A(t) = I$ for all $t$. Differentiating at $t = 0$: $A'(0)^T + A'(0) = 0$, so $A'(0)$ is antisymmetric. By [[Def - Dimension|dimension]] count, every antisymmetric matrix arises this way (e.g., from $A(t) = e^{tX}$ for $X$ antisymmetric). So $T_I \mathrm{O}(n) = \mathfrak{o}(n)$, matching the kernel characterisation. This curve-based derivation is the workhorse for matrix Lie groups.
 
 **Example — tangent space of a graph.** For $g : V \to \mathbb{R}^k$ smooth and $\Gamma = \{(x, g(x)) : x \in V\}$ the graph, the tangent space at $(x, g(x))$ is the image of $dG_x = \begin{pmatrix} I \\ Dg(x) \end{pmatrix}$, namely $\{(v, Dg(x) v) : v \in \mathbb{R}^d\}$. This is the "graph of the linearisation" — the tangent space of a graph is the graph of the linear approximation.
 

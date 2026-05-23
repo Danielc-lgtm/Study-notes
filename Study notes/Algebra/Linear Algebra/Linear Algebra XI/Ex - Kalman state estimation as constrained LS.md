@@ -78,7 +78,7 @@ The proof has four parts. Step 1 stacks the variables into the constrained LS fr
 
 **Step 1: Set up the constrained LS problem.**
 
-Let $z = (x_1, x_2, \ldots, x_T, w_1, w_2, \ldots, w_{T-1})$, of dimension $Tn + (T-1)m$. The cost is
+Let $z = (x_1, x_2, \ldots, x_T, w_1, w_2, \ldots, w_{T-1})$, of [[Def - Dimension|dimension]] $Tn + (T-1)m$. The cost is
 $$J = \sum_{t=1}^T \|y_t - C_t x_t\|^2 + \lambda \sum_{t=1}^{T-1} \|w_t\|^2.$$
 This has LS form $J = \|\tilde{A} z - \tilde{b}\|^2$ with:
 
@@ -115,7 +115,7 @@ This is an ordinary LS problem in $x_1$ — fit the best initial condition to th
 >
 > The opposite limit $\lambda \to 0^+$ is the *low-trust-in-model* regime: the dynamics is essentially ignored, and each $x_t$ is estimated independently from the corresponding $y_t$ (when $C_t$ is invertible). This is appropriate when measurement noise is small but the model is unreliable.
 
-**Step 4: Validation for choosing $\lambda$.**
+**Step 4: [[Def - Validation (Training and Test Error)|Validation]] for choosing $\lambda$.**
 
 Randomly remove $\sim 20\%$ of the measurements (the held-out set $\mathcal{H}$). Run the Kalman filter on the remaining $80\%$ ($\mathcal{T}$) with various $\lambda$ values. For each $\lambda$, the filter produces a state estimate $\hat{x}_t(\lambda)$, from which we can *predict* the held-out measurements:
 $$\hat{y}_t = C_t \hat{x}_t(\lambda), \quad t \in \mathcal{H}.$$
@@ -157,7 +157,7 @@ The connection between the batch constrained-LS formulation and the recursive Ka
 
 The deepest unification of §XI.4 is that LQR (Boyd §17.2) and Kalman state estimation (Boyd §17.3) have the *same* sparse banded KKT structure, with control inputs $u_t$ and process noise $w_t$ playing dual roles, and output cost and measurement residual swapping objective/constraint placement. This duality is the foundation of LQG (Linear Quadratic Gaussian) control, which combines LQR + Kalman: estimate the state via Kalman, apply LQR feedback to the estimate. The *separation principle* says this is optimal — you can design the estimator and controller independently and combine them. The shared KKT framework is the mathematical basis of this principle.
 
-**Validation for $\lambda$ uses held-out measurements as proxy for unknown future data.**
+**[[Def - Validation (Training and Test Error)|Validation]] for $\lambda$ uses held-out measurements as proxy for unknown future data.**
 
 The Kalman filter's regularization parameter $\lambda$ trades measurement-trust against model-trust. There is no a priori "right" value; it depends on the actual (unknown) noise levels. The validation procedure — hold out some measurements, run filter on the rest, compare predictions to actual measurements — directly estimates the *generalization error* of the filter. This is the *same validation principle* as in [[Def - Validation (Training and Test Error)|cross-validation for regression]] and the *same trigger-reaction pattern*: when a model has a free hyperparameter, choose it by validation against held-out data. The trigger: *any* free hyperparameter; the reaction: validate.
 

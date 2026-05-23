@@ -69,7 +69,7 @@ The bare conclusion is that the signature is basis-independent. Combined with ot
 
 The proof is a beautiful dimension-counting argument. Given two diagonalisations with signature triples $(p, q, r)$ and $(p', q', r')$ — meaning two bases $(e_1, \dots, e_n)$ and $(e_1', \dots, e_n')$ in which $\rho$ has diagonal matrices with diagonal entries of the given signs — we want to show $p = p'$, $q = q'$, $r = r'$.
 
-Consider the subspaces
+Consider the [[Def - Subspace|subspaces]]
 
 $$P := \operatorname{span}(e_1, \dots, e_p) \quad \text{(positive subspace from the first basis)},$$
 
@@ -77,7 +77,7 @@ $$N' := \operatorname{span}(e_{p'+1}', \dots, e_{p'+q'}') \quad \text{(negative 
 
 In $P$, the form $\rho$ is **strictly positive** on nonzero vectors: $\rho(v, v) = \sum_{i \leq p} \lambda_i x_i^2 > 0$ for $v = \sum x_i e_i \neq 0$ (since $\lambda_i > 0$ for $i \leq p$). In $N'$, the form $\rho$ is **strictly negative** on nonzero vectors. So $P \cap N' = \{0\}$ — any nonzero vector in the intersection would be both $\rho$-positive and $\rho$-negative, a contradiction.
 
-By the standard dimension formula, $\dim(P + N') = \dim P + \dim N' = p + q'$, and this must be $\leq n$. So $p + q' \leq n$. By symmetry (swap roles of the two diagonalisations), $p' + q \leq n$. We need to extract $p = p'$ from these inequalities, which requires a slightly more careful argument involving the **null subspace** $\{v : \rho(v, \cdot) = 0\}$, but the key idea is the disjointness of positive and negative subspaces.
+By the standard dimension formula, $\dim(P + N') = \dim P + \dim N' = p + q'$, and this must be $\leq n$. So $p + q' \leq n$. By symmetry (swap roles of the two diagonalisations), $p' + q \leq n$. We need to extract $p = p'$ from these inequalities, which requires a slightly more careful argument involving the **null subspace** $\{v : \rho(v, \cdot) = 0\}$, but the key idea is the disjointness of positive and negative [[Def - Subspace|subspaces]].
 
 A cleaner formulation: the **maximum dimension of a $\rho$-positive subspace** (a subspace on which $\rho$ is positive definite) is the invariant $p$. This is basis-independent because it is a property of the form $\rho$, not of any diagonalisation. The argument that the diagonal-positive count in any diagonalisation equals this maximum is what does the work.
 
@@ -85,7 +85,7 @@ A cleaner formulation: the **maximum dimension of a $\rho$-positive subspace** (
 
 > **A $\rho$-positive subspace of dimension $p$ and a $\rho$-non-positive subspace of dimension $q + r$ can only intersect in $\{0\}$, forcing $p + q + r \leq n$ on the one hand, and combined with $p + q + r = n$ on the other, $p$ is determined as the largest such positive subspace.**
 
-The positive subspace and the negative-or-null subspace cannot share any nonzero vector, so they fit disjointly inside $V$, and their dimensions sum to at most $n$. Conversely, the diagonalisation provides explicit subspaces of these dimensions, so the inequalities are equalities. This dimension-counting is the entire content of the theorem.
+The positive subspace and the negative-or-null subspace cannot share any nonzero vector, so they fit disjointly inside $V$, and their [[Def - Dimension|dimensions]] sum to at most $n$. Conversely, the diagonalisation provides explicit subspaces of these [[Def - Dimension|dimensions]], so the inequalities are equalities. This dimension-counting is the entire content of the theorem.
 
 ---
 
@@ -202,7 +202,7 @@ Set up the two diagonal forms and identify subspaces on which $\rho$ has a fixed
 
 **Topological signature of a 4k-manifold.** For a closed oriented manifold $M^{4k}$, the cup product on the middle cohomology $H^{2k}(M; \mathbb{R})$ is a symmetric bilinear form. Its signature is the **signature of the manifold**, a topological invariant. By the Hirzebruch signature theorem, this signature equals an integral of certain characteristic classes — connecting global topology to local geometry. The nonobviousness: the bilinear form is defined on a cohomology space, with no obvious metric structure, yet Sylvester's law makes its signature well-defined.
 
-**Classification of real semisimple Lie algebras.** The **Killing form** $K(X, Y) = \operatorname{tr}(\operatorname{ad}_X \operatorname{ad}_Y)$ on a real semisimple Lie algebra is symmetric and bilinear. The Cartan-Killing classification uses the signature of the Killing form to organise the real forms of complex Lie algebras: a Lie algebra is **compact** iff its Killing form is negative definite (signature $(0, n, 0)$), **split** iff its signature contains both positive and negative entries in a maximal symmetric way. So Sylvester's law is foundational for the classification of real Lie groups and their representations.
+**Classification of real semisimple Lie algebras.** The **Killing form** $K(X, Y) = \operatorname{tr}(\operatorname{ad}_X \operatorname{ad}_Y)$ on a real semisimple Lie algebra is symmetric and bilinear. The Cartan-Killing classification uses the signature of the Killing form to organise the real forms of complex Lie algebras: a Lie algebra is **compact** iff its Killing form is negative definite (signature $(0, n, 0)$), **split** iff its signature contains both positive and negative entries in a maximal symmetric way. So Sylvester's law is foundational for the classification of real Lie [[Def - Group|groups]] and their representations.
 
 **Indefinite quadratic forms in number theory.** Over $\mathbb{Q}$, the classification of quadratic forms involves the signature (Sylvester's input) combined with $p$-adic invariants (Hasse-Minkowski theorem). This is one of the cornerstones of arithmetic geometry. The nonobviousness: Sylvester's law is the "archimedean part" of a much deeper number-theoretic classification.
 

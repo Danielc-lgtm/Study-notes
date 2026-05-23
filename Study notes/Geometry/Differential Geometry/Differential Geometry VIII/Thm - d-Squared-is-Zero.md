@@ -206,7 +206,7 @@ The other common stumbling block is the propagation from functions to higher-deg
 
 # Cross-Field Exercise Suggestions
 
-**Vector calculus on $\mathbb{R}^3$.** The identities $\operatorname{curl}\operatorname{grad} f = 0$ and $\operatorname{div}\operatorname{curl}\vec F = 0$ are both instances of $d^2 = 0$, with $f$ a $0$-form and $\vec F$ identified with a $1$-form. The traditional proofs go through tedious component computations; the form proof is one line. Use this to prove the identities in any dimension, where the form version makes immediate sense but vector calculus has no analogue.
+**Vector calculus on $\mathbb{R}^3$.** The identities $\operatorname{curl}\operatorname{grad} f = 0$ and $\operatorname{div}\operatorname{curl}\vec F = 0$ are both instances of $d^2 = 0$, with $f$ a $0$-form and $\vec F$ identified with a $1$-form. The traditional proofs go through tedious component computations; the form proof is one line. Use this to prove the identities in any [[Def - Dimension|dimension]], where the form version makes immediate sense but vector calculus has no analogue.
 
 **Electromagnetism: charge conservation.** Maxwell's equations $dF = 0$ and $d \star F = J$ imply $dJ = d(d \star F) = 0$ — charge conservation, $\partial_\mu J^\mu = 0$. The whole derivation is one line via $d^2 = 0$, while the component proof involves bookkeeping over the four Maxwell equations.
 

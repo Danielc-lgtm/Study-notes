@@ -29,7 +29,7 @@ $$\Omega^2_+ : \sigma^{12} + \sigma^{34}, \quad \sigma^{13} - \sigma^{24}, \quad
 $$\Omega^2_- : \sigma^{12} - \sigma^{34}, \quad \sigma^{13} + \sigma^{24}, \quad \sigma^{14} - \sigma^{23},$$
 where $\sigma^{ij} = \sigma^i \wedge \sigma^j$ for short. Verification: $\star\sigma^{12} = \sigma^{34}$ (complementary indices), $\star\sigma^{34} = \sigma^{12}$, so $\star(\sigma^{12} + \sigma^{34}) = \sigma^{34} + \sigma^{12}$, the same form — eigenvalue $+1$. The other combinations work similarly.
 
-**What if we generalize to higher dimensions?** In dimension $4k$ with $k$ even, the middle-dimensional $2k$-forms admit a self-dual / anti-self-dual decomposition. For $k = 2$, $n = 8$, we have $\star\star = (-1)^{4\cdot 4} = +1$ on $4$-forms. This is used in $8$-dimensional gauge theory and **octonionic instantons**, but the structure is much richer (the moduli space is no longer locally Euclidean) and beyond Frankel's exposition. The four-dimensional case is the cleanest and the one with the deepest geometric content.
+**What if we generalize to higher [[Def - Dimension|dimensions]]?** In dimension $4k$ with $k$ even, the middle-dimensional $2k$-forms admit a self-dual / anti-self-dual decomposition. For $k = 2$, $n = 8$, we have $\star\star = (-1)^{4\cdot 4} = +1$ on $4$-forms. This is used in $8$-dimensional gauge theory and **octonionic [[Def - Instanton|instantons]]**, but the structure is much richer (the moduli space is no longer locally Euclidean) and beyond Frankel's exposition. The four-dimensional case is the cleanest and the one with the deepest geometric content.
 
 **What if we drop Riemannian?** Lorentzian self-duality requires $\mathbb{C}$ coefficients (eigenvalues $\pm i$), giving the **complex Maxwell tensor** $F + i\star F$ as a complex self-dual $2$-form. The physical interpretation is the **complex electromagnetic field** $\vec E + i\vec B$ familiar from physics. Riemannian self-duality is cleaner over $\mathbb{R}$ and is the setting for instantons.
 
@@ -49,7 +49,7 @@ $$\omega = \omega_+ + \omega_-, \qquad \omega_\pm = \tfrac{1}{2}(\omega \pm \sta
 with $\omega_+ \in \Omega^2_+$ and $\omega_- \in \Omega^2_-$. The decomposition is orthogonal in the pointwise inner product on $\Omega^2$:
 $$\Omega^2(M) = \Omega^2_+(M) \oplus \Omega^2_-(M).$$
 
-Each summand is a rank-$3$ subbundle of $\Lambda^2 T^*M$. The decomposition is parallel for the induced connection on $\Lambda^2 T^*M$ from the Levi-Civita connection.
+Each summand is a rank-$3$ [[Def - Subbundle|subbundle]] of $\Lambda^2 T^*M$. The decomposition is parallel for the induced connection on $\Lambda^2 T^*M$ from the Levi-Civita connection.
 
 **Cohomology version.** The decomposition descends to harmonic $2$-forms (since $\Delta$ commutes with $\star$, so the harmonic forms decompose as $\mathcal{H}^2 = \mathcal{H}^2_+ \oplus \mathcal{H}^2_-$), and then to cohomology:
 $$H^2_{dR}(M; \mathbb{R}) = H^2_+(M; \mathbb{R}) \oplus H^2_-(M; \mathbb{R}),$$

@@ -25,17 +25,17 @@ Throughout, $T \in \mathcal{L}(V, W)$ is a linear map between finite-dimensional
 
 The important special case is $W = V$ (so the hypothesis $\dim V = \dim W$ is automatic), in which the theorem says: an operator on a finite-dimensional vector space is invertible iff it is injective iff it is surjective.
 
-> **Corollary.** For $V, W$ finite-dimensional of the same dimension and $S \in \mathcal{L}(W, V)$, $T \in \mathcal{L}(V, W)$, $ST = I_V$ implies $TS = I_W$. (Equivalently, a one-sided inverse is two-sided in equal finite dimensions.)
+> **Corollary.** For $V, W$ finite-dimensional of the same dimension and $S \in \mathcal{L}(W, V)$, $T \in \mathcal{L}(V, W)$, $ST = I_V$ implies $TS = I_W$. (Equivalently, a one-sided inverse is two-sided in equal finite [[Def - Dimension|dimensions]].)
 
 ---
 
 # Motivation
 
-This theorem captures one of the most striking rigidity phenomena in finite-dimensional mathematics: **half-information about a linear map upgrades automatically to full information**. To prove a linear map between equal-dimension finite-dimensional spaces is invertible, you need only prove half — either injectivity or surjectivity. The other is free. This is "the pigeonhole principle of linear algebra", and it has no analogue in infinite dimensions.
+This theorem captures one of the most striking rigidity phenomena in finite-dimensional mathematics: **half-information about a linear map upgrades automatically to full information**. To prove a linear map between equal-dimension finite-dimensional spaces is invertible, you need only prove half — either injectivity or surjectivity. The other is free. This is "the pigeonhole principle of linear algebra", and it has no analogue in infinite [[Def - Dimension|dimensions]].
 
 The question the theorem answers is: when can a linear map fail to be invertible *while still being injective* (or surjective)? In finite equal dimensions, the answer is "never". The reason — visible from [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] — is dimensional rigidity: $\dim V = \dim \operatorname{null} T + \dim \operatorname{range} T$ has no slack when $\dim V = \dim W$. Injectivity kills the first term, forcing the second to fill all of $W$. Surjectivity fills the second, forcing the first to be zero.
 
-The motivation runs in three layers. *First*, the theorem provides a free upgrade: a one-line application of rank–nullity converts injectivity to surjectivity and back. In practice, injectivity is much easier to check than surjectivity (one equation $Tv = 0 \Rightarrow v = 0$ vs. constructing preimages for every $w \in W$), so the theorem says "check the easy one, get the hard one free". *Second*, the theorem identifies the failure mode: in infinite dimensions, where the theorem fails, the failure has a *cause* — escape to infinity, the multiplication-by-$x^2$ phenomenon — and identifying that cause is the bridge to functional analysis. *Third*, the theorem is the conceptual cousin of facts in many other areas: a permutation of a finite set is a bijection iff injective iff surjective; a finite-group endomorphism is an isomorphism iff injective iff surjective. Finite-rank rigidity is a recurring pattern.
+The motivation runs in three layers. *First*, the theorem provides a free upgrade: a one-line application of rank–nullity converts injectivity to surjectivity and back. In practice, injectivity is much easier to check than surjectivity (one equation $Tv = 0 \Rightarrow v = 0$ vs. constructing preimages for every $w \in W$), so the theorem says "check the easy one, get the hard one free". *Second*, the theorem identifies the failure mode: in infinite dimensions, where the theorem fails, the failure has a *cause* — escape to infinity, the multiplication-by-$x^2$ phenomenon — and identifying that cause is the bridge to functional analysis. *Third*, the theorem is the conceptual cousin of facts in many other areas: a permutation of a finite set is a bijection iff injective iff surjective; a finite-[[Def - Group|group]] endomorphism is an isomorphism iff injective iff surjective. Finite-rank rigidity is a recurring pattern.
 
 A useful slogan: **in finite equal dimensions, "no information lost" and "no information missing" are equivalent**. The dimension is a fixed accounting budget; spending it all on the range and spending nothing on the null space are forced to happen together.
 
@@ -69,7 +69,7 @@ A useful slogan: **in finite equal dimensions, "no information lost" and "no inf
 
 The theorem is a one-line consequence of [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] combined with $\dim V = \dim W$. The intuition is the dimension-conservation reasoning:
 
-By rank–nullity, $\dim V = \dim \operatorname{null} T + \dim \operatorname{range} T$. Since $\dim V = \dim W$, this is $\dim W = \dim \operatorname{null} T + \dim \operatorname{range} T$. Since $\operatorname{range} T \subseteq W$, we have $\dim \operatorname{range} T \leq \dim W$, with equality iff $\operatorname{range} T = W$ (because in finite dimensions, a subspace of equal dimension equals the whole space). So:
+By rank–nullity, $\dim V = \dim \operatorname{null} T + \dim \operatorname{range} T$. Since $\dim V = \dim W$, this is $\dim W = \dim \operatorname{null} T + \dim \operatorname{range} T$. Since $\operatorname{range} T \subseteq W$, we have $\dim \operatorname{range} T \leq \dim W$, with equality iff $\operatorname{range} T = W$ (because in finite dimensions, a [[Def - Subspace|subspace]] of equal dimension equals the whole space). So:
 
 - $T$ injective ⟺ $\dim \operatorname{null} T = 0$ ⟺ $\dim \operatorname{range} T = \dim W$ ⟺ $\operatorname{range} T = W$ ⟺ $T$ surjective.
 
@@ -79,7 +79,7 @@ The chain of equivalences is *forced* by the dimension equation. There is no sla
 
 A cleaner reformulation: $T : V \to W$ between equal-dimension spaces is a map "from a budget of $n$ dimensions to another budget of $n$ dimensions". The null space subtracts from the source budget; the range subtracts from the target budget. Equality of budgets and the conservation law force these subtractions to be equal — and zero on one side iff zero on the other.
 
-The reason this fails in infinite dimensions is that infinite cardinal arithmetic does not have the rigidity of natural-number arithmetic: $\aleph_0 = 1 + \aleph_0$, so the dimension equation allows non-trivial null space without forcing missing range. Specifically, for $T = x^2 \cdot$ on $\mathcal{P}(\mathbb{R})$ (multiplication by $x^2$), the null space is $\{0\}$ but the range is the polynomials with no constant or linear term — a proper subspace of the same infinite dimension as the source. The dimension equation is honoured ($\infty = 0 + \infty$), but the rigid implication "no null space ⟹ full range" fails.
+The reason this fails in infinite dimensions is that infinite cardinal arithmetic does not have the rigidity of natural-number arithmetic: $\aleph_0 = 1 + \aleph_0$, so the dimension equation allows non-trivial null space without forcing missing range. Specifically, for $T = x^2 \cdot$ on $\mathcal{P}(\mathbb{R})$ (multiplication by $x^2$), the null space is $\{0\}$ but the range is the polynomials with no constant or linear term — a proper [[Def - Subspace|subspace]] of the same infinite dimension as the source. The dimension equation is honoured ($\infty = 0 + \infty$), but the rigid implication "no null space ⟹ full range" fails.
 
 A second perspective: the theorem can be proved without rank–nullity, by direct linear-map manipulation. If $T : V \to V$ is injective and $\dim V = n$, then $T$ sends a basis $v_1, \ldots, v_n$ to a linearly independent list $Tv_1, \ldots, Tv_n$ (because if $\sum c_k T v_k = 0$ then $T(\sum c_k v_k) = 0$ so $\sum c_k v_k = 0$ by injectivity, so $c_k = 0$ by linear independence of the basis). A list of $n$ linearly independent vectors in $V$ is a basis (by [[Linear Algebra II — §2 Finite-Dimensional Vector Spaces|the basis criterion in equal length]]). So $T$ sends a basis to a basis, hence is surjective. The two proofs are equivalent.
 
@@ -187,7 +187,7 @@ A third subtle point: the result extends to **one-sided inverses**. In equal fin
 
 **Bijection on finite sets.** For finite sets $A, B$ with $|A| = |B|$, a function $f : A \to B$ is bijective iff injective iff surjective. This is the **pigeonhole principle**, and it is the set-theoretic skeleton of the theorem. The proof — that for $|A| = |B|$ finite, injectivity is equivalent to surjectivity — is the combinatorial cousin of the linear-algebra proof using rank–nullity.
 
-**Permutation criterion for endomorphisms of finite groups.** An endomorphism of a finite group is an automorphism iff injective iff surjective. The proof in [[Group Theory I — §1.1–1.2]] is by the same counting argument: a one-to-one map from a finite set to itself is a bijection. The translation to linear algebra is via the dimension count from rank–nullity.
+**Permutation criterion for endomorphisms of finite [[Def - Group|groups]].** An endomorphism of a finite group is an automorphism iff injective iff surjective. The proof in [[Group Theory I — §1.1–1.2]] is by the same counting argument: a one-to-one map from a finite set to itself is a bijection. The translation to linear algebra is via the dimension count from rank–nullity.
 
 ---
 

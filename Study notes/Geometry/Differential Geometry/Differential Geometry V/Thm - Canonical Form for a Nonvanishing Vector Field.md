@@ -25,11 +25,11 @@ $M$ is a smooth $n$-manifold, $X \in \mathfrak{X}(M)$ a smooth [[Def - Smooth Ve
 
 # Motivation
 
-The Straightening Theorem is the deepest **rigidity** result in the chapter, and it makes the chapter feel surprisingly small. The lesson: *all nonvanishing smooth vector fields look the same locally*. The infinite variety of vector fields you can write down — $r \partial_r$, $\sin(x)\partial_x$, the Hamiltonian field of some complicated function — all are, up to a diffeomorphism, the constant horizontal flow $\partial/\partial s^1$ near any point where they do not vanish. There is no local invariant.
+The Straightening Theorem is the deepest **rigidity** result in the chapter, and it makes the chapter feel surprisingly small. The lesson: *all nonvanishing smooth vector fields look the same locally*. The infinite variety of vector fields you can write down — $r \partial_r$, $\sin(x)\partial_x$, the Hamiltonian field of some complicated function — all are, up to a [[Def - Diffeomorphism|diffeomorphism]], the constant horizontal flow $\partial/\partial s^1$ near any point where they do not vanish. There is no local invariant.
 
 This explains why the chapter has the flavour it does. Every question about a single nonvanishing vector field has the *same answer*, because you can always straighten the field to $\partial/\partial s^1$ and reduce to an elementary computation in $\mathbb{R}^n$. The substance of differential geometry is therefore concentrated entirely in (i) what happens at *singular* points of vector fields, where straightening fails — phase portraits, hyperbolic equilibria, the entire qualitative theory of dynamical systems — and (ii) the interaction between *multiple* vector fields, where commutators measure obstructions to joint straightening.
 
-Why does this work? Geometrically: a regular vector field defines, in a small enough neighbourhood, a local "fibration by integral curves" — the manifold near $p$ is foliated by the orbits of $X$. Pick a codimension-1 transversal $S$ through $p$; parametrize $S$ by $(s^2, \dots, s^n)$; let $s^1$ be the time spent flowing from $S$ to reach the current point. Then $(s^1, s^2, \dots, s^n)$ are coordinates, and $X = \partial/\partial s^1$ because flowing in the $s^1$ direction is exactly flowing by $X$.
+Why does this work? Geometrically: a regular vector field defines, in a small enough neighbourhood, a local "[[Def - Fibration|fibration]] by integral curves" — the manifold near $p$ is foliated by the orbits of $X$. Pick a codimension-1 transversal $S$ through $p$; parametrize $S$ by $(s^2, \dots, s^n)$; let $s^1$ be the time spent flowing from $S$ to reach the current point. Then $(s^1, s^2, \dots, s^n)$ are coordinates, and $X = \partial/\partial s^1$ because flowing in the $s^1$ direction is exactly flowing by $X$.
 
 The construction is the **flowout** from a transversal: every nonvanishing vector field generates a flow, and the flow projects the neighbourhood of $p$ onto a product $(-\delta, \delta) \times S$ where $S$ is any transverse hypersurface. This is the Flowout Theorem (Lee Theorem 9.20), of which the Straightening Theorem is a corollary.
 
@@ -88,7 +88,7 @@ Now declare $(s^1, s^2, \dots, s^n) := \Phi^{-1}$, so $s^1$ is the "flow time fr
 
 The "hypersurface $S$" version of the theorem (with $s^1 = 0$ defining a specified hypersurface) follows by choosing the hypersurface $S$ to be the given one — the construction works for any $S$ transverse to $X$ at $p$.
 
-The whole proof is the **transverse flow construction**, made possible by the Fundamental Theorem on Flows (which gives the flow) and the inverse function theorem (which certifies $\Phi$ is a local diffeomorphism). No additional machinery is needed.
+The whole proof is the **transverse flow construction**, made possible by the [[Thm - Fundamental Theorem on Flows|Fundamental Theorem on Flows]] (which gives the flow) and the inverse function theorem (which certifies $\Phi$ is a local diffeomorphism). No additional machinery is needed.
 
 ---
 
@@ -196,11 +196,11 @@ At a regular point $p$, $X$ is transverse to some hypersurface $S$ through $p$. 
 
 # Cross-Field Exercise Suggestions
 
-**Local form of geodesics on a Riemannian manifold.** The geodesic spray on $TM$ is a vector field on the tangent bundle; near any point $(p, v) \in TM$ with $v \neq 0$, the geodesic spray is straightening-equivalent to $\partial/\partial s^1$. The geodesic-completeness question becomes whether the flow of the spray is global, which the Straightening Theorem reduces to questions about behaviour as one approaches the boundary of $TM$.
+**Local form of [[Def - Geodesic|geodesics]] on a Riemannian manifold.** The geodesic spray on $TM$ is a vector field on the tangent bundle; near any point $(p, v) \in TM$ with $v \neq 0$, the geodesic spray is straightening-equivalent to $\partial/\partial s^1$. The geodesic-completeness question becomes whether the flow of the spray is global, which the Straightening Theorem reduces to questions about behaviour as one approaches the boundary of $TM$.
 
 **Reduction of an autonomous ODE to a quadrature.** If $X$ is a nonvanishing autonomous vector field on $\mathbb{R}^n$, the Straightening Theorem locally reduces the ODE $\dot x = X(x)$ to the trivial ODE $\dot s^1 = 1$, $\dot s^i = 0$. The "quadrature" — finding the integral curve by integration — is exactly the inverse of the straightening map. In dynamical systems this is the local rectifiability theorem.
 
-**The Frobenius theorem as a multi-field straightening.** The [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|Frobenius theorem]] is the multi-field generalization: a smooth involutive subbundle $D \subseteq TM$ of rank $k$ is locally tangent to coordinate slices $\{s^{k+1} = c^{k+1}, \dots, s^n = c^n\}$ in suitable coordinates. The rank-1 case is the Straightening Theorem. The proof in the general case uses the bracket-closure to commute the flows of a chosen basis of $D$ until they jointly straighten.
+**The Frobenius theorem as a multi-field straightening.** The [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|Frobenius theorem]] is the multi-field generalization: a smooth involutive [[Def - Subbundle|subbundle]] $D \subseteq TM$ of rank $k$ is locally tangent to coordinate slices $\{s^{k+1} = c^{k+1}, \dots, s^n = c^n\}$ in suitable coordinates. The rank-1 case is the Straightening Theorem. The proof in the general case uses the bracket-closure to commute the flows of a chosen basis of $D$ until they jointly straighten.
 
 **Existence of action-angle coordinates in integrable systems.** A completely integrable Hamiltonian system has $n$ commuting Hamiltonian flows on a $2n$-dimensional symplectic manifold. By the multi-field straightening theorem (Lee 9.46), in a neighborhood of a regular orbit there are coordinates in which each of these flows becomes $\partial/\partial s^i$ — these are the **angle coordinates**. The action coordinates are the conserved Hamiltonians, complementing the angles. The Liouville–Arnold theorem upgrades this local statement to a global one.
 

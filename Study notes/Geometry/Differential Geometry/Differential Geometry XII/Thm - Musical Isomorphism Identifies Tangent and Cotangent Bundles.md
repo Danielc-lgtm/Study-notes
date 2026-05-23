@@ -59,11 +59,11 @@ The theorem also gives the structural reason why the inverse metric $g^{ij}$ is 
 
 # Why Is It True
 
-**Mechanism summary:** **non-degeneracy of $g$ at every point makes the map $v \mapsto g(v, \cdot)$ injective, and dimension count makes it surjective, so it is a fibrewise isomorphism — and smoothness of $g$ makes the assembled map a smooth bundle isomorphism.**
+**Mechanism summary:** **non-degeneracy of $g$ at every point makes the map $v \mapsto g(v, \cdot)$ injective, and [[Def - Dimension|dimension]] count makes it surjective, so it is a fibrewise isomorphism — and smoothness of $g$ makes the assembled map a smooth bundle isomorphism.**
 
 The pointwise statement is pure linear algebra: a non-degenerate bilinear form on a finite-dimensional vector space gives a canonical isomorphism between the space and its dual. The map $v \mapsto g(v, \cdot)$ sends $v \in V$ to the linear functional $w \mapsto g(v, w)$ in $V^*$. Injectivity: if $g(v, \cdot) = 0$ as a linear functional, then $g(v, w) = 0$ for all $w$, so by non-degeneracy $v = 0$. Surjectivity: from injectivity plus $\dim V = \dim V^*$ (since $V$ is finite-dimensional). So at each point we have an isomorphism $T_pM \to T_p^*M$.
 
-The smoothness — that the family of these isomorphisms is smooth in $p$ — comes from the smoothness of $g$. In coordinates, the matrix of $\flat_p$ is $g_{ij}(p)$, a smooth function of $p$. Its inverse $g^{ij}(p)$ exists pointwise (non-degeneracy means $\det(g_{ij}(p)) \neq 0$ for every $p$, hence $\det$ is a smooth function nowhere zero, and by Cramer's rule the inverse matrix has smooth entries). So $\flat$ and $\sharp$ are smooth bundle maps, and being inverses gives the bundle isomorphism.
+The smoothness — that the family of these [[Def - Isomorphism|isomorphisms]] is smooth in $p$ — comes from the smoothness of $g$. In coordinates, the matrix of $\flat_p$ is $g_{ij}(p)$, a smooth function of $p$. Its inverse $g^{ij}(p)$ exists pointwise (non-degeneracy means $\det(g_{ij}(p)) \neq 0$ for every $p$, hence $\det$ is a smooth function nowhere zero, and by Cramer's rule the inverse matrix has smooth entries). So $\flat$ and $\sharp$ are smooth bundle maps, and being inverses gives the bundle isomorphism.
 
 Alternatively, via the tensor characterisation lemma: the map $X \mapsto g(X, \cdot)$ on vector fields is $C^\infty(M)$-linear ($g(fX, Y) = f g(X, Y)$ for $f \in C^\infty(M)$). The tensor characterisation lemma converts $C^\infty(M)$-linearity into a bundle map. The same map is also $C^\infty(M)$-linear in the second argument, so it is a bundle map between $TM$ and $T^*M$.
 
@@ -81,7 +81,7 @@ The conceptual difficulty is **distinguishing the canonical isomorphism $V \cong
 
 **This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
 
-**High-level strategy:** Pointwise, the non-degeneracy of $g_p$ makes $v \mapsto g_p(v, \cdot)$ an isomorphism by injectivity and dimension count. Smoothness of $g$ promotes this to a smooth bundle isomorphism. The matrix of $\flat$ is $g_{ij}$; its inverse is $g^{ij}$.
+**High-level strategy:** Pointwise, the non-degeneracy of $g_p$ makes $v \mapsto g_p(v, \cdot)$ an isomorphism by injectivity and [[Def - Dimension|dimension]] count. Smoothness of $g$ promotes this to a smooth bundle isomorphism. The matrix of $\flat$ is $g_{ij}$; its inverse is $g^{ij}$.
 
 **Subgoal decomposition:**
 
@@ -159,7 +159,7 @@ The conceptual difficulty is **distinguishing the canonical isomorphism $V \cong
 > >
 > > Smoothness of $g^{ij}(x)$ in $x$ follows from non-degeneracy: $\det g_{ij}(x) \neq 0$ for every $x$, and since this is a continuous function of $x$ that never vanishes, it is bounded away from zero on compact sets. The entries of the inverse matrix are rational functions of the entries of the original matrix (Cramer's rule), with denominator $\det g$, which is smooth and nowhere zero. So $g^{ij}(x)$ is smooth in $x$.
 > >
-> > Hence $\sharp$ is a smooth bundle map with smooth coordinate matrix $g^{ij}(x)$, and it is the inverse of $\flat$ fibrewise. Together $\flat$ and $\sharp$ form mutually inverse bundle isomorphisms.
+> > Hence $\sharp$ is a smooth bundle map with smooth coordinate matrix $g^{ij}(x)$, and it is the inverse of $\flat$ fibrewise. Together $\flat$ and $\sharp$ form mutually inverse bundle [[Def - Isomorphism|isomorphisms]].
 
 ---
 
@@ -174,7 +174,7 @@ The conceptual difficulty is **distinguishing the canonical isomorphism $V \cong
 >
 > **Step 2 — Smoothness.** By Lemma 3, $\flat : TM \to T^*M$ is a smooth bundle homomorphism (with coordinate matrix $g_{ij}(x)$). By Lemma 4, $\sharp : T^*M \to TM$ is a smooth bundle homomorphism (with coordinate matrix $g^{ij}(x)$).
 >
-> **Step 3 — Mutual inverses.** Pointwise $\sharp_p \circ \flat_p = \mathrm{id}_{T_pM}$ and $\flat_p \circ \sharp_p = \mathrm{id}_{T_p^*M}$. So $\flat$ and $\sharp$ are mutually inverse smooth bundle homomorphisms, hence bundle isomorphisms.
+> **Step 3 — Mutual inverses.** Pointwise $\sharp_p \circ \flat_p = \mathrm{id}_{T_pM}$ and $\flat_p \circ \sharp_p = \mathrm{id}_{T_p^*M}$. So $\flat$ and $\sharp$ are mutually inverse smooth bundle [[Def - Homomorphism|homomorphisms]], hence bundle isomorphisms.
 >
 > Therefore $TM$ and $T^*M$ are smoothly isomorphic as vector bundles via the metric-induced musical isomorphisms. $\blacksquare$
 

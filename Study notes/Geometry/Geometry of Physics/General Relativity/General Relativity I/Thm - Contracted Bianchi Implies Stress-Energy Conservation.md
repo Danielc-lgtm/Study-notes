@@ -73,7 +73,7 @@ The two contributions exactly cancel — that is the entire content of the ident
 
 The result has the flavour of "two corrections that exactly cancel". This is reminiscent of the way the displacement current in Maxwell's equations was *required* by charge conservation — without $\partial_t E$ in Ampère's law, $\nabla \cdot \vec J \neq -\partial_t \rho$ and charge wouldn't be conserved. Einstein's correction to his October 1915 guess is exactly the same flavor: the $-\frac{1}{2} g_{\mu\nu} R$ term was *required* to ensure conservation, structurally analogous to Maxwell's displacement current.
 
-A deeper way to see why this must work: the Hilbert action $S_\text{grav} = \frac{1}{16\pi G}\int R\sqrt{-g}\, d^4x$ is invariant under diffeomorphisms (infinitesimal coordinate transformations). By **Noether's second theorem**, this gauge invariance forces an identical relation among the Euler-Lagrange equations — and that identical relation is exactly $\nabla^\mu G_{\mu\nu} = 0$. So the contracted Bianchi identity is the Noether identity associated with diffeomorphism invariance, just as charge conservation in electromagnetism is the Noether identity associated with $U(1)$ gauge invariance.
+A deeper way to see why this must work: the Hilbert action $S_\text{grav} = \frac{1}{16\pi G}\int R\sqrt{-g}\, d^4x$ is invariant under [[Def - Diffeomorphism|diffeomorphisms]] (infinitesimal coordinate transformations). By **Noether's second theorem**, this gauge invariance forces an identical relation among the Euler-Lagrange equations — and that identical relation is exactly $\nabla^\mu G_{\mu\nu} = 0$. So the contracted Bianchi identity is the Noether identity associated with diffeomorphism invariance, just as charge conservation in electromagnetism is the Noether identity associated with $U(1)$ gauge invariance.
 
 ---
 
@@ -191,7 +191,7 @@ The genuine difficulty is the sign-tracking in the second Bianchi identity and i
 
 **Application 2: Yang-Mills theory.** The covariant divergence of the Yang-Mills field strength satisfies $D^\nu D^\mu F_{\mu\nu} = D^\nu J_\nu$ where $J^\nu$ is the matter current. The structural reason is the gauge covariance: $D^\mu F_{\mu\nu}$ is gauge-covariant, but $D^\nu(D^\mu F_{\mu\nu}) = 0$ identically by antisymmetry of $F$ and commutativity of partial derivatives, forcing covariant conservation of $J^\nu$. *This is the exact structural analogue of Einstein → contracted Bianchi → matter conservation.*
 
-**Application 3: Hodge theory / harmonic forms.** On a closed Riemannian manifold, the Hodge Laplacian $\Delta = d\delta + \delta d$ is identically self-adjoint and satisfies $d\Delta = \Delta d$, $\delta \Delta = \Delta \delta$ — identities that yield conservation of certain harmonic forms under variations. The pattern (gauge/symmetry implies identity implies conservation) is the same as the Bianchi-conservation story for the Einstein tensor.
+**Application 3: Hodge theory / harmonic forms.** On a closed Riemannian manifold, the [[Def - Hodge Laplacian|Hodge Laplacian]] $\Delta = d\delta + \delta d$ is identically self-adjoint and satisfies $d\Delta = \Delta d$, $\delta \Delta = \Delta \delta$ — identities that yield conservation of certain harmonic forms under variations. The pattern (gauge/symmetry implies identity implies conservation) is the same as the Bianchi-conservation story for the Einstein tensor.
 
 ---
 

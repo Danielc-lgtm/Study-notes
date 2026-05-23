@@ -12,11 +12,11 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Prove that no group of order $56$ is [[Def - Simple Group|simple]].
+Prove that no [[Def - Group|group]] of order $56$ is [[Def - Simple Group|simple]].
 
 **Recall:**
 
-The objects in play are Sylow subgroups, simplicity, the Sylow count, and the element-counting consequence of prime-order Sylow subgroups.
+The objects in play are Sylow [[Def - Subgroup|subgroups]], simplicity, the Sylow count, and the element-counting consequence of prime-order Sylow [[Def - Subgroup|subgroups]].
 
 ![[Def - Sylow p-Subgroup#The Definition]]
 
@@ -40,7 +40,7 @@ The element-counting step uses the [[Ex - Counting elements of prime order with 
 
 **Theorem routing.** The route runs by cases on $n_7$. By [[Thm - Sylow's Theorems|Sylow III]], $n_7 \equiv 1 \pmod 7$ and $n_7 \mid 8$, which leaves only $n_7 \in \{1, 8\}$. If $n_7 = 1$, the unique Sylow $7$-subgroup is [[Thm - A Unique Sylow Subgroup is Normal|normal]] and we are done immediately. If $n_7 = 8$, the [[Ex - Counting elements of prime order with Sylow subgroups|counting fact]] gives $8 \cdot 6 = 48$ elements of order $7$. That leaves $56 - 48 = 8$ elements of $G$ not of order $7$. A Sylow $2$-subgroup has order $8$ and contains *no* elements of order $7$ (their orders divide $8$), so it must consist entirely of those $8$ leftover elements — there is room for *only one* Sylow $2$-subgroup, forcing $n_2 = 1$, and the unique Sylow $2$-subgroup is normal.
 
-**Key decision point.** The non-obvious move is the *leftover-room* count rather than an *overflow* count. With only one first-power prime, $7$, there is no second population of elements to add and overflow $|G|$ with — the order-$30$ trick is unavailable. Instead one counts a single population, the $48$ elements of order $7$, and reasons about the *complement*: the $8$ remaining elements. The decisive observation is that a Sylow $2$-subgroup, having order $8$ and being a $2$-group, contains *no element of order $7$*, so it is forced to live entirely inside the $8$-element complement — and an $8$-element subgroup inside an $8$-element set is *unique*. Recognising that "complement has exactly $|P|$ elements" forces $n_2 = 1$ is the heart of the exercise.
+**Key decision point.** The non-obvious move is the *leftover-room* count rather than an *overflow* count. With only one first-power prime, $7$, there is no second population of elements to add and overflow $|G|$ with — the order-$30$ trick is unavailable. Instead one counts a single population, the $48$ elements of order $7$, and reasons about the *complement*: the $8$ remaining elements. The decisive observation is that a Sylow $2$-subgroup, having order $8$ and being a $2$-[[Def - Group|group]], contains *no element of order $7$*, so it is forced to live entirely inside the $8$-element complement — and an $8$-element subgroup inside an $8$-element set is *unique*. Recognising that "complement has exactly $|P|$ elements" forces $n_2 = 1$ is the heart of the exercise.
 
 ---
 

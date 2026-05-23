@@ -20,14 +20,14 @@ is the set of cosets with a representative in $J$. The double quotient $(R/I)/(J
 
 # Statement
 
-> **Third Isomorphism Theorem for Rings.** Let $R$ be a ring and let $I \subseteq J$ be ideals of $R$. Then $J/I$ is an ideal of $R/I$, and there is a ring isomorphism
+> **[[Thm - Third Isomorphism Theorem|Third Isomorphism Theorem]] for Rings.** Let $R$ be a ring and let $I \subseteq J$ be [[Def - Ideal|ideals]] of $R$. Then $J/I$ is an ideal of $R/I$, and there is a ring isomorphism
 > $$\frac{R/I}{J/I} \;\cong\; \frac{R}{J}.$$
 
 ---
 
 # Motivation
 
-You have learned to build quotient rings, and nothing stops you from building one *out of another quotient ring*. Start with $R$, divide by an ideal $I$ to get $R/I$, then notice that $R/I$ has ideals of its own, and divide again. The result is a double quotient $(R/I)/(J/I)$ — a quotient of a quotient. The third isomorphism theorem answers the obvious worry: have you actually built something new, something hard to understand, by iterating the construction? The answer is reassuringly no. Dividing by $I$ and then dividing the result by $J/I$ gives nothing more than dividing $R$ by $J$ in one step. The two ideals "compose": quotienting is *transitive*.
+You have learned to build quotient [[Def - Ring|rings]], and nothing stops you from building one *out of another quotient ring*. Start with $R$, divide by an ideal $I$ to get $R/I$, then notice that $R/I$ has ideals of its own, and divide again. The result is a double quotient $(R/I)/(J/I)$ — a quotient of a quotient. The third isomorphism theorem answers the obvious worry: have you actually built something new, something hard to understand, by iterating the construction? The answer is reassuringly no. Dividing by $I$ and then dividing the result by $J/I$ gives nothing more than dividing $R$ by $J$ in one step. The two ideals "compose": quotienting is *transitive*.
 
 This is the **cancellation law for ring quotients**, and the slogan is exactly that — the $I$'s cancel:
 $$\frac{R/I}{J/I} \;\cong\; \frac{R}{J}.$$
@@ -71,7 +71,7 @@ that throws away the extra precision. The entire third isomorphism theorem is th
 
 First, is $\psi$ even well-defined? Yes, and this is exactly where $I \subseteq J$ earns its keep. If $r + I = r' + I$, then $r - r' \in I$; since $I \subseteq J$, also $r - r' \in J$, so $r + J = r' + J$. The coarsening map is well-defined *because* the finer ideal sits inside the coarser one — drop the inclusion hypothesis and $\psi$ is not a function at all. It is plainly a ring homomorphism, since both quotient multiplications are computed on the same representatives in $R$.
 
-Now, what does $\psi$ collapse? An element $r + I$ of $R/I$ is sent to the zero of $R/J$ exactly when $r + J = J$, i.e. $r \in J$. So the kernel of $\psi$ is the set of cosets $r + I$ with $r \in J$ — which is precisely $J/I$. This is the whole reason $J/I$ is an ideal of $R/I$: it is a *kernel*, and kernels are ideals. No axiom-checking was needed.
+Now, what does $\psi$ collapse? An element $r + I$ of $R/I$ is sent to the zero of $R/J$ exactly when $r + J = J$, i.e. $r \in J$. So the kernel of $\psi$ is the set of [[Def - Coset|cosets]] $r + I$ with $r \in J$ — which is precisely $J/I$. This is the whole reason $J/I$ is an ideal of $R/I$: it is a *kernel*, and kernels are ideals. No axiom-checking was needed.
 
 And the image? The map $\psi$ sends $r + I \mapsto r + J$, and as $r$ ranges over all of $R$ this hits every coset of $J$. So $\psi$ is surjective: $\operatorname{im}\psi = R/J$.
 
@@ -126,7 +126,7 @@ Do not analyse the double quotient directly. Write down the coarsening map $R/I 
 > **Why needed:** This is the one place the hypothesis $I \subseteq J$ is used; without it $\psi$ is not a function and the theorem is false.
 >
 > > [!note]- Full proof
-> > Suppose $r + I = r' + I$ for $r, r' \in R$. By the coset equality criterion (for the additive group), $r - r' \in I$. Since $I \subseteq J$ by hypothesis, $r - r' \in J$ as well. Therefore $r + J = r' + J$, that is, $\psi(r + I) = \psi(r' + I)$. So the value of $\psi$ at a coset does not depend on which representative is used, and $\psi$ is a genuine function $R/I \to R/J$. (Note where the inclusion was used: it converted "differ by an element of $I$" into "differ by an element of $J$". If $I \not\subseteq J$, two equal $I$-cosets could map to distinct $J$-cosets, and $\psi$ would fail to be a function.)
+> > Suppose $r + I = r' + I$ for $r, r' \in R$. By the coset equality criterion (for the additive [[Def - Group|group]]), $r - r' \in I$. Since $I \subseteq J$ by hypothesis, $r - r' \in J$ as well. Therefore $r + J = r' + J$, that is, $\psi(r + I) = \psi(r' + I)$. So the value of $\psi$ at a coset does not depend on which representative is used, and $\psi$ is a genuine function $R/I \to R/J$. (Note where the inclusion was used: it converted "differ by an element of $I$" into "differ by an element of $J$". If $I \not\subseteq J$, two equal $I$-cosets could map to distinct $J$-cosets, and $\psi$ would fail to be a function.)
 
 > [!note]- Lemma 2: The coarsening map is a ring homomorphism
 > **Statement:** The well-defined map $\psi : R/I \to R/J$, $\psi(r + I) = r + J$, is a ring homomorphism.

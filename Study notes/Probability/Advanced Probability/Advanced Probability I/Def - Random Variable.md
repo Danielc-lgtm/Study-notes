@@ -60,7 +60,7 @@ A random variable is a [[Def - Measurable Function|measurable function]]; its la
 
 An **indicator** $\mathbf{1}_A$ ($A\in\mathcal{F}$) is a random variable, the simplest one; its law is $\mathbb{P}(A)\delta_1+\mathbb{P}(A^c)\delta_0$ (a Bernoulli law). A **discrete** random variable takes countably many values, law $\sum_k p_k\delta_{x_k}$. A variable with a [[Def - Absolute Continuity and Density|density]] $f$ has law $\mu_X=f\lambda$ — the continuous distributions.
 
-A continuous function of a random variable, or a sum/product of random variables, is a random variable ([[Thm - Operations Preserve Measurability|operations preserve measurability]]). The law of a sum of *independent* variables is the convolution of the laws.
+A continuous function of a random variable, or a sum/product of random variables, is a random variable ([[Thm - Operations Preserve Measurability|operations preserve measurability]]). The law of a sum of *independent* variables is the [[Def - Convolution|convolution]] of the laws.
 
 Calibration: (i) Is $X\equiv c$ a random variable? Yes — constant, law $\delta_c$. (ii) Does $X\stackrel{d}{=}Y$ imply $X=Y$? No — equal *laws*, not equal as functions; they may live on different spaces. (iii) Is $\sigma(X)$ all of $\mathcal{F}$? Only if $X$ is "as informative as $\Omega$"; generically $\sigma(X)\subsetneq\mathcal{F}$.
 

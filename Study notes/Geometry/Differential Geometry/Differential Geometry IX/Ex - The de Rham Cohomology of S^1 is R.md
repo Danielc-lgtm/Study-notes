@@ -28,7 +28,7 @@ A closed form has $d\omega = 0$; an exact form has $\omega = d\eta$ for some $\e
 
 ![[Thm - Stokes' Theorem on Manifolds#Statement]]
 
-For dimension reasons, the only non-trivial de Rham cohomology of $S^1$ is in degrees $0$ and $1$: $H^0_{dR}(S^1) = \mathbb{R}$ (locally constant functions, of which there is only one connected-component-worth, $\mathbb{R}$), and we want to show $H^1_{dR}(S^1) = \mathbb{R}$.
+For [[Def - Dimension|dimension]] reasons, the only non-trivial de Rham cohomology of $S^1$ is in degrees $0$ and $1$: $H^0_{dR}(S^1) = \mathbb{R}$ (locally constant functions, of which there is only one connected-component-worth, $\mathbb{R}$), and we want to show $H^1_{dR}(S^1) = \mathbb{R}$.
 
 ---
 
@@ -79,7 +79,7 @@ The proof has three steps. **Step 1** verifies $d\theta$ is closed but not exact
 *Closedness:* $d\theta$ is a 1-form on the 1-manifold $S^1$, so $d(d\theta) \in \Omega^2(S^1) = 0$. Closedness is automatic for top-degree 1-forms on a 1-manifold. Alternatively, $d^2 = 0$ ensures any form of the type $d(\text{something})$ is closed — but $d\theta$ is not globally of this type, as we now show.
 
 > [!note]- Derivation
-> On a 1-manifold, $\Omega^2 = 0$, so every 1-form has $d\omega = 0$ automatically. $d\theta$ is closed by this dimension argument. The substantive content is non-exactness.
+> On a 1-manifold, $\Omega^2 = 0$, so every 1-form has $d\omega = 0$ automatically. $d\theta$ is closed by this [[Def - Dimension|dimension]] argument. The substantive content is non-exactness.
 
 *Non-exactness:* Compute $\int_{S^1}d\theta$ directly: parametrize $S^1$ by $\theta \in [0, 2\pi)$ (one chart that misses the basepoint, but the basepoint is measure-zero), so
 $$\int_{S^1}d\theta = \int_0^{2\pi}d\theta = 2\pi \neq 0.$$

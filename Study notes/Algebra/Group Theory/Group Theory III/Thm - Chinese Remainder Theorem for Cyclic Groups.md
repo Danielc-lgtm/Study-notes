@@ -18,10 +18,10 @@ $C_n$ denotes the cyclic group of order $n$ — concretely the integers $\{0, 1,
 
 # Statement
 
-> **Chinese Remainder Theorem for Cyclic Groups.** Let $m$ and $n$ be positive integers with $\gcd(m, n) = 1$. Then
+> **Chinese Remainder Theorem for Cyclic [[Def - Group|Groups]].** Let $m$ and $n$ be positive integers with $\gcd(m, n) = 1$. Then
 > $$C_{mn} \;\cong\; C_m \times C_n.$$
 
-In words: when the orders are coprime, the [[Def - Direct Product|direct product]] of two cyclic groups is again cyclic, of order the product. Iterating, if $n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}$ is the prime factorisation of $n$, then
+In words: when the orders are coprime, the [[Def - Direct Product|direct product]] of two cyclic [[Def - Group|groups]] is again cyclic, of order the product. Iterating, if $n = p_1^{a_1} p_2^{a_2} \cdots p_k^{a_k}$ is the prime factorisation of $n$, then
 
 $$C_n \;\cong\; C_{p_1^{a_1}} \times C_{p_2^{a_2}} \times \cdots \times C_{p_k^{a_k}},$$
 
@@ -192,7 +192,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 
 The aim is to find settings where the theorem applies but is not advertised — to battle-test recognition of the *sources*.
 
-**Number theory: multiplicativity of Euler's totient function.** Euler's function $\varphi(n)$ counts the integers in $\{1, \dots, n\}$ coprime to $n$; equivalently, $\varphi(n)$ is the order of the unit group $(\mathbb{Z}/n\mathbb{Z})^\times$. The theorem, applied to the *additive* group, gives $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$ as rings when $\gcd(m,n) = 1$, and a ring isomorphism carries units to units, so $(\mathbb{Z}/mn\mathbb{Z})^\times \cong (\mathbb{Z}/m\mathbb{Z})^\times \times (\mathbb{Z}/n\mathbb{Z})^\times$. Counting elements gives $\varphi(mn) = \varphi(m)\varphi(n)$ for coprime $m, n$ — the multiplicativity of $\varphi$, normally proved by a hands-on counting argument, is the order count of this isomorphism. The application is non-obvious because $\varphi$ is presented as a counting function with no group attached; the property $B$ "$\varphi(n) = |(\mathbb{Z}/n\mathbb{Z})^\times|$" is the bridge.
+**Number theory: multiplicativity of Euler's totient function.** Euler's function $\varphi(n)$ counts the integers in $\{1, \dots, n\}$ coprime to $n$; equivalently, $\varphi(n)$ is the order of the unit group $(\mathbb{Z}/n\mathbb{Z})^\times$. The theorem, applied to the *additive* group, gives $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$ as [[Def - Ring|rings]] when $\gcd(m,n) = 1$, and a [[Def - Ring|ring]] isomorphism carries units to units, so $(\mathbb{Z}/mn\mathbb{Z})^\times \cong (\mathbb{Z}/m\mathbb{Z})^\times \times (\mathbb{Z}/n\mathbb{Z})^\times$. Counting elements gives $\varphi(mn) = \varphi(m)\varphi(n)$ for coprime $m, n$ — the multiplicativity of $\varphi$, normally proved by a hands-on counting argument, is the order count of this isomorphism. The application is non-obvious because $\varphi$ is presented as a counting function with no group attached; the property $B$ "$\varphi(n) = |(\mathbb{Z}/n\mathbb{Z})^\times|$" is the bridge.
 
 **Number theory: solving simultaneous congruences.** The classical Chinese remainder theorem says the system $x \equiv a \pmod m$, $x \equiv b \pmod n$ with $\gcd(m,n) = 1$ has a unique solution modulo $mn$. This *is* the theorem: the reduction map $\mathbb{Z}/mn\mathbb{Z} \to \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z}$, $x \mapsto (x \bmod m,\ x \bmod n)$, is precisely the isomorphism, and "the system has a unique solution" is "the map is a bijection". The non-obvious recognition is that a question about remainders is a question about an isomorphism of cyclic groups — exactly the reframing the lecture notes recommend.
 

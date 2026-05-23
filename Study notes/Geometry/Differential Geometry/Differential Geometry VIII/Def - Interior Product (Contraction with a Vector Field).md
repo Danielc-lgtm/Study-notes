@@ -125,7 +125,7 @@ matching the direct computation above.
 
 **Corollary — interior product commutes with itself for a single vector field, antisymmetrically with different vector fields.** From property 5, $\iota_X\iota_X = 0$ (also from property 4) and $\iota_X\iota_Y = -\iota_Y\iota_X$. This is the algebraic statement that "fermions anticommute."
 
-**Corollary — degree-counting.** On an $n$-manifold, $\iota_X : \Omega^n(M) \to \Omega^{n-1}(M)$ is a $C^\infty(M)$-linear map between modules of ranks $\binom{n}{n} = 1$ and $\binom{n}{n-1} = n$. For a fixed nonzero top-form $\Omega$, the map $X \mapsto \iota_X\Omega$ is a $C^\infty(M)$-linear isomorphism $\mathfrak{X}(M) \to \Omega^{n-1}(M)$ (both have rank $n$).
+**Corollary — degree-counting.** On an $n$-manifold, $\iota_X : \Omega^n(M) \to \Omega^{n-1}(M)$ is a $C^\infty(M)$-linear map between [[Def - Module|modules]] of ranks $\binom{n}{n} = 1$ and $\binom{n}{n-1} = n$. For a fixed nonzero top-form $\Omega$, the map $X \mapsto \iota_X\Omega$ is a $C^\infty(M)$-linear isomorphism $\mathfrak{X}(M) \to \Omega^{n-1}(M)$ (both have rank $n$).
 
 **Calibration check.** Compute $\iota_{\partial_x}(x\,dy \wedge dz)$ on $\mathbb{R}^3$ (answer: $0$, since $dy(\partial_x) = dz(\partial_x) = 0$); compute $\iota_{\partial_z}(dx \wedge dy \wedge dz)$ on $\mathbb{R}^3$ (answer: $dx \wedge dy$); verify $\iota_X^2 = 0$ for $X = x\partial_y - y\partial_x$ and $\omega = dx \wedge dy$; check the graded anti-derivation rule on $\omega = x\,dx$, $\eta = y\,dy$ on $\mathbb{R}^2$. If you can explain why $\iota_X(dx^1 \wedge \cdots \wedge dx^n) = \sum_j (-1)^{j-1} X^j\,dx^1 \wedge \cdots \widehat{dx^j} \cdots \wedge dx^n$ in terms of the cofactor expansion of a determinant, you have understood the interior product.
 

@@ -13,15 +13,15 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $G$ be a group and let $\mathcal{S}$ be the set of all subgroups of $G$. For $g \in G$ and $H \in \mathcal{S}$, write $g \cdot H = gHg^{-1} = \{ghg^{-1} : h \in H\}$. Prove the following.
+Let $G$ be a [[Def - Group|group]] and let $\mathcal{S}$ be the set of all [[Def - Subgroup|subgroups]] of $G$. For $g \in G$ and $H \in \mathcal{S}$, write $g \cdot H = gHg^{-1} = \{ghg^{-1} : h \in H\}$. Prove the following.
 
 1. The rule $(g, H) \mapsto gHg^{-1}$ is a [[Def - Group Action|group action]] of $G$ on $\mathcal{S}$ — in particular, $gHg^{-1}$ is again a subgroup of $G$.
 2. The stabiliser of a subgroup $H$ under this action is the **normaliser** $N_G(H)$.
-3. If $G$ is finite, the number of subgroups of $G$ conjugate to $H$ equals the index $|G : N_G(H)|$.
+3. If $G$ is finite, the number of [[Def - Subgroup|subgroups]] of $G$ conjugate to $H$ equals the index $|G : N_G(H)|$.
 
 **Recall:**
 
-The objects in play are a group action, the stabiliser of a point, the normaliser of a subgroup, and the orbit-stabiliser theorem.
+The objects in play are a [[Def - Group|group]] action, the stabiliser of a point, the normaliser of a subgroup, and the orbit-stabiliser theorem.
 
 ![[Def - Group Action#The Definition]]
 
@@ -37,7 +37,7 @@ The [[Def - Normaliser|normaliser]] of a subgroup $H \leq G$ is $N_G(H) = \{g \i
 
 ![[Thm - Orbit-Stabiliser Theorem#Statement]]
 
-The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] states that for a finite group $G$ acting on $X$ and any $x \in X$, the map $gG_x \mapsto g \cdot x$ is a bijection from the cosets of the stabiliser to the orbit, so $|G \cdot x| = |G : G_x|$ and $|G| = |G_x|\,|G \cdot x|$.
+The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] states that for a finite group $G$ acting on $X$ and any $x \in X$, the map $gG_x \mapsto g \cdot x$ is a bijection from the [[Def - Coset|cosets]] of the stabiliser to the orbit, so $|G \cdot x| = |G : G_x|$ and $|G| = |G_x|\,|G \cdot x|$.
 
 ---
 
@@ -119,7 +119,7 @@ The subgroups conjugate to $H$ are precisely the elements of the orbit $G \cdot 
 > $$G \cdot H = \{g \cdot H : g \in G\} = \{gHg^{-1} : g \in G\}.$$
 > So "the number of subgroups conjugate to $H$" is $|G \cdot H|$.
 >
-> The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], applied to the finite group $G$ acting on $\mathcal{S}$, gives a bijection $gG_H \mapsto g \cdot H$ between the left cosets of the stabiliser $G_H$ and the orbit $G \cdot H$; counting,
+> The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], applied to the finite group $G$ acting on $\mathcal{S}$, gives a bijection $gG_H \mapsto g \cdot H$ between the left [[Def - Coset|cosets]] of the stabiliser $G_H$ and the orbit $G \cdot H$; counting,
 > $$|G \cdot H| = |G : G_H|.$$
 > By Step 2, $G_H = N_G(H)$. Substituting,
 > $$\#\{\text{subgroups conjugate to } H\} = |G \cdot H| = |G : N_G(H)|. \qquad \blacksquare$$

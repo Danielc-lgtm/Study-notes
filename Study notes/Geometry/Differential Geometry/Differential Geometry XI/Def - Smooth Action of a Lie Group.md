@@ -17,13 +17,13 @@ $G$ is a Lie group; $M$ is a smooth manifold. A left action is written $\theta :
 
 # Axiom Motivation
 
-The notion of a smooth Lie group action is built from two prior notions: the abstract [[Def - Group Action|group action]] of a group on a set (preserving multiplication and identity), and the requirement that the action map be smooth in the manifold sense. Together they give the right notion of "the Lie group $G$ acts smoothly on the manifold $M$": a smooth map $\theta : G \times M \to M$ that is a group action when restricted to the underlying set-theoretic structure.
+The notion of a smooth Lie [[Def - Group|group]] action is built from two prior notions: the abstract [[Def - Group Action|group action]] of a [[Def - Group|group]] on a set (preserving multiplication and identity), and the requirement that the action map be smooth in the manifold sense. Together they give the right notion of "the Lie group $G$ acts smoothly on the manifold $M$": a smooth map $\theta : G \times M \to M$ that is a group action when restricted to the underlying set-theoretic structure.
 
 Why the joint condition? Each axiom contributes something essential.
 
 **The group action condition** $\theta(e, p) = p$ and $\theta(g_1, \theta(g_2, p)) = \theta(g_1 g_2, p)$ is what makes the action genuinely a "group of symmetries acting on $M$" — without it, $\theta$ is just a smooth map of manifolds with no algebraic content. The two equations say that the identity acts trivially and that composition of actions corresponds to group multiplication. They are the same as in [[Def - Group Action|abstract group theory]].
 
-**The smoothness condition** is what makes the action interact with manifold-theoretic constructions: tangent vectors, vector fields, flows, differential forms, integration. A continuous action that fails to be smooth might not have well-defined infinitesimal generators, might not allow differentiation of orbits, and might not produce a smooth manifold structure on quotients. Smoothness is essential for the constructions of orbit-stabilizer (smooth version) and homogeneous-space theory. Like for [[Def - Lie Group Homomorphism|Lie group homomorphisms]], continuity is in fact sufficient (a continuous action of a Lie group on a smooth manifold by diffeomorphisms is automatically smooth, by a slightly weaker version of the Bochner–Montgomery theorem), but the cleanest statement of the definition demands smoothness.
+**The smoothness condition** is what makes the action interact with manifold-theoretic constructions: tangent vectors, vector fields, flows, differential forms, integration. A continuous action that fails to be smooth might not have well-defined infinitesimal generators, might not allow differentiation of orbits, and might not produce a smooth manifold structure on quotients. Smoothness is essential for the constructions of orbit-stabilizer (smooth version) and homogeneous-space theory. Like for [[Def - Lie Group Homomorphism|Lie group homomorphisms]], continuity is in fact sufficient (a continuous action of a Lie group on a smooth manifold by [[Def - Diffeomorphism|diffeomorphisms]] is automatically smooth, by a slightly weaker version of the Bochner–Montgomery theorem), but the cleanest statement of the definition demands smoothness.
 
 **Left vs right actions.** A left action satisfies $\theta(g_1, \theta(g_2, p)) = \theta(g_1 g_2, p)$ — composing the $g_2$-action with the $g_1$-action equals the $(g_1 g_2)$-action, in that order. A right action reverses this: $\theta(\theta(p, g_1), g_2) = \theta(p, g_1 g_2)$. The conversion is via inversion: a left action $\theta_g(p)$ becomes a right action $\theta^{(g)}(p) = \theta_{g^{-1}}(p)$, and vice versa. Both conventions are common; Lee predominantly uses left actions for general considerations and right actions for principal bundles. We use both as the context requires.
 
@@ -32,7 +32,7 @@ Why the joint condition? Each axiom contributes something essential.
 - **Transitivity**: the action has a single orbit, $G \cdot p = M$ for any $p$. Transitive smooth actions are the source of homogeneous-space structure.
 - **Freeness**: every stabilizer $G_p$ is trivial. Free actions admit quotient manifold structure (under additional properness).
 - **Properness**: the map $G \times M \to M \times M$, $(g, p) \mapsto (g \cdot p, p)$, is a proper map (preimages of compacts are compact). Proper actions have Hausdorff orbit spaces; combined with freeness, the orbit space is a smooth manifold (the quotient manifold theorem).
-- **Effectiveness**: the only $g \in G$ acting trivially is $e$. Effective actions are isomorphic to subgroups of $\mathrm{Diff}(M)$ — the action faithfully represents $G$.
+- **Effectiveness**: the only $g \in G$ acting trivially is $e$. Effective actions are isomorphic to [[Def - Subgroup|subgroups]] of $\mathrm{Diff}(M)$ — the action faithfully represents $G$.
 
 Each property captures a different qualitative feature, and the major theorems of the chapter (orbit-stabilizer, homogeneous-space) use specific combinations.
 
@@ -53,11 +53,11 @@ satisfying
 
 A **smooth right action** is a smooth map $M \times G \to M$, $(p, g) \mapsto p \cdot g$, satisfying $p \cdot e = p$ and $(p \cdot g_1) \cdot g_2 = p \cdot (g_1 g_2)$. We say $M$ is a **left $G$-space** or **right $G$-space** correspondingly.
 
-Each $\theta_g : M \to M$, $\theta_g(p) = g \cdot p$, is a diffeomorphism of $M$ (its inverse is $\theta_{g^{-1}}$). So a smooth action is equivalently a Lie group homomorphism $G \to \mathrm{Diff}(M)$ (where $\mathrm{Diff}(M)$ is the diffeomorphism group, an infinite-dimensional Lie group when treated with appropriate care).
+Each $\theta_g : M \to M$, $\theta_g(p) = g \cdot p$, is a [[Def - Diffeomorphism|diffeomorphism]] of $M$ (its inverse is $\theta_{g^{-1}}$). So a smooth action is equivalently a Lie group homomorphism $G \to \mathrm{Diff}(M)$ (where $\mathrm{Diff}(M)$ is the diffeomorphism group, an infinite-dimensional Lie group when treated with appropriate care).
 
 For $p \in M$:
 - The **orbit** of $p$ is $G \cdot p = \{g \cdot p : g \in G\} \subseteq M$.
-- The **stabilizer** (or **isotropy group**) of $p$ is $G_p = \{g \in G : g \cdot p = p\}$, a closed subgroup of $G$ (closed by continuity, hence an embedded Lie subgroup by [[Thm - The Closed Subgroup Theorem|the closed subgroup theorem]]).
+- The **stabilizer** (or **isotropy group**) of $p$ is $G_p = \{g \in G : g \cdot p = p\}$, a closed [[Def - Subgroup|subgroup]] of $G$ (closed by continuity, hence an embedded Lie subgroup by [[Thm - The Closed Subgroup Theorem|the closed subgroup theorem]]).
 
 An action is:
 - **Transitive** if $G \cdot p = M$ for some (equivalently, every) $p$;

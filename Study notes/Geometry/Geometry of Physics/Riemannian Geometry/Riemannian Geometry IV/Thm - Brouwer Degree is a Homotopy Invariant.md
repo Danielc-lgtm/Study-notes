@@ -16,7 +16,7 @@ Let $M^n, V^n$ be closed (compact, no boundary) oriented smooth manifolds of the
 
 # Statement
 
-> **Theorem (Brouwer Degree is a Homotopy Invariant).** Let $\phi_t : M^n \to V^n$ ($t \in [0, 1]$) be a smooth homotopy between maps of closed oriented manifolds of the same dimension. Then the [[Def - Brouwer Degree of a Map|Brouwer degree]] is constant in $t$:
+> **Theorem (Brouwer Degree is a Homotopy Invariant).** Let $\phi_t : M^n \to V^n$ ($t \in [0, 1]$) be a smooth homotopy between maps of closed oriented manifolds of the same [[Def - Dimension|dimension]]. Then the [[Def - Brouwer Degree of a Map|Brouwer degree]] is constant in $t$:
 > $$
 > \deg(\phi_0) = \deg(\phi_1).
 > $$
@@ -76,7 +76,7 @@ The technical hard part is establishing **independence of the regular value** in
 
 A second technical subtlety: the homotopy $H$ needs to be smooth, not just continuous. For continuous maps, one approximates by smooth maps (which is possible by partition-of-unity arguments) and notes that the smooth approximation preserves degree (it is a small homotopy). So the *smooth* homotopy invariance extends to the continuous case via approximation — but the formal statement and proof are cleanest in the smooth category.
 
-A common confusion: students sometimes think the theorem says "smooth homotopies preserve the preimage count $|\phi^{-1}(y)|$". This is **false** — the count can change (and typically does) as the homotopy deforms $\phi$ to pass through critical values. What is preserved is the *signed* count, the algebraic sum $\sum_x \mathrm{sign}\,\phi(x)$. Pairs can be created or destroyed, but with cancelling signs.
+A common confusion: students sometimes think the theorem says "smooth [[Def - Homotopy|homotopies]] preserve the preimage count $|\phi^{-1}(y)|$". This is **false** — the count can change (and typically does) as the homotopy deforms $\phi$ to pass through critical values. What is preserved is the *signed* count, the algebraic sum $\sum_x \mathrm{sign}\,\phi(x)$. Pairs can be created or destroyed, but with cancelling signs.
 
 ---
 
@@ -153,7 +153,7 @@ Combining: $\deg(\phi_1) - \deg(\phi_0) = 0$, hence equal.
 
 # Cross-Field Exercise Suggestions
 
-1. **Fundamental theorem of algebra via degree continuity.** Show that any polynomial $P(z) = z^n + a_{n-1}z^{n-1} + \cdots + a_0$, extended to a map $P : \mathbb{CP}^1 \to \mathbb{CP}^1$ (with $P(\infty) = \infty$), is homotopic to $z \mapsto z^n$ via $t \mapsto z^n + t(a_{n-1}z^{n-1} + \cdots + a_0)$. By homotopy invariance, $\deg(P) = \deg(z^n) = n$. Hence for $n \geq 1$, $P$ is surjective (degree-$n \neq 0$ map is surjective), so $P$ takes value $0$ — fundamental theorem of algebra. **Why nonobvious:** This is the cleanest proof of the FTA, requiring no analytic continuation, residue calculus, or other complex-analytic machinery beyond degree theory.
+1. **Fundamental theorem of algebra via degree continuity.** Show that any polynomial $P(z) = z^n + a_{n-1}z^{n-1} + \cdots + a_0$, extended to a map $P : \mathbb{CP}^1 \to \mathbb{CP}^1$ (with $P(\infty) = \infty$), is homotopic to $z \mapsto z^n$ via $t \mapsto z^n + t(a_{n-1}z^{n-1} + \cdots + a_0)$. By homotopy invariance, $\deg(P) = \deg(z^n) = n$. Hence for $n \geq 1$, $P$ is surjective (degree-$n \neq 0$ map is surjective), so $P$ takes value $0$ — fundamental theorem of algebra. **Why nonobvious:** This is the cleanest proof of the FTA, requiring no analytic continuation, [[Def - Residue|residue]] calculus, or other complex-analytic machinery beyond degree theory.
 
 2. **Borsuk–Ulam theorem.** Use homotopy invariance to prove that every continuous odd map $f : S^n \to S^n$ (i.e., $f(-x) = -f(x)$) has odd degree, in particular nonzero degree. **Application:** any continuous map $S^n \to \mathbb{R}^n$ sends some pair of antipodal points to the same value (the Borsuk–Ulam theorem) — proven by considering $g(x) = f(x) - f(-x)$ and showing it must have a zero. **Why nonobvious:** Translating "odd map" to "odd degree" uses homotopy invariance to compare $f$ with the antipodal map.
 

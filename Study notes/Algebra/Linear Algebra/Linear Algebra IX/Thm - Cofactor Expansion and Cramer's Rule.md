@@ -42,13 +42,13 @@ Throughout, $A$ is an $n \times n$ matrix over a field $\mathbb{F}$. The $(i, j)
 
 # Motivation
 
-Cofactor expansion is the **recursive computational formula** for determinants: it reduces the $n \times n$ determinant to a sum of $n$ many $(n-1) \times (n-1)$ determinants, each with a sign. The recursion bottoms out at $n = 1$, where $\det A = A_{11}$. Combined with the choice of expanding along a row or column with many zeros, this gives the most useful hand-computation algorithm for determinants of small matrices with structure.
+Cofactor expansion is the **recursive computational formula** for [[Def - Determinant|determinants]]: it reduces the $n \times n$ determinant to a sum of $n$ many $(n-1) \times (n-1)$ [[Def - Determinant|determinants]], each with a sign. The recursion bottoms out at $n = 1$, where $\det A = A_{11}$. Combined with the choice of expanding along a row or column with many zeros, this gives the most useful hand-computation algorithm for determinants of small matrices with structure.
 
 The adjugate formula and Cramer's rule are theoretical companions: they express the inverse and the solution of a linear system *explicitly* in terms of determinants. They are **computationally useless** for $n \geq 4$ or so (the cost is dominated by the cost of computing $n^2$ many $(n-1) \times (n-1)$ determinants, each itself $\geq n!$ via Leibniz), but they are **conceptually invaluable**: they show that the inverse matrix and the solution of a linear system are *polynomials in the entries of $A$*, of degree at most $n$. This polynomiality is what underlies:
 
 - **Smoothness of $A^{-1}$ as a function of $A$.** Since $A^{-1} = \operatorname{adj}(A) / \det A$ is a ratio of polynomials, with $\det A \neq 0$ at invertible $A$, the map $A \mapsto A^{-1}$ is smooth on $\mathrm{GL}(V)$.
 
-- **Cayley-Hamilton.** The proof via the adjugate uses $(zI - A) \operatorname{adj}(zI - A) = \det(zI - A) \cdot I = p_A(z) I$, and substituting $z = A$ (with care) gives $p_A(A) = 0$.
+- **[[Thm - Cayley-Hamilton (Minimal-Polynomial Form)|Cayley-Hamilton]].** The proof via the adjugate uses $(zI - A) \operatorname{adj}(zI - A) = \det(zI - A) \cdot I = p_A(z) I$, and substituting $z = A$ (with care) gives $p_A(A) = 0$.
 
 - **Implicit function theorem applications.** When you need to invert a derivative matrix as part of an implicit-function argument, Cramer's rule gives the explicit dependence of the inverse on the original entries — useful for tracking how perturbations propagate.
 
@@ -202,7 +202,7 @@ Cofactor expansion follows from multilinearity in one column and the alternating
 
 **Smoothness of $A^{-1}$ as a function of $A$ on $\mathrm{GL}_n$.** The adjugate formula $A^{-1} = \operatorname{adj}(A) / \det A$ writes $A^{-1}$ as a ratio of polynomials in the entries of $A$. So $A \mapsto A^{-1}$ is a smooth (in fact, rational) map from $\mathrm{GL}_n(\mathbb{R})$ to $\mathrm{GL}_n(\mathbb{R})$. This is the foundation of the implicit function theorem applied to "linear equations vary smoothly with their coefficients".
 
-**Cayley-Hamilton via the adjugate.** The matrix $zI - A$ has determinant $p_A(z) = \det(zI - A)$, the characteristic polynomial. By the adjugate formula, $(zI - A) \operatorname{adj}(zI - A) = p_A(z) I$. Both sides are polynomials in $z$ with matrix coefficients; "substituting $z = A$" (formally, expanding and rearranging) gives $p_A(A) = 0$, the **Cayley-Hamilton theorem**. See [[Ex - Cayley-Hamilton via determinants and via the minimal polynomial agree]].
+**[[Thm - Cayley-Hamilton (Minimal-Polynomial Form)|Cayley-Hamilton]] via the adjugate.** The matrix $zI - A$ has determinant $p_A(z) = \det(zI - A)$, the characteristic polynomial. By the adjugate formula, $(zI - A) \operatorname{adj}(zI - A) = p_A(z) I$. Both sides are polynomials in $z$ with matrix coefficients; "substituting $z = A$" (formally, expanding and rearranging) gives $p_A(A) = 0$, the **Cayley-Hamilton theorem**. See [[Ex - Cayley-Hamilton via determinants and via the minimal polynomial agree]].
 
 **Implicit function theorem for linear systems.** Given $F(x, y) = 0$ with $F(x_0, y_0) = 0$ and $\partial F/\partial y(x_0, y_0)$ invertible, the implicit function theorem solves $y$ as a smooth function of $x$ near $x_0$. Computing the derivative $\partial y/\partial x$ requires inverting $\partial F/\partial y$, and Cramer's rule gives this explicitly. This is essential for understanding the smooth dependence of solutions on parameters in differential equations.
 

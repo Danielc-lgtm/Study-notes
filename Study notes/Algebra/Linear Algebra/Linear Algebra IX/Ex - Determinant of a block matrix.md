@@ -38,7 +38,7 @@ The **Schur complement** of $D$ in the block matrix is $A - B D^{-1} C$ (assumin
 
 # Convergent Strategy
 
-**Problem class.** This is *determinant computation by factorisation*: factor the block matrix into a product of simpler matrices whose determinants are known, then apply [[Thm - Determinant is Multiplicative|multiplicativity]]. This is one of the standard techniques in linear algebra, and a recurring qualifying-exam pattern.
+**Problem class.** This is *determinant computation by factorisation*: factor the block matrix into a product of simpler matrices whose [[Def - Determinant|determinants]] are known, then apply [[Thm - Determinant is Multiplicative|multiplicativity]]. This is one of the standard techniques in linear algebra, and a recurring qualifying-exam pattern.
 
 **Assumption pattern.** Block structure: a matrix split into blocks, with some block being zero (part a) or invertible (parts b, c). The block structure is what lets us factor the matrix; the zero or invertibility is what makes the factorisation clean.
 
@@ -54,7 +54,7 @@ The **Schur complement** of $D$ in the block matrix is $A - B D^{-1} C$ (assumin
 
 2. **Apply multiplicativity $\det(ST) = \det S \det T$** (operation 8 from the topic page). For (b), the Schur factorisation expresses the block matrix as a product of three matrices, with multiplicativity reducing the calculation.
 
-3. **Recognise block-diagonal matrices have determinant equal to the product of block determinants** (operation 6 specialised). This is essentially (a) applied twice.
+3. **Recognise block-diagonal matrices have determinant equal to the product of block [[Def - Determinant|determinants]]** (operation 6 specialised). This is essentially (a) applied twice.
 
 ---
 

@@ -12,17 +12,17 @@ tags: [geometry, riemannian-geometry, conjugate-points, sphere]
 
 # Problem Statement
 
-Let $(S^n, g)$ be the unit $n$-sphere with the round metric, $p \in S^n$, and $\gamma : \mathbb{R} \to S^n$ a unit-speed geodesic with $\gamma(0) = p$. Show that:
+Let $(S^n, g)$ be the unit $n$-sphere with the round metric, $p \in S^n$, and $\gamma : \mathbb{R} \to S^n$ a unit-speed [[Def - Geodesic|geodesic]] with $\gamma(0) = p$. Show that:
 
 (a) The points conjugate to $p$ along $\gamma$ are exactly $\gamma(k\pi)$ for non-zero integers $k$. So the *first* conjugate point to $p$ is the antipode $-p = \gamma(\pi)$.
 
 (b) The multiplicity of each conjugate point $\gamma(k\pi)$ along $\gamma$ is $n - 1$.
 
-(c) Conclude that the exponential map $\exp_p : T_p S^n \to S^n$ fails to be a local diffeomorphism precisely on the spheres $\{|v| = k\pi : k \in \mathbb{Z}^+\}$ in $T_p S^n$, with corank $n - 1$ there.
+(c) Conclude that the exponential map $\exp_p : T_p S^n \to S^n$ fails to be a local [[Def - Diffeomorphism|diffeomorphism]] precisely on the spheres $\{|v| = k\pi : k \in \mathbb{Z}^+\}$ in $T_p S^n$, with corank $n - 1$ there.
 
 **Recall:**
 
-A point $\gamma(t_0)$ is [[Def - Conjugate Point|conjugate]] to $p = \gamma(0)$ along $\gamma$ if there exists a nonzero [[Def - Jacobi Field|Jacobi field]] $J$ along $\gamma$ with $J(0) = J(t_0) = 0$. The **multiplicity** is the dimension of the space of such Jacobi fields.
+A point $\gamma(t_0)$ is [[Def - Conjugate Point|conjugate]] to $p = \gamma(0)$ along $\gamma$ if there exists a nonzero [[Def - Jacobi Field|Jacobi field]] $J$ along $\gamma$ with $J(0) = J(t_0) = 0$. The **multiplicity** is the [[Def - Dimension|dimension]] of the space of such Jacobi fields.
 
 By [[Thm - Jacobi Equation and Conjugate Points|the Jacobi-equation/conjugate-point dictionary]], $\gamma(t_0)$ is conjugate to $p$ along $\gamma$ iff $d(\exp_p)_{t_0 v}$ is singular (where $v = \dot\gamma(0)$), with multiplicity equal to $\dim \ker d(\exp_p)_{t_0 v}$.
 
@@ -84,7 +84,7 @@ From [[Ex - Jacobi Fields on a Sphere are Sinusoidal]]: normal Jacobi fields alo
 > [!note]- Derivation
 > At $t_0 = k\pi$, every Jacobi field of the form $J(t) = \sin(t) E(t)$ vanishes — for every parallel unit field $E \perp T$. The space of parallel unit-normal directions $E(0) \in T_p S^n$ orthogonal to $T(0) = v$ has dimension $n - 1$ (the orthogonal complement of a unit vector in an $n$-dimensional space). Each direction gives a 1-dimensional space of Jacobi fields vanishing at $t_0$ (the constant-multiple line).
 >
-> But wait — the space of Jacobi fields with $J(0) = 0$ has dimension $n$ (it is the space of valid $J'(0) \in T_p S^n$). Among these, the ones that *also* vanish at $t_0 = k\pi$ are exactly those with $J'(0) \perp T$ — i.e., the $(n - 1)$-dimensional subspace of $T^\perp$. So the multiplicity of the conjugate pair $(p, \gamma(k\pi))$ is $n - 1$.
+> But wait — the space of Jacobi fields with $J(0) = 0$ has dimension $n$ (it is the space of valid $J'(0) \in T_p S^n$). Among these, the ones that *also* vanish at $t_0 = k\pi$ are exactly those with $J'(0) \perp T$ — i.e., the $(n - 1)$-dimensional [[Def - Subspace|subspace]] of $T^\perp$. So the multiplicity of the conjugate pair $(p, \gamma(k\pi))$ is $n - 1$.
 >
 > (The tangential Jacobi field $J(t) = t T(t)$ with $J(0) = 0, J'(0) = T(0)$ does not vanish for $t > 0$ — it grows linearly, the standard "reparametrisation" tangential Jacobi field. So only the *normal* Jacobi fields contribute to the multiplicity.)
 

@@ -89,7 +89,7 @@ The two facts combine cleanly because $\det$ is similarity-invariant (multiplica
 
 # What Makes This Hard
 
-The trap is in the multiplicity counting. "$\lambda_1 \cdots \lambda_n$ with multiplicity" has to be carefully unpacked: each *distinct* eigenvalue $\mu$ appears in the product with exponent equal to its **algebraic multiplicity** (the multiplicity as a root of the characteristic polynomial), which is the same as its multiplicity in the upper-triangular diagonal. The **geometric multiplicity** (the dimension of the eigenspace $\ker(T - \mu I)$) is in general *less than* the algebraic multiplicity, and using geometric multiplicity gives the wrong product.
+The trap is in the multiplicity counting. "$\lambda_1 \cdots \lambda_n$ with multiplicity" has to be carefully unpacked: each *distinct* eigenvalue $\mu$ appears in the product with exponent equal to its **algebraic multiplicity** (the multiplicity as a root of the characteristic polynomial), which is the same as its multiplicity in the upper-triangular diagonal. The **geometric multiplicity** (the [[Def - Dimension|dimension]] of the eigenspace $\ker(T - \mu I)$) is in general *less than* the algebraic multiplicity, and using geometric multiplicity gives the wrong product.
 
 A common error: assuming the operator is diagonalisable and concluding $\det T = \prod (\text{distinct eigenvalues})^{\text{geometric multiplicity}}$. This is correct when geometric = algebraic multiplicity (diagonalisable case) but wrong otherwise. The correct formulation always uses algebraic multiplicity.
 

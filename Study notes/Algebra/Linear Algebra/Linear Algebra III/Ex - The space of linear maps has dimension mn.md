@@ -33,7 +33,7 @@ The [[Thm - Two Vector Spaces Isomorphic iff Same Dimension|dimension equality o
 
 # Convergent Strategy
 
-**Problem class.** This is a *compute the dimension of a constructed space* problem. The topic-page Problem-Solving Strategy classifies it under "structural facts about $\mathcal{L}(V, W)$": exploit the matrix isomorphism to translate $\mathcal{L}(V, W)$ into a concrete matrix space, count dimensions there.
+**Problem class.** This is a *compute the dimension of a constructed space* problem. The topic-page Problem-Solving Strategy classifies it under "structural facts about $\mathcal{L}(V, W)$": exploit the matrix isomorphism to translate $\mathcal{L}(V, W)$ into a concrete matrix space, count [[Def - Dimension|dimensions]] there.
 
 **Assumption pattern.** $V$ and $W$ are finite-dimensional. Bases of each must be chosen to enable the matrix representation. Once bases are chosen, every linear map has a unique matrix, and every matrix specifies a unique linear map (by the [[Thm - Linear Map Determined by Action on Basis|linear-map lemma]]).
 
@@ -49,7 +49,7 @@ This solution deploys the following legal operations from [[Linear Algebra III â
 
 1. **Pass between a linear map and its matrix** (operation 6). The entire proof runs through the matrix isomorphism.
 
-2. **Identify a vector space up to isomorphism by counting dimensions** (operation 5). Once $\mathcal{L}(V, W) \cong \mathbf{F}^{m, n}$, dimensions are equal, and the dimension of $\mathbf{F}^{m, n}$ is $mn$.
+2. **Identify a vector space up to isomorphism by counting [[Def - Dimension|dimensions]]** (operation 5). Once $\mathcal{L}(V, W) \cong \mathbf{F}^{m, n}$, dimensions are equal, and the dimension of $\mathbf{F}^{m, n}$ is $mn$.
 
 3. **Specify a linear map by its action on a basis** (operation 1). Used in the surjectivity step: given a matrix $A$, construct the corresponding linear map by specifying its action on a basis of $V$ via the columns of $A$.
 

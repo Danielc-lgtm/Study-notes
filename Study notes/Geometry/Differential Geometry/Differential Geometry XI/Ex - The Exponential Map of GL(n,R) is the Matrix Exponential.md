@@ -39,7 +39,7 @@ The exponential map $\exp : \mathfrak{g} \to G$ is defined by $\exp(X) = \gamma_
 
 1. **Compute the exponential map as the matrix exponential (operation 2 from the topic page).** This exercise is the foundational case: it establishes the identification $\exp_{\mathrm{GL}} = (\cdot \mapsto e^{(\cdot)})$ for $\mathrm{GL}(n)$, which then transfers to every matrix Lie subgroup $G \leq \mathrm{GL}(n)$ via [[Thm - Naturality of the Exponential Map|naturality]] applied to the inclusion.
 
-2. **Recognize a one-parameter subgroup (operation 10 from the topic page).** The matrix exponential $t \mapsto e^{tA}$ is a one-parameter subgroup of $\mathrm{GL}(n)$ — smooth, homomorphism, $\gamma(0) = I$, $\gamma'(0) = A$. By uniqueness of one-parameter subgroups with a given initial velocity, this identifies it as $\gamma_A$.
+2. **Recognize a one-parameter subgroup (operation 10 from the topic page).** The matrix exponential $t \mapsto e^{tA}$ is a one-parameter subgroup of $\mathrm{GL}(n)$ — smooth, homomorphism, $\gamma(0) = I$, $\gamma'(0) = A$. By uniqueness of one-parameter [[Def - Subgroup|subgroups]] with a given initial velocity, this identifies it as $\gamma_A$.
 
 ---
 
@@ -58,7 +58,7 @@ The exponential map $\exp : \mathfrak{g} \to G$ is defined by $\exp(X) = \gamma_
 > Verify that $g(t) = e^{tA}$ satisfies $g'(t) = g(t) A$. Differentiate the series $e^{tA} = \sum_k (tA)^k/k!$ term by term and reassemble.
 
 > [!note]- Hint 5
-> By uniqueness of ODE solutions (or equivalently uniqueness of one-parameter subgroups with given initial velocity), $\gamma_A(t) = e^{tA}$. Evaluating at $t = 1$: $\exp_{\mathrm{GL}}(A) = \gamma_A(1) = e^A$.
+> By uniqueness of ODE solutions (or equivalently uniqueness of one-parameter [[Def - Subgroup|subgroups]] with given initial velocity), $\gamma_A(t) = e^{tA}$. Evaluating at $t = 1$: $\exp_{\mathrm{GL}}(A) = \gamma_A(1) = e^A$.
 
 ---
 
@@ -115,11 +115,11 @@ $$\exp_{\mathrm{GL}}(A) = e^A.$$
 
 **The exponential map of every matrix Lie group is the matrix exponential.**
 
-By naturality of $\exp$ applied to the inclusion $G \hookrightarrow \mathrm{GL}(n)$ for any matrix Lie subgroup, the exponential of $G$ is the restriction of $\exp_{\mathrm{GL}}$ to $\mathfrak{g} \subseteq \mathfrak{gl}(n)$. Combined with this exercise, the exponential of any matrix Lie group is the matrix exponential applied to elements of the appropriate Lie subalgebra. So all $\exp$-computations on matrix Lie groups reduce to computing matrix exponentials — a concrete, classical problem solved by series expansion, diagonalization, or Jordan-form analysis.
+By naturality of $\exp$ applied to the inclusion $G \hookrightarrow \mathrm{GL}(n)$ for any matrix Lie subgroup, the exponential of $G$ is the restriction of $\exp_{\mathrm{GL}}$ to $\mathfrak{g} \subseteq \mathfrak{gl}(n)$. Combined with this exercise, the exponential of any matrix Lie group is the matrix exponential applied to elements of the appropriate Lie subalgebra. So all $\exp$-computations on matrix Lie [[Def - Group|groups]] reduce to computing matrix exponentials — a concrete, classical problem solved by series expansion, diagonalization, or Jordan-form analysis.
 
 **The integral-curve definition of $\exp$ generalizes the matrix exponential.**
 
-The matrix exponential $e^A = \sum A^k/k!$ is defined only for matrices; the abstract Lie group exponential is defined for any Lie group via integral curves of left-invariant vector fields. This exercise shows the two agree on matrix Lie groups, and conceptually it explains *why* the matrix exponential is the right generalization of the scalar exponential $e^x$ to non-commutative settings — both are the unique solution of the ODE "derivative equals multiplication-by-self-times-$A$", with multiplication interpreted appropriately. The series expansion is one of many representations; the more intrinsic characterization is via the ODE.
+The matrix exponential $e^A = \sum A^k/k!$ is defined only for matrices; the abstract Lie group exponential is defined for any Lie group via integral curves of left-invariant vector fields. This exercise shows the two agree on matrix Lie [[Def - Group|groups]], and conceptually it explains *why* the matrix exponential is the right generalization of the scalar exponential $e^x$ to non-commutative settings — both are the unique solution of the ODE "derivative equals multiplication-by-self-times-$A$", with multiplication interpreted appropriately. The series expansion is one of many representations; the more intrinsic characterization is via the ODE.
 
 **The matrix exponential is generally not a group homomorphism.**
 

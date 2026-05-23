@@ -18,7 +18,7 @@ Throughout, $G$ is a group and $K \leq L \leq G$ are subgroups, *both normal in 
 
 # Statement
 
-> **Third Isomorphism Theorem.** Let $G$ be a group and let $K \leq L \leq G$ with $K \trianglelefteq G$ and $L \trianglelefteq G$. Then $L/K$ is a normal subgroup of $G/K$, and there is an isomorphism
+> **Third Isomorphism Theorem.** Let $G$ be a group and let $K \leq L \leq G$ with $K \trianglelefteq G$ and $L \trianglelefteq G$. Then $L/K$ is a normal [[Def - Subgroup|subgroup]] of $G/K$, and there is an isomorphism
 > $$\frac{G/K}{\,L/K\,} \;\cong\; \frac{G}{L}.$$
 
 ---
@@ -32,7 +32,7 @@ This is the **cancellation law** for quotients. It is the exact group-theoretic 
 $$\frac{a/c}{b/c} = \frac{a}{b},$$
 where dividing top and bottom by a common factor $c$ leaves the ratio unchanged. Here $G$ plays the role of $a$, $L$ of $b$, and $K$ of the common factor $c$; the theorem says the common factor $K$ "cancels". The notation $\dfrac{G/K}{L/K}$ is built so that this cancellation is visually obvious — which is precisely the point of arranging it this way.
 
-Why would one care? Two reasons. First, it makes iterated quotients tractable: when you build a [[Thm - Composition Series|composition series]] by repeatedly passing to quotients, the third isomorphism theorem is what lets you translate between "the quotient of a quotient" and "a single quotient", so the series can be analysed coherently. Second, it is the computational half of the [[Thm - Correspondence Theorem|correspondence theorem]]: the correspondence theorem tells you the *normal subgroups* of $G/K$ are exactly the $L/K$ for $L \trianglelefteq G$ above $K$, and the third isomorphism theorem then tells you the *quotient* by each one. Together they say that the quotient $G/K$ is not a mysterious new object — its entire normal-subgroup-and-quotient structure is read directly off that of $G$.
+Why would one care? Two reasons. First, it makes iterated quotients tractable: when you build a [[Thm - Composition Series|composition series]] by repeatedly passing to quotients, the third isomorphism theorem is what lets you translate between "the quotient of a quotient" and "a single quotient", so the series can be analysed coherently. Second, it is the computational half of the [[Thm - Correspondence Theorem|correspondence theorem]]: the correspondence theorem tells you the *normal [[Def - Subgroup|subgroups]]* of $G/K$ are exactly the $L/K$ for $L \trianglelefteq G$ above $K$, and the third isomorphism theorem then tells you the *quotient* by each one. Together they say that the quotient $G/K$ is not a mysterious new object — its entire normal-subgroup-and-quotient structure is read directly off that of $G$.
 
 ---
 
@@ -74,7 +74,7 @@ A second, sharper view makes the proof inevitable. There is an utterly natural m
 
 # What Makes This Hard
 
-The non-obvious step is realising you should not manipulate the iterated quotient $\dfrac{G/K}{L/K}$ directly — its elements are *cosets of cosets*, and reasoning about them by hand is error-prone — but instead build the single forgetful map $G/K \to G/L$, $gK \mapsto gL$, and invoke the first isomorphism theorem. The most common error is in checking that map is well-defined: one must use the containment $K \subseteq L$ (so that $gK = g'K \Rightarrow g^{-1}g' \in K \subseteq L \Rightarrow gL = g'L$), and beginners either skip the check or forget that it is $K \subseteq L$ that licenses it. A second subtlety is keeping straight that both $K$ and $L$ must be normal *in $G$* for all four quotients in the statement to exist — $L$ normal merely in $G/K$ would not be enough to even write $G/L$.
+The non-obvious step is realising you should not manipulate the iterated quotient $\dfrac{G/K}{L/K}$ directly — its elements are *[[Def - Coset|cosets]] of [[Def - Coset|cosets]]*, and reasoning about them by hand is error-prone — but instead build the single forgetful map $G/K \to G/L$, $gK \mapsto gL$, and invoke the first isomorphism theorem. The most common error is in checking that map is well-defined: one must use the containment $K \subseteq L$ (so that $gK = g'K \Rightarrow g^{-1}g' \in K \subseteq L \Rightarrow gL = g'L$), and beginners either skip the check or forget that it is $K \subseteq L$ that licenses it. A second subtlety is keeping straight that both $K$ and $L$ must be normal *in $G$* for all four quotients in the statement to exist — $L$ normal merely in $G/K$ would not be enough to even write $G/L$.
 
 ---
 
@@ -154,7 +154,7 @@ Define the forgetful homomorphism $\theta : G/K \to G/L$ that sends each $K$-cos
 # Formal Proof
 
 > [!note]- Complete formal proof
-> Let $G$ be a group and $K \leq L \leq G$ with $K \trianglelefteq G$ and $L \trianglelefteq G$. Then $G/K$, $G/L$ are quotient groups.
+> Let $G$ be a group and $K \leq L \leq G$ with $K \trianglelefteq G$ and $L \trianglelefteq G$. Then $G/K$, $G/L$ are quotient [[Def - Group|groups]].
 >
 > **Define the map.** Set
 > $$\theta : G/K \longrightarrow G/L, \qquad \theta(gK) = gL.$$
@@ -181,7 +181,7 @@ Define the forgetful homomorphism $\theta : G/K \to G/L$ that sends each $K$-cos
 
 **Solvability is closed under quotients.** A group $G$ is solvable if it has a normal series with abelian factors. Suppose $G$ is solvable and $N \trianglelefteq G$; one wants $G/N$ solvable. Given a normal series $\{e\} = G_0 \trianglelefteq \cdots \trianglelefteq G_r = G$, the images $G_i N/N$ form a series for $G/N$, and the third isomorphism theorem identifies the successive factors as quotients of the original abelian factors, hence abelian. The non-obvious recognition is that the theorem is exactly what converts "factor of the lifted series" into "quotient of an abelian group".
 
-**Field towers in Galois theory.** For a tower of fields $F \subseteq E \subseteq L$ with $L/F$ Galois, the Galois groups satisfy $\operatorname{Gal}(L/E) \trianglelefteq \operatorname{Gal}(L/F)$ when $E/F$ is Galois, and the third isomorphism theorem underlies $\operatorname{Gal}(E/F) \cong \operatorname{Gal}(L/F)/\operatorname{Gal}(L/E)$. Quotienting a Galois group in stages mirrors building the field tower in stages. The application is non-obvious because the "common factor that cancels" is a subgroup fixing an intermediate field — a geometric object, not an algebraic one.
+**Field towers in Galois theory.** For a tower of fields $F \subseteq E \subseteq L$ with $L/F$ Galois, the Galois [[Def - Group|groups]] satisfy $\operatorname{Gal}(L/E) \trianglelefteq \operatorname{Gal}(L/F)$ when $E/F$ is Galois, and the third isomorphism theorem underlies $\operatorname{Gal}(E/F) \cong \operatorname{Gal}(L/F)/\operatorname{Gal}(L/E)$. Quotienting a Galois group in stages mirrors building the field tower in stages. The application is non-obvious because the "common factor that cancels" is a subgroup fixing an intermediate field — a geometric object, not an algebraic one.
 
 **Comparing two refinements of a partition.** Outside group theory entirely: if a set carries two equivalence relations, one refining the other, the third isomorphism theorem (read at the level of quotient *sets* with compatible structure) says the quotient of the fine quotient by the induced relation equals the coarse quotient. Recognising a hierarchy of equivalence relations — finest, intermediate, coarsest — as a chain $K \leq L \leq G$ is the non-obvious step that brings the theorem to bear.
 

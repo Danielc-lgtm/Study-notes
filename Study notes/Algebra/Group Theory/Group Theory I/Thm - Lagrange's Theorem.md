@@ -17,9 +17,9 @@ $G$ is a finite group with identity $e$. $H \leq G$ means $H$ is a [[Def - Subgr
 
 # Statement
 
-> **Lagrange's Theorem.** Let $G$ be a finite group and let $H \leq G$ be a subgroup. Then
+> **Lagrange's Theorem.** Let $G$ be a finite group and let $H \leq G$ be a [[Def - Subgroup|subgroup]]. Then
 > $$|G| = |H| \cdot |G : H|,$$
-> where $|G : H|$ is the number of left cosets of $H$ in $G$. In particular, $|H|$ divides $|G|$.
+> where $|G : H|$ is the number of left [[Def - Coset|cosets]] of $H$ in $G$. In particular, $|H|$ divides $|G|$.
 
 > **Corollary (order of an element).** If $G$ is a finite group and $g \in G$, then $\operatorname{ord}(g)$ divides $|G|$, and consequently $g^{|G|} = e$.
 
@@ -33,7 +33,7 @@ A finite group is, in the end, just a finite set with a multiplication table, an
 
 This is the first genuine theorem of finite group theory, and it earns that status because it converts a single integer, $|G|$, into a hard combinatorial constraint on the entire internal structure of $G$. Once you know $|G| = 12$, you know instantly that every subgroup has order $1$, $2$, $3$, $4$, $6$, or $12$ — orders $5$, $7$, $8$, $9$, $10$, $11$ are impossible, and you have done no work to rule them out. The same constraint, via the corollary, pins down the order of every individual element. A group of order $7$ has nothing but the identity and elements of order $7$; there is simply no room for anything else.
 
-The theorem matters most for what it forbids. Almost every classification result in the next two topics — that groups of prime order are cyclic, that groups of order $pq$ have a normal subgroup, the entire Sylow theory — begins by writing down the divisors of $|G|$ and using Lagrange to eliminate the impossible. It is the filter through which every structural argument about finite groups is poured.
+The theorem matters most for what it forbids. Almost every classification result in the next two topics — that [[Def - Group|groups]] of prime order are cyclic, that [[Def - Group|groups]] of order $pq$ have a normal subgroup, the entire Sylow theory — begins by writing down the divisors of $|G|$ and using Lagrange to eliminate the impossible. It is the filter through which every structural argument about finite groups is poured.
 
 ---
 
@@ -98,7 +98,7 @@ Define an equivalence relation on $G$ whose classes are the left cosets of $H$. 
 
 **Subgoal decomposition:**
 
-1. **Cosets are the classes of an equivalence relation.** Show that the relation $x \sim y \iff x^{-1}y \in H$ is reflexive, symmetric, and transitive, and that the class of $x$ is precisely the coset $xH$.
+1. **[[Def - Coset|Cosets]] are the classes of an equivalence relation.** Show that the relation $x \sim y \iff x^{-1}y \in H$ is reflexive, symmetric, and transitive, and that the class of $x$ is precisely the coset $xH$.
    - *Hint:* Reflexivity uses $e \in H$; symmetry uses closure under inverses ($(x^{-1}y)^{-1} = y^{-1}x$); transitivity uses closure under products.
    - *Why needed:* Equivalence relations partition their underlying set, so this gives "the cosets are disjoint and cover $G$" for free, with no separate overlap argument.
 
@@ -196,11 +196,11 @@ Each lemma below is independently practiceable in roughly five minutes.
 
 The aim here is to find settings where Lagrange applies but is not advertised — to battle-test recognition of the *sources*.
 
-**Number theory: Fermat's and Euler's theorems.** Take $G = (\mathbb{Z}/p\mathbb{Z})^\times$, the group of nonzero residues modulo a prime $p$ under multiplication, which has order $p - 1$. The corollary says $a^{p-1} \equiv 1 \pmod p$ for every $a$ coprime to $p$ — this is Fermat's little theorem, and it is *purely* the order corollary in disguise. Replacing $p$ by a general modulus $n$ and $G$ by the units $(\mathbb{Z}/n\mathbb{Z})^\times$ of order $\varphi(n)$ gives Euler's theorem $a^{\varphi(n)} \equiv 1$. The application is non-obvious because the statements look like facts about exponents and remainders, with no group in sight; the property $B$ "the units mod $n$ form a finite group" is the bridge to the precondition. Worked in [[Ex - Order of an element divides the group order]].
+**Number theory: Fermat's and Euler's theorems.** Take $G = (\mathbb{Z}/p\mathbb{Z})^\times$, the group of nonzero [[Def - Residue|residues]] modulo a prime $p$ under multiplication, which has order $p - 1$. The corollary says $a^{p-1} \equiv 1 \pmod p$ for every $a$ coprime to $p$ — this is Fermat's little theorem, and it is *purely* the order corollary in disguise. Replacing $p$ by a general modulus $n$ and $G$ by the units $(\mathbb{Z}/n\mathbb{Z})^\times$ of order $\varphi(n)$ gives Euler's theorem $a^{\varphi(n)} \equiv 1$. The application is non-obvious because the statements look like facts about exponents and remainders, with no group in sight; the property $B$ "the units mod $n$ form a finite group" is the bridge to the precondition. Worked in [[Ex - Order of an element divides the group order]].
 
 **Field theory: no field of order $6$.** The nonzero elements of a finite field $\mathbb{F}$ form a group under multiplication of order $|\mathbb{F}| - 1$, and the additive group has order $|\mathbb{F}|$. One can show every element satisfies $x \cdot x \cdot \dots$ relations that, combined with Lagrange on these two groups, force $|\mathbb{F}|$ to be a prime power. So there is no field with exactly $6$ elements. The non-obvious step is seeing two different groups hiding in one field and applying Lagrange to each.
 
-**Combinatorics: counting symmetric colourings.** Suppose you colour the faces of a cube and ask how many colourings are fixed by a given rotation group $G$ of order $24$. The colourings fixed by a subgroup, or the size of the orbit of a colouring, are governed by $|G| = |G_x| \cdot |G \cdot x|$ — the orbit–stabiliser theorem, which is Lagrange with $H$ the stabiliser subgroup. The property $B$ here is "$G$ acts on the set of colourings", and the stabiliser of a colouring is the secret subgroup. The application is non-obvious because the problem is phrased as enumeration, never mentioning subgroups at all.
+**Combinatorics: counting symmetric colourings.** Suppose you colour the faces of a cube and ask how many colourings are fixed by a given rotation group $G$ of order $24$. The colourings fixed by a subgroup, or the size of the orbit of a colouring, are governed by $|G| = |G_x| \cdot |G \cdot x|$ — the orbit–stabiliser theorem, which is Lagrange with $H$ the stabiliser subgroup. The property $B$ here is "$G$ acts on the set of colourings", and the stabiliser of a colouring is the secret subgroup. The application is non-obvious because the problem is phrased as enumeration, never mentioning [[Def - Subgroup|subgroups]] at all.
 
 **Linear algebra: orders of invertible matrices over a finite field.** The group $\mathrm{GL}_n(\mathbb{F}_q)$ is finite, with a known order $\prod_{i=0}^{n-1}(q^n - q^i)$. The corollary then bounds the multiplicative order of any invertible matrix over $\mathbb{F}_q$: it must divide that product. Asking "can a $3 \times 3$ matrix over $\mathbb{F}_2$ have order $7$?" becomes a divisibility check. The non-obvious part is recognizing that a question about how many times you can multiply a matrix by itself is a question about element order in a finite group.
 

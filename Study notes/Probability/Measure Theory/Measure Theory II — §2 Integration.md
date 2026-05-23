@@ -74,7 +74,7 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 - **[[Thm - Properties of the Integral]]**
 	- Linearity, monotonicity, and the triangle inequality $|\int f|\le\int|f|$. Linearity is the non-trivial one: the integral of $f\ge0$ is a supremum, and sups do not add — linearity is carried up from simple functions (where it is obvious) by MCT.
 
-> [!tip] Unlocked: Expectation of a Random Variable *(from Probability Theory)*
+> [!tip] Unlocked: Expectation of a [[Def - Random Variable|Random Variable]] *(from Probability Theory)*
 > The integral against a probability measure $\mathbb{P}$ is exactly the **expectation** $\mathbb{E}[X]=\int X\,d\mathbb{P}$ of a [[Def - Random Variable|random variable]]. The whole §2.3 construction — indicators give probabilities, simple functions give weighted averages of values, monotone limits give the expectation of any non-negative random variable — is the rigorous foundation that turns probability from a calculus on densities and discrete sums into a single uniform theory. Linearity of expectation, which is taken for granted in undergraduate probability, is exactly the linearity statement here, proved by MCT for non-negative variables.
 
 > [!note] Exercise Index — §2.3
@@ -87,7 +87,7 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 - **[[Thm - Dominated Convergence Theorem]]**
 	- $f_n\to f$ a.e. and $|f_n|\le g\in L^1\Rightarrow\int|f_n-f|\to0$. The general limit-interchange theorem, proved by applying Fatou to $2g-|f_n-f|\ge0$. The dominating $g$ pins the mass down, forbidding escape. Differentiation under the integral sign is its main corollary.
 
-> [!tip] Unlocked: Martingale Convergence Theorems *(from Advanced Probability IV)*
+> [!tip] Unlocked: [[Def - Martingale|Martingale]] Convergence Theorems *(from Advanced Probability IV)*
 > The MCT/Fatou/DCT triple promotes to the **martingale convergence theorems**: an $L^1$-bounded martingale converges almost surely ([[Thm - Almost Sure Martingale Convergence]]), and a uniformly integrable martingale converges in $L^1$ to its almost-sure limit ([[Thm - Lp and L1 Martingale Convergence]]). The proof of the $L^1$ version is literally the Vitali theorem of §2.5 applied to the martingale; the proof of the a.s. version uses Doob's upcrossing inequality together with Fatou. Without §2.4 there is no theory of stochastic processes converging at all.
 
 > [!tip] Unlocked: Smoothness of the Fourier Transform *(from Harmonic Analysis)*
@@ -105,7 +105,7 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 - **[[Thm - Vitali Convergence Theorem]]**
 	- On a finite-measure space, $f_n\to f$ in $L^1$ **iff** $f_n\xrightarrow{\mu}f$ and $(f_n)$ is uniformly integrable. The *exact* characterisation of $L^1$-convergence: convergence in measure (closeness) plus uniform integrability (no escape). DCT is the special case "dominated $\Rightarrow$ UI."
 
-> [!tip] Unlocked: Uniform Integrability and Martingale Closure *(from Advanced Probability IV)*
+> [!tip] Unlocked: [[Def - Uniform Integrability|Uniform Integrability]] and Martingale Closure *(from Advanced Probability IV)*
 > Uniform integrability is the exact condition for an $L^1$-bounded martingale to **close at infinity** — to have an $L^1$-limit $X_\infty$ such that $X_n = \mathbb{E}[X_\infty\mid\mathcal{F}_n]$, recovering the martingale as conditional expectations of a single random variable. The criterion is decisive in option pricing and in statistical-inference proofs: a martingale that is merely $L^1$-bounded need not close, but a uniformly integrable one does. The Vitali theorem is the analytic core of this closure statement.
 
 > [!note] Exercise Index — §2.5
@@ -120,7 +120,7 @@ The heart of the chapter is the **convergence theorems**. [[Thm - Monotone Conve
 - **[[Thm - Completeness of Lp Spaces]]**
 	- $L^p(\mu)$ is complete: every Cauchy sequence converges (Riesz–Fischer). Proved by extracting a rapidly-Cauchy subsequence, dominating it by the sum of its gaps, and invoking DCT. Completeness of $\mathbb{R}$ transmitted through the integral; what makes $L^p$ a Banach space.
 
-> [!tip] Unlocked: Banach Spaces and Dual Spaces *(from Functional Analysis)*
+> [!tip] Unlocked: Banach Spaces and [[Def - Dual Space|Dual Spaces]] *(from Functional Analysis)*
 > The completeness of $L^p$ makes it a **Banach space** — a complete normed vector space — and $L^p$ for $1<p<\infty$ is the prototypical example. The Hölder inequality identifies the **dual space** $(L^p)^* \cong L^q$ where $\tfrac{1}{p}+\tfrac{1}{q}=1$: every continuous linear functional on $L^p$ is integration against an $L^q$ function. This $L^p$–$L^q$ duality is the structural input to the Hahn–Banach theorem in concrete form, to the weak-$*$ topology on $L^\infty$, and to every convex-duality argument in optimal transport, calculus of variations, and convex analysis.
 >
 > The case $p=2$ is more: $L^2$ is a **Hilbert space** under the inner product $\langle f,g\rangle = \int f\bar g\,d\mu$, with $(L^2)^*\cong L^2$ self-dually via Riesz representation. The orthogonal-projection structure of a Hilbert space *is* conditional expectation in [[Advanced Probability III — Conditional Expectation|Advanced Probability III]] — and Plancherel's theorem for the Fourier transform, the spectral theorem for self-adjoint operators, and the entire theory of orthogonal polynomials live in $L^2$. $L^2$ is the central object of analysis, and §2.6 is where it is constructed.

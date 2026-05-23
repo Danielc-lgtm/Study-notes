@@ -16,7 +16,7 @@ $X_n,X$ random variables; $\varphi_n=\varphi_{X_n}$, $\varphi=\varphi_X$ their [
 
 # Motivation
 
-[[Def - Weak Convergence|Weak convergence]] of laws — $\int f\,d\mu_n\to\int f\,d\mu$ for *all* bounded continuous $f$ — is an unwieldy thing to verify directly. Lévy's continuity theorem replaces it by a far simpler condition: **pointwise convergence of the [[Def - Characteristic Function|characteristic functions]]**. Since the characteristic function turns the convolution of independent sums into a *product*, this is precisely what makes the [[Thm - Central Limit Theorem|central limit theorem]] provable — one need only show $\varphi_{S_n/\sqrt n}(t)\to e^{-t^2/2}$, a computation, instead of testing against every continuous function. Lévy's theorem is the bridge from the analytic object $\varphi$ back to the probabilistic conclusion.
+[[Def - Weak Convergence|Weak convergence]] of laws — $\int f\,d\mu_n\to\int f\,d\mu$ for *all* bounded continuous $f$ — is an unwieldy thing to verify directly. Lévy's continuity theorem replaces it by a far simpler condition: **pointwise convergence of the [[Def - Characteristic Function|characteristic functions]]**. Since the characteristic function turns the [[Def - Convolution|convolution]] of independent sums into a *product*, this is precisely what makes the [[Thm - Central Limit Theorem|central limit theorem]] provable — one need only show $\varphi_{S_n/\sqrt n}(t)\to e^{-t^2/2}$, a computation, instead of testing against every continuous function. Lévy's theorem is the bridge from the analytic object $\varphi$ back to the probabilistic conclusion.
 
 ---
 

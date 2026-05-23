@@ -31,7 +31,7 @@ $F : M \to N$ is a smooth map between smooth manifolds with $\dim M = m \leq n =
 
 This theorem is the **immersion specialisation of [[Thm - The Rank Theorem|the rank theorem]]**. It says that *any* smooth immersion at a point looks, in suitable local coordinates, like the standard inclusion of $\mathbb{R}^m$ into $\mathbb{R}^n$ as the first $m$ coordinates. The rank theorem's hypothesis of "constant rank in a neighbourhood" is automatic for immersions, because the maximal rank $m$ is preserved on an open neighbourhood by lower semicontinuity ([[Def - Rank of a Smooth Map]]).
 
-The result is the local version of the question "what does an immersion look like?", and the answer is "the simplest possible thing — a coordinate inclusion". This makes immersions the local-injectivity-respecting smooth maps: every immersion is locally a smooth embedding (its image is locally a flat coordinate slice). The "local" qualifier is essential — globally, an immersion can fail to be an embedding (figure-eight, dense torus line), because global injectivity or the homeomorphism condition may fail. But near each point, an immersion is as nice as possible.
+The result is the local version of the question "what does an immersion look like?", and the answer is "the simplest possible thing — a coordinate inclusion". This makes immersions the local-injectivity-respecting smooth maps: every immersion is locally a smooth embedding (its image is locally a flat coordinate slice). The "local" qualifier is essential — globally, an immersion can fail to be an embedding (figure-eight, dense torus line), because global injectivity or the [[Def - Homeomorphism|homeomorphism]] condition may fail. But near each point, an immersion is as nice as possible.
 
 The corollary about local embedding is the bridge from the linear-algebraic immersion condition to the topological-embedding condition: every immersion is *locally* an embedding, by restricting to a sufficiently small neighbourhood. This is why immersions are sometimes called "local embeddings" — locally they are always embeddings, even when globally they fail to be.
 
@@ -65,7 +65,7 @@ Combine the conclusion with **the question of image structure.** Property $D$: y
 
 The intuition is the rank theorem's intuition in the special case of maximal injective rank, and it has a clean direct proof using the [[Thm - The Inverse Function Theorem|inverse function theorem]].
 
-**The bolded one-liner mechanism summary: the immersion's image is, by injectivity of the differential, transversal to a complementary subspace; completing $F$ by carrying along a basis of the complement produces a local diffeomorphism, which then provides the coordinate normal form.**
+**The bolded one-liner mechanism summary: the immersion's image is, by injectivity of the differential, transversal to a complementary [[Def - Subspace|subspace]]; completing $F$ by carrying along a basis of the complement produces a local diffeomorphism, which then provides the coordinate normal form.**
 
 Here is the construction. In local coordinates around $p$ and $F(p)$, $F$ is represented by a smooth map $\hat F : U \to \mathbb{R}^n$ with $\hat F(0) = 0$ and $D\hat F(0)$ injective. By a permutation of target coordinates, assume the upper $m \times m$ block of $D\hat F(0)$ is invertible — write $\hat F(x) = (F^1(x), \dots, F^n(x))$ and let $\Pi = (F^1, \dots, F^m)$ be the first $m$ components; then $D\Pi(0)$ is the upper $m \times m$ block of $D\hat F(0)$, invertible.
 
@@ -128,7 +128,7 @@ Reduce to Euclidean coordinates via initial charts. Permute target coordinates s
    - *Why needed:* It verifies the standard form.
 
 7. **Return to manifold charts.** Combine $\psi$ with the initial target chart $\psi_0$ to get the new target chart on $N$; the source chart can remain $\varphi_0$ (no change of source coordinates was needed).
-   - *Hint:* Composition of smooth charts with smooth diffeomorphisms gives smooth charts.
+   - *Hint:* Composition of smooth charts with smooth [[Def - Diffeomorphism|diffeomorphisms]] gives smooth charts.
    - *Why needed:* It returns from Euclidean coordinates to manifold charts.
 
 ---
@@ -145,7 +145,7 @@ Reduce to Euclidean coordinates via initial charts. Permute target coordinates s
 > > [!note]- Full proof
 > > The Jacobian of $G$ at $(0,0)$ has the block structure
 > > $$DG(0, 0) = \begin{pmatrix} \partial \hat F^i / \partial x^j(0)_{1 \leq i, j \leq m} & 0_{m \times (n-m)} \\ \partial \hat F^i / \partial x^j(0)_{m < i \leq n,\, 1 \leq j \leq m} & I_{n-m} \end{pmatrix}.$$
-> > The top-right block is $0$ because $\hat F^i$ does not depend on $t$ for $i \leq m$; the bottom-right block is $I_{n-m}$ because $\hat F^i + t^{i-m}$ has $\partial/\partial t^j = \delta^{i-m}_j$. This is block-lower-triangular with diagonal blocks $D\Pi(0)$ (the upper $m \times m$ block of $D\hat F(0)$, invertible by hypothesis) and $I_{n-m}$. Its determinant is the product of the diagonal blocks' determinants, $\det D\Pi(0) \cdot 1 \neq 0$. So $DG(0,0)$ is invertible, and by the [[Thm - The Inverse Function Theorem|inverse function theorem]] $G$ is a local diffeomorphism near $(0,0)$.
+> > The top-right block is $0$ because $\hat F^i$ does not depend on $t$ for $i \leq m$; the bottom-right block is $I_{n-m}$ because $\hat F^i + t^{i-m}$ has $\partial/\partial t^j = \delta^{i-m}_j$. This is block-lower-triangular with diagonal blocks $D\Pi(0)$ (the upper $m \times m$ block of $D\hat F(0)$, invertible by hypothesis) and $I_{n-m}$. Its determinant is the product of the diagonal blocks' [[Def - Determinant|determinants]], $\det D\Pi(0) \cdot 1 \neq 0$. So $DG(0,0)$ is invertible, and by the [[Thm - The Inverse Function Theorem|inverse function theorem]] $G$ is a local diffeomorphism near $(0,0)$.
 
 ---
 

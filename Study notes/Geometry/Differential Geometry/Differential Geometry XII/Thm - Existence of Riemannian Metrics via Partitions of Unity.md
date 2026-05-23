@@ -17,7 +17,7 @@ $(M, g)$ — a smooth manifold $M$ with a Riemannian metric $g$ (the conclusion)
 
 # Statement
 
-> **Theorem (Existence of Riemannian Metrics).** Every smooth manifold $M$, with or without boundary, admits a Riemannian metric.
+> **Theorem (Existence of [[Def - Riemannian Metric|Riemannian Metrics]]).** Every smooth manifold $M$, with or without boundary, admits a Riemannian metric.
 
 This is Proposition 13.3 in Lee. The proof is a partition-of-unity gluing of local Euclidean pullback metrics.
 
@@ -59,13 +59,13 @@ So this theorem is the statement that the most universal additional geometric st
 
 **Mechanism summary:** **the cone of positive-definite forms is convex, so a positive convex combination of local Euclidean metrics is positive-definite — and a partition of unity is the manifold's machinery for taking smooth positive convex combinations of locally-defined objects.**
 
-The argument is as natural as it is mechanical. At each point $p \in M$, one needs an inner product $g_p$ on $T_pM$ — equivalently, a positive-definite symmetric bilinear form on the $n$-dimensional vector space $T_pM$. The space of all symmetric bilinear forms on $T_pM$ is a vector space (of dimension $n(n+1)/2$), and the subset of positive-definite ones is a *convex open cone* in this vector space. So if I have *several* positive-definite forms — for instance, one local pullback from each chart covering $p$ — and I take a positive convex combination of them (positive coefficients summing to $1$), the result is again positive-definite.
+The argument is as natural as it is mechanical. At each point $p \in M$, one needs an inner product $g_p$ on $T_pM$ — equivalently, a positive-definite symmetric bilinear form on the $n$-dimensional vector space $T_pM$. The space of all symmetric bilinear forms on $T_pM$ is a vector space (of [[Def - Dimension|dimension]] $n(n+1)/2$), and the subset of positive-definite ones is a *convex open cone* in this vector space. So if I have *several* positive-definite forms — for instance, one local pullback from each chart covering $p$ — and I take a positive convex combination of them (positive coefficients summing to $1$), the result is again positive-definite.
 
 Now, in a chart $(U, \varphi)$, the pullback $\varphi^* \bar g$ of the Euclidean metric is a Riemannian metric on $U$ (smooth, symmetric, positive-definite — these properties pull back). So on each chart we have a local Riemannian metric. To combine them globally, we need a way of "averaging" the local metrics with weights that vary smoothly across the manifold. That is exactly what a smooth partition of unity does: the functions $\psi_\alpha$ are non-negative, sum to $1$, and vary smoothly. Define $g = \sum_\alpha \psi_\alpha (\varphi_\alpha^* \bar g)$. Pointwise, this is a positive convex combination of positive-definite forms (only those $\alpha$ with $\psi_\alpha(p) > 0$ contribute, and they all give positive-definite forms at $p$), so $g_p$ is positive-definite. The sum is smooth by local finiteness of the partition of unity. So $g$ is a Riemannian metric on $M$.
 
 The decisive insight, and the reason the argument can be remembered as a single move, is the **convexity of positive-definiteness**: positive linear combinations of positive-definite forms are positive-definite. This single algebraic fact does the entire work of the gluing. The same fact, *false* for indefinite forms, is why the analogous argument fails for Lorentzian metrics.
 
-A different way to see why the result holds: a Riemannian metric is a section of a bundle whose fibres are positive-definite symmetric forms — a smooth subbundle of the symmetric $(0, 2)$-tensor bundle. The fibres are convex, non-empty (the Euclidean inner product on $\mathbb{R}^n$, pulled back via any chart, gives a positive-definite form in the fibre at every point), and *contractible* (in fact, convex cones). For a smooth bundle with convex, contractible fibres over a paracompact base, smooth sections always exist — this is a general principle. The partition-of-unity construction is the explicit method.
+A different way to see why the result holds: a Riemannian metric is a section of a bundle whose fibres are positive-definite symmetric forms — a smooth [[Def - Subbundle|subbundle]] of the symmetric $(0, 2)$-tensor bundle. The fibres are convex, non-empty (the Euclidean inner product on $\mathbb{R}^n$, pulled back via any chart, gives a positive-definite form in the fibre at every point), and *contractible* (in fact, convex cones). For a smooth bundle with convex, contractible fibres over a paracompact base, smooth sections always exist — this is a general principle. The partition-of-unity construction is the explicit method.
 
 ---
 
@@ -108,14 +108,14 @@ The theorem itself is not hard; the proof is short and follows the canonical pat
 # Lemma Decomposition
 
 > [!note]- Lemma 1: Pullback of Euclidean metric on a chart is a Riemannian metric on $U$
-> **Statement:** Let $(U, \varphi)$ be a smooth chart on $M$ with $\varphi : U \to \varphi(U) \subseteq \mathbb{R}^n$ a diffeomorphism. The pullback $\varphi^* \bar g$ is a Riemannian metric on $U$ (where $\bar g$ is the Euclidean metric on $\varphi(U) \subseteq \mathbb{R}^n$).
+> **Statement:** Let $(U, \varphi)$ be a smooth chart on $M$ with $\varphi : U \to \varphi(U) \subseteq \mathbb{R}^n$ a [[Def - Diffeomorphism|diffeomorphism]]. The pullback $\varphi^* \bar g$ is a Riemannian metric on $U$ (where $\bar g$ is the Euclidean metric on $\varphi(U) \subseteq \mathbb{R}^n$).
 >
 > **Hint:** Pullback preserves smoothness, symmetry, and positive-definiteness (since the differential of $\varphi$ is an isomorphism at each point of $U$).
 >
 > **Why needed:** Provides the local Riemannian metrics that the partition-of-unity gluing combines.
 >
 > > [!note]- Full proof
-> > $\varphi^* \bar g$ is smooth because $\bar g$ is smooth and $\varphi$ is smooth, and pullback of smooth tensor fields is smooth. It is symmetric because $\bar g$ is symmetric and pullback preserves symmetry: $(\varphi^*\bar g)_p(v, w) = \bar g_{\varphi(p)}(d\varphi_p v, d\varphi_p w) = \bar g_{\varphi(p)}(d\varphi_p w, d\varphi_p v) = (\varphi^*\bar g)_p(w, v)$. It is positive-definite because $d\varphi_p : T_pU \to T_{\varphi(p)}\mathbb{R}^n$ is an isomorphism (the differential of a diffeomorphism), so for $v \neq 0$ we have $d\varphi_p v \neq 0$, hence $(\varphi^*\bar g)_p(v, v) = \bar g_{\varphi(p)}(d\varphi_p v, d\varphi_p v) > 0$.
+> > $\varphi^* \bar g$ is smooth because $\bar g$ is smooth and $\varphi$ is smooth, and pullback of smooth tensor fields is smooth. It is symmetric because $\bar g$ is symmetric and pullback preserves symmetry: $(\varphi^*\bar g)_p(v, w) = \bar g_{\varphi(p)}(d\varphi_p v, d\varphi_p w) = \bar g_{\varphi(p)}(d\varphi_p w, d\varphi_p v) = (\varphi^*\bar g)_p(w, v)$. It is positive-definite because $d\varphi_p : T_pU \to T_{\varphi(p)}\mathbb{R}^n$ is an isomorphism (the differential of a [[Def - Diffeomorphism|diffeomorphism]]), so for $v \neq 0$ we have $d\varphi_p v \neq 0$, hence $(\varphi^*\bar g)_p(v, v) = \bar g_{\varphi(p)}(d\varphi_p v, d\varphi_p v) > 0$.
 
 > [!note]- Lemma 2: A positive convex combination of positive-definite forms is positive-definite
 > **Statement:** Let $b_1, \ldots, b_k$ be positive-definite symmetric bilinear forms on a finite-dimensional vector space $V$, and let $\lambda_1, \ldots, \lambda_k \geq 0$ with at least one $\lambda_i > 0$. Then $b = \sum_i \lambda_i b_i$ is positive-definite.
@@ -176,7 +176,7 @@ The theorem itself is not hard; the proof is short and follows the canonical pat
 
 *2. Existence of Riemannian volume forms.* On an oriented smooth manifold, every Riemannian metric induces a [[Def - Riemannian Volume Form|volume form]] $dV_g$. The existence of orientations is itself a topological condition (not every manifold is orientable), but once an orientation is fixed, the choice of metric gives a volume form. The partition-of-unity argument can be applied directly to "positive top forms compatible with the orientation" — these form a convex cone, and the gluing gives a global volume form even without going through the metric.
 
-*3. Existence of sub-Riemannian structures.* A **sub-Riemannian** structure on $M$ is a smooth distribution $\mathcal{D} \subseteq TM$ together with a fibre metric on $\mathcal{D}$ — a Riemannian metric on a *subbundle* of $TM$. By the same partition-of-unity argument applied to the subbundle, every smooth distribution admits a sub-Riemannian metric. This is the geometric setting of, e.g., the Carnot–Carathéodory metric on the Heisenberg group, the metric of optimal control problems, and sub-Riemannian geodesics.
+*3. Existence of sub-Riemannian structures.* A **sub-Riemannian** structure on $M$ is a smooth distribution $\mathcal{D} \subseteq TM$ together with a fibre metric on $\mathcal{D}$ — a Riemannian metric on a *[[Def - Subbundle|subbundle]]* of $TM$. By the same partition-of-unity argument applied to the subbundle, every smooth distribution admits a sub-Riemannian metric. This is the geometric setting of, e.g., the Carnot–Carathéodory metric on the Heisenberg [[Def - Group|group]], the metric of optimal control problems, and sub-Riemannian [[Def - Geodesic|geodesics]].
 
 *4. Failure for almost complex structures.* An **almost complex structure** on $M$ is a smooth bundle endomorphism $J : TM \to TM$ with $J^2 = -\mathrm{id}$. Pointwise this requires $T_pM$ to be even-dimensional and gives a complex structure on the tangent space. *Unlike* Riemannian metrics, almost complex structures are obstructed: the manifold must be even-dimensional, and even then there are further topological obstructions (the existence of $J$ on the $2k$-sphere $S^{2k}$ fails for most $k$ — only $k = 1$ ($S^2$) and $k = 3$ ($S^6$) admit one, and even on $S^6$ no integrable $J$ has been found). The reason the partition-of-unity argument fails is that the set of complex structures on $\mathbb{R}^{2k}$ is *not* convex — averaging two complex structures gives an endomorphism with $J^2 \neq -\mathrm{id}$ in general.
 

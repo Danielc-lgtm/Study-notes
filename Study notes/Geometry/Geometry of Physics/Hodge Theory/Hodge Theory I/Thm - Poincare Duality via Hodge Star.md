@@ -94,7 +94,7 @@ The proof itself is short, but two subtleties trip up many students.
 
 **The Hodge star depends on the metric, but the cohomological isomorphism is topological.** The duality $H^k\cong H^{n-k}$ is metric-independent (topological), but the Hodge star realizing it is metric-dependent. The resolution: different metrics give different Hodge stars, but they all give the *same* cohomological isomorphism (up to a sign, which depends on orientation). So the metric-dependent construction realizes a metric-independent invariant — and the same isomorphism is obtained regardless of metric choice, just with different concrete representatives.
 
-**Orientation is essential.** Without an orientation, the Hodge star is only defined up to a sign, and the resulting "isomorphism" $\mathcal{H}^k\cong\mathcal{H}^{n-k}$ is well-defined only up to sign, breaking the duality. On a non-orientable closed manifold, the topological Poincaré duality is more subtle: $H^k(M; \mathbb{R}) \cong H^{n-k}(M; \mathcal{O}_M)$ with twisted coefficients (the orientation sheaf $\mathcal{O}_M$). The Hodge star can be modified to act on twisted forms (pseudoforms), recovering the twisted duality, but this is beyond the basic Hodge theory of orientable manifolds.
+**Orientation is essential.** Without an orientation, the Hodge star is only defined up to a sign, and the resulting "isomorphism" $\mathcal{H}^k\cong\mathcal{H}^{n-k}$ is well-defined only up to sign, breaking the duality. On a non-orientable closed manifold, the topological Poincaré duality is more subtle: $H^k(M; \mathbb{R}) \cong H^{n-k}(M; \mathcal{O}_M)$ with twisted coefficients (the orientation sheaf $\mathcal{O}_M$). The Hodge star can be modified to act on twisted forms ([[Def - Pseudoform (Twisted Form)|pseudoforms]]), recovering the twisted duality, but this is beyond the basic Hodge theory of orientable manifolds.
 
 ---
 
@@ -124,7 +124,7 @@ The Hodge star commutes with $\Delta$ (a sign-tracking calculation using $\delta
    - *Why needed:* Bridges the harmonic-form isomorphism to a cohomological isomorphism.
 
 5. **Composition gives Poincaré duality.** $H^k_{dR}\xrightarrow{\cong}\mathcal{H}^k\xrightarrow{\star}\mathcal{H}^{n-k}\xrightarrow{\cong}H^{n-k}_{dR}$.
-   - *Hint:* Both maps in the composition are isomorphisms.
+   - *Hint:* Both maps in the composition are [[Def - Isomorphism|isomorphisms]].
    - *Why needed:* Concludes the cohomological Poincaré duality from the harmonic isomorphism.
 
 6. **Dimensions agree.** $b_k = \dim H^k_{dR} = \dim\mathcal{H}^k = \dim\mathcal{H}^{n-k} = \dim H^{n-k}_{dR} = b_{n-k}$.
@@ -181,7 +181,7 @@ The Hodge star commutes with $\Delta$ (a sign-tracking calculation using $\delta
 > **Why needed:** Gives the cohomological Poincaré duality from the harmonic-form isomorphism.
 >
 > > [!note]- Full proof
-> > Direct. The first and third arrows are isomorphisms by the Hodge isomorphism (which is the content of [[Thm - Harmonic Forms Represent de Rham Cohomology]]). The middle arrow $\star : \mathcal{H}^k\to\mathcal{H}^{n-k}$ is an isomorphism by Lemma 3. Composition of isomorphisms is an isomorphism. The dimensions agree: $b_k = \dim H^k = \dim\mathcal{H}^k = \dim\mathcal{H}^{n-k} = \dim H^{n-k} = b_{n-k}$.
+> > Direct. The first and third arrows are isomorphisms by the Hodge isomorphism (which is the content of [[Thm - Harmonic Forms Represent de Rham Cohomology]]). The middle arrow $\star : \mathcal{H}^k\to\mathcal{H}^{n-k}$ is an isomorphism by Lemma 3. Composition of isomorphisms is an isomorphism. The [[Def - Dimension|dimensions]] agree: $b_k = \dim H^k = \dim\mathcal{H}^k = \dim\mathcal{H}^{n-k} = \dim H^{n-k} = b_{n-k}$.
 
 ---
 
@@ -192,7 +192,7 @@ The Hodge star commutes with $\Delta$ (a sign-tracking calculation using $\delta
 >
 > *Proof.*
 >
-> **Step 0 — Well-posedness.** The Hodge star $\star : \Omega^k(M) \to \Omega^{n-k}(M)$ is a pointwise $C^\infty(M)$-linear isomorphism (see [[Thm - Properties of the Hodge Star]]). The harmonic forms $\mathcal{H}^k(M) = \ker(\Delta|_{\Omega^k})$ are well-defined finite-dimensional subspaces (by the Hodge decomposition theorem).
+> **Step 0 — Well-posedness.** The Hodge star $\star : \Omega^k(M) \to \Omega^{n-k}(M)$ is a pointwise $C^\infty(M)$-linear isomorphism (see [[Thm - Properties of the Hodge Star]]). The harmonic forms $\mathcal{H}^k(M) = \ker(\Delta|_{\Omega^k})$ are well-defined finite-dimensional [[Def - Subspace|subspaces]] (by the Hodge decomposition theorem).
 >
 > **Step 1 — Sign convention compatibility.** Using $\delta = (-1)^{n(k+1)+1}\star d\star$ and the double-star formula $\star\star = (-1)^{k(n-k)+s}\mathrm{id}$, the identities
 > $$\star d = (-1)^{?}\delta\star, \qquad \star\delta = (-1)^{?}d\star$$

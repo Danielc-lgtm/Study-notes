@@ -16,7 +16,7 @@ $V$ is a finite-dimensional real vector space, $\dim V = n$, with dual basis $\v
 
 # Statement
 
-> **Theorem (Properties of the Wedge Product, Lee Proposition 14.11).** Let $V$ be a finite-dimensional real vector space and let $\omega, \omega' \in \Lambda^k V^*$, $\eta, \eta' \in \Lambda^\ell V^*$, $\zeta \in \Lambda^m V^*$ be alternating covariant tensors on $V$. The wedge product $\wedge : \Lambda^k V^* \times \Lambda^\ell V^* \to \Lambda^{k+\ell} V^*$ satisfies:
+> **Theorem (Properties of [[Def - The Wedge Product|the Wedge Product]], Lee Proposition 14.11).** Let $V$ be a finite-dimensional real vector space and let $\omega, \omega' \in \Lambda^k V^*$, $\eta, \eta' \in \Lambda^\ell V^*$, $\zeta \in \Lambda^m V^*$ be alternating covariant tensors on $V$. The wedge product $\wedge : \Lambda^k V^* \times \Lambda^\ell V^* \to \Lambda^{k+\ell} V^*$ satisfies:
 >
 > (a) **Bilinearity:** For $a, b \in \mathbb{R}$,
 > $$(a\omega + b\omega') \wedge \eta = a(\omega \wedge \eta) + b(\omega' \wedge \eta), \qquad \omega \wedge (a\eta + b\eta') = a(\omega \wedge \eta) + b(\omega \wedge \eta').$$
@@ -79,7 +79,7 @@ The fifth target combination is **pullback respects the wedge, so de Rham cohomo
 
 # Why Is It True
 
-**The one-liner mechanism:** **the wedge product is, structurally, the operation of forming determinants out of $1$-forms, and every property of the wedge is a property of determinants.**
+**The one-liner mechanism:** **the wedge product is, structurally, the operation of forming [[Def - Determinant|determinants]] out of $1$-forms, and every property of the wedge is a property of determinants.**
 
 To see why each property holds, it suffices to verify it on the elementary basic forms $\varepsilon^I = \varepsilon^{i_1} \wedge \cdots \wedge \varepsilon^{i_k}$, since by bilinearity (property a), every alternating tensor is a linear combination of such elementary forms.
 
@@ -220,7 +220,7 @@ The hardest property is associativity, because in the determinant convention the
 
 **Physics: angular momentum as a $2$-form.** In Hamiltonian mechanics, angular momentum is naturally a $2$-form on phase space, not a vector. The components $L_{ij} = x_i p_j - x_j p_i$ are antisymmetric, encoding the alternating-tensor structure. The wedge product is the algebraic content of "$L = x \wedge p$" if we view position and momentum as $1$-forms. Vector cross product disguises this structure in $\mathbb{R}^3$.
 
-**Combinatorics: Plücker coordinates.** For a $k$-dimensional subspace $W \subseteq V$ with basis $w_1, \dots, w_k$, the wedge $w_1 \wedge \cdots \wedge w_k \in \Lambda^k V$ is well-defined up to scalar by $W$. The coefficients of this wedge in a basis of $\Lambda^k V$ are the **Plücker coordinates** of $W$, and they satisfy the **Plücker relations** — quadratic identities expressing the constraint that $W$ comes from a single $k$-dimensional subspace. The whole geometry of Grassmannians runs on the algebraic properties of the wedge.
+**Combinatorics: Plücker coordinates.** For a $k$-dimensional [[Def - Subspace|subspace]] $W \subseteq V$ with basis $w_1, \dots, w_k$, the wedge $w_1 \wedge \cdots \wedge w_k \in \Lambda^k V$ is well-defined up to scalar by $W$. The coefficients of this wedge in a basis of $\Lambda^k V$ are the **Plücker coordinates** of $W$, and they satisfy the **Plücker relations** — quadratic identities expressing the constraint that $W$ comes from a single $k$-dimensional subspace. The whole geometry of Grassmannians runs on the algebraic properties of the wedge.
 
 **Algebraic topology: cup product on cohomology.** The cup product on singular cohomology $H^k(M; \mathbb{R}) \otimes H^\ell(M; \mathbb{R}) \to H^{k+\ell}(M; \mathbb{R})$ is the topological counterpart of the wedge product on de Rham cohomology. The graded commutativity $\alpha \cup \beta = (-1)^{k\ell}\beta \cup \alpha$ is the topological version of property (c). De Rham's theorem identifies the two products, providing a calculation tool.
 

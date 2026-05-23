@@ -17,7 +17,7 @@ Throughout, $M_1, \dots, M_k$ are smooth manifolds of dimensions $n_1, \dots, n_
 
 # Statement
 
-> **Theorem (Product of Smooth Manifolds; Lee Example 1.34).** Let $M_1, \dots, M_k$ be smooth manifolds of dimensions $n_1, \dots, n_k$. The product space $M_1 \times \cdots \times M_k$ with the product topology is a topological manifold of dimension $n_1 + \cdots + n_k$. Moreover, the **product atlas**
+> **Theorem (Product of [[Def - Smooth Manifold|Smooth Manifolds]]; Lee Example 1.34).** Let $M_1, \dots, M_k$ be smooth manifolds of [[Def - Dimension|dimensions]] $n_1, \dots, n_k$. The product space $M_1 \times \cdots \times M_k$ with the product topology is a topological manifold of [[Def - Dimension|dimension]] $n_1 + \cdots + n_k$. Moreover, the **product atlas**
 > $$\mathcal{A}_{\mathrm{prod}} = \{(U_{\alpha_1} \times \cdots \times U_{\alpha_k}, \, \varphi_{\alpha_1} \times \cdots \times \varphi_{\alpha_k}) : (U_{\alpha_i}, \varphi_{\alpha_i}) \in \mathcal{A}_i\}$$
 > is a smooth atlas on $M_1 \times \cdots \times M_k$, determining the **product smooth structure**.
 
@@ -108,7 +108,7 @@ The other common error is to assume that the product topology and the standard t
    - *Why needed:* The second topological-manifold condition.
 
 3. **Verify locally Euclidean of dimension $n_1 + \cdots + n_k$.** Given $(p_1, \dots, p_k)$, take charts $(U_i, \varphi_i)$ on $M_i$ with $p_i \in U_i$; then $U_1 \times \cdots \times U_k$ is an open neighbourhood, and $\varphi_1 \times \cdots \times \varphi_k$ is a homeomorphism onto $\widehat{U}_1 \times \cdots \times \widehat{U}_k \subseteq \mathbb{R}^{n_1 + \cdots + n_k}$.
-   - *Hint:* The product of homeomorphisms is a homeomorphism between products.
+   - *Hint:* The product of [[Def - Homeomorphism|homeomorphisms]] is a homeomorphism between products.
    - *Why needed:* The locally Euclidean condition, with dimension $n_1 + \cdots + n_k$.
 
 4. **Verify the product atlas is smooth.** Take two product charts $\varphi_\alpha = \varphi_{\alpha_1} \times \cdots \times \varphi_{\alpha_k}$ and $\varphi_\beta = \varphi_{\beta_1} \times \cdots \times \varphi_{\beta_k}$; compute the transition as $\varphi_\beta \circ \varphi_\alpha^{-1} = (\varphi_{\beta_1} \circ \varphi_{\alpha_1}^{-1}) \times \cdots \times (\varphi_{\beta_k} \circ \varphi_{\alpha_k}^{-1})$, a product of smooth maps.
@@ -160,7 +160,7 @@ The other common error is to assume that the product topology and the standard t
 >
 > *Proof.*
 >
-> **Step 0 — Topological manifold structure.** By Lemmas 1 and 2, $M_1 \times \cdots \times M_k$ is Hausdorff and second-countable. For locally Euclidean: given any point $(p_1, \dots, p_k) \in M_1 \times \cdots \times M_k$, choose for each $i$ a chart $(U_i, \varphi_i)$ on $M_i$ with $p_i \in U_i$. The product $U_1 \times \cdots \times U_k$ is open in the product topology (definition), and the product map $\varphi_1 \times \cdots \times \varphi_k : U_1 \times \cdots \times U_k \to \widehat{U}_1 \times \cdots \times \widehat{U}_k$ is a homeomorphism (product of homeomorphisms is a homeomorphism between products). The image $\widehat{U}_1 \times \cdots \times \widehat{U}_k$ is an open subset of $\mathbb{R}^{n_1} \times \cdots \times \mathbb{R}^{n_k} = \mathbb{R}^{n_1 + \cdots + n_k}$. So the product chart is a chart of dimension $n_1 + \cdots + n_k$, and the product atlas covers $M_1 \times \cdots \times M_k$.
+> **Step 0 — Topological manifold structure.** By Lemmas 1 and 2, $M_1 \times \cdots \times M_k$ is Hausdorff and second-countable. For locally Euclidean: given any point $(p_1, \dots, p_k) \in M_1 \times \cdots \times M_k$, choose for each $i$ a chart $(U_i, \varphi_i)$ on $M_i$ with $p_i \in U_i$. The product $U_1 \times \cdots \times U_k$ is open in the product topology (definition), and the product map $\varphi_1 \times \cdots \times \varphi_k : U_1 \times \cdots \times U_k \to \widehat{U}_1 \times \cdots \times \widehat{U}_k$ is a homeomorphism (product of [[Def - Homeomorphism|homeomorphisms]] is a homeomorphism between products). The image $\widehat{U}_1 \times \cdots \times \widehat{U}_k$ is an open subset of $\mathbb{R}^{n_1} \times \cdots \times \mathbb{R}^{n_k} = \mathbb{R}^{n_1 + \cdots + n_k}$. So the product chart is a chart of dimension $n_1 + \cdots + n_k$, and the product atlas covers $M_1 \times \cdots \times M_k$.
 >
 > **Step 1 — Smooth compatibility of product charts.** Let $\varphi_\alpha = \varphi_{\alpha_1} \times \cdots \times \varphi_{\alpha_k}$ and $\varphi_\beta = \varphi_{\beta_1} \times \cdots \times \varphi_{\beta_k}$ be two product charts with overlapping domains. On the overlap, the transition function is
 > $$\varphi_\beta \circ \varphi_\alpha^{-1} = (\varphi_{\beta_1} \circ \varphi_{\alpha_1}^{-1}) \times \cdots \times (\varphi_{\beta_k} \circ \varphi_{\alpha_k}^{-1}),$$
@@ -176,7 +176,7 @@ The other common error is to assume that the product topology and the standard t
 
 **Algebraic topology — Künneth formula.** The de Rham cohomology of a product satisfies $H^*_{dR}(M \times N) \cong H^*_{dR}(M) \otimes H^*_{dR}(N)$ (Künneth theorem; see [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|DG X]]). This is a direct consequence of the product smooth structure and is the geometric reason that cohomological invariants of products multiply.
 
-**Lie group theory — direct product of Lie groups.** The product of two Lie groups is a Lie group (the group operations multiply componentwise), and topologically it is the product manifold. The Lie algebra of the product is the direct sum of the Lie algebras. This is the "free" construction in the category of Lie groups, and most concrete Lie groups are built from direct/semidirect products of simpler ones.
+**Lie group theory — direct product of Lie [[Def - Group|groups]].** The product of two Lie [[Def - Group|groups]] is a Lie group (the group operations multiply componentwise), and topologically it is the product manifold. The Lie algebra of the product is the direct sum of the Lie algebras. This is the "free" construction in the category of Lie groups, and most concrete Lie groups are built from direct/semidirect products of simpler ones.
 
 **Probability and measure theory — product measures.** The product topology on $M \times N$ supports a natural Borel structure $\mathcal{B}(M \times N) \cong \mathcal{B}(M) \otimes \mathcal{B}(N)$, and the product of two probability measures is a probability measure on the product. Probability spaces with smooth structure (e.g., random points on a manifold) inherit the product smooth structure.
 

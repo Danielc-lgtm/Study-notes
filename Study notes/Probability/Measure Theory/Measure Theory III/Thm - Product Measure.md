@@ -17,7 +17,7 @@ $(X_1,\mathcal{A}_1,\mu_1)$, $(X_2,\mathcal{A}_2,\mu_2)$ are $\sigma$-finite mea
 
 # Motivation
 
-To integrate functions of two variables, or to model a *pair* of independent random experiments, one needs a measure on the product space. The product measure $\mu_1\otimes\mu_2$ is the unique measure assigning a rectangle $A_1\times A_2$ the *product of side measures* $\mu_1(A_1)\mu_2(A_2)$ — "area $=$ width $\times$ height," lifted to abstract measure spaces. Its existence and uniqueness are what make [[Thm - Fubini-Tonelli Theorem|Fubini's theorem]] and the measure-theoretic definition of [[Def - Independence|independence]] possible.
+To integrate functions of two variables, or to model a *pair* of independent random experiments, one needs a measure on the product space. The product measure $\mu_1\otimes\mu_2$ is the unique measure assigning a rectangle $A_1\times A_2$ the *product of side measures* $\mu_1(A_1)\mu_2(A_2)$ — "area $=$ width $\times$ height," lifted to abstract measure spaces. Its existence and uniqueness are what make [[Thm - Fubini-Tonelli Theorem|Fubini's theorem]] and the measure-theoretic definition of independence possible.
 
 ---
 
@@ -25,7 +25,7 @@ To integrate functions of two variables, or to model a *pair* of independent ran
 
 **Sources.** Hypotheses: $\mu_1,\mu_2$ **$\sigma$-finite**. $\sigma$-finiteness is essential — for uniqueness (via [[Thm - Dynkin's π-λ Theorem|π–λ]]) and for the slice-integral to be well-defined. Probability measures are finite, hence $\sigma$-finite, so product *probability* measures always exist.
 
-**Targets.** $\mu_1\otimes\mu_2$ feeds [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] (double integral $=$ iterated integral); it gives $\lambda_m\otimes\lambda_n=\lambda_{m+n}$ (Lebesgue measure is a product); and the joint law of [[Def - Independence|independent]] random variables is, by definition, the product of the marginal laws.
+**Targets.** $\mu_1\otimes\mu_2$ feeds [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] (double integral $=$ iterated integral); it gives $\lambda_m\otimes\lambda_n=\lambda_{m+n}$ (Lebesgue measure is a product); and the joint law of independent random variables is, by definition, the product of the marginal laws.
 
 ---
 
@@ -95,7 +95,7 @@ Two non-elementary inputs, neither obvious. (i) **Measurability of the slice-mea
 
 # Cross-Field Exercise Suggestions
 
-The product construction iterates: $\bigotimes_{i\in\mathbb{N}}\mu_i$ builds a measure on an *infinite* product, the home of [[Def - Independence|independent sequences]] of random variables and of the **Kolmogorov extension theorem** — the device that constructs the law of a stochastic process from its finite-dimensional marginals. The simple random walk's law on $\{-1,1\}^{\mathbb{N}}$ is such an infinite product.
+The product construction iterates: $\bigotimes_{i\in\mathbb{N}}\mu_i$ builds a measure on an *infinite* product, the home of independent sequences of random variables and of the **Kolmogorov extension theorem** — the device that constructs the law of a stochastic process from its finite-dimensional marginals. The simple random walk's law on $\{-1,1\}^{\mathbb{N}}$ is such an infinite product.
 
 ---
 

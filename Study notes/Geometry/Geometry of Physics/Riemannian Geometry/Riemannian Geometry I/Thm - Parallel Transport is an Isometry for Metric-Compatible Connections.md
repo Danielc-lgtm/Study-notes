@@ -17,11 +17,11 @@ $(M, g)$ — a Riemannian or semi-Riemannian manifold. $\nabla$ — a connection
 
 # Statement
 
-> **Theorem (Parallel Transport is an Isometry).** Let $(M, g)$ be a Riemannian or semi-Riemannian manifold with connection $\nabla$ on $TM$. The following conditions are equivalent:
+> **Theorem ([[Def - Parallel Transport|Parallel Transport]] is an Isometry).** Let $(M, g)$ be a Riemannian or semi-Riemannian manifold with connection $\nabla$ on $TM$. The following conditions are equivalent:
 >
 > (i) $\nabla$ is [[Def - Metric-Compatible Connection|metric-compatible]]: $X g(Y, Z) = g(\nabla_X Y, Z) + g(Y, \nabla_X Z)$ for all vector fields $X, Y, Z$;
 >
-> (ii) for every smooth curve $\gamma$ from $p$ to $q$, the parallel transport operator $P_\gamma : T_pM \to T_qM$ is a **linear isometry**: $g_q(P_\gamma v, P_\gamma w) = g_p(v, w)$ for all $v, w \in T_pM$;
+> (ii) for every smooth curve $\gamma$ from $p$ to $q$, the parallel transport operator $P_\gamma : T_pM \to T_qM$ is a **linear [[Def - Isometry|isometry]]**: $g_q(P_\gamma v, P_\gamma w) = g_p(v, w)$ for all $v, w \in T_pM$;
 >
 > (iii) for every smooth curve $\gamma$ and every pair of parallel vector fields $V, W$ along $\gamma$ (i.e., $\nabla_t V = \nabla_t W = 0$), the inner product $g_{\gamma(t)}(V(t), W(t))$ is constant in $t$.
 
@@ -31,7 +31,7 @@ $(M, g)$ — a Riemannian or semi-Riemannian manifold. $\nabla$ — a connection
 
 Metric-compatibility is one of the two conditions characterising the Levi-Civita connection — the other being torsion-freeness. The formal definition (a Leibniz rule for the metric, $X g(Y, Z) = g(\nabla_X Y, Z) + g(Y, \nabla_X Z)$) is computationally clean, but its **geometric meaning** is unclear at first reading. This theorem provides the geometric interpretation: metric-compatibility is *exactly* the condition that parallel transport preserves the metric — i.e., parallel transport is an isometry between tangent spaces.
 
-The motivation for this characterisation. The whole point of having a connection is to be able to compare tangent vectors at different points via parallel transport. If the connection preserves the metric, parallel transport carries lengths and angles unchanged — it is a *rigid* motion between the tangent spaces, exactly the kind of comparison one wants for Riemannian geometry. If the connection does not preserve the metric, parallel transport could rescale or shear vectors, in which case "constant velocity along a curve" would not mean "constant speed" and the entire variational picture of geodesics would fail.
+The motivation for this characterisation. The whole point of having a connection is to be able to compare tangent vectors at different points via parallel transport. If the connection preserves the metric, parallel transport carries lengths and angles unchanged — it is a *rigid* motion between the tangent spaces, exactly the kind of comparison one wants for Riemannian geometry. If the connection does not preserve the metric, parallel transport could rescale or shear vectors, in which case "constant velocity along a curve" would not mean "constant speed" and the entire variational picture of [[Def - Geodesic|geodesics]] would fail.
 
 The theorem makes precise that the three forms of the condition — (i) the infinitesimal Leibniz rule, (ii) the global isometry of parallel transport, (iii) the constancy of inner products along parallel vectors — are equivalent. The infinitesimal form (i) is what is easy to *verify* (it is a local condition checkable in coordinates); the global form (ii) is what gives the *geometric picture*; the in-between form (iii) is the bridge.
 

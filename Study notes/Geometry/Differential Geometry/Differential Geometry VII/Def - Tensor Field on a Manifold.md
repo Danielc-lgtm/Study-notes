@@ -85,13 +85,13 @@ All operations preserve smoothness: a smooth tensor field operated on by a smoot
 
 A $(k,\ell)$-tensor field is **a $C^\infty(M)$-linear combination of basis tensor fields** in any chart. More structurally:
 
-The space $\mathcal{T}^{(k,\ell)}(M)$ of smooth $(k, \ell)$-tensor fields is the iterated tensor product, **over the ring $C^\infty(M)$**, of the modules of vector fields and 1-forms:
+The space $\mathcal{T}^{(k,\ell)}(M)$ of smooth $(k, \ell)$-tensor fields is the iterated tensor product, **over the [[Def - Ring|ring]] $C^\infty(M)$**, of the [[Def - Module|modules]] of vector fields and 1-forms:
 
 $$\mathcal{T}^{(k,\ell)}(M) \cong \underbrace{\mathfrak{X}(M) \otimes_{C^\infty(M)} \cdots \otimes_{C^\infty(M)} \mathfrak{X}(M)}_{k \text{ factors}} \otimes_{C^\infty(M)} \underbrace{\Omega^1(M) \otimes_{C^\infty(M)} \cdots \otimes_{C^\infty(M)} \Omega^1(M)}_{\ell \text{ factors}}.$$
 
 This is a precise statement of the tensor characterization lemma: tensor fields are tensor products of vector field and 1-form modules over the smooth-functions ring. The categorical content is that "tensor product over $C^\infty(M)$" is the right algebraic operation to use — *not* tensor product over $\mathbb{R}$ — and this is what gives the $C^\infty(M)$-multilinearity.
 
-**Functoriality.** A smooth map $F : M \to N$ induces (i) pullback on covariant tensor fields, $F^* : \mathcal{T}^{(0,\ell)}(N) \to \mathcal{T}^{(0,\ell)}(M)$ — see [[Def - Pullback of a Covariant Tensor Field]]; (ii) pushforward on contravariant tensor fields *if* $F$ is a diffeomorphism; (iii) full pullback/pushforward on all tensor field types *if* $F$ is a diffeomorphism. The asymmetry is intrinsic: covariant tensors pull back universally, contravariant ones need invertibility of the map.
+**Functoriality.** A smooth map $F : M \to N$ induces (i) pullback on covariant tensor fields, $F^* : \mathcal{T}^{(0,\ell)}(N) \to \mathcal{T}^{(0,\ell)}(M)$ — see [[Def - Pullback of a Covariant Tensor Field]]; (ii) pushforward on contravariant tensor fields *if* $F$ is a [[Def - Diffeomorphism|diffeomorphism]]; (iii) full pullback/pushforward on all tensor field types *if* $F$ is a diffeomorphism. The asymmetry is intrinsic: covariant tensors pull back universally, contravariant ones need invertibility of the map.
 
 ---
 
@@ -123,7 +123,7 @@ From the bundle theory side, $\mathcal{T}^{(k,\ell)}(M)$ is the space of section
 
 **Is NOT an instance: the partial derivative $\partial_i f$ viewed as a "$(0, 1)$-tensor".** It is *not* well-defined as a tensor field: in another chart, $\tilde\partial_i f = (\partial x^j / \partial \tilde x^i) \partial_j f$ — which *is* the transformation rule for a 1-form. So actually, $\partial_i f$ *is* the components of the 1-form $df$. The genuine non-tensor in this vein is $\partial_i \partial_j f$ — the second partial derivative, which has a Christoffel-symbol anomaly under change of coordinates and is *not* a $(0, 2)$-tensor field. The correct tensorial second-derivative is the Hessian via a connection, $\nabla\nabla f$, which is $(0, 2)$.
 
-**Corollary (module dimension).** The module $\mathcal{T}^{(k,\ell)}(M)$ over $C^\infty(M)$ is locally free of rank $n^{k+\ell}$. *Proof:* in any chart, the basis tensor fields $\partial_{i_1}\otimes\cdots\otimes dx^{j_\ell}$ form a basis of the module restricted to the chart.
+**Corollary (module [[Def - Dimension|dimension]]).** The module $\mathcal{T}^{(k,\ell)}(M)$ over $C^\infty(M)$ is locally free of rank $n^{k+\ell}$. *Proof:* in any chart, the basis tensor fields $\partial_{i_1}\otimes\cdots\otimes dx^{j_\ell}$ form a basis of the module restricted to the chart.
 
 **Corollary (locality).** Tensor field operations are local: if $A = A'$ on an open set $U$, then any tensor field constructed from $A$ agrees with the one constructed from $A'$ on $U$. *Proof:* component functions are local, and tensor field operations are component-by-component.
 

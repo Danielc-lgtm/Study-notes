@@ -57,7 +57,7 @@ In **topology**, the existence of a continuous logarithm on $U \subseteq \mathbb
 
 In **algebraic geometry**, the multivalued nature of $\log$ is captured by working on the **universal cover** of $\mathbb{C}^\times$, which is $\mathbb{C}$ itself via the map $z \mapsto e^z$. The logarithm becomes single-valued on this cover. This is the entry point to Riemann surface theory.
 
-In **differential equations**, $\log z$ is the integral $\int_1^z dw/w$, taken along any path from $1$ to $z$ in $U$. The path-dependence of the integral (it changes by $2\pi i$ for each winding around $0$) is exactly the multivaluedness of the logarithm. This identifies $\log$ with the antiderivative of $1/z$ and links the branch theory to [[Def - Primitive (Antiderivative)|primitives]] in [[Complex Analysis II — Cauchy's Theorem and its Consequences|CA II]].
+In **differential equations**, $\log z$ is the integral $\int_1^z dw/w$, taken along any path from $1$ to $z$ in $U$. The path-dependence of the integral (it changes by $2\pi i$ for each winding around $0$) is exactly the multivaluedness of the logarithm. This identifies $\log$ with the antiderivative of $1/z$ and links the branch theory to primitives in [[Complex Analysis II — Cauchy's Theorem and its Consequences|CA II]].
 
 ---
 

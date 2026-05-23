@@ -64,7 +64,7 @@ Combine with **the well-definedness of mapping degree.** Property $D$: $f : M \t
 
 # Why Is It True
 
-The intuition has two parts: **why critical values are "few"** (the measure-theoretic content), and **why this is the right way to count "few"** (the diffeomorphism-invariance content).
+The intuition has two parts: **why critical values are "few"** (the measure-theoretic content), and **why this is the right way to count "few"** (the [[Def - Diffeomorphism|diffeomorphism]]-invariance content).
 
 **The bolded one-liner mechanism summary: the critical set is locally controlled by the failure of the differential's rank, and the failure of rank propagates into a sub-Euclidean image — packing arguments at successive orders of vanishing show the image's volume can be made arbitrarily small.**
 
@@ -84,7 +84,7 @@ The corollary "almost every value is regular" is just "the complement of a measu
 
 # What Makes This Hard
 
-The non-obvious step is the **higher-order packing argument** for the deeply-degenerate critical points (the set $C_k$ for $k > m/n - 1$). The first two reductions — $F(C \setminus C_1)$ has measure zero by elementary Lipschitz-image arguments; $F(C_k \setminus C_{k+1})$ has measure zero by induction — are intuitive. But the *innermost* set $C_k$ (where many derivatives vanish) requires a careful covering-by-cubes argument with Taylor's theorem providing the volume bound. The most common error is to skip directly to "measure-zero" without verifying the packing constants are uniform on compact sets, or to apply the elementary argument at all levels and miss the higher-order case. A second pitfall: applying Sard with hypotheses too weak (continuous instead of smooth) — the theorem genuinely requires smoothness (or at least sufficiently high regularity, depending on the dimensions; see Lee's remarks).
+The non-obvious step is the **higher-order packing argument** for the deeply-degenerate critical points (the set $C_k$ for $k > m/n - 1$). The first two reductions — $F(C \setminus C_1)$ has measure zero by elementary Lipschitz-image arguments; $F(C_k \setminus C_{k+1})$ has measure zero by induction — are intuitive. But the *innermost* set $C_k$ (where many derivatives vanish) requires a careful covering-by-cubes argument with Taylor's theorem providing the volume bound. The most common error is to skip directly to "measure-zero" without verifying the packing constants are uniform on compact sets, or to apply the elementary argument at all levels and miss the higher-order case. A second pitfall: applying Sard with hypotheses too weak (continuous instead of smooth) — the theorem genuinely requires smoothness (or at least sufficiently high regularity, depending on the [[Def - Dimension|dimensions]]; see Lee's remarks).
 
 ---
 
@@ -152,7 +152,7 @@ Reduce to the case $F : U \to \mathbb{R}^n$ on $U \subseteq \mathbb{R}^m$ open b
 
 > [!note]- Complete formal proof (sketch)
 >
-> The full proof is technical and is best read in Lee's *Introduction to Smooth Manifolds*, Chapter 6, Theorem 6.10. We give the structure here.
+> The full proof is technical and is best read in Lee's *Introduction to [[Def - Smooth Manifold|Smooth Manifolds]]*, Chapter 6, Theorem 6.10. We give the structure here.
 >
 > **Step 0 (reduction to Euclidean).** By covering $M$ and $N$ with countably many smooth charts, reduce to: $F : U \to \mathbb{R}^n$ smooth on $U \subseteq \mathbb{R}^m$ open. By Lemma 1, "measure zero" transports through these charts.
 >

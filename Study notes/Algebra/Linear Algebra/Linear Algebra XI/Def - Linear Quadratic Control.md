@@ -41,7 +41,7 @@ The output cost $J_{\text{output}} + \rho J_{\text{input}}$ is a quadratic funct
 
 The whole LQ control problem is then a single constrained LS problem:
 $$\min \|\tilde{A} z\|^2 \quad \text{subject to} \quad \tilde{C} z = \tilde{d}.$$
-This is exactly the form handled by §XI.3. The KKT system has dimension roughly $T(n + m + p)$ — large, but with a *block-banded* sparsity pattern (only adjacent time blocks couple). Sparse-matrix methods reduce the solve cost from the dense $O(T^3)$ to $O(T)$. The recursive *Riccati equation* algorithm — the standard control-theoretic algorithm for LQ control — is *exactly* this sparse-KKT solver written in recursive form.
+This is exactly the form handled by §XI.3. The KKT system has [[Def - Dimension|dimension]] roughly $T(n + m + p)$ — large, but with a *block-banded* sparsity pattern (only adjacent time blocks couple). Sparse-matrix methods reduce the solve cost from the dense $O(T^3)$ to $O(T)$. The recursive *Riccati equation* algorithm — the standard control-theoretic algorithm for LQ control — is *exactly* this sparse-KKT solver written in recursive form.
 
 The deeper insight is that the *solution is linear in the boundary data $x_{\text{init}}, x_{\text{des}}$*. Since the KKT system is linear in $\tilde{d}$, and $\tilde{d}$ depends linearly on $x_{\text{init}}, x_{\text{des}}$, the solution $z$ — and in particular the first input $u_1$ — is a linear function of the initial state. This gives the *state feedback law*: $u_1 = K x_1$ for some matrix $K$, computed by precomputing the KKT solve for $n$ different initial states ($x_{\text{init}} = e_1, \ldots, e_n$).
 

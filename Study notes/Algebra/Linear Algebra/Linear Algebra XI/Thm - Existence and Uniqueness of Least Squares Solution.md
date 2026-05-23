@@ -21,7 +21,7 @@ $A$ is an $m \times n$ matrix, $b$ is an $m$-vector. The Gram matrix $A^T A$ is 
 > 3. *Closed form (full column rank case)*: If the columns of $A$ are linearly independent, the unique minimizer is
 > $$\hat{x} = (A^T A)^{-1} A^T b.$$
 
-> **Corollary (Minimum-norm LS solution).** Without the linear-independence assumption, the set of LS minimizers is an affine subspace of $\mathbb{R}^n$ (a coset of $\ker A$); the unique element of this set with minimum Euclidean norm is $\hat{x}^+ = A^+ b$, where $A^+$ is the [[Def - Pseudoinverse|pseudoinverse]] of $A$ defined via [[Thm - Singular Value Decomposition|SVD]].
+> **Corollary (Minimum-norm LS solution).** Without the linear-independence assumption, the set of LS minimizers is an affine [[Def - Subspace|subspace]] of $\mathbb{R}^n$ (a [[Def - Coset|coset]] of $\ker A$); the unique element of this set with minimum Euclidean norm is $\hat{x}^+ = A^+ b$, where $A^+$ is the [[Def - Pseudoinverse|pseudoinverse]] of $A$ defined via [[Thm - Singular Value Decomposition|SVD]].
 
 ---
 
@@ -31,7 +31,7 @@ This theorem is the foundation of every subsequent result in the chapter. Withou
 
 The role of the theorem is to *certify* that the LS problem is well-posed: that the optimization has a well-defined answer, and to *identify* that answer with an explicit linear-algebraic formula. The geometric content — orthogonal projection — was clear from the start, but this theorem makes it computable. The formula $\hat{x} = (A^T A)^{-1} A^T b$ is the recipe for projecting and inverting.
 
-The existence claim (1) deserves emphasis: minimization of a non-negative quadratic always has a minimum (the objective is bounded below by zero and is continuous, and the lower bound is attained — though showing attainment in unbounded domains requires a bit of work). What is non-trivial is *uniqueness*: even though the objective is convex, it need not be *strictly* convex, and convex (but not strictly convex) functions can have flat minima — affine subspaces of minimizers. The strictness of convexity is what makes the minimizer unique, and that strictness is exactly what linear independence of columns provides.
+The existence claim (1) deserves emphasis: minimization of a non-negative quadratic always has a minimum (the objective is bounded below by zero and is continuous, and the lower bound is attained — though showing attainment in unbounded domains requires a bit of work). What is non-trivial is *uniqueness*: even though the objective is convex, it need not be *strictly* convex, and convex (but not strictly convex) functions can have flat minima — affine [[Def - Subspace|subspaces]] of minimizers. The strictness of convexity is what makes the minimizer unique, and that strictness is exactly what linear independence of columns provides.
 
 ---
 
@@ -176,7 +176,7 @@ The second tricky step is the *transition from "the projection exists" to "the L
 >
 > *Step 6: Closed form.* Under the linear-independence assumption, the unique minimizer is given by the explicit formula $\hat{x} = (A^T A)^{-1} A^T b$ from step 4.
 >
-> *Step 7 (Corollary): SVD-based minimum-norm solution.* When the columns of $A$ are linearly dependent, the set of LS minimizers is $\hat{x}_0 + \ker A$ for any particular minimizer $\hat{x}_0$. The minimum-norm element of this affine subspace is the projection of zero onto it, which by the SVD-based pseudoinverse formula equals $A^+ b$ where $A^+ = V \Sigma^+ U^*$ for the SVD $A = U \Sigma V^*$. See [[Thm - Singular Value Decomposition]] and [[Def - Pseudoinverse]].
+> *Step 7 (Corollary): SVD-based minimum-norm solution.* When the columns of $A$ are linearly dependent, the set of LS minimizers is $\hat{x}_0 + \ker A$ for any particular minimizer $\hat{x}_0$. The minimum-norm element of this affine subspace is the projection of zero onto it, which by the SVD-based [[Def - Pseudoinverse|pseudoinverse]] formula equals $A^+ b$ where $A^+ = V \Sigma^+ U^*$ for the SVD $A = U \Sigma V^*$. See [[Thm - Singular Value Decomposition]] and [[Def - Pseudoinverse]].
 
 ---
 

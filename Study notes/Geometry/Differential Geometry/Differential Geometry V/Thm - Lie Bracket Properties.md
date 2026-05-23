@@ -49,7 +49,7 @@ The roles:
 
 (b) **Antisymmetry** is forced by the commutator definition $[X, Y] = XY - YX$ — you cannot have a symmetric "commutator". It rules out positive-definite alternatives.
 
-(c) **Jacobi identity** is the structural axiom of a Lie algebra. It is the precise statement that $\mathrm{ad}_X = [X, \cdot]$ is a derivation of the bracket, equivalently that the bracket admits a meaningful notion of "module of derivations". Without Jacobi, $\mathfrak{X}(M)$ would not be a Lie algebra.
+(c) **Jacobi identity** is the structural axiom of a Lie algebra. It is the precise statement that $\mathrm{ad}_X = [X, \cdot]$ is a derivation of the bracket, equivalently that the bracket admits a meaningful notion of "[[Def - Module|module]] of derivations". Without Jacobi, $\mathfrak{X}(M)$ would not be a Lie algebra.
 
 (d) **Function product rule** is the most subtle of the algebraic identities. It encodes that the bracket is *not* $C^\infty(M)$-bilinear but instead has correction terms — this distinguishes the Lie bracket from a naive bilinear operation, and the correction is what makes the bracket "alive" rather than algebraically dead.
 
@@ -210,7 +210,7 @@ Bilinearity, antisymmetry, Jacobi, and the coordinate formula follow from the co
 >
 > **Hint:** Use the $F$-related characterization $X(h \circ F) = (X'h) \circ F$ and apply twice.
 >
-> **Why needed:** Without naturality, the Lie bracket is not a functorial construction; pushforward under diffeomorphisms would not be a Lie algebra homomorphism.
+> **Why needed:** Without naturality, the Lie bracket is not a functorial construction; pushforward under [[Def - Diffeomorphism|diffeomorphisms]] would not be a Lie algebra homomorphism.
 >
 > > [!note]- Full proof
 > > For $h \in C^\infty(N)$,
@@ -250,11 +250,11 @@ Bilinearity, antisymmetry, Jacobi, and the coordinate formula follow from the co
 
 # Cross-Field Exercise Suggestions
 
-**Lie algebra of a matrix Lie group.** The left-invariant vector fields on $\mathrm{GL}(n, \mathbb{R})$ form a finite-dimensional Lie subalgebra of $\mathfrak{X}(\mathrm{GL}(n))$, isomorphic to $\mathfrak{gl}(n)$ with the matrix commutator bracket. The naturality of the bracket (f) is what certifies that this subspace is closed under the bracket; the coordinate formula (e) at the identity reduces to the matrix commutator. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
+**Lie algebra of a matrix Lie [[Def - Group|group]].** The left-invariant vector fields on $\mathrm{GL}(n, \mathbb{R})$ form a finite-dimensional Lie subalgebra of $\mathfrak{X}(\mathrm{GL}(n))$, isomorphic to $\mathfrak{gl}(n)$ with the matrix commutator bracket. The naturality of the bracket (f) is what certifies that this [[Def - Subspace|subspace]] is closed under the bracket; the coordinate formula (e) at the identity reduces to the matrix commutator. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
 
 **Jacobi identity for Poisson brackets.** On a symplectic manifold $(M, \omega)$, the Poisson bracket $\{f, g\} = \omega(X_f, X_g)$ satisfies its own Jacobi identity, which is *equivalent* to the closedness $d\omega = 0$ of the symplectic form. The vector-field Jacobi identity (c) is the prerequisite: $[X_f, X_g] = -X_{\{f, g\}}$, and Jacobi for vector fields gives Jacobi for $\{f, g\}$. See [[Differential Geometry VIII — Differential Forms]] forward.
 
-**The bracket calculation in fluid dynamics.** In ideal fluid dynamics, the velocity field $v$ on a manifold $M$ satisfies the Euler equation $\partial_t v + [v, v] = -\nabla p$ (with $[v, v]$ interpreted in coordinates). The bracket is just the advective term $(v \cdot \nabla)v$, and the equation is the Newton's law on $\mathrm{Diff}(M)$ — a beautiful coincidence interpreted in Arnold's geometric mechanics.
+**The bracket calculation in fluid dynamics.** In [[Def - Ideal|ideal]] fluid dynamics, the velocity field $v$ on a manifold $M$ satisfies the Euler equation $\partial_t v + [v, v] = -\nabla p$ (with $[v, v]$ interpreted in coordinates). The bracket is just the advective term $(v \cdot \nabla)v$, and the equation is the Newton's law on $\mathrm{Diff}(M)$ — a beautiful coincidence interpreted in Arnold's geometric mechanics.
 
 **Vector fields under a covering map.** If $\pi : \tilde M \to M$ is a smooth covering map, every vector field $X$ on $M$ lifts uniquely to a vector field $\tilde X$ on $\tilde M$ with $\tilde X \sim_\pi X$, and the bracket lifts: $\widetilde{[X, Y]} = [\tilde X, \tilde Y]$. The naturality (f) is what guarantees this. This is the basic functoriality used in studying flows on universal covers.
 

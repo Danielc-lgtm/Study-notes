@@ -19,7 +19,7 @@ A finite abelian group can be written in two canonical ways:
 1. Start from a group given by its **elementary divisors**: the multiset
 $$\{2,\ 2,\ 4,\ 3,\ 9,\ 5\},$$
 so $A\cong C_2\times C_2\times C_4\times C_3\times C_9\times C_5$. Convert $A$ to **invariant-factor form** $C_{d_1}\times\cdots\times C_{d_s}$ with $d_1\mid\cdots\mid d_s$.
-2. Conversely, take a group given in invariant-factor form, say $B\cong C_6\times C_{60}$ (note $6\mid 60$), and convert it to **elementary-divisor form** — a product of cyclic groups of prime-power order.
+2. Conversely, take a group given in invariant-factor form, say $B\cong C_6\times C_{60}$ (note $6\mid 60$), and convert it to **elementary-divisor form** — a product of cyclic [[Def - Group|groups]] of prime-power order.
 3. State precisely the algorithm for each direction, and explain why both forms describe *the same* group, i.e. why the conversion is an isomorphism.
 
 The point is to become fluent with the two canonical decompositions and the bookkeeping — a grid of prime-power exponents — that translates between them.
@@ -30,13 +30,13 @@ The engine of both forms is the structure theorem.
 
 ![[Thm - Classification of Finitely Generated Abelian Groups#Statement]]
 
-That statement *is* the invariant-factor form: a finite abelian group is uniquely $C_{d_1}\times\cdots\times C_{d_s}$ with $d_1\mid\cdots\mid d_s$. The elementary-divisor form is obtained from it by splitting each cyclic factor along its prime factorisation, using the Chinese remainder theorem for modules.
+That statement *is* the invariant-factor form: a finite abelian group is uniquely $C_{d_1}\times\cdots\times C_{d_s}$ with $d_1\mid\cdots\mid d_s$. The elementary-divisor form is obtained from it by splitting each cyclic factor along its prime factorisation, using the Chinese remainder theorem for [[Def - Module|modules]].
 
 ![[Thm - Chinese Remainder Theorem for Modules#Statement]]
 
 Concretely, for $R=\mathbb{Z}$: if $n=p_1^{a_1}\cdots p_k^{a_k}$ with the $p_i$ distinct primes, then since the prime powers $p_i^{a_i}$ are pairwise coprime,
 $$C_n\cong C_{p_1^{a_1}}\times\cdots\times C_{p_k^{a_k}}.$$
-This both *splits* a cyclic group into prime-power pieces (forward direction) and *merges* coprime cyclic groups back into one (reverse direction). A prime power $p^a$ appearing as one of the factors is an **elementary divisor** of the group; the divisor $d_i$ in the chain $d_1\mid\cdots\mid d_s$ is an **invariant factor**. Both lists are uniquely determined by $A$.
+This both *splits* a cyclic group into prime-power pieces (forward direction) and *merges* coprime cyclic [[Def - Group|groups]] back into one (reverse direction). A prime power $p^a$ appearing as one of the factors is an **elementary divisor** of the group; the divisor $d_i$ in the chain $d_1\mid\cdots\mid d_s$ is an **invariant factor**. Both lists are uniquely determined by $A$.
 
 ---
 
@@ -197,7 +197,7 @@ The two directions are inverse readings of the prime-power grid: split-by-CRT to
 
 **One group, two canonical lists, one grid relating them.** A finite abelian group carries two equally canonical fingerprints: the invariant factors $d_1\mid\cdots\mid d_s$ and the elementary divisors (a multiset of prime powers). They are not rival descriptions but two readings of a single object — the grid of prime-power exponents, rows indexed by primes. Reading the grid *cell by cell* lists the elementary divisors; reading it by *right-aligned columns* lists the invariant factors. Internalising this picture means you never memorise two separate algorithms: you memorise the grid and how to read it both ways. The general lesson for canonical-form problems: when an object has two normal forms, look for the shared underlying data structure of which each form is a projection.
 
-**The Chinese remainder theorem is a two-way valve, and coprimality is the gate.** $C_{mn}\cong C_m\times C_n$ holds *exactly* when $\gcd(m,n)=1$. Forwards, it splits a cyclic group of composite order into its prime-power constituents; backwards, it fuses cyclic groups of pairwise coprime orders into one. Every conversion in this exercise is one of these two moves. The single error to guard against is applying the merge to *non-coprime* orders: $C_2\times C_2$ is emphatically *not* $C_4$ — the former has every non-identity element of order $2$, the latter has an element of order $4$. So when merging, first verify pairwise coprimality; that is the entire content of "why $C_2\times C_3=C_6$ but $C_2\times C_2\ne C_4$". This same valve, [[Thm - Chinese Remainder Theorem for Modules]], is what powers the primary (prime-power) decomposition in the structure theory of modules over any Euclidean domain.
+**The Chinese remainder theorem is a two-way valve, and coprimality is the gate.** $C_{mn}\cong C_m\times C_n$ holds *exactly* when $\gcd(m,n)=1$. Forwards, it splits a cyclic group of composite order into its prime-power constituents; backwards, it fuses cyclic groups of pairwise coprime orders into one. Every conversion in this exercise is one of these two moves. The single error to guard against is applying the merge to *non-coprime* orders: $C_2\times C_2$ is emphatically *not* $C_4$ — the former has every non-identity element of order $2$, the latter has an element of order $4$. So when merging, first verify pairwise coprimality; that is the entire content of "why $C_2\times C_3=C_6$ but $C_2\times C_2\ne C_4$". This same valve, [[Thm - Chinese Remainder Theorem for Modules]], is what powers the primary (prime-power) decomposition in the structure theory of [[Def - Module|modules]] over any Euclidean domain.
 
 **Right-alignment, largest-first, is what manufactures the divisibility chain.** The defining constraint of invariant-factor form is $d_1\mid d_2\mid\cdots\mid d_s$. This is not automatic — it is *engineered* by the alignment rule. Within each prime's row the exponents are sorted ascending; right-aligning the rows and multiplying down columns guarantees that, prime by prime, the exponent in $d_i$ never exceeds the exponent in $d_{i+1}$, which is precisely $d_i\mid d_{i+1}$. The largest invariant factor $d_s$ is the *exponent* (least common multiple of all element orders) of the group, since it absorbs the top power of every prime. If you instead align *left* (smallest-first), you get a valid product of cyclic groups with the same order, but the divisibility chain fails and it is not the canonical form. The trigger "I need invariant factors" should fire "build the grid, right-align, read columns" — and the trigger "I need elementary divisors" should fire "factor each $d_i$, list the prime powers".
 

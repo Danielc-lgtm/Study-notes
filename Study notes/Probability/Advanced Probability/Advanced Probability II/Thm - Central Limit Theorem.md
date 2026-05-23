@@ -83,7 +83,7 @@ The proof, *given* [[Thm - Lévy's Continuity Theorem|Lévy's theorem]] and the 
 >
 > **Hint:** Two independent observations: independence turns the characteristic function of a sum into a product, and finite second moment lets you Taylor-expand $\varphi_X$ around $0$ with the derivatives read off from the moments.
 >
-> **Why needed:** The product form is what allows the Fourier transform to "see" the central limit phenomenon — convolutions of densities (sums of independent variables) become powers of characteristic functions, and second-order Taylor data is exactly what survives the $1/\sqrt n$ rescaling.
+> **Why needed:** The product form is what allows the Fourier transform to "see" the central limit phenomenon — [[Def - Convolution|convolutions]] of densities (sums of independent variables) become powers of characteristic functions, and second-order Taylor data is exactly what survives the $1/\sqrt n$ rescaling.
 >
 > > [!note]- Full proof
 > > Independence and the [[Ex - Independence and the factorisation of expectation|convolution-to-product]] property give $\varphi_{S_n/\sqrt n}(t)=\mathbb{E}[\prod_k e^{i(t/\sqrt n)X_k}]=\prod_k\varphi_X(t/\sqrt n)=\varphi_X(t/\sqrt n)^n$. Since $\mathbb{E}X^2<\infty$, $\varphi_X\in C^2$ with $\varphi_X(0)=1$, $\varphi_X'(0)=i\mathbb{E}X=0$, $\varphi_X''(0)=-\mathbb{E}X^2=-1$; Taylor's theorem gives $\varphi_X(s)=1-s^2/2+o(s^2)$. $\square$
@@ -109,7 +109,7 @@ The proof, *given* [[Thm - Lévy's Continuity Theorem|Lévy's theorem]] and the 
 
 # Cross-Field Exercise Suggestions
 
-The CLT underlies **all of inferential statistics** — confidence intervals, $z$- and $t$-tests, the $\sqrt n$ rate of estimator error. Its functional version, **Donsker's invariance principle**, says the rescaled random walk converges weakly (in path space) to Brownian motion — the CLT "for the whole trajectory," and a construction of Brownian motion. The Lindeberg–Feller and martingale CLTs extend it beyond i.i.d.; Stein's method gives quantitative (Berry–Esseen) rates.
+The CLT underlies **all of inferential statistics** — confidence intervals, $z$- and $t$-tests, the $\sqrt n$ rate of estimator error. Its functional version, **Donsker's invariance principle**, says the rescaled random walk converges weakly (in path space) to Brownian motion — the CLT "for the whole trajectory," and a construction of Brownian motion. The Lindeberg–Feller and [[Def - Martingale|martingale]] CLTs extend it beyond i.i.d.; Stein's method gives quantitative (Berry–Esseen) rates.
 
 ---
 

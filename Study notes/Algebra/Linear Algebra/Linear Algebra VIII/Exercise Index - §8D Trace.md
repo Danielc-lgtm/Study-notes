@@ -11,7 +11,7 @@ Section 8D introduces the trace as the simplest similarity invariant — basis-i
 
 - [[Ex - Trace is basis-independent and equals tr of any matrix]] (⭐) — establishes the cyclic property $\operatorname{tr}(AB) = \operatorname{tr}(BA)$, deduces conjugation-invariance, deduces basis-independence of the operator trace, verifies linearity and $\operatorname{tr}(I) = \dim V$ ([[Def - Trace]], [[Def - Change of Basis Matrix]], [[Def - Matrix of a Linear Map]]).
 
-- [[Ex - Sum of algebraic multiplicities equals dimension]] (⭐) — companion result: dimensions of generalized eigenspaces sum to $\dim V$. Combined with the trace identity, this gives $\operatorname{tr} T = \sum_k d_k \lambda_k$ ([[Def - Algebraic and Geometric Multiplicity]], [[Thm - Generalized Eigenspace Decomposition]]).
+- [[Ex - Sum of algebraic multiplicities equals dimension]] (⭐) — companion result: [[Def - Dimension|dimensions]] of generalized eigenspaces sum to $\dim V$. Combined with the trace identity, this gives $\operatorname{tr} T = \sum_k d_k \lambda_k$ ([[Def - Algebraic and Geometric Multiplicity]], [[Thm - Generalized Eigenspace Decomposition]]).
 
 - [[Ex - Operators with the same characteristic polynomial need not have the same Jordan form]] (⭐⭐) — uses trace and other invariants to distinguish operators; demonstrates that trace alone (or trace + determinant) is insufficient to determine similarity, while the full Jordan form is ([[Def - Trace]], [[Def - Jordan Basis and Jordan Form]], [[Thm - Trace Equals Sum of Eigenvalues]]).
 

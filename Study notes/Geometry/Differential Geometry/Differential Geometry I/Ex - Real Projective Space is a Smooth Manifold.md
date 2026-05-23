@@ -13,7 +13,7 @@ tags: [geometry, differential-geometry]
 
 # Problem Statement
 
-Show that the real projective space $\mathbb{RP}^n$ — the set of one-dimensional linear subspaces of $\mathbb{R}^{n+1}$ — admits a smooth manifold structure of dimension $n$.
+Show that the real projective space $\mathbb{RP}^n$ — the set of one-dimensional linear [[Def - Subspace|subspaces]] of $\mathbb{R}^{n+1}$ — admits a smooth manifold structure of [[Def - Dimension|dimension]] $n$.
 
 Define $\mathbb{RP}^n = (\mathbb{R}^{n+1} \setminus \{0\}) / \sim$, where $x \sim y$ iff $y = \lambda x$ for some $\lambda \in \mathbb{R} \setminus \{0\}$. The equivalence class of $x = (x^1, \dots, x^{n+1})$ is the **homogeneous coordinate** $[x^1 : \dots : x^{n+1}]$, well-defined up to scaling. Equip $\mathbb{RP}^n$ with the quotient topology induced by the natural surjection $\pi : \mathbb{R}^{n+1} \setminus \{0\} \to \mathbb{RP}^n$.
 
@@ -41,7 +41,7 @@ The quotient topology on $\mathbb{RP}^n$: a subset $V \subseteq \mathbb{RP}^n$ i
 
 **Assumption pattern:** $\mathbb{RP}^n$ is the quotient of $\mathbb{R}^{n+1} \setminus \{0\}$ by the action of $\mathbb{R} \setminus \{0\}$ via scaling. The key topological observation is that the quotient map $\pi$ is an *open map*: if $W \subseteq \mathbb{R}^{n+1} \setminus \{0\}$ is open, then $\pi(W)$ is open in $\mathbb{RP}^n$, equivalently $\pi^{-1}(\pi(W))$ is open in $\mathbb{R}^{n+1} \setminus \{0\}$. This is because $\pi^{-1}(\pi(W)) = \bigcup_{\lambda \neq 0} \lambda W$ — a union of dilations of $W$, each of which is open. Once $\pi$ is open, the open sets of $\mathbb{RP}^n$ are precisely the images of open sets in $\mathbb{R}^{n+1} \setminus \{0\}$, and we can construct charts by restricting $\pi$ to suitable open subsets where it becomes a homeomorphism.
 
-**Theorem routing:** The smooth atlas of $n+1$ affine charts is the natural cover, and [[Thm - Smooth Structure from Maximal Atlas]] gives the smooth structure once smoothness of transitions is verified. Hausdorff requires extra care (it does not follow automatically from being a quotient of a Hausdorff space); the standard verification uses the open-map property and explicit separation of cosets.
+**Theorem routing:** The smooth atlas of $n+1$ affine charts is the natural cover, and [[Thm - Smooth Structure from Maximal Atlas]] gives the smooth structure once smoothness of transitions is verified. Hausdorff requires extra care (it does not follow automatically from being a quotient of a Hausdorff space); the standard verification uses the open-map property and explicit separation of [[Def - Coset|cosets]].
 
 **Key decision point:** The non-obvious choice is the *form* of the chart maps. The natural impulse is to project to a particular hyperplane (e.g., $x^{n+1} = 1$) — but this only covers one chart's worth of $\mathbb{RP}^n$. The full $(n+1)$-chart construction uses each coordinate hyperplane in turn: $U_i$ is the locus where the $i$-th coordinate is nonzero, and $\varphi_i$ divides by that coordinate. The choice is essentially forced by the symmetry of the $n+1$ coordinate directions, and the resulting transition functions are rational with poles at the "missing" coordinate hyperplane.
 
@@ -53,7 +53,7 @@ The quotient topology on $\mathbb{RP}^n$: a subset $V \subseteq \mathbb{RP}^n$ i
 
 2. **Operation 2 from the topic page (compute transitions).** We compute $\varphi_j \circ \varphi_i^{-1}$ explicitly as a rational function and verify smoothness on its domain.
 
-3. **Operation 7 from the topic page (quotient by a properly discontinuous group action).** $\mathbb{RP}^n = (\mathbb{R}^{n+1} \setminus \{0\}) / \mathbb{R}^\times$ is a quotient by the action of $\mathbb{R}^\times$ via scaling; the action is free (no nonzero $x$ is scaled to itself by a nontrivial $\lambda$) and proper, hence the quotient is a smooth manifold (we verify this directly without invoking the general theorem, which is more delicate for non-discrete groups).
+3. **Operation 7 from the topic page (quotient by a properly discontinuous [[Def - Group|group]] action).** $\mathbb{RP}^n = (\mathbb{R}^{n+1} \setminus \{0\}) / \mathbb{R}^\times$ is a quotient by the action of $\mathbb{R}^\times$ via scaling; the action is free (no nonzero $x$ is scaled to itself by a nontrivial $\lambda$) and proper, hence the quotient is a smooth manifold (we verify this directly without invoking the general theorem, which is more delicate for non-discrete [[Def - Group|groups]]).
 
 4. **Operation 8 from the topic page (verify Hausdorff and second countability).** Hausdorff requires explicit verification using the open-map property of $\pi$; second countability follows from $\mathbb{R}^{n+1} \setminus \{0\}$ being second-countable and $\pi$ open.
 
@@ -77,7 +77,7 @@ The quotient topology on $\mathbb{RP}^n$: a subset $V \subseteq \mathbb{RP}^n$ i
 
 # Solution
 
-The proof breaks into four steps. Step 1 defines the affine charts $\varphi_i$ and computes $\varphi_i^{-1}$. Step 2 verifies the charts are homeomorphisms and computes a sample transition. Step 3 verifies smoothness of the transition function. Step 4 verifies the topological properties (Hausdorff and second countability). The non-obvious move is in Step 4, where verifying Hausdorff requires the open-map property of $\pi$ plus the antipodal-free structure of the quotient.
+The proof breaks into four steps. Step 1 defines the affine charts $\varphi_i$ and computes $\varphi_i^{-1}$. Step 2 verifies the charts are [[Def - Homeomorphism|homeomorphisms]] and computes a sample transition. Step 3 verifies smoothness of the transition function. Step 4 verifies the topological properties (Hausdorff and second countability). The non-obvious move is in Step 4, where verifying Hausdorff requires the open-map property of $\pi$ plus the antipodal-free structure of the quotient.
 
 **Step 1: Define the affine charts.**
 
@@ -153,7 +153,7 @@ $\mathbb{RP}^n$ is second countable because $\mathbb{R}^{n+1} \setminus \{0\}$ i
 >
 > **Step 0 — Open-map property of $\pi$.** For $W \subseteq \mathbb{R}^{n+1} \setminus \{0\}$ open, $\pi^{-1}(\pi(W)) = \bigcup_{\lambda \neq 0} \lambda W$ is open as a union of open sets (each $\lambda W$ is open since multiplication by $\lambda \neq 0$ is a homeomorphism of $\mathbb{R}^{n+1} \setminus \{0\}$). So $\pi$ is an open map.
 >
-> **Step 1 — The affine charts are homeomorphisms.** For $i = 1, \dots, n+1$, define $U_i = \pi(\{x : x^i \neq 0\})$ (open by Step 0) and
+> **Step 1 — The affine charts are [[Def - Homeomorphism|homeomorphisms]].** For $i = 1, \dots, n+1$, define $U_i = \pi(\{x : x^i \neq 0\})$ (open by Step 0) and
 > $$\varphi_i([x]) = \left(\frac{x^1}{x^i}, \dots, \frac{\widehat{x^i}}{x^i}, \dots, \frac{x^{n+1}}{x^i}\right).$$
 > This is well-defined (invariant under scaling), bijective onto $\mathbb{R}^n$, continuous (descends from a continuous map on $\pi^{-1}(U_i)$ by the universal property of the quotient topology), and has continuous inverse $\varphi_i^{-1}(u) = [u^1 : \dots : u^{i-1} : 1 : u^i : \dots : u^n]$. So each $\varphi_i : U_i \to \mathbb{R}^n$ is a homeomorphism, and $\{U_i\}_{i=1}^{n+1}$ covers $\mathbb{RP}^n$ (every nonzero vector has at least one nonzero coordinate).
 >
@@ -165,7 +165,7 @@ $\mathbb{RP}^n$ is second countable because $\mathbb{R}^{n+1} \setminus \{0\}$ i
 >
 > **Step 4 — Second countability.** A countable basis $\mathcal{B}$ of $\mathbb{R}^{n+1} \setminus \{0\}$ projects to a countable basis $\{\pi(B) : B \in \mathcal{B}\}$ of $\mathbb{RP}^n$ via the open-map property (every open $V \subseteq \mathbb{RP}^n$ equals $\pi(\pi^{-1}(V)) = \bigcup_i \pi(B_i)$ for a basis cover $\pi^{-1}(V) = \bigcup_i B_i$).
 >
-> **Conclusion.** $\mathbb{RP}^n$ is Hausdorff, second-countable, and locally Euclidean of dimension $n$; the affine atlas is smooth. By [[Thm - Smooth Structure from Maximal Atlas]], $\mathbb{RP}^n$ has a unique smooth manifold structure determined by this atlas. $\blacksquare$
+> **Conclusion.** $\mathbb{RP}^n$ is Hausdorff, second-countable, and locally Euclidean of [[Def - Dimension|dimension]] $n$; the affine atlas is smooth. By [[Thm - Smooth Structure from Maximal Atlas]], $\mathbb{RP}^n$ has a unique smooth manifold structure determined by this atlas. $\blacksquare$
 
 > [!warning] Illegal but tempting alternative route: identifying with $S^n / \{\pm 1\}$ from the start
 > One could try to define $\mathbb{RP}^n = S^n / \{\pm 1\}$ — the quotient of the sphere by the antipodal action — and conclude from "quotient by free properly discontinuous action of a finite group on a manifold is a manifold" that $\mathbb{RP}^n$ is a smooth manifold. This is true but invokes a substantial theorem (covering space theory + smoothness of the quotient) that is more sophisticated than needed. The direct approach above — explicit affine charts and direct verification — is more elementary and gives concrete coordinates for later computation.

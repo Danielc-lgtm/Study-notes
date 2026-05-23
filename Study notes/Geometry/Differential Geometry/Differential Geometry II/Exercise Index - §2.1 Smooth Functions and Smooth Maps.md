@@ -13,6 +13,6 @@ The most important takeaway from this section is *automaticity*: once the chart-
 
 - [[Ex - Composition of Smooth Maps is Smooth]] (⭐) — drills the chart-pulling-back routine and the use of continuity (from [[Thm - Smooth Maps are Continuous]]) to satisfy the chart-containment condition when chaining two smooth maps ([[Def - Smooth Map between Manifolds]], [[Thm - Smooth Maps are Continuous]])
 
-- [[Ex - The Inclusion of an Open Submanifold is Smooth]] (⭐) — verifies smoothness of the inclusion via identity-in-coordinates and shows it is a diffeomorphism, drilling the easiest case of the chart-pull-back routine ([[Def - Smooth Manifold]], [[Def - Smooth Map between Manifolds]], [[Def - Diffeomorphism]])
+- [[Ex - The Inclusion of an Open Submanifold is Smooth]] (⭐) — verifies smoothness of the inclusion via identity-in-coordinates and shows it is a [[Def - Diffeomorphism|diffeomorphism]], drilling the easiest case of the chart-pull-back routine ([[Def - Smooth Manifold]], [[Def - Smooth Map between Manifolds]], [[Def - Diffeomorphism]])
 
 - [[Ex - A Continuous Function on a Compact Manifold Attains its Maximum]] (⭐) — applies compactness + continuity to derive extremum existence; uses [[Thm - Smooth Maps are Continuous]] as the bridge from smoothness to continuity, then applies pure topology ([[Def - Compact Space]], [[Thm - Smooth Maps are Continuous]])

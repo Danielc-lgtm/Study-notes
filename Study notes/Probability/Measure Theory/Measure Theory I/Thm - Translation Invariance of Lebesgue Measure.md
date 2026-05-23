@@ -33,7 +33,7 @@ It is also the hinge of the [[Thm - Existence of a Non-Measurable Set|Vitali arg
 
 For every $x_0\in\mathbb{R}^n$ and every $A\in\mathcal{B}(\mathbb{R}^n)$,
 $$\lambda(x_0+A)=\lambda(A).$$
-Moreover $x_0+A$ is Borel whenever $A$ is (translation is a homeomorphism). Consequently $\lambda$ is **the** unique translation-invariant measure on $\mathcal{B}(\mathbb{R}^n)$ with $\lambda([0,1]^n)=1$.
+Moreover $x_0+A$ is Borel whenever $A$ is (translation is a [[Def - Homeomorphism|homeomorphism]]). Consequently $\lambda$ is **the** unique translation-invariant measure on $\mathcal{B}(\mathbb{R}^n)$ with $\lambda([0,1]^n)=1$.
 
 ---
 
@@ -95,7 +95,7 @@ There is no hard step — only a discipline: one must verify invariance *separat
 
 # Cross-Field Exercise Suggestions
 
-Translation invariance is the prototype of *symmetry forcing a measure*: on any locally compact group it becomes the existence and uniqueness of **Haar measure**, the canonical invariant measure underlying representation theory and ergodic theory. The generalisation $\lambda(gA)=|\det g|\lambda(A)$ for linear $g$ is the **change-of-variables Jacobian**. In probability, invariance of a law under a group action is *exchangeability* / stationarity, the entry point to [[Thm - Birkhoff's Ergodic Theorem|ergodic theory]] and de Finetti's theorem.
+Translation invariance is the prototype of *symmetry forcing a measure*: on any locally compact [[Def - Group|group]] it becomes the existence and uniqueness of **Haar measure**, the canonical invariant measure underlying representation theory and ergodic theory. The generalisation $\lambda(gA)=|\det g|\lambda(A)$ for linear $g$ is the **change-of-variables Jacobian**. In probability, invariance of a law under a group action is *exchangeability* / stationarity, the entry point to [[Thm - Birkhoff's Ergodic Theorem|ergodic theory]] and de Finetti's theorem.
 
 ---
 

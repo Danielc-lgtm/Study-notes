@@ -23,9 +23,9 @@ The naive approach — add the constraints as soft penalties via multi-objective
 
 The principled formulation imposes the constraints *exactly*:
 $$\min_x \|Ax - b\|^2 \quad \text{subject to} \quad Cx = d.$$
-The feasible set is the *affine subspace* $\{x : Cx = d\}$, which is non-empty iff the constraint system has at least one solution (which it does iff the rows of $C$ are linearly independent — the standard assumption — or, more generally, iff $d$ lies in the range of $C$). On this feasible set, we minimize the LS objective.
+The feasible set is the *affine [[Def - Subspace|subspace]]* $\{x : Cx = d\}$, which is non-empty iff the constraint system has at least one solution (which it does iff the rows of $C$ are linearly independent — the standard assumption — or, more generally, iff $d$ lies in the range of $C$). On this feasible set, we minimize the LS objective.
 
-Geometrically: we are finding the point in $\mathrm{col}(A)$ closest to $b$ that comes from an $x$ in the feasible affine subspace. The unconstrained LS finds the closest point in $\mathrm{col}(A)$ overall; the constrained version requires that $x$ also lie in a specified affine subspace.
+Geometrically: we are finding the point in $\mathrm{col}(A)$ closest to $b$ that comes from an $x$ in the feasible affine [[Def - Subspace|subspace]]. The unconstrained LS finds the closest point in $\mathrm{col}(A)$ overall; the constrained version requires that $x$ also lie in a specified affine subspace.
 
 The deep observation is that this constrained problem reduces to a *single linear system*, just larger than the unconstrained case. The Lagrange multiplier method gives the *KKT optimality conditions*:
 - *Stationarity*: $\nabla_x L = 2 A^T(Ax - b) + C^T \nu = 0$, i.e., $2 A^T A x + C^T \nu = 2 A^T b$. This is the *generalized normal equation*: the gradient of the objective is balanced by the gradients of the constraints (weighted by the multipliers $\nu$).
@@ -47,7 +47,7 @@ The further special cases are illuminating:
 
 *No constraints ($p = 0$):* the KKT system reduces to $2 A^T A x = 2 A^T b$, i.e., the ordinary normal equations.
 
-*Zero objective ($A = 0, b = 0$):* the KKT system becomes $C^T \nu = 0, Cx = d$, which (with $C$ having linearly independent rows) gives the *least-norm* solution. But this requires regularization-like content; usually we set $A = I, b = 0$ giving $\min \|x\|^2$ s.t. $Cx = d$, with solution $\hat{x} = C^T(CC^T)^{-1} d = C^\dagger d$ — the pseudoinverse of the wide matrix $C$.
+*Zero objective ($A = 0, b = 0$):* the KKT system becomes $C^T \nu = 0, Cx = d$, which (with $C$ having linearly independent rows) gives the *least-norm* solution. But this requires regularization-like content; usually we set $A = I, b = 0$ giving $\min \|x\|^2$ s.t. $Cx = d$, with solution $\hat{x} = C^T(CC^T)^{-1} d = C^\dagger d$ — the [[Def - Pseudoinverse|pseudoinverse]] of the wide matrix $C$.
 
 *Equality-constraint regression*: when the data-fitting problem has natural side constraints (e.g., the regression coefficient sum to a known value, or the model interpolates exactly at specific points), constrained LS provides the exact framework. This is far more elegant than ad-hoc adjustments after unconstrained fitting.
 
@@ -85,7 +85,7 @@ This is the same construction as:
 
 # Examples / Corollaries
 
-*Example 1 (least-norm problem).* When $A = I, b = 0$, the constrained LS problem becomes $\min \|x\|^2$ s.t. $Cx = d$ — the *least-norm problem*. Solution: $\hat{x} = C^T(CC^T)^{-1} d = C^\dagger d$, the pseudoinverse formula for wide matrices with linearly independent rows. See [[Def - Pseudoinverse]].
+*Example 1 (least-norm problem).* When $A = I, b = 0$, the constrained LS problem becomes $\min \|x\|^2$ s.t. $Cx = d$ — the *least-norm problem*. Solution: $\hat{x} = C^T(CC^T)^{-1} d = C^\dagger d$, the [[Def - Pseudoinverse|pseudoinverse]] formula for wide matrices with linearly independent rows. See [[Def - Pseudoinverse]].
 
 *Example 2 (spline fitting with continuity constraints).* Fit two cubic polynomials $p(x), q(x)$ to a dataset, with the constraint that $p(a) = q(a)$ and $p'(a) = q'(a)$ (continuity and smoothness at the join point $a$). This is constrained LS with $p = 2$ scalar constraints. The result is a piecewise-cubic *spline*. Generalizing to many pieces gives the standard cubic-spline interpolation/fitting.
 

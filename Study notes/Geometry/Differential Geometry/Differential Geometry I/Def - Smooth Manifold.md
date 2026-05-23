@@ -31,9 +31,9 @@ Why $C^\infty$ rather than $C^k$ for finite $k$, or real-analytic? The choice of
 
 - It is *coarse enough to permit many constructions*. The category of smooth manifolds has products, partitions of unity, embedding theorems (Whitney), Sard's theorem, transversality. The smaller categories (real-analytic, $C^k$) lose at least one of these properties.
 
-A famous theorem of Whitney (1936) asserts that every $C^1$ manifold admits a unique compatible $C^\infty$ structure, and similarly for any $C^k$ with $k \geq 1$. So in dimensions where smooth structures exist at all (which is "most" dimensions; Kervaire's pathology is the exception), the $C^k$ and $C^\infty$ categories give the *same* manifolds up to diffeomorphism. This means choosing $C^\infty$ as the standard category loses no real generality, gains all the analytical advantages, and has the structural cleanness of being the limit of all finite-$k$ categories.
+A famous theorem of Whitney (1936) asserts that every $C^1$ manifold admits a unique compatible $C^\infty$ structure, and similarly for any $C^k$ with $k \geq 1$. So in [[Def - Dimension|dimensions]] where smooth structures exist at all (which is "most" [[Def - Dimension|dimensions]]; Kervaire's pathology is the exception), the $C^k$ and $C^\infty$ categories give the *same* manifolds up to [[Def - Diffeomorphism|diffeomorphism]]. This means choosing $C^\infty$ as the standard category loses no real generality, gains all the analytical advantages, and has the structural cleanness of being the limit of all finite-$k$ categories.
 
-What about *exotic* smooth structures? A topological manifold may admit multiple non-diffeomorphic smooth structures. The 7-sphere $S^7$ has 28 distinct smooth structures (Milnor 1956; the topological/smooth diffeomorphism classification of $S^n$ is a major theorem); $\mathbb{R}^4$ admits uncountably many smooth structures (Donaldson, Freedman 1980s). These are deep phenomena and far beyond the scope of this chapter, but they show that the smooth structure is *not* a derived notion — it carries genuine content beyond the topology.
+What about *exotic* smooth structures? A topological manifold may admit multiple non-diffeomorphic smooth structures. The 7-sphere $S^7$ has 28 distinct smooth structures (Milnor 1956; the topological/smooth [[Def - Diffeomorphism|diffeomorphism]] classification of $S^n$ is a major theorem); $\mathbb{R}^4$ admits uncountably many smooth structures (Donaldson, Freedman 1980s). These are deep phenomena and far beyond the scope of this chapter, but they show that the smooth structure is *not* a derived notion — it carries genuine content beyond the topology.
 
 The categorical viewpoint sums it up: a smooth manifold is the prototype of *a space modelled locally on $\mathbb{R}^n$ in the differentiable category*. Replacing the model and the category produces the entire zoo of geometric structures.
 
@@ -111,13 +111,13 @@ The unifying compression: a smooth manifold is the natural setting for any mathe
 
 **Is an instance: $\mathrm{GL}(n, \mathbb{R})$.** As an open subset of $M(n, \mathbb{R}) \cong \mathbb{R}^{n^2}$ (defined by $\det \neq 0$), it inherits a smooth manifold structure of dimension $n^2$ by [[Thm - Open Subset of a Smooth Manifold]]. See [[Ex - The General Linear Group is a Smooth Manifold]].
 
-**Is an instance: the Grassmannian $G_k(V)$.** The space of $k$-dimensional subspaces of an $n$-dimensional vector space $V$, with the smooth structure constructed via the smooth manifold chart lemma (Lee 1.35). Dimension $k(n-k)$. See [[Ex - The Grassmannian is a Smooth Manifold]].
+**Is an instance: the Grassmannian $G_k(V)$.** The space of $k$-dimensional [[Def - Subspace|subspaces]] of an $n$-dimensional vector space $V$, with the smooth structure constructed via the smooth manifold chart lemma (Lee 1.35). Dimension $k(n-k)$. See [[Ex - The Grassmannian is a Smooth Manifold]].
 
 **Is an instance: the Möbius band (without boundary).** A non-orientable smooth 2-manifold, constructed as the quotient of $\mathbb{R} \times (-1, 1)$ by the action $(x, y) \sim (x+1, -y)$. The smooth structure is induced by the quotient; the resulting manifold is a non-trivial smooth structure on the topological cylinder. (The Möbius *band with boundary*, $\mathbb{R} \times [-1, 1] / \sim$, is a smooth manifold with boundary, see [[Def - Smooth Manifold with Boundary]].)
 
 **Is an instance: $\mathbb{R}$ with the non-standard chart $\psi(x) = x^3$.** The atlas $\{(\mathbb{R}, \psi)\}$ defines a smooth structure on $\mathbb{R}$ *different from the standard one* — not equivalent, since the transition $y \mapsto y^{1/3}$ is not smooth at $0$. However, this smooth manifold is *diffeomorphic* to standard $\mathbb{R}$ via the smooth map $x \mapsto x^3$ from standard $\mathbb{R}$ to non-standard $\mathbb{R}$; in fact, by Lee Problem 1-6, there are uncountably many distinct smooth structures on any positive-dimensional topological manifold, all diffeomorphic to each other. The "moduli space of smooth structures up to diffeomorphism" is much smaller than the "set of smooth structures."
 
-**Is an instance: the Heisenberg group $H_3$.** The 3-dimensional Lie group of upper-triangular $3 \times 3$ matrices with $1$'s on the diagonal — an open subset of an affine subspace of $M(3, \mathbb{R})$, hence smooth.
+**Is an instance: the Heisenberg [[Def - Group|group]] $H_3$.** The 3-dimensional Lie group of upper-triangular $3 \times 3$ matrices with $1$'s on the diagonal — an open subset of an affine [[Def - Subspace|subspace]] of $M(3, \mathbb{R})$, hence smooth.
 
 **Is NOT an instance: the line with two origins.** Locally Euclidean and second-countable but *not Hausdorff* (Lee Problem 1-1). Not a topological manifold, hence not a smooth manifold.
 
@@ -125,9 +125,9 @@ The unifying compression: a smooth manifold is the natural setting for any mathe
 
 **Is NOT an instance: the closed unit interval $[0, 1]$.** Locally Euclidean except at the endpoints, where the locally Euclidean condition fails (the only neighbourhoods of $0$ are of the form $[0, \varepsilon)$, not homeomorphic to open subsets of $\mathbb{R}$). It *is* a smooth manifold with boundary (see [[Def - Smooth Manifold with Boundary]]).
 
-**Is NOT an instance: a generic algebraic variety with singularities.** The variety $\{xy = 0\} \subseteq \mathbb{R}^2$ — the union of the two axes — fails to be locally Euclidean at the origin (a neighbourhood of the origin contains arbitrarily small open subsets of the two axes, which has no homeomorphism to an open subset of $\mathbb{R}$, nor to an open subset of $\mathbb{R}^2$). It is a smooth manifold *away from* the origin, but not at the origin.
+**Is NOT an instance: a generic algebraic variety with singularities.** The variety $\{xy = 0\} \subseteq \mathbb{R}^2$ — the union of the two axes — fails to be locally Euclidean at the origin (a neighbourhood of the origin contains arbitrarily small open subsets of the two axes, which has no [[Def - Homeomorphism|homeomorphism]] to an open subset of $\mathbb{R}$, nor to an open subset of $\mathbb{R}^2$). It is a smooth manifold *away from* the origin, but not at the origin.
 
-**Corollary (every open subset is a smooth manifold).** By [[Thm - Open Subset of a Smooth Manifold]], any open $U \subseteq M$ inherits a smooth $n$-manifold structure from $M$. This is used constantly: matrix Lie groups, the upper half-space, complements of closed sets.
+**Corollary (every open subset is a smooth manifold).** By [[Thm - Open Subset of a Smooth Manifold]], any open $U \subseteq M$ inherits a smooth $n$-manifold structure from $M$. This is used constantly: matrix Lie [[Def - Group|groups]], the upper half-space, complements of closed sets.
 
 **Corollary (every finite product is a smooth manifold).** By [[Thm - Product of Smooth Manifolds is a Smooth Manifold]], the finite product $M_1 \times \cdots \times M_k$ inherits a smooth structure of dimension $\sum n_i$.
 

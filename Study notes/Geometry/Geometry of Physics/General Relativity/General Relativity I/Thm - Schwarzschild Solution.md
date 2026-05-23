@@ -16,7 +16,7 @@ Spacetime $(M, g)$, signature $(+,-,-,-)$, geometrised units $c = G = 1$. Spheri
 
 # Statement
 
-> **Theorem (Schwarzschild, 1916).** The unique spherically symmetric, static, asymptotically flat vacuum solution of the Einstein field equations $R_{\mu\nu} = 0$ in four spacetime dimensions is the **Schwarzschild metric**:
+> **Theorem (Schwarzschild, 1916).** The unique spherically symmetric, static, asymptotically flat vacuum solution of the Einstein field equations $R_{\mu\nu} = 0$ in four spacetime [[Def - Dimension|dimensions]] is the **Schwarzschild metric**:
 > $$ds^2 = -\left(1 - \frac{2M}{r}\right) dt^2 + \left(1 - \frac{2M}{r}\right)^{-1} dr^2 + r^2\, d\theta^2 + r^2 \sin^2\theta\, d\phi^2,$$
 > where $M$ is an integration constant (the **mass parameter**, equal to the gravitational mass of the source in geometrised units; in conventional units, $M$ has dimensions of mass and the appearance is $g_{tt} = -(1 - 2GM/(rc^2))$). The metric is valid in the exterior region $r > 2M$; the surface $r = 2M$ is the **Schwarzschild radius** (a coordinate singularity, not a curvature singularity), and $r = 0$ is a genuine curvature singularity inside.
 >
@@ -32,7 +32,7 @@ The Schwarzschild solution is the first and most fundamental exact solution of t
 
 The importance of the Schwarzschild solution is fourfold:
 
-(i) **It is the GR replacement for Newton's $\phi = -GM/r$**. In the weak-field, slow-motion limit, geodesics in the Schwarzschild geometry reduce to Newtonian orbits in the inverse-square gravity of a point mass. So the Schwarzschild metric *is* what Newton's potential becomes when you take general relativity seriously.
+(i) **It is the GR replacement for Newton's $\phi = -GM/r$**. In the weak-field, slow-motion limit, [[Def - Geodesic|geodesics]] in the Schwarzschild geometry reduce to Newtonian orbits in the inverse-square gravity of a point mass. So the Schwarzschild metric *is* what Newton's potential becomes when you take general relativity seriously.
 
 (ii) **It is the testing ground of GR**. The three "classical tests" of GR — perihelion precession of Mercury, light bending by the Sun, gravitational redshift — are all calculations of geodesics in the Schwarzschild metric outside the Sun. All three give predictions that disagree with Newtonian gravity by definite, computable amounts, and all three have been verified observationally.
 

@@ -15,7 +15,7 @@ Let $(X,\mathcal{A},\mu)$ be a measure space and $L^2(\mu)$ its [[Def - Lp Space
 
 **(a)** Show $\langle\cdot,\cdot\rangle$ is an inner product on $L^2(\mu)$ and the **Cauchy–Schwarz inequality** $|\langle f,g\rangle|\le\|f\|_2\|g\|_2$ holds — as the case $p=q=2$ of [[Thm - Hölder and Minkowski Inequalities|Hölder]].
 
-**(b)** Conclude $L^2(\mu)$ is a **Hilbert space** (complete inner-product space), and that for a closed subspace $V\subseteq L^2$ every $f$ has a unique orthogonal projection onto $V$.
+**(b)** Conclude $L^2(\mu)$ is a **Hilbert space** (complete inner-product space), and that for a closed [[Def - Subspace|subspace]] $V\subseteq L^2$ every $f$ has a unique orthogonal projection onto $V$.
 
 **(c)** Interpret on a probability space: for $X,Y\in L^2(\Omega,\mathcal{F},\mathbb{P})$, $|\mathrm{Cov}(X,Y)|\le\sigma(X)\sigma(Y)$, and the [[Def - Conditional Expectation|conditional expectation]] $\mathbb{E}[X\mid\mathcal{G}]$ is the orthogonal projection of $X$ onto $L^2(\mathcal{G})$.
 

@@ -21,17 +21,17 @@ Throughout, $R$ is a [[Def - Euclidean Domain|Euclidean domain]] — an integral
 
 > **Chinese Remainder Theorem for Modules.** Let $R$ be a [[Def - Euclidean Domain|Euclidean domain]] and let $a, b \in R$ be **coprime**, $\gcd(a, b) = 1$. Then
 > $$\frac{R}{(ab)} \;\cong\; \frac{R}{(a)} \oplus \frac{R}{(b)}$$
-> as $R$-modules.
+> as $R$-[[Def - Module|modules]].
 
-The single cyclic module $R/(ab)$, governed by one composite modulus $ab$, splits into a direct sum of two cyclic modules governed by the coprime factors $a$ and $b$ separately. The hypothesis $\gcd(a, b) = 1$ is essential: without coprimality the two factors share structure and the splitting fails (see *Sources and Targets* and *What Makes This Hard*). This is the module-theoretic form of the classical Chinese remainder theorem; specialised to $R = \mathbb{Z}$ it recovers the statement that for coprime integers $m, n$ one has $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \oplus \mathbb{Z}/n\mathbb{Z}$ — a system of congruences modulo $m$ and modulo $n$ has a unique simultaneous solution modulo $mn$.
+The single cyclic module $R/(ab)$, governed by one composite modulus $ab$, splits into a direct sum of two cyclic [[Def - Module|modules]] governed by the coprime factors $a$ and $b$ separately. The hypothesis $\gcd(a, b) = 1$ is essential: without coprimality the two factors share structure and the splitting fails (see *Sources and Targets* and *What Makes This Hard*). This is the module-theoretic form of the classical Chinese remainder theorem; specialised to $R = \mathbb{Z}$ it recovers the statement that for coprime integers $m, n$ one has $\mathbb{Z}/mn\mathbb{Z} \cong \mathbb{Z}/m\mathbb{Z} \oplus \mathbb{Z}/n\mathbb{Z}$ — a system of congruences modulo $m$ and modulo $n$ has a unique simultaneous solution modulo $mn$.
 
 ---
 
 # Motivation
 
-The classical Chinese remainder theorem is a statement about solving congruences: if you know a number's remainder modulo $3$ and its remainder modulo $5$, and $3$ and $5$ are coprime, then you know its remainder modulo $15$, and conversely every pair of remainders is achievable by exactly one residue modulo $15$. It is one of the oldest theorems in number theory, and its content is that arithmetic modulo a composite number $mn$ — when $m$ and $n$ are coprime — is *nothing more* than two independent copies of arithmetic modulo the factors, run in parallel.
+The classical Chinese remainder theorem is a statement about solving congruences: if you know a number's remainder modulo $3$ and its remainder modulo $5$, and $3$ and $5$ are coprime, then you know its remainder modulo $15$, and conversely every pair of remainders is achievable by exactly one [[Def - Residue|residue]] modulo $15$. It is one of the oldest theorems in number theory, and its content is that arithmetic modulo a composite number $mn$ — when $m$ and $n$ are coprime — is *nothing more* than two independent copies of arithmetic modulo the factors, run in parallel.
 
-This page lifts that statement out of number theory and into module theory, and the reason for doing so is leverage. The classical theorem is about $\mathbb{Z}$; but the same proof, written in the language of rings and modules, works for *any* Euclidean domain — and Euclidean domains include the polynomial ring $F[X]$, the Gaussian integers $\mathbb{Z}[i]$, and more. By proving the theorem once at this level of generality, every instance of "split a cyclic module by a coprime factorisation of its modulus" becomes available across all of these settings at once. The lecture notes flag this explicitly: the proof is "just that of the Chinese remainder theorem written in ring language".
+This page lifts that statement out of number theory and into module theory, and the reason for doing so is leverage. The classical theorem is about $\mathbb{Z}$; but the same proof, written in the language of [[Def - Ring|rings]] and modules, works for *any* Euclidean domain — and Euclidean domains include the polynomial [[Def - Ring|ring]] $F[X]$, the Gaussian integers $\mathbb{Z}[i]$, and more. By proving the theorem once at this level of generality, every instance of "split a cyclic module by a coprime factorisation of its modulus" becomes available across all of these settings at once. The lecture notes flag this explicitly: the proof is "just that of the Chinese remainder theorem written in ring language".
 
 Why does one want this particular statement, packaged this particular way? Because it is the missing tool in the [[Thm - Primary Decomposition Theorem|primary decomposition]] of finitely generated modules. The [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]] decomposes a finitely generated module over a Euclidean domain into cyclic pieces $R/(d_i)$ — but the moduli $d_i$ are arbitrary ring elements, possibly composite. To refine this into the cleanest possible form, where every cyclic piece is governed by a *prime power*, you need to break each $R/(d_i)$ apart along the prime factorisation $d_i = p_1^{n_1} \cdots p_k^{n_k}$. Distinct prime powers are coprime, so the Chinese remainder theorem is exactly the instrument that performs this break-up:
 $$\frac{R}{(d_i)} \;\cong\; \frac{R}{(p_1^{n_1})} \oplus \dots \oplus \frac{R}{(p_k^{n_k})}.$$
@@ -75,7 +75,7 @@ Now make it precise by building the isomorphism. The map that does the work goes
 $$\phi : \frac{R}{(a)} \oplus \frac{R}{(b)} \longrightarrow \frac{R}{(ab)}, \qquad (r_1 + (a),\ r_2 + (b)) \longmapsto b r_1 + a r_2 + (ab).$$
 The combination $b r_1 + a r_2$ is chosen with care. Look at it modulo $a$: the term $a r_2$ vanishes, leaving $b r_1$. Look at it modulo $b$: the term $b r_1$ vanishes, leaving $a r_2$. So the formula bakes in the right *cross-talk-free* behaviour — the first input controls the answer modulo $a$, the second controls it modulo $b$, and they do not interfere. (One first has to check this is well-defined, i.e. that changing $r_1$ by a multiple of $a$ or $r_2$ by a multiple of $b$ changes $br_1 + ar_2$ only by a multiple of $ab$; it does, because $b \cdot (xa) = (ab)x$ and $a \cdot (yb) = (ab)y$.)
 
-Here is where coprimality enters, and it enters exactly once, to make $\phi$ **surjective**. The module $R/(ab)$ is generated, as an $R$-module, by the single element $1 + (ab)$ — every coset is $r \cdot (1 + (ab))$. So to prove $\phi$ hits everything, it is enough to prove $\phi$ hits the *generator* $1 + (ab)$. And this is precisely what a Bézout relation provides: because $\gcd(a, b) = 1$, the Euclidean algorithm yields $x, y \in R$ with
+Here is where coprimality enters, and it enters exactly once, to make $\phi$ **surjective**. The module $R/(ab)$ is generated, as an $R$-module, by the single element $1 + (ab)$ — every [[Def - Coset|coset]] is $r \cdot (1 + (ab))$. So to prove $\phi$ hits everything, it is enough to prove $\phi$ hits the *generator* $1 + (ab)$. And this is precisely what a Bézout relation provides: because $\gcd(a, b) = 1$, the Euclidean algorithm yields $x, y \in R$ with
 $$ax + by = 1.$$
 Feed the pair $(y + (a),\ x + (b))$ into $\phi$:
 $$\phi(y + (a),\ x + (b)) = by + ax + (ab) = 1 + (ab).$$
@@ -102,7 +102,7 @@ Write down the explicit map $\phi : R/(a) \oplus R/(b) \to R/(ab)$, $(r_1, r_2) 
 
 1. **Define the map and check it is well-defined.** Set $\phi(r_1 + (a), r_2 + (b)) = br_1 + ar_2 + (ab)$, and show the value does not depend on the chosen representatives.
    - *Hint:* If $r_1 = r_1' + xa$ and $r_2 = r_2' + yb$, then $br_1 + ar_2 = br_1' + ar_2' + (xab + yab)$, and $xab + yab \in (ab)$.
-   - *Why needed:* A formula on cosets is meaningless until it is shown independent of representatives.
+   - *Why needed:* A formula on [[Def - Coset|cosets]] is meaningless until it is shown independent of representatives.
 
 2. **Check $\phi$ is a module homomorphism.** Show $\phi$ respects addition and the $R$-action.
    - *Hint:* Both operations on $R/(a) \oplus R/(b)$ are coordinatewise, and $br_1 + ar_2$ depends $R$-linearly on $(r_1, r_2)$.
@@ -130,7 +130,7 @@ Write down the explicit map $\phi : R/(a) \oplus R/(b) \to R/(ab)$, $(r_1, r_2) 
 > > [!note]- Full proof
 > > **Well-defined.** Suppose $(r_1 + (a),\ r_2 + (b)) = (r_1' + (a),\ r_2' + (b))$, so $r_1 - r_1' \in (a)$ and $r_2 - r_2' \in (b)$; write $r_1 = r_1' + xa$ and $r_2 = r_2' + yb$ for some $x, y \in R$. Then
 > > $$b r_1 + a r_2 = b(r_1' + xa) + a(r_2' + yb) = (b r_1' + a r_2') + (xab + yab).$$
-> > The correction term $xab + yab = (x + y)(ab)$ lies in the ideal $(ab)$, so $br_1 + ar_2 + (ab) = br_1' + ar_2' + (ab)$. The value of $\phi$ is therefore independent of the representatives, and $\phi$ is well-defined.
+> > The correction term $xab + yab = (x + y)(ab)$ lies in the [[Def - Ideal|ideal]] $(ab)$, so $br_1 + ar_2 + (ab) = br_1' + ar_2' + (ab)$. The value of $\phi$ is therefore independent of the representatives, and $\phi$ is well-defined.
 > >
 > > **Module homomorphism.** Addition and the $R$-action on $R/(a) \oplus R/(b)$ are coordinatewise. For two inputs,
 > > $$\phi\bigl((r_1, r_2) + (r_1', r_2')\bigr) = b(r_1 + r_1') + a(r_2 + r_2') + (ab) = \phi(r_1, r_2) + \phi(r_1', r_2'),$$

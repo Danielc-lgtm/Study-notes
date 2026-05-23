@@ -15,7 +15,7 @@ $A$ is an $m \times n$ matrix with linearly independent columns. The *Gram matri
 
 # Statement
 
-> **Theorem (Least Squares via Normal Equations).** Let $A$ be an $m \times n$ matrix with linearly independent columns, and $b$ an $m$-vector.
+> **Theorem (Least Squares via [[Def - Normal Equations|Normal Equations]]).** Let $A$ be an $m \times n$ matrix with linearly independent columns, and $b$ an $m$-vector.
 > 1. The least squares solution $\hat{x}$ is uniquely determined by the *normal equations* $A^T A x = A^T b$.
 > 2. The Gram matrix $G = A^T A$ is symmetric positive definite, so the system $Gx = h$ can be solved by *Cholesky factorization* in $\frac{1}{3} n^3 + mn^2$ flops (the $mn^2$ comes from forming $G$, the $\frac{1}{3} n^3$ from Cholesky).
 > 3. The condition number satisfies $\kappa(A^T A) = \kappa(A)^2$, so the normal-equation approach *squares the condition number* relative to operating on $A$ directly.
@@ -155,7 +155,7 @@ A secondary difficulty is the orthogonality principle. Even though it is "intuit
 
 *Suggestion 1 (Statistics — OLS):* The normal equations $X^T X \hat{\beta} = X^T y$ are the standard formula for OLS regression coefficients in statistics. Apply this theorem to verify when OLS is well-defined (full column rank of $X$) and to compute the standard error of the regression coefficients via the formula $\mathrm{Cov}(\hat{\beta}) = \sigma^2 (X^T X)^{-1}$.
 
-*Suggestion 2 (PDEs — Galerkin finite elements):* The Galerkin formulation of a self-adjoint elliptic PDE gives normal equations on a finite-element subspace. Apply this theorem to show that the FE solution exists and is unique (under positivity / coercivity of the bilinear form), and to interpret the FE conditioning issues as condition-number-squared phenomena.
+*Suggestion 2 (PDEs — Galerkin finite elements):* The Galerkin formulation of a self-adjoint elliptic PDE gives normal equations on a finite-element [[Def - Subspace|subspace]]. Apply this theorem to show that the FE solution exists and is unique (under positivity / coercivity of the bilinear form), and to interpret the FE conditioning issues as condition-number-squared phenomena.
 
 *Suggestion 3 (Numerical analysis — recursive least squares):* When new data arrives sequentially, the Gram matrix updates by a rank-1 outer product, and the LS solution can be updated in $O(n^2)$ flops per new sample (rather than recomputing from scratch in $O(mn^2)$). This is the *recursive least squares* (RLS) algorithm. Use this theorem as the offline batch version that the recursive algorithm incrementally builds.
 

@@ -21,7 +21,7 @@ Show that $\|T\|_{\text{op}} = s_1(T)$, the largest singular value of $T$.
 
 ![[Def - Singular Values#The Definition]]
 
-The [[Thm - Singular Value Decomposition|singular value decomposition]] gives orthonormal bases $\{e_j\}$ of $V$ and $\{f_j\}$ of (a subspace of) $W$, and non-negative real numbers $s_1 \geq s_2 \geq \cdots \geq s_n \geq 0$, such that $T e_j = s_j f_j$ for each $j$.
+The [[Thm - Singular Value Decomposition|singular value decomposition]] gives orthonormal bases $\{e_j\}$ of $V$ and $\{f_j\}$ of (a [[Def - Subspace|subspace]] of) $W$, and non-negative real numbers $s_1 \geq s_2 \geq \cdots \geq s_n \geq 0$, such that $T e_j = s_j f_j$ for each $j$.
 
 ---
 

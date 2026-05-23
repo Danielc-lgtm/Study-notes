@@ -76,7 +76,7 @@ The proof has four parts. Step 1 stacks the variables and identifies the constra
 
 **Step 1: Stack into a constrained LS problem.**
 
-Let $z = (x_1, \ldots, x_T, u_1, \ldots, u_{T-1})$, of dimension $Tn + (T-1)m$. The cost objective is
+Let $z = (x_1, \ldots, x_T, u_1, \ldots, u_{T-1})$, of [[Def - Dimension|dimension]] $Tn + (T-1)m$. The cost objective is
 $$J = \sum_{t=1}^T \|C_t x_t\|^2 + \rho \sum_{t=1}^{T-1} \|u_t\|^2.$$
 Identify the LS form $J = \|\tilde{A} z\|^2$ with $\tilde{A}$ block-diagonal:
 $$\tilde{A} = \begin{pmatrix} C_1 & & & & & & \\ & \ddots & & & & & \\ & & C_T & & & & \\ & & & \sqrt{\rho} I_m & & & \\ & & & & \ddots & & \\ & & & & & \sqrt{\rho} I_m \end{pmatrix},$$

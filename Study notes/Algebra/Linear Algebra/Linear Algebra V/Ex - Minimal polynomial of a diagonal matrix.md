@@ -17,7 +17,7 @@ $$m_T(z) = (z - \lambda_1)(z - \lambda_2) \cdots (z - \lambda_m).$$
 
 ![[Def - Minimal Polynomial#The Definition]]
 
-A polynomial is **monic** if its leading coefficient is $1$. The minimal polynomial is unique with smallest positive degree among monic annihilators of $T$.
+A polynomial is **monic** if its leading coefficient is $1$. The minimal polynomial is unique with smallest positive degree among monic [[Def - Annihilator|annihilators]] of $T$.
 
 A **diagonal matrix** $\operatorname{diag}(\mu_1, \ldots, \mu_n)$ acts on the basis $v_1, \ldots, v_n$ as $T v_k = \mu_k v_k$. So each $v_k$ is an eigenvector with eigenvalue $\mu_k$.
 
@@ -29,7 +29,7 @@ A **diagonal matrix** $\operatorname{diag}(\mu_1, \ldots, \mu_n)$ acts on the ba
 
 **Assumption pattern.** The recognisable signal is that $T$ acts on each basis vector by scalar multiplication. So $(T - \lambda I) v_k = (\mu_k - \lambda) v_k$ for any $\lambda$, and $(T - \lambda I) v_k = 0$ exactly when $\mu_k = \lambda$. By taking a product over the *distinct* values $\lambda_1, \ldots, \lambda_m$, every $v_k$ is killed by exactly one factor, hence by the product.
 
-**Theorem routing.** Use the **characterization of the minimal polynomial as the smallest-degree monic annihilator**, plus **the divisibility property**: any monic annihilator is a multiple of $m_T$, so $m_T$ divides $(z - \lambda_1) \cdots (z - \lambda_m)$. Conversely, $m_T$ must vanish at each eigenvalue (by [[Thm - Eigenvalues are Zeros of the Minimal Polynomial]]), so $(z - \lambda_k) \mid m_T$ for each distinct $\lambda_k$; combining, the product divides $m_T$. So $m_T = \prod (z - \lambda_k)$.
+**Theorem routing.** Use the **characterization of the minimal polynomial as the smallest-degree monic [[Def - Annihilator|annihilator]]**, plus **the divisibility property**: any monic annihilator is a multiple of $m_T$, so $m_T$ divides $(z - \lambda_1) \cdots (z - \lambda_m)$. Conversely, $m_T$ must vanish at each eigenvalue (by [[Thm - Eigenvalues are Zeros of the Minimal Polynomial]]), so $(z - \lambda_k) \mid m_T$ for each distinct $\lambda_k$; combining, the product divides $m_T$. So $m_T = \prod (z - \lambda_k)$.
 
 **Key decision point.** The non-obvious step (if it can be called that) is to recognise that $m_T$ has only the *distinct* eigenvalues as roots — not the eigenvalues with multiplicity. The multiplicity comes from the *characteristic polynomial* $\chi_T$, not from the minimal polynomial. So even when $\mu_1 = \mu_2 = \cdots = \mu_n = 7$ (a scalar matrix), the minimal polynomial is just $z - 7$, not $(z - 7)^n$.
 

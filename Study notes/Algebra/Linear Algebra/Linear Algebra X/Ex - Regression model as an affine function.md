@@ -103,7 +103,7 @@ Prepend a constant feature $1$ to the input.
 >
 > So $\hat y(x) = \tilde x^T \tilde \beta_{\text{wt}}$, an inner product of two $(n+1)$-vectors. As a function of $\tilde x$, this is *linear* (no offset term): $\tilde y(\tilde x) := \tilde x^T \tilde \beta_{\text{wt}}$ satisfies superposition for any $\alpha, \beta$ without the constraint $\alpha + \beta = 1$.
 >
-> Of course, the augmented input $\tilde x$ is *constrained* to have first entry $1$, so not every $\tilde x \in \mathbb R^{n+1}$ corresponds to a valid input. The trick is purely notational: it lets the same algorithm that handles linear functions also handle affine functions, by working in one dimension higher.
+> Of course, the augmented input $\tilde x$ is *constrained* to have first entry $1$, so not every $\tilde x \in \mathbb R^{n+1}$ corresponds to a valid input. The trick is purely notational: it lets the same algorithm that handles linear functions also handle affine functions, by working in one [[Def - Dimension|dimension]] higher.
 
 > [!note]- Complete formal solution
 > Let $\beta_{\text{wt}} \in \mathbb R^n$, $v \in \mathbb R$, and define $\hat y : \mathbb R^n \to \mathbb R$ by $\hat y(x) = x^T \beta_{\text{wt}} + v$.

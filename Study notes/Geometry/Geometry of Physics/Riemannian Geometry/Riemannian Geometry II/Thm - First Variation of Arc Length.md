@@ -22,7 +22,7 @@ $(M, g)$ a Riemannian manifold, $\gamma : [a, b] \to M$ a smooth curve with velo
 > **Corollary (energy version).** The same conclusion holds for the energy functional $E$: a constant-speed curve $\gamma$ is a critical point of $E$ with respect to all fixed-endpoint smooth variations iff $\nabla_T T = 0$. The first variation of $E$ on a unit-speed curve is
 > $$\frac{d}{ds}\bigg|_{s=0} E(\gamma_s) = -\int_a^b g(V, \nabla_T T)\, dt + g(V(b), T(b)) - g(V(a), T(a)).$$
 
-> **Corollary (no-need-to-be-unit-speed).** For a general smooth curve $\gamma$, the same conclusion holds: critical points of $L$ (modulo reparametrisation) are unparametrised geodesics; critical points of $E$ are parametrised geodesics (which are automatically constant-speed).
+> **Corollary (no-need-to-be-unit-speed).** For a general smooth curve $\gamma$, the same conclusion holds: critical points of $L$ (modulo reparametrisation) are unparametrised [[Def - Geodesic|geodesics]]; critical points of $E$ are parametrised geodesics (which are automatically constant-speed).
 
 ---
 

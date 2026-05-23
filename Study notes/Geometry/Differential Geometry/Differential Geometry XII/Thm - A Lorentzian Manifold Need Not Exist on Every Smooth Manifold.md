@@ -65,7 +65,7 @@ The conceptual upshot: the geometry of relativity is *not* available on every sm
 
 # Why Is It True
 
-**Mechanism summary:** **a Lorentzian metric picks out, at each point, a one-dimensional "timelike" subspace of $T_pM$ — and a smoothly varying choice of one-dimensional subspace globally is exactly a nowhere-vanishing line field. The Euler characteristic is the obstruction to such a field (for compact even-dimensional manifolds), via the Hopf–Poincaré index theorem for line fields.**
+**Mechanism summary:** **a Lorentzian metric picks out, at each point, a one-dimensional "timelike" [[Def - Subspace|subspace]] of $T_pM$ — and a smoothly varying choice of one-dimensional [[Def - Subspace|subspace]] globally is exactly a nowhere-vanishing line field. The Euler characteristic is the obstruction to such a field (for compact even-dimensional manifolds), via the Hopf–Poincaré index theorem for line fields.**
 
 The argument has two halves.
 
@@ -105,7 +105,7 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
    - *Hint:* Free from the existence theorem.
    - *Why needed:* Provides the "reference" inner product structure.
 
-2. **From line field $L$ to local generating vector field $X$.** $L$ is a smooth rank-one subbundle; locally choose a unit (in $g_R$) generator.
+2. **From line field $L$ to local generating vector field $X$.** $L$ is a smooth rank-one [[Def - Subbundle|subbundle]]; locally choose a unit (in $g_R$) generator.
    - *Hint:* $L$ being smooth means locally trivial; pick a nowhere-vanishing section.
    - *Why needed:* The Lorentzian metric formula uses a local generator.
 
@@ -134,7 +134,7 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
 # Lemma Decomposition
 
 > [!note]- Lemma 1: From line field $L$ and Riemannian $g_R$ to Lorentzian metric
-> **Statement:** Let $g_R$ be a Riemannian metric on $M$ and $L \subseteq TM$ a smooth rank-one subbundle (line field). Define a $(0, 2)$-tensor field $g_L$ as follows: for each $p \in M$, choose a generator $X_p$ of $L_p$ (locally, a smooth nowhere-vanishing section $X$ of $L$), and set
+> **Statement:** Let $g_R$ be a Riemannian metric on $M$ and $L \subseteq TM$ a smooth rank-one [[Def - Subbundle|subbundle]] (line field). Define a $(0, 2)$-tensor field $g_L$ as follows: for each $p \in M$, choose a generator $X_p$ of $L_p$ (locally, a smooth nowhere-vanishing section $X$ of $L$), and set
 > $$
 > g_L = g_R - 2\, \frac{X^\flat \otimes X^\flat}{g_R(X, X)},
 > $$
@@ -174,7 +174,7 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
 > > The eigenline spanned by the positive-eigenvalue eigenvector is a one-dimensional subspace of $T_pM$. By smoothness of $g$ and continuity of eigenvalues and eigenvectors (in the regions where they are simple and isolated, which is the case here since the positive eigenvalue is unique), this line varies smoothly with $p$, giving a smooth line field on $M$.
 
 > [!note]- Lemma 3: The Hopf–Poincaré index theorem for line fields
-> **Statement:** Let $M$ be a compact smooth manifold of dimension $n$, and let $L$ be a smooth line field on $M$ with isolated zeros (where $L_p$ is not well-defined or is the zero subspace). Then the sum of the indices of the zeros equals $\chi(M)$ for even $n$, and equals $0$ for odd $n$.
+> **Statement:** Let $M$ be a compact smooth manifold of [[Def - Dimension|dimension]] $n$, and let $L$ be a smooth line field on $M$ with isolated zeros (where $L_p$ is not well-defined or is the zero subspace). Then the sum of the indices of the zeros equals $\chi(M)$ for even $n$, and equals $0$ for odd $n$.
 >
 > **Hint:** This is a generalisation of the Hopf index theorem for vector fields; the proof uses a double cover where the line field lifts to a vector field, and the index counts double.
 >
@@ -208,7 +208,7 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
 
 *1. Time-orientability is a stronger condition.* Even when a Lorentzian metric exists, the manifold may not be **time-orientable**: requiring a continuous global choice of "future" timelike direction is the existence of a nowhere-vanishing timelike *vector* field (not just line field), which is generally more restrictive. The Möbius-strip-like Lorentzian manifold $M = (\mathbb{R} \times \mathbb{R}) / ((t, x) \sim (-t, x + 1))$ admits a Lorentzian metric but is not time-orientable.
 
-*2. The Lorentzian existence question for compact Lie groups.* Every compact Lie group $G$ has $\chi(G) = 0$ (a consequence of having a nowhere-vanishing left-invariant vector field, e.g.). So every compact Lie group admits a Lorentzian metric. Combined with other geometric structures (bi-invariance), this gives interesting examples of Lorentzian-symmetric homogeneous spaces.
+*2. The Lorentzian existence question for compact Lie [[Def - Group|groups]].* Every compact Lie [[Def - Group|group]] $G$ has $\chi(G) = 0$ (a consequence of having a nowhere-vanishing left-invariant vector field, e.g.). So every compact Lie group admits a Lorentzian metric. Combined with other geometric structures (bi-invariance), this gives interesting examples of Lorentzian-symmetric homogeneous spaces.
 
 *3. Application: torus admits a Lorentzian metric.* The 2-torus $T^2$ has $\chi(T^2) = 0$, so it admits a Lorentzian metric. Explicitly: the quotient of Minkowski $(\mathbb{R}^2, dt^2 - dx^2)$ by an integer lattice $\Lambda = \mathbb{Z}(1, 0) + \mathbb{Z}(0, 1)$ gives a Lorentzian 2-torus. This is a toy spacetime with closed timelike curves, often used as an illustrative example in causality theory.
 

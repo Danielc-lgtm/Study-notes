@@ -9,7 +9,7 @@ tags: [algebra, linear-algebra, applied, dynamics]
 
 # Problem Statement
 
-A simplified population model has age groups $0, 1, 2, 3$ (so the state vector $x_t \in \mathbb R^4$ records the number of individuals in each age group at year $t$). The birth rate is $b = (0, 0, 0.4, 0.1)$ (only ages $2$ and $3$ reproduce, with the given rates per individual per year), and the death rate is $d = (0.05, 0.1, 0.2, 1.0)$ (so the survival rate from age $i$ to age $i+1$ is $1 - d_i$; everyone in age group $3$ dies after one year).
+A simplified population model has age [[Def - Group|groups]] $0, 1, 2, 3$ (so the state vector $x_t \in \mathbb R^4$ records the number of individuals in each age group at year $t$). The birth rate is $b = (0, 0, 0.4, 0.1)$ (only ages $2$ and $3$ reproduce, with the given rates per individual per year), and the death rate is $d = (0.05, 0.1, 0.2, 1.0)$ (so the survival rate from age $i$ to age $i+1$ is $1 - d_i$; everyone in age group $3$ dies after one year).
 
 (a) Write down the $4 \times 4$ dynamics matrix $A$ for the system $x_{t+1} = A x_t$.
 
@@ -38,7 +38,7 @@ $$A = \begin{pmatrix} b_1 & b_2 & b_3 & b_4 \\ 1-d_1 & 0 & 0 & 0 \\ 0 & 1-d_2 & 
 
 **Theorem routing.** Mechanical construction from the [[Def - Linear Dynamical System|definition]]. Then verify by computing one step of the evolution numerically.
 
-**Key decision point.** The structural insight is that the dynamics matrix has a **specific sparse structure**: the first row is the birth-rate vector $b^T$, the subdiagonal entries are the survival rates $1 - d_i$, and all other entries are zero. This sparsity is what makes the matrix interpretable: the first row "produces newborns from all reproductive age groups", and the subdiagonal "shifts each age group up by one, with mortality losses". Recognising this structural pattern allows the model to be written without thought once the rates are specified.
+**Key decision point.** The structural insight is that the dynamics matrix has a **specific sparse structure**: the first row is the birth-rate vector $b^T$, the subdiagonal entries are the survival rates $1 - d_i$, and all other entries are zero. This sparsity is what makes the matrix interpretable: the first row "produces newborns from all reproductive age [[Def - Group|groups]]", and the subdiagonal "shifts each age group up by one, with mortality losses". Recognising this structural pattern allows the model to be written without thought once the rates are specified.
 
 ---
 

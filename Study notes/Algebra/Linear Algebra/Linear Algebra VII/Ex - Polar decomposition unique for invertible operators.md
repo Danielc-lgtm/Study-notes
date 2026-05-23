@@ -48,7 +48,7 @@ This solution deploys the following legal operations from [[Linear Algebra VII �
 
 2. **Solve for an unknown factor algebraically when the other is known and invertible** — Once $R = |T|$ is fixed and invertible (when $T$ is invertible), $S = T R^{-1}$ is uniquely determined.
 
-3. **Diagnose gauge freedom by examining the kernel** — When the equation $S \cdot 0 = 0$ does not constrain $S$ on a subspace, that subspace is the locus of gauge freedom.
+3. **Diagnose gauge freedom by examining the kernel** — When the equation $S \cdot 0 = 0$ does not constrain $S$ on a [[Def - Subspace|subspace]], that [[Def - Subspace|subspace]] is the locus of gauge freedom.
 
 ---
 
@@ -73,14 +73,14 @@ The proof has two parts: uniqueness of $R$ (always), and uniqueness of $S$ (when
 
 Suppose $T = SR$ with $S$ unitary (or isometric) and $R$ positive. Compute $T^* T$:
 $$T^* T = (SR)^* (SR) = R^* S^* S R = R^* I R = R^* R = R^2,$$
-using $S^* S = I$ (isometry/unitary) and $R^* = R$ (positive operators are self-adjoint).
+using $S^* S = I$ ([[Def - Isometry|isometry]]/unitary) and $R^* = R$ (positive operators are self-adjoint).
 
 So $T^*T = R^2$, which uniquely determines $R$ as the [[Thm - Positive Operators Have a Unique Square Root|unique positive square root]] of $T^*T$. Hence $R = \sqrt{T^*T} = |T|$.
 
 > [!note]- Derivation
-> The expansion $T^*T = R^* S^* S R = R^* R = R^2$ uses two facts: $S^*S = I$ (this is the isometry condition), and $R^* = R$ (positive implies self-adjoint).
+> The expansion $T^*T = R^* S^* S R = R^* R = R^2$ uses two facts: $S^*S = I$ (this is the [[Def - Isometry|isometry]] condition), and $R^* = R$ (positive implies self-adjoint).
 >
-> If $S$ is only an isometry (not full unitary), $S^* S = I$ only on $\operatorname{range} S^*$, but the equation $S^* S R = R$ still holds because... wait, this requires care. Let us be careful: for $S$ an isometry $V \to V$ in finite dimensions, $S$ is automatically surjective and hence unitary by [[Thm - Characterization of Isometries]]. So $S^* S = I_V$ on the whole space, and the computation goes through.
+> If $S$ is only an isometry (not full unitary), $S^* S = I$ only on $\operatorname{range} S^*$, but the equation $S^* S R = R$ still holds because... wait, this requires care. Let us be careful: for $S$ an isometry $V \to V$ in finite [[Def - Dimension|dimensions]], $S$ is automatically surjective and hence unitary by [[Thm - Characterization of Isometries]]. So $S^* S = I_V$ on the whole space, and the computation goes through.
 >
 > The uniqueness of $R$ follows from the [[Thm - Positive Operators Have a Unique Square Root]]: $R$ is a positive operator with $R^2 = T^*T$, and there is only one such operator.
 
@@ -99,7 +99,7 @@ uniquely determined. Verify $S$ is unitary: $S^* S = R^{-1} T^* T R^{-1} = R^{-1
 
 If $T$ is not invertible, then $\operatorname{null} T \neq \{0\}$, and $R = |T|$ also has $\operatorname{null} R = \operatorname{null} T \neq \{0\}$ (since $\|Rv\| = \|Tv\|$). On $\operatorname{null} R$, the equation $SR \cdot v = T \cdot v = 0$ becomes $S \cdot 0 = 0$, which is satisfied by any $S$. So $S$ restricted to $\operatorname{null} R$ is free.
 
-To make $S$ a full unitary on $V$, $S$ must map $\operatorname{null} R$ isometrically to some subspace of $V$. The natural choice is $S(\operatorname{null} R) = \operatorname{null} T^* = (\operatorname{range} T)^\perp$ (matching the dimensions, since $\dim \operatorname{null} T = \dim \operatorname{null} T^*$ in finite dimensions for any operator).
+To make $S$ a full unitary on $V$, $S$ must map $\operatorname{null} R$ isometrically to some subspace of $V$. The natural choice is $S(\operatorname{null} R) = \operatorname{null} T^* = (\operatorname{range} T)^\perp$ (matching the [[Def - Dimension|dimensions]], since $\dim \operatorname{null} T = \dim \operatorname{null} T^*$ in finite dimensions for any operator).
 
 The polar decomposition $T = SR$ thus has $S$ determined on $\operatorname{range} R = (\operatorname{null} T)^\perp$ by $S(Rv) = Tv$, and *any* unitary extension to $\operatorname{null} R = \operatorname{null} T$ works. Different extensions give different polar decompositions of $T$.
 
@@ -127,4 +127,4 @@ The polar decomposition $T = SR$ thus has $S$ determined on $\operatorname{range
 
 **Invertibility is the condition that removes gauge freedom in many decompositions.** This phenomenon — uniqueness when invertible, gauge freedom otherwise — recurs throughout linear algebra. The Cholesky decomposition $T = R^* R$ is uniquely determined for positive definite $T$ but has gauge freedom for positive semidefinite $T$. The QR factorisation $A = QR$ is uniquely determined when $A$ has linearly independent columns but has gauge freedom otherwise. The pattern is: the decomposition's "rotational" factor is determined wherever the "stretching" factor is invertible, and free where the stretching factor is degenerate.
 
-**The gauge freedom is precisely a unitary action on the kernel.** For a non-invertible $T$ with $k = \dim \operatorname{null} T$, the set of unitary $S$ giving valid polar decompositions $T = SR$ is parameterised by the unitary group $U(k)$, acting on $\operatorname{null} T \subseteq V$. This is a *concrete*, *computable* gauge group: not an abstract equivalence, but a literal $U(k)$ of choices. In quantum information theory, this gauge freedom underlies the freedom in choosing **Stinespring dilations** of a quantum channel — different choices of the dilation correspond to different choices of $S$ in the operator polar decomposition of the channel's representation. The uniqueness vs gauge phenomenon is real-world, not just an artefact.
+**The gauge freedom is precisely a unitary action on the kernel.** For a non-invertible $T$ with $k = \dim \operatorname{null} T$, the set of unitary $S$ giving valid polar decompositions $T = SR$ is parameterised by the unitary [[Def - Group|group]] $U(k)$, acting on $\operatorname{null} T \subseteq V$. This is a *concrete*, *computable* gauge [[Def - Group|group]]: not an abstract equivalence, but a literal $U(k)$ of choices. In quantum information theory, this gauge freedom underlies the freedom in choosing **Stinespring dilations** of a quantum channel — different choices of the dilation correspond to different choices of $S$ in the operator polar decomposition of the channel's representation. The uniqueness vs gauge phenomenon is real-world, not just an artefact.

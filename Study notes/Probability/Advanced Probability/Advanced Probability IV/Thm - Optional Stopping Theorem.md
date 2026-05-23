@@ -16,7 +16,7 @@ $(X_n)$ a [[Def - Martingale|martingale]] (or super/submartingale) on a [[Def - 
 
 # Motivation
 
-A [[Def - Martingale|martingale]] is a fair game: $\mathbb{E}[X_n]=\mathbb{E}[X_0]$ at every *fixed* time. The optional stopping theorem asserts the far stronger statement that fairness *survives stopping at a random time*: $\mathbb{E}[X_T]=\mathbb{E}[X_0]$ for a [[Def - Stopping Time|stopping time]] $T$ (under a boundedness or uniform-integrability hypothesis). No betting strategy and no quitting rule that uses only past information can beat a fair game — "you cannot get rich on a martingale." This is the theorem that *computes* hitting probabilities and expected hitting times, and the boundedness hypothesis is exactly what rules out the gambler's-ruin / doubling-strategy paradoxes.
+A [[Def - Martingale|martingale]] is a fair game: $\mathbb{E}[X_n]=\mathbb{E}[X_0]$ at every *fixed* time. The optional stopping theorem asserts the far stronger statement that fairness *survives stopping at a random time*: $\mathbb{E}[X_T]=\mathbb{E}[X_0]$ for a [[Def - Stopping Time|stopping time]] $T$ (under a boundedness or uniform-integrability hypothesis). No betting strategy and no quitting rule that uses only past information can beat a fair game — "you cannot get rich on a [[Def - Martingale|martingale]]." This is the theorem that *computes* hitting probabilities and expected hitting times, and the boundedness hypothesis is exactly what rules out the gambler's-ruin / doubling-strategy paradoxes.
 
 ---
 

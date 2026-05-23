@@ -35,7 +35,7 @@ The **nowhere-vanishing top-form** formulation is the most concise. By the [[Def
 
 **What if we demand existence of a *global* nowhere-vanishing top-form?** This is exactly the orientability criterion ([[Thm - A Manifold is Orientable iff it Admits a Nowhere-Vanishing Top Form|orientability ⟺ existence of a top-form]]). So the "strengthening" turns out to be equivalent to the original; this is the theorem and is the most useful operational form of the definition.
 
-**What if we work over $\mathbb{C}$?** A complex manifold has a complexified tangent bundle with structure group $\mathrm{GL}(n, \mathbb{C})$ — which is *connected*, so there is no two-component story. Every complex manifold's underlying real manifold is canonically oriented. The interesting orientation theory is therefore a *real* phenomenon, tied to the disconnectedness of $\mathrm{GL}(n, \mathbb{R})$.
+**What if we work over $\mathbb{C}$?** A complex manifold has a complexified tangent bundle with structure [[Def - Group|group]] $\mathrm{GL}(n, \mathbb{C})$ — which is *connected*, so there is no two-component story. Every complex manifold's underlying real manifold is canonically oriented. The interesting orientation theory is therefore a *real* phenomenon, tied to the disconnectedness of $\mathrm{GL}(n, \mathbb{R})$.
 
 ---
 
@@ -51,19 +51,19 @@ An **orientation** of $M$ is a continuous pointwise orientation. $M$ is **orient
 
 **(Top-form formulation.)** Equivalently, an orientation of $M$ corresponds to an equivalence class of nowhere-vanishing smooth $n$-forms $\omega \in \Omega^n(M)$, where two such forms are equivalent iff $\omega_1 = f\,\omega_2$ for some everywhere-positive smooth function $f \in C^\infty(M, \mathbb{R}_{>0})$. (See [[Def - Volume Form]] and [[Thm - A Manifold is Orientable iff it Admits a Nowhere-Vanishing Top Form]].)
 
-**Special case: 0-manifolds.** A 0-manifold is a discrete set of points; an orientation assigns $\pm 1$ to each point. This is forced by the convention that the boundary orientation must work in dimension 1: $\partial[0, 1] = \{1\} - \{0\}$ with the right endpoint positive and the left negative.
+**Special case: 0-manifolds.** A 0-manifold is a discrete set of points; an orientation assigns $\pm 1$ to each point. This is forced by the convention that the boundary orientation must work in [[Def - Dimension|dimension]] 1: $\partial[0, 1] = \{1\} - \{0\}$ with the right endpoint positive and the left negative.
 
-**Connectedness.** A connected orientable manifold of positive dimension has exactly two orientations. If $M$ is not connected, the number of orientations is $2^k$ where $k$ is the number of connected components: an orientation may be chosen independently on each component.
+**Connectedness.** A connected orientable manifold of positive [[Def - Dimension|dimension]] has exactly two orientations. If $M$ is not connected, the number of orientations is $2^k$ where $k$ is the number of connected components: an orientation may be chosen independently on each component.
 
 ---
 
 # Categorical / Structural Definition
 
-The tangent bundle $TM \to M$ of any smooth $n$-manifold $M$ is a rank-$n$ real vector bundle with structure group $\mathrm{GL}(n, \mathbb{R})$ (the transition functions of $TM$ are the Jacobians of the chart transitions). An **orientation** of $M$ is precisely a reduction of this structure group from $\mathrm{GL}(n, \mathbb{R})$ to the index-2 subgroup $\mathrm{GL}_+(n, \mathbb{R})$ of positive-determinant matrices.
+The tangent bundle $TM \to M$ of any smooth $n$-manifold $M$ is a rank-$n$ real vector bundle with structure [[Def - Group|group]] $\mathrm{GL}(n, \mathbb{R})$ (the transition functions of $TM$ are the Jacobians of the chart transitions). An **orientation** of $M$ is precisely a reduction of this structure group from $\mathrm{GL}(n, \mathbb{R})$ to the index-2 [[Def - Subgroup|subgroup]] $\mathrm{GL}_+(n, \mathbb{R})$ of positive-determinant matrices.
 
 Equivalently: the **orientation line bundle** $\det(T^*M) = \Lambda^n(T^*M)$ is a real line bundle over $M$. $M$ is orientable iff this line bundle is *trivial* (admits a nowhere-vanishing global section), and an orientation is exactly a choice of trivialization up to positive rescaling.
 
-Equivalently: from the **classifying space** viewpoint, the rank-$n$ tangent bundle is classified by a homotopy class of maps $M \to BO(n)$; orientability is the lift to $BSO(n)$, and the obstruction to such a lift is a single $\mathbb{Z}/2$-cohomology class — the first Stiefel–Whitney class $w_1(TM) \in H^1(M; \mathbb{Z}/2)$. $M$ is orientable iff $w_1(TM) = 0$, and the set of orientations is a torsor over $H^0(M; \mathbb{Z}/2) = (\mathbb{Z}/2)^{\#\text{components}}$.
+Equivalently: from the **classifying space** viewpoint, the rank-$n$ tangent bundle is classified by a [[Def - Homotopy|homotopy]] class of maps $M \to BO(n)$; orientability is the lift to $BSO(n)$, and the obstruction to such a lift is a single $\mathbb{Z}/2$-cohomology class — the first Stiefel–Whitney class $w_1(TM) \in H^1(M; \mathbb{Z}/2)$. $M$ is orientable iff $w_1(TM) = 0$, and the set of orientations is a torsor over $H^0(M; \mathbb{Z}/2) = (\mathbb{Z}/2)^{\#\text{components}}$.
 
 ---
 

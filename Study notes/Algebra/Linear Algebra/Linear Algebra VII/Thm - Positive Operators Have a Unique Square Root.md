@@ -152,7 +152,7 @@ Construct $\sqrt T$ via the spectral decomposition. For uniqueness, observe that
 
 3. **PDE — heat semigroup and fractional Laplacian.** For a positive self-adjoint operator $A$ on a Hilbert space (e.g., $A = -\Delta$ with appropriate boundary conditions), the fractional power $A^{1/2}$ is well-defined and self-adjoint. It plays a central role in the **fractional Laplacian** $(-\Delta)^{1/2}$ — a non-local operator central to anomalous diffusion processes, fluid dynamics with long-range interactions, and Lévy stochastic processes.
 
-4. **Differential geometry — exponential map of a positive symmetric matrix.** A positive definite symmetric matrix $A \in P_n(\mathbb{R})$ can be written as $A = e^X$ for a unique self-adjoint $X$ — the **matrix logarithm**. The set $P_n(\mathbb{R})$ has a Riemannian metric (the Karcher-Frechet mean), and the geodesics in this metric are computed using matrix square roots: $\gamma(t) = A^{1/2}(A^{-1/2} B A^{-1/2})^t A^{1/2}$ is the geodesic from $A$ to $B$. The existence of all the square roots in this formula is by this theorem.
+4. **Differential geometry — exponential map of a positive symmetric matrix.** A positive definite symmetric matrix $A \in P_n(\mathbb{R})$ can be written as $A = e^X$ for a unique self-adjoint $X$ — the **matrix logarithm**. The set $P_n(\mathbb{R})$ has a Riemannian metric (the Karcher-Frechet mean), and the [[Def - Geodesic|geodesics]] in this metric are computed using matrix square roots: $\gamma(t) = A^{1/2}(A^{-1/2} B A^{-1/2})^t A^{1/2}$ is the [[Def - Geodesic|geodesic]] from $A$ to $B$. The existence of all the square roots in this formula is by this theorem.
 
 ---
 

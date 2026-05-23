@@ -18,9 +18,9 @@ We write $\mathbb{R}^n$ with its standard topology; open subsets of $\mathbb{R}^
 
 > **Theorem (Topological Invariance of Dimension; Lee Theorem 1.2 / Brouwer 1911).** Let $n, m \geq 0$. If $U \subseteq \mathbb{R}^n$ and $V \subseteq \mathbb{R}^m$ are nonempty open subsets, then $U$ and $V$ are homeomorphic only if $n = m$.
 
-> **Corollary (Topological Invariance of Dimension for Manifolds).** Let $M$ and $N$ be nonempty [[Def - Topological Manifold|topological manifolds]] of dimensions $n$ and $m$ respectively. If $M$ and $N$ are homeomorphic, then $n = m$. In particular, every nonempty topological manifold has a well-defined dimension.
+> **Corollary (Topological Invariance of Dimension for Manifolds).** Let $M$ and $N$ be nonempty [[Def - Topological Manifold|topological manifolds]] of [[Def - Dimension|dimensions]] $n$ and $m$ respectively. If $M$ and $N$ are homeomorphic, then $n = m$. In particular, every nonempty topological manifold has a well-defined dimension.
 
-The proof of the theorem requires algebraic topology (singular homology, de Rham cohomology, or the Brouwer fixed-point theorem); we state it here and use it as a black box. A *smooth* version (where the homeomorphism is required to be a diffeomorphism) follows from elementary calculus and is Lee Theorem 2.17.
+The proof of the theorem requires algebraic topology (singular homology, de Rham cohomology, or the Brouwer fixed-point theorem); we state it here and use it as a black box. A *smooth* version (where the homeomorphism is required to be a [[Def - Diffeomorphism|diffeomorphism]]) follows from elementary calculus and is Lee Theorem 2.17.
 
 ---
 
@@ -28,17 +28,17 @@ The proof of the theorem requires algebraic topology (singular homology, de Rham
 
 The notion of "dimension" appears explicitly in the [[Def - Topological Manifold|definition of a topological manifold]] — a topological $n$-manifold is one whose every point has a chart to an open subset of $\mathbb{R}^n$. But this is potentially ambiguous: what if the same point also has a chart to $\mathbb{R}^m$ for some $m \neq n$? Could the same point be "$n$-dimensional" from one chart and "$m$-dimensional" from another? Could the same topological space be a 1-manifold *and* a 2-manifold?
 
-Intuitively, of course not. A line is 1-dimensional, a plane is 2-dimensional, they are visibly different objects. But the formal statement is delicate: it says that an open subset of $\mathbb{R}^n$ — which need not be all of $\mathbb{R}^n$, may be highly contorted — cannot be homeomorphic to an open subset of $\mathbb{R}^m$ for $n \neq m$. This is a *topological* statement: continuity alone — not smoothness, not differentiability — already forces the dimensions to match.
+Intuitively, of course not. A line is 1-dimensional, a plane is 2-dimensional, they are visibly different objects. But the formal statement is delicate: it says that an open subset of $\mathbb{R}^n$ — which need not be all of $\mathbb{R}^n$, may be highly contorted — cannot be homeomorphic to an open subset of $\mathbb{R}^m$ for $n \neq m$. This is a *topological* statement: continuity alone — not smoothness, not differentiability — already forces the [[Def - Dimension|dimensions]] to match.
 
 This is genuinely surprising, because at first glance, *continuity* should be a very weak condition. Cantor showed in 1878 that there is a bijection between $\mathbb{R}$ and $\mathbb{R}^2$ — these sets have the same cardinality — and that one might hope continuity alone preserves so little structure that "dimension" would not be a topological invariant. The bijection Cantor exhibited is *not* continuous, of course; but the existence of a set-theoretic bijection raises the question of whether some clever continuous bijection might exist.
 
-Peano (1890) made the situation worse by constructing a *space-filling curve* — a continuous surjection $[0, 1] \to [0, 1]^2$ from a 1-dimensional interval onto a 2-dimensional square. So continuity alone does not preserve dimension. The remarkable fact, eventually proved by Brouwer in 1911, is that *the combination of continuity and bijectivity-with-continuous-inverse* (homeomorphism) *does* preserve dimension. A topological manifold has a well-defined dimension precisely because the chart-defining homeomorphisms are required to be homeomorphisms, not just continuous maps.
+Peano (1890) made the situation worse by constructing a *space-filling curve* — a continuous surjection $[0, 1] \to [0, 1]^2$ from a 1-dimensional interval onto a 2-dimensional square. So continuity alone does not preserve dimension. The remarkable fact, eventually proved by Brouwer in 1911, is that *the combination of continuity and bijectivity-with-continuous-inverse* (homeomorphism) *does* preserve dimension. A topological manifold has a well-defined dimension precisely because the chart-defining [[Def - Homeomorphism|homeomorphisms]] are required to be homeomorphisms, not just continuous maps.
 
 Without invariance of dimension, "the dimension of a topological manifold" would not be a well-defined phrase, and the entire definition of topological manifold would be incoherent. Theorems like "$S^n$ is an $n$-manifold" would have to be stated carefully — *which* $n$? Sources differ on convention, and the theorem is the bedrock that lets us write "dim $S^n = n$" without scare-quotes.
 
 The proof requires genuine topological machinery. There are several routes:
 
-- **Via singular homology:** $H_k(\mathbb{R}^n, \mathbb{R}^n \setminus 0; \mathbb{Z})$ is nonzero exactly for $k = n$. A homeomorphism $\mathbb{R}^n \to \mathbb{R}^m$ taking the origin to the origin would induce an isomorphism on these homology groups, forcing $n = m$.
+- **Via singular homology:** $H_k(\mathbb{R}^n, \mathbb{R}^n \setminus 0; \mathbb{Z})$ is nonzero exactly for $k = n$. A homeomorphism $\mathbb{R}^n \to \mathbb{R}^m$ taking the origin to the origin would induce an isomorphism on these homology [[Def - Group|groups]], forcing $n = m$.
 
 - **Via de Rham cohomology:** $H^k_{dR}(\mathbb{R}^n \setminus 0)$ is nonzero exactly for $k = 0, n-1$. (For $\mathbb{R}^n \setminus 0 \simeq S^{n-1}$, and the de Rham cohomology of $S^{n-1}$ is computed in [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|DG X]].) This gives a *smooth* invariance, requiring extension to smooth maps and arguments to extend to topological setting.
 
@@ -78,13 +78,13 @@ The fifth target: **invariance of the boundary**. The topological-invariance-of-
 
 The intuition is that the *topology* near a point of $\mathbb{R}^n$ encodes its dimension: roughly speaking, removing a point from $\mathbb{R}^n$ leaves a space that is "$(n-1)$-connected but not $n$-connected" — i.e., loops, surfaces, and so on up to dimension $n-1$ can be contracted, but not the sphere $S^{n-1}$. A homeomorphism preserves all these connectedness properties, so the dimensions must match.
 
-More precisely (in the homology formulation): for any point $p \in \mathbb{R}^n$, the local homology $H_k(\mathbb{R}^n, \mathbb{R}^n \setminus \{p\}; \mathbb{Z})$ is $\mathbb{Z}$ for $k = n$ and $0$ otherwise. This is the *local* dimension at $p$, computed by relative homology of the pair "neighbourhood of $p$ vs. that neighbourhood minus $p$". A homeomorphism $\mathbb{R}^n \to \mathbb{R}^m$ taking a point to a point would induce an isomorphism on these local homology groups — and they are concentrated in different degrees for $n \neq m$, so no such isomorphism exists.
+More precisely (in the homology formulation): for any point $p \in \mathbb{R}^n$, the local homology $H_k(\mathbb{R}^n, \mathbb{R}^n \setminus \{p\}; \mathbb{Z})$ is $\mathbb{Z}$ for $k = n$ and $0$ otherwise. This is the *local* dimension at $p$, computed by relative homology of the pair "neighbourhood of $p$ vs. that neighbourhood minus $p$". A homeomorphism $\mathbb{R}^n \to \mathbb{R}^m$ taking a point to a point would induce an isomorphism on these local homology [[Def - Group|groups]] — and they are concentrated in different degrees for $n \neq m$, so no such isomorphism exists.
 
 **The one-liner mechanism: an open subset of $\mathbb{R}^n$ has nontrivial local homology in degree $n$, and a homeomorphism induces an isomorphism on local homology — so the degrees must match.**
 
 The Brouwer-fixed-point approach gives a more concrete picture. Identify $S^n$ with the one-point compactification of $\mathbb{R}^n$, and observe that a homeomorphism $\mathbb{R}^n \to \mathbb{R}^m$ extends (under one-point compactification) to a homeomorphism $S^n \to S^m$. But the degree of the identity map of $S^n$ is $1$, and there is no degree-$\pm 1$ self-map of $S^n$ that factors through $S^m$ for $m < n$ (such a factorization would force the identity of $S^n$ to be null-homotopic, contradicting the nontriviality of $\pi_n(S^n) = \mathbb{Z}$).
 
-For the smooth version (a homeomorphism between open subsets that happens to be smooth in both directions), the proof is much easier and entirely calculus-based: a diffeomorphism has an invertible Jacobian, and the Jacobian is a linear isomorphism between $\mathbb{R}^n$ and $\mathbb{R}^m$, forcing $n = m$. The genuinely deep content of the theorem is that *topological* homeomorphisms — without smoothness — also preserve dimension.
+For the smooth version (a homeomorphism between open subsets that happens to be smooth in both directions), the proof is much easier and entirely calculus-based: a [[Def - Diffeomorphism|diffeomorphism]] has an invertible Jacobian, and the Jacobian is a linear isomorphism between $\mathbb{R}^n$ and $\mathbb{R}^m$, forcing $n = m$. The genuinely deep content of the theorem is that *topological* homeomorphisms — without smoothness — also preserve dimension.
 
 ---
 
@@ -92,7 +92,7 @@ For the smooth version (a homeomorphism between open subsets that happens to be 
 
 The theorem is folklore-easy to state, but the proof is famously delicate — Brouwer (1911) was the first to give a correct proof, after several attempts by others (including a famous error by Cantor's contemporaries who thought continuity alone might be enough). The non-obvious step is: continuity is not enough — Peano's space-filling curve shows a continuous surjection $\mathbb{R} \to \mathbb{R}^2$ exists. The crucial extra ingredient is that the *inverse* must also be continuous. Without this, no dimension invariance.
 
-The most common error in attempted elementary proofs is to argue from the *cardinality* of $\mathbb{R}^n$ — but cardinality alone is no obstruction, since $|\mathbb{R}^n| = |\mathbb{R}|$ for all $n \geq 1$. Cardinality is not a topological invariant. The right notion is some homotopy/homology invariant of $\mathbb{R}^n$ near a point, which detects the local dimension.
+The most common error in attempted elementary proofs is to argue from the *cardinality* of $\mathbb{R}^n$ — but cardinality alone is no obstruction, since $|\mathbb{R}^n| = |\mathbb{R}|$ for all $n \geq 1$. Cardinality is not a topological invariant. The right notion is some [[Def - Homotopy|homotopy]]/homology invariant of $\mathbb{R}^n$ near a point, which detects the local dimension.
 
 The other source of confusion: the theorem applies to *open subsets* of $\mathbb{R}^n$, not arbitrary subsets. For instance, the Cantor set $C \subseteq \mathbb{R}$ is homeomorphic to $C \times C \subseteq \mathbb{R}^2$ — but $C$ and $C \times C$ are not open subsets of any Euclidean space, so the theorem does not apply. Generally, totally disconnected sets, lower-dimensional submanifolds, and fractals can have unexpected topological equivalences across "dimensions" of ambient space; the theorem applies specifically to *open subsets*.
 
@@ -102,7 +102,7 @@ The other source of confusion: the theorem applies to *open subsets* of $\mathbb
 
 **This section is self-sufficient: reading only what follows should let you reconstruct the proof at the algebraic-topology level.**
 
-**High-level strategy:** Find a topological invariant that distinguishes $\mathbb{R}^n$ from $\mathbb{R}^m$ for $n \neq m$. The standard choices are local homology, the homotopy type of $\mathbb{R}^n \setminus \{0\}$, or the topological degree of self-maps of compactifications.
+**High-level strategy:** Find a topological invariant that distinguishes $\mathbb{R}^n$ from $\mathbb{R}^m$ for $n \neq m$. The standard choices are local homology, the [[Def - Homotopy|homotopy]] type of $\mathbb{R}^n \setminus \{0\}$, or the topological degree of self-maps of compactifications.
 
 **Subgoal decomposition:**
 
@@ -111,7 +111,7 @@ The other source of confusion: the theorem applies to *open subsets* of $\mathbb
    - *Why needed:* This is the dimension-detecting invariant; the proof is essentially a transcription of it through a homeomorphism.
 
 2. **Verify functoriality of local homology under homeomorphism.** A homeomorphism $f : U \to V$ with $U \subseteq \mathbb{R}^n$, $V \subseteq \mathbb{R}^m$ open, taking $p \in U$ to $q \in V$, induces an isomorphism $H_k(U, U \setminus \{p\}) \cong H_k(V, V \setminus \{q\})$.
-   - *Hint:* Homeomorphisms induce isomorphisms on singular homology, and on pairs.
+   - *Hint:* [[Def - Homeomorphism|Homeomorphisms]] induce [[Def - Isomorphism|isomorphisms]] on singular homology, and on pairs.
    - *Why needed:* This is what transfers the local-homology computation across the homeomorphism.
 
 3. **Identify the local homology of an open subset of $\mathbb{R}^n$ with the local homology of $\mathbb{R}^n$.** Excision: the local homology of $U$ at $p$ equals the local homology of $\mathbb{R}^n$ at $p$, namely $\mathbb{Z}$ in degree $n$.
@@ -141,7 +141,7 @@ The other source of confusion: the theorem applies to *open subsets* of $\mathbb
 > > - For $k = n$: $0 \to 0 \to H_n \to H_{n-1}(S^{n-1}) = \mathbb{Z} \to H_{n-1}(\mathbb{R}^n) = 0$, so $H_n \cong \mathbb{Z}$.
 > > - For $0 < k < n$: $H_k(S^{n-1}) = 0 \to H_k(\mathbb{R}^n) = 0 \to H_k \to H_{k-1}(S^{n-1})$. For $1 \leq k \leq n - 1$, $H_{k-1}(S^{n-1})$ is $\mathbb{Z}$ if $k = 1$ and $0$ otherwise; similarly $H_k(S^{n-1})$ is $\mathbb{Z}$ if $k = n-1$ and $0$ otherwise. A small case analysis yields $H_k = 0$ in this range.
 
-> [!note]- Lemma 2: Homeomorphisms induce isomorphisms on local homology
+> [!note]- Lemma 2: Homeomorphisms induce [[Def - Isomorphism|isomorphisms]] on local homology
 > **Statement:** Let $f : U \to V$ be a homeomorphism between open subsets of Euclidean spaces, with $f(p) = q$. Then $f$ induces an isomorphism $f_* : H_k(U, U \setminus \{p\}) \to H_k(V, V \setminus \{q\})$ for all $k$.
 >
 > **Hint:** Singular homology is functorial under continuous maps, and a homeomorphism is a continuous bijection with continuous inverse, hence induces an isomorphism.

@@ -17,7 +17,7 @@ $M$ is a smooth manifold of dimension $n$ (possibly with boundary). $\{U_\alpha\
 
 # Statement
 
-> **Theorem (Vector Bundle Construction Lemma).** Let $M$ be a smooth manifold (with or without boundary). Suppose that for each $p \in M$ we are given a real vector space $E_p$ of fixed dimension $k$. Let $E := \bigsqcup_{p \in M} E_p$ and let $\pi : E \to M$ send each element of $E_p$ to $p$. Suppose further that we are given:
+> **Theorem ([[Def - Vector Bundle|Vector Bundle]] Construction Lemma).** Let $M$ be a smooth manifold (with or without boundary). Suppose that for each $p \in M$ we are given a real vector space $E_p$ of fixed [[Def - Dimension|dimension]] $k$. Let $E := \bigsqcup_{p \in M} E_p$ and let $\pi : E \to M$ send each element of $E_p$ to $p$. Suppose further that we are given:
 >
 > (i) an open cover $\{U_\alpha\}_{\alpha \in A}$ of $M$,
 >
@@ -76,7 +76,7 @@ The intuition is straightforward and follows from the manifold chart lemma. The 
 
 **The single one-line mechanism summary: the cocycle condition on $\tau_{\alpha\beta}$ is exactly the consistency condition for the charts on $E$ built from $\Phi_\alpha$ to satisfy the manifold chart lemma's smooth-compatibility requirement.**
 
-The construction is essentially a re-statement of the smooth-manifold chart lemma in bundle language. The fibre structure on $E_p$ is well-defined (independent of which $\Phi_\alpha$ is used, by linearity of $\Phi_\alpha|_{E_p}$); the vector-space operations are smooth (by smoothness of the inversions and the cocycle); and the projection is smooth (because in any trivialization it becomes the first-coordinate projection). The uniqueness follows because the trivializations are required to be diffeomorphisms; this uniquely determines the smooth structure on $E$, which must include all the charts $\tilde\Phi_\alpha$, and the smooth structure is the maximal atlas containing them.
+The construction is essentially a re-statement of the smooth-manifold chart lemma in bundle language. The fibre structure on $E_p$ is well-defined (independent of which $\Phi_\alpha$ is used, by linearity of $\Phi_\alpha|_{E_p}$); the vector-space operations are smooth (by smoothness of the inversions and the cocycle); and the projection is smooth (because in any trivialization it becomes the first-coordinate projection). The uniqueness follows because the trivializations are required to be [[Def - Diffeomorphism|diffeomorphisms]]; this uniquely determines the smooth structure on $E$, which must include all the charts $\tilde\Phi_\alpha$, and the smooth structure is the maximal atlas containing them.
 
 The deeper reason the lemma is true is that **the manifold structure on a vector bundle is forced by the local-triviality data**. Once the trivializations are specified and the cocycle condition is checked, no further choices are available: the smooth structure on $E$ is uniquely determined. The "construction" is therefore not really a construction but a recognition: the data already specifies a unique bundle.
 
@@ -194,7 +194,7 @@ Use the smooth-manifold chart lemma to construct the smooth structure on $E$. Fo
 
 # Cross-Field Exercise Suggestions
 
-**Algebraic topology: classification of line bundles.** A real line bundle (rank-$1$ vector bundle) on a manifold $M$ has structure group $\mathrm{GL}(1, \mathbb{R}) = \mathbb{R}^*$, and isomorphism classes are classified by $H^1(M; \mathbb{Z}/2)$ — specifically, the first Stiefel–Whitney class detects whether the bundle is trivial or "twisted" like the Möbius bundle. Use the construction lemma to build the line bundles corresponding to each element of $H^1(M; \mathbb{Z}/2)$.
+**Algebraic topology: classification of line bundles.** A real line bundle (rank-$1$ vector bundle) on a manifold $M$ has structure [[Def - Group|group]] $\mathrm{GL}(1, \mathbb{R}) = \mathbb{R}^*$, and isomorphism classes are classified by $H^1(M; \mathbb{Z}/2)$ — specifically, the first Stiefel–Whitney class detects whether the bundle is trivial or "twisted" like the Möbius bundle. Use the construction lemma to build the line bundles corresponding to each element of $H^1(M; \mathbb{Z}/2)$.
 
 **Gauge theory: bundles with prescribed connections.** Given a connection 1-form $A$ on an open cover of $M$ with values in a Lie algebra, the bundle that admits $A$ as a connection is constructed via the lemma applied to the transition functions implied by the gauge transformations of $A$. Yang–Mills theory is the variational principle on the resulting moduli space of connections.
 

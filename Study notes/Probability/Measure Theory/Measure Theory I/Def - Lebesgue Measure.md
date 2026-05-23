@@ -42,7 +42,7 @@ We call $\lambda=\mu^*|_{\mathcal{B}(\mathbb{R}^n)}$ Lebesgue measure. The full 
 
 # Categorical Definition
 
-Among all Borel measures on $\mathbb{R}^n$, Lebesgue measure is characterised by a universal/uniqueness property: it is the *unique* measure $\mu$ on $\mathcal{B}(\mathbb{R}^n)$ that is **translation-invariant** ($\mu(x_0+A)=\mu(A)$) and **normalised** ($\mu([0,1]^n)=1$). Translation invariance says $\lambda$ is a *Haar measure* — the canonical invariant measure on the locally compact abelian group $(\mathbb{R}^n,+)$ — and Haar measure on any locally compact group is unique up to a positive scalar. Lebesgue measure is thus "the Haar measure of $\mathbb{R}^n$, scaled so the unit cube has mass $1$."
+Among all Borel measures on $\mathbb{R}^n$, Lebesgue measure is characterised by a universal/uniqueness property: it is the *unique* measure $\mu$ on $\mathcal{B}(\mathbb{R}^n)$ that is **translation-invariant** ($\mu(x_0+A)=\mu(A)$) and **normalised** ($\mu([0,1]^n)=1$). Translation invariance says $\lambda$ is a *Haar measure* — the canonical invariant measure on the locally compact abelian [[Def - Group|group]] $(\mathbb{R}^n,+)$ — and Haar measure on any locally compact group is unique up to a positive scalar. Lebesgue measure is thus "the Haar measure of $\mathbb{R}^n$, scaled so the unit cube has mass $1$."
 
 ---
 

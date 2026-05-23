@@ -40,7 +40,7 @@ Third, *multiplicativity*: from $\alpha_{ST}(v_1, \dots, v_n) = \alpha(ST v_1, \
 
 $$\det T = \alpha(Te_1, \dots, Te_n) = \sum_{\sigma \in \operatorname{perm}(n)} \operatorname{sign}(\sigma)\, A_{\sigma(1), 1} \cdots A_{\sigma(n), n}.$$
 
-The Leibniz formula is what *comes out* — it is the explicit computational form of the abstract definition. The Leibniz formula is essential for hand computation in small dimensions, but it is *useless* for $n \geq 5$ (the sum has 120 terms) and gives no conceptual content for proofs. Always start from the abstract definition; use Leibniz only when you need a specific number.
+The Leibniz formula is what *comes out* — it is the explicit computational form of the abstract definition. The Leibniz formula is essential for hand computation in small [[Def - Dimension|dimensions]], but it is *useless* for $n \geq 5$ (the sum has 120 terms) and gives no conceptual content for proofs. Always start from the abstract definition; use Leibniz only when you need a specific number.
 
 **Geometric content.** The determinant is the **factor by which the operator scales $n$-dimensional volume**. Concretely: if $P$ is the parallelepiped spanned by $(v_1, \dots, v_n)$, with signed volume $\alpha(v_1, \dots, v_n)$ for some chosen alternating $n$-linear form $\alpha$ (a "volume measurement"), then the signed volume of $T(P)$ is $\alpha(Tv_1, \dots, Tv_n) = (\det T) \alpha(v_1, \dots, v_n)$. So $\det T$ is the volume-scaling factor, with sign recording orientation: positive determinant means orientation-preserving, negative means orientation-reversing. This is why $|\det J|$ appears in the change-of-variables formula and why the Jacobian determinant is the local volume-distortion factor in multivariate calculus.
 
@@ -99,11 +99,11 @@ This is the categorical-functorial definition: $\det$ is the eigenvalue of the i
 
 **Multiplicativity as functoriality.** $\Lambda^n(ST) = \Lambda^n S \circ \Lambda^n T$ (functoriality of $\Lambda^n$), which translates to $\det(ST) = \det S \cdot \det T$ on the one-dimensional output space.
 
-**Determinant as a Lie group homomorphism.** The determinant is the group homomorphism
+**Determinant as a Lie [[Def - Group|group]] homomorphism.** The determinant is the group homomorphism
 
 $$\det : \mathrm{GL}(V) \;\longrightarrow\; \mathbb{F}^\times = \mathrm{GL}_1(\mathbb{F}),$$
 
-whose kernel is the special linear group $\mathrm{SL}(V)$. As Lie groups (over $\mathbb{R}$ or $\mathbb{C}$), the determinant is a smooth surjective homomorphism, and its derivative at the identity is the **trace**: $d(\det)_I(X) = \operatorname{tr}(X)$. This gives the formula $\det(I + \epsilon X) = 1 + \epsilon \operatorname{tr} X + O(\epsilon^2)$, and shows $\mathfrak{sl}(V) = \ker(\operatorname{tr})$ as the Lie algebra of $\mathrm{SL}(V)$.
+whose kernel is the special linear group $\mathrm{SL}(V)$. As Lie [[Def - Group|groups]] (over $\mathbb{R}$ or $\mathbb{C}$), the determinant is a smooth surjective homomorphism, and its derivative at the identity is the **trace**: $d(\det)_I(X) = \operatorname{tr}(X)$. This gives the formula $\det(I + \epsilon X) = 1 + \epsilon \operatorname{tr} X + O(\epsilon^2)$, and shows $\mathfrak{sl}(V) = \ker(\operatorname{tr})$ as the Lie algebra of $\mathrm{SL}(V)$.
 
 ---
 

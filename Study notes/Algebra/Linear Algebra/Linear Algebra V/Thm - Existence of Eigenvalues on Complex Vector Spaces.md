@@ -21,25 +21,25 @@ Throughout, $V$ is a finite-dimensional vector space over a field $F$ (here, alm
 
 Equivalently — and this is the form that arises in the proof — there exists $\lambda \in \mathbb{C}$ such that $T - \lambda I$ is not invertible, equivalently has non-trivial kernel.
 
-The result fails in two important ways if any hypothesis is dropped: it fails over $\mathbb{R}$ (a $90°$ rotation on $\mathbb{R}^2$ has no real eigenvalues), and it fails in infinite dimensions (the right-shift operator on $\mathbb{C}^\infty$ has no eigenvalues — see [[Def - Eigenvalue and Eigenvector]] for the example).
+The result fails in two important ways if any hypothesis is dropped: it fails over $\mathbb{R}$ (a $90°$ rotation on $\mathbb{R}^2$ has no real eigenvalues), and it fails in infinite [[Def - Dimension|dimensions]] (the right-shift operator on $\mathbb{C}^\infty$ has no eigenvalues — see [[Def - Eigenvalue and Eigenvector]] for the example).
 
 ---
 
 # Motivation
 
-This theorem is the **single most important structural fact about operators on complex vector spaces**, and the foundation of every subsequent result in linear algebra over $\mathbb{C}$: upper-triangularizability, the spectral theorem, the existence of Jordan form, the structure of operators on Hilbert spaces. The proof was made famous by Sheldon Axler's [book](http://linear.axler.net/) for its elegant avoidance of determinants — eigenvalues are produced through pure polynomial algebra, never through "set the determinant equal to zero."
+This theorem is the **single most important structural fact about operators on complex vector spaces**, and the foundation of every subsequent result in linear algebra over $\mathbb{C}$: upper-triangularizability, the spectral theorem, the existence of Jordan form, the structure of operators on Hilbert spaces. The proof was made famous by Sheldon Axler's [book](http://linear.axler.net/) for its elegant avoidance of [[Def - Determinant|determinants]] — eigenvalues are produced through pure polynomial algebra, never through "set the determinant equal to zero."
 
 The role of the theorem is to **convert the abstract question "what does $T$ do?" into the concrete question "what are the eigenvalues of $T$ and how do they organise $V$?".** Without an eigenvalue, $T$ is opaque: we have no privileged direction, no decomposition, no clean structure to exploit. With an eigenvalue $\lambda$ and an eigenvector $v$, we have:
 
-- A one-dimensional invariant subspace $\operatorname{span}(v)$.
+- A one-dimensional invariant [[Def - Subspace|subspace]] $\operatorname{span}(v)$.
 - A natural projection $V \to V / \operatorname{span}(v)$ to a smaller space, on which $T$ descends to a new operator.
 - An induction step: by induction on $\dim V$, the structure of $T$ is built up one eigenvalue at a time.
 
-This last point is what makes the theorem the foundation of *everything else*. Almost every structural theorem on complex vector spaces proceeds by induction on dimension, with the base step "find an eigenvalue" supplied by this theorem and the induction step using restriction to an invariant subspace (or descent to a quotient).
+This last point is what makes the theorem the foundation of *everything else*. Almost every structural theorem on complex vector spaces proceeds by induction on dimension, with the base step "find an eigenvalue" supplied by this theorem and the induction step using restriction to an invariant [[Def - Subspace|subspace]] (or descent to a quotient).
 
 The role of the complexity hypothesis is irreducible. The theorem's proof relies on the **fundamental theorem of algebra** — every nonconstant polynomial in $\mathbb{C}[z]$ has a complex root. This is what guarantees that an annihilating polynomial of $T$ can be factored into linear factors over $\mathbb{C}$, hence has roots in $\mathbb{C}$ which become eigenvalues. Over $\mathbb{R}$, the fundamental theorem of algebra fails — $x^2 + 1$ has no real root — and consequently the existence theorem fails. The whole machinery of complex linear algebra rests on this single analytic fact about $\mathbb{C}$.
 
-A historical note: most older linear algebra books prove this theorem using the **characteristic polynomial** $\chi_T(z) = \det(zI - T)$, observing that $\chi_T$ has degree $\dim V$ and applying the FTA to get a complex root $\lambda$, which is then verified to be an eigenvalue. This proof needs the determinant, which requires a substantial development (multilinear algebra, signed permutations, etc.). Axler's proof avoids the determinant entirely — only the polynomial ring $F[x]$ and the FTA are needed. This is more than aesthetics: it shows that **eigenvalues are a property of the polynomial algebra $F[T] \subseteq \mathcal{L}(V)$**, not of the multilinear-algebra apparatus that produces determinants.
+A historical note: most older linear algebra books prove this theorem using the **characteristic polynomial** $\chi_T(z) = \det(zI - T)$, observing that $\chi_T$ has degree $\dim V$ and applying the FTA to get a complex root $\lambda$, which is then verified to be an eigenvalue. This proof needs the determinant, which requires a substantial development (multilinear algebra, signed permutations, etc.). Axler's proof avoids the determinant entirely — only the polynomial [[Def - Ring|ring]] $F[x]$ and the FTA are needed. This is more than aesthetics: it shows that **eigenvalues are a property of the polynomial algebra $F[T] \subseteq \mathcal{L}(V)$**, not of the multilinear-algebra apparatus that produces [[Def - Determinant|determinants]].
 
 ---
 
@@ -71,11 +71,11 @@ Combined with **a hypothesis of operator commutativity**, the theorem amplifies 
 
 Forget the formal proof and picture the geometry. An operator $T$ on a complex vector space is, in a deep sense, "the action of $x$" on $V$ — the polynomial $x$ acts as $T$, $x^2$ as $T^2$, and so on. We want to find a direction $v$ on which $T$ acts as a scalar — but more abstractly, we want to find a direction on which the *whole polynomial ring* $\mathbb{C}[x]$ acts as the simplest possible non-trivial $\mathbb{C}$-algebra, namely $\mathbb{C}$ itself.
 
-The simplest $\mathbb{C}$-algebras are $\mathbb{C}$ (one-dimensional) and the **quotient rings** $\mathbb{C}[x]/(x - \lambda) \cong \mathbb{C}$ for any $\lambda \in \mathbb{C}$. So finding an eigenvector for $T$ with eigenvalue $\lambda$ is exactly finding a one-dimensional submodule of $V$ on which the $\mathbb{C}[x]$-action factors through $\mathbb{C}[x] \to \mathbb{C}[x]/(x - \lambda) \cong \mathbb{C}$.
+The simplest $\mathbb{C}$-algebras are $\mathbb{C}$ (one-dimensional) and the **quotient [[Def - Ring|rings]]** $\mathbb{C}[x]/(x - \lambda) \cong \mathbb{C}$ for any $\lambda \in \mathbb{C}$. So finding an eigenvector for $T$ with eigenvalue $\lambda$ is exactly finding a one-dimensional [[Def - Submodule|submodule]] of $V$ on which the $\mathbb{C}[x]$-action factors through $\mathbb{C}[x] \to \mathbb{C}[x]/(x - \lambda) \cong \mathbb{C}$.
 
-Why must such a submodule exist? Because **$V$ is a finite-dimensional $\mathbb{C}[x]$-module**, and finite-dimensional modules over $\mathbb{C}[x]$ are completely classified by the [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]]: they decompose as direct sums of cyclic modules $\mathbb{C}[x]/((x - \lambda_k)^{m_k})$, and every such cyclic module contains the one-dimensional submodule annihilated by $(x - \lambda_k)$. So *every* such direct summand contains an eigenvector.
+Why must such a [[Def - Submodule|submodule]] exist? Because **$V$ is a finite-dimensional $\mathbb{C}[x]$-module**, and finite-dimensional [[Def - Module|modules]] over $\mathbb{C}[x]$ are completely classified by the [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]]: they decompose as direct sums of cyclic [[Def - Module|modules]] $\mathbb{C}[x]/((x - \lambda_k)^{m_k})$, and every such cyclic module contains the one-dimensional submodule annihilated by $(x - \lambda_k)$. So *every* such direct summand contains an eigenvector.
 
-This is the *deep* explanation: the eigenvalue exists because $\mathbb{C}[x]$ is a PID with maximal ideals all of the form $(x - \lambda)$, so any nonzero finite-dimensional $\mathbb{C}[x]$-module has a simple submodule, and simple $\mathbb{C}[x]$-modules are one-dimensional.
+This is the *deep* explanation: the eigenvalue exists because $\mathbb{C}[x]$ is a PID with maximal [[Def - Ideal|ideals]] all of the form $(x - \lambda)$, so any nonzero finite-dimensional $\mathbb{C}[x]$-module has a simple submodule, and simple $\mathbb{C}[x]$-modules are one-dimensional.
 
 > **The mechanism in one sentence: a polynomial relation $p(T) = 0$ — guaranteed to exist by finite-dimensionality — factors over $\mathbb{C}$ into linear pieces, and at least one piece $T - \lambda I$ must have non-trivial kernel.**
 
@@ -91,7 +91,7 @@ The intuition crystallised: **finite dimension forces a polynomial relation; the
 
 # What Makes This Hard
 
-The non-trivial step is the **construction of the eigenvector $w$** from the polynomial relation $p(T)v = 0$. The naive instinct is: "factor $p$ over $\mathbb{C}$, so $p$ has a root $\lambda$, hence $\lambda$ is an eigenvalue." But this is not quite right — the polynomial $p$ depends on the choice of $v$, and the roots of $p$ are not automatically eigenvalues of $T$. (Indeed, $p$ might have spurious factors that do not contribute.) The correct argument is to walk through the factored product, identifying which factor first produces zero — this gives an eigenvector explicitly as $w = (\text{tail of the product})\, v$. The common error is to assume that $\lambda$ is an eigenvalue without producing the witness vector, or to confuse "$\lambda$ is a root of an annihilating polynomial of $v$" with "$\lambda$ is an eigenvalue of $T$." Another common error is to forget the **finite-dimensional** hypothesis: in infinite dimensions, the iterate list $v, Tv, T^2 v, \ldots$ can be linearly independent forever, and no polynomial relation appears.
+The non-trivial step is the **construction of the eigenvector $w$** from the polynomial relation $p(T)v = 0$. The naive instinct is: "factor $p$ over $\mathbb{C}$, so $p$ has a root $\lambda$, hence $\lambda$ is an eigenvalue." But this is not quite right — the polynomial $p$ depends on the choice of $v$, and the roots of $p$ are not automatically eigenvalues of $T$. (Indeed, $p$ might have spurious factors that do not contribute.) The correct argument is to walk through the factored product, identifying which factor first produces zero — this gives an eigenvector explicitly as $w = (\text{tail of the product})\, v$. The common error is to assume that $\lambda$ is an eigenvalue without producing the witness vector, or to confuse "$\lambda$ is a root of an annihilating polynomial of $v$" with "$\lambda$ is an eigenvalue of $T$." Another common error is to forget the **finite-dimensional** hypothesis: in infinite [[Def - Dimension|dimensions]], the iterate list $v, Tv, T^2 v, \ldots$ can be linearly independent forever, and no polynomial relation appears.
 
 ---
 
@@ -109,7 +109,7 @@ The non-trivial step is the **construction of the eigenvector $w$** from the pol
 
 2. **Extract a smallest-degree polynomial relation.** From the dependence, there is a smallest $m \geq 1$ such that $T^m v$ is a linear combination of $v, Tv, \ldots, T^{m-1}v$.
    - *Hint:* write the smallest such relation as $T^m v + c_{m-1} T^{m-1} v + \cdots + c_0 v = 0$, defining a monic polynomial $p$ of degree $m$.
-   - *Why needed:* minimality of $m$ ensures $p$ is the "right" polynomial for $v$; it is in fact the annihilator polynomial of $v$, and the minimal polynomial of $T$ as restricted to the cyclic subspace $\operatorname{span}(v, Tv, \ldots, T^{m-1}v)$.
+   - *Why needed:* minimality of $m$ ensures $p$ is the "right" polynomial for $v$; it is in fact the [[Def - Annihilator|annihilator]] polynomial of $v$, and the minimal polynomial of $T$ as restricted to the cyclic subspace $\operatorname{span}(v, Tv, \ldots, T^{m-1}v)$.
 
 3. **Factor $p$ using the FTA.** $p \in \mathbb{C}[z]$ has degree $m \geq 1$, so by the fundamental theorem of algebra, $p(z) = (z - \lambda_1)(z - \lambda_2) \cdots (z - \lambda_m)$.
    - *Hint:* the FTA says every nonconstant polynomial in $\mathbb{C}[z]$ has a complex root, and induction on degree gives the full factorisation.

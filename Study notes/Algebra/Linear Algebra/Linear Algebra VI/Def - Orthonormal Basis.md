@@ -56,7 +56,7 @@ the **orthonormal expansion formula**. The identity $\|v\|^2 = \sum |\langle v, 
 
 An orthonormal basis is an isomorphism of inner product spaces $V \cong \mathbf{F}^n$, where $\mathbf{F}^n$ is equipped with the Euclidean inner product. The isomorphism sends $e_k \mapsto $ standard $k$-th basis vector, and the inner product is preserved by construction. This is the precise sense in which an orthonormal basis is a coordinate system: it identifies $V$ with $\mathbf{F}^n$ in a way that respects all the inner-product geometry.
 
-From this perspective, **two orthonormal bases differ by a unitary transformation**. If $e_1, \dots, e_n$ and $f_1, \dots, f_n$ are both orthonormal bases of $V$, the change-of-basis map $e_k \mapsto f_k$ extends linearly to an isometry $V \to V$. The set of orthonormal bases of $V$ is therefore a (left or right) coset of the unitary group $U(V)$ — or of the orthogonal group $O(V)$ when $\mathbf{F} = \mathbb{R}$.
+From this perspective, **two orthonormal bases differ by a unitary transformation**. If $e_1, \dots, e_n$ and $f_1, \dots, f_n$ are both orthonormal bases of $V$, the change-of-basis map $e_k \mapsto f_k$ extends linearly to an [[Def - Isometry|isometry]] $V \to V$. The set of orthonormal bases of $V$ is therefore a (left or right) [[Def - Coset|coset]] of the unitary [[Def - Group|group]] $U(V)$ — or of the orthogonal [[Def - Group|group]] $O(V)$ when $\mathbf{F} = \mathbb{R}$.
 
 ---
 

@@ -27,7 +27,7 @@ tags: [probability, advanced-probability]
 
 *What are the limit theorems?* Three landmark results on the sum $S_n$ of i.i.d. variables. The [[Thm - Weak Law of Large Numbers|weak]] and [[Thm - Strong Law of Large Numbers|strong laws of large numbers]] say the average $S_n/n$ converges to the mean $\mu$ — in probability, resp. almost surely; averaging destroys randomness. The [[Thm - Central Limit Theorem|central limit theorem]] describes the fluctuation the law of large numbers discards: $\frac{S_n-n\mu}{\sigma\sqrt n}$ converges *in distribution* to a **Gaussian**, regardless of the distribution of the summands — universality.
 
-The CLT is a [[Def - Weak Convergence|weak-convergence]] statement, so the chapter develops the apparatus of weak convergence: [[Thm - Prokhorov's Theorem|Prokhorov's theorem]] (tightness $=$ compactness), [[Def - Characteristic Function|characteristic functions]] (Fourier transforms of laws, turning the convolution of independent sums into a product), and [[Thm - Lévy's Continuity Theorem|Lévy's continuity theorem]] (weak convergence $\iff$ pointwise convergence of characteristic functions) — the machine that makes the CLT a one-page Taylor expansion.
+The CLT is a [[Def - Weak Convergence|weak-convergence]] statement, so the chapter develops the apparatus of weak convergence: [[Thm - Prokhorov's Theorem|Prokhorov's theorem]] (tightness $=$ compactness), [[Def - Characteristic Function|characteristic functions]] (Fourier transforms of laws, turning the [[Def - Convolution|convolution]] of independent sums into a product), and [[Thm - Lévy's Continuity Theorem|Lévy's continuity theorem]] (weak convergence $\iff$ pointwise convergence of characteristic functions) — the machine that makes the CLT a one-page Taylor expansion.
 
 ---
 
@@ -40,7 +40,7 @@ The CLT is a [[Def - Weak Convergence|weak-convergence]] statement, so the chapt
 - **[[Def - Uniform Integrability]]**
 	- $\sup_i\mathbb{E}[|X_i|\mathbf{1}_{|X_i|>M}]\to0$ — the tail mass is uniformly negligible. The exact condition (with convergence in probability) for $L^1$-convergence ([[Thm - Vitali Convergence Theorem|Vitali]]). Supplied by domination, or $L^p$-boundedness for $p>1$; *not* by $L^1$-boundedness.
 
-> [!tip] Unlocked: Martingale Closure and Backward Martingales *(from Advanced Probability IV)*
+> [!tip] Unlocked: Martingale Closure and Backward [[Def - Martingale|Martingales]] *(from Advanced Probability IV)*
 > Uniform integrability is the *exact* criterion for an $L^1$-bounded martingale to **close at infinity**: a UI martingale $(X_n)$ has an a.s.-and-$L^1$ limit $X_\infty$ with $X_n = \mathbb{E}[X_\infty\mid\mathcal{F}_n]$ ([[Thm - Lp and L1 Martingale Convergence]]). Without UI, an $L^1$-bounded martingale converges almost surely but the convergence need not be in $L^1$ and the limit need not be a conditional expectation of any single random variable. Likewise, the backward-martingale proof of the [[Thm - Strong Law of Large Numbers|strong law]] uses UI to upgrade a.s. convergence to $L^1$ convergence at the very last step.
 
 > [!note] Exercise Index — §2.1
@@ -160,7 +160,7 @@ A recurring meta-move: many concrete quantities — estimators, frequencies, emp
 
 1. **To measure theory.** The four [[Def - Modes of Convergence|modes]] are the [[Measure Theory II — §2 Integration|measure-theory modes]] (a.e., in measure, $L^p$) plus the genuinely new *weak* convergence; [[Def - Uniform Integrability|uniform integrability]] is [[Def - Absolute Continuity and Density|uniformly absolutely continuous integrals]], and the upgrade probability$\to L^1$ is the [[Thm - Vitali Convergence Theorem|Vitali theorem]]. [[Def - Characteristic Function|Characteristic functions]] are the Fourier transform of [[Measure Theory I — §1 Measure Spaces|measures]]; [[Thm - Prokhorov's Theorem|Prokhorov]] runs on [[Def - Distribution Function|distribution functions]] and Helly selection.
 
-2. **To Advanced Probability I.** The [[Thm - Kolmogorov 0-1 Law|0–1 law]] makes the SLLN's limit constant; [[Thm - Borel-Cantelli Lemmas|Borel–Cantelli]] is the step from summable error bounds to a.s. convergence; [[Def - Independence|independence]] and the [[Ex - Independence and the factorisation of expectation|convolution]] structure of sums are what characteristic functions exploit.
+2. **To Advanced Probability I.** The [[Thm - Kolmogorov 0-1 Law|0–1 law]] makes the SLLN's limit constant; [[Thm - Borel-Cantelli Lemmas|Borel–Cantelli]] is the step from summable error bounds to a.s. convergence; independence and the [[Ex - Independence and the factorisation of expectation|convolution]] structure of sums are what characteristic functions exploit.
 
 3. **To martingales and stochastic processes.** [[Def - Uniform Integrability|Uniform integrability]] is the criterion for $L^1$-convergence of [[Def - Martingale|martingales]] ([[Advanced Probability IV — Martingales in Discrete Time|AP IV]]); the [[Thm - Strong Law of Large Numbers|SLLN]] is proved by [[Def - Martingale|backward martingales]]; the functional CLT (Donsker) builds Brownian motion as a weak limit of rescaled random walks, with [[Thm - Prokhorov's Theorem|Prokhorov]] supplying tightness in path space.
 

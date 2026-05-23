@@ -11,13 +11,13 @@ tags: [algebra, linear-algebra]
 
 # Notation
 
-$V$ is a vector space over a [[Def - Field|field]] $\mathbb{F}$; $V_1, \dots, V_m$ are subspaces of $V$. The sum $V_1 + \dots + V_m = \{v_1 + \dots + v_m : v_k \in V_k\}$ is the set of all sums of elements drawn one from each subspace. The sum is a [[Def - Direct Sum|direct sum]] (written $V_1 \oplus \dots \oplus V_m$) when every element of the sum has a *unique* representation $v = v_1 + \dots + v_m$ with $v_k \in V_k$. See [[Linear Algebra I — §1 Vector Spaces]] for the full notation registry.
+$V$ is a vector space over a field $\mathbb{F}$; $V_1, \dots, V_m$ are subspaces of $V$. The sum $V_1 + \dots + V_m = \{v_1 + \dots + v_m : v_k \in V_k\}$ is the set of all sums of elements drawn one from each subspace. The sum is a [[Def - Direct Sum|direct sum]] (written $V_1 \oplus \dots \oplus V_m$) when every element of the sum has a *unique* representation $v = v_1 + \dots + v_m$ with $v_k \in V_k$. See [[Linear Algebra I — §1 Vector Spaces]] for the full notation registry.
 
 ---
 
 # Statement
 
-> **Theorem (Condition for a Direct Sum).** Let $V_1, \dots, V_m$ be subspaces of a vector space $V$. The sum $V_1 + \dots + V_m$ is a direct sum if and only if the only way to write
+> **Theorem (Condition for a [[Def - Direct Sum|Direct Sum]]).** Let $V_1, \dots, V_m$ be [[Def - Subspace|subspaces]] of a vector space $V$. The sum $V_1 + \dots + V_m$ is a direct sum if and only if the only way to write
 > $$0 = v_1 + \dots + v_m$$
 > with $v_k \in V_k$ is to take $v_1 = v_2 = \dots = v_m = 0$.
 
@@ -75,13 +75,13 @@ with each $v_k - u_k \in V_k$ (since each $V_k$ is a subspace). If the only way 
 
 This is the same principle that makes "a linear map is injective if and only if its kernel is trivial". The addition map $\sigma : V_1 \times \dots \times V_m \to V$ is linear; its injectivity (uniqueness of decomposition for every $v$) is equivalent to its kernel being trivial (uniqueness only at zero). The theorem is the statement of this principle for the addition map. Nothing more than linearity is being used.
 
-Why does this principle hold in an abelian group but not in a generic set? Because abelian groups have *subtraction*: from two equal expressions $v_1 + \dots + v_m = u_1 + \dots + u_m$ one obtains the difference $(v_1 - u_1) + \dots + (v_m - u_m) = 0$. In a non-additive setting there is no subtraction, and the propagation argument breaks. Linearity is the necessary algebraic structure, and the theorem leans entirely on it.
+Why does this principle hold in an abelian group but not in a generic set? Because abelian [[Def - Group|groups]] have *subtraction*: from two equal expressions $v_1 + \dots + v_m = u_1 + \dots + u_m$ one obtains the difference $(v_1 - u_1) + \dots + (v_m - u_m) = 0$. In a non-additive setting there is no subtraction, and the propagation argument breaks. Linearity is the necessary algebraic structure, and the theorem leans entirely on it.
 
 ---
 
 # What Makes This Hard
 
-The proof itself is short and entirely mechanical — one direction is immediate, the other is a one-line subtraction argument. The genuine difficulty is conceptual: the theorem is so close to a tautology that students often overlook how much work it is doing. The non-obvious content is that uniqueness at zero implies uniqueness everywhere, which is a non-trivial statement about how linearity propagates information. The most common error is conflating this theorem with [[Thm - Direct Sum of Two Subspaces]] (which says, for two subspaces, that directness is equivalent to trivial pairwise intersection); the pairwise intersection criterion fails for three or more subspaces, while the zero-uniqueness criterion is always the right test.
+The proof itself is short and entirely mechanical — one direction is immediate, the other is a one-line subtraction argument. The genuine difficulty is conceptual: the theorem is so close to a tautology that students often overlook how much work it is doing. The non-obvious content is that uniqueness at zero implies uniqueness everywhere, which is a non-trivial statement about how linearity propagates information. The most common error is conflating this theorem with [[Thm - Direct Sum of Two Subspaces]] (which says, for two [[Def - Subspace|subspaces]], that directness is equivalent to trivial pairwise intersection); the pairwise intersection criterion fails for three or more subspaces, while the zero-uniqueness criterion is always the right test.
 
 ---
 
@@ -147,7 +147,7 @@ The proof of this theorem is short enough not to require nontrivial lemma decomp
 
 # Cross-Field Exercise Suggestions
 
-**Internal direct products in abelian group theory.** A subgroup $H \leq G$ of an [[Def - Abelian Group|abelian group]] is a direct summand if there exists $K$ with $G = H + K$ and $H \cap K = \{0\}$. The theorem here generalizes to abelian groups (or even to modules over a ring) in the form: an internal sum is a direct sum if and only if the only decomposition of $0$ is trivial. So this theorem applies verbatim to abelian groups and to [[Def - Module|modules]], with the same proof. The non-obvious application: in classifying finite abelian groups, certifying the direct-sum decomposition into cyclic groups of prime-power order amounts to this criterion.
+**Internal direct products in abelian group theory.** A [[Def - Subgroup|subgroup]] $H \leq G$ of an [[Def - Abelian Group|abelian group]] is a direct summand if there exists $K$ with $G = H + K$ and $H \cap K = \{0\}$. The theorem here generalizes to abelian [[Def - Group|groups]] (or even to [[Def - Module|modules]] over a [[Def - Ring|ring]]) in the form: an internal sum is a direct sum if and only if the only decomposition of $0$ is trivial. So this theorem applies verbatim to abelian groups and to [[Def - Module|modules]], with the same proof. The non-obvious application: in classifying finite abelian groups, certifying the direct-sum decomposition into cyclic groups of prime-power order amounts to this criterion.
 
 **Decomposition of representations of groups (Maschke's theorem).** A representation of a finite group $G$ on a vector space $V$ (over a field of characteristic not dividing $|G|$) decomposes as a direct sum of irreducible subrepresentations. The proof produces invariant complementary subspaces using the averaging trick, and certifies directness via this theorem applied to the candidate decomposition. The bridge from "I have a representation" to "I want a direct sum decomposition" passes through the criterion of this theorem.
 

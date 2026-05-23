@@ -34,7 +34,7 @@ That is the entire content of the definition. Matrix multiplication is **not** a
 
 This explains immediately several otherwise-mysterious features:
 
-1. **Why the inner dimensions must match.** Composition $S \circ T$ requires the codomain of $T$ to equal the domain of $S$; in dimensions, the codomain of $T$ has dimension $n$ (the inner index of $\mathcal{M}(T)$, columns of $B$ being inputs in $V$ of dimension $n$ — wait, rows of $B$). Concretely, $B \in \mathbf{F}^{n, p}$ means $T : U \to V$ with $\dim U = p$, $\dim V = n$; and $A \in \mathbf{F}^{m, n}$ means $S : V \to W$ with $\dim V = n$, $\dim W = m$. The inner $n$ is the shared dimension of $V$, and matching it is matching codomain-of-$T$ with domain-of-$S$.
+1. **Why the inner [[Def - Dimension|dimensions]] must match.** Composition $S \circ T$ requires the codomain of $T$ to equal the domain of $S$; in [[Def - Dimension|dimensions]], the codomain of $T$ has dimension $n$ (the inner index of $\mathcal{M}(T)$, columns of $B$ being inputs in $V$ of dimension $n$ — wait, rows of $B$). Concretely, $B \in \mathbf{F}^{n, p}$ means $T : U \to V$ with $\dim U = p$, $\dim V = n$; and $A \in \mathbf{F}^{m, n}$ means $S : V \to W$ with $\dim V = n$, $\dim W = m$. The inner $n$ is the shared dimension of $V$, and matching it is matching codomain-of-$T$ with domain-of-$S$.
 
 2. **Why $AB \neq BA$ in general.** Composition of linear maps is non-commutative: do-$T$-then-$S$ is genuinely different from do-$S$-then-$T$ when the maps are different. Concrete example: on $\mathcal{P}(\mathbb{R})$, let $T$ multiply by $x^2$ and $D$ differentiate; then $(DT)p = (x^2 p)' = x^2 p' + 2x p$ but $(TD)p = x^2 p'$, so $DT \neq TD$. The non-commutativity of matrix multiplication is the matrix shadow of the non-commutativity of composition.
 
@@ -89,7 +89,7 @@ Matrix multiplication is, structurally, **composition in the category of matrice
 
 The category $\operatorname{Mat}_\mathbf{F}$ is **equivalent** to the category $\mathbf{Vect}_\mathbf{F}^{\mathrm{fin}}$ of finite-dimensional vector spaces (with chosen bases) via the functor "send $n$ to $\mathbf{F}^n$ and send a matrix to the linear map it represents in standard bases". Matrix multiplication is the composition operation of $\operatorname{Mat}_\mathbf{F}$, and equivalence of categories transfers this to composition in $\mathbf{Vect}_\mathbf{F}^{\mathrm{fin}}$.
 
-For square matrices, the set $M_n(\mathbf{F}) = \mathbf{F}^{n, n}$ under matrix addition and matrix multiplication forms a **non-commutative associative algebra** over $\mathbf{F}$: it has a multiplicative identity ($I_n$), associativity, distributivity, and scalar compatibility — all the axioms of an [[Def - Ring|associative algebra]]. The invertible elements form a [[Def - Group|group]] under multiplication, the **general linear group** $\operatorname{GL}_n(\mathbf{F})$. Both structures are central to the rest of linear algebra.
+For square matrices, the set $M_n(\mathbf{F}) = \mathbf{F}^{n, n}$ under matrix addition and matrix multiplication forms a **non-commutative associative algebra** over $\mathbf{F}$: it has a multiplicative identity ($I_n$), associativity, distributivity, and scalar compatibility — all the axioms of an [[Def - Ring|associative algebra]]. The invertible elements form a [[Def - Group|group]] under multiplication, the **general linear [[Def - Group|group]]** $\operatorname{GL}_n(\mathbf{F})$. Both structures are central to the rest of linear algebra.
 
 ---
 

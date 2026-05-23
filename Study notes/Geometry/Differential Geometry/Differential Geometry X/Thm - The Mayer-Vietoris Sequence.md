@@ -197,7 +197,7 @@ The conceptual obstacle is recognizing that **a short exact sequence of complexe
 
 # Cross-Field Exercise Suggestions
 
-**Cohomology of the $n$-sphere.** Use the cover of $S^n$ by two open hemispheres (each contractible — homotopy equivalent to a point, $H^* = \mathbb{R}$ in degree $0$). Their intersection is an open neighborhood of the equator, homotopy equivalent to $S^{n-1}$. The Mayer–Vietoris sequence (combined with the inductive hypothesis $H^*(S^{n-1})$) gives $H^p(S^n) = \mathbb{R}$ for $p = 0, n$ and zero otherwise.
+**Cohomology of the $n$-sphere.** Use the cover of $S^n$ by two open hemispheres (each contractible — [[Def - Homotopy|homotopy]] equivalent to a point, $H^* = \mathbb{R}$ in degree $0$). Their intersection is an open neighborhood of the equator, [[Def - Homotopy|homotopy]] equivalent to $S^{n-1}$. The Mayer–Vietoris sequence (combined with the inductive hypothesis $H^*(S^{n-1})$) gives $H^p(S^n) = \mathbb{R}$ for $p = 0, n$ and zero otherwise.
 
 **Cohomology of the $n$-torus.** For $T^n = S^1 \times S^1 \times \cdots \times S^1$, the **Künneth formula** $H^*(T^n) = H^*(S^1)^{\otimes n}$ (where $\otimes$ is the graded tensor product over $\mathbb{R}$) gives $H^k(T^n) = \mathbb{R}^{\binom{n}{k}}$. The Künneth formula can be proved by induction using Mayer–Vietoris, with the cover $T^n = U \times S^1$, $V \times S^1$ where $\{U, V\}$ covers $T^{n-1}$.
 

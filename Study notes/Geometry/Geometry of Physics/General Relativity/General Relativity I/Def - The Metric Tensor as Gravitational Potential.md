@@ -83,7 +83,7 @@ The connection to **classical field theory** is direct: the metric is a tensor f
 
 # Examples / Corollaries
 
-**Is an instance — Minkowski metric in inertial coordinates.** $g_{\mu\nu} = \eta_{\mu\nu} = \mathrm{diag}(1, -1, -1, -1)$, constant. No gravity (no curvature); the Christoffel symbols all vanish; geodesics are straight lines in coordinates. This is the flat limit, special relativity.
+**Is an instance — Minkowski metric in inertial coordinates.** $g_{\mu\nu} = \eta_{\mu\nu} = \mathrm{diag}(1, -1, -1, -1)$, constant. No gravity (no curvature); the Christoffel symbols all vanish; [[Def - Geodesic|geodesics]] are straight lines in coordinates. This is the flat limit, special relativity.
 
 **Is an instance — Schwarzschild metric in Schwarzschild coordinates.** $g_{tt} = (1 - 2M/r)$, $g_{rr} = -(1 - 2M/r)^{-1}$, $g_{\theta\theta} = -r^2$, $g_{\phi\phi} = -r^2 \sin^2\theta$, all other components zero. The non-trivial $g_{tt}$ encodes the Newtonian potential $\phi = -M/r$ (since $g_{tt} \approx 1 + 2\phi$ in the weak-field limit), and the non-trivial $g_{rr}$ encodes the spatial curvature. No off-diagonal components, since the geometry is static and spherically symmetric.
 

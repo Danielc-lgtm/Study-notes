@@ -39,7 +39,7 @@ The electromagnetic $2$-form $F$ on Minkowski space encodes $\vec E$ and $\vec B
 
 **Problem class:** Algebraic analysis of the Hodge star's eigenvalue structure on a specific manifold (middle-degree forms in Lorentzian $4$D), with the goal of understanding why Riemannian instantons exist but Lorentzian "instantons" require complex coefficients. The chapter's problem-solving strategy on the self-dual decomposition (operation 2 from the topic page) is the relevant tool.
 
-**Assumption pattern:** Minkowski signature $(- + + +)$, dimension $4$, middle degree $k = 2$. The signature parameter $s = 1$ flips the sign of $\star\star$ from $+1$ (Riemannian) to $-1$ (Lorentzian). The dimension parameter $k(n-k) = 4$ stays the same. The combined effect is $\star\star = -1$, the key difference from Riemannian $4$D.
+**Assumption pattern:** Minkowski signature $(- + + +)$, [[Def - Dimension|dimension]] $4$, middle degree $k = 2$. The signature parameter $s = 1$ flips the sign of $\star\star$ from $+1$ (Riemannian) to $-1$ (Lorentzian). The dimension parameter $k(n-k) = 4$ stays the same. The combined effect is $\star\star = -1$, the key difference from Riemannian $4$D.
 
 **Theorem routing:** Use [[Thm - Properties of the Hodge Star]] property 2 (double-star formula) with $s = 1$. For the eigenvalue analysis, observe that an operator with $\star^2 = -\mathrm{id}$ has eigenvalues solving $\lambda^2 = -1$, hence $\lambda = \pm i$ over $\mathbb{C}$ but no real eigenvalues. For the complex self-duality computation, apply $\star$ to $F + i\star F$ and use $\star\star = -1$ to verify.
 
@@ -119,7 +119,7 @@ The duality is more apparent: the source-free Maxwell theory is invariant under 
 
 On Euclidean $\mathbb{R}^4$ with signature $(+++ +)$ (so $s = 0$), $\star\star = (-1)^{2\cdot 2 + 0}\mathrm{id} = +\mathrm{id}$ on $\Omega^2$. The eigenvalues of $\star$ over $\mathbb{R}$ are $\pm 1$, and the eigenspace decomposition is $\Omega^2(\mathbb{R}^4) = \Omega^2_+\oplus\Omega^2_-$ over $\mathbb{R}$.
 
-This is the algebraic shell of the **self-dual / anti-self-dual Yang–Mills equations**: on a Riemannian $4$-manifold, a connection's curvature $F_A$ is a $2$-form-valued in the adjoint bundle, and the decomposition $F_A = F_+ + F_-$ has the **self-duality equation** $F_- = 0$ (curvature is self-dual) as the equation for an **instanton**. Instantons are absolute minimizers of the Yang–Mills energy in their topological charge class.
+This is the algebraic shell of the **self-dual / anti-self-dual Yang–Mills equations**: on a Riemannian $4$-manifold, a connection's curvature $F_A$ is a $2$-form-valued in the adjoint bundle, and the decomposition $F_A = F_+ + F_-$ has the **self-duality equation** $F_- = 0$ (curvature is self-dual) as the equation for an **instanton**. [[Def - Instanton|Instantons]] are absolute minimizers of the Yang–Mills energy in their topological charge class.
 
 The Lorentzian case has no real self-dual instantons (by part (b)). Riemannian instantons are obtained by **Wick rotation** $t \to it$, converting Lorentzian Minkowski into Euclidean $\mathbb{R}^4$. The Yang–Mills instantons of [[Gauge Theory IV — Yang–Mills Fields and Instantons]] live in the Wick-rotated (Riemannian) setting.
 

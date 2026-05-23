@@ -25,11 +25,11 @@ The fibrewise-linearity condition says: $F|_{E_p} : E_p \to E'_{f(p)}$ is a line
 
 What is forced by demanding $F$ is **smooth** as a map of manifolds, not just continuous? Smoothness of $F$ propagates: smooth sections of $E$ map to smooth sections of $E'$ via $\sigma \mapsto F \circ \sigma \circ f^{-1}$ (when $f$ is invertible — see below for the general case). Without smoothness, the bundle morphism would be only continuous-bundle theory.
 
-What is forced by allowing $F$ to **cover any smooth map $f$**, rather than only the identity or only diffeomorphisms? Allowing general $f$ makes bundle homomorphisms reflect the natural maps that arise in geometry. The most important example is the **differential of a smooth map**: if $\phi : M \to N$ is smooth, then $d\phi : TM \to TN$ is a bundle homomorphism covering $\phi$. If we restricted to identity-covering maps, we would exclude $d\phi$ from the category and lose the basic functorial example.
+What is forced by allowing $F$ to **cover any smooth map $f$**, rather than only the identity or only [[Def - Diffeomorphism|diffeomorphisms]]? Allowing general $f$ makes bundle [[Def - Homomorphism|homomorphisms]] reflect the natural maps that arise in geometry. The most important example is the **differential of a smooth map**: if $\phi : M \to N$ is smooth, then $d\phi : TM \to TN$ is a bundle homomorphism covering $\phi$. If we restricted to identity-covering maps, we would exclude $d\phi$ from the category and lose the basic functorial example.
 
 What is forced by demanding the *restriction to each fibre* is linear, rather than $F$ as a map of total spaces being linear? Total-space linearity doesn't make sense — the total space $E$ is a manifold, not a vector space — so the only "linear" condition that has content is the fibrewise one. This is the same situation as in the definition of a vector bundle: the linear structure is fibrewise, not total-space.
 
-What if we **strengthened** to demand the linear maps on fibres are isomorphisms? Then $F$ would be a **bundle isomorphism** (when also a diffeomorphism with inverse a bundle homomorphism). Such $F$ form a subclass of bundle homomorphisms — the invertible ones — and are exactly the isomorphisms in the category of bundles. Demanding fibrewise isomorphism in the definition of a bundle homomorphism would exclude noninjective and nonsurjective examples, including the zero map and the projection onto a subbundle.
+What if we **strengthened** to demand the linear maps on fibres are [[Def - Isomorphism|isomorphisms]]? Then $F$ would be a **bundle isomorphism** (when also a diffeomorphism with inverse a bundle homomorphism). Such $F$ form a subclass of bundle homomorphisms — the invertible ones — and are exactly the isomorphisms in the category of bundles. Demanding fibrewise isomorphism in the definition of a bundle homomorphism would exclude noninjective and nonsurjective examples, including the zero map and the projection onto a [[Def - Subbundle|subbundle]].
 
 What if we **weakened** to drop the covering condition? Then $F$ would be an arbitrary smooth map $E \to E'$, with no requirement to fibre-preserve. This includes far more maps than is useful — for instance, every diffeomorphism of $E$ to itself (regardless of how it permutes fibres) would qualify. Restricting to fibre-preserving maps is what makes the morphisms reflect the bundle structure.
 
@@ -55,7 +55,7 @@ A **bundle homomorphism over $M$** is the special case $M = M'$ and $f = \mathrm
 
 A **bundle isomorphism** is a bundle homomorphism that is a diffeomorphism of total spaces whose inverse is also a bundle homomorphism. Equivalently (by a standard result), it is a bijective smooth bundle homomorphism whose restrictions to fibres are all linear isomorphisms.
 
-**Induced map on sections.** A bundle homomorphism $F : E \to E'$ over $M$ induces a $C^\infty(M)$-module homomorphism $\Gamma(E) \to \Gamma(E')$, written by the same symbol $F$, defined by
+**Induced map on sections.** A bundle homomorphism $F : E \to E'$ over $M$ induces a $C^\infty(M)$-[[Def - Module|module]] homomorphism $\Gamma(E) \to \Gamma(E')$, written by the same symbol $F$, defined by
 $$F(\sigma)(p) := F(\sigma(p)) \in E'_p.$$
 A standard result (the **bundle homomorphism characterization lemma**) says: a map $\Gamma(E) \to \Gamma(E')$ that is $C^\infty(M)$-linear and sends smooth sections to smooth sections arises from a unique bundle homomorphism over $M$. This is a *tensoriality criterion*: bundle homomorphisms are exactly the $C^\infty(M)$-linear maps on sections.
 
@@ -87,7 +87,7 @@ A useful slogan: **bundle homomorphisms are $C^\infty(M)$-linear; differential o
 
 **Is an instance — the dual map of a bundle homomorphism.** Given a bundle homomorphism $F : E \to E'$ over $M$, there is a dual bundle homomorphism $F^* : (E')^* \to E^*$ over $M$, defined fibrewise by $F^*_p = (F_p)^* : (E'_p)^* \to E_p^*$, the dual of $F_p$ in the sense of [[Def - Dual Map]]. The direction is reversed — this is the contravariance of duality.
 
-**Is an instance — inclusion of a subbundle.** If $D \subseteq E$ is a [[Def - Subbundle|subbundle]], the inclusion $\iota : D \hookrightarrow E$ is a smooth bundle homomorphism over $M$, with each $\iota_p : D_p \to E_p$ the inclusion of a linear subspace.
+**Is an instance — inclusion of a subbundle.** If $D \subseteq E$ is a [[Def - Subbundle|subbundle]], the inclusion $\iota : D \hookrightarrow E$ is a smooth bundle homomorphism over $M$, with each $\iota_p : D_p \to E_p$ the inclusion of a linear [[Def - Subspace|subspace]].
 
 **Is NOT a bundle homomorphism — the Lie derivative.** The Lie derivative $\mathcal{L}_X : \mathfrak{X}(M) \to \mathfrak{X}(M)$, $\mathcal{L}_X Y = [X, Y]$, is an $\mathbb{R}$-linear map on sections, but it is *not* $C^\infty(M)$-linear: $\mathcal{L}_X (fY) = (Xf) Y + f \mathcal{L}_X Y$, which is not $f \mathcal{L}_X Y$ unless $Xf = 0$ everywhere. By the bundle homomorphism characterization lemma, $\mathcal{L}_X$ does not come from a bundle homomorphism. It is a differential operator, not a tensor.
 

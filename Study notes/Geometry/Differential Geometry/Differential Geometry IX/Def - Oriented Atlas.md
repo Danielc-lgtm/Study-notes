@@ -31,7 +31,7 @@ The two frames define the same orientation of $T_pM$ iff this matrix has positiv
 
 **What if we strengthen to all transitions being *constant* with positive Jacobian — i.e. linear?** Then $M$ is locally affine and inherits a flat structure. This is a much stronger condition ("affine manifold") and includes only tori and other very specific examples. Most orientable manifolds are not affine.
 
-**What if we weaken to "nonzero Jacobian"?** Every transition map is a diffeomorphism, so its Jacobian is automatically nonzero. The nonzero-determinant condition is automatic; what matters is the *sign*. Demanding positive sign is exactly the index-2 reduction $\mathrm{GL}(n, \mathbb{R}) \to \mathrm{GL}_+(n, \mathbb{R})$ on transitions.
+**What if we weaken to "nonzero Jacobian"?** Every transition map is a [[Def - Diffeomorphism|diffeomorphism]], so its Jacobian is automatically nonzero. The nonzero-determinant condition is automatic; what matters is the *sign*. Demanding positive sign is exactly the index-2 reduction $\mathrm{GL}(n, \mathbb{R}) \to \mathrm{GL}_+(n, \mathbb{R})$ on transitions.
 
 **Why a *maximal* oriented atlas?** Two different oriented atlases may describe the same orientation. The equivalence is: their union is again an oriented atlas. The unique maximal element of an equivalence class is the **maximal oriented atlas** — all charts whose coordinate frame is positively oriented. This is the canonical representative, in the same way that the smooth structure on $M$ is given by a maximal smooth atlas.
 
@@ -57,7 +57,7 @@ has positive Jacobian determinant everywhere on its domain.
 
 # Categorical / Structural Definition
 
-An oriented atlas is a **reduction of the structure group of $TM$ from $\mathrm{GL}(n, \mathbb{R})$ to $\mathrm{GL}_+(n, \mathbb{R})$**. Concretely: the transition functions of the tangent bundle $TM$ are exactly the Jacobians of the chart transition maps; demanding positive Jacobian everywhere is demanding that these transition functions take values in $\mathrm{GL}_+(n, \mathbb{R}) \subset \mathrm{GL}(n, \mathbb{R})$.
+An oriented atlas is a **reduction of the structure [[Def - Group|group]] of $TM$ from $\mathrm{GL}(n, \mathbb{R})$ to $\mathrm{GL}_+(n, \mathbb{R})$**. Concretely: the transition functions of the tangent bundle $TM$ are exactly the Jacobians of the chart transition maps; demanding positive Jacobian everywhere is demanding that these transition functions take values in $\mathrm{GL}_+(n, \mathbb{R}) \subset \mathrm{GL}(n, \mathbb{R})$.
 
 In the **principal bundle** language: $TM$ is associated to a principal $\mathrm{GL}(n, \mathbb{R})$-bundle $\mathrm{Fr}(M)$ — the frame bundle of $M$, whose fiber over $p$ is the set of ordered bases of $T_pM$. An orientation of $M$ corresponds to a connected component of $\mathrm{Fr}(M)$, equivalently a reduction of $\mathrm{Fr}(M)$ to a principal $\mathrm{GL}_+(n, \mathbb{R})$-bundle. An oriented atlas is the explicit chart-level data realizing this reduction.
 

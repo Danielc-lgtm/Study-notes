@@ -174,7 +174,7 @@ $[[Thm - Convergence of Penalty Algorithm]]$ predicts $\|g(x^{(k+1)})\| = O(1/\m
 >
 > 4. **Pure outer-loop behavior** — with no inner-loop error, the apparent slow convergence of the penalty method ($\|g\| = 1/(1+2\mu)$) is *entirely* due to the outer loop, not inner-LM convergence issues. This separates the *algorithmic* slowness (which the augmented Lagrangian fixes) from the *numerical* slowness (which is shared between penalty and augmented Lagrangian when the inner LM is the bottleneck).
 >
-> The problem is therefore an *ideal* unit test for any constrained-NLS solver: given this problem, the solver should compute $x^{(\infty)} = (0.5, 0.5)$ and $z^{(\infty)} = 1$ with predictable convergence rate. Any deviation flags an implementation bug.
+> The problem is therefore an *[[Def - Ideal|ideal]]* unit test for any constrained-NLS solver: given this problem, the solver should compute $x^{(\infty)} = (0.5, 0.5)$ and $z^{(\infty)} = 1$ with predictable convergence rate. Any deviation flags an implementation bug.
 
 > [!note]- Complete formal solution
 > **(a)** The KKT system gives $\hat x = (1/2, 1/2)$ and $\hat z = 1$.

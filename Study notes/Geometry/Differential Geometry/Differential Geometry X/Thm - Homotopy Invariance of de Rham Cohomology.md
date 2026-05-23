@@ -19,9 +19,9 @@ $M, N$ are smooth manifolds (possibly with boundary). $F, G : M \to N$ are smoot
 
 > **Theorem (Homotopy Invariance).** If $F, G : M \to N$ are smoothly homotopic smooth maps between smooth manifolds, then the induced cohomology maps $F^* = G^* : H^k_{dR}(N) \to H^k_{dR}(M)$ are equal for every $k \geq 0$.
 
-> **Corollary.** If $M$ and $N$ are smoothly homotopy equivalent — that is, there are smooth $F : M \to N$ and $G : N \to M$ with $F \circ G \simeq \mathrm{id}_N$ and $G \circ F \simeq \mathrm{id}_M$ — then $H^k_{dR}(M) \cong H^k_{dR}(N)$ for every $k$, with isomorphism induced by $F$ (or equivalently by $G$).
+> **Corollary.** If $M$ and $N$ are smoothly [[Def - Homotopy|homotopy]] equivalent — that is, there are smooth $F : M \to N$ and $G : N \to M$ with $F \circ G \simeq \mathrm{id}_N$ and $G \circ F \simeq \mathrm{id}_M$ — then $H^k_{dR}(M) \cong H^k_{dR}(N)$ for every $k$, with isomorphism induced by $F$ (or equivalently by $G$).
 
-> **Corollary (Topological invariance).** Homeomorphic smooth manifolds have isomorphic de Rham cohomology. (Every homeomorphism is, after Whitney approximation, a smooth homotopy equivalence; the corollary then applies.)
+> **Corollary (Topological invariance).** Homeomorphic smooth manifolds have isomorphic de Rham cohomology. (Every [[Def - Homeomorphism|homeomorphism]] is, after Whitney approximation, a smooth homotopy equivalence; the corollary then applies.)
 
 > **Corollary (Cohomology of contractible manifolds).** Any contractible smooth manifold $M$ has $H^k_{dR}(M) = 0$ for every $k \geq 1$ and $H^0_{dR}(M) = \mathbb{R}$. (The inclusion of a point is a homotopy equivalence, so $H^*_{dR}(M) \cong H^*_{dR}(\text{point})$.)
 
@@ -162,7 +162,7 @@ The conceptual obstacle is believing the result at all: it says that cohomology 
 >
 > **Hint:** Apply $f - g = -(dh + hd)$ to a closed cochain $c$ and observe $hd c = 0$.
 >
-> **Why needed:** This is the algebraic mechanism by which chain homotopies become cohomology equalities — a purely formal step in homological algebra.
+> **Why needed:** This is the algebraic mechanism by which chain [[Def - Homotopy|homotopies]] become cohomology equalities — a purely formal step in homological algebra.
 >
 > > [!note]- Full proof
 > > Let $c \in C^k$ be closed, $dc = 0$. Then $(g - f)(c) = (dh + hd)(c) = dh(c) + hd(c) = dh(c) + 0 = dh(c)$, which is exact. So $[g(c)] - [f(c)] = [dh(c)] = 0$ in $H^k(D)$, i.e. $f_*[c] = g_*[c]$. Since this holds for every closed $c$, $f_* = g_*$ on $H^*(C)$.
@@ -182,7 +182,7 @@ The conceptual obstacle is believing the result at all: it says that cohomology 
 >
 > **Step 3 — Pass to cohomology.** For a closed form $\omega \in \Omega^k(N)$ ($d\omega = 0$): $hd\omega = 0$, so $G^*\omega - F^*\omega = dh\omega$, which is exact. Hence $[G^*\omega] = [F^*\omega]$ in $H^k_{dR}(M)$, i.e. $G^*[\omega] = F^*[\omega]$. Since $\omega$ was an arbitrary closed form, $G^* = F^*$ on $H^k_{dR}$. $\blacksquare$
 >
-> **Corollary (homotopy equivalent manifolds have isomorphic cohomology).** If $F : M \to N$ and $G : N \to M$ satisfy $G \circ F \simeq \mathrm{id}_M$ and $F \circ G \simeq \mathrm{id}_N$, then by Step 3 applied twice, $F^* \circ G^* = (G \circ F)^* = \mathrm{id}_{H^*(M)}$ and $G^* \circ F^* = (F \circ G)^* = \mathrm{id}_{H^*(N)}$. So $F^*$ and $G^*$ are inverse isomorphisms.
+> **Corollary (homotopy equivalent manifolds have isomorphic cohomology).** If $F : M \to N$ and $G : N \to M$ satisfy $G \circ F \simeq \mathrm{id}_M$ and $F \circ G \simeq \mathrm{id}_N$, then by Step 3 applied twice, $F^* \circ G^* = (G \circ F)^* = \mathrm{id}_{H^*(M)}$ and $G^* \circ F^* = (F \circ G)^* = \mathrm{id}_{H^*(N)}$. So $F^*$ and $G^*$ are inverse [[Def - Isomorphism|isomorphisms]].
 
 ---
 

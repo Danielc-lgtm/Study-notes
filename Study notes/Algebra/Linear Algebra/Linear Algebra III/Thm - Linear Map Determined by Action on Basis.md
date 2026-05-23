@@ -33,7 +33,7 @@ Two contrasts make the theorem's content sharp. **Versus functions in general**:
 
 The theorem is the *definitional* basis for the matrix representation of linear maps. Given the target vectors $w_1, \ldots, w_n$ and a basis of $W$, each $w_k$ has a coordinate column; arranging these columns side by side gives the matrix $\mathcal{M}(T)$ in [[Def - Matrix of a Linear Map]]. So "specifying a linear map" and "writing down a matrix" are the same operation, with the linear-map lemma certifying that the matrix is consistent (i.e., that a unique map exists with that matrix).
 
-The theorem is also the reason **a linear map is finite data**. Once a basis of $V$ is fixed, a linear map is determined by $n$ vectors in $W$, and so the space $\mathcal{L}(V, W)$ has the same "size" as the $n$-fold product $W^n$ — which, when $W$ is finite-dimensional, has dimension $n \dim W$. This is the dimension formula $\dim \mathcal{L}(V, W) = mn$ in [[Ex - The space of linear maps has dimension mn]].
+The theorem is also the reason **a linear map is finite data**. Once a basis of $V$ is fixed, a linear map is determined by $n$ vectors in $W$, and so the space $\mathcal{L}(V, W)$ has the same "size" as the $n$-fold product $W^n$ — which, when $W$ is finite-dimensional, has [[Def - Dimension|dimension]] $n \dim W$. This is the [[Def - Dimension|dimension]] formula $\dim \mathcal{L}(V, W) = mn$ in [[Ex - The space of linear maps has dimension mn]].
 
 ---
 
@@ -161,7 +161,7 @@ A third subtle point: the freedom of choice in the $w_k$ is exactly $n \cdot \di
 
 **Constructing operators with prescribed eigenvalues.** Pick distinct scalars $\lambda_1, \ldots, \lambda_n \in \mathbf{F}$ and a basis $v_1, \ldots, v_n$ of $V$. The lemma gives a unique operator $T$ with $T v_k = \lambda_k v_k$ for each $k$. This $T$ has the $\lambda_k$ as eigenvalues with $v_k$ as eigenvectors, and so is **diagonalisable**. Every diagonalisable operator arises this way. See [[Linear Algebra V — §4–5 Polynomials and Eigenvalues]] for the role of diagonalisability.
 
-**Defining group representations on basis vectors.** A representation of $G$ on $V$ is a homomorphism $\rho : G \to \operatorname{GL}(V)$. For each generator $g$ of $G$, the operator $\rho(g)$ must be specified — and the linear-map lemma lets you specify $\rho(g)$ by choosing $\rho(g) v_k$ for each basis vector $v_k$. The catch: the chosen operators must satisfy the relations of $G$, which is a non-trivial check; the lemma handles the "exists as a linear map" part, but the "is a group homomorphism" part is the real content.
+**Defining [[Def - Group|group]] representations on basis vectors.** A representation of $G$ on $V$ is a homomorphism $\rho : G \to \operatorname{GL}(V)$. For each generator $g$ of $G$, the operator $\rho(g)$ must be specified — and the linear-map lemma lets you specify $\rho(g)$ by choosing $\rho(g) v_k$ for each basis vector $v_k$. The catch: the chosen operators must satisfy the relations of $G$, which is a non-trivial check; the lemma handles the "exists as a linear map" part, but the "is a [[Def - Group|group]] homomorphism" part is the real content.
 
 ---
 

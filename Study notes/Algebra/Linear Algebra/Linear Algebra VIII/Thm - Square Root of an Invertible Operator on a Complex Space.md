@@ -35,9 +35,9 @@ Why is invertibility the right hypothesis? Because the analogue of the polar for
 
 The Taylor truncation lemma is the key piece of new technology. We motivate the formula by analogy with the complex Taylor series:
 $$\sqrt{1 + x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} - \cdots = \sum_{j = 0}^{\infty} \binom{1/2}{j} x^j,$$
-which converges for $|x| < 1$. If we substitute $x \to N$ for $N$ nilpotent, the *infinite* series becomes a *finite* sum (because $N^k = 0$ for $k$ large enough), and convergence is no longer a worry — it is a polynomial identity. The polynomial $1 + \frac{N}{2} - \frac{N^2}{8} + \cdots + \binom{1/2}{m-1} N^{m-1}$ has square $I + N$ exactly because the Taylor series of $(1 + x)^{1/2}$ has this property as a formal power series identity. The "convergence" worry of complex analysis is replaced by the "truncation" reality of finite dimensions.
+which converges for $|x| < 1$. If we substitute $x \to N$ for $N$ nilpotent, the *infinite* series becomes a *finite* sum (because $N^k = 0$ for $k$ large enough), and convergence is no longer a worry — it is a polynomial identity. The polynomial $1 + \frac{N}{2} - \frac{N^2}{8} + \cdots + \binom{1/2}{m-1} N^{m-1}$ has square $I + N$ exactly because the Taylor series of $(1 + x)^{1/2}$ has this property as a formal power series identity. The "convergence" worry of complex analysis is replaced by the "truncation" reality of finite [[Def - Dimension|dimensions]].
 
-This pattern — Taylor series in $x$, then truncate by nilpotence — works for any function $f$ holomorphic in a neighbourhood of the spectrum, not just $\sqrt{1 + x}$. So the square-root result is the prototype of the **holomorphic functional calculus** in finite dimensions: for any such $f$, $f(T)$ is well-defined, and the assignment $f \mapsto f(T)$ is a ring homomorphism from holomorphic functions to operators.
+This pattern — Taylor series in $x$, then truncate by nilpotence — works for any function $f$ holomorphic in a neighbourhood of the spectrum, not just $\sqrt{1 + x}$. So the square-root result is the prototype of the **holomorphic functional calculus** in finite [[Def - Dimension|dimensions]]: for any such $f$, $f(T)$ is well-defined, and the assignment $f \mapsto f(T)$ is a [[Def - Ring|ring]] homomorphism from holomorphic functions to operators.
 
 ---
 
@@ -169,7 +169,7 @@ The second subtle point is *why* the invertibility hypothesis is needed. Student
 > > So $\mu S$ is a square root of $T|_{G(\lambda_k, T)}$.
 
 > [!note]- Lemma 4: Square roots on direct summands assemble
-> **Statement:** Suppose $V = V_1 \oplus \cdots \oplus V_m$ is a direct sum of $T$-invariant subspaces, and on each $V_k$ the operator $T|_{V_k}$ has a square root $R_k$. Then $T$ has a square root $R$ defined by $R|_{V_k} = R_k$ for each $k$.
+> **Statement:** Suppose $V = V_1 \oplus \cdots \oplus V_m$ is a direct sum of $T$-invariant [[Def - Subspace|subspaces]], and on each $V_k$ the operator $T|_{V_k}$ has a square root $R_k$. Then $T$ has a square root $R$ defined by $R|_{V_k} = R_k$ for each $k$.
 >
 > **Hint:** Define $R$ via the direct sum decomposition: every $v \in V$ has unique expression $v = v_1 + \cdots + v_m$ with $v_k \in V_k$, and set $R v = R_1 v_1 + \cdots + R_m v_m$. Then $R^2 v = R(R_1 v_1 + \cdots + R_m v_m) = R_1^2 v_1 + \cdots + R_m^2 v_m = T v_1 + \cdots + T v_m = T v$ (using that $R$ preserves each $V_k$ because $R|_{V_k} = R_k$, and $R_k^2 = T|_{V_k}$).
 >

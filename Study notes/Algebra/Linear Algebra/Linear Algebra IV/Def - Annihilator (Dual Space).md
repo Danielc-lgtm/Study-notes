@@ -20,7 +20,7 @@ It is a subspace of $V'$. Full registry on [[Linear Algebra IV — §3E–F Prod
 
 # Axiom Motivation
 
-The annihilator is the bridge between two pictures: subspaces of $V$ on one side, and subspaces of $V'$ on the other. It is the dual analogue of the subspace, in the same sense that the dual functional is the dual analogue of the vector.
+The annihilator is the bridge between two pictures: [[Def - Subspace|subspaces]] of $V$ on one side, and [[Def - Subspace|subspaces]] of $V'$ on the other. It is the dual analogue of the subspace, in the same sense that the dual functional is the dual analogue of the vector.
 
 The desideratum: given a subspace $U \leq V$, find the subspace of $V'$ "corresponding to $U$". There are two natural candidates.
 
@@ -34,11 +34,11 @@ The deeper motivation is Galois-theoretic. A *Galois connection* between two pos
 
 Specifically: with $A$ = subspaces of $V$ and $B$ = subspaces of $V'$, define
 $$f : U \mapsto U^0, \qquad g : \Omega \mapsto \Omega^0 = \{v \in V : \varphi(v) = 0 \text{ for all } \varphi \in \Omega\}.$$
-Both are order-reversing. The closed elements on both sides are *all* subspaces (in finite dimensions), and the bijection $U \leftrightarrow U^0$ is a *contravariant Galois connection* — order-reversing, with $(U^0)^0 = U$. This is the universal property of the annihilator: it is the unique order-reversing bijection between the subspace lattices of $V$ and $V'$ that uses *only* the pairing $V' \times V \to \mathbb{F}$.
+Both are order-reversing. The closed elements on both sides are *all* subspaces (in finite [[Def - Dimension|dimensions]]), and the bijection $U \leftrightarrow U^0$ is a *contravariant Galois connection* — order-reversing, with $(U^0)^0 = U$. This is the universal property of the annihilator: it is the unique order-reversing bijection between the subspace lattices of $V$ and $V'$ that uses *only* the pairing $V' \times V \to \mathbb{F}$.
 
 Why a Galois connection rather than a simple bijection? Because the construction generalises. The same shape of definition produces:
-- the **annihilator** in algebraic geometry (variety $\leftrightarrow$ ideal);
-- the **fixed field / fixed subgroup** in Galois theory (subgroup of automorphisms $\leftrightarrow$ subfield);
+- the **annihilator** in algebraic geometry (variety $\leftrightarrow$ [[Def - Ideal|ideal]]);
+- the **fixed field / fixed [[Def - Subgroup|subgroup]]** in Galois theory ([[Def - Subgroup|subgroup]] of automorphisms $\leftrightarrow$ subfield);
 - the **polarity** in projective geometry (point $\leftrightarrow$ hyperplane);
 - the **orthogonal complement** in an inner product space (subspace $\leftrightarrow$ its perpendicular subspace).
 
@@ -85,7 +85,7 @@ These two operations are mutually inverse on "closed" subspaces (those equal to 
 
 The dimension formula $\dim U + \dim U^\perp = \dim V$ is *not* a general Galois-connection property — it requires the *non-degeneracy* of the pairing (every nonzero $v$ has some $\varphi$ with $\varphi(v) \neq 0$, and vice versa). The pairing $V' \times V \to \mathbb{F}$ is non-degenerate in finite dimensions, which is why the dimension formula holds.
 
-**The annihilator as part of a bigger functorial picture.** The map $U \mapsto U^0$ extends to a contravariant functor from "subspaces of finite-dimensional vector spaces and inclusions" to itself: it reverses inclusions and respects dualization. The same construction reappears in algebraic geometry as the variety-ideal correspondence (Nullstellensatz), in commutative algebra as the radical-of-ideal correspondence, and in algebraic topology as the cohomology-homology pairing.
+**The annihilator as part of a bigger functorial picture.** The map $U \mapsto U^0$ extends to a contravariant functor from "subspaces of finite-dimensional vector spaces and inclusions" to itself: it reverses inclusions and respects dualization. The same construction reappears in algebraic geometry as the variety-[[Def - Ideal|ideal]] correspondence (Nullstellensatz), in commutative algebra as the radical-of-ideal correspondence, and in algebraic topology as the cohomology-homology pairing.
 
 ---
 
@@ -105,7 +105,7 @@ In Galois theory, the connection between subgroups of $\operatorname{Gal}(L/K)$ 
 
 # Examples / Corollaries
 
-**Is an instance — annihilator of $\operatorname{span}(e_1, e_2)$ in $\mathbb{R}^5$.** Let $V = \mathbb{R}^5$ with standard basis $e_1, \dots, e_5$ and dual basis $\varphi_1, \dots, \varphi_5$ (coordinate projections $\varphi_j(x) = x_j$). Let $U = \operatorname{span}(e_1, e_2) = \{(x_1, x_2, 0, 0, 0)\}$. A functional $\varphi = \sum c_k \varphi_k$ vanishes on $U$ iff $c_1 = c_2 = 0$ (computing $\varphi(e_1) = c_1$ and $\varphi(e_2) = c_2$). So $U^0 = \operatorname{span}(\varphi_3, \varphi_4, \varphi_5)$, a three-dimensional subspace of $V'$. Dimensions check: $\dim U = 2$, $\dim U^0 = 3$, $\dim V = 5$.
+**Is an instance — annihilator of $\operatorname{span}(e_1, e_2)$ in $\mathbb{R}^5$.** Let $V = \mathbb{R}^5$ with standard basis $e_1, \dots, e_5$ and dual basis $\varphi_1, \dots, \varphi_5$ (coordinate projections $\varphi_j(x) = x_j$). Let $U = \operatorname{span}(e_1, e_2) = \{(x_1, x_2, 0, 0, 0)\}$. A functional $\varphi = \sum c_k \varphi_k$ vanishes on $U$ iff $c_1 = c_2 = 0$ (computing $\varphi(e_1) = c_1$ and $\varphi(e_2) = c_2$). So $U^0 = \operatorname{span}(\varphi_3, \varphi_4, \varphi_5)$, a three-dimensional subspace of $V'$. [[Def - Dimension|Dimensions]] check: $\dim U = 2$, $\dim U^0 = 3$, $\dim V = 5$.
 
 **Is an instance — annihilator of polynomials divisible by $x^2$.** Let $V = \mathcal{P}(\mathbb{R})$ and $U = x^2 \mathcal{P}(\mathbb{R}) = \{x^2 q(x) : q \in \mathcal{P}(\mathbb{R})\}$. The functional $\varphi(p) = p'(0)$ vanishes on $U$: for $p = x^2 q$, $p'(x) = 2x q(x) + x^2 q'(x)$, so $p'(0) = 0$. So $\varphi \in U^0$. Similarly $\psi(p) = p(0)$ is in $U^0$ since $p(0) = 0^2 q(0) = 0$. In fact $U^0 = \operatorname{span}(\psi, \varphi) = \operatorname{span}(\operatorname{ev}_0, \operatorname{ev}'_0)$, the "value at zero" and "derivative at zero" functionals.
 

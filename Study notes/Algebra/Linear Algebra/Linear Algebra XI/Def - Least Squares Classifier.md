@@ -30,7 +30,7 @@ The multi-class extension is the *one-versus-rest* construction: for each class 
 
 The *decision threshold* $\alpha$ in $\hat{f}(x) = \mathrm{sign}(\tilde{f}(x) - \alpha)$ allows a deliberate trade-off between false-positive and false-negative rates. Lowering $\alpha$ (towards $-\infty$) predicts $+1$ more often, increasing true positives but also increasing false positives. Raising $\alpha$ does the opposite. Sweeping $\alpha$ traces out the *receiver operating characteristic* (ROC) curve in the (false-positive rate, true-positive rate) plane. The ROC curve characterizes the *capability* of the classifier independent of any particular threshold choice.
 
-The reader has now invented the LS classifier framework. The remaining content is the practical observation that this simple recipe gives competitive performance on many classification problems, and that the same multi-objective LS techniques (regularization, validation, cross-validation) apply unchanged.
+The reader has now invented the LS classifier framework. The remaining content is the practical observation that this simple recipe gives competitive performance on many classification problems, and that the same multi-objective LS techniques (regularization, [[Def - Validation (Training and Test Error)|validation]], cross-[[Def - Validation (Training and Test Error)|validation]]) apply unchanged.
 
 ---
 

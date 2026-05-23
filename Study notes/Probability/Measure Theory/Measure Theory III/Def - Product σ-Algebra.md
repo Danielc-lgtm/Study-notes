@@ -60,4 +60,4 @@ Calibration: (i) Is $\{(x,y):x=y\}$ in $\mathcal{B}(\mathbb{R})\otimes\mathcal{B
 # Unlocked by This
 
 > [!tip] Product measure, Fubini, and independence
-> On $\mathcal{A}_1\otimes\mathcal{A}_2$ one builds the [[Thm - Product Measure|product measure]] $\mu_1\otimes\mu_2$; [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] then computes double integrals as iterated ones. In probability, [[Def - Independence|independence]] is "the joint law is the product law."
+> On $\mathcal{A}_1\otimes\mathcal{A}_2$ one builds the [[Thm - Product Measure|product measure]] $\mu_1\otimes\mu_2$; [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]] then computes double integrals as iterated ones. In probability, independence is "the joint law is the product law."

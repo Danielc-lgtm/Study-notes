@@ -16,7 +16,7 @@ $X\in L^2(\Omega,\mathcal{F},\mathbb{P})$; $\mathcal{G}\subseteq\mathcal{F}$ a s
 
 # Motivation
 
-[[Def - Conditional Expectation|Conditional expectation]] for $X\in L^2$ has a purely *geometric* meaning: it is the **orthogonal projection** of $X$ onto the subspace of $\mathcal{G}$-measurable square-integrable functions — the **best $\mathcal{G}$-measurable approximation of $X$ in mean square**. This identification is illuminating in two directions: it gives the cleanest *construction* of conditional expectation ($L^2$ first, then extend), and it gives the *interpretation* — $\mathbb{E}[X\mid\mathcal{G}]$ is the optimal *prediction* of $X$ using only $\mathcal{G}$-information, the **regression function** of statistics and the basis of least-squares estimation, the Kalman filter, and projection-based prediction.
+[[Def - Conditional Expectation|Conditional expectation]] for $X\in L^2$ has a purely *geometric* meaning: it is the **orthogonal projection** of $X$ onto the [[Def - Subspace|subspace]] of $\mathcal{G}$-measurable square-integrable functions — the **best $\mathcal{G}$-measurable approximation of $X$ in mean square**. This identification is illuminating in two directions: it gives the cleanest *construction* of conditional expectation ($L^2$ first, then extend), and it gives the *interpretation* — $\mathbb{E}[X\mid\mathcal{G}]$ is the optimal *prediction* of $X$ using only $\mathcal{G}$-information, the **regression function** of statistics and the basis of least-squares estimation, the Kalman filter, and projection-based prediction.
 
 ---
 

@@ -39,13 +39,13 @@ The two notions are dual: symmetric says the form *ignores* the order of its inp
 
 $$\rho(u, w) = \rho(w, u) \quad \text{for all } u, w \in V.$$
 
-The set of symmetric bilinear forms on $V$ is denoted $V^{(2)}_{\mathrm{sym}}$ and is a subspace of $V^{(2)}$.
+The set of symmetric bilinear forms on $V$ is denoted $V^{(2)}_{\mathrm{sym}}$ and is a [[Def - Subspace|subspace]] of $V^{(2)}$.
 
 **Alternating bilinear form.** A bilinear form $\alpha \in V^{(2)}$ is **alternating** if
 
 $$\alpha(v, v) = 0 \quad \text{for all } v \in V.$$
 
-The set of alternating bilinear forms on $V$ is denoted $V^{(2)}_{\mathrm{alt}}$ and is a subspace of $V^{(2)}$.
+The set of alternating bilinear forms on $V$ is denoted $V^{(2)}_{\mathrm{alt}}$ and is a [[Def - Subspace|subspace]] of $V^{(2)}$.
 
 **Symmetric matrix.** A square matrix $A$ is **symmetric** if $A = A^t$. A bilinear form $\rho$ on $V$ is symmetric if and only if its matrix in *some* (equivalently, *every*) basis of $V$ is a symmetric matrix.
 
@@ -95,7 +95,7 @@ An alternating bilinear form is **the antisymmetrised two-input determinant**. O
 
 **Corollary (matrix characterisation).** A bilinear form is symmetric iff its matrix in *every* basis is symmetric, iff its matrix in *some* basis is symmetric. Likewise for alternating: a bilinear form is alternating iff its matrix in *every* basis is antisymmetric, iff its matrix in *some* basis is antisymmetric. The reason "some" implies "every" is the change-of-basis formula $B = C^t A C$: if $A^t = A$, then $B^t = (C^t A C)^t = C^t A^t C = C^t A C = B$.
 
-**Corollary (dimensions).** $\dim V^{(2)}_{\mathrm{sym}} = \binom{n+1}{2} = \frac{n(n+1)}{2}$ (symmetric matrices have $n$ diagonal entries plus $\binom{n}{2}$ above-diagonal entries free). $\dim V^{(2)}_{\mathrm{alt}} = \binom{n}{2} = \frac{n(n-1)}{2}$ (antisymmetric matrices have zeros on the diagonal and $\binom{n}{2}$ above-diagonal entries free). Their sum is $n^2 = \dim V^{(2)}$, consistent with the direct-sum decomposition.
+**Corollary ([[Def - Dimension|dimensions]]).** $\dim V^{(2)}_{\mathrm{sym}} = \binom{n+1}{2} = \frac{n(n+1)}{2}$ (symmetric matrices have $n$ diagonal entries plus $\binom{n}{2}$ above-diagonal entries free). $\dim V^{(2)}_{\mathrm{alt}} = \binom{n}{2} = \frac{n(n-1)}{2}$ (antisymmetric matrices have zeros on the diagonal and $\binom{n}{2}$ above-diagonal entries free). Their sum is $n^2 = \dim V^{(2)}$, consistent with the direct-sum decomposition.
 
 **Calibration check.** If you have understood the definitions, you should be able to verify: (i) on $\mathbb{R}^2$, the matrices $\begin{pmatrix} 1 & 2 \\ 2 & 3\end{pmatrix}$ and $\begin{pmatrix} 0 & 5 \\ -5 & 0\end{pmatrix}$ define a symmetric and an alternating bilinear form respectively; (ii) the inner product is symmetric and not alternating; the determinant of column pairs in $\mathbb{R}^2$ is alternating and not symmetric; (iii) for $\beta$ with matrix $\begin{pmatrix} 1 & 3 \\ 1 & 5\end{pmatrix}$, the symmetric part has matrix $\begin{pmatrix} 1 & 2 \\ 2 & 5\end{pmatrix}$ and the alternating part has matrix $\begin{pmatrix} 0 & 1 \\ -1 & 0\end{pmatrix}$.
 

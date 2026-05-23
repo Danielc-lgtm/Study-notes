@@ -22,7 +22,7 @@ The intuitive content of probability: *the average of many independent repetitio
 
 # Sources and Targets
 
-**Sources.** Hypotheses: identically distributed, *finite variance*, and *uncorrelated* (pairwise — full [[Def - Independence|independence]] is not needed, since only variance is used). The finite-variance hypothesis is what the proof consumes; it can be relaxed (the weak law holds under just $\mathbb{E}|X_1|<\infty$) at the cost of a harder truncation argument.
+**Sources.** Hypotheses: identically distributed, *finite variance*, and *uncorrelated* (pairwise — full independence is not needed, since only variance is used). The finite-variance hypothesis is what the proof consumes; it can be relaxed (the weak law holds under just $\mathbb{E}|X_1|<\infty$) at the cost of a harder truncation argument.
 
 **Targets.** $S_n/n\xrightarrow{\mathbb{P}}\mu$ — combines with [[Thm - Borel-Cantelli Lemmas|Borel–Cantelli]] (and a sharper variance bound) to yield the [[Thm - Strong Law of Large Numbers|strong law]]; it is the prototype *concentration* statement, refined by large deviations.
 

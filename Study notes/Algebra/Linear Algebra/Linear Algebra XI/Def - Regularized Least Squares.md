@@ -43,7 +43,7 @@ The further generalizations:
 
 (iii) *Norm choice.* L1 regularization $\lambda \|x\|_1$ (LASSO) produces *sparse* solutions (many $\hat{x}_i = 0$) — useful for feature selection but breaks the LS framework (non-quadratic penalty). L2 (this definition) does not produce sparsity but is closed-form. The choice between L1 and L2 depends on whether sparsity is desired.
 
-The *choice of $\lambda$* is the practical art. Cross-validation gives a principled procedure: fit on training data for a grid of $\lambda$ values (typically logarithmic, $\lambda \in \{10^{-4}, 10^{-3}, \ldots, 10^{4}\}$), evaluate test error on held-out data, pick the $\lambda$ minimizing test error. When ties exist, choose the *largest* $\lambda$ among the near-minimum, on the principle that "simpler is better."
+The *choice of $\lambda$* is the practical art. Cross-[[Def - Validation (Training and Test Error)|validation]] gives a principled procedure: fit on training data for a grid of $\lambda$ values (typically logarithmic, $\lambda \in \{10^{-4}, 10^{-3}, \ldots, 10^{4}\}$), evaluate test error on held-out data, pick the $\lambda$ minimizing test error. When ties exist, choose the *largest* $\lambda$ among the near-minimum, on the principle that "simpler is better."
 
 ---
 
@@ -76,7 +76,7 @@ This is the same construction as:
 
 *Example 1 (curing rank deficiency).* If $A$ is rank-deficient (e.g., has a repeated column), $A^T A$ is singular and the unregularized LS problem has infinitely many solutions. Adding $\lambda I$ for any $\lambda > 0$ makes $A^T A + \lambda I$ invertible; the regularized solution picks out the *unique minimum-norm* LS minimizer as $\lambda \to 0^+$. So Tikhonov regularization is also a *way to handle rank-deficient problems*.
 
-*Example 2 (wide $A$).* If $A$ is wide ($m < n$, more unknowns than equations), the system $Ax = b$ has infinitely many solutions and the unregularized LS objective is identically zero on the entire affine subspace of solutions. The regularized solution $\hat{x}(\lambda) = (A^T A + \lambda I)^{-1} A^T b$ for any $\lambda > 0$ is uniquely defined. The kernel-trick identity $(A^T A + \lambda I)^{-1} A^T = A^T (A A^T + \lambda I)^{-1}$ lets you compute this efficiently for wide $A$ (the $m \times m$ matrix $A A^T + \lambda I$ is smaller than the $n \times n$ matrix $A^T A + \lambda I$).
+*Example 2 (wide $A$).* If $A$ is wide ($m < n$, more unknowns than equations), the system $Ax = b$ has infinitely many solutions and the unregularized LS objective is identically zero on the entire affine [[Def - Subspace|subspace]] of solutions. The regularized solution $\hat{x}(\lambda) = (A^T A + \lambda I)^{-1} A^T b$ for any $\lambda > 0$ is uniquely defined. The kernel-trick identity $(A^T A + \lambda I)^{-1} A^T = A^T (A A^T + \lambda I)^{-1}$ lets you compute this efficiently for wide $A$ (the $m \times m$ matrix $A A^T + \lambda I$ is smaller than the $n \times n$ matrix $A^T A + \lambda I$).
 
 *Example 3 (smoothness regularization).* For a signal $x$ that we believe should be smooth, regularize with $\|Dx\|^2$ where $D$ is the first-difference matrix. The objective $\|x - y\|^2 + \lambda \|Dx\|^2$ has solution that interpolates between $y$ (at $\lambda \to 0$) and a constant (at $\lambda \to \infty$). The regularization implements the prior assumption "$x$ varies slowly."
 
@@ -84,7 +84,7 @@ This is the same construction as:
 
 *Example 5 (Bayesian interpretation).* If $b = Ax^* + \epsilon$ with $\epsilon \sim \mathcal{N}(0, \sigma^2 I)$ and $x \sim \mathcal{N}(0, \tau^2 I)$, then the posterior is $x | b \sim \mathcal{N}(\hat{x}(\lambda), \Sigma_{\text{post}})$ with $\lambda = \sigma^2/\tau^2$ and $\Sigma_{\text{post}} = \sigma^2 (A^T A + \lambda I)^{-1}$. The Tikhonov solution is the posterior mean, and the posterior covariance quantifies uncertainty. This is the basis of **Bayesian Linear Regression**.
 
-**Calibration check.** Verify: (i) $\hat{x}(\lambda = 0) = (A^T A)^{-1} A^T b$ recovers ordinary LS (when defined); (ii) $\hat{x}(\lambda) \to 0$ as $\lambda \to \infty$ (the regularization eventually dominates); (iii) when $A$ is square and invertible with $\lambda = 0$, $\hat{x} = A^{-1} b$ — the exact solution; (iv) for SVD $A = U \Sigma V^T$, the Tikhonov solution becomes $\hat{x}(\lambda) = V \Sigma_\lambda^+ U^T b$ where $\Sigma_\lambda^+$ has diagonal entries $\sigma_i / (\sigma_i^2 + \lambda)$ — the *filtered pseudoinverse*, with small singular values shrunk away from infinity.
+**Calibration check.** Verify: (i) $\hat{x}(\lambda = 0) = (A^T A)^{-1} A^T b$ recovers ordinary LS (when defined); (ii) $\hat{x}(\lambda) \to 0$ as $\lambda \to \infty$ (the regularization eventually dominates); (iii) when $A$ is square and invertible with $\lambda = 0$, $\hat{x} = A^{-1} b$ — the exact solution; (iv) for SVD $A = U \Sigma V^T$, the Tikhonov solution becomes $\hat{x}(\lambda) = V \Sigma_\lambda^+ U^T b$ where $\Sigma_\lambda^+$ has diagonal entries $\sigma_i / (\sigma_i^2 + \lambda)$ — the *filtered [[Def - Pseudoinverse|pseudoinverse]]*, with small singular values shrunk away from infinity.
 
 ---
 

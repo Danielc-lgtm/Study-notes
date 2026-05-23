@@ -40,7 +40,7 @@ There exists a set $V\subseteq(0,1]$ that is **not Lebesgue-measurable**: $V\not
 
 # Why Is It True
 
-The intuition is a *counting paradox forced by symmetry*. Define $x\sim y$ iff $x-y\in\mathbb{Q}$. This partitions $\mathbb{R}$ into countably-infinite cosets, each dense. By the axiom of choice, pick one representative from each coset lying in $(0,1]$; collect them into $V$.
+The intuition is a *counting paradox forced by symmetry*. Define $x\sim y$ iff $x-y\in\mathbb{Q}$. This partitions $\mathbb{R}$ into countably-infinite [[Def - Coset|cosets]], each dense. By the axiom of choice, pick one representative from each coset lying in $(0,1]$; collect them into $V$.
 
 Now look at the rational translates $q+V$ for $q\in\mathbb{Q}\cap(-1,1]$. Two facts hold by *construction*: (a) distinct rationals give *disjoint* translates — if $q_1+V$ and $q_2+V$ met, two representatives would differ by a rational, so lie in the same coset, contradicting "one representative per coset"; (b) these translates *sandwich* the unit interval: $(0,1]\subseteq\bigsqcup_{q}(q+V)\subseteq(-1,2]$, because every point of $(0,1]$ is a rational shift of its representative.
 
@@ -102,7 +102,7 @@ The argument is short; the difficulty is *believing* each construction-fact and 
 
 # Cross-Field Exercise Suggestions
 
-The same "symmetry $+$ countable additivity $\Rightarrow$ paradox" template, pushed harder, yields the **Banach–Tarski paradox** in $\mathbb{R}^3$ (where the symmetry group is the non-amenable $SO(3)$, so even *finite* additivity fails). The contrast is instructive: $\mathbb{R}/\mathbb{Z}$ is *amenable*, so a finitely-additive invariant mean *does* exist there — it is only *countable* additivity that Vitali kills. In probability, the lesson is structural: a "uniform distribution on a countable group" cannot exist, which is why [[Def - Probability Space|probability spaces]] insist on a $\sigma$-algebra and forbid measuring every event.
+The same "symmetry $+$ countable additivity $\Rightarrow$ paradox" template, pushed harder, yields the **Banach–Tarski paradox** in $\mathbb{R}^3$ (where the symmetry [[Def - Group|group]] is the non-amenable $SO(3)$, so even *finite* additivity fails). The contrast is instructive: $\mathbb{R}/\mathbb{Z}$ is *amenable*, so a finitely-additive invariant mean *does* exist there — it is only *countable* additivity that Vitali kills. In probability, the lesson is structural: a "uniform distribution on a countable group" cannot exist, which is why [[Def - Probability Space|probability spaces]] insist on a $\sigma$-algebra and forbid measuring every event.
 
 ---
 

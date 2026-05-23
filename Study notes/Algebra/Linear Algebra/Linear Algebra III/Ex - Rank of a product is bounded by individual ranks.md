@@ -39,7 +39,7 @@ The [[Thm - Fundamental Theorem of Linear Maps|fundamental theorem of linear map
 **Theorem routing.** Two routes, one for each bound.
 
 - **Bound 1:** $\operatorname{range}(ST) \subseteq \operatorname{range} S$. Reason: every $(ST)(u) = S(T(u))$ is in the range of $S$. Hence $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} S$.
-- **Bound 2:** $\operatorname{range}(ST) = S(\operatorname{range} T)$. Reason: $(ST)(u) = S(T u)$, and as $u$ ranges over $U$, $Tu$ ranges over $\operatorname{range} T$. So $\operatorname{range}(ST)$ is exactly the image of $\operatorname{range} T$ under $S$. The image of a subspace under a linear map has dimension at most the dimension of the subspace (this is a special case of rank–nullity applied to the restriction $S|_{\operatorname{range} T}$). Hence $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} T$.
+- **Bound 2:** $\operatorname{range}(ST) = S(\operatorname{range} T)$. Reason: $(ST)(u) = S(T u)$, and as $u$ ranges over $U$, $Tu$ ranges over $\operatorname{range} T$. So $\operatorname{range}(ST)$ is exactly the image of $\operatorname{range} T$ under $S$. The image of a [[Def - Subspace|subspace]] under a linear map has dimension at most the dimension of the [[Def - Subspace|subspace]] (this is a special case of rank–nullity applied to the restriction $S|_{\operatorname{range} T}$). Hence $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} T$.
 
 Combining both bounds gives the $\min$.
 
@@ -83,7 +83,7 @@ The range of $ST$ is contained in the range of $S$.
 > [!note]- Derivation
 > Let $w \in \operatorname{range}(ST)$. Then $w = (ST)(u) = S(Tu)$ for some $u \in U$. So $w = S(v)$ where $v := Tu \in V$. Hence $w \in \operatorname{range} S$.
 >
-> So $\operatorname{range}(ST) \subseteq \operatorname{range} S$. Taking dimensions:
+> So $\operatorname{range}(ST) \subseteq \operatorname{range} S$. Taking [[Def - Dimension|dimensions]]:
 > $$\dim \operatorname{range}(ST) \leq \dim \operatorname{range} S.$$
 
 **Step 2: $\operatorname{range}(ST) = S(\operatorname{range} T)$.**
@@ -116,7 +116,7 @@ Combining with Step 1: $\dim \operatorname{range}(ST) \leq \min\{\dim \operatorn
 > [!note]- Complete formal solution
 > Let $S \in \mathcal{L}(V, W)$ and $T \in \mathcal{L}(U, V)$ with $U$ (and hence $\operatorname{range} T \subseteq V$) finite-dimensional.
 >
-> **First bound: $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} S$.** For $w \in \operatorname{range}(ST)$, $w = S(Tu)$ for some $u$, so $w \in \operatorname{range} S$. Hence $\operatorname{range}(ST) \subseteq \operatorname{range} S$, and dimensions are monotone in inclusion: $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} S$.
+> **First bound: $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} S$.** For $w \in \operatorname{range}(ST)$, $w = S(Tu)$ for some $u$, so $w \in \operatorname{range} S$. Hence $\operatorname{range}(ST) \subseteq \operatorname{range} S$, and [[Def - Dimension|dimensions]] are monotone in inclusion: $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} S$.
 >
 > **Second bound: $\dim \operatorname{range}(ST) \leq \dim \operatorname{range} T$.** We first identify $\operatorname{range}(ST) = S(\operatorname{range} T)$ as subsets of $W$. Indeed, $w \in \operatorname{range}(ST)$ iff $w = S(Tu)$ for some $u$, iff $w = S(v)$ for some $v \in \operatorname{range} T$, iff $w \in S(\operatorname{range} T)$.
 >

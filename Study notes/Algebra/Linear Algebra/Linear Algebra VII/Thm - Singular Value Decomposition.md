@@ -93,7 +93,7 @@ The non-obvious step is the **realisation that $T^* T$ is the right object** to 
 
 The second subtle step is **handling the zero singular values**. The construction gives orthonormal $f_j$ only for $s_j > 0$. When $s_j = 0$ (which happens precisely on $\operatorname{null} T$), the formula $f_j = T e_j / s_j$ is $0/0$. The fix is to choose the corresponding $f_j$ freely from $(\operatorname{range} T)^\perp$. This is also the source of the *non-uniqueness* of the SVD: multiple choices of $f_j$ for zero singular values give different (but related) decompositions.
 
-The third subtlety is the **uniqueness statement**. The singular values are unique. The singular vectors are unique up to multiplication by a phase (for simple singular values) and up to a unitary rotation within each multi-dimensional singular subspace. So the SVD is "essentially unique" but not literally unique.
+The third subtlety is the **uniqueness statement**. The singular values are unique. The singular vectors are unique up to multiplication by a phase (for simple singular values) and up to a unitary rotation within each multi-dimensional singular [[Def - Subspace|subspace]]. So the SVD is "essentially unique" but not literally unique.
 
 ---
 
@@ -178,7 +178,7 @@ Apply the spectral theorem to $T^*T$. Use the orthonormal eigenbasis of $T^*T$ a
 
 1. **Statistics — Principal Component Analysis.** Given a centred data matrix $X \in \mathbb{R}^{n \times p}$, the SVD $X = U \Sigma V^*$ gives the principal components as the columns of $V$, with singular values $s_j$ proportional to standard deviations along each component. Truncating to the top $k$ singular values gives the best rank-$k$ approximation of the data — the **Eckart–Young theorem**. PCA is SVD applied to centred data.
 
-2. **Numerical analysis — least squares via SVD.** To solve the overdetermined system $A x = b$ in the least-squares sense — find $x$ minimising $\|Ax - b\|$ — use the SVD $A = U \Sigma V^*$ and set $x = V \Sigma^+ U^* b$, where $\Sigma^+$ inverts the non-zero entries of $\Sigma$. This is the Moore–Penrose pseudoinverse approach to least squares, the most numerically stable method.
+2. **Numerical analysis — least squares via SVD.** To solve the overdetermined system $A x = b$ in the least-squares sense — find $x$ minimising $\|Ax - b\|$ — use the SVD $A = U \Sigma V^*$ and set $x = V \Sigma^+ U^* b$, where $\Sigma^+$ inverts the non-zero entries of $\Sigma$. This is the Moore–Penrose [[Def - Pseudoinverse|pseudoinverse]] approach to least squares, the most numerically stable method.
 
 3. **Image processing — JPEG-like compression.** An image, viewed as a matrix of pixel values, has SVD $X = U \Sigma V^*$. Truncating to the top $k$ singular values gives a compressed image (storing only the $k$ singular values and $k$ singular vectors instead of all $n \times p$ pixels). The visual quality of the reconstruction depends on how rapidly the singular values decay; natural images have rapidly decaying singular values, making them compressible.
 

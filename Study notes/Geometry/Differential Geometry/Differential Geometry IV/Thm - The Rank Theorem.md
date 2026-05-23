@@ -18,7 +18,7 @@ $F : M \to N$ is a smooth map between smooth manifolds, $m = \dim M$, $n = \dim 
 
 # Statement
 
-> **Theorem (Rank Theorem).** Let $M$ and $N$ be smooth manifolds of dimensions $m$ and $n$ respectively, and let $F : M \to N$ be a smooth map with **constant rank** $r$ on a neighbourhood of a point $p \in M$. Then there exist smooth charts $(U, \varphi)$ for $M$ centred at $p$ and $(V, \psi)$ for $N$ centred at $F(p)$ with $F(U) \subseteq V$, such that the coordinate representation $\hat F = \psi \circ F \circ \varphi^{-1}$ has the linear form
+> **Theorem (Rank Theorem).** Let $M$ and $N$ be smooth manifolds of [[Def - Dimension|dimensions]] $m$ and $n$ respectively, and let $F : M \to N$ be a smooth map with **constant rank** $r$ on a neighbourhood of a point $p \in M$. Then there exist smooth charts $(U, \varphi)$ for $M$ centred at $p$ and $(V, \psi)$ for $N$ centred at $F(p)$ with $F(U) \subseteq V$, such that the coordinate representation $\hat F = \psi \circ F \circ \varphi^{-1}$ has the linear form
 > $$\hat F(x^1, \dots, x^r, x^{r+1}, \dots, x^m) \;=\; (x^1, \dots, x^r, 0, \dots, 0).$$
 
 > **Corollary (Submersion form).** If $F$ is a submersion ($r = n$, requires $m \geq n$), the coordinate representation becomes the projection $\hat F(x^1, \dots, x^n, x^{n+1}, \dots, x^m) = (x^1, \dots, x^n)$.
@@ -80,7 +80,7 @@ The rank theorem says the same thing for smooth maps of constant rank, with the 
 
 **The bolded one-liner mechanism summary: the rank theorem is the inverse function theorem applied twice — once to build new coordinates on the source by carrying $r$ image-coordinates back as new source-coordinates, and once on the target by using the source-construction to define a remainder-killing diffeomorphism on the target.**
 
-Unpacking this: the proof has two main moves. First, you arrange that the first $r$ columns of $dF_p$'s matrix are linearly independent (by reordering coordinates), so that the map "first $r$ output coordinates of $F$" has injective differential on a complementary subspace. The inverse function theorem applied to "carry forward the first $r$ image coordinates" produces a diffeomorphism of the source taking $(x, y) \mapsto (F^{1\dots r}(x, y), y)$. After this first change of coordinates, the map $F$ has been rewritten as $(x, y) \mapsto (x, R(x, y))$ for some smooth $R$.
+Unpacking this: the proof has two main moves. First, you arrange that the first $r$ columns of $dF_p$'s matrix are linearly independent (by reordering coordinates), so that the map "first $r$ output coordinates of $F$" has injective differential on a complementary [[Def - Subspace|subspace]]. The inverse function theorem applied to "carry forward the first $r$ image coordinates" produces a diffeomorphism of the source taking $(x, y) \mapsto (F^{1\dots r}(x, y), y)$. After this first change of coordinates, the map $F$ has been rewritten as $(x, y) \mapsto (x, R(x, y))$ for some smooth $R$.
 
 Second, the constant-rank hypothesis kicks in. The Jacobian of the rewritten map is $\begin{pmatrix} I_r & 0 \\ \partial R/\partial x & \partial R/\partial y \end{pmatrix}$, which has rank $r$ everywhere (the rank is unchanged by smooth coordinate changes). For the rank to be exactly $r$, the bottom block $\partial R/\partial y$ *must vanish identically* — otherwise the rank would jump up. So $R$ depends only on $x$, not on $y$: $R(x, y) = S(x)$ for some smooth $S$. The map is now $(x, y) \mapsto (x, S(x))$ — a graph over the first $r$ variables.
 
@@ -134,7 +134,7 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
    - *Why needed:* It produces the final normal form $(\tilde x, \tilde y) \mapsto (\tilde x, 0)$.
 
 7. **Repackage as manifold charts.** Combine $\varphi$ with the initial chart $\varphi_0$ to get a chart $(U, \varphi) = (\varphi_0^{-1}(U_0'), \varphi \circ \varphi_0)$ on $M$; similarly combine $\psi$ with $\psi_0$. These are smooth charts on $M$ and $N$ centred at $p$ and $F(p)$, in which $F$ has the form $(x^1, \dots, x^m) \mapsto (x^1, \dots, x^r, 0, \dots, 0)$.
-   - *Hint:* Composition of smooth charts with smooth diffeomorphisms is again a smooth chart.
+   - *Hint:* Composition of smooth charts with smooth [[Def - Diffeomorphism|diffeomorphisms]] is again a smooth chart.
    - *Why needed:* It returns from Euclidean coordinates to genuine manifold charts.
 
 ---

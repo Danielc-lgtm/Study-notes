@@ -15,11 +15,11 @@ tags: [algebra, ring-theory]
 
 Let $R$ be an [[Def - Integral Domain|integral domain]]. Prove that its **characteristic** $\operatorname{char}(R)$ is either $0$ or a prime number.
 
-Give two proofs: a direct one exhibiting zero divisors when the characteristic is composite, and a structural one identifying the prime subring of $R$.
+Give two proofs: a direct one exhibiting zero divisors when the characteristic is composite, and a structural one identifying the prime [[Def - Subring|subring]] of $R$.
 
 **Recall:**
 
-An [[Def - Integral Domain|integral domain]] is a non-zero commutative ring $R$ with no **zero divisors**: if $a\cdot b=0_R$ then $a=0_R$ or $b=0_R$. Equivalently, the product of any two non-zero elements is non-zero.
+An [[Def - Integral Domain|integral domain]] is a non-zero commutative [[Def - Ring|ring]] $R$ with no **zero divisors**: if $a\cdot b=0_R$ then $a=0_R$ or $b=0_R$. Equivalently, the product of any two non-zero elements is non-zero.
 
 The **characteristic** of a ring is defined through the unique map from $\mathbb{Z}$:
 
@@ -31,7 +31,7 @@ First, the **distributive law** controls multiples of $1_R$: for integers $m,n\g
 $$(m\cdot 1_R)(n\cdot 1_R)=(mn)\cdot 1_R.$$
 This is just "$m$ copies of $1_R$, each multiplied by $n$ copies of $1_R$, gives $mn$ copies of $1_R$" — the distributive law unwound. So the map $\iota:\mathbb{Z}\to R$, $\iota(n)=n\cdot 1_R$, is multiplicative, as it must be to be a ring homomorphism.
 
-Second, the structural route uses the characterisation of prime ideals through the quotient:
+Second, the structural route uses the characterisation of prime [[Def - Ideal|ideals]] through the quotient:
 
 > **Prime ideals via quotients.** An ideal $I\trianglelefteq R$ of a commutative ring is **prime** if and only if the [[Def - Quotient Ring|quotient ring]] $R/I$ is an [[Def - Integral Domain|integral domain]]. In particular, an ideal $n\mathbb{Z}\trianglelefteq\mathbb{Z}$ is prime exactly when $n=0$ or $n$ is a prime number, since $\mathbb{Z}/n\mathbb{Z}$ is a domain precisely in those cases.
 

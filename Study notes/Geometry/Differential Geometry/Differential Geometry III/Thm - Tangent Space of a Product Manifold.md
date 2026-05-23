@@ -17,13 +17,13 @@ $M_{1}, \dots, M_{k}$ are smooth manifolds. The product manifold $M = M_{1} \tim
 
 # Statement
 
-> **Theorem (Tangent Space of a Product Manifold).** Let $M_{1}, \dots, M_{k}$ be smooth manifolds and let $M = M_{1} \times \cdots \times M_{k}$ be their product manifold. For any point $p = (p_{1}, \dots, p_{k}) \in M$, the map
+> **Theorem ([[Def - The Tangent Space|Tangent Space]] of a Product Manifold).** Let $M_{1}, \dots, M_{k}$ be smooth manifolds and let $M = M_{1} \times \cdots \times M_{k}$ be their product manifold. For any point $p = (p_{1}, \dots, p_{k}) \in M$, the map
 > $$\alpha : T_{p}M \to T_{p_{1}}M_{1} \oplus \cdots \oplus T_{p_{k}}M_{k}, \qquad \alpha(v) = (d(\pi_{1})_{p}(v), \dots, d(\pi_{k})_{p}(v))$$
 > is a canonical vector-space isomorphism, where $\pi_{i} : M \to M_{i}$ is the projection onto the $i$-th factor.
 >
 > The same result holds if one of the $M_{i}$ is a smooth manifold with boundary.
 
-> **Corollary 1 (Dimension).** $\dim T_{p}M = \sum_{i} \dim T_{p_{i}}M_{i} = \sum_{i} \dim M_{i} = \dim M$ — consistent with the dimension theorem.
+> **Corollary 1 ([[Def - Dimension|Dimension]]).** $\dim T_{p}M = \sum_{i} \dim T_{p_{i}}M_{i} = \sum_{i} \dim M_{i} = \dim M$ — consistent with the [[Def - Dimension|dimension]] theorem.
 >
 > **Corollary 2 (Inverse).** The inverse of $\alpha$ sends a tuple $(v_{1}, \dots, v_{k})$ to the unique $v \in T_{p}M$ with $d(\pi_{i})_{p}(v) = v_{i}$ for all $i$. Explicitly, $v$ acts on a smooth function $f$ on $M$ by $v(f) = \sum_{i} v_{i}(f \circ \iota_{i,p})$, where $\iota_{i,p} : M_{i} \to M$ is the inclusion of the $i$-th factor fixing the other coordinates at $p_{j}$.
 >
@@ -37,7 +37,7 @@ The motivation is to compute tangent spaces of products of manifolds explicitly.
 
 Without the theorem, computing tangent spaces of products would require building charts on the product manifold and verifying the tangent-space structure chart by chart — tedious and inelegant. With the theorem, tangent vectors on products split canonically into "components from each factor", and operations on products reduce to operations on each factor separately.
 
-The result is also the foundational input for working with **product structures** in dynamical systems (separating variables, integrating Hamiltonian flows with conserved quantities), Lie group theory (the tangent space of a product Lie group is the direct sum of the tangent spaces of the factors, which gives the Lie algebra of the product as the direct sum of the factor Lie algebras), and physics (separating spatial and temporal components, or decomposing tensors).
+The result is also the foundational input for working with **product structures** in dynamical systems (separating variables, integrating Hamiltonian flows with conserved quantities), Lie [[Def - Group|group]] theory (the tangent space of a product Lie group is the direct sum of the tangent spaces of the factors, which gives the Lie algebra of the product as the direct sum of the factor Lie algebras), and physics (separating spatial and temporal components, or decomposing tensors).
 
 ---
 
@@ -73,11 +73,11 @@ The reason is structural: **the product manifold's atlas is the product of the f
 
 Here is the picture. The product manifold $M_{1} \times M_{2}$ has charts that are products of charts: a chart on $M$ at $p = (p_{1}, p_{2})$ is built from a chart $(U_{1}, \varphi_{1})$ on $M_{1}$ at $p_{1}$ and a chart $(U_{2}, \varphi_{2})$ on $M_{2}$ at $p_{2}$, with chart $(U_{1} \times U_{2}, \varphi_{1} \times \varphi_{2})$ on $M$. The coordinate functions are $x^{i}$ from the first factor and $y^{j}$ from the second, so a coordinate basis at $p$ is
 $$\left\{\left.\frac{\partial}{\partial x^{i}}\right|_{p}\right\}_{i=1}^{m_{1}} \cup \left\{\left.\frac{\partial}{\partial y^{j}}\right|_{p}\right\}_{j=1}^{m_{2}}$$
-where $m_{i} = \dim M_{i}$. The first subset spans an $m_{1}$-dimensional subspace; the second subset spans an $m_{2}$-dimensional subspace; they intersect only at $0$. So $T_{p}M$ splits as a direct sum of the two subspaces.
+where $m_{i} = \dim M_{i}$. The first subset spans an $m_{1}$-dimensional subspace; the second subset spans an $m_{2}$-dimensional subspace; they intersect only at $0$. So $T_{p}M$ splits as a direct sum of the two [[Def - Subspace|subspaces]].
 
 What is the identification with $T_{p_{1}}M_{1} \oplus T_{p_{2}}M_{2}$? The first subspace, spanned by $\partial/\partial x^{i}|_{p}$, is precisely the image of $T_{p_{1}}M_{1}$ under the inclusion $\iota_{1, p_{2}} : M_{1} \to M$, $\iota_{1, p_{2}}(q) = (q, p_{2})$. The differential $d(\iota_{1, p_{2}})_{p_{1}}$ sends $\partial/\partial x^{i}|_{p_{1}}$ to $\partial/\partial x^{i}|_{p}$. So the first subspace is naturally $T_{p_{1}}M_{1}$. Similarly the second subspace is $T_{p_{2}}M_{2}$.
 
-The projection map $\alpha$ from the theorem is then easy: a tangent vector $v \in T_{p}M$ at the product has components in both subspaces, and $\alpha(v)$ extracts these components.
+The projection map $\alpha$ from the theorem is then easy: a tangent vector $v \in T_{p}M$ at the product has components in both [[Def - Subspace|subspaces]], and $\alpha(v)$ extracts these components.
 
 The proof of well-definedness is by the chain rule: $d\pi_{i, p}$ is linear, and the direct-sum target is the natural recipient of two linear maps. Bijectivity is by direct construction of the inverse.
 
@@ -195,7 +195,7 @@ Define $\alpha = (d\pi_{1}, d\pi_{2}) : T_{p}M \to T_{p_{1}}M_{1} \oplus T_{p_{2
 
 **Classical mechanics — separation of variables.** For a Lagrangian system on a product configuration manifold $Q_{1} \times Q_{2}$ with Lagrangian $L(q_{1}, q_{2}, \dot q_{1}, \dot q_{2})$ that separates as $L = L_{1}(q_{1}, \dot q_{1}) + L_{2}(q_{2}, \dot q_{2})$, the dynamics on $T(Q_{1} \times Q_{2}) = TQ_{1} \oplus TQ_{2}$ also separate — the velocity on each factor evolves independently. The tangent-space splitting is the basis for this separation.
 
-**Lie theory — product Lie group.** For Lie groups $G$ and $H$, the product $G \times H$ is a Lie group, and the tangent space at the identity $T_{(e, e)}(G \times H) = T_{e}G \oplus T_{e}H = \mathfrak{g} \oplus \mathfrak{h}$. The Lie bracket on the product algebra is the componentwise bracket, with no mixing between $\mathfrak{g}$ and $\mathfrak{h}$ — the two factors commute. This is the trivial case of the structure theory of Lie algebras.
+**Lie theory — product Lie group.** For Lie [[Def - Group|groups]] $G$ and $H$, the product $G \times H$ is a Lie group, and the tangent space at the identity $T_{(e, e)}(G \times H) = T_{e}G \oplus T_{e}H = \mathfrak{g} \oplus \mathfrak{h}$. The Lie bracket on the product algebra is the componentwise bracket, with no mixing between $\mathfrak{g}$ and $\mathfrak{h}$ — the two factors commute. This is the trivial case of the structure theory of Lie algebras.
 
 **Hamiltonian mechanics — product phase space.** For Hamiltonian systems with multiple particles, the phase space is a product of single-particle phase spaces (or a quotient thereof for indistinguishable particles). The tangent-space splitting gives the natural decomposition of "position-momentum pairs" into per-particle pieces, foundational for many-body classical mechanics.
 

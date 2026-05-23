@@ -38,7 +38,7 @@ The theorem also holds on manifolds with corners (locally modeled on $\{x_1 \geq
 
 The Fundamental Theorem of Calculus, $\int_a^b f' = f(b) - f(a)$, has a particular *shape*: it equates the integral of a derivative over a region with the integral of the original function over the boundary of that region. The right side is, viewed correctly, an integral of $f$ over the two-point set $\{a, b\}$, with $b$ counted positively and $a$ negatively — the boundary of $[a, b]$ with its induced orientation. So the theorem already exhibits the abstract structure
 $$\int_{\text{region}}(\text{derivative}) = \int_{\text{boundary}}(\text{original}).$$
-The question that demands an answer is: *is this shape an accident of one dimension, or a universal law?* Before differential forms, the answer was "fragmented yes": Green's theorem in the plane, the divergence theorem in three dimensions, and the classical Stokes theorem on surfaces in space all exhibited the same shape, but each was proved separately and there was no manifest reason the three should be one theorem.
+The question that demands an answer is: *is this shape an accident of one dimension, or a universal law?* Before differential forms, the answer was "fragmented yes": Green's theorem in the plane, the divergence theorem in three [[Def - Dimension|dimensions]], and the classical Stokes theorem on surfaces in space all exhibited the same shape, but each was proved separately and there was no manifest reason the three should be one theorem.
 
 Differential forms supply the missing structure. The "thing being integrated" is a top-degree form; the "derivative" is the exterior derivative $d$; the "boundary" is the manifold boundary $\partial M$. Once these are in place, the four classical statements *collapse into one sentence*: $\int_M d\omega = \int_{\partial M}\omega$. This is the manifold-version Stokes theorem. The Euclidean version was established in [[Thm - The General Stokes Theorem]]; the manifold version generalizes it by removing the embedding into an ambient $\mathbb{R}^N$ and stating the result intrinsically — in terms of charts, oriented atlases, partitions of unity, and the exterior derivative.
 
@@ -82,7 +82,7 @@ Combine $C$ with **the Bianchi identity $d^2 = 0$**. Applying Stokes twice — t
 
 # Why Is It True
 
-The truth of Stokes's theorem on manifolds is best seen in *three stages*: the one-variable Fundamental Theorem of Calculus, the half-space model in $n$ dimensions, and the partition-of-unity gluing.
+The truth of Stokes's theorem on manifolds is best seen in *three stages*: the one-variable Fundamental Theorem of Calculus, the half-space model in $n$ [[Def - Dimension|dimensions]], and the partition-of-unity gluing.
 
 **Stage 1: the FTC is true because $\int$ and $d$ are inverse operations in one dimension.** The Fundamental Theorem of Calculus, $\int_a^b f'(x)\,dx = f(b) - f(a)$, is true because integration accumulates the infinitesimal changes $f'(x)\,dx$ and the accumulated total is exactly the net change from one endpoint to the other. The interior of $[a, b]$ contributes nothing net: every infinitesimal increment is cancelled, being the start of one sub-interval and the end of the previous. Only the genuine endpoints survive. This is the "interior cancels, boundary survives" mechanism, and it is the entire content of Stokes — it is just stated in dimension one.
 

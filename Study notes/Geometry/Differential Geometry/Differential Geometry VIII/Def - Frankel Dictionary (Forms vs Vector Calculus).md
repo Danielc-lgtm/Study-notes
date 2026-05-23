@@ -28,7 +28,7 @@ This page is a reference card on the manifold $\mathbb{R}^3$ with the standard E
 
 # Axiom Motivation
 
-The dictionary exists because the calculus of $\mathbb{R}^3$ that you learned in multivariable calculus — gradient, curl, divergence, the cross product, the various Stokes-type theorems — is *not* an accident of three dimensions. It is the shadow cast on the small case $n = 3$ by a single set of operations on differential forms that work in every dimension and on every manifold. Once you accept that this shadow exists, the question becomes: which operation on forms is gradient, which is curl, which is divergence? The dictionary answers this question, and it makes the entire structure of $\mathbb{R}^3$ vector calculus transparent rather than mysterious.
+The dictionary exists because the calculus of $\mathbb{R}^3$ that you learned in multivariable calculus — gradient, curl, divergence, the cross product, the various Stokes-type theorems — is *not* an accident of three [[Def - Dimension|dimensions]]. It is the shadow cast on the small case $n = 3$ by a single set of operations on differential forms that work in every dimension and on every manifold. Once you accept that this shadow exists, the question becomes: which operation on forms is gradient, which is curl, which is divergence? The dictionary answers this question, and it makes the entire structure of $\mathbb{R}^3$ vector calculus transparent rather than mysterious.
 
 The reason the dictionary is needed *at all* is that the classical formulas package two different kinds of information together. The gradient $\nabla f$ is built from $df$ and the metric: $df$ is intrinsically a $1$-form, but the gradient is a vector, so the conversion uses $\sharp$. The curl $\nabla\times\vec F$ is built from $d$ applied to a $1$-form (giving a $2$-form) and then converted back to a vector via $\star$ and $\sharp$. The divergence $\nabla\cdot\vec F$ is built from $d$ applied to a $2$-form (giving a $3$-form) and then converted to a scalar via $\star$. Each classical operation is a *composition* of (i) a metric-dependent lowering or raising step, (ii) an intrinsic exterior derivative, and (iii) a metric-and-orientation-dependent Hodge step. The classical notation hides the composition; the dictionary makes it visible.
 
@@ -63,7 +63,7 @@ In coordinates, $\vec F = F^1\partial_x + F^2\partial_y + F^3\partial_z$ corresp
 | $\nabla\times\vec F$ (curl) | $(\nabla\times\vec F)^\flat = \star\,d(\vec F^\flat)$ | $d$ on a $1$-form, then $\star$ |
 | $\nabla\cdot\vec F$ (divergence) | $(\nabla\cdot\vec F)\,dV = d(\iota_{\vec F}\,dV) = d(\star\vec F^\flat)$ | $d$ on a $2$-form |
 
-The single operation behind all three is the **exterior derivative** $d$. The three classical operators are $d$ applied to $0$-forms, to $1$-forms, and to $2$-forms respectively, with the lower/upper musical isomorphisms and the Hodge star handling the conversions between the form world and the vector/scalar world.
+The single operation behind all three is the **exterior derivative** $d$. The three classical operators are $d$ applied to $0$-forms, to $1$-forms, and to $2$-forms respectively, with the lower/upper musical [[Def - Isomorphism|isomorphisms]] and the Hodge star handling the conversions between the form world and the vector/scalar world.
 
 **Cross product.**
 

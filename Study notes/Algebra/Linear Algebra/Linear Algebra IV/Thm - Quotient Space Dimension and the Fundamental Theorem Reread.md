@@ -17,12 +17,12 @@ $V$ is a finite-dimensional vector space over $\mathbb{F}$ and $U \leq V$ is a s
 
 # Statement
 
-> **Theorem (Dimension of a Quotient).** Let $V$ be a finite-dimensional vector space and $U \leq V$ a subspace. Then
+> **Theorem (Dimension of a Quotient).** Let $V$ be a finite-dimensional vector space and $U \leq V$ a [[Def - Subspace|subspace]]. Then
 > $$\dim(V/U) = \dim V - \dim U.$$
 
-> **Companion (First Isomorphism Theorem for Vector Spaces).** Let $T \in \mathcal{L}(V, W)$. The induced map $\tilde T : V/\operatorname{null} T \to W$ defined by $\tilde T(v + \operatorname{null} T) = Tv$ is a well-defined, injective linear map with $\operatorname{range} \tilde T = \operatorname{range} T$. Hence $\tilde T$ restricts to an isomorphism
+> **Companion ([[Thm - First Isomorphism Theorem|First Isomorphism Theorem]] for [[Def - Vector Space|Vector Spaces]]).** Let $T \in \mathcal{L}(V, W)$. The induced map $\tilde T : V/\operatorname{null} T \to W$ defined by $\tilde T(v + \operatorname{null} T) = Tv$ is a well-defined, injective linear map with $\operatorname{range} \tilde T = \operatorname{range} T$. Hence $\tilde T$ restricts to an isomorphism
 > $$V / \operatorname{null} T \;\xrightarrow{\;\cong\;}\; \operatorname{range} T.$$
-> Taking dimensions yields $\dim V = \dim \operatorname{null} T + \dim \operatorname{range} T$, the [[Thm - Fundamental Theorem of Linear Maps|fundamental theorem of linear maps]].
+> Taking [[Def - Dimension|dimensions]] yields $\dim V = \dim \operatorname{null} T + \dim \operatorname{range} T$, the [[Thm - Fundamental Theorem of Linear Maps|fundamental theorem of linear maps]].
 
 The two statements form a structural-and-counting pair. The dimension formula is the consequence; the isomorphism is the structural content.
 
@@ -36,7 +36,7 @@ This identity is correct but unsatisfying — it gives equality of numbers witho
 
 This is one of those structural rereadings that, once seen, makes the original theorem look obvious — and the reread becomes the version you actually carry around for problem-solving. It is much easier to *use* "$V/\operatorname{null} T \cong \operatorname{range} T$" than to use "rank plus nullity equals dimension", because the isomorphism gives you a *map*, not just a number.
 
-The historical context: this theorem is the **first isomorphism theorem for vector spaces**, and it is the linear-algebraic specialisation of [[Thm - First Isomorphism Theorem|the first isomorphism theorem for groups]]. The construction $V/\operatorname{null} T \cong \operatorname{range} T$ for linear maps is identical to $G/\ker\varphi \cong \operatorname{im}\varphi$ for group homomorphisms, with subspaces playing the role of normal subgroups (every subspace is automatically normal in the abelian sense, so there is nothing to check). Once internalised, the theorem can be invoked verbatim from group theory.
+The historical context: this theorem is the **first isomorphism theorem for vector spaces**, and it is the linear-algebraic specialisation of [[Thm - First Isomorphism Theorem|the first isomorphism theorem for groups]]. The construction $V/\operatorname{null} T \cong \operatorname{range} T$ for linear maps is identical to $G/\ker\varphi \cong \operatorname{im}\varphi$ for [[Def - Group|group]] [[Def - Homomorphism|homomorphisms]], with [[Def - Subspace|subspaces]] playing the role of normal [[Def - Subgroup|subgroups]] (every subspace is automatically normal in the abelian sense, so there is nothing to check). Once internalised, the theorem can be invoked verbatim from [[Def - Group|group]] theory.
 
 ---
 
@@ -66,9 +66,9 @@ Combine with the **annihilator / dual**. For finite-dimensional $V$ and subspace
 
 The induced map $\tilde T : V/\operatorname{null} T \to W$ is defined to *forget exactly what $T$ already forgets*. Two vectors $v, v'$ map to the same image under $T$ if and only if $T(v - v') = 0$, i.e. if and only if $v - v' \in \operatorname{null} T$, i.e. if and only if $v$ and $v'$ define the same coset of $\operatorname{null} T$. So:
 
-> Two cosets $v + \operatorname{null} T$ and $v' + \operatorname{null} T$ have the same image under $\tilde T$ if and only if they are equal — *which is the definition of injectivity*.
+> Two [[Def - Coset|cosets]] $v + \operatorname{null} T$ and $v' + \operatorname{null} T$ have the same image under $\tilde T$ if and only if they are equal — *which is the definition of injectivity*.
 
-This single observation is the whole theorem. The cosets of $\operatorname{null} T$ are *literally the fibres* of $T$ — the sets of vectors sharing a common image. The null space measures the redundancy in $T$, and quotienting by the null space is exactly removing that redundancy. The resulting map $\tilde T$ is forced to be injective because we have collapsed exactly the things $T$ was collapsing.
+This single observation is the whole theorem. The [[Def - Coset|cosets]] of $\operatorname{null} T$ are *literally the fibres* of $T$ — the sets of vectors sharing a common image. The null space measures the redundancy in $T$, and quotienting by the null space is exactly removing that redundancy. The resulting map $\tilde T$ is forced to be injective because we have collapsed exactly the things $T$ was collapsing.
 
 > **The whole intuition in one sentence: a linear map's fibres are cosets of its null space, so quotienting by the null space identifies the fibres with their common image — and that is the isomorphism.**
 
@@ -116,7 +116,7 @@ The dimension formula itself is mechanical once the quotient map is in hand. The
    - *Hint:* Every element of $\operatorname{range} T$ is $Tv = \tilde T(v + N)$, and every element of $\operatorname{range} \tilde T$ is $\tilde T(v + N) = Tv \in \operatorname{range} T$.
    - *Why needed:* The isomorphism's target is $\operatorname{range} T$, not the larger $W$.
 
-7. **Recover the dimension equation.** Take dimensions of both sides of $V/\operatorname{null} T \cong \operatorname{range} T$, and substitute the dimension formula.
+7. **Recover the dimension equation.** Take [[Def - Dimension|dimensions]] of both sides of $V/\operatorname{null} T \cong \operatorname{range} T$, and substitute the dimension formula.
    - *Hint:* $\dim V - \dim \operatorname{null} T = \dim(V/\operatorname{null} T) = \dim \operatorname{range} T$, hence $\dim V = \dim \operatorname{null} T + \dim \operatorname{range} T$.
    - *Why needed:* This is the rank-nullity theorem reread.
 

@@ -68,19 +68,19 @@ Combine with **functions of $T$ holomorphic on the spectrum**. Once a Jordan for
 
 The picture is two-step. **Step 1: reduce to the nilpotent case.** By the [[Thm - Generalized Eigenspace Decomposition|generalized eigenspace decomposition]], $V = G(\lambda_1, T) \oplus \cdots \oplus G(\lambda_m, T)$, and on each piece $T = \lambda_k I + N_k$ with $N_k = (T - \lambda_k I)|_{G(\lambda_k, T)}$ nilpotent. A Jordan basis of $G(\lambda_k, T)$ for the operator $N_k$ is automatically a Jordan basis of $G(\lambda_k, T)$ for $T$: adding $\lambda_k I$ to a Jordan-block-at-$0$ matrix gives a Jordan-block-at-$\lambda_k$ matrix. So the global Jordan basis is obtained by assembling Jordan bases of each piece for the corresponding nilpotent restriction.
 
-**Step 2: prove the nilpotent case.** This is the heart of the proof and uses induction on $\dim V$. The key construction is to find a vector $u$ with $T^{m-1} u \neq 0$ (where $m$ is the smallest power killing $T$), then the chain $u, Tu, \dots, T^{m-1} u$ is linearly independent (by exercise 2 of §8A in LADR, which is the standard linear-independence-of-chains argument) and the subspace $U = \operatorname{span}(u, Tu, \dots, T^{m-1} u)$ is $T$-invariant — so $U$ is itself a Jordan block (when read in reverse order, the matrix of $T|_U$ in the basis $T^{m-1} u, T^{m-2} u, \dots, u$ is exactly $J_m(0)$).
+**Step 2: prove the nilpotent case.** This is the heart of the proof and uses induction on $\dim V$. The key construction is to find a vector $u$ with $T^{m-1} u \neq 0$ (where $m$ is the smallest power killing $T$), then the chain $u, Tu, \dots, T^{m-1} u$ is linearly independent (by exercise 2 of §8A in LADR, which is the standard linear-independence-of-chains argument) and the [[Def - Subspace|subspace]] $U = \operatorname{span}(u, Tu, \dots, T^{m-1} u)$ is $T$-invariant — so $U$ is itself a Jordan block (when read in reverse order, the matrix of $T|_U$ in the basis $T^{m-1} u, T^{m-2} u, \dots, u$ is exactly $J_m(0)$).
 
 If $U = V$, we are done. Otherwise we need to find a $T$-invariant complement $W$ with $V = U \oplus W$, so we can induct on $W$.
 
 The construction of $W$ is the clever step. Pick a linear functional $\varphi \in V'$ with $\varphi(T^{m-1} u) \neq 0$ — such $\varphi$ exists by the dual-space construction. Define
 $$W = \{ v \in V : \varphi(v) = \varphi(T v) = \cdots = \varphi(T^{m-1} v) = 0 \}.$$
-Then $W$ is a subspace, and it is $T$-invariant: if $v \in W$ then $\varphi(T^k (T v)) = \varphi(T^{k+1} v)$, which equals $0$ for $k \leq m - 2$ (by the defining conditions for $v$) and equals $\varphi(T^m v) = \varphi(0) = 0$ for $k = m - 1$ (since $T^m = 0$).
+Then $W$ is a [[Def - Subspace|subspace]], and it is $T$-invariant: if $v \in W$ then $\varphi(T^k (T v)) = \varphi(T^{k+1} v)$, which equals $0$ for $k \leq m - 2$ (by the defining conditions for $v$) and equals $\varphi(T^m v) = \varphi(0) = 0$ for $k = m - 1$ (since $T^m = 0$).
 
 Why is $V = U \oplus W$? The argument has two parts:
 - $U \cap W = \{0\}$: if $v = c_0 u + c_1 Tu + \cdots + c_{m-1} T^{m-1} u \in W \cap U$ is nonzero, let $j$ be the smallest index with $c_j \neq 0$. Then $T^{m-1-j} v = c_j T^{m-1} u$ (the other terms vanish by $T^m = 0$), so $\varphi(T^{m-1-j} v) = c_j \varphi(T^{m-1} u) \neq 0$, contradicting $v \in W$.
 - $\dim U + \dim W \geq \dim V$: define $S : V \to \mathbf{F}^m$ by $S v = (\varphi(v), \varphi(T v), \dots, \varphi(T^{m-1} v))$. Then $\ker S = W$, and by rank-nullity $\dim W = \dim V - \dim \operatorname{range} S \geq \dim V - m = \dim V - \dim U$. So $\dim(U + W) = \dim U + \dim W \geq \dim V$, hence $U + W = V$, and the previous bullet gives directness.
 
-By induction on $\dim V$ (applied to $W$, of smaller dimension), $W$ has a Jordan basis for $T|_W$. Combining with the Jordan-block-basis of $U$ gives a Jordan basis of $V$.
+By induction on $\dim V$ (applied to $W$, of smaller [[Def - Dimension|dimension]]), $W$ has a Jordan basis for $T|_W$. Combining with the Jordan-block-basis of $U$ gives a Jordan basis of $V$.
 
 **Mechanism summary: the longest chain $u, Tu, \dots, T^{m-1} u$ generates a Jordan block, and a linear functional $\varphi$ detecting the top of the chain defines a $T$-invariant complement via the conditions $\varphi(T^k v) = 0$ for $k < m$.**
 
@@ -116,7 +116,7 @@ Uniqueness of the Jordan form is a separate (and easier) statement we omit from 
    - *Hint:* Pick $\varphi \in V'$ with $\varphi(T^{m-1} u) \neq 0$. Set $W = \{ v : \varphi(v) = \varphi(T v) = \cdots = \varphi(T^{m-1} v) = 0 \}$. Show (a) $W$ is $T$-invariant; (b) $U \cap W = \{0\}$ by extracting leading coefficients; (c) $\dim W \geq \dim V - m$ by rank-nullity applied to $S : V \to \mathbf{F}^m, v \mapsto (\varphi(v), \dots, \varphi(T^{m-1} v))$.
    - *Why needed:* The induction step needs a $T$-invariant complement, not just any complement.
 
-4. **Induction.** Apply the nilpotent Jordan form to $T|_W$ (smaller dimension) and assemble.
+4. **Induction.** Apply the nilpotent Jordan form to $T|_W$ (smaller [[Def - Dimension|dimension]]) and assemble.
    - *Hint:* Base case $\dim V = 1$ trivial. Induction step: $\dim W < \dim V$, so $W$ has a Jordan basis for $T|_W$ by induction. Combine with the chain basis of $U$ (read in reverse: $T^{m-1} u, T^{m-2} u, \dots, u$ for the $J_m(0)$ matrix to come out right).
    - *Why needed:* This is the formal inductive step.
 
@@ -219,7 +219,7 @@ Uniqueness of the Jordan form is a separate (and easier) statement we omit from 
 > [!note]- Complete formal proof
 > Let $\mathbf{F} = \mathbb{C}$ and $T \in \mathcal{L}(V)$.
 >
-> **Step 0 — eigenvalues exist.** Since $\mathbf{F} = \mathbb{C}$ and $V$ is finite-dimensional nonzero, the Fundamental Theorem of Algebra applied to the characteristic polynomial (or minimal polynomial — see [[Thm - Existence of Eigenvalues on Complex Vector Spaces]]) guarantees at least one eigenvalue.
+> **Step 0 — eigenvalues exist.** Since $\mathbf{F} = \mathbb{C}$ and $V$ is finite-dimensional nonzero, the [[Thm - Fundamental Theorem of Algebra|Fundamental Theorem of Algebra]] applied to the characteristic polynomial (or minimal polynomial — see [[Thm - Existence of Eigenvalues on Complex Vector Spaces]]) guarantees at least one eigenvalue.
 >
 > **Step 1 — generalized eigenspace decomposition.** By [[Thm - Generalized Eigenspace Decomposition|generalized eigenspace decomposition]], $V = G(\lambda_1, T) \oplus \cdots \oplus G(\lambda_m, T)$ where $\lambda_1, \dots, \lambda_m$ are the distinct eigenvalues of $T$. On each $G(\lambda_k, T)$, the operator $N_k := (T - \lambda_k I)|_{G(\lambda_k, T)}$ is nilpotent.
 >

@@ -26,7 +26,7 @@ In other words: find the **best $L^2$-approximation** to $\sin x$ on $[-\pi, \pi
 
 **Recall:**
 
-The minimization is over the subspace $U = \mathcal{P}_5(\mathbb{R}) \subseteq C[-\pi, \pi]$, a $6$-dimensional subspace.
+The minimization is over the [[Def - Subspace|subspace]] $U = \mathcal{P}_5(\mathbb{R}) \subseteq C[-\pi, \pi]$, a $6$-dimensional [[Def - Subspace|subspace]].
 
 ![[Thm - Best Approximation by Orthogonal Projection#Statement]]
 

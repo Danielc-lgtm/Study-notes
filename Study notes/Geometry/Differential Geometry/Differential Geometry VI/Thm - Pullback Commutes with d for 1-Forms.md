@@ -195,7 +195,7 @@ Show the two 1-forms agree pointwise on every tangent vector. The pointwise pair
 
 **Algebraic topology: functoriality of de Rham cohomology.** The theorem (extended to higher degrees) makes $F^*$ commute with $d$, so $F^*$ descends to maps $F^* : H^k_{dR}(N) \to H^k_{dR}(M)$ on cohomology. Use this to compute the induced map on cohomology by smooth maps between specific manifolds (e.g., the squaring map $S^1 \to S^1$ acts on $H^1_{dR}(S^1) = \mathbb{R}$ by multiplication by $2$).
 
-**Complex analysis: pullback of holomorphic 1-forms.** For a holomorphic function $g : V \subseteq \mathbb{C} \to \mathbb{C}$, the holomorphic 1-form $dg$ pulls back under a holomorphic map $F : U \to V$ to $F^*(dg) = d(g \circ F)$. This is the chain rule for holomorphic 1-forms, and it underlies the contour-integration calculus of Cauchy's integral formula and the residue theorem.
+**Complex analysis: pullback of holomorphic 1-forms.** For a holomorphic function $g : V \subseteq \mathbb{C} \to \mathbb{C}$, the holomorphic 1-form $dg$ pulls back under a holomorphic map $F : U \to V$ to $F^*(dg) = d(g \circ F)$. This is the chain rule for holomorphic 1-forms, and it underlies the contour-integration calculus of Cauchy's integral formula and the [[Def - Residue|residue]] theorem.
 
 **General relativity: covariant differential of fields.** In GR, smooth maps include the embedding of slices into spacetime and the coordinate transformations relating different reference frames. The theorem says that the differentials of physical quantities (energy, momentum, etc.) transform correctly under all such smooth maps — a consequence of $d$ being natural.
 

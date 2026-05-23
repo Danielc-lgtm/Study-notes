@@ -148,14 +148,14 @@ Choose bases of $V$ and $W$. Define $\hat\Gamma$ on the basis $\{e_i \otimes f_j
 > [!note]- Lemma 1: $\{e_i \otimes f_j\}$ is a basis of $V \otimes W$ when $(e_i)$ and $(f_j)$ are bases of $V, W$
 > **Statement:** If $(e_1, \dots, e_m)$ is a basis of $V$ and $(f_1, \dots, f_n)$ is a basis of $W$, then the family $\{e_i \otimes f_j\}_{1 \leq i \leq m,\, 1 \leq j \leq n}$ is a basis of $V \otimes W$.
 >
-> **Hint:** Verify it spans (every elementary tensor $v \otimes w$ can be expanded in the basis via bilinearity, and elementary tensors span $V \otimes W$). Verify it is linearly independent by checking dimensions: $\#\{e_i \otimes f_j\} = mn = \dim V \otimes W$.
+> **Hint:** Verify it spans (every elementary tensor $v \otimes w$ can be expanded in the basis via bilinearity, and elementary tensors span $V \otimes W$). Verify it is linearly independent by checking [[Def - Dimension|dimensions]]: $\#\{e_i \otimes f_j\} = mn = \dim V \otimes W$.
 >
 > **Why needed:** Provides a basis on which to define $\hat\Gamma$.
 >
 > > [!note]- Full proof
 > > By bilinearity of $\otimes$ (which holds by direct verification from the construction $\mathcal{B}(V', W')$, see [[Def - Tensor Product of Vector Spaces]]):
 > > $$v \otimes w = (\sum_i v_i e_i) \otimes (\sum_j w_j f_j) = \sum_{i, j} v_i w_j (e_i \otimes f_j),$$
-> > so the family $\{e_i \otimes f_j\}$ spans the set of elementary tensors. To see it spans all of $V \otimes W$, recall that the dimension of $V \otimes W = \mathcal{B}(V', W')$ is $\dim V' \cdot \dim W' = mn$ (a bilinear form on $V' \times W'$ is determined by its values on basis pairs, giving $mn$ free parameters). The family has $mn$ elements, so if they are linearly independent they form a basis. Linear independence: suppose $\sum c_{ij} (e_i \otimes f_j) = 0$. As an element of $\mathcal{B}(V', W')$, this is the bilinear form $(\varphi, \tau) \mapsto \sum c_{ij} \varphi(e_i) \tau(f_j)$. Setting $(\varphi, \tau) = (\varphi_k, \tau_\ell)$ for the dual basis vectors picks out the term with $i = k, j = \ell$, giving $c_{k\ell} = 0$ for all $k, \ell$.
+> > so the family $\{e_i \otimes f_j\}$ spans the set of elementary tensors. To see it spans all of $V \otimes W$, recall that the [[Def - Dimension|dimension]] of $V \otimes W = \mathcal{B}(V', W')$ is $\dim V' \cdot \dim W' = mn$ (a bilinear form on $V' \times W'$ is determined by its values on basis pairs, giving $mn$ free parameters). The family has $mn$ elements, so if they are linearly independent they form a basis. Linear independence: suppose $\sum c_{ij} (e_i \otimes f_j) = 0$. As an element of $\mathcal{B}(V', W')$, this is the bilinear form $(\varphi, \tau) \mapsto \sum c_{ij} \varphi(e_i) \tau(f_j)$. Setting $(\varphi, \tau) = (\varphi_k, \tau_\ell)$ for the dual basis vectors picks out the term with $i = k, j = \ell$, giving $c_{k\ell} = 0$ for all $k, \ell$.
 
 > [!note]- Lemma 2: Linear extension of values on a basis to a linear map
 > **Statement:** Given any function $f : \{e_i \otimes f_j\}_{i, j} \to U$ on a basis of $V \otimes W$, there is a unique linear map $\hat\Gamma : V \otimes W \to U$ extending $f$.
@@ -214,7 +214,7 @@ Choose bases of $V$ and $W$. Define $\hat\Gamma$ on the basis $\{e_i \otimes f_j
 
 **Functoriality $S \otimes T$.** For linear maps $S : V \to V'$ and $T : W \to W'$, the universal property promotes the bilinear map $(v, w) \mapsto Sv \otimes Tw$ (from $V \times W$ to $V' \otimes W'$) to a unique linear map $S \otimes T : V \otimes W \to V' \otimes W'$. This makes $\otimes$ a *bifunctor* on the category of vector spaces. Composition compatibility $(S' \otimes T')(S \otimes T) = (S'S) \otimes (T'T)$ is the standard naturality calculation.
 
-**Extension of scalars in module theory.** For a ring homomorphism $R \to S$ and an $R$-module $M$, the extension of scalars $S \otimes_R M$ is an $S$-module — the universal property promotes the bilinear $R$-balanced map $S \times M \to S \otimes_R M$ to an $S$-linear map from $S \otimes_R M$ to any other $S$-module-with-the-same-property. This is foundational in representation theory (extending representations to larger fields) and arithmetic geometry (base change).
+**Extension of scalars in [[Def - Module|module]] theory.** For a [[Def - Ring|ring]] homomorphism $R \to S$ and an $R$-[[Def - Module|module]] $M$, the extension of scalars $S \otimes_R M$ is an $S$-module — the universal property promotes the bilinear $R$-balanced map $S \times M \to S \otimes_R M$ to an $S$-linear map from $S \otimes_R M$ to any other $S$-module-with-the-same-property. This is foundational in representation theory (extending representations to larger fields) and arithmetic geometry (base change).
 
 ---
 

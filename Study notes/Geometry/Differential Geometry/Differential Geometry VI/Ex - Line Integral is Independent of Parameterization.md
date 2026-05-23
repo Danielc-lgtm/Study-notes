@@ -11,7 +11,7 @@ tags: [geometry, differential-geometry, line-integral, parameterization]
 
 # Problem Statement
 
-Let $M$ be a smooth manifold, $\omega \in \Omega^1(M)$ a smooth 1-form, and $\gamma : [a, b] \to M$ a smooth curve. Let $\sigma : [c, d] \to [a, b]$ be an orientation-preserving smooth diffeomorphism (i.e., $\sigma'(s) > 0$ for all $s$, with $\sigma(c) = a, \sigma(d) = b$). Define the reparameterized curve $\tilde\gamma := \gamma \circ \sigma : [c, d] \to M$. Show that
+Let $M$ be a smooth manifold, $\omega \in \Omega^1(M)$ a smooth 1-form, and $\gamma : [a, b] \to M$ a smooth curve. Let $\sigma : [c, d] \to [a, b]$ be an orientation-preserving smooth [[Def - Diffeomorphism|diffeomorphism]] (i.e., $\sigma'(s) > 0$ for all $s$, with $\sigma(c) = a, \sigma(d) = b$). Define the reparameterized curve $\tilde\gamma := \gamma \circ \sigma : [c, d] \to M$. Show that
 $$\int_{\tilde\gamma} \omega = \int_\gamma \omega.$$
 
 What happens for an orientation-reversing reparameterization (i.e., $\sigma'(s) < 0$, $\sigma(c) = b, \sigma(d) = a$)?

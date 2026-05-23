@@ -16,11 +16,11 @@ $M$ is a smooth manifold, $X \in \mathfrak{X}(M)$ a smooth [[Def - Smooth Vector
 
 # Axiom Motivation
 
-After the Fundamental Theorem on Flows ([[Thm - Fundamental Theorem on Flows]]), every smooth vector field has a unique maximal flow, but this flow is in general only *local*: its domain $\mathcal{D}$ is an open subset of $\mathbb{R} \times M$, possibly strictly smaller than $\mathbb{R} \times M$. The question "for which vector fields is the flow defined for all time?" is the question of **completeness**, and the definition records the answer.
+After the [[Thm - Fundamental Theorem on Flows|Fundamental Theorem on Flows]] ([[Thm - Fundamental Theorem on Flows]]), every smooth vector field has a unique maximal flow, but this flow is in general only *local*: its domain $\mathcal{D}$ is an open subset of $\mathbb{R} \times M$, possibly strictly smaller than $\mathbb{R} \times M$. The question "for which vector fields is the flow defined for all time?" is the question of **completeness**, and the definition records the answer.
 
 The single condition to capture is: **every maximal integral curve is defined for all $t \in \mathbb{R}$.** This is equivalent to $\mathcal{D}^{(p)} = \mathbb{R}$ for every $p$, equivalent to $\mathcal{D} = \mathbb{R} \times M$, equivalent to $\phi^X$ being a *global* flow. Failure of completeness is always the same phenomenon: some integral curve **escapes** — to infinity, through a removed point, or out of a compact set — in finite time. The escape lemma (Lee 9.19) makes this precise: a maximal integral curve with finite right endpoint leaves every compact subset of $M$.
 
-Why do we need this notion at all? Because the cleanest version of every flow theorem — the [[Thm - Commuting Flows Theorem]], the construction of one-parameter subgroups of $\mathrm{Diff}(M)$, the assignment $v \mapsto \phi^X_1(p)$ as a smooth function of $v$ — requires the flow to be defined for $t = \pm 1$ at least, ideally for all $t$. So we identify the class of vector fields for which the theory has its cleanest statements and call them complete.
+Why do we need this notion at all? Because the cleanest version of every flow theorem — the [[Thm - Commuting Flows Theorem]], the construction of one-parameter [[Def - Subgroup|subgroups]] of $\mathrm{Diff}(M)$, the assignment $v \mapsto \phi^X_1(p)$ as a smooth function of $v$ — requires the flow to be defined for $t = \pm 1$ at least, ideally for all $t$. So we identify the class of vector fields for which the theory has its cleanest statements and call them complete.
 
 The two sufficient conditions to remember are:
 
@@ -44,7 +44,7 @@ Why pick this specific condition and not, say, "every integral curve through eve
 
 A smooth vector field $X \in \mathfrak{X}(M)$ is **complete** if its maximal flow $\phi^X : \mathcal{D} \to M$ has flow domain $\mathcal{D} = \mathbb{R} \times M$; equivalently, $\mathcal{D}^{(p)} = \mathbb{R}$ for every $p \in M$; equivalently, every maximal integral curve of $X$ is defined for all $t \in \mathbb{R}$.
 
-When $X$ is complete, $\{\phi^X_t\}_{t \in \mathbb{R}}$ is a **one-parameter group of diffeomorphisms** of $M$: each $\phi^X_t : M \to M$ is a diffeomorphism, with $\phi^X_0 = \mathrm{id}_M$ and $\phi^X_t \circ \phi^X_s = \phi^X_{t+s}$ for all $s, t \in \mathbb{R}$.
+When $X$ is complete, $\{\phi^X_t\}_{t \in \mathbb{R}}$ is a **one-parameter [[Def - Group|group]] of [[Def - Diffeomorphism|diffeomorphisms]]** of $M$: each $\phi^X_t : M \to M$ is a diffeomorphism, with $\phi^X_0 = \mathrm{id}_M$ and $\phi^X_t \circ \phi^X_s = \phi^X_{t+s}$ for all $s, t \in \mathbb{R}$.
 
 ---
 

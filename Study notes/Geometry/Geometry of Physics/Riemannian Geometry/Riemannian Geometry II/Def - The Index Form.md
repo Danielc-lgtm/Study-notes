@@ -19,7 +19,7 @@ $(M, g)$ a Riemannian manifold, $\gamma : [a, b] \to M$ a unit-speed [[Def - Geo
 
 The motivating question is: **what bilinear form on variation fields along a geodesic detects whether the geodesic is a local length-minimiser, and what is the structure of its kernel and its negative eigenspaces?** The answer is the index form, and its derivation is the second variation of the length (or energy) functional.
 
-The first variation tells us geodesics are *critical points* of length and energy. But criticality alone does not determine minimisation — a critical point can be a minimum, a saddle, or a maximum. To distinguish these we look at the **second variation**: the Hessian of the functional at the critical point. The second variation of energy at a geodesic $\gamma$, evaluated on a variation field $V$ along $\gamma$ vanishing at the endpoints, is
+The first variation tells us [[Def - Geodesic|geodesics]] are *critical points* of length and energy. But criticality alone does not determine minimisation — a critical point can be a minimum, a saddle, or a maximum. To distinguish these we look at the **second variation**: the Hessian of the functional at the critical point. The second variation of energy at a geodesic $\gamma$, evaluated on a variation field $V$ along $\gamma$ vanishing at the endpoints, is
 $$\frac{d^2}{ds^2}\bigg|_{s=0} E(\gamma_s) = \int_a^b \bigl(g(V', V') - g(R(V, T)T, V)\bigr)\, dt =: I(V, V).$$
 This bilinear form $I$ is the **index form**, and it is the Hessian of the energy functional at the geodesic $\gamma$.
 
@@ -29,7 +29,7 @@ The structure of $I$ is exactly what we want from a Hessian:
 
 2. **Kernel of $I$ = Jacobi fields vanishing at the endpoints**, which is precisely the conjugate-point obstruction. So a non-trivial kernel signals the transition from minimising to non-minimising.
 
-3. **Index of $I$ (dimension of a maximal negative-definite subspace) = number of interior conjugate points counted with multiplicity** — the Morse index theorem.
+3. **Index of $I$ ([[Def - Dimension|dimension]] of a maximal negative-definite [[Def - Subspace|subspace]]) = number of interior conjugate points counted with multiplicity** — the Morse index theorem.
 
 Why the *minus* sign on the curvature term? It comes from the derivation: when you differentiate the geodesic equation $\nabla_T T = 0$ twice in the variation parameter, the curvature contribution appears with a definite sign depending on the convention for $R$. In the standard convention $R(X, Y)Z = \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]}Z$, positive sectional curvature gives $\langle R(V, T)T, V\rangle > 0$, hence $-\langle R(V, T)T, V\rangle < 0$ — *positive curvature decreases the index form*, consistent with the geometric picture that positive curvature focuses geodesics (makes nearby geodesics come together, hence makes $\gamma$ not a strict local minimum past the first conjugate point).
 
@@ -41,7 +41,7 @@ Why piecewise smooth? Variations through nearby geodesics produce smooth Jacobi 
 
 The **integration-by-parts** identity is the workhorse of every index-form computation. For a normal variation field $V$ vanishing at the endpoints,
 $$I(V, V) = \int_a^b \bigl(g(V', V') - g(R(V, T)T, V)\bigr)\, dt = -\int_a^b g(V'' + R(V, T)T, V)\, dt,$$
-obtained by integration by parts on the kinetic term. The integrand on the right is exactly the Jacobi operator $\mathcal J(V) := V'' + R(V, T)T$ applied to $V$. So **the index form is the bilinear form associated to the Jacobi operator** — the Jacobi field equation is the variational equation of $I$. This makes the connection between (a) zeros of the Jacobi equation (conjugate points), (b) kernel of the index form (Morse-degenerate critical points), and (c) failure of $\exp_p$ to be a diffeomorphism (singular values of the exponential map) into a single statement.
+obtained by integration by parts on the kinetic term. The integrand on the right is exactly the Jacobi operator $\mathcal J(V) := V'' + R(V, T)T$ applied to $V$. So **the index form is the bilinear form associated to the Jacobi operator** — the Jacobi field equation is the variational equation of $I$. This makes the connection between (a) zeros of the Jacobi equation (conjugate points), (b) kernel of the index form (Morse-degenerate critical points), and (c) failure of $\exp_p$ to be a [[Def - Diffeomorphism|diffeomorphism]] (singular values of the exponential map) into a single statement.
 
 ---
 

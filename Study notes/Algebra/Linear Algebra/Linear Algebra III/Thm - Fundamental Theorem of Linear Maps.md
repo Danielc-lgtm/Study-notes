@@ -18,7 +18,7 @@ Throughout, $T : V \to W$ is a [[Def - Linear Map|linear map]] with $V$ finite-d
 
 # Statement
 
-> **Theorem (Fundamental Theorem of Linear Maps).** Let $V$ be a finite-dimensional vector space over $\mathbf{F}$, let $W$ be any vector space over $\mathbf{F}$, and let $T \in \mathcal{L}(V, W)$. Then $\operatorname{range} T$ is finite-dimensional, and
+> **Theorem (Fundamental Theorem of [[Def - Linear Map|Linear Maps]]).** Let $V$ be a finite-dimensional vector space over $\mathbf{F}$, let $W$ be any vector space over $\mathbf{F}$, and let $T \in \mathcal{L}(V, W)$. Then $\operatorname{range} T$ is finite-dimensional, and
 >
 > $$\dim V \;=\; \dim \operatorname{null} T \;+\; \dim \operatorname{range} T.$$
 
@@ -32,11 +32,11 @@ Note that $W$ is not required to be finite-dimensional — only $V$. If $W$ is f
 
 # Motivation
 
-This is the central theorem of finite-dimensional linear algebra. Almost every structural fact in [[Linear Algebra III — §3A–D Linear Maps]] is one or two lines away from it: injectivity-equals-surjectivity in equal finite dimensions, the dimensional classification of isomorphic vector spaces, the dimension of the space of linear maps, every rank inequality involving compositions, and the impossibility of various prescribed-kernel-and-range constructions. The theorem is to linear algebra what [[Thm - Lagrange's Theorem|Lagrange's theorem]] is to finite group theory — a free conservation law that converts one unknown dimension into another, and rules out impossible configurations before any specific computation.
+This is the central theorem of finite-dimensional linear algebra. Almost every structural fact in [[Linear Algebra III — §3A–D Linear Maps]] is one or two lines away from it: injectivity-equals-surjectivity in equal finite [[Def - Dimension|dimensions]], the dimensional classification of isomorphic vector spaces, the dimension of the space of linear maps, every rank inequality involving compositions, and the impossibility of various prescribed-kernel-and-range constructions. The theorem is to linear algebra what [[Thm - Lagrange's Theorem|Lagrange's theorem]] is to finite [[Def - Group|group]] theory — a free conservation law that converts one unknown dimension into another, and rules out impossible configurations before any specific computation.
 
 The question the theorem answers is: given a linear map $T : V \to W$, how does the dimension of the domain split between "what gets collapsed" and "what gets mapped into the codomain"? Intuitively, $T$ kills a subspace (its null space) and stretches the rest onto the range. The theorem says these two pieces add up to $\dim V$ exactly — no overlap, no slack, no information lost. Every dimension of $V$ is accounted for, either by being mapped to $0$ (null-space contribution) or by being mapped to a non-zero output (range contribution). It is a **conservation law for dimension**.
 
-The deeper conceptual reading is that this is the dimension-counting shadow of a sharper algebraic statement: there is an isomorphism $V / \operatorname{null} T \cong \operatorname{range} T$, the **first isomorphism theorem** for vector spaces (which is itself a special case of the [[Thm - First Isomorphism Theorem|first isomorphism theorem for groups]] applied in the abelian-group setting of vector spaces). Taking dimensions of both sides converts the isomorphism into the rank–nullity equation. So rank–nullity is not a primitive theorem about dimensions — it is the dimensional shadow of a structural identity that holds in much greater generality (for modules over any ring, where dimensions need not even be defined). The clean linear-algebra version exists because vector spaces are modules over a field, and over a field every module is free and has a well-defined dimension.
+The deeper conceptual reading is that this is the dimension-counting shadow of a sharper algebraic statement: there is an isomorphism $V / \operatorname{null} T \cong \operatorname{range} T$, the **first isomorphism theorem** for vector spaces (which is itself a special case of the [[Thm - First Isomorphism Theorem|first isomorphism theorem for groups]] applied in the abelian-[[Def - Group|group]] setting of vector spaces). Taking [[Def - Dimension|dimensions]] of both sides converts the isomorphism into the rank–nullity equation. So rank–nullity is not a primitive theorem about dimensions — it is the dimensional shadow of a structural identity that holds in much greater generality (for [[Def - Module|modules]] over any [[Def - Ring|ring]], where dimensions need not even be defined). The clean linear-algebra version exists because vector spaces are [[Def - Module|modules]] over a field, and over a field every module is free and has a well-defined dimension.
 
 The theorem also explains why "operators on a finite-dimensional space" behave so much better than operators in infinite dimensions: in finite dimensions, every operator has a *finite* rank and a *finite* nullity, summing to $\dim V$, and so the "size" of what is destroyed and what is preserved is bounded by a single number. In infinite dimensions, rank and nullity can both be infinite and unrelated, and the rich phenomena of functional analysis (compact operators, the Fredholm alternative, the spectrum-as-resolvent-set-complement) emerge from the failure of this rigidity.
 
@@ -128,12 +128,12 @@ A third subtle point: the theorem requires $V$ finite-dimensional, but $W$ need 
 
 # Lemma Decomposition
 
-> [!note]- Lemma 1: Null space and range are subspaces
+> [!note]- Lemma 1: Null space and range are [[Def - Subspace|subspaces]]
 > **Statement:** $\operatorname{null} T$ is a subspace of $V$ and $\operatorname{range} T$ is a subspace of $W$, for any linear map $T : V \to W$.
 >
 > **Hint:** Check the three subspace axioms (contains zero, closed under sum, closed under scalar multiplication) using linearity of $T$.
 >
-> **Why needed:** To even speak of $\dim \operatorname{null} T$ and $\dim \operatorname{range} T$, these subsets must be subspaces. The dimension is undefined for general subsets.
+> **Why needed:** To even speak of $\dim \operatorname{null} T$ and $\dim \operatorname{range} T$, these subsets must be [[Def - Subspace|subspaces]]. The dimension is undefined for general subsets.
 >
 > > [!note]- Full proof
 > > For $\operatorname{null} T$: $T(0_V) = 0_W$, so $0_V \in \operatorname{null} T$. If $u, v \in \operatorname{null} T$, then $T(u + v) = Tu + Tv = 0 + 0 = 0$, so $u + v \in \operatorname{null} T$. If $\lambda \in \mathbf{F}$ and $v \in \operatorname{null} T$, then $T(\lambda v) = \lambda Tv = \lambda \cdot 0 = 0$, so $\lambda v \in \operatorname{null} T$.

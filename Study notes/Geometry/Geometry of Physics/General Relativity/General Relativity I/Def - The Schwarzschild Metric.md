@@ -32,7 +32,7 @@ The most general ansatz consistent with (i)-(iii) is
 $$ds^2 = e^{2\Phi(r)}\, dt^2 - e^{2\Lambda(r)}\, dr^2 - r^2\, d\Omega^2,$$
 with two unknown functions $\Phi(r)$ and $\Lambda(r)$ of the radial coordinate alone. Substituting into the vacuum Einstein equations $R_{\mu\nu} = 0$ gives a system of ODEs (computed in [[Thm - Schwarzschild Solution]]) with the unique solution
 $$e^{2\Phi(r)} = e^{-2\Lambda(r)} = 1 - \frac{2M}{r},$$
-where $M$ is an integration constant. Identifying $M$ with the Newtonian mass via the weak-field limit (so that the geodesic equation in the Newtonian limit gives $\ddot x^\alpha = -\partial^\alpha \phi$ with $\phi = -M/r$) fixes the interpretation.
+where $M$ is an integration constant. Identifying $M$ with the Newtonian mass via the weak-field limit (so that the [[Def - Geodesic|geodesic]] equation in the Newtonian limit gives $\ddot x^\alpha = -\partial^\alpha \phi$ with $\phi = -M/r$) fixes the interpretation.
 
 **Why is the areal radius $r$ the right choice?** In a spherically symmetric metric, we have freedom in how we label the radial coordinate. We could use the *proper radial distance* from some reference point; or we could use a coordinate adapted to the angular metric. The choice $r = $ "areal radius", defined by the area of the sphere of constant $r$ being $4\pi r^2$, is the simplest and the one that appears in the Schwarzschild solution. Note: $r$ is *not* the proper radial distance — that is $\int (1 - 2M/r)^{-1/2}\, dr$, which is larger than $r$ for the Schwarzschild metric. The naming "radial coordinate" is conventional but slightly misleading.
 

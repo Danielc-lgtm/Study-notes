@@ -18,7 +18,7 @@ $R$ is a commutative ring with $1_R$, and $M = (M, +, 0_M, \cdot)$ is an [[Def -
 
 # Axiom Motivation
 
-Every algebraic structure comes with a notion of *substructure*: a subset that is closed under all the operations and is therefore a structure of the same kind in its own right. For groups it is the subgroup, for rings the subring, for vector spaces the subspace. A **submodule** is simply the substructure notion for [[Def - Module|modules]], and the way to invent it is mechanical: list the operations of a module, and demand a subset be closed under each one.
+Every algebraic structure comes with a notion of *substructure*: a subset that is closed under all the operations and is therefore a structure of the same kind in its own right. For [[Def - Group|groups]] it is the subgroup, for [[Def - Ring|rings]] the [[Def - Subring|subring]], for vector spaces the subspace. A **submodule** is simply the substructure notion for [[Def - Module|modules]], and the way to invent it is mechanical: list the operations of a [[Def - Module|module]], and demand a subset be closed under each one.
 
 A module has exactly two pieces of operational data: the abelian group structure $(M, +, 0_M)$, and the action $\cdot : R \times M \to M$. So a submodule must be closed under both. Closure under the group structure means the subset $N$ must be a **subgroup** of $(M, +, 0_M)$ — non-empty, closed under $+$, and closed under additive inverses (equivalently, by the subgroup criterion, closed under $n_1 - n_2$). Closure under the action means: whenever $n \in N$ and $r \in R$, the element $rn$ must again lie in $N$. That is the entire definition. There is nothing to invent beyond "be closed under everything a module can do".
 
@@ -32,7 +32,7 @@ There is one more thing the definition should make you anticipate: a submodule i
 
 Let $M$ be an [[Def - Module|R-module]]. A subset $N \subseteq M$ is an **$R$-submodule of $M$**, written $N \leq M$, if:
 
-1. **Subgroup.** $N$ is a subgroup of the abelian group $(M, +, 0_M)$ — equivalently, $N$ is non-empty and $n_1 - n_2 \in N$ whenever $n_1, n_2 \in N$ (this single condition gives closure under addition, inverses, and membership of $0_M$).
+1. **[[Def - Subgroup|Subgroup]].** $N$ is a subgroup of the abelian group $(M, +, 0_M)$ — equivalently, $N$ is non-empty and $n_1 - n_2 \in N$ whenever $n_1, n_2 \in N$ (this single condition gives closure under addition, inverses, and membership of $0_M$).
 
 2. **Closure under the action.** For every $r \in R$ and every $n \in N$, the element $r \cdot n$ lies in $N$.
 
@@ -54,9 +54,9 @@ So the inclusion-of-concepts reads: subgroup $\supseteq$ submodule, and submodul
 
 **Is an instance: the trivial submodules.** In any [[Def - Module|R-module]] $M$, both $\{0_M\}$ and $M$ are submodules. The set $\{0_M\}$ is a subgroup and $r \cdot 0_M = 0_M \in \{0_M\}$ for every $r$; the set $M$ is closed under everything by definition. A module whose *only* submodules are these two (and $M \neq \{0_M\}$) is called **simple** — the module-theoretic analogue of a simple group or a field.
 
-**Is an instance: submodules of $R$ are exactly the ideals.** Regard $R$ as a module over itself. A subset $N \subseteq R$ is an $R$-submodule precisely when it is an additive subgroup of $R$ and $rn \in N$ for all $r \in R, n \in N$ — and that is *word for word* the definition of an [[Def - Ideal|ideal]] $N \trianglelefteq R$. So the lattice of submodules of $R$ and the lattice of ideals of $R$ are the same object. For example, in $\mathbb{Z}$ the submodules of $\mathbb{Z}$ (as a $\mathbb{Z}$-module) are exactly the subsets $n\mathbb{Z}$, the ideals of $\mathbb{Z}$.
+**Is an instance: submodules of $R$ are exactly the [[Def - Ideal|ideals]].** Regard $R$ as a module over itself. A subset $N \subseteq R$ is an $R$-submodule precisely when it is an additive subgroup of $R$ and $rn \in N$ for all $r \in R, n \in N$ — and that is *word for word* the definition of an [[Def - Ideal|ideal]] $N \trianglelefteq R$. So the lattice of submodules of $R$ and the lattice of ideals of $R$ are the same object. For example, in $\mathbb{Z}$ the submodules of $\mathbb{Z}$ (as a $\mathbb{Z}$-module) are exactly the subsets $n\mathbb{Z}$, the ideals of $\mathbb{Z}$.
 
-**Is an instance: $F$-submodules are exactly subspaces.** If $F$ is a [[Def - Unit and Field|field]] and $V$ is an $F$-module — that is, a vector space over $F$ — then a subset $W \subseteq V$ is an $F$-submodule if and only if $W$ is a vector subspace of $V$. The submodule conditions are the subspace test verbatim. For instance, any line through the origin in $\mathbb{R}^2$ is an $\mathbb{R}$-submodule of $\mathbb{R}^2$.
+**Is an instance: $F$-submodules are exactly [[Def - Subspace|subspaces]].** If $F$ is a [[Def - Unit and Field|field]] and $V$ is an $F$-module — that is, a vector space over $F$ — then a subset $W \subseteq V$ is an $F$-submodule if and only if $W$ is a vector subspace of $V$. The submodule conditions are the subspace test verbatim. For instance, any line through the origin in $\mathbb{R}^2$ is an $\mathbb{R}$-submodule of $\mathbb{R}^2$.
 
 **Is an instance: $nM$ and the $n$-torsion, inside a $\mathbb{Z}$-module.** Let $M$ be a $\mathbb{Z}$-module — an abelian group — and fix $n \in \mathbb{Z}$. The set $nM = \{nm : m \in M\}$ is a submodule (it is closed under addition since $nm_1 + nm_2 = n(m_1 + m_2)$, and under the $\mathbb{Z}$-action since $k(nm) = n(km)$). So is the **$n$-torsion** $M[n] = \{m \in M : nm = 0\}$. These are genuine submodules manufactured purely from the action, with no analogue available for a bare set; they are the typical *players* in torsion arguments.
 

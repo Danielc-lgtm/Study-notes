@@ -18,11 +18,11 @@ $$n\cdot m \;=\; \underbrace{m+m+\cdots+m}_{n\text{ times}}\quad(n>0),\qquad 0\c
 
 2. **Existence and uniqueness.** Conversely, every abelian group $(A,+,0)$ carries one and only one $\mathbb{Z}$-module structure, given by the formula above.
 
-3. **Morphisms agree.** Deduce that a function $f:M\to N$ between $\mathbb{Z}$-modules is a [[Def - Module Homomorphism|module homomorphism]] if and only if it is a homomorphism of abelian groups. Hence the theory of $\mathbb{Z}$-modules and the theory of abelian groups are *the same theory*.
+3. **Morphisms agree.** Deduce that a function $f:M\to N$ between $\mathbb{Z}$-[[Def - Module|modules]] is a [[Def - Module Homomorphism|module homomorphism]] if and only if it is a homomorphism of abelian [[Def - Group|groups]]. Hence the theory of $\mathbb{Z}$-modules and the theory of abelian groups are *the same theory*.
 
 **Recall:**
 
-The objects in play are a commutative ring $R$, an $R$-module, and an abelian group.
+The objects in play are a commutative [[Def - Ring|ring]] $R$, an $R$-module, and an abelian group.
 
 ![[Def - Module#The Definition]]
 
@@ -133,7 +133,7 @@ Given an abelian group $(A,+,0)$, define $n\cdot a$ by the Steps 2–3 formula. 
 >
 > All four axioms hold, so $(A,+,0,\cdot)$ is a $\mathbb{Z}$-module. *Uniqueness:* Steps 1–3 showed every $\mathbb{Z}$-module structure on a fixed abelian group must equal this formula, so this is the only one. Hence "abelian group" and "$\mathbb{Z}$-module" carry exactly the same data.
 
-**Step 5: Module homomorphisms of $\mathbb{Z}$-modules are precisely group homomorphisms.**
+**Step 5: Module [[Def - Homomorphism|homomorphisms]] of $\mathbb{Z}$-modules are precisely group homomorphisms.**
 
 A function $f:M\to N$ between $\mathbb{Z}$-modules is a module homomorphism if and only if it is an abelian-group homomorphism.
 
@@ -165,4 +165,4 @@ A function $f:M\to N$ between $\mathbb{Z}$-modules is a module homomorphism if a
 
 **An axiom can be redundant: scalar-compatibility for $f$ follows from additivity when scalars are repeated addition.** Step 5 shows that for $\mathbb{Z}$-modules the morphism condition $f(n\cdot m)=n\cdot f(m)$ is *not an extra requirement* — it is implied by $f(m_1+m_2)=f(m_1)+f(m_2)$, because $n\cdot m$ is *itself* built from $+$. This is a recurring phenomenon: when one operation is definable from another, compatibility with the first is free given compatibility with the second. The same logic shows a ring homomorphism that respects $+$ and $\times$ automatically respects all polynomial expressions, and that a continuous group homomorphism $\mathbb{R}\to\mathbb{R}$ is automatically $\mathbb{Q}$-linear. The lesson for problem-solving: before verifying a list of compatibility conditions, ask which ones are *consequences* of the others — often a definition carries redundant axioms, and recognising the redundancy is precisely what makes "two structures coincide" arguments short.
 
-**This exercise is the template by which module theory generalises abelian-group theory.** Reading the result in reverse is illuminating: it says module theory, with a *general* scalar ring $R$, is "abelian-group theory where the integers have been replaced by $R$." Every module-theoretic concept specialises, when $R=\mathbb{Z}$, to a familiar abelian-group concept — a [[Def - Submodule|submodule]] becomes a subgroup, a [[Def - Quotient Module|quotient module]] becomes a quotient group, the [[Thm - Isomorphism Theorems for Modules|module isomorphism theorems]] become the abelian-group isomorphism theorems, and the [[Def - Annihilator|annihilator]] of an element becomes the set of integers killing it (its *order* generates that annihilator). When a module-theory definition or theorem looks unfamiliar, the first sanity check is to set $R=\mathbb{Z}$ and confirm it recovers the abelian-group statement you already know; if it does not, you have either misread the definition or found a phenomenon genuinely new to modules — and pinning down which is itself valuable.
+**This exercise is the template by which module theory generalises abelian-group theory.** Reading the result in reverse is illuminating: it says module theory, with a *general* scalar ring $R$, is "abelian-group theory where the integers have been replaced by $R$." Every module-theoretic concept specialises, when $R=\mathbb{Z}$, to a familiar abelian-group concept — a [[Def - Submodule|submodule]] becomes a [[Def - Subgroup|subgroup]], a [[Def - Quotient Module|quotient module]] becomes a quotient group, the [[Thm - Isomorphism Theorems for Modules|module isomorphism theorems]] become the abelian-group isomorphism theorems, and the [[Def - Annihilator|annihilator]] of an element becomes the set of integers killing it (its *order* generates that [[Def - Annihilator|annihilator]]). When a module-theory definition or theorem looks unfamiliar, the first sanity check is to set $R=\mathbb{Z}$ and confirm it recovers the abelian-group statement you already know; if it does not, you have either misread the definition or found a phenomenon genuinely new to modules — and pinning down which is itself valuable.

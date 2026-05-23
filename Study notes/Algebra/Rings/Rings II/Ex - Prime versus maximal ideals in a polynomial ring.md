@@ -15,7 +15,7 @@ tags: [algebra, ring-theory]
 
 # Problem Statement
 
-Work in the polynomial ring $\mathbb{Z}[X]$ — polynomials in one indeterminate $X$ with integer coefficients. Consider two ideals:
+Work in the polynomial ring $\mathbb{Z}[X]$ — polynomials in one indeterminate $X$ with integer coefficients. Consider two [[Def - Ideal|ideals]]:
 $$(X) = \{\,Xf : f\in\mathbb{Z}[X]\,\}, \qquad (2,X) = \{\,2f + Xg : f,g\in\mathbb{Z}[X]\,\}.$$
 
 Prove that:
@@ -29,7 +29,7 @@ Conclude that in $\mathbb{Z}[X]$ the inclusion "maximal $\Rightarrow$ prime" is 
 
 The objects in play are the polynomial ring $\mathbb{Z}[X]$, two of its ideals, the notions of prime and maximal ideal, and the two characterisations of these notions through the quotient ring.
 
-An [[Def - Ideal|ideal]] $I\trianglelefteq R$ of a commutative ring is an additive subgroup closed under multiplication by *every* element of $R$: $r\in R, x\in I \Rightarrow rx\in I$. For elements $a_1,\dots,a_k\in R$, the ideal they **generate** is $(a_1,\dots,a_k)=\{a_1r_1+\cdots+a_kr_k : r_i\in R\}$, the smallest ideal containing all of them.
+An [[Def - Ideal|ideal]] $I\trianglelefteq R$ of a commutative ring is an additive [[Def - Subgroup|subgroup]] closed under multiplication by *every* element of $R$: $r\in R, x\in I \Rightarrow rx\in I$. For elements $a_1,\dots,a_k\in R$, the ideal they **generate** is $(a_1,\dots,a_k)=\{a_1r_1+\cdots+a_kr_k : r_i\in R\}$, the smallest ideal containing all of them.
 
 A [[Def - Prime and Maximal Ideal|prime ideal]] $P\trianglelefteq R$ is an ideal with $P\neq R$ such that whenever a product $ab$ lies in $P$, at least one factor does: $ab\in P\Rightarrow a\in P$ or $b\in P$. A [[Def - Prime and Maximal Ideal|maximal ideal]] $M\trianglelefteq R$ is an ideal with $M\neq R$ that is *maximal* among proper ideals: the only ideals $J$ with $M\subseteq J\subseteq R$ are $J=M$ and $J=R$.
 
@@ -43,7 +43,7 @@ The bridge between ideals and these properties is a pair of theorems characteris
 
 See [[Thm - Maximal and Prime Ideals via Quotients]]. Because every field is an integral domain, the second statement implies the first specialised: every maximal ideal is prime.
 
-Finally, the [[Thm - First Isomorphism Theorem for Rings|first isomorphism theorem]]: a ring homomorphism $\varphi:R\to S$ factors as $R/\ker\varphi\cong\operatorname{im}\varphi$. We will use it to *identify* the two quotient rings $\mathbb{Z}[X]/(X)$ and $\mathbb{Z}[X]/(2,X)$ with familiar rings.
+Finally, the [[Thm - First Isomorphism Theorem for Rings|first isomorphism theorem]]: a ring homomorphism $\varphi:R\to S$ factors as $R/\ker\varphi\cong\operatorname{im}\varphi$. We will use it to *identify* the two quotient [[Def - Ring|rings]] $\mathbb{Z}[X]/(X)$ and $\mathbb{Z}[X]/(2,X)$ with familiar rings.
 
 ---
 
@@ -71,7 +71,7 @@ This solution deploys the following legal operations from [[Rings II — §2.3�
 
 4. **Characterise maximality via the quotient being a field** (the maximal $\Leftrightarrow$ field operation). Since $\mathbb{Z}[X]/(2,X)\cong\mathbb{F}_2$ is a field, $(2,X)$ is maximal; and since $\mathbb{Z}[X]/(X)\cong\mathbb{Z}$ is *not* a field, $(X)$ is not maximal.
 
-5. **Compose ring homomorphisms** (operation: *the composite of two ring homomorphisms is a ring homomorphism*). The surjection $\mathbb{Z}[X]\to\mathbb{F}_2$ is the composite of evaluation at $0$, $\mathbb{Z}[X]\to\mathbb{Z}$, with reduction mod $2$, $\mathbb{Z}\to\mathbb{F}_2$.
+5. **Compose ring [[Def - Homomorphism|homomorphisms]]** (operation: *the composite of two ring homomorphisms is a ring homomorphism*). The surjection $\mathbb{Z}[X]\to\mathbb{F}_2$ is the composite of evaluation at $0$, $\mathbb{Z}[X]\to\mathbb{Z}$, with reduction mod $2$, $\mathbb{Z}\to\mathbb{F}_2$.
 
 ---
 
@@ -185,7 +185,7 @@ We have produced, inside the single ring $\mathbb{Z}[X]$, a prime ideal that is 
 
 **To classify an ideal as prime or maximal, identify its quotient ring — never argue from the definition directly.** The single organising principle here is the dictionary $I$ *prime* $\Leftrightarrow$ $R/I$ *integral domain* and $I$ *maximal* $\Leftrightarrow$ $R/I$ *field*. This converts a question about an ideal — a subset, awkward to reason about — into a question about a *ring*, where one has the full vocabulary of ring theory. The procedure is mechanical and reusable: (i) build a surjective homomorphism $\varphi:R\to T$ onto a ring you recognise, (ii) check $\ker\varphi=I$, (iii) invoke the first isomorphism theorem to get $R/I\cong T$, (iv) ask whether $T$ is a field, an integral domain, or neither. The trigger is *any* concrete ideal whose primality or maximality is in question; the reaction is "find the quotient". This is exactly how one shows $(p)\trianglelefteq\mathbb{Z}$ is maximal ($\mathbb{Z}/(p)$ is the field $\mathbb{F}_p$), how one shows $(X^2+1)\trianglelefteq\mathbb{R}[X]$ is maximal ($\mathbb{R}[X]/(X^2+1)\cong\mathbb{C}$), and how one shows $(X)\trianglelefteq k[X,Y]$ is prime but not maximal ($k[X,Y]/(X)\cong k[Y]$).
 
-**Quotienting by an ideal that contains an indeterminate is *substitution*: the quotient is a quotient of the coefficient ring.** When an ideal $I\trianglelefteq R[X]$ contains $X$ itself, passing to $R[X]/I$ kills $X$ — every polynomial collapses to its constant term — and the quotient is computed by "setting $X=0$". If $I=(X)$ the quotient is the coefficient ring $R$ exactly; if $I$ also contains further relations among constants, the quotient is $R$ modulo those relations. This is why $\mathbb{Z}[X]/(X)\cong\mathbb{Z}$ and $\mathbb{Z}[X]/(2,X)\cong\mathbb{Z}/(2)=\mathbb{F}_2$: the first sets $X=0$, the second sets $X=0$ *and* $2=0$. The general slogan, which iterates, is $R[X_1,\dots,X_n]/(X_1,\dots,X_n)\cong R$, and more generally adding generators to the ideal corresponds to adding relations to the quotient. Recognising "this ideal contains an indeterminate" instantly tells you the quotient is a substitution quotient and saves all the work of manipulating cosets.
+**Quotienting by an ideal that contains an indeterminate is *substitution*: the quotient is a quotient of the coefficient ring.** When an ideal $I\trianglelefteq R[X]$ contains $X$ itself, passing to $R[X]/I$ kills $X$ — every polynomial collapses to its constant term — and the quotient is computed by "setting $X=0$". If $I=(X)$ the quotient is the coefficient ring $R$ exactly; if $I$ also contains further relations among constants, the quotient is $R$ modulo those relations. This is why $\mathbb{Z}[X]/(X)\cong\mathbb{Z}$ and $\mathbb{Z}[X]/(2,X)\cong\mathbb{Z}/(2)=\mathbb{F}_2$: the first sets $X=0$, the second sets $X=0$ *and* $2=0$. The general slogan, which iterates, is $R[X_1,\dots,X_n]/(X_1,\dots,X_n)\cong R$, and more generally adding generators to the ideal corresponds to adding relations to the quotient. Recognising "this ideal contains an indeterminate" instantly tells you the quotient is a substitution quotient and saves all the work of manipulating [[Def - Coset|cosets]].
 
 **Prime and maximal are genuinely different, and the gap is precisely the gap between "integral domain" and "field".** It is a common and costly error to treat prime and maximal as interchangeable. They coincide in some rings — in a [[Def - Principal Ideal Domain|principal ideal domain]] every non-zero prime is maximal, and in any *finite* commutative ring every prime is maximal, because a [[Thm - Finite Integral Domains are Fields|finite integral domain is a field]] — but not in general. The honest picture is the implication chain "maximal $\Rightarrow$ prime", coming from "field $\Rightarrow$ integral domain", with a *strict* converse failure whenever the ambient ring has a quotient that is a domain but not a field. The ring $\mathbb{Z}$ is the prototype of "integral domain, not a field", so any quotient isomorphic to $\mathbb{Z}$ — here $\mathbb{Z}[X]/(X)$ — automatically certifies a prime-but-not-maximal ideal. When you meet a new prime ideal, ask: is its quotient a field? If the quotient is something like $\mathbb{Z}$ or $k[Y]$ (a domain with non-invertible elements), the ideal is prime but *not* maximal, and there is a proper ideal strictly above it.
 

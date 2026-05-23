@@ -12,7 +12,7 @@ tags: [algebra, linear-algebra]
 
 # Problem Statement
 
-Let $V$ be a finite-dimensional vector space, $W$ any vector space, $X \subseteq V$ a subspace, and $Y \subseteq W$ a finite-dimensional subspace. Prove that there exists $T \in \mathcal{L}(V, W)$ with $\operatorname{null} T = X$ and $\operatorname{range} T = Y$ if and only if
+Let $V$ be a finite-dimensional vector space, $W$ any vector space, $X \subseteq V$ a [[Def - Subspace|subspace]], and $Y \subseteq W$ a finite-dimensional subspace. Prove that there exists $T \in \mathcal{L}(V, W)$ with $\operatorname{null} T = X$ and $\operatorname{range} T = Y$ if and only if
 $$\dim X + \dim Y = \dim V.$$
 
 (This is Exercise 31 of LADR §3B.)
@@ -48,7 +48,7 @@ This solution deploys the following legal operations from [[Linear Algebra III �
 
 1. **Specify a linear map by its action on a basis** (operation 1). The entire construction is one application of the [[Thm - Linear Map Determined by Action on Basis|linear-map lemma]] with a basis of $V$ adapted to $X$.
 
-2. **Apply rank–nullity to convert one dimension into another** (operation 3). Used for the necessity direction.
+2. **Apply rank–nullity to convert one [[Def - Dimension|dimension]] into another** (operation 3). Used for the necessity direction.
 
 3. **Decompose a domain via $V = \operatorname{null} T \oplus U$** (operation 9). The basis-extension construction implicitly produces a complement of $X$ in $V$ — the span of the extension vectors.
 
@@ -137,10 +137,10 @@ Check that the constructed $T$ has $\operatorname{null} T = X$ and $\operatornam
 
 # Key Takeaways
 
-**Dimensional conditions are exactly what rank–nullity enforces.** The "iff" structure of this exercise — a *dimensional* condition is both necessary and sufficient for a *qualitative* existence statement — is the canonical pattern of how [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] is used. The necessary direction reads off the dimension equation; the sufficient direction *uses* the dimension equation as the only constraint, building the map via the [[Thm - Linear Map Determined by Action on Basis|linear-map lemma]]. The reusable principle: whenever a problem asks "does a linear map with property X exist", check whether X has a dimensional shadow, and use rank–nullity + the linear-map lemma to settle the question. The trigger is "existence of a map with kernel/range/rank/nullity of a specific kind".
+**Dimensional conditions are exactly what rank–nullity enforces.** The "iff" structure of this exercise — a *dimensional* condition is both necessary and sufficient for a *qualitative* existence statement — is the canonical pattern of how [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] is used. The necessary direction reads off the [[Def - Dimension|dimension]] equation; the sufficient direction *uses* the dimension equation as the only constraint, building the map via the [[Thm - Linear Map Determined by Action on Basis|linear-map lemma]]. The reusable principle: whenever a problem asks "does a linear map with property X exist", check whether X has a dimensional shadow, and use rank–nullity + the linear-map lemma to settle the question. The trigger is "existence of a map with kernel/range/rank/nullity of a specific kind".
 
 **Basis adapted to a subspace is the standard construction trick.** Whenever you need to control what a linear map does on a specific subspace $X \subseteq V$, choose a basis of $X$ and *extend* to a basis of $V$. The extension vectors then represent the "complement" of $X$, and you have full control over what $T$ does on each. This is the same trick used in the proof of [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]], and it is the construction-engine of essentially every existence proof in this chapter. The reusable principle: basis extension converts "control on a subspace" into "control everywhere". The trigger is any problem about linear maps with prescribed behaviour on a subspace.
 
-**Constructions via the linear-map lemma are templated.** The lemma's pattern — "pick a basis of the domain, specify the images, extend by linearity" — is mechanical. The skill is in choosing the right basis and the right images. Here we chose a basis adapted to $X$ and images that span $Y$, but other constructions use bases adapted to other structures: an eigenbasis adapted to an operator, a basis adapted to an inner product (orthonormal), a basis adapted to a chain of invariant subspaces (giving an upper-triangular matrix). The reusable principle: for any "build a linear map with property P" problem, identify the right basis structure, and the construction follows. The trigger: "show there exists $T$ with [structural property]". See [[Thm - Linear Map Determined by Action on Basis]] for the underlying construction tool.
+**Constructions via the linear-map lemma are templated.** The lemma's pattern — "pick a basis of the domain, specify the images, extend by linearity" — is mechanical. The skill is in choosing the right basis and the right images. Here we chose a basis adapted to $X$ and images that span $Y$, but other constructions use bases adapted to other structures: an eigenbasis adapted to an operator, a basis adapted to an inner product (orthonormal), a basis adapted to a chain of invariant [[Def - Subspace|subspaces]] (giving an upper-triangular matrix). The reusable principle: for any "build a linear map with property P" problem, identify the right basis structure, and the construction follows. The trigger: "show there exists $T$ with [structural property]". See [[Thm - Linear Map Determined by Action on Basis]] for the underlying construction tool.
 
 ---

@@ -125,7 +125,7 @@ hence $f(x+1, -y) = -f(x, y)$ for all $(x, y) \in \widetilde E$.
 > [!note]- Derivation
 > Set $y = 0$ in the functional equation: $f(x + 1, 0) = -f(x, 0)$ for all $x \in \mathbb{R}$. The line $\{y = 0\}$ in $\widetilde E$ is connected, and $f$ restricted to this line is a smooth real-valued function. If $f$ never vanished, $f|_{y=0}$ would have constant sign. But $f(x+1, 0)$ has the opposite sign from $f(x, 0)$, contradiction. So $f$ vanishes on the line $y = 0$ — in particular, there exists at least one $(x_0, 0)$ with $f(x_0, 0) = 0$.
 
-**Step 4: Conclude $E$ is not orientable.** If $E$ had a smooth nowhere-vanishing 2-form $\omega$, its lift $q^*\omega = f\,dx\wedge dy$ would also be nowhere-vanishing (since $q$ is a local diffeomorphism, $q^*\omega(p) = 0$ iff $\omega(q(p)) = 0$). But Step 3 shows $f$ must vanish somewhere on $\widetilde E$, contradicting nowhere-vanishing. By [[Thm - A Manifold is Orientable iff it Admits a Nowhere-Vanishing Top Form|the orientability criterion]], $E$ is not orientable.
+**Step 4: Conclude $E$ is not orientable.** If $E$ had a smooth nowhere-vanishing 2-form $\omega$, its lift $q^*\omega = f\,dx\wedge dy$ would also be nowhere-vanishing (since $q$ is a local [[Def - Diffeomorphism|diffeomorphism]], $q^*\omega(p) = 0$ iff $\omega(q(p)) = 0$). But Step 3 shows $f$ must vanish somewhere on $\widetilde E$, contradicting nowhere-vanishing. By [[Thm - A Manifold is Orientable iff it Admits a Nowhere-Vanishing Top Form|the orientability criterion]], $E$ is not orientable.
 
 > [!note]- Complete formal solution
 > **Part (a).** Let $\nu = \sum_i x^i\partial_i \in \mathfrak{X}(\mathbb{R}^{n+1})$ be the position vector field, and let $\Omega = dx^1\wedge\cdots\wedge dx^{n+1}$ be the standard volume form on $\mathbb{R}^{n+1}$. Define
@@ -144,7 +144,7 @@ hence $f(x+1, -y) = -f(x, y)$ for all $(x, y) \in \widetilde E$.
 > $$\tau^*(q^*\omega) = f(x+1, -y)(-dx\wedge dy) \stackrel{!}{=} f(x, y)\,dx\wedge dy,$$
 > so $f(x+1, -y) = -f(x, y)$ for all $(x, y) \in \widetilde E$.
 >
-> Set $y = 0$: $f(x+1, 0) = -f(x, 0)$, so $f$ restricted to the line $\{y = 0\}$ alternates sign in steps of $x = 1$. On the connected line $\{y = 0\}$, $f$ cannot have constant sign while satisfying this alternation, so $f$ vanishes at some $(x_0, 0) \in \widetilde E$. Since $q$ is a local diffeomorphism, $\omega = q^{-1*}(q^*\omega)$ vanishes at $q(x_0, 0) \in E$.
+> Set $y = 0$: $f(x+1, 0) = -f(x, 0)$, so $f$ restricted to the line $\{y = 0\}$ alternates sign in steps of $x = 1$. On the connected line $\{y = 0\}$, $f$ cannot have constant sign while satisfying this alternation, so $f$ vanishes at some $(x_0, 0) \in \widetilde E$. Since $q$ is a local [[Def - Diffeomorphism|diffeomorphism]], $\omega = q^{-1*}(q^*\omega)$ vanishes at $q(x_0, 0) \in E$.
 >
 > Therefore, $E$ admits no nowhere-vanishing smooth 2-form. By the orientability criterion, $E$ is not orientable. $\blacksquare$
 

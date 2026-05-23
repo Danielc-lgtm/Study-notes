@@ -13,11 +13,11 @@ tags: [geometry, differential-geometry]
 
 Show that the general linear group
 $$\mathrm{GL}(n, \mathbb{R}) = \{A \in M(n \times n, \mathbb{R}) : \det A \neq 0\}$$
-is a smooth manifold of dimension $n^2$, and identify its smooth structure.
+is a smooth manifold of [[Def - Dimension|dimension]] $n^2$, and identify its smooth structure.
 
 **Recall:**
 
-The space $M(n \times n, \mathbb{R})$ of all $n \times n$ real matrices is a real vector space of dimension $n^2$. Choosing the standard basis $\{E_{ij} : 1 \leq i, j \leq n\}$ (with $E_{ij}$ having $1$ in the $(i,j)$ position and $0$ elsewhere) gives an isomorphism $M(n \times n, \mathbb{R}) \cong \mathbb{R}^{n^2}$. The determinant $\det : M(n \times n, \mathbb{R}) \to \mathbb{R}$ is a polynomial function in the matrix entries, hence continuous.
+The space $M(n \times n, \mathbb{R})$ of all $n \times n$ real matrices is a real vector space of [[Def - Dimension|dimension]] $n^2$. Choosing the standard basis $\{E_{ij} : 1 \leq i, j \leq n\}$ (with $E_{ij}$ having $1$ in the $(i,j)$ position and $0$ elsewhere) gives an isomorphism $M(n \times n, \mathbb{R}) \cong \mathbb{R}^{n^2}$. The determinant $\det : M(n \times n, \mathbb{R}) \to \mathbb{R}$ is a polynomial function in the matrix entries, hence continuous.
 
 The open submanifold theorem:
 
@@ -33,7 +33,7 @@ The open submanifold theorem:
 
 **Theorem routing:** The route is: $M(n \times n, \mathbb{R}) \cong \mathbb{R}^{n^2}$ as a smooth $n^2$-manifold (since it is a finite-dimensional vector space with the standard smooth structure); $\det$ is a continuous (polynomial) function on $M(n \times n, \mathbb{R})$; $\mathrm{GL}(n, \mathbb{R}) = \det^{-1}(\mathbb{R} \setminus \{0\})$ is the preimage of an open set, hence open; by [[Thm - Open Subset of a Smooth Manifold]], $\mathrm{GL}(n, \mathbb{R})$ inherits a smooth manifold structure of dimension $n^2$.
 
-**Key decision point:** Recognizing that the *strict* inequality $\det A \neq 0$ defines an open set — *not* an equality (which would give a closed submanifold of lower dimension). The closely related groups $\mathrm{SL}(n, \mathbb{R}) = \{A : \det A = 1\}$ (special linear group) and $\mathrm{O}(n) = \{A : A^T A = I\}$ (orthogonal group) are *not* open subsets — they are closed submanifolds of lower dimension, and require the more sophisticated regular value theorem of [[Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds|DG IV]] to handle.
+**Key decision point:** Recognizing that the *strict* inequality $\det A \neq 0$ defines an open set — *not* an equality (which would give a closed submanifold of lower dimension). The closely related [[Def - Group|groups]] $\mathrm{SL}(n, \mathbb{R}) = \{A : \det A = 1\}$ (special linear group) and $\mathrm{O}(n) = \{A : A^T A = I\}$ (orthogonal group) are *not* open subsets — they are closed submanifolds of lower dimension, and require the more sophisticated regular value theorem of [[Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds|DG IV]] to handle.
 
 ---
 
@@ -41,7 +41,7 @@ The open submanifold theorem:
 
 1. **Operation 4 from the topic page (pass to an open subset).** $\mathrm{GL}(n, \mathbb{R}) = \det^{-1}(\mathbb{R} \setminus \{0\})$ is the preimage of an open set under a continuous function, hence open in $M(n \times n, \mathbb{R})$. By [[Thm - Open Subset of a Smooth Manifold]], $\mathrm{GL}(n, \mathbb{R})$ inherits a smooth $n^2$-manifold structure.
 
-2. **Operation 8 from the topic page (verify Hausdorff and second countability by inheritance).** Both are inherited from $\mathbb{R}^{n^2}$ as a subspace.
+2. **Operation 8 from the topic page (verify Hausdorff and second countability by inheritance).** Both are inherited from $\mathbb{R}^{n^2}$ as a [[Def - Subspace|subspace]].
 
 ---
 
@@ -80,7 +80,7 @@ By [[Thm - Open Subset of a Smooth Manifold]] applied to $M = \mathbb{R}^{n^2}$ 
 > [!note]- Derivation
 > *Single-chart atlas.* The most economical smooth atlas on $\mathrm{GL}(n, \mathbb{R})$ is the single chart $(\mathrm{GL}(n, \mathbb{R}), \mathrm{id})$, where the identity map is to be understood as the restriction of the identity on $M(n \times n, \mathbb{R}) \cong \mathbb{R}^{n^2}$ to the open subset $\mathrm{GL}(n, \mathbb{R})$. The image is $\mathrm{GL}(n, \mathbb{R})$ itself, an open subset of $\mathbb{R}^{n^2}$. So a single chart suffices to cover $\mathrm{GL}(n, \mathbb{R})$, and that single chart has image an open subset of $\mathbb{R}^{n^2}$.
 >
-> *Maximal smooth atlas.* The smooth structure on $\mathrm{GL}(n, \mathbb{R})$ inherited from $\mathbb{R}^{n^2}$ contains every chart smoothly compatible with the standard structure on $\mathbb{R}^{n^2}$, in particular every diffeomorphism of an open subset of $\mathrm{GL}(n, \mathbb{R})$ with an open subset of $\mathbb{R}^{n^2}$.
+> *Maximal smooth atlas.* The smooth structure on $\mathrm{GL}(n, \mathbb{R})$ inherited from $\mathbb{R}^{n^2}$ contains every chart smoothly compatible with the standard structure on $\mathbb{R}^{n^2}$, in particular every [[Def - Diffeomorphism|diffeomorphism]] of an open subset of $\mathrm{GL}(n, \mathbb{R})$ with an open subset of $\mathbb{R}^{n^2}$.
 
 > [!note]- Complete formal solution
 > **Claim.** $\mathrm{GL}(n, \mathbb{R})$ is a smooth manifold of dimension $n^2$.
@@ -106,14 +106,14 @@ By [[Thm - Open Subset of a Smooth Manifold]] applied to $M = \mathbb{R}^{n^2}$ 
 
 # Key Takeaways
 
-**The trigger pattern: "open subset of a smooth manifold" — instant smooth structure.** Whenever you encounter a space defined by a *strict* inequality involving continuous functions on a known smooth manifold — $\{f > 0\}$, $\{f \neq 0\}$, $\{f < c\}$, intersections of these — the open-submanifold theorem ([[Thm - Open Subset of a Smooth Manifold]]) immediately gives a smooth manifold of the same dimension as the ambient one. No further work is needed; the smooth structure is inherited. This is the cheapest construction in the chapter, and is the source of essentially all matrix Lie groups as smooth manifolds.
+**The trigger pattern: "open subset of a smooth manifold" — instant smooth structure.** Whenever you encounter a space defined by a *strict* inequality involving continuous functions on a known smooth manifold — $\{f > 0\}$, $\{f \neq 0\}$, $\{f < c\}$, intersections of these — the open-submanifold theorem ([[Thm - Open Subset of a Smooth Manifold]]) immediately gives a smooth manifold of the same dimension as the ambient one. No further work is needed; the smooth structure is inherited. This is the cheapest construction in the chapter, and is the source of essentially all matrix Lie [[Def - Group|groups]] as smooth manifolds.
 
 **Strict inequality cuts out an open set; equality cuts out a closed lower-dimensional submanifold.** The transition from $\det A \neq 0$ (an *inequality*) to $\det A = 1$ (an *equality*) takes you from $\mathrm{GL}(n, \mathbb{R})$ (open, dimension $n^2$) to $\mathrm{SL}(n, \mathbb{R})$ (closed, dimension $n^2 - 1$). The smooth structure is no longer inherited from the open-submanifold theorem; instead, it requires the *regular value theorem* ([[Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds|DG IV]]). This is the fundamental distinction between *open* submanifolds (this exercise) and *closed embedded* submanifolds (developed in DG IV).
 
 **Once $\mathrm{GL}(n, \mathbb{R})$ is a smooth manifold, the rest of matrix Lie theory follows.** The general linear group is the *prototype matrix Lie group*. From this exercise, the following all follow with minimal extra work:
 - $\mathrm{GL}(n, \mathbb{C}) = \det^{-1}(\mathbb{C} \setminus \{0\}) \subseteq M(n, \mathbb{C}) \cong \mathbb{R}^{2n^2}$ is a smooth manifold of (real) dimension $2n^2$ — same argument with complex matrices.
 - $\mathrm{GL}^+(n, \mathbb{R}) = \det^{-1}((0, \infty))$ is a smooth manifold of dimension $n^2$ — its identity component.
-- The space of *upper-triangular invertible matrices* and the space of *invertible diagonal matrices* are smooth manifolds (open subsets of corresponding affine subspaces of $M(n, \mathbb{R})$).
+- The space of *upper-triangular invertible matrices* and the space of *invertible diagonal matrices* are smooth manifolds (open subsets of corresponding affine [[Def - Subspace|subspaces]] of $M(n, \mathbb{R})$).
 The whole landscape of matrix Lie groups built from $\mathrm{GL}$ via further restrictions (equality constraints, leading to submanifolds via the regular value theorem) is in [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map|DG XI]].
 
 **The dimension of $\mathrm{GL}(n, \mathbb{R})$ is $n^2$ — every entry is independent.** $n^2$ is the dimension of the *ambient* matrix space, and openness preserves it. This is the analytical intuition: at a generic invertible matrix $A$, you can perturb each of the $n^2$ entries independently and stay invertible (since the determinant is a nonzero polynomial, hence its zero set has codimension at least $1$). The full $n^2$-dimensional neighbourhood of $A$ in $\mathrm{GL}$ is genuine. Compare: $\mathrm{SL}(n) = \{A : \det A = 1\}$ has dimension $n^2 - 1$ (one constraint), $\mathrm{O}(n) = \{A : A^T A = I\}$ has dimension $\frac{n(n-1)}{2}$ (the constraint $A^T A = I$ gives $\frac{n(n+1)}{2}$ equations, so codimension is $\frac{n(n+1)}{2}$ when the constraints are independent).

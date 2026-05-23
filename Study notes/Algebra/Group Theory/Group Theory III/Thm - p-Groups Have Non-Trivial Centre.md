@@ -20,12 +20,12 @@ $G$ is a finite group with identity $e$. A prime is $p$, and $G$ is a [[Def - p-
 
 # Statement
 
-> **Theorem (non-trivial centre of a $p$-group).** Let $G$ be a finite [[Def - p-group|p-group]] — a group of order $p^n$ with $p$ prime and $n \geq 1$. Then the [[Def - Centraliser and Centre|centre]] $Z(G)$ is non-trivial:
+> **Theorem (non-trivial centre of a $p$-[[Def - Group|group]]).** Let $G$ be a finite [[Def - p-group|p-group]] — a group of order $p^n$ with $p$ prime and $n \geq 1$. Then the [[Def - Centraliser and Centre|centre]] $Z(G)$ is non-trivial:
 > $$Z(G) \neq \{e\}, \qquad \text{indeed} \qquad p \mid |Z(G)|.$$
 
 > **Corollary (a $p$-group is not simple for $n \geq 2$).** If $|G| = p^n$ with $n \geq 2$, then $G$ is not a [[Def - Simple Group|simple group]]: it has a proper non-trivial [[Def - Normal Subgroup|normal subgroup]].
 
-The corollary follows because $Z(G)$ is always normal in $G$. If $Z(G) = G$ then $G$ is abelian and any subgroup of order $p$ (one exists by [[Group Theory II — §1.3–1.4|Cauchy]]) is a proper non-trivial normal subgroup; if $Z(G) \neq G$ then $Z(G)$ itself is proper, and it is non-trivial by the theorem — either way $G$ has a proper non-trivial normal subgroup and is not simple.
+The corollary follows because $Z(G)$ is always normal in $G$. If $Z(G) = G$ then $G$ is abelian and any [[Def - Subgroup|subgroup]] of order $p$ (one exists by [[Group Theory II — §1.3–1.4|Cauchy]]) is a proper non-trivial normal [[Def - Subgroup|subgroup]]; if $Z(G) \neq G$ then $Z(G)$ itself is proper, and it is non-trivial by the theorem — either way $G$ has a proper non-trivial normal subgroup and is not simple.
 
 ---
 
@@ -35,7 +35,7 @@ A $p$-group is defined by one arithmetic fact — its order is $p^n$ — and the
 
 Why is a central element the right thing to extract, rather than, say, an element of order $p$ (which [[Group Theory II — §1.3–1.4|Cauchy's theorem]] already supplies)? Because a central element of order $p$ generates a subgroup $\langle x \rangle \cong C_p$ that is automatically [[Def - Normal Subgroup|normal]] — central elements are fixed by conjugation, so the subgroup they generate is too. A normal subgroup is exactly what you need to form a quotient $G/\langle x \rangle$, and that quotient is a strictly smaller $p$-group. So this theorem is the engine of *induction on the order of a $p$-group*: it manufactures, for free, the normal subgroup you quotient by. Cauchy's element of order $p$ need not be central, so the subgroup it generates need not be normal, and you cannot quotient by it. The word "central" is doing all the work.
 
-The historical and structural payoff is the corollary: no $p$-group of order $p^n$ with $n \geq 2$ is [[Def - Simple Group|simple]]. Since the [[Thm - Composition Series|simple groups are the atoms]] of finite group theory, this rules out an entire infinite family of orders — $p^2, p^3, p^4, \dots$ — as candidate orders for new simple groups, with no case-checking at all. Before this theorem one might worry that some large $p$-group is simple; after it, one knows no $p$-group beyond prime order ever is. The theorem is the reason the prime powers are an "easy" region of the simple-group landscape.
+The historical and structural payoff is the corollary: no $p$-group of order $p^n$ with $n \geq 2$ is [[Def - Simple Group|simple]]. Since the [[Thm - Composition Series|simple groups are the atoms]] of finite group theory, this rules out an entire infinite family of orders — $p^2, p^3, p^4, \dots$ — as candidate orders for new simple [[Def - Group|groups]], with no case-checking at all. Before this theorem one might worry that some large $p$-group is simple; after it, one knows no $p$-group beyond prime order ever is. The theorem is the reason the prime powers are an "easy" region of the simple-group landscape.
 
 ---
 

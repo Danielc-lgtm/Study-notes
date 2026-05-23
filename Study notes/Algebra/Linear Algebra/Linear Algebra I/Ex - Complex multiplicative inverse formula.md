@@ -17,7 +17,7 @@ $$\alpha^{-1} = \frac{a - bi}{a^2 + b^2}, \qquad \text{when } \alpha = a + bi.$$
 
 **Recall:**
 
-A [[Def - Field|field]] requires multiplicative inverses for every nonzero element. For $\mathbb{C}$ this is one of the axioms to verify in showing $\mathbb{C}$ is a field. The complex conjugate is $\overline{a + bi} = a - bi$, and the modulus squared is $|a + bi|^2 = a^2 + b^2$.
+A field requires multiplicative inverses for every nonzero element. For $\mathbb{C}$ this is one of the axioms to verify in showing $\mathbb{C}$ is a field. The complex conjugate is $\overline{a + bi} = a - bi$, and the modulus squared is $|a + bi|^2 = a^2 + b^2$.
 
 ---
 
@@ -76,8 +76,8 @@ The plan: multiply by the conjugate, get a real denominator, and divide.
 
 # Key Takeaways
 
-**The conjugate trick rationalizes denominators in any quadratic field.** The same maneuver $\alpha \cdot \overline{\alpha} = a^2 + b^2$ works in $\mathbb{Q}(\sqrt{-d})$ and more generally in $K(\sqrt{-d})$ for any field $K$: multiply by the Galois conjugate to land in $K$. This is the source of the **norm map** in algebraic number theory and the technique used to invert elements in many concrete number rings. Recognizing the conjugate as a useful symmetry is one of the first steps in working with field extensions.
+**The conjugate trick rationalizes denominators in any quadratic field.** The same maneuver $\alpha \cdot \overline{\alpha} = a^2 + b^2$ works in $\mathbb{Q}(\sqrt{-d})$ and more generally in $K(\sqrt{-d})$ for any field $K$: multiply by the Galois conjugate to land in $K$. This is the source of the **norm map** in algebraic number theory and the technique used to invert elements in many concrete number [[Def - Ring|rings]]. Recognizing the conjugate as a useful symmetry is one of the first steps in working with field extensions.
 
-**Uniqueness follows from associativity and the inverse property, generally.** The uniqueness argument $\beta = \beta \alpha \beta' = \beta'$ is purely structural — it uses associativity, the identity property of $1$, and the inverse property of $\beta$. It works in any monoid in which inverses exist, including groups and rings with units. The same pattern proved uniqueness of inverses in [[Def - Group|group theory]] and applies to multiplicative inverses in fields without modification.
+**Uniqueness follows from associativity and the inverse property, generally.** The uniqueness argument $\beta = \beta \alpha \beta' = \beta'$ is purely structural — it uses associativity, the identity property of $1$, and the inverse property of $\beta$. It works in any monoid in which inverses exist, including [[Def - Group|groups]] and [[Def - Ring|rings]] with units. The same pattern proved uniqueness of inverses in [[Def - Group|group theory]] and applies to multiplicative inverses in fields without modification.
 
 **Modulus squared $|\alpha|^2 = a^2 + b^2$ is the geometric content of $\alpha \overline{\alpha}$.** The product $\alpha \overline{\alpha} = a^2 + b^2$ is the squared distance from $\alpha$ to the origin in the Argand plane. The fact that it is real and non-negative is the geometric source of $\mathbb{C}$ being an inner-product space (over $\mathbb{R}$, via $\langle \alpha, \beta \rangle = \operatorname{Re}(\alpha \overline{\beta})$). This bridges the field-theoretic structure of $\mathbb{C}$ with its geometric structure, and is the prototype of inner-product spaces in [[Linear Algebra VI — §6 Inner Product Spaces]].

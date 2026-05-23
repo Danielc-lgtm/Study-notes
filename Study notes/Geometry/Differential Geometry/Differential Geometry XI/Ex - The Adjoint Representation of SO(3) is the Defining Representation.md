@@ -19,7 +19,7 @@ Conclude that $\mathrm{Ad} : \mathrm{SO}(3) \to \mathrm{GL}(\mathfrak{so}(3))$ f
 
 **Recall:**
 
-The adjoint representation $\mathrm{Ad}_g = d(C_g)_e$ where $C_g(h) = ghg^{-1}$. For matrix Lie groups, $\mathrm{Ad}_g(X) = gXg^{-1}$. The Lie algebra $\mathfrak{so}(3)$ is the antisymmetric $3 \times 3$ matrices, and the hat map sends $v \in \mathbb{R}^3$ to $\widehat v = \begin{pmatrix} 0 & -v_3 & v_2 \\ v_3 & 0 & -v_1 \\ -v_2 & v_1 & 0 \end{pmatrix}$.
+The adjoint representation $\mathrm{Ad}_g = d(C_g)_e$ where $C_g(h) = ghg^{-1}$. For matrix Lie [[Def - Group|groups]], $\mathrm{Ad}_g(X) = gXg^{-1}$. The Lie algebra $\mathfrak{so}(3)$ is the antisymmetric $3 \times 3$ matrices, and the hat map sends $v \in \mathbb{R}^3$ to $\widehat v = \begin{pmatrix} 0 & -v_3 & v_2 \\ v_3 & 0 & -v_1 \\ -v_2 & v_1 & 0 \end{pmatrix}$.
 
 ---
 
@@ -29,7 +29,7 @@ The adjoint representation $\mathrm{Ad}_g = d(C_g)_e$ where $C_g(h) = ghg^{-1}$.
 
 **Assumption pattern:** $\mathfrak{so}(3)$ is identified with $\mathbb{R}^3$ via the hat map, which is a linear isomorphism. The adjoint action of $\mathrm{SO}(3)$ on $\mathfrak{so}(3)$ (matrix conjugation) should correspond to a linear action of $\mathrm{SO}(3)$ on $\mathbb{R}^3$ via the hat-map identification. The natural guess — the defining representation — is the one we verify.
 
-**Theorem routing:** Route is: (1) for matrix groups, $\mathrm{Ad}_g(X) = gXg^{-1}$. (2) Compute $g \widehat v g^{-1} = g \widehat v g^T$ (since $g \in \mathrm{SO}(3)$, $g^{-1} = g^T$). (3) Verify the resulting matrix is the hat of $gv$, i.e., that $(g \widehat v g^T)_{ij} = (\widehat{gv})_{ij}$ — this is a direct computation using the formula for the hat map and the orthogonality of $g$. (4) Conclude $\mathrm{Ad}_g(\widehat v) = \widehat{gv}$, so under the hat-map identification, $\mathrm{Ad}$ on $\mathrm{SO}(3)$ is the defining representation.
+**Theorem routing:** Route is: (1) for matrix [[Def - Group|groups]], $\mathrm{Ad}_g(X) = gXg^{-1}$. (2) Compute $g \widehat v g^{-1} = g \widehat v g^T$ (since $g \in \mathrm{SO}(3)$, $g^{-1} = g^T$). (3) Verify the resulting matrix is the hat of $gv$, i.e., that $(g \widehat v g^T)_{ij} = (\widehat{gv})_{ij}$ — this is a direct computation using the formula for the hat map and the orthogonality of $g$. (4) Conclude $\mathrm{Ad}_g(\widehat v) = \widehat{gv}$, so under the hat-map identification, $\mathrm{Ad}$ on $\mathrm{SO}(3)$ is the defining representation.
 
 **Key decision point:** The non-obvious computation is **verifying that $g \widehat v g^T = \widehat{gv}$ for $g \in \mathrm{SO}(3)$**. This uses the orthogonality of $g$ in an essential way: for a general invertible $g$, $g \widehat v g^{-1}$ is *not* of the form $\widehat w$ for some $w$ — only for $g \in \mathrm{SO}(3)$ does the conjugation preserve the antisymmetric/skew structure. The result is also a beautiful identity that justifies the term "$\widehat v$ is the angular velocity associated to $v$" — rotating the system by $g$ rotates the angular velocity vector by $g$.
 
@@ -126,10 +126,10 @@ with image $\mathrm{Ad}(\mathrm{SO}(3)) = \mathrm{SO}(3) \subseteq \mathrm{GL}(\
 > $$(g \widehat v g^T) w = g(v \times (g^T w)) = (gv) \times (g g^T w) = (gv) \times w = \widehat{gv} \cdot w \quad \forall w \in \mathbb{R}^3,$$
 > so $g \widehat v g^T = \widehat{gv}$. Hence $\mathrm{Ad}_g(\widehat v) = \widehat{gv}$.
 >
-> *Factorization.* Under the hat-map identification $\mathfrak{so}(3) \cong \mathbb{R}^3$, $\mathrm{Ad}_g$ acts as $g$ on $\mathbb{R}^3$ — the defining representation. So $\mathrm{Ad} : \mathrm{SO}(3) \to \mathrm{GL}(\mathfrak{so}(3)) \cong \mathrm{GL}(3, \mathbb{R})$ is the inclusion of $\mathrm{SO}(3)$ as a subgroup of $\mathrm{GL}(3)$, with image $\mathrm{SO}(3)$. Since $Z(\mathrm{SO}(3)) = \{I\}$, $\mathrm{Ad}$ has trivial kernel — it is **injective**. $\qquad\blacksquare$
+> *Factorization.* Under the hat-map identification $\mathfrak{so}(3) \cong \mathbb{R}^3$, $\mathrm{Ad}_g$ acts as $g$ on $\mathbb{R}^3$ — the defining representation. So $\mathrm{Ad} : \mathrm{SO}(3) \to \mathrm{GL}(\mathfrak{so}(3)) \cong \mathrm{GL}(3, \mathbb{R})$ is the inclusion of $\mathrm{SO}(3)$ as a [[Def - Subgroup|subgroup]] of $\mathrm{GL}(3)$, with image $\mathrm{SO}(3)$. Since $Z(\mathrm{SO}(3)) = \{I\}$, $\mathrm{Ad}$ has trivial kernel — it is **injective**. $\qquad\blacksquare$
 
 > [!warning] Illegal but tempting: assuming $\mathrm{Ad}_g$ acts arbitrarily on $\mathfrak{so}(3)$
-> One might think the adjoint representation gives some new, possibly higher-dimensional or irreducible-decomposed action of $\mathrm{SO}(3)$ on $\mathfrak{so}(3)$. The result of this exercise is much cleaner: $\mathrm{Ad}$ on $\mathrm{SO}(3)$ is **just the defining representation**, with no new structure. The reason is that $\mathfrak{so}(3)$ is $3$-dimensional and $\mathrm{SO}(3)$ already has a natural $3$-dimensional irreducible representation (the defining one); by representation-theoretic dimension considerations, the adjoint representation is forced to be the defining one (up to isomorphism, which the hat map provides explicitly).
+> One might think the adjoint representation gives some new, possibly higher-dimensional or irreducible-decomposed action of $\mathrm{SO}(3)$ on $\mathfrak{so}(3)$. The result of this exercise is much cleaner: $\mathrm{Ad}$ on $\mathrm{SO}(3)$ is **just the defining representation**, with no new structure. The reason is that $\mathfrak{so}(3)$ is $3$-dimensional and $\mathrm{SO}(3)$ already has a natural $3$-dimensional irreducible representation (the defining one); by representation-theoretic [[Def - Dimension|dimension]] considerations, the adjoint representation is forced to be the defining one (up to isomorphism, which the hat map provides explicitly).
 
 ---
 
@@ -137,7 +137,7 @@ with image $\mathrm{Ad}(\mathrm{SO}(3)) = \mathrm{SO}(3) \subseteq \mathrm{GL}(\
 
 **The adjoint representation of $\mathrm{SO}(n)$ is the antisymmetric-tensor representation on $\Lambda^2 \mathbb{R}^n$.**
 
-For general $n$, $\mathfrak{so}(n) \cong \Lambda^2 \mathbb{R}^n$ (antisymmetric bilinear forms on $\mathbb{R}^n$), and the adjoint representation of $\mathrm{SO}(n)$ on $\mathfrak{so}(n)$ is the natural representation on $\Lambda^2 \mathbb{R}^n$. For $n = 3$, $\Lambda^2 \mathbb{R}^3 \cong \mathbb{R}^3$ via the Hodge star (or the hat map), so the adjoint representation becomes the defining representation. For $n = 4$, $\Lambda^2 \mathbb{R}^4$ is $6$-dimensional, and the adjoint representation on $\mathfrak{so}(4) = \Lambda^2 \mathbb{R}^4$ has a richer structure — in fact it splits as $\mathfrak{so}(4) = \mathfrak{so}(3) \oplus \mathfrak{so}(3)$ (self-dual + anti-self-dual), the source of "instanton chirality" in $4$D gauge theory.
+For general $n$, $\mathfrak{so}(n) \cong \Lambda^2 \mathbb{R}^n$ (antisymmetric bilinear forms on $\mathbb{R}^n$), and the adjoint representation of $\mathrm{SO}(n)$ on $\mathfrak{so}(n)$ is the natural representation on $\Lambda^2 \mathbb{R}^n$. For $n = 3$, $\Lambda^2 \mathbb{R}^3 \cong \mathbb{R}^3$ via the Hodge star (or the hat map), so the adjoint representation becomes the defining representation. For $n = 4$, $\Lambda^2 \mathbb{R}^4$ is $6$-dimensional, and the adjoint representation on $\mathfrak{so}(4) = \Lambda^2 \mathbb{R}^4$ has a richer structure — in fact it splits as $\mathfrak{so}(4) = \mathfrak{so}(3) \oplus \mathfrak{so}(3)$ (self-dual + anti-self-dual), the source of "[[Def - Instanton|instanton]] chirality" in $4$D gauge theory.
 
 **Adjoint orbits of $\mathrm{SO}(3)$ on $\mathfrak{so}(3) \cong \mathbb{R}^3$ are spheres centered at the origin.**
 

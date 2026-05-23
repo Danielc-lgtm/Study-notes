@@ -30,7 +30,7 @@ The construction follows the universal pattern of [[Def - Vector Bundle|vector b
 
 What is forced by demanding $T^*M$ be the bundle whose **fibre at $p$ is $T_p^*M$**? This is the operational definition: the fibre records the local linear-algebra data at $p$. Demanding the fibre be the dual ensures that sections (covector fields) are exactly the objects we need — linear functionals on tangent vectors at each point.
 
-What is forced by demanding the bundle structure be **smooth**? Smoothness of the bundle ensures that smoothness of sections makes sense. The local trivializations from charts must be diffeomorphisms (not just bijections), so the inverse-transpose Jacobians of coordinate transitions must be smooth on overlaps — and they are, because the original Jacobians are smooth and matrix inversion-and-transposition is smooth on $\mathrm{GL}(n, \mathbb{R})$.
+What is forced by demanding the bundle structure be **smooth**? Smoothness of the bundle ensures that smoothness of sections makes sense. The local trivializations from charts must be [[Def - Diffeomorphism|diffeomorphisms]] (not just bijections), so the inverse-transpose Jacobians of coordinate transitions must be smooth on overlaps — and they are, because the original Jacobians are smooth and matrix inversion-and-transposition is smooth on $\mathrm{GL}(n, \mathbb{R})$.
 
 What is forced by demanding the **dual coordinate vector fields $dx^i$** be smooth sections? This is the consistency requirement that aligns the cotangent bundle with the chart-induced structure on $TM$. In any chart, $\partial/\partial x^i$ are smooth sections of $TM$, and by duality $dx^j$ defined by $dx^j(\partial/\partial x^i) = \delta^j_i$ should be smooth sections of $T^*M$. The smooth structure on $T^*M$ is the *unique* one for which this holds (see [[Thm - The Cotangent Bundle is a Smooth Manifold]]).
 
@@ -66,7 +66,7 @@ A **covector field** (or **differential 1-form**) on $M$ is a smooth section of 
 
 The cotangent bundle is the dual bundle of the tangent bundle, in the precise categorical sense.
 
-**Dual functor on vector bundles.** Let $\mathbf{Vect}_M$ be the category of smooth vector bundles over $M$ with morphisms the bundle homomorphisms over $M$. The **dual functor**
+**Dual functor on vector bundles.** Let $\mathbf{Vect}_M$ be the category of smooth vector bundles over $M$ with morphisms the bundle [[Def - Homomorphism|homomorphisms]] over $M$. The **dual functor**
 $$(-)^* : \mathbf{Vect}_M^{\mathrm{op}} \to \mathbf{Vect}_M$$
 sends a bundle $E \to M$ to its dual $E^* := \bigsqcup_p E_p^*$, with fibrewise dual. It sends a bundle homomorphism $F : E \to E'$ over $M$ to the dual bundle homomorphism $F^* : (E')^* \to E^*$, $(F^*\omega)_p(v) = \omega_p(F_p(v))$. This is a *contravariant* functor — arrows are reversed.
 
@@ -76,7 +76,7 @@ the dual of the tangent bundle. The dual functor packages the linear-algebra of 
 
 **Cotangent functor on smooth manifolds.** The construction $M \mapsto T^*M$ is *not* a functor on smooth manifolds in the same way $TM$ is. Specifically, for a smooth map $F : M \to N$, the differential $dF : TM \to TN$ is a bundle homomorphism *covering $F$* (going from $M$ to $N$), making $T$ a covariant functor. But for the cotangent bundle, there is no analogous bundle homomorphism $T^*M \to T^*N$ — instead, there is a *pullback* of covector fields $F^* : \Gamma(T^*N) \to \Gamma(T^*M)$, going in the opposite direction. So $T^*(-)$ is contravariant on the level of sections, not on the level of total spaces.
 
-This asymmetry is the structural source of the difference between vectors and covectors: vectors push forward (along diffeomorphisms), covectors pull back (always). The categorical content is that $\Gamma(T^*(-))$ is a contravariant functor from smooth manifolds to vector spaces (or $C^\infty$-module-functors when one keeps track of the base ring).
+This asymmetry is the structural source of the difference between vectors and covectors: vectors push forward (along diffeomorphisms), covectors pull back (always). The categorical content is that $\Gamma(T^*(-))$ is a contravariant functor from smooth manifolds to vector spaces (or $C^\infty$-[[Def - Module|module]]-functors when one keeps track of the base [[Def - Ring|ring]]).
 
 **Hom-functor perspective.** The cotangent space at a point is $T_p^*M = \mathrm{Hom}_{\mathbb{R}}(T_pM, \mathbb{R})$, the $\mathbb{R}$-linear-map space. Bundle-globally, this realises $T^*M$ as a "Hom bundle" — the bundle of fibrewise $\mathbb{R}$-linear maps from $TM$ to the trivial line bundle $M \times \mathbb{R}$. In categorical language, $T^*M = \mathcal{Hom}(TM, M \times \mathbb{R})$ within $\mathbf{Vect}_M$.
 
@@ -108,7 +108,7 @@ In **algebraic geometry**, the cotangent sheaf $\Omega^1_{X/k}$ on a scheme $X$ 
 
 **Is NOT a cotangent vector — an element of $T_pM$.** Tangent vectors and cotangent vectors live in different (though isomorphic, non-canonically) vector spaces. A tangent vector $v \in T_pM$ is not in $T_p^*M$ unless there is an additional structure (an inner product, a Riemannian metric) that identifies them via the musical isomorphism $\flat : v \mapsto g(v, \cdot)$.
 
-**Corollary — dimension matches.** $\dim T^*M = 2n$, the same as $\dim TM$, because both are rank-$n$ vector bundles over the $n$-dimensional manifold $M$. The total spaces have the same dimension; the bundles are not canonically isomorphic without extra structure.
+**Corollary — [[Def - Dimension|dimension]] matches.** $\dim T^*M = 2n$, the same as $\dim TM$, because both are rank-$n$ vector bundles over the $n$-dimensional manifold $M$. The total spaces have the same dimension; the bundles are not canonically isomorphic without extra structure.
 
 **Corollary — the dual coordinate basis.** In a chart $(U, x^i)$, the covectors $dx^1|_p, \dots, dx^n|_p$ are the dual basis to $\partial/\partial x^1|_p, \dots, \partial/\partial x^n|_p$, so $\dim T_p^*M = n$.
 

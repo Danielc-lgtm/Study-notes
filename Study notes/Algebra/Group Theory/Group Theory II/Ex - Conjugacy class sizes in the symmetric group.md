@@ -21,11 +21,11 @@ Equivalently, prove that the centraliser of $\sigma$ has order $|C_{S_n}(\sigma)
 
 **Recall:**
 
-The objects in play are a symmetric group, the conjugacy class of one of its elements, and the centraliser of that element.
+The objects in play are a symmetric [[Def - Group|group]], the conjugacy class of one of its elements, and the centraliser of that element.
 
 ![[Def - Symmetric Group#The Definition]]
 
-The [[Def - Conjugacy Class|conjugacy class]] of $\sigma$ is $\operatorname{ccl}_{S_n}(\sigma) = \{\tau\sigma\tau^{-1} : \tau \in S_n\}$ — the orbit of $\sigma$ under conjugation. The [[Def - Centraliser and Centre|centraliser]] $C_{S_n}(\sigma) = \{\tau \in S_n : \tau\sigma = \sigma\tau\}$ is the subgroup of permutations commuting with $\sigma$; it is the stabiliser of $\sigma$ for the conjugation action.
+The [[Def - Conjugacy Class|conjugacy class]] of $\sigma$ is $\operatorname{ccl}_{S_n}(\sigma) = \{\tau\sigma\tau^{-1} : \tau \in S_n\}$ — the orbit of $\sigma$ under conjugation. The [[Def - Centraliser and Centre|centraliser]] $C_{S_n}(\sigma) = \{\tau \in S_n : \tau\sigma = \sigma\tau\}$ is the [[Def - Subgroup|subgroup]] of permutations commuting with $\sigma$; it is the stabiliser of $\sigma$ for the conjugation action.
 
 The [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]] applied to conjugation gives $|\operatorname{ccl}_{S_n}(\sigma)| \cdot |C_{S_n}(\sigma)| = |S_n| = n!$.
 
@@ -39,7 +39,7 @@ In words: to compute $\tau\sigma\tau^{-1}$, take the cycle notation of $\sigma$ 
 
 **Problem class.** This is a *count a conjugacy class* problem, the recurring computational task of §1.4. The [[Group Theory II — §1.3–1.4#Problem-Solving Strategy|topic page's strategy]] prescribes the route directly: a conjugacy class is an orbit of the conjugation action, so its size is the index of a [[Def - Centraliser and Centre|centraliser]] by the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]]. The class size is hard to count head-on but the centraliser order is structured and countable, so the productive direction is to compute the centraliser and divide $n!$ by it.
 
-**Assumption pattern.** The group is a [[Def - Symmetric Group|symmetric group]] and the element is specified by its cycle type $(a_1, \dots, a_n)$. Cycle type is precisely the invariant that determines conjugacy in $S_n$, so the assumption hands us, for free, a complete description of the centraliser's *job*: a permutation $\tau$ centralises $\sigma$ exactly when relabelling $\sigma$'s cycles by $\tau$ reproduces $\sigma$. The assumption converts an abstract count into a concrete combinatorial bookkeeping of "ways to relabel without changing the picture".
+**Assumption pattern.** The [[Def - Group|group]] is a [[Def - Symmetric Group|symmetric group]] and the element is specified by its cycle type $(a_1, \dots, a_n)$. Cycle type is precisely the invariant that determines conjugacy in $S_n$, so the assumption hands us, for free, a complete description of the centraliser's *job*: a permutation $\tau$ centralises $\sigma$ exactly when relabelling $\sigma$'s cycles by $\tau$ reproduces $\sigma$. The assumption converts an abstract count into a concrete combinatorial bookkeeping of "ways to relabel without changing the picture".
 
 **Theorem routing.** Two theorems do the work. [[Thm - Conjugacy Classes of the Symmetric Group|Conjugation relabels cycle entries]] turns "$\tau$ commutes with $\sigma$" into "$\tau$ permutes $\sigma$'s disjoint cycles among themselves and rotates within them" — a condition we can enumerate. Counting those $\tau$ gives $|C_{S_n}(\sigma)| = \prod_k k^{a_k} a_k!$. Then the [[Thm - Orbit-Stabiliser Theorem|orbit-stabiliser theorem]], $|\operatorname{ccl}(\sigma)| = |S_n|/|C_{S_n}(\sigma)|$, delivers the class-size formula. The centraliser is the *computed* object; the class size is *read off* by division.
 

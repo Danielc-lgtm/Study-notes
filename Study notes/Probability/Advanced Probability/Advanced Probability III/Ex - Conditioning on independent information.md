@@ -19,7 +19,7 @@ $$\mathbb{E}[h(X,Y)\mid\mathcal{G}]=g(X),\qquad g(x)=\mathbb{E}[h(x,Y)].$$
 
 **Recall:**
 
-[[Def - Independence|Independence]]; [[Thm - Properties of Conditional Expectation|properties of conditional expectation]] — characterise by $\mathcal{G}$-measurability + the averaging identity.
+Independence; [[Thm - Properties of Conditional Expectation|properties of conditional expectation]] — characterise by $\mathcal{G}$-measurability + the averaging identity.
 
 ---
 

@@ -63,7 +63,7 @@ The existence theorem [[Thm - Existence of Smooth Partitions of Unity]] guarante
 
 There is no clean categorical formulation of a partition of unity, but the construction is central to the descent theory of sheaves: a sheaf-theoretic local-to-global argument typically requires a partition-of-unity argument to assemble local sections into a global one. **Soft sheaves** (sheaves where every section extends from a closed subset to a global section) are exactly those for which partitions-of-unity-style assembly works; the sheaf of smooth functions $\mathcal{O}_M^\infty$ on a smooth manifold is soft.
 
-In more sophisticated language: the existence of partitions of unity on $M$ is what makes the sheaf $\mathcal{O}_M^\infty$ acyclic for sheaf cohomology, and this is what allows the de Rham cohomology of $M$ (computed by $\mathcal{O}_M^\infty$-modules) to compute the actual cohomology of $M$ as a topological space (the de Rham theorem).
+In more sophisticated language: the existence of partitions of unity on $M$ is what makes the sheaf $\mathcal{O}_M^\infty$ acyclic for sheaf cohomology, and this is what allows the de Rham cohomology of $M$ (computed by $\mathcal{O}_M^\infty$-[[Def - Module|modules]]) to compute the actual cohomology of $M$ as a topological space (the de Rham theorem).
 
 ---
 

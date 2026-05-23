@@ -12,9 +12,9 @@ tags: [algebra, linear-algebra]
 
 # Problem Statement
 
-The **Cayley-Hamilton theorem** has two proofs in LADR: one in §8B via the minimal polynomial (call this the "**minimal-polynomial form**"), and one in §9C via the determinant and the adjugate (the "**determinantal form**"). Both prove that every operator $T \in \mathcal{L}(V)$ on a finite-dimensional vector space satisfies its own characteristic polynomial: $p_T(T) = 0$, where $p_T(z) := \det(zI - T)$.
+The **[[Thm - Cayley-Hamilton (Minimal-Polynomial Form)|Cayley-Hamilton]] theorem** has two proofs in LADR: one in §8B via the minimal polynomial (call this the "**minimal-polynomial form**"), and one in §9C via the determinant and the adjugate (the "**determinantal form**"). Both prove that every operator $T \in \mathcal{L}(V)$ on a finite-dimensional vector space satisfies its own characteristic polynomial: $p_T(T) = 0$, where $p_T(z) := \det(zI - T)$.
 
-Show that the **two definitions of the characteristic polynomial** — the minimal-polynomial-based definition (from §8) and the determinantal definition (from §9) — agree on a complex vector space, and explain how the two proofs of Cayley-Hamilton reflect different organising principles.
+Show that the **two definitions of the characteristic polynomial** — the minimal-polynomial-based definition (from §8) and the determinantal definition (from §9) — agree on a complex vector space, and explain how the two proofs of [[Thm - Cayley-Hamilton (Minimal-Polynomial Form)|Cayley-Hamilton]] reflect different organising principles.
 
 Specifically:
 
@@ -38,7 +38,7 @@ Show these two proofs are essentially equivalent and identify which proof is mor
 
 **Cayley-Hamilton theorem (LADR 8.29 and 9.64).** For any operator $T \in \mathcal{L}(V)$ on a finite-dimensional vector space, $p_T(T) = 0$ where $p_T$ is the characteristic polynomial.
 
-**Generalised eigenspace.** $G(\lambda, T) := \{v \in V : (T - \lambda I)^k v = 0 \text{ for some } k\}$, with dimension equal to the algebraic multiplicity of $\lambda$.
+**Generalised eigenspace.** $G(\lambda, T) := \{v \in V : (T - \lambda I)^k v = 0 \text{ for some } k\}$, with [[Def - Dimension|dimension]] equal to the algebraic multiplicity of $\lambda$.
 
 **Adjugate identity (LADR §9C).** For any matrix $A$, $A \cdot \operatorname{adj}(A) = \det(A) I$.
 
@@ -78,7 +78,7 @@ Show these two proofs are essentially equivalent and identify which proof is mor
 > For (c), invoke the §8 generalised eigenspace decomposition: $V = \bigoplus_\lambda G(\lambda, T)$, and on $G(\lambda, T)$, $(T - \lambda I)^{m(\lambda)}$ vanishes by definition of the generalised eigenspace. The product $p_T(T) = \prod_\lambda (T - \lambda I)^{m(\lambda)}$ contains $(T - \lambda I)^{m(\lambda)}$ as a factor for each $\lambda$, so on each $G(\lambda, T)$ the corresponding factor vanishes.
 
 > [!note]- Hint 4
-> The two proofs are essentially equivalent because both rely on the eigenvalue structure of $T$ (Schur reduction or generalised eigenspace decomposition), but they differ in *organisation*: the determinantal proof works in matrix algebra and uses the adjugate identity as a polynomial-coefficient identity; the spectral proof works geometrically with subspace decomposition.
+> The two proofs are essentially equivalent because both rely on the eigenvalue structure of $T$ (Schur reduction or generalised eigenspace decomposition), but they differ in *organisation*: the determinantal proof works in matrix algebra and uses the adjugate identity as a polynomial-coefficient identity; the spectral proof works geometrically with [[Def - Subspace|subspace]] decomposition.
 
 ---
 
@@ -95,7 +95,7 @@ Both equal $\prod_i (z - \lambda_i)$ with multiplicity.
 >
 > The §8 definition of the characteristic polynomial (LADR 8.26): for a complex $V$, $p_T^{(\S 8)}(z) := \prod_\lambda (z - \lambda)^{m(\lambda)}$, where the product is over distinct eigenvalues $\lambda$ and $m(\lambda) = \dim G(\lambda, T)$ is the algebraic multiplicity defined via the generalised eigenspace.
 >
-> A key fact (LADR 8.21): the algebraic multiplicity from §8 (dimension of generalised eigenspace) equals the multiplicity as a root of $\det(zI - T)$. So:
+> A key fact (LADR 8.21): the algebraic multiplicity from §8 ([[Def - Dimension|dimension]] of generalised eigenspace) equals the multiplicity as a root of $\det(zI - T)$. So:
 > $$p_T^{(\S 8)}(z) = \prod_\lambda (z - \lambda)^{m(\lambda)} = \prod_{i=1}^n (z - \lambda_i) = \det(zI - T) = p_T^{(\S 9)}(z),$$
 > where in the middle equality we expand the product over distinct $\lambda$ with multiplicity $m(\lambda)$ as a product over $\lambda_i$ with each $\lambda$ appearing $m(\lambda)$ times. The two definitions agree.
 
@@ -158,13 +158,13 @@ Via the §8 generalised eigenspace decomposition: $V = \bigoplus G(\lambda, T)$,
 
 **Step 4: Compare the two proofs.**
 
-The determinantal proof is more abstract and works in matrix algebra; the spectral proof is geometric and works with subspace decomposition.
+The determinantal proof is more abstract and works in matrix algebra; the spectral proof is geometric and works with [[Def - Subspace|subspace]] decomposition.
 
 > [!note]- Derivation
 > The determinantal proof:
 > - Works entirely in matrix algebra.
 > - Uses only the [[Thm - Cofactor Expansion and Cramer's Rule|adjugate identity]] and polynomial-coefficient matching.
-> - Does not invoke eigenvalues directly — the adjugate identity holds over any commutative ring, so the proof generalises to operators on modules over commutative rings, where eigenvalues may not exist.
+> - Does not invoke eigenvalues directly — the adjugate identity holds over any commutative ring, so the proof generalises to operators on [[Def - Module|modules]] over commutative [[Def - Ring|rings]], where eigenvalues may not exist.
 > - The substitution $z \to T$ is the subtle step requiring polynomial-coefficient identification.
 >
 > The spectral / minimal-polynomial proof:
@@ -173,7 +173,7 @@ The determinantal proof is more abstract and works in matrix algebra; the spectr
 > - The proof is conceptually transparent: $V$ splits into pieces $G(\lambda, T)$ each of which is annihilated by $(T - \lambda)^{m(\lambda)}$, so the product polynomial annihilates everything.
 > - It is the "right" proof for understanding *why* Cayley-Hamilton is true at a structural level.
 >
-> **Which is more economical?** For operators over algebraically closed fields with known eigenstructure, the spectral proof is shorter and more conceptual. For operators over general commutative rings (e.g., over $\mathbb{Z}$ or over polynomial rings), the determinantal proof is the only one available — and it has the further advantage of being purely formal, not requiring any "spectral" data.
+> **Which is more economical?** For operators over algebraically closed fields with known eigenstructure, the spectral proof is shorter and more conceptual. For operators over general commutative [[Def - Ring|rings]] (e.g., over $\mathbb{Z}$ or over polynomial rings), the determinantal proof is the only one available — and it has the further advantage of being purely formal, not requiring any "spectral" data.
 >
 > **Equivalence at the eigenvalue level.** Both proofs ultimately rely on the polynomial $p_T(z) = \prod (z - \lambda_i)$ factoring into linear pieces over $\mathbb{C}$. The determinantal proof uses this factorisation implicitly through the equality $\det(zI - T) = \prod(z - \lambda_i)$; the spectral proof uses it explicitly to organise $V$ into generalised eigenspaces. So the two proofs are equivalent at the structural level: they encode the same eigenvalue data, packaged in different mathematical languages.
 
@@ -197,4 +197,4 @@ The determinantal proof is more abstract and works in matrix algebra; the spectr
 
 **The adjugate identity $(zI - T) \operatorname{adj}(zI - T) = p_T(z) I$ is a polynomial-coefficient identity, not a substitution-style identity.** This is the most subtle point about the determinantal Cayley-Hamilton proof, and the place where a "naive" attempt would fail. The identity is between two matrix-valued polynomials in $z$, and the proof works by expanding both as $\sum_k C_k z^k$ with $C_k \in M_n(\mathbb{F})$ (i.e., matrix coefficients) and equating coefficients of each $z^k$. The "substitute $z = T$" step is *not* a literal substitution — it is a series of identities $T^k B_{k-1} - T^{k+1} B_k = c_k T^k$, summed appropriately so that the matrix coefficients $B_k$ telescope away and only the scalar coefficients $c_k$ remain, giving $p_T(T) = 0$. This is a powerful technique whenever you have a polynomial identity over a non-commutative algebra: pass to formal-polynomial-coefficient comparisons rather than naive substitution.
 
-**The §8 (spectral) and §9 (determinantal) frameworks are complementary; LADR provides both deliberately.** The §8 framework starts from the minimal polynomial and works geometrically with eigenspaces; the §9 framework starts from alternating multilinear forms and works algebraically with determinants. Each illuminates different aspects: §8 is the natural home for "the Jordan form" and the structure-of-an-operator picture; §9 is the natural home for "the determinant" and the multilinear-functional picture. The Cayley-Hamilton theorem is a *bridge* between them, statable purely in terms of polynomials in operators but provable from either side. Reading both proofs is a way of consolidating both frameworks, and the bridge is exactly the eigenvalue structure that both proofs ultimately rely on.
+**The §8 (spectral) and §9 (determinantal) frameworks are complementary; LADR provides both deliberately.** The §8 framework starts from the minimal polynomial and works geometrically with eigenspaces; the §9 framework starts from alternating multilinear forms and works algebraically with [[Def - Determinant|determinants]]. Each illuminates different aspects: §8 is the natural home for "the Jordan form" and the structure-of-an-operator picture; §9 is the natural home for "the determinant" and the multilinear-functional picture. The Cayley-Hamilton theorem is a *bridge* between them, statable purely in terms of polynomials in operators but provable from either side. Reading both proofs is a way of consolidating both frameworks, and the bridge is exactly the eigenvalue structure that both proofs ultimately rely on.

@@ -17,7 +17,7 @@ Let $p < q$ be prime numbers and let $G$ be a group of order $|G| = pq$. Prove t
 
 **Recall:**
 
-The objects in play are Sylow subgroups, simplicity, and the consequence of a Sylow count of $1$.
+The objects in play are Sylow [[Def - Subgroup|subgroups]], simplicity, and the consequence of a Sylow count of $1$.
 
 ![[Def - Sylow p-Subgroup#The Definition]]
 
@@ -25,7 +25,7 @@ Here $|G| = pq$ with $p < q$ both prime. For the prime $q$ the factorization $|G
 
 ![[Def - Simple Group#The Definition]]
 
-The two clauses of [[Thm - Sylow's Theorems|Sylow's theorems]] this problem uses are the *count* and what it implies. Sylow III says the number $n_q$ of Sylow $q$-subgroups satisfies $n_q \equiv 1 \pmod q$ and $n_q \mid m$, where $|G| = q^a m$. And:
+The two clauses of [[Thm - Sylow's Theorems|Sylow's theorems]] this problem uses are the *count* and what it implies. Sylow III says the number $n_q$ of Sylow $q$-[[Def - Subgroup|subgroups]] satisfies $n_q \equiv 1 \pmod q$ and $n_q \mid m$, where $|G| = q^a m$. And:
 
 ![[Thm - A Unique Sylow Subgroup is Normal#Statement]]
 
@@ -127,4 +127,4 @@ With $n_q = 1$ there is exactly one Sylow $q$-subgroup; by [[Thm - A Unique Sylo
 
 **A Sylow count of $1$ is the cheapest possible certificate of non-simplicity.** This problem is the template for the two-step move that ends a large fraction of non-simplicity arguments: get some $n_p = 1$ from the arithmetic, then cite [[Thm - A Unique Sylow Subgroup is Normal]] to upgrade the count into a normal subgroup. A unique Sylow $p$-subgroup is automatically normal — its conjugates are Sylow $p$-subgroups, and uniqueness leaves nowhere for them to go but back to itself. Crucially the resulting subgroup is *automatically* proper and non-trivial: it has order $p^a$ with $1 \leq a < $ (the exponent making it all of $G$), so it never accidentally equals $\{e\}$ or $G$. This means the only real work in such a problem is the arithmetic of forcing $n_p = 1$; once that is done, non-simplicity follows mechanically. Recognising that "$n_p = 1$" and "not simple" are essentially synonymous, given a single normal-subgroup-producing prime, is the single most reusable insight of the topic.
 
-**The ordering of the primes is a hypothesis, not a labelling convention.** It is tempting to read "$p < q$" as a harmless way of naming the two primes, but it is doing essential work: it is precisely the inequality $p < q$ that makes $p \not\equiv 1 \pmod q$ and so kills the candidate $n_q = p$. Drop the ordering and the argument collapses — for the *smaller* prime there genuinely can be more than one Sylow subgroup, as $S_3$ (order $6 = 2 \cdot 3$) shows with its three Sylow $2$-subgroups. The transferable lesson is to treat every numerical inequality in a hypothesis as potentially load-bearing and to locate, explicitly, the step where it is consumed. Here it is consumed in the single line "$0 < p - 1 < q$, so $q \nmid (p-1)$" — and identifying that line is identifying the spine of the proof. More broadly: groups of order $pq$ with $p < q$ are never simple, and in fact always have a normal Sylow $q$-subgroup, so they are semidirect products $C_q \rtimes C_p$ — the smallest interesting family of non-abelian groups after the prime-order and $p^2$ cases.
+**The ordering of the primes is a hypothesis, not a labelling convention.** It is tempting to read "$p < q$" as a harmless way of naming the two primes, but it is doing essential work: it is precisely the inequality $p < q$ that makes $p \not\equiv 1 \pmod q$ and so kills the candidate $n_q = p$. Drop the ordering and the argument collapses — for the *smaller* prime there genuinely can be more than one Sylow subgroup, as $S_3$ (order $6 = 2 \cdot 3$) shows with its three Sylow $2$-subgroups. The transferable lesson is to treat every numerical inequality in a hypothesis as potentially load-bearing and to locate, explicitly, the step where it is consumed. Here it is consumed in the single line "$0 < p - 1 < q$, so $q \nmid (p-1)$" — and identifying that line is identifying the spine of the proof. More broadly: [[Def - Group|groups]] of order $pq$ with $p < q$ are never simple, and in fact always have a normal Sylow $q$-subgroup, so they are semidirect products $C_q \rtimes C_p$ — the smallest interesting family of non-abelian [[Def - Group|groups]] after the prime-order and $p^2$ cases.

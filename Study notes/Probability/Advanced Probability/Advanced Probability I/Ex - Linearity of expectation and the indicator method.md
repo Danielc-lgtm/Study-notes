@@ -15,7 +15,7 @@ tags: [probability, advanced-probability]
 
 **(b) (Indicator method.)** Compute the expected number of fixed points of a uniformly random permutation of $\{1,\dots,n\}$ by writing the count as a sum of indicators.
 
-**(c)** Show that variance is *not* additive in general — $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y+2\,\mathrm{Cov}(X,Y)$ — and is additive exactly when $X,Y$ are uncorrelated (in particular when [[Def - Independence|independent]]).
+**(c)** Show that variance is *not* additive in general — $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y+2\,\mathrm{Cov}(X,Y)$ — and is additive exactly when $X,Y$ are uncorrelated (in particular when independent).
 
 **Recall:**
 
@@ -66,7 +66,7 @@ The expected number of fixed points is exactly $1$, for every $n$ — *even thou
 
 **Step 3 — (c) Variance is not additive.** For $X,Y\in L^2$, writing $\tilde X=X-\mathbb{E}X$, $\tilde Y=Y-\mathbb{E}Y$,
 $$\mathrm{Var}(X+Y)=\mathbb{E}[(\tilde X+\tilde Y)^2]=\mathbb{E}[\tilde X^2]+\mathbb{E}[\tilde Y^2]+2\mathbb{E}[\tilde X\tilde Y]=\mathrm{Var}X+\mathrm{Var}Y+2\,\mathrm{Cov}(X,Y).$$
-So variance adds iff $\mathrm{Cov}(X,Y)=0$ — iff $X,Y$ are *uncorrelated*. Independent variables are uncorrelated ($\mathbb{E}[\tilde X\tilde Y]=\mathbb{E}\tilde X\,\mathbb{E}\tilde Y=0$ by [[Def - Independence|independence]] and [[Thm - Fubini-Tonelli Theorem|Fubini]]), so for independent $X,Y$, $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y$ — but uncorrelated is strictly weaker than independent.
+So variance adds iff $\mathrm{Cov}(X,Y)=0$ — iff $X,Y$ are *uncorrelated*. Independent variables are uncorrelated ($\mathbb{E}[\tilde X\tilde Y]=\mathbb{E}\tilde X\,\mathbb{E}\tilde Y=0$ by independence and [[Thm - Fubini-Tonelli Theorem|Fubini]]), so for independent $X,Y$, $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y$ — but uncorrelated is strictly weaker than independent.
 
 > [!note]- Complete formal solution
 > (a) $\mathbb{E}=\int\cdot\,d\mathbb{P}$ is linear because the integral is — no probabilistic hypothesis. (b) $N=\sum_i\mathbf{1}_{\{\pi(i)=i\}}$, $\mathbb{P}(\pi(i)=i)=1/n$, so $\mathbb{E}[N]=n\cdot\frac1n=1$ by linearity despite dependence. (c) Expanding the square, $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y+2\mathrm{Cov}(X,Y)$, additive iff uncorrelated; independence $\Rightarrow$ uncorrelated $\Rightarrow$ additive. $\blacksquare$
@@ -77,4 +77,4 @@ So variance adds iff $\mathrm{Cov}(X,Y)=0$ — iff $X,Y$ are *uncorrelated*. Ind
 
 **Linearity of expectation holds unconditionally — it is linearity of the integral — and the *indicator method* turns this into a computational superpower.** To find the expected size of any count, write the count as a sum of indicators and add up their probabilities; *dependence is irrelevant*. The expected number of fixed points, of records, of triangles in a random graph, of empty boxes — all fall to one line, because $\mathbb{E}[\sum\mathbf{1}_{A_i}]=\sum\mathbb{P}(A_i)$ no matter how the $A_i$ interact. The trigger: "expected number of ..." → decompose into indicators.
 
-**Variance is quadratic, so it *does* feel dependence: $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y+2\mathrm{Cov}(X,Y)$.** Additivity of variance holds only for *uncorrelated* (in particular [[Def - Independence|independent]]) summands — this is exactly why the [[Thm - Strong Law of Large Numbers|law of large numbers]] for sums of independent variables has $\mathrm{Var}(S_n)=n\,\mathrm{Var}(X_1)$, hence $\mathrm{Var}(S_n/n)=\mathrm{Var}(X_1)/n\to0$, the [[Ex - Markov's inequality|Chebyshev]] route to the weak law. The lesson: linear functionals of random variables ignore dependence; quadratic ones do not.
+**Variance is quadratic, so it *does* feel dependence: $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y+2\mathrm{Cov}(X,Y)$.** Additivity of variance holds only for *uncorrelated* (in particular independent) summands — this is exactly why the [[Thm - Strong Law of Large Numbers|law of large numbers]] for sums of independent variables has $\mathrm{Var}(S_n)=n\,\mathrm{Var}(X_1)$, hence $\mathrm{Var}(S_n/n)=\mathrm{Var}(X_1)/n\to0$, the [[Ex - Markov's inequality|Chebyshev]] route to the weak law. The lesson: linear functionals of random variables ignore dependence; quadratic ones do not.

@@ -102,7 +102,7 @@ The proof of (1)$\Rightarrow$(2) is a *three-way split* and one must see why eac
 
 # Cross-Field Exercise Suggestions
 
-Vitali is the engine of the **$L^1$ martingale convergence theorem**: a [[Def - Martingale|martingale]] $(X_n)$ converges in $L^1$ iff it is uniformly integrable, because the family $\{\mathbb{E}[Z\mid\mathcal{F}_n]\}$ of conditional expectations of a fixed $Z\in L^1$ is automatically UI. It is also the right tool whenever a.s. convergence must be upgraded to $L^1$ without a dominating function — the typical situation in [[Thm - Strong Law of Large Numbers|laws of large numbers]] and ergodic theory.
+Vitali is the engine of the **$L^1$ [[Def - Martingale|martingale]] convergence theorem**: a [[Def - Martingale|martingale]] $(X_n)$ converges in $L^1$ iff it is uniformly integrable, because the family $\{\mathbb{E}[Z\mid\mathcal{F}_n]\}$ of conditional expectations of a fixed $Z\in L^1$ is automatically UI. It is also the right tool whenever a.s. convergence must be upgraded to $L^1$ without a dominating function — the typical situation in [[Thm - Strong Law of Large Numbers|laws of large numbers]] and ergodic theory.
 
 ---
 

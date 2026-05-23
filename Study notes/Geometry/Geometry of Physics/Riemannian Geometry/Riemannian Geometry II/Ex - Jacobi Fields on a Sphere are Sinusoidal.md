@@ -11,7 +11,7 @@ tags: [geometry, riemannian-geometry, jacobi-fields, sphere]
 
 # Problem Statement
 
-Let $(S^n, g)$ be the unit $n$-sphere with the round metric, and let $\gamma : \mathbb{R} \to S^n$ be a unit-speed geodesic (a great-circle parametrisation). Let $E$ be a parallel unit normal vector field along $\gamma$ (i.e., $E(t) \in T_{\gamma(t)} S^n$ with $|E| = 1$, $E \perp \dot\gamma$, and $\nabla_{\dot\gamma} E = 0$).
+Let $(S^n, g)$ be the unit $n$-sphere with the round metric, and let $\gamma : \mathbb{R} \to S^n$ be a unit-speed [[Def - Geodesic|geodesic]] (a great-circle parametrisation). Let $E$ be a parallel unit normal vector field along $\gamma$ (i.e., $E(t) \in T_{\gamma(t)} S^n$ with $|E| = 1$, $E \perp \dot\gamma$, and $\nabla_{\dot\gamma} E = 0$).
 
 (a) Show that any [[Def - Jacobi Field|Jacobi field]] $J(t) = f(t)\, E(t)$ along $\gamma$ that is parallel to $E$ (i.e., a pure-$E$ component) satisfies the scalar ODE
 $$f'' + f = 0.$$
@@ -95,7 +95,7 @@ A **parallel vector field** $E$ along $\gamma$ satisfies $\nabla_T E = 0$ — it
 >
 > By choosing a parallel-transported orthonormal basis $(E_1, \ldots, E_{n-1})$ of $T^\perp$ along $\gamma$ (rather than a single $E$), the general normal Jacobi field decomposes:
 > $$J(t) = \sum_{i=1}^{n-1} (a_i \cos t + b_i \sin t) E_i(t), \qquad a_i, b_i \in \mathbb{R}.$$
-> This is a $2(n-1)$-dimensional family — the right count for normal Jacobi fields in dimension $n$.
+> This is a $2(n-1)$-dimensional family — the right count for normal Jacobi fields in [[Def - Dimension|dimension]] $n$.
 
 **(c) The Jacobi field with $J(0) = 0, J'(0) = E(0)$.**
 
@@ -138,4 +138,4 @@ This is the cleanest case of the [[Thm - Jacobi Equation and Conjugate Points|ei
 
 **The sinusoidal Jacobi field $\sin(t) E(t)$ corresponds to $d(\exp_p)$ on $S^n$.** By the [[Thm - Jacobi Equation and Conjugate Points|Jacobi-field formula]] $J_w(t) = d(\exp_p)_{tv}(tw)$, the Jacobi field $J$ with $J(0) = 0, J'(0) = w$ is $d(\exp_p)$ applied to the radial perturbation. On $S^n$, this is $J(t) = \sin(t) E(t)$ (with $E$ the parallel transport of $w$ along $\gamma_v$, assumed unit), giving the explicit formula for the radial derivative of $\exp_p$ on the sphere. The vanishing at $t = \pi$ is the [[Ex - Conjugate Points on the Round Sphere are Antipodal|antipodal conjugate point]].
 
-**The Jacobi-field analysis bridges geometry, ODE theory, and analysis on the sphere.** The single calculation $J(t) = \sin(t)E(t)$ encodes: (i) the conjugate-point structure of $S^n$ (zeros of $\sin$ at $\pi, 2\pi, \ldots$); (ii) the failure of $\exp_p$ to be a local diffeomorphism at $|v| = \pi$ (the differential collapses); (iii) the second-variation analysis showing great-circle arcs of length $\geq \pi$ are not minimising. So one explicit Jacobi-field computation gives *all* the local geometry of the round sphere — and the same is true on hyperbolic space (with $\sinh$ instead of $\sin$).
+**The Jacobi-field analysis bridges geometry, ODE theory, and analysis on the sphere.** The single calculation $J(t) = \sin(t)E(t)$ encodes: (i) the conjugate-point structure of $S^n$ (zeros of $\sin$ at $\pi, 2\pi, \ldots$); (ii) the failure of $\exp_p$ to be a local [[Def - Diffeomorphism|diffeomorphism]] at $|v| = \pi$ (the differential collapses); (iii) the second-variation analysis showing great-circle arcs of length $\geq \pi$ are not minimising. So one explicit Jacobi-field computation gives *all* the local geometry of the round sphere — and the same is true on hyperbolic space (with $\sinh$ instead of $\sin$).

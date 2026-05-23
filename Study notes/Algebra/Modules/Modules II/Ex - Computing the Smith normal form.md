@@ -17,17 +17,17 @@ Work over the Euclidean domain $\mathbb{Z}$, with Euclidean function $\varphi(n)
 
 1. Put the $2\times 2$ matrix
 $$A=\begin{pmatrix}2&-1\\1&2\end{pmatrix}$$
-into **Smith normal form** by a sequence of elementary row and column operations, recording each move. State the invariant factors $d_1,d_2$. Then verify the answer independently by computing the Fitting ideals: confirm $\operatorname{Fit}_1(A)=(d_1)$ and $\operatorname{Fit}_2(A)=(d_1 d_2)$.
+into **Smith normal form** by a sequence of elementary row and column operations, recording each move. State the invariant factors $d_1,d_2$. Then verify the answer independently by computing the Fitting [[Def - Ideal|ideals]]: confirm $\operatorname{Fit}_1(A)=(d_1)$ and $\operatorname{Fit}_2(A)=(d_1 d_2)$.
 
 2. Do the same for the $3\times 3$ matrix
 $$B=\begin{pmatrix}2&4&4\\-6&6&12\\10&4&16\end{pmatrix}$$
 over $\mathbb{Z}$: reduce it to Smith normal form $\operatorname{diag}(d_1,d_2,d_3)$ with $d_1\mid d_2\mid d_3$, and cross-check $d_1\cdots d_k$ against $\operatorname{Fit}_k(B)$ for $k=1,2,3$.
 
-The point of the exercise is purely mechanical fluency: to run the Smith normal form algorithm by hand and to use the Fitting ideals as a built-in error check, since they are computable directly from the original matrix without doing any reduction.
+The point of the exercise is purely mechanical fluency: to run the Smith normal form algorithm by hand and to use the Fitting [[Def - Ideal|ideals]] as a built-in error check, since they are computable directly from the original matrix without doing any reduction.
 
 **Recall:**
 
-The three elementary row operations on a matrix over a ring $R$ are: add an $R$-multiple of one row to another; swap two rows; multiply a row by a *unit* of $R$. The three elementary *column* operations are the same with "row" replaced by "column". Each corresponds to multiplication by an invertible matrix — row operations on the left, column operations on the right.
+The three elementary row operations on a matrix over a [[Def - Ring|ring]] $R$ are: add an $R$-multiple of one row to another; swap two rows; multiply a row by a *unit* of $R$. The three elementary *column* operations are the same with "row" replaced by "column". Each corresponds to multiplication by an invertible matrix — row operations on the left, column operations on the right.
 
 ![[Def - Elementary Operations and Equivalent Matrices#The Definition]]
 

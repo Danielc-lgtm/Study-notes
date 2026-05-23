@@ -16,7 +16,7 @@ tags: [algebra, linear-algebra]
 
 Let $A \in \mathbb{F}^{m, n}$ be an $m \times n$ matrix with entries in $\mathbb{F}$.
 
-The **column rank** of $A$ is the dimension of the span of its columns (a subspace of $\mathbb{F}^{m,1}$).
+The **column rank** of $A$ is the dimension of the span of its columns (a [[Def - Subspace|subspace]] of $\mathbb{F}^{m,1}$).
 
 The **row rank** of $A$ is the dimension of the span of its rows (a subspace of $\mathbb{F}^{1,n}$).
 
@@ -53,7 +53,7 @@ The **transpose** $A^t$ of $A$ has entries $(A^t)_{j,k} = A_{k,j}$, so the colum
 
 Chaining: column rank of $A$ = $\dim \operatorname{range} T$ = $\dim \operatorname{range} T'$ = column rank of $A^t$ = row rank of $A$.
 
-**Key decision point.** The non-obvious move is *recognising the row-vs-column distinction as a duality phenomenon*. Most students think of rows and columns as a symmetric pair and never quite understand why their dimensions should match. The duality view reveals that the equality is *not* a symmetry — it is *contravariance*: the rank of $T$ equals the rank of $T'$, and the dual map $T'$ has matrix $A^t$. The match of dimensions is a structural consequence of duality, not a coincidence of indices.
+**Key decision point.** The non-obvious move is *recognising the row-vs-column distinction as a duality phenomenon*. Most students think of rows and columns as a symmetric pair and never quite understand why their [[Def - Dimension|dimensions]] should match. The duality view reveals that the equality is *not* a symmetry — it is *contravariance*: the rank of $T$ equals the rank of $T'$, and the dual map $T'$ has matrix $A^t$. The match of [[Def - Dimension|dimensions]] is a structural consequence of duality, not a coincidence of indices.
 
 ---
 
@@ -123,7 +123,7 @@ The dimension of the range of $T'$ is the column rank of its matrix $A^t$. The c
 > [!note]- Derivation
 > By the same reasoning as Step 1 applied to $T'$ and its matrix $A^t$: $\dim \operatorname{range} T' = \dim \operatorname{span}(\text{columns of } A^t) = $ column rank of $A^t$.
 >
-> The columns of $A^t$ are, by definition of the transpose, the rows of $A$: the $j$-th column of $A^t$ is the vector $((A^t)_{1,j}, (A^t)_{2,j}, \dots)^t = (A_{j,1}, A_{j,2}, \dots)^t$, which is the $j$-th row of $A$ written as a column. So $\operatorname{span}(\text{columns of } A^t) = \operatorname{span}(\text{rows of } A)$ (as subspaces of $\mathbb{F}^{n,1}$, identifying row vectors with column vectors via transpose).
+> The columns of $A^t$ are, by definition of the transpose, the rows of $A$: the $j$-th column of $A^t$ is the vector $((A^t)_{1,j}, (A^t)_{2,j}, \dots)^t = (A_{j,1}, A_{j,2}, \dots)^t$, which is the $j$-th row of $A$ written as a column. So $\operatorname{span}(\text{columns of } A^t) = \operatorname{span}(\text{rows of } A)$ (as [[Def - Subspace|subspaces]] of $\mathbb{F}^{n,1}$, identifying row vectors with column vectors via transpose).
 >
 > Hence column rank of $A^t$ = row rank of $A$.
 
@@ -157,13 +157,13 @@ $$\text{column rank of } A \;\overset{\text{Step 1}}{=}\; \dim \operatorname{ran
 
 **Matrix manipulation often hides linear-algebraic structure that becomes clear under interpretation as linear maps.** The transpose, the determinant, multiplication of matrices — each of these has a structural interpretation as a linear-map operation. The transpose is the dual map ([[Thm - Matrix of Dual Map is Transpose]]); the determinant is the unique alternating multilinear form normalised at the identity ([[Linear Algebra IX — §9 Multilinear Algebra and Determinants|Chapter 9]]); matrix multiplication is composition. The lesson: *whenever you have a matrix identity, ask what the corresponding linear-map statement is*. The matrix identity often has an obscure indexical proof; the linear-map statement often has a clean structural proof.
 
-**The duality argument generalises far beyond matrices.** The structural identity is "rank of $T$ equals rank of $T'$", and it holds in any finite-dimensional setting (vector spaces, modules over a field), not just for finite matrices. In infinite dimensions it becomes more subtle (the dual of a Banach space is its continuous dual, and rank means dimension of the range), but the structural identity persists in the form of the **Fredholm alternative**. So learning the duality proof here teaches you a pattern that recurs in functional analysis: "transpose-rank arguments" via duality of operators.
+**The duality argument generalises far beyond matrices.** The structural identity is "rank of $T$ equals rank of $T'$", and it holds in any finite-dimensional setting (vector spaces, [[Def - Module|modules]] over a field), not just for finite matrices. In infinite dimensions it becomes more subtle (the dual of a Banach space is its continuous dual, and rank means dimension of the range), but the structural identity persists in the form of the **Fredholm alternative**. So learning the duality proof here teaches you a pattern that recurs in functional analysis: "transpose-rank arguments" via duality of operators.
 
 **Recognition trigger: any problem mentioning rows-vs-columns or transpose-rank is a duality problem.** Beyond the present exercise, the same template solves:
 - "$AB$ and $BA$ have the same nonzero eigenvalues" (use traces and duality).
 - "Rank of $A$ equals rank of $A^t A$" (dualise and use trace identity).
 - "Symmetric matrices have orthogonal eigenvectors" (use $T = T'$ and apply spectral theorem from [[Linear Algebra VII — §7 Operators on Inner Product Spaces|Chapter 7]]).
-- "The system $Ax = b$ is solvable iff $b$ is orthogonal to every $y$ with $A^t y = 0$" (annihilator of range = null space of dual).
+- "The system $Ax = b$ is solvable iff $b$ is orthogonal to every $y$ with $A^t y = 0$" ([[Def - Annihilator|annihilator]] of range = null space of dual).
 Whenever you see one of these patterns, reach for duality.
 
 **Cross-link to companion exercises.** This exercise is the matrix-level companion of [[Ex - Annihilator of a subspace has complementary dimension]] and [[Thm - Null Space and Range of Dual Map]]. The rank equality used here ($\dim \operatorname{range} T' = \dim \operatorname{range} T$) is proved in that theorem; the present exercise just applies it together with the transpose-as-dual-matrix identification.

@@ -37,11 +37,11 @@ The canonical operations are:
 
 The unifying principle is that *the model class is fixed at "linear in parameters"* — what changes is the feature representation. Two principles guide the choice:
 
-(i) *Simplicity until proven otherwise.* Start with the rawest possible features; add transformations only when validation indicates that the simpler model is missing structure. The risk of adding features is overfitting (training error decreases but test error increases) and the only diagnostic is out-of-sample validation.
+(i) *Simplicity until proven otherwise.* Start with the rawest possible features; add transformations only when [[Def - Validation (Training and Test Error)|validation]] indicates that the simpler model is missing structure. The risk of adding features is overfitting (training error decreases but test error increases) and the only diagnostic is out-of-sample validation.
 
 (ii) *Domain knowledge as inductive bias.* When you know a relationship is periodic, use sinusoidal basis functions. When you know it has a saturation point, use piecewise-linear with a knot. When you know it is monotonic but nonlinear, use logs or splines. The choice of basis functions *embeds* domain knowledge into the model in a way that pure data-fitting cannot recover.
 
-The "feature engineering principle" is sometimes summarized as: with enough features, any predictor can do well on training; the art is choosing features that also help on test. Validation is the only way to evaluate this art.
+The "feature engineering principle" is sometimes summarized as: with enough features, any predictor can do well on training; the art is choosing features that also help on test. [[Def - Validation (Training and Test Error)|Validation]] is the only way to evaluate this art.
 
 ---
 

@@ -120,7 +120,7 @@ A subtle point: the converse — that any operation satisfying (1)–(5) and agr
 
 3. **Function compatibility.** Show $F^*(fB) = (f \circ F)\, F^*B$.
    - *Hint:* Scalar multiplication on tensors is the special case of tensor product where one factor is a $(0, 0)$-tensor (a function).
-   - *Why needed:* This handles the $C^\infty(M)$-module structure.
+   - *Why needed:* This handles the $C^\infty(M)$-[[Def - Module|module]] structure.
 
 4. **Chain rule.** Show $(G \circ F)^* = F^* \circ G^*$.
    - *Hint:* The differential of a composition is the composition of differentials: $d(G \circ F)_p = dG_{F(p)} \circ dF_p$. Apply this in the definition.
@@ -212,13 +212,13 @@ A subtle point: the converse — that any operation satisfying (1)–(5) and agr
 
 # Cross-Field Exercise Suggestions
 
-**Riemannian geometry: the induced metric on a submanifold and isometries.** For an embedded submanifold $M \hookrightarrow N$ with metric $g$ on $N$, the induced metric is $F^*g$. The chain rule (4) means: if $M' \hookrightarrow M \hookrightarrow N$ is a chain of submanifolds, the induced metric on $M'$ is *either* the induced metric of $M$'s induced metric, *or* the induced metric of $N$'s metric directly — by (4) they agree. This is the "transitivity of induced metric" property, used constantly when studying submanifolds of submanifolds (e.g., curves on surfaces in $\mathbb{R}^3$).
+**Riemannian geometry: the induced metric on a submanifold and [[Def - Isometry|isometries]].** For an embedded submanifold $M \hookrightarrow N$ with metric $g$ on $N$, the induced metric is $F^*g$. The chain rule (4) means: if $M' \hookrightarrow M \hookrightarrow N$ is a chain of submanifolds, the induced metric on $M'$ is *either* the induced metric of $M$'s induced metric, *or* the induced metric of $N$'s metric directly — by (4) they agree. This is the "transitivity of induced metric" property, used constantly when studying submanifolds of submanifolds (e.g., curves on surfaces in $\mathbb{R}^3$).
 
 **Special relativity: Lorentz invariance of the metric in any inertial frame.** The Minkowski metric $\eta$ is invariant under Lorentz transformations $\Lambda : \mathbb{R}^4 \to \mathbb{R}^4$: $\Lambda^*\eta = \eta$. This says that the metric, viewed as a covariant tensor field, is *Lorentz-invariant*. The chain rule (4) ensures consistency: a composition of two Lorentz transformations gives another Lorentz transformation, and the pullback of $\eta$ remains $\eta$.
 
-**General relativity: pullback of stress-energy under a diffeomorphism.** Under a diffeomorphism $\phi : M \to M$ of a spacetime $(M, g)$, the metric $\phi^*g$ is another metric. If we want to formulate diffeomorphism-invariant physics, we ask that all physical quantities transform by pullback consistently. The chain rule (4) is what makes "general covariance" consistent: composition of diffeomorphisms is again a diffeomorphism, and the relationships between tensor fields are preserved.
+**General relativity: pullback of stress-energy under a diffeomorphism.** Under a diffeomorphism $\phi : M \to M$ of a spacetime $(M, g)$, the metric $\phi^*g$ is another metric. If we want to formulate diffeomorphism-invariant physics, we ask that all physical quantities transform by pullback consistently. The chain rule (4) is what makes "general covariance" consistent: composition of [[Def - Diffeomorphism|diffeomorphisms]] is again a diffeomorphism, and the relationships between tensor fields are preserved.
 
-**Symplectic geometry: pullback under a canonical transformation.** A *symplectomorphism* $\phi : M \to M$ of a symplectic manifold satisfies $\phi^*\omega = \omega$. The theorem ensures that the algebra of pullback operations is consistent: composition of symplectomorphisms is again a symplectomorphism (chain rule), and tensor products and scalar multiplications by Hamiltonians transform consistently.
+**Symplectic geometry: pullback under a canonical transformation.** A *symplectomorphism* $\phi : M \to M$ of a symplectic manifold satisfies $\phi^*\omega = \omega$. The theorem ensures that the algebra of pullback operations is consistent: composition of [[Def - Symplectomorphism (Canonical Transformation)|symplectomorphisms]] is again a symplectomorphism (chain rule), and tensor products and scalar multiplications by Hamiltonians transform consistently.
 
 ---
 

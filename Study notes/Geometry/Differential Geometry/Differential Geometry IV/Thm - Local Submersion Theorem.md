@@ -69,7 +69,7 @@ Combine the conclusion with **the fibres of $F$.** Property $D$: you ask about t
 
 The intuition is the rank theorem's intuition in the surjection case, and the proof is a direct application of the [[Thm - The Implicit Function Theorem|implicit function theorem]] via the auxiliary square map trick.
 
-**The bolded one-liner mechanism summary: a submersion's differential is surjective, so it has an $n$-dimensional right-inverse subspace in the source; carrying that subspace's coordinates forward as new source coordinates makes $F$ literally a coordinate projection.**
+**The bolded one-liner mechanism summary: a submersion's differential is surjective, so it has an $n$-dimensional right-inverse [[Def - Subspace|subspace]] in the source; carrying that subspace's coordinates forward as new source coordinates makes $F$ literally a coordinate projection.**
 
 Here is the construction. In local coordinates around $p$ and $F(p)$, $F$ is represented by a smooth map $\hat F : U \to \mathbb{R}^n$ with $\hat F(0) = 0$ and $D\hat F(0)$ surjective. By permuting source coordinates, assume the *first* $n$ columns of $D\hat F(0)$ are linearly independent — write the source as $\mathbb{R}^n_x \times \mathbb{R}^{m-n}_y$, and the columns of $D\hat F(0)$ in the $x$-block are linearly independent. So the partial Jacobian $\partial \hat F / \partial x|_0$ is an invertible $n \times n$ matrix.
 
@@ -79,7 +79,7 @@ This is a smooth map between open subsets of $\mathbb{R}^m$, with $\varphi(0, 0)
 $$D\varphi(0, 0) = \begin{pmatrix} \partial \hat F/\partial x|_0 & \partial \hat F/\partial y|_0 \\ 0 & I_{m-n} \end{pmatrix},$$
 which is block-upper-triangular with diagonal blocks invertible ($\partial \hat F/\partial x|_0$ by hypothesis, $I_{m-n}$ trivially). Hence $D\varphi(0,0)$ is invertible.
 
-By the [[Thm - The Inverse Function Theorem|inverse function theorem]], $\varphi$ is a local diffeomorphism near $(0,0)$. So $\varphi$ provides a new system of source coordinates, in which the *first $n$ source coordinates are the components of $\hat F$* and the *last $m - n$ source coordinates are the original $y$ coordinates carried unchanged*.
+By the [[Thm - The Inverse Function Theorem|inverse function theorem]], $\varphi$ is a local [[Def - Diffeomorphism|diffeomorphism]] near $(0,0)$. So $\varphi$ provides a new system of source coordinates, in which the *first $n$ source coordinates are the components of $\hat F$* and the *last $m - n$ source coordinates are the original $y$ coordinates carried unchanged*.
 
 In these new source coordinates, $\hat F$ becomes the *standard projection* onto the first $n$ coordinates. Let me verify: in the new coordinates $(\tilde x, \tilde y) = \varphi(x, y) = (\hat F(x, y), y)$, the original $\hat F(x, y) = \tilde x$ by the definition of $\varphi$. So $\hat F \circ \varphi^{-1}(\tilde x, \tilde y) = \hat F(\varphi^{-1}(\tilde x, \tilde y))$ — and $\varphi^{-1}(\tilde x, \tilde y)$ is the $(x, y)$ such that $\hat F(x, y) = \tilde x$ and $y = \tilde y$, so $\hat F(\varphi^{-1}(\tilde x, \tilde y)) = \tilde x$. Hence
 $$\hat F \circ \varphi^{-1}(\tilde x, \tilde y) = \tilde x = (\tilde x^1, \dots, \tilde x^n)$$
@@ -119,7 +119,7 @@ Reduce to Euclidean coordinates. Permute source coordinates so the first $n$ col
    - *Hint:* The bottom-right block is $I_{m-n}$ because $y$ is carried unchanged.
    - *Why needed:* Provides the new source coordinates.
 
-4. **Verify $D\varphi(0,0)$ is invertible.** Block-triangular with invertible diagonal blocks; determinant is the product of diagonal determinants.
+4. **Verify $D\varphi(0,0)$ is invertible.** Block-triangular with invertible diagonal blocks; determinant is the product of diagonal [[Def - Determinant|determinants]].
    - *Hint:* Use the block-triangular determinant formula.
    - *Why needed:* Activates the inverse function theorem.
 
@@ -183,9 +183,9 @@ Reduce to Euclidean coordinates. Permute source coordinates so the first $n$ col
 
 **Fibre bundles in physics.** A gauge theory's principal bundle $P \to M$ has the projection a smooth surjective submersion. The local submersion theorem provides local trivialisations: in coordinates, $P$ looks like $U \times G$ over $U \subseteq M$, with the projection the first-coordinate map. Gauge connections, parallel transport, and the field strength are organised around this local trivialisation structure.
 
-**The smooth quotient theorem.** A free, proper smooth action of a Lie group $G$ on $M$ produces a smooth manifold structure on the orbit space $M/G$ such that the projection $M \to M/G$ is a smooth submersion. This is the manifold-level version of the topological quotient construction, and the local submersion theorem is the technical foundation: locally, the quotient map is a coordinate projection.
+**The smooth quotient theorem.** A free, proper smooth action of a Lie [[Def - Group|group]] $G$ on $M$ produces a smooth manifold structure on the orbit space $M/G$ such that the projection $M \to M/G$ is a smooth submersion. This is the manifold-level version of the topological quotient construction, and the local submersion theorem is the technical foundation: locally, the quotient map is a coordinate projection.
 
-**Implicit function theorem applications in PDEs.** A nonlinear PDE $F(u, \lambda) = 0$ on a Banach space, depending on a parameter $\lambda$, has solutions $u(\lambda)$ that depend smoothly on $\lambda$ whenever the linearised operator $F_u$ is invertible (in the appropriate Banach-space sense). This is the implicit function theorem in infinite dimensions, and at the level of finite-dimensional approximations it is the local submersion theorem applied to the map $F : E \times \Lambda \to E$.
+**Implicit function theorem applications in PDEs.** A nonlinear PDE $F(u, \lambda) = 0$ on a Banach space, depending on a parameter $\lambda$, has solutions $u(\lambda)$ that depend smoothly on $\lambda$ whenever the linearised operator $F_u$ is invertible (in the appropriate Banach-space sense). This is the implicit function theorem in infinite [[Def - Dimension|dimensions]], and at the level of finite-dimensional approximations it is the local submersion theorem applied to the map $F : E \times \Lambda \to E$.
 
 **Path lifting in covering spaces.** A smooth covering map $\pi : \tilde M \to M$ is a local diffeomorphism, hence a submersion. Given a smooth path $\gamma : [0,1] \to M$, the local section theorem allows the path to be lifted to $\tilde M$: cover $\gamma$ by finitely many neighbourhoods of section domains, paste the sections together over the lifted path's overlaps. This is the path-lifting lemma at the smooth-category level.
 

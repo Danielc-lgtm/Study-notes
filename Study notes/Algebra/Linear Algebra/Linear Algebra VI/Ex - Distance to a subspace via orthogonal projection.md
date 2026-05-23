@@ -35,9 +35,9 @@ once we have an orthonormal basis $e_1, e_2$ of $U$. Gram-Schmidt converts the g
 
 # Convergent Strategy
 
-**Problem class.** This is a *distance-to-subspace* problem, the simplest application of the [[Thm - Best Approximation by Orthogonal Projection|best-approximation theorem]]. The route is mechanical: Gram-Schmidt the spanning set to get an orthonormal basis, project the target vector, compute the distance.
+**Problem class.** This is a *distance-to-[[Def - Subspace|subspace]]* problem, the simplest application of the [[Thm - Best Approximation by Orthogonal Projection|best-approximation theorem]]. The route is mechanical: Gram-Schmidt the spanning set to get an orthonormal basis, project the target vector, compute the distance.
 
-**Assumption pattern.** The hypothesis is an explicit $2$-dimensional subspace of $\mathbb{R}^4$ given by two spanning vectors, and a target vector. The spanning vectors are *not* orthogonal: $\langle (1, 1, 0, 0), (1, 1, 1, 2)\rangle = 1 + 1 + 0 + 0 = 2 \neq 0$. So Gram-Schmidt is required to convert them to an orthonormal basis.
+**Assumption pattern.** The hypothesis is an explicit $2$-dimensional [[Def - Subspace|subspace]] of $\mathbb{R}^4$ given by two spanning vectors, and a target vector. The spanning vectors are *not* orthogonal: $\langle (1, 1, 0, 0), (1, 1, 1, 2)\rangle = 1 + 1 + 0 + 0 = 2 \neq 0$. So Gram-Schmidt is required to convert them to an orthonormal basis.
 
 **Theorem routing.** The route is:
 1. By the [[Thm - Best Approximation by Orthogonal Projection|best-approximation theorem]], the minimiser is $P_U v$, the orthogonal projection of $v = (1, 2, 3, 4)$ onto $U$.

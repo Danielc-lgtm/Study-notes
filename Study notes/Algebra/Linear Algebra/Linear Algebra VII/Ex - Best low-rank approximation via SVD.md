@@ -48,7 +48,7 @@ This solution deploys the following legal operations from [[Linear Algebra VII �
 
 2. **Compute operator norm via singular values** — Use $\|T\|_{\text{op}} = s_1(T)$, applied to $T - T_k$ (whose nonzero singular values are $s_{k+1}, s_{k+2}, \ldots, s_r$, with $s_{k+1}$ being the largest).
 
-3. **Use a dimension count to force non-trivial intersection** — Two subspaces of dimensions summing to more than $n$ must intersect non-trivially.
+3. **Use a dimension count to force non-trivial intersection** — Two [[Def - Subspace|subspaces]] of [[Def - Dimension|dimensions]] summing to more than $n$ must intersect non-trivially.
 
 4. **Bound $\|Tv\|$ from below on a subspace** — On $\operatorname{span}(e_1, \ldots, e_{k+1})$, $\|Tv\| \geq s_{k+1} \|v\|$ (the smallest singular value of $T$ restricted to this subspace).
 
@@ -89,7 +89,7 @@ $$\|Tv\|^2 = \sum_{j=1}^{k+1} |\alpha_j|^2 s_j^2 \geq s_{k+1}^2 \sum_{j=1}^{k+1}
 using $s_j \geq s_{k+1}$ for $j \leq k+1$ (decreasing-order singular values). So $\|Tv\| \geq s_{k+1}$, hence $\|(T - B) v\| \geq s_{k+1}$ for this $v$ with $\|v\| = 1$. So $\|T - B\|_{\text{op}} \geq s_{k+1}$. ✓
 
 > [!note]- Derivation
-> The dimension argument is the heart of the proof. The dimension formula $\dim(A) + \dim(B) = \dim(A + B) + \dim(A \cap B)$ in a finite-dimensional space implies $\dim(A \cap B) \geq \dim(A) + \dim(B) - n$ when both are subspaces of $V \cong \mathbb{F}^n$. With $A = \operatorname{null} B \subseteq V$ (dimension $\geq n - k$) and $B = U_{k+1} \subseteq V$ (dimension $k+1$), the intersection has dimension $\geq (n - k) + (k + 1) - n = 1$, so contains a non-zero vector.
+> The dimension argument is the heart of the proof. The dimension formula $\dim(A) + \dim(B) = \dim(A + B) + \dim(A \cap B)$ in a finite-dimensional space implies $\dim(A \cap B) \geq \dim(A) + \dim(B) - n$ when both are [[Def - Subspace|subspaces]] of $V \cong \mathbb{F}^n$. With $A = \operatorname{null} B \subseteq V$ (dimension $\geq n - k$) and $B = U_{k+1} \subseteq V$ (dimension $k+1$), the intersection has dimension $\geq (n - k) + (k + 1) - n = 1$, so contains a non-zero vector.
 >
 > Once a vector $v$ is in both $\operatorname{null} B$ and $U_{k+1}$, the calculation $\|(T - B)v\| = \|Tv\| \geq s_{k+1} \|v\|$ uses the fact that on the span of the top $k+1$ right-singular vectors, $T$ stretches every unit vector by at least $s_{k+1}$ (since the smallest singular value in this span is $s_{k+1}$).
 
@@ -116,7 +116,7 @@ Combining Steps 1 and 2: any rank-$\leq k$ matrix $B$ has $\|T - B\|_{\text{op}}
 
 # Key Takeaways
 
-**The dimension intersection argument is the core of low-rank approximation theory.** The technique used here — two subspaces whose dimensions sum to more than the ambient dimension must intersect — is the foundational tool for nearly every lower bound in spectral approximation. The reason it works: for any candidate rank-$\leq k$ approximation $B$, the kernel of $B$ is at least $(n - k)$-dimensional; intersecting with the top-$(k+1)$ singular subspace (dimension $k+1$) forces a non-trivial vector where $T$ acts "with operator norm at least $s_{k+1}$". The same argument proves the Courant-Fischer min-max characterisation of eigenvalues, the Weyl inequalities for matrix sums, the Cauchy interlacing theorem for principal submatrices, and similar deep results about spectral interlacing.
+**The dimension intersection argument is the core of low-rank approximation theory.** The technique used here — two subspaces whose [[Def - Dimension|dimensions]] sum to more than the ambient dimension must intersect — is the foundational tool for nearly every lower bound in spectral approximation. The reason it works: for any candidate rank-$\leq k$ approximation $B$, the kernel of $B$ is at least $(n - k)$-dimensional; intersecting with the top-$(k+1)$ singular subspace (dimension $k+1$) forces a non-trivial vector where $T$ acts "with operator norm at least $s_{k+1}$". The same argument proves the Courant-Fischer min-max characterisation of eigenvalues, the Weyl inequalities for matrix sums, the Cauchy interlacing theorem for principal submatrices, and similar deep results about spectral interlacing.
 
 **Eckart–Young is the foundation of all modern data approximation.** PCA, image compression, latent semantic analysis, recommender systems, randomised numerical linear algebra, sketching algorithms, matrix completion, dynamic mode decomposition, model order reduction in PDE — every one of these techniques exploits Eckart–Young to justify approximating large matrices by truncated SVDs. The fact that **the optimal rank-$k$ approximation is given by truncating the SVD** is the single most important computational fact in applied linear algebra. The decay rate of the singular values controls how compressible the matrix is, and the Eckart-Young error formula gives the precise reconstruction error.
 

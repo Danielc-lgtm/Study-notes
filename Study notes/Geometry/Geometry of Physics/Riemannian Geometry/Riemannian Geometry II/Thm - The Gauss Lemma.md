@@ -32,7 +32,7 @@ $(M, g)$ a Riemannian manifold, $p \in M$, $\exp_p : V_p \subseteq T_pM \to M$ t
 
 This is the technical workhorse of local Riemannian geometry. It says that the exponential map, even though it does not in general preserve the *full* metric (which would require flatness), *does* preserve one specific piece of metric structure: the orthogonality between the radial direction and the tangent direction to the geodesic sphere.
 
-The reason this matters is that it is *exactly* the piece of structure needed to prove geodesics are locally length-minimising. The intuition: in geodesic polar coordinates the metric has the form $dr^2 + h_{\alpha\beta}\, d\omega^\alpha d\omega^\beta$ — no cross-terms. So the length of any curve $\gamma(t) = (r(t), \omega(t))$ is
+The reason this matters is that it is *exactly* the piece of structure needed to prove [[Def - Geodesic|geodesics]] are locally length-minimising. The intuition: in geodesic polar coordinates the metric has the form $dr^2 + h_{\alpha\beta}\, d\omega^\alpha d\omega^\beta$ — no cross-terms. So the length of any curve $\gamma(t) = (r(t), \omega(t))$ is
 $$L(\gamma) = \int \sqrt{\dot r^2 + h_{\alpha\beta}(r, \omega)\dot\omega^\alpha \dot\omega^\beta}\, dt \geq \int |\dot r|\, dt \geq |\Delta r|,$$
 the second inequality coming from $h_{\alpha\beta}\dot\omega^\alpha\dot\omega^\beta \geq 0$. So any curve from a point at radius $r_1$ to a point at radius $r_2$ has length at least $|r_2 - r_1|$, with equality iff $\dot\omega = 0$ throughout — i.e., iff the curve is a *radial geodesic*. So radial geodesics minimise length within the geodesic ball.
 
@@ -40,7 +40,7 @@ Without the Gauss lemma — if the metric in polar coordinates had cross-terms $
 
 The Gauss lemma is the precise place in the theory where the metric and the connection cooperate: the exponential map is built from the connection (via geodesics), and the lemma extracts a metric statement (orthogonality) from this connection-built construction. The cooperation works because the [[Thm - Fundamental Theorem of Riemannian Geometry (Statement)|Levi-Civita connection]] is *metric-compatible* — parallel transport preserves inner products — and "geodesic = velocity is parallel-transported along itself" then makes the velocity preserve its inner product structure with orthogonal complement-fields.
 
-Historically, Gauss proved this for surfaces in $\mathbb{R}^3$ (the local picture of any 2-dimensional Riemannian manifold), and it was the key step in his proof of the *Theorema Egregium* and his characterisation of intrinsic geometry. The generalisation to $n$ dimensions is straightforward but indispensable.
+Historically, Gauss proved this for surfaces in $\mathbb{R}^3$ (the local picture of any 2-dimensional Riemannian manifold), and it was the key step in his proof of the *Theorema Egregium* and his characterisation of intrinsic geometry. The generalisation to $n$ [[Def - Dimension|dimensions]] is straightforward but indispensable.
 
 ---
 

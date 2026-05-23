@@ -10,12 +10,12 @@ tags: [algebra, linear-algebra]
 
 # Problem Statement
 
-Show that the subspaces of $\mathbb{F}^2$ are exactly:
+Show that the [[Def - Subspace|subspaces]] of $\mathbb{F}^2$ are exactly:
 - the trivial subspace $\{0\}$,
 - every line through the origin (i.e. the span of a nonzero vector $v \in \mathbb{F}^2$),
 - the whole space $\mathbb{F}^2$.
 
-Together with the corresponding result for $\mathbb{R}^3$ — subspaces are $\{0\}$, lines through the origin, planes through the origin, and $\mathbb{R}^3$ — this is the classification of low-dimensional subspaces stated by Axler in LADR §1C, used implicitly throughout the chapter.
+Together with the corresponding result for $\mathbb{R}^3$ — [[Def - Subspace|subspaces]] are $\{0\}$, lines through the origin, planes through the origin, and $\mathbb{R}^3$ — this is the classification of low-dimensional subspaces stated by Axler in LADR §1C, used implicitly throughout the chapter.
 
 **Recall:**
 
@@ -119,13 +119,13 @@ We show $\{v, w\}$ spans $\mathbb{F}^2$, hence so does any subspace containing b
 > In each case $U$ is one of the three listed types. $\blacksquare$
 
 > [!warning] Illegal but tempting: invoking "dimension" as if defined
-> A common shortcut: "$U$ is a subspace of $\mathbb{F}^2$ so $\dim U \in \{0, 1, 2\}$; the dimensions correspond to the three listed types." This is correct *after* dimension is defined and the relevant theorems are proved (see [[Linear Algebra II — §2 Finite-Dimensional Vector Spaces]]). Within Chapter 1, dimension has not been introduced; using it would be a forward-reference. The proof here is the direct, dimension-free version.
+> A common shortcut: "$U$ is a subspace of $\mathbb{F}^2$ so $\dim U \in \{0, 1, 2\}$; the [[Def - Dimension|dimensions]] correspond to the three listed types." This is correct *after* dimension is defined and the relevant theorems are proved (see [[Linear Algebra II — §2 Finite-Dimensional Vector Spaces]]). Within Chapter 1, dimension has not been introduced; using it would be a forward-reference. The proof here is the direct, dimension-free version.
 
 ---
 
 # Key Takeaways
 
-**Low-dimensional subspaces are classified by their "direction count".** $\mathbb{F}^2$ has only three sizes of subspace — zero-dimensional ($\{0\}$), one-dimensional (a line through the origin), and two-dimensional (all of $\mathbb{F}^2$) — and the classification is by which "directions" the subspace contains. A one-dimensional subspace contains scalar multiples of a single nonzero vector; a two-dimensional one contains scalar multiples of two non-parallel vectors. The pattern generalizes to higher dimensions: subspaces of $\mathbb{F}^n$ are classified by their dimension, $0, 1, 2, \dots, n$, with the $k$-dimensional subspaces forming an algebraic variety called the *Grassmannian* $\operatorname{Gr}(k, n)$. The dimension count is a complete invariant for "type of subspace" up to the action of $\operatorname{GL}_n(\mathbb{F})$.
+**Low-dimensional subspaces are classified by their "direction count".** $\mathbb{F}^2$ has only three sizes of subspace — zero-dimensional ($\{0\}$), one-dimensional (a line through the origin), and two-dimensional (all of $\mathbb{F}^2$) — and the classification is by which "directions" the subspace contains. A one-dimensional subspace contains scalar multiples of a single nonzero vector; a two-dimensional one contains scalar multiples of two non-parallel vectors. The pattern generalizes to higher [[Def - Dimension|dimensions]]: subspaces of $\mathbb{F}^n$ are classified by their dimension, $0, 1, 2, \dots, n$, with the $k$-dimensional subspaces forming an algebraic variety called the *Grassmannian* $\operatorname{Gr}(k, n)$. The dimension count is a complete invariant for "type of subspace" up to the action of $\operatorname{GL}_n(\mathbb{F})$.
 
 **The determinant $ad - bc$ is the algebraic test for "two vectors span $\mathbb{F}^2$".** The condition $ad - bc \neq 0$ that arose in the proof is the **determinant** of the $2 \times 2$ matrix with columns $v, w$. It is the algebraic obstruction to one of the vectors being a scalar multiple of the other, and is the simplest example of the determinant as a "non-vanishing test for linear independence". The same role is played in higher dimensions by the $n \times n$ determinant: $n$ vectors in $\mathbb{F}^n$ span the whole space iff the determinant of the matrix they form is nonzero. We are previewing the determinant of [[Linear Algebra IX — §9 Multilinear Algebra and Determinants]] in its simplest manifestation. Recognizing the determinant in disguise — wherever a $2 \times 2$ or $n \times n$ system has a unique solution iff a particular polynomial in the coefficients is nonzero — is the start of the bridge into multilinear algebra.
 

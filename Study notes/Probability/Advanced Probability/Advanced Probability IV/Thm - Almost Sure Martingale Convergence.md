@@ -16,7 +16,7 @@ $(X_n)$ a [[Def - Martingale|martingale]] or supermartingale; $U_n[a,b]$ the num
 
 # Motivation
 
-The single most useful structural theorem about [[Def - Martingale|martingales]]: **an $L^1$-bounded martingale converges almost surely**. A fair game whose fortune stays bounded in expectation *settles down* — the trajectory has a definite limit, with probability one. This is the discrete-time analogue of the [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]] and the workhorse behind the [[Thm - Strong Law of Large Numbers|strong law of large numbers]], the convergence of [[Thm - Radon-Nikodym Theorem|Radon–Nikodym]] approximations, branching-process limits, and Pólya's-urn-type results. The proof rests on a beautiful gambling idea — **Doob's upcrossing lemma** — quantifying that a martingale cannot oscillate across an interval too many times.
+The single most useful structural theorem about [[Def - Martingale|martingales]]: **an $L^1$-bounded [[Def - Martingale|martingale]] converges almost surely**. A fair game whose fortune stays bounded in expectation *settles down* — the trajectory has a definite limit, with probability one. This is the discrete-time analogue of the [[Thm - Lebesgue Differentiation Theorem|Lebesgue differentiation theorem]] and the workhorse behind the [[Thm - Strong Law of Large Numbers|strong law of large numbers]], the convergence of [[Thm - Radon-Nikodym Theorem|Radon–Nikodym]] approximations, branching-process limits, and Pólya's-urn-type results. The proof rests on a beautiful gambling idea — **Doob's upcrossing lemma** — quantifying that a martingale cannot oscillate across an interval too many times.
 
 ---
 

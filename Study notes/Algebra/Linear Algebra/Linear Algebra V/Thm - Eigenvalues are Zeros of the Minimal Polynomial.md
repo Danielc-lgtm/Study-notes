@@ -60,7 +60,7 @@ The mechanism is symmetric in the two implications, and both use the [[Def - Div
 
 **Forward (every zero of $m_T$ is an eigenvalue):** Suppose $\lambda \in F$ is a zero of $m_T$. By the factor theorem, $(z - \lambda) \mid m_T$, so $m_T(z) = (z - \lambda) q(z)$ for some $q \in F[x]$ with $\deg q = \deg m_T - 1$. Applying to $T$:
 $$0 = m_T(T) = (T - \lambda I) q(T).$$
-This says the operator $(T - \lambda I) q(T)$ is the zero operator. Now, $q(T)$ is not the zero operator (because $\deg q < \deg m_T$ and $m_T$ is the smallest-degree annihilator). So there exists $v \in V$ with $q(T) v \neq 0$. Let $w = q(T) v$. Then $(T - \lambda I) w = (T - \lambda I) q(T) v = 0 \cdot v = 0$, with $w \neq 0$. So $w$ is an eigenvector of $T$ with eigenvalue $\lambda$.
+This says the operator $(T - \lambda I) q(T)$ is the zero operator. Now, $q(T)$ is not the zero operator (because $\deg q < \deg m_T$ and $m_T$ is the smallest-degree [[Def - Annihilator|annihilator]]). So there exists $v \in V$ with $q(T) v \neq 0$. Let $w = q(T) v$. Then $(T - \lambda I) w = (T - \lambda I) q(T) v = 0 \cdot v = 0$, with $w \neq 0$. So $w$ is an eigenvector of $T$ with eigenvalue $\lambda$.
 
 **Backward (every eigenvalue is a zero of $m_T$):** Suppose $\lambda$ is an eigenvalue of $T$, so there is $v \neq 0$ with $Tv = \lambda v$. Then $T^k v = \lambda^k v$ for all $k \geq 0$ (induction). For any polynomial $p \in F[x]$:
 $$p(T) v = p(\lambda) v.$$
@@ -126,7 +126,7 @@ The forward direction is the slightly subtler one: producing the eigenvector $w 
 > [!note]- Lemma 2: Cofactor of $m_T$ at a root $\lambda$ is nonzero as an operator
 > **Statement:** Suppose $m_T(z) = (z - \lambda) q(z)$ for some $\lambda \in F$ and $q \in F[x]$. Then $q(T) \neq 0$ as an operator on $V$.
 >
-> **Hint:** $\deg q = \deg m_T - 1$; minimality of $m_T$ as the smallest annihilator excludes a nonzero polynomial of smaller degree annihilating $T$.
+> **Hint:** $\deg q = \deg m_T - 1$; minimality of $m_T$ as the smallest [[Def - Annihilator|annihilator]] excludes a nonzero polynomial of smaller degree annihilating $T$.
 >
 > **Why needed:** lets us find a vector $v$ with $q(T)v \neq 0$, which becomes the eigenvector.
 >

@@ -37,7 +37,7 @@ For self-adjoint operators on a real or complex inner product space, the [[Thm -
 
 1. **Spectral theorem for self-adjoint operators** — Apply to both $S$ and $T$ separately, then within eigenspaces.
 2. **Commuting operators preserve each other's eigenspaces** — Standard fact, derived from $ST = TS$ acting on an eigenvector.
-3. **Restriction of self-adjoint operator to invariant subspace remains self-adjoint** — Self-adjointness restricts.
+3. **Restriction of self-adjoint operator to invariant [[Def - Subspace|subspace]] remains self-adjoint** — Self-adjointness restricts.
 
 ---
 
@@ -68,7 +68,7 @@ Let $E_\lambda = E(\lambda, S)$. For $v \in E_\lambda$: $S(Tv) = (ST) v = (TS) v
 For $v, w \in E_\lambda$: $\langle T|_{E_\lambda} v, w \rangle = \langle Tv, w \rangle$ (using the inherited inner product on $E_\lambda$). And $\langle Tv, w \rangle = \langle v, Tw \rangle$ (using self-adjointness of $T$ on $V$). So $T|_{E_\lambda}$ is self-adjoint.
 
 > [!note]- Derivation
-> The restriction's adjoint is the restriction of the adjoint, provided the subspace is preserved by both. By Step 1, $E_\lambda$ is $T$-invariant; trivially also $T^*$-invariant (since $T = T^*$). So self-adjointness restricts.
+> The restriction's adjoint is the restriction of the adjoint, provided the [[Def - Subspace|subspace]] is preserved by both. By Step 1, $E_\lambda$ is $T$-invariant; trivially also $T^*$-invariant (since $T = T^*$). So self-adjointness restricts.
 
 **Step 3: Apply spectral theorem to $T|_{E_\lambda}$ for each eigenvalue $\lambda$ of $S$.**
 

@@ -12,11 +12,11 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Prove that no group of order $30$ is [[Def - Simple Group|simple]].
+Prove that no [[Def - Group|group]] of order $30$ is [[Def - Simple Group|simple]].
 
 **Recall:**
 
-The objects in play are Sylow subgroups, simplicity, the Sylow count, and the element-counting consequence of prime-order Sylow subgroups.
+The objects in play are Sylow [[Def - Subgroup|subgroups]], simplicity, the Sylow count, and the element-counting consequence of prime-order Sylow [[Def - Subgroup|subgroups]].
 
 ![[Def - Sylow p-Subgroup#The Definition]]
 
@@ -34,7 +34,7 @@ The element-counting step uses the [[Ex - Counting elements of prime order with 
 
 # Convergent Strategy
 
-**Problem class.** This is a *non-simplicity* problem, the dominant target of [[Group Theory III — §1.5–1.7#Sources and Targets|the topic]]. But unlike the groups of order $pq$, the first step of the playbook — find a prime with $n_p = 1$ forced — does *not* finish the job: assuming simplicity, the constraints permit $n_p > 1$ for every one of the three primes. This is the canonical case for the *second* tactic, **element-counting**, and the exercise exists to drill exactly that tactic.
+**Problem class.** This is a *non-simplicity* problem, the dominant target of [[Group Theory III — §1.5–1.7#Sources and Targets|the topic]]. But unlike the [[Def - Group|groups]] of order $pq$, the first step of the playbook — find a prime with $n_p = 1$ forced — does *not* finish the job: assuming simplicity, the constraints permit $n_p > 1$ for every one of the three primes. This is the canonical case for the *second* tactic, **element-counting**, and the exercise exists to drill exactly that tactic.
 
 **Assumption pattern.** The factorization $30 = 2 \cdot 3 \cdot 5$ has the special feature that *every* prime appears to the first power. By the [[Ex - Counting elements of prime order with Sylow subgroups|prime-order counting fact]], every Sylow subgroup is then of prime order, so distinct Sylow $p$-subgroups (for each fixed $p$) intersect trivially and the population of order-$p$ elements is exactly $n_p(p-1)$. A square-free order is the signature that element-counting is available — and $30$ is square-free.
 

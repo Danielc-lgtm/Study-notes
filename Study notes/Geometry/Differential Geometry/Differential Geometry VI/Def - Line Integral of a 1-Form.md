@@ -28,7 +28,7 @@ The integrand is the pointwise pairing of a covector (at the point $\gamma(t) \i
 
 This definition has three essential properties.
 
-**Invariance under reparameterization.** If $\sigma : [c, d] \to [a, b]$ is an orientation-preserving diffeomorphism and $\tilde\gamma = \gamma \circ \sigma$, then $\int_{\tilde\gamma} \omega = \int_\gamma \omega$. This follows from the change-of-variables formula and the chain rule: $\tilde\gamma'(s) = \sigma'(s) \gamma'(\sigma(s))$, so $\omega(\tilde\gamma'(s)) = \sigma'(s) \omega(\gamma'(\sigma(s)))$, and substituting in the integral gives the same result. *Orientation-reversing reparameterization reverses the sign:* $\int_{-\gamma} \omega = -\int_\gamma \omega$.
+**Invariance under reparameterization.** If $\sigma : [c, d] \to [a, b]$ is an orientation-preserving [[Def - Diffeomorphism|diffeomorphism]] and $\tilde\gamma = \gamma \circ \sigma$, then $\int_{\tilde\gamma} \omega = \int_\gamma \omega$. This follows from the change-of-variables formula and the chain rule: $\tilde\gamma'(s) = \sigma'(s) \gamma'(\sigma(s))$, so $\omega(\tilde\gamma'(s)) = \sigma'(s) \omega(\gamma'(\sigma(s)))$, and substituting in the integral gives the same result. *Orientation-reversing reparameterization reverses the sign:* $\int_{-\gamma} \omega = -\int_\gamma \omega$.
 
 **Additivity over concatenated paths.** If $\gamma$ is the concatenation of $\gamma_1$ and $\gamma_2$ (with the endpoint of $\gamma_1$ being the start of $\gamma_2$), then $\int_\gamma \omega = \int_{\gamma_1} \omega + \int_{\gamma_2} \omega$. This is the additivity of the Riemann integral over $[a, c] \cup [c, b] = [a, b]$.
 

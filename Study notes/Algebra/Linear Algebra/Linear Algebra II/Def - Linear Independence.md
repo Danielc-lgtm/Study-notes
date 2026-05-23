@@ -15,7 +15,7 @@ $V$ is a vector space over a field $F$, and $v_1, \ldots, v_m$ is a list (finite
 
 # Axiom Motivation
 
-The notion is forced by a question raised the moment we have spans: when we write a vector $v$ as $a_1 v_1 + \cdots + a_m v_m$, is the choice of coefficients $a_i$ unique? If yes, then the list $v_1, \ldots, v_m$ installs *coordinates* on $\operatorname{span}(v_1, \ldots, v_m)$ — every vector in the span is faithfully recorded by its tuple of coefficients. If no, then the same vector has multiple coefficient tuples, and the list overcounts. Almost every later theorem in linear algebra — the matrix representation of linear maps, the change-of-basis formulas, the dimension formula — requires uniqueness of expansion. The question is therefore central, and **linear independence** is exactly the condition that answers it positively.
+The notion is forced by a question raised the moment we have spans: when we write a vector $v$ as $a_1 v_1 + \cdots + a_m v_m$, is the choice of coefficients $a_i$ unique? If yes, then the list $v_1, \ldots, v_m$ installs *coordinates* on $\operatorname{span}(v_1, \ldots, v_m)$ — every vector in the span is faithfully recorded by its tuple of coefficients. If no, then the same vector has multiple coefficient tuples, and the list overcounts. Almost every later theorem in linear algebra — the matrix representation of linear maps, the change-of-basis formulas, the [[Def - Dimension|dimension]] formula — requires uniqueness of expansion. The question is therefore central, and **linear independence** is exactly the condition that answers it positively.
 
 Here is the derivation. Suppose $v_1, \ldots, v_m$ is a list, and $v$ has two expansions
 $$v = a_1 v_1 + \cdots + a_m v_m = c_1 v_1 + \cdots + c_m v_m.$$
@@ -69,7 +69,7 @@ A second compression: linear independence is the **kernel-triviality** of the li
 
 **Non-example (a list containing zero).** Any list containing the zero vector is linearly dependent. The combination $1 \cdot 0 = 0$ is non-trivial (its coefficient is $1 \neq 0$), so the trivial-expansion-of-zero condition fails.
 
-**Non-example (three vectors in a plane).** In $\mathbb{R}^3$, the list $(1, 0, 0), (0, 1, 0), (1, 1, 0)$ is linearly dependent: $(1, 1, 0) = (1, 0, 0) + (0, 1, 0)$, so $(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = 0$ is a nontrivial vanishing combination. The list spans the $xy$-plane (a 2-dimensional subspace), and three vectors in a 2-dimensional space cannot be independent.
+**Non-example (three vectors in a plane).** In $\mathbb{R}^3$, the list $(1, 0, 0), (0, 1, 0), (1, 1, 0)$ is linearly dependent: $(1, 1, 0) = (1, 0, 0) + (0, 1, 0)$, so $(1, 0, 0) + (0, 1, 0) - (1, 1, 0) = 0$ is a nontrivial vanishing combination. The list spans the $xy$-plane (a 2-dimensional [[Def - Subspace|subspace]]), and three vectors in a 2-dimensional space cannot be independent.
 
 **Non-example (depends on the field).** The list $1+i, 1-i$ in $\mathbb{C}$. Viewed as $\mathbb{R}$-vector space, this is independent: a real combination $a(1+i) + b(1-i) = (a+b) + (a-b)i = 0$ forces $a + b = 0$ and $a - b = 0$, so $a = b = 0$. Viewed as $\mathbb{C}$-vector space, this is dependent: the combination $i \cdot (1-i) + (-1) \cdot (1+i) = (i + 1) - 1 - i = 0$ is nontrivial. Restricting the scalar field can convert dependence into independence — never the other way around.
 

@@ -18,7 +18,7 @@ $V$ and $W$ are finite-dimensional vector spaces over $\mathbb{F}$, $T \in \math
 
 # Statement
 
-> **Theorem (Null Space and Range of the Dual Map).** Suppose $V$ and $W$ are finite-dimensional and $T \in \mathcal{L}(V, W)$. Then:
+> **Theorem ([[Def - Null Space and Range|Null Space and Range]] of the [[Def - Dual Map|Dual Map]]).** Suppose $V$ and $W$ are finite-dimensional and $T \in \mathcal{L}(V, W)$. Then:
 > $$
 > \operatorname{null} T' = (\operatorname{range} T)^0, \qquad \operatorname{range} T' = (\operatorname{null} T)^0.
 > $$
@@ -33,7 +33,7 @@ The first equality, $\operatorname{null} T' = (\operatorname{range} T)^0$, actua
 
 # Motivation
 
-The dual map $T'$ reverses the direction of $T$, and the natural question is what it does to subspaces. The null space and range of $T'$ ought to be related to the null space and range of $T$ — but through what relation?
+The dual map $T'$ reverses the direction of $T$, and the natural question is what it does to [[Def - Subspace|subspaces]]. The null space and range of $T'$ ought to be related to the null space and range of $T$ — but through what relation?
 
 The answer is *annihilation*: the null space of $T'$ is the annihilator of the range of $T$, and the range of $T'$ is the annihilator of the null space of $T$. The relation is *covariant* (no extra reversal beyond the one already in the dual map) and reads as a four-corner diagram:
 $$
@@ -54,7 +54,7 @@ $$
 
 This four-fold identity has spectacular consequences for problem-solving. To prove "$T$ is surjective", you can equivalently prove "$T'$ is injective" — and often $T'$ is easier to analyse. Similarly, "$T$ is injective" is equivalent to "$T'$ is surjective". And the *rank* of $T'$ equals the rank of $T$, which is the structural source of "row rank equals column rank" (see [[Ex - Row rank equals column rank]]).
 
-The theorem is one of those identities that looks like four separate statements but is essentially one structural fact: *dualization converts null spaces to annihilators of ranges, and vice versa*. Once you see the symmetry the four-corner picture exposes, the consequences fall out automatically.
+The theorem is one of those identities that looks like four separate statements but is essentially one structural fact: *dualization converts null spaces to [[Def - Annihilator|annihilators]] of ranges, and vice versa*. Once you see the symmetry the four-corner picture exposes, the consequences fall out automatically.
 
 ---
 
@@ -102,9 +102,9 @@ The surjectivity/injectivity duality is then immediate: $T$ is surjective iff $\
 
 # What Makes This Hard
 
-The trap is in the *direction of the implication* and in *not confusing dual with adjoint*. The first equality $\operatorname{null} T' = (\operatorname{range} T)^0$ is direct and short; the second $\operatorname{range} T' = (\operatorname{null} T)^0$ is harder because the easy direction gives only $\operatorname{range} T' \subseteq (\operatorname{null} T)^0$, and the reverse inclusion needs dimension counting (in finite dimensions) or an extension argument. The standard proof uses the dimension shortcut: both sides have the same dimension, and one is contained in the other, so they are equal.
+The trap is in the *direction of the implication* and in *not confusing dual with adjoint*. The first equality $\operatorname{null} T' = (\operatorname{range} T)^0$ is direct and short; the second $\operatorname{range} T' = (\operatorname{null} T)^0$ is harder because the easy direction gives only $\operatorname{range} T' \subseteq (\operatorname{null} T)^0$, and the reverse inclusion needs dimension counting (in finite [[Def - Dimension|dimensions]]) or an extension argument. The standard proof uses the dimension shortcut: both sides have the same dimension, and one is contained in the other, so they are equal.
 
-The other slip is conflating the dual $T'$ with the adjoint $T^*$ from [[Linear Algebra VII — §7 Operators on Inner Product Spaces|Chapter 7]]. The adjoint is a map $W \to V$ (not $W' \to V'$), it requires an inner product, and the formulas $\operatorname{null} T^* = (\operatorname{range} T)^\perp$, $\operatorname{range} T^* = (\operatorname{null} T)^\perp$ use orthogonal complements (not annihilators). The structural pattern is *the same*, and the inner product is what bridges dual and adjoint via Riesz representation, but the two are formally distinct.
+The other slip is conflating the dual $T'$ with the adjoint $T^*$ from [[Linear Algebra VII — §7 Operators on Inner Product Spaces|Chapter 7]]. The adjoint is a map $W \to V$ (not $W' \to V'$), it requires an inner product, and the formulas $\operatorname{null} T^* = (\operatorname{range} T)^\perp$, $\operatorname{range} T^* = (\operatorname{null} T)^\perp$ use orthogonal complements (not [[Def - Annihilator|annihilators]]). The structural pattern is *the same*, and the inner product is what bridges dual and adjoint via Riesz representation, but the two are formally distinct.
 
 ---
 
@@ -124,9 +124,9 @@ The other slip is conflating the dual $T'$ with the adjoint $T^*$ from [[Linear 
    - *Hint:* If $\varphi = T'(\psi) = \psi \circ T$, then for $v \in \operatorname{null} T$, $\varphi(v) = \psi(Tv) = \psi(0) = 0$.
    - *Why needed:* The easy half of the second identity.
 
-3. **Second identity (dimensions agree): $\dim \operatorname{range} T' = \dim (\operatorname{null} T)^0$.**
+3. **Second identity ([[Def - Dimension|dimensions]] agree): $\dim \operatorname{range} T' = \dim (\operatorname{null} T)^0$.**
    - *Hint:* Compute $\dim \operatorname{range} T'$ via rank-nullity on $T'$ and the first identity. Compute $\dim (\operatorname{null} T)^0 = \dim V - \dim \operatorname{null} T = \dim \operatorname{range} T$ via the [[Ex - Annihilator of a subspace has complementary dimension|annihilator formula]] and rank-nullity on $T$. Both equal $\dim \operatorname{range} T$.
-   - *Why needed:* Containment plus dimension equality gives equality of subspaces.
+   - *Why needed:* Containment plus dimension equality gives equality of [[Def - Subspace|subspaces]].
 
 4. **Rank equality: $\dim \operatorname{range} T' = \dim \operatorname{range} T$.**
    - *Hint:* Falls out of the computation in step 3.

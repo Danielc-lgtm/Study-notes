@@ -29,7 +29,7 @@ These two atlases determine the same smooth structure (Lee discussion before Pro
 
 # Motivation
 
-After defining smooth manifolds and verifying that finite products are smooth, we need a third construction: open subsets. The motivation is everywhere: $\mathrm{GL}(n, \mathbb{R})$ is the open subset of $M(n, \mathbb{R})$ where the determinant is nonzero, the upper half-plane $\{y > 0\} \subseteq \mathbb{R}^2$ is an open subset of $\mathbb{R}^2$, the orientation-preserving subgroup $\mathrm{GL}^+(n) = \{A : \det A > 0\}$ is open in $\mathrm{GL}(n)$, the complement of any closed subset of a manifold is open and inherits a smooth structure. The theorem says: all these inherit smooth manifold structures, and the inheritance is *canonical* — the same dimension, charts from the ambient manifold simply restricted.
+After defining smooth manifolds and verifying that finite products are smooth, we need a third construction: open subsets. The motivation is everywhere: $\mathrm{GL}(n, \mathbb{R})$ is the open subset of $M(n, \mathbb{R})$ where the determinant is nonzero, the upper half-plane $\{y > 0\} \subseteq \mathbb{R}^2$ is an open subset of $\mathbb{R}^2$, the orientation-preserving [[Def - Subgroup|subgroup]] $\mathrm{GL}^+(n) = \{A : \det A > 0\}$ is open in $\mathrm{GL}(n)$, the complement of any closed subset of a manifold is open and inherits a smooth structure. The theorem says: all these inherit smooth manifold structures, and the inheritance is *canonical* — the same [[Def - Dimension|dimension]], charts from the ambient manifold simply restricted.
 
 This is the most natural construction one could hope for: an open subset is *locally* the same as the ambient manifold, so its smooth structure should be locally inherited from the ambient one. The theorem makes this precise.
 
@@ -69,9 +69,9 @@ The fourth target: **smooth maps from open submanifolds**. A smooth map $f : M \
 
 The intuition is that smoothness is a *local* property: a smooth atlas is determined by its behaviour near each point, and restricting to an open subset preserves this local behaviour. The proof is largely bookkeeping.
 
-For the Hausdorff and second-countability conditions: both are inherited by subspaces in general topology. A subspace of a Hausdorff space is Hausdorff (intersect the separating open sets with the subspace); a subspace of a second-countable space is second-countable (intersect a countable basis with the subspace).
+For the Hausdorff and second-countability conditions: both are inherited by [[Def - Subspace|subspaces]] in general topology. A subspace of a Hausdorff space is Hausdorff (intersect the separating open sets with the subspace); a subspace of a second-countable space is second-countable (intersect a countable basis with the subspace).
 
-For the locally Euclidean condition: given $p \in U$, choose a chart $(V, \varphi)$ on $M$ with $p \in V$. Since $U$ is open and $p \in V \cap U$, the intersection $V \cap U$ is open in $M$ (intersection of opens). Restricting $\varphi$ to $V \cap U$ gives a chart $(V \cap U, \varphi|_{V \cap U})$ on $U$ with image $\varphi(V \cap U) \subseteq \varphi(V)$, an open subset of $\mathbb{R}^n$. This chart has dimension $n$ (the same as $M$), so $U$ is locally Euclidean of dimension $n$.
+For the locally Euclidean condition: given $p \in U$, choose a chart $(V, \varphi)$ on $M$ with $p \in V$. Since $U$ is open and $p \in V \cap U$, the intersection $V \cap U$ is open in $M$ (intersection of opens). Restricting $\varphi$ to $V \cap U$ gives a chart $(V \cap U, \varphi|_{V \cap U})$ on $U$ with image $\varphi(V \cap U) \subseteq \varphi(V)$, an open subset of $\mathbb{R}^n$. This chart has [[Def - Dimension|dimension]] $n$ (the same as $M$), so $U$ is locally Euclidean of dimension $n$.
 
 For smooth compatibility: the transition between two restricted charts is just the restriction of the transition between the original charts, hence smooth on the (open) restricted domain. Concretely, if $(V_\alpha, \varphi_\alpha), (V_\beta, \varphi_\beta) \in \mathcal{A}$ and we form the restricted charts $(V_\alpha \cap U, \varphi_\alpha|_{V_\alpha \cap U}), (V_\beta \cap U, \varphi_\beta|_{V_\beta \cap U})$ on $U$, the transition between them is
 
@@ -102,7 +102,7 @@ The most common error is to assume the closed-subset version: a closed subset of
 **Subgoal decomposition:**
 
 1. **Verify Hausdorff for $U$.** Two distinct points in $U$ are distinct in $M$; separate by disjoint opens in $M$ (Hausdorff property), then intersect with $U$ to get disjoint opens in $U$.
-   - *Hint:* Hausdorff is preserved by subspaces.
+   - *Hint:* Hausdorff is preserved by [[Def - Subspace|subspaces]].
    - *Why needed:* First condition of topological manifold.
 
 2. **Verify second countability for $U$.** A countable basis $\mathcal{B}$ for $M$ gives a countable basis $\mathcal{B}_U = \{B \cap U : B \in \mathcal{B}\}$ for the subspace topology on $U$.
@@ -110,7 +110,7 @@ The most common error is to assume the closed-subset version: a closed subset of
    - *Why needed:* Second condition.
 
 3. **Verify locally Euclidean of dimension $n$ for $U$.** Given $p \in U$, take a chart $(V, \varphi) \in \mathcal{A}$ with $p \in V$; restrict to $(V \cap U, \varphi|_{V \cap U})$, a chart on $U$ of dimension $n$.
-   - *Hint:* Restrictions of homeomorphisms to open subsets are homeomorphisms.
+   - *Hint:* Restrictions of [[Def - Homeomorphism|homeomorphisms]] to open subsets are [[Def - Homeomorphism|homeomorphisms]].
    - *Why needed:* Locally Euclidean condition.
 
 4. **Verify smooth compatibility.** The transition between two restricted charts is the restriction of the transition between the original charts, hence smooth on the open restricted domain.
@@ -188,9 +188,9 @@ The most common error is to assume the closed-subset version: a closed subset of
 
 **Topology — every open subset of a manifold is locally connected.** A topological manifold is locally connected (every point has a basis of connected neighbourhoods — the coordinate balls); this property is preserved by open subsets. Hence open submanifolds are locally connected, which simplifies many connectivity arguments.
 
-**Algebraic topology — homotopy invariance.** An open submanifold $U \subseteq M$ has its own homotopy type, generally different from $M$. Computing $\pi_k(U)$ and $H_k(U)$ versus $\pi_k(M)$ and $H_k(M)$ is a standard exercise in algebraic topology. The inclusion $U \hookrightarrow M$ induces maps on these invariants, and the *long exact sequence* relating $U$, $M$, and $M \setminus U$ (excision, Mayer–Vietoris) computes them.
+**Algebraic topology — [[Def - Homotopy|homotopy]] invariance.** An open submanifold $U \subseteq M$ has its own [[Def - Homotopy|homotopy]] type, generally different from $M$. Computing $\pi_k(U)$ and $H_k(U)$ versus $\pi_k(M)$ and $H_k(M)$ is a standard exercise in algebraic topology. The inclusion $U \hookrightarrow M$ induces maps on these invariants, and the *long exact sequence* relating $U$, $M$, and $M \setminus U$ (excision, Mayer–Vietoris) computes them.
 
-**Matrix Lie groups — concrete open submanifolds.** $\mathrm{GL}(n, \mathbb{R}), \mathrm{GL}(n, \mathbb{C})$, the *upper-triangular invertible matrices*, the *positive-determinant block-diagonal matrices*, the *unitary matrices in a specific maximal torus* — all are open submanifolds of larger linear groups. Computing the dimension of each and the relationship to the regular value theorem ([[Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds|DG IV]]) is a basic Lie-theory exercise.
+**Matrix Lie [[Def - Group|groups]] — concrete open submanifolds.** $\mathrm{GL}(n, \mathbb{R}), \mathrm{GL}(n, \mathbb{C})$, the *upper-triangular invertible matrices*, the *positive-determinant block-diagonal matrices*, the *unitary matrices in a specific maximal torus* — all are open submanifolds of larger linear [[Def - Group|groups]]. Computing the dimension of each and the relationship to the regular value theorem ([[Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds|DG IV]]) is a basic Lie-theory exercise.
 
 **Algebraic geometry — open subvarieties.** An algebraic variety $X$ has open subvarieties (complements of closed subvarieties), and these inherit the variety structure. The same construction — restrict the structure sheaf to the open set — works for schemes. The open-submanifold theorem in differential geometry is the differential-geometric counterpart of this purely algebraic construction.
 

@@ -33,7 +33,7 @@ $$h(z, w) = (2(ac + bd),\, 2(bc - ad),\, a^2 + b^2 - c^2 - d^2) \in S^2 \subsete
 
 **Problem class:** This is a verification exercise: show a specific smooth map is a submersion. The route is to compute the differential at each point and verify surjectivity. The Hopf map is special because (a) it is a fibre bundle (every fibre is $S^1$), and (b) its fibres are linked great circles, making it the simplest nontrivial fibre bundle.
 
-**Assumption pattern:** The source $S^3$ has dimension $3$, the target $S^2$ has dimension $2$. So at each point of $S^3$, the differential $dh_p : T_p S^3 \to T_{h(p)} S^2$ is a linear map between a $3$-dimensional and a $2$-dimensional space. For $h$ to be a submersion, this differential must be surjective, equivalently have rank $2$, equivalently have kernel of dimension $1$.
+**Assumption pattern:** The source $S^3$ has [[Def - Dimension|dimension]] $3$, the target $S^2$ has dimension $2$. So at each point of $S^3$, the differential $dh_p : T_p S^3 \to T_{h(p)} S^2$ is a linear map between a $3$-dimensional and a $2$-dimensional space. For $h$ to be a submersion, this differential must be surjective, equivalently have rank $2$, equivalently have kernel of dimension $1$.
 
 **Theorem routing:** The route is computational:
 1. Compute the differential $dh_p$ in explicit coordinates (using the real or complex form).
@@ -82,7 +82,7 @@ The proof breaks into three steps. Step 1 identifies the vertical tangent direct
 >
 > The tangent vector to this fibre at $(z, w)$ is obtained by differentiating the orbit curve $\gamma(t) = (e^{it} z, e^{it} w)$ at $t = 0$:
 > $$\gamma'(0) = (iz, iw) \in T_{(z,w)} S^3 \subseteq \mathbb{C}^2.$$
-> (We view $T_{(z,w)} S^3$ as a real subspace of $T_{(z,w)} \mathbb{C}^2 \cong \mathbb{C}^2 \cong \mathbb{R}^4$.)
+> (We view $T_{(z,w)} S^3$ as a real [[Def - Subspace|subspace]] of $T_{(z,w)} \mathbb{C}^2 \cong \mathbb{C}^2 \cong \mathbb{R}^4$.)
 >
 > Verify $(iz, iw) \in T_{(z,w)} S^3$: differentiate $|z|^2 + |w|^2 = 1$ at $\gamma(t) = (e^{it}z, e^{it}w)$: $|e^{it}z|^2 + |e^{it}w|^2 = |z|^2 + |w|^2 = 1$, constant. So $\gamma(t) \in S^3$ for all $t$, confirming $\gamma'(0) = (iz, iw) \in T_{(z,w)} S^3$.
 
@@ -141,10 +141,10 @@ The proof breaks into three steps. Step 1 identifies the vertical tangent direct
 
 # Key Takeaways
 
-**The Hopf map is a fibre bundle.** Beyond being a submersion, the Hopf map is a smooth $S^1$-bundle over $S^2$: $S^3 \to S^2$ with fibre $S^1$. The submersion structure is what makes it locally trivial (locally the projection $U \times S^1 \to U$). Globally, the bundle is *nontrivial*: $S^3$ is not diffeomorphic to $S^2 \times S^1$ (their fundamental groups differ — $\pi_1(S^3) = 0$ versus $\pi_1(S^2 \times S^1) = \mathbb{Z}$). The non-triviality is encoded in the **Hopf invariant**, an integer-valued topological invariant detecting the linking number of the Hopf fibres. The Hopf bundle is the prototypical nontrivial principal bundle and appears throughout physics (Dirac monopoles, $\mathrm{SU}(2)$ gauge theory, quantum information).
+**The Hopf map is a fibre bundle.** Beyond being a submersion, the Hopf map is a smooth $S^1$-bundle over $S^2$: $S^3 \to S^2$ with fibre $S^1$. The submersion structure is what makes it locally trivial (locally the projection $U \times S^1 \to U$). Globally, the bundle is *nontrivial*: $S^3$ is not diffeomorphic to $S^2 \times S^1$ (their fundamental [[Def - Group|groups]] differ — $\pi_1(S^3) = 0$ versus $\pi_1(S^2 \times S^1) = \mathbb{Z}$). The non-triviality is encoded in the **Hopf invariant**, an integer-valued topological invariant detecting the linking number of the Hopf fibres. The Hopf bundle is the prototypical nontrivial principal bundle and appears throughout physics (Dirac monopoles, $\mathrm{SU}(2)$ gauge theory, quantum information).
 
 **Quotient maps under group actions are submersions.** The Hopf map is the quotient of the $S^1$-action on $S^3$; more generally, the quotient map of a free, proper Lie group action on a manifold is a smooth submersion (by the smooth quotient theorem). This is the cleanest source of submersions: take a manifold with a nice group action and project to the orbit space. The fibres are the orbits, each diffeomorphic to the group; the base is the orbit space, which is itself a manifold.
 
 **Vertical and horizontal decomposition.** The proof above decomposed $T_{(z,w)} S^3$ into a vertical subspace (tangent to the fibre) and a horizontal complement (orthogonal in the Hermitian metric). This is the general pattern for fibre bundles: the tangent space at a point of the total space decomposes (after a choice of connection) into vertical (tangent to fibre) plus horizontal (chosen complement). The vertical-horizontal decomposition is the foundation of **connection theory** and **gauge theory** in differential geometry.
 
-**Cross-link to companion exercises and forward bridges.** This exercise is the bridge between the local theory of submersions and the global theory of fibre bundles. It connects to [[Differential Geometry V — Vector Fields, Flows, and the Lie Bracket|DG V]] (the vertical vector field $(iz, iw)$ is the infinitesimal generator of the $S^1$-action) and to [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map|DG XI]] (the Hopf fibration is the principal bundle $\mathrm{U}(1) \to S^3 \to S^2 = \mathrm{SU}(2)/\mathrm{U}(1)$).
+**Cross-link to companion exercises and forward bridges.** This exercise is the bridge between the local theory of submersions and the global theory of fibre bundles. It connects to [[Differential Geometry V — Vector Fields, Flows, and the Lie Bracket|DG V]] (the vertical vector field $(iz, iw)$ is the infinitesimal generator of the $S^1$-action) and to [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map|DG XI]] (the Hopf [[Def - Fibration|fibration]] is the principal bundle $\mathrm{U}(1) \to S^3 \to S^2 = \mathrm{SU}(2)/\mathrm{U}(1)$).

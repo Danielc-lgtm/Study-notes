@@ -30,7 +30,7 @@ The factorization is sometimes also called the **modified Gram-Schmidt** factori
 
 Why is QR factorization important? Three reasons.
 
-**(i) It gives a canonical orthonormal basis for the column space of $A$.** The columns of $Q$ are an orthonormal basis of $\operatorname{span}\{a_1, \dots, a_k\}$, with the first $i$ columns of $Q$ spanning the same subspace as the first $i$ columns of $A$. This is what one needs whenever working with subspaces: projection onto the column space is $QQ^T$, the distance from a vector to the subspace is $\|b - QQ^T b\|$, and so on. QR is the *constructive* way to produce this orthonormal basis.
+**(i) It gives a canonical orthonormal basis for the column space of $A$.** The columns of $Q$ are an orthonormal basis of $\operatorname{span}\{a_1, \dots, a_k\}$, with the first $i$ columns of $Q$ spanning the same [[Def - Subspace|subspace]] as the first $i$ columns of $A$. This is what one needs whenever working with [[Def - Subspace|subspaces]]: projection onto the column space is $QQ^T$, the distance from a vector to the subspace is $\|b - QQ^T b\|$, and so on. QR is the *constructive* way to produce this orthonormal basis.
 
 **(ii) It is the numerically standard algorithm for solving $Ax = b$.** When $A$ is square and invertible, $Ax = b$ becomes $QRx = b$, hence $Rx = Q^T b$. The right-hand side $Q^T b$ is computed in $O(nk)$ flops, and then $Rx = Q^T b$ is solved by back-substitution in $O(k^2)$ flops since $R$ is upper triangular. The total cost is dominated by the QR factorization itself ($O(nk^2)$ flops), and the algorithm is numerically more stable than computing $A^{-1}$ directly or using LU factorization.
 

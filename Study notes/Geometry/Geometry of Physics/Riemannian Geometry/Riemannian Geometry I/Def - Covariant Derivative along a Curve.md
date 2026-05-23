@@ -39,7 +39,7 @@ The covariant derivative along a curve is the conceptual *minimum* needed to mak
 
 # The Definition
 
-Let $(M, \nabla)$ be a smooth manifold with an affine connection on $TM$, and let $\gamma : I \to M$ be a smooth curve. A **smooth vector field along $\gamma$** is a smooth map $V : I \to TM$ with $V(t) \in T_{\gamma(t)}M$ for every $t \in I$. The set of smooth vector fields along $\gamma$ is denoted $\mathfrak{X}(\gamma)$ and is a $C^\infty(I)$-module.
+Let $(M, \nabla)$ be a smooth manifold with an affine connection on $TM$, and let $\gamma : I \to M$ be a smooth curve. A **smooth vector field along $\gamma$** is a smooth map $V : I \to TM$ with $V(t) \in T_{\gamma(t)}M$ for every $t \in I$. The set of smooth vector fields along $\gamma$ is denoted $\mathfrak{X}(\gamma)$ and is a $C^\infty(I)$-[[Def - Module|module]].
 
 The **covariant derivative along $\gamma$** is the unique $\mathbb{R}$-linear operator
 $$
@@ -88,9 +88,9 @@ In **physics**, $\nabla_t V$ is the **proper-time derivative** of a vector quant
 $$
 \frac{d}{dt}g_{\gamma(t)}(V(t), W(t)) = g_{\gamma(t)}(\nabla_t V, W) + g_{\gamma(t)}(V, \nabla_t W).
 $$
-This is the integrated form of metric-compatibility, and it is the basis for proving that parallel transport is an isometry ([[Thm - Parallel Transport is an Isometry for Metric-Compatible Connections]]).
+This is the integrated form of metric-compatibility, and it is the basis for proving that parallel transport is an [[Def - Isometry|isometry]] ([[Thm - Parallel Transport is an Isometry for Metric-Compatible Connections]]).
 
-**Corollary (geodesics have constant speed for metric-compatible connections).** If $\gamma$ is a geodesic ($\nabla_t \dot\gamma = 0$) and $\nabla$ is metric-compatible, then by the previous corollary $\frac{d}{dt}g(\dot\gamma, \dot\gamma) = 2g(\nabla_t\dot\gamma, \dot\gamma) = 0$, so $|\dot\gamma|^2$ is constant along the geodesic. This is the geometric content of "geodesics are constant-speed straight lines": the velocity has constant magnitude along the curve. For a non-metric-compatible connection (e.g., Weitzenböck on a Lie group with non-bi-invariant metric), this fails.
+**Corollary ([[Def - Geodesic|geodesics]] have constant speed for metric-compatible connections).** If $\gamma$ is a geodesic ($\nabla_t \dot\gamma = 0$) and $\nabla$ is metric-compatible, then by the previous corollary $\frac{d}{dt}g(\dot\gamma, \dot\gamma) = 2g(\nabla_t\dot\gamma, \dot\gamma) = 0$, so $|\dot\gamma|^2$ is constant along the geodesic. This is the geometric content of "geodesics are constant-speed straight lines": the velocity has constant magnitude along the curve. For a non-metric-compatible connection (e.g., Weitzenböck on a Lie [[Def - Group|group]] with non-bi-invariant metric), this fails.
 
 **Calibration check.** If you can perform the following three computations, you have understood the covariant derivative along a curve. (i) Compute $\nabla_t\dot\gamma$ for the curve $\gamma(t) = (R\cos t, R\sin t)$ on Euclidean $\mathbb{R}^2$ in Cartesian coordinates (answer: $\nabla_t\dot\gamma = -R(\cos t, \sin t)$, the centripetal acceleration), and verify that the same answer comes out in polar coordinates after applying the Christoffel correction. (ii) Verify that the velocity of a great circle on $S^2$ is parallel along itself (i.e., great circles are geodesics) using the Christoffel symbols. (iii) Solve the parallel-transport ODE along the equator of $S^2$ and verify that a vector returns unchanged after a full circuit — and contrast with the rotated result for parallel transport along a non-geodesic circle of constant latitude.
 

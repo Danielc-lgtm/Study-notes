@@ -32,7 +32,7 @@ Three answers present themselves; one is correct.
 
 The chosen construction routes through left-invariant vector fields not because they are physically intrinsic to the situation but because they bridge two pieces of machinery already in hand: tangent vectors at a point (linear algebra) and Lie brackets of vector fields (manifold theory). The bridge is constructed in [[Thm - Left-Invariant Vector Fields Form a Lie Algebra]].
 
-**Why is this the "right" bracket?** Because it agrees with the matrix commutator on matrix Lie groups (see [[Ex - The Lie Bracket on a Matrix Lie Algebra is the Commutator]]), and because it reproduces the BCH leading-order formula for $\exp(X) \exp(Y)$ in terms of $X + Y + \tfrac{1}{2}[X, Y]$. These two checks pin down the bracket uniquely, and the left-invariant-vector-field construction is the one that achieves them.
+**Why is this the "right" bracket?** Because it agrees with the matrix commutator on matrix Lie [[Def - Group|groups]] (see [[Ex - The Lie Bracket on a Matrix Lie Algebra is the Commutator]]), and because it reproduces the BCH leading-order formula for $\exp(X) \exp(Y)$ in terms of $X + Y + \tfrac{1}{2}[X, Y]$. These two checks pin down the bracket uniquely, and the left-invariant-vector-field construction is the one that achieves them.
 
 **The dimension count.** The evaluation map $\mathrm{Lie}(G) \to T_e G$, $X \mapsto X_e$, is a vector space isomorphism (Lee Thm 8.37). The injectivity is the rigidity statement: a left-invariant vector field is determined by its value at $e$. Surjectivity is via the construction $v \mapsto v^L$ where $v^L|_g = d(L_g)_e(v)$. Hence $\dim \mathfrak{g} = \dim T_e G = \dim G$.
 
@@ -50,7 +50,7 @@ These two definitions are equivalent via the **evaluation isomorphism** $\vareps
 
 The Lie algebra $\mathfrak{g}$ is a real Lie algebra of dimension $\dim G$. It is finite-dimensional, satisfying bilinearity, antisymmetry, and the Jacobi identity (inherited from the Lie bracket of vector fields).
 
-For matrix Lie groups $G \leq \mathrm{GL}(n, \mathbb{R})$: $\mathfrak{g} = T_I G \subseteq T_I \mathrm{GL}(n) \cong M(n, \mathbb{R}) = \mathfrak{gl}(n, \mathbb{R})$, with bracket the matrix commutator $[A, B] = AB - BA$ — see [[Ex - The Lie Bracket on a Matrix Lie Algebra is the Commutator]].
+For matrix Lie [[Def - Group|groups]] $G \leq \mathrm{GL}(n, \mathbb{R})$: $\mathfrak{g} = T_I G \subseteq T_I \mathrm{GL}(n) \cong M(n, \mathbb{R}) = \mathfrak{gl}(n, \mathbb{R})$, with bracket the matrix commutator $[A, B] = AB - BA$ — see [[Ex - The Lie Bracket on a Matrix Lie Algebra is the Commutator]].
 
 ---
 
@@ -74,7 +74,7 @@ From the [[Def - Lie Group|Lie-group-theoretic side]], it is the canonical finit
 
 **Is an instance: $\mathrm{Lie}(\mathrm{O}(n)) = \mathrm{Lie}(\mathrm{SO}(n)) = \mathfrak{so}(n)$.** $\mathfrak{so}(n) = \{A \in \mathfrak{gl}(n) : A^T = -A\}$, antisymmetric matrices, dimension $\binom{n}{2}$. Note that $\mathrm{O}(n)$ and $\mathrm{SO}(n)$ have the **same** Lie algebra because they share an identity component — and the Lie algebra only sees infinitesimal data at $e$.
 
-**Is an instance: $\mathrm{Lie}(\mathrm{U}(n)) = \mathfrak{u}(n)$.** $\mathfrak{u}(n) = \{A \in \mathfrak{gl}(n, \mathbb{C}) : A^* = -A\}$, skew-Hermitian complex matrices viewed as a real Lie algebra. Dimension $n^2$ (as a real algebra).
+**Is an instance: $\mathrm{Lie}(\mathrm{U}(n)) = \mathfrak{u}(n)$.** $\mathfrak{u}(n) = \{A \in \mathfrak{gl}(n, \mathbb{C}) : A^* = -A\}$, skew-Hermitian complex matrices viewed as a real Lie algebra. [[Def - Dimension|Dimension]] $n^2$ (as a real algebra).
 
 **Is an instance: $\mathrm{Lie}(\mathrm{SU}(n)) = \mathfrak{su}(n)$.** $\mathfrak{su}(n) = \{A \in \mathfrak{u}(n) : \mathrm{tr} A = 0\}$, traceless skew-Hermitian matrices. Dimension $n^2 - 1$.
 
@@ -82,7 +82,7 @@ From the [[Def - Lie Group|Lie-group-theoretic side]], it is the canonical finit
 
 **Is an instance: $\mathrm{Lie}(\mathrm{Heis}(3)) = \mathfrak{h}_3$.** The Heisenberg Lie algebra, $3$-dimensional with basis $X, Y, Z$ and brackets $[X, Y] = Z$, $[X, Z] = [Y, Z] = 0$. Non-abelian, nilpotent.
 
-**Corollary (dimensions match).** $\dim \mathfrak{g} = \dim G$.
+**Corollary ([[Def - Dimension|dimensions]] match).** $\dim \mathfrak{g} = \dim G$.
 
 **Corollary (functorial).** Every Lie group homomorphism $F : G \to H$ induces a Lie algebra homomorphism $F_* = dF_e : \mathfrak{g} \to \mathfrak{h}$ — see [[Thm - Lie Group Homomorphism Induces Lie Algebra Homomorphism]]. The assignment $G \mapsto \mathfrak{g}$, $F \mapsto F_*$ is a functor $\mathbf{LieGrp} \to \mathbf{LieAlg}$.
 

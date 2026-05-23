@@ -25,7 +25,7 @@ A double integral $\int_{X_1\times X_2}f\,d(\mu_1\otimes\mu_2)$ is, in principle
 
 **Sources.** Hypotheses: $\mu_1,\mu_2$ $\sigma$-finite, and either $f\ge0$ (Tonelli) or $f\in L^1(\mu_1\otimes\mu_2)$ (Fubini). The standard *bridge* to verify Fubini's hypothesis: first apply **Tonelli to $|f|$** — if the iterated integral of $|f|$ is finite, then $f\in L^1(\mu_1\otimes\mu_2)$ and Fubini applies. Tonelli is the gateway to Fubini.
 
-**Targets.** The interchange $\iint=\iint$ yields: evaluation of multiple integrals; the identity $\int_X g\,d\mu=\int_0^\infty\mu(g>t)\,dt$ ("layer-cake"); convolution identities; in probability, $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$ for [[Def - Independence|independent]] $X,Y$, and the computation of expectations of functions of independent variables by iterated integration against the product law.
+**Targets.** The interchange $\iint=\iint$ yields: evaluation of multiple integrals; the identity $\int_X g\,d\mu=\int_0^\infty\mu(g>t)\,dt$ ("layer-cake"); convolution identities; in probability, $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$ for independent $X,Y$, and the computation of expectations of functions of independent variables by iterated integration against the product law.
 
 ---
 
@@ -107,7 +107,7 @@ Tonelli itself is routine *once* one accepts that "Tonelli for indicators $=$ th
 
 # Cross-Field Exercise Suggestions
 
-Fubini–Tonelli proves the **layer-cake formula** $\int g\,d\mu=\int_0^\infty\mu(g>t)\,dt$ (apply Tonelli to $\mathbf{1}_{\{(x,t):t<g(x)\}}$ on $X\times[0,\infty)$) — the bridge between integrating a function and integrating its tail. In probability it gives $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$ for [[Def - Independence|independent]] $X,Y$ (the joint law is a product, integrate the product against it), and the [[Thm - Doob's Maximal Inequality|Lᵖ maximal inequality]] uses Fubini to integrate $\int_0^\infty pt^{p-1}\mathbb{P}(X^*>t)\,dt$.
+Fubini–Tonelli proves the **layer-cake formula** $\int g\,d\mu=\int_0^\infty\mu(g>t)\,dt$ (apply Tonelli to $\mathbf{1}_{\{(x,t):t<g(x)\}}$ on $X\times[0,\infty)$) — the bridge between integrating a function and integrating its tail. In probability it gives $\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$ for independent $X,Y$ (the joint law is a product, integrate the product against it), and the [[Thm - Doob's Maximal Inequality|Lᵖ maximal inequality]] uses Fubini to integrate $\int_0^\infty pt^{p-1}\mathbb{P}(X^*>t)\,dt$.
 
 ---
 

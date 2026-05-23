@@ -74,7 +74,7 @@ The relation $v \wedge v = 0$ encodes anticommutativity in disguise: expand $(v 
 
 **The exterior algebra functor.** The assignment $V \mapsto \Lambda^\bullet V^*$ is a contravariant functor from finite-dimensional vector spaces to graded-anticommutative algebras: a linear map $T : V \to W$ induces, by precomposition, an algebra homomorphism $\Lambda^\bullet T^* : \Lambda^\bullet W^* \to \Lambda^\bullet V^*$ in the reverse direction. The manifold version is the corresponding statement at the level of forms: a smooth map $F : M \to N$ induces an algebra homomorphism $F^* : \Omega^\bullet(N) \to \Omega^\bullet(M)$, the [[Def - Pullback of a Differential Form on a Manifold|pullback]] of forms.
 
-**Differential graded algebra (DGA).** With the [[Def - Exterior Derivative on a Manifold|exterior derivative]] $d$, the algebra $(\Omega^\bullet(M), \wedge, d)$ becomes a **differential graded algebra**: an associative graded algebra with a derivation $d$ of degree $+1$ satisfying $d^2 = 0$ and the graded Leibniz rule $d(\omega \wedge \eta) = d\omega \wedge \eta + (-1)^{\deg\omega}\,\omega \wedge d\eta$. DGAs are the basic objects of rational homotopy theory; the de Rham DGA is one of the two paradigmatic examples (the other is singular cochains).
+**Differential graded algebra (DGA).** With the [[Def - Exterior Derivative on a Manifold|exterior derivative]] $d$, the algebra $(\Omega^\bullet(M), \wedge, d)$ becomes a **differential graded algebra**: an associative graded algebra with a derivation $d$ of degree $+1$ satisfying $d^2 = 0$ and the graded Leibniz rule $d(\omega \wedge \eta) = d\omega \wedge \eta + (-1)^{\deg\omega}\,\omega \wedge d\eta$. DGAs are the basic objects of rational [[Def - Homotopy|homotopy]] theory; the de Rham DGA is one of the two paradigmatic examples (the other is singular cochains).
 
 ---
 
@@ -98,7 +98,7 @@ In **physics** the wedge product is the algebraic content of cross products in d
 $$\omega \wedge \eta = (dx + 2\,dy) \wedge (dy + 3\,dz) = dx \wedge dy + 3\,dx \wedge dz + 2\,dy \wedge dy + 6\,dy \wedge dz.$$
 By anticommutativity $dy \wedge dy = 0$, leaving $\omega \wedge \eta = dx \wedge dy + 3\,dx \wedge dz + 6\,dy \wedge dz$, a $2$-form. Note that all the *non-repeated* products survive — only the repeated-factor term dies.
 
-**Is an instance — the determinant identity in dimension $2$.** With $\omega = a\,dx + b\,dy$ and $\eta = c\,dx + d\,dy$ on $\mathbb{R}^2$,
+**Is an instance — the determinant identity in [[Def - Dimension|dimension]] $2$.** With $\omega = a\,dx + b\,dy$ and $\eta = c\,dx + d\,dy$ on $\mathbb{R}^2$,
 $$\omega \wedge \eta = (ad - bc)\,dx \wedge dy.$$
 The coefficient $ad - bc$ is $\det\begin{pmatrix}a & b \\ c & d\end{pmatrix}$. This confirms the determinant identity in degree $2$.
 

@@ -15,7 +15,7 @@ Let $\omega = x\,dy\wedge dz + y\,dz\wedge dx + z\,dx\wedge dy$ be the standard 
 
 Using the spherical-coordinate parametrization $F : (0, \pi) \times (0, 2\pi) \to S^2$ defined by $F(\varphi, \theta) = (\sin\varphi\cos\theta, \sin\varphi\sin\theta, \cos\varphi)$:
 
-(a) Verify that $F$ restricts to an orientation-preserving diffeomorphism onto its image (which is $S^2$ minus a measure-zero set).
+(a) Verify that $F$ restricts to an orientation-preserving [[Def - Diffeomorphism|diffeomorphism]] onto its image (which is $S^2$ minus a measure-zero set).
 
 (b) Compute the pullback $F^*\omega$.
 
@@ -79,7 +79,7 @@ The proof breaks into three steps. **Step 1** verifies orientation-preservation 
 
 We verify that $F : D \to S^2$ (where $D = (0, \pi)\times(0, 2\pi)$) is orientation-preserving by appealing to the radial extension. Define $\widetilde F : (0, \infty)\times D \to \mathbb{R}^3\setminus\{0\}$ by
 $$\widetilde F(\rho, \varphi, \theta) = (\rho\sin\varphi\cos\theta, \rho\sin\varphi\sin\theta, \rho\cos\varphi).$$
-This is a diffeomorphism onto its image (the punctured 3-space minus the half-plane $\{y = 0, x \geq 0\}$).
+This is a [[Def - Diffeomorphism|diffeomorphism]] onto its image (the punctured 3-space minus the half-plane $\{y = 0, x \geq 0\}$).
 
 > [!note]- Derivation
 > Compute the Jacobian matrix:

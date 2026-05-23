@@ -17,7 +17,7 @@ $U \subseteq \mathbb{R}^n$ is open. $U$ is **star-shaped** about a point $c \in 
 
 # Statement
 
-> **Theorem (Poincaré Lemma on a Star-Shaped Region).** Let $U \subseteq \mathbb{R}^n$ or $U \subseteq \mathbb{H}^n$ be an open star-shaped set. Then for every $k \geq 1$:
+> **Theorem ([[Thm - The Poincaré Lemma|Poincaré Lemma]] on a Star-Shaped Region).** Let $U \subseteq \mathbb{R}^n$ or $U \subseteq \mathbb{H}^n$ be an open star-shaped set. Then for every $k \geq 1$:
 > $$H^k_{dR}(U) = 0.$$
 > Equivalently, every closed $k$-form on $U$ is exact: if $\omega \in \Omega^k(U)$ satisfies $d\omega = 0$ with $k \geq 1$, there exists $\beta \in \Omega^{k-1}(U)$ with $\omega = d\beta$.
 
@@ -35,7 +35,7 @@ The basic question is whether the local construction of a primitive function, av
 
 The conceptual content of the theorem is that *closedness is locally enough for exactness*. Equivalently: *all obstructions to exactness are global*. The de Rham cohomology of a contractible domain vanishes in positive degrees because there is no global topology — no holes, no loops — for an obstruction to hide in. The Poincaré lemma is the foundation of every de Rham computation, because it says cohomology can be patched together from local pieces, each of which is trivial.
 
-The reason the lemma is stated on *star-shaped* (rather than just convex, or just simply connected) sets is that the proof needs a *canonical contraction* — a homotopy from the identity to a constant — and star-shapedness gives the simplest such contraction, the radial straight-line scaling $H(x, t) = c + t(x - c)$. The full statement, that any contractible domain has trivial positive-degree cohomology, then follows by combining the star-shaped case with [[Thm - Homotopy Invariance of de Rham Cohomology]]: contractibility says there is *some* homotopy from the identity to a constant, and homotopy invariance then transfers the star-shaped result to the general contractible setting.
+The reason the lemma is stated on *star-shaped* (rather than just convex, or just simply connected) sets is that the proof needs a *canonical contraction* — a [[Def - Homotopy|homotopy]] from the identity to a constant — and star-shapedness gives the simplest such contraction, the radial straight-line scaling $H(x, t) = c + t(x - c)$. The full statement, that any contractible domain has trivial positive-degree cohomology, then follows by combining the star-shaped case with [[Thm - Homotopy Invariance of de Rham Cohomology]]: contractibility says there is *some* [[Def - Homotopy|homotopy]] from the identity to a constant, and homotopy invariance then transfers the star-shaped result to the general contractible setting.
 
 The lemma is *false* without contractibility. The standing counterexample, since [[Thm - The Poincaré Lemma|Multivariate Analysis IV]], is the angular form $d\theta = (-y\,dx + x\,dy)/(x^2 + y^2)$ on $\mathbb{R}^2 \setminus \{0\}$: closed everywhere, but $\int_{S^1} d\theta = 2\pi \neq 0$, so $d\theta$ is not exact. The hole at the origin carries a non-trivial cohomology class, and the punctured plane is not contractible. So the Poincaré lemma is both a positive existence result (when the hypothesis holds) and a sharp characterization (without contractibility, all bets are off).
 

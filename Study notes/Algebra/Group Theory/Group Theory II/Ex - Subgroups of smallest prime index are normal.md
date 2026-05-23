@@ -20,9 +20,9 @@ Let $G$ be a finite group and let $H \leq G$ be a subgroup whose index $|G : H| 
 
 **Recall:**
 
-The objects in play are a subgroup of prime index, the action of $G$ on its cosets, and the divisibility consequences of that action.
+The objects in play are a subgroup of prime index, the action of $G$ on its [[Def - Coset|cosets]], and the divisibility consequences of that action.
 
-A [[Def - Coset|left coset]] of $H$ is a set $gH = \{gh : h \in H\}$; the **index** $|G : H|$ is the number of distinct left cosets, and the set of left cosets is written $G/H$. Here $|G : H| = p$, so $G/H$ is a set of exactly $p$ elements.
+A [[Def - Coset|left coset]] of $H$ is a set $gH = \{gh : h \in H\}$; the **index** $|G : H|$ is the number of distinct left [[Def - Coset|cosets]], and the set of left cosets is written $G/H$. Here $|G : H| = p$, so $G/H$ is a set of exactly $p$ elements.
 
 ![[Def - Normal Subgroup#The Definition]]
 
@@ -103,7 +103,7 @@ Because $G/K$ embeds in $S_p$, the index $|G : K|$ divides $p!$. Splitting that 
 > By the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] applied to $\rho$, the quotient $G/K = G/\ker\rho$ is isomorphic to $\operatorname{im}\rho$, a subgroup of $S_p$. By [[Thm - Lagrange's Theorem|Lagrange's theorem]], the order of a subgroup divides the order of the group, so
 > $$|G : K| = |G/K| = |\operatorname{im}\rho| \ \big|\ |S_p| = p!.$$
 >
-> Indices are multiplicative along a chain of subgroups: for $K \leq H \leq G$,
+> Indices are multiplicative along a chain of [[Def - Subgroup|subgroups]]: for $K \leq H \leq G$,
 > $$|G : K| = |G : H| \cdot |H : K|.$$
 > (This is the tower law for indices, itself a counting consequence of [[Thm - Lagrange's Theorem|Lagrange]]: each coset of $H$ in $G$ splits into $|H : K|$ cosets of $K$.) Since $|G : H| = p$, this reads $|G : K| = p \cdot |H : K|$. Substituting into $|G : K| \mid p!$ gives
 > $$p \cdot |H : K| \ \big|\ p! = p \cdot (p-1)!,$$
@@ -112,7 +112,7 @@ Because $G/K$ embeds in $S_p$, the index $|G : K|$ divides $p!$. Splitting that 
 
 **Step 3: $|H : K|$ divides $|G|$.**
 
-Since $K \leq H \leq G$ are finite groups, $|H : K| = |H|/|K|$ is an integer dividing $|H|$, and $|H|$ in turn divides $|G|$; hence $|H : K|$ divides $|G|$.
+Since $K \leq H \leq G$ are finite [[Def - Group|groups]], $|H : K| = |H|/|K|$ is an integer dividing $|H|$, and $|H|$ in turn divides $|G|$; hence $|H : K|$ divides $|G|$.
 
 > [!note]- Derivation
 > By [[Thm - Lagrange's Theorem|Lagrange's theorem]] applied to $K \leq H$, the index $|H : K| = |H|/|K|$ divides $|H|$. By Lagrange applied to $H \leq G$, the order $|H|$ divides $|G|$. Divisibility is transitive, so
@@ -158,7 +158,7 @@ By Steps 2 and 3, the integer $|H : K|$ divides both $(p-1)!$ and $|G|$. Every p
 
 **A subgroup of small index becomes a homomorphism into a small symmetric group — this is the universal first move when the index-two shortcut is unavailable.** Index two certifies normality almost for free, because two cosets leave no room for the left and right partitions to differ. For any larger index there is no such immediate argument, and the correct reflex is the [[Thm - Coset Action and the Normal Core|coset action]]: let $G$ act on the $n$ left cosets of $H$, obtaining a homomorphism $\rho : G \to S_n$ whose kernel $K$ is a normal subgroup sitting inside $H$. The trigger is any hypothesis of the form "$H$ has index $n$" with $n$ small relative to $|G|$. This single construction manufactures a normal subgroup out of an arbitrary subgroup, and it converts the qualitative datum "small index" into the quantitative constraint "$|G/K|$ divides $n!$" — a divisibility statement that can then be attacked with arithmetic. Whenever a problem gives a subgroup of small index and asks for normality, non-simplicity, or an embedding, this is where to start.
 
-**Pin a subgroup between its normal core and itself, then collapse the gap by squeezing the index $|H : K|$ from two sides.** The structural skeleton of this proof is worth abstracting. The coset action gives $K \leq H$ with $K$ normal; if one can show $|H : K| = 1$, then $H = K$ inherits normality from $K$. To force $|H : K| = 1$ one finds *two independent divisibility constraints* on that index and shows they are jointly satisfiable only by $1$. Here one constraint comes from the symmetric group — $|H : K|$ divides $(p-1)!$ — and the other from Lagrange — $|H : K|$ divides $|G|$. The general pattern is: trap an unknown quantity between a lower object (the core $K$) and an upper object ($H$), express the gap as an index, and pile divisibility conditions on that index until only the trivial value survives. This "squeeze the index" technique recurs throughout finite group theory: it is the same shape of argument used to show groups of certain orders have normal Sylow subgroups, where the count $n_p$ of Sylow subgroups is trapped by the two constraints $n_p \equiv 1 \pmod p$ and $n_p \mid |G|$.
+**Pin a subgroup between its normal core and itself, then collapse the gap by squeezing the index $|H : K|$ from two sides.** The structural skeleton of this proof is worth abstracting. The coset action gives $K \leq H$ with $K$ normal; if one can show $|H : K| = 1$, then $H = K$ inherits normality from $K$. To force $|H : K| = 1$ one finds *two independent divisibility constraints* on that index and shows they are jointly satisfiable only by $1$. Here one constraint comes from the symmetric group — $|H : K|$ divides $(p-1)!$ — and the other from Lagrange — $|H : K|$ divides $|G|$. The general pattern is: trap an unknown quantity between a lower object (the core $K$) and an upper object ($H$), express the gap as an index, and pile divisibility conditions on that index until only the trivial value survives. This "squeeze the index" technique recurs throughout finite group theory: it is the same shape of argument used to show [[Def - Group|groups]] of certain orders have normal Sylow [[Def - Subgroup|subgroups]], where the count $n_p$ of Sylow subgroups is trapped by the two constraints $n_p \equiv 1 \pmod p$ and $n_p \mid |G|$.
 
 **"The smallest prime dividing $|G|$" is a coded instruction to make a number coprime to a factorial.** The hypothesis that $p$ is minimal looks like a mild technical condition, but it is the entire engine of the proof, and recognising what it *buys* is the transferable insight. Its content is a partition of the primes: every prime $< p$ is absent from $|G|$, and every prime dividing $|G|$ is $\geq p$. Consequently $|G|$ is coprime to $(p-1)!$, since $(p-1)!$ is built entirely from primes below $p$. Any time a hypothesis names "the smallest prime divisor", expect the proof to exploit exactly this coprimality — an integer constrained to divide both $|G|$ and something assembled from smaller primes is thereby forced to be $1$. The same idea, in the same words, proves that a group of order $2m$ with $m$ odd has a normal subgroup of order $m$, and that the smallest Sylow subgroup is often normal: in each case "smallest prime" is the lever that makes a factorial and a group order share no common factor.
 

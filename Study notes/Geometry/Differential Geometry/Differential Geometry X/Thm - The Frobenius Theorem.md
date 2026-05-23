@@ -29,9 +29,9 @@ $M$ is a smooth $n$-manifold; $D$ is a smooth distribution of rank $k$ on $M$ �
 
 > **Corollary (existence of integral manifolds through every point).** If $D$ is involutive, then for every $p \in M$ there is a $k$-dimensional embedded submanifold $N_p$ through $p$ with $T_qN_p = D_q$ for every $q \in N_p$ — explicitly, the slice $\{x^{k+1} = c^{k+1}, \dots, x^n = c^n\}$ in any flat chart, with $c^{i} = x^{i}(p)$.
 
-> **Corollary (Global Frobenius, see [[Def - Foliation]]).** If $D$ is involutive, then the collection of all maximal connected integral manifolds of $D$ forms a foliation of $M$.
+> **Corollary (Global Frobenius, see [[Def - Foliation]]).** If $D$ is involutive, then the collection of all maximal connected integral manifolds of $D$ forms a [[Def - Foliation|foliation]] of $M$.
 
-The forms-language version is [[Thm - Frobenius Theorem in Forms Language]], stating the equivalent condition that the annihilating ideal $\mathcal{I}(D)$ is a differential ideal.
+The forms-language version is [[Thm - Frobenius Theorem in Forms Language]], stating the equivalent condition that the annihilating [[Def - Ideal|ideal]] $\mathcal{I}(D)$ is a differential [[Def - Ideal|ideal]].
 
 ---
 
@@ -41,9 +41,9 @@ The question Frobenius answers is sharp: when does a rank-$k$ distribution admit
 
 The necessary condition is easy and is the easy half of the theorem. If $D$ has an integral manifold $N$ through $p$, and $X, Y \in \Gamma(D)$ are both tangent to $N$ along $N$, then their bracket $[X, Y]$ is tangent to $N$ along $N$ (this is `Corollary 8.32` in Lee — brackets of vector fields tangent to a submanifold remain tangent). Since this must hold for every $p$ (integrability is pointwise), $[X, Y] \in \Gamma(D)$ everywhere.
 
-The sufficient direction is the deep content. Frobenius proves that closure under brackets is *enough* — bracket-closure forces the existence of integral manifolds, with the strongest form of regularity (flat charts) holding everywhere. This converts a local infinitesimal condition (bracket-closure of vector fields, checkable at each point) into a global geometric structure (a flat-chart structure, equivalently a foliation).
+The sufficient direction is the deep content. Frobenius proves that closure under brackets is *enough* — bracket-closure forces the existence of integral manifolds, with the strongest form of regularity (flat charts) holding everywhere. This converts a local infinitesimal condition (bracket-closure of vector fields, checkable at each point) into a global geometric structure (a flat-chart structure, equivalently a [[Def - Foliation|foliation]]).
 
-The conceptual content: *the algebraic condition $[\Gamma(D), \Gamma(D)] \subseteq \Gamma(D)$ is both necessary and sufficient for the geometric construction.* This is a recurring pattern in differential geometry — the [[Thm - The Inverse Function Theorem|inverse function theorem]] makes an algebraic condition (invertible derivative) sufficient for a geometric one (local diffeomorphism); the [[Thm - The Regular Value Theorem|regular value theorem]] makes a pointwise condition (surjectivity of differential) sufficient for a global submanifold structure on level sets. Frobenius is the higher-dimensional version of the same conceptual move.
+The conceptual content: *the algebraic condition $[\Gamma(D), \Gamma(D)] \subseteq \Gamma(D)$ is both necessary and sufficient for the geometric construction.* This is a recurring pattern in differential geometry — the [[Thm - The Inverse Function Theorem|inverse function theorem]] makes an algebraic condition (invertible derivative) sufficient for a geometric one (local [[Def - Diffeomorphism|diffeomorphism]]); the [[Thm - The Regular Value Theorem|regular value theorem]] makes a pointwise condition (surjectivity of differential) sufficient for a global submanifold structure on level sets. Frobenius is the higher-dimensional version of the same conceptual move.
 
 The proof's main idea is also conceptually clean: an involutive distribution can be "straightened" by replacing its given local frame with a *commuting* frame, after which the [[Thm - Canonical Form for a Nonvanishing Vector Field|canonical-form theorem for commuting vector fields]] produces the flat chart. The construction of the commuting frame uses a coordinate projection to pull back the standard partial derivatives — once you have $k$ commuting fields whose flows mutually commute, you can compose their flows to parameterize integral manifolds explicitly.
 
@@ -189,7 +189,7 @@ The conceptual obstacle is recognizing that **the bracket condition is exactly w
 > >
 > > Define $\Phi : U' \subseteq \mathbb{R}^k \times S \to M$ by $\Phi(t_1, \dots, t_k, q) = \phi^{V_1}_{t_1}\phi^{V_2}_{t_2}\cdots\phi^{V_k}_{t_k}(q)$, where $\phi^{V_i}_{t}$ is the flow of $V_i$. Because $[V_i, V_j] = 0$, the flows commute by the commuting-flows theorem, so the order of composition does not matter, and $\Phi$ is smooth and well-defined on a neighborhood of $0$ in $\mathbb{R}^k \times S$.
 > >
-> > $d\Phi$ at $(0, \dots, 0, p)$ sends $\partial_{t_i}$ to $V_i|_p$ and $T_pS$ to itself, so $d\Phi$ is invertible at the basepoint. By [[Thm - The Inverse Function Theorem|inverse function theorem]], $\Phi$ is a local diffeomorphism. Use $(t_1, \dots, t_k, \text{coordinates on } S)$ as the new coordinate system $(y^1, \dots, y^n)$. In these coordinates, flowing along $V_i$ corresponds to incrementing $t_i$ alone, so $V_i = \partial/\partial y^i$.
+> > $d\Phi$ at $(0, \dots, 0, p)$ sends $\partial_{t_i}$ to $V_i|_p$ and $T_pS$ to itself, so $d\Phi$ is invertible at the basepoint. By [[Thm - The Inverse Function Theorem|inverse function theorem]], $\Phi$ is a local [[Def - Diffeomorphism|diffeomorphism]]. Use $(t_1, \dots, t_k, \text{coordinates on } S)$ as the new coordinate system $(y^1, \dots, y^n)$. In these coordinates, flowing along $V_i$ corresponds to incrementing $t_i$ alone, so $V_i = \partial/\partial y^i$.
 
 ---
 
@@ -216,7 +216,7 @@ The conceptual obstacle is recognizing that **the bracket condition is exactly w
 
 **Existence of solutions to overdetermined PDEs.** A system $\partial u/\partial x^i = \alpha^i(x, u)$ for $i = 1, \dots, n$ has a solution iff the associated distribution on $\mathbb{R}^{n+1}$ spanned by $X_i = \partial_{x^i} + \alpha^i\partial_u$ is involutive — equivalently, iff $[X_i, X_j] = 0$ for all $i, j$. The Frobenius theorem then constructs the integral manifold (the graph of the solution). This is the foundational existence theorem for first-order overdetermined PDE.
 
-**Lie subalgebras and Lie subgroups.** Lee's Theorem 19.26: every Lie subalgebra $\mathfrak{h}$ of $\mathrm{Lie}(G)$ corresponds to a unique connected Lie subgroup of $G$. The proof uses Frobenius: the left-invariant distribution $D_g = \{X_g : X \in \mathfrak{h}\}$ on $G$ is involutive (because $\mathfrak{h}$ is a Lie subalgebra), so by Frobenius it has a foliation; the leaf through the identity is the desired Lie subgroup.
+**Lie subalgebras and Lie [[Def - Subgroup|subgroups]].** Lee's Theorem 19.26: every Lie subalgebra $\mathfrak{h}$ of $\mathrm{Lie}(G)$ corresponds to a unique connected Lie [[Def - Subgroup|subgroup]] of $G$. The proof uses Frobenius: the left-invariant distribution $D_g = \{X_g : X \in \mathfrak{h}\}$ on $G$ is involutive (because $\mathfrak{h}$ is a Lie subalgebra), so by Frobenius it has a foliation; the leaf through the identity is the desired Lie subgroup.
 
 **Holonomic vs nonholonomic constraints.** In classical mechanics, a velocity constraint distribution $D \subseteq TQ$ on configuration space $Q$ is **holonomic** (comes from a submanifold constraint) iff $D$ is involutive — by Frobenius. The skate on ice, the rolling ball, and parallel-parking constraints are non-involutive distributions whose lack of integrability is *exactly* the geometric meaning of "non-holonomic." See [[Ex - A Non-Integrable Distribution on R^3 from the Standard Contact Form]].
 

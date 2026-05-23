@@ -24,7 +24,7 @@ $V$ is a finite-dimensional vector space over $F$, with subspaces $V_1, V_2 \sub
 
 > **Corollary (direct sum case, LADR 3.94 / Ex 2C.18).** If $V_1 \cap V_2 = \{0\}$, equivalently if $V_1 + V_2 = V_1 \oplus V_2$, then $\dim(V_1 \oplus V_2) = \dim V_1 + \dim V_2$.
 
-> **Corollary (pigeonhole, Ex 2C.13–15).** If $V_1, V_2$ are subspaces of an $n$-dimensional space with $\dim V_1 + \dim V_2 > n$, then $V_1 \cap V_2 \neq \{0\}$.
+> **Corollary (pigeonhole, Ex 2C.13–15).** If $V_1, V_2$ are [[Def - Subspace|subspaces]] of an $n$-dimensional space with $\dim V_1 + \dim V_2 > n$, then $V_1 \cap V_2 \neq \{0\}$.
 
 ---
 
@@ -32,7 +32,7 @@ $V$ is a finite-dimensional vector space over $F$, with subspaces $V_1, V_2 \sub
 
 The formula is the linear-algebra **inclusion-exclusion principle**. For finite sets, $|A \cup B| = |A| + |B| - |A \cap B|$ — the double-counted overlap is subtracted once. For finite-dimensional subspaces, the same accounting holds with **union → sum** and **size → dimension** and **disjoint → trivially intersecting**. The analogy is essentially exact, and the table in LADR pages 47–48 makes it explicit.
 
-The formula matters for two reasons. First, it is the principal computational tool for **dimensions of sums**. Given two subspaces with known dimensions and a known intersection, the dimension of their sum is determined; given the sum and intersection, the dimensions of $V_1$ and $V_2$ are constrained; given dimensions of $V_1, V_2$, and the sum, the dimension of the intersection is determined. In any "two-subspace" problem there are four numbers and one equation: knowing any three forces the fourth.
+The formula matters for two reasons. First, it is the principal computational tool for **[[Def - Dimension|dimensions]] of sums**. Given two subspaces with known [[Def - Dimension|dimensions]] and a known intersection, the dimension of their sum is determined; given the sum and intersection, the dimensions of $V_1$ and $V_2$ are constrained; given dimensions of $V_1, V_2$, and the sum, the dimension of the intersection is determined. In any "two-subspace" problem there are four numbers and one equation: knowing any three forces the fourth.
 
 Second, the formula's **pigeonhole corollary** is the standard route to forcing nontrivial intersection. If $\dim V_1 + \dim V_2 > \dim V$, the formula gives $\dim(V_1 \cap V_2) \geq \dim V_1 + \dim V_2 - \dim V > 0$, so $V_1 \cap V_2$ is nontrivial. This converts a dimension inequality into an existence statement about vectors. It is one of the cleanest applications of the formula and appears repeatedly in exam problems (LADR 2C.11, 13, 14, 15 all use this).
 
@@ -135,7 +135,7 @@ This section is self-sufficient: reading only what follows should let you recons
 > [!note]- Lemma 1: The intersection $V_1 \cap V_2$ is a finite-dimensional subspace
 > **Statement:** If $V$ is finite-dimensional and $V_1, V_2$ are subspaces of $V$, then $V_1 \cap V_2$ is also a subspace of $V$ (in particular of $V_1$ and of $V_2$), and is finite-dimensional.
 >
-> **Hint:** Intersection of subspaces is a subspace. Subspaces of a finite-dimensional space are finite-dimensional ([[Thm - Subspace of Finite-Dimensional Space is Finite-Dimensional|2.25]]).
+> **Hint:** Intersection of subspaces is a subspace. [[Def - Subspace|Subspaces]] of a finite-dimensional space are finite-dimensional ([[Thm - Subspace of Finite-Dimensional Space is Finite-Dimensional|2.25]]).
 >
 > **Why needed:** The proof of the dimension formula starts by fixing a basis of $V_1 \cap V_2$, which requires this lemma to know such a basis exists.
 >

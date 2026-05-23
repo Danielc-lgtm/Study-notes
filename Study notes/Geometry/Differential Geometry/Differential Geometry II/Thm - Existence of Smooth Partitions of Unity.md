@@ -91,7 +91,7 @@ The three ingredients:
 
 3. **Sum and normalize.** On each regular coordinate ball $B_i$, place a smooth bump $f_i$ supported in $\overline{B_i}$, equal to $1$ on a smaller ball, with $\bigcup_i \{f_i > 0\}$ covering $M$. The sum $f = \sum_i f_i$ is locally finite (so smooth) and positive everywhere (since $\bigcup_i \{f_i > 0\} = M$). Normalize: $g_i = f_i / f$. Then $\sum_i g_i = 1$, $g_i \geq 0$, $\operatorname{supp}(g_i) \subseteq \overline{B_i}$, locally finite. This is a partition of unity subordinate to the refinement; re-index to get one subordinate to the original cover.
 
-The argument is conceptually like a *topological convolution*: convolve the indicator function of $M$ (which is everywhere $1$) with a family of smooth bumps that respect the cover, and obtain a smooth identity-of-mass decomposition.
+The argument is conceptually like a *topological [[Def - Convolution|convolution]]*: convolve the indicator function of $M$ (which is everywhere $1$) with a family of smooth bumps that respect the cover, and obtain a smooth identity-of-mass decomposition.
 
 ---
 
@@ -212,9 +212,9 @@ Verify: $\psi_\alpha \in C^\infty(M)$ (locally finite sum), $\operatorname{supp}
 
 **PDE / variational analysis: localization of weak formulations.** When working with PDEs on a manifold, test functions are taken to be compactly supported smooth functions $C^\infty_c(M)$. Localizing a global PDE to a chart: multiply by a chart-supported bump (from a partition of unity), reduce to a Euclidean PDE on the chart's image, solve there. This is the standard mechanism by which elliptic regularity, weak solution existence, and Sobolev space machinery transfer from $\mathbb{R}^n$ to manifolds. See **PDE on Manifolds** (downstream).
 
-**Sheaf cohomology: the sheaf of smooth functions is acyclic.** The smooth function sheaf $\mathcal{O}_M^\infty$ on a smooth manifold is *soft* (any section on a closed subset extends to a global section), and soft sheaves are acyclic for sheaf cohomology. This is the foundational acyclicity result that makes the de Rham theorem ($H^*_{\mathrm{dR}}(M; \mathbb{R}) \cong H^*(M; \mathbb{R})$) work — the de Rham complex computes sheaf cohomology because each $\Omega^k$ is a $\mathcal{O}_M^\infty$-module sheaf, hence soft. See [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|DG X]].
+**Sheaf cohomology: the sheaf of smooth functions is acyclic.** The smooth function sheaf $\mathcal{O}_M^\infty$ on a smooth manifold is *soft* (any section on a closed subset extends to a global section), and soft sheaves are acyclic for sheaf cohomology. This is the foundational acyclicity result that makes the de Rham theorem ($H^*_{\mathrm{dR}}(M; \mathbb{R}) \cong H^*(M; \mathbb{R})$) work — the de Rham complex computes sheaf cohomology because each $\Omega^k$ is a $\mathcal{O}_M^\infty$-[[Def - Module|module]] sheaf, hence soft. See [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|DG X]].
 
-**Quantum field theory: gauge fixing via partition of unity.** In gauge field theories on a curved spacetime, the gauge group acts on the space of connections on a principal bundle. To define amplitudes via path integrals, one needs to fix a gauge. The Faddeev–Popov procedure uses a partition-of-unity-like construction on the moduli space of connections — locally pick a gauge, weight by the partition, ensure the global definition is independent of the choice. See **Gauge Theory** (downstream).
+**Quantum field theory: gauge fixing via partition of unity.** In gauge field theories on a curved spacetime, the gauge [[Def - Group|group]] acts on the space of connections on a principal bundle. To define amplitudes via path integrals, one needs to fix a gauge. The Faddeev–Popov procedure uses a partition-of-unity-like construction on the moduli space of connections — locally pick a gauge, weight by the partition, ensure the global definition is independent of the choice. See **Gauge Theory** (downstream).
 
 ---
 

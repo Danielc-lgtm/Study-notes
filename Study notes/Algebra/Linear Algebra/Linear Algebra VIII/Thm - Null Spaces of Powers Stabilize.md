@@ -18,7 +18,7 @@ Throughout, $V$ is a finite-dimensional nonzero vector space over $\mathbf{F}$ a
 
 > **Theorem (null spaces of powers stabilize).** Suppose $T \in \mathcal{L}(V)$.
 >
-> 1. (Increasing chain.) The null spaces $\operatorname{null} T^0 \subseteq \operatorname{null} T^1 \subseteq \operatorname{null} T^2 \subseteq \cdots$ form a non-decreasing sequence of subspaces of $V$.
+> 1. (Increasing chain.) The null spaces $\operatorname{null} T^0 \subseteq \operatorname{null} T^1 \subseteq \operatorname{null} T^2 \subseteq \cdots$ form a non-decreasing sequence of [[Def - Subspace|subspaces]] of $V$.
 >
 > 2. (Stabilisation propagates.) If $\operatorname{null} T^m = \operatorname{null} T^{m+1}$ for some non-negative integer $m$, then $\operatorname{null} T^m = \operatorname{null} T^{m+k}$ for every $k \geq 0$.
 >
@@ -72,9 +72,9 @@ The argument has two pieces. The first is **propagation**: once two consecutive 
 
 The second piece is the **dimensional bound**: the chain cannot strictly increase past $\dim V$ steps. The argument is dimensional: at each strict inclusion the dimension must increase by at least $1$, but $\dim \operatorname{null} T^k \leq \dim V$, so the chain can strictly increase at most $\dim V$ times. After $\dim V$ steps the chain must have stopped strictly increasing — that is, *two consecutive terms must agree by index $\dim V$* — and the propagation result then takes over.
 
-**Mechanism summary: a strictly increasing chain of subspaces of $V$ adds at least one dimension per step, and $V$ has only $\dim V$ dimensions to give.**
+**Mechanism summary: a strictly increasing chain of [[Def - Subspace|subspaces]] of $V$ adds at least one dimension per step, and $V$ has only $\dim V$ [[Def - Dimension|dimensions]] to give.**
 
-This argument is *not* spectral, polynomial, or basis-dependent. It is the purest dimension-counting argument in chapter 8, and it is precisely the strength of finite-dimensionality: in infinite dimensions the chain can strictly increase forever, and the result fails. (For instance, on the space of polynomials $\mathcal{P}(\mathbb{R})$ — infinite-dimensional — the differentiation operator $D$ has $\operatorname{null} D^k = \mathcal{P}_{k-1}(\mathbb{R})$, a strictly increasing chain that never stabilises.)
+This argument is *not* spectral, polynomial, or basis-dependent. It is the purest dimension-counting argument in chapter 8, and it is precisely the strength of finite-dimensionality: in infinite [[Def - Dimension|dimensions]] the chain can strictly increase forever, and the result fails. (For instance, on the space of polynomials $\mathcal{P}(\mathbb{R})$ — infinite-dimensional — the differentiation operator $D$ has $\operatorname{null} D^k = \mathcal{P}_{k-1}(\mathbb{R})$, a strictly increasing chain that never stabilises.)
 
 The corollary $V = \operatorname{null} T^{\dim V} \oplus \operatorname{range} T^{\dim V}$ takes a little more work but is short. Suppose $v \in \operatorname{null} T^{\dim V} \cap \operatorname{range} T^{\dim V}$. Then $v = T^{\dim V} u$ for some $u$ and $T^{\dim V} v = 0$. So $T^{2 \dim V} u = 0$, hence $u \in \operatorname{null} T^{2 \dim V} = \operatorname{null} T^{\dim V}$ by stabilisation, hence $v = T^{\dim V} u = 0$. The intersection is zero. Then by rank-nullity, $\dim \operatorname{null} T^{\dim V} + \dim \operatorname{range} T^{\dim V} = \dim V$, so the sum is all of $V$ — direct.
 

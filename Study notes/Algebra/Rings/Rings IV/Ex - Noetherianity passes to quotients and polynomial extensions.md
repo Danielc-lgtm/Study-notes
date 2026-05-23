@@ -32,7 +32,7 @@ The two equivalent faces of this condition — the ascending chain condition, an
 
 ![[Thm - Noetherian Rings and Finitely Generated Ideals#Statement]]
 
-The engine for *building* Noetherian rings out of old ones is Hilbert's basis theorem:
+The engine for *building* Noetherian [[Def - Ring|rings]] out of old ones is Hilbert's basis theorem:
 
 ![[Thm - Hilbert's Basis Theorem#Statement]]
 
@@ -68,7 +68,7 @@ This solution deploys the following legal operations from [[Rings IV — §2.7�
 
 4. **Pass to a quotient by an ideal, preserving Noetherianity.** A quotient $R/I$ of a Noetherian ring $R$ is again Noetherian; the proof routes ideals of $R/I$ back to ideals of $R$ via the ideal correspondence and pushes finite generating sets forward.
 
-5. **Use the ideal correspondence to transport finite generation across a quotient.** Ideals of $R/I$ correspond bijectively (via [[Thm - Ideal Correspondence]]) to ideals of $R$ containing $I$; a finite generating set of the upstairs ideal projects to a finite generating set downstairs.
+5. **Use the ideal correspondence to transport finite generation across a quotient.** [[Def - Ideal|Ideals]] of $R/I$ correspond bijectively (via [[Thm - Ideal Correspondence]]) to ideals of $R$ containing $I$; a finite generating set of the upstairs ideal projects to a finite generating set downstairs.
 
 ---
 
@@ -84,7 +84,7 @@ This solution deploys the following legal operations from [[Rings IV — §2.7�
 > [[Thm - Hilbert's Basis Theorem]]: $R$ Noetherian $\implies R[X]$ Noetherian. Apply it to $R=\mathbb{Z}$ to get $\mathbb{Z}[X]$ Noetherian; apply it *again* to $R=\mathbb{Z}[X]$, since $\mathbb{Z}[X,Y]=(\mathbb{Z}[X])[Y]$, to get $\mathbb{Z}[X,Y]$ Noetherian. Now only the quotient step remains: why is $R/I$ Noetherian when $R$ is?
 
 > [!note]- Hint 4
-> For the quotient step, take any ideal $J\trianglelefteq R/I$. By the [[Thm - Ideal Correspondence|ideal correspondence]] it equals $J'/I$ for a unique ideal $J'$ of $R$ with $I\subseteq J'$. Since $R$ is Noetherian, $J'=(r_1,\dots,r_n)$ is finitely generated. Project: the cosets $r_1+I,\dots,r_n+I$ generate $J$. So every ideal of $R/I$ is finitely generated — that is the Noetherian property. The polynomial $X^2-Y^3$ is never used; *any* ideal would do.
+> For the quotient step, take any ideal $J\trianglelefteq R/I$. By the [[Thm - Ideal Correspondence|ideal correspondence]] it equals $J'/I$ for a unique ideal $J'$ of $R$ with $I\subseteq J'$. Since $R$ is Noetherian, $J'=(r_1,\dots,r_n)$ is finitely generated. Project: the [[Def - Coset|cosets]] $r_1+I,\dots,r_n+I$ generate $J$. So every ideal of $R/I$ is finitely generated — that is the Noetherian property. The polynomial $X^2-Y^3$ is never used; *any* ideal would do.
 
 ---
 
@@ -123,7 +123,7 @@ For any ideal $I$ of a Noetherian ring $R$, the quotient ring $R/I$ is Noetheria
 >
 > Let $J\trianglelefteq R/I$ be an arbitrary ideal of the quotient. By the [[Thm - Ideal Correspondence|ideal correspondence]] — the bijection, induced by the quotient map $\pi:R\to R/I$, between ideals of $R/I$ and ideals of $R$ that contain $I$ — there is a unique ideal $J'\trianglelefteq R$ with
 > $$I\subseteq J'\qquad\text{and}\qquad J=J'/I=\pi(J')=\{\,r+I:r\in J'\,\}.$$
-> ($J'=\pi^{-1}(J)$ is the preimage; it is an ideal of $R$ because preimages of ideals under ring homomorphisms are ideals, and it contains $I=\ker\pi$.)
+> ($J'=\pi^{-1}(J)$ is the preimage; it is an ideal of $R$ because preimages of ideals under ring [[Def - Homomorphism|homomorphisms]] are ideals, and it contains $I=\ker\pi$.)
 >
 > Since $R$ is Noetherian, the ideal $J'$ is finitely generated: $J'=(r_1,\dots,r_n)$ for some $r_1,\dots,r_n\in R$.
 >
@@ -163,4 +163,4 @@ Apply Step 3 with $R=\mathbb{Z}[X,Y]$ (Noetherian by Step 2) and $I=(X^2-Y^3)$: 
 
 **Hilbert's basis theorem is single-variable; the multivariate case is induction, applied once per variable.** [[Thm - Hilbert's Basis Theorem]] is stated for one adjoined indeterminate, $R\rightsquigarrow R[X]$. The multivariate ring is *defined* iteratively, $R[X_1,\dots,X_n]=(R[X_1,\dots,X_{n-1}])[X_n]$, so applying the theorem $n$ times in succession proves $R[X_1,\dots,X_n]$ Noetherian for any *finite* $n$. This induction is the content of the corollary "$\mathbb{Z}[X_1,\dots,X_n]$ and $F[X_1,\dots,X_n]$ are Noetherian" (worked in [[Ex - Hilbert's basis theorem and polynomial rings in several variables]]). The crucial caveat: the induction runs only over *finitely many* variables — each finite stage is Noetherian, but the infinite-variable union $\mathbb{Z}[X_1,X_2,\dots]$ is **not** Noetherian (see [[Ex - A ring that is not Noetherian]]). When you "apply Hilbert's theorem twice," internalise that you are running two steps of a finite induction, and that the finiteness is essential.
 
-**The quotient-preserves-Noetherian proof is the universal "push a property through a surjection" template.** The Step 3 argument has a shape worth extracting. To show $R/I$ inherits a finiteness property from $R$: take an ideal $J$ of the quotient, *pull it back* to an ideal $J'=\pi^{-1}(J)$ of $R$ via the [[Thm - Ideal Correspondence|ideal correspondence]], use the property *upstairs* in $R$ (here: $J'$ is finitely generated), then *push the witness forward* through the surjection $\pi$ (the cosets $r_i+I$ generate $J$, because $\pi$ is a homomorphism and turns $\sum a_i r_i$ into $\sum(a_i+I)(r_i+I)$). Pull back — apply upstairs — push forward. This three-beat pattern proves not only that quotients of Noetherian rings are Noetherian, but that quotients of finitely generated rings are finitely generated, that homomorphic images of Noetherian modules are Noetherian, and more broadly that *any* property witnessed by a finite generating set descends along surjections. Recognising the template lets you reconstruct the quotient step from scratch whenever you need it.
+**The quotient-preserves-Noetherian proof is the universal "push a property through a surjection" template.** The Step 3 argument has a shape worth extracting. To show $R/I$ inherits a finiteness property from $R$: take an ideal $J$ of the quotient, *pull it back* to an ideal $J'=\pi^{-1}(J)$ of $R$ via the [[Thm - Ideal Correspondence|ideal correspondence]], use the property *upstairs* in $R$ (here: $J'$ is finitely generated), then *push the witness forward* through the surjection $\pi$ (the cosets $r_i+I$ generate $J$, because $\pi$ is a homomorphism and turns $\sum a_i r_i$ into $\sum(a_i+I)(r_i+I)$). Pull back — apply upstairs — push forward. This three-beat pattern proves not only that quotients of Noetherian rings are Noetherian, but that quotients of finitely generated rings are finitely generated, that homomorphic images of Noetherian [[Def - Module|modules]] are Noetherian, and more broadly that *any* property witnessed by a finite generating set descends along surjections. Recognising the template lets you reconstruct the quotient step from scratch whenever you need it.

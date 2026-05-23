@@ -47,7 +47,7 @@ The bracket of two coordinate vector fields is zero: $[\partial/\partial x^i, \p
 
 1. **Operation 5 from the topic page (compute a Lie bracket coordinatewise).** Apply $[X, Y]^k = X^i \partial_i Y^k - Y^i \partial_i X^k$ component by component, with $X^i, Y^k$ smooth functions of the coordinates. The pattern is direct substitution; the only care needed is in identifying components against the standard basis.
 
-2. **Operation 11 from the topic page ($\mathfrak{X}(M)$ as a $C^\infty(M)$-module).** Recognize that $X = x \partial_x + 1 \cdot \partial_y + x(y+1) \partial_z$ is a $C^\infty(M)$-linear combination of coordinate vector fields. This is the input format for the coordinate formula.
+2. **Operation 11 from the topic page ($\mathfrak{X}(M)$ as a $C^\infty(M)$-[[Def - Module|module]]).** Recognize that $X = x \partial_x + 1 \cdot \partial_y + x(y+1) \partial_z$ is a $C^\infty(M)$-linear combination of coordinate vector fields. This is the input format for the coordinate formula.
 
 ---
 

@@ -11,7 +11,7 @@ tags: [probability, advanced-probability]
 
 # Problem Statement
 
-Let $X,Y$ be [[Def - Independence|independent]] random variables.
+Let $X,Y$ be independent random variables.
 
 **(a)** Show that for non-negative Borel $f,g$ (and for $f(X),g(Y)\in L^1$), $\mathbb{E}[f(X)g(Y)]=\mathbb{E}[f(X)]\,\mathbb{E}[g(Y)]$. In particular $\mathbb{E}[XY]=\mathbb{E}X\,\mathbb{E}Y$ when $X,Y\in L^1$ are independent.
 
@@ -21,7 +21,7 @@ Let $X,Y$ be [[Def - Independence|independent]] random variables.
 
 **Recall:**
 
-[[Def - Independence|Independence]] of $X,Y$ $\iff$ the joint law is the [[Thm - Product Measure|product]] $\mu_{(X,Y)}=\mu_X\otimes\mu_Y$. [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]].
+Independence of $X,Y$ $\iff$ the joint law is the [[Thm - Product Measure|product]] $\mu_{(X,Y)}=\mu_X\otimes\mu_Y$. [[Thm - Fubini-Tonelli Theorem|Fubini–Tonelli]].
 
 ---
 
@@ -64,7 +64,7 @@ the middle step because the integrand *factors* and Tonelli splits the double in
 
 **Step 2 — (b) Uncorrelated.** $\mathrm{Cov}(X,Y)=\mathbb{E}[XY]-\mathbb{E}X\,\mathbb{E}Y=0$ by (a). So independent integrable variables are uncorrelated — and hence $\mathrm{Var}(X+Y)=\mathrm{Var}X+\mathrm{Var}Y$. (The converse fails: uncorrelated $\not\Rightarrow$ independent.)
 
-**Step 3 — (c) Convolution.** For any $t$,
+**Step 3 — (c) [[Def - Convolution|Convolution]].** For any $t$,
 $$\mathbb{P}(X+Y\le t)=\int_{\mathbb{R}^2}\mathbf{1}_{\{x+y\le t\}}\,d(\mu_X\otimes\mu_Y)=\int_\mathbb{R}\Big(\int_\mathbb{R}\mathbf{1}_{\{x\le t-y\}}\,d\mu_X(x)\Big)d\mu_Y(y)=\int_\mathbb{R}\mu_X((-\infty,t-y])\,d\mu_Y(y),$$
 by [[Thm - Fubini-Tonelli Theorem|Fubini]]. This is precisely the convolution: $\mu_{X+Y}=\mu_X*\mu_Y$, where $(\mu_X*\mu_Y)(B)=\int\mu_X(B-y)\,d\mu_Y(y)$. If $X,Y$ have densities $p,q$, then $X+Y$ has density $p*q$.
 

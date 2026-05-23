@@ -135,7 +135,7 @@ $$[A, B]_\mathfrak{g} = [A^L, B^L]|_I = (AB - BA)^L|_I = I \cdot (AB - BA) = AB 
 > The matrix commutator identification: $(AB)^j_l = A^p_l B^j_p$ (with summation over $p$), so $(AB - BA)^j_l = A^p_l B^j_p - B^p_l A^j_p$, exactly the coefficient that appeared. Reassembling: $g^{kl} (AB - BA)^j_l = (g(AB - BA))^{kj}$, the matrix product. So $[A^L, B^L]|_g$ has the form $g \cdot C$ where $C = AB - BA$ — which is exactly $C^L|_g$ for $C = AB - BA$. Hence $[A^L, B^L] = (AB - BA)^L$, and at $I$: $[A, B] = AB - BA$.
 
 > [!note]- Complete formal solution
-> Let $G \leq \mathrm{GL}(n, \mathbb{R})$ be a matrix Lie subgroup, with Lie algebra $\mathfrak{g} \subseteq \mathfrak{gl}(n, \mathbb{R})$.
+> Let $G \leq \mathrm{GL}(n, \mathbb{R})$ be a matrix Lie [[Def - Subgroup|subgroup]], with Lie algebra $\mathfrak{g} \subseteq \mathfrak{gl}(n, \mathbb{R})$.
 >
 > The left-invariant vector field on $\mathrm{GL}(n)$ associated to $A \in \mathfrak{gl}(n)$ has $A^L|_g = gA$ ([[Ex - The Exponential Map of GL(n,R) is the Matrix Exponential]]). On a smooth function $f : \mathrm{GL}(n) \to \mathbb{R}$, $A^L f(g) = g^{ik} A^j_k \partial_{ij} f(g)$ in matrix-entry coordinates.
 >
@@ -144,15 +144,15 @@ $$[A, B]_\mathfrak{g} = [A^L, B^L]|_I = (AB - BA)^L|_I = I \cdot (AB - BA) = AB 
 >
 > So $[A^L, B^L] = (AB - BA)^L$ on $\mathrm{GL}(n)$, and evaluating at $g = I$: $[A, B]_\mathfrak{g} = AB - BA$, the matrix commutator.
 >
-> For a matrix Lie subgroup $G \leq \mathrm{GL}(n)$ with Lie algebra $\mathfrak{g} \subseteq \mathfrak{gl}(n)$, the bracket on $\mathfrak{g}$ inherited from $\mathrm{GL}(n)$ (via the inclusion-induced Lie algebra homomorphism) is the restriction of the matrix commutator. Hence $[A, B]_\mathfrak{g} = AB - BA$ for all $A, B \in \mathfrak{g}$. $\qquad\blacksquare$
+> For a matrix Lie [[Def - Subgroup|subgroup]] $G \leq \mathrm{GL}(n)$ with Lie algebra $\mathfrak{g} \subseteq \mathfrak{gl}(n)$, the bracket on $\mathfrak{g}$ inherited from $\mathrm{GL}(n)$ (via the inclusion-induced Lie algebra homomorphism) is the restriction of the matrix commutator. Hence $[A, B]_\mathfrak{g} = AB - BA$ for all $A, B \in \mathfrak{g}$. $\qquad\blacksquare$
 
 ---
 
 # Key Takeaways
 
-**The matrix commutator is universal for matrix Lie groups.**
+**The matrix commutator is universal for matrix Lie [[Def - Group|groups]].**
 
-For any matrix Lie group $G \leq \mathrm{GL}(n)$, the Lie bracket on $\mathfrak{g}$ is the matrix commutator $[A, B] = AB - BA$, full stop. This means all the abstract Lie-algebraic operations on $\mathfrak{g}$ (the bracket, the adjoint representation $\mathrm{ad}_A(B) = [A, B]$, the Killing form $\mathrm{tr}(\mathrm{ad}_A \mathrm{ad}_B)$) can be computed concretely using matrix multiplication. Combined with the matrix-exponential identification of $\exp$ ([[Ex - The Exponential Map of GL(n,R) is the Matrix Exponential]]), the entire structural theory of matrix Lie groups reduces to elementary matrix algebra.
+For any matrix Lie group $G \leq \mathrm{GL}(n)$, the Lie bracket on $\mathfrak{g}$ is the matrix commutator $[A, B] = AB - BA$, full stop. This means all the abstract Lie-algebraic operations on $\mathfrak{g}$ (the bracket, the adjoint representation $\mathrm{ad}_A(B) = [A, B]$, the Killing form $\mathrm{tr}(\mathrm{ad}_A \mathrm{ad}_B)$) can be computed concretely using matrix multiplication. Combined with the matrix-exponential identification of $\exp$ ([[Ex - The Exponential Map of GL(n,R) is the Matrix Exponential]]), the entire structural theory of matrix Lie [[Def - Group|groups]] reduces to elementary matrix algebra.
 
 **The bracket on matrix algebras is the commutator because matrix multiplication is associative.**
 

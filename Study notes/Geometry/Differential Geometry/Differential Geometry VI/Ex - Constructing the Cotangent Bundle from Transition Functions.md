@@ -29,7 +29,7 @@ $$\text{Tangent transition functions: } J_{\alpha\beta} = (\partial x^j_\alpha /
 
 The [[Def - Dual Basis|dual basis]] under change of basis transforms by the inverse transpose. The fibrewise dual functor on vector bundles inherits transitions by inverse transpose.
 
-For the [[Thm - Vector Bundle Construction Lemma|construction lemma]]: open cover, fibres of constant dimension, candidate trivializations (bijective, fibrewise linear), smooth transition functions satisfying the cocycle $\tau_{\alpha\gamma} = \tau_{\alpha\beta} \tau_{\beta\gamma}$ — these data assemble into a unique smooth rank-$k$ vector bundle.
+For the [[Thm - Vector Bundle Construction Lemma|construction lemma]]: open cover, fibres of constant [[Def - Dimension|dimension]], candidate trivializations (bijective, fibrewise linear), smooth transition functions satisfying the cocycle $\tau_{\alpha\gamma} = \tau_{\alpha\beta} \tau_{\beta\gamma}$ — these data assemble into a unique smooth rank-$k$ vector bundle.
 
 ---
 

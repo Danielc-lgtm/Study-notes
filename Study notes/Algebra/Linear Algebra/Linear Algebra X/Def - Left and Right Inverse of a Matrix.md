@@ -25,11 +25,11 @@ These two notions emerge as separate concepts because $A$ is not symmetric in it
 
 What goes wrong with nearby variants? **Suppose we tried to define "an inverse" as any matrix $X$ with $AX$ and $XA$ both close to $I$ but not exactly $I$**. This is the world of *approximate inverses* and *preconditioners*, used in numerical linear algebra. It is genuinely useful when $A$ is ill-conditioned, but it conflates two distinct things: exact inverses (when they exist) and approximations (when they do not). The crisp notion above lets us separate these.
 
-**What if we required both $XA = I$ and $AX = I$ simultaneously?** Then $A$ must be square (counting dimensions: $n = m$ on both sides), and a matrix with both a left and a right inverse has $X = Y$ (where $Y$ is any other right inverse), so the inverse is unique. This is the **two-sided inverse**, denoted $A^{-1}$, and the matrix is then called **invertible** or **nonsingular**. For square matrices, having a one-sided inverse forces having a two-sided inverse: this is the non-trivial theorem that the [[Thm - Conditions for a Square Matrix to be Invertible|six equivalent conditions]] for invertibility codify.
+**What if we required both $XA = I$ and $AX = I$ simultaneously?** Then $A$ must be square (counting [[Def - Dimension|dimensions]]: $n = m$ on both sides), and a matrix with both a left and a right inverse has $X = Y$ (where $Y$ is any other right inverse), so the inverse is unique. This is the **two-sided inverse**, denoted $A^{-1}$, and the matrix is then called **invertible** or **nonsingular**. For square matrices, having a one-sided inverse forces having a two-sided inverse: this is the non-trivial theorem that the [[Thm - Conditions for a Square Matrix to be Invertible|six equivalent conditions]] for invertibility codify.
 
 **Why is the inverse, when it exists, unique?** Suppose $A X = I = Y A$. Then $X = (Y A) X = Y (A X) = Y I = Y$, so any left inverse equals any right inverse. So a matrix with both a left and a right inverse has a *unique* two-sided inverse, and this is the matrix denoted $A^{-1}$.
 
-**Why introduce the pseudoinverse?** When $A$ is *not* square (so no two-sided inverse exists), but has linearly independent columns (so a left inverse exists), the choice of left inverse is generally not unique — there can be infinitely many. The **Moore–Penrose pseudoinverse** $A^\dagger = (A^T A)^{-1} A^T$ singles out a canonical one: the unique left inverse with smallest Frobenius norm, equivalently the one obtained from the QR factorization $A = QR$ by $A^\dagger = R^{-1} Q^T$. This canonical left inverse has the additional property that $\hat x = A^\dagger b$ is the **least-squares solution** of $Ax = b$: it minimises $\|Ax - b\|^2$ when the system is over-determined.
+**Why introduce the [[Def - Pseudoinverse|pseudoinverse]]?** When $A$ is *not* square (so no two-sided inverse exists), but has linearly independent columns (so a left inverse exists), the choice of left inverse is generally not unique — there can be infinitely many. The **Moore–Penrose pseudoinverse** $A^\dagger = (A^T A)^{-1} A^T$ singles out a canonical one: the unique left inverse with smallest Frobenius norm, equivalently the one obtained from the QR factorization $A = QR$ by $A^\dagger = R^{-1} Q^T$. This canonical left inverse has the additional property that $\hat x = A^\dagger b$ is the **least-squares solution** of $Ax = b$: it minimises $\|Ax - b\|^2$ when the system is over-determined.
 
 ---
 
@@ -55,7 +55,7 @@ A square matrix with a two-sided inverse is called **invertible** or **nonsingul
 5. **Inverse of orthogonal matrix:** if $Q^T Q = I$ (square $Q$), then $Q^{-1} = Q^T$.
 6. **Inverse of diagonal matrix:** $\operatorname{diag}(a_1, \dots, a_n)^{-1} = \operatorname{diag}(1/a_1, \dots, 1/a_n)$ when all $a_i \neq 0$.
 
-**Pseudoinverse (left-invertible case).** For $A \in \mathbb R^{m \times n}$ with $m \geq n$ and linearly independent columns, the **Moore-Penrose pseudoinverse** is
+**[[Def - Pseudoinverse|Pseudoinverse]] (left-invertible case).** For $A \in \mathbb R^{m \times n}$ with $m \geq n$ and linearly independent columns, the **Moore-Penrose pseudoinverse** is
 $$A^\dagger = (A^T A)^{-1} A^T \in \mathbb R^{n \times m}.$$
 This is a left inverse: $A^\dagger A = (A^T A)^{-1}(A^T A) = I_n$. The matrix $A^T A$ is the **Gram matrix** of the columns of $A$, and is invertible exactly when the columns are linearly independent.
 

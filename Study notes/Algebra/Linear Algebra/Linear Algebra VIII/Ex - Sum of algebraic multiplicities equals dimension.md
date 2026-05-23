@@ -41,7 +41,7 @@ The dimension formula for a direct sum says $\dim(U_1 \oplus \cdots \oplus U_m) 
 
 **Theorem routing.** Single theorem chain: [[Thm - Generalized Eigenspace Decomposition]] $\to$ direct-sum dimension formula. The theorem gives $V = \bigoplus_k G(\lambda_k, T)$; the dimension formula gives $\dim V = \sum_k \dim G(\lambda_k, T)$. Done.
 
-**Key decision point.** The non-obvious move (such as it is) is to *recognise that the statement of the decomposition theorem is overkill for the dimension identity*. The theorem says the sum is direct *and* equals $V$, with each piece a $T$-invariant subspace on which $T - \lambda_k I$ is nilpotent. We only need the *dimension* identity, which uses just the direct-sum property and the fact that the sum is $V$. The structural properties (invariance, nilpotence on each piece) are not used. This is a soft proof — applying a heavy theorem and immediately taking dimensions — but it is the right pattern. Many corollaries of the generalized eigenspace decomposition are obtained by this "structural theorem $\to$ take dimensions" route.
+**Key decision point.** The non-obvious move (such as it is) is to *recognise that the statement of the decomposition theorem is overkill for the dimension identity*. The theorem says the sum is direct *and* equals $V$, with each piece a $T$-invariant subspace on which $T - \lambda_k I$ is nilpotent. We only need the *dimension* identity, which uses just the direct-sum property and the fact that the sum is $V$. The structural properties (invariance, nilpotence on each piece) are not used. This is a soft proof — applying a heavy theorem and immediately taking [[Def - Dimension|dimensions]] — but it is the right pattern. Many corollaries of the generalized eigenspace decomposition are obtained by this "structural theorem $\to$ take [[Def - Dimension|dimensions]]" route.
 
 ---
 
@@ -61,7 +61,7 @@ This solution deploys the following legal operations from [[Linear Algebra VIII 
 > The [[Thm - Generalized Eigenspace Decomposition|generalized eigenspace decomposition]] gives $V = G(\lambda_1, T) \oplus \cdots \oplus G(\lambda_m, T)$. Take dimensions.
 
 > [!note]- Hint 2
-> For a direct sum $V = U_1 \oplus \cdots \oplus U_m$ of subspaces, $\dim V = \dim U_1 + \cdots + \dim U_m$. Apply this with $U_k = G(\lambda_k, T)$.
+> For a direct sum $V = U_1 \oplus \cdots \oplus U_m$ of [[Def - Subspace|subspaces]], $\dim V = \dim U_1 + \cdots + \dim U_m$. Apply this with $U_k = G(\lambda_k, T)$.
 
 > [!note]- Hint 3
 > The $\dim G(\lambda_k, T)$ is by definition the algebraic multiplicity $\operatorname{mult}_{\text{alg}}(\lambda_k)$. So $\dim V = \sum_k \operatorname{mult}_{\text{alg}}(\lambda_k)$.
@@ -85,7 +85,7 @@ where $\lambda_1, \dots, \lambda_m$ are the distinct eigenvalues of $T$.
 
 **Step 2: Take dimensions.**
 
-For a direct sum of subspaces $V = U_1 \oplus \cdots \oplus U_m$, the dimension formula gives $\dim V = \sum_k \dim U_k$. Applied to the generalized eigenspaces,
+For a direct sum of [[Def - Subspace|subspaces]] $V = U_1 \oplus \cdots \oplus U_m$, the dimension formula gives $\dim V = \sum_k \dim U_k$. Applied to the generalized eigenspaces,
 
 $$\dim V = \sum_{k=1}^m \dim G(\lambda_k, T) = \sum_{k=1}^m \operatorname{mult}_{\text{alg}}(\lambda_k).$$
 

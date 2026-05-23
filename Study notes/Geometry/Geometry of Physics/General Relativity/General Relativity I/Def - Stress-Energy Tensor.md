@@ -59,7 +59,7 @@ The symmetry $T^{\mu\nu} = T^{\nu\mu}$ has two faces. The spatial part $T^{ij} =
 >
 > Defined variationally: for a matter action $S_\text{matter}[g, \psi]$ depending on the metric $g$ and matter fields $\psi$,
 > $$T_{\mu\nu} = -\frac{2}{\sqrt{-g}} \frac{\delta S_\text{matter}}{\delta g^{\mu\nu}}.$$
-> This is the **Hilbert stress-energy tensor**, and it is automatically symmetric and (by diffeomorphism invariance of $S_\text{matter}$) conserved when matter equations of motion hold.
+> This is the **Hilbert stress-energy tensor**, and it is automatically symmetric and (by [[Def - Diffeomorphism|diffeomorphism]] invariance of $S_\text{matter}$) conserved when matter equations of motion hold.
 
 **Examples of standard matter content:**
 

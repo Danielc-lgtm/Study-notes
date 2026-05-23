@@ -11,7 +11,7 @@ tags: [algebra, group-theory]
 
 # Problem Statement
 
-Let $G$ be the group of rotational symmetries of a cube — the rigid motions of three-dimensional space that carry the cube onto itself, with reflections excluded. Using the orbit-stabiliser theorem, show that $|G| = 24$.
+Let $G$ be the [[Def - Group|group]] of rotational symmetries of a cube — the rigid motions of three-dimensional space that carry the cube onto itself, with reflections excluded. Using the orbit-stabiliser theorem, show that $|G| = 24$.
 
 **Recall:**
 
@@ -114,7 +114,7 @@ With $|G \cdot x| = 6$ and $|G_x| = 4$, the orbit-stabiliser theorem gives $|G| 
 > agreeing with Step 3. The same exercise on the $12$ edges gives $|G| = 12 \cdot 2 = 24$, since the stabiliser of an edge is the order-$2$ group containing the identity and the $180°$ rotation about the axis through that edge's midpoint and the opposite edge's midpoint.
 
 > [!note]- Remark: the action on the 4 long diagonals gives an isomorphism with $S_4$
-> The cube has $4$ long diagonals (each joining a pair of opposite vertices), and every rotation permutes them, giving an action $G \to \operatorname{Sym}(X'') \cong S_4$ on a $4$-element set. This [[Thm - Actions Correspond to Homomorphisms|homomorphism]] is in fact an isomorphism. It is injective: a rotation fixing all four diagonals as lines must fix the cube pointwise or invert every diagonal, and a single rotation cannot invert all four simultaneously while fixing the cube, so only the identity acts trivially — the kernel is trivial. Since $|G| = 24 = |S_4|$, an injective homomorphism between finite groups of equal order is a bijection. Hence the rotation group of the cube is isomorphic to $S_4$. This is a recurring bonus of the action viewpoint: a well-chosen action does not merely *count* the group, it can *identify* it.
+> The cube has $4$ long diagonals (each joining a pair of opposite vertices), and every rotation permutes them, giving an action $G \to \operatorname{Sym}(X'') \cong S_4$ on a $4$-element set. This [[Thm - Actions Correspond to Homomorphisms|homomorphism]] is in fact an isomorphism. It is injective: a rotation fixing all four diagonals as lines must fix the cube pointwise or invert every diagonal, and a single rotation cannot invert all four simultaneously while fixing the cube, so only the identity acts trivially — the kernel is trivial. Since $|G| = 24 = |S_4|$, an injective homomorphism between finite [[Def - Group|groups]] of equal order is a bijection. Hence the rotation group of the cube is isomorphic to $S_4$. This is a recurring bonus of the action viewpoint: a well-chosen action does not merely *count* the group, it can *identify* it.
 
 > [!note]- Complete formal solution
 > Let $G$ be the rotation group of the cube.

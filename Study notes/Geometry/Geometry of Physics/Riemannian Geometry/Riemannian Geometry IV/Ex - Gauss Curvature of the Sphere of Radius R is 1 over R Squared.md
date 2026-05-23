@@ -39,7 +39,7 @@ The [[Def - Gauss Curvature and Mean Curvature|Gauss curvature]] is $K = \det b_
 
 **Theorem routing:** Direct computation via the determinant formula. Compute $\mathbf{x}_\theta, \mathbf{x}_\varphi, \mathbf{x}_{\theta\theta}, \mathbf{x}_{\theta\varphi}, \mathbf{x}_{\varphi\varphi}$ as vectors in $\mathbb{R}^3$; take dot products to get $E, F, G$; cross-product gives the unit normal $N = (\mathbf{x}_\theta\times\mathbf{x}_\varphi)/|\mathbf{x}_\theta\times\mathbf{x}_\varphi|$; dot products with $N$ give $e, f, g_\mathrm{II}$; the formula $K = (eg_\mathrm{II} - f^2)/(EG - F^2)$ assembles the answer.
 
-**Key decision point:** Choose the right coordinates. Spherical coordinates are ideal because the rotational symmetry forces $F = 0$ and the metric components depend only on $\theta$ (not on $\varphi$). In stereographic coordinates, the formula would also work but the algebra is uglier (the metric has a conformal factor $1/(1 + r^2/4a^2)^2$ or similar). Recognising that "rotational symmetry $\Rightarrow$ use polar-style coordinates" is the key insight that simplifies the problem.
+**Key decision point:** Choose the right coordinates. Spherical coordinates are [[Def - Ideal|ideal]] because the rotational symmetry forces $F = 0$ and the metric components depend only on $\theta$ (not on $\varphi$). In stereographic coordinates, the formula would also work but the algebra is uglier (the metric has a conformal factor $1/(1 + r^2/4a^2)^2$ or similar). Recognising that "rotational symmetry $\Rightarrow$ use polar-style coordinates" is the key insight that simplifies the problem.
 
 ---
 

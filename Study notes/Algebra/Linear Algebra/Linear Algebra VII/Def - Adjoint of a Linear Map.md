@@ -63,7 +63,7 @@ Equivalently, the adjoint is the *unique* linear map $T^* \in \mathcal{L}(W, V)$
 
 $$\begin{array}{c} V \xrightarrow{T} W \\ \downarrow \cong \qquad \qquad \downarrow \cong \\ V' \xleftarrow{T'} W' \end{array}$$
 
-commute, where the vertical isomorphisms are the **Riesz isomorphisms** $v \mapsto \langle \cdot, v \rangle$ (a conjugate-linear isomorphism from $V$ to its dual $V'$), and $T'$ is the [[Def - Dual Map|dual map]]. In other words, *the adjoint is the dual map transported across the Riesz isomorphism.* This is the precise way in which the adjoint is "the dual map made concrete in $V$".
+commute, where the vertical [[Def - Isomorphism|isomorphisms]] are the **Riesz [[Def - Isomorphism|isomorphisms]]** $v \mapsto \langle \cdot, v \rangle$ (a conjugate-linear isomorphism from $V$ to its dual $V'$), and $T'$ is the [[Def - Dual Map|dual map]]. In other words, *the adjoint is the dual map transported across the Riesz isomorphism.* This is the precise way in which the adjoint is "the dual map made concrete in $V$".
 
 ---
 
@@ -87,9 +87,9 @@ A second example: scalar multiplication. If $T = \alpha I$ for $\alpha \in \math
 
 A third example: a $2 \times 2$ matrix. Let $T : \mathbb{C}^2 \to \mathbb{C}^2$ have matrix $A = \begin{pmatrix} 1 & i \\ 0 & 2 \end{pmatrix}$ in the standard basis. Then $T^*$ has matrix $A^* = \begin{pmatrix} 1 & 0 \\ -i & 2 \end{pmatrix}$ — transpose, then conjugate every entry. Note that $T \neq T^*$, so $T$ is not self-adjoint; but $T T^* = \begin{pmatrix} 1 + 1 & -2i \\ 2i & 4 \end{pmatrix}$ and $T^* T = \begin{pmatrix} 1 & i \\ -i & 5 \end{pmatrix}$ are different, so $T$ is also not normal.
 
-A subtle non-example: the unilateral shift on $\ell^2(\mathbb{N})$ (infinite-dimensional). The shift $S(x_1, x_2, x_3, \ldots) = (0, x_1, x_2, \ldots)$ has adjoint $S^*(x_1, x_2, x_3, \ldots) = (x_2, x_3, \ldots)$ — the backward shift. Then $S^* S = I$ (so $S$ is an isometry) but $S S^* \neq I$ (the projection onto the orthogonal complement of $e_1$). This shows that **in infinite dimensions, $S^*S = I$ does not imply $S S^* = I$**; one needs to check both for unitary. This phenomenon does not occur in finite dimensions because an isometry $V \to V$ on a finite-dimensional space is automatically surjective.
+A subtle non-example: the unilateral shift on $\ell^2(\mathbb{N})$ (infinite-dimensional). The shift $S(x_1, x_2, x_3, \ldots) = (0, x_1, x_2, \ldots)$ has adjoint $S^*(x_1, x_2, x_3, \ldots) = (x_2, x_3, \ldots)$ — the backward shift. Then $S^* S = I$ (so $S$ is an [[Def - Isometry|isometry]]) but $S S^* \neq I$ (the projection onto the orthogonal complement of $e_1$). This shows that **in infinite [[Def - Dimension|dimensions]], $S^*S = I$ does not imply $S S^* = I$**; one needs to check both for unitary. This phenomenon does not occur in finite [[Def - Dimension|dimensions]] because an [[Def - Isometry|isometry]] $V \to V$ on a finite-dimensional space is automatically surjective.
 
-A geometric example: orthogonal projection. The [[Def - Orthogonal Projection|orthogonal projection]] $P_U$ onto a subspace $U$ of $V$ satisfies $P_U^* = P_U$ (it is self-adjoint) and $P_U^2 = P_U$ (it is idempotent). In fact, **a projection is orthogonal if and only if it is self-adjoint** — the two characterisations of orthogonal projection coincide.
+A geometric example: orthogonal projection. The [[Def - Orthogonal Projection|orthogonal projection]] $P_U$ onto a [[Def - Subspace|subspace]] $U$ of $V$ satisfies $P_U^* = P_U$ (it is self-adjoint) and $P_U^2 = P_U$ (it is idempotent). In fact, **a projection is orthogonal if and only if it is self-adjoint** — the two characterisations of orthogonal projection coincide.
 
 A corollary on dimensions: $\dim \operatorname{range} T = \dim \operatorname{range} T^*$. Combined with the rank-nullity theorem (which is the [[Thm - Fundamental Theorem of Linear Maps|fundamental theorem of linear maps]] from [[Linear Algebra III — §3A–D Linear Maps]]), this gives $\dim \operatorname{null} T - \dim V = \dim \operatorname{null} T^* - \dim W$, the **row-rank-equals-column-rank theorem** in clean form.
 

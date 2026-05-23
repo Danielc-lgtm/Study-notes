@@ -81,9 +81,9 @@ The single scalar multiplier $\nu$ has interpretation as the marginal change in 
 
 *Example 2 (KKT for least-norm).* Minimize $\|x\|^2$ subject to $Cx = d$ (with $C$ having linearly independent rows). The KKT system is
 $$\begin{pmatrix} 2 I & C^T \\ C & 0 \end{pmatrix} \begin{pmatrix} x \\ \nu \end{pmatrix} = \begin{pmatrix} 0 \\ d \end{pmatrix}.$$
-From the top block, $x = -\frac{1}{2} C^T \nu$. Substituting into the bottom block: $-\frac{1}{2} CC^T \nu = d$, so $\nu = -2(CC^T)^{-1} d$. Then $x = C^T(CC^T)^{-1} d = C^\dagger d$ — the classical least-norm formula via the wide-matrix pseudoinverse.
+From the top block, $x = -\frac{1}{2} C^T \nu$. Substituting into the bottom block: $-\frac{1}{2} CC^T \nu = d$, so $\nu = -2(CC^T)^{-1} d$. Then $x = C^T(CC^T)^{-1} d = C^\dagger d$ — the classical least-norm formula via the wide-matrix [[Def - Pseudoinverse|pseudoinverse]].
 
-*Example 3 (KKT for LQR).* For the linear quadratic control problem with $T$ time steps, the variable $z = (x_1, \ldots, x_T, u_1, \ldots, u_{T-1})$ has dimension $Tn + (T-1)m$, and the constraint matrix $C$ (encoding dynamics + boundary conditions) has block-banded structure with bandwidth $\max\{n, m\}$. The KKT matrix is also block-banded; sparse LU factorization solves it in $O(T)$ flops. See [[Ex - Linear quadratic control via constrained LS]].
+*Example 3 (KKT for LQR).* For the linear quadratic control problem with $T$ time steps, the variable $z = (x_1, \ldots, x_T, u_1, \ldots, u_{T-1})$ has [[Def - Dimension|dimension]] $Tn + (T-1)m$, and the constraint matrix $C$ (encoding dynamics + boundary conditions) has block-banded structure with bandwidth $\max\{n, m\}$. The KKT matrix is also block-banded; sparse LU factorization solves it in $O(T)$ flops. See [[Ex - Linear quadratic control via constrained LS]].
 
 *Example 4 (KKT non-invertibility — redundant constraints).* If two rows of $C$ are identical (or one is a linear combination of others), the constraint system is redundant: any $x$ satisfying the independent constraints satisfies the redundant ones. The corresponding $\nu$ is not uniquely determined (the multipliers can absorb the redundancy in different ways), and the KKT matrix is singular. The fix is to drop redundant constraints to reduce $C$ to having linearly independent rows.
 

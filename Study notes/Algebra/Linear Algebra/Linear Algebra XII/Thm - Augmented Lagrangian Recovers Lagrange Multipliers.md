@@ -92,7 +92,7 @@ The theorem itself is a simple algebraic rearrangement once one sees the right g
 
 **This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
 
-**High-level strategy:** Compute the gradient of $L_\mu(x, z)$ with respect to $x$, group the constraint-related terms, identify the result with the KKT stationarity at the multiplier $z + 2\mu g(x)$.
+**High-level strategy:** Compute the gradient of $L_\mu(x, z)$ with respect to $x$, [[Def - Group|group]] the constraint-related terms, identify the result with the KKT stationarity at the multiplier $z + 2\mu g(x)$.
 
 **Subgoal decomposition:**
 
@@ -100,7 +100,7 @@ The theorem itself is a simple algebraic rearrangement once one sees the right g
    - *Hint:* $\nabla_x \|f\|^2 = 2 Df^T f$; $\nabla_x (g^T z) = Dg^T z$; $\nabla_x \|g\|^2 = 2 Dg^T g$. Sum these.
    - *Why needed:* The optimality condition is $\nabla_x L_\mu = 0$; we need its explicit form.
 
-2. **Group constraint-related terms.** Combine $Dg^T z + 2\mu Dg^T g = Dg^T (z + 2\mu g)$.
+2. **[[Def - Group|Group]] constraint-related terms.** Combine $Dg^T z + 2\mu Dg^T g = Dg^T (z + 2\mu g)$.
    - *Hint:* Linearity of $Dg^T$ in the argument.
    - *Why needed:* Reveals the inner optimality as a KKT-shaped equation with an "updated multiplier."
 

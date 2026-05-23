@@ -30,7 +30,7 @@ $(X_n)$ a [[Def - Martingale|martingale]] or non-negative submartingale; $X_n^*=
 
 # Statement
 
-Let $(X_n)$ be a martingale or a non-negative submartingale, $X_n^*=\max_{k\le n}|X_k|$.
+Let $(X_n)$ be a [[Def - Martingale|martingale]] or a non-negative submartingale, $X_n^*=\max_{k\le n}|X_k|$.
 
 **(Maximal inequality, weak-type.)** For every $\lambda>0$,
 $$\lambda\,\mathbb{P}(X_n^*\ge\lambda)\ \le\ \mathbb{E}\big[|X_n|\,\mathbf{1}_{\{X_n^*\ge\lambda\}}\big]\ \le\ \mathbb{E}|X_n|.$$

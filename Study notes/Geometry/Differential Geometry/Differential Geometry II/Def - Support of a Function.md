@@ -43,7 +43,7 @@ The function $f$ is **supported in $U$** (for $U \subseteq M$) if $\operatorname
 
 The function $f$ is **compactly supported** if $\operatorname{supp}(f)$ is a compact subset of $M$.
 
-The set of compactly supported continuous functions $M \to \mathbb{R}$ is denoted $C_c(M)$; the set of compactly supported smooth functions on a smooth manifold $M$ is denoted $C^\infty_c(M)$ (this is an $\mathbb{R}$-vector subspace of $C^\infty(M)$, and an ideal of the ring $C^\infty(M)$ when $M$ is non-compact — though it lacks a multiplicative identity, since $1$ is not compactly supported on non-compact $M$).
+The set of compactly supported continuous functions $M \to \mathbb{R}$ is denoted $C_c(M)$; the set of compactly supported smooth functions on a smooth manifold $M$ is denoted $C^\infty_c(M)$ (this is an $\mathbb{R}$-vector [[Def - Subspace|subspace]] of $C^\infty(M)$, and an [[Def - Ideal|ideal]] of the [[Def - Ring|ring]] $C^\infty(M)$ when $M$ is non-compact — though it lacks a multiplicative identity, since $1$ is not compactly supported on non-compact $M$).
 
 **Equivalent characterization.** $p \in \operatorname{supp}(f)$ if and only if every open neighbourhood of $p$ contains a point where $f$ does not vanish.
 

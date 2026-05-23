@@ -17,12 +17,12 @@ $V_1, \dots, V_m$ are vector spaces over a field $\mathbb{F}$. The product is $V
 
 # Statement
 
-> **Theorem (Dimension of a Product).** Let $V_1, \dots, V_m$ be finite-dimensional vector spaces over $\mathbb{F}$. Then the product $V_1 \times \cdots \times V_m$ is finite-dimensional, and
+> **Theorem ([[Def - Dimension|Dimension]] of a Product).** Let $V_1, \dots, V_m$ be finite-dimensional vector spaces over $\mathbb{F}$. Then the product $V_1 \times \cdots \times V_m$ is finite-dimensional, and
 > $$\dim(V_1 \times \cdots \times V_m) = \dim V_1 + \dim V_2 + \cdots + \dim V_m.$$
 
-> **Companion (Sum as Direct Sum).** Suppose $V_1, \dots, V_m$ are subspaces of a common vector space $V$. The sum $V_1 + \cdots + V_m$ is a direct sum if and only if the natural map
+> **Companion (Sum as [[Def - Direct Sum|Direct Sum]]).** Suppose $V_1, \dots, V_m$ are [[Def - Subspace|subspaces]] of a common vector space $V$. The sum $V_1 + \cdots + V_m$ is a direct sum if and only if the natural map
 > $$\Gamma : V_1 \times \cdots \times V_m \to V_1 + \cdots + V_m, \quad \Gamma(v_1, \dots, v_m) = v_1 + \cdots + v_m,$$
-> is injective. In that case it is an isomorphism, and the dimension formula reads $\dim(V_1 \oplus \cdots \oplus V_m) = \dim V_1 + \cdots + \dim V_m$.
+> is injective. In that case it is an isomorphism, and the [[Def - Dimension|dimension]] formula reads $\dim(V_1 \oplus \cdots \oplus V_m) = \dim V_1 + \cdots + \dim V_m$.
 
 The product and direct-sum dimension formulas have the same shape because the constructions are essentially the same — internal direct sum is the image of external product under $\Gamma$.
 
@@ -34,7 +34,7 @@ The product of finite-dimensional vector spaces is itself finite-dimensional, an
 
 The companion statement does what the dimension formula was *built to do*: convert the external product construction to the internal direct-sum construction whenever the two coincide. When $V_1, \dots, V_m$ live inside a common ambient $V$, the question "is $V_1 + \cdots + V_m$ a direct sum?" is the same as the question "is $\Gamma$ injective?", which is purely about whether the only way to write $0$ as $v_1 + \cdots + v_m$ with $v_k \in V_k$ is to take all $v_k = 0$.
 
-In one sentence: the external product is the "free" version of a sum of subspaces, and it agrees with the internal direct sum exactly when no nontrivial cancellation happens.
+In one sentence: the external product is the "free" version of a sum of [[Def - Subspace|subspaces]], and it agrees with the internal direct sum exactly when no nontrivial cancellation happens.
 
 ---
 

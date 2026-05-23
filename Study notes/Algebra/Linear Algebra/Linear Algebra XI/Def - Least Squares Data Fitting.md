@@ -33,7 +33,7 @@ The minimum-RSS principle gives the *training loss*:
 $$L(\theta) = \sum_{i=1}^N (y^{(i)} - \hat{f}_\theta(x^{(i)}))^2 = \|y^d - A \theta\|^2$$
 where the *data matrix* (or *design matrix*) $A$ is the $N \times p$ matrix with $A_{ij} = f_j(x^{(i)})$. This is a standard least squares problem in $\theta$, with $A$ a known matrix and $y^d$ a known vector. The LS solution $\hat{\theta} = (A^T A)^{-1} A^T y^d$ is then the model parameter vector.
 
-The reader has now invented the LS data-fitting framework. The remaining content of §XI.2 is about *which basis functions to use* (feature engineering, §13.3) and *how to detect and prevent overfitting* (validation, §13.2). Both of these are addressed in their own definition pages.
+The reader has now invented the LS data-fitting framework. The remaining content of §XI.2 is about *which basis functions to use* (feature engineering, §13.3) and *how to detect and prevent overfitting* ([[Def - Validation (Training and Test Error)|validation]], §13.2). Both of these are addressed in their own definition pages.
 
 ---
 

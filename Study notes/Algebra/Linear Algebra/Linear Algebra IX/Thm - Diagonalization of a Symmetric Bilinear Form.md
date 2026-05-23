@@ -16,7 +16,7 @@ Throughout, $V$ is a finite-dimensional vector space over a field $\mathbb{F}$ o
 
 # Statement
 
-> **Theorem (Diagonalization of a Symmetric Bilinear Form, LADR 9.12).** Let $\rho$ be a symmetric bilinear form on a finite-dimensional vector space $V$ over a field of characteristic $\neq 2$. Then there exists a basis $(e_1, \dots, e_n)$ of $V$ in which the matrix of $\rho$ is **diagonal**:
+> **Theorem (Diagonalization of a Symmetric [[Def - Bilinear Form|Bilinear Form]], LADR 9.12).** Let $\rho$ be a symmetric bilinear form on a finite-dimensional vector space $V$ over a field of characteristic $\neq 2$. Then there exists a basis $(e_1, \dots, e_n)$ of $V$ in which the matrix of $\rho$ is **diagonal**:
 >
 > $$\mathcal{M}(\rho, (e_1, \dots, e_n)) = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$$
 >
@@ -32,7 +32,7 @@ The companion form follows immediately from the [[Thm - Real Spectral Theorem|re
 
 This theorem is the structural foundation underlying [[Thm - Sylvester's Law of Inertia|Sylvester's law of inertia]]. Sylvester's law says "the signature of the diagonal form is intrinsic"; this theorem says "the diagonal form *exists*". Without this theorem, Sylvester would be vacuous.
 
-The conceptual content: every symmetric bilinear form admits a basis in which it looks like a weighted sum of squares, $\rho(\sum x_i e_i, \sum y_j e_j) = \sum \lambda_i x_i y_i$. The diagonal entries $\lambda_i$ are not invariants (they depend on basis), but their *signs* are (Sylvester). The route to this canonical form is by induction on dimension: find one vector $v$ where $\rho(v, v) \neq 0$, take the $\rho$-orthogonal complement of $v$, and recurse.
+The conceptual content: every symmetric bilinear form admits a basis in which it looks like a weighted sum of squares, $\rho(\sum x_i e_i, \sum y_j e_j) = \sum \lambda_i x_i y_i$. The diagonal entries $\lambda_i$ are not invariants (they depend on basis), but their *signs* are (Sylvester). The route to this canonical form is by induction on [[Def - Dimension|dimension]]: find one vector $v$ where $\rho(v, v) \neq 0$, take the $\rho$-orthogonal complement of $v$, and recurse.
 
 The companion-form inner-product version is the more familiar statement: every real symmetric matrix has an orthonormal eigenbasis with real eigenvalues. This is the spectral theorem dressed as a bilinear-form statement. The non-inner-product version is *strictly more general* — it works over any field of characteristic $\neq 2$, including $\mathbb{C}$ and even finite fields, but the resulting basis is not orthonormal because there is no metric structure to be orthonormal *to*. In return, the diagonal entries are merely "diagonal entries" and not "eigenvalues in any intrinsic sense" — only their *signs* (over $\mathbb{R}$) are intrinsic.
 
@@ -66,7 +66,7 @@ The bare conclusion is "a diagonalising basis exists". Combined with other facts
 
 # Why Is It True
 
-The proof is by induction on $\dim V$. The intuition: a symmetric bilinear form is "symmetric" in the sense that it treats its two inputs the same way, so it has the right kind of symmetry to be diagonalised by a clever choice of basis. The induction uses the **$\rho$-orthogonal complement** to peel off one dimension at a time, in much the same way the spectral theorem proof peels off eigenvectors one at a time.
+The proof is by induction on $\dim V$. The intuition: a symmetric bilinear form is "symmetric" in the sense that it treats its two inputs the same way, so it has the right kind of symmetry to be diagonalised by a clever choice of basis. The induction uses the **$\rho$-orthogonal complement** to peel off one [[Def - Dimension|dimension]] at a time, in much the same way the spectral theorem proof peels off eigenvectors one at a time.
 
 **The mechanism summary:**
 
@@ -134,14 +134,14 @@ Induction on dimension. Find a non-isotropic vector (one with $\rho(v, v) \neq 0
 >
 > **Hint:** The map $u \mapsto \rho(u, v)$ is a *nonzero* linear functional (since $v \mapsto \rho(v, v) \neq 0$), so its kernel has codimension 1.
 >
-> **Why needed:** Gives the codimension-1 subspace on which we can recurse, and the splitting that lets us reassemble.
+> **Why needed:** Gives the codimension-1 [[Def - Subspace|subspace]] on which we can recurse, and the splitting that lets us reassemble.
 >
 > > [!note]- Full proof
 > > Define the linear functional $\varphi : V \to \mathbb{F}$ by $\varphi(u) := \rho(u, v)$. This is linear by linearity of $\rho$ in its first slot. It is *nonzero*, since $\varphi(v) = \rho(v, v) \neq 0$. Hence $\dim \ker \varphi = \dim V - 1$. By definition, $U = \ker \varphi$, so $\dim U = n - 1$.
 > >
 > > Since $v \notin U$ (because $\varphi(v) \neq 0$), the sum $U + \mathbb{F} v$ has dimension $\dim U + \dim \mathbb{F} v = n$, equal to $\dim V$. Also $U \cap \mathbb{F} v = \{0\}$ (any nonzero $\lambda v \in U$ would have $\varphi(\lambda v) = \lambda \varphi(v) = 0$, but $\lambda \neq 0$ and $\varphi(v) \neq 0$). Hence $V = U \oplus \mathbb{F} v$.
 
-> [!note]- Lemma 3: The restriction of $\rho$ to a subspace is a symmetric bilinear form
+> [!note]- Lemma 3: The restriction of $\rho$ to a [[Def - Subspace|subspace]] is a symmetric bilinear form
 > **Statement:** If $U$ is a subspace of $V$ and $\rho$ is a symmetric bilinear form on $V$, then the restriction $\rho|_{U \times U} : U \times U \to \mathbb{F}$ is a symmetric bilinear form on $U$.
 >
 > **Hint:** Each axiom (bilinearity, symmetry) is inherited from $\rho$ because the restriction just shrinks the domain.

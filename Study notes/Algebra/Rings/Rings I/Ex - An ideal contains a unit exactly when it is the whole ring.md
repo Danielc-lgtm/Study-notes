@@ -17,7 +17,7 @@ Let $R$ be a ring and let $I\trianglelefteq R$ be an ideal. Prove that the follo
 2. $I$ contains the multiplicative identity, $1_R\in I$;
 3. $I$ contains a unit of $R$.
 
-As a corollary, deduce that a **field** $F$ has exactly two ideals: the zero ideal $\{0\}$ and $F$ itself.
+As a corollary, deduce that a **field** $F$ has exactly two [[Def - Ideal|ideals]]: the zero ideal $\{0\}$ and $F$ itself.
 
 **Recall:**
 
@@ -25,13 +25,13 @@ The objects in play are a ring, an ideal of it, the units of the ring, and the s
 
 ![[Def - Ideal#The Definition]]
 
-The decisive axiom is part (ii), **strong closure**: an ideal absorbs multiplication by *every* element of the ring, not merely by its own elements. If $a\in I$ and $b\in R$ then $ab\in I$ (and likewise $ba\in I$). This is strictly stronger than the closure required of a subring, and it is the whole engine of this exercise.
+The decisive axiom is part (ii), **strong closure**: an ideal absorbs multiplication by *every* element of the ring, not merely by its own elements. If $a\in I$ and $b\in R$ then $ab\in I$ (and likewise $ba\in I$). This is strictly stronger than the closure required of a [[Def - Subring|subring]], and it is the whole engine of this exercise.
 
 ![[Def - Unit and Field#The Definition]]
 
-To restate the two notions used: a **unit** of $R$ is an element $u\in R$ possessing a multiplicative inverse — some $v\in R$ with $uv = vu = 1_R$. A **field** is a (commutative, non-zero) ring in which *every* non-zero element is a unit; equivalently, a field is a ring whose non-zero elements form a group under multiplication.
+To restate the two notions used: a **unit** of $R$ is an element $u\in R$ possessing a multiplicative inverse — some $v\in R$ with $uv = vu = 1_R$. A **field** is a (commutative, non-zero) ring in which *every* non-zero element is a unit; equivalently, a field is a ring whose non-zero elements form a [[Def - Group|group]] under multiplication.
 
-A standing convention: every ideal is in particular an additive subgroup of $R$, so every ideal contains $0_R$. We assume $R$ is a non-zero ring, $1_R\neq 0_R$, so that "$I=R$" and "$I=\{0\}$" are genuinely different.
+A standing convention: every ideal is in particular an additive [[Def - Subgroup|subgroup]] of $R$, so every ideal contains $0_R$. We assume $R$ is a non-zero ring, $1_R\neq 0_R$, so that "$I=R$" and "$I=\{0\}$" are genuinely different.
 
 ---
 
@@ -151,6 +151,6 @@ Any non-zero ideal of a field contains a unit, hence is the whole field; so the 
 
 **Strong closure is the axiom that does all the work — and the reason an ideal is so much more rigid than a subring.** Every step of this proof is one application of the same axiom: $a\in I$, $b\in R\Rightarrow ab\in I$. The lesson is that this axiom is *extravagantly powerful* precisely because $b$ ranges over the *entire ring*, not just over $I$. A single well-chosen element of $I$ therefore controls a vast portion of $I$: one unit controls everything. Contrast a *subring*, which need only be closed under products of its own elements — a subring can contain a unit (indeed contains $1$ by definition) without being the whole ring (e.g. $\mathbb{Z}\subset\mathbb{Q}$). The phenomenon "contains a unit $\Rightarrow$ everything" is *exclusive to ideals*, and isolating *which* axiom causes it — strong closure, not mere additive or multiplicative closure — is the conceptual content. When solving any ideal problem, the first question to ask is "what does strong closure let me absorb here?"
 
-**Fields are the rings with no room for proper non-zero ideals — this is what makes them the ground floor of ring theory.** The corollary "a field has only $\{0\}$ and $F$ as ideals" is the structural fingerprint of a field, and it follows the instant you combine two facts: in a field *every* non-zero element is a unit, and (by the main result) *any* unit in an ideal collapses it. So a field is too "invertible" to support an interesting ideal lattice. This has large downstream consequences. It means *every* ring homomorphism out of a field is either injective or zero — because its kernel is an ideal, hence $\{0\}$ (injective) or all of $F$ (zero map). It means the quotient construction is useless on a field: there are no proper non-zero ideals to quotient by. And it characterises fields among commutative rings: a non-zero commutative ring is a field *if and only if* its only ideals are $\{0\}$ and itself. The trigger "the ring is a field" should immediately call up "so its only ideals are trivial, and homomorphisms out of it are injective-or-zero."
+**Fields are the [[Def - Ring|rings]] with no room for proper non-zero ideals — this is what makes them the ground floor of ring theory.** The corollary "a field has only $\{0\}$ and $F$ as ideals" is the structural fingerprint of a field, and it follows the instant you combine two facts: in a field *every* non-zero element is a unit, and (by the main result) *any* unit in an ideal collapses it. So a field is too "invertible" to support an interesting ideal lattice. This has large downstream consequences. It means *every* ring homomorphism out of a field is either injective or zero — because its kernel is an ideal, hence $\{0\}$ (injective) or all of $F$ (zero map). It means the quotient construction is useless on a field: there are no proper non-zero ideals to quotient by. And it characterises fields among commutative rings: a non-zero commutative ring is a field *if and only if* its only ideals are $\{0\}$ and itself. The trigger "the ring is a field" should immediately call up "so its only ideals are trivial, and [[Def - Homomorphism|homomorphisms]] out of it are injective-or-zero."
 
 **Prove equivalences by closing a cycle, not by proving every arrow.** A three-statement equivalence has six directed implications, but proving a single *cycle* of three — here $(1)\Rightarrow(3)\Rightarrow(2)\Rightarrow(1)$ — yields all six by transitivity, at half the work. The skill is choosing the cycle so that each individual arrow is as easy as possible: we ordered the statements so that every link is one invocation of strong closure (or, for $(1)\Rightarrow(3)$, a triviality). This is a general proof-organisation tactic — for $n$ equivalent statements, prove a single $n$-cycle of implications rather than $n(n-1)$ separate ones. When you set up such a proof, *spend a moment ordering the statements* so the consecutive implications are the natural, short ones; a well-chosen cycle can make a multi-way equivalence almost effortless.

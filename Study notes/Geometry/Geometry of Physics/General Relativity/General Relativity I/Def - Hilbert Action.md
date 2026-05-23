@@ -78,11 +78,11 @@ The Hilbert action is the **simplest diffeomorphism-invariant action functional*
 $$S_\text{grav} = \frac{1}{16\pi G}\int (R - 2\Lambda + c_1 R^2 + c_2 R_{\mu\nu}R^{\mu\nu} + c_3 R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma} + \ldots)\sqrt{-g}\, d^4x,$$
 with the cosmological constant term being dimension 0, the $R$ term being dimension 2, and higher-curvature terms being dimension 4 and above (in mass dimension). The $1/(16\pi G)$ in front of $R$ is the Newton-constant-determined coupling, and the higher-curvature coefficients $c_i$ are dimensionless coupling constants suppressed by powers of the Planck scale.
 
-In **fibre bundle** language: the metric $g$ is a section of the bundle of Lorentzian quadratic forms over $M$; the Hilbert action is a smooth functional on this section space, gauge-invariant under the action of the diffeomorphism group $\mathrm{Diff}(M)$. The Einstein field equations are the gauge-fixed Euler–Lagrange equations, and the **constraints** of canonical GR (Hamiltonian and momentum constraints) are the generators of the gauge group.
+In **fibre bundle** language: the metric $g$ is a section of the bundle of Lorentzian quadratic forms over $M$; the Hilbert action is a smooth functional on this section space, gauge-invariant under the action of the diffeomorphism [[Def - Group|group]] $\mathrm{Diff}(M)$. The Einstein field equations are the gauge-fixed Euler–Lagrange equations, and the **constraints** of canonical GR (Hamiltonian and momentum constraints) are the generators of the gauge group.
 
 In the **path-integral approach** to quantum gravity, the partition function is formally
 $$Z = \int \mathcal{D}g\, e^{iS_\text{grav}[g]/\hbar},$$
-with the integral over Lorentzian metrics modulo diffeomorphisms. This integral is ill-defined in 4D (the theory is non-renormalisable), motivating the search for a more fundamental theory (**string theory**, **loop quantum gravity**, **asymptotic safety**).
+with the integral over Lorentzian metrics modulo [[Def - Diffeomorphism|diffeomorphisms]]. This integral is ill-defined in 4D (the theory is non-renormalisable), motivating the search for a more fundamental theory (**string theory**, **loop quantum gravity**, **asymptotic safety**).
 
 ---
 
@@ -120,7 +120,7 @@ The key *difference* is order: Yang–Mills is *quadratic* in the field strength
 
 **Corollary — boundary term necessity.** For a spacetime with boundary, the variation of $\int R \sqrt{-g}\, d^4x$ produces non-vanishing boundary terms (from the derivative of the metric variation in the boundary direction) even when $\delta g|_{\partial M} = 0$. The Gibbons–Hawking–York term cancels these, making the variational principle well-posed for boundary-value problems.
 
-**Calibration check.** (i) Dimensional analysis: $[R] = \text{length}^{-2}$, $[\sqrt{-g}\, d^4x] = \text{length}^4$, so $[R\sqrt{-g}\, d^4x] = \text{length}^2$; $[1/G] = \text{length}^{-1} \cdot \text{mass}$ (in natural units), so $[S/G] = \text{length}^2 \cdot \text{mass} \cdot \text{length}^{-1} = \text{mass} \cdot \text{length} = \text{action}$ — dimensions of $\hbar$, consistent. (ii) Verify that the integrand is a scalar density: $R$ is a scalar, $\sqrt{-g}$ is a density of weight 1, so $R\sqrt{-g}$ is a density of weight 1, and integrating it over $d^4x$ gives a coordinate-invariant number. (iii) Check that varying the action with respect to $g^{\mu\nu}$ gives the right combination $R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R$ (this is the content of [[Thm - Hilbert's Variational Principle Yields Einstein Equations]]).
+**Calibration check.** (i) Dimensional analysis: $[R] = \text{length}^{-2}$, $[\sqrt{-g}\, d^4x] = \text{length}^4$, so $[R\sqrt{-g}\, d^4x] = \text{length}^2$; $[1/G] = \text{length}^{-1} \cdot \text{mass}$ (in natural units), so $[S/G] = \text{length}^2 \cdot \text{mass} \cdot \text{length}^{-1} = \text{mass} \cdot \text{length} = \text{action}$ — [[Def - Dimension|dimensions]] of $\hbar$, consistent. (ii) Verify that the integrand is a scalar density: $R$ is a scalar, $\sqrt{-g}$ is a density of weight 1, so $R\sqrt{-g}$ is a density of weight 1, and integrating it over $d^4x$ gives a coordinate-invariant number. (iii) Check that varying the action with respect to $g^{\mu\nu}$ gives the right combination $R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R$ (this is the content of [[Thm - Hilbert's Variational Principle Yields Einstein Equations]]).
 
 ---
 

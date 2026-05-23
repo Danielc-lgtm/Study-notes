@@ -15,8 +15,8 @@ $A$ is an $m \times n$ matrix ($m \geq n$) with linearly independent columns. Th
 
 # Statement
 
-> **Theorem (Least Squares via QR Factorization).** Let $A$ be an $m \times n$ matrix with linearly independent columns, factored as $A = QR$ (QR factorization), and let $b$ be an $m$-vector.
-> 1. The pseudoinverse of $A$ is $A^\dagger = R^{-1} Q^T$.
+> **Theorem (Least Squares via [[Thm - QR Factorization|QR Factorization]]).** Let $A$ be an $m \times n$ matrix with linearly independent columns, factored as $A = QR$ (QR factorization), and let $b$ be an $m$-vector.
+> 1. The [[Def - Pseudoinverse|pseudoinverse]] of $A$ is $A^\dagger = R^{-1} Q^T$.
 > 2. The least squares solution is
 > $$\hat{x} = R^{-1} Q^T b,$$
 > computed by first forming $Q^T b$ (a matrix-vector product) and then solving the upper-triangular system $R \hat{x} = Q^T b$ by back-substitution.
@@ -160,7 +160,7 @@ A secondary difficulty is computing the QR factorization itself. The classical G
 # Formal Proof
 
 > [!note]- Complete formal proof
-> *Step 1: Pseudoinverse formula.* By Lemma 1, $A^T A = R^T R$. Then
+> *Step 1: [[Def - Pseudoinverse|Pseudoinverse]] formula.* By Lemma 1, $A^T A = R^T R$. Then
 > $$A^\dagger = (A^T A)^{-1} A^T = (R^T R)^{-1} (QR)^T = (R^T R)^{-1} R^T Q^T = R^{-1} Q^T$$
 > using Lemma 2 in the last step.
 >

@@ -33,7 +33,7 @@ A weaker definition — "a partition of $M$ into $k$-dimensional immersed subman
 
 # The Definition
 
-Let $M$ be a smooth $n$-manifold. A **foliation of dimension $k$** on $M$ is a collection $\mathcal{F}$ of disjoint, connected, nonempty, immersed $k$-dimensional submanifolds of $M$ (called the **leaves** of $\mathcal{F}$) such that:
+Let $M$ be a smooth $n$-manifold. A **foliation of [[Def - Dimension|dimension]] $k$** on $M$ is a collection $\mathcal{F}$ of disjoint, connected, nonempty, immersed $k$-dimensional submanifolds of $M$ (called the **leaves** of $\mathcal{F}$) such that:
 
 **(i) Covering:** $\bigsqcup_{L \in \mathcal{F}} L = M$.
 
@@ -41,7 +41,7 @@ Let $M$ be a smooth $n$-manifold. A **foliation of dimension $k$** on $M$ is a c
 
 The number $n - k$ is the **codimension** of the foliation.
 
-**Connection to involutive distributions (Global Frobenius Theorem):** if $\mathcal{F}$ is a foliation, then the collection $\{T_pL : p \in M, L \ni p\}$ is an involutive distribution $D \subseteq TM$ — the **tangent distribution of $\mathcal{F}$**. Conversely, if $D$ is an involutive distribution, then the collection of maximal connected integral manifolds of $D$ is a foliation. This bijection between foliations and involutive distributions is the content of the [[Thm - The Frobenius Theorem|global Frobenius theorem]] (Lee, Theorem 19.21).
+**Connection to involutive distributions (Global [[Thm - The Frobenius Theorem|Frobenius Theorem]]):** if $\mathcal{F}$ is a foliation, then the collection $\{T_pL : p \in M, L \ni p\}$ is an involutive distribution $D \subseteq TM$ — the **tangent distribution of $\mathcal{F}$**. Conversely, if $D$ is an involutive distribution, then the collection of maximal connected integral manifolds of $D$ is a foliation. This bijection between foliations and involutive distributions is the content of the [[Thm - The Frobenius Theorem|global Frobenius theorem]] (Lee, Theorem 19.21).
 
 ---
 
@@ -65,7 +65,7 @@ The number $n - k$ is the **codimension** of the foliation.
 
 **Is an instance: a foliation of $T^2$ by lines of fixed slope.** Take $T^2 = \mathbb{R}^2 / \mathbb{Z}^2$ and the rank-$1$ distribution spanned by $\partial_x + \alpha \partial_y$. For rational $\alpha = p/q$, the leaves are embedded closed curves (each line, after wrapping around the torus, closes up to a curve of slope $p/q$). For irrational $\alpha$, every leaf is dense — only immersed, not embedded. Both cases are foliations.
 
-**Is an instance: the orbits of a free Lie group action.** If a Lie group $G$ acts smoothly and freely on $M$, the orbits $G \cdot p$ form a foliation of dimension $\dim G$. The flat chart structure comes from the existence of *local slices* (transversals to the action). When the action is not free, the orbit decomposition is a stratification, not a foliation.
+**Is an instance: the orbits of a free Lie [[Def - Group|group]] action.** If a Lie [[Def - Group|group]] $G$ acts smoothly and freely on $M$, the orbits $G \cdot p$ form a foliation of [[Def - Dimension|dimension]] $\dim G$. The flat chart structure comes from the existence of *local slices* (transversals to the action). When the action is not free, the orbit decomposition is a stratification, not a foliation.
 
 **Is an instance: the Reeb foliation of $S^3$.** A celebrated foliation of $S^3$ by surfaces, with two "Reeb components" each diffeomorphic to a solid torus interior, and leaves that asymptote to the boundary torus. This is a $2$-dimensional foliation of a $3$-manifold; the leaves are non-compact non-embedded immersed surfaces. The Reeb foliation shows that even on compact manifolds the leaf structure can be exotic.
 

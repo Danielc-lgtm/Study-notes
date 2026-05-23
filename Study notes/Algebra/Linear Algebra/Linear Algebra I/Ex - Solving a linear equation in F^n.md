@@ -32,7 +32,7 @@ A [[Def - Vector Space|vector space]] over $\mathbb{F}$ has well-defined additio
 
 **Theorem routing:** Direct — invoke [[Thm - Uniqueness of Additive Identity and Inverses]] for the well-definedness of $-v$, then use distributivity to manipulate $v + 3x = w$ into $x = \frac{1}{3}(w - v)$.
 
-**Key decision point:** The non-obvious step (only because students sometimes overlook it) is **using that the scalar $3$ has an inverse in $\mathbb{F}$**. This is the field axiom of multiplicative inverses for nonzero elements. In a vector space over a ring (a module), the same equation might have no solution or multiple solutions.
+**Key decision point:** The non-obvious step (only because students sometimes overlook it) is **using that the scalar $3$ has an inverse in $\mathbb{F}$**. This is the field axiom of multiplicative inverses for nonzero elements. In a vector space over a [[Def - Ring|ring]] (a [[Def - Module|module]]), the same equation might have no solution or multiple solutions.
 
 ---
 
@@ -40,7 +40,7 @@ A [[Def - Vector Space|vector space]] over $\mathbb{F}$ has well-defined additio
 
 1. **Solve a linear equation by subtracting and dividing** (operation 7 from the topic page). Applied here: subtract $v$ from both sides of $v + \lambda x = w$, then multiply by $1/\lambda$. The cancellation step uses uniqueness of additive inverses ([[Thm - Uniqueness of Additive Identity and Inverses]]) implicitly.
 
-2. **Use the multiplicative inverse of a nonzero scalar in $\mathbb{F}$** (operation 7 from the topic page, by way of the field axioms). Applied here: $1/3 \in \mathbb{F}$ exists because $3 \neq 0$ in $\mathbb{R}$ (more generally, $\mathbb{F}$ being a [[Def - Field|field]] guarantees inverses for all nonzero scalars).
+2. **Use the multiplicative inverse of a nonzero scalar in $\mathbb{F}$** (operation 7 from the topic page, by way of the field axioms). Applied here: $1/3 \in \mathbb{F}$ exists because $3 \neq 0$ in $\mathbb{R}$ (more generally, $\mathbb{F}$ being a field guarantees inverses for all nonzero scalars).
 
 ---
 
@@ -82,6 +82,6 @@ Plan: solve mechanically — subtract from both sides, then divide.
 
 # Key Takeaways
 
-**Linear equations in one unknown over a field have unique solutions.** The equation $v + \lambda x = w$ with $\lambda \neq 0$ has the unique solution $x = (w - v)/\lambda$ in any vector space over a field. The two ingredients are additive cancellation (additive inverses in $V$) and scalar division (multiplicative inverses for nonzero scalars in $\mathbb{F}$). Both are field-axiom-level features; their conjunction makes vector spaces over fields the natural setting for linear equations. Over a ring (a [[Def - Module|module]]) the same equation might have multiple solutions or none, illustrating again why the field hypothesis matters.
+**Linear equations in one unknown over a field have unique solutions.** The equation $v + \lambda x = w$ with $\lambda \neq 0$ has the unique solution $x = (w - v)/\lambda$ in any vector space over a field. The two ingredients are additive cancellation (additive inverses in $V$) and scalar division (multiplicative inverses for nonzero scalars in $\mathbb{F}$). Both are field-axiom-level features; their conjunction makes vector spaces over fields the natural setting for linear equations. Over a [[Def - Ring|ring]] (a [[Def - Module|module]]) the same equation might have multiple solutions or none, illustrating again why the field hypothesis matters.
 
 **Cancellation is the operational form of "additive inverses are unique".** The step $v + 3x = v + 3x' \Rightarrow 3x = 3x'$ is the cancellation law in $V$, and it follows from [[Thm - Uniqueness of Additive Identity and Inverses|uniqueness of additive inverses]]: add $-v$ to both sides and use associativity. Cancellation is the most-used algebraic consequence of inverses, and is the engine of solving linear equations throughout the chapter and beyond. Recognizing cancellation in disguise — wherever you can subtract a common term — saves work in countless proofs.

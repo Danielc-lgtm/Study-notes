@@ -17,11 +17,11 @@ $M$ is a smooth manifold; $S \subseteq M$ is a subset. We will give $S$ its own 
 
 # Axiom Motivation
 
-The [[Def - Embedded Submanifold|embedded submanifold]] notion is the clean one: subspace topology, unique smooth structure, slice charts. But for certain natural constructions — Lie subgroups, foliations, integral submanifolds of distributions, the image of a non-injective immersion's restriction to an injectivity neighbourhood — the natural object cannot be described in the embedded-submanifold framework, and a strict generalisation is needed.
+The [[Def - Embedded Submanifold|embedded submanifold]] notion is the clean one: [[Def - Subspace|subspace]] topology, unique smooth structure, slice charts. But for certain natural constructions — Lie [[Def - Subgroup|subgroups]], [[Def - Foliation|foliations]], integral submanifolds of distributions, the image of a non-injective immersion's restriction to an injectivity neighbourhood — the natural object cannot be described in the embedded-submanifold framework, and a strict generalisation is needed.
 
 The motivating example is the **irrational line on the torus**. For irrational $\alpha \in \mathbb{R}$, the map $\gamma : \mathbb{R} \to T^2 = S^1 \times S^1$ defined by $\gamma(t) = (e^{2\pi i t}, e^{2\pi i \alpha t})$ is a smooth injective immersion. Its image $S = \gamma(\mathbb{R})$ is *dense* in $T^2$ (by Weyl equidistribution or Dirichlet's approximation theorem). In the subspace topology from $T^2$, the image $S$ is not locally Euclidean — every neighbourhood of any point in $S$ contains infinitely many "wraps" of $\gamma$, which are not connected in $S$. So $S$ is not an embedded submanifold of $T^2$.
 
-But $S$ is naturally a smooth $1$-manifold: it is the image of $\gamma$, and we can give it the topology and smooth structure that *makes $\gamma$ a diffeomorphism onto $S$*. This means $S$ has the topology of $\mathbb{R}$ (not the subspace topology from $T^2$), and a single global chart $\gamma^{-1} : S \to \mathbb{R}$. With this structure $S$ is a smooth $1$-manifold, the inclusion $\iota : S \hookrightarrow T^2$ is the composition $\gamma \circ \gamma^{-1}$ which is a smooth immersion, and we have all the differential-geometric structure we want — but the topology on $S$ is the *domain* topology pulled across by $\gamma$, not the subspace topology.
+But $S$ is naturally a smooth $1$-manifold: it is the image of $\gamma$, and we can give it the topology and smooth structure that *makes $\gamma$ a [[Def - Diffeomorphism|diffeomorphism]] onto $S$*. This means $S$ has the topology of $\mathbb{R}$ (not the subspace topology from $T^2$), and a single global chart $\gamma^{-1} : S \to \mathbb{R}$. With this structure $S$ is a smooth $1$-manifold, the inclusion $\iota : S \hookrightarrow T^2$ is the composition $\gamma \circ \gamma^{-1}$ which is a smooth immersion, and we have all the differential-geometric structure we want — but the topology on $S$ is the *domain* topology pulled across by $\gamma$, not the subspace topology.
 
 This is the immersed submanifold idea: **take a subset, equip it with its own topology and smooth structure, and require only that the inclusion into the ambient manifold be a smooth immersion**. The topology may differ from the subspace topology; this is the price of admitting examples like the irrational line on the torus.
 
@@ -44,7 +44,7 @@ Let $M$ be a smooth manifold.
 Note that:
 - The topology on $S$ need not be the subspace topology from $M$.
 - The smooth structure on $S$ need not be unique — different immersed structures may exist on the same set.
-- The inclusion is automatically injective (since $S \subseteq M$ as a set), but may fail to be a topological embedding (i.e., a homeomorphism onto its image in the subspace topology of $M$).
+- The inclusion is automatically injective (since $S \subseteq M$ as a set), but may fail to be a topological embedding (i.e., a [[Def - Homeomorphism|homeomorphism]] onto its image in the subspace topology of $M$).
 
 **Equivalent characterisation.** A set with topology and smooth structure $(S, \tau, \mathcal{A})$ is an immersed submanifold of $M$ if and only if it is the image of an injective smooth immersion $F : N \to M$ from some abstract smooth manifold $N$, equipped with the topology and smooth structure pushed forward by $F$ (declaring $F$ to be a homeomorphism, hence a diffeomorphism, onto $S$).
 

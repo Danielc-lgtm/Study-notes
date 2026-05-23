@@ -13,19 +13,19 @@ tags: [geometry, differential-geometry]
 
 # Problem Statement
 
-Show that the $n$-sphere $S^n = \{x \in \mathbb{R}^{n+1} : |x| = 1\}$ admits a smooth manifold structure of dimension $n$ via the **stereographic atlas**. Specifically:
+Show that the $n$-sphere $S^n = \{x \in \mathbb{R}^{n+1} : |x| = 1\}$ admits a smooth manifold structure of [[Def - Dimension|dimension]] $n$ via the **stereographic atlas**. Specifically:
 
-(a) Define the stereographic projection $\sigma_N : S^n \setminus \{N\} \to \mathbb{R}^n$ from the north pole $N = (0, \dots, 0, 1)$ and verify it is a homeomorphism onto $\mathbb{R}^n$. Define analogously $\sigma_S : S^n \setminus \{S\} \to \mathbb{R}^n$ from the south pole $S = (0, \dots, 0, -1)$.
+(a) Define the stereographic projection $\sigma_N : S^n \setminus \{N\} \to \mathbb{R}^n$ from the north pole $N = (0, \dots, 0, 1)$ and verify it is a [[Def - Homeomorphism|homeomorphism]] onto $\mathbb{R}^n$. Define analogously $\sigma_S : S^n \setminus \{S\} \to \mathbb{R}^n$ from the south pole $S = (0, \dots, 0, -1)$.
 
 (b) Compute the transition function $\sigma_S \circ \sigma_N^{-1} : \mathbb{R}^n \setminus \{0\} \to \mathbb{R}^n \setminus \{0\}$ explicitly.
 
-(c) Verify the transition function is smooth (in fact a diffeomorphism), so $\{(S^n \setminus \{N\}, \sigma_N), (S^n \setminus \{S\}, \sigma_S)\}$ is a smooth atlas on $S^n$.
+(c) Verify the transition function is smooth (in fact a [[Def - Diffeomorphism|diffeomorphism]]), so $\{(S^n \setminus \{N\}, \sigma_N), (S^n \setminus \{S\}, \sigma_S)\}$ is a smooth atlas on $S^n$.
 
 (d) Conclude that this smooth atlas determines a smooth manifold structure on $S^n$, called the **standard smooth structure**.
 
 **Recall:**
 
-A **smooth atlas** on a topological manifold is a covering family of charts whose transition functions are diffeomorphisms:
+A **smooth atlas** on a topological manifold is a covering family of charts whose transition functions are [[Def - Diffeomorphism|diffeomorphisms]]:
 
 ![[Def - Smooth Atlas and Smooth Structure#The Definition]]
 
@@ -33,7 +33,7 @@ The transition function:
 
 ![[Def - Transition Function#The Definition]]
 
-A topological manifold needs Hausdorff, second-countable, locally Euclidean — $S^n$ as a subspace of $\mathbb{R}^{n+1}$ is Hausdorff and second-countable automatically. Locally Euclidean is established by exhibiting any atlas; this exercise constructs the two-chart stereographic atlas.
+A topological manifold needs Hausdorff, second-countable, locally Euclidean — $S^n$ as a [[Def - Subspace|subspace]] of $\mathbb{R}^{n+1}$ is Hausdorff and second-countable automatically. Locally Euclidean is established by exhibiting any atlas; this exercise constructs the two-chart stereographic atlas.
 
 ---
 
@@ -55,7 +55,7 @@ A topological manifold needs Hausdorff, second-countable, locally Euclidean — 
 
 2. **Operation 2 from the topic page (compute transition functions explicitly).** We compute $\sigma_S \circ \sigma_N^{-1}$ on $\mathbb{R}^n \setminus \{0\}$ by directly applying the formula for $\sigma_N^{-1}$ followed by $\sigma_S$. The result is the inversion $u \mapsto u/|u|^2$.
 
-3. **Operation 8 from the topic page (verify Hausdorff and second countability by inheritance).** $S^n$ inherits Hausdorff and second countability from $\mathbb{R}^{n+1}$ via the subspace topology.
+3. **Operation 8 from the topic page (verify Hausdorff and second countability by inheritance).** $S^n$ inherits Hausdorff and second countability from $\mathbb{R}^{n+1}$ via the [[Def - Subspace|subspace]] topology.
 
 ---
 
@@ -138,7 +138,7 @@ The map $u \mapsto u/|u|^2$ on $\mathbb{R}^n \setminus \{0\}$ has $i$-th compone
 > [!note]- Complete formal solution
 > **Claim.** $S^n = \{x \in \mathbb{R}^{n+1} : |x| = 1\}$ is a smooth $n$-manifold under the smooth structure determined by the stereographic atlas $\{(S^n \setminus \{N\}, \sigma_N), (S^n \setminus \{S\}, \sigma_S)\}$ described below.
 >
-> *Proof.* $S^n$ inherits the Hausdorff and second-countable properties from $\mathbb{R}^{n+1}$ via the subspace topology, so it suffices to exhibit a smooth atlas of dimension $n$.
+> *Proof.* $S^n$ inherits the Hausdorff and second-countable properties from $\mathbb{R}^{n+1}$ via the subspace topology, so it suffices to exhibit a smooth atlas of [[Def - Dimension|dimension]] $n$.
 >
 > **Stereographic projection from $N$.** Define $\sigma_N : S^n \setminus \{N\} \to \mathbb{R}^n$ by
 > $$\sigma_N(x^1, \dots, x^{n+1}) = \frac{1}{1 - x^{n+1}}\left(x^1, \dots, x^n\right).$$
@@ -148,7 +148,7 @@ The map $u \mapsto u/|u|^2$ on $\mathbb{R}^n \setminus \{0\}$ has $i$-th compone
 >
 > **Stereographic projection from $S$.** Analogously, $\sigma_S : S^n \setminus \{S\} \to \mathbb{R}^n$, $\sigma_S(x^1, \dots, x^{n+1}) = \frac{1}{1 + x^{n+1}}(x^1, \dots, x^n)$, with inverse $\sigma_S^{-1}(v) = \frac{1}{|v|^2 + 1}(2v^1, \dots, 2v^n, 1 - |v|^2)$.
 >
-> **Both maps are homeomorphisms.** Each $\sigma_N, \sigma_S$ is continuous with continuous inverse, hence a homeomorphism between an open subset of $S^n$ and $\mathbb{R}^n$. They cover $S^n$: every $x \in S^n$ has $x^{n+1} \neq \pm 1$ unless $x = N$ or $x = S$, and these two cases are handled by $\sigma_S$ and $\sigma_N$ respectively.
+> **Both maps are [[Def - Homeomorphism|homeomorphisms]].** Each $\sigma_N, \sigma_S$ is continuous with continuous inverse, hence a homeomorphism between an open subset of $S^n$ and $\mathbb{R}^n$. They cover $S^n$: every $x \in S^n$ has $x^{n+1} \neq \pm 1$ unless $x = N$ or $x = S$, and these two cases are handled by $\sigma_S$ and $\sigma_N$ respectively.
 >
 > **Smooth compatibility.** The domains overlap on $S^n \setminus \{N, S\}$, mapped to $\mathbb{R}^n \setminus \{0\}$ under each chart (the omitted points $S, N$ map to $0$ under $\sigma_N, \sigma_S$ respectively, and these are the only points missing from the image). The transition function $\sigma_S \circ \sigma_N^{-1}$ on $\mathbb{R}^n \setminus \{0\}$ is computed:
 > $$\sigma_S(\sigma_N^{-1}(u)) = \frac{1}{1 + \frac{|u|^2 - 1}{|u|^2 + 1}}\left(\frac{2u^1}{|u|^2 + 1}, \dots, \frac{2u^n}{|u|^2 + 1}\right) = \frac{u}{|u|^2}.$$
@@ -170,7 +170,7 @@ The map $u \mapsto u/|u|^2$ on $\mathbb{R}^n \setminus \{0\}$ has $i$-th compone
 
 **The geometric meaning of stereographic projection: lines from a pole to the equator plane.** Stereographic projection has a classical interpretation: project from the north pole $N$ through the point $x$ to where the line crosses the equator plane $\{x^{n+1} = 0\}$. This is the same map used in cartography (the Mercator projection is a 2D variant), in complex analysis (the Riemann sphere uses $\mathbb{CP}^1 = S^2$ and stereographic charts give the holomorphic structure), and in physics (the celestial sphere). Once you internalize the picture, every property — conformal, mapping circles to circles or lines, etc. — becomes geometrically obvious.
 
-**The transition function is the inversion $u \mapsto u/|u|^2$ — a classical geometric transformation.** The transition between the two stereographic charts is the *inversion in the unit sphere*, a transformation classical Euclidean geometry has studied for two centuries (the Apollonius construction, Möbius transformations on $\mathbb{R}^n$). This is not a coincidence: stereographic projection conjugates the "rotations of $S^n$" with the "Möbius transformations of $\mathbb{R}^n \cup \{\infty\}$" (or "conformal transformations of $S^n$"), and the change of pole reflects this conjugation. In dimension $n = 2$, the result is the Möbius group $\mathrm{PSL}(2, \mathbb{C})$, the symmetry group of complex projective line and the Riemann sphere. The exercise is thus the gateway to a rich classical geometry.
+**The transition function is the inversion $u \mapsto u/|u|^2$ — a classical geometric transformation.** The transition between the two stereographic charts is the *inversion in the unit sphere*, a transformation classical Euclidean geometry has studied for two centuries (the Apollonius construction, Möbius transformations on $\mathbb{R}^n$). This is not a coincidence: stereographic projection conjugates the "rotations of $S^n$" with the "Möbius transformations of $\mathbb{R}^n \cup \{\infty\}$" (or "conformal transformations of $S^n$"), and the change of pole reflects this conjugation. In dimension $n = 2$, the result is the Möbius [[Def - Group|group]] $\mathrm{PSL}(2, \mathbb{C})$, the symmetry [[Def - Group|group]] of complex projective line and the Riemann sphere. The exercise is thus the gateway to a rich classical geometry.
 
 **The standard smooth structure on $S^n$ is *not* obvious without the verification.** A priori, the atlas $\{(S^n \setminus \{N\}, \sigma_N), (S^n \setminus \{S\}, \sigma_S)\}$ could fail smooth compatibility, in which case it would describe a non-standard smooth structure. The fact that the transition is the inversion (a smooth diffeomorphism) is what justifies calling it the *standard* smooth structure. Milnor's exotic 7-spheres ($S^7$ with 28 distinct smooth structures, all topologically equivalent) shows that on higher-dimensional spheres, alternative smooth structures genuinely exist — but the standard one is always defined via stereographic projection or graph coordinates.
 

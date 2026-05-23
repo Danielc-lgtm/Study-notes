@@ -131,7 +131,7 @@ Take a harmonic $1$-form $h$. The Weitzenböck formula gives $\Delta h = \nabla^
    - *Hint:* $\dim H^1_{dR} = \dim\mathcal{H}^1 = 0$.
    - *Why needed:* Concludes the topological statement $b_1 = 0$.
 
-7. **(Corollary, nonnegative case)** With $\operatorname{Ric} \geq 0$: from step 4, $\nabla h = 0$ ($h$ parallel) and $\operatorname{Ric}(h^\sharp, h^\sharp) = 0$ pointwise. The space of parallel $1$-forms has dimension $\leq n$ (since $\nabla$-parallel sections of $\Omega^1$ are determined by their value at a single point). Hence $b_1 \leq n$. Equality iff $M$ has flat connection on $T^*M$, iff $M$ is a flat torus quotient.
+7. **(Corollary, nonnegative case)** With $\operatorname{Ric} \geq 0$: from step 4, $\nabla h = 0$ ($h$ parallel) and $\operatorname{Ric}(h^\sharp, h^\sharp) = 0$ pointwise. The space of parallel $1$-forms has [[Def - Dimension|dimension]] $\leq n$ (since $\nabla$-parallel sections of $\Omega^1$ are determined by their value at a single point). Hence $b_1 \leq n$. Equality iff $M$ has flat connection on $T^*M$, iff $M$ is a flat torus quotient.
 
 ---
 
@@ -140,7 +140,7 @@ Take a harmonic $1$-form $h$. The Weitzenböck formula gives $\Delta h = \nabla^
 > [!note]- Lemma 1: Weitzenböck formula on $1$-forms
 > **Statement:** For any $\omega \in \Omega^1(M)$ on a Riemannian manifold,
 > $$\Delta\omega = \nabla^*\nabla\omega + \operatorname{Ric}(\omega^\sharp, \cdot),$$
-> where $\Delta = d\delta + \delta d$ is the Hodge Laplacian, $\nabla^*\nabla$ is the rough Laplacian (formal adjoint of $\nabla$ followed by $\nabla$), and $\operatorname{Ric}(\omega^\sharp, \cdot)$ is the $1$-form $X \mapsto \operatorname{Ric}(\omega^\sharp, X)$.
+> where $\Delta = d\delta + \delta d$ is the [[Def - Hodge Laplacian|Hodge Laplacian]], $\nabla^*\nabla$ is the rough Laplacian (formal adjoint of $\nabla$ followed by $\nabla$), and $\operatorname{Ric}(\omega^\sharp, \cdot)$ is the $1$-form $X \mapsto \operatorname{Ric}(\omega^\sharp, X)$.
 >
 > **Hint:** Express $d\delta\omega$ and $\delta d\omega$ in covariant derivatives. Use the Ricci identity $[\nabla_i, \nabla_j]\omega_k = -R_{ijk}{}^l\omega_l$ to convert one of the resulting commutators into a Riemann tensor contraction; tracing gives Ricci.
 >
@@ -231,11 +231,11 @@ Take a harmonic $1$-form $h$. The Weitzenböck formula gives $\Delta h = \nabla^
 
 **Riemannian geometry — checking Bochner on standard examples.** Verify $b_1(S^n) = 0$ via Bochner: the round metric has $\operatorname{Ric} = (n-1)g > 0$, so Bochner gives $b_1 = 0$; verify directly from the cohomology of $S^n$ (which is $\mathbb{R}$ in degrees $0$ and $n$, zero elsewhere). Verify the same for $\mathbb{CP}^n$ with the Fubini–Study metric. Verify that the flat $T^n$ saturates the nonnegative-Ricci corollary: $\operatorname{Ric} = 0$ and $b_1 = n$.
 
-**Lie theory — semisimple Lie groups have $b_1 = 0$.** A compact semisimple Lie group $G$ has trivial centre, so the bi-invariant metric gives $\operatorname{Ric}(X, X) = \frac{1}{4}\|\mathrm{ad}_X\|^2 > 0$ for $X \neq 0$. Bochner: $b_1(G) = 0$. Verify for specific groups: $\mathrm{SU}(2) = S^3$ has $b_1 = 0$; $\mathrm{SU}(n)$ for $n \geq 2$ has $b_1 = 0$; $\mathrm{SO}(n)$ for $n \geq 3$ has $b_1 = 0$. For $U(n) = (\mathrm{SU}(n)\times U(1))/\mathbb{Z}_n$, the centre is nontrivial ($U(1)$), so Ricci is nonnegative with a kernel, and $b_1(U(n)) = 1$ — at the Bochner boundary.
+**Lie theory — semisimple Lie [[Def - Group|groups]] have $b_1 = 0$.** A compact semisimple Lie group $G$ has trivial centre, so the bi-invariant metric gives $\operatorname{Ric}(X, X) = \frac{1}{4}\|\mathrm{ad}_X\|^2 > 0$ for $X \neq 0$. Bochner: $b_1(G) = 0$. Verify for specific groups: $\mathrm{SU}(2) = S^3$ has $b_1 = 0$; $\mathrm{SU}(n)$ for $n \geq 2$ has $b_1 = 0$; $\mathrm{SO}(n)$ for $n \geq 3$ has $b_1 = 0$. For $U(n) = (\mathrm{SU}(n)\times U(1))/\mathbb{Z}_n$, the centre is nontrivial ($U(1)$), so Ricci is nonnegative with a kernel, and $b_1(U(n)) = 1$ — at the Bochner boundary.
 
 **Complex geometry — Bochner for Kähler manifolds and Kodaira vanishing.** On a compact Kähler manifold with positive bisectional curvature, the Bochner technique on $(p, q)$-forms with bundle coefficients gives **Kodaira vanishing**: $H^q(X, K_X^{-1}\otimes L) = 0$ for $q > 0$, when $L$ is positive (ample). The proof structure parallels Bochner: harmonic $L$-valued forms, Weitzenböck involving the curvature of $L$ and the metric, integration, positivity forcing vanishing.
 
-**Mathematical physics — gauge theories on positive-Ricci backgrounds.** In Yang–Mills theory on a closed Riemannian $4$-manifold with positive Ricci curvature, the moduli space of instantons (self-dual connections) has dimension bounded by Hodge-theoretic data on the base; positive Ricci constrains $b^+_2$ and $b^-_2$ via Bochner-style arguments. For positive scalar curvature, the **Lichnerowicz–Singer theorem** says: a closed spin manifold with positive scalar curvature has no harmonic spinors. This is the spin-geometric Bochner.
+**Mathematical physics — gauge theories on positive-Ricci backgrounds.** In Yang–Mills theory on a closed Riemannian $4$-manifold with positive Ricci curvature, the moduli space of [[Def - Instanton|instantons]] (self-dual connections) has dimension bounded by Hodge-theoretic data on the base; positive Ricci constrains $b^+_2$ and $b^-_2$ via Bochner-style arguments. For positive scalar curvature, the **Lichnerowicz–Singer theorem** says: a closed spin manifold with positive scalar curvature has no harmonic spinors. This is the spin-geometric Bochner.
 
 ---
 

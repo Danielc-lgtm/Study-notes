@@ -19,7 +19,7 @@ a $3$-dimensional vector space. Identify $\mathfrak{so}(3) \cong (\mathbb{R}^3, 
 
 **Recall:**
 
-The **special orthogonal group** $\mathrm{SO}(3) = \{A \in \mathrm{GL}(3, \mathbb{R}) : A^T A = I, \det A = 1\}$ is the group of orientation-preserving orthogonal $3 \times 3$ matrices, the rotation group of $\mathbb{R}^3$. By [[Thm - The Closed Subgroup Theorem|the closed subgroup theorem]], $\mathrm{SO}(3)$ is an embedded Lie subgroup of $\mathrm{GL}(3, \mathbb{R})$. Its **Lie algebra** is $\mathfrak{so}(3) = T_I \mathrm{SO}(3) \subseteq T_I \mathrm{GL}(3, \mathbb{R}) = M(3, \mathbb{R})$, as in [[Def - The Lie Algebra of a Lie Group]].
+The **special orthogonal group** $\mathrm{SO}(3) = \{A \in \mathrm{GL}(3, \mathbb{R}) : A^T A = I, \det A = 1\}$ is the group of orientation-preserving orthogonal $3 \times 3$ matrices, the rotation group of $\mathbb{R}^3$. By [[Thm - The Closed Subgroup Theorem|the closed subgroup theorem]], $\mathrm{SO}(3)$ is an embedded Lie [[Def - Subgroup|subgroup]] of $\mathrm{GL}(3, \mathbb{R})$. Its **Lie algebra** is $\mathfrak{so}(3) = T_I \mathrm{SO}(3) \subseteq T_I \mathrm{GL}(3, \mathbb{R}) = M(3, \mathbb{R})$, as in [[Def - The Lie Algebra of a Lie Group]].
 
 ---
 
@@ -31,7 +31,7 @@ The **special orthogonal group** $\mathrm{SO}(3) = \{A \in \mathrm{GL}(3, \mathb
 
 **Theorem routing:** The route is: (1) parametrize a curve $A(t) = I + tX + O(t^2)$ in $\mathrm{SO}(3)$ with initial velocity $X$, (2) substitute into the defining equations, (3) expand to first order in $t$, (4) read off the linear constraint. The first equation gives $X + X^T = 0$ (antisymmetry); the second gives $\mathrm{tr} X = 0$, which is automatic for antisymmetric matrices. So the Lie algebra is the space of antisymmetric matrices.
 
-**Key decision point:** The non-obvious move is noting that **the second equation ($\det A = 1$) imposes no new constraint** beyond antisymmetry. The derivative of $\det$ at $I$ is the trace $\mathrm{tr}$, and antisymmetric matrices have zero trace automatically. So the $\det = 1$ condition is "free" once antisymmetry is imposed — which is also why $\mathfrak{o}(n) = \mathfrak{so}(n)$ for all $n$ (the orthogonal and special orthogonal Lie algebras are the same, even though the groups differ by their components).
+**Key decision point:** The non-obvious move is noting that **the second equation ($\det A = 1$) imposes no new constraint** beyond antisymmetry. The derivative of $\det$ at $I$ is the trace $\mathrm{tr}$, and antisymmetric matrices have zero trace automatically. So the $\det = 1$ condition is "free" once antisymmetry is imposed — which is also why $\mathfrak{o}(n) = \mathfrak{so}(n)$ for all $n$ (the orthogonal and special orthogonal Lie algebras are the same, even though the [[Def - Group|groups]] differ by their components).
 
 ---
 
@@ -94,7 +94,7 @@ The tangent space $T_I \mathrm{SO}(3)$ is contained in $\{X : X^T = -X\}$ by Ste
 > [!note]- Derivation
 > *Reverse inclusion.* Given $X$ antisymmetric, define $A(t) = e^{tX}$ (the matrix exponential). Then $A(t)^T = e^{tX^T} = e^{-tX} = (e^{tX})^{-1} = A(t)^{-1}$, so $A(t)^T A(t) = I$ — $A(t)$ is orthogonal. Also $\det A(t) = \det e^{tX} = e^{t \mathrm{tr} X} = e^0 = 1$ since $\mathrm{tr} X = 0$ for antisymmetric $X$. So $A(t) \in \mathrm{SO}(3)$, and $A'(0) = X \in T_I \mathrm{SO}(3)$. This shows every antisymmetric matrix is in the tangent space, completing the equality.
 
-**Step 4: Dimension and the hat map.**
+**Step 4: [[Def - Dimension|Dimension]] and the hat map.**
 
 A general $3 \times 3$ antisymmetric matrix has the form $\widehat v = \begin{pmatrix} 0 & -v_3 & v_2 \\ v_3 & 0 & -v_1 \\ -v_2 & v_1 & 0 \end{pmatrix}$ for $v = (v_1, v_2, v_3) \in \mathbb{R}^3$ — three free parameters above the diagonal, with three corresponding entries below. The dimension is $3$, matching $\dim \mathrm{SO}(3) = 3$.
 

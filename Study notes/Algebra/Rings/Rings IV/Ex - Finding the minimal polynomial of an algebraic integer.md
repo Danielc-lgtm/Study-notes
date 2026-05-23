@@ -20,7 +20,7 @@ Find the minimal polynomial of $\alpha = \sqrt{2} + \sqrt{3}$ over $\mathbb{Q}$.
 
 The setting is the complex number $\alpha = \sqrt{2} + \sqrt{3} \in \mathbb{R} \subset \mathbb{C}$, the [[Def - Polynomial Ring|polynomial ring]] $\mathbb{Z}[X]$, and the notions of [[Def - Algebraic Integer and Minimal Polynomial|algebraic integer and minimal polynomial]].
 
-A complex number $\alpha$ is an [[Def - Algebraic Integer and Minimal Polynomial|algebraic integer]] when it is a root of some **monic** polynomial in $\mathbb{Z}[X]$ — a polynomial $f = X^n + a_{n-1}X^{n-1} + \cdots + a_0$ with every $a_i \in \mathbb{Z}$ and leading coefficient $1$. The set of polynomials in $\mathbb{Z}[X]$ vanishing at $\alpha$ is the kernel ideal $I = \ker(\varphi)$ of the evaluation homomorphism $\varphi : \mathbb{Z}[X] \to \mathbb{C}$, $g \mapsto g(\alpha)$.
+A complex number $\alpha$ is an [[Def - Algebraic Integer and Minimal Polynomial|algebraic integer]] when it is a root of some **monic** polynomial in $\mathbb{Z}[X]$ — a polynomial $f = X^n + a_{n-1}X^{n-1} + \cdots + a_0$ with every $a_i \in \mathbb{Z}$ and leading coefficient $1$. The set of polynomials in $\mathbb{Z}[X]$ vanishing at $\alpha$ is the kernel [[Def - Ideal|ideal]] $I = \ker(\varphi)$ of the evaluation homomorphism $\varphi : \mathbb{Z}[X] \to \mathbb{C}$, $g \mapsto g(\alpha)$.
 
 ![[Thm - The Minimal Polynomial Generates the Kernel Ideal#Statement]]
 

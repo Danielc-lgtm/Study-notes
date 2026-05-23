@@ -34,11 +34,11 @@ Why a *weighted sum* and not some other aggregation (max, geometric mean, etc.)?
 
 The deep observation is that the weighted-sum problem reduces to a *single* LS problem with stacked matrices. Define $\tilde{A}$ to stack $\sqrt{\lambda_i} A_i$ vertically and $\tilde{b}$ to stack $\sqrt{\lambda_i} b_i$ vertically. Then
 $$J(x) = \sum_i \lambda_i \|A_i x - b_i\|^2 = \sum_i \|\sqrt{\lambda_i}(A_i x - b_i)\|^2 = \|\tilde{A} x - \tilde{b}\|^2.$$
-So the multi-objective LS problem is *literally* an LS problem with the stacked matrix and right-hand side. All the §XI.1 machinery — normal equations, QR factorization, pseudoinverse — applies unchanged. No new mathematics is needed; what is new is the *recognition* that the problem has this structure.
+So the multi-objective LS problem is *literally* an LS problem with the stacked matrix and right-hand side. All the §XI.1 machinery — normal equations, QR factorization, [[Def - Pseudoinverse|pseudoinverse]] — applies unchanged. No new mathematics is needed; what is new is the *recognition* that the problem has this structure.
 
 This is the structural reason why so many applications in §XI.2–§XI.3 reduce to LS: they are multi-objective problems whose objectives are all quadratic in the unknown. Data fitting with regularization (Tikhonov), constrained problems (in the limit of large weight on the constraint), control (output vs. input cost), estimation (measurement consistency vs. model consistency) — all are multi-objective LS in disguise.
 
-The remaining question is *how to choose the weights*. There is no universal answer; it depends on the application. In data fitting with regularization, $\lambda$ is chosen by cross-validation to minimize test error. In control, $\rho$ (the weight on input cost) is chosen by hand-tuning until the system behaves acceptably. In estimation, $\lambda$ is chosen by validation against held-out measurements. The weights are *knobs* that tune the trade-off; choosing them well is part of the engineering practice.
+The remaining question is *how to choose the weights*. There is no universal answer; it depends on the application. In data fitting with regularization, $\lambda$ is chosen by cross-[[Def - Validation (Training and Test Error)|validation]] to minimize test error. In control, $\rho$ (the weight on input cost) is chosen by hand-tuning until the system behaves acceptably. In estimation, $\lambda$ is chosen by [[Def - Validation (Training and Test Error)|validation]] against held-out measurements. The weights are *knobs* that tune the trade-off; choosing them well is part of the engineering practice.
 
 ---
 

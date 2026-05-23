@@ -17,7 +17,7 @@ A function $f : \mathbb{R} \to \mathbb{R}$ is **even** if $f(-x) = f(x)$ for all
 
 Let $V_e \subseteq \mathbb{R}^\mathbb{R}$ be the set of even functions and $V_o \subseteq \mathbb{R}^\mathbb{R}$ the set of odd functions.
 
-Show that $V_e$ and $V_o$ are subspaces of $\mathbb{R}^\mathbb{R}$, and that
+Show that $V_e$ and $V_o$ are [[Def - Subspace|subspaces]] of $\mathbb{R}^\mathbb{R}$, and that
 
 $$\mathbb{R}^\mathbb{R} = V_e \oplus V_o.$$
 
@@ -115,7 +115,7 @@ Combining Step 2 and Step 3: $\mathbb{R}^\mathbb{R} = V_e \oplus V_o$.
 > [!note]- Complete formal solution
 > **Claim.** $V_e$ and $V_o$ are subspaces of $\mathbb{R}^\mathbb{R}$, and $\mathbb{R}^\mathbb{R} = V_e \oplus V_o$.
 >
-> *Proof.* *Step 1 — Subspaces.* For each parity, the zero function satisfies the parity condition, the sum of two parity-respecting functions has the same parity, and a scalar multiple preserves parity. So both $V_e$ and $V_o$ are subspaces.
+> *Proof.* *Step 1 — [[Def - Subspace|Subspaces]].* For each parity, the zero function satisfies the parity condition, the sum of two parity-respecting functions has the same parity, and a scalar multiple preserves parity. So both $V_e$ and $V_o$ are subspaces.
 >
 > *Step 2 — Trivial intersection.* If $f \in V_e \cap V_o$, then for every $x$, $f(-x) = f(x)$ and $f(-x) = -f(x)$, so $f(x) = -f(x)$, i.e. $2 f(x) = 0$, hence $f(x) = 0$. So $f$ is identically zero. By [[Thm - Direct Sum of Two Subspaces]], $V_e + V_o$ is a direct sum.
 >
@@ -133,7 +133,7 @@ Combining Step 2 and Step 3: $\mathbb{R}^\mathbb{R} = V_e \oplus V_o$.
 
 **Symmetrization and antisymmetrization decompose any space under an involution into invariants and anti-invariants.** The construction $f_e = \frac{1}{2}(f + f^\vee)$, $f_o = \frac{1}{2}(f - f^\vee)$ where $f^\vee(x) = f(-x)$ is a special case of a much more general construction. Whenever a vector space $V$ carries an **involution** — a linear map $\sigma : V \to V$ with $\sigma^2 = \operatorname{id}$ — it decomposes as $V = V^+ \oplus V^-$ where $V^+ = \ker(\sigma - I)$ (the $+1$-eigenspace) and $V^- = \ker(\sigma + I)$ (the $-1$-eigenspace), via $v = \frac{1}{2}(v + \sigma v) + \frac{1}{2}(v - \sigma v)$. The same trick decomposes matrices into symmetric and antisymmetric parts ($M = \frac{1}{2}(M + M^T) + \frac{1}{2}(M - M^T)$), tensors into symmetric and antisymmetric parts (the basis of differential forms in [[Linear Algebra IX — §9 Multilinear Algebra and Determinants]]), and operators on Hilbert space into Hermitian and skew-Hermitian parts. The pattern is one of the most reusable in linear algebra: identify an involution, use it to split.
 
-**The proof works in characteristic not equal to 2.** The construction relies on dividing by $2$, which is invalid in fields of characteristic $2$ (such as $\mathbb{F}_2$). In characteristic $2$, even and odd functions coincide (since $-1 = 1$), and the decomposition degenerates. This is a recurring caution: many "averaging" constructions in linear algebra fail in characteristic $2$ or in fields where some integer is non-invertible. Examples include the polarization identity (recovers an inner product from a norm; divides by $2$ and $4$), the eigenspace decomposition of an involution (divides by $2$), and Maschke's theorem on group representations (divides by the group order). Being alert to characteristic-dependent steps is a transferable diagnostic.
+**The proof works in characteristic not equal to 2.** The construction relies on dividing by $2$, which is invalid in fields of characteristic $2$ (such as $\mathbb{F}_2$). In characteristic $2$, even and odd functions coincide (since $-1 = 1$), and the decomposition degenerates. This is a recurring caution: many "averaging" constructions in linear algebra fail in characteristic $2$ or in fields where some integer is non-invertible. Examples include the polarization identity (recovers an inner product from a norm; divides by $2$ and $4$), the eigenspace decomposition of an involution (divides by $2$), and Maschke's theorem on [[Def - Group|group]] representations (divides by the [[Def - Group|group]] order). Being alert to characteristic-dependent steps is a transferable diagnostic.
 
 **The trick "evaluate $f$ at $\pm x$" is a substitution that produces invariants automatically.** The substitution $x \to -x$ is an involution on the domain $\mathbb{R}$, and any function $f : \mathbb{R} \to \mathbb{R}$ can be replaced by $f^\vee(x) := f(-x)$. The pair $(f, f^\vee)$ then admits a linear decomposition into symmetric and antisymmetric combinations, which is the abstract source of the formulae here. The same trick — replace a function by its image under a domain symmetry, average to symmetrize — works for: decomposing periodic functions by Fourier components (the domain symmetry is translation), decomposing distributions by their parity under rotation (the symmetry is $O(n)$-action), and decomposing wave functions by parity in quantum mechanics. The skill is recognizing when a domain symmetry exists; once recognized, the decomposition is mechanical.
 

@@ -11,7 +11,7 @@ tags: [geometry, riemannian-geometry, exponential-map, sphere]
 
 # Problem Statement
 
-Let $(S^n, g)$ be the unit $n$-sphere with the round metric. For $p \in S^n$, the [[Def - The Riemannian Exponential Map|Riemannian exponential map]] $\exp_p : T_p S^n \to S^n$ is defined by following geodesics from $p$ for unit time.
+Let $(S^n, g)$ be the unit $n$-sphere with the round metric. For $p \in S^n$, the [[Def - The Riemannian Exponential Map|Riemannian exponential map]] $\exp_p : T_p S^n \to S^n$ is defined by following [[Def - Geodesic|geodesics]] from $p$ for unit time.
 
 (a) Compute $\exp_p$ explicitly using the great-circle parametrisation.
 
@@ -82,7 +82,7 @@ with $\exp_p(0) = p$ (taking the limit, $\cos(0) = 1$ and $\sin(0)/0 \cdot v$ ma
 > [!note]- Derivation
 > The geodesic $\gamma_v$ with initial data $(p, v)$ is, by Step 2 of [[Ex - Great Circles are the Geodesics of the Sphere|the great-circle exercise]], $\gamma_v(t) = \cos(|v|t)p + \sin(|v|t) v/|v|$. Setting $t = 1$ gives the formula.
 
-**(b) Diffeomorphism on the open ball of radius $\pi$ onto $S^n \setminus \{-p\}$.**
+**(b) [[Def - Diffeomorphism|Diffeomorphism]] on the open ball of radius $\pi$ onto $S^n \setminus \{-p\}$.**
 
 > [!note]- Derivation
 > *Smoothness:* The formula $\exp_p(v) = \cos(|v|)p + \sin(|v|)v/|v|$ is smooth on $T_pS^n \setminus \{0\}$. Near $v = 0$, smoothness follows from the Taylor expansion $\sin(|v|)/|v| = 1 - |v|^2/6 + O(|v|^4)$, which is smooth in $v$ even at $0$. So $\exp_p$ is a smooth map $T_pS^n \to S^n$.
@@ -129,4 +129,4 @@ with $\exp_p(0) = p$ (taking the limit, $\cos(0) = 1$ and $\sin(0)/0 \cdot v$ ma
 
 **The injectivity radius equals the first conjugate distance for the round sphere.** The injectivity radius at $p \in S^n$ is the largest $r$ such that $\exp_p|_{B(0, r)}$ is injective — which is $\pi$ on the unit sphere. This equals the first conjugate distance (also $\pi$), so the entire injectivity-radius theory and the conjugate-point theory coincide on the sphere. In general manifolds the injectivity radius can be *smaller* than the first conjugate distance — the additional obstruction is the existence of multiple minimising geodesics (cut points) that aren't necessarily conjugate. The sphere is the simplest case where they agree.
 
-**Computing the exponential map explicitly is the cleanest way to understand the geometry of a homogeneous space.** Whenever a manifold has enough symmetry (homogeneous, symmetric space), the geodesics are explicit (one-parameter subgroups, orbits of one-parameter isometry groups), so $\exp_p$ has an explicit formula. The technique transfers: on hyperbolic space $\mathbb{H}^n$, $\exp_p$ is the analogous formula with hyperbolic trigonometric functions ($\cosh, \sinh$ instead of $\cos, \sin$), and is a *global* diffeomorphism $T_p \mathbb{H}^n \to \mathbb{H}^n$ (no conjugate points anywhere). On a Lie group with bi-invariant metric, the Riemannian exponential is the Lie-group exponential, and the conjugate-point structure is determined by the Lie algebra eigenvalues. Each case is a direct computation — the difficulty is in setting up the geodesics, after which the exponential map is a one-line evaluation.
+**Computing the exponential map explicitly is the cleanest way to understand the geometry of a homogeneous space.** Whenever a manifold has enough symmetry (homogeneous, symmetric space), the geodesics are explicit (one-parameter [[Def - Subgroup|subgroups]], orbits of one-parameter [[Def - Isometry|isometry]] [[Def - Group|groups]]), so $\exp_p$ has an explicit formula. The technique transfers: on hyperbolic space $\mathbb{H}^n$, $\exp_p$ is the analogous formula with hyperbolic trigonometric functions ($\cosh, \sinh$ instead of $\cos, \sin$), and is a *global* diffeomorphism $T_p \mathbb{H}^n \to \mathbb{H}^n$ (no conjugate points anywhere). On a Lie group with bi-invariant metric, the Riemannian exponential is the Lie-group exponential, and the conjugate-point structure is determined by the Lie algebra eigenvalues. Each case is a direct computation — the difficulty is in setting up the geodesics, after which the exponential map is a one-line evaluation.

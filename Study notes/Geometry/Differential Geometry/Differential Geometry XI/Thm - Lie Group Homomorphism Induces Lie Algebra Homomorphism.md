@@ -17,16 +17,16 @@ $G$ and $H$ are Lie groups with Lie algebras $\mathfrak{g}$ and $\mathfrak{h}$, 
 
 # Statement
 
-> **Theorem.** Let $F : G \to H$ be a Lie group homomorphism between Lie groups. Then the differential $F_* = dF_{e_G} : \mathfrak{g} \to \mathfrak{h}$ is a Lie algebra homomorphism: it is linear and preserves the bracket,
+> **Theorem.** Let $F : G \to H$ be a Lie group homomorphism between Lie [[Def - Group|groups]]. Then the differential $F_* = dF_{e_G} : \mathfrak{g} \to \mathfrak{h}$ is a Lie algebra homomorphism: it is linear and preserves the bracket,
 > $$F_*[X, Y]_{\mathfrak{g}} = [F_* X, F_* Y]_{\mathfrak{h}} \qquad \text{for all } X, Y \in \mathfrak{g}.$$
 
-> **Corollary (functoriality).** The assignment $G \mapsto \mathfrak{g}$, $F \mapsto F_*$ defines a functor $\mathrm{Lie} : \mathbf{LieGrp} \to \mathbf{LieAlg}$ from the category of Lie groups to the category of (finite-dimensional real) Lie algebras.
+> **Corollary (functoriality).** The assignment $G \mapsto \mathfrak{g}$, $F \mapsto F_*$ defines a functor $\mathrm{Lie} : \mathbf{LieGrp} \to \mathbf{LieAlg}$ from the category of Lie [[Def - Group|groups]] to the category of (finite-dimensional real) Lie algebras.
 
 ---
 
 # Motivation
 
-Lie groups have two structures — a smooth manifold and a group — and the natural morphisms (Lie group homomorphisms) respect both. The Lie algebra is the linearization of a Lie group at the identity, capturing infinitesimal data. A natural question is: do the morphisms of Lie groups linearize to morphisms of Lie algebras? More precisely, given a Lie group homomorphism $F : G \to H$, does $F_* = dF_e$ preserve the Lie algebra structure?
+Lie groups have two structures — a smooth manifold and a group — and the natural morphisms (Lie group [[Def - Homomorphism|homomorphisms]]) respect both. The Lie algebra is the linearization of a Lie group at the identity, capturing infinitesimal data. A natural question is: do the morphisms of Lie groups linearize to morphisms of Lie algebras? More precisely, given a Lie group homomorphism $F : G \to H$, does $F_* = dF_e$ preserve the Lie algebra structure?
 
 The answer, yes, is what makes the Lie functor possible. If $F_*$ only preserved linearity (which is automatic for a differential), then $\mathrm{Lie}$ would be a functor only into vector spaces. The bracket-preservation is what upgrades it to a functor into Lie algebras, and this is what makes the Lie correspondence meaningful: a Lie group homomorphism is the same data as a Lie algebra homomorphism (at the level of differentials), at least when the target side is simply connected.
 
@@ -132,7 +132,7 @@ Show that the left-invariant vector field $X^L$ on $G$ is $F$-related to the lef
 >
 > **Hint:** Use Lemma 1 to factor $F \circ L_g$, differentiate at $e$, and apply chain rule.
 >
-> **Why needed:** It says Lie group homomorphisms preserve left-invariance at the level of vector fields, so brackets transport correctly.
+> **Why needed:** It says Lie group [[Def - Homomorphism|homomorphisms]] preserve left-invariance at the level of vector fields, so brackets transport correctly.
 >
 > > [!note]- Full proof
 > > $$dF_g(X^L|_g) = dF_g \circ d(L_g)_e(X_e) = d(F \circ L_g)_e(X_e) = d(L_{F(g)} \circ F)_e(X_e) = d(L_{F(g)})_{F(e)} \circ dF_e(X_e) = d(L_{F(g)})_{e_H}(F_* X) = (F_* X)^L|_{F(g)}.$$
@@ -143,7 +143,7 @@ Show that the left-invariant vector field $X^L$ on $G$ is $F$-related to the lef
 >
 > **Hint:** Test against $f \in C^\infty(N)$ by tracking $X_1 X_2 (f \circ F)$ and $Y_1 Y_2 f \circ F$.
 >
-> **Why needed:** It is the smooth-map (not-necessarily-diffeomorphism) generalization of "pushforward preserves bracket", and combined with Lemma 2 it gives the bracket-preservation property of $F_*$.
+> **Why needed:** It is the smooth-map (not-necessarily-[[Def - Diffeomorphism|diffeomorphism]]) generalization of "pushforward preserves bracket", and combined with Lemma 2 it gives the bracket-preservation property of $F_*$.
 >
 > > [!note]- Full proof
 > > For $f \in C^\infty(N)$, $X_i \sim_F Y_i$ means $X_i(f \circ F) = (Y_i f) \circ F$ for every $f$. Applying twice:
@@ -174,7 +174,7 @@ Show that the left-invariant vector field $X^L$ on $G$ is $F$-related to the lef
 
 **Representation theory — differentiating a Lie group representation.** Given a Lie group representation $\rho : G \to \mathrm{GL}(V)$, the differential $\rho_* : \mathfrak{g} \to \mathfrak{gl}(V)$ is a Lie algebra representation, by this theorem. Concrete computation: for $G = \mathrm{SU}(2)$ and the defining representation $\rho : \mathrm{SU}(2) \to \mathrm{GL}(\mathbb{C}^2)$, compute $\rho_* : \mathfrak{su}(2) \to \mathfrak{gl}(\mathbb{C}^2)$ as the inclusion of skew-Hermitian traceless matrices into $\mathfrak{gl}(2, \mathbb{C})$. Then differentiate the adjoint representation $\mathrm{Ad} : \mathrm{SU}(2) \to \mathrm{SO}(3)$ to recover $\mathrm{ad} : \mathfrak{su}(2) \to \mathfrak{so}(3)$, the bracket on $\mathfrak{su}(2)$ — a self-referential consistency check.
 
-**Algebraic topology — covering maps via Lie group homomorphisms.** A Lie group homomorphism $F : G \to H$ with $F_*$ an isomorphism and $G$ connected is a covering map (it is a local diffeomorphism by the inverse function theorem applied at $e$, plus constant rank, plus surjectivity onto the identity component of $H$). The kernel $\ker F$ is then a discrete normal subgroup of $G$, hence central. The canonical example: $\mathrm{SU}(2) \to \mathrm{SO}(3)$, kernel $\{\pm I\}$.
+**Algebraic topology — covering maps via Lie group homomorphisms.** A Lie group homomorphism $F : G \to H$ with $F_*$ an isomorphism and $G$ connected is a covering map (it is a local [[Def - Diffeomorphism|diffeomorphism]] by the inverse function theorem applied at $e$, plus constant rank, plus surjectivity onto the identity component of $H$). The kernel $\ker F$ is then a discrete normal [[Def - Subgroup|subgroup]] of $G$, hence central. The canonical example: $\mathrm{SU}(2) \to \mathrm{SO}(3)$, kernel $\{\pm I\}$.
 
 **Quantum mechanics — angular momentum operators as Lie algebra representations.** The angular momentum operators $L_x, L_y, L_z$ on $L^2(\mathbb{R}^3)$ are obtained as the differential of the rotation action $\rho : \mathrm{SO}(3) \to \mathrm{U}(L^2(\mathbb{R}^3))$. They satisfy the $\mathfrak{so}(3)$ commutation relations $[L_x, L_y] = i\hbar L_z$ (and cyclic) — exactly the Lie algebra bracket of $\mathfrak{so}(3)$ pushed forward to the unitary group's Lie algebra. The bracket-preservation conclusion of this theorem is the source of the canonical commutation relations.
 

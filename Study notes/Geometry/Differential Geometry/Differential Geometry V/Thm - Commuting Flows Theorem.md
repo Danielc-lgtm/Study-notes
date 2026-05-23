@@ -82,7 +82,7 @@ Unpack this:
 
 **(a) ⟺ (c).** By antisymmetry, $[X, Y] = 0 \iff [Y, X] = 0$; apply (a)⟺(b) with the roles of $X$ and $Y$ swapped.
 
-**(b) ⟹ (d).** Suppose $Y$ is invariant under $\phi^X$. Fix $p \in M$. The curve $t \mapsto \phi^X_{-s} \circ \psi^Y_t \circ \phi^X_s(p)$ starts at $\phi^X_{-s}(\phi^X_s(p)) = p$ (using the group law for $\phi^X$) and its velocity at $t$ is
+**(b) ⟹ (d).** Suppose $Y$ is invariant under $\phi^X$. Fix $p \in M$. The curve $t \mapsto \phi^X_{-s} \circ \psi^Y_t \circ \phi^X_s(p)$ starts at $\phi^X_{-s}(\phi^X_s(p)) = p$ (using the [[Def - Group|group]] law for $\phi^X$) and its velocity at $t$ is
 
 $$\frac{d}{dt}\left(\phi^X_{-s}(\psi^Y_t(\phi^X_s(p)))\right) = d(\phi^X_{-s})_{\psi^Y_t(\phi^X_s(p))}\left(Y_{\psi^Y_t(\phi^X_s(p))}\right) = Y_{\phi^X_{-s} \psi^Y_t \phi^X_s(p)},$$
 

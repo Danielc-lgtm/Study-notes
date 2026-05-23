@@ -21,7 +21,7 @@ A matrix $A \in \mathbf{F}^{n, n}$ is **upper-triangular** if $A_{j, k} = 0$ for
 
 ![[Def - Invertibility and Isomorphism#The Definition]]
 
-For a triangular matrix, the **diagonal entries** $A_{1, 1}, A_{2, 2}, \ldots, A_{n, n}$ are the entries on the main diagonal. An upper-triangular matrix is invertible iff all diagonal entries are non-zero (its determinant is the product of the diagonal entries; we will use the equivalent fact that an upper-triangular matrix has the *standard subspaces* $\operatorname{span}(e_1, \ldots, e_k)$ as invariant subspaces).
+For a triangular matrix, the **diagonal entries** $A_{1, 1}, A_{2, 2}, \ldots, A_{n, n}$ are the entries on the main diagonal. An upper-triangular matrix is invertible iff all diagonal entries are non-zero (its determinant is the product of the diagonal entries; we will use the equivalent fact that an upper-triangular matrix has the *standard [[Def - Subspace|subspaces]]* $\operatorname{span}(e_1, \ldots, e_k)$ as invariant [[Def - Subspace|subspaces]]).
 
 ---
 
@@ -31,7 +31,7 @@ For a triangular matrix, the **diagonal entries** $A_{1, 1}, A_{2, 2}, \ldots, A
 
 **Assumption pattern.** $A$ is upper-triangular and invertible, hence has non-zero diagonal entries. The defining feature: triangularity is equivalent to a chain of invariant subspaces, and invertibility plus this chain forces the inverse to also preserve the chain.
 
-**Theorem routing.** The cleanest argument: triangularity of $A$ means $A V_k \subseteq V_k$ for each $k$ (where $V_k = \operatorname{span}(e_1, \ldots, e_k)$). Since $A$ is invertible and these are equal-dimension subspaces ($\dim AV_k \leq \dim V_k = k$, but $A$ is injective on $V_k$ so $\dim A V_k = k$, and $AV_k \subseteq V_k$ forces $AV_k = V_k$), $A^{-1}$ also satisfies $A^{-1} V_k = V_k$ for each $k$, which is equivalent to $A^{-1}$ being upper-triangular.
+**Theorem routing.** The cleanest argument: triangularity of $A$ means $A V_k \subseteq V_k$ for each $k$ (where $V_k = \operatorname{span}(e_1, \ldots, e_k)$). Since $A$ is invertible and these are equal-[[Def - Dimension|dimension]] subspaces ($\dim AV_k \leq \dim V_k = k$, but $A$ is injective on $V_k$ so $\dim A V_k = k$, and $AV_k \subseteq V_k$ forces $AV_k = V_k$), $A^{-1}$ also satisfies $A^{-1} V_k = V_k$ for each $k$, which is equivalent to $A^{-1}$ being upper-triangular.
 
 For the diagonal entries: from $AA^{-1} = I_n$, the $(k, k)$-entry gives $\sum_r A_{k, r} (A^{-1})_{r, k} = 1$. The sum collapses by triangularity: $A_{k, r} = 0$ for $r < k$, and $(A^{-1})_{r, k} = 0$ for $r > k$, so only $r = k$ survives, giving $A_{k, k} (A^{-1})_{k, k} = 1$, i.e., $(A^{-1})_{k, k} = (A_{k, k})^{-1}$.
 
@@ -47,7 +47,7 @@ This solution deploys the following legal operations from [[Linear Algebra III â
 
 2. **Use $\mathcal{M}(ST) = \mathcal{M}(S)\mathcal{M}(T)$** (operation 7). Reading off entries of $AA^{-1}$ via matrix multiplication.
 
-3. **Convert injectivity to surjectivity (or vice versa) using equal finite dimension** (operation 4). In the invariant-subspace argument: $A V_k \subseteq V_k$ plus $A$ invertible (hence injective on $V_k$) plus $\dim V_k = k$ forces $A V_k = V_k$.
+3. **Convert injectivity to surjectivity (or vice versa) using equal finite [[Def - Dimension|dimension]]** (operation 4). In the invariant-subspace argument: $A V_k \subseteq V_k$ plus $A$ invertible (hence injective on $V_k$) plus $\dim V_k = k$ forces $A V_k = V_k$.
 
 4. **Decompose a domain via $V = \operatorname{null} T \oplus U$** (operation 9), used implicitly via invariant-subspace chain.
 

@@ -30,7 +30,7 @@ The Riemannian definition requires that $g$ be smooth, symmetric, and *positive-
 
 **Why require signature constant globally?** On a connected manifold this is automatic — the eigenvalues of $g_p$ vary continuously in $p$ and never pass through zero (by non-degeneracy), so the signs are locally constant. On a disconnected manifold one could in principle have different signatures on different components, but for the definition to be useful (so that the manifold has a well-defined "type"), we require the signature to be uniform. This is a definitional convention rather than a forced one.
 
-**Why the convention $p + q = n$?** This is just the dimension count — at every point, the bilinear form has $n$ eigenvalues counted with multiplicity, and they must be distributed between positive ($p$) and negative ($q$).
+**Why the convention $p + q = n$?** This is just the [[Def - Dimension|dimension]] count — at every point, the bilinear form has $n$ eigenvalues counted with multiplicity, and they must be distributed between positive ($p$) and negative ($q$).
 
 **Per-axiom failure analysis:**
 
@@ -73,13 +73,13 @@ The inverse metric $g^{ij}(x)$ is defined by $g^{ij}g_{jk} = \delta^i_k$; it exi
 
 # Categorical / Structural Definition
 
-A semi-Riemannian metric of signature $(p, q)$ on $M$ is equivalent to a reduction of the structure group of the tangent bundle $TM$ from $GL(n, \mathbb{R})$ to the **indefinite orthogonal group** $O(p, q)$ — the group of linear transformations of $\mathbb{R}^n$ preserving the standard form of signature $(p, q)$:
+A semi-Riemannian metric of signature $(p, q)$ on $M$ is equivalent to a reduction of the structure [[Def - Group|group]] of the tangent bundle $TM$ from $GL(n, \mathbb{R})$ to the **indefinite orthogonal group** $O(p, q)$ — the group of linear transformations of $\mathbb{R}^n$ preserving the standard form of signature $(p, q)$:
 $$
 O(p, q) = \{A \in GL(n, \mathbb{R}) : A^T \eta_{p,q} A = \eta_{p,q}\},
 $$
 where $\eta_{p,q} = \mathrm{diag}(1, \ldots, 1, -1, \ldots, -1)$ with $p$ ones and $q$ minus ones. Geometrically, this reduction selects at each point a **pseudo-orthonormal frame** — a basis $(e_1, \ldots, e_n)$ with $g(e_i, e_j) = \pm \delta_{ij}$ — and the indefinite orthogonal group is the change-of-frame group between such bases.
 
-For $(p, q) = (n, 0)$, $O(n, 0) = O(n)$ is the usual orthogonal group — the Riemannian case. For $(p, q) = (1, n-1)$, $O(1, n-1)$ is the **Lorentz group** of dimension $n$, the isometry group of $n$-dimensional Minkowski space (with the time-direction-fixed origin). The classification of semi-Riemannian metrics by signature corresponds to the classification of orthogonal groups $O(p, q)$ of the same total dimension.
+For $(p, q) = (n, 0)$, $O(n, 0) = O(n)$ is the usual orthogonal group — the Riemannian case. For $(p, q) = (1, n-1)$, $O(1, n-1)$ is the **Lorentz group** of [[Def - Dimension|dimension]] $n$, the isometry group of $n$-dimensional Minkowski space (with the time-direction-fixed origin). The classification of semi-Riemannian metrics by signature corresponds to the classification of orthogonal [[Def - Group|groups]] $O(p, q)$ of the same total dimension.
 
 The bundle picture: a semi-Riemannian metric is a smooth section of the bundle whose fibre at $p$ is the space of non-degenerate symmetric bilinear forms on $T_pM$ of signature $(p, q)$. *Unlike* the Riemannian case, this fibre is not a convex set — it is a union of components (one per signature), and even within a fixed signature the set of metrics of that signature is not convex. This is why the partition-of-unity argument that works for Riemannian metrics ([[Thm - Existence of Riemannian Metrics via Partitions of Unity]]) *fails* for general signatures, and why the existence of, say, a Lorentzian metric is genuinely obstructed.
 
@@ -114,7 +114,7 @@ Higher-signature cases appear in:
 
 **Is NOT an instance — a non-symmetric bilinear form.** A non-degenerate antisymmetric 2-form $\omega$ — for example a [[Def - Closed and Exact Forms|symplectic form]] $\omega = dp \wedge dq$ on $\mathbb{R}^{2n}$ — is non-degenerate but not symmetric. It is *not* a metric in the semi-Riemannian sense; it gives a symplectic structure rather than an inner product. The signature concept does not apply.
 
-**Corollary — the signature is invariant under isometries.** If $F : (M, g) \to (N, h)$ is a (semi-)Riemannian isometry, then $g$ and $h$ have the same signature. This is because the pullback $F^*h = g$ preserves signature pointwise (isometries are pointwise isomorphisms of inner-product spaces).
+**Corollary — the signature is invariant under [[Def - Isometry|isometries]].** If $F : (M, g) \to (N, h)$ is a (semi-)Riemannian isometry, then $g$ and $h$ have the same signature. This is because the pullback $F^*h = g$ preserves signature pointwise ([[Def - Isometry|isometries]] are pointwise [[Def - Isomorphism|isomorphisms]] of inner-product spaces).
 
 **Corollary — every signature is achievable on $\mathbb{R}^n$.** For any $(p, q)$ with $p + q = n$, the constant metric $\sum_{i=1}^p dx_i^2 - \sum_{i=p+1}^n dx_i^2$ is a flat semi-Riemannian metric of signature $(p, q)$ on $\mathbb{R}^n$. So locally, every signature is realisable; the global question of whether a given smooth manifold admits a metric of a given signature is more delicate ([[Thm - A Lorentzian Manifold Need Not Exist on Every Smooth Manifold]]).
 

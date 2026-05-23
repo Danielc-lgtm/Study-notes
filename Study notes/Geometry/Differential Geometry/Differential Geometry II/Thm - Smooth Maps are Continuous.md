@@ -62,7 +62,7 @@ The intuition: in a chart neighbourhood, the smooth map $F$ factors as
 
 $$F|_U = \psi^{-1} \circ \widehat F \circ \varphi,$$
 
-a composition of three maps: the homeomorphism $\varphi : U \to \widetilde U$, the smooth Euclidean map $\widehat F : \widetilde U \to \widetilde V$, and the inverse homeomorphism $\psi^{-1} : \widetilde V \to V$. Each factor is continuous: $\varphi$ and $\psi^{-1}$ by definition of chart, $\widehat F$ because smooth Euclidean maps are continuous (basic multivariable calculus). The composition of continuous maps is continuous. So $F|_U$ is continuous.
+a composition of three maps: the [[Def - Homeomorphism|homeomorphism]] $\varphi : U \to \widetilde U$, the smooth Euclidean map $\widehat F : \widetilde U \to \widetilde V$, and the inverse [[Def - Homeomorphism|homeomorphism]] $\psi^{-1} : \widetilde V \to V$. Each factor is continuous: $\varphi$ and $\psi^{-1}$ by definition of chart, $\widehat F$ because smooth Euclidean maps are continuous (basic multivariable calculus). The composition of continuous maps is continuous. So $F|_U$ is continuous.
 
 **The mechanism in one line:** $F$ is locally a chart-pulled-back smooth Euclidean map, and smooth Euclidean maps are continuous, so $F$ is locally continuous; continuity is a local property, so $F$ is continuous.
 
@@ -121,7 +121,7 @@ At each point $p \in M$, write $F$ locally as a composition of three maps: the c
 > **Why needed:** Lets us pass from "$F$ continuous in each chart" to "$F$ continuous on $M$".
 >
 > > [!note]- Full proof
-> > *Forward:* if $F$ is continuous on $M$, then for any subset $U_p \subseteq M$, $F|_{U_p}$ is continuous (preimages of opens by restriction are opens in $U_p$ in the subspace topology — automatic).
+> > *Forward:* if $F$ is continuous on $M$, then for any subset $U_p \subseteq M$, $F|_{U_p}$ is continuous (preimages of opens by restriction are opens in $U_p$ in the [[Def - Subspace|subspace]] topology — automatic).
 > >
 > > *Reverse:* suppose every $p$ has a neighbourhood $U_p$ on which $F$ is continuous. To show $F$ is continuous, let $V \subseteq N$ be open. We show $F^{-1}(V)$ is open in $M$. For each $p \in F^{-1}(V)$, the set $F|_{U_p}^{-1}(V)$ is open in $U_p$ (by continuity of $F|_{U_p}$), hence open in $M$ (since $U_p$ is open in $M$ and open subsets of open sets are open). Thus
 > > $$F^{-1}(V) = \bigcup_{p \in F^{-1}(V)} F|_{U_p}^{-1}(V)$$

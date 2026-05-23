@@ -20,7 +20,7 @@ $M, N$ are oriented smooth $n$-manifolds, possibly with boundary. $F : N \to M$ 
 
 > **Change of Variables for Manifold Integrals.** Let $M, N$ be oriented smooth $n$-manifolds (possibly with boundary), and let $F : N \to M$ be a smooth map.
 >
-> (a) **Orientation-preserving diffeomorphism.** If $F$ is an orientation-preserving diffeomorphism and $\omega \in \Omega^n_c(M)$, then
+> (a) **Orientation-preserving [[Def - Diffeomorphism|diffeomorphism]].** If $F$ is an orientation-preserving diffeomorphism and $\omega \in \Omega^n_c(M)$, then
 > $$\int_M\omega = \int_N F^*\omega.$$
 >
 > (b) **Orientation-reversing diffeomorphism.** If $F$ is an orientation-reversing diffeomorphism, then
@@ -34,7 +34,7 @@ $M, N$ are oriented smooth $n$-manifolds, possibly with boundary. $F : N \to M$ 
 
 # Motivation
 
-A manifold integral $\int_M\omega$ ought to be invariant under "relabeling" the manifold — that is, under orientation-preserving diffeomorphisms. The change-of-variables theorem is the precise statement of this invariance. Parts (a) and (b) say: pulling back a top-form via a diffeomorphism preserves the integral up to a sign that depends only on whether the diffeomorphism preserves or reverses orientation.
+A manifold integral $\int_M\omega$ ought to be invariant under "relabeling" the manifold — that is, under orientation-preserving [[Def - Diffeomorphism|diffeomorphisms]]. The change-of-variables theorem is the precise statement of this invariance. Parts (a) and (b) say: pulling back a top-form via a diffeomorphism preserves the integral up to a sign that depends only on whether the diffeomorphism preserves or reverses orientation.
 
 Part (c) is the computationally useful version: for an explicit parametrization $F_i$ from a domain $D_i \subseteq \mathbb{R}^n$ into $M$, the integral $\int_M\omega$ over $M$ becomes the ordinary multivariable Riemann integral $\int_{D_i}F_i^*\omega$ on the source. This is how one *actually computes* manifold integrals: parametrize, pull back, integrate.
 

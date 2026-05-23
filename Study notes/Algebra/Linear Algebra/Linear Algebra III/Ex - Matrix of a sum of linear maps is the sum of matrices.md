@@ -32,7 +32,7 @@ The vector space $\mathbf{F}^{m, n}$ has entry-wise operations on matrices: $(A 
 
 **Theorem routing.** The route is to compute the $(j, k)$-entry of each side of the claimed identity. The $(j, k)$-entry of $\mathcal{M}(S + T)$ is the $w_j$-coefficient of $(S + T)(v_k) = S v_k + T v_k$, which by linearity of basis expansion is the sum of the $w_j$-coefficients of $S v_k$ and $T v_k$, i.e., $\mathcal{M}(S)_{j, k} + \mathcal{M}(T)_{j, k}$. This is the $(j, k)$-entry of $\mathcal{M}(S) + \mathcal{M}(T)$.
 
-**Key decision point.** The crucial recognition is that "linearity of $\mathcal{M}$" reduces to "linearity of basis expansion": the operation of extracting the coefficient of $w_j$ from an expansion is itself linear. Once you see this, the proof is one line per axiom. The "key decision" is to compute entries directly rather than try to argue abstractly about isomorphisms.
+**Key decision point.** The crucial recognition is that "linearity of $\mathcal{M}$" reduces to "linearity of basis expansion": the operation of extracting the coefficient of $w_j$ from an expansion is itself linear. Once you see this, the proof is one line per axiom. The "key decision" is to compute entries directly rather than try to argue abstractly about [[Def - Isomorphism|isomorphisms]].
 
 ---
 

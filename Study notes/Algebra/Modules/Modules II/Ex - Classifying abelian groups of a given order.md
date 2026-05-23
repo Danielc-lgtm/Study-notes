@@ -11,10 +11,10 @@ tags: [algebra, module-theory]
 
 # Problem Statement
 
-How many abelian groups of order $600$ are there, up to isomorphism?
+How many abelian [[Def - Group|groups]] of order $600$ are there, up to isomorphism?
 
 1. Determine the count, and **list every one of them explicitly** — in elementary-divisor form, and also in invariant-factor form.
-2. Justify the counting formula: explain why the number of abelian groups of order $n=p_1^{a_1}\cdots p_k^{a_k}$ is $p(a_1)\cdot p(a_2)\cdots p(a_k)$, where $p(\,\cdot\,)$ is the integer **partition function** ($p(m)$ = number of ways to write $m$ as a sum of positive integers, order disregarded).
+2. Justify the counting formula: explain why the number of abelian [[Def - Group|groups]] of order $n=p_1^{a_1}\cdots p_k^{a_k}$ is $p(a_1)\cdot p(a_2)\cdots p(a_k)$, where $p(\,\cdot\,)$ is the integer **partition function** ($p(m)$ = number of ways to write $m$ as a sum of positive integers, order disregarded).
 
 For $600=2^3\cdot 3\cdot 5^2$ the answer is $p(3)\cdot p(1)\cdot p(2)=3\cdot 1\cdot 2=6$.
 

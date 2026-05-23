@@ -39,7 +39,7 @@ The Newtonian gravitational potential $\phi$ satisfies Poisson's equation $\nabl
 
 1. **Operation 1 from the topic page** (Lift Newtonian intuitions to GR): This is the inverse application — we *descend* from GR to Newton, showing the GR equations reduce to the Newtonian ones. The identification $h_{00} = -2\phi$ is the bridge.
 
-2. **Operation 2 from the topic page** (Use the equivalence principle): The geodesic equation in the weak-field limit gives $\ddot x = -\nabla\phi$, identifying $\phi$ with the metric component $h_{00}/(-2)$ — this is the equivalence-principle reduction (free-fall worldlines $\Leftrightarrow$ Newtonian gravity).
+2. **Operation 2 from the topic page** (Use the equivalence principle): The [[Def - Geodesic|geodesic]] equation in the weak-field limit gives $\ddot x = -\nabla\phi$, identifying $\phi$ with the metric component $h_{00}/(-2)$ — this is the equivalence-principle reduction (free-fall worldlines $\Leftrightarrow$ Newtonian gravity).
 
 ---
 

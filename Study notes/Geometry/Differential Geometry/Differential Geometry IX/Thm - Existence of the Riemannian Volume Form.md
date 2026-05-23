@@ -18,7 +18,7 @@ $(M, g)$ is an oriented Riemannian $n$-manifold, $n \geq 1$, possibly with bound
 
 # Statement
 
-> **Existence and Uniqueness of the Riemannian Volume Form.** Let $(M, g)$ be an oriented Riemannian $n$-manifold ($n \geq 1$), possibly with boundary. Then there exists a unique smooth $n$-form $\omega_g \in \Omega^n(M)$ such that
+> **Existence and Uniqueness of the [[Def - Riemannian Volume Form|Riemannian Volume Form]].** Let $(M, g)$ be an oriented Riemannian $n$-manifold ($n \geq 1$), possibly with boundary. Then there exists a unique smooth $n$-form $\omega_g \in \Omega^n(M)$ such that
 > $$\omega_g(E_1, \ldots, E_n) = 1$$
 > for every local oriented orthonormal frame $(E_1, \ldots, E_n)$.
 
@@ -26,7 +26,7 @@ $(M, g)$ is an oriented Riemannian $n$-manifold, $n \geq 1$, possibly with bound
 > $$\omega_g|_U = \sqrt{\det(g_{ij})}\,dx^1\wedge\cdots\wedge dx^n,$$
 > where $g_{ij}$ are the components of $g$ in the chart.
 
-> **Corollary (local isometries pull back $\omega_g$).** If $F : (M, g_M) \to (N, g_N)$ is an orientation-preserving local isometry of oriented Riemannian manifolds, then $F^*\omega_{g_N} = \omega_{g_M}$.
+> **Corollary (local [[Def - Isometry|isometries]] pull back $\omega_g$).** If $F : (M, g_M) \to (N, g_N)$ is an orientation-preserving local [[Def - Isometry|isometry]] of oriented Riemannian manifolds, then $F^*\omega_{g_N} = \omega_{g_M}$.
 
 ---
 

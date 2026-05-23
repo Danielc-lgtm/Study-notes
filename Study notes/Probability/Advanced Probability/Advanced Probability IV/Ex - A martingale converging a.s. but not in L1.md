@@ -27,7 +27,7 @@ Let $(Y_k)$ be i.i.d. with $\mathbb{P}(Y_k=0)=\mathbb{P}(Y_k=2)=\tfrac12$, and $
 
 # Convergent Strategy
 
-**Problem class:** the canonical example separating a.s. convergence from $L^1$-convergence for martingales.
+**Problem class:** the canonical example separating a.s. convergence from $L^1$-convergence for [[Def - Martingale|martingales]].
 
 **Assumption pattern:** $(X_n)$ is non-negative with constant expectation $1$ — so $L^1$-bounded, hence a.s. convergent. But once a single $Y_k=0$, the product is $0$ forever; this happens a.s., so the limit is $0$ — and $\mathbb{E}[0]=0\neq1$. Mass escapes; UI fails.
 

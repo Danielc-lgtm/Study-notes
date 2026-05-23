@@ -53,7 +53,7 @@ The mechanism: **the maximal inequality is precisely the device that bounds the 
 
 # What Makes This Hard
 
-The architecture — dense class, then maximal inequality to kill the exceptional set — is the non-obvious idea, and it is *the* template for proving a.e.-convergence theorems (the same shape recurs for the [[Thm - Almost Sure Martingale Convergence|martingale convergence theorem]] and the pointwise ergodic theorem). The technical heart is the **Vitali covering lemma** and the geometric factor $5^n$: one must see that disjointifying a cover, at the cost of dilating by $5$, is what makes the maximal inequality dimension-uniform. The common error is to expect a *strong* ($L^1$) bound on $f^*$ — there is none; only the *weak* bound, and it is exactly enough.
+The architecture — dense class, then maximal inequality to kill the exceptional set — is the non-obvious idea, and it is *the* template for proving a.e.-convergence theorems (the same shape recurs for the [[Thm - Almost Sure Martingale Convergence|martingale convergence theorem]] and the pointwise ergodic theorem). The technical heart is the **Vitali covering lemma** and the geometric factor $5^n$: one must see that disjointifying a cover, at the cost of dilating by $5$, is what makes the maximal inequality [[Def - Dimension|dimension]]-uniform. The common error is to expect a *strong* ($L^1$) bound on $f^*$ — there is none; only the *weak* bound, and it is exactly enough.
 
 ---
 

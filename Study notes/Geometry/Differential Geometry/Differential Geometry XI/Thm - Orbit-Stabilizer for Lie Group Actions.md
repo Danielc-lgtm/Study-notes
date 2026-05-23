@@ -17,7 +17,7 @@ $G$ is a Lie group; $M$ is a smooth manifold with a transitive smooth left actio
 
 # Statement
 
-> **Theorem (Smooth Orbit-Stabilizer).** Let $G$ be a Lie group acting smoothly and transitively on a smooth manifold $M$. For any $p \in M$, the orbit map $\theta^{(p)} : G \to M$, $g \mapsto g \cdot p$, factors uniquely through the quotient $\pi : G \to G/G_p$ to give a $G$-equivariant diffeomorphism
+> **Theorem (Smooth Orbit-Stabilizer).** Let $G$ be a Lie [[Def - Group|group]] acting smoothly and transitively on a smooth manifold $M$. For any $p \in M$, the orbit map $\theta^{(p)} : G \to M$, $g \mapsto g \cdot p$, factors uniquely through the quotient $\pi : G \to G/G_p$ to give a $G$-equivariant [[Def - Diffeomorphism|diffeomorphism]]
 >
 > $$\bar\theta^{(p)} : G/G_p \xrightarrow{\;\sim\;} M.$$
 
@@ -27,11 +27,11 @@ $G$ is a Lie group; $M$ is a smooth manifold with a transitive smooth left actio
 
 # Motivation
 
-This is the smooth-manifold analogue of the classical orbit-stabilizer theorem from finite [[Thm - Orbit-Stabiliser Theorem|group theory]]: for a finite group $G$ acting transitively on a finite set $X$, $|X| = |G|/|G_p|$. The smooth version replaces "$|.|$" with "$\dim$" and "$=$" with "diffeomorphism" — converting an arithmetic identity into a manifold-theoretic one.
+This is the smooth-manifold analogue of the classical orbit-stabilizer theorem from finite [[Thm - Orbit-Stabiliser Theorem|group theory]]: for a finite [[Def - Group|group]] $G$ acting transitively on a finite set $X$, $|X| = |G|/|G_p|$. The smooth version replaces "$|.|$" with "$\dim$" and "$=$" with "diffeomorphism" — converting an arithmetic identity into a manifold-theoretic one.
 
-The structural content is that **every homogeneous space is of the form $G/G_p$**. So the classification of homogeneous spaces of $G$ reduces to the classification of closed Lie subgroups of $G$. Combined with the closed subgroup theorem and the homogeneous-space construction, this makes the theory of homogeneous spaces purely algebraic: given $G$, list its closed subgroups $H$, form quotients $G/H$, and you have all homogeneous spaces of $G$ (up to $G$-equivariant diffeomorphism, and up to conjugation of $H$, which corresponds to changing basepoint in $M$).
+The structural content is that **every homogeneous space is of the form $G/G_p$**. So the classification of homogeneous spaces of $G$ reduces to the classification of closed Lie [[Def - Subgroup|subgroups]] of $G$. Combined with the closed subgroup theorem and the homogeneous-space construction, this makes the theory of homogeneous spaces purely algebraic: given $G$, list its closed [[Def - Subgroup|subgroups]] $H$, form quotients $G/H$, and you have all homogeneous spaces of $G$ (up to $G$-equivariant diffeomorphism, and up to conjugation of $H$, which corresponds to changing basepoint in $M$).
 
-The corollary $\dim M = \dim G - \dim G_p$ is the smooth version of $|X| = |G|/|G_p|$, and it is the workhorse for dimension counts: knowing the dimensions of $G$ and the stabilizer, one reads off the dimension of the homogeneous space. Examples: $\dim S^n = \dim \mathrm{SO}(n+1) - \dim \mathrm{SO}(n) = n$, $\dim \mathrm{Gr}_k(\mathbb{R}^n) = \dim \mathrm{O}(n) - \dim(\mathrm{O}(k) \times \mathrm{O}(n-k)) = k(n-k)$.
+The corollary $\dim M = \dim G - \dim G_p$ is the smooth version of $|X| = |G|/|G_p|$, and it is the workhorse for dimension counts: knowing the [[Def - Dimension|dimensions]] of $G$ and the stabilizer, one reads off the dimension of the homogeneous space. Examples: $\dim S^n = \dim \mathrm{SO}(n+1) - \dim \mathrm{SO}(n) = n$, $\dim \mathrm{Gr}_k(\mathbb{R}^n) = \dim \mathrm{O}(n) - \dim(\mathrm{O}(k) \times \mathrm{O}(n-k)) = k(n-k)$.
 
 The theorem is the bridge between abstract orbit-stabilizer (purely combinatorial) and the smooth manifold-theoretic version (which provides the diffeomorphism structure, not just the dimension count).
 
@@ -65,7 +65,7 @@ A fourth amplification is **the dimension equation for fibrations**. Combining o
 
 # Why Is It True
 
-The proof has three ingredients: (i) the orbit map $\theta^{(p)}$ has constant rank by the equivariant rank theorem; (ii) by transitivity, the orbit map is surjective; (iii) the level sets of $\theta^{(p)}$ are left cosets of $G_p$, so $\theta^{(p)}$ descends to a continuous bijection $G/G_p \to M$, which is then a diffeomorphism by the constant-rank theorem and properness.
+The proof has three ingredients: (i) the orbit map $\theta^{(p)}$ has constant rank by the equivariant rank theorem; (ii) by transitivity, the orbit map is surjective; (iii) the level sets of $\theta^{(p)}$ are left [[Def - Coset|cosets]] of $G_p$, so $\theta^{(p)}$ descends to a continuous bijection $G/G_p \to M$, which is then a diffeomorphism by the constant-rank theorem and properness.
 
 **The bolded mechanism summary: an equivariant smooth map from a homogeneous space has constant rank, and a surjective constant-rank map factors through its quotient by the stabilizer to give a diffeomorphism — applied to the orbit map, this gives $G/G_p \cong M$.**
 
@@ -75,7 +75,7 @@ Step by step:
 
 2. **Rank equals $\dim M$.** Since $\theta^{(p)}$ is surjective (by transitivity of the $G$-action on $M$) and has constant rank, the rank equals $\dim M$ (Lee Thm 4.14 — a smooth map of constant rank $\leq \dim$-target whose image has full measure has rank equal to $\dim$-target).
 
-3. **Quotient.** The level sets $(\theta^{(p)})^{-1}(\{q\})$ are precisely the left cosets of $G_p$: indeed, $\theta^{(p)}(g) = q$ iff $g \cdot p = q$, and choosing one such $g_0$, every other $g$ with $g \cdot p = q$ satisfies $g = g_0 h$ for $h \in G_p$, i.e., $g \in g_0 G_p$. So $\theta^{(p)}$ descends through $\pi : G \to G/G_p$ to a continuous bijection $\bar\theta^{(p)} : G/G_p \to M$.
+3. **Quotient.** The level sets $(\theta^{(p)})^{-1}(\{q\})$ are precisely the left [[Def - Coset|cosets]] of $G_p$: indeed, $\theta^{(p)}(g) = q$ iff $g \cdot p = q$, and choosing one such $g_0$, every other $g$ with $g \cdot p = q$ satisfies $g = g_0 h$ for $h \in G_p$, i.e., $g \in g_0 G_p$. So $\theta^{(p)}$ descends through $\pi : G \to G/G_p$ to a continuous bijection $\bar\theta^{(p)} : G/G_p \to M$.
 
 4. **Smoothness and inverse.** $\bar\theta^{(p)}$ is smooth (since the action map $\theta$ is smooth) and injective (by step 3). By the rank theorem applied to $\theta^{(p)}$, $\theta^{(p)}$ is locally a submersion (since rank = $\dim M$); hence $\bar\theta^{(p)} : G/G_p \to M$ is a local diffeomorphism. A bijective local diffeomorphism is a diffeomorphism.
 
@@ -175,7 +175,7 @@ The orbit map $\theta^{(p)} : G \to M$ is equivariant for the left translation a
 >
 > **Step 4 (Bijection).** $\bar\theta^{(p)}$ is **injective** by Lemma 4 (distinct cosets have distinct images). $\bar\theta^{(p)}$ is **surjective** because $\theta^{(p)}$ is surjective (by transitivity of the $G$-action on $M$).
 >
-> **Step 5 (Diffeomorphism).** $\bar\theta^{(p)}$ is a smooth bijection. By the rank theorem applied to $\theta^{(p)}$ (which has rank $\dim M$), $\theta^{(p)}$ is locally a submersion onto $M$. After quotienting by the kernel of the differential (= cosets of $G_p$), $\bar\theta^{(p)}$ becomes a local diffeomorphism. A bijective local diffeomorphism is a diffeomorphism.
+> **Step 5 ([[Def - Diffeomorphism|Diffeomorphism]]).** $\bar\theta^{(p)}$ is a smooth bijection. By the rank theorem applied to $\theta^{(p)}$ (which has rank $\dim M$), $\theta^{(p)}$ is locally a submersion onto $M$. After quotienting by the kernel of the differential (= cosets of $G_p$), $\bar\theta^{(p)}$ becomes a local diffeomorphism. A bijective local diffeomorphism is a diffeomorphism.
 >
 > **Step 6 (Equivariance of $\bar\theta^{(p)}$).** For $g \in G$ and $\bar g \in G/G_p$, $\bar\theta^{(p)}(g \cdot \bar g) = \bar\theta^{(p)}([g \bar g]) = (g\bar g) \cdot p = g \cdot (\bar g \cdot p) = g \cdot \bar\theta^{(p)}(\bar g)$. So $\bar\theta^{(p)}$ is $G$-equivariant.
 >
@@ -187,7 +187,7 @@ The orbit map $\theta^{(p)} : G \to M$ is equivariant for the left translation a
 
 **Differential topology — spheres as homogeneous spaces.** $S^n = \mathrm{SO}(n+1)/\mathrm{SO}(n)$ via the natural action of $\mathrm{SO}(n+1)$ on $\mathbb{R}^{n+1}$ restricted to $S^n$. See [[Ex - S^2 as a Homogeneous Space of SO(3)]] for the $n = 2$ case. The dimension equation $\dim S^n = \dim \mathrm{SO}(n+1) - \dim \mathrm{SO}(n) = \binom{n+1}{2} - \binom{n}{2} = n$ provides an immediate sanity check.
 
-**Grassmannians as homogeneous spaces.** $\mathrm{Gr}_k(\mathbb{R}^n) = \mathrm{O}(n)/(\mathrm{O}(k) \times \mathrm{O}(n - k))$, since $\mathrm{O}(n)$ acts transitively on $k$-planes in $\mathbb{R}^n$ and the stabilizer of a fixed $k$-plane decomposes into rotations within and orthogonal to that plane. Dimension: $\binom{n}{2} - \binom{k}{2} - \binom{n-k}{2} = k(n-k)$.
+**Grassmannians as homogeneous spaces.** $\mathrm{Gr}_k(\mathbb{R}^n) = \mathrm{O}(n)/(\mathrm{O}(k) \times \mathrm{O}(n - k))$, since $\mathrm{O}(n)$ acts transitively on $k$-planes in $\mathbb{R}^n$ and the stabilizer of a fixed $k$-plane decomposes into rotations within and orthogonal to that plane. [[Def - Dimension|Dimension]]: $\binom{n}{2} - \binom{k}{2} - \binom{n-k}{2} = k(n-k)$.
 
 **Geometric mechanics — coadjoint orbits as symplectic manifolds.** For any Lie group $G$, the coadjoint orbits in $\mathfrak{g}^*$ (orbits under the action $\mathrm{Ad}^* : G \to \mathrm{GL}(\mathfrak{g}^*)$) are homogeneous spaces $G/G_\xi$ for the stabilizer $G_\xi$ of a covector $\xi \in \mathfrak{g}^*$. By the orbit-stabilizer theorem they are smooth manifolds; the Kirillov–Kostant–Souriau construction equips them with a canonical symplectic structure, making them the natural setting for geometric quantization. For $G = \mathrm{SU}(2)$, the coadjoint orbits in $\mathfrak{su}(2)^* \cong \mathbb{R}^3$ are spheres centered at the origin — Bohr's quantization of angular momentum, geometrically.
 

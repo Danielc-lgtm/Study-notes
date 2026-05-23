@@ -16,7 +16,7 @@ $M$ is a smooth $n$-manifold and $p \in M$. The tangent space $T_{p}M$ consists 
 
 # Statement
 
-> **Theorem (Dimension of the Tangent Space).** Let $M$ be a smooth manifold of dimension $n$. For every $p \in M$, the tangent space $T_{p}M$ is a real vector space of dimension $n$.
+> **Theorem ([[Def - Dimension|Dimension]] of [[Def - The Tangent Space|the Tangent Space]]).** Let $M$ be a smooth manifold of [[Def - Dimension|dimension]] $n$. For every $p \in M$, the tangent space $T_{p}M$ is a real vector space of dimension $n$.
 >
 > More precisely, given any chart $(U, \varphi)$ at $p$ with coordinates $x^{1}, \dots, x^{n}$, the $n$ coordinate tangent vectors $\partial/\partial x^{1}|_{p}, \dots, \partial/\partial x^{n}|_{p}$ form a basis of $T_{p}M$. Equivalently, every tangent vector $v \in T_{p}M$ has a unique expansion
 > $$v = v^{i}\,\frac{\partial}{\partial x^{i}}\bigg|_{p}, \qquad v^{i} = v(x^{i}).$$
@@ -73,7 +73,7 @@ Here is the picture. Pick a chart $(U, \varphi)$ at $p$ with coordinate function
 
 So $T_{p}M \cong \mathbb{R}^{n}$ as vector spaces, via the map $v \mapsto (v(x^{1}), \dots, v(x^{n}))$. The dimension is $n$.
 
-The picture is fundamentally **a chart turns $T_{p}M$ into $\mathbb{R}^{n}$**. Different charts produce different isomorphisms — different identifications of $T_{p}M$ with $\mathbb{R}^{n}$ — but the abstract dimension is chart-independent. The Jacobian-transformation rule (see [[Def - Coordinate Tangent Vectors]]) is precisely the rule for converting between these chart-induced isomorphisms.
+The picture is fundamentally **a chart turns $T_{p}M$ into $\mathbb{R}^{n}$**. Different charts produce different [[Def - Isomorphism|isomorphisms]] — different identifications of $T_{p}M$ with $\mathbb{R}^{n}$ — but the abstract dimension is chart-independent. The Jacobian-transformation rule (see [[Def - Coordinate Tangent Vectors]]) is precisely the rule for converting between these chart-induced [[Def - Isomorphism|isomorphisms]].
 
 ---
 
@@ -98,7 +98,7 @@ Pick a chart at $p$ and transport the problem to $\mathbb{R}^{n}$. On $\mathbb{R
    - *Hint:* Bump functions extend smooth functions from $U$ to $M$ without changing values near $p$.
    - *Why needed:* Lets us work in a coordinate chart's domain rather than all of $M$.
 
-2. **Use a chart to identify $T_{p}U$ with $T_{\varphi(p)}\hat{U} \cong T_{\varphi(p)}\mathbb{R}^{n}$.** The chart $\varphi : U \to \hat{U} \subseteq \mathbb{R}^{n}$ is a diffeomorphism, so $d\varphi_{p}$ is an isomorphism $T_{p}U \to T_{\varphi(p)}\hat{U}$. Since $\hat{U}$ is open in $\mathbb{R}^{n}$, $T_{\varphi(p)}\hat{U} = T_{\varphi(p)}\mathbb{R}^{n}$.
+2. **Use a chart to identify $T_{p}U$ with $T_{\varphi(p)}\hat{U} \cong T_{\varphi(p)}\mathbb{R}^{n}$.** The chart $\varphi : U \to \hat{U} \subseteq \mathbb{R}^{n}$ is a [[Def - Diffeomorphism|diffeomorphism]], so $d\varphi_{p}$ is an isomorphism $T_{p}U \to T_{\varphi(p)}\hat{U}$. Since $\hat{U}$ is open in $\mathbb{R}^{n}$, $T_{\varphi(p)}\hat{U} = T_{\varphi(p)}\mathbb{R}^{n}$.
    - *Hint:* Same locality argument as Subgoal 1, but now between $\hat{U}$ and $\mathbb{R}^{n}$.
    - *Why needed:* Transports the problem to the local model $\mathbb{R}^{n}$.
 
@@ -157,7 +157,7 @@ Pick a chart at $p$ and transport the problem to $\mathbb{R}^{n}$. On $\mathbb{R
 >
 > By Lemma 1, the inclusion $\iota : U \hookrightarrow M$ induces an isomorphism $d\iota_{p} : T_{p}U \to T_{p}M$. So it suffices to compute $\dim T_{p}U$.
 >
-> By Proposition 3.6(d) of Lee (see [[Thm - Chain Rule for the Differential]]), since $\varphi : U \to \hat{U}$ is a diffeomorphism, $d\varphi_{p} : T_{p}U \to T_{\varphi(p)}\hat{U}$ is an isomorphism. So $\dim T_{p}U = \dim T_{\varphi(p)}\hat{U}$.
+> By Proposition 3.6(d) of Lee (see [[Thm - Chain Rule for the Differential]]), since $\varphi : U \to \hat{U}$ is a [[Def - Diffeomorphism|diffeomorphism]], $d\varphi_{p} : T_{p}U \to T_{\varphi(p)}\hat{U}$ is an isomorphism. So $\dim T_{p}U = \dim T_{\varphi(p)}\hat{U}$.
 >
 > By Lemma 2, $T_{\varphi(p)}\hat{U} \cong T_{\varphi(p)}\mathbb{R}^{n}$.
 >
@@ -173,11 +173,11 @@ Pick a chart at $p$ and transport the problem to $\mathbb{R}^{n}$. On $\mathbb{R
 
 # Cross-Field Exercise Suggestions
 
-**Algebraic geometry — the local ring's cotangent space.** For a smooth affine variety $X$ at a point $p$, the Zariski cotangent space $\mathfrak{m}_{p}/\mathfrak{m}_{p}^{2}$ has dimension $\dim X$ — the variety is smooth at $p$ iff this equality holds. So the same dimension-counting argument distinguishes smooth from singular points: at a singular point, the cotangent dimension is *strictly larger* than the variety dimension. This is the algebraic-geometric version of the dimension theorem, with smoothness as the regularity condition.
+**Algebraic geometry — the local [[Def - Ring|ring]]'s cotangent space.** For a smooth affine variety $X$ at a point $p$, the Zariski cotangent space $\mathfrak{m}_{p}/\mathfrak{m}_{p}^{2}$ has dimension $\dim X$ — the variety is smooth at $p$ iff this equality holds. So the same dimension-counting argument distinguishes smooth from singular points: at a singular point, the cotangent dimension is *strictly larger* than the variety dimension. This is the algebraic-geometric version of the dimension theorem, with smoothness as the regularity condition.
 
-**Functional analysis — tangent space to a Hilbert manifold.** For a smooth submanifold of a Hilbert space, the tangent space at any point is a *closed linear subspace* of the Hilbert space, and the dimension (or codimension) is preserved chart-to-chart. The dimension theorem holds verbatim in infinite-dimensional settings provided one is careful with topology.
+**Functional analysis — tangent space to a Hilbert manifold.** For a smooth submanifold of a Hilbert space, the tangent space at any point is a *closed linear [[Def - Subspace|subspace]]* of the Hilbert space, and the dimension (or codimension) is preserved chart-to-chart. The dimension theorem holds verbatim in infinite-dimensional settings provided one is careful with topology.
 
-**Lie theory — dimension of a Lie group equals dimension of its Lie algebra.** For a Lie group $G$, the Lie algebra $\mathfrak{g} = T_{e}G$ has dimension equal to $\dim G$. The dimension theorem applied at the identity gives this; the left-invariant-vector-field interpretation gives the same dimension globally — the Lie algebra captures the dimension of the group.
+**Lie theory — dimension of a Lie [[Def - Group|group]] equals dimension of its Lie algebra.** For a Lie [[Def - Group|group]] $G$, the Lie algebra $\mathfrak{g} = T_{e}G$ has dimension equal to $\dim G$. The dimension theorem applied at the identity gives this; the left-invariant-vector-field interpretation gives the same dimension globally — the Lie algebra captures the dimension of the group.
 
 ---
 

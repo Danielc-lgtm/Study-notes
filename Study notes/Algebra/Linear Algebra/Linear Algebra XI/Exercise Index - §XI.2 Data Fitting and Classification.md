@@ -7,7 +7,7 @@ tags: [algebra, linear-algebra, applied, data-fitting, machine-learning]
 
 ## §XI.2 Data Fitting and Classification — Exercises
 
-The exercises in this section drill the application of LS to *data fitting* (continuous outcomes) and *classification* (discrete outcomes). The recurring skill is recognizing that *any* linear-in-parameters model — polynomial, sinusoidal, one-hot encoded categorical, neural-network-features — gives a LS problem with appropriate design matrix, and that the overfitting / underfitting diagnostic is the train/test error gap. These exercises also drill the validation discipline of holding out data and measuring generalization, which transfers to *any* model fit to data.
+The exercises in this section drill the application of LS to *data fitting* (continuous outcomes) and *classification* (discrete outcomes). The recurring skill is recognizing that *any* linear-in-parameters model — polynomial, sinusoidal, one-hot encoded categorical, neural-network-features — gives a LS problem with appropriate design matrix, and that the overfitting / underfitting diagnostic is the train/test error gap. These exercises also drill the [[Def - Validation (Training and Test Error)|validation]] discipline of holding out data and measuring generalization, which transfers to *any* model fit to data.
 
 - [[Ex - Polynomial fitting and overfitting]] (⭐⭐) — Sweep polynomial degree, fit each by LS, evaluate on held-out test data; observe the U-shape on test error and identify the optimal degree. The canonical diagnostic of bias-variance tradeoff in practice ([[Def - Least Squares Data Fitting]], [[Def - Validation (Training and Test Error)]], [[Thm - Least Squares via QR Factorization]], [[Thm - Bias-Variance Tradeoff in Regularized LS]]).
 

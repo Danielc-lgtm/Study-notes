@@ -31,7 +31,7 @@ The characteristic polynomial is $p_T(z) = \prod_\lambda (z - \lambda)^{d_\lambd
 
 ![[Def - Algebraic and Geometric Multiplicity#The Definition]]
 
-The Jordan form's block partition at each eigenvalue is recovered from the dimensions of $\operatorname{null}(T - \lambda I)^j$: the number of blocks of size $\geq j$ at $\lambda$ is $\dim \operatorname{null}(T - \lambda I)^j - \dim \operatorname{null}(T - \lambda I)^{j-1}$.
+The Jordan form's block partition at each eigenvalue is recovered from the [[Def - Dimension|dimensions]] of $\operatorname{null}(T - \lambda I)^j$: the number of blocks of size $\geq j$ at $\lambda$ is $\dim \operatorname{null}(T - \lambda I)^j - \dim \operatorname{null}(T - \lambda I)^{j-1}$.
 
 ---
 
@@ -51,7 +51,7 @@ The Jordan form's block partition at each eigenvalue is recovered from the dimen
 
 This solution deploys the following legal operations from [[Linear Algebra VIII — §8 Operators on Complex Vector Spaces#Legal Operations|the topic page's Legal Operations]]:
 
-1. **Read off the Jordan structure from the null-space dimensions** (operation 4). For each candidate operator we compute $\dim \operatorname{null}(T - \lambda I)^j$ for relevant $j$ and read off the block partition.
+1. **Read off the Jordan structure from the null-space [[Def - Dimension|dimensions]]** (operation 4). For each candidate operator we compute $\dim \operatorname{null}(T - \lambda I)^j$ for relevant $j$ and read off the block partition.
 
 2. **Use polynomial constraints** (operation 5). The characteristic and minimal polynomials constrain the Jordan structure: the characteristic polynomial fixes the multiplicity, the minimal polynomial fixes the largest block size at each eigenvalue.
 

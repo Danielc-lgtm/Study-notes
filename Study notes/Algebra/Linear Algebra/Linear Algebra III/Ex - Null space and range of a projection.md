@@ -14,13 +14,13 @@ tags: [algebra, linear-algebra]
 Let $V$ be a vector space and let $P \in \mathcal{L}(V)$ satisfy $P^2 = P$. (Such an operator is called a **projection** or **idempotent**.) Prove that
 $$V \;=\; \operatorname{null} P \;\oplus\; \operatorname{range} P.$$
 
-That is, the null space and the range of $P$ are *complementary subspaces* — every $v \in V$ is uniquely $u + w$ with $u \in \operatorname{null} P$ and $w \in \operatorname{range} P$.
+That is, the null space and the range of $P$ are *complementary [[Def - Subspace|subspaces]]* — every $v \in V$ is uniquely $u + w$ with $u \in \operatorname{null} P$ and $w \in \operatorname{range} P$.
 
 **Recall:**
 
 ![[Def - Null Space and Range#The Definition]]
 
-Two subspaces $U_1, U_2 \subseteq V$ form a **direct sum** $V = U_1 \oplus U_2$ if every $v \in V$ is uniquely expressible as $v = u_1 + u_2$ with $u_i \in U_i$, equivalently $V = U_1 + U_2$ and $U_1 \cap U_2 = \{0\}$.
+Two [[Def - Subspace|subspaces]] $U_1, U_2 \subseteq V$ form a **direct sum** $V = U_1 \oplus U_2$ if every $v \in V$ is uniquely expressible as $v = u_1 + u_2$ with $u_i \in U_i$, equivalently $V = U_1 + U_2$ and $U_1 \cap U_2 = \{0\}$.
 
 A linear map $P$ with $P^2 = P$ is called **idempotent**. Geometric examples: orthogonal projection onto a subspace; projection onto $U_1$ along $U_2$ when $V = U_1 \oplus U_2$.
 
@@ -30,7 +30,7 @@ A linear map $P$ with $P^2 = P$ is called **idempotent**. Geometric examples: or
 
 **Problem class.** This is a *prove a direct sum decomposition* problem. The topic-page Problem-Solving Strategy classifies it under "decompose a domain via $V = \operatorname{null} T \oplus U$": find a complement of the null space, and show it equals the range.
 
-**Assumption pattern.** $P^2 = P$ is the defining feature. This identity is what links the null space and the range — without it, $\operatorname{null} P$ and $\operatorname{range} P$ are arbitrary subspaces (Step 1: their dimensions are bound by [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] but they need not be complementary).
+**Assumption pattern.** $P^2 = P$ is the defining feature. This identity is what links the null space and the range — without it, $\operatorname{null} P$ and $\operatorname{range} P$ are arbitrary subspaces (Step 1: their [[Def - Dimension|dimensions]] are bound by [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] but they need not be complementary).
 
 **Theorem routing.** The route is: prove (i) $V = \operatorname{null} P + \operatorname{range} P$ (sum, using $v = (v - Pv) + Pv$), and (ii) $\operatorname{null} P \cap \operatorname{range} P = \{0\}$ (intersection, using $P^2 = P$ to show that a vector in both is zero). These two together imply the direct sum decomposition by the standard direct-sum-criterion.
 
@@ -108,7 +108,7 @@ Steps 1 and 2 together give $V = \operatorname{null} P \oplus \operatorname{rang
 > Hence $V = \operatorname{null} P \oplus \operatorname{range} P$. $\blacksquare$
 
 > [!note]- Sanity check via rank–nullity
-> If $V$ is finite-dimensional, [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] gives $\dim V = \dim \operatorname{null} P + \dim \operatorname{range} P$, which is consistent with the direct-sum decomposition $V = \operatorname{null} P \oplus \operatorname{range} P$ (where dimensions of complementary subspaces add to the dimension of the whole space). Conversely, the direct-sum decomposition makes the rank–nullity equation transparent — and even gives a constructive isomorphism $V \cong \operatorname{null} P \oplus \operatorname{range} P$.
+> If $V$ is finite-dimensional, [[Thm - Fundamental Theorem of Linear Maps|rank–nullity]] gives $\dim V = \dim \operatorname{null} P + \dim \operatorname{range} P$, which is consistent with the direct-sum decomposition $V = \operatorname{null} P \oplus \operatorname{range} P$ (where [[Def - Dimension|dimensions]] of complementary subspaces add to the dimension of the whole space). Conversely, the direct-sum decomposition makes the rank–nullity equation transparent — and even gives a constructive isomorphism $V \cong \operatorname{null} P \oplus \operatorname{range} P$.
 
 ---
 

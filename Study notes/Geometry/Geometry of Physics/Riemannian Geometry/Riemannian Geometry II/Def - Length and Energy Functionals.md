@@ -16,7 +16,7 @@ $(M, g)$ a Riemannian manifold; $\gamma : [a, b] \to M$ a piecewise smooth curve
 
 # Axiom Motivation
 
-The motivating question is: **on a Riemannian manifold, what is the natural quantity to minimise to find geodesics, and what do we lose by choosing one over another?** The conventional answer in introductory expositions is "minimise the length," but this is technically incorrect in a subtle way that the energy functional fixes. Understanding *why* the energy is better — and what the length still does that the energy cannot — is the content of this definition.
+The motivating question is: **on a Riemannian manifold, what is the natural quantity to minimise to find [[Def - Geodesic|geodesics]], and what do we lose by choosing one over another?** The conventional answer in introductory expositions is "minimise the length," but this is technically incorrect in a subtle way that the energy functional fixes. Understanding *why* the energy is better — and what the length still does that the energy cannot — is the content of this definition.
 
 **Length** $L(\gamma) = \int_a^b |\dot\gamma|\, dt$ is the natural geometric measurement: it counts the distance travelled along $\gamma$. It is **reparametrisation-invariant**: if $\tilde\gamma(s) = \gamma(\varphi(s))$ for any monotonic $\varphi$, then $L(\tilde\gamma) = L(\gamma)$. This is exactly what we want from a geometric quantity: the length of a path is a property of the *image* and not of any particular parametrisation.
 

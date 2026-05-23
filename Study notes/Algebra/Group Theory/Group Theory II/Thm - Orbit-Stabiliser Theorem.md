@@ -27,7 +27,7 @@ $G$ is a group acting on a set $X$ via $(g, x) \mapsto g\cdot x$ (see [[Def - Gr
 > $$|G| \;=\; |G_x|\cdot|G\cdot x|,$$
 > equivalently $|G\cdot x| = |G : G_x|$. In particular, **every orbit size divides $|G|$**.
 
-The bijective form holds for arbitrary (possibly infinite) groups; the counting form is its finite specialisation, obtained by [[Thm - Lagrange's Theorem|Lagrange's theorem]] applied to the subgroup $G_x$. This is the master counting theorem of finite group theory: the [[Thm - The Class Equation|class equation]], the conjugate-counting formula, and [[Thm - Lagrange's Theorem|Lagrange's theorem]] itself are all instances of it.
+The bijective form holds for arbitrary (possibly infinite) [[Def - Group|groups]]; the counting form is its finite specialisation, obtained by [[Thm - Lagrange's Theorem|Lagrange's theorem]] applied to the subgroup $G_x$. This is the master counting theorem of finite group theory: the [[Thm - The Class Equation|class equation]], the conjugate-counting formula, and [[Thm - Lagrange's Theorem|Lagrange's theorem]] itself are all instances of it.
 
 ---
 
@@ -37,7 +37,7 @@ A group action presents two numbers attached to each point $x$, and at first sig
 
 The orbit-stabiliser theorem says these two numbers are not independent: they are *complementary*, and their product is the whole of $|G|$. Largeness of the orbit is exactly smallness of the stabiliser, in lockstep, with $|G|$ as the fixed budget. If $x$ moves to many places, few elements can fix it; if $x$ is fixed by much of $G$, it cannot move far. This is the conservation law of group actions, and it is the reason actions are the central tool of finite group theory.
 
-The reason it matters so much in practice is that it converts *structure into arithmetic*. Many questions about a finite group are secretly questions of the form "how big is this set the group acts on" — how many symmetries a polyhedron has, how many elements are conjugate to a given one, how many subgroups have a given order. The orbit-stabiliser theorem turns each such question into the integer equation $|G| = |G_x|\cdot|G\cdot x|$: know any two of $|G|$, $|G_x|$, $|G\cdot x|$ and the third is forced. And even when you know only $|G|$, the theorem still bites — it says every orbit size *divides* $|G|$, an immediate and often decisive constraint. Counting symmetries, counting conjugates, proving an orbit must be small or large: all of it routes through this one equation. The entire skill the topic trains — *choose the right set for $G$ to act on* — exists because, once the set is chosen, this theorem does the rest.
+The reason it matters so much in practice is that it converts *structure into arithmetic*. Many questions about a finite group are secretly questions of the form "how big is this set the group acts on" — how many symmetries a polyhedron has, how many elements are conjugate to a given one, how many [[Def - Subgroup|subgroups]] have a given order. The orbit-stabiliser theorem turns each such question into the integer equation $|G| = |G_x|\cdot|G\cdot x|$: know any two of $|G|$, $|G_x|$, $|G\cdot x|$ and the third is forced. And even when you know only $|G|$, the theorem still bites — it says every orbit size *divides* $|G|$, an immediate and often decisive constraint. Counting symmetries, counting conjugates, proving an orbit must be small or large: all of it routes through this one equation. The entire skill the topic trains — *choose the right set for $G$ to act on* — exists because, once the set is chosen, this theorem does the rest.
 
 ---
 
@@ -77,7 +77,7 @@ The theorem should feel inevitable once you see what the orbit and the stabilise
 
 Fix the point $x$, and think of every element $g \in G$ as a "delivery instruction": $g$ delivers $x$ to the destination $g\cdot x$. The orbit $G\cdot x$ is precisely the set of *destinations actually reached*. Now ask: how many different delivery instructions land at the *same* destination? Suppose $g$ and $h$ both deliver $x$ to the same place, $g\cdot x = h\cdot x$. Then $h^{-1}g\cdot x = x$, which says $h^{-1}g \in G_x$ — the discrepancy between two instructions reaching the same place is an element of the stabiliser. And this is reversible: $g$ and $gk$ deliver $x$ to the same place for every $k \in G_x$. So the instructions landing at a given destination form *exactly a coset* $g\,G_x$ of the stabiliser.
 
-That is the whole theorem in one sentence: **the instructions are sorted by destination, and the sorting bins are the cosets of the stabiliser**. Each destination in the orbit corresponds to one bin; each bin is one coset. So the orbit and the set of cosets are in bijection — there are as many destinations as there are bins. This is the bijective statement, and it holds for any group, finite or not, because it is purely the observation "same destination $\iff$ same coset".
+That is the whole theorem in one sentence: **the instructions are sorted by destination, and the sorting bins are the [[Def - Coset|cosets]] of the stabiliser**. Each destination in the orbit corresponds to one bin; each bin is one coset. So the orbit and the set of [[Def - Coset|cosets]] are in bijection — there are as many destinations as there are bins. This is the bijective statement, and it holds for any group, finite or not, because it is purely the observation "same destination $\iff$ same coset".
 
 Now make it quantitative for finite $G$. The cosets of $G_x$ all have the same size — every coset is a translate of $G_x$, and translation is reversible — so each delivery-bin contains exactly $|G_x|$ instructions. The bins do not overlap and together exhaust all of $G$ (every element is *some* instruction, landing *somewhere*). So $G$ is partitioned into $|G\cdot x|$ bins, each of size $|G_x|$. Counting elements bin by bin:
 $$|G| = (\text{number of bins})\times(\text{bin size}) = |G\cdot x|\times|G_x|.$$
@@ -91,7 +91,7 @@ The theorem is, in the end, [[Thm - Lagrange's Theorem|Lagrange's theorem]] wear
 
 # What Makes This Hard
 
-The proof has exactly one delicate step, and it is **well-definedness** of the map $\Phi(g\,G_x) = g\cdot x$: the input is a coset, named by a representative $g$, and one must check the *output does not depend on the choice of representative* — if $g\,G_x = h\,G_x$ then $g\cdot x = h\cdot x$. People routinely skip this and verify only the bijection, but a map on cosets that is not well-defined is not a map at all. The non-obvious idea is that the same equivalence — $g\,G_x = h\,G_x \iff h^{-1}g \in G_x \iff g\cdot x = h\cdot x$ — proves well-definedness *and* injectivity simultaneously, read in the two directions. The common error is to conflate the stabilisers of different points of the orbit; they are only *conjugate* ($G_{g\cdot x} = g\,G_x\,g^{-1}$), equal in size but generally distinct subgroups.
+The proof has exactly one delicate step, and it is **well-definedness** of the map $\Phi(g\,G_x) = g\cdot x$: the input is a coset, named by a representative $g$, and one must check the *output does not depend on the choice of representative* — if $g\,G_x = h\,G_x$ then $g\cdot x = h\cdot x$. People routinely skip this and verify only the bijection, but a map on cosets that is not well-defined is not a map at all. The non-obvious idea is that the same equivalence — $g\,G_x = h\,G_x \iff h^{-1}g \in G_x \iff g\cdot x = h\cdot x$ — proves well-definedness *and* injectivity simultaneously, read in the two directions. The common error is to conflate the stabilisers of different points of the orbit; they are only *conjugate* ($G_{g\cdot x} = g\,G_x\,g^{-1}$), equal in size but generally distinct [[Def - Subgroup|subgroups]].
 
 ---
 
@@ -167,7 +167,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 >
 > **Hint:** Well-definedness and injectivity are the two directions of Lemma 2; surjectivity is the definition of the orbit.
 >
-> **Why needed:** This is the bijective form of the theorem, valid for all groups.
+> **Why needed:** This is the bijective form of the theorem, valid for all [[Def - Group|groups]].
 >
 > > [!note]- Full proof
 > > *Well-defined.* If $g\,G_x = h\,G_x$, then by Lemma 2, $g\cdot x = h\cdot x$, so $\Phi$ assigns the same value to a coset regardless of the chosen representative.
@@ -229,7 +229,7 @@ The aim is to find settings where orbit-stabiliser applies but is not advertised
 
 **Number theory: counting solutions and class numbers.** When a group acts on the set of solutions to a Diophantine equation, or on the set of representations of an integer by a quadratic form, orbit-stabiliser turns "count solutions up to equivalence" into orbit counting, and the stabiliser indices control multiplicities. The application is non-obvious because the arithmetic problem mentions no group; the symmetry group of the equation must be supplied. This underlies the mass formulas in the theory of quadratic forms, where each orbit is weighted by $1/|G_x|$.
 
-**Linear algebra and physics: the dimension of an orbit.** For a Lie group acting smoothly on a manifold, the orbit-stabiliser bijection $G/G_x \cong G\cdot x$ upgrades to a diffeomorphism, so $\dim(G\cdot x) = \dim G - \dim G_x$ — the *continuous* analogue of the counting form, with dimension replacing cardinality. The application is non-obvious because the theorem was stated for finite groups and sizes, yet the same bijection, now in the smooth category, computes the dimension of a coadjoint orbit (the phase spaces of geometric mechanics) as $\dim G$ minus the dimension of an isotropy subgroup.
+**Linear algebra and physics: the [[Def - Dimension|dimension]] of an orbit.** For a Lie group acting smoothly on a manifold, the orbit-stabiliser bijection $G/G_x \cong G\cdot x$ upgrades to a [[Def - Diffeomorphism|diffeomorphism]], so $\dim(G\cdot x) = \dim G - \dim G_x$ — the *continuous* analogue of the counting form, with [[Def - Dimension|dimension]] replacing cardinality. The application is non-obvious because the theorem was stated for finite groups and sizes, yet the same bijection, now in the smooth category, computes the dimension of a coadjoint orbit (the phase spaces of geometric mechanics) as $\dim G$ minus the dimension of an isotropy subgroup.
 
 ---
 

@@ -15,7 +15,7 @@ This is a compound page: it defines four interlocking notions — the **Euclidea
 
 # Axiom Motivation
 
-What are we trying to capture with a norm? The desiderata are clear: we want a single non-negative number $\|x\|$ that measures the **magnitude** of the vector $x$, generalising the absolute value of a scalar to higher dimensions. The applied use cases — measuring the size of a residual, the distance between two data points, the energy of a signal — all want the same thing: a function $\|\cdot\| : \mathbb{R}^n \to \mathbb{R}_{\geq 0}$ that says "this vector is small / medium / large".
+What are we trying to capture with a norm? The desiderata are clear: we want a single non-negative number $\|x\|$ that measures the **magnitude** of the vector $x$, generalising the absolute value of a scalar to higher [[Def - Dimension|dimensions]]. The applied use cases — measuring the size of a residual, the distance between two data points, the energy of a signal — all want the same thing: a function $\|\cdot\| : \mathbb{R}^n \to \mathbb{R}_{\geq 0}$ that says "this vector is small / medium / large".
 
 Four properties are non-negotiable. (i) **Non-negativity**: $\|x\| \geq 0$ always. (ii) **Definiteness**: $\|x\| = 0$ if and only if $x = 0$. The norm vanishes exactly at the zero vector — otherwise, $\|\cdot\|$ would conflate different vectors and lose its role as a magnitude. (iii) **Nonnegative homogeneity**: $\|\alpha x\| = |\alpha|\|x\|$ for any scalar $\alpha$. Scaling the vector by $\alpha$ should scale the magnitude by $|\alpha|$ — otherwise the norm would not respect the most basic vector-space operation. (iv) **Triangle inequality**: $\|x + y\| \leq \|x\| + \|y\|$. Going from the origin to $x + y$ is no longer than going to $x$ and then to $x + y$. This is what gives the resulting distance function the geometric structure of a metric.
 
@@ -23,7 +23,7 @@ These four properties define the *abstract* notion of a norm — any function sa
 
 The Euclidean norm is the unique norm derived from an inner product: $\|x\| = \sqrt{x^T x}$. This is what makes it special among all norms: it interacts compatibly with angles, projections, orthogonality, and least-squares — all the geometric notions that fall out of the inner product. The other commonly-used norms — the $\ell^1$ norm $\|x\|_1 = \sum_i |x_i|$, the $\ell^\infty$ norm $\|x\|_\infty = \max_i |x_i|$ — are not inner-product norms and lack this rich geometric structure. They are useful for different purposes (sparsity for $\ell^1$, worst-case for $\ell^\infty$) but lose the angle/projection apparatus.
 
-What if we weakened **definiteness** to allow $\|x\| = 0$ for some nonzero $x$? Then $\|\cdot\|$ is called a **seminorm**, and it identifies entire subspaces as "zero". Seminorms are useful (the seminorm $\|f\|_0 = |f(0)|$ on a function space, the seminorms in Sobolev spaces) but in $\mathbb{R}^n$ they are not what one means by "magnitude" — they only measure magnitude *modulo* some subspace.
+What if we weakened **definiteness** to allow $\|x\| = 0$ for some nonzero $x$? Then $\|\cdot\|$ is called a **seminorm**, and it identifies entire [[Def - Subspace|subspaces]] as "zero". Seminorms are useful (the seminorm $\|f\|_0 = |f(0)|$ on a function space, the seminorms in Sobolev spaces) but in $\mathbb{R}^n$ they are not what one means by "magnitude" — they only measure magnitude *modulo* some [[Def - Subspace|subspace]].
 
 What if we **strengthened** by requiring $\|x + y\|^2 \leq \|x\|^2 + \|y\|^2$ unconditionally? This is the so-called "ultrametric" condition, and it forces every pair of vectors with disjoint support to behave as if orthogonal — too restrictive for the geometry of $\mathbb{R}^n$, where vectors at an acute angle have $\|x + y\|^2 > \|x\|^2 + \|y\|^2$.
 
@@ -45,7 +45,7 @@ When other norms are present, this is written $\|x\|_2$. In one dimension it red
 $$
 \operatorname{dist}(a, b) = \|a - b\| = \sqrt{(a_1 - b_1)^2 + \cdots + (a_n - b_n)^2}.
 $$
-In one, two, and three dimensions this is the standard distance between the corresponding points.
+In one, two, and three [[Def - Dimension|dimensions]] this is the standard distance between the corresponding points.
 
 **Mean-square value, root-mean-square value, RMS deviation.** For $x \in \mathbb{R}^n$:
 $$

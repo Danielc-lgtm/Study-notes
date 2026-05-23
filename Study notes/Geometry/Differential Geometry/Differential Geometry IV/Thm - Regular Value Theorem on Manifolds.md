@@ -20,7 +20,7 @@ $\Phi : M \to N$ is a smooth map between smooth manifolds, $m = \dim M$, $n = \d
 
 # Statement
 
-> **Theorem (Regular Value Theorem on Manifolds).** Let $\Phi : M \to N$ be a smooth map between smooth manifolds, and let $c \in N$ be a regular value of $\Phi$. Then the level set
+> **Theorem ([[Thm - The Regular Value Theorem|Regular Value Theorem]] on Manifolds).** Let $\Phi : M \to N$ be a smooth map between smooth manifolds, and let $c \in N$ be a regular value of $\Phi$. Then the level set
 > $$S \;=\; \Phi^{-1}(c) \;\subseteq\; M,$$
 > if nonempty, is a properly embedded smooth submanifold of $M$ of codimension $\dim N = n$ (hence of dimension $\dim M - \dim N = m - n$). For every $p \in S$, the tangent space of $S$ at $p$ as a subspace of $T_p M$ is
 > $$T_p S \;=\; \ker d\Phi_p.$$
@@ -37,7 +37,7 @@ The result answers the most natural geometric question one asks about a level se
 
 The theorem is the **manifold-level upgrade of the [[Thm - The Regular Value Theorem|Euclidean regular value theorem]]** from [[Multivariate Analysis II — Inverse and Implicit Function Theorems|MA II]]. The Euclidean theorem says: for $\Phi : U \to \mathbb{R}^{n-d}$ smooth on $U \subseteq \mathbb{R}^n$ open, a regular level set is a $d$-dimensional embedded submanifold of $\mathbb{R}^n$. The manifold version replaces $\mathbb{R}^n$ by an arbitrary smooth manifold $M$ and proceeds by applying the Euclidean theorem chart-by-chart. The proof's structural backbone is the same as the Euclidean one — *the [[Thm - The Implicit Function Theorem|implicit function theorem]] gives local product structure; gluing these local pieces gives the manifold structure of the level set.*
 
-The theorem also gives the **tangent space for free**, as the kernel of the differential of the defining map. This is the most computationally direct way to identify the tangent space of a submanifold: rather than parametrising, one differentiates the defining equation. For matrix Lie groups this is the foundational identification: $T_I \mathrm{SL}(n) = \mathfrak{sl}(n)$ (trace-zero matrices), $T_I \mathrm{O}(n) = \mathfrak{o}(n)$ (antisymmetric matrices). The dimension of the submanifold falls out for free as $\dim M - \dim N$.
+The theorem also gives the **tangent space for free**, as the kernel of the differential of the defining map. This is the most computationally direct way to identify the tangent space of a submanifold: rather than parametrising, one differentiates the defining equation. For matrix Lie [[Def - Group|groups]] this is the foundational identification: $T_I \mathrm{SL}(n) = \mathfrak{sl}(n)$ (trace-zero matrices), $T_I \mathrm{O}(n) = \mathfrak{o}(n)$ (antisymmetric matrices). The dimension of the submanifold falls out for free as $\dim M - \dim N$.
 
 There is a subtle but important point about *which* points of $M$ need to be regular. The hypothesis is that every point *in the preimage of $c$* is regular — not that every point of $M$ is regular. This is a strictly weaker condition, and it is exactly what is needed: the rank condition is checked along the level set, not globally. If even one point of the preimage is critical, the level set can fail to be a submanifold *at that point*, while remaining a submanifold elsewhere. The conical example $\{z^2 = x^2 + y^2\}$ in $\mathbb{R}^3$ is exactly this: it is a $2$-submanifold everywhere except at the origin, which is the unique critical point on the level set.
 
@@ -124,7 +124,7 @@ At each point $p$ of the level set, regularity of $d\Phi_p$ activates the local 
    - *Hint:* Constancy of $\Phi$ on $S$ gives the chain-rule identity.
    - *Why needed:* It gives one inclusion.
 
-5. **Match dimensions.** Both $T_p S$ and $\ker d\Phi_p$ have dimension $m - n$: the former because $S$ has dimension $m - n$; the latter because $d\Phi_p$ is surjective onto $T_c N$ (which has dimension $n$), so by rank-nullity $\dim\ker d\Phi_p = \dim T_p M - n = m - n$. A subspace of the same dimension is equal, so $T_p S = \ker d\Phi_p$.
+5. **Match [[Def - Dimension|dimensions]].** Both $T_p S$ and $\ker d\Phi_p$ have dimension $m - n$: the former because $S$ has dimension $m - n$; the latter because $d\Phi_p$ is surjective onto $T_c N$ (which has dimension $n$), so by rank-nullity $\dim\ker d\Phi_p = \dim T_p M - n = m - n$. A subspace of the same dimension is equal, so $T_p S = \ker d\Phi_p$.
    - *Hint:* Rank-nullity from surjectivity.
    - *Why needed:* It completes the tangent-space identification.
 
@@ -150,7 +150,7 @@ At each point $p$ of the level set, regularity of $d\Phi_p$ activates the local 
 > > So $\varphi(\Phi^{-1}(c) \cap U) = \varphi(U) \cap (\{0\}^n \times \mathbb{R}^{m-n})$, which is a coordinate slice in $\varphi(U)$.
 
 > [!note]- Lemma 2: The tangent space of a regular level set is the kernel of the differential
-> **Statement:** With $S = \Phi^{-1}(c)$ a regular level set, $T_p S = \ker d\Phi_p$ as subspaces of $T_p M$, for every $p \in S$.
+> **Statement:** With $S = \Phi^{-1}(c)$ a regular level set, $T_p S = \ker d\Phi_p$ as [[Def - Subspace|subspaces]] of $T_p M$, for every $p \in S$.
 >
 > **Hint:** One inclusion comes from differentiating $\Phi \circ \gamma = c$ along curves; the other from a dimension count.
 >

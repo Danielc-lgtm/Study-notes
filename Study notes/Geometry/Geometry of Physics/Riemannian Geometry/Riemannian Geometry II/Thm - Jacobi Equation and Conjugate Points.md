@@ -16,7 +16,7 @@ $(M, g)$ a Riemannian manifold, $\gamma_v : I \to M$ the unique geodesic with $\
 
 # Statement
 
-> **Theorem (Jacobi Equation and Conjugate Points).** Let $(M, g)$ be a Riemannian manifold and $\gamma_v : I \to M$ a geodesic with $\gamma_v(0) = p$ and $\dot\gamma_v(0) = v$. For each $w \in T_pM$, the [[Def - Jacobi Field|Jacobi field]] $J_w$ along $\gamma_v$ with $J_w(0) = 0$ and $J_w'(0) = w$ is given by
+> **Theorem (Jacobi Equation and [[Def - Conjugate Point|Conjugate Points]]).** Let $(M, g)$ be a Riemannian manifold and $\gamma_v : I \to M$ a geodesic with $\gamma_v(0) = p$ and $\dot\gamma_v(0) = v$. For each $w \in T_pM$, the [[Def - Jacobi Field|Jacobi field]] $J_w$ along $\gamma_v$ with $J_w(0) = 0$ and $J_w'(0) = w$ is given by
 > $$J_w(t) = d(\exp_p)_{tv}(tw).$$
 > Consequently:
 >
@@ -44,7 +44,7 @@ This theorem is the cleanest possible statement of the **link between three diff
 
 This is the entire engine of comparison geometry. Curvature bounds — whether on sectional curvature, Ricci curvature, or scalar curvature — translate into bounds on conjugate-point distance, which translate into bounds on the injectivity radius, which translate into bounds on the diameter (via the second variation of length), which translate into compactness and topology results (Bonnet–Myers, Synge, Cartan–Hadamard).
 
-The Jacobi-field formula $J_w(t) = d(\exp_p)_{tv}(tw)$ is also the technical heart of the theorem. It says that **Jacobi fields with $J(0) = 0$ are the radial derivatives of the exponential map**. This converts the abstract "Jacobi field" (defined as the variation of geodesics through nearby geodesics) into the concrete "differential of $\exp_p$ along radial directions", which is computable in any specific example. And it makes the equivalence between conjugate points (Jacobi field $J_w(t) = 0$) and singular values of $d(\exp_p)$ ($\ker d(\exp_p)_{tv} \ni w$) into a tautology.
+The Jacobi-field formula $J_w(t) = d(\exp_p)_{tv}(tw)$ is also the technical heart of the theorem. It says that **Jacobi fields with $J(0) = 0$ are the radial derivatives of the exponential map**. This converts the abstract "Jacobi field" (defined as the variation of [[Def - Geodesic|geodesics]] through nearby geodesics) into the concrete "differential of $\exp_p$ along radial directions", which is computable in any specific example. And it makes the equivalence between conjugate points (Jacobi field $J_w(t) = 0$) and singular values of $d(\exp_p)$ ($\ker d(\exp_p)_{tv} \ni w$) into a tautology.
 
 The variational/Morse-theoretic content is the [[Thm - Second Variation of Arc Length|second variation of arc length]]: at a conjugate point, the index form has a non-trivial kernel, signalling the loss of length-minimisation. The **Morse Index Theorem** packages this into a count: the index of the index form equals the number of interior conjugate points, with multiplicity.
 
@@ -213,7 +213,7 @@ The most common error is to **conflate the parameter on $\gamma$ (called $t$) wi
 >
 > By Lemma 3, $J$ is the unique Jacobi field along $\gamma_v$ with $J(0) = 0, J'(0) = w$. So $J = J_w$, and the formula $J_w(t) = d(\exp_p)_{tv}(tw)$ is established.
 >
-> For the conjugate-point characterisation: $\gamma_v(t)$ is conjugate to $p$ along $\gamma_v$ iff there exists a non-zero $w \in T_pM$ with $J_w(t) = 0$ iff there exists $w$ such that $d(\exp_p)_{tv}(tw) = 0$ iff $\ker d(\exp_p)_{tv}$ contains some $tw \neq 0$ iff $d(\exp_p)_{tv}$ is singular. The multiplicity is the dimension of this kernel.
+> For the conjugate-point characterisation: $\gamma_v(t)$ is conjugate to $p$ along $\gamma_v$ iff there exists a non-zero $w \in T_pM$ with $J_w(t) = 0$ iff there exists $w$ such that $d(\exp_p)_{tv}(tw) = 0$ iff $\ker d(\exp_p)_{tv}$ contains some $tw \neq 0$ iff $d(\exp_p)_{tv}$ is singular. The multiplicity is the [[Def - Dimension|dimension]] of this kernel.
 >
 > The Sturm-comparison corollary follows from Lemma 4 applied to each scalar equation $f_i'' + \lambda_i(t) f_i = 0$ obtained by diagonalising the matrix $A(t)$ of the curvature operator in a parallel-transported frame. Bounds on the eigenvalues $\lambda_i(t)$ translate via Sturm into conjugate-point distance bounds. $\qquad\blacksquare$
 
@@ -225,7 +225,7 @@ The most common error is to **conflate the parameter on $\gamma$ (called $t$) wi
 
 **Optics: focal points and caustics.** A wavefront in geometric optics is propagated along geodesics of the optical metric, and the points where the wavefront becomes singular — **caustics** — are precisely where the linearised geodesic flow (i.e., the Jacobi-field equation) develops vanishing solutions. So caustics in optics are conjugate points in disguise, and the geometric-optics theory of caustics (cusp catastrophes, swallowtails, butterfly catastrophes — the classification of low-codimension caustic singularities) is the geometric-optics version of the Riemannian theory.
 
-**Symplectic geometry: the Maslov index.** A Lagrangian submanifold of a symplectic manifold has, along any path, a *Maslov index* counting how many times it becomes tangent to the vertical foliation. For the case of Lagrangian flows generated by Hamiltonians, the Maslov index along a Hamiltonian trajectory equals the **conjugate-point count of the projection** — i.e., the Morse index of the corresponding variational problem. The Riemannian Morse Index Theorem is the special case for geodesic Hamiltonians; the general symplectic Maslov-index theory is the deep generalisation.
+**Symplectic geometry: the Maslov index.** A Lagrangian submanifold of a symplectic manifold has, along any path, a *Maslov index* counting how many times it becomes tangent to the vertical [[Def - Foliation|foliation]]. For the case of Lagrangian flows generated by Hamiltonians, the Maslov index along a Hamiltonian trajectory equals the **conjugate-point count of the projection** — i.e., the Morse index of the corresponding variational problem. The Riemannian Morse Index Theorem is the special case for geodesic Hamiltonians; the general symplectic Maslov-index theory is the deep generalisation.
 
 **General relativity: the Raychaudhuri equation.** The Lorentzian analogue of the Jacobi equation, applied to a *congruence* of geodesics (rather than a single geodesic), is the **Raychaudhuri equation**. It governs the **expansion** $\theta$, **shear** $\sigma$, and **rotation** $\omega$ of the congruence. Focusing of the expansion ($\theta \to -\infty$) signals a focal point analogous to a Riemannian conjugate point — and in Lorentzian signature, with the energy conditions of general relativity, the Raychaudhuri equation forces focal points along causal geodesics in finite affine parameter, leading to the **Penrose singularity theorem**.
 

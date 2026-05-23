@@ -17,7 +17,7 @@ $M$ is a smooth $n$-manifold (with or without boundary). $\Omega^k(M)$ is the sp
 
 # Statement
 
-> **Theorem (Existence and Uniqueness of the Exterior Derivative, Lee Theorem 14.24).** Let $M$ be a smooth manifold. There exists a unique family of operators
+> **Theorem (Existence and Uniqueness of [[Def - The Exterior Derivative|the Exterior Derivative]], Lee Theorem 14.24).** Let $M$ be a smooth manifold. There exists a unique family of operators
 > $$d_k : \Omega^k(M) \longrightarrow \Omega^{k+1}(M), \quad k = 0, 1, \dots, n-1$$
 > (with $d_k \equiv 0$ for $k \geq n$, since $\Omega^{k+1}(M) = 0$), satisfying the following four properties:
 >
@@ -261,7 +261,7 @@ defines an operator on smooth forms. Verify directly that it is linear, agrees w
 
 **Find an operator on $\Omega^\bullet(M)$ that satisfies three of the four axioms but not the fourth.** For each axiom (linearity, boundary, Leibniz, $d^2 = 0$), construct an operator satisfying the other three. The constructions reveal which axiom does which work: e.g., dropping $d^2 = 0$ allows the operator $D_\nabla = d + A\wedge$ for a $1$-form $A$ (with $D_\nabla^2 = dA + A\wedge A \neq 0$ in general), the gauge-theoretic covariant exterior derivative.
 
-**Show that on a Lie group, the exterior derivative of the dual coframe of left-invariant vector fields is determined by the structure constants.** Combined with the uniqueness theorem, this yields the Maurer–Cartan equation $d\theta + \tfrac12[\theta, \theta] = 0$. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
+**Show that on a Lie [[Def - Group|group]], the exterior derivative of the dual coframe of left-invariant vector fields is determined by the structure constants.** Combined with the uniqueness theorem, this yields the Maurer–Cartan equation $d\theta + \tfrac12[\theta, \theta] = 0$. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
 
 ---
 

@@ -26,7 +26,7 @@ Let $T^n = \mathbb{R}^n/\mathbb{Z}^n$ be the flat $n$-torus, with the flat Eucli
 
 The flat $n$-torus is the quotient $T^n = \mathbb{R}^n/\mathbb{Z}^n$. Smooth functions on $T^n$ are smooth $\mathbb{Z}^n$-periodic functions on $\mathbb{R}^n$. Smooth differential forms on $T^n$ are smooth $\mathbb{Z}^n$-periodic differential forms on $\mathbb{R}^n$.
 
-A **harmonic $k$-form** on a closed Riemannian manifold is a $k$-form $\omega$ satisfying $\Delta\omega = 0$, where $\Delta = d\delta + \delta d$ is the Hodge Laplacian.
+A **harmonic $k$-form** on a closed Riemannian manifold is a $k$-form $\omega$ satisfying $\Delta\omega = 0$, where $\Delta = d\delta + \delta d$ is the [[Def - Hodge Laplacian|Hodge Laplacian]].
 
 ![[Def - Harmonic Form#The Definition]]
 
@@ -109,7 +109,7 @@ The proof has three parts. Part (a) shows constant-coefficient forms are harmoni
 >
 > Hence $\omega = \sum'_I\hat\omega_{I,0}\,dx^I$ is a constant-coefficient form. ✓
 
-**Step 3: Dimension of $\mathcal{H}^k(T^n)$ (part (c)).**
+**Step 3: [[Def - Dimension|Dimension]] of $\mathcal{H}^k(T^n)$ (part (c)).**
 
 > [!note]- Derivation
 > By Steps 1 and 2, $\mathcal{H}^k(T^n) = \{$ constant-coefficient $k$-forms on $T^n\} = \{\sum'_I c_I dx^I : c_I \in \mathbb{R}\}$.
@@ -149,8 +149,8 @@ The proof has three parts. Part (a) shows constant-coefficient forms are harmoni
 
 **Constant-coefficient forms on a flat compact manifold are harmonic.** The most reusable insight is that on any flat compact Riemannian manifold (torus, Klein bottle, etc.), constant-coefficient forms are automatically harmonic — they trivially satisfy both $d\omega = 0$ and $\delta\omega = 0$. The converse — that *all* harmonic forms are constant-coefficient — uses Fourier analysis and the absence of Christoffel correction in the flat metric. The trigger pattern: see "flat compact Riemannian manifold" + "compute harmonic forms" → "look at constant-coefficient forms".
 
-**Fourier analysis diagonalizes the Hodge Laplacian on a flat torus.** The Hodge Laplacian acts componentwise on forms in flat coordinates, and on each component (a function), Fourier analysis diagonalizes it: eigenfunctions are $e^{2\pi i k\cdot x}$ with eigenvalues $(2\pi)^2|k|^2$. The kernel is the $k = 0$ subspace (constants). This pattern — Fourier diagonalization of an elliptic operator on a flat compact manifold — is the prototype for **spectral theory on compact manifolds** more generally: the Laplacian has discrete eigenvalues converging to infinity, with the kernel corresponding to topologically meaningful objects (here, cohomology classes).
+**Fourier analysis diagonalizes the Hodge Laplacian on a flat torus.** The Hodge Laplacian acts componentwise on forms in flat coordinates, and on each component (a function), Fourier analysis diagonalizes it: eigenfunctions are $e^{2\pi i k\cdot x}$ with eigenvalues $(2\pi)^2|k|^2$. The kernel is the $k = 0$ [[Def - Subspace|subspace]] (constants). This pattern — Fourier diagonalization of an elliptic operator on a flat compact manifold — is the prototype for **spectral theory on compact manifolds** more generally: the Laplacian has discrete eigenvalues converging to infinity, with the kernel corresponding to topologically meaningful objects (here, cohomology classes).
 
-**On a homogeneous manifold, harmonic forms are invariant forms.** The torus $T^n$ has a transitive $T^n$-action on itself (translation), and harmonic forms are precisely the invariant forms (constant-coefficient). This generalizes: on any homogeneous manifold $G/K$ with an invariant Riemannian metric, the harmonic forms are exactly the $G$-invariant forms, computable from the Lie algebra cohomology $H^*(\mathfrak{g}, \mathfrak{k})$. The trigger pattern: "homogeneous space with invariant metric" + "compute $\mathcal{H}^k$" → "Lie algebra cohomology computation". This is how the cohomology of spheres, projective spaces, and Lie groups is computed via Hodge theory.
+**On a homogeneous manifold, harmonic forms are invariant forms.** The torus $T^n$ has a transitive $T^n$-action on itself (translation), and harmonic forms are precisely the invariant forms (constant-coefficient). This generalizes: on any homogeneous manifold $G/K$ with an invariant Riemannian metric, the harmonic forms are exactly the $G$-invariant forms, computable from the Lie algebra cohomology $H^*(\mathfrak{g}, \mathfrak{k})$. The trigger pattern: "homogeneous space with invariant metric" + "compute $\mathcal{H}^k$" → "Lie algebra cohomology computation". This is how the cohomology of spheres, projective spaces, and Lie [[Def - Group|groups]] is computed via Hodge theory.
 
 This exercise complements [[Ex - Computing the Hodge Star on S^2]] (Hodge star on a curved $2$-manifold) and [[Ex - First Betti Number Bounds via Bochner's Theorem]] (Bochner's theorem applied to manifolds with positive Ricci). The flat torus is the boundary case of Bochner: $\operatorname{Ric} = 0$ (nonnegative but not strictly positive), and $b_1 = n$ saturates the nonnegative-Ricci bound.

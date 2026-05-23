@@ -17,7 +17,7 @@ The desideratum is to define a *product* of two finite sequences (or vectors) th
 
 The cleanest motivation comes from **polynomial multiplication**. Suppose $a = (a_1, \dots, a_n)$ holds the coefficients of a polynomial $p(t) = a_1 + a_2 t + \cdots + a_n t^{n-1}$, and $b$ holds the coefficients of $q(t)$ similarly. The product polynomial $p(t) q(t)$ is then a polynomial of degree $n + m - 2$ (so its coefficient vector has length $n + m - 1$), and its coefficients are obtained by collecting terms: the coefficient of $t^{k-1}$ in $p(t)q(t)$ is $\sum_{i + j = k + 1} a_i b_j$, summing over all pairs $(i, j)$ with $i + j - 2 = k - 1$. **Define the convolution $a \ast b$ to be this coefficient vector**:
 $$(a \ast b)_k = \sum_{i + j = k + 1} a_i b_j, \quad k = 1, \dots, n + m - 1.$$
-By construction, convolution corresponds to polynomial multiplication, and inherits its algebraic properties for free: commutative ($p q = q p$), associative ($(pq)r = p(qr)$), distributive over addition, and with multiplicative identity the polynomial $1$ (i.e., the $1$-vector $(1)$, which is "scalar $1$"). Also for free, $a \ast b = 0$ implies $a = 0$ or $b = 0$ (a polynomial product is zero only when one factor is zero, since the polynomial ring is an integral domain).
+By construction, convolution corresponds to polynomial multiplication, and inherits its algebraic properties for free: commutative ($p q = q p$), associative ($(pq)r = p(qr)$), distributive over addition, and with multiplicative identity the polynomial $1$ (i.e., the $1$-vector $(1)$, which is "scalar $1$"). Also for free, $a \ast b = 0$ implies $a = 0$ or $b = 0$ (a polynomial product is zero only when one factor is zero, since the polynomial [[Def - Ring|ring]] is an integral domain).
 
 A second motivation comes from **signal processing**. Suppose $u_1, u_2, \dots, u_m$ is a time series — a signal sampled at $m$ time points — and we want to filter it by computing weighted local averages with weights $a = (a_1, \dots, a_n)$. The filtered signal is the $(n + m - 1)$-vector
 $$y_t = \sum_{j=1}^{\min(n, t)} a_j u_{t-j+1}, \quad t = 1, \dots, n + m - 1,$$
@@ -42,7 +42,7 @@ Equivalently, $a \ast b$ is the coefficient vector of the polynomial product $p(
 **Properties.**
 1. **Commutativity:** $a \ast b = b \ast a$.
 2. **Associativity:** $(a \ast b) \ast c = a \ast (b \ast c)$.
-3. **Distributivity:** $a \ast (b + c) = a \ast b + a \ast c$ (when $b$ and $c$ have the same dimensions).
+3. **Distributivity:** $a \ast (b + c) = a \ast b + a \ast c$ (when $b$ and $c$ have the same [[Def - Dimension|dimensions]]).
 4. **Bilinearity:** for any scalar $\alpha$, $(\alpha a) \ast b = a \ast (\alpha b) = \alpha (a \ast b)$.
 5. **Integral domain:** $a \ast b = 0$ implies $a = 0$ or $b = 0$.
 6. **Sum property:** $\mathbf{1}^T (a \ast b) = (\mathbf 1^T a)(\mathbf 1^T b)$.
@@ -86,7 +86,7 @@ In linear-time-invariant system theory, convolution is the *only* operation: any
 
 **Corollary — convolution with the unit vector.** $e_k \ast b$ is the vector that places $b$ starting at position $k$, with zeros elsewhere. So convolution with $e_k$ is a *shift*. This is what makes shift-invariance manifest: the impulse response to a unit input at time $k$ is the impulse response shifted to start at time $k$.
 
-**Corollary — convolution of indicator-of-interval with itself.** $a = (1, 1, \dots, 1)$ (the all-ones $n$-vector) convolved with itself is the "triangle" or "tent" vector: $a \ast a$ has entries $1, 2, 3, \dots, n - 1, n, n - 1, \dots, 1$. This is the discrete analogue of the convolution of a rectangle with itself being a triangle, and the basis of why the Central Limit Theorem works — convolutions of indicator functions become bell-shaped.
+**Corollary — convolution of indicator-of-interval with itself.** $a = (1, 1, \dots, 1)$ (the all-ones $n$-vector) convolved with itself is the "triangle" or "tent" vector: $a \ast a$ has entries $1, 2, 3, \dots, n - 1, n, n - 1, \dots, 1$. This is the discrete analogue of the convolution of a rectangle with itself being a triangle, and the basis of why the [[Thm - Central Limit Theorem|Central Limit Theorem]] works — convolutions of indicator functions become bell-shaped.
 
 **Calibration check.** Verify that the convolution $a \ast b$ of an $n$-vector and an $m$-vector has length $n + m - 1$. Verify that $a \ast 1 = a$ (convolution with the scalar $1$ is the identity on vectors). Verify that $a \ast b = b \ast a$ by checking the index symmetry $i + j = k + 1$ is symmetric in $(i, j)$.
 

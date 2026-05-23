@@ -15,7 +15,7 @@ tags: [algebra, ring-theory]
 
 # Problem Statement
 
-Let $F$ be a field and $n\ge 1$ an integer. Deduce from Hilbert's basis theorem that the polynomial rings
+Let $F$ be a field and $n\ge 1$ an integer. Deduce from Hilbert's basis theorem that the polynomial [[Def - Ring|rings]]
 $$F[X_1,X_2,\dots,X_n]\qquad\text{and}\qquad\mathbb{Z}[X_1,X_2,\dots,X_n]$$
 are **Noetherian**.
 
@@ -23,7 +23,7 @@ Conclude that every ideal of each of these rings is finitely generated — and i
 
 **Recall:**
 
-The objects are a multivariate polynomial ring over a field or over $\mathbb{Z}$, its ideals, and systems of polynomial equations.
+The objects are a multivariate polynomial ring over a field or over $\mathbb{Z}$, its [[Def - Ideal|ideals]], and systems of polynomial equations.
 
 ![[Def - Noetherian Ring#The Definition]]
 

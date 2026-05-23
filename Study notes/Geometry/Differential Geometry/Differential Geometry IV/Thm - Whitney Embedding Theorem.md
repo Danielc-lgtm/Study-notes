@@ -84,7 +84,7 @@ Here is the compact-case construction.
 $$F(p) = (\rho_1(p) \varphi_1(p), \dots, \rho_m(p) \varphi_m(p), \rho_1(p), \dots, \rho_m(p)),$$
 where $\rho_i(p) \varphi_i(p)$ is understood to be zero outside $U_i$ (since $\rho_i$ vanishes there). This is a smooth map from $M$ to $\mathbb{R}^{nm + m}$.
 
-**Step D (verify injectivity).** Suppose $F(p) = F(q)$. Then $\rho_i(p) = \rho_i(q)$ for all $i$. Since the $V_i$ cover $M$, some $\rho_i$ equals $1$ at $p$ — and hence at $q$, forcing $q \in U_i$ (where $\rho_i$ is supported). In this $U_i$, the coordinate components give $\varphi_i(p) = \varphi_i(q)$ (since $\rho_i(p) = \rho_i(q) = 1$); since $\varphi_i$ is a homeomorphism, $p = q$.
+**Step D (verify injectivity).** Suppose $F(p) = F(q)$. Then $\rho_i(p) = \rho_i(q)$ for all $i$. Since the $V_i$ cover $M$, some $\rho_i$ equals $1$ at $p$ — and hence at $q$, forcing $q \in U_i$ (where $\rho_i$ is supported). In this $U_i$, the coordinate components give $\varphi_i(p) = \varphi_i(q)$ (since $\rho_i(p) = \rho_i(q) = 1$); since $\varphi_i$ is a [[Def - Homeomorphism|homeomorphism]], $p = q$.
 
 **Step E (verify immersion).** At any $p \in V_i$, $\rho_i$ equals $1$ in a neighbourhood of $p$, so $d(\rho_i \varphi_i)_p = d\varphi_{i\,p}$, which is a coordinate map's differential and is injective. The corresponding components of $dF_p$ are therefore injective. (In fact $dF_p$ is injective on the $n$-dimensional tangent space $T_p M$ because $d(\rho_i \varphi_i)_p$ already is.)
 
@@ -169,7 +169,7 @@ For compact $M$, cover by finitely many regular coordinate balls. Build cutoff f
 > > $$\tau : TM \setminus M_0 \to \mathbb{RP}^{N-1}, \quad \tau(p, w) = [w],$$
 > > where $M_0 = \{(p, 0) : p \in M\}$ is the zero section. The domain $TM \setminus M_0$ has dimension $2n$ (the tangent bundle of an $n$-manifold has dimension $2n$); the codomain $\mathbb{RP}^{N-1}$ has dimension $N - 1 > 2n$. By Sard's theorem, $\tau(TM \setminus M_0)$ has measure zero in $\mathbb{RP}^{N-1}$.
 > >
-> > For $v \notin \tau(TM \setminus M_0)$, we have $[v] \neq [w]$ for all nonzero $w \in T_p M$ and all $p$ — that is, $v$ is not parallel to any nonzero tangent vector of $M$. The differential $d\pi_v$ on $T_p M$ has kernel exactly the subspace of $T_p M$ parallel to $v$; this is $\{0\}$ by the genericity of $v$, so $d\pi_v|_{T_p M}$ is injective. Hence $\pi_v|_M$ is an immersion. The set of good $v$ is dense.
+> > For $v \notin \tau(TM \setminus M_0)$, we have $[v] \neq [w]$ for all nonzero $w \in T_p M$ and all $p$ — that is, $v$ is not parallel to any nonzero tangent vector of $M$. The differential $d\pi_v$ on $T_p M$ has kernel exactly the [[Def - Subspace|subspace]] of $T_p M$ parallel to $v$; this is $\{0\}$ by the genericity of $v$, so $d\pi_v|_{T_p M}$ is injective. Hence $\pi_v|_M$ is an immersion. The set of good $v$ is dense.
 
 ---
 
@@ -186,7 +186,7 @@ For compact $M$, cover by finitely many regular coordinate balls. Build cutoff f
 >
 > *$F_0$ is injective.* If $F_0(p) = F_0(q)$, then $\rho_i(p) = \rho_i(q)$ for all $i$. The $V_i$ cover $M$, so $p \in V_j$ for some $j$, hence $\rho_j(p) = 1$, hence $\rho_j(q) = 1$, hence $q \in \mathrm{supp}\, \rho_j \subseteq U_j$ — in fact $q \in V_j$ (otherwise $\rho_j(q) < 1$). The coordinate component gives $\varphi_j(p) = \rho_j(p)\varphi_j(p) = \rho_j(q) \varphi_j(q) = \varphi_j(q)$, and $\varphi_j$ is injective on $U_j$, so $p = q$.
 >
-> *$F_0$ is an immersion.* At $p \in V_i$, $\rho_i$ is constantly $1$ on a neighbourhood, so $d(\rho_i \varphi_i)_p = d\varphi_{i\,p}$ is injective (chart differentials are isomorphisms). Hence $dF_{0,p}$ is injective.
+> *$F_0$ is an immersion.* At $p \in V_i$, $\rho_i$ is constantly $1$ on a neighbourhood, so $d(\rho_i \varphi_i)_p = d\varphi_{i\,p}$ is injective (chart differentials are [[Def - Isomorphism|isomorphisms]]). Hence $dF_{0,p}$ is injective.
 >
 > *$F_0$ is an embedding.* Injective smooth immersion from compact $M$ to Hausdorff $\mathbb{R}^{nm + m}$ is automatically a smooth embedding.
 >
@@ -214,7 +214,7 @@ For compact $M$, cover by finitely many regular coordinate balls. Build cutoff f
 
 **Computational topology.** In computational topology, manifolds are represented as simplicial complexes embedded in $\mathbb{R}^N$ for $N$ small. Whitney's theorem gives a theoretical bound on the necessary $N$ (namely $2n + 1$ for smooth $n$-manifolds), guiding choice of data structures and algorithms.
 
-**The h-cobordism theorem and high-dimensional topology.** Smale's $h$-cobordism theorem (every simply connected $h$-cobordism is trivial in dimensions $\geq 5$) was proved using Whitney's trick for resolving self-intersections of embeddings — a refinement of the techniques behind the strong Whitney embedding theorem ($\mathbb{R}^{2n}$). The classification of simply connected high-dimensional manifolds rests on this.
+**The h-cobordism theorem and high-dimensional topology.** Smale's $h$-cobordism theorem (every simply connected $h$-cobordism is trivial in [[Def - Dimension|dimensions]] $\geq 5$) was proved using Whitney's trick for resolving self-intersections of embeddings — a refinement of the techniques behind the strong Whitney embedding theorem ($\mathbb{R}^{2n}$). The classification of simply connected high-dimensional manifolds rests on this.
 
 ---
 

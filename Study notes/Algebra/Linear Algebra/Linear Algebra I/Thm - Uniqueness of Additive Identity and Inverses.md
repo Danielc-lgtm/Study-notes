@@ -8,7 +8,7 @@ tags: [algebra, linear-algebra]
 
 # Notation
 
-$V$ is a vector space over a [[Def - Field|field]] $\mathbb{F}$. The additive identity is $0 \in V$; the additive inverse of $v \in V$ is $-v$, defined by $v + (-v) = 0$. The scalar zero in $\mathbb{F}$ is also denoted $0$ — context distinguishes the two. See [[Linear Algebra I — §1 Vector Spaces]] for the full notation registry.
+$V$ is a vector space over a field $\mathbb{F}$. The additive identity is $0 \in V$; the additive inverse of $v \in V$ is $-v$, defined by $v + (-v) = 0$. The scalar zero in $\mathbb{F}$ is also denoted $0$ — context distinguishes the two. See [[Linear Algebra I — §1 Vector Spaces]] for the full notation registry.
 
 ---
 
@@ -101,7 +101,7 @@ For uniqueness of the additive identity, compute $0 + 0'$ in two ways using each
    - *Why needed:* This is part (2) and the proof exhibits the role of associativity.
 
 3. **Corollary $0 \cdot v = 0$:** Use distributivity over scalar addition: $0 v = (0 + 0) v = 0 v + 0 v$, then add $-(0 v)$ to both sides.
-   - *Hint:* The defining equation $X = X + X$ forces $X = 0$ in any group, via cancellation.
+   - *Hint:* The defining equation $X = X + X$ forces $X = 0$ in any [[Def - Group|group]], via cancellation.
    - *Why needed:* Standard corollary used everywhere.
 
 4. **Corollary $a \cdot 0 = 0$:** Use distributivity over vector addition: $a \cdot 0 = a (0 + 0) = a \cdot 0 + a \cdot 0$, then cancel.
@@ -110,7 +110,7 @@ For uniqueness of the additive identity, compute $0 + 0'$ in two ways using each
 
 5. **Corollary $(-1) v = -v$:** Use both distributivity and the multiplicative identity: $(-1) v + v = (-1) v + 1 \cdot v = (-1 + 1) v = 0 \cdot v = 0$, so $(-1) v$ is an additive inverse of $v$, and by uniqueness equals $-v$.
    - *Hint:* Express the candidate inverse explicitly and verify it satisfies the inverse property.
-   - *Why needed:* This corollary is invoked in nearly every subspace argument and is the reason subspaces don't need a separate "closure under inverses" axiom.
+   - *Why needed:* This corollary is invoked in nearly every [[Def - Subspace|subspace]] argument and is the reason [[Def - Subspace|subspaces]] don't need a separate "closure under inverses" axiom.
 
 ---
 
@@ -179,11 +179,11 @@ For uniqueness of the additive identity, compute $0 + 0'$ in two ways using each
 
 # Cross-Field Exercise Suggestions
 
-**Uniqueness of group identities and inverses.** The proofs given here are nearly identical to the proofs in [[Def - Group|group theory]] that group identities and inverses are unique — the only difference is that the underlying operation is addition rather than abstract multiplication. The argument for inverses uses associativity in exactly the same way, exposing that associativity is what makes inverses well-defined in any algebraic structure, not just vector spaces.
+**Uniqueness of [[Def - Group|group]] identities and inverses.** The proofs given here are nearly identical to the proofs in [[Def - Group|group theory]] that group identities and inverses are unique — the only difference is that the underlying operation is addition rather than abstract multiplication. The argument for inverses uses associativity in exactly the same way, exposing that associativity is what makes inverses well-defined in any algebraic structure, not just vector spaces.
 
 **Uniqueness of identity in monoids and semigroups.** A *monoid* is a set with an associative operation and a two-sided identity (no inverses required). The proof of uniqueness of the identity transfers verbatim to monoids. The inverse-uniqueness proof, however, requires actual inverses to exist; for monoids one talks instead about elements *with* inverses (units) and verifies uniqueness for those.
 
-**Uniqueness of the additive identity in a ring or a field.** The same argument shows that a ring's (and a field's, see [[Def - Field]]) additive identity is unique. The multiplicative identity in a ring with $1$ is also unique by the same argument. In a field, multiplicative inverses are also unique by the same associative re-bracketing. The argument is purely about additive-group structure.
+**Uniqueness of the additive identity in a [[Def - Ring|ring]] or a field.** The same argument shows that a [[Def - Ring|ring]]'s (and a field's, see [[Def - Field]]) additive identity is unique. The multiplicative identity in a ring with $1$ is also unique by the same argument. In a field, multiplicative inverses are also unique by the same associative re-bracketing. The argument is purely about additive-group structure.
 
 **Uniqueness of solutions to linear equations.** Given a linear equation $v + 3 x = w$ in a vector space, the solution is unique: $x = \frac{1}{3}(w - v)$. The uniqueness comes from the well-definedness of $-v$ (this theorem), the well-definedness of scalar inverses (since the field has multiplicative inverses), and the well-definedness of subtraction $w - v = w + (-v)$. This is LADR Exercise 1B.3, and it is the simplest application of the theorem.
 

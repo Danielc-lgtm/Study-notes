@@ -13,7 +13,7 @@ tags: [geometry, differential-geometry, integration, mobius]
 
 # Problem Statement
 
-Let $E$ be the Möbius strip, constructed as the quotient of the cylinder $\mathbb{R} \times (-1, 1)$ by the identification $(x, y) \sim (x + 1, -y)$. Equip $E$ with the induced flat Riemannian metric $ds^2 = dx^2 + dy^2$ (well-defined because the identification is an isometry).
+Let $E$ be the Möbius strip, constructed as the quotient of the cylinder $\mathbb{R} \times (-1, 1)$ by the identification $(x, y) \sim (x + 1, -y)$. Equip $E$ with the induced flat Riemannian metric $ds^2 = dx^2 + dy^2$ (well-defined because the identification is an [[Def - Isometry|isometry]]).
 
 **(a)** Show that the local expression $\omega = dx \wedge dy$ defines a globally well-defined pseudo-$2$-form on $E$, even though no global ordinary $2$-form can be nowhere-vanishing on $E$.
 
@@ -23,13 +23,13 @@ Let $E$ be the Möbius strip, constructed as the quotient of the cylinder $\math
 
 **Recall:**
 
-The objects in play are the Möbius strip as a non-orientable smooth manifold, the pseudo-$2$-form construction, and the integration of pseudoforms.
+The objects in play are the Möbius strip as a non-orientable smooth manifold, the pseudo-$2$-form construction, and the integration of [[Def - Pseudoform (Twisted Form)|pseudoforms]].
 
 ![[Def - Pseudoform (Twisted Form)#The Definition]]
 
 The Möbius strip can be defined either as the quotient $E = [\mathbb{R} \times (-1, 1)]/\sim$ with $(x, y) \sim (x + 1, -y)$, or equivalently as a rank-$1$ non-trivial real line bundle over $S^1$. The non-trivial bundle structure is what makes it non-orientable — the fiber's orientation reverses after one trip around the base. See [[Ex - The Sphere is Orientable but the Möbius Strip is Not]] for the proof of non-orientability via a global-section obstruction.
 
-Recall that on an oriented chart $(U, \varphi)$, the integral of an ordinary $n$-form $\omega = f(x)\,dx^1 \wedge \cdots \wedge dx^n$ supported in $U$ is $\int_U f(\varphi(x))\,dx^1\cdots dx^n$ — a positively-signed Riemann integral. For pseudoforms the formula is *the same* in each chart, but the orientation-flip rule of the pseudoform guarantees that the integrals on overlapping charts agree without requiring positive Jacobian on transitions.
+Recall that on an oriented chart $(U, \varphi)$, the integral of an ordinary $n$-form $\omega = f(x)\,dx^1 \wedge \cdots \wedge dx^n$ supported in $U$ is $\int_U f(\varphi(x))\,dx^1\cdots dx^n$ — a positively-signed Riemann integral. For [[Def - Pseudoform (Twisted Form)|pseudoforms]] the formula is *the same* in each chart, but the orientation-flip rule of the pseudoform guarantees that the integrals on overlapping charts agree without requiring positive Jacobian on transitions.
 
 ---
 
@@ -110,7 +110,7 @@ This is the geometric area of the strip.
 > $$\int_E\omega = \int_{[0,1) \times (-1,1)} dx \wedge dy = \int_0^1\int_{-1}^1 dy\,dx.$$
 > The inner integral is $\int_{-1}^1 dy = 2$ (the width of the strip), and the outer integral is $\int_0^1 dx = 1$ (the circumference of the core circle). The total is $2 \cdot 1 = 2$.
 >
-> This matches the geometric area: the Möbius strip, regarded as a rectangle of dimensions $1 \times 2$ before gluing, has area $1 \cdot 2 = 2$, and the gluing preserves area because the identification map is an isometry.
+> This matches the geometric area: the Möbius strip, regarded as a rectangle of [[Def - Dimension|dimensions]] $1 \times 2$ before gluing, has area $1 \cdot 2 = 2$, and the gluing preserves area because the identification map is an [[Def - Isometry|isometry]].
 
 **Step 3: Show no ordinary $2$-form representation exists.**
 

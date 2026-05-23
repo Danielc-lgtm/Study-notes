@@ -18,12 +18,12 @@ $M$ is a smooth $n$-manifold. A subset $A \subseteq \mathbb{R}^n$ has **Lebesgue
 
 A general smooth manifold $M$ carries no canonical measure or volume — a Riemannian metric is required to define one, and there is no canonical metric. So we cannot define "measure zero on $M$" by integrating a volume form (no volume form is available without extra structure) or by bounding the measure of $A$ (no measure is available). But [[Thm - Sard's Theorem|Sard's theorem]] says the critical values of a smooth map have measure zero in the codomain manifold, so *some* notion of measure zero on a manifold is essential.
 
-The escape is that Lebesgue measure zero on $\mathbb{R}^n$ is **diffeomorphism-invariant** in a precise sense: a smooth map between open subsets of $\mathbb{R}^n$ (of the same dimension) sends measure-zero sets to measure-zero sets, because such a map is locally Lipschitz on compact sets, and Lipschitz maps preserve measure zero with at most a multiplicative bound on the covering volumes. This makes "measure zero" a property that transports across charts: if $\varphi(A \cap U)$ has measure zero in $\mathbb{R}^n$ for one chart $(U, \varphi)$, then the same is true in any compatible chart.
+The escape is that Lebesgue measure zero on $\mathbb{R}^n$ is **diffeomorphism-invariant** in a precise sense: a smooth map between open subsets of $\mathbb{R}^n$ (of the same [[Def - Dimension|dimension]]) sends measure-zero sets to measure-zero sets, because such a map is locally Lipschitz on compact sets, and Lipschitz maps preserve measure zero with at most a multiplicative bound on the covering volumes. This makes "measure zero" a property that transports across charts: if $\varphi(A \cap U)$ has measure zero in $\mathbb{R}^n$ for one chart $(U, \varphi)$, then the same is true in any compatible chart.
 
 So we *define* "measure zero on a manifold" by demanding it in every chart: $A \subseteq M$ has measure zero iff $\varphi(A \cap U)$ has Lebesgue measure zero in $\mathbb{R}^n$ for every smooth chart $(U, \varphi)$ of $M$. The diffeomorphism invariance ensures this is well-posed; in practice, only one atlas needs to be checked.
 
 The desiderata for this notion are clean:
-1. **Diffeomorphism invariance.** Smooth maps between manifolds of the same dimension send measure-zero sets to measure-zero sets.
+1. **[[Def - Diffeomorphism|Diffeomorphism]] invariance.** Smooth maps between manifolds of the same dimension send measure-zero sets to measure-zero sets.
 2. **Closure under countable unions.** A countable union of measure-zero sets has measure zero (just like in Euclidean space).
 3. **Density of the complement.** The complement of a measure-zero set is dense in $M$ — measure-zero sets are "small enough that you can avoid them by perturbing".
 4. **Submanifolds of positive codimension have measure zero.** A submanifold of dimension $k < n$ has measure zero in $M$ — strictly lower-dimensional pieces are negligible.
@@ -76,7 +76,7 @@ The relationship to **first category / meagre sets** in topology: measure zero i
 
 **Example — the graph of a continuous function.** For $A \subseteq \mathbb{R}^{n-1}$ open and $f : A \to \mathbb{R}$ continuous, the graph $\Gamma(f) \subseteq \mathbb{R}^n$ has measure zero. (Proved by induction in Lee's Proposition 6.3.) So a graph in $\mathbb{R}^n$ — even a graph of a merely continuous function — is negligible. This is the engine of "submanifolds have measure zero".
 
-**Example — a proper affine subspace.** A proper affine subspace of $\mathbb{R}^n$ has measure zero (corollary of the graph result). So lines in $\mathbb{R}^2$, planes in $\mathbb{R}^3$, hyperplanes in $\mathbb{R}^n$ — all have measure zero in the appropriate ambient space.
+**Example — a proper affine [[Def - Subspace|subspace]].** A proper affine subspace of $\mathbb{R}^n$ has measure zero (corollary of the graph result). So lines in $\mathbb{R}^2$, planes in $\mathbb{R}^3$, hyperplanes in $\mathbb{R}^n$ — all have measure zero in the appropriate ambient space.
 
 **Example — critical values of a smooth map (Sard).** By [[Thm - Sard's Theorem|Sard's theorem]], the set of critical values of any smooth map $F : M \to N$ has measure zero in $N$. This is the most important application of the notion, and it makes "almost every value is regular" a precise statement.
 

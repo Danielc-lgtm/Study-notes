@@ -28,13 +28,13 @@ $$\mathrm{RMS}_{\text{train}} = \sqrt{(1/N_{\text{train}}) \sum_i (y_i - \hat{f}
 
 # Convergent Strategy
 
-**Problem class:** This is a *model-complexity selection* problem via validation. The class is "sweep a hyperparameter (here, polynomial degree) over a range, fit each model, evaluate on a held-out test set, identify the minimum-test-error model." This is the canonical approach to model selection in least squares; the only judgment is the choice of train/test split (here, 50/50, a reasonable but not unique choice).
+**Problem class:** This is a *model-complexity selection* problem via [[Def - Validation (Training and Test Error)|validation]]. The class is "sweep a hyperparameter (here, polynomial degree) over a range, fit each model, evaluate on a held-out test set, identify the minimum-test-error model." This is the canonical approach to model selection in least squares; the only judgment is the choice of train/test split (here, 50/50, a reasonable but not unique choice).
 
 **Assumption pattern:** Training data $\{(x_i, y_i)\}_{i=1}^N$ are samples from some unknown function $f(x)$ with additive noise: $y_i = f(x_i) + \epsilon_i$. The test data are samples from the same distribution. The assumption of i.i.d. sampling is crucial — it justifies using the test error as an estimator of true generalization error. With this assumption, the Vandermonde design matrix has linearly independent columns (assuming distinct $x_i$), and the LS theorem gives a unique fit for each degree.
 
 **Theorem routing:** For each $d$, apply [[Thm - Existence and Uniqueness of Least Squares Solution]] to the Vandermonde design matrix of degree $d$ to get the unique LS minimizer $\hat{\theta}(d)$. Compute training error $\mathrm{RMS}_{\text{train}}(d) = \|y^{\text{train}} - A^{\text{train}} \hat{\theta}(d)\|/\sqrt{N_{\text{train}}}$ and test error $\mathrm{RMS}_{\text{test}}(d) = \|y^{\text{test}} - A^{\text{test}} \hat{\theta}(d)\|/\sqrt{N_{\text{test}}}$. Plot both vs. $d$ to find the minimum-test-error model. Then apply [[Thm - Bias-Variance Tradeoff in Regularized LS|the bias-variance tradeoff theorem]] (in spirit) to explain *why* the test error has its U-shape.
 
-**Key decision point:** The non-obvious choice is the *test set size*. A small test set gives a noisy estimate of true generalization error, making the identified optimal degree unreliable. A large test set gives a better estimate but leaves less data for training, potentially worsening the model. The 50/50 split is a compromise; in production, 80/20 splits or 5-10 fold cross-validation are more common, with cross-validation generally giving more reliable estimates at the cost of more computation.
+**Key decision point:** The non-obvious choice is the *test set size*. A small test set gives a noisy estimate of true generalization error, making the identified optimal degree unreliable. A large test set gives a better estimate but leaves less data for training, potentially worsening the model. The 50/50 split is a compromise; in production, 80/20 splits or 5-10 fold cross-[[Def - Validation (Training and Test Error)|validation]] are more common, with cross-validation generally giving more reliable estimates at the cost of more computation.
 
 ---
 
@@ -54,7 +54,7 @@ $$\mathrm{RMS}_{\text{train}} = \sqrt{(1/N_{\text{train}}) \sum_i (y_i - \hat{f}
 > Each polynomial fit of degree $d$ is a least squares problem with the Vandermonde design matrix $A_{ij} = x_i^{j-1}$ for $j = 1, \ldots, d+1$. As $d$ increases, the design matrix gets more columns, but the data ($y$) is fixed.
 
 > [!note]- Hint 2
-> Training error decreases (or stays the same) as $d$ increases: more parameters can fit the data more closely. To see this formally, observe that adding a column to $A$ enlarges the column space, and the LS projection onto a larger subspace cannot increase the residual.
+> Training error decreases (or stays the same) as $d$ increases: more parameters can fit the data more closely. To see this formally, observe that adding a column to $A$ enlarges the column space, and the LS projection onto a larger [[Def - Subspace|subspace]] cannot increase the residual.
 
 > [!note]- Hint 3
 > The test error has a U-shape because: for small $d$, the model is too simple to capture the underlying $\sin(2\pi x)$ pattern (high bias, high test error). For large $d$, the model has so many parameters that it fits the *noise* in the training data, not the signal (low bias, but high variance, high test error). The minimum is at some intermediate $d^*$.
@@ -66,7 +66,7 @@ $$\mathrm{RMS}_{\text{train}} = \sqrt{(1/N_{\text{train}}) \sum_i (y_i - \hat{f}
 
 # Solution
 
-The proof structure has three steps. Step 1 establishes existence and uniqueness of the LS minimizer for each degree, using the Vandermonde-distinctness condition. Step 2 proves the training error is non-increasing in $d$ via the *projection-onto-larger-subspace* argument. Step 3 explains the test-error U-shape via the bias-variance tradeoff and computes the optimal degree empirically for the synthetic problem.
+The proof structure has three steps. Step 1 establishes existence and uniqueness of the LS minimizer for each degree, using the Vandermonde-distinctness condition. Step 2 proves the training error is non-increasing in $d$ via the *projection-onto-larger-[[Def - Subspace|subspace]]* argument. Step 3 explains the test-error U-shape via the bias-variance tradeoff and computes the optimal degree empirically for the synthetic problem.
 
 **Step 1: Existence and uniqueness of LS for each degree.**
 

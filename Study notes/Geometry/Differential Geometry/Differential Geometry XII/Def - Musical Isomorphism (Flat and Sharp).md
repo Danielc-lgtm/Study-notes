@@ -91,7 +91,7 @@ Structurally, $\flat$ is the bundle map induced by the metric tensor $g$ viewed 
 
 Equivalently, in terms of categorical adjunction: the cotangent space $T_p^*M = (T_pM)^*$ is the dual space, and a non-degenerate symmetric bilinear form $g_p$ on a finite-dimensional vector space $V$ provides a *canonical isomorphism* $V \cong V^*$ via $v \mapsto g_p(v, \cdot)$. The musical isomorphism is this construction parametrised by the point of $M$.
 
-From the perspective of vector bundle isomorphisms: the metric $g$ is a smooth section of $\mathrm{Sym}^2(T^*M)$ that is fibrewise non-degenerate, hence determines a bundle isomorphism $TM \cong T^*M$. Equivalently, the metric gives a fibrewise inner product, and the inner product gives the Riesz isomorphism between $T_pM$ and its dual.
+From the perspective of vector bundle [[Def - Isomorphism|isomorphisms]]: the metric $g$ is a smooth section of $\mathrm{Sym}^2(T^*M)$ that is fibrewise non-degenerate, hence determines a bundle isomorphism $TM \cong T^*M$. Equivalently, the metric gives a fibrewise inner product, and the inner product gives the Riesz isomorphism between $T_pM$ and its dual.
 
 A categorical subtlety: the musical isomorphism is *not* a natural transformation in any functorial sense, because there is no canonical metric on a manifold. The choice of $g$ is part of the structure, and the isomorphism depends on it. This is in contrast to the canonical isomorphism $V \cong V^{**}$ between a vector space and its double dual, which is natural with no extra data.
 

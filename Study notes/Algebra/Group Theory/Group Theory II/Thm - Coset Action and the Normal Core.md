@@ -32,15 +32,15 @@ $G$ is a group with identity $e$; $H \leq G$ a [[Def - Subgroup|subgroup]]. The 
 > **Index theorem.** Let $G$ be finite and $H \leq G$ a subgroup of index $n$. Then there is a [[Def - Normal Subgroup|normal subgroup]] $K \trianglelefteq G$ with $K \leq H$ such that $G/K$ is isomorphic to a subgroup of $S_n$. Hence
 > $$|G/K| \;\big|\; n! \qquad\text{and}\qquad |G/K| \;\geq\; n.$$
 
-> **Corollary (no small subgroups in a simple group).** Let $G$ be a non-abelian [[Def - Simple Group|simple]] group and $H \leq G$ a proper subgroup of index $n > 1$. Then $G$ is isomorphic to a subgroup of $A_n$; consequently $n \geq 5$ — a non-abelian simple group has no proper subgroup of index less than $5$.
+> **Corollary (no small [[Def - Subgroup|subgroups]] in a simple group).** Let $G$ be a non-abelian [[Def - Simple Group|simple]] group and $H \leq G$ a proper subgroup of index $n > 1$. Then $G$ is isomorphic to a subgroup of $A_n$; consequently $n \geq 5$ — a non-abelian simple group has no proper subgroup of index less than $5$.
 
-The construction manufactures a normal subgroup from an arbitrary subgroup — the most reliable source of normal subgroups in the topic — and the corollary turns it into a remarkably rigid constraint on simple groups.
+The construction manufactures a normal subgroup from an arbitrary subgroup — the most reliable source of normal [[Def - Subgroup|subgroups]] in the topic — and the corollary turns it into a remarkably rigid constraint on simple [[Def - Group|groups]].
 
 ---
 
 # Motivation
 
-[[Group Theory I — §1.1–1.2]] established that [[Def - Normal Subgroup|normal subgroups]] are the good subgroups: they are exactly the ones you can quotient by, the kernels of homomorphisms, the building blocks of the structure theory. But normality is a *fragile* property. A generic [[Def - Subgroup|subgroup]] $H \leq G$ is not normal — the condition $gHg^{-1} = H$ for all $g$ is a strong demand, and most subgroups fail it. This leaves a gap: subgroups are easy to come by (every element generates one, every intersection is one), but the *useful* subgroups, the normal ones, are scarce. Where do normal subgroups come from when none is handed to you?
+[[Group Theory I — §1.1–1.2]] established that [[Def - Normal Subgroup|normal subgroups]] are the good subgroups: they are exactly the ones you can quotient by, the kernels of [[Def - Homomorphism|homomorphisms]], the building blocks of the structure theory. But normality is a *fragile* property. A generic [[Def - Subgroup|subgroup]] $H \leq G$ is not normal — the condition $gHg^{-1} = H$ for all $g$ is a strong demand, and most subgroups fail it. This leaves a gap: subgroups are easy to come by (every element generates one, every intersection is one), but the *useful* subgroups, the normal ones, are scarce. Where do normal subgroups come from when none is handed to you?
 
 This theorem answers that. It gives a universal recipe — input *any* subgroup $H$, output a normal subgroup — and the recipe is pure [[Thm - Actions Correspond to Homomorphisms|action machinery]]. The idea is that a subgroup, even a badly non-normal one, still has a coset space $G/H$, and $G$ permutes that coset space by left multiplication. An action is a homomorphism; a homomorphism has a kernel; a kernel is normal. So the coset action *converts a subgroup into a normal subgroup automatically*, by routing it through the kernel. The normal subgroup produced — the normal core — is the largest one that fits inside $H$, so the recipe extracts the maximal normal "essence" of any subgroup.
 
@@ -82,9 +82,9 @@ The fourth combination is **conclusion plus a prime-power order forces normality
 
 # Why Is It True
 
-The theorem has two claims — that the coset action exists, and that its kernel is the normal core — and both become transparent once you picture left multiplication shuffling the cosets.
+The theorem has two claims — that the coset action exists, and that its kernel is the normal core — and both become transparent once you picture left multiplication shuffling the [[Def - Coset|cosets]].
 
-**Why $G$ acts on $G/H$.** Take the set of left cosets $G/H$; its elements are the "clumps" $xH$ that tile $G$. An element $g \in G$ sends the clump $xH$ to the clump $gxH$. Is this a well-defined rule on *clumps* (not on representatives)? Yes — if $xH = x'H$ then $x' = xh$ for some $h \in H$, so $gx'H = gxhH = gxH$, the clump is sent to the same place regardless of which representative names it. And the action axioms are immediate: $e\cdot xH = xH$, and $g_1\cdot(g_2\cdot xH) = g_1 g_2 xH = (g_1 g_2)\cdot xH$ by associativity. So left multiplication genuinely permutes the coset space, exactly as it permutes $G$ itself in [[Thm - Cayley's Theorem|Cayley's theorem]] — the coset action is Cayley's regular action with the points "blurred" into clumps of size $|H|$.
+**Why $G$ acts on $G/H$.** Take the set of left [[Def - Coset|cosets]] $G/H$; its elements are the "clumps" $xH$ that tile $G$. An element $g \in G$ sends the clump $xH$ to the clump $gxH$. Is this a well-defined rule on *clumps* (not on representatives)? Yes — if $xH = x'H$ then $x' = xh$ for some $h \in H$, so $gx'H = gxhH = gxH$, the clump is sent to the same place regardless of which representative names it. And the action axioms are immediate: $e\cdot xH = xH$, and $g_1\cdot(g_2\cdot xH) = g_1 g_2 xH = (g_1 g_2)\cdot xH$ by associativity. So left multiplication genuinely permutes the coset space, exactly as it permutes $G$ itself in [[Thm - Cayley's Theorem|Cayley's theorem]] — the coset action is Cayley's regular action with the points "blurred" into clumps of size $|H|$.
 
 **Why the kernel is the normal core.** Ask which $g$ act *invisibly* — fix every coset. The element $g$ fixes the coset $xH$ when $gxH = xH$. Rearrange: $gxH = xH$ means $x^{-1}gxH = H$, which means $x^{-1}gx \in H$, which means $g \in xHx^{-1}$. So *$g$ fixes the particular coset $xH$ exactly when $g$ lies in the conjugate $xHx^{-1}$.* This is the key local computation, and the argument is completely reversible — each step is an "if and only if". Now $g$ is in the kernel when it fixes *every* coset, i.e. when $g \in xHx^{-1}$ for *every* $x$. That is precisely the intersection:
 $$\ker\rho = \bigcap_{x \in G} xHx^{-1}.$$
@@ -230,7 +230,7 @@ Each lemma below is independently practiceable in roughly five minutes.
 > $$\operatorname{im}\rho \cong \frac{\operatorname{im}\rho}{\operatorname{im}\rho\cap A_n} \cong \frac{\operatorname{im}\rho\,A_n}{A_n} \leq \frac{S_n}{A_n} \cong C_2,$$
 > making $G$ abelian — a contradiction. So $\operatorname{im}\rho\cap A_n = \operatorname{im}\rho$, i.e. $G \cong \operatorname{im}\rho \leq A_n$.
 >
-> Finally, $n \geq 5$. The groups $S_1, S_2, S_3, S_4$ — equivalently $A_1, A_2, A_3, A_4$ — contain no non-abelian simple subgroup, as one verifies by listing all their subgroups: $A_1, A_2$ are trivial, $A_3 \cong C_3$ is abelian, and every subgroup of $S_4$ (hence of $A_4$) is solvable. So a non-abelian simple $G$ cannot embed in $A_n$ for $n \leq 4$; therefore $n \geq 5$. $\qquad\blacksquare$
+> Finally, $n \geq 5$. The [[Def - Group|groups]] $S_1, S_2, S_3, S_4$ — equivalently $A_1, A_2, A_3, A_4$ — contain no non-abelian simple subgroup, as one verifies by listing all their subgroups: $A_1, A_2$ are trivial, $A_3 \cong C_3$ is abelian, and every subgroup of $S_4$ (hence of $A_4$) is solvable. So a non-abelian simple $G$ cannot embed in $A_n$ for $n \leq 4$; therefore $n \geq 5$. $\qquad\blacksquare$
 >
 > This is the theorem and corollary of §1.3 of the source lecture notes, with the coset-action kernel computation as the central reversible argument.
 

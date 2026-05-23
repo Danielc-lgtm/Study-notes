@@ -16,7 +16,7 @@ Throughout, $V$ is a finite-dimensional vector space over a field $F$ (almost al
 
 # Axiom Motivation
 
-An operator $T$ on a vector space $V$ is potentially very complicated. The strategy of the entire chapter — and indeed of every chapter on operators that follows — is to **break $V$ apart** into pieces that $T$ respects, and to study $T$ separately on each piece. The pieces are the **invariant subspaces** of $T$, and the central question of §5 is: what invariant subspaces does $T$ have?
+An operator $T$ on a vector space $V$ is potentially very complicated. The strategy of the entire chapter — and indeed of every chapter on operators that follows — is to **break $V$ apart** into pieces that $T$ respects, and to study $T$ separately on each piece. The pieces are the **invariant [[Def - Subspace|subspaces]]** of $T$, and the central question of §5 is: what invariant [[Def - Subspace|subspaces]] does $T$ have?
 
 What is the right axiomatic content? We want a subspace $U \leq V$ such that "the restriction of $T$ to $U$" is a well-defined operator on $U$. For the restriction to land in $U$, we need $Tv \in U$ for every $v \in U$. That is the single requirement. So a $T$-invariant subspace is a subspace $U$ closed under the action of $T$ — exactly the same condition as "closed under multiplication by a scalar" for a subspace of a vector space, with the operator $T$ playing the role of a scalar.
 
@@ -36,7 +36,7 @@ The *simplest* possible non-trivial invariant subspace is **one-dimensional**: a
 
 Why does the axiom have only one half — closure under $T$ — and not also "closure under $T^{-1}$" (when $T$ is invertible)? Because requiring both would be a much stronger condition: it would say $U$ is invariant under both $T$ and $T^{-1}$, hence under all powers $T^k$ for $k \in \mathbb{Z}$. This is the condition for **$T$-stability**, and it is more rigid than mere invariance. The looser, one-sided condition is the right one because it makes "find an invariant subspace and induct" a useful strategy: it imposes the minimum needed for the induction step to go through.
 
-A final point about the philosophy. The existence question "does $T$ have a non-trivial invariant subspace?" has a famous infinite-dimensional analogue: the **invariant subspace problem** for bounded operators on a Hilbert space. The question whether every such operator has a non-trivial closed invariant subspace has been open for decades for separable Hilbert spaces; counterexamples are known for general Banach spaces. So even the most basic question of operator theory becomes hard in infinite dimensions, and the finite-dimensional answer — "yes, over $\mathbb{C}$, by the existence of eigenvalues" — is to be appreciated.
+A final point about the philosophy. The existence question "does $T$ have a non-trivial invariant subspace?" has a famous infinite-dimensional analogue: the **invariant subspace problem** for bounded operators on a Hilbert space. The question whether every such operator has a non-trivial closed invariant subspace has been open for decades for separable Hilbert spaces; counterexamples are known for general Banach spaces. So even the most basic question of operator theory becomes hard in infinite [[Def - Dimension|dimensions]], and the finite-dimensional answer — "yes, over $\mathbb{C}$, by the existence of eigenvalues" — is to be appreciated.
 
 ---
 
@@ -55,9 +55,9 @@ The **trivial invariant subspaces** are $\{0\}$ and $V$ itself; both are always 
 
 A $T$-invariant subspace is a **subobject** in the category whose objects are pairs $(V, T)$ — a vector space together with a chosen operator — and whose morphisms $\phi : (V, T) \to (W, S)$ are linear maps $\phi : V \to W$ satisfying $\phi \circ T = S \circ \phi$ (the "intertwining" condition). In this category, a subobject of $(V, T)$ is a pair $(U, T|_U)$ where $U \leq V$ is a subspace satisfying $T(U) \subseteq U$, with the morphism being the inclusion.
 
-This is the same as saying: a $T$-invariant subspace is a **submodule** of $V$ viewed as an $F[x]$-module with $x$ acting as $T$. The dictionary
+This is the same as saying: a $T$-invariant subspace is a **submodule** of $V$ viewed as an $F[x]$-[[Def - Module|module]] with $x$ acting as $T$. The dictionary
 $$(V, T) \;\longleftrightarrow\; F[x]\text{-module structure on } V$$
-sends $T$-invariant subspaces to $F[x]$-submodules. This is the bridge to [[Def - The Module of a Linear Operator]] and to the [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]] for $F[x]$-modules: the indecomposable submodules of $V$ are exactly the cyclic submodules $F[x]/(p)$ for $p$ an irreducible power, and these correspond geometrically to the [[Thm - Jordan Normal Form|Jordan blocks]] of $T$.
+sends $T$-invariant subspaces to $F[x]$-[[Def - Submodule|submodules]]. This is the bridge to [[Def - The Module of a Linear Operator]] and to the [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]] for $F[x]$-[[Def - Module|modules]]: the indecomposable [[Def - Submodule|submodules]] of $V$ are exactly the cyclic submodules $F[x]/(p)$ for $p$ an irreducible power, and these correspond geometrically to the [[Thm - Jordan Normal Form|Jordan blocks]] of $T$.
 
 The quotient construction also works: when $U \leq V$ is $T$-invariant, $T$ descends to an operator $T/U \in \mathcal{L}(V/U)$ on the quotient space, defined by $(T/U)(v + U) = Tv + U$. This is the quotient $F[x]$-module $V/U$, and the construction commutes with restriction in the natural sense. Together, restriction and quotient are the two ways to make an invariant subspace into a strategic ingredient: study $T$ on $U$ and $T/U$ on $V/U$ separately.
 

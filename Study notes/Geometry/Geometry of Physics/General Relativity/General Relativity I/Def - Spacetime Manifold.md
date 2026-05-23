@@ -22,7 +22,7 @@ A standing convention: throughout this topic, **signature is $(+,-,-,-)$ and uni
 
 The desideratum is to set up the *geometric stage* on which general relativity will be performed. We need an arena in which: (i) the special-relativistic experience of every freely-falling observer is recovered locally, (ii) gravity can be encoded as a global geometric feature (curvature) rather than a force, (iii) the worldlines of massive particles, light rays, and observers can be described as curves, and (iv) the Einstein field equations make sense as PDEs for the geometric structure. The minimal mathematical object meeting all four is a *Lorentzian manifold*.
 
-The dimension is four because special relativity has four-dimensional Minkowski space as its arena (one time, three spatial directions), and GR must reduce to SR locally. Higher-dimensional spacetimes (5D, 10D, 11D) appear in **Kaluza–Klein theory**, **string theory**, and **brane-world cosmologies**, but the observed physical world has four large dimensions, and the standard GR setup is four-dimensional.
+The dimension is four because special relativity has four-dimensional Minkowski space as its arena (one time, three spatial directions), and GR must reduce to SR locally. Higher-dimensional spacetimes (5D, 10D, 11D) appear in **Kaluza–Klein theory**, **string theory**, and **brane-world cosmologies**, but the observed physical world has four large [[Def - Dimension|dimensions]], and the standard GR setup is four-dimensional.
 
 **Why a manifold?** Because we want a geometric object where coordinates are local labels with no intrinsic significance — the same physics described in many coordinate systems, with smooth transitions between them. The diffeomorphism invariance that powers all of GR (the principle of general covariance) is exactly the freedom to use any smooth chart, which is the defining feature of a manifold. We want **smooth** charts because the Christoffel symbols (derivatives of the metric) and the Riemann tensor (second derivatives) must make sense; $C^\infty$ is the generous default, though existence theorems for the Einstein equations are usually proved with weaker regularity (Sobolev classes).
 
@@ -42,7 +42,7 @@ The dimension is four because special relativity has four-dimensional Minkowski 
 
 (c) *If we drop second countable*: long lines, etc. — topologically pathological, blocks construction of partitions of unity.
 
-(d) *If we drop Lorentzian signature*: no causal structure, no relativity. Riemannian 4-manifolds describe "Euclidean gravity" (a tool in **quantum gravity via the Euclidean path integral**, **gravitational instantons**), but not physical spacetimes.
+(d) *If we drop Lorentzian signature*: no causal structure, no relativity. Riemannian 4-manifolds describe "Euclidean gravity" (a tool in **quantum gravity via the Euclidean path integral**, **gravitational [[Def - Instanton|instantons]]**), but not physical spacetimes.
 
 (e) *If we drop time orientation*: causally consistent in some patches but no global "arrow of time"; **closed timelike curves** can exist, and one runs into the **grandfather paradox**.
 
@@ -80,7 +80,7 @@ In the language of [[Def - Riemannian Manifold|(semi-)Riemannian manifolds]], a 
 - A section of the bundle $S^2_- T^*M \to M$ of symmetric $(0,2)$-tensors with Lorentzian signature — the metric.
 - A connected component of the bundle of non-spacelike vectors over $M$ — the time orientation.
 
-The natural morphisms between spacetimes are **isometries** preserving the time orientation: smooth diffeomorphisms $f : M_1 \to M_2$ such that $f^* g_2 = g_1$ and $f_* \tau_1$ is future-directed in $M_2$. Two isometric spacetimes describe the same physics; the "general covariance principle" is the statement that physically meaningful quantities depend only on the isometry class.
+The natural morphisms between spacetimes are **[[Def - Isometry|isometries]]** preserving the time orientation: smooth [[Def - Diffeomorphism|diffeomorphisms]] $f : M_1 \to M_2$ such that $f^* g_2 = g_1$ and $f_* \tau_1$ is future-directed in $M_2$. Two isometric spacetimes describe the same physics; the "general covariance principle" is the statement that physically meaningful quantities depend only on the isometry class.
 
 The category of spacetimes is *not* well-behaved in obvious ways (no products, no colimits in general), but it admits enough structure to support most differential-geometric constructions: tensor bundles, connections, curvatures, integration, etc.
 

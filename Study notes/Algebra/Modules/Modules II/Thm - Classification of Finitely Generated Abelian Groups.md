@@ -20,16 +20,16 @@ An **abelian group** is a [[Def - Module|ℤ-module]]: the ring is the integers 
 
 # Statement
 
-> **Classification of Finitely Generated Abelian Groups.** Every [[Def - Finitely Generated Module|finitely generated]] abelian group $A$ is isomorphic to a direct product of cyclic groups
+> **Classification of Finitely Generated [[Def - Abelian Group|Abelian Groups]].** Every [[Def - Finitely Generated Module|finitely generated]] abelian group $A$ is isomorphic to a direct product of cyclic [[Def - Group|groups]]
 > $$A \;\cong\; C_{d_1} \times C_{d_2} \times \dots \times C_{d_r} \times \underbrace{C_\infty \times \dots \times C_\infty}_{s},$$
 > where $C_\infty \cong \mathbb{Z}$ is the infinite cyclic group, $s \geq 0$, the $d_i$ are integers $\geq 2$, and the divisibility chain
 > $$d_1 \mid d_2 \mid \dots \mid d_r$$
 > holds.
 
-> **Corollary (finite abelian groups).** If $A$ is a *finite* abelian group then there are no infinite-cyclic factors, so
+> **Corollary (finite abelian [[Def - Group|groups]]).** If $A$ is a *finite* abelian group then there are no infinite-cyclic factors, so
 > $$A \;\cong\; C_{d_1} \times C_{d_2} \times \dots \times C_{d_r}, \qquad d_1 \mid d_2 \mid \dots \mid d_r.$$
 
-This is the master classification theorem for abelian groups. It says every finitely generated abelian group is built, by direct product, out of the simplest abelian groups there are — cyclic groups — split cleanly into a **free part** (the $s$ copies of $\mathbb{Z}$, recording the "non-torsion directions") and a **torsion part** (the finite cyclic factors $C_{d_i}$). The divisibility chain $d_1 \mid \dots \mid d_r$ makes the list of invariant factors canonical. The result is obtained with no extra work from the [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem for finitely generated modules over a Euclidean domain]] by taking the ring to be $\mathbb{Z}$; this page proves the existence half, exactly as the lecture notes do, and exhibits the computation in a worked example.
+This is the master classification theorem for abelian groups. It says every finitely generated abelian group is built, by direct product, out of the simplest abelian groups there are — cyclic groups — split cleanly into a **free part** (the $s$ copies of $\mathbb{Z}$, recording the "non-torsion directions") and a **torsion part** (the finite cyclic factors $C_{d_i}$). The divisibility chain $d_1 \mid \dots \mid d_r$ makes the list of invariant factors canonical. The result is obtained with no extra work from the [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem for finitely generated modules over a Euclidean domain]] by taking the [[Def - Ring|ring]] to be $\mathbb{Z}$; this page proves the existence half, exactly as the lecture notes do, and exhibits the computation in a worked example.
 
 ---
 
@@ -39,9 +39,9 @@ A finite group, presented by generators and relations, is opaque. You might be t
 
 It says: every finitely generated abelian group is, up to isomorphism, a product of cyclic groups, and the product can be arranged into a canonical normal form — a free part $\mathbb{Z}^s$ and a torsion part $C_{d_1} \times \dots \times C_{d_r}$ with $d_1 \mid \dots \mid d_r$. The opaque "abelian group with three generators and three relations" becomes a transparent short list: an integer $s$ and a divisibility chain of integers $d_i$. Two finitely generated abelian groups are isomorphic *exactly* when these data agree. The isomorphism problem — undecidable for groups in general — is, for abelian groups, solved by comparing two lists of integers.
 
-One should expect a result like this because abelian groups lack the feature that makes general groups wild: non-commuting elements. With every subgroup normal and conjugation trivial, there is no room for the semidirect-product "twisting" by which non-abelian groups assemble their pieces in complicated ways. The only way to build an abelian group from cyclic pieces is the untwisted way — the direct product — and the surprise is not that a classification exists but that it is this short.
+One should expect a result like this because abelian groups lack the feature that makes general groups wild: non-commuting elements. With every [[Def - Subgroup|subgroup]] normal and conjugation trivial, there is no room for the semidirect-product "twisting" by which non-abelian groups assemble their pieces in complicated ways. The only way to build an abelian group from cyclic pieces is the untwisted way — the direct product — and the surprise is not that a classification exists but that it is this short.
 
-The deeper reason to expect it, and the reason the proof is essentially free, is structural: a finitely generated abelian group *is* a finitely generated $\mathbb{Z}$-module, and $\mathbb{Z}$ is a [[Def - Euclidean Domain|Euclidean domain]]. The [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]] already classifies finitely generated modules over *any* Euclidean domain — it says such a module is $\bigoplus R/(d_i) \oplus R^s$ with $d_1 \mid \dots \mid d_r$. Reading this with $R = \mathbb{Z}$, and translating "$\mathbb{Z}$-module" into "abelian group", "$\mathbb{Z}/(d)$" into "$C_d$", and "$\mathbb{Z}$" into "$C_\infty$", *is* the classification. There is nothing to prove beyond the dictionary; the theorem is a corollary, and the lecture notes present it precisely as one. What this page adds beyond the translation is the practical content: *how to actually compute* the invariant factors of a concretely presented group, by Smith normal form and [[Def - Minor and Fitting Ideal|Fitting ideals]] — which is what the worked example below demonstrates.
+The deeper reason to expect it, and the reason the proof is essentially free, is structural: a finitely generated abelian group *is* a finitely generated $\mathbb{Z}$-module, and $\mathbb{Z}$ is a [[Def - Euclidean Domain|Euclidean domain]]. The [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]] already classifies finitely generated [[Def - Module|modules]] over *any* Euclidean domain — it says such a module is $\bigoplus R/(d_i) \oplus R^s$ with $d_1 \mid \dots \mid d_r$. Reading this with $R = \mathbb{Z}$, and translating "$\mathbb{Z}$-module" into "abelian group", "$\mathbb{Z}/(d)$" into "$C_d$", and "$\mathbb{Z}$" into "$C_\infty$", *is* the classification. There is nothing to prove beyond the dictionary; the theorem is a corollary, and the lecture notes present it precisely as one. What this page adds beyond the translation is the practical content: *how to actually compute* the invariant factors of a concretely presented group, by Smith normal form and [[Def - Minor and Fitting Ideal|Fitting ideals]] — which is what the worked example below demonstrates.
 
 ---
 
@@ -75,9 +75,9 @@ Combine the conclusion with **the largest invariant factor**. Because $d_i \mid 
 
 # Why Is It True
 
-The intuition is a single sentence: **an abelian group is a $\mathbb{Z}$-module, $\mathbb{Z}$ is a Euclidean domain, and the classification of modules over a Euclidean domain is already proved — so the theorem is a translation, not a new argument.**
+The intuition is a single sentence: **an abelian group is a $\mathbb{Z}$-module, $\mathbb{Z}$ is a Euclidean domain, and the classification of [[Def - Module|modules]] over a Euclidean domain is already proved — so the theorem is a translation, not a new argument.**
 
-Begin with the dictionary, because the whole theorem *is* the dictionary. An abelian group $A$ carries an addition. For any integer $n$ and element $g$, the expression $n \cdot g$ — meaning $g$ added to itself $n$ times (and $(-n) \cdot g = -(n \cdot g)$, $0 \cdot g = 0$) — equips $A$ with an action of the ring $\mathbb{Z}$. The module axioms $(m + n)g = mg + ng$, $m(ng) = (mn)g$, $1 \cdot g = g$ are just the elementary rules of repeated addition. So *an abelian group is exactly a $\mathbb{Z}$-module* — not analogous to one, literally one. "Finitely generated abelian group" is "finitely generated $\mathbb{Z}$-module", "subgroup" is "submodule", "direct product" is "direct sum".
+Begin with the dictionary, because the whole theorem *is* the dictionary. An abelian group $A$ carries an addition. For any integer $n$ and element $g$, the expression $n \cdot g$ — meaning $g$ added to itself $n$ times (and $(-n) \cdot g = -(n \cdot g)$, $0 \cdot g = 0$) — equips $A$ with an action of the [[Def - Ring|ring]] $\mathbb{Z}$. The module axioms $(m + n)g = mg + ng$, $m(ng) = (mn)g$, $1 \cdot g = g$ are just the elementary rules of repeated addition. So *an abelian group is exactly a $\mathbb{Z}$-module* — not analogous to one, literally one. "Finitely generated abelian group" is "finitely generated $\mathbb{Z}$-module", "subgroup" is "[[Def - Submodule|submodule]]", "direct product" is "direct sum".
 
 Now invoke what is already known. The [[Thm - Structure Theorem for Finitely Generated Modules over a Euclidean Domain|structure theorem]] says: for *any* Euclidean domain $R$, every finitely generated $R$-module $M$ decomposes as
 $$M \;\cong\; \frac{R}{(d_1)} \oplus \dots \oplus \frac{R}{(d_r)} \oplus R^s, \qquad d_1 \mid \dots \mid d_r.$$
@@ -127,7 +127,7 @@ Recognise that an abelian group is a $\mathbb{Z}$-module and that $\mathbb{Z}$ i
 # Lemma Decomposition
 
 > [!note]- Lemma 1: An abelian group is exactly a module over the integers
-> **Statement:** Every abelian group $A$ is a $\mathbb{Z}$-module under the action $n \cdot g = \underbrace{g + \dots + g}_{n}$ (with $0 \cdot g = 0$ and $(-n) \cdot g = -(n \cdot g)$), and conversely every $\mathbb{Z}$-module is an abelian group under its addition. Group homomorphisms and $\mathbb{Z}$-module homomorphisms coincide; subgroups and submodules coincide; direct products and direct sums coincide.
+> **Statement:** Every abelian group $A$ is a $\mathbb{Z}$-module under the action $n \cdot g = \underbrace{g + \dots + g}_{n}$ (with $0 \cdot g = 0$ and $(-n) \cdot g = -(n \cdot g)$), and conversely every $\mathbb{Z}$-module is an abelian group under its addition. Group [[Def - Homomorphism|homomorphisms]] and $\mathbb{Z}$-module [[Def - Homomorphism|homomorphisms]] coincide; [[Def - Subgroup|subgroups]] and [[Def - Submodule|submodules]] coincide; direct products and direct sums coincide.
 >
 > **Hint:** The module axioms for the $\mathbb{Z}$-action unwind to the elementary arithmetic of repeated addition.
 >
@@ -147,7 +147,7 @@ Recognise that an abelian group is a $\mathbb{Z}$-module and that $\mathbb{Z}$ i
 > **Why needed:** It translates each cyclic summand produced by the structure theorem into the corresponding cyclic group.
 >
 > > [!note]- Full proof
-> > The quotient module $\mathbb{Z}/(d)$ has underlying set the cosets $\{0 + (d), 1 + (d), \dots, (d-1) + (d)\}$ — exactly $d$ elements — with addition $(i + (d)) + (j + (d)) = (i + j) + (d)$. This is the cyclic group of order $d$: it is generated by the single element $1 + (d)$, every element being $k \cdot (1 + (d))$, and the additive order of that generator is $d$. Hence $\mathbb{Z}/(d) \cong C_d$.
+> > The quotient module $\mathbb{Z}/(d)$ has underlying set the [[Def - Coset|cosets]] $\{0 + (d), 1 + (d), \dots, (d-1) + (d)\}$ — exactly $d$ elements — with addition $(i + (d)) + (j + (d)) = (i + j) + (d)$. This is the cyclic group of order $d$: it is generated by the single element $1 + (d)$, every element being $k \cdot (1 + (d))$, and the additive order of that generator is $d$. Hence $\mathbb{Z}/(d) \cong C_d$.
 > >
 > > The module $\mathbb{Z}$ has underlying set all integers, with addition; it is generated by $1$, and $1$ has infinite additive order ($k \cdot 1 = k \neq 0$ for $k \neq 0$). So $\mathbb{Z}$ is the infinite cyclic group $C_\infty$. (Note $\mathbb{Z}/(1)$ is the trivial group, and $\mathbb{Z}/(0) = \mathbb{Z}$, consistent with discarding unit moduli and absorbing $d_i = 0$ into the free part.) $\blacksquare$
 
@@ -203,7 +203,7 @@ $$A \;\cong\; \frac{\mathbb{Z}^3}{\bigl\langle (2,3,1),\ (1,2,0),\ (5,6,7) \bigr
 $$X \;=\; \begin{pmatrix} 2 & 1 & 5 \\ 3 & 2 & 6 \\ 1 & 0 & 7 \end{pmatrix}.$$
 The invariant factors $d_1 \mid d_2 \mid d_3$ of $A$ are the diagonal entries of the [[Thm - Smith Normal Form|Smith normal form]] of $X$.
 
-**Step 3 — find the invariant factors via Fitting ideals.** Rather than carry out row and column operations, compute the [[Def - Minor and Fitting Ideal|Fitting ideals]] $\operatorname{Fit}_k(X)$ — the ideal generated by all $k \times k$ minors — and use that $\operatorname{Fit}_k(X) = (d_1 d_2 \cdots d_k)$ ([[Thm - Fitting Ideals are Invariants|Fitting ideals are invariants]]). Then $d_k$ is recovered by dividing a generator of $\operatorname{Fit}_k$ by a generator of $\operatorname{Fit}_{k-1}$.
+**Step 3 — find the invariant factors via Fitting [[Def - Ideal|ideals]].** Rather than carry out row and column operations, compute the [[Def - Minor and Fitting Ideal|Fitting ideals]] $\operatorname{Fit}_k(X)$ — the ideal generated by all $k \times k$ minors — and use that $\operatorname{Fit}_k(X) = (d_1 d_2 \cdots d_k)$ ([[Thm - Fitting Ideals are Invariants|Fitting ideals are invariants]]). Then $d_k$ is recovered by dividing a generator of $\operatorname{Fit}_k$ by a generator of $\operatorname{Fit}_{k-1}$.
 
 > [!note]- The Fitting-ideal computation
 > **First Fitting ideal $\operatorname{Fit}_1(X)$.** This is generated by all $1 \times 1$ minors — the matrix entries themselves. The entries include $1$ (the $(1,2)$ entry), and the ideal $(1) = \mathbb{Z}$ is the whole ring regardless of the other entries. So
@@ -225,7 +225,7 @@ $$A \;\cong\; \frac{\mathbb{Z}}{(3)} \;\cong\; C_3.$$
 The opaque presentation — three generators, three tangled relations — describes nothing more than the cyclic group of order $3$. (Note also $\det X = 3 \neq 0$: the matrix is invertible over $\mathbb{Q}$, so $K$ has full rank $3$, the Betti number is $s = 3 - 3 = 0$, and $A$ is finite of order $|\det X| = 3$ — a useful sanity check.)
 
 > [!tip] The general procedure
-> To identify any abelian group given by generators and relations: (1) write it as $\mathbb{Z}^m/K$; (2) form the matrix $X$ whose columns are the relation vectors; (3) compute the invariant factors $d_k = \operatorname{Fit}_k(X)/\operatorname{Fit}_{k-1}(X)$ from the Fitting ideals (or directly by Smith normal form); (4) read off $A \cong \bigoplus C_{d_k} \oplus \mathbb{Z}^{m - r}$, discarding $C_{d_k}$ for any $d_k$ that is a unit. The Betti number is $m$ minus the number of non-zero $d_k$, equivalently $m - \operatorname{rank}_{\mathbb{Q}}(X)$.
+> To identify any abelian group given by generators and relations: (1) write it as $\mathbb{Z}^m/K$; (2) form the matrix $X$ whose columns are the relation vectors; (3) compute the invariant factors $d_k = \operatorname{Fit}_k(X)/\operatorname{Fit}_{k-1}(X)$ from the Fitting [[Def - Ideal|ideals]] (or directly by Smith normal form); (4) read off $A \cong \bigoplus C_{d_k} \oplus \mathbb{Z}^{m - r}$, discarding $C_{d_k}$ for any $d_k$ that is a unit. The Betti number is $m$ minus the number of non-zero $d_k$, equivalently $m - \operatorname{rank}_{\mathbb{Q}}(X)$.
 
 ---
 

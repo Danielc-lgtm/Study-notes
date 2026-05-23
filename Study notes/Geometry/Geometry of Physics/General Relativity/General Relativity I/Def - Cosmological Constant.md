@@ -67,7 +67,7 @@ So the cosmological constant is equivalent to a contribution to the stress-energ
 
 # Categorical / Structural Definition
 
-The cosmological constant is the unique zeroth-order term in an expansion of the gravitational action in powers of curvature: $S_\text{grav} = \frac{1}{16\pi G}\int(R - 2\Lambda + \alpha R^2 + \beta R_{\mu\nu}R^{\mu\nu} + \ldots) \sqrt{-g}\, d^4x$. The first term ($-2\Lambda$) is dimension-zero in curvature, the $R$ term is dimension-2, and higher-curvature terms are dimension-4 and above. From the effective-field-theory standpoint, $\Lambda$ is the leading-order term, $R$ the next-to-leading, and higher curvatures are corrections.
+The cosmological constant is the unique zeroth-order term in an expansion of the gravitational action in powers of curvature: $S_\text{grav} = \frac{1}{16\pi G}\int(R - 2\Lambda + \alpha R^2 + \beta R_{\mu\nu}R^{\mu\nu} + \ldots) \sqrt{-g}\, d^4x$. The first term ($-2\Lambda$) is [[Def - Dimension|dimension]]-zero in curvature, the $R$ term is dimension-2, and higher-curvature terms are dimension-4 and above. From the effective-field-theory standpoint, $\Lambda$ is the leading-order term, $R$ the next-to-leading, and higher curvatures are corrections.
 
 By **Lovelock's theorem**, the variations of all these terms with respect to $g^{\mu\nu}$ give symmetric divergence-free tensors built from $g$ and its derivatives. In 4D, the linearly-second-order terms reduce to $G_{\mu\nu}$ and $g_{\mu\nu}$ — yielding the Einstein equations with cosmological constant.
 

@@ -80,7 +80,7 @@ By [[Def - Dual Basis]], the dual basis $(\varphi^j)$ to a basis $(v_i)$ of a fi
 **Step 3: $dx^j$ is a smooth section of $T^*M$ over $U$.**
 
 > [!note]- Derivation
-> By Step 2, the composition $\Phi \circ dx^j : U \to U \times \mathbb{R}^n$, $p \mapsto (p, e_j)$, is smooth (the second component is constant). Since $\Phi$ is a diffeomorphism (by the local-trivialization condition on $T^*M$), $dx^j = \Phi^{-1} \circ (p \mapsto (p, e_j))$ is also smooth. So $dx^j \in \Gamma(U, T^*M) = \Omega^1(U)$.
+> By Step 2, the composition $\Phi \circ dx^j : U \to U \times \mathbb{R}^n$, $p \mapsto (p, e_j)$, is smooth (the second component is constant). Since $\Phi$ is a [[Def - Diffeomorphism|diffeomorphism]] (by the local-trivialization condition on $T^*M$), $dx^j = \Phi^{-1} \circ (p \mapsto (p, e_j))$ is also smooth. So $dx^j \in \Gamma(U, T^*M) = \Omega^1(U)$.
 
 **Step 4: $(dx^1, \dots, dx^n)$ is a smooth local frame for $T^*M$ over $U$.**
 

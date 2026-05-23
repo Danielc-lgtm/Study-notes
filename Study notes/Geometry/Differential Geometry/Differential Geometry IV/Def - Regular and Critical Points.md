@@ -19,7 +19,7 @@ This is a compound page: it defines four interlocking notions — **regular poin
 
 # Axiom Motivation
 
-The [[Thm - Regular Value Theorem on Manifolds|regular value theorem]] says that, when the differential of $\Phi$ is surjective at every point of a level set $\Phi^{-1}(c)$, the level set is an embedded submanifold of $M$ with computable dimension and tangent space. This raises the question: at which points is the differential surjective? At which values is it surjective everywhere on the level set? These are the geometrically meaningful questions, and the definitions of "regular point" and "regular value" exist exactly to answer them.
+The [[Thm - Regular Value Theorem on Manifolds|regular value theorem]] says that, when the differential of $\Phi$ is surjective at every point of a level set $\Phi^{-1}(c)$, the level set is an embedded submanifold of $M$ with computable [[Def - Dimension|dimension]] and tangent space. This raises the question: at which points is the differential surjective? At which values is it surjective everywhere on the level set? These are the geometrically meaningful questions, and the definitions of "regular point" and "regular value" exist exactly to answer them.
 
 **Why "regular" for surjectivity of $d\Phi_p$.** A point $p$ where $d\Phi_p$ is surjective is one where $\Phi$ "behaves regularly" in the sense that the [[Thm - The Implicit Function Theorem|implicit function theorem]] applies — locally $\Phi$ looks like a coordinate projection, and the level set through $p$ is locally a graph (and hence locally a submanifold). The natural opposite is "critical": a point where the linearisation drops rank, where $\Phi$ "behaves singularly" in the sense that the IFT does not apply.
 
@@ -52,7 +52,7 @@ Let $\Phi : M \to N$ be a smooth map between smooth manifolds.
 - The set of regular points is open in $M$ (by lower semicontinuity of rank).
 - The set of critical points may be closed but is not necessarily small; the set of *critical values*, however, is small in the sense of measure zero ([[Thm - Sard's Theorem|Sard's theorem]]).
 - If $\dim M < \dim N$, then every point of $M$ is critical (the differential cannot be surjective from a lower-dimensional space). Correspondingly, the image $\Phi(M)$ has measure zero in $N$, so almost every value is regular by the empty-preimage convention.
-- If $\dim M = \dim N$, then $p$ is regular iff $d\Phi_p$ is a linear isomorphism iff $\Phi$ is a local diffeomorphism at $p$.
+- If $\dim M = \dim N$, then $p$ is regular iff $d\Phi_p$ is a linear isomorphism iff $\Phi$ is a local [[Def - Diffeomorphism|diffeomorphism]] at $p$.
 
 ---
 

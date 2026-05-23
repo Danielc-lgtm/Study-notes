@@ -101,7 +101,7 @@ The proof has two parts. Part 1 computes $\chi(S^2) = 2$ by constructing a concr
 > [!note]- Complete formal solution
 > **Step 1: Construct a vector field on $S^2$ with two isolated zeros.** Define $v : S^2 \to TS^2$ by $v(p) = -\mathbf{e}_z - \langle -\mathbf{e}_z, p\rangle p = -\mathbf{e}_z + p_z\cdot p$ (the orthogonal projection of $-\mathbf{e}_z$ onto $T_pS^2$ — using $N(p) = p$ on the unit sphere). In spherical coordinates with $p = (\sin\theta\cos\varphi, \sin\theta\sin\varphi, \cos\theta)$, $|v(p)| = |\sin\theta|$. So $v$ vanishes precisely at $\theta = 0$ (north pole) and $\theta = \pi$ (south pole), with $v$ nonzero elsewhere — isolated zeros.
 >
-> **Step 2: Compute indices.** At the south pole, the field's flow lines converge inward (all of $S^2$ flows southward), making it a sink, index $+1$. At the north pole, the field's flow lines diverge outward, making it a source, index $+1$. (Both source and sink have index $+1$ in $2$ dimensions because the linearisation has positive determinant in both cases.)
+> **Step 2: Compute indices.** At the south pole, the field's flow lines converge inward (all of $S^2$ flows southward), making it a sink, index $+1$. At the north pole, the field's flow lines diverge outward, making it a source, index $+1$. (Both source and sink have index $+1$ in $2$ [[Def - Dimension|dimensions]] because the linearisation has positive determinant in both cases.)
 >
 > **Step 3: Apply Poincaré–Hopf.** $\chi(S^2) = \sum_p\mathrm{Ind}_p(v) = 1 + 1 = 2$.
 >

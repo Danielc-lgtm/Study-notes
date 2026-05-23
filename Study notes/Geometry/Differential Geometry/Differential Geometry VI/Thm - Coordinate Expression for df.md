@@ -180,7 +180,7 @@ Two 1-forms on $U$ are equal if and only if they agree pointwise. Two covectors 
 
 **Physics: Hamilton's equations from $dH$.** For a Hamiltonian $H(q, p)$ on phase space $T^*Q$, the theorem gives $dH = (\partial H/\partial q^i) dq^i + (\partial H/\partial p_i) dp_i$. Hamilton's equations $\dot q^i = \partial H/\partial p_i$ and $\dot p_i = -\partial H/\partial q^i$ then read off from the symplectic-form equation $\iota_{X_H}\omega = dH$ once the components of $X_H$ in $\partial/\partial q^i, \partial/\partial p_i$ are extracted.
 
-**Algebraic geometry: Kähler differentials in local coordinates.** On an affine variety $\mathrm{Spec}(A)$ with coordinate ring $A$, the module of Kähler differentials $\Omega^1_{A/k}$ contains the symbols $df$ for $f \in A$, and these satisfy the Leibniz rule. For $A = k[x_1, \dots, x_n]$, $\Omega^1_{A/k}$ is a free $A$-module with basis $dx_1, \dots, dx_n$, and $df = \sum_i (\partial f/\partial x_i) dx_i$ algebraically — the algebraic counterpart of this theorem.
+**Algebraic geometry: Kähler differentials in local coordinates.** On an affine variety $\mathrm{Spec}(A)$ with coordinate [[Def - Ring|ring]] $A$, the [[Def - Module|module]] of Kähler differentials $\Omega^1_{A/k}$ contains the symbols $df$ for $f \in A$, and these satisfy the Leibniz rule. For $A = k[x_1, \dots, x_n]$, $\Omega^1_{A/k}$ is a free $A$-module with basis $dx_1, \dots, dx_n$, and $df = \sum_i (\partial f/\partial x_i) dx_i$ algebraically — the algebraic counterpart of this theorem.
 
 ---
 

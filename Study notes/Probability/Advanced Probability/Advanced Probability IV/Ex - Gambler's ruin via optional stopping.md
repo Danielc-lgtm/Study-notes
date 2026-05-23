@@ -26,7 +26,7 @@ A gambler starts with $k$ pounds and bets £1 on fair coin tosses, stopping on r
 
 **Problem class:** computing a hitting probability and an expected hitting time by applying [[Thm - Optional Stopping Theorem|optional stopping]] to the *right* martingale.
 
-**Assumption pattern:** $T$ is the exit time of a bounded interval — a.s. finite, and the stopped fortune $S_n^T$ is bounded (in $[0,N]$), so the [[Thm - Optional Stopping Theorem|optional stopping theorem]] applies. Two martingales of the [[Ex - Martingales of the random walk|random walk]] give two equations: $S_n$ for the probability, $S_n^2-n$ for the time.
+**Assumption pattern:** $T$ is the exit time of a bounded interval — a.s. finite, and the stopped fortune $S_n^T$ is bounded (in $[0,N]$), so the [[Thm - Optional Stopping Theorem|optional stopping theorem]] applies. Two [[Def - Martingale|martingales]] of the [[Ex - Martingales of the random walk|random walk]] give two equations: $S_n$ for the probability, $S_n^2-n$ for the time.
 
 ---
 

@@ -207,7 +207,7 @@ Translate $x^2 + y^2 = N(x + iy)$, so the question is "which $n$ are Gaussian no
 
 # Cross-Field Exercise Suggestions
 
-**Integer points on circles — geometry of numbers.** The circle $x^2 + y^2 = n$ in the plane contains a lattice point if and only if $n$ is a sum of two squares. So the theorem decides, for each radius $\sqrt n$, whether the circle "sees" the integer lattice — and the constructive proof locates the points. The non-obvious recognition is that a question of plane geometry (does this circle pass through a lattice point?) is settled by the residues mod $4$ of the prime factors of $n$.
+**Integer points on circles — geometry of numbers.** The circle $x^2 + y^2 = n$ in the plane contains a lattice point if and only if $n$ is a sum of two squares. So the theorem decides, for each radius $\sqrt n$, whether the circle "sees" the integer lattice — and the constructive proof locates the points. The non-obvious recognition is that a question of plane geometry (does this circle pass through a lattice point?) is settled by the [[Def - Residue|residues]] mod $4$ of the prime factors of $n$.
 
 **Counting representations and the function $r_2(n)$.** Refining the theorem with the *choices* in the proof (which conjugate of each split prime to take) yields the exact count of representations $r_2(n) = 4\bigl(d_1(n) - d_3(n)\bigr)$, where $d_j(n)$ counts divisors of $n$ congruent to $j \pmod 4$. The non-obvious step is that the *multiplicity* of solutions, not just their existence, is governed by the Gaussian factorization — split primes generate the choices, inert primes generate none.
 

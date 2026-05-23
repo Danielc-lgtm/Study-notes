@@ -10,7 +10,7 @@ tags: [algebra, linear-algebra]
 
 # Problem Statement
 
-Show that the set $\{T \in \mathcal{L}(V, W) : T \text{ is injective}\}$ is *not* a subspace of $\mathcal{L}(V, W)$, by exhibiting injective $S, T \in \mathcal{L}(V, W)$ whose sum $S + T$ is not injective. (Take $V$ and $W$ finite-dimensional with $\dim V \geq 2$; the result for higher dimensions follows similarly.)
+Show that the set $\{T \in \mathcal{L}(V, W) : T \text{ is injective}\}$ is *not* a [[Def - Subspace|subspace]] of $\mathcal{L}(V, W)$, by exhibiting injective $S, T \in \mathcal{L}(V, W)$ whose sum $S + T$ is not injective. (Take $V$ and $W$ finite-dimensional with $\dim V \geq 2$; the result for higher [[Def - Dimension|dimensions]] follows similarly.)
 
 **Recall:**
 
@@ -44,7 +44,7 @@ This solution deploys the following legal operations from [[Linear Algebra III �
 
 2. **Build new linear maps by sum, composition, restriction, and extension** (operation 10). We sum $S$ and $-S$ to get the zero map; the sum operation on $\mathcal{L}(V, W)$ is what makes this whole problem possible.
 
-3. **Convert injectivity to surjectivity (or vice versa) using equal finite dimension** (operation 4), as a sanity check. In the finite-dimensional case with $V = W$, an injective map is invertible. The negative of an invertible map is invertible. Their sum is zero — not invertible. So the result also says "the invertible linear maps are not a subspace", which is more striking.
+3. **Convert injectivity to surjectivity (or vice versa) using equal finite [[Def - Dimension|dimension]]** (operation 4), as a sanity check. In the finite-dimensional case with $V = W$, an injective map is invertible. The negative of an invertible map is invertible. Their sum is zero — not invertible. So the result also says "the invertible linear maps are not a subspace", which is more striking.
 
 ---
 
@@ -100,7 +100,7 @@ The negation of an injective map is injective.
 > Therefore the set of injective linear maps is not closed under addition, so it is not a subspace of $\mathcal{L}(V, V)$. The same construction adapted to maps $V \to W$ (using any injective map $S : V \to W$ and $T = -S$) shows that injective maps in $\mathcal{L}(V, W)$ are not a subspace for any $V, W$ with at least one injective map. $\blacksquare$
 
 > [!warning] Illegal but tempting alternative route: the zero map argument alone
-> A *quicker* but less informative argument is: "the zero map is in any subspace, but is not injective (when $V \neq \{0\}$), so the set of injective maps does not even contain $0$, hence is not a subspace". This is valid but unsatisfying — it does not exhibit the *failure of closure under addition*, which is the substantive property of subspaces being violated. The construction above is the "real" counterexample, showing that closure under addition is the failing axiom.
+> A *quicker* but less informative argument is: "the zero map is in any subspace, but is not injective (when $V \neq \{0\}$), so the set of injective maps does not even contain $0$, hence is not a subspace". This is valid but unsatisfying — it does not exhibit the *failure of closure under addition*, which is the substantive property of [[Def - Subspace|subspaces]] being violated. The construction above is the "real" counterexample, showing that closure under addition is the failing axiom.
 
 ---
 

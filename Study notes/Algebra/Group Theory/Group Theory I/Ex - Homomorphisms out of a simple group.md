@@ -19,7 +19,7 @@ In other words: a homomorphism out of a simple group is either constant or an em
 
 **Recall:**
 
-The problem is about homomorphisms out of a simple group, so the objects in play are homomorphisms, kernels, normality, and simplicity.
+The problem is about [[Def - Homomorphism|homomorphisms]] out of a simple group, so the objects in play are [[Def - Homomorphism|homomorphisms]], kernels, normality, and simplicity.
 
 ![[Def - Homomorphism#The Definition]]
 
@@ -31,7 +31,7 @@ Two facts about the kernel are used. First, $\ker\varphi$ is always a [[Def - No
 
 ![[Def - Simple Group#The Definition]]
 
-The content of simplicity is that the *only* normal subgroups of a simple group $G$ are the two extreme ones — the trivial subgroup $\{e\}$ and the whole group $G$. There are no normal subgroups strictly in between.
+The content of simplicity is that the *only* normal [[Def - Subgroup|subgroups]] of a simple group $G$ are the two extreme ones — the trivial subgroup $\{e\}$ and the whole group $G$. There are no normal [[Def - Subgroup|subgroups]] strictly in between.
 
 ---
 
@@ -92,7 +92,7 @@ A simple group has only two normal subgroups, $\{e\}$ and $G$. Since $\ker\varph
 > [!note]- Derivation
 > By [[Def - Simple Group]], a non-trivial group $G$ is **simple** when its only normal subgroups are the trivial subgroup $\{e\}$ and $G$ itself — there is no proper non-trivial normal subgroup. Step 1 established that $\ker\varphi$ is a normal subgroup of $G$. A normal subgroup of a simple group therefore has nowhere to be except one of the two extremes:
 > $$\ker\varphi = \{e\} \qquad \text{or} \qquad \ker\varphi = G.$$
-> These two cases are exhaustive and mutually exclusive (they would coincide only for the trivial group, which is excluded since simple groups are non-trivial). This is the entire force of the simplicity hypothesis: it converts the a priori unknown subgroup $\ker\varphi$ into a two-valued object.
+> These two cases are exhaustive and mutually exclusive (they would coincide only for the trivial group, which is excluded since simple [[Def - Group|groups]] are non-trivial). This is the entire force of the simplicity hypothesis: it converts the a priori unknown subgroup $\ker\varphi$ into a two-valued object.
 
 **Step 3: Translate each case into a statement about $\varphi$.**
 
@@ -129,4 +129,4 @@ If $\ker\varphi = G$, then $\varphi$ is the trivial homomorphism. If $\ker\varph
 
 **Simplicity is a dichotomy, and it stamps that dichotomy onto everything it touches.** A simple group has exactly two normal subgroups, the two extremes. This is the defining feature, and its consequences are always two-way splits. Any object that a simple group controls through one of its normal subgroups inherits a binary outcome. For homomorphisms out of $G$ the split is trivial-versus-injective, as proved here. For the action of a simple group on a set, the associated permutation representation is similarly either trivial or faithful. For a simple group sitting as a normal subgroup of a larger group, it is either central or its own conjugacy is fully active. The recognition pattern is: the moment "simple" appears in the hypotheses, expect the conclusion to be an "either ... or ..." with the two branches corresponding to the two extreme normal subgroups, and structure the proof as "produce the relevant normal subgroup, then let simplicity bisect it". You are not really proving a dichotomy; you are transporting the dichotomy that simplicity already is.
 
-**An injective homomorphism is an embedding — so this result is a tool for placing simple groups inside other groups.** Reading the dichotomy from the side of its useful conclusion: if you have a homomorphism out of a simple group and can rule out the trivial case — usually by exhibiting a single element $g$ with $\varphi(g) \neq e_H$ — then $\varphi$ is automatically injective, and an injective homomorphism realises $G$ as a subgroup of $H$ (its image $\operatorname{im}\varphi \cong G$). This is the standard route for proving non-existence and embedding facts about simple groups: to show no non-trivial homomorphism $G \to H$ exists when $H$ is "too small", it suffices to show $G$ cannot embed in $H$ — for instance by a [[Thm - Lagrange's Theorem|Lagrange]] divisibility obstruction, $|G| \nmid |H|$. Conversely, any non-trivial action of a simple group on a small set embeds $G$ into a symmetric group $S_n$, which combined with order constraints is exactly how one proves results like "a simple group of order $60$ embeds in $A_5$". The first isomorphism theorem makes this precise: ruling out the trivial case forces $G/\ker\varphi = G/\{e\} \cong \operatorname{im}\varphi$, an honest copy of $G$ inside $H$.
+**An injective homomorphism is an embedding — so this result is a tool for placing simple [[Def - Group|groups]] inside other groups.** Reading the dichotomy from the side of its useful conclusion: if you have a homomorphism out of a simple group and can rule out the trivial case — usually by exhibiting a single element $g$ with $\varphi(g) \neq e_H$ — then $\varphi$ is automatically injective, and an injective homomorphism realises $G$ as a subgroup of $H$ (its image $\operatorname{im}\varphi \cong G$). This is the standard route for proving non-existence and embedding facts about simple groups: to show no non-trivial homomorphism $G \to H$ exists when $H$ is "too small", it suffices to show $G$ cannot embed in $H$ — for instance by a [[Thm - Lagrange's Theorem|Lagrange]] divisibility obstruction, $|G| \nmid |H|$. Conversely, any non-trivial action of a simple group on a small set embeds $G$ into a symmetric group $S_n$, which combined with order constraints is exactly how one proves results like "a simple group of order $60$ embeds in $A_5$". The first isomorphism theorem makes this precise: ruling out the trivial case forces $G/\ker\varphi = G/\{e\} \cong \operatorname{im}\varphi$, an honest copy of $G$ inside $H$.

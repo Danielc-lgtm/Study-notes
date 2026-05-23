@@ -15,7 +15,7 @@ $X$ a set. A **$\pi$-system** $\mathcal{P}$ is a family closed under finite inte
 
 # Motivation
 
-A recurring obstacle: one wants to prove a property holds for *all* sets in a $\sigma$-algebra $\mathcal{A}=\sigma(\mathcal{P})$, but can only verify it directly on the simple generators $\mathcal{P}$. The generated $\sigma$-algebra is [[Def - Generated σ-Algebra|non-constructive]] — there is no induction up to it. Dynkin's $\pi$–$\lambda$ theorem is the induction principle that fills the gap: **if a property survives finite intersections (so it can start on a $\pi$-system) and forms a $\lambda$-system, it propagates to the whole generated $\sigma$-algebra.** It is the workhorse behind every "two measures agreeing on a generating $\pi$-system agree everywhere" argument — uniqueness of [[Thm - Product Measure|product measures]], uniqueness of laws from [[Def - Distribution Function|distribution functions]], the [[Thm - Fubini-Tonelli Theorem|measurability of slices]], and the very definition of [[Def - Independence|independence]].
+A recurring obstacle: one wants to prove a property holds for *all* sets in a $\sigma$-algebra $\mathcal{A}=\sigma(\mathcal{P})$, but can only verify it directly on the simple generators $\mathcal{P}$. The generated $\sigma$-algebra is [[Def - Generated σ-Algebra|non-constructive]] — there is no induction up to it. Dynkin's $\pi$–$\lambda$ theorem is the induction principle that fills the gap: **if a property survives finite intersections (so it can start on a $\pi$-system) and forms a $\lambda$-system, it propagates to the whole generated $\sigma$-algebra.** It is the workhorse behind every "two measures agreeing on a generating $\pi$-system agree everywhere" argument — uniqueness of [[Thm - Product Measure|product measures]], uniqueness of laws from [[Def - Distribution Function|distribution functions]], the [[Thm - Fubini-Tonelli Theorem|measurability of slices]], and the very definition of independence.
 
 ---
 
@@ -93,7 +93,7 @@ The proof's one genuine idea is the **double application of minimality** to the 
 
 # Cross-Field Exercise Suggestions
 
-In probability the $\pi$–$\lambda$ theorem is *ubiquitous*: a law on $\mathbb{R}$ is determined by its values on the rays $(-\infty,t]$ (a $\pi$-system) — i.e. by its [[Def - Distribution Function|distribution function]]; [[Def - Independence|independence]] of $\sigma$-algebras need only be checked on generating $\pi$-systems; two processes with the same finite-dimensional distributions (cylinder sets, a $\pi$-system) have the same law. Each is "agree on a $\pi$-system $\Rightarrow$ agree on the $\sigma$-algebra."
+In probability the $\pi$–$\lambda$ theorem is *ubiquitous*: a law on $\mathbb{R}$ is determined by its values on the rays $(-\infty,t]$ (a $\pi$-system) — i.e. by its [[Def - Distribution Function|distribution function]]; independence of $\sigma$-algebras need only be checked on generating $\pi$-systems; two processes with the same finite-dimensional distributions (cylinder sets, a $\pi$-system) have the same law. Each is "agree on a $\pi$-system $\Rightarrow$ agree on the $\sigma$-algebra."
 
 ---
 

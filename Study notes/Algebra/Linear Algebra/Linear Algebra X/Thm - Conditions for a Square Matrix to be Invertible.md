@@ -117,7 +117,7 @@ Another pitfall: condition 9 (the determinant condition) is *mathematically* equ
    - *Hint:* The crucial step is the independence-dimension inequality, an inductive fact about $\mathbb R^n$.
    - *Why needed:* Goes from condition 4 to condition 3 (via condition 7 implicitly).
 
-3. **Right invertibility $\Rightarrow$ left invertibility.** Suppose $AB = I$. Define $X = BA$, so $X A = BA \cdot A = B \cdot (A \cdot A)$... wait, this doesn't quite work. Use instead: from condition 4 (which we've just established), the columns are independent, so the linear map $A : \mathbb R^n \to \mathbb R^n$ is injective. By the rank-nullity theorem (or by counting dimensions), an injective linear map between equal-dimensional spaces is surjective. Hence $A$ has a right inverse, which is the same as $B$, and then $BA = I$ too (by the uniqueness argument).
+3. **Right invertibility $\Rightarrow$ left invertibility.** Suppose $AB = I$. Define $X = BA$, so $X A = BA \cdot A = B \cdot (A \cdot A)$... wait, this doesn't quite work. Use instead: from condition 4 (which we've just established), the columns are independent, so the linear map $A : \mathbb R^n \to \mathbb R^n$ is injective. By the rank-nullity theorem (or by counting [[Def - Dimension|dimensions]]), an injective linear map between equal-dimensional spaces is surjective. Hence $A$ has a right inverse, which is the same as $B$, and then $BA = I$ too (by the uniqueness argument).
    - *Hint:* Cleanest is to argue: $AB = I$ and $A(BA) = (AB)A = A$, so $A(BA - I) = 0$. Since the columns of $A$ are linearly independent (condition 4 holds, proved in subgoal 2), $BA - I = 0$, i.e., $BA = I$. So $B$ is also a left inverse.
    - *Why needed:* This is the closure of the loop; it makes $B$ a two-sided inverse.
 
@@ -125,8 +125,8 @@ Another pitfall: condition 9 (the determinant condition) is *mathematically* equ
    - *Hint:* Multiply $C(AB)$ associatively.
    - *Why needed:* Establishes condition 1 from conditions 2 and 3.
 
-5. **Determinant and eigenvalue conditions are equivalent to column independence.** $\det A = 0$ iff columns are linearly dependent (a standard property of determinants); columns are dependent iff $A$ has a nontrivial null vector iff $0$ is an eigenvalue.
-   - *Hint:* These are textbook properties of determinants and eigenvalues.
+5. **Determinant and eigenvalue conditions are equivalent to column independence.** $\det A = 0$ iff columns are linearly dependent (a standard property of [[Def - Determinant|determinants]]); columns are dependent iff $A$ has a nontrivial null vector iff $0$ is an eigenvalue.
+   - *Hint:* These are textbook properties of [[Def - Determinant|determinants]] and eigenvalues.
    - *Why needed:* Extends the theorem to conditions 9, 10.
 
 ---
@@ -182,7 +182,7 @@ Another pitfall: condition 9 (the determinant condition) is *mathematically* equ
 >
 > **$(3) \Rightarrow (1)$**: Suppose $AB = I$. We claim $BA = I$ also. Compute: $A(BA - I) = (AB)A - A = IA - A = 0$. Each column of $A(BA - I)$ is a linear combination of the columns of $A$ summing to $0$. By (4) (which we have already established from (2) implicitly — but here we are at (3), and need to show (4) holds; doing so requires care).
 >
-> Cleaner organisation: from $(3)$, we deduce $(4)$ for $A^T$ (since $AB = I \Rightarrow B^T A^T = I$, so $B^T$ is a left inverse of $A^T$, so $A^T$ has linearly independent columns by Lemma 1, i.e., $A$ has linearly independent rows). And $A^T$ has the same dimensions as $A$. Now apply $(4) \Rightarrow (3)$ to $A^T$: there exists $C^T$ with $A^T C^T = I$, i.e., $CA = I$. So $A$ has a left inverse $C$. By Lemma 3, $C = B$, and this matrix is the two-sided inverse.
+> Cleaner organisation: from $(3)$, we deduce $(4)$ for $A^T$ (since $AB = I \Rightarrow B^T A^T = I$, so $B^T$ is a left inverse of $A^T$, so $A^T$ has linearly independent columns by Lemma 1, i.e., $A$ has linearly independent rows). And $A^T$ has the same [[Def - Dimension|dimensions]] as $A$. Now apply $(4) \Rightarrow (3)$ to $A^T$: there exists $C^T$ with $A^T C^T = I$, i.e., $CA = I$. So $A$ has a left inverse $C$. By Lemma 3, $C = B$, and this matrix is the two-sided inverse.
 >
 > **$(1) \Rightarrow (2)$**: Trivial: $A^{-1}$ is a left inverse.
 >
@@ -196,11 +196,11 @@ Another pitfall: condition 9 (the determinant condition) is *mathematically* equ
 
 **Numerical analysis — condition number and numerical singularity.** A matrix $A$ is mathematically invertible if $\det A \neq 0$, but *numerically* invertible only if the condition number $\kappa(A) = \|A\|\|A^{-1}\| \ll 1/\epsilon_\text{machine}$. The condition number measures how much a tiny perturbation in $b$ can amplify into a large change in the solution $x$ of $Ax = b$. This is a quantitative refinement of the theorem: invertibility is binary, but conditioning is continuous.
 
-**Algebra — invertibility in matrix rings.** The set of $n \times n$ invertible real matrices forms a group under multiplication, the general linear group $GL_n(\mathbb R)$. The theorem applies verbatim to matrices over any field; over a ring (like $\mathbb Z$), invertibility is more restrictive ($\det A$ must be a unit in the ring), and the analogous theorem requires careful restatement.
+**Algebra — invertibility in matrix [[Def - Ring|rings]].** The set of $n \times n$ invertible real matrices forms a [[Def - Group|group]] under multiplication, the general linear [[Def - Group|group]] $GL_n(\mathbb R)$. The theorem applies verbatim to matrices over any field; over a [[Def - Ring|ring]] (like $\mathbb Z$), invertibility is more restrictive ($\det A$ must be a unit in the ring), and the analogous theorem requires careful restatement.
 
-**Geometry — diffeomorphisms via the inverse function theorem.** The inverse function theorem in multivariate analysis says: if $f : \mathbb R^n \to \mathbb R^n$ is $C^1$ and $Df(z)$ is invertible, then $f$ is locally a diffeomorphism near $z$. The invertibility of the Jacobian $Df(z)$ — a specific square matrix — is the hypothesis, and the theorem of this page is what one checks to see if the hypothesis is satisfied.
+**Geometry — [[Def - Diffeomorphism|diffeomorphisms]] via the inverse function theorem.** The inverse function theorem in multivariate analysis says: if $f : \mathbb R^n \to \mathbb R^n$ is $C^1$ and $Df(z)$ is invertible, then $f$ is locally a [[Def - Diffeomorphism|diffeomorphism]] near $z$. The invertibility of the Jacobian $Df(z)$ — a specific square matrix — is the hypothesis, and the theorem of this page is what one checks to see if the hypothesis is satisfied.
 
-**Probability — Gaussian distributions and covariance matrices.** A multivariate Gaussian distribution $\mathcal N(\mu, \Sigma)$ has a well-defined density iff its covariance matrix $\Sigma$ is invertible (i.e., positive *definite*, not just positive semidefinite). If $\Sigma$ is singular, the distribution is supported on a proper affine subspace and has no density relative to Lebesgue measure. The theorem of this page is the structural condition; positive-definiteness adds the spectral refinement.
+**Probability — Gaussian distributions and covariance matrices.** A multivariate Gaussian distribution $\mathcal N(\mu, \Sigma)$ has a well-defined density iff its covariance matrix $\Sigma$ is invertible (i.e., positive *definite*, not just positive semidefinite). If $\Sigma$ is singular, the distribution is supported on a proper affine [[Def - Subspace|subspace]] and has no density relative to Lebesgue measure. The theorem of this page is the structural condition; positive-definiteness adds the spectral refinement.
 
 ---
 

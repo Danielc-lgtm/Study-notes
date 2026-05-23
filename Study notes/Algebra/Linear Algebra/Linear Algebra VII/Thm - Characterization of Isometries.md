@@ -17,7 +17,7 @@ $V$ and $W$ are finite-dimensional [[Def - Inner Product Space|inner product spa
 
 # Statement
 
-> **Theorem (Characterization of isometries).** Let $S \in \mathcal{L}(V, W)$ be a linear map between finite-dimensional inner product spaces. The following are equivalent:
+> **Theorem (Characterization of [[Def - Isometry|isometries]]).** Let $S \in \mathcal{L}(V, W)$ be a linear map between finite-dimensional inner product spaces. The following are equivalent:
 >
 > 1. $\|S v\| = \|v\|$ for all $v \in V$ (definition of isometry).
 > 2. $\langle Sv, Sw \rangle = \langle v, w \rangle$ for all $v, w \in V$ ($S$ preserves the inner product).
@@ -39,7 +39,7 @@ Each of the six (or seven) characterisations is the right form for a specific se
 - **(1)** for the verifier: norm preservation is the geometric content, the easiest to check from a description of $S$.
 - **(2)** for the user: inner product preservation says all geometric structure transfers, useful when geometry is the question.
 - **(3)** for the algebraist: $S^* S = I$ is the cleanest algebraic statement, what you write down when manipulating expressions symbolically.
-- **(4) and (5)** for the constructor: the basis-mapping characterisations let you build isometries by specifying their action on a single orthonormal basis.
+- **(4) and (5)** for the constructor: the basis-mapping characterisations let you build [[Def - Isometry|isometries]] by specifying their action on a single orthonormal basis.
 - **(6)** for the computer: the matrix-column condition is the form to verify when given a matrix presentation.
 - **(7)** is the additional condition (surjectivity) that promotes an isometry to a [[Def - Unitary Operator|unitary operator]] when $V = W$.
 
@@ -89,7 +89,7 @@ For **(4) ⇔ (5)**, the forward direction is trivial. For the converse: charact
 
 For **(6)** as equivalent to **(3)**: in orthonormal bases, the column orthonormality of the matrix of $S$ is exactly the matrix relation $S^* S = I$, where $*$ is the conjugate transpose.
 
-For **(7)**: in finite dimensions with $V = W$, $S^*S = I_V$ forces $S$ to be injective (norm-preserving), hence surjective (by dimension), hence invertible. The inverse is then $S^*$, and the relations $S^*S = SS^* = I$ both hold. So isometry on $V$ to $V$ in finite dimensions is unitary.
+For **(7)**: in finite [[Def - Dimension|dimensions]] with $V = W$, $S^*S = I_V$ forces $S$ to be injective (norm-preserving), hence surjective (by dimension), hence invertible. The inverse is then $S^*$, and the relations $S^*S = SS^* = I$ both hold. So isometry on $V$ to $V$ in finite [[Def - Dimension|dimensions]] is unitary.
 
 ---
 
@@ -176,7 +176,7 @@ Use polarisation for (1) ⇔ (2). Use the defining relation of the adjoint for (
 
 2. **Numerical linear algebra — testing for orthogonality of computed bases.** When the Gram–Schmidt procedure is run on a list of vectors, the resulting matrix $Q$ has $Q^*Q \approx I$ — but with finite-precision arithmetic, the orthonormality is lost. The condition $\|Q^*Q - I\|$ measures this loss. Characterisation (6) — that the columns of $Q$ should be orthonormal — provides the standard diagnostic.
 
-3. **Crystallography — symmetry operations of a lattice.** The symmetry group of a crystal is the subgroup of $O(n)$ consisting of orthogonal transformations preserving the lattice. Each symmetry is by definition an isometry of $\mathbb{R}^n$, and the orthogonality of the columns of its matrix (in the standard basis) is what makes the group structure work — composition of symmetries is composition of orthogonal matrices.
+3. **Crystallography — symmetry operations of a lattice.** The symmetry [[Def - Group|group]] of a crystal is the [[Def - Subgroup|subgroup]] of $O(n)$ consisting of orthogonal transformations preserving the lattice. Each symmetry is by definition an isometry of $\mathbb{R}^n$, and the orthogonality of the columns of its matrix (in the standard basis) is what makes the [[Def - Group|group]] structure work — composition of symmetries is composition of orthogonal matrices.
 
 4. **Tensor networks — isometric tensors.** In the MERA (multi-scale entanglement renormalization ansatz) and similar tensor-network architectures, the basic building blocks are *isometric tensors* satisfying the matrix-level condition $V^\dagger V = I$ (characterisation 3, in the form of a contraction over indices). These isometric tensors are the essential components of the network, and their composition produces the wave functions of low-energy quantum states.
 

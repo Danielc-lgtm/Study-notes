@@ -29,11 +29,11 @@ Throughout, $G$ is a group, $H \leq G$ is a [[Def - Subgroup|subgroup]], and $K 
 
 # Motivation
 
-You have a subgroup $H$ and a normal subgroup $K$ of the same group $G$, and you would like to understand how they relate. The first thing you might do is form the [[Def - Quotient Group|quotient]] $G/K$ — collapsing $K$ to a point — and ask what becomes of $H$ inside it. The image of $H$ in $G/K$ is the set of cosets $\{hK : h \in H\}$. The second isomorphism theorem answers two questions about this image at once: *which cosets* it consists of, and *what group* it is.
+You have a subgroup $H$ and a normal subgroup $K$ of the same group $G$, and you would like to understand how they relate. The first thing you might do is form the [[Def - Quotient Group|quotient]] $G/K$ — collapsing $K$ to a point — and ask what becomes of $H$ inside it. The image of $H$ in $G/K$ is the set of [[Def - Coset|cosets]] $\{hK : h \in H\}$. The second isomorphism theorem answers two questions about this image at once: *which [[Def - Coset|cosets]]* it consists of, and *what group* it is.
 
 The first answer is $HK/K$. The image of $H$ in $G/K$ is exactly the cosets that have a representative inside $H$, and that set of representatives is the product $HK$ — so the image is the subgroup $HK/K$ of $G/K$. The second answer comes from asking what $H$ loses when pushed into $G/K$: two elements of $H$ collapse together precisely when they differ by an element of $K$, that is, by an element of $H \cap K$. So the image is $H$ with $H \cap K$ collapsed, namely $H/(H \cap K)$. Setting the two descriptions of the same image equal gives the theorem.
 
-This is why the theorem is sometimes drawn as a **diamond**: the four groups $HK$, $H$, $K$, $H\cap K$ sit at the corners of a square of inclusions, and the theorem says the two "opposite" quotients $HK/K$ and $H/(H\cap K)$ — the two diagonals of the diamond — are isomorphic. Concretely, it lets you compute a quotient $HK/K$ that might look complicated, by trading it for $H/(H\cap K)$, which often does not, because $H$ and $H\cap K$ are groups you chose and understand. It also produces, for free, the normality $H \cap K \trianglelefteq H$, which is useful in its own right.
+This is why the theorem is sometimes drawn as a **diamond**: the four [[Def - Group|groups]] $HK$, $H$, $K$, $H\cap K$ sit at the corners of a square of inclusions, and the theorem says the two "opposite" quotients $HK/K$ and $H/(H\cap K)$ — the two diagonals of the diamond — are isomorphic. Concretely, it lets you compute a quotient $HK/K$ that might look complicated, by trading it for $H/(H\cap K)$, which often does not, because $H$ and $H\cap K$ are [[Def - Group|groups]] you chose and understand. It also produces, for free, the normality $H \cap K \trianglelefteq H$, which is useful in its own right.
 
 ---
 
@@ -67,7 +67,7 @@ Combine the normality conclusion $H \cap K \trianglelefteq H$ with **an inductiv
 
 The theorem looks like it has three separate claims, but they are all consequences of one act: **push $H$ through the quotient map $G \to G/K$ and watch what happens.**
 
-Call that map $\pi : G \to G/K$, $g \mapsto gK$. Restrict it to $H$ — that is, only feed it elements of $H$. What is the image of this restricted map? It is $\{hK : h \in H\}$. Now, two facts. A coset $gK$ has a representative in $H$ exactly when $g \in HK$, so the *set* of cosets in the image is exactly $HK/K$ — and being the image of a homomorphism, $HK/K$ is a subgroup; pulling that back, $HK$ is a subgroup of $G$. That is claim 1, and it explains the otherwise-surprising fact that the product of two subgroups is a subgroup: $HK/K$ is a subgroup *because images of homomorphisms always are*, and normality of $K$ is what makes $\pi$ exist in the first place.
+Call that map $\pi : G \to G/K$, $g \mapsto gK$. Restrict it to $H$ — that is, only feed it elements of $H$. What is the image of this restricted map? It is $\{hK : h \in H\}$. Now, two facts. A coset $gK$ has a representative in $H$ exactly when $g \in HK$, so the *set* of cosets in the image is exactly $HK/K$ — and being the image of a homomorphism, $HK/K$ is a subgroup; pulling that back, $HK$ is a subgroup of $G$. That is claim 1, and it explains the otherwise-surprising fact that the product of two [[Def - Subgroup|subgroups]] is a subgroup: $HK/K$ is a subgroup *because images of [[Def - Homomorphism|homomorphisms]] always are*, and normality of $K$ is what makes $\pi$ exist in the first place.
 
 What is the *kernel* of the restricted map? An element $h \in H$ goes to the identity coset $K$ exactly when $h \in K$, i.e. exactly when $h \in H \cap K$. Kernels are always normal in the domain, and the domain here is $H$ — so $H \cap K \trianglelefteq H$. That is claim 2, and again it is not a fact you must verify by conjugation; it is automatic, because $H \cap K$ *is a kernel*.
 
@@ -86,12 +86,12 @@ The standard place people get stuck is trying to prove claim 1 — that $HK$ is 
 # Rederivation Scaffold
 
 **High-level strategy:**
-Do not attack the three claims independently. Define one homomorphism — restrict the quotient map $G \to G/K$ to the subgroup $H$ — and compute its image and kernel. Claims 1 and 2 fall out of "images and kernels are subgroups / normal", and claim 3 is the first isomorphism theorem applied to this map.
+Do not attack the three claims independently. Define one homomorphism — restrict the quotient map $G \to G/K$ to the subgroup $H$ — and compute its image and kernel. Claims 1 and 2 fall out of "images and kernels are [[Def - Subgroup|subgroups]] / normal", and claim 3 is the first isomorphism theorem applied to this map.
 
 **Subgoal decomposition:**
 
 1. **Define the map.** Set $\varphi : H \to G/K$ by $\varphi(h) = hK$. Check it is a homomorphism.
-   - *Hint:* It is the composite $H \hookrightarrow G \xrightarrow{\pi} G/K$; both pieces are homomorphisms, so the composite is. Note this uses $K \trianglelefteq G$, since otherwise $G/K$ is not a group.
+   - *Hint:* It is the composite $H \hookrightarrow G \xrightarrow{\pi} G/K$; both pieces are [[Def - Homomorphism|homomorphisms]], so the composite is. Note this uses $K \trianglelefteq G$, since otherwise $G/K$ is not a group.
    - *Why needed:* This single map is the source of all three claims.
 
 2. **Compute the image.** Show $\operatorname{im}\varphi = HK/K$, and deduce $HK \leq G$.
@@ -176,11 +176,11 @@ Do not attack the three claims independently. Define one homomorphism — restri
 
 # Cross-Field Exercise Suggestions
 
-**The inclusion–exclusion dimension formula in linear algebra.** For subspaces $U$ and $W$ of a vector space $V$, the second isomorphism theorem (in its additive, abelian form, with submodules replacing subgroups) gives $(U+W)/W \cong U/(U\cap W)$. Taking dimensions yields $\dim(U+W) - \dim W = \dim U - \dim(U\cap W)$, i.e. $\dim(U+W) = \dim U + \dim W - \dim(U\cap W)$. The application is non-obvious because the dimension formula is usually proved by extending a basis; recognising it as a *quotient isomorphism* shows it is the same theorem as the group product formula $|HK| = |H||K|/|H\cap K|$.
+**The inclusion–exclusion [[Def - Dimension|dimension]] formula in linear algebra.** For [[Def - Subspace|subspaces]] $U$ and $W$ of a vector space $V$, the second isomorphism theorem (in its additive, abelian form, with [[Def - Submodule|submodules]] replacing subgroups) gives $(U+W)/W \cong U/(U\cap W)$. Taking [[Def - Dimension|dimensions]] yields $\dim(U+W) - \dim W = \dim U - \dim(U\cap W)$, i.e. $\dim(U+W) = \dim U + \dim W - \dim(U\cap W)$. The application is non-obvious because the dimension formula is usually proved by extending a basis; recognising it as a *quotient isomorphism* shows it is the same theorem as the group product formula $|HK| = |H||K|/|H\cap K|$.
 
 **Counting in finite groups via the product formula.** Suppose $G$ has order $p q$ with $p < q$ primes, and $H$, $K$ are subgroups of orders $p$ and $q$ with $K$ normal. The product formula $|HK| = |H||K|/|H\cap K|$ and $|H\cap K| = 1$ (orders coprime) give $|HK| = pq = |G|$, so $G = HK$. The theorem is the hidden engine: it is non-obvious that the size of a product *set* is pinned down so exactly, and this is the step that shows such a $G$ is a semidirect product.
 
-**Sublattices and ideals in ring theory.** Replace "group" by "abelian group", $H$ and $K$ by subgroups of $(\mathbb{Z}, +)$, say $H = a\mathbb{Z}$ and $K = b\mathbb{Z}$. Then $H + K = \gcd(a,b)\mathbb{Z}$ and $H \cap K = \operatorname{lcm}(a,b)\mathbb{Z}$, and the second isomorphism theorem $(H+K)/K \cong H/(H\cap K)$ becomes a statement about the indices, recovering $\gcd(a,b)\cdot\operatorname{lcm}(a,b) = ab$. The non-obvious recognition is that this elementary number-theoretic identity is an instance of the diamond isomorphism.
+**Sublattices and [[Def - Ideal|ideals]] in [[Def - Ring|ring]] theory.** Replace "group" by "abelian group", $H$ and $K$ by subgroups of $(\mathbb{Z}, +)$, say $H = a\mathbb{Z}$ and $K = b\mathbb{Z}$. Then $H + K = \gcd(a,b)\mathbb{Z}$ and $H \cap K = \operatorname{lcm}(a,b)\mathbb{Z}$, and the second isomorphism theorem $(H+K)/K \cong H/(H\cap K)$ becomes a statement about the indices, recovering $\gcd(a,b)\cdot\operatorname{lcm}(a,b) = ab$. The non-obvious recognition is that this elementary number-theoretic identity is an instance of the diamond isomorphism.
 
 **Pushing a subgroup through an arbitrary quotient.** Given any homomorphism $\psi : G \to G'$ and a subgroup $H \leq G$, set $K = \ker\psi$. The image $\psi(H)$ is $HK/K$, and the second isomorphism theorem identifies it as $H/(H\cap\ker\psi)$. This says the image of $H$ under *any* homomorphism is $H$ modulo the part of $H$ killed by the homomorphism — a non-obvious but constantly used principle for tracking subgroups across maps.
 

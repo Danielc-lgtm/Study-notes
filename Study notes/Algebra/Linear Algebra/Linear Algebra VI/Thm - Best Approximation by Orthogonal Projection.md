@@ -17,7 +17,7 @@ $V$ is an inner product space over $\mathbf{F}$. $U \subseteq V$ is a finite-dim
 
 # Statement
 
-> **Theorem (Best Approximation by Orthogonal Projection).** Let $V$ be an inner product space and $U \subseteq V$ a finite-dimensional subspace. For any $v \in V$,
+> **Theorem (Best Approximation by [[Def - Orthogonal Projection|Orthogonal Projection]]).** Let $V$ be an inner product space and $U \subseteq V$ a finite-dimensional subspace. For any $v \in V$,
 > $$\|v - P_U v\| \leq \|v - u\| \qquad \text{for every } u \in U,$$
 > with equality if and only if $u = P_U v$. That is, $P_U v$ is the unique closest point in $U$ to $v$.
 
@@ -43,7 +43,7 @@ Second, it **converts minimization problems to orthogonality conditions**. To mi
 
 Third, it gives the **fundamental identity** $\|v\|^2 = \|P_U v\|^2 + \|v - P_U v\|^2$, the Pythagorean decomposition of the squared length of $v$ into "norm in $U$" and "norm in $U^\perp$". From this identity, Bessel's inequality follows immediately ($\|v\|^2 \geq \|P_U v\|^2 = \sum |\langle v, e_k\rangle|^2$), with equality iff $v \in U$. Bessel's inequality, in turn, is the foundation of convergence of orthonormal expansions in $L^2$ and infinite-dimensional Hilbert spaces.
 
-The theorem is also the **finite-dimensional case of the Hilbert projection theorem**, which extends to closed convex subsets of any Hilbert space. This generalization is the workhorse of convex optimization, variational calculus, and the calculus of variations in infinite dimensions.
+The theorem is also the **finite-dimensional case of the Hilbert projection theorem**, which extends to closed convex subsets of any Hilbert space. This generalization is the workhorse of convex optimization, variational calculus, and the calculus of variations in infinite [[Def - Dimension|dimensions]].
 
 ---
 
@@ -105,7 +105,7 @@ First, **recognising the orthogonality of the decomposition**. The key step is $
 
 Second, **the equality case** clarifies that the minimum is *unique*. Equality in Pythagoras $\|v - u\|^2 = \|v - P_U v\|^2 + \|P_U v - u\|^2$ requires $\|P_U v - u\|^2 = 0$, i.e., $u = P_U v$. Without uniqueness, the orthogonal projection could in principle be one of many "best approximations"; the theorem asserts it is the unique one.
 
-A third subtlety: in infinite-dimensional Hilbert spaces, the theorem extends to **closed** subspaces. For non-closed subspaces, the projection (best-approximation) map may not exist. The pathology occurs because the existence of $P_U v$ requires the orthogonal decomposition $V = U \oplus U^\perp$, which holds only for closed $U$ in Hilbert space. This is the same closedness assumption that underlies the orthogonal decomposition.
+A third subtlety: in infinite-dimensional Hilbert spaces, the theorem extends to **closed** [[Def - Subspace|subspaces]]. For non-closed [[Def - Subspace|subspaces]], the projection (best-approximation) map may not exist. The pathology occurs because the existence of $P_U v$ requires the orthogonal decomposition $V = U \oplus U^\perp$, which holds only for closed $U$ in Hilbert space. This is the same closedness assumption that underlies the orthogonal decomposition.
 
 ---
 

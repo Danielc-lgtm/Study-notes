@@ -32,7 +32,7 @@ A list of length $> \dim V$ is automatically dependent: in $\mathbb{R}^3$, any l
 
 **Theorem routing:** The lemma 2.19 says the smallest such $k$ exists in any dependent list, and identifies the redundant vector. The procedure is to test $k = 1, 2, 3, 4$ in order and stop at the first that works. The output is the value of $k$ together with the explicit coefficients in the combination $v_k = \sum b_i v_i$.
 
-**Key decision point:** Solving a 2D linear system is unavoidable for testing $k = 3$. The student must be comfortable manipulating linear systems, recognising consistency, and reading off explicit coefficients. For higher dimensions the systems grow, and Gaussian elimination is the standard tool.
+**Key decision point:** Solving a 2D linear system is unavoidable for testing $k = 3$. The student must be comfortable manipulating linear systems, recognising consistency, and reading off explicit coefficients. For higher [[Def - Dimension|dimensions]] the systems grow, and Gaussian elimination is the standard tool.
 
 ---
 
@@ -125,7 +125,7 @@ A list of length $> \dim V$ is automatically dependent: in $\mathbb{R}^3$, any l
 
 **The linear dependence lemma identifies the *first* redundancy in left-to-right reading.** When a list is dependent, the lemma guarantees that *some* $v_k$ lies in the span of its predecessors; this exercise illustrates how to find the smallest such $k$ by direct testing. The technique is the bookkeeping device that drives the reduction algorithm in [[Thm - Every Spanning List Contains a Basis|2.30]] — at each step, that algorithm asks the same question and deletes the redundant vector. So the exercise is the *atom* of the reduction procedure, and mastering it is a prerequisite for fluently extracting bases from spanning lists.
 
-**Testing membership in a 2D span is a 3-equation, 2-unknown linear system in $\mathbb{R}^3$.** The system is overdetermined (3 equations, 2 unknowns), so it usually has no solution; when it *does* have a solution, that means the third vector is dependent on the first two. The procedure is: solve the first two equations for the two unknowns, then check whether the solution is consistent with the third equation. This is the standard "is this vector in the span of those two" test, and it generalises mechanically to higher dimensions (Gaussian elimination on a matrix).
+**Testing membership in a 2D span is a 3-equation, 2-unknown linear system in $\mathbb{R}^3$.** The system is overdetermined (3 equations, 2 unknowns), so it usually has no solution; when it *does* have a solution, that means the third vector is dependent on the first two. The procedure is: solve the first two equations for the two unknowns, then check whether the solution is consistent with the third equation. This is the standard "is this vector in the span of those two" test, and it generalises mechanically to higher [[Def - Dimension|dimensions]] (Gaussian elimination on a matrix).
 
 **The dependence relation has a sign convention.** Once you know $v_3 = 3 v_1 + 2 v_2$, you can express the dependence as $3 v_1 + 2 v_2 - v_3 = 0$. The "$-1$" coefficient of $v_3$ comes from moving it to the other side of the equation. This sign convention shows up in every linear-dependence calculation: the redundant vector picks up a coefficient $-1$ (or any nonzero constant after rescaling) in the vanishing combination.
 

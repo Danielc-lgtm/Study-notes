@@ -23,7 +23,7 @@ The most natural candidate is **smoothness as a map between manifolds**: since b
 
 The second candidate is **smooth component functions in every chart**: $X = X^i \partial/\partial x^i$ in $(U, (x^i))$, and we demand each $X^i$ be smooth on $U$. This is the easiest condition to verify in practice, but it is chart-dependent on its face — we have to check that it survives a change of chart. The transformation rule for components under a chart change $\tilde x = \tilde x(x)$ is $\tilde X^j = X^i \frac{\partial \tilde x^j}{\partial x^i}$, which is smooth-of-smooth-times-smooth, so the smoothness *does* survive. But we need a proof to know that, so the definition is hostage to that proof.
 
-The third candidate is the **derivation criterion**: $X$ is smooth if, for every $f \in C^\infty(M)$ and every open $U \subseteq M$, the function $Xf$ defined by $(Xf)(p) = X_p f$ is smooth on $U$. This is the most powerful for theoretical work because it converts a question about $X$ into a question about its action on functions, and the function-ring $C^\infty(M)$ is something we already understand. But it is not what one would *guess* the definition should be — it has to be earned, by showing it agrees with the other two.
+The third candidate is the **derivation criterion**: $X$ is smooth if, for every $f \in C^\infty(M)$ and every open $U \subseteq M$, the function $Xf$ defined by $(Xf)(p) = X_p f$ is smooth on $U$. This is the most powerful for theoretical work because it converts a question about $X$ into a question about its action on functions, and the function-[[Def - Ring|ring]] $C^\infty(M)$ is something we already understand. But it is not what one would *guess* the definition should be — it has to be earned, by showing it agrees with the other two.
 
 The mathematical content of the definition is that all three candidates *are equivalent*, and so we can use any one of them as definition and prove the others as theorems. This is Lee Proposition 8.1 and 8.14. The traditional choice is the first (smooth as a map of manifolds), with the others recovered as criteria; this is the choice we make.
 
@@ -61,7 +61,7 @@ $$(fX)_p = f(p)\, X_p.$$
 
 In the category of smooth manifolds, $\pi : TM \to M$ is a vector bundle, and $\mathfrak{X}(M) = \Gamma(TM)$ is the space of smooth sections. The categorical structure is:
 
-- **$\mathfrak{X}(M)$ as a $C^\infty(M)$-module.** Vector fields form a [[Def - Module|module]] over the commutative ring $C^\infty(M)$. This is the general fact: sections of any [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle|vector bundle]] $E \to M$ form a $C^\infty(M)$-module $\Gamma(E)$.
+- **$\mathfrak{X}(M)$ as a $C^\infty(M)$-[[Def - Module|module]].** Vector fields form a [[Def - Module|module]] over the commutative ring $C^\infty(M)$. This is the general fact: sections of any [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle|vector bundle]] $E \to M$ form a $C^\infty(M)$-module $\Gamma(E)$.
 
 - **$\mathfrak{X}(M)$ as a Lie algebra.** The Lie bracket $[X, Y]f = X(Yf) - Y(Xf)$ — see [[Def - The Lie Bracket of Vector Fields]] — makes $\mathfrak{X}(M)$ into a Lie algebra over $\mathbb{R}$. Note: it is a Lie algebra over $\mathbb{R}$, not over $C^\infty(M)$, because the bracket does not satisfy $C^\infty(M)$-bilinearity — see the function-product rule.
 

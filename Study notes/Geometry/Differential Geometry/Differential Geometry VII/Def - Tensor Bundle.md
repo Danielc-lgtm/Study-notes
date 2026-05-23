@@ -20,7 +20,7 @@ $M$ is a smooth $n$-manifold (Hausdorff, second countable). $T_pM, T_p^*M$ are t
 
 What we want is a **smooth manifold whose points are tensors at points of $M$**. The motivation is the same as for the [[Def - The Tangent Bundle|tangent bundle]] and [[Def - Cotangent Space and Cotangent Bundle|cotangent bundle]]: a tensor field is a smooth assignment of a tensor to each point, and "smooth" requires the codomain to be a smooth manifold. The tensor bundle is the smooth manifold that makes "smooth tensor field" make sense.
 
-The construction proceeds by **fibrewise multilinear algebra plus a vector-bundle structure**. The fibrewise data is automatic: at each $p$, the algebra of [[Def - Mixed Tensor|mixed tensors]] $T^{(k,\ell)}(T_pM)$ is a well-defined vector space of dimension $n^{k+\ell}$. The work is in giving the disjoint union of these fibres a smooth structure compatible with the projection $\pi : T^{(k,\ell)}M \to M$. The recipe is:
+The construction proceeds by **fibrewise multilinear algebra plus a vector-bundle structure**. The fibrewise data is automatic: at each $p$, the algebra of [[Def - Mixed Tensor|mixed tensors]] $T^{(k,\ell)}(T_pM)$ is a well-defined vector space of [[Def - Dimension|dimension]] $n^{k+\ell}$. The work is in giving the disjoint union of these fibres a smooth structure compatible with the projection $\pi : T^{(k,\ell)}M \to M$. The recipe is:
 
 1. **Local trivializations.** In a chart $(U, \varphi = (x^1, \dots, x^n))$ on $M$, the coordinate vector fields $(\partial_1, \dots, \partial_n)$ trivialize $TM|_U$ as $U \times \mathbb{R}^n$, and the coordinate covector fields $(dx^1, \dots, dx^n)$ trivialize $T^*M|_U$. Tensoring these together gives a local frame $\{\partial_{i_1}\otimes\cdots\otimes \partial_{i_k}\otimes dx^{j_1}\otimes\cdots\otimes dx^{j_\ell}\}$ for $T^{(k,\ell)}M|_U$, which trivializes the tensor bundle on $U$ as $U \times \mathbb{R}^{n^{k+\ell}}$.
 
@@ -55,7 +55,7 @@ equipped with the unique smooth vector bundle structure satisfying:
 
 $$\Phi_U : \pi^{-1}(U) \to U \times \mathbb{R}^{n^{k+\ell}}, \quad (p, W) \mapsto (p, W^{i_1\cdots i_k}_{j_1\cdots j_\ell})$$
 
-(where $W^{i_1\cdots i_k}_{j_1\cdots j_\ell}$ are the components of $W$ in the coordinate frame at $p$) is a diffeomorphism that is fibrewise linear.
+(where $W^{i_1\cdots i_k}_{j_1\cdots j_\ell}$ are the components of $W$ in the coordinate frame at $p$) is a [[Def - Diffeomorphism|diffeomorphism]] that is fibrewise linear.
 
 3. **Transition functions.** On an overlap of charts $(x^i)$ and $(\tilde x^i)$, the transition function $\Phi_{\tilde U} \circ \Phi_U^{-1} : (U \cap \tilde U) \times \mathbb{R}^{n^{k+\ell}} \to (U \cap \tilde U) \times \mathbb{R}^{n^{k+\ell}}$ acts on the fibre coordinates by
 

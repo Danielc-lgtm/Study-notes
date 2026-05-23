@@ -39,7 +39,7 @@ For a Riemannian manifold of constant sectional curvature $K$, the Riemann tenso
 
 **Theorem routing:** Apply [[Thm - Bochner's Theorem]] directly to $S^n$: positive Ricci forces $b_1 = 0$. Verify topologically. For $T^n$, apply the corollary of Bochner: nonnegative Ricci forces parallel $1$-forms, $b_1 \leq n$. For $\mathbb{H}^n/\Gamma$, observe that Bochner does *not* apply (negative Ricci), so no Bochner-style restriction on $b_1$. The arbitrarily large $b_1$ of hyperbolic manifolds is consistent.
 
-**Key decision point:** Recognize that **the sharpness of Bochner's theorem is in the strict-positivity hypothesis**. Without positivity ($\operatorname{Ric} = 0$ on the torus), the theorem gives only parallelism, not vanishing — and parallel $1$-forms have dimension $\leq n$ but can saturate the bound. The torus is the rigidity case: $b_1 = n$ exactly, with the flat structure being forced. Anything with $\operatorname{Ric} < 0$ somewhere or strictly negative gives no Bochner constraint — explaining why hyperbolic manifolds can have arbitrarily large $b_1$.
+**Key decision point:** Recognize that **the sharpness of Bochner's theorem is in the strict-positivity hypothesis**. Without positivity ($\operatorname{Ric} = 0$ on the torus), the theorem gives only parallelism, not vanishing — and parallel $1$-forms have [[Def - Dimension|dimension]] $\leq n$ but can saturate the bound. The torus is the rigidity case: $b_1 = n$ exactly, with the flat structure being forced. Anything with $\operatorname{Ric} < 0$ somewhere or strictly negative gives no Bochner constraint — explaining why hyperbolic manifolds can have arbitrarily large $b_1$.
 
 ---
 
@@ -107,7 +107,7 @@ The exercise has four parts. Part (a) applies Bochner directly to the sphere. Pa
 > [!note]- Derivation
 > Hyperbolic $n$-space $\mathbb{H}^n$ has constant sectional curvature $K = -1$ (negative). So $\operatorname{Ric}_{\mathbb{H}^n} = (n-1)(-1)g = -(n-1)g$. Negative-definite Ricci.
 >
-> A closed hyperbolic $n$-manifold $\mathbb{H}^n/\Gamma$ (for $\Gamma$ a torsion-free cocompact discrete subgroup of $\mathrm{Isom}(\mathbb{H}^n)$) inherits the negative-Ricci metric: $\operatorname{Ric}_{\mathbb{H}^n/\Gamma} = -(n-1)g < 0$.
+> A closed hyperbolic $n$-manifold $\mathbb{H}^n/\Gamma$ (for $\Gamma$ a torsion-free cocompact discrete [[Def - Subgroup|subgroup]] of $\mathrm{Isom}(\mathbb{H}^n)$) inherits the negative-Ricci metric: $\operatorname{Ric}_{\mathbb{H}^n/\Gamma} = -(n-1)g < 0$.
 >
 > Bochner's theorem (which requires $\operatorname{Ric} > 0$) does *not* apply. There is no Bochner-style restriction on $b_1$.
 >
@@ -123,11 +123,11 @@ The exercise has four parts. Part (a) applies Bochner directly to the sphere. Pa
 **Step 4: Rigidity case (part (d)).**
 
 > [!note]- Derivation
-> **Claim:** A closed Riemannian $n$-manifold with $\operatorname{Ric} \geq 0$ and $b_1 = n$ is a flat torus quotient $T^n/\Gamma$ for a finite group $\Gamma$.
+> **Claim:** A closed Riemannian $n$-manifold with $\operatorname{Ric} \geq 0$ and $b_1 = n$ is a flat torus quotient $T^n/\Gamma$ for a finite [[Def - Group|group]] $\Gamma$.
 >
 > **Outline:** By the nonnegative-Bochner corollary, harmonic $1$-forms are parallel. The space of parallel $1$-forms has dimension $\leq n$ (since parallel sections of $T^*M$ are determined by their value at one point). If $b_1 = n$, equality, so the space of parallel $1$-forms is all of $T^*_p M$ at each $p$ — the cotangent bundle is **parallelizable** with a parallel frame.
 >
-> A parallel frame implies the Levi-Civita connection is *flat* (curvature tensor is zero). A closed Riemannian manifold with flat connection is locally isometric to Euclidean $\mathbb{R}^n$ (by the **Cartan structure theorem**), hence its universal cover is $\mathbb{R}^n$ with the flat metric. The fundamental group $\pi_1(M)$ acts on $\mathbb{R}^n$ by isometries (Euclidean motions: translations and rotations).
+> A parallel frame implies the Levi-Civita connection is *flat* (curvature tensor is zero). A closed Riemannian manifold with flat connection is locally isometric to Euclidean $\mathbb{R}^n$ (by the **Cartan structure theorem**), hence its universal cover is $\mathbb{R}^n$ with the flat metric. The fundamental group $\pi_1(M)$ acts on $\mathbb{R}^n$ by [[Def - Isometry|isometries]] (Euclidean motions: translations and rotations).
 >
 > Since $M$ is closed and $\pi_1(M)$ acts freely and cocompactly on $\mathbb{R}^n$, and the action is by Euclidean motions, $\pi_1(M)$ is a **crystallographic group** (Bieberbach group). By **Bieberbach's first theorem**, $\pi_1(M)$ has a normal subgroup of finite index consisting of translations — a finite-index lattice in $\mathbb{R}^n$. Hence $M$ is finitely covered by a flat torus $T^n$, i.e., $M = T^n/\Gamma$ for a finite group $\Gamma$.
 >

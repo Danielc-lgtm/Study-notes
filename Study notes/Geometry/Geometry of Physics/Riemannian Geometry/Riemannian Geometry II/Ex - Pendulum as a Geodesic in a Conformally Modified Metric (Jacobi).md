@@ -13,7 +13,7 @@ tags: [geometry, riemannian-geometry, jacobi-principle, classical-mechanics, pen
 
 (a) Let $(M, g)$ be a Riemannian manifold and $V : M \to \mathbb{R}$ a smooth potential. Consider a unit-mass particle on $M$ with Lagrangian $L = T - V$, where $T = \tfrac12 g_{ij}\dot q^i \dot q^j$ is the kinetic energy. At a fixed total energy $E$ (with $E > V$ throughout the trajectory), define the **Jacobi metric**
 $$\tilde g := 2(E - V(q))\, g$$
-on the classically-allowed region $\{q : V(q) < E\} \subseteq M$. Prove **Jacobi's principle of least action**: the trajectories of $L$ at energy $E$ are reparametrisations of the geodesics of $\tilde g$.
+on the classically-allowed region $\{q : V(q) < E\} \subseteq M$. Prove **Jacobi's principle of least action**: the trajectories of $L$ at energy $E$ are reparametrisations of the [[Def - Geodesic|geodesics]] of $\tilde g$.
 
 (b) Apply this to the simple pendulum: a unit-mass bob on a unit-length rod swinging freely in a uniform gravitational field. The configuration space is $S^1$ (parametrised by the angle $\theta$ from the downward vertical), and the Lagrangian is $L = \tfrac12 \dot\theta^2 - (1 - \cos\theta)$ (taking the gravitational acceleration $g_{\mathrm{grav}} = 1$ and the bob's bottom position as the zero of potential).
 

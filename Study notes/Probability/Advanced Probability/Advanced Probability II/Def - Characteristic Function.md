@@ -30,7 +30,7 @@ $$\varphi_X(t)=\mathbb{E}\big[e^{i\langle t,X\rangle}\big]=\int_{\mathbb{R}^d}e^
 
 It satisfies: $\varphi_X(0)=1$; $|\varphi_X(t)|\le1$; $\varphi_X$ is **uniformly continuous**; $\varphi_X(-t)=\overline{\varphi_X(t)}$; and it is **positive definite**.
 
-**Key properties.** (i) **Determination:** $\varphi_X=\varphi_Y\implies\mu_X=\mu_Y$. (ii) **Convolution $\to$ product:** if $X,Y$ are [[Def - Independence|independent]], $\varphi_{X+Y}=\varphi_X\,\varphi_Y$. (iii) **Affine maps:** $\varphi_{aX+b}(t)=e^{itb}\varphi_X(at)$. (iv) **Moments:** if $\mathbb{E}|X|^k<\infty$, then $\varphi_X\in C^k$ and $\varphi_X^{(k)}(0)=i^k\mathbb{E}[X^k]$.
+**Key properties.** (i) **Determination:** $\varphi_X=\varphi_Y\implies\mu_X=\mu_Y$. (ii) **[[Def - Convolution|Convolution]] $\to$ product:** if $X,Y$ are independent, $\varphi_{X+Y}=\varphi_X\,\varphi_Y$. (iii) **Affine maps:** $\varphi_{aX+b}(t)=e^{itb}\varphi_X(at)$. (iv) **Moments:** if $\mathbb{E}|X|^k<\infty$, then $\varphi_X\in C^k$ and $\varphi_X^{(k)}(0)=i^k\mathbb{E}[X^k]$.
 
 For the standard Gaussian $N(0,1)$, $\varphi(t)=e^{-t^2/2}$ — the Gaussian is its own characteristic function up to scaling (**self-dual**).
 

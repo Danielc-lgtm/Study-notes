@@ -68,7 +68,7 @@ Combine the proposition with **its contrapositive** to prove *non*-representabil
 
 # Why Is It True
 
-There are two halves, and they have completely different characters. One half is a one-line congruence; the other half is the real content and needs a square root of $-1$ conjured out of group theory. Seeing why each half is what it is makes the proof unsurprising.
+There are two halves, and they have completely different characters. One half is a one-line congruence; the other half is the real content and needs a square root of $-1$ conjured out of [[Def - Group|group]] theory. Seeing why each half is what it is makes the proof unsurprising.
 
 **The easy half: $p \equiv 3 \pmod 4$ stays prime.** A Gaussian integer that splits a rational prime would have to have norm $p$ — because if $p = uv$ with $u, v$ non-units then $p^2 = N(u)N(v)$ forces $N(u) = N(v) = p$. So $p$ splits *only if* $p$ is a norm, i.e. $p = a^2 + b^2$ for some integers. But now look mod $4$: an integer square is $0^2, 1^2, 2^2, 3^2 \equiv 0, 1, 0, 1$, so every square is $0$ or $1$ mod $4$, and a sum of two squares is $0 + 0, 0 + 1, 1 + 1 \equiv 0, 1, 2$ mod $4$ — **never $3$**. A prime $\equiv 3 \pmod 4$ is therefore not a sum of two squares, cannot be a norm, cannot split, and stays prime. The whole obstruction is the arithmetic of squares modulo $4$; nothing deep is happening, the congruence simply forbids $p$ from being a norm.
 
@@ -139,7 +139,7 @@ Two directions for the proposition, then a completeness sweep. For "$p$ splits $
 > **Why needed:** With Lemma 1, it proves the easy direction of the classification — primes $\equiv 3 \pmod 4$ cannot split, so they stay prime.
 >
 > > [!note]- Full proof
-> > For any integer $n$, $n$ is even or odd, so $n \equiv 0, 1, 2, 3 \pmod 4$ and $n^2 \equiv 0, 1, 0, 1 \pmod 4$ respectively. Hence **every square is $\equiv 0$ or $1 \pmod 4$.** Adding two squares, the possible residues are
+> > For any integer $n$, $n$ is even or odd, so $n \equiv 0, 1, 2, 3 \pmod 4$ and $n^2 \equiv 0, 1, 0, 1 \pmod 4$ respectively. Hence **every square is $\equiv 0$ or $1 \pmod 4$.** Adding two squares, the possible [[Def - Residue|residues]] are
 > > $$0 + 0 = 0, \quad 0 + 1 = 1, \quad 1 + 1 = 2 \pmod 4.$$
 > > So a sum of two squares is $\equiv 0, 1$, or $2 \pmod 4$, and **never $\equiv 3$**. A prime $p \equiv 3 \pmod 4$ therefore cannot equal $a^2 + b^2$. $\blacksquare$
 
@@ -201,7 +201,7 @@ Two directions for the proposition, then a completeness sweep. For "$p$ splits $
 >
 > **Part D — completeness: these are all the Gaussian primes.**
 >
-> Let $z \in \mathbb{Z}[i]$ be any prime (equivalently irreducible). Its conjugate $\bar z$ is also irreducible (conjugation is a ring automorphism, and it carries units to units, hence irreducibles to irreducibles). Now $N(z) = z\bar z$ is a factorization of the integer $N(z)$, and $N(z) \neq 1$ since $z$ is not a unit, so $N(z)$ has a rational prime factor $p$. Then
+> Let $z \in \mathbb{Z}[i]$ be any prime (equivalently irreducible). Its conjugate $\bar z$ is also irreducible (conjugation is a [[Def - Ring|ring]] automorphism, and it carries units to units, hence irreducibles to irreducibles). Now $N(z) = z\bar z$ is a factorization of the integer $N(z)$, and $N(z) \neq 1$ since $z$ is not a unit, so $N(z)$ has a rational prime factor $p$. Then
 > $$p \;\mid\; N(z) \;=\; z\bar z \quad\text{in } \mathbb{Z}[i].$$
 > Consider the two cases for $p$.
 >

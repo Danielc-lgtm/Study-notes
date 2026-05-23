@@ -16,7 +16,7 @@ Realize the $n$-torus as the quotient $T^n = \mathbb{R}^n / \mathbb{Z}^n$ — th
 
 (a) Verify the natural projection $\pi : \mathbb{R}^n \to T^n$ is an open map and that the $\mathbb{Z}^n$-action on $\mathbb{R}^n$ is free and properly discontinuous.
 
-(b) Construct a smooth atlas on $T^n$ by restricting $\pi$ to small open subsets where it becomes a homeomorphism onto its image.
+(b) Construct a smooth atlas on $T^n$ by restricting $\pi$ to small open subsets where it becomes a [[Def - Homeomorphism|homeomorphism]] onto its image.
 
 (c) Compute a sample transition function and verify smoothness.
 
@@ -38,7 +38,7 @@ The $\mathbb{Z}^n$-action on $\mathbb{R}^n$ by translation: $k \cdot x = x + k$ 
 
 # Convergent Strategy
 
-**Problem class:** Constructing a smooth structure on a quotient of a smooth manifold by a discrete group action — type 2 of the problem-solving routine in [[Differential Geometry I — Smooth Manifolds and Atlases#Problem-Solving Strategy]]. The key sub-problem is to verify the group action is *free* and *properly discontinuous*, which guarantees the quotient is a topological manifold; then lift charts from $\mathbb{R}^n$ to make it a smooth manifold.
+**Problem class:** Constructing a smooth structure on a quotient of a smooth manifold by a discrete [[Def - Group|group]] action — type 2 of the problem-solving routine in [[Differential Geometry I — Smooth Manifolds and Atlases#Problem-Solving Strategy]]. The key sub-problem is to verify the group action is *free* and *properly discontinuous*, which guarantees the quotient is a topological manifold; then lift charts from $\mathbb{R}^n$ to make it a smooth manifold.
 
 **Assumption pattern:** The action of $\mathbb{Z}^n$ on $\mathbb{R}^n$ has two properties that make the quotient construction work: (i) *free*: no nontrivial group element fixes any point (translation by $k \neq 0$ moves every point); (ii) *properly discontinuous*: for any compact $K \subseteq \mathbb{R}^n$, only finitely many elements $k \in \mathbb{Z}^n$ satisfy $K \cap (K + k) \neq \emptyset$. Together these make $\pi : \mathbb{R}^n \to T^n$ a *covering map*, and standard covering-space theory makes $T^n$ a topological manifold; the smooth structure descends because the action is by *smooth* maps (translations).
 
@@ -107,7 +107,7 @@ For each $x_0 \in \mathbb{R}^n$, pick the open ball $B_r(x_0)$ of radius $r < 1/
 > [!note]- Derivation
 > *$\pi|_{B_r(x_0)}$ is injective.* Take $x, y \in B_r(x_0)$ with $\pi(x) = \pi(y)$, i.e. $y - x \in \mathbb{Z}^n$. Since $|y - x| \leq |y - x_0| + |x_0 - x| < 2r < 1$ and the smallest nonzero element of $\mathbb{Z}^n$ has norm $\geq 1$, we conclude $y - x = 0$, so $x = y$.
 >
-> *Homeomorphism.* $\pi$ is continuous (definition of quotient topology) and an open map (Step 1), so its restriction to an open set on which it is injective is a homeomorphism onto its image.
+> *[[Def - Homeomorphism|Homeomorphism]].* $\pi$ is continuous (definition of quotient topology) and an open map (Step 1), so its restriction to an open set on which it is injective is a homeomorphism onto its image.
 >
 > *Charts cover.* Every $[x] \in T^n$ has a representative $x \in \mathbb{R}^n$, and $[x] \in \pi(B_r(x)) = U_x$. So the union of all $U_{x_0}$ as $x_0$ ranges over $\mathbb{R}^n$ is $T^n$. (One can extract a countable subcover by taking $x_0$ with rational coordinates.)
 
@@ -152,10 +152,10 @@ The $n = 1$ case ($S^1 = \mathbb{R}/\mathbb{Z}$) gives the standard smooth struc
 >
 > **Step 3 — Smooth structure.** By [[Thm - Smooth Structure from Maximal Atlas]], the lifting atlas determines a unique smooth manifold structure on $T^n$.
 >
-> **Step 4 — Equivalence with the product structure.** The map $\Phi : T^n = \mathbb{R}^n/\mathbb{Z}^n \to (S^1)^n$, $[x] \mapsto ([x^1], \dots, [x^n])$, is a well-defined bijection (verified by coordinate-by-coordinate equivalence). In local coordinates: a chart $\varphi_{x_0}$ of $T^n$ maps to a product of $n$ charts on $S^1$ (one for each coordinate, lifting on $B_{1/4}(x_0^i)$), and $\Phi$ becomes the identity in coordinates. So $\Phi$ is a smooth diffeomorphism, and the lifting atlas on $T^n$ and the product atlas on $(S^1)^n$ are smoothly compatible — they determine the same smooth structure. $\blacksquare$
+> **Step 4 — Equivalence with the product structure.** The map $\Phi : T^n = \mathbb{R}^n/\mathbb{Z}^n \to (S^1)^n$, $[x] \mapsto ([x^1], \dots, [x^n])$, is a well-defined bijection (verified by coordinate-by-coordinate equivalence). In local coordinates: a chart $\varphi_{x_0}$ of $T^n$ maps to a product of $n$ charts on $S^1$ (one for each coordinate, lifting on $B_{1/4}(x_0^i)$), and $\Phi$ becomes the identity in coordinates. So $\Phi$ is a smooth [[Def - Diffeomorphism|diffeomorphism]], and the lifting atlas on $T^n$ and the product atlas on $(S^1)^n$ are smoothly compatible — they determine the same smooth structure. $\blacksquare$
 
-> [!warning] Illegal but tempting alternative route: use the quotient theorem for Lie groups
-> One might try to invoke "the quotient of a Lie group by a closed subgroup is a smooth manifold" (a theorem from [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map|DG XI]]) — $\mathbb{R}^n$ is a Lie group under addition, $\mathbb{Z}^n$ is a closed (discrete) subgroup, so $T^n = \mathbb{R}^n/\mathbb{Z}^n$ is a smooth manifold of dimension $n - 0 = n$. This is correct, but invokes a substantial theorem (the *closed subgroup theorem*) that is more advanced than needed. The direct lifting-atlas construction is more elementary and gives explicit coordinates.
+> [!warning] Illegal but tempting alternative route: use the quotient theorem for Lie [[Def - Group|groups]]
+> One might try to invoke "the quotient of a Lie group by a closed [[Def - Subgroup|subgroup]] is a smooth manifold" (a theorem from [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map|DG XI]]) — $\mathbb{R}^n$ is a Lie group under addition, $\mathbb{Z}^n$ is a closed (discrete) [[Def - Subgroup|subgroup]], so $T^n = \mathbb{R}^n/\mathbb{Z}^n$ is a smooth manifold of [[Def - Dimension|dimension]] $n - 0 = n$. This is correct, but invokes a substantial theorem (the *closed subgroup theorem*) that is more advanced than needed. The direct lifting-atlas construction is more elementary and gives explicit coordinates.
 
 > [!warning] Sanity-check via the product structure
 > Computing the smooth structure on $T^n$ two different ways — by direct quotient and by product — and verifying they agree (Step 4) is a sanity check: both constructions should give the same smooth manifold, and indeed they do.

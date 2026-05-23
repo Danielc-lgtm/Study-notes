@@ -20,7 +20,7 @@ $M$ is a smooth manifold. $\mathfrak{X}(M)$ is the space of smooth vector fields
 
 > **Lemma (Tensor Characterization, Lee Lemma 12.24).** Let $M$ be a smooth manifold and let $k \geq 1$. A map
 > $$\mathcal{A} : \mathfrak{X}(M) \times \cdots \times \mathfrak{X}(M) \to C^\infty(M) \quad (k \text{ factors})$$
-> is induced by pointwise evaluation by a smooth covariant $k$-tensor field $A$ on $M$ if and only if $\mathcal{A}$ is **multilinear over the ring $C^\infty(M)$**: for $f, f' \in C^\infty(M)$, $X_i, X'_i \in \mathfrak{X}(M)$, and each slot $i$,
+> is induced by pointwise evaluation by a smooth covariant $k$-tensor field $A$ on $M$ if and only if $\mathcal{A}$ is **multilinear over the [[Def - Ring|ring]] $C^\infty(M)$**: for $f, f' \in C^\infty(M)$, $X_i, X'_i \in \mathfrak{X}(M)$, and each slot $i$,
 > $$\mathcal{A}(X_1, \dots, fX_i + f'X'_i, \dots, X_k) = f\,\mathcal{A}(X_1, \dots, X_i, \dots, X_k) + f'\,\mathcal{A}(X_1, \dots, X'_i, \dots, X_k).$$
 > When this holds, $A$ is uniquely determined by $\mathcal{A}$.
 

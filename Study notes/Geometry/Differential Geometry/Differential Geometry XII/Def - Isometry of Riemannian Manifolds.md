@@ -18,7 +18,7 @@ Let $(M, g)$ and $(N, h)$ be Riemannian manifolds (or, more generally, (semi-)Ri
 
 The desideratum is to identify the *natural notion of equivalence* of Riemannian manifolds. Two manifolds are equivalent as smooth manifolds if there is a [[Def - Diffeomorphism|diffeomorphism]] between them; the question is what additional structure to require for them to be equivalent as Riemannian manifolds. The answer is: the diffeomorphism must *preserve the metric*. This is the definition of an isometry.
 
-**Why a diffeomorphism?** Equivalence of Riemannian manifolds is symmetric, so the map and its inverse should both be well-behaved. A smooth bijection with smooth inverse — a diffeomorphism — is exactly the smoothness category's notion of isomorphism. Anything weaker (e.g., a homeomorphism, or a smooth bijection without smooth inverse) loses the smooth structure that the metric depends on.
+**Why a diffeomorphism?** Equivalence of Riemannian manifolds is symmetric, so the map and its inverse should both be well-behaved. A smooth bijection with smooth inverse — a diffeomorphism — is exactly the smoothness category's notion of isomorphism. Anything weaker (e.g., a [[Def - Homeomorphism|homeomorphism]], or a smooth bijection without smooth inverse) loses the smooth structure that the metric depends on.
 
 **Why "$F^*h = g$"?** This is the precise way to say "the metric of $M$ equals the pulled-back metric from $N$". Pointwise, at each $p \in M$:
 $$
@@ -26,7 +26,7 @@ g_p(v, w) = (F^*h)_p(v, w) = h_{F(p)}(dF_p v, dF_p w).
 $$
 Geometrically: the differential $dF_p : T_pM \to T_{F(p)}N$ is a *linear isometry* between the two inner-product spaces $(T_pM, g_p)$ and $(T_{F(p)}N, h_{F(p)})$. So $F$ takes the inner-product structure of $M$ exactly to the inner-product structure of $N$, at every point.
 
-**Why is this the right equivalence relation?** Because every geometric quantity built from the Riemannian metric is preserved by isometries: lengths of curves (Exercise 13.24 of Lee — see [[Def - Length of a Curve and Riemannian Distance]]), distances ($d_h(F(p), F(q)) = d_g(p, q)$), angles, gradients, Christoffel symbols, curvature tensors, geodesics, the Laplace–Beltrami operator's spectrum. Anything that is a *function of $g$ alone* (no extra data) is preserved by isometries. So two Riemannian manifolds related by an isometry are indistinguishable by intrinsic geometric measurements — they are "the same" in every way that matters for Riemannian geometry.
+**Why is this the right equivalence relation?** Because every geometric quantity built from the Riemannian metric is preserved by [[Def - Isometry|isometries]]: lengths of curves (Exercise 13.24 of Lee — see [[Def - Length of a Curve and Riemannian Distance]]), distances ($d_h(F(p), F(q)) = d_g(p, q)$), angles, gradients, Christoffel symbols, curvature tensors, [[Def - Geodesic|geodesics]], the Laplace–Beltrami operator's spectrum. Anything that is a *function of $g$ alone* (no extra data) is preserved by [[Def - Isometry|isometries]]. So two Riemannian manifolds related by an isometry are indistinguishable by intrinsic geometric measurements — they are "the same" in every way that matters for Riemannian geometry.
 
 **Why "local isometry"?** A local isometry is a smooth map $F : M \to N$ such that *every point* $p \in M$ has a neighborhood $U$ on which $F|_U$ is an isometry onto its image. Equivalently, $F$ is a local diffeomorphism with $F^*h = g$. Local isometries do not need to be globally bijective — they can have multiple sheets or self-overlap. This weaker notion is useful because many natural maps (covering maps, Riemannian submersions) are local but not global isometries.
 
@@ -34,7 +34,7 @@ Geometrically: the differential $dF_p : T_pM \to T_{F(p)}N$ is a *linear isometr
 
 (a) *Drop "diffeomorphism", keep "$F^*h = g$".* You get **local isometries**, **Riemannian immersions** (when $F$ is an immersion satisfying the pullback condition), and **Riemannian embeddings**. These are useful weaker notions, and the diffeomorphism case is the strongest one.
 
-(b) *Drop "$F^*h = g$", keep diffeomorphism.* You get a smooth diffeomorphism that does *not* preserve the metric. Such maps abound and are the diffeomorphisms of the underlying smooth manifold; they preserve everything *except* the geometry. The round sphere and the ellipsoid are diffeomorphic but not isometric, and the failure of diffeomorphisms to be isometries is what makes Riemannian geometry richer than smooth-manifold theory.
+(b) *Drop "$F^*h = g$", keep diffeomorphism.* You get a smooth diffeomorphism that does *not* preserve the metric. Such maps abound and are the [[Def - Diffeomorphism|diffeomorphisms]] of the underlying smooth manifold; they preserve everything *except* the geometry. The round sphere and the ellipsoid are diffeomorphic but not isometric, and the failure of [[Def - Diffeomorphism|diffeomorphisms]] to be isometries is what makes Riemannian geometry richer than smooth-manifold theory.
 
 (c) *Weaken to a $C^0$ map preserving distance.* For a connected Riemannian manifold one can define a distance-preserving continuous map $F : (M, d_g) \to (N, d_h)$, where $d_g$, $d_h$ are the Riemannian distances. The **Myers–Steenrod theorem** says that a distance-preserving bijection between Riemannian manifolds is automatically a smooth isometry. So in the connected case the metric-space and smooth-manifold notions of isometry coincide — a remarkable rigidity result. (For disconnected manifolds, one has to be more careful.)
 
@@ -42,19 +42,19 @@ Geometrically: the differential $dF_p : T_pM \to T_{F(p)}N$ is a *linear isometr
 
 # The Definition
 
-> **Definition (Isometry of Riemannian Manifolds).** Let $(M, g)$ and $(N, h)$ be Riemannian manifolds. A **(Riemannian) isometry** $F : (M, g) \to (N, h)$ is a [[Def - Diffeomorphism|diffeomorphism]] $F : M \to N$ such that $F^*h = g$, that is,
+> **Definition (Isometry of [[Def - Riemannian Manifold|Riemannian Manifolds]]).** Let $(M, g)$ and $(N, h)$ be Riemannian manifolds. A **(Riemannian) isometry** $F : (M, g) \to (N, h)$ is a [[Def - Diffeomorphism|diffeomorphism]] $F : M \to N$ such that $F^*h = g$, that is,
 > $$
 > h_{F(p)}\bigl(dF_p v,\ dF_p w\bigr) \;=\; g_p(v, w) \qquad \text{for every } p \in M,\ v, w \in T_pM.
 > $$
 > The two Riemannian manifolds $(M, g)$ and $(N, h)$ are **isometric** if such an isometry exists.
 
-The isometries of $(M, g)$ to itself form a group $\mathrm{Isom}(M, g) \leq \mathrm{Diff}(M)$ under composition, called the **isometry group** of $(M, g)$.
+The isometries of $(M, g)$ to itself form a [[Def - Group|group]] $\mathrm{Isom}(M, g) \leq \mathrm{Diff}(M)$ under composition, called the **isometry [[Def - Group|group]]** of $(M, g)$.
 
 **Definition (Local Isometry).** A smooth map $F : M \to N$ is a **local isometry** if every $p \in M$ has an open neighborhood $U$ such that $F|_U : U \to F(U)$ is a (Riemannian) isometry; equivalently, $F$ is a local diffeomorphism satisfying $F^*h = g$.
 
 **Definition (Locally Isometric).** Two Riemannian manifolds $(M, g)$ and $(N, h)$ are **locally isometric** if every point of $M$ has a neighborhood isometric to an open subset of $N$, *and* vice versa. (Both directions are needed for symmetry.)
 
-**Definition (Flat Riemannian Manifold).** A Riemannian manifold $(M, g)$ is **flat** if it is locally isometric to Euclidean space $(\mathbb{R}^n, \bar g)$. Equivalently, every point has a neighborhood in which $g$ takes the constant Euclidean coordinate expression $\delta_{ij}\, dx^i \otimes dx^j$.
+**Definition (Flat [[Def - Riemannian Manifold|Riemannian Manifold]]).** A Riemannian manifold $(M, g)$ is **flat** if it is locally isometric to Euclidean space $(\mathbb{R}^n, \bar g)$. Equivalently, every point has a neighborhood in which $g$ takes the constant Euclidean coordinate expression $\delta_{ij}\, dx^i \otimes dx^j$.
 
 ---
 
@@ -62,7 +62,7 @@ The isometries of $(M, g)$ to itself form a group $\mathrm{Isom}(M, g) \leq \mat
 
 The isometries form the **morphisms in the category of Riemannian manifolds** $\mathbf{Riem}$, when we take morphisms to be metric-preserving maps. The objects of $\mathbf{Riem}$ are Riemannian manifolds $(M, g)$, and the morphisms $(M, g) \to (N, h)$ are smooth maps $F$ satisfying $F^*h = g$ — that is, Riemannian immersions when $F$ is an immersion. Restricting morphisms to diffeomorphisms gives the category $\mathbf{Riem}_{\cong}$ in which morphisms are isometries; isomorphism in this category is precisely Riemannian isometric equivalence.
 
-The isometry group $\mathrm{Isom}(M, g)$ is the automorphism group of the object $(M, g)$ in the category $\mathbf{Riem}_{\cong}$. By a theorem of **Myers and Steenrod**, $\mathrm{Isom}(M, g)$ is always a (finite-dimensional) [[Def - Lie Group|Lie group]] — a very nontrivial fact, because a priori the isometry group is defined only as a group of diffeomorphisms (an infinite-dimensional group), and the metric-preserving condition is what cuts it down to a finite-dimensional Lie subgroup. The Lie algebra of $\mathrm{Isom}(M, g)$ is the space of **Killing vector fields** — vector fields whose flow consists of isometries — which is itself a Lie algebra of finite dimension at most $n(n+1)/2$ (attained for Euclidean space, spheres, and hyperbolic space).
+The isometry group $\mathrm{Isom}(M, g)$ is the automorphism group of the object $(M, g)$ in the category $\mathbf{Riem}_{\cong}$. By a theorem of **Myers and Steenrod**, $\mathrm{Isom}(M, g)$ is always a (finite-dimensional) [[Def - Lie Group|Lie group]] — a very nontrivial fact, because a priori the isometry group is defined only as a group of diffeomorphisms (an infinite-dimensional group), and the metric-preserving condition is what cuts it down to a finite-dimensional Lie [[Def - Subgroup|subgroup]]. The Lie algebra of $\mathrm{Isom}(M, g)$ is the space of **Killing vector fields** — vector fields whose flow consists of isometries — which is itself a Lie algebra of finite [[Def - Dimension|dimension]] at most $n(n+1)/2$ (attained for Euclidean space, spheres, and hyperbolic space).
 
 Structurally, an isometry is *the diffeomorphism category's notion of "structure-preserving map" lifted to Riemannian manifolds*: it preserves the smooth structure (it is a diffeomorphism) *and* the metric structure (the pullback condition).
 
@@ -96,9 +96,9 @@ In group theory and physics, the isometry group of a (semi-)Riemannian manifold 
 
 **Corollary — isometries preserve distance.** If $F : (M, g) \to (N, h)$ is a Riemannian isometry between connected manifolds, then $d_h(F(p), F(q)) = d_g(p, q)$ for all $p, q \in M$. This justifies the name "isometry" — the metric (in the metric-space sense, [[Def - Length of a Curve and Riemannian Distance|Riemannian distance]]) is preserved.
 
-**Corollary — isometries preserve all metric-derived quantities.** Lengths of curves, angles between tangent vectors, gradients (for the metric-dual), Christoffel symbols (in corresponding coordinates), the Riemann curvature tensor, geodesics (isometries send geodesics to geodesics — see [[Ex - Isometries Send Geodesics to Geodesics]]), and the Laplace–Beltrami spectrum are all preserved.
+**Corollary — isometries preserve all metric-derived quantities.** Lengths of curves, angles between tangent vectors, gradients (for the metric-dual), Christoffel symbols (in corresponding coordinates), the Riemann curvature tensor, [[Def - Geodesic|geodesics]] (isometries send geodesics to geodesics — see [[Ex - Isometries Send Geodesics to Geodesics]]), and the Laplace–Beltrami spectrum are all preserved.
 
-**Corollary — the isometry group is a finite-dimensional Lie group.** By the **Myers–Steenrod theorem**, for any Riemannian manifold $(M, g)$, the isometry group $\mathrm{Isom}(M, g)$ is a (finite-dimensional) Lie group of dimension at most $n(n+1)/2$. The maximum is attained by the constant-curvature simply-connected manifolds: Euclidean space $\mathbb{R}^n$ (dim $E(n) = n + n(n-1)/2 = n(n+1)/2$), the sphere $S^n$ (dim $O(n+1) = n(n+1)/2$), hyperbolic space $\mathbb{H}^n$.
+**Corollary — the isometry group is a finite-dimensional Lie group.** By the **Myers–Steenrod theorem**, for any Riemannian manifold $(M, g)$, the isometry group $\mathrm{Isom}(M, g)$ is a (finite-dimensional) Lie group of [[Def - Dimension|dimension]] at most $n(n+1)/2$. The maximum is attained by the constant-curvature simply-connected manifolds: Euclidean space $\mathbb{R}^n$ (dim $E(n) = n + n(n-1)/2 = n(n+1)/2$), the sphere $S^n$ (dim $O(n+1) = n(n+1)/2$), hyperbolic space $\mathbb{H}^n$.
 
 **Calibration check.** First, verify that the rotation $R_\theta : \mathbb{R}^2 \to \mathbb{R}^2$, $R_\theta(x, y) = (x\cos\theta - y\sin\theta, x\sin\theta + y\cos\theta)$, is an isometry of $(\mathbb{R}^2, \bar g)$. Second, show that the map $F : (\mathbb{R}^2, \bar g) \to (\mathbb{R}^2, \bar g)$, $F(x, y) = (2x, y/2)$, is *not* an isometry, even though it has determinant $1$ — it scales the $x$-direction and shrinks the $y$-direction, distorting the inner product. Third, identify all isometries of the flat torus $T^n = \mathbb{R}^n / \mathbb{Z}^n$ that fix the origin. Expected: $O(n) \cap GL(n, \mathbb{Z})$, the orthogonal transformations preserving the integer lattice (a finite group: for $n = 2$ it has order 8, the dihedral group of order 8).
 

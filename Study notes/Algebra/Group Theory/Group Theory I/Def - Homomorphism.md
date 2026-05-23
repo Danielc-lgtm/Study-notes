@@ -15,7 +15,7 @@ $(G, \cdot, e_G)$ and $(H, *, e_H)$ are groups, with their own operations and id
 
 # Axiom Motivation
 
-We have spent §1.1 studying groups one at a time. But a single group in isolation reveals little; mathematics gets its power from *comparing* objects, and to compare two groups we need maps between them. The motivating desideratum is therefore: *single out the functions $G \to H$ that are worth studying — the ones that see $G$ and $H$ as groups, not merely as sets.*
+We have spent §1.1 studying [[Def - Group|groups]] one at a time. But a single group in isolation reveals little; mathematics gets its power from *comparing* objects, and to compare two [[Def - Group|groups]] we need maps between them. The motivating desideratum is therefore: *single out the functions $G \to H$ that are worth studying — the ones that see $G$ and $H$ as groups, not merely as sets.*
 
 An arbitrary function $f : G \to H$ is useless for group theory. It can shuffle elements with no regard for multiplication: it might send a product $g_1 g_2$ anywhere at all, unrelated to where it sends $g_1$ and $g_2$. Such a function carries no group-theoretic information; it cannot transport a single theorem from $G$ to $H$. We want instead the functions that *respect the structure*. A group's structure is entirely contained in its multiplication — the identity and inverses are forced by it — so "respecting the structure" can only mean one thing: the function must commute with multiplication. The product of the images should be the image of the product. That is the desideratum, and it admits exactly one formalisation:
 $$\varphi(g_1 g_2) = \varphi(g_1)\,\varphi(g_2),$$
@@ -64,7 +64,7 @@ The most consequential compression: a **linear representation** of $G$ is *liter
 
 **Is an instance — the sign $\operatorname{sgn} : S_n \to \{\pm 1\}$.** Every permutation is even or odd, and the sign of a composite is the product of signs, $\operatorname{sgn}(\sigma\tau) = \operatorname{sgn}(\sigma)\operatorname{sgn}(\tau)$ — the homomorphism condition. Its kernel is the alternating group $A_n$; its image is the order-$2$ group $\{\pm 1\}$.
 
-**Is an instance — reduction mod $n$, $\ \mathbb{Z} \to \mathbb{Z}/n\mathbb{Z}$.** The map $k \mapsto k + n\mathbb{Z}$ sending an integer to its residue class is a homomorphism of additive groups: the residue of a sum is the sum of residues. This is a special case of the next example.
+**Is an instance — reduction mod $n$, $\ \mathbb{Z} \to \mathbb{Z}/n\mathbb{Z}$.** The map $k \mapsto k + n\mathbb{Z}$ sending an integer to its [[Def - Residue|residue]] class is a homomorphism of additive groups: the residue of a sum is the sum of [[Def - Residue|residues]]. This is a special case of the next example.
 
 **Is an instance — the quotient map $\pi : G \to G/N$.** For any [[Def - Normal Subgroup|normal subgroup]] $N$, the map $g \mapsto gN$ is a homomorphism, since $\pi(g_1 g_2) = g_1 g_2 N = (g_1 N)(g_2 N) = \pi(g_1)\pi(g_2)$ — this is essentially the definition of the [[Def - Quotient Group|quotient group]] operation. It is the most important homomorphism in the subject, deliberately non-injective: it forgets exactly $N$.
 

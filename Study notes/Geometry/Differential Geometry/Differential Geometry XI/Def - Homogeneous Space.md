@@ -30,7 +30,7 @@ Why **closed** $H$? Because of the closed subgroup theorem, any stabilizer is cl
 - A **manifold with a transitive $G$-action** is a homogeneous space.
 - **Quotient $G/H$ for a closed subgroup $H$** is a homogeneous space.
 
-These two descriptions are equivalent — Lee Thm 21.17 says that for any closed subgroup $H \leq G$, the quotient $G/H$ inherits a unique smooth manifold structure of dimension $\dim G - \dim H$ such that $\pi : G \to G/H$ is a smooth submersion, and conversely every smooth transitive action $G \times M \to M$ produces $M \cong G/G_p$ via the orbit map. So homogeneous spaces are in bijection with closed subgroups of Lie groups, up to choice of basepoint and conjugation of $H$.
+These two descriptions are equivalent — Lee Thm 21.17 says that for any closed subgroup $H \leq G$, the quotient $G/H$ inherits a unique smooth manifold structure of dimension $\dim G - \dim H$ such that $\pi : G \to G/H$ is a smooth submersion, and conversely every smooth transitive action $G \times M \to M$ produces $M \cong G/G_p$ via the orbit map. So homogeneous spaces are in bijection with closed [[Def - Subgroup|subgroups]] of Lie [[Def - Group|groups]], up to choice of basepoint and conjugation of $H$.
 
 **Why does the quotient $G/H$ inherit smooth structure?** Because $H$ is closed (hence embedded by the closed subgroup theorem), and the projection $\pi : G \to G/H$ is built from the orbit structure of $H$ acting on $G$ by right translation — a free, smooth, proper action when $H$ is closed. The quotient manifold theorem (Lee Thm 21.10) provides smooth manifold structure for any free proper smooth action; applying it to right $H$-action on $G$ gives $G/H$ as a manifold.
 
@@ -46,7 +46,7 @@ A **homogeneous space** of a Lie group $G$ is a smooth manifold $M$ equipped wit
 
 For any choice of basepoint $p \in M$, the **stabilizer** $H = G_p = \{g \in G : g \cdot p = p\}$ is a closed Lie subgroup of $G$ (closed by continuity of the action, hence an embedded Lie subgroup by [[Thm - The Closed Subgroup Theorem|the closed subgroup theorem]]).
 
-The **orbit map** $\theta^{(p)} : G \to M$, $g \mapsto g \cdot p$, factors through the quotient $\pi : G \to G/H$ to give a $G$-equivariant diffeomorphism
+The **orbit map** $\theta^{(p)} : G \to M$, $g \mapsto g \cdot p$, factors through the quotient $\pi : G \to G/H$ to give a $G$-equivariant [[Def - Diffeomorphism|diffeomorphism]]
 
 $$\bar\theta^{(p)} : G/H \xrightarrow{\;\sim\;} M.$$
 
@@ -74,7 +74,7 @@ From the [[Def - Smooth Action of a Lie Group|smooth-action side]], a homogeneou
 
 # Examples / Corollaries
 
-**Is an instance: $S^n = \mathrm{SO}(n+1)/\mathrm{SO}(n)$.** The unit $n$-sphere with the natural action of $\mathrm{SO}(n+1)$ by rotations. Transitive (any unit vector can be rotated to any other), stabilizer of the north pole $e_{n+1}$ is the block-diagonal copy of $\mathrm{SO}(n)$. Dimension: $\dim \mathrm{SO}(n+1) - \dim \mathrm{SO}(n) = \binom{n+1}{2} - \binom{n}{2} = n$, correct. See [[Ex - S^2 as a Homogeneous Space of SO(3)]].
+**Is an instance: $S^n = \mathrm{SO}(n+1)/\mathrm{SO}(n)$.** The unit $n$-sphere with the natural action of $\mathrm{SO}(n+1)$ by rotations. Transitive (any unit vector can be rotated to any other), stabilizer of the north pole $e_{n+1}$ is the block-diagonal copy of $\mathrm{SO}(n)$. [[Def - Dimension|Dimension]]: $\dim \mathrm{SO}(n+1) - \dim \mathrm{SO}(n) = \binom{n+1}{2} - \binom{n}{2} = n$, correct. See [[Ex - S^2 as a Homogeneous Space of SO(3)]].
 
 **Is an instance: $\mathbb{RP}^n = \mathrm{SO}(n+1)/(\mathrm{O}(n) \cap \mathrm{SO}(n+1))$.** Real projective space as a homogeneous space of $\mathrm{SO}(n+1)$. Note that the stabilizer of a line through the origin (rather than a point on $S^n$) is larger than the sphere's stabilizer — it includes the $\pm 1$ ambiguity in the line direction.
 
@@ -96,7 +96,7 @@ From the [[Def - Smooth Action of a Lie Group|smooth-action side]], a homogeneou
 
 **Corollary (invariant structures).** A $G$-invariant Riemannian metric on $M = G/H$ is in bijection with an $H$-invariant inner product on $T_p M \cong \mathfrak{g}/\mathfrak{h}$, where $H$ acts on $\mathfrak{g}/\mathfrak{h}$ via the adjoint representation. Existence reduces to a representation-theoretic question: does $H$ admit an invariant inner product on $\mathfrak{g}/\mathfrak{h}$? For $H$ compact, yes (average over $H$); for general $H$, may fail.
 
-**Corollary (homogeneous spaces are Lie groups iff $H \trianglelefteq G$).** $G/H$ is itself a Lie group (rather than just a homogeneous $G$-space) iff $H$ is a normal Lie subgroup of $G$ (so that left and right cosets coincide). The quotient is then the quotient Lie group.
+**Corollary (homogeneous spaces are Lie groups iff $H \trianglelefteq G$).** $G/H$ is itself a Lie group (rather than just a homogeneous $G$-space) iff $H$ is a normal Lie subgroup of $G$ (so that left and right [[Def - Coset|cosets]] coincide). The quotient is then the quotient Lie group.
 
 **Calibration check.** If you can (i) verify $S^n \cong \mathrm{SO}(n+1)/\mathrm{SO}(n)$ as a homogeneous space; (ii) compute $\dim \mathrm{Gr}_k(\mathbb{R}^n) = k(n-k)$ from the orbit-stabilizer dimension equation; and (iii) explain why $H$ must be closed for $G/H$ to be a smooth manifold — you have understood the definition correctly.
 

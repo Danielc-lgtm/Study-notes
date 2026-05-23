@@ -17,11 +17,11 @@ Throughout, $V$ is a finite-dimensional nonzero vector space over $\mathbf{F} \i
 
 # Axiom Motivation
 
-Once we have admitted [[Def - Generalized Eigenvector|generalized eigenvectors]] — vectors $v$ for which $(T - \lambda I)^k v = 0$ for some power $k$ — the next question is what algebraic structure they form. A natural guess is that they constitute a subspace: closed under addition and scalar multiplication, containing zero. This is the right guess, and the generalized eigenspace is precisely the resulting subspace.
+Once we have admitted [[Def - Generalized Eigenvector|generalized eigenvectors]] — vectors $v$ for which $(T - \lambda I)^k v = 0$ for some power $k$ — the next question is what algebraic structure they form. A natural guess is that they constitute a [[Def - Subspace|subspace]]: closed under addition and scalar multiplication, containing zero. This is the right guess, and the generalized eigenspace is precisely the resulting subspace.
 
 But there is a subtlety in the closure. If $v$ is killed by $(T - \lambda I)^k$ and $w$ is killed by $(T - \lambda I)^\ell$, is $v + w$ killed by some power? The answer is yes — by $(T - \lambda I)^{\max(k, \ell)}$, since both summands are then in its kernel. So $G(\lambda, T) = \{v : (T - \lambda I)^k v = 0 \text{ for some } k\} \cup \{0\}$ is closed under addition. Closure under scalar multiplication is immediate: $(T - \lambda I)^k (cv) = c (T - \lambda I)^k v = 0$ if $v$ is killed by $(T - \lambda I)^k$. Hence $G(\lambda, T)$ is a subspace of $V$.
 
-The next step is to give $G(\lambda, T)$ a *uniform* description, not as the union of kernels of varying powers but as the kernel of a single operator. The chain $\operatorname{null}(T - \lambda I)^0 \subseteq \operatorname{null}(T - \lambda I)^1 \subseteq \cdots$ is nondecreasing and bounded above by $\dim V$, so once two consecutive terms agree, all subsequent terms agree (see [[Thm - Null Spaces of Powers Stabilize]]). The stabilisation occurs by index $\dim V$ at the latest, because each strict inclusion in the chain adds at least one dimension and a subspace of $V$ has dimension at most $\dim V$. Hence
+The next step is to give $G(\lambda, T)$ a *uniform* description, not as the union of kernels of varying powers but as the kernel of a single operator. The chain $\operatorname{null}(T - \lambda I)^0 \subseteq \operatorname{null}(T - \lambda I)^1 \subseteq \cdots$ is nondecreasing and bounded above by $\dim V$, so once two consecutive terms agree, all subsequent terms agree (see [[Thm - Null Spaces of Powers Stabilize]]). The stabilisation occurs by index $\dim V$ at the latest, because each strict inclusion in the chain adds at least one [[Def - Dimension|dimension]] and a subspace of $V$ has dimension at most $\dim V$. Hence
 
 $$G(\lambda, T) \;=\; \operatorname{null}(T - \lambda I)^{\dim V}.$$
 
@@ -35,7 +35,7 @@ $$V = G(\lambda_1, T) \oplus \cdots \oplus G(\lambda_m, T)$$
 
 with $\lambda_k$ the distinct eigenvalues. This is the [[Thm - Generalized Eigenspace Decomposition|generalized eigenspace decomposition]], the headline theorem of [[Linear Algebra VIII — §8 Operators on Complex Vector Spaces]], and it would not work with eigenspaces alone: the sum $\bigoplus E(\lambda_k, T)$ has dimension equal to the sum of *geometric* multiplicities, which falls short of $\dim V$ unless $T$ is diagonalisable. Replacing eigenspaces by generalized eigenspaces enlarges each piece by exactly enough to make the sum total. The relevant inequality $\dim E(\lambda, T) \leq \dim G(\lambda, T)$ — geometric multiplicity at most algebraic multiplicity — is precisely the room that allows the upgrade.
 
-Why insist that $\lambda$ be an eigenvalue? If $\lambda$ is *not* an eigenvalue, then $T - \lambda I$ is injective; in finite dimensions injective implies invertible, so $(T - \lambda I)^k$ is also invertible, hence has trivial kernel. So $G(\lambda, T) = \{0\}$ — the definition is consistent but gives a trivial space. There is no benefit to extending $\lambda$ beyond eigenvalues; doing so just adds zero subspaces.
+Why insist that $\lambda$ be an eigenvalue? If $\lambda$ is *not* an eigenvalue, then $T - \lambda I$ is injective; in finite [[Def - Dimension|dimensions]] injective implies invertible, so $(T - \lambda I)^k$ is also invertible, hence has trivial kernel. So $G(\lambda, T) = \{0\}$ — the definition is consistent but gives a trivial space. There is no benefit to extending $\lambda$ beyond eigenvalues; doing so just adds zero [[Def - Subspace|subspaces]].
 
 ---
 

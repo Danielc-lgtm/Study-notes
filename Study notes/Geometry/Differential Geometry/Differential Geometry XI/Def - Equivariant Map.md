@@ -16,11 +16,11 @@ $G$ is a Lie group; $M, N$ are smooth manifolds carrying smooth actions of $G$. 
 
 # Axiom Motivation
 
-When two manifolds $M$ and $N$ carry smooth actions of the same Lie group $G$, the natural maps between them are those that **respect** the $G$-actions — sending a $G$-symmetry of $M$ to the corresponding $G$-symmetry of $N$. An equivariant map is precisely this: a smooth map $F : M \to N$ such that $F(g \cdot p) = g \cdot F(p)$ for all $g, p$.
+When two manifolds $M$ and $N$ carry smooth actions of the same Lie [[Def - Group|group]] $G$, the natural maps between them are those that **respect** the $G$-actions — sending a $G$-symmetry of $M$ to the corresponding $G$-symmetry of $N$. An equivariant map is precisely this: a smooth map $F : M \to N$ such that $F(g \cdot p) = g \cdot F(p)$ for all $g, p$.
 
 Why this condition? It is the manifold-theoretic version of "homomorphism of $G$-sets": the morphisms in the category of $G$-spaces. Without it, $F$ is just a smooth map of manifolds with no relationship to the $G$-actions; with it, $F$ becomes a "$G$-equivariant" smooth map, intertwining the two actions.
 
-The most important structural consequence is **constant rank**. If $F : M \to N$ is equivariant and $G$ acts transitively on $M$, then $F$ has constant rank — equal to the rank of $dF$ at any one point. The proof is by equivariance: $F \circ \theta_g = \phi_g \circ F$ where $\theta_g, \phi_g$ are the actions of $g$ on $M, N$ respectively. Differentiating at $p$ gives $dF_{g \cdot p} \circ d(\theta_g)_p = d(\phi_g)_{F(p)} \circ dF_p$. Since $\theta_g$ and $\phi_g$ are diffeomorphisms, their differentials are isomorphisms, so the rank of $dF_{g \cdot p}$ equals the rank of $dF_p$. Transitivity then means any two points are connected by such a $g$, so the rank is constant.
+The most important structural consequence is **constant rank**. If $F : M \to N$ is equivariant and $G$ acts transitively on $M$, then $F$ has constant rank — equal to the rank of $dF$ at any one point. The proof is by equivariance: $F \circ \theta_g = \phi_g \circ F$ where $\theta_g, \phi_g$ are the actions of $g$ on $M, N$ respectively. Differentiating at $p$ gives $dF_{g \cdot p} \circ d(\theta_g)_p = d(\phi_g)_{F(p)} \circ dF_p$. Since $\theta_g$ and $\phi_g$ are [[Def - Diffeomorphism|diffeomorphisms]], their differentials are [[Def - Isomorphism|isomorphisms]], so the rank of $dF_{g \cdot p}$ equals the rank of $dF_p$. Transitivity then means any two points are connected by such a $g$, so the rank is constant.
 
 This is the **equivariant rank theorem** (Lee Thm 7.25), and it is what makes equivariant maps so tractable: constant rank unlocks the [[Thm - The Rank Theorem|rank theorem]] (Lee Thm 4.12) — $F$ factors locally as a submersion followed by an immersion. So equivariant maps automatically have all the nice local structure of constant-rank maps without any extra assumption.
 
@@ -28,7 +28,7 @@ Why **two** actions of $G$ rather than one? Equivariance is intrinsically a comp
 
 What if we **drop equivariance** and just consider arbitrary smooth maps $M \to N$ between $G$-manifolds? Then we lose the constant-rank theorem and most of the structural payoff. The smooth maps $M \to N$ form a vast space; the equivariant ones form a small, structured subset that is the source of orbit-stabilizer, homogeneous-space identification, and equivariant bundle theory.
 
-What if we **strengthen** by requiring $F$ to be a diffeomorphism? Then we get the notion of **$G$-equivariant diffeomorphism**, the right notion of isomorphism in the category of $G$-spaces. Examples include the orbit-map diffeomorphism $G/G_p \to G \cdot p$ for a smooth action.
+What if we **strengthen** by requiring $F$ to be a [[Def - Diffeomorphism|diffeomorphism]]? Then we get the notion of **$G$-equivariant diffeomorphism**, the right notion of isomorphism in the category of $G$-spaces. Examples include the orbit-map diffeomorphism $G/G_p \to G \cdot p$ for a smooth action.
 
 The summary: equivariance is the condition that morphisms in the category of $G$-spaces should respect both the smooth-manifold and the $G$-action structure. It is the joint condition.
 
@@ -36,7 +36,7 @@ The summary: equivariance is the condition that morphisms in the category of $G$
 
 # The Definition
 
-Let $G$ be a Lie group, and let $M, N$ be smooth manifolds equipped with smooth left $G$-actions $\theta : G \times M \to M$ and $\phi : G \times N \to N$.
+Let $G$ be a Lie [[Def - Group|group]], and let $M, N$ be smooth manifolds equipped with smooth left $G$-actions $\theta : G \times M \to M$ and $\phi : G \times N \to N$.
 
 A smooth map $F : M \to N$ is **equivariant** (or **$G$-equivariant**) if it commutes with the two actions:
 
@@ -78,7 +78,7 @@ From the abstract group-action side, equivariance is just the standard "morphism
 
 **Is an instance: the orbit map.** For a smooth left action of $G$ on $M$ and $p \in M$, the orbit map $\theta^{(p)} : G \to M$, $g \mapsto g \cdot p$, is $G$-equivariant when $G$ acts on itself by left translation: $\theta^{(p)}(hg) = (hg) \cdot p = h \cdot (g \cdot p) = h \cdot \theta^{(p)}(g)$. Since the action of $G$ on itself by left translation is transitive, $\theta^{(p)}$ has constant rank by the equivariant rank theorem.
 
-**Is an instance: a Lie group homomorphism.** A Lie group homomorphism $F : G \to H$ is $G$-equivariant when $G$ acts on itself by left translation and on $H$ via $F$ followed by left translation: $F(gg') = F(g) F(g')$ is exactly the equivariance condition. The constant-rank fact for Lie group homomorphisms (Lee Thm 7.5) is a special case of the equivariant rank theorem.
+**Is an instance: a Lie group homomorphism.** A Lie group homomorphism $F : G \to H$ is $G$-equivariant when $G$ acts on itself by left translation and on $H$ via $F$ followed by left translation: $F(gg') = F(g) F(g')$ is exactly the equivariance condition. The constant-rank fact for Lie group [[Def - Homomorphism|homomorphisms]] (Lee Thm 7.5) is a special case of the equivariant rank theorem.
 
 **Is an instance: the projection $\pi : \mathbb{R}^{n+1} \setminus \{0\} \to \mathbb{RP}^n$.** Under the natural action of $\mathbb{R}^\times$ on $\mathbb{R}^{n+1} \setminus \{0\}$ by scalar multiplication, and the trivial action on $\mathbb{RP}^n$, the projection $\pi(v) = [v]$ is equivariant ($\pi(\lambda v) = [\lambda v] = [v] = \pi(v) = \lambda \cdot \pi(v)$ where the last "$\lambda \cdot$" is the trivial action). It is a smooth submersion (by the equivariant rank theorem applied to a transitive action).
 
@@ -92,7 +92,7 @@ From the abstract group-action side, equivariance is just the standard "morphism
 
 **Corollary (image is a $G$-orbit).** If $F : M \to N$ is equivariant with $M$ a single $G$-orbit, then $F(M)$ is a single $G$-orbit in $N$. *Proof:* take $p \in M$; $F(M) = F(G \cdot p) = G \cdot F(p)$.
 
-**Corollary (kernel of equivariant action).** If $F : G \to \mathrm{Diff}(M)$ is the homomorphism corresponding to an action, then $\ker F$ is a closed normal Lie subgroup of $G$ (closed by continuity, normal because it is the kernel of a homomorphism). The action descends to a faithful action of $G/\ker F$ on $M$. So every non-faithful action canonically factors through a faithful one.
+**Corollary (kernel of equivariant action).** If $F : G \to \mathrm{Diff}(M)$ is the homomorphism corresponding to an action, then $\ker F$ is a closed normal Lie [[Def - Subgroup|subgroup]] of $G$ (closed by continuity, normal because it is the kernel of a homomorphism). The action descends to a faithful action of $G/\ker F$ on $M$. So every non-faithful action canonically factors through a faithful one.
 
 **Corollary (induced map on orbit spaces).** If $F : M \to N$ is equivariant and the orbit spaces $M/G$, $N/G$ are smooth manifolds (e.g., the actions are free and proper), then $F$ descends to a smooth map $\bar F : M/G \to N/G$ on orbit spaces.
 

@@ -22,7 +22,7 @@ Why is diagonalizability so desirable? Three reasons.
 
 **Computational.** If $T$ has a diagonal matrix $\operatorname{diag}(\lambda_1, \ldots, \lambda_n)$ in a basis $v_1, \ldots, v_n$, then computing $T^k$ is trivial: in the same basis, $T^k$ has matrix $\operatorname{diag}(\lambda_1^k, \ldots, \lambda_n^k)$. More generally, $p(T)$ has matrix $\operatorname{diag}(p(\lambda_1), \ldots, p(\lambda_n))$ for any polynomial $p$. Diagonalisation reduces operator algebra to scalar algebra, applied component-wise.
 
-**Conceptual.** A diagonalizable operator is *exactly* a direct sum of $\dim V$ commuting one-dimensional pieces. The decomposition $V = E(\lambda_1, T) \oplus \cdots \oplus E(\lambda_m, T)$ — when it exists — breaks $V$ into invariant subspaces on each of which $T$ acts as a single scalar. So a diagonalizable operator is one we *fully understand*: knowing the eigenvalues and eigenspaces is knowing everything.
+**Conceptual.** A diagonalizable operator is *exactly* a direct sum of $\dim V$ commuting one-dimensional pieces. The decomposition $V = E(\lambda_1, T) \oplus \cdots \oplus E(\lambda_m, T)$ — when it exists — breaks $V$ into invariant [[Def - Subspace|subspaces]] on each of which $T$ acts as a single scalar. So a diagonalizable operator is one we *fully understand*: knowing the eigenvalues and eigenspaces is knowing everything.
 
 **Dynamical.** For an operator governing some kind of dynamics — iteration, differential equations, Markov chains — diagonalization decouples the dynamics into independent one-dimensional modes. Each eigenvector evolves independently with its own scalar rate (decay, growth, oscillation), and the general solution is a sum of these modes. This is the foundation of the theory of linear differential equations and the spectral analysis of stochastic processes.
 
@@ -32,7 +32,7 @@ What is the right axiomatic content of "diagonalizable"? Three formulations turn
 2. **Eigenvector basis:** there is a basis of $V$ consisting of eigenvectors of $T$.
 3. **Eigenspace decomposition:** $V$ is the direct sum of the eigenspaces of $T$: $V = E(\lambda_1, T) \oplus \cdots \oplus E(\lambda_m, T)$, where $\lambda_1, \ldots, \lambda_m$ are the distinct eigenvalues.
 
-The equivalence (1) $\iff$ (2) is immediate: a basis $v_1, \ldots, v_n$ gives a diagonal matrix iff each $v_k$ is an eigenvector. The equivalence (2) $\iff$ (3) uses [[Thm - Eigenvectors with Distinct Eigenvalues are Linearly Independent|the linear independence of eigenvectors with distinct eigenvalues]] in one direction (the sum of eigenspaces is automatically direct) and a dimension count in the other.
+The equivalence (1) $\iff$ (2) is immediate: a basis $v_1, \ldots, v_n$ gives a diagonal matrix iff each $v_k$ is an eigenvector. The equivalence (2) $\iff$ (3) uses [[Thm - Eigenvectors with Distinct Eigenvalues are Linearly Independent|the linear independence of eigenvectors with distinct eigenvalues]] in one direction (the sum of eigenspaces is automatically direct) and a [[Def - Dimension|dimension]] count in the other.
 
 A fourth equivalent condition — and the one that matters most in practice — is:
 
@@ -40,7 +40,7 @@ A fourth equivalent condition — and the one that matters most in practice — 
 
 This is the content of [[Thm - Conditions for Diagonalizability]]. It is the *practical* test for diagonalizability because it does not require finding eigenvectors. One can verify or refute "$m_T$ has distinct linear factors" by computing $m_T$ via the iterate algorithm, or by guessing a polynomial $p$ with distinct linear factors and checking $p(T) = 0$ (since $m_T \mid p$, the minimal polynomial inherits distinct linear factors).
 
-A subtle but critical distinction: "distinct" matters. The operator $T$ on $\mathbb{F}^3$ given by $T(a, b, c) = (b, c, 0)$ has $m_T = x^3$ — a *repeated* linear factor — and is not diagonalizable. Even though $0$ is the only eigenvalue of $T$, the eigenspace $E(0, T) = \operatorname{span}(e_1)$ has dimension $1$, not $3$, so condition (3) fails: $V = E(0, T)$ would mean $V$ is one-dimensional, which it is not. The minimal polynomial $x^3$ has the factor $x$ with multiplicity $3$, and this multiplicity counts the failure of diagonalizability (specifically, the maximum Jordan block size).
+A subtle but critical distinction: "distinct" matters. The operator $T$ on $\mathbb{F}^3$ given by $T(a, b, c) = (b, c, 0)$ has $m_T = x^3$ — a *repeated* linear factor — and is not diagonalizable. Even though $0$ is the only eigenvalue of $T$, the eigenspace $E(0, T) = \operatorname{span}(e_1)$ has [[Def - Dimension|dimension]] $1$, not $3$, so condition (3) fails: $V = E(0, T)$ would mean $V$ is one-dimensional, which it is not. The minimal polynomial $x^3$ has the factor $x$ with multiplicity $3$, and this multiplicity counts the failure of diagonalizability (specifically, the maximum Jordan block size).
 
 Why insist on "distinct" linear factors and not just "linear factors"? Because the failure mode of diagonalizability is precisely the presence of a [[Thm - Jordan Normal Form|Jordan block]] of size $> 1$, which corresponds to a repeated linear factor in $m_T$. The operator $T(a, b, c) = (b, c, 0)$ has a single Jordan block of size $3$ at $0$; the minimal polynomial $x^3$ records this size, but the size $> 1$ is exactly what prevents diagonalizability. So "distinct linear factors" is the precise algebraic condition for "no Jordan block of size $> 1$ at any eigenvalue".
 
@@ -72,11 +72,11 @@ The equivalence of (a)–(d) is immediate from the definitions plus [[Thm - Eige
 
 # Categorical / Structural Definition
 
-In the language of $F[x]$-modules — $V$ with $x$ acting as $T$ — diagonalizability is the condition that $V_T$ is **semisimple** as an $F[x]$-module, equivalently that $V_T$ is a direct sum of *simple* $F[x]$-modules. The simple $F[x]$-modules over an algebraically closed field $F$ are the one-dimensional modules $F[x]/(x - \lambda)$, one for each $\lambda \in F$; over a general $F$, they are $F[x]/(p)$ for $p$ a monic irreducible polynomial.
+In the language of $F[x]$-[[Def - Module|modules]] — $V$ with $x$ acting as $T$ — diagonalizability is the condition that $V_T$ is **semisimple** as an $F[x]$-module, equivalently that $V_T$ is a direct sum of *simple* $F[x]$-[[Def - Module|modules]]. The simple $F[x]$-modules over an algebraically closed field $F$ are the one-dimensional modules $F[x]/(x - \lambda)$, one for each $\lambda \in F$; over a general $F$, they are $F[x]/(p)$ for $p$ a monic irreducible polynomial.
 
-So "diagonalizable" means: $V_T$ decomposes as a direct sum of one-dimensional simple submodules. This is the simplest possible module structure on $V_T$ — every other operator has more complicated indecomposable summands (corresponding to Jordan blocks of size $> 1$ over an algebraic closure, or to higher-power irreducible factors over a general field).
+So "diagonalizable" means: $V_T$ decomposes as a direct sum of one-dimensional simple [[Def - Submodule|submodules]]. This is the simplest possible module structure on $V_T$ — every other operator has more complicated indecomposable summands (corresponding to Jordan blocks of size $> 1$ over an algebraic closure, or to higher-power irreducible factors over a general field).
 
-The characterisation (e) above — $m_T$ has distinct linear factors — is the **square-free condition** on the annihilator ideal: the ideal $(m_T)$ has $m_T$ a product of distinct primes, equivalent to $\gcd(m_T, m_T') = 1$ where $m_T'$ is the formal derivative. In module-theoretic terms, this is exactly the condition that the module $V_T$ is semisimple — Jacobson's theorem in the special case of modules over $F[x]$.
+The characterisation (e) above — $m_T$ has distinct linear factors — is the **square-free condition** on the [[Def - Annihilator|annihilator]] [[Def - Ideal|ideal]]: the [[Def - Ideal|ideal]] $(m_T)$ has $m_T$ a product of distinct primes, equivalent to $\gcd(m_T, m_T') = 1$ where $m_T'$ is the formal derivative. In module-theoretic terms, this is exactly the condition that the module $V_T$ is semisimple — Jacobson's theorem in the special case of modules over $F[x]$.
 
 In the **structure theorem** decomposition $V_T \cong \bigoplus_k F[x]/(f_k)$ with $f_1 \mid \cdots \mid f_s$, diagonalizability is the condition that each invariant factor $f_k$ is a product of distinct linear factors. Equivalently, the **Smith normal form** of the presentation matrix of $V_T$ has only linear factors on the diagonal, no powers.
 
@@ -106,7 +106,7 @@ In **dynamical systems**, diagonalisation of the linearisation $Df_{x_*}$ at a h
 
 **Involution: $T^2 = I$.** Then $m_T \mid x^2 - 1 = (x - 1)(x + 1)$, distinct linear factors. So $T$ is diagonalizable with eigenvalues $\pm 1$. (Over a field of characteristic $\neq 2$. In characteristic $2$, $(x - 1)(x + 1) = (x - 1)^2$, so the analysis is different.) The eigenspaces are $E(1, T)$ (fixed points) and $E(-1, T)$ (anti-fixed points), and $V = E(1, T) \oplus E(-1, T)$ via $v = \tfrac12(v + Tv) + \tfrac12(v - Tv)$.
 
-**Finite-order operator over $\mathbb{C}$: $T^k = I$.** Then $m_T \mid x^k - 1 = \prod_{j=0}^{k-1}(x - \zeta^j)$ for $\zeta = e^{2\pi i / k}$. These are distinct linear factors over $\mathbb{C}$, so $T$ is diagonalizable. **Every operator of finite order on a complex vector space is diagonalizable.** This is one of the most useful applications: it gives diagonalizability of $S$-equivariant maps for finite groups $S$, the engine of representation theory.
+**Finite-order operator over $\mathbb{C}$: $T^k = I$.** Then $m_T \mid x^k - 1 = \prod_{j=0}^{k-1}(x - \zeta^j)$ for $\zeta = e^{2\pi i / k}$. These are distinct linear factors over $\mathbb{C}$, so $T$ is diagonalizable. **Every operator of finite order on a complex vector space is diagonalizable.** This is one of the most useful applications: it gives diagonalizability of $S$-equivariant maps for finite [[Def - Group|groups]] $S$, the engine of representation theory.
 
 **Diagonal matrix:** trivially diagonalizable, with the standard basis as the basis of eigenvectors and the diagonal entries as eigenvalues.
 
@@ -116,7 +116,7 @@ In **dynamical systems**, diagonalisation of the linearisation $Df_{x_*}$ at a h
 
 **Non-example: a non-projection idempotent... wait, that's a contradiction.** Let me think. Every idempotent is a projection. The non-diagonalizable non-trivial examples are exactly the operators with Jordan blocks of size $> 1$.
 
-**Restriction of a diagonalizable operator is diagonalizable.** If $T$ is diagonalizable on $V$ and $U \leq V$ is $T$-invariant, then $T|_U$ is diagonalizable on $U$. Reason: $m_{T|_U} \mid m_T$, and divisors of products of distinct linear factors are themselves products of distinct linear factors. So diagonalizability is inherited by restrictions to invariant subspaces.
+**Restriction of a diagonalizable operator is diagonalizable.** If $T$ is diagonalizable on $V$ and $U \leq V$ is $T$-invariant, then $T|_U$ is diagonalizable on $U$. Reason: $m_{T|_U} \mid m_T$, and divisors of products of distinct linear factors are themselves products of distinct linear factors. So diagonalizability is inherited by restrictions to invariant [[Def - Subspace|subspaces]].
 
 **Calibration check.** If you have absorbed the definition: (a) for $T$ with $T^k = I$ over $\mathbb{C}$, you can compute the eigenvalues as $k$-th roots of unity and write down the diagonal form abstractly without picking specific matrices; (b) you recognise that the failure of diagonalizability is concentrated in repeated factors of $m_T$ — equivalently, in Jordan blocks of size $> 1$; (c) you can verify "the eigenspaces sum directly" without invoking the dimension count by using [[Thm - Eigenvectors with Distinct Eigenvalues are Linearly Independent]].
 

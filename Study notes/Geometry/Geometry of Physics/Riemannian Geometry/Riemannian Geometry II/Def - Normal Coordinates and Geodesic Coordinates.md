@@ -16,13 +16,13 @@ $(M, g)$ a Riemannian manifold, $p \in M$, and $(e_1, \ldots, e_n)$ an orthonorm
 
 # Axiom Motivation
 
-The motivation is a sharper version of the question that motivated the [[Def - The Riemannian Exponential Map|exponential map]]: **once we have $\exp_p$ as a local diffeomorphism near $p$, what is the most useful chart we can build from it?** The bare exponential gives a smooth map $T_pM \to M$ near the origin; to turn this into a coordinate chart we need to identify $T_pM$ with $\mathbb{R}^n$.
+The motivation is a sharper version of the question that motivated the [[Def - The Riemannian Exponential Map|exponential map]]: **once we have $\exp_p$ as a local [[Def - Diffeomorphism|diffeomorphism]] near $p$, what is the most useful chart we can build from it?** The bare exponential gives a smooth map $T_pM \to M$ near the origin; to turn this into a coordinate chart we need to identify $T_pM$ with $\mathbb{R}^n$.
 
 The natural way is to pick an *orthonormal* basis $(e_1, \ldots, e_n)$ for $T_pM$. The choice of basis matters: with an orthonormal basis the resulting chart will have the property $g_{ij}(p) = \delta_{ij}$, the metric at the centre point is Euclidean — exactly what we want for a coordinate system "centred on Euclidean". With a non-orthonormal basis the metric at $p$ would be some other symmetric positive-definite matrix, and computations would be needlessly cluttered.
 
 The structural payoff is this: in normal coordinates centred at $p$, **the Christoffel symbols all vanish at $p$**:
 $$\Gamma^k_{ij}(p) = 0 \quad\text{for all } i, j, k.$$
-This is the most useful single property of normal coordinates. The proof is short: the geodesics through $p$ have the form $\gamma_v(t) = (tv^1, \ldots, tv^n)$ in normal coordinates (because $\exp_p(tv)$ is literally the geodesic point with coordinates $tv$). Substituting into the geodesic equation $\ddot x^k + \Gamma^k_{ij}\dot x^i \dot x^j = 0$ at $t = 0$ gives $\Gamma^k_{ij}(p) v^i v^j = 0$ for *every* $v \in T_pM$, so by symmetry $\Gamma^k_{(ij)}(p) = 0$; the Levi-Civita Christoffel symbols are already symmetric in $(i, j)$, so $\Gamma^k_{ij}(p) = 0$.
+This is the most useful single property of normal coordinates. The proof is short: the [[Def - Geodesic|geodesics]] through $p$ have the form $\gamma_v(t) = (tv^1, \ldots, tv^n)$ in normal coordinates (because $\exp_p(tv)$ is literally the geodesic point with coordinates $tv$). Substituting into the geodesic equation $\ddot x^k + \Gamma^k_{ij}\dot x^i \dot x^j = 0$ at $t = 0$ gives $\Gamma^k_{ij}(p) v^i v^j = 0$ for *every* $v \in T_pM$, so by symmetry $\Gamma^k_{(ij)}(p) = 0$; the Levi-Civita Christoffel symbols are already symmetric in $(i, j)$, so $\Gamma^k_{ij}(p) = 0$.
 
 From this, $\partial_k g_{ij}(p) = 0$ follows by the Christoffel formula $\Gamma^k_{ij} = \tfrac12 g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})$, which is invertible: a symmetric cyclic combination of $\partial g$ equals zero iff all the $\partial g$ vanish (algebra exercise). So normal coordinates achieve, at the centre point:
 
