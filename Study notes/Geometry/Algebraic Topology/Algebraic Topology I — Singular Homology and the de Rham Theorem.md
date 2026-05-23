@@ -141,7 +141,7 @@ What the reader should bring: comfort with smooth manifolds, smooth maps, and di
 - **[[Ex - Computing H_n of S^n via Mayer-Vietoris]]** (⭐⭐)
 	- Compute $H_p(S^n; \mathbb{Z})$ by induction on $n$ using the cover by two open hemispheres-with-a-collar. The base case $S^0$ is two points; the inductive step uses that the intersection of the two hemispheres deformation-retracts onto the equator $S^{n-1}$. The long exact sequence then shifts the homology up by one dimension.
 
-- **[[Ex - Computing H_* of the Torus]]** (⭐⭐)
+- **[[Ex - Computing the Homology of the Torus]]** (⭐⭐)
 	- Compute $H_*(T^2; \mathbb{Z})$ using the standard rectangle-with-identifications triangulation. Identify the basis cycles $A$ and $B$ explicitly; verify that $T^2$ is orientable by computing $\partial[T^2] = A + B - A - B = 0$.
 
 - **[[Ex - Singular Homology of RP^2]]** (⭐⭐⭐)

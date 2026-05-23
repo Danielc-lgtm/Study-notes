@@ -2,7 +2,7 @@
 type: definition
 subject: differential-geometry
 prereqs:
-  - "Def - Alternating Tensor and Lambda^k V*"
+  - "Def - Alternating Tensor and Lambda k V Dual"
   - "Def - Differential k-Form on a Manifold"
   - "Def - The Wedge Product"
 tags: [geometry, differential-geometry]

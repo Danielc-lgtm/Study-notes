@@ -5,7 +5,7 @@ prereqs:
   - "Def - Differential k-Form on a Manifold"
   - "Def - The Wedge Product on a Manifold"
   - "Def - Vector Field on a Manifold"
-  - "Def - Alternating Tensor and Lambda^k V*"
+  - "Def - Alternating Tensor and Lambda k V Dual"
 tags: [geometry, differential-geometry]
 ---
 

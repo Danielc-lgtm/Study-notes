@@ -2,7 +2,7 @@
 type: theorem
 subject: differential-geometry
 prereqs:
-  - "Def - Alternating Tensor and Lambda^k V*"
+  - "Def - Alternating Tensor and Lambda k V Dual"
   - "Def - The Wedge Product on a Manifold"
   - "Def - Determinant"
 tags: [geometry, differential-geometry]

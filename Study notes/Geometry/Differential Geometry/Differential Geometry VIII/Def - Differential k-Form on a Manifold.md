@@ -2,7 +2,7 @@
 type: definition
 subject: differential-geometry
 prereqs:
-  - "Def - Alternating Tensor and Lambda^k V*"
+  - "Def - Alternating Tensor and Lambda k V Dual"
   - "Def - Smooth Manifold"
   - "Def - The Tangent Space"
   - "Def - Cotangent Space and Cotangent Bundle"
@@ -14,7 +14,7 @@ tags: [geometry, differential-geometry]
 
 # Notation
 
-$M$ is a smooth $n$-manifold (Hausdorff, second-countable, with or without boundary). $T_pM$ is the tangent space at $p \in M$ and $T_p^*M = (T_pM)^*$ is the cotangent space. $\Lambda^k T_p^*M = \Lambda^k(T_pM)^*$ is the space of alternating $k$-tensors on $T_pM$ (see [[Def - Alternating Tensor and Lambda^k V*]]). $\Lambda^k T^*M = \coprod_{p \in M} \Lambda^k T_p^*M$ is the bundle of alternating $k$-tensors over $M$; its smooth structure makes it a smooth vector bundle of rank $\binom{n}{k}$ over $M$. Smooth sections of this bundle are written $\Omega^k(M) = \Gamma(\Lambda^k T^*M)$. In a chart $(U, (x^1, \dots, x^n))$, the coordinate basis vector fields are $\partial/\partial x^i$ and the coordinate $1$-forms are $dx^i$, dual in the sense $dx^i(\partial/\partial x^j) = \delta^i_j$. For an increasing multi-index $I = (i_1 < \cdots < i_k)$, $dx^I = dx^{i_1} \wedge \cdots \wedge dx^{i_k}$. The primed sum $\sum'_I$ is taken over increasing multi-indices only. The full registry is on [[Differential Geometry VIII — Differential Forms]].
+$M$ is a smooth $n$-manifold (Hausdorff, second-countable, with or without boundary). $T_pM$ is the tangent space at $p \in M$ and $T_p^*M = (T_pM)^*$ is the cotangent space. $\Lambda^k T_p^*M = \Lambda^k(T_pM)^*$ is the space of alternating $k$-tensors on $T_pM$ (see [[Def - Alternating Tensor and Lambda k V Dual]]). $\Lambda^k T^*M = \coprod_{p \in M} \Lambda^k T_p^*M$ is the bundle of alternating $k$-tensors over $M$; its smooth structure makes it a smooth vector bundle of rank $\binom{n}{k}$ over $M$. Smooth sections of this bundle are written $\Omega^k(M) = \Gamma(\Lambda^k T^*M)$. In a chart $(U, (x^1, \dots, x^n))$, the coordinate basis vector fields are $\partial/\partial x^i$ and the coordinate $1$-forms are $dx^i$, dual in the sense $dx^i(\partial/\partial x^j) = \delta^i_j$. For an increasing multi-index $I = (i_1 < \cdots < i_k)$, $dx^I = dx^{i_1} \wedge \cdots \wedge dx^{i_k}$. The primed sum $\sum'_I$ is taken over increasing multi-indices only. The full registry is on [[Differential Geometry VIII — Differential Forms]].
 
 ---
 

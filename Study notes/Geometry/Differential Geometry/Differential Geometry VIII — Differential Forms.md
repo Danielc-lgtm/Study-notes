@@ -64,7 +64,7 @@ The pay-off, deferred to the next chapter, is **Stokes' theorem** $\int_M d\omeg
 
 ## §8.1 Alternating Tensors and the Wedge Product
 
-- **[[Def - Alternating Tensor and Lambda^k V*]]**
+- **[[Def - Alternating Tensor and Lambda k V Dual]]**
 	- An **alternating $k$-tensor** on a finite-dimensional vector space $V$ is a covariant $k$-tensor $\omega \in T^k(V^*)$ that changes sign whenever two arguments are swapped, equivalently vanishes on any tuple with a repeated entry. The space of all such tensors is $\Lambda^k(V^*)$, a subspace of $T^k(V^*)$. For a basis $\varepsilon^1, \dots, \varepsilon^n$ of $V^*$, the **elementary $k$-covectors** $\varepsilon^I = \varepsilon^{i_1} \wedge \cdots \wedge \varepsilon^{i_k}$ indexed by increasing multi-indices $I$ form a basis, so $\dim \Lambda^k V^* = \binom{n}{k}$. The case $k = n$ is one-dimensional and contains exactly the determinants; the case $k > n$ is zero, because any $k > n$ vectors in an $n$-dimensional space are linearly dependent and an alternating form vanishes on dependent tuples.
 
 - **[[Def - The Wedge Product on a Manifold]]**

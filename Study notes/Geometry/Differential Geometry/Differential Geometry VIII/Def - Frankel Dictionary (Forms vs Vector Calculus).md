@@ -75,7 +75,7 @@ Equivalently, the cross product is the Hodge-dual of the wedge of two $1$-forms,
 
 $$\vec u \cdot (\vec v \times \vec w) = \star(\vec u^\flat \wedge \vec v^\flat \wedge \vec w^\flat) = \det\begin{pmatrix} u^1 & v^1 & w^1 \\ u^2 & v^2 & w^2 \\ u^3 & v^3 & w^3 \end{pmatrix}.$$
 
-The triple product is just the volume $3$-form evaluated on the three vectors — exactly the determinant identity for forms in the [[Def - Alternating Tensor and Lambda^k V*|alternating-tensor]] formulation.
+The triple product is just the volume $3$-form evaluated on the three vectors — exactly the determinant identity for forms in the [[Def - Alternating Tensor and Lambda k V Dual|alternating-tensor]] formulation.
 
 **Interior product and dot product.**
 
