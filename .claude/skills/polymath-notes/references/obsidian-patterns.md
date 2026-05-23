@@ -241,6 +241,13 @@ Group Theory I — §1.1–1.2.md
 
 Use descriptive names. The file name IS the wikilink target, so it should be clear and unambiguous.
 
+**Windows-portable filenames (mandatory).** The vault must be cloneable on Windows clients, where the filesystem forbids the characters `< > : " / \ | ? *` in filenames. Never use any of these characters in a filename. Two patterns to watch for:
+
+- **Asterisks in dualization / homology notation.** Filenames like `Def - Lambda^k V*.md` or `Ex - Computing H_* of the Torus.md` will fail `git checkout` on Windows. Spell them out: `Def - Alternating Tensor and Lambda k V Dual.md`, `Ex - Computing the Homology of the Torus.md`.
+- **Slashes in fraction notation.** Filenames like `Ex - Spin-1/2 in a Magnetic Field.md` are silently interpreted as a path separator on POSIX (creating a directory) and fail on Windows. Spell out the fraction: `Ex - Spin-Half in a Magnetic Field.md`. Same goes for ratios in titles (`1/2`, `3/4`).
+
+Other characters to spell out when they would otherwise appear in a filename: colons (`:` → ` —` or omit), question marks (`?` → omit), pipes (`|` → ` and `), quotes (`"` → omit). The em-dash (`—`), section sign (`§`), and Unicode math (σ, ℝ, →) are all safe.
+
 ## Vault Directory Structure
 
 ```
