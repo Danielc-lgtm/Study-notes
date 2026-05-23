@@ -169,6 +169,31 @@ The user will request either:
 
 Before creating any page, search the Obsidian vault for existing pages covering the same concepts. Use `grep`, `find`, or search the vault directory to check whether definition or theorem pages already exist. If they do, link to them with wikilinks rather than creating duplicates.
 
+**Existing abbreviated treatments to be aware of.** The vault already contains compact, Frankel-depth treatments of several subjects under `Study notes/Geometry/Geometry of Physics/`:
+
+- `Riemannian Geometry/` (RG I–IV) — connections, geodesics, Riemann curvature, classical surfaces
+- `Algebraic Topology/` (AT I–III) — singular homology + de Rham, $\pi_1$ + covering spaces, higher homotopy + Chern forms
+- `Hodge Theory/` (Hodge I) — Hodge star, decomposition, Bochner
+- `Gauge Theory/` (GT I–IV) — vector-bundle connections, principal bundles, Yang–Mills
+- `Spinors/` — Clifford, Dirac equation, spin bundle
+- `General Relativity/` (GR I) — Einstein equations, Schwarzschild
+- `Geometric Mechanics/` (GM I) — symplectic manifolds, Hamiltonian dynamics
+- `Thermodynamics/` (Thermo I) — Caratheodory's form-theoretic second law
+
+These pages were written to Frankel's *Geometry of Physics* depth — enough to support the physics-bridge program of Differential Geometry, but not a full standalone treatment of any of these subjects.
+
+**When the user asks for a deeper / more complete treatment of one of these subjects** (e.g., "make full Algebraic Topology notes following Hatcher", "write up Riemannian Geometry from do Carmo"), do NOT overwrite or extend the Geometry-of-Physics pages. Instead:
+
+1. **Create a new peer subject folder** at the top level of the relevant area — e.g., `Study notes/Geometry/Algebraic Topology/` as a peer to `Differential Geometry/` and to `Geometry of Physics/`. Or `Study notes/Physics/General Relativity/` as a peer to `Special Relativity/`. The new folder is independent: its topic pages, definitions, theorems, and exercises live entirely inside it.
+
+2. **Link to the existing Geometry-of-Physics pages when adequate.** For routine definitions and theorems the Geometry-of-Physics page may already be at the right depth; in that case, wikilink to the existing page rather than re-writing it. For example, a deep Algebraic Topology treatment might still link to `[[Def - Singular Simplex]]` (under Geometry of Physics) for the basic definition. Filename uniqueness across the vault is preserved automatically by Obsidian's wikilink resolution.
+
+3. **Copy and substantially expand a page when the existing depth is insufficient.** When the deeper treatment needs more (extra examples, an alternative proof, a deeper categorical framing, more exercises), create a NEW page in the new subject folder with a distinct filename (e.g., add a suffix or rephrase: `Def - Singular Homology.md` already exists, so the new page could be `Def - Singular Homology (Hatcher Treatment).md`, or — more commonly — the new chapter's topic page absorbs the deeper exposition and the existing Def page is left in place). Document the relationship in the new page's Bridges section.
+
+4. **Do not delete or rename Geometry-of-Physics pages.** They remain the physics-bridge gateway. The new standalone treatment is additive.
+
+This pattern mirrors how `Special Relativity/` and `General Relativity/` already coexist: SR has its own folder with its own topic pages and subpages; if a fuller GR treatment is later requested, it would go under `Physics/General Relativity (Standalone)/` or similar, not into the Geometry-of-Physics gateway.
+
 ### Step 3: Gather source material
 
 The notes are built from source material, not from scratch. Two sources:
