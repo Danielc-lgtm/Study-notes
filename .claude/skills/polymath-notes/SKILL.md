@@ -253,6 +253,21 @@ All pages use wikilinks (`[[Def - Group]]`) for internal cross-references. Only 
 
 After all pages are created, scan every page for references to defined concepts and ensure they use wikilinks. This includes references in Legal Operations, Problem-Solving Strategy, Most Reusable Properties, Bridges, Insights, and prose throughout. The same concept may be linked with different display text: `[[Def - Compactness|compact]]` and `[[Def - Compactness|compactness]]` both linking to the same page.
 
+**Comprehensiveness rule.** **Every** occurrence of jargon — even a single occurrence buried in prose, even when the jargon is not the exact name of any page — must wikilink to the page that introduces that concept, *unless* the jargon is a forward reference to a concept the vault does not yet define. Two implications:
+
+- If the jargon's filename uses a slightly different phrasing (e.g. the page is `Def - Riemannian Metric` and the prose says "the metric"), use a display-text wikilink: `[[Def - Riemannian Metric|metric]]`. Singular/plural and capitalisation are fine to vary in display text, never inside the `[[ ]]` target. No LaTeX inside the target.
+- Exceptions where the bold-plain-text convention is preserved: text inside Unlocked callouts, Bridges, Insights, "Sources and Targets" prose, "True name" lines, and the Notation Registry — these sections curate the gateway from one chapter to the next and intentionally keep forward references bold plain text. Do not retroactively wikilink there.
+
+**Mechanise this.** Maintain an auto-linker at `.claude/skills/polymath-notes/scripts/autolinker.py` that walks the vault, extracts canonical terms from every `Def - <name>.md` and `Thm - <name>.md` filename (with plural/lowercase variants), and inserts a wikilink at the first body-text occurrence in every other page. The auto-linker must:
+
+- Skip protected regions: YAML frontmatter, `$...$` and `$$...$$` math, fenced code, inline code, existing `[[ ]]` and `![[ ]]`, and lines beginning with `#`.
+- Skip sections whose header is one of: Notation, Notation Registry, Unlocked by This, Sources and Targets, Bridges, Insights, Calibration check, True name, Relate to Other Fields.
+- Skip self-links (a page linking to its own definition).
+- Cap insertions per file (e.g. 10) so a single page does not become a wikilink soup.
+- Carry a target blocklist for definitions whose name collides too broadly with English usage to auto-link safely. The current blocklisted targets, learned the hard way during the May 2026 vault-wide pass, are `Def - Field` (always loses to "vector field" / "gauge field" / "magnetic field"), `Def - Independence` (loses to "coordinate-independence" / "path-independence"), and `Def - Primitive (Antiderivative)` (loses to "primitive root" / "primitive ideal" / "primitive permutation group"). Extend this list whenever a new false-positive pattern is discovered. **Never remove an entry from the blocklist without re-verifying that the term has stopped being ambiguous in the vault.**
+
+Run `python3 .claude/skills/polymath-notes/scripts/autolinker.py --apply --max-per-file 10` as part of Step 6 after a batch of new pages is written. Inspect the diff, revert any obvious false positives via `find -exec perl -i -pe 's{\[\[Def - X\|([^\]]+)\]\]}{$1}g' {} +`, add the offending target to the blocklist, and re-run.
+
 Then run a mechanical link audit over the whole vault. After stripping `$...$` / `$$...$$` math and code spans — where `[[...]]` can be ordinary notation such as the power-series ring `R[[X]]` — every remaining `[[wikilink]]` must resolve to an existing `.md` file, and every `![[transclusion]]` (including its `#section` anchor) must point to real content. Any unresolved wikilink is a bug: either the target filename is wrong (fix the link) or it is a forward reference that should be bold plain text (unlink it). The audit must come back clean before Step 7.
 
 ### Step 7: Commit to repository
