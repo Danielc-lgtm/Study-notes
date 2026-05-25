@@ -8,7 +8,7 @@ tags: [geometry, algebraic-topology]
 
 # Notation
 
-$M$ is a topological space (or a smooth manifold, when we want to integrate forms over the simplex). $\Delta^p$ is the [[Def - The Standard p-Simplex|standard $p$-simplex]] with vertices $v_0, \dots, v_p$ in barycentric coordinates (or $P_0, \dots, P_p$ in Frankel's affine realisation). $\sigma$, $\tau$ denote singular simplices.
+$M$ is a topological space (or a smooth manifold, when we want to integrate forms over the simplex). $\Delta^p$ is the [[Def - The Standard p-Simplex|standard p-simplex]] with vertices $v_0, \dots, v_p$ in barycentric coordinates (or $P_0, \dots, P_p$ in Frankel's affine realisation). $\sigma$, $\tau$ denote singular simplices.
 
 Smooth versus continuous: a **continuous singular simplex** is a continuous map $\Delta^p \to M$; a **smooth singular simplex** in a smooth manifold $M$ is a smooth map $\Delta^p \to M$, where smoothness means the map extends to a smooth map on an open neighborhood of $\Delta^p$ in $\mathbb{R}^{p+1}$ (the simplex itself has a boundary, so the standard definition of smoothness via charts requires the extension). Both versions give the same homology, by smoothing arguments (Whitney approximation), but the smooth version is what is needed to define $\int_\sigma \omega$ for differential forms.
 
@@ -44,13 +44,13 @@ Let $M$ be a topological space and let $p \geq 0$. A **singular $p$-simplex** in
 $$
 \sigma : \Delta^p \to M,
 $$
-where $\Delta^p$ is the [[Def - The Standard p-Simplex|standard $p$-simplex]]. No further restrictions: $\sigma$ need not be injective, need not be of full rank, need not be a submersion or immersion, need not be smooth.
+where $\Delta^p$ is the [[Def - The Standard p-Simplex|standard p-simplex]]. No further restrictions: $\sigma$ need not be injective, need not be of full rank, need not be a submersion or immersion, need not be smooth.
 
 The **$k$-th face** of $\sigma$ (for $0 \leq k \leq p$) is the singular $(p-1)$-simplex
 $$
 \partial_k \sigma \;=\; \sigma \circ f_k : \Delta^{p-1} \to M,
 $$
-where $f_k : \Delta^{p-1} \to \Delta^p$ is the [[Def - The Standard p-Simplex|$k$-th face map]] of the standard simplex.
+where $f_k : \Delta^{p-1} \to \Delta^p$ is the [[Def - The Standard p-Simplex|k-th face map]] of the standard simplex.
 
 If $M$ is a smooth manifold, a **smooth singular $p$-simplex** is a singular $p$-simplex $\sigma : \Delta^p \to M$ that is the restriction of a smooth map defined on a neighborhood of $\Delta^p$ in $\mathbb{R}^{p+1}$ (equivalently, $\sigma$ extends smoothly across the boundary of $\Delta^p$). Smooth singular simplices form a subset of all singular simplices, closed under taking faces and under post-composition with smooth maps.
 

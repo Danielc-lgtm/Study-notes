@@ -71,7 +71,7 @@ Combine with the spectral theorem: for a normal operator on a complex inner prod
 
 # Why Is It True
 
-The proof has two main ingredients: the [[Thm - Upper-Triangular Form on Complex Vector Spaces|upper-triangular form theorem]] and the [[Thm - Determinant is Multiplicative|multiplicativity of $\det$]].
+The proof has two main ingredients: the [[Thm - Upper-Triangular Form on Complex Vector Spaces|upper-triangular form theorem]] and the [[Thm - Determinant is Multiplicative|multiplicativity of det]].
 
 The upper-triangular form theorem says there is a basis in which $T$ has upper-triangular matrix $A$, with the eigenvalues of $T$ on the diagonal (counted with algebraic multiplicity).
 
@@ -187,7 +187,7 @@ Reduce to the upper-triangular case by Schur, then use the Leibniz formula to co
 
 - **[[Thm - Upper-Triangular Form on Complex Vector Spaces|Schur's theorem]] (upper-triangular form on $\mathbb{C}$)** — the structural ingredient. Schur says every complex operator is upper-triangular in some basis, with eigenvalues on the diagonal. Without Schur, the leap from "determinant" to "eigenvalue product" would not be available.
 
-- **[[Thm - Determinant is Multiplicative|Multiplicativity of $\det$]]** — used implicitly to say "$\det T = \det A$" for the upper-triangular matrix $A$ of $T$. Multiplicativity is the similarity-invariance that lets us choose any basis.
+- **[[Thm - Determinant is Multiplicative|Multiplicativity of det]]** — used implicitly to say "$\det T = \det A$" for the upper-triangular matrix $A$ of $T$. Multiplicativity is the similarity-invariance that lets us choose any basis.
 
 - **The trace as a sum of eigenvalues.** Parallel to "$\det = \prod \lambda_i$", we have "$\operatorname{tr} T = \sum \lambda_i$". The two are the extremal **elementary symmetric polynomials** in the eigenvalues, the only two that are universally meaningful for any operator. The intermediate symmetric polynomials $e_k(\lambda_1, \dots, \lambda_n)$ are the coefficients of the characteristic polynomial.
 

@@ -41,7 +41,7 @@ For the **adjoint bundle** specifically ($E = \mathrm{Ad}\,P$, $\rho = \mathrm{A
 $$
 d_\nabla\psi = d\psi + [A, \psi],
 $$
-where $[A, \psi]$ is the [[Def - Bracket of g-Valued Forms|bracket of $\mathfrak{g}$-valued forms]]. This is the operator that appears in the [[Thm - Bianchi Identity for Principal Connections|Bianchi identity]] $d_\nabla F = dF + [A, F] = 0$.
+where $[A, \psi]$ is the [[Def - Bracket of g-Valued Forms|bracket of \mathfrak{g}-valued forms]]. This is the operator that appears in the [[Thm - Bianchi Identity for Principal Connections|Bianchi identity]] $d_\nabla F = dF + [A, F] = 0$.
 
 Why does this matter? Because the curvature of $\nabla$ obstructs $d_\nabla^2 = 0$: in general,
 $$
@@ -80,7 +80,7 @@ where $d\rho(A) \in \Omega^1(U; \mathfrak{gl}(V))$ acts on $\psi$ pointwise via 
 $$
 d_\nabla\psi = d\psi + [A, \psi]
 $$
-using the [[Def - Bracket of g-Valued Forms|bracket of $\mathfrak{g}$-valued forms]].
+using the [[Def - Bracket of g-Valued Forms|bracket of \mathfrak{g}-valued forms]].
 
 **Properties:**
 

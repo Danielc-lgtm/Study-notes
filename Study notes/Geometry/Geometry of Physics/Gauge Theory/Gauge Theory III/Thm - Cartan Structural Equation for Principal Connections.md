@@ -11,7 +11,7 @@ tags: [geometry, gauge-theory, principal-bundles, curvature]
 
 # Notation
 
-$P \to M$ a principal $G$-bundle, $\omega \in \Omega^1(P; \mathfrak{g})$ a [[Def - Connection 1-Form on a Principal Bundle|connection 1-form]]. The bracket $[\,\cdot\,,\,\cdot\,]$ is the [[Def - Bracket of g-Valued Forms|graded bracket of $\mathfrak{g}$-valued forms]]; for matrix groups, $\tfrac{1}{2}[\omega, \omega] = \omega \wedge \omega$. Sections $s_\alpha : U_\alpha \to P$; local gauge potentials $A_\alpha = s_\alpha^*\omega$; local field strengths $F_\alpha = s_\alpha^*\Omega$. The adjoint bundle is $\mathrm{Ad}\,P = P \times_{\mathrm{Ad}} \mathfrak{g}$.
+$P \to M$ a principal $G$-bundle, $\omega \in \Omega^1(P; \mathfrak{g})$ a [[Def - Connection 1-Form on a Principal Bundle|connection 1-form]]. The bracket $[\,\cdot\,,\,\cdot\,]$ is the [[Def - Bracket of g-Valued Forms|graded bracket of \mathfrak{g}-valued forms]]; for matrix groups, $\tfrac{1}{2}[\omega, \omega] = \omega \wedge \omega$. Sections $s_\alpha : U_\alpha \to P$; local gauge potentials $A_\alpha = s_\alpha^*\omega$; local field strengths $F_\alpha = s_\alpha^*\Omega$. The adjoint bundle is $\mathrm{Ad}\,P = P \times_{\mathrm{Ad}} \mathfrak{g}$.
 
 ---
 

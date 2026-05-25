@@ -9,7 +9,7 @@ tags: [geometry, algebraic-topology, boundary]
 
 # Notation
 
-$M$ is a topological space, $G$ an abelian coefficient group. $\sigma : \Delta^p \to M$ is a [[Def - Singular Simplex|singular $p$-simplex]] in $M$, and $c \in C_p(M; G)$ is a [[Def - Singular Chain|singular $p$-chain]]. The face maps $f_k : \Delta^{p-1} \to \Delta^p$ of the standard simplex are as in [[Def - The Standard p-Simplex]] — the unique affine embeddings sending $P_j \mapsto P_j$ for $j < k$ and $P_j \mapsto P_{j+1}$ for $j \geq k$.
+$M$ is a topological space, $G$ an abelian coefficient group. $\sigma : \Delta^p \to M$ is a [[Def - Singular Simplex|singular p-simplex]] in $M$, and $c \in C_p(M; G)$ is a [[Def - Singular Chain|singular p-chain]]. The face maps $f_k : \Delta^{p-1} \to \Delta^p$ of the standard simplex are as in [[Def - The Standard p-Simplex]] — the unique affine embeddings sending $P_j \mapsto P_j$ for $j < k$ and $P_j \mapsto P_{j+1}$ for $j \geq k$.
 
 The boundary operator is denoted $\partial$, or $\partial_p$ when the degree needs to be tracked: $\partial_p : C_p(M; G) \to C_{p-1}(M; G)$.
 

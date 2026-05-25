@@ -13,7 +13,7 @@ tags: [geometry, algebraic-topology, homology]
 
 $M$ is a topological space, $G$ an abelian coefficient group, $p \geq 0$ an integer.
 
-- $C_p(M; G)$ — the [[Def - Singular Chain|singular $p$-chain group]].
+- $C_p(M; G)$ — the [[Def - Singular Chain|singular p-chain group]].
 - $\partial : C_p \to C_{p-1}$ — the [[Def - The Boundary Operator|boundary operator]], satisfying $\partial^2 = 0$.
 - $Z_p(M; G) = \ker(\partial : C_p \to C_{p-1})$ — the group of **$p$-cycles**.
 - $B_p(M; G) = \mathrm{im}(\partial : C_{p+1} \to C_p)$ — the group of **$p$-boundaries**.

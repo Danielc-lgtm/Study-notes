@@ -44,7 +44,7 @@ The **Cartan 3-form** on a Lie group $G$ is $\Omega_3 = \mathrm{Tr}(g^{-1}dg \we
 **Assumption pattern.** The hypotheses are: (i) the BPST instanton has finite action, hence the curvature decays at infinity, so the connection asymptotes to pure gauge $g^{-1}dg$; (ii) the gauge transformation $g$ extends from $S^3_\infty$ to a smooth map to $SU(2) = S^3$. The integral $\int c_2$ is well-defined because the curvature has compact support effectively (decays sufficiently fast), and the topological invariant is the degree of $g$.
 
 **Theorem routing.** The route is:
-1. Use [[Thm - Chern Forms are Closed and Their Cohomology Class is Independent of Connection|Chern form closedness]] and [[Def - Chern Forms of a U(n) Bundle|the formula $c_2 = -(1/8\pi^2)\mathrm{Tr}(F \wedge F)$]] for $SU(2)$.
+1. Use [[Thm - Chern Forms are Closed and Their Cohomology Class is Independent of Connection|Chern form closedness]] and [[Def - Chern Forms of a U(n) Bundle|the formula c_2 = -(1/8π²)\mathrm{Tr}(F \wedge F)]] for $SU(2)$.
 2. Apply Frankel (22.4): $\mathrm{Tr}(F \wedge F) = d\,\mathrm{CS}_3$ locally, so Stokes converts the bulk integral to a boundary integral over $S^3_\infty$.
 3. On $S^3_\infty$, the connection is pure gauge $A = g^{-1}dg$, so $\mathrm{CS}_3 = \mathrm{Tr}(\tfrac{2}{3}(g^{-1}dg)^3) = \tfrac{2}{3}\Omega_3$ (other terms vanish for pure gauge).
 4. The integral $\int_{S^3_\infty}\Omega_3 =$ degree of $g$ times the volume of $SU(2)$, i.e., $24\pi^2 \cdot \deg(g)$.

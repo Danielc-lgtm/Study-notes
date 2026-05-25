@@ -196,7 +196,7 @@ Each lemma is independently practiceable in roughly five minutes.
 
 # Bridges
 
-- **[[Def - Path-Product and the Fundamental Group|Path-product and definition of $\pi_1$]]** — this theorem is the verification of the group axioms for the construction given in the definition. The definition introduces the path-product on loops; the theorem checks that path-product passes to classes and satisfies the group axioms. They are inseparable: the definition does not make sense as a group definition without this theorem.
+- **[[Def - Path-Product and the Fundamental Group|Path-product and definition of \pi₁]]** — this theorem is the verification of the group axioms for the construction given in the definition. The definition introduces the path-product on loops; the theorem checks that path-product passes to classes and satisfies the group axioms. They are inseparable: the definition does not make sense as a group definition without this theorem.
 
 - **[[Group Theory I — §1.1–1.2|Group axioms]]** — the theorem is a direct verification of the group axioms of [[Def - Group]] applied to a specific construction. The four conditions of well-definedness, associativity, identity, inverse are exactly those of a group operation. So this theorem is a bridge: a topological object (loops up to homotopy) is shown to be an algebraic object (a group), and the bridge goes through verifying the axioms one by one.
 

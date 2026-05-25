@@ -60,7 +60,7 @@ Combine the conclusion with **a result that establishes irreducibility in $R[X]$
 
 Combine the conclusion with **a finite search over $R$-coefficient factorizations**. Over $R[X]$, a factorization $f = gh$ pins the leading and constant coefficients of $g, h$ to *divisors in $R$* of the leading and constant coefficients of $f$ — a finite set. The further result $E$ is a decision procedure for $F[X]$-reducibility of a primitive $f$: enumerate the finitely many possible $R[X]$-factorizations, and if none works, $f$ is irreducible over $F$ too. This is non-obvious because $F[X]$-factorizations are an infinite search, and Gauss's lemma silently converts the infinite search into a finite one.
 
-Combine the conclusion with **the UFD structure of $F[X]$**. Because $F$ is a field, $F[X]$ is Euclidean, hence a [[Thm - Principal Ideal Domains are Unique Factorization Domains|UFD]]. The further result $E$, used in [[Thm - Polynomial Rings over a UFD|the theorem that $R[X]$ is a UFD]], is that *uniqueness* of factorization descends from $F[X]$ to $R[X]$: irreducible primitives in $R[X]$ remain irreducible in the UFD $F[X]$, so any two primitive factorizations in $R[X]$, viewed in $F[X]$, must match. Non-obvious because it lets one *import* the hard-won UFD property of $F[X]$ to constrain factorizations in $R[X]$.
+Combine the conclusion with **the UFD structure of $F[X]$**. Because $F$ is a field, $F[X]$ is Euclidean, hence a [[Thm - Principal Ideal Domains are Unique Factorization Domains|UFD]]. The further result $E$, used in [[Thm - Polynomial Rings over a UFD|the theorem that R[X] is a UFD]], is that *uniqueness* of factorization descends from $F[X]$ to $R[X]$: irreducible primitives in $R[X]$ remain irreducible in the UFD $F[X]$, so any two primitive factorizations in $R[X]$, viewed in $F[X]$, must match. Non-obvious because it lets one *import* the hard-won UFD property of $F[X]$ to constrain factorizations in $R[X]$.
 
 ---
 
@@ -147,7 +147,7 @@ The forward direction is immediate from primitivity (factors of a primitive poly
 >
 > **Hint:** Pull the content out of each factor — $f = c(f) f_1$, $g = c(g) g_1$ with $f_1, g_1$ primitive — multiply, and apply Lemma 1 to the primitive parts.
 >
-> **Why needed:** This is the ledger of the reverse direction: it is the precise statement that lets the scalar cost $ab$ of clearing denominators be cancelled. It is also used directly in [[Thm - Polynomial Rings over a UFD|the proof that $R[X]$ is a UFD]].
+> **Why needed:** This is the ledger of the reverse direction: it is the precise statement that lets the scalar cost $ab$ of clearing denominators be cancelled. It is also used directly in [[Thm - Polynomial Rings over a UFD|the proof that R[X] is a UFD]].
 >
 > > [!note]- Full proof
 > > Using the [[Def - Content and Primitive Polynomial|content–primitive decomposition]], write
@@ -203,7 +203,7 @@ The forward direction is immediate from primitivity (factors of a primitive poly
 
 **Factorization over $\mathbb{Z}[i]$ versus over $\mathbb{Q}(i)$.** The [[Def - Gaussian Integers|Gaussian integers]] $\mathbb{Z}[i]$ form a UFD, with field of fractions $\mathbb{Q}(i)$. A primitive polynomial in $\mathbb{Z}[i][X]$ factors over $\mathbb{Z}[i]$ if and only if it factors over $\mathbb{Q}(i)$. The application is non-obvious because one's instinct is that the larger, field-based ring $\mathbb{Q}(i)[X]$ should admit more factorizations; Gauss's lemma says that for primitive polynomials it does not — illustrating that the theorem is about the UFD $R$ in the abstract, not specifically about $\mathbb{Z}$.
 
-**Multivariable polynomials by viewing one variable as a coefficient.** A polynomial in $\mathbb{Z}[X, Y]$ can be regarded as a polynomial in $Y$ with coefficients in the UFD $R = \mathbb{Z}[X]$. Gauss's lemma then compares its factorization over $\mathbb{Z}[X][Y]$ with its factorization over $F[Y]$, where $F = \mathbb{Q}(X)$ is the field of rational functions. The application is non-obvious because the "coefficients" are themselves polynomials and the "field of fractions" is a field of rational functions — yet the abstract statement applies verbatim, and this is exactly the inductive step in [[Thm - Polynomial Rings over a UFD|proving that $R[X_1, \dots, X_n]$ is a UFD]].
+**Multivariable polynomials by viewing one variable as a coefficient.** A polynomial in $\mathbb{Z}[X, Y]$ can be regarded as a polynomial in $Y$ with coefficients in the UFD $R = \mathbb{Z}[X]$. Gauss's lemma then compares its factorization over $\mathbb{Z}[X][Y]$ with its factorization over $F[Y]$, where $F = \mathbb{Q}(X)$ is the field of rational functions. The application is non-obvious because the "coefficients" are themselves polynomials and the "field of fractions" is a field of rational functions — yet the abstract statement applies verbatim, and this is exactly the inductive step in [[Thm - Polynomial Rings over a UFD|proving that R[X₁, …, Xₙ] is a UFD]].
 
 **Lattice geometry — visible vectors and shears.** Encode a primitive polynomial as a primitive integer coefficient vector. Gauss's lemma, in this dictionary, says that a coefficient vector "visible from the origin" cannot be decomposed (via the [[Def - Convolution|convolution]] that is polynomial multiplication) into a way that is invisible without the decomposition already being achievable integrally. The application is out-of-distribution because it recasts an algebraic factorization theorem as a statement about which lattice configurations are reachable, suggesting Gauss-type lemmas wherever a "primitivity = visibility" notion and a bilinear product coexist.
 
@@ -226,7 +226,7 @@ The forward direction is immediate from primitivity (factors of a primitive poly
 # Unlocked by This
 
 > [!tip] $R[X]$ is a UFD *(from this topic)*
-> Gauss's lemma is the keystone of [[Thm - Polynomial Rings over a UFD|the theorem that $R$ a UFD implies $R[X]$ a UFD]], and hence that $\mathbb{Z}[X]$ and $F[X_1, \dots, X_n]$ are UFDs — producing the first natural examples of UFDs that are not principal ideal domains.
+> Gauss's lemma is the keystone of [[Thm - Polynomial Rings over a UFD|the theorem that R a UFD implies R[X] a UFD]], and hence that $\mathbb{Z}[X]$ and $F[X_1, \dots, X_n]$ are UFDs — producing the first natural examples of UFDs that are not principal ideal domains.
 
 > [!tip] Irreducibility tests over $\mathbb{Q}$ *(from Field Theory)*
 > Because reducibility over $F$ reduces to reducibility over $R$, all the integer-coefficient irreducibility machinery — the [[Thm - Eisenstein's Criterion|Eisenstein criterion]], the rational root test, reduction modulo a prime — becomes a toolkit for proving polynomials irreducible over $\mathbb{Q}$, which is the starting point for constructing field extensions $F[X]/(f)$.

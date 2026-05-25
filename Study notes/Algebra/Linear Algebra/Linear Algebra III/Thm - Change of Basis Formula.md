@@ -17,7 +17,7 @@ Throughout, $V$ is a finite-dimensional vector space over $\mathbf{F}$, $T \in \
 
 # Statement
 
-> **Theorem (Change of Basis Formula).** Let $V$ be finite-dimensional over $\mathbf{F}$, $T \in \mathcal{L}(V)$, and $u_1, \ldots, u_n$ and $v_1, \ldots, v_n$ two bases of $V$. Let $A = \mathcal{M}(T, (u))$ be the matrix of $T$ in the $u$-basis, $B = \mathcal{M}(T, (v))$ the matrix in the $v$-basis, and $C = \mathcal{M}(I, (u), (v))$ the [[Def - Change of Basis Matrix|change-of-basis matrix from $u$ to $v$]]. Then
+> **Theorem (Change of Basis Formula).** Let $V$ be finite-dimensional over $\mathbf{F}$, $T \in \mathcal{L}(V)$, and $u_1, \ldots, u_n$ and $v_1, \ldots, v_n$ two bases of $V$. Let $A = \mathcal{M}(T, (u))$ be the matrix of $T$ in the $u$-basis, $B = \mathcal{M}(T, (v))$ the matrix in the $v$-basis, and $C = \mathcal{M}(I, (u), (v))$ the [[Def - Change of Basis Matrix|change-of-basis matrix from u to v]]. Then
 >
 > $$A \;=\; C^{-1}\, B\, C.$$
 

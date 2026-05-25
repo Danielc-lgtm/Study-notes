@@ -231,7 +231,7 @@ The proof itself is short and combinatorial, but the index bookkeeping is fiddly
 
 # Bridges
 
-- **[[Thm - d-Squared-is-Zero|$d^2 = 0$ for the exterior derivative]]** — the differential-form version of the same combinatorial identity, dualised. On the singular side, $\partial = \sum (-1)^k (\text{face}_k)$ lowers degree; on the de Rham side, $d$ raises degree but has the same alternating structure (in its coordinate expression). The two facts pair via integration: $\int_{\partial^2 c} \omega = 0 = \int_c d^2 \omega$, and both vanish for the same reason — the simplicial face identity.
+- **[[Thm - d-Squared-is-Zero|d² = 0 for the exterior derivative]]** — the differential-form version of the same combinatorial identity, dualised. On the singular side, $\partial = \sum (-1)^k (\text{face}_k)$ lowers degree; on the de Rham side, $d$ raises degree but has the same alternating structure (in its coordinate expression). The two facts pair via integration: $\int_{\partial^2 c} \omega = 0 = \int_c d^2 \omega$, and both vanish for the same reason — the simplicial face identity.
 
 - **[[Def - Singular Homology|Singular homology]]** — defined as $H_p = \ker\partial / \mathrm{im}\,\partial$, which requires $\mathrm{im}\,\partial \subseteq \ker\partial$ — equivalently $\partial^2 = 0$. Without this theorem, singular homology does not exist as a well-defined construction. Every subsequent theorem in this topic (homotopy invariance, Mayer–Vietoris, de Rham) tacitly assumes $\partial^2 = 0$.
 

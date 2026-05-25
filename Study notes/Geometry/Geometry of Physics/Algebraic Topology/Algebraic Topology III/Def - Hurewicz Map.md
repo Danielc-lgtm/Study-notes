@@ -10,7 +10,7 @@ tags: [geometry, algebraic-topology, homotopy, homology]
 
 # Notation
 
-$X$ is a topological space, $x_0 \in X$ a base point. $\pi_k(X, x_0)$ is the [[Def - Higher Homotopy Group|$k$-th homotopy group]]. $H_k(X; \mathbb{Z})$ is the [[Algebraic Topology I — Singular Homology and the de Rham Theorem|singular homology]] with integer coefficients. $[S^k] \in H_k(S^k; \mathbb{Z}) = \mathbb{Z}$ is the **fundamental class** of the oriented $k$-sphere — the generator. For $f : S^k \to X$, $f_*([S^k]) \in H_k(X; \mathbb{Z})$ is the pushforward of the fundamental class. See [[Algebraic Topology III — Higher Homotopy and Chern Forms]] for the full notation registry.
+$X$ is a topological space, $x_0 \in X$ a base point. $\pi_k(X, x_0)$ is the [[Def - Higher Homotopy Group|k-th homotopy group]]. $H_k(X; \mathbb{Z})$ is the [[Algebraic Topology I — Singular Homology and the de Rham Theorem|singular homology]] with integer coefficients. $[S^k] \in H_k(S^k; \mathbb{Z}) = \mathbb{Z}$ is the **fundamental class** of the oriented $k$-sphere — the generator. For $f : S^k \to X$, $f_*([S^k]) \in H_k(X; \mathbb{Z})$ is the pushforward of the fundamental class. See [[Algebraic Topology III — Higher Homotopy and Chern Forms]] for the full notation registry.
 
 ---
 

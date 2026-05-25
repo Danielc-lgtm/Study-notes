@@ -216,7 +216,7 @@ Cofactor expansion follows from multilinearity in one column and the alternating
 
 - **[[Def - Determinant|Determinant definition]]** — cofactor expansion is the most useful concrete computational formula. The expansion is a direct corollary of multilinearity (used in the proof). Together with the Leibniz formula and the eigenvalue product, it gives the full toolkit.
 
-- **[[Thm - Determinant is Multiplicative|Multiplicativity of $\det$]]** — used in proving Cayley-Hamilton via the adjugate. The factor-and-multiply pattern $(zI - A) \operatorname{adj}(zI - A) = p_A(z) I$ is the determinantal identity bridging $\det$ multiplicativity and the Cayley-Hamilton theorem.
+- **[[Thm - Determinant is Multiplicative|Multiplicativity of det]]** — used in proving Cayley-Hamilton via the adjugate. The factor-and-multiply pattern $(zI - A) \operatorname{adj}(zI - A) = p_A(z) I$ is the determinantal identity bridging $\det$ multiplicativity and the Cayley-Hamilton theorem.
 
 - **The Cayley-Hamilton theorem** — proved via the adjugate identity. The cofactor formula is the gateway from "the determinant is a polynomial" to "the operator satisfies its own characteristic polynomial".
 

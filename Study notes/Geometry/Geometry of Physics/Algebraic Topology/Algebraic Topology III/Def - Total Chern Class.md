@@ -9,7 +9,7 @@ tags: [geometry, algebraic-topology, characteristic-classes]
 
 # Notation
 
-$E \to M$ is a complex rank-$n$ vector bundle with $U(n)$ structure group. $\theta$ is the curvature 2-form of a $U(n)$ connection on $E$. $c_r(E)$ is the [[Def - Chern Forms of a U(n) Bundle|$r$-th Chern form]], a real $2r$-form on $M$. $H^*_{\mathrm{dR}}(M; \mathbb{R}) = \bigoplus_k H^k_{\mathrm{dR}}(M; \mathbb{R})$ is the de Rham cohomology ring of $M$. See [[Algebraic Topology III — Higher Homotopy and Chern Forms]] for the full notation registry.
+$E \to M$ is a complex rank-$n$ vector bundle with $U(n)$ structure group. $\theta$ is the curvature 2-form of a $U(n)$ connection on $E$. $c_r(E)$ is the [[Def - Chern Forms of a U(n) Bundle|r-th Chern form]], a real $2r$-form on $M$. $H^*_{\mathrm{dR}}(M; \mathbb{R}) = \bigoplus_k H^k_{\mathrm{dR}}(M; \mathbb{R})$ is the de Rham cohomology ring of $M$. See [[Algebraic Topology III — Higher Homotopy and Chern Forms]] for the full notation registry.
 
 ---
 
@@ -59,7 +59,7 @@ Let $E \to M$ be a complex rank-$n$ vector bundle with $U(n)$ structure group an
 
 $$c(E) := \det\!\left(I + \frac{i}{2\pi}\theta\right) = 1 + c_1(E) + c_2(E) + \cdots + c_n(E),$$
 
-a closed differential form on $M$ of mixed (even) degree, where $c_r(E)$ is the [[Def - Chern Forms of a U(n) Bundle|$r$-th Chern form]] of degree $2r$.
+a closed differential form on $M$ of mixed (even) degree, where $c_r(E)$ is the [[Def - Chern Forms of a U(n) Bundle|r-th Chern form]] of degree $2r$.
 
 The **total Chern class** of $E$, also denoted $c(E)$, is the de Rham cohomology class:
 

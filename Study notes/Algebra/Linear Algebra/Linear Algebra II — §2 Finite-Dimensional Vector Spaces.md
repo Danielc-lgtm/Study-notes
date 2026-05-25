@@ -38,7 +38,7 @@ Section §2B brings the two properties together to define a basis and proves the
 
 Section §2C is where the chapter's true theorem lives. It says all bases of a given finite-dimensional space have the same length, so we may give that length a name — **dimension** — and the integer $\dim V$ is an intrinsic invariant of the space, independent of any choice. The whole hierarchy
 $$\dim V_1 \;\leq\; \dim V_2 \;\leq\; \dim(V_1 + V_2) \;\leq\; \dim V_1 + \dim V_2$$
-of dimension inequalities then drops out, culminating in the precise formula [[Thm - Dimension of a Sum of Subspaces|$\dim(V_1 + V_2) = \dim V_1 + \dim V_2 - \dim(V_1 \cap V_2)$]] — the linear-algebra counterpart of inclusion-exclusion for the sizes of finite sets.
+of dimension inequalities then drops out, culminating in the precise formula [[Thm - Dimension of a Sum of Subspaces|dim(V₁ + V_2) = dim V₁ + dim V_2 - dim(V₁ ∩ V_2)]] — the linear-algebra counterpart of inclusion-exclusion for the sizes of finite sets.
 
 The reader is assumed to have absorbed [[Linear Algebra I — §1 Vector Spaces]] — in particular the definitions of [[Def - Vector Space|vector space]], [[Def - Subspace|subspace]], [[Def - Sum of Subspaces|sum]] and [[Def - Direct Sum|direct sum]] of [[Def - Subspace|subspaces]] — and to be comfortable with the polynomial space $\mathcal{P}_m(F)$ as a worked example. No previous exposure to dimension or basis is required; in fact, the whole chapter is the careful derivation of those words.
 

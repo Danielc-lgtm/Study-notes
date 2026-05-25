@@ -253,7 +253,7 @@ A meta-strategy: **every question in this chapter is a balance between intrinsic
 
 - **[[Thm - Poincare-Hopf Theorem for Surfaces|Poincaré–Hopf theorem]]**: $\sum\mathrm{Ind}_p(v) = \chi(M)$. **Typical use:** show a tangent vector field on $S^2$ must have a zero (hairy ball); compute $\chi(M)$ by picking a convenient field (gradient of a height function in Morse theory, where index sums recover Euler characteristic via the Morse inequalities); detect critical points of smooth functions on closed surfaces.
 
-- **[[Def - Shape Operator (Weingarten Map)|The shape operator $S = -dN$ is self-adjoint]]**. **Typical use:** invoke the spectral theorem to diagonalise $S$ at every point (principal curvatures, orthogonal principal directions); reduce surface-theory problems to two-by-two linear algebra at each point; identify $K = \det S$ and $H = \mathrm{tr}\, S$ as the basic invariants of $S$ at a point.
+- **[[Def - Shape Operator (Weingarten Map)|The shape operator S = -dN is self-adjoint]]**. **Typical use:** invoke the spectral theorem to diagonalise $S$ at every point (principal curvatures, orthogonal principal directions); reduce surface-theory problems to two-by-two linear algebra at each point; identify $K = \det S$ and $H = \mathrm{tr}\, S$ as the basic invariants of $S$ at a point.
 
 - **[[Thm - First Variation of Area|First variation of area]]**: $\delta A = -\int H\,\langle v, N\rangle\, dA + \text{boundary}$. **Typical use:** identify $H$ as the $L^2$-gradient of area; derive the minimal-surface equation $H = 0$ from variational principles; conclude that any area-extremising surface (with fixed boundary) must have $H = 0$; derive Laplace's pressure formula $\Delta p = -2\sigma H$ for soap films and bubbles.
 

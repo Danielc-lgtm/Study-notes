@@ -17,7 +17,7 @@ $$(\varphi_1 \wedge \cdots \wedge \varphi_m)(v_1, \dots, v_m) := \det \big[ \var
 
 where $[\varphi_i(v_j)]$ is the $m \times m$ matrix with $(i, j)$-entry $\varphi_i(v_j)$.
 
-(a) Show that $\varphi_1 \wedge \cdots \wedge \varphi_m$ is an [[Def - Alternating Multilinear Form|alternating $m$-linear form]] on $V$.
+(a) Show that $\varphi_1 \wedge \cdots \wedge \varphi_m$ is an [[Def - Alternating Multilinear Form|alternating m-linear form]] on $V$.
 
 (b) Show that swapping any two of the dual vectors $\varphi_i, \varphi_j$ (with $i \neq j$) multiplies the wedge product by $-1$: $\varphi_1 \wedge \cdots \wedge \varphi_j \wedge \cdots \wedge \varphi_i \wedge \cdots \wedge \varphi_m = -(\varphi_1 \wedge \cdots \wedge \varphi_i \wedge \cdots \wedge \varphi_j \wedge \cdots \wedge \varphi_m)$.
 

@@ -176,7 +176,7 @@ The other slip is conflating the dual $T'$ with the adjoint $T^*$ from [[Linear 
 > > [!note]- Full proof
 > > Apply [[Thm - Fundamental Theorem of Linear Maps|rank-nullity]] to $T' : W' \to V'$:
 > > $$\dim \operatorname{range} T' = \dim W' - \dim \operatorname{null} T'.$$
-> > Use [[Thm - Dimension of Dual Space|$\dim W' = \dim W$]] and Lemma 1 ($\operatorname{null} T' = (\operatorname{range} T)^0$):
+> > Use [[Thm - Dimension of Dual Space|dim W' = dim W]] and Lemma 1 ($\operatorname{null} T' = (\operatorname{range} T)^0$):
 > > $$= \dim W - \dim (\operatorname{range} T)^0.$$
 > > Use the annihilator dimension formula $\dim U^0 = \dim W - \dim U$ applied to $U = \operatorname{range} T \leq W$:
 > > $$\dim (\operatorname{range} T)^0 = \dim W - \dim \operatorname{range} T.$$

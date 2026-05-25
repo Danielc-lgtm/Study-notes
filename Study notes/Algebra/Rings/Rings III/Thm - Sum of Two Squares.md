@@ -223,7 +223,7 @@ Translate $x^2 + y^2 = N(x + iy)$, so the question is "which $n$ are Gaussian no
 
 - **[[Def - Gaussian Integers|Multiplicativity of the Gaussian norm]]** — the structural fact powering Lemma 2. That $N(zw) = N(z)N(w)$ is *the same statement* as the two-square identity $(a^2+b^2)(c^2+d^2) = (ac-bd)^2 + (ad+bc)^2$; closure of "sums of two squares" under multiplication is closure of "norms" under multiplication.
 
-- **[[Def - Unique Factorization Domain|Unique factorization in $\mathbb{Z}[i]$]]** — what makes Lemma 4 valid. The forward direction needs to factor an arbitrary Gaussian integer into primes and read off the contribution of each rational prime; without unique factorization the parity bookkeeping would not be well-defined.
+- **[[Def - Unique Factorization Domain|Unique factorization in ℤ[i]]]** — what makes Lemma 4 valid. The forward direction needs to factor an arbitrary Gaussian integer into primes and read off the contribution of each rational prime; without unique factorization the parity bookkeeping would not be well-defined.
 
 - **First supplement to quadratic reciprocity** — a sub-result in disguise. The fact that an odd prime $p$ is a sum of two squares if and only if $p \equiv 1 \pmod 4$ is equivalent to "$-1$ is a quadratic residue mod $p$ exactly when $p \equiv 1 \pmod 4$", the first supplement. The two-squares theorem packages this supplement together with multiplicativity into a statement about all integers.
 

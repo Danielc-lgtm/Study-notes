@@ -81,7 +81,7 @@ A second compression: a field is the home of **linear systems with unique row-re
 
 **Is an instance: the field of rational functions $\mathbb{F}(x)$.** The fractions $p(x)/q(x)$ with $p, q \in \mathbb{F}[x]$ and $q \neq 0$, modulo the usual equivalence, form a field. It is the "field of fractions" of the integral domain $\mathbb{F}[x]$, just as $\mathbb{Q}$ is the field of fractions of $\mathbb{Z}$. It plays a role in algebraic geometry and in the study of meromorphic functions.
 
-**Is NOT an instance: $\mathbb{Z}$.** The integers form a [[Def - Ring|commutative ring with $1$]] but **fail axiom 5** (multiplicative inverses): $2$ has no reciprocal in $\mathbb{Z}$. This is the prototypical "almost a field but not quite", and the failure is exactly why integer linear algebra is harder than rational or real linear algebra.
+**Is NOT an instance: $\mathbb{Z}$.** The integers form a [[Def - Ring|commutative ring with 1]] but **fail axiom 5** (multiplicative inverses): $2$ has no reciprocal in $\mathbb{Z}$. This is the prototypical "almost a field but not quite", and the failure is exactly why integer linear algebra is harder than rational or real linear algebra.
 
 **Is NOT an instance: $\mathbb{Z}/4\mathbb{Z}$.** The integers modulo $4$ form a commutative ring but **fail axiom 5** for non-units: $2 \cdot 2 = 4 \equiv 0$, so $2$ is a zero divisor and certainly has no inverse. The general fact is that $\mathbb{Z}/n\mathbb{Z}$ is a field if and only if $n$ is prime. This non-example probes why the modulus must be prime, and is a good calibration test.
 

@@ -184,7 +184,7 @@ A third subtle point is that the theorem is the *reason* matrix multiplication i
 
 - **[[Thm - Change of Basis Formula]]** — the change of basis $A = C^{-1} B C$ is three applications of the composition theorem, with one of the matrices being a basis-change identity. The matrix algebra of changes of basis runs on composition.
 
-- **[[Def - Ring|Ring structure on $\mathcal{L}(V)$]]** — the composition theorem makes $\mathcal{L}(V)$ a ring (associative, distributive, with identity). Choosing a basis of $V$ identifies this ring with the matrix ring $M_n(\mathbf{F})$. The minimal polynomial of an operator (see [[Linear Algebra V — §4–5 Polynomials and Eigenvalues]]) is a fact about this ring structure.
+- **[[Def - Ring|Ring structure on ℒ(V)]]** — the composition theorem makes $\mathcal{L}(V)$ a ring (associative, distributive, with identity). Choosing a basis of $V$ identifies this ring with the matrix ring $M_n(\mathbf{F})$. The minimal polynomial of an operator (see [[Linear Algebra V — §4–5 Polynomials and Eigenvalues]]) is a fact about this ring structure.
 
 - **The functor $\mathcal{M}$ from $\mathbf{Vect}_\mathbf{F}^{\mathrm{fin}, \mathrm{basis}}$ to $\operatorname{Mat}_\mathbf{F}$** — the composition theorem is the **functoriality** of the matrix-representation assignment. The same identity holds in any algebraic structure where one represents abstract objects by concrete coordinate data: composition of abstract morphisms corresponds to composition (multiplication) of concrete representations.
 

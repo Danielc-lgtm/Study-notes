@@ -11,7 +11,7 @@ tags: [geometry, gauge-theory, principal-bundles, curvature]
 
 # Notation
 
-$P \to M$ is a principal $G$-bundle, $\omega \in \Omega^1(P; \mathfrak{g})$ a [[Def - Connection 1-Form on a Principal Bundle|connection 1-form]]. The Lie bracket on $\mathfrak{g}$ extends to a [[Def - Bracket of g-Valued Forms|bracket of $\mathfrak{g}$-valued forms]] by $[\alpha \otimes \xi, \beta \otimes \eta] = \alpha \wedge \beta \otimes [\xi, \eta]$. The curvature 2-form is denoted $\Omega \in \Omega^2(P; \mathfrak{g})$ (Frankel's notation; some authors write $F$ or $\Theta$). For matrix groups, $\tfrac{1}{2}[\omega, \omega] = \omega \wedge \omega$ where the right-hand side is the matrix wedge.
+$P \to M$ is a principal $G$-bundle, $\omega \in \Omega^1(P; \mathfrak{g})$ a [[Def - Connection 1-Form on a Principal Bundle|connection 1-form]]. The Lie bracket on $\mathfrak{g}$ extends to a [[Def - Bracket of g-Valued Forms|bracket of \mathfrak{g}-valued forms]] by $[\alpha \otimes \xi, \beta \otimes \eta] = \alpha \wedge \beta \otimes [\xi, \eta]$. The curvature 2-form is denoted $\Omega \in \Omega^2(P; \mathfrak{g})$ (Frankel's notation; some authors write $F$ or $\Theta$). For matrix groups, $\tfrac{1}{2}[\omega, \omega] = \omega \wedge \omega$ where the right-hand side is the matrix wedge.
 
 ---
 

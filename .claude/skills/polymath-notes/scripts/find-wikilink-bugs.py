@@ -25,22 +25,31 @@ def find_bugs():
             fp = os.path.join(root, f)
             with open(fp, "r", encoding="utf-8") as fd:
                 text = fd.read()
-            # Strip math regions so we don't confuse `R[[X]]` (power series) with wikilinks
-            stripped = re.sub(r"\$\$[\s\S]*?\$\$", lambda m: " " * len(m.group(0)), text)
-            stripped = re.sub(r"\$[^\$\n]+\$", lambda m: " " * len(m.group(0)), stripped)
-            stripped = re.sub(r"```[\s\S]*?```", lambda m: " " * len(m.group(0)), stripped)
-            stripped = re.sub(r"`[^`\n]*`", lambda m: " " * len(m.group(0)), stripped)
-            for line_no, line in enumerate(stripped.split("\n"), start=1):
+            # Strip code regions (where `R[[X]]` might be in a code fence)
+            # and math regions (where `[[X,Y]]` is a Lie bracket, not a
+            # wikilink). LaTeX-in-display-text detection runs SEPARATELY
+            # below on the original text — we do not strip math here.
+            def blank(s):
+                # Replace non-newline chars with spaces; preserve \n so line
+                # numbering across stripped/orig stays in sync.
+                return "".join(" " if c != "\n" else "\n" for c in s)
+            stripped = re.sub(r"```[\s\S]*?```", lambda m: blank(m.group(0)), text)
+            stripped = re.sub(r"`[^`\n]*`", lambda m: blank(m.group(0)), stripped)
+            stripped = re.sub(r"\$\$[\s\S]*?\$\$", lambda m: blank(m.group(0)), stripped)
+            stripped = re.sub(r"\$[^\$\n]+\$", lambda m: blank(m.group(0)), stripped)
+            stripped_lines = stripped.split("\n")
+            orig_lines = text.split("\n")
+            for line_no, line in enumerate(stripped_lines, start=1):
                 if "[[" not in line:
                     continue
-                # Look for nested wikilinks: a [[ appearing inside another [[ ... ]]
-                # Pattern: [[XXX [[YYY|ZZZ]] WWW ...]] or [[XXX|YYY [[Z]] W]]
-                # Easier: detect [[ ... [[ ... ]] ... ]]
+                orig = orig_lines[line_no - 1]
+                # Nested-wikilink detection on the stripped line (math removed)
                 for m in re.finditer(r"\[\[(?:(?!\]\]).)*\[\[", line):
                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "nested",
-                                 line[m.start():min(len(line), m.end()+50)]))
-                # Look for individual wikilinks and inspect display text
-                # Walk [[ ... ]] one at a time
+                                 orig[m.start():min(len(orig), m.end()+50)]))
+                # Walk genuine [[ ... ]] pairs on the stripped line, then use
+                # the original line to inspect display text for LaTeX (which
+                # was stripped from the stripped line).
                 depth = 0
                 start = None
                 i = 0
@@ -53,35 +62,34 @@ def find_bugs():
                     elif line[i:i+2] == "]]":
                         depth -= 1
                         if depth == 0 and start is not None:
-                            content = line[start+2:i]
-                            # Split on | (only first |)
-                            if "|" in content:
-                                target, display = content.split("|", 1)
+                            # Use ORIGINAL line slice for display-text check
+                            orig_content = orig[start+2:i]
+                            if "|" in orig_content:
+                                target, display = orig_content.split("|", 1)
                             else:
-                                target, display = content, ""
-                            # Check display text
+                                target, display = orig_content, ""
                             if display:
                                 if re.search(r"\*\*[^*]+\*\*", display):
                                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "bold-in-display",
-                                                 line[start:i+2]))
+                                                 orig[start:i+2]))
                                 elif re.search(r"(?<!\*)\*[^*\s][^*]*[^*\s]\*(?!\*)", display):
                                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "italic-in-display",
-                                                 line[start:i+2]))
+                                                 orig[start:i+2]))
                                 if re.search(r"__[^_]+__", display):
                                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "underscore-bold",
-                                                 line[start:i+2]))
+                                                 orig[start:i+2]))
                                 if re.search(r"~~[^~]+~~", display):
                                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "strikethrough",
-                                                 line[start:i+2]))
+                                                 orig[start:i+2]))
                                 if "`" in display:
                                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "code-in-display",
-                                                 line[start:i+2]))
+                                                 orig[start:i+2]))
                                 if "$" in display:
                                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "latex-in-display",
-                                                 line[start:i+2]))
+                                                 orig[start:i+2]))
                                 if re.search(r"<[/]?[a-zA-Z]+[^>]*>", display):
                                     bugs.append((fp.replace(VAULT + "/", ""), line_no, "html-in-display",
-                                                 line[start:i+2]))
+                                                 orig[start:i+2]))
                             i += 2
                             start = None
                         else:

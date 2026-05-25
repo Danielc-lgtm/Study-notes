@@ -15,7 +15,7 @@ Let $M = \{*\}$ be a topological space consisting of a single point. Compute the
 
 **Recall:**
 
-A [[Def - Singular Simplex|singular $p$-simplex]] in a space $M$ is a continuous map $\sigma : \Delta^p \to M$ from the standard $p$-simplex to $M$. The singular chain group $C_p(M; G)$ is the free $G$-module on the set of all such maps.
+A [[Def - Singular Simplex|singular p-simplex]] in a space $M$ is a continuous map $\sigma : \Delta^p \to M$ from the standard $p$-simplex to $M$. The singular chain group $C_p(M; G)$ is the free $G$-module on the set of all such maps.
 
 The [[Def - The Boundary Operator|boundary operator]] $\partial : C_p(M; G) \to C_{p-1}(M; G)$ is defined on a singular simplex $\sigma$ by
 $$

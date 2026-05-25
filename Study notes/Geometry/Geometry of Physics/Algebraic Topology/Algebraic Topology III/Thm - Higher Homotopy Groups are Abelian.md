@@ -9,7 +9,7 @@ tags: [geometry, algebraic-topology, homotopy]
 
 # Notation
 
-$(X, x_0)$ is a pointed topological space. $\pi_k(X, x_0)$ is the [[Def - Higher Homotopy Group|$k$-th homotopy group]]. We identify $S^k = I^k / \dot I^k$ where $I^k = [0, 1]^k$ is the $k$-cube. The concatenation operation on $\pi_k$ uses the first coordinate $t_1$: $(f + g)(t_1, t_2, \ldots) = f(2t_1, \ldots)$ for $t_1 \leq 1/2$ and $g(2t_1 - 1, \ldots)$ for $t_1 \geq 1/2$. See [[Algebraic Topology III — Higher Homotopy and Chern Forms]] for the full notation registry.
+$(X, x_0)$ is a pointed topological space. $\pi_k(X, x_0)$ is the [[Def - Higher Homotopy Group|k-th homotopy group]]. We identify $S^k = I^k / \dot I^k$ where $I^k = [0, 1]^k$ is the $k$-cube. The concatenation operation on $\pi_k$ uses the first coordinate $t_1$: $(f + g)(t_1, t_2, \ldots) = f(2t_1, \ldots)$ for $t_1 \leq 1/2$ and $g(2t_1 - 1, \ldots)$ for $t_1 \geq 1/2$. See [[Algebraic Topology III — Higher Homotopy and Chern Forms]] for the full notation registry.
 
 ---
 

@@ -272,7 +272,15 @@ Then run a mechanical link audit over the whole vault. After stripping `$...$` /
 
 **Math-region audit.** Also run `python3 .claude/skills/polymath-notes/scripts/find-math-bugs.py` to detect inline math regions with whitespace immediately after the opening `$` or before the closing `$` — both patterns cause KaTeX/Obsidian to fail to close the math, silently swallowing following prose. See `references/obsidian-patterns.md` for the rule. Apply `fix-math-bugs.py --apply` to repair them mechanically (strips internal whitespace at both math boundaries), and re-run the detector until clean.
 
-**Wikilink content audit.** Run `python3 .claude/skills/polymath-notes/scripts/find-wikilink-bugs.py` to detect malformed wikilinks: markdown formatting inside display text (`[[X|**Y**]]` renders as literal `**Y**`), nested wikilinks (`[[X - [[Y|Z]]|W]]`), LaTeX inside display (`[[X|$Y$]]`), and HTML inside display. Apply `fix-wikilink-bugs.py --apply` for the formatting cases (moves the markers outside the wikilink) and `fix-nested-wikilinks.py --apply` for nested wikilinks (collapses to the inner target with the outer display). See `references/obsidian-patterns.md` for the rule.
+**Wikilink content audit.** Run `python3 .claude/skills/polymath-notes/scripts/find-wikilink-bugs.py` to detect malformed wikilinks: markdown formatting inside display text (`[[X|**Y**]]` renders as literal `**Y**`), nested wikilinks (`[[X - [[Y|Z]]|W]]`), LaTeX inside display (`[[X|$Y$]]` — Obsidian does NOT process math inside wikilink display text, so the dollars render literally), and HTML inside display. Apply three fixers in this order:
+
+- `fix-wikilink-bugs.py --apply` — formatting-in-display fixes (moves `**`/`*`/`__`/`~~`/`` ` `` markers outside the wikilink).
+- `fix-nested-wikilinks.py --apply` — collapses nested wikilinks `[[X - [[Y|Z]]|W]]` to `[[Y|W]]`.
+- `fix-latex-in-display.py --apply` — substitutes LaTeX commands inside display text with Unicode (e.g. `\sigma`→σ, `\mathbb{R}`→ℝ, `\to`→→, `\Rightarrow`→⇒) and strips the surrounding `$` markers.
+
+When writing the scanner itself: be careful that the math-stripping step preserves NEWLINES (replace non-newline chars with spaces) so line-numbering across the stripped and original text stays in sync. And do *not* strip math before checking for `$` in display text — perform the LaTeX-in-display check on the original text or split it into two passes.
+
+See `references/obsidian-patterns.md` for the full rule and offender patterns.
 
 ### Step 7: Commit to repository
 

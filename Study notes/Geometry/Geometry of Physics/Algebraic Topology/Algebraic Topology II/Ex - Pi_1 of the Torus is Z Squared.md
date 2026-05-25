@@ -37,7 +37,7 @@ The flagship computation we will lean on:
 
 **Assumption pattern:** $T^2$ is a product $S^1 \times S^1$, so its $\pi_1$ should decompose as a product of $\pi_1$'s. We have $\pi_1(S^1) = \mathbb{Z}$ from the previous flagship theorem. The base point is on both factors. The product structure of the space is the key assumption that unlocks the product structure of the group.
 
-**Theorem routing:** [[Thm - Pi_1 of S^1 is Z|$\pi_1(S^1) = \mathbb{Z}$]] gives the factor. The product formula $\pi_1(X \times Y) = \pi_1(X) \times \pi_1(Y)$ (proved via the projection homomorphisms $\pi_1(X \times Y) \to \pi_1(X) \times \pi_1(Y)$ and its inverse) gives $\pi_1(T^2) = \mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$. The universal cover argument from [[Thm - Galois Correspondence for Covering Spaces|Galois correspondence]] gives the same answer geometrically: $\widetilde{T^2} = \mathbb{R}^2$ with deck group $\mathbb{Z}^2$.
+**Theorem routing:** [[Thm - Pi_1 of S^1 is Z|\pi₁(S^1) = ℤ]] gives the factor. The product formula $\pi_1(X \times Y) = \pi_1(X) \times \pi_1(Y)$ (proved via the projection homomorphisms $\pi_1(X \times Y) \to \pi_1(X) \times \pi_1(Y)$ and its inverse) gives $\pi_1(T^2) = \mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$. The universal cover argument from [[Thm - Galois Correspondence for Covering Spaces|Galois correspondence]] gives the same answer geometrically: $\widetilde{T^2} = \mathbb{R}^2$ with deck group $\mathbb{Z}^2$.
 
 **Key decision point:** Whether to prove the product formula in generality or to compute $\pi_1(T^2)$ directly using lifts to $\mathbb{R}^2$. The product-formula route is the cleanest for the algebra; the universal-cover route is more memorable. We do both: product formula as the proof, universal cover as the conceptual picture. The non-obvious aspect of either route is the commutativity — geometrically clear from $\mathbb{Z}^2$ being abelian, algebraically forced by the product structure.
 
@@ -90,7 +90,7 @@ $$\Phi : \pi_1(T^2, *) \to \pi_1(S^1) \times \pi_1(S^1), \quad [\gamma] \mapsto 
 **Step 2: Apply $\pi_1(S^1) = \mathbb{Z}$ to get $\pi_1(T^2) = \mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$.**
 
 > [!note]- Derivation
-> [[Thm - Pi_1 of S^1 is Z|$\pi_1(S^1) = \mathbb{Z}$]] applied to each factor gives $\pi_1(S^1) \times \pi_1(S^1) = \mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$. Combined with Step 1: $\pi_1(T^2) \cong \mathbb{Z}^2$.
+> [[Thm - Pi_1 of S^1 is Z|\pi₁(S^1) = ℤ]] applied to each factor gives $\pi_1(S^1) \times \pi_1(S^1) = \mathbb{Z} \times \mathbb{Z} = \mathbb{Z}^2$. Combined with Step 1: $\pi_1(T^2) \cong \mathbb{Z}^2$.
 >
 > Under this isomorphism, the generator $[a]$ of $\pi_1(T^2)$ corresponds to $(1, 0) \in \mathbb{Z}^2$ (winding number $1$ in the first factor, $0$ in the second), and the generator $[b]$ corresponds to $(0, 1)$.
 

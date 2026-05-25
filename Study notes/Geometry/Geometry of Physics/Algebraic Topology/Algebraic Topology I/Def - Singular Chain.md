@@ -52,7 +52,7 @@ Let $M$ be a topological space, $G$ an abelian group, and $p \geq 0$ an integer.
 $$
 c \;=\; g_1 \sigma_1 + g_2 \sigma_2 + \cdots + g_r \sigma_r,
 $$
-where each $\sigma_i : \Delta^p \to M$ is a [[Def - Singular Simplex|singular $p$-simplex]] and each $g_i \in G$. Equivalently, a singular $p$-chain is a function $c : \{\text{singular$p$-simplices}\} \to G$ that takes the value $0$ except on finitely many simplices.
+where each $\sigma_i : \Delta^p \to M$ is a [[Def - Singular Simplex|singular p-simplex]] and each $g_i \in G$. Equivalently, a singular $p$-chain is a function $c : \{\text{singular$p$-simplices}\} \to G$ that takes the value $0$ except on finitely many simplices.
 
 Two chains are added termwise:
 $$

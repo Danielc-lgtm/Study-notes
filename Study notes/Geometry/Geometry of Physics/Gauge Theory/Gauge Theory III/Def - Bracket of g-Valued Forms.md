@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, differential-forms, lie-algebras]
 
 # Notation
 
-$M$ is a smooth manifold, $\mathfrak{g}$ a finite-dimensional Lie algebra with bracket $[\,\cdot\,,\,\cdot\,]_\mathfrak{g} : \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}$, and $\Omega^p(M; \mathfrak{g}) = \Omega^p(M) \otimes \mathfrak{g}$ the space of [[Def - Lie-Algebra-Valued Differential Form|$\mathfrak{g}$-valued $p$-forms]]. We write $\alpha \wedge \beta$ for the ordinary wedge product of forms and $[\xi, \eta]$ for the Lie bracket on $\mathfrak{g}$. The new bracket of two $\mathfrak{g}$-valued forms is also denoted $[\,\cdot\,,\,\cdot\,]$ — the context (form-degree) disambiguates.
+$M$ is a smooth manifold, $\mathfrak{g}$ a finite-dimensional Lie algebra with bracket $[\,\cdot\,,\,\cdot\,]_\mathfrak{g} : \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}$, and $\Omega^p(M; \mathfrak{g}) = \Omega^p(M) \otimes \mathfrak{g}$ the space of [[Def - Lie-Algebra-Valued Differential Form|\mathfrak{g}-valued p-forms]]. We write $\alpha \wedge \beta$ for the ordinary wedge product of forms and $[\xi, \eta]$ for the Lie bracket on $\mathfrak{g}$. The new bracket of two $\mathfrak{g}$-valued forms is also denoted $[\,\cdot\,,\,\cdot\,]$ — the context (form-degree) disambiguates.
 
 ---
 

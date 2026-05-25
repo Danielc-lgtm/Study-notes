@@ -11,7 +11,7 @@ tags: [geometry, gauge-theory, principal-bundles, connections]
 
 # Notation
 
-$P \to M$ is a principal $G$-bundle with right action $R_g : P \to P$, $p \mapsto p \cdot g$. $\mathfrak{g} = T_e G$ is the Lie algebra. For $\xi \in \mathfrak{g}$, $\xi^* \in \mathfrak{X}(P)$ is the [[Def - Fundamental Vector Field of a Principal Bundle|fundamental vector field]]. $\mathrm{Ad} : G \to \mathrm{GL}(\mathfrak{g})$ is the [[Def - Adjoint Representation|adjoint representation]]. We write $\Omega^1(P; \mathfrak{g})$ for the space of [[Def - Lie-Algebra-Valued Differential Form|$\mathfrak{g}$-valued 1-forms]] on $P$.
+$P \to M$ is a principal $G$-bundle with right action $R_g : P \to P$, $p \mapsto p \cdot g$. $\mathfrak{g} = T_e G$ is the Lie algebra. For $\xi \in \mathfrak{g}$, $\xi^* \in \mathfrak{X}(P)$ is the [[Def - Fundamental Vector Field of a Principal Bundle|fundamental vector field]]. $\mathrm{Ad} : G \to \mathrm{GL}(\mathfrak{g})$ is the [[Def - Adjoint Representation|adjoint representation]]. We write $\Omega^1(P; \mathfrak{g})$ for the space of [[Def - Lie-Algebra-Valued Differential Form|\mathfrak{g}-valued 1-forms]] on $P$.
 
 ---
 

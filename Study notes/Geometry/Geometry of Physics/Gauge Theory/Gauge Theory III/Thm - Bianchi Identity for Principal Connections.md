@@ -160,15 +160,15 @@ The conceptual difficulty is internalising that the Bianchi identity is a *geome
 > **Why needed:** The first computational step in deriving Bianchi.
 > 
 > > [!note]- Full proof
-> > Graded Leibniz: $d[\alpha, \beta] = [d\alpha, \beta] + (-1)^{|\alpha|}[\alpha, d\beta]$. For $\alpha = \beta = \omega$ (degree 1): $d[\omega, \omega] = [d\omega, \omega] - [\omega, d\omega]$.
+> > Graded Leibniz: $d[\alpha, \beta] = [d\alpha, \beta] + (-1)^{|\alpha|}[\alpha, d\beta]. For \alpha = \beta = \omega (degree 1): d[\omega, \omega] = [d\omega, \omega] - [\omega, d\omega].
 > > 
-> > Graded symmetry: $[\beta, \alpha] = (-1)^{|\alpha||\beta| + 1}[\alpha, \beta]$. For $\alpha = d\omega$ (degree 2), $\beta = \omega$ (degree 1): $[\omega, d\omega] = (-1)^{2 \cdot 1 + 1}[d\omega, \omega] = -[d\omega, \omega]$.
+> > Graded symmetry: [\beta, \alpha] = (-1)^{|\alpha||\beta| + 1}[\alpha, \beta]. For \alpha = d\omega (degree 2), \beta = \omega (degree 1): [\omega, d\omega] = (-1)^{2 \cdot 1 + 1}[d\omega, \omega] = -[d\omega, \omega].
 > > 
-> > Substituting: $d[\omega, \omega] = [d\omega, \omega] - (-[d\omega, \omega]) = 2[d\omega, \omega]$.
+> > Substituting: d[\omega, \omega] = [d\omega, \omega] - (-[d\omega, \omega]) = 2[d\omega, \omega].
 
-> [!note]- Lemma 2: Jacobi triple-bracket $[\omega, [\omega, \omega]] = 0$ for $\omega$ of degree 1
-> **Statement:** For a $\mathfrak{g}$-valued 1-form $\omega$,
-> $$
+> [!note]- Lemma 2: Jacobi triple-bracket [\omega, [\omega, \omega]] = 0 for \omega of degree 1
+> **Statement:** For a \mathfrak{g}-valued 1-form \omega,
+> $
 > [\omega, [\omega, \omega]] = 0, \quad \text{equivalently} \quad [[\omega, \omega], \omega] = 0.
 > $$
 > 
@@ -254,7 +254,7 @@ The conceptual difficulty is internalising that the Bianchi identity is a *geome
 
 - **[[Thm - Cartan Structural Equation for Principal Connections|Cartan structural equation]]** — Bianchi is the *direct consequence* of the structural equation $\Omega = d\omega + \tfrac{1}{2}[\omega, \omega]$ together with $d^2 = 0$ and Jacobi. The two theorems form a kinematic pair: structural equation defines curvature, Bianchi gives its automatic identity. No connection is exempt from either.
 
-- **[[Def - Exterior Covariant Derivative on Associated Bundles|Exterior covariant derivative on $\mathrm{Ad}\,P$]]** — Bianchi reads $d_\nabla F = 0$ in the adjoint bundle, where $d_\nabla$ is the exterior covariant derivative. This makes Bianchi an instance of "the covariant derivative of the curvature is zero" — a fundamental property of any connection, generalising the algebraic Bianchi identity for the Riemann tensor.
+- **[[Def - Exterior Covariant Derivative on Associated Bundles|Exterior covariant derivative on \mathrm{Ad}P]]** — Bianchi reads $d_\nabla F = 0$ in the adjoint bundle, where $d_\nabla$ is the exterior covariant derivative. This makes Bianchi an instance of "the covariant derivative of the curvature is zero" — a fundamental property of any connection, generalising the algebraic Bianchi identity for the Riemann tensor.
 
 - **$dF = 0$ for abelian gauge theory** — for $G = U(1)$, $[A, F] = 0$ and Bianchi reduces to $dF = 0$. This is the "magnetic Gauss + Faraday" half of Maxwell, and it is *manifestly* a consequence of $F$ being locally exact ($F = dA$). The non-abelian Bianchi is the covariant generalisation, with the $[A, F]$ term correcting for the non-globality of $A$.
 

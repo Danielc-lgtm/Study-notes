@@ -161,7 +161,7 @@ There is nothing non-trivial in the proof — it is a direct application of the 
 
 - **The Characteristic Polynomial** — the related invariant. The classical Cayley–Hamilton theorem $\chi_T(T) = 0$ is the statement that the characteristic polynomial is also an annihilator. By the minimal polynomial form, $m_T \mid \chi_T$, with the difference being the "excess" Jordan structure. See [[Linear Algebra IX — §9 Multilinear Algebra and Determinants]] for the characteristic polynomial; in Modules II this is made precise via [[Thm - Jordan Normal Form]].
 
-- **The Annihilator Ideal in Module Theory** — the abstract framing. In the language of [[Def - The Module of a Linear Operator|$F[x]$-modules]], the minimal polynomial form is the statement that the **annihilator** of the module $V_T$ is the principal ideal $(m_T)$ — the universal property of the annihilator.
+- **The Annihilator Ideal in Module Theory** — the abstract framing. In the language of [[Def - The Module of a Linear Operator|F[x]-modules]], the minimal polynomial form is the statement that the **annihilator** of the module $V_T$ is the principal ideal $(m_T)$ — the universal property of the annihilator.
 
 ---
 
