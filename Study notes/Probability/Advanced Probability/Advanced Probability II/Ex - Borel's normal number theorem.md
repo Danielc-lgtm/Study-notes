@@ -55,7 +55,7 @@ Call $x\in[0,1]$ **normal in base $2$** if the digit $1$ has asymptotic frequenc
 **Step 1 — (a).** Take the probability space $([0,1],\mathcal{B}([0,1]),\lambda)$ — total mass $1$, so genuinely a [[Def - Probability Space|probability space]]. For $x\in[0,1]$ let $d_k(x)\in\{0,1\}$ be the $k$-th binary digit, $x=\sum_k d_k(x)2^{-k}$.
 
 > [!note]- Derivation
-> $\{d_k=1\}=\{x:\text{$k$-th digit is }1\}$ is a union of $2^{k-1}$ dyadic intervals each of length $2^{-k}$, total length $\tfrac12$ — so $\mathbb{P}(d_k=1)=\lambda(\{d_k=1\})=\tfrac12$, i.e. $d_k$ is a fair bit. Moreover the digits are *independent*: $\mathbb{P}(d_1=\varepsilon_1,\dots,d_n=\varepsilon_n)$ is the length of a single dyadic interval, $2^{-n}=\prod_k\mathbb{P}(d_k=\varepsilon_k)$. So $(d_k)_{k\ge1}$ is an i.i.d. sequence of fair bits — the digits of a uniform real are independent fair coin tosses.
+> $\{d_k=1\}=\{x:k\text{-th digit is }1\}$ is a union of $2^{k-1}$ dyadic intervals each of length $2^{-k}$, total length $\tfrac12$ — so $\mathbb{P}(d_k=1)=\lambda(\{d_k=1\})=\tfrac12$, i.e. $d_k$ is a fair bit. Moreover the digits are *independent*: $\mathbb{P}(d_1=\varepsilon_1,\dots,d_n=\varepsilon_n)$ is the length of a single dyadic interval, $2^{-n}=\prod_k\mathbb{P}(d_k=\varepsilon_k)$. So $(d_k)_{k\ge1}$ is an i.i.d. sequence of fair bits — the digits of a uniform real are independent fair coin tosses.
 
 **Step 2 — (b).** Each $d_k$ has $\mathbb{E}[d_k]=\tfrac12$. By the [[Thm - Strong Law of Large Numbers|strong law of large numbers]] for the i.i.d. sequence $(d_k)$,
 $$\frac1n\sum_{k=1}^n d_k(x)\ \xrightarrow{\text{a.s.}}\ \mathbb{E}[d_1]=\tfrac12.$$

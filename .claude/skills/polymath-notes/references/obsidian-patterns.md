@@ -58,6 +58,13 @@ The skill ships two scripts to enforce this:
 - `.claude/skills/polymath-notes/scripts/find-wikilink-bugs.py` — scans the vault and reports every offending wikilink (bold/italic/code/LaTeX/HTML in display, nested wikilinks).
 - `.claude/skills/polymath-notes/scripts/fix-wikilink-bugs.py` — applies the mechanical fix for formatting inside display (moves the markers outside). For nested wikilinks, see `fix-nested-wikilinks.py` which walks the file with a depth-aware parser.
 
+**Re-entering math from `\text{...}` (rule).** Inside a `$...$` math region, the command `\text{...}` switches to text mode. You may re-enter math mode with `$X$` *inside* the `\text` braces — KaTeX supports this — **but only if the inner `$...$` is separated from the surrounding text by whitespace**. The bad pattern is `\text{ is a$\sigma$-algebra}` (no space before `$\sigma$`): KaTeX's math/text toggle gets confused and renders incorrectly. Two safe fixes:
+
+- **Spaced re-entry**: `\text{ is a $\sigma$-algebra }` — surround the inner `$...$` with spaces.
+- **Split-text idiom (preferred for crisp typesetting)**: `\text{ is a } \sigma \text{-algebra}` — break the text around the math command. Each `\text{...}` contains only text; math commands stand outside. This is the David-Tong / typesetting style and avoids every spacing pitfall.
+
+**Display-math pairing (rule).** Every `$$` must be paired. An odd count of `$$` tokens in a file means a stray delimiter — KaTeX will render display math up to a stray single `$` somewhere and the rest of the file as math. Run the detector to catch this.
+
 **Whitespace rule for inline math (mandatory).** KaTeX/Pandoc require that the character immediately AFTER an opening `$` is NOT whitespace, and the character immediately BEFORE a closing `$` is NOT whitespace. Violating either rule makes Obsidian fail to close the math region, silently swallowing following prose into one runaway math block. The classic offender is writing `$X = $ (some prose)` — the closing `$` is preceded by a space, so KaTeX does not treat it as a close; the math region extends through the prose until the next `$`, which then captures the prose as math (rendering it without spaces). Fix patterns:
 
 - **Trailing operator inside math.** Never end math with `= ` (or `+ `, `- `, `\mapsto `, etc.) right before the closing `$`. Either remove the trailing whitespace (`$X =$` is valid and renders fine, with the dangling `=` shown — this is the mechanical fix), or move the operator into prose: `$X$ = (some prose)`. The mechanical fix is what the auto-fixer applies.
