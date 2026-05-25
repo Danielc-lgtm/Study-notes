@@ -19,7 +19,7 @@ Let $(X, d)$ be a metric space. Prove the implication (3) ⇒ (1) of the [[Thm -
 
 **Recall:**
 
-A metric space $(X, d)$ is [[Def - Cauchy Sequence and Complete Metric Space|**complete**]] if every Cauchy sequence in $X$ converges in $X$. It is [[Def - Totally Bounded Metric Space|**totally bounded**]] if for every $\varepsilon > 0$ there exists a finite cover by $\varepsilon$-balls — i.e. finitely many points $x_1, \dots, x_N \in X$ with $X = \bigcup_{i=1}^N B_\varepsilon(x_i)$. It is **sequentially compact** if every sequence $\{x_n\}$ has a subsequence converging in $X$.
+A metric space $(X, d)$ is **[[Def - Cauchy Sequence and Complete Metric Space|complete]]** if every Cauchy sequence in $X$ converges in $X$. It is **[[Def - Totally Bounded Metric Space|totally bounded]]** if for every $\varepsilon > 0$ there exists a finite cover by $\varepsilon$-balls — i.e. finitely many points $x_1, \dots, x_N \in X$ with $X = \bigcup_{i=1}^N B_\varepsilon(x_i)$. It is **sequentially compact** if every sequence $\{x_n\}$ has a subsequence converging in $X$.
 
 ![[Def - Cauchy Sequence and Complete Metric Space#The Definition]]
 

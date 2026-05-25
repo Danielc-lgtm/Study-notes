@@ -24,13 +24,13 @@ Let $M$ be a smooth manifold — Hausdorff, second countable, locally diffeomorp
 
 **Recall:**
 
-A [[Def - Partition of Unity|**partition of unity**]] subordinate to an open cover $\{U_\alpha\}$ of $X$ is a family of continuous (or smooth) functions $\{\rho_\alpha : X \to [0, 1]\}$ with $\operatorname{supp}(\rho_\alpha) \subseteq U_\alpha$, locally finite supports, and $\sum_\alpha \rho_\alpha \equiv 1$.
+A **[[Def - Partition of Unity|partition of unity]]** subordinate to an open cover $\{U_\alpha\}$ of $X$ is a family of continuous (or smooth) functions $\{\rho_\alpha : X \to [0, 1]\}$ with $\operatorname{supp}(\rho_\alpha) \subseteq U_\alpha$, locally finite supports, and $\sum_\alpha \rho_\alpha \equiv 1$.
 
 [[Thm - Locally Compact σ-Compact Hausdorff is Paracompact|LC + σ-compact + Hausdorff ⇒ paracompact]]. The standard manifold definition makes $M$ Hausdorff, locally compact (since $\mathbb{R}^n$ is locally compact and charts are diffeomorphisms onto open subsets), and second countable, hence $\sigma$-compact.
 
 ![[Thm - Locally Compact σ-Compact Hausdorff is Paracompact#Statement]]
 
-[[Thm - Paracompact Has Partitions of Unity|**Paracompact Hausdorff ⇒ has partitions of unity**]] subordinate to any open cover.
+**[[Thm - Paracompact Has Partitions of Unity|Paracompact Hausdorff ⇒ has partitions of unity]]** subordinate to any open cover.
 
 ---
 

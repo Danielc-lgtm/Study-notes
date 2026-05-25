@@ -48,6 +48,16 @@ Obsidian uses `[[...]]` wikilinks for internal cross-references. These are the p
 
 Common substitutions for display text: `\sigma`→σ, `\pi`→π, `\lambda`→λ, `\mu`→μ, `\nu`→ν, `\varphi`→φ, `\mathbb{P}`→ℙ, `\mathbb{R}`→ℝ, `\mathbb{N}`→ℕ, `\mathbb{Q}`→ℚ, `\mathcal{F}`→ℱ; superscripts `^1 ^2 ^p ^k ^n`→¹ ² ᵖ ᵏ ⁿ; subscripts `_n _k`→ₙ ₖ; `\le`→≤, `\ge`→≥, `\to`→→, `\infty`→∞, `\leftrightarrow`→↔. Filenames likewise use the Unicode character (e.g. `Def - σ-Finite Measure.md`), so the link target is a plain Unicode string too. LaTeX `$...$` is *only* for ordinary prose, formal statements, and callout bodies — never within `[[ ]]`.
 
+**Wikilink content rule (mandatory).** Wikilink display text — the part after the `|` in `[[Target|Display]]` — is rendered as **plain text** by Obsidian. Markdown formatting (bold `**X**`, italic `*X*`, underscore-bold `__X__`, strikethrough `~~X~~`, inline code `` `X` ``), HTML tags (`<i>X</i>`), and LaTeX (`$X$`) inside the display text render literally as the characters you typed: e.g., `[[Def - X|**primitive**]]` displays as the literal `**primitive**`, not bold "primitive". Three rules:
+
+- **Move formatting outside the wikilink, not inside.** Write `**[[Def - X|primitive]]**`, not `[[Def - X|**primitive**]]`. Same for italic, underscore-bold, strikethrough, and inline code.
+- **No nested wikilinks.** `[[Thm - [[Thm - X|Y]]|Z]]` is malformed — Obsidian parses the inner `[[Thm - X|Y]]` first and the outer pair has a broken target. Use the inner target with the outer display directly: `[[Thm - X|Z]]`.
+- **No LaTeX in display text.** Same rule as for wikilink targets: use Unicode (ℝ, σ, φ, →, ⊗) in display text, never `$...$`. The renderer doesn't process math inside `[[ | ]]`.
+
+The skill ships two scripts to enforce this:
+- `.claude/skills/polymath-notes/scripts/find-wikilink-bugs.py` — scans the vault and reports every offending wikilink (bold/italic/code/LaTeX/HTML in display, nested wikilinks).
+- `.claude/skills/polymath-notes/scripts/fix-wikilink-bugs.py` — applies the mechanical fix for formatting inside display (moves the markers outside). For nested wikilinks, see `fix-nested-wikilinks.py` which walks the file with a depth-aware parser.
+
 **Whitespace rule for inline math (mandatory).** KaTeX/Pandoc require that the character immediately AFTER an opening `$` is NOT whitespace, and the character immediately BEFORE a closing `$` is NOT whitespace. Violating either rule makes Obsidian fail to close the math region, silently swallowing following prose into one runaway math block. The classic offender is writing `$X = $ (some prose)` — the closing `$` is preceded by a space, so KaTeX does not treat it as a close; the math region extends through the prose until the next `$`, which then captures the prose as math (rendering it without spaces). Fix patterns:
 
 - **Trailing operator inside math.** Never end math with `= ` (or `+ `, `- `, `\mapsto `, etc.) right before the closing `$`. Either remove the trailing whitespace (`$X =$` is valid and renders fine, with the dangling `=` shown — this is the mechanical fix), or move the operator into prose: `$X$ = (some prose)`. The mechanical fix is what the auto-fixer applies.

@@ -24,11 +24,11 @@ where $B(k, 2)$ is the open ball of radius $2$ centered at the integer point $k 
 
 **Recall:**
 
-A [[Def - Partition of Unity|**partition of unity**]] subordinate to an open cover $\{U_\alpha\}$ of $X$ is a family of continuous (here: smooth) functions $\{\rho_\alpha : X \to [0, 1]\}$ with $\operatorname{supp}(\rho_\alpha) \subseteq U_\alpha$, supports forming a [[Def - Locally Finite Family and Refinement|locally finite]] cover of $X$, and $\sum_\alpha \rho_\alpha(x) = 1$ for every $x$.
+A **[[Def - Partition of Unity|partition of unity]]** subordinate to an open cover $\{U_\alpha\}$ of $X$ is a family of continuous (here: smooth) functions $\{\rho_\alpha : X \to [0, 1]\}$ with $\operatorname{supp}(\rho_\alpha) \subseteq U_\alpha$, supports forming a [[Def - Locally Finite Family and Refinement|locally finite]] cover of $X$, and $\sum_\alpha \rho_\alpha(x) = 1$ for every $x$.
 
 ![[Def - Partition of Unity#The Definition]]
 
-A family $\{A_\alpha\}$ in $X$ is [[Def - Locally Finite Family and Refinement|**locally finite**]] if every $x \in X$ has a neighborhood meeting only finitely many $A_\alpha$. The support of a function $f : X \to \mathbb{R}$ is $\operatorname{supp}(f) = \overline{\{x : f(x) \neq 0\}}$.
+A family $\{A_\alpha\}$ in $X$ is **[[Def - Locally Finite Family and Refinement|locally finite]]** if every $x \in X$ has a neighborhood meeting only finitely many $A_\alpha$. The support of a function $f : X \to \mathbb{R}$ is $\operatorname{supp}(f) = \overline{\{x : f(x) \neq 0\}}$.
 
 ---
 

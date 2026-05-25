@@ -27,9 +27,9 @@ Establish the following facts about $\beta\mathbb{N}$:
 
 **Recall:**
 
-A space is [[Def - Completely Regular Space|**completely regular**]] (or $T_{3.5}$, Tychonoff) if for every point $x$ and closed set $C$ not containing $x$ there is a continuous $f : X \to [0, 1]$ with $f(x) = 0$ and $f|_C \equiv 1$. Discrete spaces are completely regular trivially.
+A space is **[[Def - Completely Regular Space|completely regular]]** (or $T_{3.5}$, Tychonoff) if for every point $x$ and closed set $C$ not containing $x$ there is a continuous $f : X \to [0, 1]$ with $f(x) = 0$ and $f|_C \equiv 1$. Discrete spaces are completely regular trivially.
 
-A [[Thm - Stone–Čech Compactification|**Stone–Čech compactification**]] of $X$ (completely regular) is a compact Hausdorff $\beta X$ with $X \hookrightarrow \beta X$ dense such that every continuous $X \to K$ with $K$ compact Hausdorff factors through $\beta X$. Existence: embed $X$ in $[0, 1]^{C_b(X, [0,1])}$ via $x \mapsto (f(x))_f$, take the closure.
+A **[[Thm - Stone–Čech Compactification|Stone–Čech compactification]]** of $X$ (completely regular) is a compact Hausdorff $\beta X$ with $X \hookrightarrow \beta X$ dense such that every continuous $X \to K$ with $K$ compact Hausdorff factors through $\beta X$. Existence: embed $X$ in $[0, 1]^{C_b(X, [0,1])}$ via $x \mapsto (f(x))_f$, take the closure.
 
 An **ultrafilter** $\mathcal{U}$ on $\mathbb{N}$ is a maximal filter: $\mathcal{U}$ is a nonempty family of subsets of $\mathbb{N}$ closed under intersection, closed under supersets, not containing $\emptyset$, and *maximal* — for every $A \subseteq \mathbb{N}$, either $A \in \mathcal{U}$ or $\mathbb{N} \setminus A \in \mathcal{U}$.
 

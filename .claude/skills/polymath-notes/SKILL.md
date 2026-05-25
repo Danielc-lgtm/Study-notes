@@ -272,6 +272,8 @@ Then run a mechanical link audit over the whole vault. After stripping `$...$` /
 
 **Math-region audit.** Also run `python3 .claude/skills/polymath-notes/scripts/find-math-bugs.py` to detect inline math regions with whitespace immediately after the opening `$` or before the closing `$` — both patterns cause KaTeX/Obsidian to fail to close the math, silently swallowing following prose. See `references/obsidian-patterns.md` for the rule. Apply `fix-math-bugs.py --apply` to repair them mechanically (strips internal whitespace at both math boundaries), and re-run the detector until clean.
 
+**Wikilink content audit.** Run `python3 .claude/skills/polymath-notes/scripts/find-wikilink-bugs.py` to detect malformed wikilinks: markdown formatting inside display text (`[[X|**Y**]]` renders as literal `**Y**`), nested wikilinks (`[[X - [[Y|Z]]|W]]`), LaTeX inside display (`[[X|$Y$]]`), and HTML inside display. Apply `fix-wikilink-bugs.py --apply` for the formatting cases (moves the markers outside the wikilink) and `fix-nested-wikilinks.py --apply` for nested wikilinks (collapses to the inner target with the outer display). See `references/obsidian-patterns.md` for the rule.
+
 ### Step 7: Commit to repository
 
 After all pages are written and cross-linked, stage and commit the new files to the git repository with a descriptive commit message (e.g., "Add Group Theory I — §1.1–1.2 notes with 12 definitions, 5 theorems, 8 exercises"). Push if the user has requested it. This ensures all work is preserved even if the session ends.

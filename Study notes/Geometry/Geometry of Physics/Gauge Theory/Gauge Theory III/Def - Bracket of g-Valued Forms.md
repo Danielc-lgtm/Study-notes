@@ -38,29 +38,7 @@ This is what allows the Bianchi identity to be derived from a one-line computati
 $$
 d\Omega = d^2\omega + \tfrac{1}{2}d[\omega, \omega] = 0 + \tfrac{1}{2}\big([d\omega, \omega] - [\omega, d\omega]\big) = [d\omega, \omega] = [\Omega - \tfrac{1}{2}[\omega, \omega], \omega] = [\Omega, \omega],
 $$
-where the last step uses $[[\omega, \omega], \omega] = 0$ (graded Jacobi). So $d\Omega + [\omega, \Omega] = 0$ — the [[Thm - Bianchi Identity for Principal Connections|Bianchi identity]].
-
----
-
-# The Definition
-
-For $\alpha \in \Omega^p(M)$, $\beta \in \Omega^q(M)$, $\xi, \eta \in \mathfrak{g}$, define the **bracket of $\mathfrak{g}$-valued forms** on simple tensors by
-$$
-[\alpha \otimes \xi, \beta \otimes \eta] := (\alpha \wedge \beta) \otimes [\xi, \eta]_\mathfrak{g} \in \Omega^{p+q}(M; \mathfrak{g}),
-$$
-and extend bilinearly to all of $\Omega^p(M; \mathfrak{g}) \times \Omega^q(M; \mathfrak{g})$.
-
-In a basis $\{E_R\}$ of $\mathfrak{g}$, if $\alpha = E_R \otimes \alpha^R$ and $\beta = E_S \otimes \beta^S$, then
-$$
-[\alpha, \beta] = [E_R, E_S] \otimes \alpha^R \wedge \beta^S = C^T_{RS}\,E_T \otimes \alpha^R \wedge \beta^S,
-$$
-where $C^T_{RS}$ are the structure constants of $\mathfrak{g}$.
-
-**Properties** (verified from the definition):
-
-1. **Graded symmetry:** $[\beta, \alpha] = (-1)^{pq+1}[\alpha, \beta]$ for $\alpha$ of degree $p$, $\beta$ of degree $q$.
-2. **Graded Leibniz with $d$:** $d[\alpha, \beta] = [d\alpha, \beta] + (-1)^p [\alpha, d\beta]$.
-3. **Graded Jacobi:** $(-1)^{pr}[\alpha, [\beta, \gamma]] + (-1)^{qp}[\beta, [\gamma, \alpha]] + (-1)^{rq}[\gamma, [\alpha, \beta]] = 0$ for $\alpha, \beta, \gamma$ of degrees $p, q, r$.
+where the last step uses $[[Thm - Bianchi Identity for Principal Connections|Thm - Bianchi Identity for Principal Connections]] + (-1)^{qp}[\beta, [\gamma, \alpha]] + (-1)^{rq}[\gamma, [\alpha, \beta]] = 0$ for $\alpha, \beta, \gamma$ of degrees $p, q, r$.
 4. **Matrix-group case:** if $\mathfrak{g}$ is a matrix Lie algebra and we identify $\mathfrak{g}$-valued forms with matrices of forms, then
 $$
 [\alpha, \beta] = \alpha \wedge \beta - (-1)^{pq}\beta \wedge \alpha,

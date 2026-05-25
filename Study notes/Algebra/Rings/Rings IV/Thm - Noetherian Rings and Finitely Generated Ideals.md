@@ -10,7 +10,7 @@ tags: [algebra, ring-theory]
 
 # Notation
 
-Throughout, $R$ is a [[Def - Ring|ring]] — commutative with $1$, by the standing convention. We write $I \trianglelefteq R$ for "$I$ is an [[Def - Ideal|ideal]] of $R$". An ideal $I$ is **finitely generated** if $I = (r_1, \dots, r_n)$ for finitely many $r_1, \dots, r_n \in R$, where $(r_1, \dots, r_n) = \{r_1 s_1 + \cdots + r_n s_n : s_i \in R\}$ is the set of $R$-linear combinations of the generators. A ring $R$ is [[Def - Noetherian Ring|**Noetherian**]] if it satisfies the **ascending chain condition (ACC)**: every chain of ideals $I_1 \subseteq I_2 \subseteq I_3 \subseteq \cdots$ stabilises, meaning $I_N = I_{N+1} = I_{N+2} = \cdots$ for some index $N$. The symbol $\subseteq$ allows equality; $\subsetneq$ denotes strict containment. The full symbol registry is on the parent page [[Rings IV — §2.7–2.8]].
+Throughout, $R$ is a [[Def - Ring|ring]] — commutative with $1$, by the standing convention. We write $I \trianglelefteq R$ for "$I$ is an [[Def - Ideal|ideal]] of $R$". An ideal $I$ is **finitely generated** if $I = (r_1, \dots, r_n)$ for finitely many $r_1, \dots, r_n \in R$, where $(r_1, \dots, r_n) = \{r_1 s_1 + \cdots + r_n s_n : s_i \in R\}$ is the set of $R$-linear combinations of the generators. A ring $R$ is **[[Def - Noetherian Ring|Noetherian]]** if it satisfies the **ascending chain condition (ACC)**: every chain of ideals $I_1 \subseteq I_2 \subseteq I_3 \subseteq \cdots$ stabilises, meaning $I_N = I_{N+1} = I_{N+2} = \cdots$ for some index $N$. The symbol $\subseteq$ allows equality; $\subsetneq$ denotes strict containment. The full symbol registry is on the parent page [[Rings IV — §2.7–2.8]].
 
 ---
 

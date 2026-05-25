@@ -25,7 +25,7 @@ Thus the **Heine–Borel theorem** ("closed + bounded ⇒ compact") *fails* in i
 
 **Recall:**
 
-A space $X$ is [[Def - Locally Compact Space|**locally compact**]] if every point has a compact neighborhood. Equivalently in Hausdorff: every point has a neighborhood basis of compact neighborhoods.
+A space $X$ is **[[Def - Locally Compact Space|locally compact]]** if every point has a compact neighborhood. Equivalently in Hausdorff: every point has a neighborhood basis of compact neighborhoods.
 
 ![[Def - Locally Compact Space#The Definition]]
 

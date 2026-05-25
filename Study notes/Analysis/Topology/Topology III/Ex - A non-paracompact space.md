@@ -22,7 +22,7 @@ In particular, $L$ is a Hausdorff topological manifold (locally Euclidean second
 
 **Recall:**
 
-A Hausdorff space is [[Def - Paracompact Space|**paracompact**]] if every open cover has a [[Def - Locally Finite Family and Refinement|**locally finite**]] open refinement. *Locally finite:* every point has a neighborhood meeting only finitely many members of the family. *Refinement:* every member of the refinement is contained in some member of the original cover.
+A Hausdorff space is **[[Def - Paracompact Space|paracompact]]** if every open cover has a **[[Def - Locally Finite Family and Refinement|locally finite]]** open refinement. *Locally finite:* every point has a neighborhood meeting only finitely many members of the family. *Refinement:* every member of the refinement is contained in some member of the original cover.
 
 ![[Def - Paracompact Space#The Definition]]
 
