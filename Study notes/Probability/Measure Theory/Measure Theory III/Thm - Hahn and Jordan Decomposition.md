@@ -21,9 +21,25 @@ A [[Def - Signed Measure|signed measure]] mixes positive and negative "charge." 
 
 # Sources and Targets
 
-**Sources.** Hypothesis: $\alpha$ a signed measure (taking at most one infinite value). The prototype to keep in mind: $\alpha(A)=\int_A f\,d\mu$, where the positive set is $\{f\ge0\}$.
+**Sources (Input Broadening)**
 
-**Targets.** The decomposition yields: the **total variation measure** $|\alpha|=\alpha^++\alpha^-$ and the total-variation *norm* $\|\alpha\|=|\alpha|(X)$, making signed measures a Banach space; the reduction of any signed-measure question to two positive-measure questions; and the structural input to [[Thm - Radon-Nikodym Theorem|Lebesgue decomposition]] (which is proved for signed $\nu$ by Jordan-decomposing first).
+The literal hypothesis is "$\alpha$ a signed measure on $(X,\mathcal{A})$." But in practice one almost never encounters an object already labelled as a signed measure — one encounters arithmetic combinations and integrals of mixed-sign integrands, and the recognition that these *are* signed measures is the source skill.
+
+The first source is **any difference $\mu-\nu$ of two finite positive measures on the same space**. By construction this is a signed measure, but it is *not* already written in mutually singular form: the parts $\mu$ and $\nu$ can overlap, share mass, agree on chunks of $X$. The bridge is that Jordan re-expresses the same object as a *canonical* difference $\alpha^+-\alpha^-$ with the two parts forced apart onto disjoint sets. A concrete problem: in statistical hypothesis testing, the difference $\mathbb{P}-\mathbb{Q}$ of two competing distributions is a signed measure, and the [[Thm - Neyman-Pearson Lemma|Neyman-Pearson test region]] is precisely the Hahn-positive set of $\mathbb{P}-\mathbb{Q}$ — the set on which the likelihood ratio favours $\mathbb{P}$.
+
+The second source is **any "charge" $\alpha(A)=\int_A f\,d\mu$ where $f$ takes both signs and lies in $L^1(\mu)$**. This is the prototype: $\alpha$ is signed because $f$ is, and Hahn-Jordan applied to $\alpha$ reproduces the splitting $f=f^+-f^-$ at the level of measures, with positive set $\{f\ge0\}$ and $\alpha^\pm(A)=\int_A f^\pm\,d\mu$. The example: in spectral theory one studies projection-valued measures, and for a self-adjoint operator $T=\int\lambda\,dE_\lambda$, the operator $T$ itself decomposes via the Hahn decomposition of $\lambda\mapsto\lambda$ into positive and negative parts $T^+,T^-$ — the functional calculus reads off from Jordan.
+
+The third source is **a finite-energy or signed-mass difference in physics or economics**. Consider two charge distributions $\rho_+(x),\rho_-(x)$ on $\mathbb{R}^3$ representing positive and negative ions; the net charge density $\rho=\rho_+-\rho_-$ is a signed measure, and Hahn-Jordan identifies the spatial regions of net positive and net negative charge. The same structure appears in economics as net flow: cash inflows minus outflows define a signed measure on time intervals, and the Hahn decomposition isolates the surplus and deficit periods. Recognising "I have two positive flows competing" as a signed measure unlocks the decomposition.
+
+**Targets (Output Amplification)**
+
+The conclusion is "$\alpha=\alpha^+-\alpha^-$ with $\alpha^+\perp\alpha^-$, unique." This minimal statement combines with three other tools to produce structures that the bare decomposition does not hint at.
+
+The first combination is **Jordan together with [[Thm - Radon-Nikodym Theorem|Radon-Nikodym]]**. Each part $\alpha^\pm$ is a positive measure, and if $\alpha\ll\mu$ for some reference $\mu$, then $\alpha^\pm\ll\mu$ as well, so each has a density $f^\pm=d\alpha^\pm/d\mu\ge0$. The amplified result: $\alpha$ itself has a *signed* density $f=f^+-f^-\in L^1(\mu)$, and $\alpha(A)=\int_A f\,d\mu$. The combination is non-obvious because Radon-Nikodym is usually stated for positive measures only; Jordan is precisely the bridge that extends it to the signed case, and without Jordan there is no notion of "density of a signed measure."
+
+The second combination is **Jordan together with the total variation norm**. Define $\|\alpha\|_{TV}=|\alpha|(X)=\alpha^+(X)+\alpha^-(X)$. The amplified result: the space $\mathcal{M}(X)$ of finite signed measures, equipped with $\|\cdot\|_{TV}$, is a **Banach space**. This is non-obvious because the construction of the norm itself depends on the Jordan decomposition — one cannot define $|\alpha|$ without first splitting $\alpha$ into mutually singular pieces. Completeness then makes $\mathcal{M}(X)$ a venue for functional-analytic methods on measures: weak convergence, compactness via [[Thm - Prokhorov's Theorem|Prokhorov]], and operator theory on measure spaces all live downstream of this Banach structure.
+
+The third combination is **Hahn together with the [[Thm - Riesz Representation Theorem|Riesz representation theorem]]**. For compact Hausdorff $K$, Riesz identifies $C(K)^*$ with $\mathcal{M}(K)$ — every continuous linear functional on $C(K)$ is integration against a signed Radon measure. The amplified result: the *positive* and *negative* parts of a functional $\Lambda\in C(K)^*$ are exactly the integrals against $\alpha^\pm$, and the Hahn decomposition geometrically separates the support of "where $\Lambda$ acts positively" from "where $\Lambda$ acts negatively." This is the duality between $C(K)$ and signed measures, and it gives the structural picture of $C(K)^*$ as a Banach lattice — a non-obvious consequence of pairing an analytic theorem (Riesz) with a measure-theoretic one (Hahn).
 
 ---
 

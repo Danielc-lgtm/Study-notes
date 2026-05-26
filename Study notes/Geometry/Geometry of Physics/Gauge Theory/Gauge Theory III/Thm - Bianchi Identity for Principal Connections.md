@@ -167,7 +167,7 @@ The conceptual difficulty is internalising that the Bianchi identity is a *geome
 > > Substituting: d[\omega, \omega] = [d\omega, \omega] - (-[d\omega, \omega]) = 2[d\omega, \omega].
 
 > [!note]- Lemma 2: Jacobi triple-bracket [\omega, [\omega, \omega]] = 0 for \omega of degree 1
-> **Statement:** For a $\mathfrak{g}$-valued 1-form $\omega$,
+> **Statement:** For a \mathfrak{g}-valued 1-form ω,
 > $$
 > [\omega, [\omega, \omega]] = 0, \quad \text{equivalently} \quad [[\omega, \omega], \omega] = 0.
 > $$
