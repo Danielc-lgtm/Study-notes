@@ -52,7 +52,12 @@ Combine with **bootstrapping to closed curves.** Property $D$: an arbitrary clos
 
 # Why Is It True
 
-Bisect $T$ into four sub-triangles by joining the midpoints of the sides. The integrals along the *interior* edges cancel (each edge is traversed twice, in opposite directions), so the integral around $\partial T$ equals the sum of integrals around the four sub-boundaries:
+Let $T = T_0$ have vertices $A, B, C \in \mathbb{C}$ in counterclockwise order, and define the three midpoints
+$$M_{AB} = \tfrac{A+B}{2}, \qquad M_{BC} = \tfrac{B+C}{2}, \qquad M_{CA} = \tfrac{C+A}{2}.$$
+The medial subdivision splits $T$ into four congruent sub-triangles (each with sides half as long):
+$$T^{(1)} = \mathrm{conv}\{A,\, M_{AB},\, M_{CA}\}, \quad T^{(2)} = \mathrm{conv}\{M_{AB},\, B,\, M_{BC}\},$$
+$$T^{(3)} = \mathrm{conv}\{M_{CA},\, M_{BC},\, C\}, \quad T^{(4)} = \mathrm{conv}\{M_{AB},\, M_{BC},\, M_{CA}\}\text{ (central, reversed orientation).}$$
+With each $\partial T^{(i)}$ traversed counterclockwise, every edge of $T^{(4)}$ — namely $\overline{M_{AB} M_{BC}}$, $\overline{M_{BC} M_{CA}}$, $\overline{M_{CA} M_{AB}}$ — also appears as an edge of exactly one of $T^{(1)}, T^{(2)}, T^{(3)}$, but parametrised in the *opposite* direction. The three outer edges of $\partial T$ are split by the midpoints into the six edges $\overline{A\,M_{AB}}, \overline{M_{AB}\,B}, \overline{B\,M_{BC}}, \overline{M_{BC}\,C}, \overline{C\,M_{CA}}, \overline{M_{CA}\,A}$, each appearing once. Summing the four sub-boundary integrals, interior edges cancel pairwise by the orientation reversal $\int_{\overline{pq}} f \,dz = -\int_{\overline{qp}} f\,dz$, leaving only the original outer edges:
 $$\int_{\partial T} f\,dz = \sum_{i=1}^4 \int_{\partial T^{(i)}} f\,dz.$$
 By the triangle inequality, *some* sub-triangle has $|\int_{\partial T^{(i)}} f\,dz| \geq |I|/4$ where $I = \int_{\partial T} f\,dz$. Pick that one, call it $T_1$; iterate to get $T_2$ (a sub-sub-triangle with $|\int_{\partial T_2}| \geq |I|/16$); and so on.
 
@@ -98,12 +103,18 @@ Bisect, pick the sub-triangle with $\geq 1/4$ the integral, iterate. The nested 
 # Lemma Decomposition
 
 > [!note]- Lemma 1: Bisection identity
-> **Statement:** Subdividing $T$ into four sub-triangles via the midpoints, $\int_{\partial T} f\,dz = \sum_{i=1}^4 \int_{\partial T^{(i)}} f\,dz$.
+> **Statement:** For $T = \mathrm{conv}\{A, B, C\}$ with midpoints $M_{AB}, M_{BC}, M_{CA}$ and the four sub-triangles $T^{(1)}, \ldots, T^{(4)}$ defined above, $\int_{\partial T} f\,dz = \sum_{i=1}^4 \int_{\partial T^{(i)}} f\,dz$.
 >
-> **Hint:** Interior edges are traversed twice, in opposite directions, and cancel.
+> **Hint:** Each interior edge appears in two sub-boundaries with opposite parametrisations and cancels.
 >
 > > [!note]- Full proof
-> > The four sub-triangles share three interior edges: the segments connecting the midpoints. Each interior edge is part of two sub-boundaries, traversed once each, in opposite directions (by the counterclockwise orientation of all four sub-triangles). So the line integrals of $f$ along the interior edges cancel pairwise in the sum, leaving only the integrals along the original outer boundary $\partial T$. $\blacksquare$
+> > Parametrise the segment $\overline{pq}$ by $\gamma_{pq}(t) = p + t(q-p)$, $t \in [0,1]$, so that $\int_{\overline{pq}} f\,dz = (q - p)\int_0^1 f(p + t(q-p))\,dt = -\int_{\overline{qp}} f\,dz$ (substitution $t \mapsto 1 - t$). Write each $\int_{\partial T^{(i)}} f\,dz$ as a sum of three segment integrals:
+> > $$\int_{\partial T^{(1)}} = \int_{\overline{A M_{AB}}} + \int_{\overline{M_{AB} M_{CA}}} + \int_{\overline{M_{CA} A}},$$
+> > $$\int_{\partial T^{(2)}} = \int_{\overline{M_{AB} B}} + \int_{\overline{B M_{BC}}} + \int_{\overline{M_{BC} M_{AB}}},$$
+> > $$\int_{\partial T^{(3)}} = \int_{\overline{M_{CA} M_{BC}}} + \int_{\overline{M_{BC} C}} + \int_{\overline{C M_{CA}}},$$
+> > $$\int_{\partial T^{(4)}} = \int_{\overline{M_{AB} M_{BC}}} + \int_{\overline{M_{BC} M_{CA}}} + \int_{\overline{M_{CA} M_{AB}}}.$$
+> > The three interior edges $\overline{M_{AB} M_{BC}}$, $\overline{M_{BC} M_{CA}}$, $\overline{M_{CA} M_{AB}}$ each appear once in this list with one orientation and once with the opposite, so cancel pairwise. The remaining six terms are the six halves of $\partial T$ in counterclockwise order:
+> > $$\int_{\overline{A M_{AB}}} + \int_{\overline{M_{AB} B}} + \int_{\overline{B M_{BC}}} + \int_{\overline{M_{BC} C}} + \int_{\overline{C M_{CA}}} + \int_{\overline{M_{CA} A}} = \int_{\partial T} f\,dz. \;\blacksquare$$
 
 > [!note]- Lemma 2: Holomorphic linearization
 > **Statement:** If $f$ is holomorphic at $w$, then for any $\varepsilon > 0$ there is $\delta > 0$ such that $|f(z) - f(w) - f'(w)(z - w)| \leq \varepsilon |z - w|$ for $|z - w| < \delta$.
@@ -134,6 +145,24 @@ Bisect, pick the sub-triangle with $\geq 1/4$ the integral, iterate. The nested 
 > **Conclude.** $|I|/4^n \leq |\int_{\partial T_n} f\,dz| \leq \varepsilon L^2/4^n$, so $|I| \leq \varepsilon L^2$. Since $\varepsilon$ was arbitrary, $|I| = 0$. $\blacksquare$
 >
 > **Extension to continuous on $U$, holomorphic on $U \setminus S$ for finite $S$.** If $T$ contains a single bad point $a$, subdivide $T$ so $a$ is in a tiny sub-triangle $T'$ with arbitrarily small perimeter; on $T \setminus T'$, $f$ is holomorphic and Goursat gives $0$; on $T'$, ML gives $|f| \cdot L(\partial T') \leq M \cdot \text{tiny}$, which goes to zero. Multiple bad points by repeated subdivision.
+
+---
+
+> [!note]- Axis-aligned rectangle variant (coordinate-explicit alternative)
+> The same nesting-and-quadratic-estimate proof works for an axis-aligned rectangle $R_0 = [a, b] \times [c, d] \subseteq U$ in place of a triangle, with strictly coordinate arithmetic and no medial geometry. State $\int_{\partial R_0} f\,dz = 0$ for any closed rectangle in $U$ — this version of Goursat suffices to upgrade to all later Cauchy theorems via primitive constructions on rectangle-decomposable domains.
+>
+> **Subdivision.** Set $m = (a+b)/2$, $n = (c+d)/2$, and define the four congruent closed sub-rectangles
+> $$R^{(1)} = [a, m] \times [c, n], \quad R^{(2)} = [m, b] \times [c, n], \quad R^{(3)} = [m, b] \times [n, d], \quad R^{(4)} = [a, m] \times [n, d].$$
+> Each $\partial R^{(i)}$ is traversed counterclockwise. The interior horizontal segment $[a, b] \times \{n\}$ decomposes as $[a, m] \times \{n\}$ (shared by $R^{(1)}$ top and $R^{(4)}$ bottom — opposite parametrisations) and $[m, b] \times \{n\}$ (shared by $R^{(2)}$ top and $R^{(3)}$ bottom). The interior vertical segment $\{m\} \times [c, d]$ similarly decomposes into two halves with opposite parametrisations. So all four interior segments cancel pairwise and
+> $$\int_{\partial R_0} f\,dz = \sum_{i=1}^4 \int_{\partial R^{(i)}} f\,dz.$$
+>
+> **Iteration.** Pick the sub-rectangle $R^{(i)}$ with $|\int_{\partial R^{(i)}} f\,dz| \geq |I|/4$ and call it $R_1$. Iterating, get nested $R_0 \supseteq R_1 \supseteq R_2 \supseteq \cdots$ with perimeters $L(\partial R_n) = L(\partial R_0)/2^n$ and $|\int_{\partial R_n} f\,dz| \geq |I|/4^n$.
+>
+> **Shrinking.** $\bigcap_n R_n$ is a single point $w$ by the nested-interval theorem applied separately to the $x$- and $y$-coordinates: the $x$-intervals $[a_n, b_n]$ shrink to a point because $b_n - a_n = (b-a)/2^n \to 0$, and likewise the $y$-intervals.
+>
+> **Linearisation.** Identical to the triangle case: $|f(z) - f(w) - f'(w)(z - w)| \leq \varepsilon|z - w|$ on $R_n$ for large $n$, and the linear part has a primitive so integrates to zero around the closed $\partial R_n$. ML gives $|\int_{\partial R_n} f\,dz| \leq \varepsilon \cdot L(\partial R_n) \cdot (\text{diam}\, R_n) \leq \varepsilon L(\partial R_0)^2 / 4^n$, hence $|I| \leq \varepsilon L(\partial R_0)^2$ for any $\varepsilon$, so $I = 0$.
+>
+> The rectangle version is strictly more convenient when $U$ is decomposed in coordinate language (intersections of half-planes, products of intervals); the triangle version is more convenient when the natural subdivision is barycentric. The two are equivalent statements about complex differentiability.
 
 ---
 
