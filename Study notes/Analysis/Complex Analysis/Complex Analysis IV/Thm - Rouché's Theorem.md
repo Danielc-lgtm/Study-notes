@@ -99,19 +99,18 @@ The homotopy $h(t, z) = (1 - t)f + tg$ stays nonzero on $\gamma$ (by hypothesis)
 > [!note]- Lemma 1: The homotopy stays nonzero on the boundary
 > **Statement:** If $|f(z) - g(z)| < |f(z)|$ on $\gamma$, then $h(t, z) := (1 - t)f(z) + tg(z) \neq 0$ for all $t \in [0, 1]$ and $z \in \gamma$.
 >
-> **Hint:** If $h(t, z) = 0$, rearrange to relate $|f|, |g|$, and use the hypothesis.
+> **Hint:** If $h(t, z) = 0$ for $t \in (0, 1]$, solve for $g(z)$ in terms of $f(z)$; substitute into $|f - g|$ and obtain $|f - g| \geq |f|$, contradicting strict $|f - g| < |f|$.
 >
 > > [!note]- Full proof
-> > Suppose $h(t, z) = (1 - t)f(z) + tg(z) = 0$ for some $z \in \gamma, t \in [0, 1]$.
-> > - $t = 0$: then $f(z) = 0$, contradicting $|f(z)| > |f(z) - g(z)| \geq 0$ on $\gamma$.
-> > - $t = 1$: then $g(z) = 0$, and $|f(z) - g(z)| = |f(z)|$, contradicting strict inequality.
-> > - $0 < t < 1$: $(1 - t) f(z) = -t g(z)$, so $|f(z)|/|g(z)| = t/(1 - t)$, i.e., $|f(z) - g(z)| = |f(z) + (g(z) - f(z))| \geq$ wait, more carefully: $|f - g| \geq |f| - |g| = |f| - (1-t)|f|/t = |f|(1 - (1-t)/t) = |f|(2t - 1)/t$, which for $t > 1/2$ is non-negative. The cleaner argument: at $h(t, z) = 0$, $|f(z)| = (t/(1-t))|g(z) - f(z)| \leq (t/(1-t)) \cdot$ something. Easier: at $h(t,z) = 0$ with $0 < t < 1$: $-tg = (1-t)f$, so $tg + (1-t)f = 0$, hence $g - f = (g \cdot t + g (1-t)) - f = g - f$, ugh. Let me redo: $h = 0 \Rightarrow (1-t)f = -tg \Rightarrow f - g = f + tg/(1-t) - g = ...$.
+> > Fix $z \in \gamma$. The hypothesis $|f(z) - g(z)| < |f(z)|$ already forces $|f(z)| > 0$.
 > >
-> > Cleaner: if $h(t, z) = 0$ for $0 < t < 1$, then $|(1-t)f(z)| = |tg(z)|$, so $(1-t)|f| = t|g|$. The triangle inequality gives $|g| \geq |f| - |f - g| > 0$ on $\gamma$, so $|g| > 0$. Now, $|f - g| < |f|$ becomes (using $|g| = (1-t)|f|/t$): $|f - g| < |f|$. But also $|f - g| \geq |f| - |g| = |f| - (1-t)|f|/t = |f|(2t - 1)/t$ for $t > 1/2$. Combined with $|g - f| < |f|$, ok this is getting messy. Let me give the standard one-line proof.
+> > **Case $t = 0$.** $h(0, z) = f(z) \neq 0$ since $|f(z)| > 0$.
 > >
-> > **Standard proof:** If $h(t, z) = 0$, then $|f(z)| = |(1 - t)f(z)| / (1 - t) = |tg(z)|/(1 - t) = t|g(z)|/(1 - t)$. Also $|g(z)| = |g(z) - f(z) + f(z)| \leq |f(z) - g(z)| + |f(z)| < |f(z)| + |f(z)| = 2|f(z)|$ (by hypothesis $|f - g| < |f|$). So $|f(z)| < 2t|f(z)|/(1 - t)$, giving $1 < 2t/(1-t)$, i.e., $t > 1/3$. Hmm, doesn't quite finish.
-> >
-> > **Cleanest proof:** Suppose $h(t, z) = 0$ for some $t \in [0, 1], z \in \gamma$. Then $|(1-t)f(z) + tg(z)| = 0$, so $(1-t)f(z) = -tg(z)$, i.e., $f(z)/g(z) = -t/(1-t) \leq 0$ (assuming $t < 1$). But then $f(z) = -(t/(1-t))g(z)$, so $|f - g| = |f + (-g)| =$... ah, the key insight: $f$ and $g$ are then antiparallel (in $\mathbb{C}$). So $|f - g| = |f| + |g|$ (triangle inequality, equality case). Now $|f - g| < |f|$ forces $|g| < 0$, impossible. So $h(t, z) = 0$ leads to contradiction for $t \in (0, 1)$. For $t = 0$: $f(z) = 0$ but $|f| > |f-g| \geq 0$, contradiction. For $t = 1$: $g(z) = 0$, but $|f - g| < |f|$ means $|f - 0| < |f|$, i.e., $|f| < |f|$, contradiction. $\blacksquare$
+> > **Case $t \in (0, 1]$.** Suppose for contradiction $h(t, z) = 0$, i.e. $(1-t)f(z) + tg(z) = 0$. Solving for $g(z)$:
+> > $$g(z) \;=\; -\frac{1-t}{t}\,f(z).$$
+> > Then
+> > $$f(z) - g(z) \;=\; f(z) + \frac{1-t}{t}\,f(z) \;=\; \frac{1}{t}\,f(z),$$
+> > so $|f(z) - g(z)| = (1/t)\,|f(z)| \geq |f(z)|$ because $1/t \geq 1$. This contradicts the strict hypothesis $|f(z) - g(z)| < |f(z)|$. So $h(t, z) \neq 0$ for any $t \in [0, 1]$. $\blacksquare$
 
 ---
 

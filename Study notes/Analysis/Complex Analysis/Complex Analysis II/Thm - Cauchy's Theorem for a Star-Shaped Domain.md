@@ -56,7 +56,7 @@ Construct a primitive by integrating along line segments from the star-point $a_
 $$F(w) := \int_{[a_0, w]} f\,dz$$
 where $[a_0, w]$ is the line segment from $a_0$ to $w$ (lies in $D$ by star-shapedness).
 
-We must check that $F$ is holomorphic with $F'(w) = f(w)$. For $w \in D$ and small $h$, both $w$ and $w + h$ are in $D$, and so is the triangle $T$ with vertices $a_0, w, w + h$ (by star-shapedness: each vertex lies in $D$ via a segment from $a_0$, and the triangle, being a 2D figure, is contained in $D$... actually this needs care — star-shapedness ensures the segments lie in $D$, but the interior of the triangle needs to be checked. The standard treatment is: $D$ star-shaped means each *segment* from $a_0$ is in $D$, so the triangle $[a_0, w, w + h]$ is in $D$ provided the segment from $a_0$ to $w + h$ is in $D$, which holds. The interior of the triangle is filled by segments from $a_0$ to points on $[w, w + h]$, all of which are in $D$.)
+We must check that $F$ is holomorphic with $F'(w) = f(w)$. For $w \in D$ and $h \in \mathbb{C}$ with $|h|$ small enough that $w + h \in D$ and the segment $[w, w+h] \subseteq D$ (possible because $D$ is open), the closed triangle $T = \mathrm{conv}\{a_0, w, w+h\}$ lies in $D$ by Lemma 1: every point of $T$ has the form $(1-t)a_0 + t\bigl((1-s)w + s(w+h)\bigr)$ for $t, s \in [0, 1]$, which is a point on the segment $\bigl[a_0,\, (1-s)w + s(w+h)\bigr] \subseteq D$ by star-shapedness applied to the endpoint $(1-s)w + s(w+h) \in [w, w+h] \subseteq D$.
 
 By [[Thm - Goursat's Theorem (Cauchy for a Triangle)|Goursat]] on this triangle: $\int_{\partial T} f\,dz = 0$. So
 $$\int_{[a_0, w + h]} f\,dz - \int_{[a_0, w]} f\,dz - \int_{[w, w + h]} f\,dz = 0,$$

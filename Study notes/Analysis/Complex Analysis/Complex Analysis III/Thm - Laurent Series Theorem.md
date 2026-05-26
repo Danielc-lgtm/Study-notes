@@ -109,12 +109,26 @@ For $w$ in the annulus, write $f(w)$ as a contour integral using Cauchy's formul
 # Lemma Decomposition
 
 > [!note]- Lemma 1: Cauchy's integral formula on the annulus
-> **Statement:** For $f$ holomorphic on $A(a; r_0, R_0)$ and $w$ in a sub-annulus $\{\rho_1 \leq |z - a| \leq \rho_2\}$, $f(w) = (2\pi i)^{-1}[\oint_{|z-a|=\rho_2} - \oint_{|z-a|=\rho_1}] f(z)/(z - w)\,dz$.
+> **Statement:** For $f$ holomorphic on $A(a; r_0, R_0)$ and $w$ in a sub-annulus $\{\rho_1 < |z - a| < \rho_2\}$, $f(w) = (2\pi i)^{-1}\left[\oint_{|z-a|=\rho_2} - \oint_{|z-a|=\rho_1}\right] f(z)/(z - w)\,dz$.
 >
-> **Hint:** The "cycle" $\gamma_2 - \gamma_1$ bounds the sub-annulus; apply CIF.
+> **Hint:** Cut the closed sub-annulus along the radial segment opposite to $w$ to produce a simply-connected region, apply Cauchy's integral formula there, and observe that the two opposite parametrisations of the cut cancel.
 >
 > > [!note]- Full proof
-> > Choose an enlargement of the sub-annulus to a simply connected region: cut the sub-annulus by a radial segment, giving a simply connected region whose boundary traverses $\gamma_2$, the segment outward, $\gamma_1$ reversed, and the segment inward. The contributions of the segment in the two directions cancel, leaving $\gamma_2 - \gamma_1$. By Cauchy's integral formula on the (now simply connected) cut region, $f(w) = (2\pi i)^{-1}\oint_{\gamma_2 - \gamma_1} f(z)/(z - w)\,dz$.
+> > Pick an angle $\theta_0$ such that the point $w$ does not lie on the radial ray $\{a + te^{i\theta_0} : t > 0\}$; explicitly, choose $\theta_0 = \arg(w - a) + \pi$ (the ray points away from $w$). Define the **cut sub-annulus**
+> > $$\Omega = \{a + re^{i\theta} : \rho_1 < r < \rho_2,\ \theta_0 < \theta < \theta_0 + 2\pi\},$$
+> > an open set in $\mathbb{C}$ that is *simply connected* (it is bijective with the open rectangle $(\rho_1, \rho_2) \times (\theta_0, \theta_0 + 2\pi)$ under $(r, \theta) \mapsto a + re^{i\theta}$). Its boundary $\partial\Omega$ is the concatenation of four parametrised pieces:
+> > - the outer arc $\gamma_2(\theta) = a + \rho_2 e^{i\theta}$ for $\theta \in [\theta_0, \theta_0 + 2\pi]$ (counterclockwise);
+> > - the radial segment $\sigma_-(t) = a + ((1-t)\rho_2 + t\rho_1) e^{i(\theta_0 + 2\pi)}$ for $t \in [0, 1]$ (inward, on the "upper" side of the cut $\theta = \theta_0 + 2\pi$);
+> > - the inner arc $\gamma_1^{-1}(\theta) = a + \rho_1 e^{i(\theta_0 + 2\pi - (\theta - \theta_0))} = a + \rho_1 e^{i(2\theta_0 + 2\pi - \theta)}$ for $\theta \in [\theta_0, \theta_0 + 2\pi]$ (clockwise — that is, the inner circle traversed *backwards*);
+> > - the radial segment $\sigma_+(t) = a + ((1-t)\rho_1 + t\rho_2) e^{i\theta_0}$ for $t \in [0, 1]$ (outward, on the "lower" side of the cut $\theta = \theta_0$).
+> >
+> > On $\overline\Omega$ the function $z \mapsto f(z)/(z - w)$ is holomorphic (since $w \in \Omega$ is the only candidate singularity, and we apply CIF to that interior point) so by [[Thm - Cauchy Integral Formula]] on the simply-connected $\Omega$:
+> > $$f(w) = \frac{1}{2\pi i}\left[\int_{\gamma_2} + \int_{\sigma_-} + \int_{\gamma_1^{-1}} + \int_{\sigma_+}\right] \frac{f(z)}{z - w}\,dz.$$
+> > **The two radial integrals cancel exactly.** $\sigma_+$ parametrises the radial segment $\{a + re^{i\theta_0} : r \in [\rho_1, \rho_2]\}$ outward; $\sigma_-$ parametrises the *same* radial segment (since $e^{i(\theta_0 + 2\pi)} = e^{i\theta_0}$) inward. By the substitution $t \mapsto 1 - t$:
+> > $$\int_{\sigma_-}\frac{f(z)}{z - w}\,dz \;=\; \int_0^1 \frac{f(\sigma_-(t))}{\sigma_-(t) - w}\,\sigma_-'(t)\,dt \;=\; -\int_{\sigma_+}\frac{f(z)}{z - w}\,dz.$$
+> > Substituting and using $\int_{\gamma_1^{-1}} = -\int_{\gamma_1}$ (where $\gamma_1(\theta) = a + \rho_1 e^{i\theta}$, $\theta \in [\theta_0, \theta_0 + 2\pi]$, is the inner circle *counterclockwise*) gives
+> > $$f(w) = \frac{1}{2\pi i}\left[\int_{\gamma_2} - \int_{\gamma_1}\right]\frac{f(z)}{z - w}\,dz.$$
+> > Finally, since $\gamma_2(\theta_0 + 2\pi) = \gamma_2(\theta_0)$ (a closed curve), reparametrising over $[0, 2\pi]$ recovers the standard CCW circle $|z - a| = \rho_2$; same for $\gamma_1$.  $\blacksquare$
 
 > [!note]- Lemma 2: Geometric expansion of $1/(z - w)$ on each circle
 > **Statement:** On $|z - a| = \rho_2$ with $|w - a| < \rho_2$: $1/(z - w) = \sum_{n \geq 0}(w - a)^n/(z - a)^{n+1}$, uniformly. On $|z - a| = \rho_1$ with $|w - a| > \rho_1$: $1/(z - w) = -\sum_{m \geq 1}(z - a)^{m-1}/(w - a)^m$, uniformly.
@@ -138,7 +152,7 @@ For $w$ in the annulus, write $f(w)$ as a contour integral using Cauchy's formul
 > $$\frac{1}{z - w} = \frac{-1}{(w - a)(1 - (z - a)/(w - a))} = -\sum_{m \geq 1}\frac{(z - a)^{m-1}}{(w - a)^m}, \quad \text{uniformly}.$$
 > So $-\oint_{|z-a|=\rho_1} f(z)/(z - w)\,dz = \sum_{m \geq 1}(w - a)^{-m}\oint f(z)(z - a)^{m-1}\,dz$. Defining $c_{-m} = (2\pi i)^{-1}\oint_{|z-a|=\rho_1} f(z)(z - a)^{m-1}\,dz = (2\pi i)^{-1}\oint_{|z-a|=\rho_1} f(z)/(z - a)^{-m + 1}\,dz$ — i.e., the same formula $c_n = (2\pi i)^{-1}\oint f(z)/(z-a)^{n+1}\,dz$ with $n = -m$ — the inner contribution is $2\pi i \sum_{m \geq 1} c_{-m}(w - a)^{-m}$.
 >
-> **Adding:** $f(w) = \sum_{n=-\infty}^\infty c_n (w - a)^n$, with $c_n = (2\pi i)^{-1}\oint_{|z-a|=\rho} f(z)/(z-a)^{n+1}\,dz$ for any $\rho \in (r_0, R_0)$ (using Cauchy's theorem to deform the contour).
+> **Adding:** $f(w) = \sum_{n=-\infty}^\infty c_n (w - a)^n$, with $c_n = (2\pi i)^{-1}\oint_{|z-a|=\rho} f(z)/(z-a)^{n+1}\,dz$ for any $\rho \in (r_0, R_0)$. (Radius-independence: the integrand $z \mapsto f(z)/(z - a)^{n+1}$ is holomorphic on the entire annulus $A(a; r_0, R_0)$, so for any two radii $r_0 < \rho < \rho' < R_0$ the Lemma 1 cut-annulus argument applied to the sub-annulus $\rho \leq |z - a| \leq \rho'$ — with $w$ replaced by *any* point of the inner disc that the integrand is regular at, e.g. the integrand has no singularity in the sub-annulus so Cauchy gives directly $\oint_{|z-a|=\rho'} = \oint_{|z-a|=\rho}$.)
 >
 > **Uniform convergence on sub-annuli.** The geometric series $\sum (w - a)^n/(z - a)^{n+1}$ on the outer circle is dominated by $(|w - a|/\rho_2)^n/\rho_2$, geometric ratio $< 1$; similarly for the inner. So the Laurent series converges absolutely, uniformly on any closed sub-annulus.
 >

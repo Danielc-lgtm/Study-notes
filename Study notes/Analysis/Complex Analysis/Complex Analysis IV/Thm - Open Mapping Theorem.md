@@ -56,7 +56,7 @@ Combine with **the Riemann mapping theorem proof.** Property $D$: extremal $f : 
 
 The intuition is captured by the local mapping degree. At any $z_0 \in U$, write the Taylor expansion of $f - f(z_0)$ as $f(z) - f(z_0) = (z - z_0)^k g(z)$ with $g(z_0) \neq 0$ and $k \geq 1$ (the order of the zero of $f - f(z_0)$ at $z_0$).
 
-Locally, $f$ behaves like the map $w \mapsto w^k$ near $0$: it takes a small disc $|z - z_0| < r$ to a region covering a disc around $f(z_0)$, with each interior point covered $k$ times. The image is open because $w \mapsto w^k$ on a small disc around $0$ produces an open disc image (it's a $k$-to-$1$ covering of the disc image).
+Locally near $z_0$ the map $f$ is conjugate to $w \mapsto w^k$. Concretely, $g(z_0) \neq 0$ holomorphic in a disc, so $g(z) = g(z_0)\,h(z)^k$ with $h$ holomorphic and $h(z_0) = 1$ (any $k$-th root of $g(z)/g(z_0)$ near $z_0$, via [[Thm - Existence of Log and Square Root on Simply Connected Domains|the k-th root on a small disc]]). Setting $\zeta := (z - z_0)\,h(z)$ gives a biholomorphism $z \leftrightarrow \zeta$ between a neighbourhood of $z_0$ and a neighbourhood of $0$, with $f(z) - f(z_0) = g(z_0)\,\zeta^k$. So in the new coordinate $\zeta$, the map is exactly $\zeta \mapsto g(z_0)\,\zeta^k$ — a $k$-th power. The image of the disc $\{|\zeta| < \rho\}$ under $\zeta \mapsto g(z_0)\,\zeta^k$ is the disc $\{|w - f(z_0)| < |g(z_0)|\,\rho^k\}$, which is open. Hence $f$ maps an open neighbourhood of $z_0$ onto an open neighbourhood of $f(z_0)$.
 
 More formally, the [[Thm - Local Mapping Degree|local mapping degree theorem]] says: for $w$ sufficiently close to $f(z_0)$, the equation $f(z) = w$ has *exactly* $k$ solutions near $z_0$. So for every $w$ near $f(z_0)$, there is at least one $z$ near $z_0$ with $f(z) = w$. This means $f(U)$ contains a neighborhood of $f(z_0)$ — exactly the definition of "openness".
 
@@ -104,7 +104,7 @@ For any $z_0 \in U$ and the corresponding $w_0 = f(z_0)$, apply the local mappin
 
 # Cross-Field Exercise Suggestions
 
-**Maximum modulus principle.** If $f$ is holomorphic and non-constant on a domain $D$, and $|f|$ has a local maximum at $z_0 \in D$, then... wait, this should be a contradiction. Suppose $|f|$ has a local max at $z_0$. By open mapping, $f(D)$ contains a neighborhood of $f(z_0)$, hence points $w$ with $|w| > |f(z_0)|$. But these are images of points in $D$ near $z_0$, contradicting the local max. So $f$ must be constant on $D$.
+**Maximum modulus principle.** If $f$ is holomorphic and non-constant on a domain $D$, then $|f|$ has no interior local maximum. Proof: suppose $|f|$ had a local maximum at $z_0 \in D$. By the open mapping theorem, $f(D)$ contains an open disc $D(f(z_0), \varepsilon)$. Pick any $w \in D(f(z_0), \varepsilon)$ with $|w| > |f(z_0)|$ (such $w$ exists since the disc has positive radius and $|w| \in (|f(z_0)| - \varepsilon, |f(z_0)| + \varepsilon)$ ranges over an interval of length $2\varepsilon$). By definition of $f(D)$, $w = f(z)$ for some $z \in D$, and we may take $z$ arbitrarily close to $z_0$ by choosing $w$ close to $f(z_0)$ in the local-mapping-degree sense. This contradicts the assumption that $|f|$ has a local maximum at $z_0$. Hence $f$ has no interior local maximum unless it is constant.
 
 **Holomorphic functions $\mathbb{C} \to \mathbb{R}$ are constant.** Suppose $f : \mathbb{C} \to \mathbb{C}$ is holomorphic and all values are real. Then $f(\mathbb{C}) \subseteq \mathbb{R}$, which is not open in $\mathbb{C}$. By open mapping, $f$ must be constant.
 

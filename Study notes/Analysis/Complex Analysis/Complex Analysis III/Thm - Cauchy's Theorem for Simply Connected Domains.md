@@ -60,13 +60,13 @@ Combine the conclusion with **a meromorphic $f$ with isolated singularities.** P
 
 # Why Is It True
 
-The intuition is that on a simply connected domain, every closed curve bounds a region inside the domain (in the homological sense: winding number zero around every external point), so the integral over that curve picks up no contribution from anything outside.
+The proof reduces the global statement to a finite combinatorial sum of *local* Cauchy theorems (each one Goursat on a triangle, or equivalently Cauchy on a disc).
 
-More concretely: simple-connectedness says no closed curve has nonzero winding number around any complementary point. Cauchy's theorem on a triangle (proved via Goursat's lemma in [[Complex Analysis II — Cauchy's Theorem and its Consequences|CA II]]) says the integral over any triangle vanishes. By a triangulation argument, any closed curve in a region can be approximated by a sum of triangle boundaries — provided the region is "simply connected enough" that the triangulation can be done within the region. Simple-connectedness is exactly the topological condition that makes the triangulation argument go through globally.
+**The mechanism in one line.** *Simple-connectedness gives a continuous homotopy $H : [0, 1]^2 \to U$ from $\gamma$ to a constant; uniform continuity of $H$ lets us tile $[0, 1]^2$ into a square grid fine enough that each small square's image lies in some open disc inside $U$; Cauchy-on-a-disc kills the integral around each small square's image; summing, interior edges of the grid cancel pairwise (each interior edge is traversed once by each adjacent square in opposite directions), and only the boundary of the unit square survives — which integrates to $\int_\gamma f\,dz$ on the bottom edge and $0$ on the other three.* The full argument is Lemma 3 below.
 
-A second intuition, more directly tied to primitives: integrating $f$ along a path from a basepoint $z_0$ to $z$ gives a function $F(z) = \int_{z_0}^z f\,dw$ — but this is well-defined only if the integral does not depend on the path chosen. On a simply connected domain, any two paths from $z_0$ to $z$ together form a closed loop (one followed by the reverse of the other), and the closed loop has winding number zero around the complement. So Cauchy's theorem makes the closed integral vanish, hence the path-independence, hence the well-definedness of $F$. And $F'(z) = f(z)$ by the fundamental theorem of calculus (in complex form: the integrand at the endpoint).
+**Why simple-connectedness is exactly the right hypothesis.** The grid argument needs every small square's image to lie in a disc inside $U$. Without simple-connectedness, the loop need not bound a contractible region — for instance, the unit circle in $\mathbb{C}^\times$ encloses the missing point $0$, and *no* homotopy in $\mathbb{C}^\times$ can contract it. In that case the grid argument has no homotopy $H$ to set up, and indeed $\int_{|z|=1} dz/z = 2\pi i \neq 0$ shows the theorem genuinely fails. So simple-connectedness is not just sufficient for the closed-integral statement to hold, it is the precise condition under which the grid-and-cancel proof goes through.
 
-So one should expect Cauchy's theorem on simply connected domains because *simple-connectedness is the topological condition that makes primitives well-defined*, and the existence of a primitive immediately implies that closed integrals vanish (closed integral of a derivative is always zero).
+**Equivalent route via primitives.** A holomorphic $f$ with a primitive $F$ on $U$ has $\int_\gamma f\,dz = F(\gamma(b)) - F(\gamma(a)) = 0$ for every closed $\gamma$ — closed-loop integrals of derivatives vanish. So existence of a primitive immediately implies the closed-integral statement, and conversely vanishing of closed integrals implies path-independence of $F(z) := \int_{z_0}^z f\,dw$, hence well-definedness of the primitive. The two statements are equivalent; the grid argument proves the closed-integral version directly, and Lemma 2 (disc primitive) is the building block of the alternate primitive-construction route.
 
 ---
 
@@ -122,13 +122,31 @@ Use the local Cauchy theorem (on triangles, via Goursat) plus the simple-connect
 > > [!note]- Full proof
 > > Define $F(z) = \int_{[z_0, z]} f\,dw$. To compute $F'$: for $z, z + h \in D$, the triangle with vertices $z_0, z, z + h$ lies in $D$, so by Goursat $\int_{\partial T} f\,dw = 0$, giving $F(z + h) - F(z) = \int_{[z, z+h]} f\,dw$. By continuity of $f$, $\int_{[z, z+h]} f\,dw = h f(z) + o(h)$, so $F'(z) = f(z)$.
 
-> [!note]- Lemma 3: Path independence on simply connected $U$
-> **Statement:** If $U$ is simply connected, $f$ holomorphic on $U$, and $\gamma_1, \gamma_2$ are paths from $z_0$ to $z$ in $U$, then $\int_{\gamma_1} f = \int_{\gamma_2} f$.
+> [!note]- Lemma 3: Closed-loop integral on simply connected $U$ vanishes
+> **Statement:** If $U$ is open and simply connected, $f$ is holomorphic on $U$, and $\gamma : [0, 1] \to U$ is a piecewise $C^1$ closed loop ($\gamma(0) = \gamma(1)$), then $\int_\gamma f\,dz = 0$.
 >
-> **Hint:** Form the closed loop $\gamma = \gamma_1 - \gamma_2$. Show $\int_\gamma f\,dz = 0$ by covering $\gamma$ with discs and using local primitives.
+> **Hint:** Simple-connectedness gives a continuous homotopy $H : [0, 1]^2 \to U$ from $\gamma$ to a constant loop. Tile $[0, 1]^2$ into small squares whose $H$-image fits in some open disc inside $U$, apply [[Thm - Cauchy's Theorem for a Disc|Cauchy-on-a-disc]] to each square, sum: interior edges cancel, only the outer boundary survives, and the outer boundary integrates to $\int_\gamma f - 0 = \int_\gamma f$.
 >
 > > [!note]- Full proof
-> > Form the closed loop $\gamma = \gamma_1 \cdot \gamma_2^{-1}$ in $U$. By compactness, $\gamma^*$ can be covered by finitely many open discs $D_1, \ldots, D_n$ inside $U$, with each $D_i$ containing a connected sub-arc of $\gamma$. On each $D_i$, by Lemma 2, $f$ has a primitive $F_i$. The change in $F_i$ across the sub-arc of $\gamma$ in $D_i$ equals the integral of $f$ over that sub-arc. At overlaps between $D_i, D_{i+1}$, the primitives differ by a constant (both have derivative $f$). Going around the closed loop, the sum of changes is zero — provided the loop's "topology" allows the primitives to be glued consistently. Simple-connectedness ensures this: the obstruction to gluing is a winding-number term around any singularity of $f$, but $f$ has no singularities in $U$, and the loop has zero winding around the complement, so no obstruction arises.
+> > **Setup.** By the definition of simply connected, there is a continuous $H : [0, 1]^2 \to U$ with $H(s, 0) = \gamma(s)$, $H(s, 1) = \gamma(0)$ (constant), and $H(0, t) = H(1, t) = \gamma(0)$. (Strictly, simple-connectedness gives only continuous $H$; the integral statement we want is about piecewise $C^1$ curves. The standard fix: after a uniform $C^0$ approximation of $H$ by a piecewise-affine map $\tilde H$ whose square grid pulls back to a square grid in $[0, 1]^2$, the integrals along the affine pieces are valid contour integrals. We omit this approximation and assume $H$ is piecewise $C^1$.)
+> >
+> > **The grid.** Pick $N \in \mathbb{N}$ large enough that for each closed square $Q_{ij} = [(i-1)/N, i/N] \times [(j-1)/N, j/N]$, $i, j \in \{1, \ldots, N\}$, the image $H(Q_{ij})$ has diameter less than $\min_{z \in H([0,1]^2)} \mathrm{dist}(z, \partial U)$. Such $N$ exists by uniform continuity of $H$ on the compact $[0, 1]^2$. Then $H(Q_{ij})$ is contained in an open disc $D_{ij} \subseteq U$ centred at $H((i-\tfrac12)/N, (j-\tfrac12)/N)$. By [[Thm - Cauchy's Theorem for a Disc|Cauchy-on-a-disc]] applied on $D_{ij} \supseteq H(\partial Q_{ij})$:
+> > $$\int_{H(\partial Q_{ij})} f\,dz = 0,$$
+> > where $\partial Q_{ij}$ is traversed counterclockwise.
+> >
+> > **Summing the squares.** Sum over $i, j$:
+> > $$\sum_{i, j = 1}^N \int_{H(\partial Q_{ij})} f\,dz = 0.$$
+> > Each interior edge of the grid — every vertical edge $\{i/N\} \times [(j-1)/N, j/N]$ for $i \in \{1, \ldots, N-1\}$ and every horizontal edge $[(i-1)/N, i/N] \times \{j/N\}$ for $j \in \{1, \ldots, N-1\}$ — is shared between two adjacent squares $Q_{ij}$ and $Q_{i+1, j}$ (or $Q_{ij}$ and $Q_{i, j+1}$), and in the two squares' CCW boundary parametrisations the shared edge appears with opposite directions. So under the map $H$, $\int_{H(\text{edge})} f\,dz$ from one square cancels exactly with the corresponding contribution from the adjacent square (substitution $t \mapsto 1 - t$).
+> >
+> > **What remains.** The cancellation leaves only the boundary edges of the unit square $\partial[0, 1]^2$, traversed once CCW:
+> > - bottom edge $s \in [0, 1]$, $t = 0$: $H(s, 0) = \gamma(s)$, contributing $\int_\gamma f\,dz$;
+> > - right edge $s = 1$, $t \in [0, 1]$: $H(1, t) = \gamma(0)$ (constant), contributing $0$;
+> > - top edge $s \in [1, 0]$ (reversed), $t = 1$: $H(s, 1) = \gamma(0)$ (constant), contributing $0$;
+> > - left edge $s = 0$, $t \in [1, 0]$ (reversed): $H(0, t) = \gamma(0)$ (constant), contributing $0$.
+> >
+> > So $\int_\gamma f\,dz = 0$. $\blacksquare$
+> >
+> > **Corollary (path independence).** Given two paths $\gamma_1, \gamma_2 : [0, 1] \to U$ with $\gamma_1(0) = \gamma_2(0) = z_0$, $\gamma_1(1) = \gamma_2(1) = z$, the concatenation $\gamma_1 \cdot \gamma_2^{-1}$ (where $\gamma_2^{-1}(t) = \gamma_2(1-t)$) is a closed loop at $z_0$ with $\int_{\gamma_1 \cdot \gamma_2^{-1}} f\,dz = \int_{\gamma_1} f\,dz - \int_{\gamma_2} f\,dz = 0$, hence $\int_{\gamma_1} f\,dz = \int_{\gamma_2} f\,dz$.
 
 ---
 
