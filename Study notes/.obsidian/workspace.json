@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra/Linear Algebra/Linear Algebra IX — §9 Multilinear Algebra and Determinants.md",
+                "file": "Analysis/Complex Analysis/Complex Analysis III/Thm - Laurent Series Theorem.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linear Algebra IX — §9 Multilinear Algebra and Determinants"
+              "title": "Thm - Laurent Series Theorem"
             }
           }
         ]
@@ -185,31 +185,31 @@
   },
   "active": "28731305ca23332c",
   "lastOpenFiles": [
-    "Algebra/Linear Algebra/Linear Algebra VI — §6 Inner Product Spaces.md",
-    "Algebra/Linear Algebra/Linear Algebra VII — §7 Operators on Inner Product Spaces.md",
-    "Algebra/Linear Algebra/Linear Algebra VIII — §8 Operators on Complex Vector Spaces.md",
-    "Algebra/Linear Algebra/Linear Algebra X — Applied I — Vectors, Distance, Equations, Dynamics.md",
-    "Algebra/Linear Algebra/Linear Algebra V — §4–5 Polynomials and Eigenvalues.md",
-    "Algebra/Linear Algebra/Linear Algebra II — §2 Finite-Dimensional Vector Spaces.md",
-    "Algebra/Linear Algebra/Linear Algebra I — §1 Vector Spaces.md",
-    "Probability/Advanced Probability/Advanced Probability I — Probability Spaces and Random Variables.md",
-    "Algebra/Rings/Rings IV — §2.7–2.8.md",
-    "Algebra/Rings/Rings I/Ex - A power series is a unit if and only if its constant term is.md",
-    "Algebra/Rings/Rings I/Exercise Index - §2.1 Definitions and Examples.md",
-    "Algebra/Rings/Rings I — §2.1–2.2.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - Liouville's Theorem.md",
-    "Analysis/Complex Analysis/Complex Analysis II — Cauchy's Theorem and its Consequences.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - Cauchy's Theorem for a Disc.md",
     "Analysis/Complex Analysis/Complex Analysis III — Winding, Laurent, Residues.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - Goursat's Theorem (Cauchy for a Triangle).md",
-    "Physics/Special Relativity/Special Relativity I — Lorentz Transformations and Minkowski Space.md",
-    "Analysis/Topology/Topology I — §1–3 Metric and Topological Spaces.md",
-    "Analysis/Topology/Topology I/Thm - The Pasting Lemma.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - Fundamental Theorem of Contour Integration.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Def - Primitive (Antiderivative).md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - Existence of a Primitive iff Closed Integrals Vanish.md",
-    "Analysis/Complex Analysis/Complex Analysis I — Basic Notions.md",
+    "Analysis/Complex Analysis/Complex Analysis III/Def - Laurent Series.md",
+    "Analysis/Complex Analysis/Complex Analysis III/Def - Simply Connected Domain in Complex Analysis.md",
+    "Analysis/Complex Analysis/Complex Analysis II — Cauchy's Theorem and its Consequences.md",
     "Analysis/Complex Analysis/Complex Analysis I/Thm - Constant on a Domain if Derivative is Zero.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - ML Estimate.md"
+    "Analysis/Complex Analysis/Complex Analysis II/Thm - Liouville's Theorem.md",
+    "Analysis/Complex Analysis/Complex Analysis II/Thm - Cauchy Integral Formula.md",
+    "Analysis/Complex Analysis/Complex Analysis I — Basic Notions.md",
+    "Probability/Measure Theory/Measure Theory III/Thm - Dynkin's π-λ Theorem.md",
+    "Probability/Measure Theory/Measure Theory III — §3–4 Product Measures and Differentiation.md",
+    "Probability/Measure Theory/Measure Theory II — §2 Integration.md",
+    "Probability/Measure Theory/Measure Theory I — §1 Measure Spaces.md",
+    "Probability/Advanced Probability/Advanced Probability I/Thm - Kolmogorov 0-1 Law.md",
+    "Probability/Advanced Probability/Advanced Probability I — Probability Spaces and Random Variables.md",
+    "Probability/Advanced Probability/Advanced Probability I/Thm - Borel-Cantelli Lemmas.md",
+    "Analysis/Complex Analysis/Complex Analysis III/Thm - Existence and Properties of the Winding Number.md",
+    "Algebra/Rings/Rings IV/Thm - Hilbert's Basis Theorem.md",
+    "Algebra/Rings/Rings IV — §2.7–2.8.md",
+    "Algebra/Rings/Rings IV/Thm - Noetherian Rings and Finitely Generated Ideals.md",
+    "Algebra/Rings/Rings IV/Def - Noetherian Ring.md",
+    "Algebra/Rings/Rings IV/Thm - Rational Algebraic Integers are Integers.md",
+    "Algebra/Rings/Rings IV/Thm - The Minimal Polynomial Generates the Kernel Ideal.md",
+    "Algebra/Rings/Rings I/Def - Ring Homomorphism.md",
+    "Algebra/Rings/Rings IV/Def - Algebraic Integer and Minimal Polynomial.md",
+    "Algebra/Rings/Rings III — §2.5–2.6.md",
+    "Algebra/Rings/Rings III/Def - Gaussian Integers.md"
   ]
 }
