@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; all modules unital. Fix an $R$-module $M$ and write $T_M = M \otimes_R (-)$ for the [[Def - Tensor Product of Modules|tensor-with-$M$ functor]], sending a module $N$ to $M \otimes N$ and an $R$-linear $f : N \to N'$ to $\operatorname{id}_M \otimes f$. A sequence $A \xrightarrow{f} B \xrightarrow{g} C$ is [[Def - Exact Sequence and Short Exact Sequence|exact at $B$]] when $\operatorname{im} f = \ker g$. We write $\operatorname{Hom}_R(-, P)$ and $\operatorname{Hom}_R(M, -)$ for the [[Def - The Hom Functor and Left Exactness|Hom functors]], $\iota : Q \hookrightarrow P$ for an inclusion of a submodule, and $\operatorname{coker} f = B/\operatorname{im} f$ for the cokernel. The full registry is on [[Commutative Algebra III — Flatness and Exactness]].
+All rings are commutative with $1$; all modules unital. Fix an $R$-module $M$ and write $T_M = M \otimes_R (-)$ for the [[Def - Tensor Product of Modules|tensor-with-M functor]], sending a module $N$ to $M \otimes N$ and an $R$-linear $f : N \to N'$ to $\operatorname{id}_M \otimes f$. A sequence $A \xrightarrow{f} B \xrightarrow{g} C$ is [[Def - Exact Sequence and Short Exact Sequence|exact at B]] when $\operatorname{im} f = \ker g$. We write $\operatorname{Hom}_R(-, P)$ and $\operatorname{Hom}_R(M, -)$ for the [[Def - The Hom Functor and Left Exactness|Hom functors]], $\iota : Q \hookrightarrow P$ for an inclusion of a submodule, and $\operatorname{coker} f = B/\operatorname{im} f$ for the cokernel. The full registry is on [[Commutative Algebra III — Flatness and Exactness]].
 
 ---
 
@@ -52,7 +52,7 @@ The first disguised source is **a surjection $g : B \twoheadrightarrow C$**, wit
 
 The second disguised source is **a quotient module $P/Q$**. The property $B$ is "I must tensor a quotient." The bridge: $Q \hookrightarrow P \to P/Q \to 0$ is exact, so the corollary gives $M \otimes (P/Q) = (M \otimes P)/\operatorname{im}(\operatorname{id}_M \otimes \iota)$. The non-obviousness is that the image of $M \otimes Q$ — which may not be all of what you would naively subtract, since $\operatorname{id}_M \otimes \iota$ need not be injective — is exactly the right thing to quotient by. *Example problem:* compute $M \otimes_R (R/I)$ and get $M/IM$ by recognising $\operatorname{im}(\operatorname{id}_M \otimes \iota) = IM$.
 
-The third disguised source is **a finite presentation $R^m \to R^n \to M \to 0$**. The property $B$ is "$M$ is finitely presented." The bridge: tensoring the presentation stays right exact, giving $M' \otimes M$ as the cokernel of a known map between free modules $ (M')^m \to (M')^n$. The non-obvious payoff is a completely explicit description of $M' \otimes M$ by generators and relations. *Example problem:* compute $\mathbb{Z}/m \otimes \mathbb{Z}/n$ from the presentations and recover $\mathbb{Z}/\gcd(m,n)$.
+The third disguised source is **a finite presentation $R^m \to R^n \to M \to 0$**. The property $B$ is "$M$ is finitely presented." The bridge: tensoring the presentation stays right exact, giving $M' \otimes M$ as the cokernel of a known map between free modules $(M')^m \to (M')^n$. The non-obvious payoff is a completely explicit description of $M' \otimes M$ by generators and relations. *Example problem:* compute $\mathbb{Z}/m \otimes \mathbb{Z}/n$ from the presentations and recover $\mathbb{Z}/\gcd(m,n)$.
 
 **Targets (Output Amplification)**
 
@@ -119,7 +119,7 @@ Convert the tensor statement into a Hom statement using the adjunction $\operato
 > **Why needed:** It is the two-way bridge between right-exact tensor statements and left-exact Hom statements; the "only if" is [[Thm - Hom is Left Exact|left-exactness of Hom]], the "if" is its converse (the analogue of [[Thm - Hom is Left Exact|Lemma 3.36]]).
 >
 > > [!note]- Full proof
-> > ($\Rightarrow$) is [[Thm - Hom is Left Exact|left-exactness of the contravariant Hom]]. ($\Leftarrow$) Suppose the Hom sequence is exact for all $L$. Take $L = \operatorname{coker} v = Z/\operatorname{im} v$ and the projection $p : Z \to L$. Then $v^*(p) = p \circ v = 0$, so injectivity of $v^*$ forces $p = 0$, i.e. $\operatorname{im} v = Z$: $v$ is onto. For exactness in the middle: $u^* v^* = (vu)^* $, and $\ker u^* = \operatorname{im} v^*$ for all $L$ gives $vu = 0$ (take $L = Z$, $\operatorname{id}_Z$) hence $\operatorname{im} u \subseteq \ker v$; the reverse uses $L = Y/\operatorname{im} u$ and the quotient map, whose vanishing under $u^*$ forces it to factor through $v$, giving $\ker v \subseteq \operatorname{im} u$.
+> > ($\Rightarrow$) is [[Thm - Hom is Left Exact|left-exactness of the contravariant Hom]]. ($\Leftarrow$) Suppose the Hom sequence is exact for all $L$. Take $L = \operatorname{coker} v = Z/\operatorname{im} v$ and the projection $p : Z \to L$. Then $v^*(p) = p \circ v = 0$, so injectivity of $v^*$ forces $p = 0$, i.e. $\operatorname{im} v = Z$: $v$ is onto. For exactness in the middle: $u^* v^* = (vu)^*$, and $\ker u^* = \operatorname{im} v^*$ for all $L$ gives $vu = 0$ (take $L = Z$, $\operatorname{id}_Z$) hence $\operatorname{im} u \subseteq \ker v$; the reverse uses $L = Y/\operatorname{im} u$ and the quotient map, whose vanishing under $u^*$ forces it to factor through $v$, giving $\ker v \subseteq \operatorname{im} u$.
 
 > [!note]- Lemma 2: The tensor–Hom adjunction is natural
 > **Statement:** For $R$-modules $N, L$ and fixed $M$, the map $\Theta_N : \operatorname{Hom}(M \otimes N, L) \to \operatorname{Hom}(N, \operatorname{Hom}(M, L))$, $\Phi \mapsto (n \mapsto (m \mapsto \Phi(m \otimes n)))$, is an isomorphism, natural in $N$.
@@ -142,7 +142,7 @@ Convert the tensor statement into a Hom statement using the adjunction $\operato
 >
 > By Lemma 2 (the adjunction, natural in the module variable), this sequence is isomorphic, as a sequence, to
 > $$0 \to \operatorname{Hom}(C, \operatorname{Hom}(M, L)) \to \operatorname{Hom}(B, \operatorname{Hom}(M, L)) \to \operatorname{Hom}(A, \operatorname{Hom}(M, L)),$$
-> the three vertical isomorphisms $\Theta_C, \Theta_B, \Theta_A$ forming a morphism of sequences (naturality of Lemma 2). Set $P := \operatorname{Hom}(M, L)$. The original sequence $A \xrightarrow{f} B \xrightarrow{g} C \to 0$ is exact, so by [[Thm - Hom is Left Exact|left-exactness of the contravariant functor $\operatorname{Hom}(-, P)$]] the sequence
+> the three vertical isomorphisms $\Theta_C, \Theta_B, \Theta_A$ forming a morphism of sequences (naturality of Lemma 2). Set $P := \operatorname{Hom}(M, L)$. The original sequence $A \xrightarrow{f} B \xrightarrow{g} C \to 0$ is exact, so by [[Thm - Hom is Left Exact|left-exactness of the contravariant functor Hom(−, P)]] the sequence
 > $$0 \to \operatorname{Hom}(C, P) \to \operatorname{Hom}(B, P) \to \operatorname{Hom}(A, P)$$
 > is exact. Since the two displayed sequences are isomorphic, the first is exact too. As this holds for *every* $L$, Lemma 1 (the "if" direction) applied to $X = M\otimes A$, $Y = M\otimes B$, $Z = M\otimes C$ gives that
 > $$M \otimes A \xrightarrow{\operatorname{id}_M \otimes f} M \otimes B \xrightarrow{\operatorname{id}_M \otimes g} M \otimes C \to 0$$

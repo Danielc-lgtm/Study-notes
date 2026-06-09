@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 All rings are commutative with $1$; all modules unital. Fix $R$-modules $Q$ (a source) and $P$ (a target). For an $R$-linear $f : M \to N$:
 - $f_* : \operatorname{Hom}_R(Q, M) \to \operatorname{Hom}_R(Q, N)$, $\varphi \mapsto f \circ \varphi$ (covariant);
 - $f^* : \operatorname{Hom}_R(N, P) \to \operatorname{Hom}_R(M, P)$, $\varphi \mapsto \varphi \circ f$ (contravariant).
-A sequence is [[Def - Exact Sequence and Short Exact Sequence|exact at $B$]] when $\operatorname{im} = \ker$ there. The functors and the notion of [[Def - The Hom Functor and Left Exactness|left exactness]] are defined on the companion page. The full registry is on [[Commutative Algebra III — Flatness and Exactness]].
+A sequence is [[Def - Exact Sequence and Short Exact Sequence|exact at B]] when $\operatorname{im} = \ker$ there. The functors and the notion of [[Def - The Hom Functor and Left Exactness|left exactness]] are defined on the companion page. The full registry is on [[Commutative Algebra III — Flatness and Exactness]].
 
 ---
 

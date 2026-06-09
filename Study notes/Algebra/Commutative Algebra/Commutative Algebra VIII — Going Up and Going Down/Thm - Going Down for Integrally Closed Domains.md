@@ -139,7 +139,7 @@ This is the hardest proof in the chapter, and the difficulty is concentrated in 
 >
 > **Step 1 — reduce to a contraction equality.** It suffices to show $\mathfrak{p}_2$ is contracted from $B_{\mathfrak{q}_1}$ along $A \to B \to B_{\mathfrak{q}_1}$, i.e.
 > $$(\mathfrak{p}_2 B_{\mathfrak{q}_1}) \cap A = \mathfrak{p}_2.$$
-> For then $\mathfrak{q}_2 := (\mathfrak{p}_2 B_{\mathfrak{q}_1}) \cap B$ is a prime of $B$ (contraction of the prime $\mathfrak{p}_2 B_{\mathfrak{q}_1}$... after checking it is prime; more carefully, take $\mathfrak{q}_2$ to be the contraction of a prime of $B_{\mathfrak{q}_1}$ minimal over $\mathfrak{p}_2 B_{\mathfrak{q}_1}$ contracting to $\mathfrak{p}_2$, see remark) contained in $\mathfrak{q}_1$ (everything in $B_{\mathfrak{q}_1}$ contracts into $\mathfrak{q}_1$) with $\mathfrak{q}_2 \cap A = \mathfrak{p}_2$.
+> Granting this equality, a prime $\mathfrak{n}$ of $B_{\mathfrak{q}_1}$ minimal over $\mathfrak{p}_2 B_{\mathfrak{q}_1}$ contracts to $\mathfrak{p}_2$ in $A$ (Step 3), and $\mathfrak{q}_2 := \mathfrak{n} \cap B$ is then a prime of $B$ contained in $\mathfrak{q}_1$ with $\mathfrak{q}_2 \cap A = \mathfrak{p}_2$ — the required prime. (The extended ideal $\mathfrak{p}_2 B_{\mathfrak{q}_1}$ itself need not be prime, which is why we pass to a minimal prime over it.)
 >
 > The inclusion $\mathfrak{p}_2 \subseteq (\mathfrak{p}_2 B_{\mathfrak{q}_1}) \cap A$ is automatic (extend then contract). We prove the reverse.
 >

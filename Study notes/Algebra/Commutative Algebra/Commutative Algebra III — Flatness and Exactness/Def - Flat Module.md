@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$ and all modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|$R$-module]]. For an $R$-linear map $f : N \to N'$ we write $\operatorname{id}_M \otimes f : M \otimes_R N \to M \otimes_R N'$ for the induced map on [[Def - Tensor Product of Modules|tensor products]], characterised on pure tensors by $(\operatorname{id}_M \otimes f)(m \otimes n) = m \otimes f(n)$. We write $T_M = M \otimes_R (-)$ for the tensor-with-$M$ functor, $\mu_r : R \to R$ for multiplication by an element $r \in R$, and $R^{\oplus I}$ for the [[Def - Free Module|free module]] on an index set $I$. An element $r \in R$ is a **zero-divisor** if $rs = 0$ for some $s \neq 0$, and a **non-zero-divisor** otherwise. The full registry is on [[Commutative Algebra III — Flatness and Exactness]].
+All rings are commutative with $1$ and all modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|R-module]]. For an $R$-linear map $f : N \to N'$ we write $\operatorname{id}_M \otimes f : M \otimes_R N \to M \otimes_R N'$ for the induced map on [[Def - Tensor Product of Modules|tensor products]], characterised on pure tensors by $(\operatorname{id}_M \otimes f)(m \otimes n) = m \otimes f(n)$. We write $T_M = M \otimes_R (-)$ for the tensor-with-$M$ functor, $\mu_r : R \to R$ for multiplication by an element $r \in R$, and $R^{\oplus I}$ for the [[Def - Free Module|free module]] on an index set $I$. An element $r \in R$ is a **zero-divisor** if $rs = 0$ for some $s \neq 0$, and a **non-zero-divisor** otherwise. The full registry is on [[Commutative Algebra III — Flatness and Exactness]].
 
 ---
 
@@ -40,7 +40,7 @@ Let $R$ be a commutative ring and $M$ an $R$-module.
 
 $M$ is **flat** if for every injective $R$-linear map $f : N \to N'$, the induced map
 $$\operatorname{id}_M \otimes f : M \otimes_R N \longrightarrow M \otimes_R N'$$
-is again injective. Equivalently (using that [[Thm - Tensoring is Right Exact|$T_M$ is already right exact]]), $M$ is flat if and only if the functor $T_M = M \otimes_R (-)$ is **exact** — it preserves every exact sequence, and in particular sends short exact sequences to short exact sequences.
+is again injective. Equivalently (using that [[Thm - Tensoring is Right Exact|Tₘ is already right exact]]), $M$ is flat if and only if the functor $T_M = M \otimes_R (-)$ is **exact** — it preserves every exact sequence, and in particular sends short exact sequences to short exact sequences.
 
 ## Torsion-free module
 

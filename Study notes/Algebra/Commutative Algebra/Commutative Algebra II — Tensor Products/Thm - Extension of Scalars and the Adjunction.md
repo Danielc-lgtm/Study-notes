@@ -77,7 +77,7 @@ Everything rests on part 1, the two-step factorisation, and part 1 is the univer
 
 *Inverse check.* On pure tensors: $\psi\varphi(m\otimes n) = \psi(m\otimes(1\otimes n)) = (1\cdot m)\otimes n = m\otimes n$, and $\varphi\psi(m\otimes(s\otimes n)) = \varphi((sm)\otimes n) = (sm)\otimes(1\otimes n) = m\otimes(s\otimes n)$ (sliding $s$ across the inner $\otimes$). Generators are fixed, so $\varphi, \psi$ are mutually inverse $S$-isomorphisms.
 
-**Part 2** follows by combining part 1 with the [[Thm - Standard Isomorphisms of Tensor Products|standard isomorphisms]] over $S$ (associativity, distributivity, commutativity now applied to $S$-tensors), as in Becker's proof of (3): $(M\otimes_R N)\otimes_S M'\cong(M\otimes_S(S\otimes_R N))\otimes_S M'\cong M\otimes_S((S\otimes_R N)\otimes_S M')\cong M\otimes_S(N\otimes_R M')$ — the last step is part 1 in reverse applied to $M' $.
+**Part 2** follows by combining part 1 with the [[Thm - Standard Isomorphisms of Tensor Products|standard isomorphisms]] over $S$ (associativity, distributivity, commutativity now applied to $S$-tensors), as in Becker's proof of (3): $(M\otimes_R N)\otimes_S M'\cong(M\otimes_S(S\otimes_R N))\otimes_S M'\cong M\otimes_S((S\otimes_R N)\otimes_S M')\cong M\otimes_S(N\otimes_R M')$ — the last step is part 1 in reverse applied to $M'$.
 
 **Part 3** combines part 2(2) ($(S\otimes_R N)\otimes_R N'\cong S\otimes_R(N\otimes_R N')$) with part 1 ($(S\otimes_R N)\otimes_R N'\cong(S\otimes_R N)\otimes_S(S\otimes_R N')$): chaining gives $S\otimes_R(N\otimes_R N')\cong(S\otimes_R N)\otimes_S(S\otimes_R N')$.
 

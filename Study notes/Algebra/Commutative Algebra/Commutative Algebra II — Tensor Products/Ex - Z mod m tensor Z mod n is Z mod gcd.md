@@ -50,7 +50,7 @@ The arithmetic fact closing the second proof is $m\mathbb{Z} + n\mathbb{Z} = \gc
 
 This solution deploys the following legal operations from [[Commutative Algebra II — Tensor Products#Legal Operations|the topic page's Legal Operations]]:
 
-1. **Slide scalars across the $\otimes$ (operation 1).** Move $m$ or $n$ from one factor to the other so it annihilates: $\bar m\otimes\bar1 = m(\bar1\otimes\bar1) = \bar1\otimes\overline{m} $ collapses because $\bar m = 0$ in $\mathbb{Z}/m$.
+1. **Slide scalars across the $\otimes$ (operation 1).** Move $m$ or $n$ from one factor to the other so it annihilates: $\bar m\otimes\bar1 = m(\bar1\otimes\bar1) = \bar1\otimes\overline{m}$ collapses because $\overline{m} = 0$ in $\mathbb{Z}/m$.
 
 2. **Use that pure tensors of generators generate (operation 6).** Since $\bar1$ generates $\mathbb{Z}/m$ and $\bar1$ generates $\mathbb{Z}/n$, the single tensor $\bar1\otimes\bar1$ generates $\mathbb{Z}/m\otimes\mathbb{Z}/n$, so the group is cyclic.
 

@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$ and all modules are unital. Let $R$ be a ring and $Q, P, M, N$ be $R$-modules. We write $\operatorname{Hom}_R(Q, P)$ for the set of [[Def - Module Homomorphism|$R$-linear maps]] $Q \to P$. For an $R$-linear $f : M \to N$:
+All rings are commutative with $1$ and all modules are unital. Let $R$ be a ring and $Q, P, M, N$ be $R$-modules. We write $\operatorname{Hom}_R(Q, P)$ for the set of [[Def - Module Homomorphism|R-linear maps]] $Q \to P$. For an $R$-linear $f : M \to N$:
 - $f_* = \operatorname{Hom}_R(Q, f) : \operatorname{Hom}_R(Q, M) \to \operatorname{Hom}_R(Q, N)$, $\varphi \mapsto f \circ \varphi$ (post-composition, **covariant**);
 - $f^* = \operatorname{Hom}_R(f, P) : \operatorname{Hom}_R(N, P) \to \operatorname{Hom}_R(M, P)$, $\varphi \mapsto \varphi \circ f$ (pre-composition, **contravariant**, reverses the arrow).
 
@@ -41,7 +41,7 @@ Let $R$ be a commutative ring and $Q, P$ be $R$-modules.
 
 ## The Hom-module
 
-$\operatorname{Hom}_R(Q, P)$ is the set of all [[Def - Module Homomorphism|$R$-linear maps]] $Q \to P$, made an $R$-module by
+$\operatorname{Hom}_R(Q, P)$ is the set of all [[Def - Module Homomorphism|R-linear maps]] $Q \to P$, made an $R$-module by
 $$(f + g)(x) = f(x) + g(x), \qquad (rf)(x) = r\,f(x) \qquad (r \in R,\ x \in Q).$$
 That $rf$ is again $R$-linear uses commutativity of $R$. The zero element is the zero map.
 
