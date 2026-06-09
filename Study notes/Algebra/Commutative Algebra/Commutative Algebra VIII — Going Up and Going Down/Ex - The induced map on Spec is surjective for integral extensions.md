@@ -87,7 +87,7 @@ The proof is the "localize to force a prime into existence" manoeuvre. Localizin
 Set $S = A \setminus \mathfrak{p}$, $B_{\mathfrak{p}} = S^{-1}B$, $A_{\mathfrak{p}} = S^{-1}A$. Then $A_{\mathfrak{p}} \subseteq B_{\mathfrak{p}}$ is integral, and $B_{\mathfrak{p}} \neq 0$.
 
 > [!note]- Derivation
-> $S = A \setminus \mathfrak{p}$ is multiplicative because $\mathfrak{p}$ is prime ($1 \in S$, and $a, b \notin \mathfrak{p} \Rightarrow ab \notin \mathfrak{p}$). Integrality survives localization: for $b/s \in B_{\mathfrak{p}}$ with $b^n + a_1 b^{n-1} + \cdots + a_n = 0$ ($a_i \in A$), dividing by $s^n$ gives a monic relation for $b/s$ over $A_{\mathfrak{p}}$, so $A_{\mathfrak{p}} \subseteq B_{\mathfrak{p}}$ is integral. Finally, since $\mathfrak{p}$ is a proper ideal, $0 \in \mathfrak{p}$, so $0 \notin S$; and [[Def - Multiplicative Set and Localization|$S^{-1}B = 0 \iff 0 \in S$]], so $B_{\mathfrak{p}} \neq 0$.
+> $S = A \setminus \mathfrak{p}$ is multiplicative because $\mathfrak{p}$ is prime ($1 \in S$, and $a, b \notin \mathfrak{p} \Rightarrow ab \notin \mathfrak{p}$). Integrality survives localization: for $b/s \in B_{\mathfrak{p}}$ with $b^n + a_1 b^{n-1} + \cdots + a_n = 0$ ($a_i \in A$), dividing by $s^n$ gives a monic relation for $b/s$ over $A_{\mathfrak{p}}$, so $A_{\mathfrak{p}} \subseteq B_{\mathfrak{p}}$ is integral. Finally, since $\mathfrak{p}$ is a proper ideal, $0 \in \mathfrak{p}$, so $0 \notin S$; and [[Def - Multiplicative Set and Localization|the localization]] $S^{-1}B$ is zero iff $0 \in S$, so $B_{\mathfrak{p}} \neq 0$.
 
 **Step 2: Take a maximal ideal $\mathfrak{m}$ of $B_{\mathfrak{p}}$; it contracts to $\mathfrak{p}A_{\mathfrak{p}}$ in $A_{\mathfrak{p}}$.**
 

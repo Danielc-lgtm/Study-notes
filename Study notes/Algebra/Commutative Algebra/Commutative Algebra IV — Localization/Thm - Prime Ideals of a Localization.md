@@ -50,7 +50,7 @@ The first disguised source is **"what is the maximal ideal / are the primes / is
 
 The second disguised source is **"is this localization local?" or "is it a field?"**. Property $B$: you must decide whether $S^{-1}R$ has a unique maximal ideal (or only $(0)$). The bridge is counting survivors: a unique maximal survivor means local; only $(0)$ surviving means a field (e.g. $R_{(0)} = \operatorname{Frac} R$ for a domain). The non-obviousness: locality is a *counting* statement about the surviving primes. *Example problem:* $R_{\mathfrak{p}}$ is local because $\mathfrak{p}$ is the unique maximal survivor — see [[Ex - Localizing at a prime gives a local ring]].
 
-The third disguised source is **"restrict a geometric/spectral statement to an open set or a neighbourhood"**. Property $B$: a question about $D(f)$ or a neighbourhood of a point. The bridge is $\operatorname{Spec}(R_f)\cong D(f)$ and $\operatorname{Spec}(R_{\mathfrak{p}}) = $ neighbourhood of $\mathfrak{p}$. The non-obvious value: open-set questions become localization questions. *Example problem:* the basic opens form a basis because each is a spectrum of a localization — see [[Ex - The prime spectrum of a localization]].
+The third disguised source is **"restrict a geometric/spectral statement to an open set or a neighbourhood"**. Property $B$: a question about $D(f)$ or a neighbourhood of a point. The bridge is $\operatorname{Spec}(R_f)\cong D(f)$ and "$\operatorname{Spec}(R_{\mathfrak{p}})$ is a neighbourhood of $\mathfrak{p}$". The non-obvious value: open-set questions become localization questions. *Example problem:* the basic opens form a basis because each is a spectrum of a localization — see [[Ex - The prime spectrum of a localization]].
 
 **Targets (Output Amplification)**
 

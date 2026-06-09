@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $A \subseteq B$ be an [[Def - Integral Element and Integral Extension|integral extension]]. [[Def - Krull Dimension and Height|$\dim R$]] is the Krull dimension, the supremum of $n$ over strict chains $\mathfrak{p}_0 \subsetneq \cdots \subsetneq \mathfrak{p}_n$ in $\operatorname{Spec} R$; $\operatorname{ht}\mathfrak{p}$ is the height of $\mathfrak{p}$, $= \dim A_{\mathfrak{p}}$. [[Def - The Induced Map on Spectra|$\iota^*$]] is the contraction $\mathfrak{q} \mapsto \mathfrak{q} \cap A$. The full registry is on [[Commutative Algebra VIII — Going Up and Going Down]].
+All rings are commutative with $1$. Let $A \subseteq B$ be an [[Def - Integral Element and Integral Extension|integral extension]]. [[Def - Krull Dimension and Height|dim R]] is the Krull dimension, the supremum of $n$ over strict chains $\mathfrak{p}_0 \subsetneq \cdots \subsetneq \mathfrak{p}_n$ in $\operatorname{Spec} R$; $\operatorname{ht}\mathfrak{p}$ is the height of $\mathfrak{p}$, $= \dim A_{\mathfrak{p}}$. [[Def - The Induced Map on Spectra|ι*]] is the contraction $\mathfrak{q} \mapsto \mathfrak{q} \cap A$. The full registry is on [[Commutative Algebra VIII — Going Up and Going Down]].
 
 ---
 

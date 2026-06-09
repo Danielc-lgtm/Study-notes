@@ -21,7 +21,7 @@ the subring of pairs of polynomials agreeing at the origin. ($k$ is a field.) Sh
 
 1. $A \subseteq B$ is an integral extension, and $A$ is *not* an integrally closed domain (indeed $A$ is not even a domain);
 2. the spectra are "two lines meeting at a point" downstairs and "two disjoint lines" upstairs, with the map $\iota^*$ gluing the two origins;
-3. with $\mathfrak{p}_1 = $ the glue point and $\mathfrak{p}_2 = $ the generic point of one component, and $\mathfrak{q}_1 = $ the origin of the *other* component upstairs, going down fails.
+3. with $\mathfrak{p}_1$ the glue point and $\mathfrak{p}_2$ the generic point of one component, and $\mathfrak{q}_1$ the origin of the *other* component upstairs, going down fails.
 
 **Recall:**
 
@@ -41,7 +41,7 @@ A domain $A$ is **[[Def - Integral Closure and Normal Domain|integrally closed]]
 
 **Assumption pattern.** The construction is engineered so that $A$ fails the *one* hypothesis going down needs: normality. By gluing two lines at a point, $A$ acquires a singular point (the glue), and its normalization is precisely $B$ = the two separated lines. The recognisable pattern: a non-normal ring is one whose normalization $B$ "pulls apart" a singularity into several branches, and going down fails exactly at the singular point because a preimage on *one* branch cannot specialise to a point on *another* branch.
 
-**Theorem routing.** The route is: verify $A \subseteq B$ integral (the idempotent $e = (1,0)$ satisfies $e^2 = e$, so $B = A + Ae$ is module-finite); identify $\operatorname{Spec} A$ (two lines meeting at the glue point $P$) and $\operatorname{Spec} B$ (two disjoint lines); compute the contraction map $\iota^*$ (it glues the two origins to $P$, is a bijection elsewhere); choose the failing data $\mathfrak{p}_2 \subsetneq \mathfrak{p}_1 = P$ on the $u$-component and $\mathfrak{q}_1 = $ origin of the $v$-component; observe that the only prime $\subseteq \mathfrak{q}_1$ is the generic point of the $v$-component, which contracts to the *$v$*-component prime, not $\mathfrak{p}_2$.
+**Theorem routing.** The route is: verify $A \subseteq B$ integral (the idempotent $e = (1,0)$ satisfies $e^2 = e$, so $B = A + Ae$ is module-finite); identify $\operatorname{Spec} A$ (two lines meeting at the glue point $P$) and $\operatorname{Spec} B$ (two disjoint lines); compute the contraction map $\iota^*$ (it glues the two origins to $P$, is a bijection elsewhere); choose the failing data $\mathfrak{p}_2 \subsetneq \mathfrak{p}_1 = P$ on the $u$-component and $\mathfrak{q}_1$ the origin of the $v$-component; observe that the only prime $\subseteq \mathfrak{q}_1$ is the generic point of the $v$-component, which contracts to the *$v$*-component prime, not $\mathfrak{p}_2$.
 
 **Key decision point.** The non-obvious construction is the *glued* ring $A = \{(f,g) : f(0) = g(0)\}$ — neither $k[u]\times k[v]$ nor a polynomial ring, but the "node" obtained by identifying the two origins. The genuine insight is choosing $\mathfrak{q}_1$ on the *opposite* branch from $\mathfrak{p}_2$: $\mathfrak{p}_2$ is the generic point of the $u$-line, but $\mathfrak{q}_1$ is the origin of the $v$-line, and below $\mathfrak{q}_1$ there is *only* the $v$-line's generic point — which sits over the $v$-line downstairs, not the $u$-line. The branches do not communicate below the glue point. (A reader who picks $\mathfrak{q}_1$ on the *same* branch as $\mathfrak{p}_2$ will find going down *succeeds* there, missing the failure.)
 
@@ -70,7 +70,7 @@ This solution deploys the following legal operations from [[Commutative Algebra 
 > First get the geometry. $\operatorname{Spec} B = \operatorname{Spec} k[u] \sqcup \operatorname{Spec} k[v]$ is *two disjoint lines*. $\operatorname{Spec} A$ is *two lines meeting at one point* $P$ (the glue). The map $\iota^* : \operatorname{Spec} B \to \operatorname{Spec} A$ is a bijection away from the origins, but sends *both* origins $(u) \times k[v]$ and $k[u] \times (v)$ to the single point $P$.
 
 > [!note]- Hint 3
-> Now set up the failing chain. Downstairs, take $\mathfrak{p}_1 = P$ (the glue point, a maximal ideal) and $\mathfrak{p}_2 = $ the generic point of the $u$-line (the prime of functions vanishing on the $u$-component). So $\mathfrak{p}_2 \subsetneq \mathfrak{p}_1$. Upstairs, take $\mathfrak{q}_1 = $ the origin of the *$v$*-line — note: the *other* branch. Check $\mathfrak{q}_1$ lies over $\mathfrak{p}_1 = P$.
+> Now set up the failing chain. Downstairs, take $\mathfrak{p}_1 = P$ (the glue point, a maximal ideal) and let $\mathfrak{p}_2$ be the generic point of the $u$-line (the prime of functions vanishing on the $u$-component). So $\mathfrak{p}_2 \subsetneq \mathfrak{p}_1$. Upstairs, let $\mathfrak{q}_1$ be the origin of the $v$-line — note: the *other* branch. Check $\mathfrak{q}_1$ lies over $\mathfrak{p}_1 = P$.
 
 > [!note]- Hint 4
 > Going down asks for $\mathfrak{q}_2 \subseteq \mathfrak{q}_1$ over $\mathfrak{p}_2$. The only primes $\subseteq \mathfrak{q}_1$ (the $v$-origin) are $\mathfrak{q}_1$ itself and the generic point of the $v$-line. The $v$-line's generic point contracts to the $v$-component prime in $A$ — *not* to $\mathfrak{p}_2$, which is the $u$-component prime. So no $\mathfrak{q}_2$ works: going down fails. The branches do not talk below the glue.

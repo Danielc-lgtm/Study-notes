@@ -77,6 +77,15 @@ This chapter assumes fluency with the [[Def - Tensor Product of Modules|tensor p
 > [!tip] Unlocked: Tor and homological algebra *(from Homological Algebra)*
 > The failure of $T_M$ to be left exact is measured by a sequence of derived functors $\operatorname{Tor}_n^R(M, -)$, with $\operatorname{Tor}_0 = M \otimes (-)$ and $M$ flat exactly when all higher $\operatorname{Tor}$ vanish. The single criterion $\operatorname{Tor}_1^R(R/I, M) = 0$ for all finitely generated $I$ detects flatness, and the long exact sequence of $\operatorname{Tor}$ is the systematic bookkeeping of "how badly injectivity is broken." This is the gateway from a caveat about tensoring into the whole edifice of homological algebra.
 
+- **[[Ex - A monic-polynomial quotient is a flat algebra]]** (⭐⭐)
+	- For any ring $A$ and monic $f \in A[T]$, the algebra $B = A[T]/(f)$ is a **free** $A$-module with basis $1, T, \dots, T^{d-1}$ ($d = \deg f$), hence flat. Geometrically a finite flat family of $d$ points whose count never drops. By contrast $k[X,Y]/(XY)$ is not flat over $k[X]$, the fibre jumping at the origin — the prototype of a non-flat family.
+
+- **[[Ex - The maximal ideal (X,Y) is torsion-free but not flat]]** (⭐⭐⭐)
+	- The maximal ideal $\mathfrak m = (X,Y) \trianglelefteq k[X,Y]$ is torsion-free (a submodule of the domain $R$), but not flat: tensoring the inclusion $\mathfrak m \hookrightarrow R$ with $\mathfrak m$ fails to be injective — the Koszul relation $Y \otimes X - X \otimes Y$ is a non-zero element of $\mathfrak m \otimes \mathfrak m$ killed by the multiplication map. Separates torsion-free from flat, completing the four-step tower with a witness at every gap.
+
+- **[[Ex - Free implies projective implies flat implies torsion-free]]** (⭐⭐)
+	- The structural backbone: each implication proved cleanly (free is a summand of itself hence projective; projective is a summand of free hence flat; flat is torsion-free because a torsion element witnesses a broken injection $\mu_r$), and the chain is the spine the rest of the chapter hangs failures on. Read here as the flatness tower; revisited in §3.5 once projectivity is in hand.
+
 > [!note] Exercise Index — §3.4
 > [[Exercise Index - §3.4 Flatness]]
 
@@ -89,25 +98,16 @@ This chapter assumes fluency with the [[Def - Tensor Product of Modules|tensor p
 	- For an $R$-module $M$ the following are equivalent: (i) $M$ is projective; (ii) $\operatorname{Hom}(M,-)$ is an exact functor; (iii) every short exact sequence $0 \to A \to B \to M \to 0$ splits; (iv) $M$ is a direct summand of a free module, $M \oplus N \cong R^{\oplus I}$. The pivot is $(iii)\Leftrightarrow(iv)$: present $M$ as a quotient of a free module $F \twoheadrightarrow M$, then $M$ projective $\Leftrightarrow$ this sequence splits $\Leftrightarrow$ $M$ is a summand of $F$. From (iv) one gets at once that **projective $\Rightarrow$ flat**, since a summand of a flat (indeed free) module is flat.
 
 - **[[Ex - The splitting lemma]]** (⭐⭐)
-	- For a short exact sequence $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$, the conditions "splits", "$g$ has a right inverse $s$ with $gs = \operatorname{id}_C$", and "$f$ has a left inverse $r$ with $rf = \operatorname{id}_A$" are equivalent, and each forces $B \cong A \oplus C$ compatibly with $f, g$. The retraction/section is the data that builds the splitting isomorphism.
-
-- **[[Ex - Free implies projective implies flat implies torsion-free]]** (⭐⭐)
-	- The structural backbone: each implication proved cleanly (free is a summand of itself hence projective; projective is a summand of free hence flat; flat is torsion-free because a torsion element witnesses a broken injection $\mu_r$), and the chain is the spine the rest of the section hangs failures on.
+	- For a short exact sequence $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$, the conditions "splits", "$g$ has a right inverse $s$ with $gs = \operatorname{id}_C$", and "$f$ has a left inverse $r$ with $rf = \operatorname{id}_A$" are equivalent, and each forces $B \cong A \oplus C$ compatibly with $f, g$. The retraction/section is the data that builds the splitting isomorphism, and a projective quotient $C$ hands you the section for free.
 
 - **[[Ex - Q is a flat but not projective Z-module]]** (⭐⭐)
 	- $\mathbb{Q}$ is flat over $\mathbb{Z}$ (it is a localization, or directly: every tensor in $\mathbb{Q} \otimes V$ is pure), but not projective — a hypothetical splitting of a free cover would make $\mathbb{Q}$ a summand of a free abelian group, impossible since $\mathbb{Q}$ is divisible and free abelian groups have no non-trivial divisible elements. The first separation of flat from projective.
 
 - **[[Ex - A projective module that is not free]]** (⭐⭐)
-	- Over $R = \mathbb{Z}/6 \cong \mathbb{Z}/2 \times \mathbb{Z}/3$, the ideal $\mathbb{Z}/2$ is a direct summand of the free module $R$, hence projective, but is not free (every non-zero free $R$-module has at least $6$ elements). The idempotent $e = (1,0)$ is the engine: $Re$ is projective for any idempotent $e$. Separates projective from free.
-
-- **[[Ex - The maximal ideal (X,Y) is torsion-free but not flat]]** (⭐⭐⭐)
-	- The maximal ideal $\mathfrak m = (X,Y) \trianglelefteq k[X,Y]$ is torsion-free (a submodule of the domain $R$), but not flat: tensoring the inclusion $\mathfrak m \hookrightarrow R$ with $\mathfrak m$ fails to be injective — the Koszul relation $Y \otimes X - X \otimes Y$ is a non-zero element of $\mathfrak m \otimes \mathfrak m$ killed by the multiplication map. Separates torsion-free from flat, completing the four-step tower with a witness at every gap.
+	- Over $R = \mathbb{Z}/6 \cong \mathbb{Z}/2 \times \mathbb{Z}/3$, the module $\mathbb{Z}/2$ is a direct summand of the free module $R$, hence projective, but is not free (every non-zero free $R$-module has at least $6$ elements). The idempotent $e = (1,0)$ is the engine: $Re$ is projective for any idempotent $e$. Separates projective from free.
 
 - **[[Ex - A short exact sequence that does not split though B is the direct sum]]** (⭐⭐)
 	- The sequence $0 \to \mathbb{Z} \xrightarrow{\times 2} \mathbb{Z} \to \mathbb{Z}/2 \to 0$ does not split (no section, as $\mathbb{Z}$ has no $2$-torsion). More subtly, one can have $0 \to A \to B \to C \to 0$ non-split yet $B \cong A \oplus C$ abstractly — the isomorphism exists but not *compatibly* with the maps. A caution that "splits" is about the maps, not the abstract isomorphism type of $B$.
-
-- **[[Ex - A monic-polynomial quotient is a flat algebra]]** (⭐⭐)
-	- For any ring $A$ and monic $f \in A[T]$, the algebra $B = A[T]/(f)$ is a **free** $A$-module with basis $1, T, \dots, T^{d-1}$ ($d = \deg f$), hence flat. Geometrically a finite flat family of $d$ points whose count never drops. By contrast $k[X,Y]/(XY)$ is not flat over $k[X]$, the fibre jumping at the origin — the prototype of a non-flat family.
 
 > [!tip] Unlocked: Vector bundles and Serre–Swan *(from Algebraic Geometry / Topology)*
 > A finitely generated **projective** module is exactly a **vector bundle** in algebraic guise: it is *locally free* — free after localizing at each prime — yet may be globally twisted, just as a vector bundle is locally trivial but globally non-trivial. The **Serre–Swan** correspondence makes this precise: finitely generated projective modules over the ring of functions on a space are the same data as vector bundles over the space, with [[Def - Free Module|free]] modules corresponding to *trivial* bundles. The projective-not-free phenomenon (the $\mathbb{Z}/6$ example, or the non-principal ideal $(2, 1+\sqrt{-5})$) is the algebraic seed of every non-trivial bundle. Reading the chapter's tower geometrically: **trivial bundle $\Rightarrow$ vector bundle $\Rightarrow$ flat family $\Rightarrow$ no torsion**.

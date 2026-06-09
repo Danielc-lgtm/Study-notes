@@ -148,7 +148,7 @@ This is the hardest proof in the chapter, and the difficulty is concentrated in 
 > By Lemma 1, $y \in \mathfrak{p}_2 B = \sqrt{\mathfrak{p}_2 B}$ is integral over the ideal $\mathfrak{p}_2$. By Lemma 2 (using $A$ integrally closed and $\mathfrak{p}_2$ prime), the minimal polynomial of $y$ over $K$ is
 > $$y^r + u_1 y^{r-1} + \cdots + u_r = 0, \qquad u_1, \dots, u_r \in \mathfrak{p}_2.$$
 > Now $y = x \cdot s$ with $x = y/s \in A \subseteq K$ and $s \in B \subseteq \operatorname{Frac} B$. The minimal polynomial of $s$ over $K$ is obtained by dividing the equation for $y = xs$ by $x^r$:
-> $$s^r + \tfrac{u_1}{x}\, s^{r-1} + \cdots + \tfrac{u_r}{x^r} = 0. \tag{$\ast$}$$
+> $$s^r + \tfrac{u_1}{x}\, s^{r-1} + \cdots + \tfrac{u_r}{x^r} = 0. \qquad (\ast)$$
 > Since $s \in B$ is integral over $A$ and $A$ is integrally closed, all coefficients of $s$'s minimal polynomial lie in $A$: $\tfrac{u_i}{x^i} \in A$ for each $i$.
 >
 > **Suppose $x = y/s \notin \mathfrak{p}_2$.** Then $x^i \notin \mathfrak{p}_2$ for each $i$ (primeness). From $u_i = x^i \cdot \tfrac{u_i}{x^i}$ with $u_i \in \mathfrak{p}_2$, $x^i \notin \mathfrak{p}_2$, and $\tfrac{u_i}{x^i} \in A$, primeness of $\mathfrak{p}_2$ gives $\tfrac{u_i}{x^i} \in \mathfrak{p}_2$ for all $i$. Rearranging $(\ast)$,

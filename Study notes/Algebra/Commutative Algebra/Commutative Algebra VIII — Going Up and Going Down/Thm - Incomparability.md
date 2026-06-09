@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $A \subseteq B$ be an [[Def - Integral Element and Integral Extension|integral extension]], [[Def - The Induced Map on Spectra|$\iota^*$]] the contraction $\mathfrak{q} \mapsto \mathfrak{q} \cap A$. For $\mathfrak{p} \in \operatorname{Spec} A$, $B_{\mathfrak{p}} = (A\setminus\mathfrak{p})^{-1}B$, and the **fibre** over $\mathfrak{p}$ is the set of primes of $B$ lying over $\mathfrak{p}$, identified with $\operatorname{mSpec} B_{\mathfrak{p}}$. The full registry is on [[Commutative Algebra VIII — Going Up and Going Down]].
+All rings are commutative with $1$. Let $A \subseteq B$ be an [[Def - Integral Element and Integral Extension|integral extension]], [[Def - The Induced Map on Spectra|ι*]] the contraction $\mathfrak{q} \mapsto \mathfrak{q} \cap A$. For $\mathfrak{p} \in \operatorname{Spec} A$, $B_{\mathfrak{p}} = (A\setminus\mathfrak{p})^{-1}B$, and the **fibre** over $\mathfrak{p}$ is the set of primes of $B$ lying over $\mathfrak{p}$, identified with $\operatorname{mSpec} B_{\mathfrak{p}}$. The full registry is on [[Commutative Algebra VIII — Going Up and Going Down]].
 
 ---
 
