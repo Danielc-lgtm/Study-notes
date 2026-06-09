@@ -56,7 +56,7 @@ The third disguised source is **"$R$ is itself already a completion or a power s
 
 The conclusions are "$\widehat{R}$ Noetherian", "$\widehat{R}$ flat / $\otimes\widehat{R}$ exact", and "$\widehat{M}=\widehat{R}\otimes_R M$".
 
-Combine **part 1 with Hilbert's basis theorem** to get [[T₁,…,Tₙ]]. The additional fact $D$ is that $R[[T_1,\dots,T_n]]$ *is* the $(T_1,\dots,T_n)$-adic completion of the Noetherian ring $R[T_1,\dots,T_n]$. The result $E$ is the power-series analogue of Hilbert's theorem, in one line. Nonobvious because the power-series ring is *not* finitely generated over $R$ as a ring, so Hilbert does not apply directly — completion is the bridge.
+Combine **part 1 with Hilbert's basis theorem** to get [[Thm - Formal Power Series over a Noetherian Ring are Noetherian|that the formal power series ring R⟦T₁,…,Tₙ⟧ is Noetherian]]. The additional fact $D$ is that $R[[T_1,\dots,T_n]]$ *is* the $(T_1,\dots,T_n)$-adic completion of the Noetherian ring $R[T_1,\dots,T_n]$. The result $E$ is the power-series analogue of Hilbert's theorem, in one line. Nonobvious because the power-series ring is *not* finitely generated over $R$ as a ring, so Hilbert does not apply directly — completion is the bridge.
 
 Combine **part 3 with a presentation $M=R^n/K$** to compute $\widehat{M}$ concretely. The additional data $D$ is a finite presentation of $M$ (available since $R$ is Noetherian). The result $E$ is $\widehat{M}=\widehat{R}^n/\widehat{K}$: completion commutes with cokernels of maps of free modules, so $\widehat{M}$ is computed by completing a presentation. Nonobvious because it converts an inverse limit into linear algebra over $\widehat{R}$.
 
