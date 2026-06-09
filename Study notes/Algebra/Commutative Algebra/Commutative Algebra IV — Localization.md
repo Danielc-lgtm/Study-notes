@@ -62,6 +62,15 @@ This chapter assumes you are fluent with [[Def - Ideal|ideals]], [[Def - Quotien
 > [!tip] Unlocked: The structure sheaf of an affine scheme *(from Algebraic Geometry)*
 > The localizations $R_f$, one for each $f \in R$, are the rings of functions on the **basic open sets** $D(f) = \{\mathfrak{p} : f \notin \mathfrak{p}\}$ of $\operatorname{Spec} R$. Gluing these together — using that $R_f$ and $R_g$ both localize further to $R_{fg}$ — produces the **structure sheaf** $\mathcal{O}_{\operatorname{Spec} R}$, the object that upgrades the bare set $\operatorname{Spec} R$ into a *scheme*. Localization is the affine-local model for the entire global theory: a scheme is what you get by gluing the spectra of rings along their localizations.
 
+- **[[Ex - Localizing at a prime gives a local ring]]** (⭐)
+	- Compute $R_{\mathfrak p} = (R\setminus\mathfrak p)^{-1}R$, show its unique maximal ideal is $\mathfrak p R_{\mathfrak p}$, and identify the residue field $\kappa(\mathfrak p) = \operatorname{Frac}(R/\mathfrak p)$ — the algebra of a single point.
+
+- **[[Ex - Localization commutes with quotients]]** (⭐)
+	- Prove $R_{\mathfrak p}/\mathfrak q R_{\mathfrak p} \cong (R/\mathfrak q)_{\mathfrak p}$, and specialise at $\mathfrak q = \mathfrak p$ to recover the residue field — the reconciliation of "localize then quotient" with "quotient then take fractions".
+
+- **[[Ex - A localization as a quotient R[T] over (uT-1)]]** (⭐⭐)
+	- Identify $R_f \cong R[T]/(fT - 1)$, the presentation of "inverting $f$" as adjoining a formal inverse $T$ and forcing $fT = 1$ — the universal property made concrete.
+
 > [!note] Exercise Index — §4.1–4.2
 > [[Exercise Index - §4.1–4.2 Construction and Universal Property]]
 
@@ -78,6 +87,15 @@ This chapter assumes you are fluent with [[Def - Ideal|ideals]], [[Def - Quotien
 
 > [!tip] Unlocked: Basic open sets and the Zariski topology *(from Algebraic Geometry)*
 > The sets $D(f) = \operatorname{Spec}(R_f)$ form a basis for the Zariski topology on $\operatorname{Spec} R$, and the [[Thm - Prime Ideals of a Localization|prime-correspondence theorem]] is what makes $\operatorname{Spec}(R_f) \hookrightarrow \operatorname{Spec} R$ a homeomorphism onto $D(f)$. This is the precise sense in which **inverting $f$ = restricting to the open set where $f \neq 0$**. The full Zariski-topology / Nullstellensatz story is developed in [[Commutative Algebra VII — Noether Normalization and the Nullstellensatz]].
+
+- **[[Ex - Extension and contraction bijection of ideals]]** (⭐⭐)
+	- Establish $\mathfrak a \subseteq \mathfrak a^{ec}$ and $\mathfrak b \supseteq \mathfrak b^{ce}$ in general, then the bijection between contracted ideals of $R$ and extended ideals of $S^{-1}R$ — the abstract bookkeeping behind "every ideal of a localization is extended".
+
+- **[[Ex - The prime spectrum of a localization]]** (⭐⭐)
+	- Apply the prime-correspondence theorem to list $\operatorname{Spec}(S^{-1}R) = \{\mathfrak p : \mathfrak p \cap S = \varnothing\}$, recovering that $R_{\mathfrak p}$ is local and $\operatorname{Spec}(R_f) = D(f)$.
+
+- **[[Ex - The radical of an extended ideal]]** (⭐⭐)
+	- Prove $\sqrt{\mathfrak a}^{\,e} = \sqrt{\mathfrak a^e}$, so localization commutes with radicals; deduce $(\operatorname{nil} R)^e = \operatorname{nil}(S^{-1}R)$ — nilpotence is detected locally.
 
 > [!note] Exercise Index — §4.3
 > [[Exercise Index - §4.3 Extension and Contraction]]
@@ -101,6 +119,15 @@ This chapter assumes you are fluent with [[Def - Ideal|ideals]], [[Def - Quotien
 
 > [!tip] Unlocked: Vector bundles are not detected locally *(from Algebraic Geometry)*
 > That **freeness is not a local property** is the algebraic seed of the existence of non-trivial vector bundles: a finitely generated projective module is locally free (free at every $\mathfrak{p}$) yet need not be free, exactly as a vector bundle is locally trivial yet globally twisted. The non-free locally-free ideal $(2, 1+\sqrt{-5}) \trianglelefteq \mathbb{Z}[\sqrt{-5}]$ is a line bundle on $\operatorname{Spec}\mathbb{Z}[\sqrt{-5}]$ with non-trivial class — the **Serre–Swan** correspondence between projective modules and vector bundles in embryo.
+
+- **[[Ex - Being reduced is a local property]]** (⭐⭐)
+	- Show $R$ is reduced (no nonzero nilpotents) if and only if $R_{\mathfrak p}$ is reduced for every prime $\mathfrak p$, by applying the local–global principle to the nilradical — a model "check it one point at a time" argument.
+
+- **[[Ex - A domain is the intersection of its localizations at maximal ideals]]** (⭐⭐)
+	- Prove $A = \bigcap_{\mathfrak m \in \operatorname{mSpec} A} A_{\mathfrak m}$ inside $\operatorname{Frac}(A)$, so a global function is exactly one that is regular at every point — the local-to-global glueing for a domain.
+
+- **[[Ex - Freeness is not a local property]]** (⭐⭐⭐)
+	- Over $R = \mathbb C \times \mathbb C$ exhibit a module that is free at every prime yet not free, the algebraic seed of non-trivial vector bundles (the Serre–Swan phenomenon).
 
 > [!note] Exercise Index — §4.4–4.5
 > [[Exercise Index - §4.4–4.5 Local Rings and Local Properties]]
