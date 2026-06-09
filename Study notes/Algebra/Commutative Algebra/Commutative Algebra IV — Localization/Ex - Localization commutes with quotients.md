@@ -76,7 +76,7 @@ Applying the exact functor to $0\to N\to M\to M/N\to 0$ keeps it exact.
 > [!note]- Derivation
 > The inclusion $\iota : N\hookrightarrow M$ and quotient $\pi : M\twoheadrightarrow M/N$ form the short exact sequence
 > $$0\to N\xrightarrow{\iota}M\xrightarrow{\pi}M/N\to 0.$$
-> By [[Thm - Localization is Exact and the Localization is Flat|exactness of $S^{-1}(-)$]], applying it preserves exactness:
+> By [[Thm - Localization is Exact and the Localization is Flat|exactness of localization]], applying it preserves exactness:
 > $$0\to S^{-1}N\xrightarrow{S^{-1}\iota}S^{-1}M\xrightarrow{S^{-1}\pi}S^{-1}(M/N)\to 0$$
 > is exact. Here $S^{-1}\iota$ embeds $S^{-1}N$ as a submodule of $S^{-1}M$, and $S^{-1}\pi$ acts by $\tfrac ms\mapsto\tfrac{\pi(m)}{s} = \tfrac{m+N}{s}$.
 
