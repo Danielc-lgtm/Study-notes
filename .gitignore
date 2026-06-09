@@ -1,2 +1,6 @@
 # Claude Code working memory — not part of the vault
 .scratch/
+
+# Python bytecode from audit scripts
+__pycache__/
+*.pyc
