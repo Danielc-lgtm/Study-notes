@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $A$ be a [[Def - Dedekind Domain|Dedekind domain]] with fraction field $K$, and $\mathfrak{p}$ a nonzero (hence maximal) prime ideal. We write $A_\mathfrak{p} = (A\setminus\mathfrak{p})^{-1}A$ for the [[Def - Multiplicative Set and Localization|localization]] at $\mathfrak{p}$, with unique maximal ideal $\mathfrak{p}A_\mathfrak{p}$, and $\iota : A \to A_\mathfrak{p}$ for the localization map. An ideal $\mathfrak{q}$ is **[[Def - Primary Ideal|$\mathfrak{p}$-primary]]** if $\sqrt{\mathfrak{q}} = \mathfrak{p}$ and $xy\in\mathfrak q,\,x\notin\mathfrak q\Rightarrow y\in\mathfrak p$; the contraction is $\mathfrak{q}^c = \iota^{-1}(\mathfrak{q}A_\mathfrak{p})$. The full registry is on [[Commutative Algebra XIII — Dedekind Domains and DVRs]].
+All rings are commutative with $1$. Let $A$ be a [[Def - Dedekind Domain|Dedekind domain]] with fraction field $K$, and $\mathfrak{p}$ a nonzero (hence maximal) prime ideal. We write $A_\mathfrak{p} = (A\setminus\mathfrak{p})^{-1}A$ for the [[Def - Multiplicative Set and Localization|localization]] at $\mathfrak{p}$, with unique maximal ideal $\mathfrak{p}A_\mathfrak{p}$, and $\iota : A \to A_\mathfrak{p}$ for the localization map. An ideal $\mathfrak{q}$ is **[[Def - Primary Ideal|𝔭-primary]]** if $\sqrt{\mathfrak{q}} = \mathfrak{p}$ and $xy\in\mathfrak q,\,x\notin\mathfrak q\Rightarrow y\in\mathfrak p$; the contraction is $\mathfrak{q}^c = \iota^{-1}(\mathfrak{q}A_\mathfrak{p})$. The full registry is on [[Commutative Algebra XIII — Dedekind Domains and DVRs]].
 
 ---
 

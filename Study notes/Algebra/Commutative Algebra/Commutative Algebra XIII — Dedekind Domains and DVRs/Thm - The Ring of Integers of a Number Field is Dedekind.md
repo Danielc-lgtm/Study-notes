@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. A **number field** $K$ is a finite extension of $\mathbb{Q}$, i.e. $[K : \mathbb{Q}] < \infty$. Its **ring of integers** is $\mathcal{O}_K = \{x \in K : x \text{ is integral over } \mathbb{Z}\}$, the [[Def - Integral Closure and Normal Domain|integral closure]] of $\mathbb{Z}$ in $K$ — equivalently the set of [[Def - Algebraic Integer and Minimal Polynomial|algebraic integers]] lying in $K$. We write $\operatorname{Frac}(\mathcal{O}_K) = K$, $\dim$ for [[Def - Krull Dimension and Height|Krull dimension]], and $\mathbb{Z}^n$ for the [[Def - Free Module|free $\mathbb{Z}$-module]] of rank $n$. The full registry is on [[Commutative Algebra XIII — Dedekind Domains and DVRs]].
+All rings are commutative with $1$. A **number field** $K$ is a finite extension of $\mathbb{Q}$, i.e. $[K : \mathbb{Q}] < \infty$. Its **ring of integers** is $\mathcal{O}_K = \{x \in K : x \text{ is integral over } \mathbb{Z}\}$, the [[Def - Integral Closure and Normal Domain|integral closure]] of $\mathbb{Z}$ in $K$ — equivalently the set of [[Def - Algebraic Integer and Minimal Polynomial|algebraic integers]] lying in $K$. We write $\operatorname{Frac}(\mathcal{O}_K) = K$, $\dim$ for [[Def - Krull Dimension and Height|Krull dimension]], and $\mathbb{Z}^n$ for the [[Def - Free Module|free ℤ-module]] of rank $n$. The full registry is on [[Commutative Algebra XIII — Dedekind Domains and DVRs]].
 
 ---
 
