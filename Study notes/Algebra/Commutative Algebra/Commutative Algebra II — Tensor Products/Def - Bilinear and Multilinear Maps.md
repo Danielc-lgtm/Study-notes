@@ -10,7 +10,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; all modules are unital. Let $R$ be a ring and $M, N, L, M_1,\dots,M_k$ be [[Def - Module|$R$-modules]]. We write $f : M\times N\to L$ for a function on the Cartesian product of the underlying sets, $m_0\in M$, $n_0\in N$ for fixed ("frozen") arguments, and $\operatorname{Bil}_R(M\times N, L)$ for the set of $R$-bilinear maps $M\times N\to L$. An $R$-[[Def - Module Homomorphism|linear map]] is a homomorphism of $R$-modules; $\operatorname{Hom}_R(M, L)$ is the $R$-module of these. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; all modules are unital. Let $R$ be a ring and $M, N, L, M_1,\dots,M_k$ be [[Def - Module|R-modules]]. We write $f : M\times N\to L$ for a function on the Cartesian product of the underlying sets, $m_0\in M$, $n_0\in N$ for fixed ("frozen") arguments, and $\operatorname{Bil}_R(M\times N, L)$ for the set of $R$-bilinear maps $M\times N\to L$. An $R$-[[Def - Module Homomorphism|linear map]] is a homomorphism of $R$-modules; $\operatorname{Hom}_R(M, L)$ is the $R$-module of these. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 This is a compound page: it defines two interlocking notions — the **bilinear map** (two arguments) and the **multilinear map** ($k$ arguments) — because the second is the literal generalisation of the first and they are used interchangeably (a bilinear map is a $2$-multilinear map). The single example to keep in mind throughout is ordinary multiplication $R\times R\to R$, $(a,b)\mapsto ab$, which is bilinear but not linear.
 

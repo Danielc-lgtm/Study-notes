@@ -55,8 +55,20 @@ This chapter assumes you are fluent with [[Def - Ideal|ideals]] and their powers
 - **[[Def - The Associated Graded Ring and the Rees Algebra]]**
 	- Two constructions turning a filtration into a graded object. The associated graded ring $\operatorname{gr}_{\mathfrak{a}}(R) = \bigoplus \mathfrak{a}^n/\mathfrak{a}^{n+1}$ keeps the *layers* (quotients of successive levels), with multiplication $\bar x \cdot \bar y = \overline{xy}$ well-defined because $\mathfrak{a}^{m+1}\mathfrak{a}^n \subseteq \mathfrak{a}^{m+n+1}$; it is an algebra over $R/\mathfrak{a}$ and is the coordinate ring of the tangent cone. The Rees algebra $R^* = \bigoplus \mathfrak{a}^n$ keeps the *levels*, generated in degree one over $R$ by generators of $\mathfrak{a}$; it is the coordinate algebra of the blowup. They are linked by $\operatorname{gr}_{\mathfrak{a}}(R) = R^*/\mathfrak{a}R^*$.
 
+- **[[Ex - The associated graded ring of a polynomial ring]]** (⭐⭐)
+	- Compute $\operatorname{gr}_{\mathfrak{m}}(k[x_1,\dots,x_d]) \cong k[x_1,\dots,x_d]$ (affine space is its own tangent cone) by exploiting the pre-existing total-degree grading, then contrast the cuspidal cubic $y^2 = x^3$ whose tangent cone $k[x,y]/(y^2)$ is a nonreduced doubled line. Drills computing $\operatorname{gr}$ from initial forms and reading singularity off the tangent cone.
+
+- **[[Ex - A nonstandard grading and its Hilbert function]]** (⭐⭐)
+	- For the weighted grading $\deg'(T_1^{e_1}T_2^{e_2}) = e_1 + 2e_2$, show $\dim_k A_n = \lfloor n/2\rfloor + 1$ is quasi-polynomial (no Hilbert polynomial), diagnose the failure as violated degree-one generation in Hilbert–Serre, and compute $P(t) = \frac{1}{(1-t)(1-t^2)}$. Example Sheet 4 Q10.
+
 - **[[Thm - A Graded Ring is Noetherian iff Finitely Generated in Degree One]]**
 	- A graded ring $A$ is Noetherian $\iff$ $A_0$ is Noetherian and $A$ is finitely generated as an $A_0$-algebra (by homogeneous elements of positive degree). The hard direction is a degree induction: homogeneous generators of the irrelevant ideal $A_+$ generate all of $A$ over $A_0$, because projecting $y = \sum r_i x_i$ onto its own degree replaces the coefficients $r_i$ by lower-degree ones. The corollary: a graded $k$-algebra generated in degree one is a quotient of $k[T_0,\dots,T_r]$, so its Proj embeds in $\mathbb{P}^r$ — generation in degree one *is* a projective embedding.
+
+- **[[Ex - The Rees algebra is Noetherian]]** (⭐⭐)
+	- Prove $R^* = \bigoplus \mathfrak{a}^n$ is Noetherian by presenting it as a degree-one quotient of $R[T_1,\dots,T_r]$ and applying Hilbert's basis theorem, then deduce $\operatorname{gr}_{\mathfrak{a}}(R) = R^*/\mathfrak{a}R^*$ is Noetherian. The load-bearing finiteness fact under the whole Artin–Rees machine.
+
+- **[[Ex - Stable filtrations of a finitely generated module]]** (⭐⭐⭐)
+	- Prove the master dictionary "$(M_n)$ stable $\iff$ Rees module $M^*$ finitely generated over $R^*$" via the freeze-then-continue-adically ascending chain, then harvest Artin–Rees and the equivalence of stable filtrations as corollaries — the deepest technique of the chapter (also indexed under §12.2).
 
 > [!tip] Unlocked: Projective varieties and the Proj construction *(from Algebraic Geometry)*
 > A graded ring finitely generated in degree one over a field $A_0 = k$ is the **homogeneous coordinate ring** of a **projective variety** $\operatorname{Proj} A \hookrightarrow \mathbb{P}^r$, with the degree-one piece $A_1$ supplying the homogeneous coordinates. The model is $A = k[T_0, \dots, T_r]$, $\operatorname{Proj} A = \mathbb{P}^r$. The grading implements "scale all coordinates together and get the same point" — the algebra of the $\mathbb{G}_m$-action. The Noetherian criterion is what makes $\operatorname{Proj} A$ quasi-compact and of finite type, hence a genuine variety.

@@ -53,7 +53,7 @@ This solution deploys the following legal operations from [[Commutative Algebra 
 # Hints
 
 > [!note]- Hint 1
-> You are asked to show a local ring is a DVR, and a DVR is *defined* as the valuation ring of some discrete valuation. The valuation is already named: $v_p(x) = $ the power of $p$ in $x$. So the task is purely to check $v_p$ satisfies the three axioms, then compute $\{v_p \geq 0\}$.
+> You are asked to show a local ring is a DVR, and a DVR is *defined* as the valuation ring of some discrete valuation. The valuation is already named: $v_p(x)$ is the power of $p$ in $x$. So the task is purely to check $v_p$ satisfies the three axioms, then compute $\{v_p \geq 0\}$.
 
 > [!note]- Hint 2
 > Well-definedness and multiplicativity are unique factorization in $\mathbb{Z}$: write $x = p^m a/b$, $y = p^n c/d$ with no $p$ in $a, b, c, d$; then $xy = p^{m+n}\cdot ac/bd$ and $p \nmid ac, bd$ because $p$ is prime. So $v_p(xy) = m + n$.

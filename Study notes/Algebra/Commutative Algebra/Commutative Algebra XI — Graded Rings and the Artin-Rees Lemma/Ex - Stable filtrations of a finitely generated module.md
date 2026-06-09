@@ -14,7 +14,7 @@ tags: [algebra, commutative-algebra]
 
 # Problem Statement
 
-Let $R$ be a [[Def - Noetherian Ring|Noetherian ring]], $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]], $M$ a [[Def - Finitely Generated Module|finitely generated]] $R$-module, and $(M_n)_{n \geq 0}$ an [[Def - Filtration and Stable Filtration|$\mathfrak{a}$-filtration]] of $M$. Let $R^* = \bigoplus_n \mathfrak{a}^n$ be the [[Def - The Associated Graded Ring and the Rees Algebra|Rees algebra]] and $M^* = \bigoplus_n M_n$ the Rees module.
+Let $R$ be a [[Def - Noetherian Ring|Noetherian ring]], $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]], $M$ a [[Def - Finitely Generated Module|finitely generated]] $R$-module, and $(M_n)_{n \geq 0}$ an [[Def - Filtration and Stable Filtration|𝔞-filtration]] of $M$. Let $R^* = \bigoplus_n \mathfrak{a}^n$ be the [[Def - The Associated Graded Ring and the Rees Algebra|Rees algebra]] and $M^* = \bigoplus_n M_n$ the Rees module.
 
 **(a)** Prove the **stability criterion**: $(M_n)$ is a stable $\mathfrak{a}$-filtration $\iff$ $M^*$ is a finitely generated $R^*$-module.
 

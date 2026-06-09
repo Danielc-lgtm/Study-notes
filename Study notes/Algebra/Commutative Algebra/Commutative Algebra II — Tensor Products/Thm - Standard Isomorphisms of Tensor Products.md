@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, N, P$ be [[Def - Module|$R$-modules]], with [[Def - Submodule|submodules]] $M'\leq M$, $N'\leq N$, and a family $\{M_i\}_{i\in I}$. We write $M\otimes_R N$ for the [[Def - Tensor Product of Modules|tensor product]], $\bigoplus_i M_i$ for the [[Def - Direct Sum of Modules|direct sum]], $M/M'$ for the [[Def - Quotient Module|quotient]], and $I, J\trianglelefteq R$ for ideals with sum $I+J$. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, N, P$ be [[Def - Module|R-modules]], with [[Def - Submodule|submodules]] $M'\leq M$, $N'\leq N$, and a family $\{M_i\}_{i\in I}$. We write $M\otimes_R N$ for the [[Def - Tensor Product of Modules|tensor product]], $\bigoplus_i M_i$ for the [[Def - Direct Sum of Modules|direct sum]], $M/M'$ for the [[Def - Quotient Module|quotient]], and $I, J\trianglelefteq R$ for ideals with sum $I+J$. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 ---
 

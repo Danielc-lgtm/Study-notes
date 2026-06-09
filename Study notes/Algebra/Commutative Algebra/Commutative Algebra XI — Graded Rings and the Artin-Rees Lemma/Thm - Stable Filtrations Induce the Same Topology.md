@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $R$ be a ring, $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]], and $M$ an [[Def - Module|$R$-module]]. Two [[Def - Filtration and Stable Filtration|filtrations]] $(M_n)$, $(M_n')$ of $M$ are **equivalent**, written $(M_n) \sim (M_n')$, if there is $n_0 \geq 0$ with $M_{n + n_0} \subseteq M_n'$ and $M_{n + n_0}' \subseteq M_n$ for all $n$ — each is bounded inside a finite shift of the other. The **$\mathfrak{a}$-adic filtration** is $(\mathfrak{a}^n M)$. A filtration defines a **topology** on $M$ with the $M_n$ a basis of open neighbourhoods of $0$. The full registry is on [[Commutative Algebra XI — Graded Rings and the Artin-Rees Lemma]].
+All rings are commutative with $1$. Let $R$ be a ring, $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]], and $M$ an [[Def - Module|R-module]]. Two [[Def - Filtration and Stable Filtration|filtrations]] $(M_n)$, $(M_n')$ of $M$ are **equivalent**, written $(M_n) \sim (M_n')$, if there is $n_0 \geq 0$ with $M_{n + n_0} \subseteq M_n'$ and $M_{n + n_0}' \subseteq M_n$ for all $n$ — each is bounded inside a finite shift of the other. The **$\mathfrak{a}$-adic filtration** is $(\mathfrak{a}^n M)$. A filtration defines a **topology** on $M$ with the $M_n$ a basis of open neighbourhoods of $0$. The full registry is on [[Commutative Algebra XI — Graded Rings and the Artin-Rees Lemma]].
 
 ---
 

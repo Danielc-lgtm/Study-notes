@@ -13,9 +13,9 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, N$ be [[Def - Module|$R$-modules]]. We write $F = R^{\oplus(M\times N)}$ for the [[Def - Free Module|free $R$-module]] on the *set* $M\times N$, with standard basis $\{e_{m,n} : (m,n)\in M\times N\}$; $K\leq F$ for the [[Def - Submodule|submodule]] of bilinearity relations; $M\otimes_R N = F/K$ for the tensor product; $m\otimes n$ for the image of $e_{m,n}$ (a **pure tensor**); and $i_{M\otimes N} : M\times N\to M\otimes N$, $(m,n)\mapsto m\otimes n$, for the canonical [[Def - Bilinear and Multilinear Maps|bilinear map]]. When $R$ is clear we write $M\otimes N$. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, N$ be [[Def - Module|R-modules]]. We write $F = R^{\oplus(M\times N)}$ for the [[Def - Free Module|free R-module]] on the *set* $M\times N$, with standard basis $\{e_{m,n} : (m,n)\in M\times N\}$; $K\leq F$ for the [[Def - Submodule|submodule]] of bilinearity relations; $M\otimes_R N = F/K$ for the tensor product; $m\otimes n$ for the image of $e_{m,n}$ (a **pure tensor**); and $i_{M\otimes N} : M\times N\to M\otimes N$, $(m,n)\mapsto m\otimes n$, for the canonical [[Def - Bilinear and Multilinear Maps|bilinear map]]. When $R$ is clear we write $M\otimes N$. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
-This generalises the vector-space construction [[Def - Tensor Product of Vector Spaces|$V\otimes_k W$]] from a field $k$ to an arbitrary commutative ring $R$; everything below specialises to that page when $R = k$ is a field and $M, N$ are vector spaces.
+This generalises the vector-space construction [[Def - Tensor Product of Vector Spaces|V⊗ₖW]] from a field $k$ to an arbitrary commutative ring $R$; everything below specialises to that page when $R = k$ is a field and $M, N$ are vector spaces.
 
 ---
 
@@ -73,7 +73,7 @@ The cleanest compression: **$M\otimes_R N$ is the universal place where elements
 
 **True name:** the true name of $M\otimes_R N$ is *not* "formal sums $\sum m_i\otimes n_i$" but "**the receptacle through which every bilinear map factors uniquely**". The fraction model is for computation (collapsing, bases, reduction mod $I$); the universal property is for everything structural (building maps, proving isomorphisms, certifying non-vanishing). When you need to map *out of* a tensor product, the reflex is "give the bilinear map".
 
-This generalises [[Def - Tensor Product of Vector Spaces|$V\otimes_k W$]] from fields to rings; over a field every module is free, so $\dim(V\otimes W) = \dim V\cdot\dim W$ and no tensor surprises occur, whereas over a general ring the relations can collapse things ($\mathbb{Z}/2\otimes\mathbb{Z}/3 = 0$) and tensors can be hard to evaluate. In **homological algebra** $M\otimes_R N$ is the degree-zero piece of the derived tensor product, with higher $\operatorname{Tor}^R_i(M,N)$ measuring the failure of exactness. In **physics and quantum information** $\mathcal{H}_A\otimes\mathcal{H}_B$ is the state space of a composite system, pure tensors are unentangled product states, and non-pure tensors are entangled states.
+This generalises [[Def - Tensor Product of Vector Spaces|V⊗ₖW]] from fields to rings; over a field every module is free, so $\dim(V\otimes W) = \dim V\cdot\dim W$ and no tensor surprises occur, whereas over a general ring the relations can collapse things ($\mathbb{Z}/2\otimes\mathbb{Z}/3 = 0$) and tensors can be hard to evaluate. In **homological algebra** $M\otimes_R N$ is the degree-zero piece of the derived tensor product, with higher $\operatorname{Tor}^R_i(M,N)$ measuring the failure of exactness. In **physics and quantum information** $\mathcal{H}_A\otimes\mathcal{H}_B$ is the state space of a composite system, pure tensors are unentangled product states, and non-pure tensors are entangled states.
 
 ---
 

@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, N, L$ be [[Def - Module|$R$-modules]]. We write $M\otimes_R N$ for the [[Def - Tensor Product of Modules|tensor product]], $m\otimes n$ for a pure tensor, $i = i_{M\otimes N} : M\times N\to M\otimes N$, $(m,n)\mapsto m\otimes n$, for the canonical [[Def - Bilinear and Multilinear Maps|bilinear map]], $\operatorname{Bil}_R(M\times N, L)$ for the bilinear maps $M\times N\to L$, and $\operatorname{Hom}_R(-,-)$ for $R$-linear maps. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, N, L$ be [[Def - Module|R-modules]]. We write $M\otimes_R N$ for the [[Def - Tensor Product of Modules|tensor product]], $m\otimes n$ for a pure tensor, $i = i_{M\otimes N} : M\times N\to M\otimes N$, $(m,n)\mapsto m\otimes n$, for the canonical [[Def - Bilinear and Multilinear Maps|bilinear map]], $\operatorname{Bil}_R(M\times N, L)$ for the bilinear maps $M\times N\to L$, and $\operatorname{Hom}_R(-,-)$ for $R$-linear maps. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 ---
 
@@ -61,7 +61,7 @@ The conclusion $C$ is "there is a unique linear $h$ with $h(m\otimes n) = f(m,n)
 
 Combine $C$ with **a second bilinear map in the other direction**. Producing $h : M\otimes N\to T$ and $h' : T\to M\otimes N$ and checking $h'h$, $hh'$ are the identity *on generators* (pure tensors, which generate) yields $E$ = an isomorphism $M\otimes N\cong T$. The combination is nonobvious because checking on pure tensors suffices — generators determine a linear map — so you never verify equality of maps on all tensors. This is the standard route to every standard isomorphism.
 
-Combine $C$ with **the functoriality of $\otimes$**. Given linear $f : M\to M'$, $g : N\to N'$, the bilinear map $(m,n)\mapsto f(m)\otimes g(n)$ induces (by $C$) the unique $f\otimes g : M\otimes N\to M'\otimes N'$. The result $E$ is the [[Thm - Functoriality of the Tensor Product|action of $\otimes$ on morphisms]] — the universal property is *what defines* $f\otimes g$. Nonobvious because functoriality is not assumed; it is manufactured from the universal property one map at a time.
+Combine $C$ with **the functoriality of $\otimes$**. Given linear $f : M\to M'$, $g : N\to N'$, the bilinear map $(m,n)\mapsto f(m)\otimes g(n)$ induces (by $C$) the unique $f\otimes g : M\otimes N\to M'\otimes N'$. The result $E$ is the [[Thm - Functoriality of the Tensor Product|action of ⊗ on morphisms]] — the universal property is *what defines* $f\otimes g$. Nonobvious because functoriality is not assumed; it is manufactured from the universal property one map at a time.
 
 Combine $C$ with **currying**. Reading $\operatorname{Bil}_R(M\times N, L)\cong\operatorname{Hom}_R(M, \operatorname{Hom}_R(N, L))$ together with $C$ gives the **tensor–hom adjunction** $\operatorname{Hom}_R(M\otimes N, L)\cong\operatorname{Hom}_R(M, \operatorname{Hom}_R(N, L))$. The result $E$ is that $-\otimes N$ is left adjoint to $\operatorname{Hom}_R(N, -)$, the structural fact behind right-exactness and $\operatorname{Tor}$. Nonobvious because it links tensor and hom, which look unrelated.
 

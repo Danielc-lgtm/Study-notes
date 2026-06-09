@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; ring/algebra homomorphisms send $1\mapsto 1$. Let $R$ be a ring and $A, B, C, D$ be [[Def - Algebra over a Ring (R-algebra)|$R$-algebras]]. We write $A\otimes_R B$ for the [[Def - Tensor Product of Algebras|tensor product algebra]], $i_A : A\to A\otimes_R B$, $a\mapsto a\otimes 1$ and $i_B : B\to A\otimes_R B$, $b\mapsto 1\otimes b$ for the structure maps, and $f_1 : A\to C$, $f_2 : B\to C$ for $R$-algebra homomorphisms into a common target. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; ring/algebra homomorphisms send $1\mapsto 1$. Let $R$ be a ring and $A, B, C, D$ be [[Def - Algebra over a Ring (R-algebra)|R-algebras]]. We write $A\otimes_R B$ for the [[Def - Tensor Product of Algebras|tensor product algebra]], $i_A : A\to A\otimes_R B$, $a\mapsto a\otimes 1$ and $i_B : B\to A\otimes_R B$, $b\mapsto 1\otimes b$ for the structure maps, and $f_1 : A\to C$, $f_2 : B\to C$ for $R$-algebra homomorphisms into a common target. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 ---
 

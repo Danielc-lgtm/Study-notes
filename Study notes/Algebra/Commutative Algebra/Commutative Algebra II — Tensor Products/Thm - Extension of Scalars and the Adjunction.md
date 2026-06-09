@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; ring homomorphisms send $1\mapsto 1$. Fix a ring homomorphism $f : R\to S$. Let $M, M'$ be [[Def - Module|$S$-modules]] and $N, N', \{N_i\}_{i\in I}$ be $R$-modules. We write $S\otimes_R N$ for the [[Def - Restriction and Extension of Scalars|extension of scalars]], $M\otimes_R N$ for the $R$-tensor with its $S$-action $s(m\otimes n) = (sm)\otimes n$, and $\operatorname{Hom}_S, \operatorname{Hom}_R$ for $S$- and $R$-linear maps. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; ring homomorphisms send $1\mapsto 1$. Fix a ring homomorphism $f : R\to S$. Let $M, M'$ be [[Def - Module|S-modules]] and $N, N', \{N_i\}_{i\in I}$ be $R$-modules. We write $S\otimes_R N$ for the [[Def - Restriction and Extension of Scalars|extension of scalars]], $M\otimes_R N$ for the $R$-tensor with its $S$-action $s(m\otimes n) = (sm)\otimes n$, and $\operatorname{Hom}_S, \operatorname{Hom}_R$ for $S$- and $R$-linear maps. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 ---
 
@@ -205,7 +205,7 @@ The technically delicate point is the *backward map* in part 1: it must be built
 
 - **[[Thm - Standard Isomorphisms of Tensor Products|Standard Isomorphisms]]** — parts 2 and 3 are the standard isomorphisms transported to the base-change setting; the proofs *are* the standard isomorphisms over $S$ chained with the two-step factorisation. The free case $S\otimes_R R^n\cong S^n$ is the identity and distributivity laws.
 
-- **[[Ex - Tensoring with R over I gives M over IM|$R/I\otimes_R M\cong M/IM$]]** — the simplest instance of extension, along $R\to R/I$: $S\otimes_R N$ with $S = R/I$, $N = M$ gives $(R/I)\otimes_R M\cong M/IM$. The adjunction here is the universal property of the quotient module.
+- **[[Ex - Tensoring with R over I gives M over IM|R/I⊗ᵣM≅M/IM]]** — the simplest instance of extension, along $R\to R/I$: $S\otimes_R N$ with $S = R/I$, $N = M$ gives $(R/I)\otimes_R M\cong M/IM$. The adjunction here is the universal property of the quotient module.
 
 - **Flat base change** — because extension is a left adjoint (part 4), it is right exact; it is *exact* precisely when $f : R\to S$ is **flat**, and then base change preserves exact sequences, kernels, and finite limits. This is the homological backbone of [[Commutative Algebra III — Flatness and Exactness]] and of localization (where $R\to S^{-1}R$ is flat), tying the adjunction to the exactness theory.
 

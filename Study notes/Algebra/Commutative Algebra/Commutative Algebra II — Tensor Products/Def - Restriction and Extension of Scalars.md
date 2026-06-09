@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; ring homomorphisms send $1\mapsto 1$. Fix a ring homomorphism $f : R\to S$ in the background — it is the *only* ingredient both constructions depend on. We write $M$ for an [[Def - Module|$S$-module]] and $N$ for an $R$-module; $\operatorname{End}(M)$ for the ring of endomorphisms of $M$ as an abelian group; and $S\otimes_R N$ (more generally $M\otimes_R N$) for the [[Def - Tensor Product of Modules|tensor product]], which we will endow with an $S$-module structure. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; ring homomorphisms send $1\mapsto 1$. Fix a ring homomorphism $f : R\to S$ in the background — it is the *only* ingredient both constructions depend on. We write $M$ for an [[Def - Module|S-module]] and $N$ for an $R$-module; $\operatorname{End}(M)$ for the ring of endomorphisms of $M$ as an abelian group; and $S\otimes_R N$ (more generally $M\otimes_R N$) for the [[Def - Tensor Product of Modules|tensor product]], which we will endow with an $S$-module structure. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 This is a compound page: it defines two opposite operations — **restriction of scalars** (an $S$-module becomes an $R$-module, *along $f$*) and **extension of scalars** (an $R$-module is pushed to an $S$-module, *by $\otimes_R S$*) — because they are a pair: extension is left adjoint to restriction, and one is rarely used without the other.
 
