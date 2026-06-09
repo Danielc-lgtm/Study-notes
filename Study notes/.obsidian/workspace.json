@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Analysis/Complex Analysis/Complex Analysis III/Thm - Laurent Series Theorem.md",
+                "file": "Geometry/Geometry of Physics/Hodge Theory/Hodge Theory I — Harmonic Forms and the Hodge Decomposition.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Thm - Laurent Series Theorem"
+              "title": "Hodge Theory I — Harmonic Forms and the Hodge Decomposition"
             }
           }
         ]
@@ -185,31 +185,31 @@
   },
   "active": "28731305ca23332c",
   "lastOpenFiles": [
-    "Analysis/Complex Analysis/Complex Analysis III — Winding, Laurent, Residues.md",
-    "Analysis/Complex Analysis/Complex Analysis III/Def - Laurent Series.md",
-    "Analysis/Complex Analysis/Complex Analysis III/Def - Simply Connected Domain in Complex Analysis.md",
-    "Analysis/Complex Analysis/Complex Analysis II — Cauchy's Theorem and its Consequences.md",
-    "Analysis/Complex Analysis/Complex Analysis I/Thm - Constant on a Domain if Derivative is Zero.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - Liouville's Theorem.md",
-    "Analysis/Complex Analysis/Complex Analysis II/Thm - Cauchy Integral Formula.md",
-    "Analysis/Complex Analysis/Complex Analysis I — Basic Notions.md",
-    "Probability/Measure Theory/Measure Theory III/Thm - Dynkin's π-λ Theorem.md",
-    "Probability/Measure Theory/Measure Theory III — §3–4 Product Measures and Differentiation.md",
-    "Probability/Measure Theory/Measure Theory II — §2 Integration.md",
-    "Probability/Measure Theory/Measure Theory I — §1 Measure Spaces.md",
-    "Probability/Advanced Probability/Advanced Probability I/Thm - Kolmogorov 0-1 Law.md",
-    "Probability/Advanced Probability/Advanced Probability I — Probability Spaces and Random Variables.md",
-    "Probability/Advanced Probability/Advanced Probability I/Thm - Borel-Cantelli Lemmas.md",
-    "Analysis/Complex Analysis/Complex Analysis III/Thm - Existence and Properties of the Winding Number.md",
-    "Algebra/Rings/Rings IV/Thm - Hilbert's Basis Theorem.md",
-    "Algebra/Rings/Rings IV — §2.7–2.8.md",
-    "Algebra/Rings/Rings IV/Thm - Noetherian Rings and Finitely Generated Ideals.md",
-    "Algebra/Rings/Rings IV/Def - Noetherian Ring.md",
-    "Algebra/Rings/Rings IV/Thm - Rational Algebraic Integers are Integers.md",
-    "Algebra/Rings/Rings IV/Thm - The Minimal Polynomial Generates the Kernel Ideal.md",
-    "Algebra/Rings/Rings I/Def - Ring Homomorphism.md",
-    "Algebra/Rings/Rings IV/Def - Algebraic Integer and Minimal Polynomial.md",
-    "Algebra/Rings/Rings III — §2.5–2.6.md",
-    "Algebra/Rings/Rings III/Def - Gaussian Integers.md"
+    "Geometry/Geometry of Physics/General Relativity/General Relativity I — Einstein's Equations and Schwarzschild.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Thm - Poincare-Hopf Theorem.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Def - Index of a Vector Field at a Zero.md",
+    "Geometry/Geometry of Physics/Riemannian Geometry/Riemannian Geometry IV/Def - Brouwer Degree of a Map.md",
+    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I/Def - Euler Characteristic.md",
+    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I/Def - Betti Numbers.md",
+    "Geometry/Geometry of Physics/Hodge Theory/Hodge Theory I — Harmonic Forms and the Hodge Decomposition.md",
+    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology III — Higher Homotopy and Chern Forms.md",
+    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology II — Fundamental Group and Covering Spaces.md",
+    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I/Thm - Mayer-Vietoris for Singular Homology.md",
+    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I — Singular Homology and the de Rham Theorem.md",
+    "Geometry/Differential Geometry/Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds.md",
+    "Geometry/Differential Geometry/Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map.md",
+    "Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
+    "Geometry/Differential Geometry/Differential Geometry VIII — Differential Forms.md",
+    "Geometry/Differential Geometry/Differential Geometry VII — Tensors and Tensor Fields.md",
+    "Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
+    "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
+    "Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
+    "Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
+    "Geometry/Differential Geometry/Differential Geometry III — Tangent Vectors and the Differential.md",
+    "Geometry/Differential Geometry/Differential Geometry II — Smooth Maps and Partitions of Unity.md",
+    "Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md"
   ]
 }
