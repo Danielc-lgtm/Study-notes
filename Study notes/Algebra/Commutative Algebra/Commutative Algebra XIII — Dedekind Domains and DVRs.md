@@ -104,7 +104,7 @@ This chapter assumes you are fluent with [[Def - Noetherian Ring|Noetherian ring
 - **[[Ex - Fractional ideals form a group]]** (⭐⭐)
 	- Prove that the nonzero fractional ideals of a Dedekind domain form an abelian group, verifying the only nontrivial axiom — invertibility $\mathfrak{a}(A:\mathfrak{a}) = A$ — *locally*, where at each prime it is the trivial DVR cancellation $(\pi^n)(\pi^{-n}) = A_\mathfrak{p}$. Identifies $\mathcal{I}(A)$ as the free abelian group on the primes, and notes that invertibility of all fractional ideals characterizes Dedekind domains.
 
-- **[[Ex - Unique factorization of ideals in Z[sqrt -5]]]** (⭐⭐)
+- **[[Ex - Unique factorization of ideals in Z[sqrt -5] into primes]]** (⭐⭐)
 	- The canonical worked example: factor $(2) = \mathfrak{p}^2$ (ramified), $(3) = \mathfrak{q}\bar{\mathfrak{q}}$ (split), $(1\pm\sqrt{-5}) = \mathfrak{p}\mathfrak{q},\,\mathfrak{p}\bar{\mathfrak{q}}$ in $\mathbb{Z}[\sqrt{-5}]$ by reducing $x^2+5$ modulo each prime (Dedekind's criterion), and watch both factorizations of $6$ regroup to the single ideal factorization $(6) = \mathfrak{p}^2\mathfrak{q}\bar{\mathfrak{q}}$. The norm proves $\mathfrak{p}$ is non-principal.
 
 - **[[Ex - The class group measures failure of unique factorization]]** (⭐⭐⭐)

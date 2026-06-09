@@ -67,7 +67,7 @@ In the geometry–algebra dictionary, Dedekind domains are the coordinate rings 
 
 **Is an instance — $\mathbb{Z}$ and any PID.** The integers $\mathbb{Z}$ form a Dedekind domain: Noetherian, integrally closed (it is a UFD), dimension $1$. Every PID is Dedekind for the same reasons, including $k[T]$ and $\mathbb{Z}[i]$. For a PID the class group is trivial and ideal factorization reduces to ordinary factorization of generators.
 
-**Is an instance — rings of integers.** For any number field $K$, the ring of integers $\mathcal{O}_K$ is Dedekind — this is [[Thm - The Ring of Integers of a Number Field is Dedekind|the main existence theorem]]. Concretely $\mathbb{Z}[\sqrt{-5}] = \mathcal{O}_{\mathbb{Q}(\sqrt{-5})}$ is Dedekind but *not* a PID, with class number $2$; it is the standard example where ideal factorization is unique but element factorization is not. See [[Ex - Unique factorization of ideals in Z[sqrt -5]]].
+**Is an instance — rings of integers.** For any number field $K$, the ring of integers $\mathcal{O}_K$ is Dedekind — this is [[Thm - The Ring of Integers of a Number Field is Dedekind|the main existence theorem]]. Concretely $\mathbb{Z}[\sqrt{-5}] = \mathcal{O}_{\mathbb{Q}(\sqrt{-5})}$ is Dedekind but *not* a PID, with class number $2$; it is the standard example where ideal factorization is unique but element factorization is not. See [[Ex - Unique factorization of ideals in Z[sqrt -5] into primes]].
 
 **Is an instance — smooth affine curves.** The coordinate ring $k[x,y]/(y^2 - x^3 - x)$ of a smooth elliptic curve (minus a point) is Dedekind: it is a one-dimensional integrally closed domain. Its class group is the curve's Picard group, an object of deep arithmetic interest.
 

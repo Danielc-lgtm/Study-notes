@@ -74,7 +74,7 @@ This chapter assumes fluency with [[Def - Ideal|ideals]], [[Def - Quotient Ring|
 - **[[Ex - Z[sqrt 5] is not integrally closed]]** (⭐⭐)
 	- Exhibit the missing algebraic integer $\tfrac{1+\sqrt5}2$ (integral via $T^2 - T - 1$, outside $\mathbb{Z}[\sqrt5]$ by its half-integer coordinate) to disprove normality, then compute $\overline{\mathbb{Z}[\sqrt5]} = \mathbb{Z}[\tfrac{1+\sqrt5}2]$ by the sandwich, capping with a Euclidean-hence-UFD candidate. Shows non-normality is a "missing algebraic integer" and that $\mathbb{Z}[\sqrt d]$ is the wrong ring of integers when $d \equiv 1 \pmod 4$.
 
-- **[[Ex - The integral closure of k[t^2,t^3]]]** (⭐⭐)
+- **[[Ex - The integral closure of k[t^2,t^3] resolves the cusp]]** (⭐⭐)
 	- Compute the normalization of the cuspidal cubic $y^2 = x^3$: $t = t^3/t^2$ is integral via $T^2 - t^2$ but missing from $k[t^2, t^3]$, and the closure is the smooth line $k[t]$ (sandwich capped by $k[t]$, a PID). Geometrically the finite birational map $t \mapsto (t^2, t^3)$ resolves the cusp singularity — the showcase of "non-normal $=$ singular, integral closure $=$ smooth model".
 
 > [!note] Exercise Index — §6.1
