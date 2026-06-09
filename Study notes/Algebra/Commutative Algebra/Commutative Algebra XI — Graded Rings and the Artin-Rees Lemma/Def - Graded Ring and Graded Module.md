@@ -45,11 +45,11 @@ The **irrelevant ideal** is $A_+ = \bigoplus_{n \geq 1} A_n$; it is the kernel o
 
 ## Graded module
 
-Let $A = \bigoplus_{n \geq 0} A_n$ be a graded ring. A **graded $A$-module** is an [[Def - Module|$A$-module]] $M$ together with a family $(M_n)_{n \geq 0}$ of additive subgroups such that
+Let $A = \bigoplus_{n \geq 0} A_n$ be a graded ring. A **graded $A$-module** is an [[Def - Module|A-module]] $M$ together with a family $(M_n)_{n \geq 0}$ of additive subgroups such that
 $$M = \bigoplus_{n=0}^{\infty} M_n \qquad \text{and} \qquad A_m M_n \subseteq M_{m+n} \ \text{ for all } m, n \geq 0.$$
 Each $M_n$ is then an $A_0$-module. An element $x \in M_n$ is **homogeneous of degree $n$**; every $y \in M$ has a unique decomposition $y = \sum_n y_n$ into homogeneous components $y_n \in M_n$, almost all zero.
 
-A **homomorphism of graded $A$-modules** is an [[Def - Module Homomorphism|$A$-module homomorphism]] $f : M \to N$ that *preserves degree*: $f(M_n) \subseteq N_n$ for all $n$. (More generally one allows degree-shifting maps $f(M_n) \subseteq N_{n+d}$, a map "of degree $d$", but the default is $d = 0$.)
+A **homomorphism of graded $A$-modules** is an [[Def - Module Homomorphism|A-module homomorphism]] $f : M \to N$ that *preserves degree*: $f(M_n) \subseteq N_n$ for all $n$. (More generally one allows degree-shifting maps $f(M_n) \subseteq N_{n+d}$, a map "of degree $d$", but the default is $d = 0$.)
 
 ---
 

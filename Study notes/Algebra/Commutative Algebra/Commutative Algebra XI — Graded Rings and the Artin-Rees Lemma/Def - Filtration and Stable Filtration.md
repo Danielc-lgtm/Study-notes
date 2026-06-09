@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Throughout, $R$ is a ring, $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]], and $M$ an [[Def - Module|$R$-module]]. A filtration of $M$ is a descending chain of [[Def - Submodule|submodules]] $M = M_0 \supseteq M_1 \supseteq M_2 \supseteq \cdots$, written $(M_n)_{n \geq 0}$. We write $\mathfrak{a}^n$ for the $n$-th power of the ideal (with $\mathfrak{a}^0 = R$), and $\mathfrak{a}^n M = \{\sum_i a_i m_i : a_i \in \mathfrak{a}^n, m_i \in M\}$ for the submodule it cuts out. The canonical example is the **$\mathfrak{a}$-adic filtration** $(\mathfrak{a}^n M)_{n \geq 0}$. The full registry is on [[Commutative Algebra XI — Graded Rings and the Artin-Rees Lemma]].
+All rings are commutative with $1$. Throughout, $R$ is a ring, $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]], and $M$ an [[Def - Module|R-module]]. A filtration of $M$ is a descending chain of [[Def - Submodule|submodules]] $M = M_0 \supseteq M_1 \supseteq M_2 \supseteq \cdots$, written $(M_n)_{n \geq 0}$. We write $\mathfrak{a}^n$ for the $n$-th power of the ideal (with $\mathfrak{a}^0 = R$), and $\mathfrak{a}^n M = \{\sum_i a_i m_i : a_i \in \mathfrak{a}^n, m_i \in M\}$ for the submodule it cuts out. The canonical example is the **$\mathfrak{a}$-adic filtration** $(\mathfrak{a}^n M)_{n \geq 0}$. The full registry is on [[Commutative Algebra XI — Graded Rings and the Artin-Rees Lemma]].
 
 This is a compound page: it defines three nested notions — a **filtration**, an **$\mathfrak{a}$-filtration**, and a **stable $\mathfrak{a}$-filtration** — because each refines the previous, and the entire force of the Artin–Rees lemma lives in the gap between the second and the third.
 
