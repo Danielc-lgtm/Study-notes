@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $R$ be a ring, $\mathfrak{a}\trianglelefteq R$ an [[Def - Ideal|ideal]], $M$ an [[Def - Module|$R$-module]]. Write $\widehat{M}=\varprojlim_n M/\mathfrak{a}^n M$ for the [[Def - The I-adic Completion|$\mathfrak{a}$-adic completion]], $\varphi=\varphi_M:M\to\widehat{M}$, $m\mapsto(m+\mathfrak{a}^n M)_n$ for the completion map, and $\mathrm{Jac}(R)$ for the Jacobson radical (the intersection of all maximal ideals). A ring or module is **complete** (for the $\mathfrak{a}$-adic topology) if $\varphi$ is an isomorphism. The full registry is on [[Commutative Algebra X — Completions and Limits]].
+All rings are commutative with $1$. Let $R$ be a ring, $\mathfrak{a}\trianglelefteq R$ an [[Def - Ideal|ideal]], $M$ an [[Def - Module|R-module]]. Write $\widehat{M}=\varprojlim_n M/\mathfrak{a}^n M$ for the [[Def - The I-adic Completion|\mathfrak{a}-adic completion]], $\varphi=\varphi_M:M\to\widehat{M}$, $m\mapsto(m+\mathfrak{a}^n M)_n$ for the completion map, and $\mathrm{Jac}(R)$ for the Jacobson radical (the intersection of all maximal ideals). A ring or module is **complete** (for the $\mathfrak{a}$-adic topology) if $\varphi$ is an isomorphism. The full registry is on [[Commutative Algebra X — Completions and Limits]].
 
 ---
 
@@ -57,7 +57,7 @@ Combine the **kernel formula with the existence of a non-zero infinitely-divisib
 
 Combine **injectivity with completeness** to get $M\hookrightarrow\widehat{M}$ as a *dense* embedding into a complete module. The further result $E$ is that $\widehat{M}$ is the smallest complete module containing $M$ — its Cauchy completion — so any $\mathfrak{a}$-adically continuous map out of $M$ extends uniquely to $\widehat{M}$. This is the engine behind extending $\mathbb{Z}$-valued functions to $\mathbb{Z}_p$-valued ones and is nonobvious because it upgrades an algebraic injection to a topological universal property.
 
-Combine **completeness with unit-detection** ([[Def - The I-adic Completion|units are detected mod $\mathfrak{a}$]]) to invert elements by geometric series. If $u\equiv1\pmod{\mathfrak{a}}$ then $u^{-1}=\sum_n(1-u)^n$ converges in $\widehat{R}$. The further result $E$ is that $\widehat{R}$ has *many more units* than $R$ — every element congruent to a unit mod $\mathfrak{a}$ — which is why $\widehat{R}$ is local with maximal ideal $\widehat{\mathfrak{a}}$ and why Hensel lifting works. Nonobvious because the new units are limiting elements with no finite expression.
+Combine **completeness with unit-detection** ([[Def - The I-adic Completion|units are detected mod \mathfrak{a}]]) to invert elements by geometric series. If $u\equiv1\pmod{\mathfrak{a}}$ then $u^{-1}=\sum_n(1-u)^n$ converges in $\widehat{R}$. The further result $E$ is that $\widehat{R}$ has *many more units* than $R$ — every element congruent to a unit mod $\mathfrak{a}$ — which is why $\widehat{R}$ is local with maximal ideal $\widehat{\mathfrak{a}}$ and why Hensel lifting works. Nonobvious because the new units are limiting elements with no finite expression.
 
 ---
 

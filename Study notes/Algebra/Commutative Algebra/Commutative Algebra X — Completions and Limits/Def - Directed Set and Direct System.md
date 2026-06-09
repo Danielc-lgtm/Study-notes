@@ -10,7 +10,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. We fix an index set $I$ carrying a partial order $\leq$, objects $X_i$ or $Y_i$ ($i\in I$) drawn from a fixed category $\mathcal{C}$ — one of Sets, Groups, Rings, [[Def - Module|$R$-modules]], or $R$-algebras — and morphisms between them. For a direct system the transition morphisms are written $f_{ij}:X_i\to X_j$ (defined when $i\leq j$, running *with* the order); for an inverse system they are $h_{ij}:Y_j\to Y_i$ (defined when $i\leq j$, running *against* the order). The full registry is on [[Commutative Algebra X — Completions and Limits]].
+All rings are commutative with $1$. We fix an index set $I$ carrying a partial order $\leq$, objects $X_i$ or $Y_i$ ($i\in I$) drawn from a fixed category $\mathcal{C}$ — one of Sets, Groups, Rings, [[Def - Module|R-modules]], or $R$-algebras — and morphisms between them. For a direct system the transition morphisms are written $f_{ij}:X_i\to X_j$ (defined when $i\leq j$, running *with* the order); for an inverse system they are $h_{ij}:Y_j\to Y_i$ (defined when $i\leq j$, running *against* the order). The full registry is on [[Commutative Algebra X — Completions and Limits]].
 
 This is a compound page: it defines three interlocking notions — the **directed set** $(I,\leq)$, the **direct system** $\big((X_i),(f_{ij})\big)$, and the **inverse system** $\big((Y_i),(h_{ij})\big)$ — because they are introduced together and none is usable without the others: a system is *indexed by* a directed set, and the limits built from the two kinds of system (on [[Def - Direct and Inverse Limits]]) are dual.
 

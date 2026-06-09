@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $R$ be a [[Def - Noetherian Ring|Noetherian]] ring. We write $R[T_1,\dots,T_n]$ for the [[Def - Polynomial Ring|polynomial ring]] and $R[[T_1,\dots,T_n]]$ for the **formal power series ring** — the set of formal sums $\sum_{\alpha}c_\alpha T^\alpha$ over all multi-indices $\alpha=(\alpha_1,\dots,\alpha_n)\in\mathbb{N}^n$, with $c_\alpha\in R$ and $T^\alpha=T_1^{\alpha_1}\cdots T_n^{\alpha_n}$, under the usual (Cauchy-product) addition and multiplication. We write $\mathfrak{m}=(T_1,\dots,T_n)$ for the ideal of power series with zero constant term, $\widehat{R}^{\,\mathfrak{m}}$ for the [[Def - The I-adic Completion|$\mathfrak{m}$-adic completion]]. The full registry is on [[Commutative Algebra X — Completions and Limits]].
+All rings are commutative with $1$. Let $R$ be a [[Def - Noetherian Ring|Noetherian]] ring. We write $R[T_1,\dots,T_n]$ for the [[Def - Polynomial Ring|polynomial ring]] and $R[[T_1,\dots,T_n]]$ for the **formal power series ring** — the set of formal sums $\sum_{\alpha}c_\alpha T^\alpha$ over all multi-indices $\alpha=(\alpha_1,\dots,\alpha_n)\in\mathbb{N}^n$, with $c_\alpha\in R$ and $T^\alpha=T_1^{\alpha_1}\cdots T_n^{\alpha_n}$, under the usual (Cauchy-product) addition and multiplication. We write $\mathfrak{m}=(T_1,\dots,T_n)$ for the ideal of power series with zero constant term, $\widehat{R}^{\,\mathfrak{m}}$ for the [[Def - The I-adic Completion|\mathfrak{m}-adic completion]]. The full registry is on [[Commutative Algebra X — Completions and Limits]].
 
 ---
 
@@ -150,7 +150,7 @@ Identify $R[[T_1,\dots,T_n]]$ as the $\mathfrak{m}$-adic completion of $R[T_1,\d
 
 - **[[Thm - Hilbert's Basis Theorem|Hilbert's Basis Theorem]]** — the polynomial-ring twin. Hilbert handles the *finitely generated* algebras $R[T_1,\dots,T_n]$; this theorem handles the *not* finitely generated power-series rings $R[[T_1,\dots,T_n]]$. The two together cover every standard ring of commutative algebra. The proof here *uses* Hilbert (to make the polynomial ring Noetherian before completing), so this theorem is genuinely downstream of it.
 
-- **[[Def - The I-adic Completion|the $\mathfrak{a}$-adic completion]]** — the construction that makes the identification work. Recognising $R[[T_1,\dots,T_n]]$ as $\varprojlim R[T]/\mathfrak{m}^N$ is an instance of "a completion is a ring of compatible truncation-threads", with the truncations being polynomial degree-truncations and the threads being power series.
+- **[[Def - The I-adic Completion|the \mathfrak{a}-adic completion]]** — the construction that makes the identification work. Recognising $R[[T_1,\dots,T_n]]$ as $\varprojlim R[T]/\mathfrak{m}^N$ is an instance of "a completion is a ring of compatible truncation-threads", with the truncations being polynomial degree-truncations and the threads being power series.
 
 - **Cohen structure theorem and the local classification** — the downstream application. Because $k[[T_1,\dots,T_n]]$ is Noetherian, Cohen's theorem can present every equicharacteristic complete Noetherian local ring as a quotient $k[[T_1,\dots,T_n]]/I$, making power series the universal local model. This theorem is the finiteness input that Cohen's presentation requires.
 

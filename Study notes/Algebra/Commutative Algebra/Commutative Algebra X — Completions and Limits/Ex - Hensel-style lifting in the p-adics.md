@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Problem Statement
 
-Let $p$ be a prime and $\mathbb{Z}_p=\varprojlim\mathbb{Z}/p^n\mathbb{Z}$ the [[Def - The I-adic Completion|$p$-adic integers]]. Prove **Hensel's lemma** and apply it.
+Let $p$ be a prime and $\mathbb{Z}_p=\varprojlim\mathbb{Z}/p^n\mathbb{Z}$ the [[Def - The I-adic Completion|p-adic integers]]. Prove **Hensel's lemma** and apply it.
 
 1. **(Hensel's lemma.)** Let $f\in\mathbb{Z}_p[X]$ and $a_0\in\mathbb{Z}_p$ with
 $$f(a_0)\equiv0\pmod{p}\qquad\text{and}\qquad f'(a_0)\not\equiv0\pmod{p}$$
@@ -23,7 +23,7 @@ $$f(a_0)\equiv0\pmod{p}\qquad\text{and}\qquad f'(a_0)\not\equiv0\pmod{p}$$
 
 ![[Def - The I-adic Completion#The Definition]]
 
-The [[Def - The I-adic Completion|$p$-adic integers]] $\mathbb{Z}_p=\varprojlim\mathbb{Z}/p^n\mathbb{Z}$ are complete: every $p$-adically Cauchy sequence (one whose differences sink into ever-higher $p^n\mathbb{Z}_p$) has a limit. An element is a unit iff its residue mod $p$ is non-zero.
+The [[Def - The I-adic Completion|p-adic integers]] $\mathbb{Z}_p=\varprojlim\mathbb{Z}/p^n\mathbb{Z}$ are complete: every $p$-adically Cauchy sequence (one whose differences sink into ever-higher $p^n\mathbb{Z}_p$) has a limit. An element is a unit iff its residue mod $p$ is non-zero.
 
 For $f=\sum c_i X^i\in\mathbb{Z}_p[X]$, the **formal derivative** is $f'=\sum i c_i X^{i-1}$, and the first-order Taylor expansion $f(a+h)=f(a)+f'(a)h+h^2 g(a,h)$ holds with $g\in\mathbb{Z}_p[X,Y]$ (a purely algebraic identity, no analysis).
 

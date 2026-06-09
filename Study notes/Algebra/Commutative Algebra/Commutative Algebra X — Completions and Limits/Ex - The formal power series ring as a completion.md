@@ -28,7 +28,7 @@ A [[Def - Direct and Inverse Limits|inverse limit]] $\varprojlim Y_i$ is the set
 
 ![[Def - The I-adic Completion#The Definition]]
 
-The [[Def - The I-adic Completion|$(T)$-adic completion]] of $k[T]$ is $\widehat{k[T]}^{(T)}=\varprojlim k[T]/(T)^n$; the claim is that it equals the formal power series ring.
+The [[Def - The I-adic Completion|(T)-adic completion]] of $k[T]$ is $\widehat{k[T]}^{(T)}=\varprojlim k[T]/(T)^n$; the claim is that it equals the formal power series ring.
 
 ![[Def - Polynomial Ring#The Definition]]
 
@@ -44,7 +44,7 @@ The **formal power series ring** $k[[T]]$ is the set of formal sums $\sum_{m\geq
 
 **Assumption pattern.** The trigger is *degree-truncation maps* $k[T]/(T^{n+1})\twoheadrightarrow k[T]/(T^n)$. A thread is then a coherent family of polynomial truncations agreeing on low-degree terms — exactly the data of a single power series, since each coefficient $a_m$ is determined once and stays fixed. The analogy with the $p$-adic digits is exact: "coefficient $a_m$" plays the role of "digit $d_m$", and $T$ plays the role of $p$.
 
-**Theorem routing.** The route is: (1) map a thread $(p_n)$ to the power series whose degree-$m$ coefficient is the (stable) degree-$m$ coefficient of $p_n$ for any $n>m$ — well-defined by compatibility — and check this is a ring isomorphism (the Cauchy product is compatible with truncation because each output coefficient uses only finitely many inputs); (2) the unit criterion is [[Def - The I-adic Completion|"units detected mod $\mathfrak{a}$"]]: $f$ is a unit iff $f\bmod(T)=a_0$ is a unit in $k$, i.e. $a_0\neq0$, with the inverse a geometric series; (3) the several-variable case is identical once one identifies $\mathfrak{a}^i$ with "total degree $\geq i$".
+**Theorem routing.** The route is: (1) map a thread $(p_n)$ to the power series whose degree-$m$ coefficient is the (stable) degree-$m$ coefficient of $p_n$ for any $n>m$ — well-defined by compatibility — and check this is a ring isomorphism (the Cauchy product is compatible with truncation because each output coefficient uses only finitely many inputs); (2) the unit criterion is [[Def - The I-adic Completion|"units detected mod \mathfrak{a}"]]: $f$ is a unit iff $f\bmod(T)=a_0$ is a unit in $k$, i.e. $a_0\neq0$, with the inverse a geometric series; (3) the several-variable case is identical once one identifies $\mathfrak{a}^i$ with "total degree $\geq i$".
 
 **Key decision point.** The non-obvious point is that *multiplication survives the limit*: a priori the Cauchy product is an infinite sum, but its degree-$m$ coefficient $\sum_{i+j=m}a_i b_j$ is a *finite* sum, so it is computed correctly inside any truncation $k[T]/(T^{n})$ with $n>m$. This finiteness-per-coefficient is what makes $\varprojlim$ a ring isomorphism and not merely an additive one — the same reason the Cauchy product is well-defined in $k[[T]]$ at all.
 

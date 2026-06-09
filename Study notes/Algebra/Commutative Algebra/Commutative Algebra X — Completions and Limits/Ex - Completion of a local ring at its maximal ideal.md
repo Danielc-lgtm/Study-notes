@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Problem Statement
 
-Let $(R,\mathfrak{m})$ be a [[Def - Local Ring and Residue Field|local ring]] and $\widehat{R}=\widehat{R}^{\,\mathfrak{m}}=\varprojlim_n R/\mathfrak{m}^n$ its [[Def - The I-adic Completion|$\mathfrak{m}$-adic completion]]. Prove:
+Let $(R,\mathfrak{m})$ be a [[Def - Local Ring and Residue Field|local ring]] and $\widehat{R}=\widehat{R}^{\,\mathfrak{m}}=\varprojlim_n R/\mathfrak{m}^n$ its [[Def - The I-adic Completion|\mathfrak{m}-adic completion]]. Prove:
 
 1. **(Maximal ideal.)** $\widehat{R}$ is a local ring with maximal ideal $\widehat{\mathfrak{m}}=\ker\big(\widehat{R}\to R/\mathfrak{m}\big)=\mathfrak{m}\widehat{R}$; an element of $\widehat{R}$ is a unit iff its image in $R/\mathfrak{m}$ is non-zero.
 2. **(Residue field unchanged.)** The completion has the *same* residue field: $\widehat{R}/\widehat{\mathfrak{m}}\cong R/\mathfrak{m}$.
@@ -38,7 +38,7 @@ The $\mathfrak{m}$-adic completion is $\widehat{R}=\varprojlim R/\mathfrak{m}^n$
 
 **Assumption pattern.** The trigger is *a local ring being completed at its own maximal ideal*. The decisive structural fact is that $\widehat{R}\to R/\mathfrak{m}$ (the level-$1$ projection) is surjective with a kernel $\widehat{\mathfrak{m}}$ that turns out to be the *unique* maximal ideal, because everything outside it is a unit. The locality of $\widehat{R}$ is inherited from the locality of $R$ via the unit criterion.
 
-**Theorem routing.** The route is: (1) show $x\in\widehat{R}$ is a unit iff $x\bmod\mathfrak{m}\neq0$, by inverting level-by-level (geometric series) exactly as for $\mathbb{Z}_p$ and $k[[T]]$, so the non-units form the single ideal $\widehat{\mathfrak{m}}$ — this is [[Def - The I-adic Completion|"units detected mod $\mathfrak{a}$"]]; (2) the level-$1$ projection induces $\widehat{R}/\widehat{\mathfrak{m}}\cong R/\mathfrak{m}$ since truncating the completion to order $1$ recovers $R/\mathfrak{m}$ ([[Thm - The Inverse Limit and Completeness|Lemma 2]]); (3) the examples are instances of [[Ex - The p-adic integers as an inverse limit]] and [[Ex - The formal power series ring as a completion]] with $R$ already local.
+**Theorem routing.** The route is: (1) show $x\in\widehat{R}$ is a unit iff $x\bmod\mathfrak{m}\neq0$, by inverting level-by-level (geometric series) exactly as for $\mathbb{Z}_p$ and $k[[T]]$, so the non-units form the single ideal $\widehat{\mathfrak{m}}$ — this is [[Def - The I-adic Completion|"units detected mod \mathfrak{a}"]]; (2) the level-$1$ projection induces $\widehat{R}/\widehat{\mathfrak{m}}\cong R/\mathfrak{m}$ since truncating the completion to order $1$ recovers $R/\mathfrak{m}$ ([[Thm - The Inverse Limit and Completeness|Lemma 2]]); (3) the examples are instances of [[Ex - The p-adic integers as an inverse limit]] and [[Ex - The formal power series ring as a completion]] with $R$ already local.
 
 **Key decision point.** The non-obvious content is that completion *enlarges the unit group but not the residue field*. One might expect that adding all the limiting elements changes the "value at the point", but the residue field $R/\mathfrak{m}$ is order-$1$ data, and completion only adds higher-order ($\mathfrak{m}^n$, $n\geq2$) information. So the point looks identical ($\widehat{R}/\widehat{\mathfrak{m}}=R/\mathfrak{m}$) while its infinitesimal neighbourhood is resolved into a complete, Henselian ring. Recognising that the residue field is "order-$1$" and hence untouched is the key insight.
 

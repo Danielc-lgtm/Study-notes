@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $R$ be a [[Def - Noetherian Ring|Noetherian]] ring, $\mathfrak{a}\trianglelefteq R$ an [[Def - Ideal|ideal]], $M$ an [[Def - Module|$R$-module]]. Write $\widehat{R}=\varprojlim_n R/\mathfrak{a}^n$ for the [[Def - The I-adic Completion|$\mathfrak{a}$-adic completion]] of $R$ and $\widehat{M}=\varprojlim_n M/\mathfrak{a}^n M$ for that of $M$; both are taken with respect to the *same* ideal $\mathfrak{a}$. We write $\otimes_R$ for the tensor product over $R$ and call a functor **exact** if it preserves short exact sequences. The full registry is on [[Commutative Algebra X — Completions and Limits]].
+All rings are commutative with $1$. Let $R$ be a [[Def - Noetherian Ring|Noetherian]] ring, $\mathfrak{a}\trianglelefteq R$ an [[Def - Ideal|ideal]], $M$ an [[Def - Module|R-module]]. Write $\widehat{R}=\varprojlim_n R/\mathfrak{a}^n$ for the [[Def - The I-adic Completion|\mathfrak{a}-adic completion]] of $R$ and $\widehat{M}=\varprojlim_n M/\mathfrak{a}^n M$ for that of $M$; both are taken with respect to the *same* ideal $\mathfrak{a}$. We write $\otimes_R$ for the tensor product over $R$ and call a functor **exact** if it preserves short exact sequences. The full registry is on [[Commutative Algebra X — Completions and Limits]].
 
 ---
 
@@ -56,7 +56,7 @@ The third disguised source is **"$R$ is itself already a completion or a power s
 
 The conclusions are "$\widehat{R}$ Noetherian", "$\widehat{R}$ flat / $\otimes\widehat{R}$ exact", and "$\widehat{M}=\widehat{R}\otimes_R M$".
 
-Combine **part 1 with Hilbert's basis theorem** to get [[Thm - Formal Power Series over a Noetherian Ring are Noetherian|"$R[[T_1,\dots,T_n]]$ is Noetherian"]]. The additional fact $D$ is that $R[[T_1,\dots,T_n]]$ *is* the $(T_1,\dots,T_n)$-adic completion of the Noetherian ring $R[T_1,\dots,T_n]$. The result $E$ is the power-series analogue of Hilbert's theorem, in one line. Nonobvious because the power-series ring is *not* finitely generated over $R$ as a ring, so Hilbert does not apply directly — completion is the bridge.
+Combine **part 1 with Hilbert's basis theorem** to get [[T₁,…,Tₙ]]. The additional fact $D$ is that $R[[T_1,\dots,T_n]]$ *is* the $(T_1,\dots,T_n)$-adic completion of the Noetherian ring $R[T_1,\dots,T_n]$. The result $E$ is the power-series analogue of Hilbert's theorem, in one line. Nonobvious because the power-series ring is *not* finitely generated over $R$ as a ring, so Hilbert does not apply directly — completion is the bridge.
 
 Combine **part 3 with a presentation $M=R^n/K$** to compute $\widehat{M}$ concretely. The additional data $D$ is a finite presentation of $M$ (available since $R$ is Noetherian). The result $E$ is $\widehat{M}=\widehat{R}^n/\widehat{K}$: completion commutes with cokernels of maps of free modules, so $\widehat{M}$ is computed by completing a presentation. Nonobvious because it converts an inverse limit into linear algebra over $\widehat{R}$.
 

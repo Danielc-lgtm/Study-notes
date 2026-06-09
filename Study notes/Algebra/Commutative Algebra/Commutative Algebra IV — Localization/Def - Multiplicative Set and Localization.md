@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $R$ be a ring and $M$ an [[Def - Module|$R$-module]]. We write $S \subseteq R$ for a multiplicative subset, $S^{-1}R$ for the localized ring, $S^{-1}M$ for the localized module, and $\tfrac{r}{s}$, $\tfrac{m}{s}$ for the fractions ($r \in R$, $m \in M$, $s \in S$). The localization map is $\iota : R \to S^{-1}R$, $r \mapsto \tfrac{r}{1}$. Two recurring special cases: $R_f := S^{-1}R$ with $S = \{1, f, f^2, \dots\}$, and $R_{\mathfrak p} := (R\setminus\mathfrak p)^{-1}R$ for a [[Def - Prime and Maximal Ideal|prime ideal]] $\mathfrak p$. The full registry is on [[Commutative Algebra IV — Localization]].
+All rings are commutative with $1$. Let $R$ be a ring and $M$ an [[Def - Module|R-module]]. We write $S \subseteq R$ for a multiplicative subset, $S^{-1}R$ for the localized ring, $S^{-1}M$ for the localized module, and $\tfrac{r}{s}$, $\tfrac{m}{s}$ for the fractions ($r \in R$, $m \in M$, $s \in S$). The localization map is $\iota : R \to S^{-1}R$, $r \mapsto \tfrac{r}{1}$. Two recurring special cases: $R_f := S^{-1}R$ with $S = \{1, f, f^2, \dots\}$, and $R_{\mathfrak p} := (R\setminus\mathfrak p)^{-1}R$ for a [[Def - Prime and Maximal Ideal|prime ideal]] $\mathfrak p$. The full registry is on [[Commutative Algebra IV — Localization]].
 
 This is a compound page: it defines three interlocking notions — the **multiplicative subset** $S$, the **localized module** $S^{-1}M$, and the **localized ring** $S^{-1}R$ — because they are introduced together and none is fully usable without the others. ($S^{-1}R$ is the special case $M = R$ equipped, in addition, with a multiplication; and $S^{-1}M$ is a module not just over $R$ but over $S^{-1}R$.)
 

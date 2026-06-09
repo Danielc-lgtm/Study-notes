@@ -30,7 +30,7 @@ A [[Def - Direct and Inverse Limits|inverse limit]] $\varprojlim Y_i$ is the set
 
 ![[Def - The I-adic Completion#The Definition]]
 
-This $\mathbb{Z}_p$ is precisely the [[Def - The I-adic Completion|$(p)$-adic completion]] $\widehat{\mathbb{Z}}^{(p)}$ of $\mathbb{Z}$, with completion map $\varphi:\mathbb{Z}\to\mathbb{Z}_p$, $m\mapsto(m+p^n\mathbb{Z})_n$.
+This $\mathbb{Z}_p$ is precisely the [[Def - The I-adic Completion|(p)-adic completion]] $\widehat{\mathbb{Z}}^{(p)}$ of $\mathbb{Z}$, with completion map $\varphi:\mathbb{Z}\to\mathbb{Z}_p$, $m\mapsto(m+p^n\mathbb{Z})_n$.
 
 ![[Def - Local Ring and Residue Field#The Definition]]
 
@@ -44,7 +44,7 @@ A [[Def - Local Ring and Residue Field|local ring]] has a unique maximal ideal $
 
 **Assumption pattern.** The recognisable trigger is *projections down a tower of finite quotients of $\mathbb{Z}$*: $\mathbb{Z}/p^{n+1}\twoheadrightarrow\mathbb{Z}/p^n$. This says "completion at $(p)$", so the snapshots are residues mod $p^n$ and a thread is a coherent system of residues — which, by the division algorithm, is exactly a left-infinite base-$p$ expansion. The finiteness of each $\mathbb{Z}/p^n$ is what makes the digit extraction terminate at each level.
 
-**Theorem routing.** The route is: (1) for each thread, peel off digits by the division algorithm at each level, using compatibility to show the lower digits never change — this gives the unique expansion; (2) injectivity of $\mathbb{Z}\to\mathbb{Z}_p$ is the kernel formula $\ker\varphi=\bigcap_n p^n\mathbb{Z}=0$ in the domain $\mathbb{Z}$ ([[Thm - The Inverse Limit and Completeness]]); (3) the domain property and locality follow from the unit criterion, proved by inverting any $d_0\neq0$ digit-by-digit (a geometric-series construction). The unit criterion is the [[Def - The I-adic Completion|"units detected mod $\mathfrak{a}$"]] corollary specialised to $p$.
+**Theorem routing.** The route is: (1) for each thread, peel off digits by the division algorithm at each level, using compatibility to show the lower digits never change — this gives the unique expansion; (2) injectivity of $\mathbb{Z}\to\mathbb{Z}_p$ is the kernel formula $\ker\varphi=\bigcap_n p^n\mathbb{Z}=0$ in the domain $\mathbb{Z}$ ([[Thm - The Inverse Limit and Completeness]]); (3) the domain property and locality follow from the unit criterion, proved by inverting any $d_0\neq0$ digit-by-digit (a geometric-series construction). The unit criterion is the [[Def - The I-adic Completion|"units detected mod \mathfrak{a}"]] corollary specialised to $p$.
 
 **Key decision point.** The non-obvious move is realising that *compatibility forces the low-order digits to be permanent*: when you write $x_{n+1}=x_n+d_n p^n$, the digit $d_n$ is *new* and $x_n$ is *unchanged*, so the expansion grows only at the high end. This is why a thread is a single well-defined infinite digit string rather than a sequence of unrelated base-$p$ numbers. The alternative — treating each $x_n$ independently — misses that the thread condition is exactly "agree on all previous digits", and is the source of every confusion about $p$-adics.
 

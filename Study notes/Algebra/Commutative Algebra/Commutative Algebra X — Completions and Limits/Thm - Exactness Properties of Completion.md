@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $R$ be a [[Def - Noetherian Ring|Noetherian]] ring, $\mathfrak{a}\trianglelefteq R$ an ideal, and let $M, N, P$ be [[Def - Module|$R$-modules]]. Write $\widehat{M}=\varprojlim_n M/\mathfrak{a}^n M$ for the [[Def - The I-adic Completion|$\mathfrak{a}$-adic completion]] and $\varphi:M\to\widehat{M}$ for the completion map. A sequence $0\to N\to M\to P\to0$ is **short exact** if the first map is injective, the second surjective, and the image of the first equals the kernel of the second. We write $\varprojlim^1$ for the first derived functor of inverse limit (the obstruction to right-exactness of $\varprojlim$). The full registry is on [[Commutative Algebra X — Completions and Limits]].
+All rings are commutative with $1$. Let $R$ be a [[Def - Noetherian Ring|Noetherian]] ring, $\mathfrak{a}\trianglelefteq R$ an ideal, and let $M, N, P$ be [[Def - Module|R-modules]]. Write $\widehat{M}=\varprojlim_n M/\mathfrak{a}^n M$ for the [[Def - The I-adic Completion|\mathfrak{a}-adic completion]] and $\varphi:M\to\widehat{M}$ for the completion map. A sequence $0\to N\to M\to P\to0$ is **short exact** if the first map is injective, the second surjective, and the image of the first equals the kernel of the second. We write $\varprojlim^1$ for the first derived functor of inverse limit (the obstruction to right-exactness of $\varprojlim$). The full registry is on [[Commutative Algebra X — Completions and Limits]].
 
 ---
 
