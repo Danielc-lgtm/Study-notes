@@ -23,7 +23,7 @@ All rings are commutative with $1$; modules are unital. Let $R$ be a ring, regar
 
 > **Corollary.** A ring $R$ is Noetherian if and only if every submodule of every finitely generated $R$-module is finitely generated.
 
-The corollary records the slogan: over a Noetherian ring, *finite generation is hereditary across all finitely generated modules*. (The "only if" is the theorem combined with [[Thm - Noetherian iff Every Submodule is Finitely Generated|Noetherian $\iff$ every submodule finitely generated]]; the "if" is the special case $M = R$, where submodules are ideals.)
+The corollary records the slogan: over a Noetherian ring, *finite generation is hereditary across all finitely generated modules*. (The "only if" is the theorem combined with [[Thm - Noetherian iff Every Submodule is Finitely Generated|Noetherian ⟺ every submodule finitely generated]]; the "if" is the special case $M = R$, where submodules are ideals.)
 
 ---
 
@@ -173,7 +173,7 @@ The theorem is not hard once the previous two are in hand — the difficulty is 
 
 - **[[Thm - Hilbert's Basis Theorem (Algebra Form)|Hilbert's basis theorem]]** — the companion that supplies Noetherian base rings. Hilbert produces the Noetherian rings (polynomial rings, coordinate rings, finitely generated algebras) over which this theorem then certifies all finitely generated modules Noetherian. The two together cover essentially every ring and module of practical interest: Hilbert makes the ring Noetherian, this theorem makes its modules Noetherian.
 
-- **[[Thm - Noetherian iff Every Submodule is Finitely Generated|Noetherian $\iff$ every submodule finitely generated]]** — the characterisation that converts the conclusion into usable form. Once $M$ is known Noetherian, this theorem extracts finite generators of any submodule, which is how the conclusion is actually deployed downstream (finite presentations, finite syzygies, finite associated primes).
+- **[[Thm - Noetherian iff Every Submodule is Finitely Generated|Noetherian ⟺ every submodule finitely generated]]** — the characterisation that converts the conclusion into usable form. Once $M$ is known Noetherian, this theorem extracts finite generators of any submodule, which is how the conclusion is actually deployed downstream (finite presentations, finite syzygies, finite associated primes).
 
 - **[[Def - Finitely Presented Module|Finitely presented modules]]** — the strengthening this enables. Over a Noetherian ring, "finitely generated" upgrades to "finitely presented", because the kernel $K$ in $0 \to K \to R^{\oplus \ell} \to M \to 0$ is itself finitely generated (a submodule of the Noetherian $R^{\oplus \ell}$). The distinction between generated and presented, which matters over general rings, evaporates here.
 

@@ -20,7 +20,7 @@ All rings are commutative with $1$. Let $R \subseteq A$ be a subring (or $A$ an 
 
 > **Theorem (module-finite criterion for integrality).** Let $R \subseteq A$ be rings and $x \in A$. The following are equivalent:
 >
-> 1. $x$ is [[Def - Integral Element and Integral Extension|integral over $R$]] (there is a monic $f \in R[T]$ with $f(x) = 0$).
+> 1. $x$ is [[Def - Integral Element and Integral Extension|integral over R]] (there is a monic $f \in R[T]$ with $f(x) = 0$).
 > 2. $R[x]$ is [[Def - Finite and Finite-Type Algebra|finite]] as an $R$-module.
 > 3. $R[x]$ is contained in a subring $C$ of $A$ that is finite as an $R$-module.
 > 4. There exists a faithful $R[x]$-submodule $M \subseteq A$ that is finite as an $R$-module (i.e. $M$ is an $R$-submodule, $xM \subseteq M$, and $M$ is faithful over $R[x]$).
@@ -184,7 +184,7 @@ Prove (1)$\Rightarrow$(2) by truncating powers using the monic relation. Close (
 
 # Bridges
 
-- **[[Thm - Cayley-Hamilton for Modules (Determinant Trick)|Cayley–Hamilton for modules / the determinant trick]]** — this theorem *is* the determinant trick wearing the costume of integrality. The trick says a finite-module endomorphism $\phi$ with $\phi(M) \subseteq \mathfrak a M$ satisfies a monic polynomial with coefficients in $\mathfrak a$; taking $\phi = $ "multiply by $x$" and $\mathfrak a = R$ gives exactly condition (4)$\Rightarrow$(1). The very same lemma with $\mathfrak a$ a proper ideal gives [[Commutative Algebra V — Nakayama's Lemma|Nakayama's lemma]] and the §8 integrality-over-an-ideal theory — so this page and Nakayama are two specialisations of one linear-algebra fact.
+- **[[Thm - Cayley-Hamilton for Modules (Determinant Trick)|Cayley–Hamilton for modules / the determinant trick]]** — this theorem *is* the determinant trick wearing the costume of integrality. The trick says a finite-module endomorphism $\phi$ with $\phi(M) \subseteq \mathfrak a M$ satisfies a monic polynomial with coefficients in $\mathfrak a$; taking $\phi$ to be "multiply by $x$" and $\mathfrak a = R$ gives exactly condition (4)$\Rightarrow$(1). The very same lemma with $\mathfrak a$ a proper ideal gives [[Commutative Algebra V — Nakayama's Lemma|Nakayama's lemma]] and the §8 integrality-over-an-ideal theory — so this page and Nakayama are two specialisations of one linear-algebra fact.
 
 - **[[Thm - The Integral Closure is a Subring|The integral closure is a subring]]** — the immediate payoff. Because integrality is module-finiteness, two integral elements $x, y$ both live in the finite module $R[x, y]$, and condition (4) integralises *every* element of that module, including $x \pm y$ and $xy$. Without this criterion, closure under $+, \times$ would require combining monic equations, which has no general formula.
 

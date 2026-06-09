@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|$R$-module]]. A [[Def - Submodule|submodule]] $N \subseteq M$ is **[[Def - Finitely Generated Module|finitely generated]]** if $N = R n_1 + \cdots + R n_k$ for finitely many $n_i \in N$. The module $M$ is **[[Def - Noetherian and Artinian Module|Noetherian]]** if every ascending chain of submodules $M_1 \subseteq M_2 \subseteq \cdots$ stabilises (the ascending chain condition, ACC). The full registry is on [[Commutative Algebra I — Chain Conditions]].
+All rings are commutative with $1$; modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|R-module]]. A [[Def - Submodule|submodule]] $N \subseteq M$ is **[[Def - Finitely Generated Module|finitely generated]]** if $N = R n_1 + \cdots + R n_k$ for finitely many $n_i \in N$. The module $M$ is **[[Def - Noetherian and Artinian Module|Noetherian]]** if every ascending chain of submodules $M_1 \subseteq M_2 \subseteq \cdots$ stabilises (the ascending chain condition, ACC). The full registry is on [[Commutative Algebra I — Chain Conditions]].
 
 ---
 

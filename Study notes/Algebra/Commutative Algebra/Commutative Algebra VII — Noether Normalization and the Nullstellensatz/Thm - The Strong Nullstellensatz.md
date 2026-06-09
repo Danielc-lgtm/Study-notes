@@ -47,7 +47,7 @@ The precondition is "$\mathfrak a \trianglelefteq k[T_1, \dots, T_n]$, $\Omega$ 
 
 The first disguised source is **"$f$ vanishes on $V(\mathfrak a)$ and I want to conclude something algebraic about $f$"**. The bridge: the strong Nullstellensatz turns the geometric hypothesis "$f|_{V(\mathfrak a)} = 0$" into the algebraic conclusion "$f^m \in \mathfrak a$". The non-obvious value is that a *pointwise* vanishing condition yields an *ideal-membership* statement with a concrete exponent. *Example problem:* if $f$ vanishes wherever $g_1, \dots, g_t$ all vanish, then $f^m = \sum h_i g_i$ for some $m$.
 
-The second disguised source is **"compute $\sqrt{\mathfrak a}$" or "is $\mathfrak a$ radical?"**. The bridge: $\sqrt{\mathfrak a} = I(V(\mathfrak a))$, so the radical is the ideal of functions vanishing on the geometric zero set — often computable geometrically. The non-obvious payoff is that radical-membership becomes a vanishing question. *Example problem:* [[Ex - The radical as the intersection of maximal ideals containing it|show $\sqrt{\mathfrak a} = \bigcap_{\mathfrak a \subseteq \mathfrak m} \mathfrak m$]] (over a finitely generated algebra).
+The second disguised source is **"compute $\sqrt{\mathfrak a}$" or "is $\mathfrak a$ radical?"**. The bridge: $\sqrt{\mathfrak a} = I(V(\mathfrak a))$, so the radical is the ideal of functions vanishing on the geometric zero set — often computable geometrically. The non-obvious payoff is that radical-membership becomes a vanishing question. *Example problem:* [[Ex - The radical as the intersection of maximal ideals containing it|show the radical is the intersection of the maximal ideals above it]] (over a finitely generated algebra).
 
 The third disguised source is **"two varieties are equal / contained"**, phrased as a set inclusion $V(\mathfrak a) \subseteq V(\mathfrak b)$. The bridge: applying $I$ and the strong Nullstellensatz, this is equivalent to $\sqrt{\mathfrak b} \subseteq \sqrt{\mathfrak a}$ — a purely algebraic inclusion of radicals. *Example problem:* $V(\mathfrak a) \subseteq V(\mathfrak b) \iff \mathfrak b \subseteq \sqrt{\mathfrak a}$.
 
@@ -77,7 +77,7 @@ So $f^m \in \mathfrak a$, i.e. $f \in \sqrt{\mathfrak a}$.
 
 The conceptual content: **"$f$ vanishes wherever $\mathfrak a$ vanishes" is exactly "$\mathfrak a$ together with $1/f$ is inconsistent".** The extra variable $T_{n+1}$ is a stand-in for $1/f$; demanding $T_{n+1}f = 1$ forbids $f = 0$, so the geometric statement "$\mathfrak a \Rightarrow f = 0$" becomes "$\mathfrak a$ and $f \neq 0$ have no common solution", which the weak Nullstellensatz certifies as $1 \in \mathfrak b$. Clearing the artificial denominator returns the certificate to the original ring as a power of $f$. The exponent $m$ is the price of the denominators — it is *why* the answer is the radical, not the ideal.
 
-(The localization-theoretic restatement: $A_f = A[T_{n+1}]/(T_{n+1}f - 1)$, so $f$ nilpotent in $A = k[T]/\mathfrak a$ $\iff$ $A_f = 0$ $\iff$ $V(\mathfrak b) = \varnothing$ — the same trick, phrased via [[Commutative Algebra IV — Localization|inverting $f$]].)
+(The localization-theoretic restatement: $A_f = A[T_{n+1}]/(T_{n+1}f - 1)$, so $f$ nilpotent in $A = k[T]/\mathfrak a$ $\iff$ $A_f = 0$ $\iff$ $V(\mathfrak b) = \varnothing$ — the same trick, phrased via [[Commutative Algebra IV — Localization|inverting the element]].)
 
 ---
 

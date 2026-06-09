@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|$R$-module]]. A **chain of submodules** is a finite strictly decreasing sequence $M = M_0 \supsetneq M_1 \supsetneq \cdots \supsetneq M_n = 0$; its **length** is $n$ (the number of strict steps, equivalently the number of *quotients* $M_i/M_{i+1}$). A module $S \neq 0$ is **simple** if its only [[Def - Submodule|submodules]] are $0$ and $S$. We write $\ell(M)$ or $\ell_R(M)$ for the length of $M$, with the convention $\ell(M) = \infty$ when $M$ has no composition series, and $\ell(0) = 0$. The full registry is on [[Commutative Algebra I — Chain Conditions]].
+All rings are commutative with $1$; modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|R-module]]. A **chain of submodules** is a finite strictly decreasing sequence $M = M_0 \supsetneq M_1 \supsetneq \cdots \supsetneq M_n = 0$; its **length** is $n$ (the number of strict steps, equivalently the number of *quotients* $M_i/M_{i+1}$). A module $S \neq 0$ is **simple** if its only [[Def - Submodule|submodules]] are $0$ and $S$. We write $\ell(M)$ or $\ell_R(M)$ for the length of $M$, with the convention $\ell(M) = \infty$ when $M$ has no composition series, and $\ell(0) = 0$. The full registry is on [[Commutative Algebra I — Chain Conditions]].
 
 This is a compound page: it defines three interlocking notions — the **simple module** (the atom), the **composition series** (a maximal chain with simple quotients), and the **length** $\ell(M)$ (the invariant the Jordan–Hölder theorem extracts from it) — because none is usable without the others: length is *defined* through composition series, and a composition series is *defined* as a chain whose quotients are simple.
 
@@ -33,7 +33,7 @@ The goal is a notion of "size" for a module that is genuinely additive — a sin
 
 # The Definition
 
-Let $R$ be a ring and $M$ an [[Def - Module|$R$-module]].
+Let $R$ be a ring and $M$ an [[Def - Module|R-module]].
 
 ## Simple module
 
@@ -73,7 +73,7 @@ In group theory the exact analogue is the **composition series of a finite group
 
 **Is an instance — a finite-dimensional vector space, $\ell(V) = \dim_k V$.** A composition series of a $k$-vector space $V$ is a maximal flag $V = V_0 \supsetneq V_1 \supsetneq \cdots \supsetneq V_d = 0$ with each $V_i/V_{i+1}$ one-dimensional (hence simple, since a one-dimensional space has no proper non-zero subspace). Any two such flags have length $d = \dim_k V$, so $\ell(V) = \dim_k V$. This is the prototype and the calibration that length generalises dimension.
 
-**Is an instance — $\mathbb{Z}/12$ as a $\mathbb{Z}$-module, $\ell = 3$.** One composition series is $\mathbb{Z}/12 \supsetneq 2\mathbb{Z}/12 \supsetneq 4\mathbb{Z}/12 \supsetneq 0$ wait — better: $\mathbb{Z}/12 \supsetneq (2)/12 \supsetneq (4)/12 \supsetneq 0$ has factors $\mathbb{Z}/2$, $\mathbb{Z}/2$, $\mathbb{Z}/3$. Another is $\mathbb{Z}/12 \supsetneq (3)/12 \supsetneq (6)/12 \supsetneq 0$ with factors $\mathbb{Z}/3$, $\mathbb{Z}/2$, $\mathbb{Z}/2$. Both have length $3$, and the factor multisets agree up to reordering — exactly $12 = 2^2 \cdot 3$ has three prime factors with multiplicity. So $\ell(\mathbb{Z}/n) = $ the number of prime factors of $n$ counted with multiplicity, illustrating Jordan–Hölder concretely.
+**Is an instance — $\mathbb{Z}/12$ as a $\mathbb{Z}$-module, $\ell = 3$.** One composition series is $\mathbb{Z}/12 \supsetneq 2\mathbb{Z}/12 \supsetneq 4\mathbb{Z}/12 \supsetneq 0$ wait — better: $\mathbb{Z}/12 \supsetneq (2)/12 \supsetneq (4)/12 \supsetneq 0$ has factors $\mathbb{Z}/2$, $\mathbb{Z}/2$, $\mathbb{Z}/3$. Another is $\mathbb{Z}/12 \supsetneq (3)/12 \supsetneq (6)/12 \supsetneq 0$ with factors $\mathbb{Z}/3$, $\mathbb{Z}/2$, $\mathbb{Z}/2$. Both have length $3$, and the factor multisets agree up to reordering — exactly $12 = 2^2 \cdot 3$ has three prime factors with multiplicity. So $\ell(\mathbb{Z}/n)$ equals the number of prime factors of $n$ counted with multiplicity, illustrating Jordan–Hölder concretely.
 
 **Is NOT an instance (length infinite, Noetherian not Artinian) — $\mathbb{Z}$ as a $\mathbb{Z}$-module.** The module $\mathbb{Z}$ has no composition series: any chain $\mathbb{Z} \supsetneq M_1 \supsetneq \cdots$ has $M_1 = n_1\mathbb{Z}$, and $\mathbb{Z}/n_1\mathbb{Z}$ is simple only if $n_1$ is prime, but then $n_1\mathbb{Z} \supsetneq n_1 q\mathbb{Z} \supsetneq \cdots$ continues forever — the descending chain never reaches $0$. So $\ell(\mathbb{Z}) = \infty$, witnessing that Noetherian alone (which $\mathbb{Z}$ is) does not give finite length; Artinian fails.
 

@@ -25,7 +25,7 @@ All rings are commutative with $1$; modules are unital. Let $R$ be a ring. We us
 
 > **Corollary (finite direct sums).** If $M_1, \dots, M_n$ are Noetherian (resp. Artinian) $R$-modules, then $M_1 \oplus \cdots \oplus M_n$ is Noetherian (resp. Artinian).
 
-The corollary follows by applying the theorem to the split short exact sequence $0 \to M_1 \to M_1 \oplus M_2 \to M_2 \to 0$ and inducting on $n$. Specialised to $N = $ a submodule and $L = M/N$, the theorem says a module is Noetherian/Artinian iff a given submodule and the corresponding quotient both are.
+The corollary follows by applying the theorem to the split short exact sequence $0 \to M_1 \to M_1 \oplus M_2 \to M_2 \to 0$ and inducting on $n$. Specialised to the case where $N$ is a submodule and $L = M/N$, the theorem says a module is Noetherian/Artinian iff a given submodule and the corresponding quotient both are.
 
 ---
 

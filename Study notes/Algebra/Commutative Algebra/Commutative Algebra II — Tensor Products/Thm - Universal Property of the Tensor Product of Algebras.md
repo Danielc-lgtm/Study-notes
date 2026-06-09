@@ -1,0 +1,199 @@
+---
+type: theorem
+subject: commutative-algebra
+prereqs:
+  - "Def - Algebra over a Ring (R-algebra)"
+  - "Def - Ring Homomorphism"
+  - "Def - Tensor Product of Algebras"
+  - "Def - Tensor Product of Modules"
+  - "Thm - Universal Property of the Tensor Product of Modules"
+tags: [algebra, commutative-algebra]
+---
+
+# Notation
+
+All rings are commutative with $1$; ring/algebra homomorphisms send $1\mapsto 1$. Let $R$ be a ring and $A, B, C, D$ be [[Def - Algebra over a Ring (R-algebra)|$R$-algebras]]. We write $A\otimes_R B$ for the [[Def - Tensor Product of Algebras|tensor product algebra]], $i_A : A\to A\otimes_R B$, $a\mapsto a\otimes 1$ and $i_B : B\to A\otimes_R B$, $b\mapsto 1\otimes b$ for the structure maps, and $f_1 : A\to C$, $f_2 : B\to C$ for $R$-algebra homomorphisms into a common target. The full registry is on [[Commutative Algebra II — Tensor Products]].
+
+---
+
+# Statement
+
+> **Theorem (Universal property of the tensor product of algebras — the coproduct).** Let $A, B$ be $R$-algebras.
+>
+> 1. **(Coproduct property.)** For every $R$-algebra $C$ and $R$-algebra homomorphisms $f_1 : A\to C$, $f_2 : B\to C$, there is a *unique* $R$-algebra homomorphism $h : A\otimes_R B\to C$ with $h\circ i_A = f_1$ and $h\circ i_B = f_2$, namely
+> $$h(a\otimes b) = f_1(a)\,f_2(b).$$
+> 2. **(Uniqueness of the coproduct.)** If $(Q, j_A, j_B)$ is any $R$-algebra with $R$-algebra maps $j_A : A\to Q$, $j_B : B\to Q$ satisfying the same universal property, then there is a unique $R$-algebra isomorphism $\varphi : A\otimes_R B\to Q$ with $\varphi\circ i_A = j_A$, $\varphi\circ i_B = j_B$.
+>
+> Equivalently: $A\otimes_R B$ is the **coproduct** of $A$ and $B$ in the category of commutative $R$-algebras.
+
+> **Corollary (Standard algebra isomorphisms).** As $R$-algebras: $A\otimes_R B\cong B\otimes_R A$; $(A\otimes_R B)\otimes_R C\cong A\otimes_R(B\otimes_R C)$; $A\otimes_R(B\times C)\cong(A\otimes_R B)\times(A\otimes_R C)$, hence $A\otimes_R B^n\cong(A\otimes_R B)^n$; $R/I\otimes_R R/J\cong R/(I+J)$; and
+> $$R[X_1,\dots,X_n]\otimes_R R[T_1,\dots,T_r]\ \cong\ R[X_1,\dots,X_n, T_1,\dots,T_r].$$
+
+---
+
+# Motivation
+
+The module tensor product answered "what is the universal home for bilinear maps?". When the modules are *algebras*, there is a richer question: "what is the universal way to combine two rings over a common base into one ring?". The answer is again $A\otimes_R B$, now carrying its ring structure, and this theorem identifies the precise sense in which it is universal — it is the **coproduct**. A coproduct is the freest object *receiving* compatible maps from both factors: any two $R$-algebra maps $A\to C$, $B\to C$ glue into a single map $A\otimes_R B\to C$, uniquely. This is what makes $A\otimes_R B$ the canonical "join" of two algebras.
+
+The payoff is computational and conceptual at once. Computationally, the universal property hands you the formula $h(a\otimes b) = f_1(a)f_2(b)$ for *every* map out of $A\otimes_R B$, and lets you identify $A\otimes_R B$ with a known algebra by recognising that algebra as a coproduct — which is how Becker re-derives $R[X_*]\otimes_R R[T_*]\cong R[X_*, T_*]$ a second way, the polynomial ring on the union of variables being manifestly the coproduct of the two smaller polynomial rings. Conceptually, "coproduct" is the word that connects this chapter to geometry: under the algebra–geometry dictionary, ring maps reverse arrows, so the *coproduct of algebras* is the *product of spaces*. The universal property of $A\otimes_R B$ as a coproduct is, arrow for arrow, the universal property of the fibre product $\mathbf{Spec}\,A\times_{\mathbf{Spec}\,R}\mathbf{Spec}\,B$. This theorem is the algebraic statement that products of varieties exist and that their coordinate ring is the tensor product.
+
+It is worth noting what is *not* the answer. The universal ring *mapping to* both $A$ and $B$ is the product $A\times B$, not the tensor product. Coproduct and product are dual, and the tensor product is the coproduct — receiving, not projecting. Getting this duality right is the whole conceptual content.
+
+---
+
+# Sources and Targets
+
+**Sources (Input Broadening)**
+
+The precondition $A$ is "I have two $R$-algebra maps into a common target, or I want a map out of $A\otimes_R B$".
+
+The first disguised source is **two compatible structures on one ring**. The property $B$ is "the target $C$ contains commuting homomorphic images of $A$ and $B$". The bridge: those images are maps $f_1 : A\to C$, $f_2 : B\to C$, and the theorem glues them into $h : A\otimes_R B\to C$. The non-obvious part is that "a ring built from $A$ and $B$" is automatically a quotient of $A\otimes_R B$. *Example problem:* $\mathbb{C} = \mathbb{R}[i]$ receives $\mathbb{R}[X]\to\mathbb{C}$ and $\mathbb{R}[Y]\to\mathbb{C}$, glued to $\mathbb{R}[X,Y]\to\mathbb{C}$.
+
+The second disguised source is **an algebra presented as a polynomial ring on a union of variables**. The property $B$ is "$D = R[X_*, T_*]$ is generated by two disjoint variable sets". The bridge: $D$ is the coproduct of $R[X_*]$ and $R[T_*]$ (any maps of each into $C$ glue, by the universal property of polynomial rings), so by uniqueness $D\cong R[X_*]\otimes_R R[T_*]$. *Example problem:* identifying $\mathbb{C}[X,Y,Z,W,U]/(f,g,h)$ as the tensor product of two quotient algebras. See [[Ex - Tensor product of polynomial algebras]].
+
+The third disguised source is **a base extension of an algebra**. The property $B$ is "I want to view the $R$-algebra $A$ over a larger base $S$". The bridge: $S\otimes_R A$ is the coproduct of $S$ and $A$ over $R$, the universal $S$-algebra receiving $A$. *Example problem:* $S\otimes_R R[T_*]\cong S[T_*]$, base-changing a polynomial algebra. See [[Ex - C tensor R C is not a field]] for the field case $\mathbb{C}\otimes_{\mathbb{R}}\mathbb{C}$.
+
+**Targets (Output Amplification)**
+
+The conclusion $C$ is "there is a unique $R$-algebra map $h(a\otimes b) = f_1(a)f_2(b)$".
+
+Combine $C$ with **the universal property of a polynomial ring**. Maps out of $R[X_*]$ are choices of images of the $X_i$; so a pair of polynomial algebras maps into any $C$ by choosing images of all variables, which is the same as a map out of $R[X_*, T_*]$. The result $E$ is $R[X_*]\otimes_R R[T_*]\cong R[X_*, T_*]$, *with the explicit formula* $p\otimes q\mapsto pq$ handed over by uniqueness. Nonobvious because the universal property gives not just existence of the isomorphism but its action on pure tensors.
+
+Combine $C$ with **a quotient presentation $A = R[X_*]/I$**. Then $A\otimes_R B$ glues the relations, giving $A\otimes_R B\cong B[X_*]/(I)$, and for $A = R[X]/(f)$ specifically $A\otimes_R B\cong B[X]/(\bar f)$. The result $E$ is that base change of a hypersurface is "read the defining polynomial over the new ring", and $A\otimes_R B$ is a field iff $f$ stays irreducible. Nonobvious because the *factorisation behaviour* of $\bar f$ over $B$ controls the structure of $A\otimes_R B$. See [[Ex - C tensor R C is not a field]].
+
+Combine $C$ with **distributivity over products**. $A\otimes_R(B\times C)\cong(A\otimes_R B)\times(A\otimes_R C)$ upgrades the module distributivity to a ring isomorphism via the upgrading lemma. The result $E$ is that tensoring distributes over the splitting of a base into components, which is how $\mathbb{C}\otimes_{\mathbb{R}}\mathbb{C}\cong\mathbb{C}\times\mathbb{C}$ ramifies and how products of disconnected schemes decompose. Nonobvious because the *algebra* structure (not just the module structure) respects the product.
+
+---
+
+# Why Is It True
+
+The proof is the [[Thm - Universal Property of the Tensor Product of Modules|module universal property]] plus a check that the resulting map respects multiplication, and the check is cheap because of the upgrading lemma. Here is the one idea: **a map out of $A\otimes_R B$ as a ring is the same as a pair of ring maps out of $A$ and $B$ — because $A\otimes_R B$ is generated as an $R$-algebra by the two commuting copies $a\otimes 1$ and $1\otimes b$.**
+
+Spelled out: given $f_1 : A\to C$, $f_2 : B\to C$, the map $(a, b)\mapsto f_1(a)f_2(b)$ is $R$-bilinear, so the *module* universal property gives a unique $R$-linear $h : A\otimes_R B\to C$ with $h(a\otimes b) = f_1(a)f_2(b)$. It remains to see $h$ is a *ring* map. By the upgrading lemma it suffices to check $h(1\otimes 1) = 1$ and multiplicativity on the generating set of pure tensors:
+$$h(1\otimes 1) = f_1(1)f_2(1) = 1\cdot 1 = 1,$$
+$$h\big((a\otimes b)(a'\otimes b')\big) = h(aa'\otimes bb') = f_1(aa')f_2(bb') = f_1(a)f_1(a')f_2(b)f_2(b') = \big(f_1(a)f_2(b)\big)\big(f_1(a')f_2(b')\big) = h(a\otimes b)h(a'\otimes b'),$$
+using that $C$ is commutative to interleave the four factors. So $h$ is an $R$-algebra map, and clearly $h\circ i_A = f_1$ (since $h(a\otimes 1) = f_1(a)f_2(1) = f_1(a)$), $h\circ i_B = f_2$. Uniqueness: any algebra map agreeing with $f_1, f_2$ on the generators $a\otimes 1$, $1\otimes b$ agrees on their products $a\otimes b = (a\otimes 1)(1\otimes b)$, hence everywhere.
+
+**Uniqueness of the coproduct** (part 2) is the standard universal-object back-and-forth, identical to the module case but with algebra maps: challenge $A\otimes_R B$ with $(j_A, j_B)$ to get $\varphi$; challenge $Q$ with $(i_A, i_B)$ to get $\psi$; the composites solve identity-challenges, so are identities.
+
+**The polynomial corollary** is the universal property read backwards. Maps out of $R[X_*]$ are choices of images of the $X_i$ in $C$ (the universal property of polynomial rings), and likewise for $R[T_*]$; so a pair of such maps is the same as a map out of $R[X_*, T_*]$ choosing images of *all* variables. Hence $R[X_*, T_*]$ is the coproduct, and by part 2, $R[X_*, T_*]\cong R[X_*]\otimes_R R[T_*]$, with $\varphi(p\otimes q) = pq$.
+
+---
+
+# What Makes This Hard
+
+The conceptual trap is *coproduct versus product*: the tensor product is the universal ring *receiving* maps from $A$ and $B$ (coproduct), not the one *mapping to* them (that is $A\times B$); confusing the two reverses every arrow. The non-obvious step in the proof is recognising that the *module* universal property already gives the map and only multiplicativity remains — and that the upgrading lemma reduces multiplicativity to a check on pure tensors, using commutativity of $C$ to interleave factors. The common error is to try to define $h$ directly on representatives without going through the module universal property, re-encountering the well-definedness problem the universal property exists to dissolve.
+
+---
+
+# Rederivation Scaffold
+
+**This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
+
+**High-level strategy:** Get the linear map $h$ from the module universal property applied to the bilinear $(a,b)\mapsto f_1(a)f_2(b)$. Upgrade $h$ to an algebra map by checking $1\mapsto 1$ and multiplicativity on pure tensors (using commutativity of $C$). Uniqueness from "$a\otimes 1$, $1\otimes b$ generate". For part 2, run the universal-object back-and-forth with algebra maps. For the corollary, recognise $R[X_*, T_*]$ as the coproduct via the polynomial-ring universal property.
+
+**Subgoal decomposition:**
+
+1. **Build the linear $h$.** Show $(a,b)\mapsto f_1(a)f_2(b)$ is bilinear; get $h$ from the [[Thm - Universal Property of the Tensor Product of Modules|module universal property]].
+   - *Hint:* Bilinearity is linearity of $f_1, f_2$ plus distributivity in $C$.
+   - *Why needed:* It produces the underlying map; only multiplicativity remains.
+
+2. **Upgrade $h$ to an algebra map.** Check $h(1\otimes 1) = 1$ and $h$ multiplicative on pure tensors.
+   - *Hint:* Use the upgrading lemma and commutativity of $C$ to interleave $f_1(a)f_2(b)f_1(a')f_2(b')$.
+   - *Why needed:* It makes $h$ a ring homomorphism, completing existence.
+
+3. **Uniqueness of $h$.** Show any algebra map matching $f_1, f_2$ equals $h$.
+   - *Hint:* $a\otimes 1$ and $1\otimes b$ generate $A\otimes_R B$ as an algebra, and $a\otimes b$ is their product.
+   - *Why needed:* It is the uniqueness half of part 1.
+
+4. **Uniqueness of the coproduct.** Back-and-forth with $(Q, j_A, j_B)$.
+   - *Hint:* Compose the two universal maps; identity-challenges force identities.
+   - *Why needed:* It is part 2 — canonicity of $A\otimes_R B$.
+
+5. **Polynomial corollary.** Recognise $R[X_*, T_*]$ as the coproduct.
+   - *Hint:* A map out of a polynomial ring is a choice of images of the variables; pairs of these = maps out of the joint polynomial ring.
+   - *Why needed:* It gives $R[X_*]\otimes R[T_*]\cong R[X_*, T_*]$ with $p\otimes q\mapsto pq$.
+
+---
+
+# Lemma Decomposition
+
+> [!note]- Lemma 1: The gluing map $h$ exists as an algebra homomorphism
+> **Statement:** Given $R$-algebra maps $f_1 : A\to C$, $f_2 : B\to C$, there is an $R$-algebra map $h : A\otimes_R B\to C$ with $h(a\otimes b) = f_1(a)f_2(b)$.
+>
+> **Hint:** Get $h$ linear from the [[Thm - Universal Property of the Tensor Product of Modules|module universal property]]; upgrade to an algebra map by checking on pure tensors.
+>
+> **Why needed:** It is the existence half of the coproduct property.
+>
+> > [!note]- Full proof
+> > The map $b_0 : A\times B\to C$, $b_0(a,b) = f_1(a)f_2(b)$, is $R$-bilinear: in the first slot, $b_0(a+a', b) = f_1(a+a')f_2(b) = (f_1 a + f_1 a')f_2 b = b_0(a,b)+b_0(a',b)$; scalars slide since $f_1, f_2$ are $R$-linear; similarly in the second slot. By the module universal property there is a unique $R$-linear $h : A\otimes_R B\to C$ with $h(a\otimes b) = f_1(a)f_2(b)$.
+> >
+> > $h$ is an algebra map by the **upgrading lemma**: $\{a\otimes b\}$ generates $A\otimes_R B$ as an $R$-module, $h(1\otimes 1) = f_1(1)f_2(1) = 1$, and (using commutativity of $C$)
+> > $$h((a\otimes b)(a'\otimes b')) = h(aa'\otimes bb') = f_1(aa')f_2(bb') = f_1(a)f_2(b)f_1(a')f_2(b') = h(a\otimes b)h(a'\otimes b').$$
+
+> [!note]- Lemma 2: $h$ is unique and recovers $f_1, f_2$
+> **Statement:** $h\circ i_A = f_1$, $h\circ i_B = f_2$, and any $R$-algebra map $h'$ with these two properties equals $h$.
+>
+> **Hint:** $h(a\otimes 1) = f_1(a)$, $h(1\otimes b) = f_2(b)$; and $a\otimes b = (a\otimes 1)(1\otimes b)$ generates.
+>
+> **Why needed:** It is the uniqueness half of the coproduct property.
+>
+> > [!note]- Full proof
+> > $h(i_A(a)) = h(a\otimes 1) = f_1(a)f_2(1) = f_1(a)$, so $h\circ i_A = f_1$; similarly $h\circ i_B = f_2$. If $h'$ is an $R$-algebra map with $h'\circ i_A = f_1$, $h'\circ i_B = f_2$, then $h'(a\otimes b) = h'((a\otimes 1)(1\otimes b)) = h'(a\otimes 1)h'(1\otimes b) = f_1(a)f_2(b) = h(a\otimes b)$. Since pure tensors generate $A\otimes_R B$ as a ring and both maps are ring homomorphisms, $h' = h$.
+
+> [!note]- Lemma 3: The polynomial ring is the coproduct
+> **Statement:** $R[X_1,\dots,X_n, T_1,\dots,T_r]$ with the natural inclusions of $R[X_*]$ and $R[T_*]$ satisfies the coproduct universal property; hence $\cong R[X_*]\otimes_R R[T_*]$ with $p\otimes q\mapsto pq$.
+>
+> **Hint:** A map out of a polynomial ring is a free choice of images of the variables.
+>
+> **Why needed:** It is the headline computation, derived the "coproduct way".
+>
+> > [!note]- Full proof
+> > Let $j_A : R[X_*]\hookrightarrow R[X_*, T_*]$, $j_B : R[T_*]\hookrightarrow R[X_*, T_*]$ be the inclusions. Given $R$-algebra maps $f_1 : R[X_*]\to C$, $f_2 : R[T_*]\to C$, the data is exactly the images $f_1(X_i)\in C$ and $f_2(T_j)\in C$. By the universal property of the polynomial ring $R[X_*, T_*]$, there is a unique $R$-algebra map $h : R[X_*, T_*]\to C$ with $h(X_i) = f_1(X_i)$, $h(T_j) = f_2(T_j)$, i.e. $h\circ j_A = f_1$, $h\circ j_B = f_2$. So $(R[X_*, T_*], j_A, j_B)$ is a coproduct of $R[X_*]$ and $R[T_*]$. By Theorem part 2, the unique isomorphism $\varphi : R[X_*]\otimes_R R[T_*]\to R[X_*, T_*]$ satisfies $\varphi(p\otimes q) = j_A(p)j_B(q) = pq$.
+
+---
+
+# Formal Proof
+
+> [!note]- Complete formal proof
+> **Part 1.** **Lemma 1** gives the $R$-algebra map $h(a\otimes b) = f_1(a)f_2(b)$; **Lemma 2** gives $h\circ i_A = f_1$, $h\circ i_B = f_2$ and uniqueness. This is the coproduct property.
+>
+> **Part 2 (uniqueness of the coproduct).** Let $(Q, j_A, j_B)$ also satisfy the universal property. By part 1 applied to $A\otimes_R B$, there is a unique $R$-algebra map $\varphi : A\otimes_R B\to Q$ with $\varphi\circ i_A = j_A$, $\varphi\circ i_B = j_B$. By the universal property of $Q$, there is a unique $R$-algebra map $\psi : Q\to A\otimes_R B$ with $\psi\circ j_A = i_A$, $\psi\circ j_B = i_B$. Then $\psi\varphi : A\otimes_R B\to A\otimes_R B$ satisfies $(\psi\varphi)\circ i_A = i_A$, $(\psi\varphi)\circ i_B = i_B$, as does $\operatorname{id}$; by the uniqueness in part 1, $\psi\varphi = \operatorname{id}$. Symmetrically $\varphi\psi = \operatorname{id}_Q$. So $\varphi$ is an isomorphism.
+>
+> ---
+> **Corollary.** The isomorphisms $A\otimes B\cong B\otimes A$, associativity, and $A\otimes(B\times C)\cong(A\otimes B)\times(A\otimes C)$, $R/I\otimes R/J\cong R/(I+J)$ are the module [[Thm - Standard Isomorphisms of Tensor Products|standard isomorphisms]] upgraded to algebra isomorphisms: each underlying linear map sends $1\mapsto 1$ and is multiplicative on pure tensors (checked exactly as in Lemma 1), so the upgrading lemma makes it an algebra isomorphism. The polynomial isomorphism $R[X_*]\otimes_R R[T_*]\cong R[X_*, T_*]$ is **Lemma 3**. $\blacksquare$
+
+---
+
+# Cross-Field Exercise Suggestions
+
+**Splitting of a field extension after base change (Galois theory).** For $A = K[X]/(f)$ with $f$ irreducible over $K$ and $L/K$ a field extension, $A\otimes_K L\cong L[X]/(\bar f)$, which splits into a product of fields according to the factorisation of $f$ over $L$ — exactly the coproduct $\mathbf{Spec}\,A\times_{\mathbf{Spec}\,K}\mathbf{Spec}\,L$ counting the points of $A$ over $L$. Nonobvious because the coproduct universal property predicts the *number of factors* as the number of roots gained. See [[Ex - C tensor R C is not a field]].
+
+**Group algebra of a product group (representation theory).** $k[G]\otimes_k k[H]\cong k[G\times H]$ because $k[G\times H]$ is the coproduct of $k[G]$ and $k[H]$ — maps out of each group algebra are representations, and a representation of $G\times H$ is a commuting pair. Nonobvious because the tensor product of group algebras realises the *direct product* of the groups, the coproduct-product duality made concrete.
+
+**Pushout of rings and amalgamated constructions (commutative algebra / topology).** The coproduct $A\otimes_R B$ in $R$-algebras is the **pushout** of $A\leftarrow R\rightarrow B$, the algebraic analogue of gluing two spaces along a common subspace (the van Kampen pushout in topology, with $\pi_1$ replaced by coordinate rings). Nonobvious because "glue two algebras along a common subalgebra" is the same universal construction as "glue two spaces along a common piece", with arrows reversed.
+
+---
+
+# Bridges
+
+- **[[Def - Tensor Product of Algebras|Tensor Product of Algebras]]** — this theorem is the *meaning* of that ring structure: the multiplication $(b\otimes c)(b'\otimes c') = bb'\otimes cc'$ is precisely the one making $A\otimes_R B$ the coproduct, and the structure map $r\mapsto r(1\otimes1)$ is the unique one compatible with both injections. The construction page builds the object; this page characterises it.
+
+- **[[Thm - Universal Property of the Tensor Product of Modules|Module universal property]]** — the algebra coproduct is built on top of it: the gluing map $h$ is first obtained as a *linear* map from the module property, then upgraded to an algebra map by checking multiplicativity on pure tensors. The upgrading lemma is what bridges "linear" to "algebra homomorphism".
+
+- **[[Thm - Standard Isomorphisms of Tensor Products|Standard module isomorphisms]]** — the algebra-level isomorphisms in the corollary are the module ones with multiplicativity checked; commutativity, associativity, and distributivity over products all transfer because the underlying linear isomorphisms respect $1$ and products on pure tensors.
+
+- **The fibre product of schemes** — this is the geometric face. Reversing arrows in the coproduct universal property gives the universal property of the fibre product $\mathbf{Spec}(A\otimes_R B) = \mathbf{Spec}\,A\times_{\mathbf{Spec}\,R}\mathbf{Spec}\,B$: a space mapping to both $\mathbf{Spec}\,A$ and $\mathbf{Spec}\,B$ compatibly over $\mathbf{Spec}\,R$ is a map *into* the fibre product, dual to a map *out of* $A\otimes_R B$. Products of varieties (Chapter VII's [[Commutative Algebra VII — Noether Normalization and the Nullstellensatz|coordinate rings]]) are this construction.
+
+---
+
+# Unlocked by This
+
+> [!tip] The fibre product of schemes and base change *(from Algebraic Geometry)*
+> The coproduct property, with all arrows reversed, *is* the universal property of the **fibre product** $\mathbf{Spec}(A\otimes_R B) = \mathbf{Spec}\,A\times_{\mathbf{Spec}\,R}\mathbf{Spec}\,B$. Products of varieties, the fibre of a morphism over a point, and base change of a scheme along $\mathbf{Spec}\,S\to\mathbf{Spec}\,R$ are all this construction. That $R[X_*]\otimes R[T_*]\cong R[X_*, T_*]$ is $\mathbb{A}^n\times\mathbb{A}^r = \mathbb{A}^{n+r}$; that $A\otimes_R B$ can fail to be a domain even when $A, B$ are is the failure of **geometric irreducibility** after base change.
+
+> [!tip] Hopf algebras, group schemes, and comultiplication *(from Algebraic Groups)*
+> When $\mathbf{Spec}\,A$ carries a group structure, the multiplication map $G\times G\to G$ dualises to a **comultiplication** $\Delta : A\to A\otimes_R A$, and the coproduct property is what makes $\Delta$ an algebra map. Together with a counit and antipode this makes $A$ a **Hopf algebra**; affine group schemes, quantum groups, and their representation theory are built on the algebra coproduct established here.
+
+> [!tip] Pushouts and amalgamated sums *(from Category Theory)*
+> $A\otimes_R B$ is the **pushout** of the diagram $A\leftarrow R\rightarrow B$ in commutative rings — the algebraic analogue of the van Kampen gluing in topology. Recognising it as a pushout places ring-theoretic gluing (amalgamated free products, fibre coproducts) inside the general theory of colimits, alongside quotients and direct sums.

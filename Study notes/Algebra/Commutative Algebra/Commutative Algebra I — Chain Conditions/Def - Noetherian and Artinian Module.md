@@ -10,7 +10,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$, and all modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|$R$-module]]. We write $N \subseteq M$ for "$N$ is a [[Def - Submodule|submodule]] of $M$", and an *ascending chain* of submodules is a sequence $M_1 \subseteq M_2 \subseteq M_3 \subseteq \cdots$; a *descending chain* is $M_1 \supseteq M_2 \supseteq M_3 \supseteq \cdots$. A chain **stabilises** if it is eventually constant: there is $n$ with $M_{n'} = M_n$ for all $n' \geq n$. For a non-empty set $\Sigma$ of submodules, a **maximal element** is an $M_0 \in \Sigma$ contained in no other member of $\Sigma$, and a **minimal element** is one containing no other member. The full registry is on [[Commutative Algebra I — Chain Conditions]].
+All rings are commutative with $1$, and all modules are unital. Let $R$ be a ring and $M$ an [[Def - Module|R-module]]. We write $N \subseteq M$ for "$N$ is a [[Def - Submodule|submodule]] of $M$", and an *ascending chain* of submodules is a sequence $M_1 \subseteq M_2 \subseteq M_3 \subseteq \cdots$; a *descending chain* is $M_1 \supseteq M_2 \supseteq M_3 \supseteq \cdots$. A chain **stabilises** if it is eventually constant: there is $n$ with $M_{n'} = M_n$ for all $n' \geq n$. For a non-empty set $\Sigma$ of submodules, a **maximal element** is an $M_0 \in \Sigma$ contained in no other member of $\Sigma$, and a **minimal element** is one containing no other member. The full registry is on [[Commutative Algebra I — Chain Conditions]].
 
 This is a compound page: it defines two interlocking notions — the **Noetherian module** (a chain condition that bounds growth) and the **Artinian module** (the dual condition bounding shrinkage) — because they are introduced together, are formally dual, and the entire point of the pair is that they are *independent*, so neither is fully understood without the other beside it.
 
@@ -32,7 +32,7 @@ The goal is to write down the *right* finiteness condition on a module — one s
 
 # The Definition
 
-Let $R$ be a ring and $M$ an [[Def - Module|$R$-module]].
+Let $R$ be a ring and $M$ an [[Def - Module|R-module]].
 
 ## Noetherian module
 
