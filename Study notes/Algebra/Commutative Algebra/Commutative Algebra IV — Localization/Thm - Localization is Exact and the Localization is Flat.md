@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $S \subseteq R$ be a [[Def - Multiplicative Set and Localization|multiplicative subset]], $M$ an [[Def - Module|$R$-module]]. Write $S^{-1}M$ for the localized module, $S^{-1}f : S^{-1}M \to S^{-1}N$ for the localization of an $R$-linear map $f : M \to N$ (acting by $\tfrac ms \mapsto \tfrac{f(m)}{s}$), and $\otimes_R$ for the [[Def - Tensor Product of Modules|tensor product]]. A sequence $A \xrightarrow{f} B \xrightarrow{g} C$ is **exact** at $B$ if $\operatorname{im} f = \ker g$. The functor "$S^{-1}(-)$" sends $M \mapsto S^{-1}M$ and $f \mapsto S^{-1}f$. The full registry is on [[Commutative Algebra IV — Localization]].
+All rings are commutative with $1$. Let $S \subseteq R$ be a [[Def - Multiplicative Set and Localization|multiplicative subset]], $M$ an [[Def - Module|R-module]]. Write $S^{-1}M$ for the localized module, $S^{-1}f : S^{-1}M \to S^{-1}N$ for the localization of an $R$-linear map $f : M \to N$ (acting by $\tfrac ms \mapsto \tfrac{f(m)}{s}$), and $\otimes_R$ for the [[Def - Tensor Product of Modules|tensor product]]. A sequence $A \xrightarrow{f} B \xrightarrow{g} C$ is **exact** at $B$ if $\operatorname{im} f = \ker g$. The functor "$S^{-1}(-)$" sends $M \mapsto S^{-1}M$ and $f \mapsto S^{-1}f$. The full registry is on [[Commutative Algebra IV — Localization]].
 
 ---
 
