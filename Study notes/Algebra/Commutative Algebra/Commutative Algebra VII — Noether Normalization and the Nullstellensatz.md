@@ -133,7 +133,7 @@ These are the moves nearly every problem in this chapter is assembled from. When
 
 2. **Shear coordinates to make a relation monic (Noether normalization).** Given an algebraic relation $f(x_1, \dots, x_m) = 0$, substitute $x_i \mapsto x_i + c_i x_m$ with $c$ avoiding the zeros of the top form $F(\cdot, 1)$; the relation becomes monic in $x_m$, making it integral. *Trigger:* generators with a relation, want a finite module over fewer generators. *Pattern:* "isolate the leading form, pick a generic direction, divide by $F(c,1)$".
 
-3. **Pass to the residue field at a maximal ideal and squeeze with Zariski's lemma.** $R/\mathfrak m$ is a field finitely generated as a $k$-algebra, hence [[Thm - Zariski's Lemma|finite over $k$]]; over $\Omega$ closed it equals $\Omega$, and $\mathfrak m$ is a point. *Trigger:* a maximal ideal of a finitely generated algebra. *Pattern:* "residue field is finite over $k$; over $\Omega$ it is $\Omega$, so $\mathfrak m = \mathfrak m_x$".
+3. **Pass to the residue field at a maximal ideal and squeeze with Zariski's lemma.** $R/\mathfrak m$ is a field finitely generated as a $k$-algebra, hence [[Thm - Zariski's Lemma|finite over the base field]]; over $\Omega$ closed it equals $\Omega$, and $\mathfrak m$ is a point. *Trigger:* a maximal ideal of a finitely generated algebra. *Pattern:* "residue field is finite over $k$; over $\Omega$ it is $\Omega$, so $\mathfrak m = \mathfrak m_x$".
 
 4. **Identify a $k$-algebra homomorphism $k[T] \to \Omega$ with a point.** $\varphi \leftrightarrow x = (\varphi(T_i))$, with $\varphi = \operatorname{ev}_x$ and $\ker \varphi = \mathfrak m_x$. *Trigger:* a homomorphism from a polynomial ring to a field appears. *Pattern:* "read off the image-tuple as a point".
 
