@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; ring homomorphisms send $1\mapsto 1$. Let $R$ be a ring and $B, C$ (also $A$) be [[Def - Algebra over a Ring (R-algebra)|$R$-algebras]], i.e. rings equipped with structure maps $R\to B$, $R\to C$. We write $B\otimes_R C$ for their tensor product as $R$-modules ([[Def - Tensor Product of Modules]]), with pure tensors $b\otimes c$; $m_B : B\otimes_R B\to B$, $m_C : C\otimes_R C\to C$ for the linearised multiplications; $i_B : B\to B\otimes_R C$, $b\mapsto b\otimes 1$ and $i_C : C\to B\otimes_R C$, $c\mapsto 1\otimes c$ for the structure maps; and $\rho : R\to B$ for the algebra structure map of $B$. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; ring homomorphisms send $1\mapsto 1$. Let $R$ be a ring and $B, C$ (also $A$) be [[Def - Algebra over a Ring (R-algebra)|R-algebras]], i.e. rings equipped with structure maps $R\to B$, $R\to C$. We write $B\otimes_R C$ for their tensor product as $R$-modules ([[Def - Tensor Product of Modules]]), with pure tensors $b\otimes c$; $m_B : B\otimes_R B\to B$, $m_C : C\otimes_R C\to C$ for the linearised multiplications; $i_B : B\to B\otimes_R C$, $b\mapsto b\otimes 1$ and $i_C : C\to B\otimes_R C$, $c\mapsto 1\otimes c$ for the structure maps; and $\rho : R\to B$ for the algebra structure map of $B$. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 ---
 

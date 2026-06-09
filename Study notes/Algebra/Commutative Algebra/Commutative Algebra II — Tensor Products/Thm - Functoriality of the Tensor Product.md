@@ -11,7 +11,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, M', M_1, M_2, M_3, N, N', N_1, N_2, N_3$ be [[Def - Module|$R$-modules]]. We write $f : M\to M'$, $g : N\to N'$ for $R$-[[Def - Module Homomorphism|linear maps]], $f\otimes g : M\otimes_R N\to M'\otimes_R N'$ for the induced map, $m\otimes n$ for a pure tensor, and $[T]$ for the matrix of a linear map $T$ in chosen bases. For the Kronecker product, $T : k^a\to k^b$ and $S : k^c\to k^d$ are $k$-linear over a field $k$. The full registry is on [[Commutative Algebra II — Tensor Products]].
+All rings are commutative with $1$; all modules unital. Let $R$ be a ring and $M, M', M_1, M_2, M_3, N, N', N_1, N_2, N_3$ be [[Def - Module|R-modules]]. We write $f : M\to M'$, $g : N\to N'$ for $R$-[[Def - Module Homomorphism|linear maps]], $f\otimes g : M\otimes_R N\to M'\otimes_R N'$ for the induced map, $m\otimes n$ for a pure tensor, and $[T]$ for the matrix of a linear map $T$ in chosen bases. For the Kronecker product, $T : k^a\to k^b$ and $S : k^c\to k^d$ are $k$-linear over a field $k$. The full registry is on [[Commutative Algebra II — Tensor Products]].
 
 ---
 

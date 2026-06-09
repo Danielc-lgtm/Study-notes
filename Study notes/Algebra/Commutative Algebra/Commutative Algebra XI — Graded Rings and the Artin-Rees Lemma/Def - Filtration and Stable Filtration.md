@@ -35,7 +35,7 @@ A filtration is a way of measuring "how deep an element sits" — how divisible 
 
 # The Definition
 
-Let $R$ be a ring, $M$ an [[Def - Module|$R$-module]], and $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]].
+Let $R$ be a ring, $M$ an [[Def - Module|R-module]], and $\mathfrak{a} \trianglelefteq R$ an [[Def - Ideal|ideal]].
 
 ## Filtration
 
