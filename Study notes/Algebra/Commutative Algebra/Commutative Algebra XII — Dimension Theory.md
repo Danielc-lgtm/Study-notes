@@ -64,6 +64,12 @@ This chapter is the capstone of the course and leans on most of what came before
 > [!tip] Unlocked: Degree and the Hilbert polynomial of a projective variety *(from Algebraic Geometry)*
 > For a projective variety $X \subseteq \mathbb P^n$ with homogeneous coordinate ring $S$, the **Hilbert polynomial** $P_X(n) = \dim_k S_n$ (for large $n$) has degree $\dim X$ and leading coefficient $(\deg X)/(\dim X)!$ — so a single polynomial simultaneously encodes the **dimension** and the **degree** of $X$, and its constant term is the **arithmetic genus**. This is the bridge by which the abstract Hilbert function becomes the central numerical invariant of projective geometry, and the foundation of Hilbert schemes (moduli of subvarieties with fixed Hilbert polynomial).
 
+- **[[Ex - The Hilbert polynomial of projective space]]** (⭐⭐)
+	- Compute the Hilbert function of $k[T_0,\dots,T_n]$ as $\binom{n+d}{d}$ and read off that its degree is $n = \dim \mathbb P^n$, with the leading coefficient giving the degree — the prototype linking Hilbert polynomials to projective dimension and degree.
+
+- **[[Ex - Dimension equals transcendence degree for a finitely generated domain]]** (⭐⭐⭐)
+	- Prove $\dim A = \operatorname{trdeg}_k \operatorname{Frac}(A)$ for a finitely generated domain over a field, via Noether normalization and dimension-invariance under integral extensions — the theorem that makes dimension computable as a count of free coordinates.
+
 > [!note] Exercise Index — §13.1
 > [[Exercise Index - §13.1 Hilbert Functions and the Dimension Theorem]]
 
@@ -80,6 +86,18 @@ This chapter is the capstone of the course and leans on most of what came before
 
 > [!tip] Unlocked: Codimension, divisors, and the principal ideal theorem *(from Algebraic Geometry)*
 > Krull's height theorem is the algebraic statement that **a hypersurface has codimension one**: the zero locus of a single equation $f$ drops the dimension by exactly one (when $f$ is a non-zero-divisor non-unit). Iterated, it gives the **expected dimension** $n - r$ of a variety cut by $r$ equations, with equality for complete intersections. Height-one primes are the **prime divisors**, generating the group of Weil divisors — the start of intersection theory and the theory of line bundles, tying back to the [[Commutative Algebra XIII — Dedekind Domains and DVRs|class group]] of a Dedekind domain.
+
+- **[[Ex - The dimension of a polynomial ring is n]]** (⭐⭐)
+	- Show $\dim k[T_1,\dots,T_n] = n$ by exhibiting the linear flag of primes and bounding above by transcendence degree — the base case anchoring algebraic dimension to $\dim \mathbb A^n = n$.
+
+- **[[Ex - Krull's principal ideal theorem and hypersurfaces]]** (⭐⭐)
+	- Prove that a minimal prime over a single non-zero-divisor has height exactly one, so a hypersurface has codimension one — one equation drops dimension by exactly one.
+
+- **[[Ex - Height plus dimension of the quotient equals dimension]]** (⭐⭐)
+	- Establish the catenary identity $\operatorname{ht}\mathfrak p + \dim A/\mathfrak p = \dim A$ for a finitely generated domain, the exactness that makes codimension well defined and additive.
+
+- **[[Ex - A Noetherian ring of infinite dimension]]** (⭐⭐⭐)
+	- Construct Nagata's example: a Noetherian ring with primes of unbounded height, so $\dim R = \infty$ even though every individual height is finite — Noetherianity bounds heights pointwise but not their supremum.
 
 > [!note] Exercise Index — §13.2
 > [[Exercise Index - §13.2 Krull Dimension and Height]]

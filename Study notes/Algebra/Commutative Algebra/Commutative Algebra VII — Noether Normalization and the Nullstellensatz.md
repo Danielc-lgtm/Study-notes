@@ -52,7 +52,7 @@ This chapter assumes you are fluent with [[Def - Ideal|ideals]], [[Def - Prime a
 - **[[Thm - Noether Normalization]]**
 	- Every nonzero finitely generated $k$-algebra $A$ is a **finite module** over a polynomial subalgebra $A' = k[x_1, \dots, x_n]$ with the $x_i$ algebraically independent and $n = \operatorname{trdeg}_k A$. The proof inducts on the number of generators, using a generic linear shear $x_i \mapsto x_i + c_i x_m$ to turn any algebraic relation into a monic (integral) one — the top homogeneous form $F$ of the relation becomes the leading coefficient $F(c, 1)$, made a unit by choosing $c$ to avoid its zeros (possible over an infinite field). Geometrically: every variety is a finite branched cover of $\mathbb{A}^n$ by a generic projection.
 
-> [!tip] Finite surjection onto affine space *(from Algebraic Geometry)*
+> [!tip] Unlocked: Finite surjection onto affine space *(from Algebraic Geometry)*
 > Noether normalization is the algebra of **"every $d$-dimensional affine variety is a finite surjective branched cover of $\mathbb{A}^d$"**, realised as a generic linear projection $\pi : X \to \mathbb{A}^d$. Finiteness forces $\pi$ to be surjective, closed, with finite fibres, preserving the dimension of each component; the number of sheets is the degree of the function-field extension. This is the geometric backbone of **dimension theory** and the reason a complicated variety can always be studied as a cover of simple affine space.
 
 - **[[Ex - Noether normalization of a plane curve]]** (⭐⭐)
@@ -61,7 +61,7 @@ This chapter assumes you are fluent with [[Def - Ideal|ideals]], [[Def - Prime a
 - **[[Ex - Why algebraic closure is needed in the Nullstellensatz]]** (⭐⭐)
 	- Separate the two hypotheses: *infinite* (for the linear shear, via the dehomogenisation lemma ES1 Q1b and zero-avoidance ES1 Q1c) versus *algebraically closed* (for solution-existence). Build the $\mathbb{R}$-counterexample $(T^2+1)$ to the Nullstellensatz, the $\mathbb{F}_q$-counterexample $T_1^q - T_1$ to zero-avoidance, and spread inclusions $\mathbb{C} \to \overline{\mathbb{F}_p}$ by reduction mod $p$ (ES3 Q8).
 
-> [!tip] Dimension equals transcendence degree *(from Algebraic Geometry)*
+> [!tip] Unlocked: Dimension equals transcendence degree *(from Algebraic Geometry)*
 > Because $A$ is finite over $k[x_1, \dots, x_n]$ and finite extensions preserve Krull dimension, $\dim A = n = \operatorname{trdeg}_k \operatorname{Frac}(A)$ for a finitely generated domain. This is the theorem **"dimension of a variety = transcendence degree of its function field"**, the cornerstone of dimension theory developed in [[Commutative Algebra XII — Dimension Theory]]: $\mathbb{A}^n$ has dimension $n$, a hypersurface has dimension $n-1$, each equation drops dimension by one.
 
 > [!note] Exercise Index — §7.1
@@ -102,10 +102,10 @@ This chapter assumes you are fluent with [[Def - Ideal|ideals]], [[Def - Prime a
 - **[[Ex - Irreducible iff the ideal is prime]]** (⭐⭐)
 	- Prove $X$ irreducible $\iff I(X)$ prime $\iff \Omega[X]$ a domain, by translating "$fg \in I(X)$" into the covering $X \subseteq V(f) \cup V(g)$ and using "a prime equal to a finite intersection equals a factor" (ES2 Q2a). The mechanism "vanishing of a product = union of zero loci" drives both directions.
 
-> [!tip] The full dictionary of affine algebraic geometry *(from Algebraic Geometry)*
+> [!tip] Unlocked: The full dictionary of affine algebraic geometry *(from Algebraic Geometry)*
 > The correspondence is the affine, classical heart of an **anti-equivalence of categories** {affine $\Omega$-varieties, regular maps} $\simeq$ {finitely generated reduced $\Omega$-algebras}$^{\mathrm{op}}$: a variety is its coordinate ring, a map is an algebra homomorphism, points are maximal ideals, dimension is Krull dimension is transcendence degree, local geometry is the local ring at a point. Dropping "reduced" — keeping nilpotents — extends varieties to **affine schemes** $\operatorname{Spec} A$, and gluing them gives general **schemes**, absorbing arithmetic ($\operatorname{Spec}\mathbb{Z}$), infinitesimals, and non-closed fields into one geometry.
 
-> [!tip] Spec, generic points, and the Zariski topology *(from Algebraic Geometry)*
+> [!tip] Unlocked: Spec, generic points, and the Zariski topology *(from Algebraic Geometry)*
 > Reading the correspondence on *all* primes realises $\operatorname{Spec} \Omega[T_1, \dots, T_n]$ as affine space enriched with a **generic point** for each irreducible subvariety (its closure is that subvariety). The classical points $\Omega^n$ are the *closed* points; the extra points let "a general point of the variety" become a literal point, and free the theory from needing algebraic closure — the move founding **scheme theory**. The Zariski topology appeared already from [[Commutative Algebra IV — Localization|localization]] as the topology on $\operatorname{Spec}$; here it is the classical topology on $\Omega^n$.
 
 > [!note] Exercise Index — §7.2
