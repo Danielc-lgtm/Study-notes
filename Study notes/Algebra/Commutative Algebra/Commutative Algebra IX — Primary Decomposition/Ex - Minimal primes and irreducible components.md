@@ -27,7 +27,7 @@ The objects in play are prime ideals, minimal primes, radical ideals in Noetheri
 
 ![[Def - Prime and Maximal Ideal#The Definition]]
 
-![[Def - Associated and Minimal Primes#Minimal prime over $I$]]
+![[Def - Associated and Minimal Primes#Minimal prime over an ideal]]
 
 A **minimal prime over $I$** is a prime $\mathfrak{p} \supseteq I$ with no prime strictly between. By the [[Thm - Minimal Primes are Finite in a Noetherian Ring|finiteness theorem]], a radical ideal in a Noetherian ring is a finite intersection of its minimal primes. An algebraic set is [[Def - Irreducible Algebraic Set|irreducible]] if it is not the union of two proper closed subsets; $V(\mathfrak{p})$ is irreducible exactly when $\mathfrak{p}$ is prime.
 

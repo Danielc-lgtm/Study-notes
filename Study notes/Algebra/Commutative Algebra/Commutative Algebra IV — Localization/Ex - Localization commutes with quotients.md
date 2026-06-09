@@ -14,7 +14,7 @@ tags: [algebra, commutative-algebra]
 
 # Problem Statement
 
-Let $S\subseteq R$ be a [[Def - Multiplicative Set and Localization|multiplicative subset]], $M$ an [[Def - Module|$R$-module]], and $N\subseteq M$ a [[Def - Submodule|submodule]]. Prove that localization commutes with the quotient:
+Let $S\subseteq R$ be a [[Def - Multiplicative Set and Localization|multiplicative subset]], $M$ an [[Def - Module|R-module]], and $N\subseteq M$ a [[Def - Submodule|submodule]]. Prove that localization commutes with the quotient:
 $$S^{-1}(M/N) \;\cong\; S^{-1}M / S^{-1}N \quad\text{as } S^{-1}R\text{-modules}, \qquad \tfrac{m+N}{s}\mapsfrom\tfrac ms + S^{-1}N.$$
 Deduce the ring statement: for an ideal $\mathfrak{a}\trianglelefteq R$, $S^{-1}(R/\mathfrak{a})\cong S^{-1}R/\mathfrak{a}^e$. Then deduce the residue-field identity: for a prime $\mathfrak{p}$,
 $$\kappa(\mathfrak{p}) := R_{\mathfrak{p}}/\mathfrak{p}R_{\mathfrak{p}} \;\cong\; (R/\mathfrak{p})_{\mathfrak{p}} = \operatorname{Frac}(R/\mathfrak{p}),$$

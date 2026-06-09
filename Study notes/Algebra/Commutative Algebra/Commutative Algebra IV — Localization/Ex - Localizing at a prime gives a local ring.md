@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Problem Statement
 
-Let $\mathfrak{p}\trianglelefteq R$ be a [[Def - Prime and Maximal Ideal|prime ideal]] and $R_{\mathfrak{p}} = (R\setminus\mathfrak{p})^{-1}R$ the [[Def - Multiplicative Set and Localization|localization at $\mathfrak{p}$]]. Prove that $R_{\mathfrak{p}}$ is a [[Def - Local Ring and Residue Field|local ring]] with unique maximal ideal
+Let $\mathfrak{p}\trianglelefteq R$ be a [[Def - Prime and Maximal Ideal|prime ideal]] and $R_{\mathfrak{p}} = (R\setminus\mathfrak{p})^{-1}R$ the [[Def - Multiplicative Set and Localization|localization at 𝔭]]. Prove that $R_{\mathfrak{p}}$ is a [[Def - Local Ring and Residue Field|local ring]] with unique maximal ideal
 $$\mathfrak{p}R_{\mathfrak{p}} = \mathfrak{p}^e = \left\{\tfrac as : a\in\mathfrak{p},\ s\notin\mathfrak{p}\right\}.$$
 Give two proofs: one directly from the fraction model (a fraction $\tfrac rs$ is a unit iff $r\notin\mathfrak{p}$, so the non-units form an ideal), and one from the [[Thm - Prime Ideals of a Localization|prime-correspondence theorem]] (the surviving primes are those $\subseteq\mathfrak{p}$, of which $\mathfrak{p}$ is the largest). Deduce that $\mathbb{Z}_{(p)}$ is local with maximal ideal $(p)\mathbb{Z}_{(p)}$ and residue field $\mathbb{F}_p$.
 

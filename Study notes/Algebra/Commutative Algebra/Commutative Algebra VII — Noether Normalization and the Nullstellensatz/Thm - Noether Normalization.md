@@ -128,7 +128,7 @@ Induct on the minimal number $m$ of $k$-algebra generators of $A$. If the genera
 > [!note]- Lemma 2: A nonzero polynomial over an infinite field has a non-root
 > **Statement:** If $k$ is infinite and $0 \neq g \in k[T_1, \dots, T_{m-1}]$, then there is $c \in k^{m-1}$ with $g(c) \neq 0$.
 >
-> **Hint:** Induct on the number of variables; a nonzero one-variable polynomial of degree $d$ has at most $d$ roots, and $k$ is infinite. (Quantitatively: the zero set in $S^{m-1}$ has at most $d \cdot |S|^{m-2}$ points for $|S| = $ size of a finite subset — Schwartz–Zippel.)
+> **Hint:** Induct on the number of variables; a nonzero one-variable polynomial of degree $d$ has at most $d$ roots, and $k$ is infinite. (Quantitatively: the zero set in $S^{m-1}$ has at most $d \cdot |S|^{m-2}$ points, where $|S|$ is the size of a finite subset — Schwartz–Zippel.)
 >
 > **Why needed:** Supplies the existence of the shear parameter $c$ with $F(c, 1) \neq 0$; this is where "$k$ infinite" is used and is [[Ex - Why algebraic closure is needed in the Nullstellensatz|Example Sheet 1, Q1(c)]].
 >

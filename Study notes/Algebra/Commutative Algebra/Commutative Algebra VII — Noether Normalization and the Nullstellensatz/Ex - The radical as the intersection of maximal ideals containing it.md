@@ -31,7 +31,7 @@ A $k$-algebra $A$ is **finitely generated** if $A = k[a_1, \dots, a_n]$ for fini
 
 # Convergent Strategy
 
-**Problem class.** This is a *radical-equals-intersection* problem, establishing that finitely generated $k$-algebras are **Jacobson rings**. It is the bridge between two descriptions of the radical: the algebraic one ($\sqrt I = $ functions some power of which lands in $I$) and the geometric/spectral one ($\sqrt I = $ functions vanishing at every point of $V(I)$). The topic page's strategy files it under "compute a radical by translating to vanishing via the strong Nullstellensatz".
+**Problem class.** This is a *radical-equals-intersection* problem, establishing that finitely generated $k$-algebras are **Jacobson rings**. It is the bridge between two descriptions of the radical: the algebraic one ($\sqrt I$ is the functions some power of which lands in $I$) and the geometric/spectral one ($\sqrt I$ is the functions vanishing at every point of $V(I)$). The topic page's strategy files it under "compute a radical by translating to vanishing via the strong Nullstellensatz".
 
 **Assumption pattern.** The decisive assumption is that $A$ is *finitely generated over a field* — this is exactly the hypothesis under which the strong Nullstellensatz, and its corollary "maximal ideals are points", hold. The general inclusion $\sqrt I = \bigcap_{I \subseteq \mathfrak p}\mathfrak p$ (intersection of *primes*, from [[Commutative Algebra IV — Localization|localization]]) holds in any ring; the strengthening to *maximal* ideals is special to finitely generated algebras and is the whole point.
 

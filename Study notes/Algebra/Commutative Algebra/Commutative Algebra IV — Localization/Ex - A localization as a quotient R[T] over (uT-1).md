@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Problem Statement
 
-Let $u\in R$ and $R_u := \{u^n : n\geq 0\}^{-1}R$ be the [[Def - Multiplicative Set and Localization|localization inverting $u$]]. Prove the **quotient presentation** (Becker Lemma 4.33):
+Let $u\in R$ and $R_u := \{u^n : n\geq 0\}^{-1}R$ be the [[Def - Multiplicative Set and Localization|localization inverting u]]. Prove the **quotient presentation** (Becker Lemma 4.33):
 $$R_u \;\cong\; R[T]/(uT - 1)$$
 as $R$-algebras, via $\tfrac{r}{u^n}\mapsto rT^n + (uT-1)$, with inverse sending the class of $p(T)$ to $p(\tfrac1u)$.
 

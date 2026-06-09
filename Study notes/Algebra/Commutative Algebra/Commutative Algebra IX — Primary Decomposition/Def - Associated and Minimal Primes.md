@@ -43,7 +43,7 @@ The **associated primes** of $I$ are
 $$\operatorname{Ass}(I) = \{\mathfrak{p}_1, \dots, \mathfrak{p}_n\} = \{\sqrt{\mathfrak{q}_i} : 1 \leq i \leq n\}.$$
 By the [[Thm - Uniqueness of the Associated Primes (First Uniqueness Theorem)|First Uniqueness Theorem]] this set is independent of the chosen minimal decomposition; equivalently $\operatorname{Ass}(I) = \{\sqrt{(I:x)} : x \in R\} \cap \operatorname{Spec} R$.
 
-## Minimal prime over $I$
+## Minimal prime over an ideal
 
 A **minimal prime over $I$** is a prime ideal $\mathfrak{p} \supseteq I$ such that there is no prime $\mathfrak{q}$ with $I \subseteq \mathfrak{q} \subsetneq \mathfrak{p}$. Equivalently, it is a prime of $R$ corresponding to a minimal prime ideal of $R/I$.
 

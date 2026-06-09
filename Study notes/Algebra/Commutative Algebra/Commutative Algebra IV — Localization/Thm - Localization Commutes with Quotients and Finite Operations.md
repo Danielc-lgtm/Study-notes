@@ -13,7 +13,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $S \subseteq R$ be a [[Def - Multiplicative Set and Localization|multiplicative subset]], $M$ an [[Def - Module|$R$-module]], and $N, P \subseteq M$ [[Def - Submodule|submodules]]. We write $N + P$ for the submodule of sums $n + p$, $N \cap P$ for the intersection, $M/N$ for the [[Def - Quotient Module|quotient]], and $\otimes_R$, $\otimes_{S^{-1}R}$ for [[Def - Tensor Product of Modules|tensor products]]. We treat $S^{-1}N$ as an $S^{-1}R$-submodule of $S^{-1}M$ (legitimate by exactness of localization, [[Thm - Localization is Exact and the Localization is Flat]]). For a prime $\mathfrak{p}$, $M_{\mathfrak{p}} = (R\setminus\mathfrak{p})^{-1}M$. The full registry is on [[Commutative Algebra IV — Localization]].
+All rings are commutative with $1$. Let $S \subseteq R$ be a [[Def - Multiplicative Set and Localization|multiplicative subset]], $M$ an [[Def - Module|R-module]], and $N, P \subseteq M$ [[Def - Submodule|submodules]]. We write $N + P$ for the submodule of sums $n + p$, $N \cap P$ for the intersection, $M/N$ for the [[Def - Quotient Module|quotient]], and $\otimes_R$, $\otimes_{S^{-1}R}$ for [[Def - Tensor Product of Modules|tensor products]]. We treat $S^{-1}N$ as an $S^{-1}R$-submodule of $S^{-1}M$ (legitimate by exactness of localization, [[Thm - Localization is Exact and the Localization is Flat]]). For a prime $\mathfrak{p}$, $M_{\mathfrak{p}} = (R\setminus\mathfrak{p})^{-1}M$. The full registry is on [[Commutative Algebra IV — Localization]].
 
 ---
 

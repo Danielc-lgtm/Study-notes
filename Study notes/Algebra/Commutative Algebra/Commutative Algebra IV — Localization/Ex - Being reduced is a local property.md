@@ -80,7 +80,7 @@ $R$ reduced $\iff\operatorname{nil} R = (0)$, and $\operatorname{nil} R$ is an i
 $(\operatorname{nil} R)_{\mathfrak{p}} = \operatorname{nil}(R_{\mathfrak{p}})$ for every prime $\mathfrak{p}$.
 
 > [!note]- Derivation
-> This is the $I = (0)$ case of [[Ex - The radical of an extended ideal|$\sqrt{I}^{\,e} = \sqrt{I^e}$]]: with $S = R\setminus\mathfrak{p}$, $(\operatorname{nil} R)_{\mathfrak{p}} = (\sqrt{(0)})^e = \sqrt{(0)^e} = \sqrt{(0)} = \operatorname{nil}(R_{\mathfrak{p}})$. Concretely: a fraction $\tfrac rs\in R_{\mathfrak{p}}$ is nilpotent iff $(\tfrac rs)^n = \tfrac{r^n}{s^n} = 0$ for some $n$, iff $u r^n = 0$ for some $u\in S$, iff $(ur)^n = u^{n-1}\cdot u r^n = 0$, iff $ur\in\operatorname{nil} R$, iff $\tfrac rs = \tfrac{ur}{us}\in(\operatorname{nil} R)_{\mathfrak{p}}$.
+> This is the $I = (0)$ case of [[Ex - The radical of an extended ideal|the radical-of-an-extended-ideal identity]]: with $S = R\setminus\mathfrak{p}$, $(\operatorname{nil} R)_{\mathfrak{p}} = (\sqrt{(0)})^e = \sqrt{(0)^e} = \sqrt{(0)} = \operatorname{nil}(R_{\mathfrak{p}})$. Concretely: a fraction $\tfrac rs\in R_{\mathfrak{p}}$ is nilpotent iff $(\tfrac rs)^n = \tfrac{r^n}{s^n} = 0$ for some $n$, iff $u r^n = 0$ for some $u\in S$, iff $(ur)^n = u^{n-1}\cdot u r^n = 0$, iff $ur\in\operatorname{nil} R$, iff $\tfrac rs = \tfrac{ur}{us}\in(\operatorname{nil} R)_{\mathfrak{p}}$.
 
 **Step 3: Assemble the equivalence via the local–global principle.**
 

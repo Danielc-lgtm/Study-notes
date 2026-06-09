@@ -15,7 +15,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. For an [[Def - Module|$R$-module]] $M$ and a [[Def - Prime and Maximal Ideal|prime]] $\mathfrak{p}$ (resp. maximal ideal $\mathfrak{m}$), $M_{\mathfrak{p}}$ (resp. $M_{\mathfrak{m}}$) is the [[Def - Multiplicative Set and Localization|localization]]; for a map $f$, $f_{\mathfrak{p}}$ is its localization. We write $\operatorname{Spec} R$ for the primes, $\operatorname{mSpec} R$ for the maximal ideals, and $\operatorname{Ann}_R(m) = \{r\in R : rm = 0\}$ for the [[Def - Annihilator|annihilator]] of $m\in M$. The full registry is on [[Commutative Algebra IV — Localization]].
+All rings are commutative with $1$. For an [[Def - Module|R-module]] $M$ and a [[Def - Prime and Maximal Ideal|prime]] $\mathfrak{p}$ (resp. maximal ideal $\mathfrak{m}$), $M_{\mathfrak{p}}$ (resp. $M_{\mathfrak{m}}$) is the [[Def - Multiplicative Set and Localization|localization]]; for a map $f$, $f_{\mathfrak{p}}$ is its localization. We write $\operatorname{Spec} R$ for the primes, $\operatorname{mSpec} R$ for the maximal ideals, and $\operatorname{Ann}_R(m) = \{r\in R : rm = 0\}$ for the [[Def - Annihilator|annihilator]] of $m\in M$. The full registry is on [[Commutative Algebra IV — Localization]].
 
 ---
 

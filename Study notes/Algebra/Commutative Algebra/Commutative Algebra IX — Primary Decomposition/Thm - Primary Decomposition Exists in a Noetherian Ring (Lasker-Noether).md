@@ -25,7 +25,7 @@ All rings are commutative with $1$. Let $R$ be a [[Def - Noetherian Ring|Noether
 
 > **Corollary (existence of irreducible decompositions).** In a Noetherian ring, every proper ideal is a finite intersection of [[Def - Irreducible Ideal|irreducible ideals]].
 
-The corollary is in fact the first half of the proof; the theorem follows by combining it with [[Thm - Irreducible Ideals are Primary|irreducible $\Rightarrow$ primary]] and then refining to a minimal decomposition.
+The corollary is in fact the first half of the proof; the theorem follows by combining it with [[Thm - Irreducible Ideals are Primary|irreducible ⇒ primary]] and then refining to a minimal decomposition.
 
 ---
 
