@@ -101,7 +101,7 @@ For a subset $U\subseteq R$, $R_U = R[\{T_u\}_{u\in U}]/(\{uT_u - 1\}_{u\in U})\
 >
 > Thus $(A, \iota_A)$ satisfies the universal property of $(R_u, \iota_{R_u})$, and by uniqueness of universal objects, $R_u\cong A = R[T]/(uT-1)$ via $\tfrac{r}{u^n}\mapsto rT^n + (uT-1)$, with inverse $p(T) + (uT-1)\mapsto p(\tfrac1u)$.
 >
-> The general case $R_U = R[\{T_u\}_U]/(\{uT_u-1\}_U)\cong S^{-1}R$ ($S = $ multiplicative closure of $U$) follows identically with one variable per $u\in U$. $\blacksquare$
+> The general case $R_U = R[\{T_u\}_U]/(\{uT_u-1\}_U)\cong S^{-1}R$ (with $S$ the multiplicative closure of $U$) follows identically with one variable per $u\in U$. $\blacksquare$
 
 ---
 

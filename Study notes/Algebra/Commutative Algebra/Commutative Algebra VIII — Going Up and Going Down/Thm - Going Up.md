@@ -12,7 +12,7 @@ tags: [algebra, commutative-algebra]
 
 # Notation
 
-All rings are commutative with $1$. Let $A \subseteq B$ be an [[Def - Integral Element and Integral Extension|integral extension]], $\iota : A \hookrightarrow B$ the inclusion, [[Def - The Induced Map on Spectra|$\iota^*$]] the contraction $\mathfrak{q} \mapsto \mathfrak{q} \cap A$. Primes of $A$: $\mathfrak{p}_1 \subseteq \mathfrak{p}_2$; primes of $B$: $\mathfrak{q}_1, \mathfrak{q}_2$. For an ideal $\mathfrak{q} \trianglelefteq B$ with contraction $\mathfrak{q} \cap A$, the induced inclusion $A/(\mathfrak{q}\cap A) \hookrightarrow B/\mathfrak{q}$ is again integral. The full registry is on [[Commutative Algebra VIII — Going Up and Going Down]].
+All rings are commutative with $1$. Let $A \subseteq B$ be an [[Def - Integral Element and Integral Extension|integral extension]], $\iota : A \hookrightarrow B$ the inclusion, [[Def - The Induced Map on Spectra|ι*]] the contraction $\mathfrak{q} \mapsto \mathfrak{q} \cap A$. Primes of $A$: $\mathfrak{p}_1 \subseteq \mathfrak{p}_2$; primes of $B$: $\mathfrak{q}_1, \mathfrak{q}_2$. For an ideal $\mathfrak{q} \trianglelefteq B$ with contraction $\mathfrak{q} \cap A$, the induced inclusion $A/(\mathfrak{q}\cap A) \hookrightarrow B/\mathfrak{q}$ is again integral. The full registry is on [[Commutative Algebra VIII — Going Up and Going Down]].
 
 ---
 
