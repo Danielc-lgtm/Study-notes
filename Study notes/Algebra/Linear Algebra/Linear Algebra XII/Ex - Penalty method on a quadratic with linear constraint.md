@@ -151,7 +151,7 @@ As predicted, $\|g\|$ halves roughly each iteration (rate $1/\mu^{(k)}$ with $\m
 
 **Step 4: Rate verification.**
 
-$[[Thm - Convergence of Penalty Algorithm]]$ predicts $\|g(x^{(k+1)})\| = O(1/\mu^{(k)})$. The explicit formula gives $\|g\| = 1/(1 + 2\mu^{(k)})$, which for large $\mu$ is approximately $1/(2\mu^{(k)})$ — exactly $O(1/\mu^{(k)})$ with constant $1/2$. The rate matches the theorem prediction precisely.
+[[Thm - Convergence of Penalty Algorithm]] predicts $\|g(x^{(k+1)})\| = O(1/\mu^{(k)})$. The explicit formula gives $\|g\| = 1/(1 + 2\mu^{(k)})$, which for large $\mu$ is approximately $1/(2\mu^{(k)})$ — exactly $O(1/\mu^{(k)})$ with constant $1/2$. The rate matches the theorem prediction precisely.
 
 > [!note]- Derivation
 > Numerical verification:
