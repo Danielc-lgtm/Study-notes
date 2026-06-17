@@ -41,7 +41,7 @@ Let $R$ be a ring and let $M$ be an $R$-module.
 
 **Relation module.** Suppose $M$ is [[Def - Finitely Generated Module|finitely generated]], say by $k$ elements. By the [[Thm - Finitely Generated Modules and Surjections from a Free Module|surjection theorem]] there is a surjective [[Def - Module Homomorphism|module homomorphism]]
 
-$$\varphi : R^k \longtwoheadrightarrow M$$
+$$\varphi : R^k \twoheadrightarrow M$$
 
 from the [[Def - Free Module|free module]] $R^k$ — concretely, choosing generators $m_1, \dots, m_k$ of $M$ and sending the standard basis vector $e_i \mapsto m_i$. The **relation module** (or **module of relations**) for this surjection is its kernel
 
