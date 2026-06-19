@@ -88,7 +88,7 @@ This compresses the relationship between a structure and its free version. A gro
 
 **Is an instance — algebras for the free-group monad are groups.** For $T = UF$ the free-group monad, a structure map evaluates a reduced word in $A \cup A^{-1}$ to an element of $A$; the laws force this to be a group multiplication with inverses, so $\mathbf{Set}^T \simeq \mathbf{Grp}$ (full proof in [[Ex - Algebras for the free-group monad are groups]]).
 
-**Is an instance — algebras for the free-module monad are modules.** For $T A = R[A]$, the free $R$-module on $A$, a structure map evaluates a formal $R$-linear combination $\sum r_i a_i$ to an actual element; the laws force $A$ to be an [[Def - Module|$R$-module]] and $a$ its linear-combination operation. Hence $\mathbf{Set}^{R[-]} \simeq \mathbf{Mod}_R$ (see [[Ex - Algebras for the free-vector-space monad]] for $R = k$ a field).
+**Is an instance — algebras for the free-module monad are modules.** For $T A = R[A]$, the free $R$-module on $A$, a structure map evaluates a formal $R$-linear combination $\sum r_i a_i$ to an actual element; the laws force $A$ to be an [[Def - Module|module]] over $R$ and $a$ its linear-combination operation. Hence $\mathbf{Set}^{R[-]} \simeq \mathbf{Mod}_R$ (see [[Ex - Algebras for the free-vector-space monad]] for $R = k$ a field).
 
 **Is an instance — algebras for the power-set monad are complete lattices.** For $T = P$, a structure map $a : P(A) \to A$ assigns to each subset a "supremum"; the unit law gives $a(\{x\}) = x$ and the associativity law gives compatibility of nested unions with the assignment, which is exactly the data of arbitrary joins. So $\mathbf{Set}^P \simeq$ complete (sup-)lattices, with algebra morphisms the sup-preserving maps.
 
@@ -109,4 +109,4 @@ This compresses the relationship between a structure and its free version. A gro
 > Eilenberg–Moore categories of finitary monads on $\mathbf{Set}$ are exactly the categories of models of **Lawvere theories**. This is the categorical formulation of **universal algebra**, unifying groups, rings, modules, and lattices as algebras for a monad.
 
 > [!tip] Modules over a Ring as Eilenberg–Moore Algebras *(from Algebraic Geometry)*
-> For a commutative [[Def - Ring|ring]] $R$, the monad $R \otimes_R - $ (and base-change monads $S \otimes_R -$) have modules as algebras; the comonadic dual organizes **faithfully flat descent** of quasi-coherent sheaves on a **scheme**.
+> For a commutative [[Def - Ring|ring]] $R$, the monad $R \otimes_R (-)$ (and base-change monads $S \otimes_R (-)$) have modules as algebras; the comonadic dual organizes **faithfully flat descent** of quasi-coherent sheaves on a **scheme**.

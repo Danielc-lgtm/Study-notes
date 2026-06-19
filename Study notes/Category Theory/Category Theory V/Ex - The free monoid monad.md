@@ -62,7 +62,7 @@ A [[Def - Monoid in a Monoidal Category|monoid]] is a set $M$ with an associativ
 > For (b), the universal property of the free monoid *is* the adjunction: $\mathbf{Mon}(A^*, M) \cong \mathbf{Set}(A, UM)$. The counit $\varepsilon_M : (UM)^* \to M$ multiplies a word of elements of $M$ in $M$.
 
 > [!note]- Hint 4
-> For (c), a [[Def - Algebra for a Monad|$T$-algebra]] $a : A^* \to A$ must satisfy $a(\text{singleton } x) = x$ (unit law) and $a$ respects concatenation (associativity law). Setting $x \cdot y = a((x,y))$ and $1 = a(())$ gives an associative unital operation — a monoid.
+> For (c), a [[Def - Algebra for a Monad|T-algebra]] $a : A^* \to A$ must satisfy $a(\text{singleton } x) = x$ (unit law) and $a$ respects concatenation (associativity law). Setting $x \cdot y = a((x,y))$ and $1 = a(())$ gives an associative unital operation — a monoid.
 
 ---
 
@@ -102,12 +102,12 @@ The plan: verify the monad axioms by flattening nested lists (Step 1–2); ident
 **Step 4 (c): Algebras are monoids.**
 
 > [!note]- Derivation
-> A [[Def - Algebra for a Monad|$T$-algebra]] is $(A, a : A^* \to A)$ with $a\circ\eta_A = 1_A$ and $a\circ\mu_A = a\circ Ta$. Define $1 := a(())$ and $x \cdot y := a((x,y))$. The unit law forces $a((x)) = x$. The associativity law $a\circ\mu = a\circ Ta$, evaluated on the word $((x),(y),(z))$-style nestings, forces $a$ to respect concatenation: $a(w_1 \frown w_2) = a((a(w_1), a(w_2)))$, i.e. evaluating a concatenation equals evaluating the two pieces and combining. This makes $\cdot$ associative with unit $1$. So $(A, \cdot, 1)$ is a [[Def - Monoid in a Monoidal Category|monoid]], and conversely every monoid gives an algebra by $a(w) = $ "multiply out $w$." Hence $\mathbf{Set}^T \simeq \mathbf{Mon}$, which is why $T$ is the **free monoid** monad: its free algebras are free monoids and its algebras are monoids.
+> A [[Def - Algebra for a Monad|T-algebra]] is $(A, a : A^* \to A)$ with $a\circ\eta_A = 1_A$ and $a\circ\mu_A = a\circ Ta$. Define $1 := a(())$ and $x \cdot y := a((x,y))$. The unit law forces $a((x)) = x$. The associativity law $a\circ\mu = a\circ Ta$, evaluated on the word $((x),(y),(z))$-style nestings, forces $a$ to respect concatenation: $a(w_1 \frown w_2) = a((a(w_1), a(w_2)))$, i.e. evaluating a concatenation equals evaluating the two pieces and combining. This makes $\cdot$ associative with unit $1$. So $(A, \cdot, 1)$ is a [[Def - Monoid in a Monoidal Category|monoid]], and conversely every monoid gives an algebra by $a(w) =$ "multiply out $w$." Hence $\mathbf{Set}^T \simeq \mathbf{Mon}$, which is why $T$ is the **free monoid** monad: its free algebras are free monoids and its algebras are monoids.
 
 > [!note]- Complete formal solution
 > **(a)** With $\eta_A(a) = (a)$ and $\mu_A$ = concatenation: associativity holds because for $W \in T^3A$ both $\mu\circ T\mu$ and $\mu\circ\mu T$ concatenate all bottom-level words in order (associativity of $\frown$); the unit laws hold because concatenating singletons of a word's letters, or concatenating the one-element list of the whole word, each returns the word. So $(T,\eta,\mu)$ is a monad.
 >
-> **(b)** $F : \mathbf{Set}\to\mathbf{Mon}$, $A\mapsto(A^*,\frown,())$, is left adjoint to the forgetful $U$, via $\mathbf{Mon}(A^*,M)\cong\mathbf{Set}(A,UM)$. Then $UF = T$, the unit is $a\mapsto(a)$, and the counit $\varepsilon_M$ multiplies a word in $M$; whiskering gives $\mu_A = \varepsilon_{A^*} = $ concatenation. By [[Thm - Every Adjunction Gives a Monad]], $T$ is the monad of this adjunction.
+> **(b)** $F : \mathbf{Set}\to\mathbf{Mon}$, $A\mapsto(A^*,\frown,())$, is left adjoint to the forgetful $U$, via $\mathbf{Mon}(A^*,M)\cong\mathbf{Set}(A,UM)$. Then $UF = T$, the unit is $a\mapsto(a)$, and the counit $\varepsilon_M$ multiplies a word in $M$; whiskering gives $\mu_A = \varepsilon_{A^*}$, which is concatenation. By [[Thm - Every Adjunction Gives a Monad]], $T$ is the monad of this adjunction.
 >
 > **(c)** A $T$-algebra $a : A^*\to A$ defines $1 = a(())$, $x\cdot y = a((x,y))$; the unit and associativity laws make $(A,\cdot,1)$ a monoid, and this is an equivalence $\mathbf{Set}^T\simeq\mathbf{Mon}$. $\blacksquare$
 

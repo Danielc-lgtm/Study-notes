@@ -83,7 +83,7 @@ The deepest compression is the meta-statement that *categorification turns the s
 
 **Is an instance — a ring as a monoid in $(\mathbf{Ab}, \otimes)$.** Let $R$ be an [[Def - Abelian Group|abelian group]]. A multiplication $m : R \otimes_{\mathbb{Z}} R \to R$ is exactly a $\mathbb{Z}$-bilinear map $R \times R \to R$ (by the universal property of $\otimes$), and a unit $e : \mathbb{Z} \to R$ is determined by $e(1) =: 1_R$. Associativity and unitality of the monoid object become exactly the ring axioms. So a monoid in $(\mathbf{Ab}, \otimes)$ is a [[Def - Ring|ring]], and a commutative monoid is a commutative ring (full unwinding in [[Ex - Monoids in Vect are algebras and in Ab are rings]]).
 
-**Is an instance — a $k$-algebra as a monoid in $(\mathbf{Vect}_k, \otimes)$.** Same computation over a field: a bilinear associative unital multiplication on a [[Def - Vector Space|$k$-vector space]] is a unital associative $k$-algebra. Matrix algebras $M_n(k)$, polynomial algebras $k[x]$, and group algebras $k[G]$ are all monoids here.
+**Is an instance — a $k$-algebra as a monoid in $(\mathbf{Vect}_k, \otimes)$.** Same computation over a field: a bilinear associative unital multiplication on a [[Def - Vector Space|vector space]] over $k$ is a unital associative $k$-algebra. Matrix algebras $M_n(k)$, polynomial algebras $k[x]$, and group algebras $k[G]$ are all monoids here.
 
 **Is an instance — a monad as a monoid in $([\mathcal{C},\mathcal{C}], \circ)$.** As in the structural section: $(T, \mu, \eta)$ is a monoid object with $\otimes = \circ$, recovering [[Def - Monad and Comonad|the monad]] definition exactly. This is the loop-closing example of the chapter.
 

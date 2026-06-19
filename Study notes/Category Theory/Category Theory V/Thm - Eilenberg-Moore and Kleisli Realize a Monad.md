@@ -103,7 +103,7 @@ Two things. First, the **directions of the comparison functors are opposite**: K
    - *Why needed:* Establishes terminality.
 
 5. **The Kleisli comparison out of $\mathcal{C}_T$ is unique.**
-   - *Hint:* A functor out of $\mathcal{C}_T$ commuting with free functors is determined on objects ($= FX$) and on Kleisli arrows ($= $ transpose).
+   - *Hint:* A functor out of $\mathcal{C}_T$ commuting with free functors is determined on objects (as $FX$) and on Kleisli arrows (as the transpose).
    - *Why needed:* Establishes initiality.
 
 ---

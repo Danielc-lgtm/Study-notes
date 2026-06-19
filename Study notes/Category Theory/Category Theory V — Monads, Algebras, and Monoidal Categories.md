@@ -89,7 +89,7 @@ This chapter assumes you are comfortable with the previous four. You should have
 > [[Exercise Index - §5.2 Algebras Eilenberg-Moore and Kleisli]]
 
 - **[[Ex - Algebras for the free-group monad are groups]]** (⭐⭐⭐)
-	- Prove that the Eilenberg–Moore category of the free-group monad $T = UF$ on $\mathbf{Set}$ is equivalent to [[Def - Group|$\mathbf{Grp}$]]: a structure map $TA \to A$ is exactly a group multiplication, and the algebra laws are exactly the group axioms.
+	- Prove that the Eilenberg–Moore category of the free-group monad $T = UF$ on $\mathbf{Set}$ is equivalent to **[[Def - Group|Grp]]**: a structure map $TA \to A$ is exactly a group multiplication, and the algebra laws are exactly the group axioms.
 
 - **[[Ex - The Kleisli category of the powerset monad is Rel]]** (⭐⭐)
 	- Show $\mathbf{Set}_P \cong \mathbf{Rel}$: a Kleisli arrow $A \to P(B)$ is a relation, and Kleisli composition is relational composition.
