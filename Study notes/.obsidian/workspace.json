@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Geometry/Geometry of Physics/Hodge Theory/Hodge Theory I — Harmonic Forms and the Hodge Decomposition.md",
+                "file": "Algebra/Commutative Algebra/Commutative Algebra VII — Noether Normalization and the Nullstellensatz.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hodge Theory I — Harmonic Forms and the Hodge Decomposition"
+              "title": "Commutative Algebra VII — Noether Normalization and the Nullstellensatz"
             }
           }
         ]
@@ -185,31 +185,31 @@
   },
   "active": "28731305ca23332c",
   "lastOpenFiles": [
-    "Geometry/Geometry of Physics/General Relativity/General Relativity I — Einstein's Equations and Schwarzschild.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Thm - Poincare-Hopf Theorem.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Def - Index of a Vector Field at a Zero.md",
-    "Geometry/Geometry of Physics/Riemannian Geometry/Riemannian Geometry IV/Def - Brouwer Degree of a Map.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I/Def - Euler Characteristic.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I/Def - Betti Numbers.md",
-    "Geometry/Geometry of Physics/Hodge Theory/Hodge Theory I — Harmonic Forms and the Hodge Decomposition.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology III — Higher Homotopy and Chern Forms.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology II — Fundamental Group and Covering Spaces.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I/Thm - Mayer-Vietoris for Singular Homology.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I — Singular Homology and the de Rham Theorem.md",
-    "Geometry/Differential Geometry/Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds.md",
-    "Geometry/Differential Geometry/Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map.md",
-    "Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
-    "Geometry/Differential Geometry/Differential Geometry VIII — Differential Forms.md",
-    "Geometry/Differential Geometry/Differential Geometry VII — Tensors and Tensor Fields.md",
-    "Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
-    "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
-    "Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
-    "Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
-    "Geometry/Differential Geometry/Differential Geometry III — Tangent Vectors and the Differential.md",
-    "Geometry/Differential Geometry/Differential Geometry II — Smooth Maps and Partitions of Unity.md",
-    "Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md"
+    "Algebra/Commutative Algebra/Commutative Algebra VI — Integral Extensions.md",
+    "Algebra/Commutative Algebra/Commutative Algebra X — Completions and Limits.md",
+    "Algebra/Commutative Algebra/Commutative Algebra I — Chain Conditions.md",
+    "Algebra/Commutative Algebra/Commutative Algebra II — Tensor Products.md",
+    "Algebra/Commutative Algebra/Commutative Algebra III — Flatness and Exactness.md",
+    "Algebra/Commutative Algebra/Commutative Algebra IV — Localization.md",
+    "Analysis/Topology/Topology III — §8–12 Products, Metric Spaces, Locally Compact, Paracompact.md",
+    "Analysis/Topology/Topology II — §4–7 Connectivity, Separation, Nets, Compactness.md",
+    "Analysis/Topology/Topology II/Def - Connected Space.md",
+    "Analysis/Topology/Topology I — §1–3 Metric and Topological Spaces.md",
+    "Analysis/Topology/Topology I/Thm - Continuity via Bases and Neighbourhood Bases.md",
+    "Algebra/Commutative Algebra/Commutative Algebra III — Flatness and Exactness/Thm - Tensoring is Right Exact.md",
+    "Algebra/Commutative Algebra/Commutative Algebra II — Tensor Products/Thm - Universal Property of the Tensor Product of Modules.md",
+    "Algebra/Commutative Algebra/Commutative Algebra II — Tensor Products/Def - Tensor Product of Modules.md",
+    "Algebra/Commutative Algebra/Commutative Algebra II — Tensor Products/Def - Bilinear and Multilinear Maps.md",
+    "Algebra/Commutative Algebra/Commutative Algebra I — Chain Conditions/Thm - Length is Additive and Finite iff Noetherian and Artinian.md",
+    "Algebra/Commutative Algebra/Commutative Algebra VIII — Going Up and Going Down.md",
+    "Algebra/Commutative Algebra/Commutative Algebra VII — Noether Normalization and the Nullstellensatz.md",
+    "Algebra/Commutative Algebra/Commutative Algebra V — Nakayama's Lemma.md",
+    "Algebra/Commutative Algebra/Commutative Algebra IX — Primary Decomposition.md",
+    "Algebra/Commutative Algebra/Commutative Algebra I — Chain Conditions/Thm - Hilbert's Basis Theorem (Algebra Form).md",
+    "Algebra/Commutative Algebra/Commutative Algebra I — Chain Conditions/Def - Finitely Generated Algebra.md",
+    "Algebra/Commutative Algebra/Commutative Algebra I — Chain Conditions/Def - Algebra over a Ring (R-algebra).md",
+    "Algebra/Commutative Algebra/Commutative Algebra I — Chain Conditions/Def - Composition Series and Length.md",
+    "Algebra/Commutative Algebra/Commutative Algebra I — Chain Conditions/Thm - Finitely Generated Modules over a Noetherian Ring are Noetherian.md",
+    "Algebra/Modules/Modules I — §3.1–3.2.md"
   ]
 }
