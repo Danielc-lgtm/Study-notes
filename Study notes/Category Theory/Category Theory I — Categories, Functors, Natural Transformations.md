@@ -52,6 +52,13 @@ This is the most reused chapter in the vault. Category theory is the hub: its la
 - **[[Def - Commutative Diagram]]**
 	- A **diagram** is a graph labelled by objects and morphisms; it **commutes** when any two directed paths with equal source and target compose to the same morphism — route-independence of composites. Precisely, a diagram of shape $\mathcal{J}$ is a [[Def - Functor|functor]] $\mathcal{J} \to \mathcal{C}$, and commutativity is functoriality on the imposed relations. The reflex it enables is **diagram chasing**: prove a new equation by transporting along already-commuting cells. Associativity of $\mathcal{C}$ is what makes "the composite along a path" unambiguous.
 
+- **[[Ex - Mono and epi need not imply iso]]** (⭐⭐)
+	- Verify mono/epi by cancellation, not by elements: the inclusion $\mathbb{Z} \hookrightarrow \mathbb{Q}$ is mono and epi in $\mathbf{CRing}$ yet not iso, and a continuous bijection $[0,1) \to S^1$ is mono and epi in $\mathbf{Top}$ without being a homeomorphism. The lesson is that "mono + epi" is strictly weaker than "iso" outside balanced categories.
+- **[[Ex - A monoid is a one-object category]]** (⭐)
+	- Show a monoid is the same data as a one-object category, and a one-object [[Def - Groupoid|groupoid]] is a group. Installs the "category = many-object monoid" frame and the object-count dial.
+- **[[Ex - Slice and arrow categories]]** (⭐⭐)
+	- Construct the slice category $\mathcal{C}/A$ and the arrow category $\mathcal{C}^{\to}$, verifying the axioms by inheriting composition and adding a commuting constraint; identify $\mathcal{C}^{\to} = [\mathbf{2}, \mathcal{C}]$, the first functor category.
+
 > [!tip] Unlocked: Affine Schemes and the Category CRing *(from Algebraic Geometry)*
 > The category $\mathbf{CRing}$ of commutative rings is the algebraic backbone of geometry: its opposite $\mathbf{CRing}^{\mathrm{op}}$ is equivalent to the category of **affine schemes**. A commutative ring is "functions on a space", a ring map runs backward against the geometry, and the whole dictionary begins with taking morphisms seriously. Unpacked via **Spec** in [[Def - Functor]].
 
@@ -68,6 +75,13 @@ This is the most reused chapter in the vault. Category theory is the hub: its la
 - **[[Thm - The Duality Principle]]**
 	- Every categorical statement $S$ has a **dual** $S^{\mathrm{op}}$ (reverse arrows, swap domain/codomain, reverse composite order), and $S$ holds for all categories iff $S^{\mathrm{op}}$ does — because proving $S$ for all categories proves it for $\mathcal{C}^{\mathrm{op}}$, which reads back as $S^{\mathrm{op}}$ for $\mathcal{C}$. This meta-theorem halves the subject: product/coproduct, mono/epi, initial/terminal, [[Def - Limit and Colimit|limit/colimit]] are each one theorem proved twice for free.
 
+- **[[Ex - Monos in a category are epis in the opposite]]** (⭐)
+	- Verify by hand the single translation that mono in $\mathcal{C}$ becomes epi in $\mathcal{C}^{\mathrm{op}}$, reversing arrows and composition order. Exhibits mono/epi as the prototypical dual pair and is the duality principle in miniature.
+- **[[Ex - The opposite of a poset and of a group]]** (⭐)
+	- Compute $(-)^{\mathrm{op}}$ on a poset (the order reverses, meets become joins) and on a group (self-opposite via $g \mapsto g^{-1}$). Shows self-opposite is special — groups are, generic posets are not.
+- **[[Ex - Set is not equivalent to its opposite]]** (⭐⭐⭐)
+	- Prove $\mathbf{Set} \not\simeq \mathbf{Set}^{\mathrm{op}}$ via the initial/terminal asymmetry: $\mathbf{Set}(X, \emptyset) = \emptyset$ for $X \neq \emptyset$ while dually maps into a singleton are never empty. An impossibility argument run on a preserved invariant.
+
 > [!tip] Unlocked: Presheaves and CRing^op ≃ Affine Schemes *(from Algebraic Geometry)*
 > A **presheaf** is a functor $\mathcal{C}^{\mathrm{op}} \to \mathbf{Set}$ — the opposite category is built into the definition. The central geometric duality $\mathbf{CRing}^{\mathrm{op}} \simeq$ **affine schemes** says geometry is *dual* to algebra: the arrow-reversal of $(-)^{\mathrm{op}}$ is exactly the contravariance of taking functions on a space. See [[Def - Presheaf]] in Chapter II.
 
@@ -77,7 +91,7 @@ This is the most reused chapter in the vault. Category theory is the hub: its la
 ## §1.3 Functors
 
 - **[[Def - Functor]]**
-	- A **functor** $F : \mathcal{C} \to \mathcal{D}$ sends objects to objects and morphisms to morphisms, preserving composition ($F(g \circ f) = Fg \circ Ff$) and identities — a homomorphism of categories. **Contravariant** functors reverse arrows (functors out of $\mathcal{C}^{\mathrm{op}}$). The examples are the engine of mathematics: forgetful $\mathbf{Grp} \to \mathbf{Set}$, free $\mathbf{Set} \to \mathbf{Grp}$, the hom-functors $\mathcal{C}(A,-)$, $\pi_1 : \mathbf{Top}_* \to \mathbf{Grp}$, [[Def - Singular Homology|$H_n$]], the contravariant [[Def - Dual Space|dual space]] $(-)^*$ and **Spec**$: \mathbf{CRing}^{\mathrm{op}} \to \mathbf{Top}$. Pushforward is covariant; pullback is contravariant.
+	- A **functor** $F : \mathcal{C} \to \mathcal{D}$ sends objects to objects and morphisms to morphisms, preserving composition ($F(g \circ f) = Fg \circ Ff$) and identities — a homomorphism of categories. **Contravariant** functors reverse arrows (functors out of $\mathcal{C}^{\mathrm{op}}$). The examples are the engine of mathematics: forgetful $\mathbf{Grp} \to \mathbf{Set}$, free $\mathbf{Set} \to \mathbf{Grp}$, the hom-functors $\mathcal{C}(A,-)$, $\pi_1 : \mathbf{Top}_* \to \mathbf{Grp}$, singular homology [[Def - Singular Homology|Hₙ]], the contravariant [[Def - Dual Space|dual space]] $(-)^*$ and **Spec**$: \mathbf{CRing}^{\mathrm{op}} \to \mathbf{Top}$. Pushforward is covariant; pullback is contravariant.
 - **[[Def - Full, Faithful, and Essentially Surjective Functor]]**
 	- The three measures of how a functor relates source and target: **faithful** = injective on each hom-set, **full** = surjective on each hom-set, **essentially surjective** = every target object iso to some $FC$. Forgetful $\mathbf{Grp} \to \mathbf{Set}$ is faithful but not full; the inclusion $\mathbf{Ab} \hookrightarrow \mathbf{Grp}$ is fully faithful but not essentially surjective. **Fully faithful functors reflect isomorphisms** — the key lemma behind equivalence and Yoneda.
 - **[[Def - Subcategory]]**
@@ -85,11 +99,18 @@ This is the most reused chapter in the vault. Category theory is the hub: its la
 - **[[Thm - Functors Preserve Isomorphisms]]**
 	- Every functor sends isomorphisms to isomorphisms, with $(Ff)^{-1} = F(f^{-1})$ — because "iso" is defined by equations between composites, which functors preserve. Corollary: **fully faithful functors reflect isos**. Functors do *not* preserve mono/epi in general (those are quantified cancellation properties, not equations). This is the soundness certificate for all algebraic invariants: $\pi_1$, $H_n$ distinguish spaces because they are functors.
 
+- **[[Ex - The covariant and contravariant power-set functors]]** (⭐)
+	- Verify the image functor $P$ is covariant and the preimage functor $P^{\bullet}$ is contravariant. Extracts the universal heuristic: pushforward is covariant, pullback is contravariant.
+- **[[Ex - Forgetful functors and faithfulness]]** (⭐⭐)
+	- Run $U : \mathbf{Grp} \to \mathbf{Set}$ against the full/faithful/essentially-surjective checklist: faithful (a homomorphism is its underlying function), not full ($n \mapsto n+1$ is no homomorphism), not essentially surjective (the empty set underlies no group). The canonical "faithful, not full" profile.
+- **[[Ex - The fundamental group is a functor]]** (⭐⭐)
+	- Prove $\pi_1 : \mathbf{Top}_* \to \mathbf{Grp}$ is a functor (well-defined on homotopy classes, homomorphism, functorial) and transport non-isomorphism: $\pi_1(\mathbb{R}^2) = 0 \neq \mathbb{Z} = \pi_1(\mathbb{R}^2 \setminus \{0\})$, so the spaces differ.
+
 > [!tip] Unlocked: Representable Functors and the Yoneda Lemma *(from Chapter II)*
 > The hom-functors $\mathcal{C}(A,-)$ and $\mathcal{C}(-,B)$ are the **representable functors**, and the [[Def - The Yoneda Embedding|Yoneda embedding]] realizes every object as the presheaf it represents. The [[Thm - The Yoneda Lemma|Yoneda lemma]] — "an object is determined by its hom-functor" — is the most important calculation in the subject.
 
 > [!tip] Unlocked: Derived Functors, Tor and Ext *(from Homological Algebra)*
-> When a functor between **abelian categories** fails to preserve exact sequences, its **derived functors** measure the failure — $\mathrm{Tor}$ and $\mathrm{Ext}$ derive $\otimes$ and $\mathrm{Hom}$. The functoriality of [[Def - Singular Homology|$H_n$]] is the entry point to this machinery.
+> When a functor between **abelian categories** fails to preserve exact sequences, its **derived functors** measure the failure — $\mathrm{Tor}$ and $\mathrm{Ext}$ derive $\otimes$ and $\mathrm{Hom}$. The functoriality of singular homology [[Def - Singular Homology|Hₙ]] is the entry point to this machinery.
 
 > [!note] Exercise Index — §1.3
 > [[Exercise Index - §1.3 Functors]]
@@ -100,6 +121,13 @@ This is the most reused chapter in the vault. Category theory is the hub: its la
 	- A **natural transformation** $\alpha : F \Rightarrow G$ is a uniform, choice-free family of components $\alpha_A : FA \to GA$ commuting with every morphism (the **naturality square** $Gf \circ \alpha_A = \alpha_B \circ Ff$). It is the precise meaning of "canonical": the [[Def - Dual Space|double dual]] $\eta_V : V \to V^{**}$ is natural (and iso in finite dimensions), the [[Def - Determinant|determinant]] $\det : \mathrm{GL}_n \Rightarrow (-)^\times$ is natural (same formula in every ring), but the single dual $V \cong V^*$ is *not* — the variances clash. The subject was invented to make "natural" precise.
 - **[[Def - Functor Category]]**
 	- The **functor category** $[\mathcal{C}, \mathcal{D}]$ has functors as objects, natural transformations as morphisms, composed componentwise (vertical composition). Its isomorphisms are exactly natural isomorphisms. This makes $\mathbf{Cat}$ a **2-category** with horizontal composition (whiskering) and the **interchange law**. Representations $[\mathbf{B}G, \mathbf{Vect}_k]$, presheaves $[\mathcal{C}^{\mathrm{op}}, \mathbf{Set}]$, and diagram categories $[\mathcal{J}, \mathcal{C}]$ are all functor categories.
+
+- **[[Ex - The double dual natural transformation]]** (⭐⭐)
+	- Verify $\eta_V : V \to V^{**}$, $v \mapsto \mathrm{ev}_v$, is a natural transformation $1 \Rightarrow (-)^{**}$ (and a natural iso in finite dimensions), and explain why no natural transformation $1 \Rightarrow (-)^*$ to the single dual exists — the variances clash. The example that named the subject.
+- **[[Ex - The determinant is a natural transformation]]** (⭐⭐)
+	- Show $\det : \mathrm{GL}_n \Rightarrow (-)^\times$ is natural between functors $\mathbf{CRing} \to \mathbf{Grp}$: naturality is "a ring map commutes with the determinant polynomial". A uniform formula is automatically natural.
+- **[[Ex - Components and naturality squares]]** (⭐)
+	- Unwind functors and natural transformations on the walking arrow $\mathbf{2}$ (arrow; commuting square), and prove an arrow of $[\mathcal{C}, \mathcal{D}]$ is an isomorphism iff every component is — the standard route to natural isomorphisms.
 
 > [!tip] Unlocked: Monads and Markov Categories *(from Chapter V and Categorical Probability)*
 > A **monad** is an endofunctor with unit and multiplication natural transformations satisfying coherence. The **Giry/probability monad** packages "form distributions over"; its Kleisli category and the copy-discard structure of **Markov categories** are the categorical foundation of probability — directly grounding the user's research in categorical systems theory. See [[Def - Monad and Comonad]].
@@ -116,6 +144,13 @@ This is the most reused chapter in the vault. Category theory is the hub: its la
 	- An **equivalence** $\mathcal{C} \simeq \mathcal{D}$ is functors $F, G$ with natural *isomorphisms* $GF \cong 1_{\mathcal{C}}$, $FG \cong 1_{\mathcal{D}}$ — isomorphism of categories with "equal objects" relaxed to "naturally isomorphic objects". It is the *correct* notion of sameness, because objects only matter up to iso. Weaker than isomorphism of categories (which demands $GF = 1$ on the nose): $\mathbf{FinVect}_k \simeq \mathbf{Mat}_k$ but the two are not isomorphic. A category is equivalent to any of its skeletons.
 - **[[Thm - Characterization of Equivalence]]**
 	- A functor $F$ is an equivalence **iff** it is [[Def - Full, Faithful, and Essentially Surjective Functor|full, faithful, and essentially surjective]]. The hard direction *constructs* a quasi-inverse $G$: essential surjectivity (plus the axiom of choice) chooses objects $GD$ with $FGD \cong D$, and full faithfulness turns "morphisms between images" into morphisms of $\mathcal{C}$ bijectively, defining $G$ on arrows. This is the working definition — never verify the four-tuple directly, check the three local conditions.
+
+- **[[Ex - Finite-dimensional vector spaces are equivalent to the category of matrices]]** (⭐⭐)
+	- Prove $\mathbf{FinVect}_k \simeq \mathbf{Mat}_k$ by the three local conditions (matrices *are* linear maps; bases give essential surjectivity) without constructing a quasi-inverse, and show they are not isomorphic. $\mathbf{Mat}_k$ is the skeleton of $\mathbf{FinVect}_k$.
+- **[[Ex - Equivalence versus isomorphism of categories]]** (⭐⭐)
+	- Separate the two notions with the minimal example $\mathbf{1} \simeq \mathcal{I}$ (terminal category versus the walking isomorphism): equivalence weakens $GF = 1$ to $GF \cong 1$, and the gap lives in object-count.
+- **[[Ex - Equivalences preserve monos epis and limits]]** (⭐⭐)
+	- Show an equivalence preserves and reflects [[Def - Isomorphism, Monomorphism, Epimorphism|monos, epis]], and [[Def - Limit and Colimit|limits]] — every categorical property — using full faithfulness (transport cancellation) and essential surjectivity (cover all test objects).
 
 > [!tip] Unlocked: Morita and Derived Equivalence *(from Ring Theory and Homological Algebra)*
 > Two rings are **Morita equivalent** when $\mathbf{Mod}_R \simeq \mathbf{Mod}_S$ — coarser than ring isomorphism ($R$ and $M_n(R)$ are always Morita equivalent). **Derived equivalences** $D^b(\mathcal{A}) \simeq D^b(\mathcal{B})$ between **triangulated categories** encode tilting and (conjecturally) homological mirror symmetry. All run on the characterization theorem.

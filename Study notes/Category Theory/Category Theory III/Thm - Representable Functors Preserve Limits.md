@@ -63,7 +63,7 @@ Combine with **the contravariant form and adjunctions**. $\mathcal{C}(\operatorn
 
 # Why Is It True
 
-The proof is almost a tautology once you see what the two sides *say*. The left side, $\mathcal{C}(X, \lim D)$, is the set of maps from $X$ into the limit. By the very [[Def - Limit and Colimit|definition of the limit]], a map $X \to \lim D$ is the same thing as a [[Def - Cone and Cocone|cone over $D$ with apex $X$]] — that is the universal property, no more. The right side, $\lim_J \mathcal{C}(X, D_-)$, computed in $\mathbf{Set}$, is the set of compatible families $(\phi_j : X \to D_j)$ with $D(f)\phi_j = \phi_k$ — which is *also* exactly a cone over $D$ with apex $X$. So both sides are the set of cones $\mathrm{Cone}(X, D)$, and the isomorphism is the identity on cones.
+The proof is almost a tautology once you see what the two sides *say*. The left side, $\mathcal{C}(X, \lim D)$, is the set of maps from $X$ into the limit. By the very [[Def - Limit and Colimit|definition of the limit]], a map $X \to \lim D$ is the same thing as a [[Def - Cone and Cocone|cone over the diagram with apex]] $X$ — that is the universal property, no more. The right side, $\lim_J \mathcal{C}(X, D_-)$, computed in $\mathbf{Set}$, is the set of compatible families $(\phi_j : X \to D_j)$ with $D(f)\phi_j = \phi_k$ — which is *also* exactly a cone over $D$ with apex $X$. So both sides are the set of cones $\mathrm{Cone}(X, D)$, and the isomorphism is the identity on cones.
 
 > **Mapping into a limit = a compatible family of mappings = a limit of hom-sets.** The hom-functor preserves the limit because "cone with apex $X$" can be read either as "a single map into $\lim D$" or as "a compatible family of maps", and these are the two sides of the equation.
 

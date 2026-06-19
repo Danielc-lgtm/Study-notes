@@ -73,7 +73,7 @@ So the equalizer of $s$ and $t$ is exactly the universal object carrying a compa
 
 # What Makes This Hard
 
-The hard part is *defining the two maps $s, t : P \to Q$ correctly*, because they are specified component-wise through the universal property of $Q$, and the indexing is easy to get backwards. The slot of $Q$ indexed by $f : j \to k$ holds an element of $D_k = D_{\mathrm{cod}\,f}$; the map $t$ must put $D(f)(\text{$j$-th coordinate})$ there while $s$ puts the $k$-th coordinate, and swapping these or mis-indexing the product collapses the argument. The second subtlety is remembering that the limit *projections* are $\pi_j \circ e$ (project to the $j$-slot, after including the equalizer), not $\pi_j$ alone. Most errors are bookkeeping with the two product projections $\pi_j$ (on $P$) and $\pi_f$ (on $Q$), not conceptual.
+The hard part is *defining the two maps $s, t : P \to Q$ correctly*, because they are specified component-wise through the universal property of $Q$, and the indexing is easy to get backwards. The slot of $Q$ indexed by $f : j \to k$ holds an element of $D_k = D_{\mathrm{cod}\,f}$; the map $t$ must put $D(f)$ applied to the $j$-th coordinate there while $s$ puts the $k$-th coordinate, and swapping these or mis-indexing the product collapses the argument. The second subtlety is remembering that the limit *projections* are $\pi_j \circ e$ (project to the $j$-slot, after including the equalizer), not $\pi_j$ alone. Most errors are bookkeeping with the two product projections $\pi_j$ (on $P$) and $\pi_f$ (on $Q$), not conceptual.
 
 ---
 

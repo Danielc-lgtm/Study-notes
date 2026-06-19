@@ -1,0 +1,110 @@
+---
+type: exercise
+subject: model-categories
+difficulty: "⭐⭐⭐"
+prereqs:
+  - "Def - Quillen Adjunction and Quillen Equivalence"
+  - "Thm - Quillen Adjunctions Descend to Derived Adjunctions"
+  - "Def - Simplicial Set"
+  - "Thm - Geometric Realization is Left Adjoint to the Singular Nerve"
+tags: [category-theory, homotopy-theory, foundations]
+---
+
+# Problem Statement
+
+Let $|{-}| : \mathbf{sSet} \to \mathbf{Top}$ be **geometric realization** and $\mathrm{Sing} : \mathbf{Top} \to \mathbf{sSet}$ the **singular simplicial set** functor, with $\mathrm{Sing}(X)_n = \mathbf{Top}(\Delta^n, X)$ the set of singular $n$-simplices. These form an adjunction $|{-}| \dashv \mathrm{Sing}$. Equip $\mathbf{sSet}$ with the Kan–Quillen model structure (cofibrations = monomorphisms, weak equivalences = maps whose realization is a weak homotopy equivalence, fibrations = Kan fibrations) and $\mathbf{Top}$ with the Quillen model structure.
+
+(a) Show that $|{-}| \dashv \mathrm{Sing}$ is a **Quillen adjunction**: that $|{-}|$ preserves cofibrations and trivial cofibrations (equivalently $\mathrm{Sing}$ preserves fibrations and trivial fibrations).
+
+(b) Show it is a **Quillen equivalence**: for a simplicial set $A$ (always cofibrant) and a space $X$ (always fibrant), a map $|A| \to X$ is a weak homotopy equivalence iff its adjunct $A \to \mathrm{Sing}(X)$ is a weak equivalence in $\mathbf{sSet}$.
+
+(c) Conclude that $\mathrm{Ho}(\mathbf{sSet}) \simeq \mathrm{Ho}(\mathbf{Top})$, and interpret this as a form of the homotopy hypothesis.
+
+You may use that the counit $|\mathrm{Sing}(X)| \to X$ is a weak homotopy equivalence for every space $X$ (a standard fact), and that the weak equivalences of $\mathbf{sSet}$ are *defined* as the maps becoming weak homotopy equivalences after realization.
+
+**Recall:**
+
+![[Def - Quillen Adjunction and Quillen Equivalence#The Definition]]
+
+A [[Def - Simplicial Set|simplicial set]] is a functor $\Delta^{op} \to \mathbf{Set}$; geometric realization $|{-}|$ is its left adjoint, built by gluing topological simplices $\Delta^n$. See [[Thm - Geometric Realization is Left Adjoint to the Singular Nerve]].
+
+---
+
+# Convergent Strategy
+
+**Problem class:** This is the flagship Quillen-equivalence problem: proving two model categories present the same homotopy theory. It is the prototypical instance of the "prove a Quillen equivalence" target on the [[Model Categories — Quillen's Axiomatization of Homotopy Theory#Sources and Targets|topic page]], and the cleanest realization of [[Thm - Quillen Adjunctions Descend to Derived Adjunctions]].
+
+**Assumption pattern:** The recognizable structure is an adjunction between two models of "the same" homotopy theory, with one side combinatorial ($\mathbf{sSet}$) and one topological ($\mathbf{Top}$). The unlock is that *every* simplicial set is cofibrant and *every* space is fibrant, so the Quillen-equivalence condition only has to be checked between an arbitrary $A$ and an arbitrary $X$ — no replacement is needed on either side, which dramatically simplifies the verification.
+
+**Theorem routing:** Part (a) routes through "realization sends monomorphisms to relative cell complexes" (cofibration preservation) and the corresponding statement for trivial cofibrations. Part (b) routes through the definition of $\mathbf{sSet}$ weak equivalences plus the standard fact that the counit is a weak equivalence: a map $|A| \to X$ and its adjunct $A \to \mathrm{Sing}(X)$ are related by the unit/counit, and 2-out-of-three closes the iff. Part (c) is [[Thm - Quillen Adjunctions Descend to Derived Adjunctions|the derived-equivalence theorem]] applied to (a) and (b).
+
+**Key decision point:** The non-obvious move in part (b) is to relate the map $|A| \to X$ to its adjunct via the triangle identities: the adjunct $A \to \mathrm{Sing}(X)$ realizes to $|A| \to |\mathrm{Sing}(X)|$, which composes with the counit $|\mathrm{Sing}(X)| \to X$ to recover $|A| \to X$. The decision is to use the counit being a weak equivalence to transfer the weak-equivalence property across this triangle, then apply 2-out-of-three.
+
+---
+
+# Legal Operations Used
+
+1. **Operation 8 from the topic page (recognize a class by its lifting property).** Cofibration preservation is checked on generating cofibrations $\partial\Delta^n \hookrightarrow \Delta^n$, whose realizations are the cell inclusions $S^{n-1} \hookrightarrow D^n$.
+
+2. **Operation 5 from the topic page (use two-out-of-three).** The Quillen-equivalence iff in part (b) is closed by 2-out-of-three applied to the triangle relating $|A| \to X$, its realized adjunct, and the counit.
+
+3. **Operation 4 from the topic page (replace by a (co)fibrant model) — trivially.** Here no replacement is needed because every simplicial set is cofibrant and every space is fibrant; recognizing this is what makes the equivalence check tractable.
+
+---
+
+# Hints
+
+> [!note]- Hint 1
+> For (a): cofibrations of $\mathbf{sSet}$ are monomorphisms, generated by the boundary inclusions $\partial\Delta^n \hookrightarrow \Delta^n$. Their realizations are $S^{n-1} \hookrightarrow D^n$ (since $|\partial\Delta^n| = S^{n-1}$ and $|\Delta^n| = D^n$), the generating cofibrations of $\mathbf{Top}$. A left adjoint preserving generators preserves all cofibrations.
+
+> [!note]- Hint 2
+> For trivial cofibrations: the generating trivial cofibrations of $\mathbf{sSet}$ are the horn inclusions $\Lambda^n_k \hookrightarrow \Delta^n$, whose realizations are deformation retracts (trivial cofibrations of $\mathbf{Top}$). So $|{-}|$ preserves trivial cofibrations.
+
+> [!note]- Hint 3
+> For (b): given $\phi : |A| \to X$ with adjunct $\tilde\phi : A \to \mathrm{Sing}(X)$, the triangle identity says $\phi$ factors as $|A| \xrightarrow{|\tilde\phi|} |\mathrm{Sing}(X)| \xrightarrow{\varepsilon_X} X$, where $\varepsilon_X$ is the counit.
+
+> [!note]- Hint 4
+> The counit $\varepsilon_X : |\mathrm{Sing}(X)| \to X$ is a weak homotopy equivalence (given). And $\tilde\phi$ is a weak equivalence in $\mathbf{sSet}$ iff $|\tilde\phi|$ is a weak homotopy equivalence (by *definition* of $\mathbf{sSet}$ weak equivalences). Now apply two-out-of-three to $\phi = \varepsilon_X \circ |\tilde\phi|$.
+
+---
+
+# Solution
+
+The solution checks the Quillen-adjunction condition on generators (a), uses the triangle identity and the counit to prove the equivalence iff (b), and invokes the derived-equivalence theorem for (c).
+
+**Step 1: $|{-}| \dashv \mathrm{Sing}$ is a Quillen adjunction.**
+
+> [!note]- Derivation
+> Cofibrations of $\mathbf{sSet}$ are the monomorphisms, which are generated (under pushout, transfinite composition, retract) by the boundary inclusions $\partial\Delta^n \hookrightarrow \Delta^n$. Geometric realization sends $|\Delta^n| = D^n$ and $|\partial\Delta^n| = S^{n-1}$, so $|\partial\Delta^n \hookrightarrow \Delta^n| = (S^{n-1} \hookrightarrow D^n)$, a generating cofibration of $\mathbf{Top}$. Since $|{-}|$ is a left adjoint it preserves colimits, hence preserves pushouts, coproducts, and transfinite composites of these generators; by [[Ex - A left Quillen functor preserves cofibrations]] it therefore preserves all cofibrations (monomorphisms map to relative cell complexes). For trivial cofibrations, the generating trivial cofibrations of $\mathbf{sSet}$ are the horn inclusions $\Lambda^n_k \hookrightarrow \Delta^n$, whose realizations $|\Lambda^n_k| \hookrightarrow |\Delta^n| = D^n$ are inclusions of a deformation retract — trivial cofibrations of $\mathbf{Top}$. So $|{-}|$ preserves trivial cofibrations, and $|{-}| \dashv \mathrm{Sing}$ is a Quillen adjunction.
+
+**Step 2: The Quillen-equivalence iff.**
+
+> [!note]- Derivation
+> Every simplicial set $A$ is cofibrant (monomorphism $\varnothing \to A$) and every space $X$ is fibrant, so the Quillen-equivalence condition must be checked for arbitrary $A, X$. Let $\phi : |A| \to X$ have adjunct $\tilde\phi : A \to \mathrm{Sing}(X)$. The triangle identity for the adjunction gives
+> $$\phi = \big(|A| \xrightarrow{\,|\tilde\phi|\,} |\mathrm{Sing}(X)| \xrightarrow{\,\varepsilon_X\,} X\big),$$
+> where $\varepsilon_X : |\mathrm{Sing}(X)| \to X$ is the counit, a weak homotopy equivalence (given). By definition, $\tilde\phi$ is a weak equivalence in $\mathbf{sSet}$ iff $|\tilde\phi|$ is a weak homotopy equivalence in $\mathbf{Top}$.
+> Now apply two-out-of-three to $\phi = \varepsilon_X \circ |\tilde\phi|$ with $\varepsilon_X$ a weak equivalence: $\phi$ is a weak homotopy equivalence iff $|\tilde\phi|$ is, iff $\tilde\phi$ is a weak equivalence in $\mathbf{sSet}$. This is exactly the Quillen-equivalence condition.
+
+**Step 3: Conclude the equivalence of homotopy categories.**
+
+> [!note]- Derivation
+> By Steps 1 and 2, $|{-}| \dashv \mathrm{Sing}$ is a Quillen equivalence. By [[Thm - Quillen Adjunctions Descend to Derived Adjunctions]] (part 3), the total derived functors give mutually inverse equivalences
+> $$\mathbf{L}|{-}| : \mathrm{Ho}(\mathbf{sSet}) \xrightarrow{\;\simeq\;} \mathrm{Ho}(\mathbf{Top}), \qquad \mathbf{R}\,\mathrm{Sing} : \mathrm{Ho}(\mathbf{Top}) \xrightarrow{\;\simeq\;} \mathrm{Ho}(\mathbf{sSet}).$$
+> Since every simplicial set is cofibrant and every space is fibrant, $\mathbf{L}|{-}| = |{-}|$ and $\mathbf{R}\,\mathrm{Sing} = \mathrm{Sing}$ on the nose. Hence $\mathrm{Ho}(\mathbf{sSet}) \simeq \mathrm{Ho}(\mathbf{Top})$: the combinatorial homotopy theory of simplicial sets and the topological homotopy theory of spaces are equivalent. This is a precise form of the **homotopy hypothesis** — Kan complexes (the fibrant simplicial sets) model ∞-groupoids, which are the same as homotopy types of spaces.
+
+> [!note]- Complete formal solution
+> **(a)** $|{-}|$ sends the generating cofibrations $\partial\Delta^n \hookrightarrow \Delta^n$ to $S^{n-1} \hookrightarrow D^n$ and the generating trivial cofibrations $\Lambda^n_k \hookrightarrow \Delta^n$ to deformation-retract inclusions; being a left adjoint it preserves the colimits generating all (trivial) cofibrations, so it is a left Quillen functor and $|{-}| \dashv \mathrm{Sing}$ is a Quillen adjunction.
+>
+> **(b)** Every $A$ is cofibrant, every $X$ fibrant. For $\phi : |A| \to X$ with adjunct $\tilde\phi$, the triangle identity gives $\phi = \varepsilon_X \circ |\tilde\phi|$ with $\varepsilon_X$ a weak equivalence. By definition $\tilde\phi \in \mathcal{W}_{\mathbf{sSet}}$ iff $|\tilde\phi| \in \mathcal{W}_{\mathbf{Top}}$, and 2-out-of-three gives $\phi \in \mathcal{W}_{\mathbf{Top}}$ iff $|\tilde\phi| \in \mathcal{W}_{\mathbf{Top}}$. So $\phi$ is a weak equivalence iff $\tilde\phi$ is — the Quillen-equivalence condition.
+>
+> **(c)** By [[Thm - Quillen Adjunctions Descend to Derived Adjunctions]], the Quillen equivalence induces $\mathrm{Ho}(\mathbf{sSet}) \simeq \mathrm{Ho}(\mathbf{Top})$, realizing combinatorial and topological homotopy theory as the same and giving a form of the homotopy hypothesis. $\blacksquare$
+
+---
+
+# Key Takeaways
+
+**A Quillen equivalence is the rigorous statement that two model categories present the same homotopy theory, and this is the prototype.** Spaces and simplicial sets are genuinely different categories — one topological, one combinatorial — yet their homotopy categories are equivalent, which is exactly what "same homotopy theory, different presentation" means. The method is universal: exhibit an adjunction, check it is Quillen (preservation of cofibrations), check the derived unit/counit are weak equivalences (the equivalence condition), and invoke [[Thm - Quillen Adjunctions Descend to Derived Adjunctions]]. Every comparison of models in homotopy theory — and there are many — follows this exact template, so internalizing the realization-nerve case gives you the pattern for all of them.
+
+**When every object is cofibrant on one side and fibrant on the other, the equivalence check trivializes because no replacement is needed.** The reason this verification is clean is that $\mathbf{sSet}$ has every object cofibrant and $\mathbf{Top}$ has every object fibrant, so the derived functors $\mathbf{L}|{-}|$ and $\mathbf{R}\,\mathrm{Sing}$ equal the underlying functors and the Quillen-equivalence condition is checked between arbitrary $A$ and $X$ with no $Q$ or $R$ inserted. Recognizing this "all cofibrant / all fibrant" structure is a major simplification, and it is worth scanning for whenever you set up a Quillen equivalence: it tells you the comparison maps are the honest unit and counit, not their derived versions, which makes the triangle-identity argument direct.
+
+**The counit being a weak equivalence is the engine, and the triangle identity is what transmits it to the equivalence condition.** The single external fact used is that $\varepsilon_X : |\mathrm{Sing}(X)| \to X$ is a weak homotopy equivalence — geometrically, that the singular complex of a space realizes back to something weakly equivalent to it. The triangle identity $\phi = \varepsilon_X \circ |\tilde\phi|$ then lets two-out-of-three transfer "weak equivalence" between $\phi$ and $\tilde\phi$. This pattern — use the (co)unit's good behaviour plus a triangle identity plus 2-out-of-three to establish the equivalence condition — is the standard mechanism for proving Quillen equivalences, and recognizing the role of the counit as the "comparison weak equivalence" is the transferable diagnostic. The deeper content, that $\varepsilon_X$ is a weak equivalence, is the geometric input that makes spaces and simplicial sets agree, and it is the homotopy hypothesis in disguise.
