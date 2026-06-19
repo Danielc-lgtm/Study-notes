@@ -69,7 +69,7 @@ A homomorphism $\mathbb{Z} \to G$ is completely determined by the image of the g
 
 **Is an instance — $U : \mathbf{Ring} \to \mathbf{Set}$ is represented by $\mathbb{Z}[x]$.** A ring homomorphism $\mathbb{Z}[x] \to R$ is determined by the image of $x$, which may be any element of $R$, so $\mathbf{Ring}(\mathbb{Z}[x], R) \cong U(R)$ naturally — $\mathbb{Z}[x]$ is the free ring on one generator. Drilled in [[Ex - Representable forgetful functors]].
 
-**Is an instance — the forgetful $U : \mathbf{Top} \to \mathbf{Set}$ is represented by the one-point space.** A continuous map from the one-point space $* $ into $X$ picks out a point of $X$, and every point arises uniquely, so $\mathbf{Top}(*, X) \cong U(X)$ naturally.
+**Is an instance — the forgetful $U : \mathbf{Top} \to \mathbf{Set}$ is represented by the one-point space.** A continuous map from the one-point space $*$ into $X$ picks out a point of $X$, and every point arises uniquely, so $\mathbf{Top}(*, X) \cong U(X)$ naturally.
 
 **Is an instance — the units functor on $\mathbf{CRing}$.** The functor $(-)^\times : \mathbf{CRing} \to \mathbf{Set}$ sending a ring to its set of *units* (invertible elements) is represented by the Laurent polynomial ring $\mathbb{Z}[x, x^{-1}]$: a ring map $\mathbb{Z}[x, x^{-1}] \to R$ must send $x$ to a unit (since $x$ is invertible, with inverse $x^{-1}$), and conversely any unit is a legal image. So $\mathbf{CRing}(\mathbb{Z}[x, x^{-1}], R) \cong R^\times$. This is the algebraic group $\mathbb{G}_m$ of the AG callout below.
 

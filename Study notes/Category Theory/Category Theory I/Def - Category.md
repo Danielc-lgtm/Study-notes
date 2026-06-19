@@ -69,7 +69,7 @@ There is a second compression worth carrying. A [[Def - Group|group]] is a one-o
 
 **$\mathbf{Ring}$ and $\mathbf{CRing}$.** Objects are [[Def - Ring|rings]] (respectively commutative rings), morphisms are [[Def - Ring Homomorphism|ring homomorphisms]] (preserving $1$). $\mathbf{CRing}$ is the home of the algebraic-geometry dictionary: its opposite $\mathbf{CRing}^{\mathrm{op}}$ is equivalent to the category of **affine schemes**.
 
-**$\mathbf{Mod}_R$ and $\mathbf{Vect}_k$.** For a fixed ring $R$, objects are [[Def - Module|left $R$-modules]] and morphisms are $R$-linear [[Def - Module Homomorphism|module homomorphisms]]. When $R = k$ is a field this is $\mathbf{Vect}_k$, the category of [[Def - Vector Space|vector spaces]] and [[Def - Linear Map|linear maps]].
+**$\mathbf{Mod}_R$ and $\mathbf{Vect}_k$.** For a fixed ring $R$, objects are left $R$-modules (see [[Def - Module]]) and morphisms are $R$-linear [[Def - Module Homomorphism|module homomorphisms]]. When $R = k$ is a field this is $\mathbf{Vect}_k$, the category of [[Def - Vector Space|vector spaces]] and [[Def - Linear Map|linear maps]].
 
 **$\mathbf{Top}$.** Objects are [[Def - Topological Space|topological spaces]], morphisms are [[Def - Continuous Map|continuous maps]]. The composite of continuous maps is continuous and the identity is continuous.
 

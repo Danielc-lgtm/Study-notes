@@ -1,0 +1,107 @@
+---
+type: exercise
+subject: category-theory
+difficulty: "⭐⭐"
+prereqs:
+  - "Def - Unit and Counit of an Adjunction"
+  - "Def - Free-Forgetful Adjunction"
+  - "Def - Free Group and Free Product"
+tags: [category-theory, foundations]
+---
+
+# Problem Statement
+
+Let $F\dashv U$ be the free-forgetful adjunction for groups, $F : \mathbf{Set}\to\mathbf{Grp}$, $U : \mathbf{Grp}\to\mathbf{Set}$.
+
+**(a)** Compute the unit $\eta_S : S\to UFS$ and the counit $\varepsilon_H : FUH\to H$ explicitly as the transposes of the appropriate identity morphisms.
+
+**(b)** Describe the counit $\varepsilon_H$ on a general element of $FUH$, and prove it is a surjective homomorphism. Interpret "$H$ is a quotient of a free group" as a statement about the counit.
+
+**(c)** Show that the unit $\eta_S$ is **not** in general surjective or injective-onto-a-subgroup in a way that makes $S$ a subgroup — i.e. clarify what the unit is and is not.
+
+**Recall:**
+
+![[Def - Unit and Counit of an Adjunction#The Definition]]
+
+For the free group, $FS$ is reduced words in $S\sqcup S^{-1}$; the [[Def - Free Group and Free Product|free group]] universal property is "homomorphisms out of $FS$ are functions out of $S$".
+
+---
+
+# Convergent Strategy
+
+**Problem class:** This is a "compute the unit and counit of a concrete adjunction" problem, and a structural-interpretation problem (part b). The mechanical core is transposing identities; the conceptual core is reading the counit as "every group is a quotient of a free group".
+
+**Assumption pattern:** The assumptions are the explicit description of the free group and the formulas $\eta_S = \Phi(1_{FS})$, $\varepsilon_H = \Phi^{-1}(1_{UH})$. The counit's source $FUH$ is the free group on the *underlying set of $H$* — this is the key recognition that makes part (b) work.
+
+**Theorem routing:** Use [[Def - Unit and Counit of an Adjunction|the unit/counit definitions]] (transposes of identities) and the [[Def - Free Group and Free Product|free group]] universal property to get explicit formulas; then surjectivity of $\varepsilon_H$ follows because the one-letter generators already hit all of $H$.
+
+**Key decision point:** The non-obvious point is that the counit's domain $FUH$ has *the elements of $H$* as generators (not the generators of some presentation of $H$). The counit is the evaluation that reinterprets a formal word of group elements as their actual product. Recognising this is what turns "the counit" from an abstract transpose into the concrete surjection presenting $H$.
+
+---
+
+# Legal Operations Used
+
+1. **Operation 3 from the topic page (build the unit and counit from the hom-set isomorphism).** Both $\eta$ and $\varepsilon$ are computed by transposing identities.
+
+2. **Operation 5 from the topic page (universal property of the unit).** The counit is the unique homomorphism extending the identity on $UH$, defined via the universal property.
+
+---
+
+# Hints
+
+> [!note]- Hint 1
+> $\eta_S = \Phi(1_{FS})$: transpose the identity homomorphism on $FS$. By the free-group bijection, $\Phi$ restricts a homomorphism to the generators, so $\eta_S$ is the insertion of generators.
+
+> [!note]- Hint 2
+> $\varepsilon_H = \Phi^{-1}(1_{UH})$: the unique homomorphism $FUH\to H$ extending the identity function $UH\to UH$. The free group $FUH$ has *the elements of $H$* as generators.
+
+> [!note]- Hint 3
+> For surjectivity of $\varepsilon_H$: every $h\in H$ is the image of the one-letter word $h\in FUH$. For the quotient interpretation: a surjective homomorphism $FUH\twoheadrightarrow H$ exhibits $H\cong FUH/\ker\varepsilon_H$, presenting $H$ by generators (all of $H$) and relations ($\ker\varepsilon_H$).
+
+---
+
+# Solution
+
+The unit and counit are transposes of identities. The unit inserts generators; the counit, defined on the free group of *all elements of $H$*, multiplies a formal word out. Surjectivity is immediate from the one-letter words, and the kernel gives the canonical presentation.
+
+**Step 1: The unit (part a).**
+
+$\eta_S : S\to UFS$ is the insertion of generators, $s\mapsto s$ (the one-letter word).
+
+> [!note]- Derivation
+> $\eta_S = \Phi_{S, FS}(1_{FS})$. The bijection $\Phi$ sends a homomorphism $f : FS\to H$ to the function $Uf\circ\iota_S$ (its restriction to the generators). At $f = 1_{FS}$ this is $U(1_{FS})\circ\iota_S = \iota_S$, the insertion of generators. So $\eta_S(s) = s\in UFS$, the length-one word $s$.
+
+**Step 2: The counit (part a, b).**
+
+$\varepsilon_H : FUH\to H$ sends a reduced word $h_1^{\epsilon_1}\cdots h_n^{\epsilon_n}$ (each $h_i\in H$, $\epsilon_i=\pm1$) to its product $h_1^{\epsilon_1}\cdots h_n^{\epsilon_n}$ computed in $H$. It is a surjective homomorphism, and $H\cong FUH/\ker\varepsilon_H$.
+
+> [!note]- Derivation
+> $\varepsilon_H = \Phi^{-1}_{UH, H}(1_{UH})$ is the unique homomorphism $FUH\to H$ whose restriction to the generators $UH$ equals the identity function $1_{UH}$. The free group $FUH$ is generated by symbols, one for each element of $H$. The homomorphism sending each generator-symbol $h$ to the element $h\in H$ extends uniquely to send a reduced word $h_1^{\epsilon_1}\cdots h_n^{\epsilon_n}$ to the product evaluated in $H$.
+>
+> **Surjectivity:** for any $h\in H$, the one-letter word $h\in FUH$ satisfies $\varepsilon_H(h) = h$. So $\varepsilon_H$ is onto.
+>
+> **Quotient interpretation:** since $\varepsilon_H$ is a surjective homomorphism, the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] gives $H\cong FUH/\ker\varepsilon_H$. This realises $H$ as the free group on its own elements, modulo the relations $\ker\varepsilon_H$ (which encode the multiplication table of $H$). This is the precise sense in which **every group is a quotient of a free group** — the canonical presentation is exactly the counit.
+
+**Step 3: What the unit is and is not (part c).**
+
+> [!note]- Derivation
+> The unit $\eta_S : S\to UFS$ is an *injective function* (distinct generators are distinct one-letter words) but it is **not** a group homomorphism — its domain $S$ is a bare set, not a group, so "surjective onto a subgroup" is not even a meaningful question for $\eta_S$ as stated. The image $\eta_S(S)$ is the set of one-letter generators; it is *not* a subgroup of $FS$ (it is not closed under products: $st\notin\eta_S(S)$ for distinct $s, t$). The unit is the universal *function* embedding the generators, not a structural inclusion of groups. The contrast with the counit is sharp: the counit is a surjective *homomorphism* (it presents $H$), while the unit is an injective *function* (it inserts generators). This asymmetry — counit surjective in $\mathbf{Grp}$, unit injective in $\mathbf{Set}$ — is typical of free-forgetful adjunctions.
+
+> [!note]- Complete formal solution
+> For $F\dashv U$ on groups:
+>
+> **(a)** $\eta_S = \Phi(1_{FS}) = \iota_S$, so $\eta_S(s) = s$ is the insertion of generators. $\varepsilon_H = \Phi^{-1}(1_{UH})$ is the unique homomorphism $FUH\to H$ extending $1_{UH}$, sending $h_1^{\epsilon_1}\cdots h_n^{\epsilon_n}\mapsto h_1^{\epsilon_1}\cdots h_n^{\epsilon_n}$ (product in $H$).
+>
+> **(b)** $\varepsilon_H$ is surjective since $\varepsilon_H(h) = h$ for the one-letter word $h$. By the first isomorphism theorem $H\cong FUH/\ker\varepsilon_H$, the canonical presentation of $H$ by generators $UH$ and relations $\ker\varepsilon_H$. Thus "every group is a quotient of a free group" is the statement that the counit is a surjective homomorphism.
+>
+> **(c)** The unit is an injective function $S\to UFS$ but not a homomorphism (its source is a set) and its image is not a subgroup of $FS$. Counit: surjective homomorphism; unit: injective function. $\blacksquare$
+
+---
+
+# Key Takeaways
+
+**The counit presents the object: "every $H$ is a quotient of a free object" is the statement $\varepsilon_H$ is a surjection.** In any free-forgetful adjunction $F\dashv U$, the counit $\varepsilon_A : FUA\to A$ is the canonical surjection exhibiting $A$ as the free object on its own underlying set, modulo relations. For groups this is "every group is a quotient of a free group"; for modules, "every module is a quotient of a free module"; for vector spaces it is even an isomorphism on a basis. The trigger for using this is any time you need a *presentation* or a *resolution* of an object: start with the counit $FUA\to A$, take its kernel, and iterate — this is the bar resolution and the foundation of monadic descent (Chapter V). The counit is not bookkeeping; it is the universal presentation.
+
+**Unit and counit live in different worlds and have different qualitative behaviour.** The unit $\eta$ lives in the base category ($\mathbf{Set}$ here) and is typically injective (it inserts generators); the counit $\varepsilon$ lives in the structured category ($\mathbf{Grp}$) and is typically surjective (it evaluates/presents). They are *not* inverse and not even composable — the triangle identities relate them only after whiskering by $F$ or $U$. Keeping the two worlds separate prevents the most common conceptual error in the subject ("$\varepsilon\circ\eta = 1$", a type error). When analyzing any adjunction, ask separately: what does the unit do in the source category, and what does the counit do in the target category?
+
+**Computing unit and counit is always "transpose the identity".** The mechanical recipe never changes: $\eta_A = \Phi(1_{FA})$ and $\varepsilon_B = \Phi^{-1}(1_{GB})$. The unit is the bijection applied to the identity on a free object; the counit is the inverse bijection applied to the identity on a forgotten object. In every concrete case this produces "insertion" and "evaluation", because the bijection restricts-to-generators one way and extends-freely the other. Once you have internalised this recipe, you can read off the unit and counit of any adjunction the moment you know the hom-set bijection — which is why [[Thm - Equivalence of the Definitions of Adjunction|the equivalence-of-definitions theorem]] lets you move freely between the bijection and the $(\eta,\varepsilon)$ presentation. The next exercise, [[Ex - Verifying the triangle identities|Verifying the triangle identities]], checks that the $\eta, \varepsilon$ computed here actually satisfy the triangle laws.
