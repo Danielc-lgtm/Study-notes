@@ -175,7 +175,7 @@ Define homotopy of morphisms and show it is an equivalence relation via inner-ho
 
 - **[[Thm - The Nerve is Fully Faithful and Characterized by Unique Inner Horn Fillers|The nerve characterisation]]** — the inverse relationship. That theorem embeds $\mathbf{Cat}$ into $\mathbf{sSet}$ via $N$ with unique fillers; this theorem provides the retraction $\mathrm{ho}$ with $\mathrm{ho}\circ N \cong \mathrm{id}$. Together they exhibit $\mathrm{ho} \dashv N$, making ordinary categories the $1$-truncation of $\infty$-categories.
 
-- **[[Thm - Geometric Realization is Left Adjoint to the Singular Nerve|$\mathrm{Sing}(Y)$ is a Kan complex]]** — the source of fundamental groupoids. Because $\mathrm{Sing}(Y)$ is Kan, Corollary 2 gives $\mathrm{ho}(\mathrm{Sing}\,Y) = \Pi_1(Y)$, the [[Def - Path-Product and the Fundamental Group|fundamental groupoid]]; the full $\mathrm{Sing}(Y)$ is the fundamental $\infty$-groupoid, and $\mathrm{ho}$ is its bottom truncation.
+- **[[Thm - Geometric Realization is Left Adjoint to the Singular Nerve|Sing(Y) is a Kan complex]]** — the source of fundamental groupoids. Because $\mathrm{Sing}(Y)$ is Kan, Corollary 2 gives $\mathrm{ho}(\mathrm{Sing}\,Y) = \Pi_1(Y)$, the [[Def - Path-Product and the Fundamental Group|fundamental groupoid]]; the full $\mathrm{Sing}(Y)$ is the fundamental $\infty$-groupoid, and $\mathrm{ho}$ is its bottom truncation.
 
 - **The Postnikov tower** — $\mathrm{ho}$ as the first stage. The homotopy category is the $1$-truncation $\tau_{\le 1}\mathcal{D}$ of a quasi-category; iterating the truncation up the dimensions yields the Postnikov tower, the systematic approximation of an $\infty$-category (or space) by its $n$-truncations. $\mathrm{ho}$ keeps $\pi_0$ and $\pi_1$ and discards everything higher.
 

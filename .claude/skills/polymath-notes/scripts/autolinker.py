@@ -74,6 +74,13 @@ BLOCKLIST_TERMS = {
     "field", "fields",  # "vector field", "gauge field" dominate over the algebraic Field
     "independence",  # "coordinate-independence", "path-independence" dominate
     "primitive", "primitives",  # primitive root / ideal / element / permutation dominate
+    # Category-theory single-word targets that recur as ordinary words across the
+    # whole vault (learned authoring the Category Theory subject, June 2026):
+    # "functor"/"presheaf"/"adjunction" saturate the CT subtree, and "category"
+    # (already above) collides with "Baire category" / "first category" in analysis.
+    "functor", "functors", "presheaf", "presheaves", "groupoid", "groupoids",
+    "subcategory", "subcategories", "adjunction", "adjunctions",
+    "naturality", "functorial", "functoriality",
 }
 
 # Def filenames whose target is dangerous to auto-link (too many false positives
@@ -82,6 +89,15 @@ BLOCKLIST_TARGETS = {
     "Def - Field",
     "Def - Independence",
     "Def - Primitive (Antiderivative)",
+    # Category Theory: single-word / broadly-named targets that would carpet-link
+    # across the vault. The Category Theory pages are linked intentionally instead.
+    "Def - Category",
+    "Def - Functor",
+    "Def - Presheaf",
+    "Def - Groupoid",
+    "Def - Subcategory",
+    "Def - Adjunction",
+    "Def - Quasi-Category",
 }
 
 

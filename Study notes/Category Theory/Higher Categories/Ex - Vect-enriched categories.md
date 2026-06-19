@@ -11,19 +11,19 @@ tags: [category-theory, homotopy-theory, foundations]
 
 # Problem Statement
 
-Show that a category enriched in $(\mathbf{Vect}_k, \otimes_k, k)$ — the [[Def - Monoidal Category|monoidal category]] of [[Def - Vector Space|$k$-vector spaces]] under tensor product — is exactly a **$k$-linear category**: an ordinary category in which each hom-set is a $k$-vector space and composition is $k$-bilinear. Then prove the **one-object** case is a $k$-algebra, with the single hom-space as the underlying vector space, composition as multiplication, and the enriched identity as the algebra unit.
+Show that a category enriched in $(\mathbf{Vect}_k, \otimes_k, k)$ — the [[Def - Monoidal Category|monoidal category]] of [[Def - Vector Space|k-vector spaces]] under tensor product — is exactly a **$k$-linear category**: an ordinary category in which each hom-set is a $k$-vector space and composition is $k$-bilinear. Then prove the **one-object** case is a $k$-algebra, with the single hom-space as the underlying vector space, composition as multiplication, and the enriched identity as the algebra unit.
 
 **Recall:**
 
 ![[Def - Enriched Category#The Definition]]
 
-The monoidal category $(\mathbf{Vect}_k,\otimes_k,k)$ has [[Def - Vector Space|$k$-vector spaces]] as objects, $k$-linear maps as morphisms, tensor product $\otimes_k$ as monoidal product, and the ground field $k$ (as a one-dimensional space) as unit. A linear map out of a tensor product $V\otimes_k W$ is the same as a $k$-bilinear map out of $V\times W$ (universal property, [[Thm - Universal Property of the Tensor Product]]). A $k$-algebra is a vector space $R$ with an associative bilinear multiplication and a unit $1\in R$.
+The monoidal category $(\mathbf{Vect}_k,\otimes_k,k)$ has [[Def - Vector Space|k-vector spaces]] as objects, $k$-linear maps as morphisms, tensor product $\otimes_k$ as monoidal product, and the ground field $k$ (as a one-dimensional space) as unit. A linear map out of a tensor product $V\otimes_k W$ is the same as a $k$-bilinear map out of $V\times W$ (universal property, [[Thm - Universal Property of the Tensor Product]]). A $k$-algebra is a vector space $R$ with an associative bilinear multiplication and a unit $1\in R$.
 
 ---
 
 # Convergent Strategy
 
-**Problem class:** This is an "identification by unwinding" problem, the first source pattern of the topic page's [[Higher Categories — 2-Categories, Enrichment, and Quasi-Categories#Sources and Targets|Sources and Targets]], and the linear twin of [[Ex - An Ab-enriched category is a preadditive category|the $\mathbf{Ab}$-enriched exercise]]. Substitute $\mathcal{V}=\mathbf{Vect}_k$ into [[Def - Enriched Category|the enriched definition]] and read off the result.
+**Problem class:** This is an "identification by unwinding" problem, the first source pattern of the topic page's [[Higher Categories — 2-Categories, Enrichment, and Quasi-Categories#Sources and Targets|Sources and Targets]], and the linear twin of [[Ex - An Ab-enriched category is a preadditive category|the Ab-enriched exercise]]. Substitute $\mathcal{V}=\mathbf{Vect}_k$ into [[Def - Enriched Category|the enriched definition]] and read off the result.
 
 **Assumption pattern:** The recognisable feature is "hom-objects in $\mathbf{Vect}_k$" with monoidal product $\otimes_k$. The two structural facts that carry content are: a morphism out of $\otimes_k$ is a bilinear map (forcing bilinear composition), and the unit object is the *ground field* $k$ (so the enriched identity is a linear map $k\to\mathcal{C}(A,A)$, i.e. a scalar multiple, picking out $1_A$).
 
