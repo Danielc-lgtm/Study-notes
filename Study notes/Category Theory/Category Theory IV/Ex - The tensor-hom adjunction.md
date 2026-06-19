@@ -25,7 +25,7 @@ for all $R$-modules $A, B$.
 
 ![[Thm - Universal Property of the Tensor Product of Modules#Statement]]
 
-The [[Def - Tensor Product of Modules|tensor product]] $A\otimes_R M$ is the universal target of $R$-**bilinear** maps out of $A\times M$: a bilinear map $A\times M\to B$ corresponds to a unique [[Def - Module Homomorphism|$R$-linear]] map $A\otimes_R M\to B$.
+The [[Def - Tensor Product of Modules|tensor product]] $A\otimes_R M$ is the universal target of $R$-**bilinear** maps out of $A\times M$: a bilinear map $A\times M\to B$ corresponds to a unique [[Def - Module Homomorphism|R-linear map]] (an $R$-module homomorphism) $A\otimes_R M\to B$.
 
 $\mathrm{Hom}_R(M, B)$ is the $R$-module of $R$-linear maps $M\to B$ (see [[Def - The Hom Functor and Left Exactness]]). An [[Def - Adjunction|adjunction]] $L\dashv R$ is a natural bijection $\mathcal{C}(LA, B)\cong\mathcal{C}(A, RB)$.
 
