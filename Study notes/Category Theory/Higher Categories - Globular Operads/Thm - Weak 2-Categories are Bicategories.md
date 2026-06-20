@@ -1,0 +1,206 @@
+---
+type: theorem
+subject: higher-categories
+prereqs:
+  - "Def - Weak ω-Category and Weak n-Category (Batanin-Leinster)"
+  - "Def - Globular Operad"
+  - "Def - Contraction on a Globular Operad"
+  - "Def - 2-Category and Bicategory"
+tags: [category-theory, higher-categories, foundations]
+---
+
+# Notation
+
+Write $\mathbf{Wk\text{-}n\text{-}Cat} = \mathrm{Alg}(L_n)$ for the category of [[Def - Weak ω-Category and Weak n-Category (Batanin-Leinster)|weak $n$-categories]], where $L_n$ is the initial $n$-[[Def - Globular Operad|operad]]-with-[[Def - Contraction on a Globular Operad|contraction]] (see [[Thm - The Initial Contractible Globular Operad Exists]]). Write $\mathbf{Cat}$ for small categories, $\mathbf{Set}$ for sets. A [[Def - 2-Category and Bicategory|bicategory]] is a weak $2$-dimensional category with horizontal composition associative and unital up to coherent invertible $2$-cells; an **unbiased bicategory** is the variant with a specified $k$-ary horizontal composite for every $k \geq 0$ (not just binary and nullary), coherent among themselves. $\mathbf{UBicat}_{str}$ is the category of small unbiased bicategories and **unbiased strict functors** (functors preserving all the specified composites on the nose); $\mathbf{Bicat}$ denotes classical (biased) bicategories. The operad of trees is $\mathrm{tr}$, with $\mathrm{tr}(k)$ the set of $k$-leafed trees. The full symbol registry is on [[Higher Categories — Globular Operads and Weak n-Categories]]. The notion **strict ω-category** is from a chapter not yet in the vault and is restated as needed.
+
+---
+
+# Statement
+
+> **Theorem (Low-dimensional comparison; Leinster 9.4.1).** There are equivalences of categories
+> $$
+> \mathbf{Wk\text{-}0\text{-}Cat} \simeq \mathbf{Set}, \qquad \mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}, \qquad \mathbf{Wk\text{-}2\text{-}Cat} \simeq \mathbf{UBicat}_{str}.
+> $$
+> In particular, **a weak $2$-category in the Batanin–Leinster sense is precisely an unbiased bicategory** (with unbiased strict functors as morphisms).
+
+> **Companion (biased form).** Since unbiased bicategories are equivalent, as a doctrine, to classical (biased) [[Def - 2-Category and Bicategory|bicategories]] — every biased bicategory extends uniquely-up-to-coherence to an unbiased one, and conversely (the biased-equals-unbiased coherence results) — a weak $2$-category is *essentially the same thing* as a bicategory. The comparison is exact for objects; the precise statement at the level of morphisms is the unbiased-strict one above, because the maps in $\mathbf{Wk\text{-}2\text{-}Cat}$ are strict.
+
+A caveat on morphisms: $\mathbf{Wk\text{-}2\text{-}Cat}$ has *strict* maps, so the equivalence is with $\mathbf{UBicat}_{str}$, not with $\mathbf{UBicat}_{wk}$; one expects (but the theory does not yet supply) that with weak $2$-functors in place, weak $2$-categories would be equivalent to bicategories-and-weak-functors.
+
+---
+
+# Motivation
+
+This theorem is the sanity check that licenses the entire Batanin–Leinster definition. A definition of weak $\omega$-category is only believable if, when you truncate it to the dimensions where the answer is already known, it reproduces the known answer. Everyone agrees what a weak $2$-category should be: a [[Def - 2-Category and Bicategory|bicategory]], the structure Bénabou wrote down in 1967, with composition of $1$-cells associative and unital up to coherent invertible $2$-cells. If the abstract machine — pasting diagrams, the free strict $\omega$-category monad, contractions, the initial operad $L$ — spat out something *other* than bicategories in dimension $2$, the machine would be wrong. The theorem says it spits out exactly bicategories. That is the evidence that "an $L$-algebra" is the right notion in all dimensions, including the infinitely many where we have no independent intuition to check against.
+
+The role of the theorem is therefore *validation by reduction to the known*. It is the higher-categorical analogue of checking that a proposed definition of "manifold" gives back $\mathbb{R}^n$ in the simplest case, or that a proposed integral reproduces the Riemann integral on continuous functions. The cases $n = 0$ (sets) and $n = 1$ (categories) are warm-ups confirming the bottom of the tower is correct; the case $n = 2$ is the first genuinely *weak* case and so the first real test, because dimension $2$ is where associators and unitors first appear and coherence first has content.
+
+There is also a conceptual payoff beyond validation. The proof reveals *why* bicategories have the coherence they do — "all diagrams of constraints commute" — in operadic terms: it is exactly the top-dimensional tameness condition forcing the $2$-dimensional coherence cells to be unique, hence the constraint cells to satisfy all equations. Mac Lane's coherence theorem, normally proved by a delicate rewriting argument, appears here as the statement that the relevant operad in dimension $2$ is the one generated by the operad of trees, with no extra relations.
+
+---
+
+# Sources and Targets
+
+**Sources (Input Broadening)**
+
+The literal precondition is "we are computing $\mathbf{Wk\text{-}2\text{-}Cat}$ from $L_2$". The disguised sources are the structural facts that let one *identify* $L_2$ with a known operad without grinding through its construction by hand.
+
+The first disguised source is **knowing the operad $L_2$ is generated by the operad of trees $\mathrm{tr}$.** The contraction forces $L_2$, in dimension $1$, to have $L_2(\sigma_k) = \mathrm{tr}(k)$ (the $k$-leafed trees, the unbiased ways to compose $k$ arrows), and the top-dimensional tameness forces dimension $2$ to be determined by the parallel pairs below. The non-obvious bridge is "tameness in the top dimension $\implies$ the $2$-operad is freely determined by its $1$-dimensional tree part", which converts an a priori infinite construction into a finite, explicit description $L_2 = (I^2_1)_\ast\,\delta_\ast\,\mathrm{tr}$. *Example application:* the same recognition computes $L_1$ as the terminal $1$-operad (trees collapse to a point in the contraction), giving $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$ in one line.
+
+The second disguised source is **knowing that unbiased bicategories are *also* generated by the operad of trees.** Leinster's earlier chapters show $\mathbf{UBicat}_{str} \cong \mathrm{Alg}(\delta_\ast I_\ast \mathrm{tr})$ — the doctrine of unbiased bicategories is the $\mathbf{Cat}$-operad freely built from trees. The bridge is the coincidence of *two* tree-generated descriptions, one coming from the contraction (the $\omega$-side) and one from the explicit theory of monoidal-bicategory coherence (the $2$-side). *Example application:* the same tree-generated description underlies the proof that biased and unbiased monoidal categories coincide, so recognizing "trees generate the coherence" is reusable across the periodic table.
+
+The third disguised source is **the equivalence between plain operads and $1$-object $fc$-operads (and their $\mathbf{Cat}$-enriched analogues).** The proof transports the comparison through these equivalences rather than computing $2$-operads directly. The bridge is "a $1$-globular operad is an $fc$-operad, and an $fc$-operad with one $0$-cell and one horizontal $1$-cell is a plain operad", which lets a hard $2$-dimensional comparison be replaced by a manageable statement about plain operads of trees. *Example application:* any time one must compare two $2$-dimensional doctrines, descending to plain operads via these embeddings is the lever.
+
+**Targets (Output Amplification)**
+
+The bare conclusion is the three equivalences. Combined with other facts they yield more.
+
+Combine the conclusion with **the biased-equals-unbiased coherence theorem**. The equivalence $\mathbf{Wk\text{-}2\text{-}Cat} \simeq \mathbf{UBicat}_{str}$ gives weak $2$-categories as *unbiased* bicategories; composing with "every biased bicategory is canonically unbiased and vice versa" yields the headline statement that weak $2$-categories are *bicategories* in the ordinary sense. The amplified result is non-obvious because it bridges the unbiased framework (natural for the operad) and the biased framework (natural in practice), and it shows the choice of "binary-plus-nullary" versus "all arities" composition is immaterial up to coherence.
+
+Combine the conclusion with **Mac Lane's coherence theorem**. A one-object bicategory is a monoidal category, so the $n=2$ equivalence restricted to one-object structures recovers [[Thm - Mac Lane Coherence Theorem|Mac Lane coherence]]: the operad governing monoidal coherence is tree-generated with all diagrams commuting. The amplified result is that the abstract "tameness forces uniqueness in top dimension" *is* the coherence theorem, giving a structural proof of coherence as a corollary of the comparison.
+
+Combine the conclusion with **the strict-vs-weak comparison in dimension $2$**. Knowing $\mathbf{Wk\text{-}2\text{-}Cat} \simeq \mathbf{UBicat}_{str}$ and that $\mathbf{UBicat}_{str}$ is *not* equivalent to the analogous category of strict $2$-categories (the obvious functor is not an equivalence) yields the precise statement that weak $2$-categories are genuinely more general than strict ones — every bicategory is equivalent to a strict $2$-category (the $2$-dimensional strictification theorem), but not isomorphic. The amplified result delimits exactly how much weakness dimension $2$ contains.
+
+---
+
+# Why Is It True
+
+Strip away the operadic apparatus and the theorem says something simple: *the freely-generated coherent way to compose in two dimensions is exactly Bénabou's bicategory.* Why should the abstract construction land on Bénabou's notion and not some larger or smaller thing? Because both are pinned down by the same generating data — the trees — and the same top-dimensional rule — all coherence diagrams commute.
+
+Trace it dimension by dimension. In dimension $0$, the contraction forces nothing (no parallel pairs), the operad is trivial, and a weak $0$-category is just a globular set concentrated in dimension $0$, i.e. a set: $\mathbf{Wk\text{-}0\text{-}Cat} \simeq \mathbf{Set}$. In dimension $1$, the contraction supplies, for each $k$, the *unbiased* $k$-fold composite of arrows; the resulting $1$-operad's operations of arity $k$ are the $k$-leafed trees (the bracketings), but because there is a dimension $2$... — for a $1$-*category* there is not, so tameness collapses the trees to a single composite per arity and one recovers ordinary composition: $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$. In dimension $2$, this is the first time both phenomena coexist: dimension $1$ houses the unbiased composites (trees), and dimension $2$ houses the coherence cells (associators, unitors, interchangers) relating them — *but* tameness now bites in dimension $2$, forcing any two parallel $2$-fold coherence cells to be *equal*. That equality is precisely "all coherence diagrams commute".
+
+> **The one-line mechanism:** *in dimension $2$ the contraction supplies the associators and unitors (lifts of parallel composites) while top-dimensional tameness forces them to satisfy every coherence equation (parallel $2$-cells with equal boundary are equal) — and "tree-generated composites plus all-coherences-commute" is exactly the definition of an unbiased bicategory.*
+
+So the match is not a coincidence to be checked case by case; it is structural. Bicategory coherence ("all diagrams of constraint $2$-cells commute") and Batanin–Leinster tameness ("parallel top cells with equal image are equal") are the *same condition*, viewed from the explicit and the operadic sides. The unbiasedness is likewise forced: the contraction is "unbiased once more" at every stage, specifying a composite for *each* arity rather than privileging the binary one — which is exactly why the natural output is the *unbiased* bicategory, with the passage to biased bicategories being the (separate, coherence-theoretic) statement that the choice of arities does not matter.
+
+---
+
+# What Makes This Hard
+
+The non-obvious step is identifying the operad $L_2$ explicitly: one must see that top-dimensional tameness forces the $2$-dimensional part of $L_2$ to be *completely determined* by its $1$-dimensional (tree) part, so that $L_2$ collapses to the tree-generated operad $(I^2_1)_\ast\,\delta_\ast\,\mathrm{tr}$. People get stuck trying to construct $L_2$'s $2$-cells by hand and miss that tameness makes them redundant. The second hard point is the morphism subtlety: the equivalence is with $\mathbf{UBicat}_{str}$ (strict maps), *not* with biased bicategories under their usual weak functors, and conflating these — claiming a naive equivalence with $\mathbf{Bicat}_{str}$ — is the standard error. The genuine content "weak $2$-cat $=$ unbiased bicategory" must be combined with the *separate* biased-equals-unbiased coherence result to reach "weak $2$-cat $\approx$ bicategory".
+
+---
+
+# Rederivation Scaffold
+
+**This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
+
+**High-level strategy:** Compute the initial operad-with-contraction in dimensions $0, 1, 2$, using that contractibility forces a tree-generated description and top-dimensional tameness collapses the top dimension. Identify the resulting operad in each dimension with a known one (terminal, trees), then match its algebras against $\mathbf{Set}$, $\mathbf{Cat}$, and $\mathbf{UBicat}_{str}$ via the plain-operad/$fc$-operad equivalences.
+
+**Subgoal decomposition:**
+
+1. **Dimension $0$.** Show the initial $0$-operad-with-contraction is the one whose algebras are sets.
+   - *Hint:* A $0$-operad is a monoid; the unique precontraction is a contraction iff the monoid is trivial, so the initial object is the trivial monoid and its algebras are sets.
+   - *Why needed:* Establishes $\mathbf{Wk\text{-}0\text{-}Cat} \simeq \mathbf{Set}$, the base.
+
+2. **Dimension $1$.** Show the initial $1$-operad-with-contraction is the terminal $1$-operad, whose algebras are categories.
+   - *Hint:* In one dimension the initial operad-with-precontraction is also terminal; the equivalence $1\text{-}\mathbf{OC} \simeq 0\text{-}\mathbf{OP}$ identifies it with the terminal $1$-operad, whose algebras are $T^{(1)}$-algebras $=$ categories.
+   - *Why needed:* Establishes $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$.
+
+3. **Identify $L_2$ via trees.** Show $L_2 \cong (I^2_1)_\ast\,\delta_\ast\,\mathrm{tr}$, the $2$-operad generated by the plain operad of trees.
+   - *Hint:* A $1$-operad-with-precontraction induced from a plain operad $P$ amounts to a chosen element of each $P(r)$; the operad of trees $\mathrm{tr}$ with its $r$-leafed corolla is the *initial* such, and tameness in dimension $2$ determines the rest.
+   - *Why needed:* Replaces the abstract $L_2$ by an explicit tree-generated operad amenable to comparison.
+
+4. **Identify $\mathbf{UBicat}_{str}$ via trees.** Recall that unbiased bicategories are algebras for the $\mathbf{Cat}$-operad $\delta_\ast I_\ast \mathrm{tr}$ built from the same trees.
+   - *Hint:* The doctrine of unbiased bicategories was shown (earlier chapters) to be tree-generated: $\mathbf{UBicat}_{str} \cong \mathrm{Alg}(\delta_\ast I_\ast \mathrm{tr})$.
+   - *Why needed:* Provides the target description to match against $L_2$.
+
+5. **Match the two tree-generated operads.** Prove $\mathrm{Alg}((I^2_1)_\ast\,\delta_\ast\,\mathrm{tr}) \cong \mathrm{Alg}(\delta_\ast I_\ast\, \mathrm{tr})$ for the operad of trees, hence $\mathbf{Wk\text{-}2\text{-}Cat} \simeq \mathbf{UBicat}_{str}$.
+   - *Hint:* Both monads on $2$-globular sets arise by gluing the same constituents via a distributive law; a general lemma (Leinster 9.4.2) gives the isomorphism of algebra categories for any plain operad $P$.
+   - *Why needed:* This is the equivalence; combined with biased-equals-unbiased it gives "weak $2$-category $=$ bicategory".
+
+---
+
+# Lemma Decomposition
+
+> [!note]- Lemma 1: The initial 0-operad-with-contraction has algebras = sets
+> **Statement:** A $0$-globular operad is a monoid; its unique precontraction is a contraction iff the monoid is trivial; the initial (= terminal) such object has algebras the category $\mathbf{Set}$.
+>
+> **Hint:** The monad $T^{(0)}$ on sets is the identity, so a $0$-operad is a monoid $M$ and an algebra is a set with an $M$-action; demand triviality of $M$ via the contraction condition.
+>
+> **Why needed:** It establishes the base case $\mathbf{Wk\text{-}0\text{-}Cat} \simeq \mathbf{Set}$ and illustrates that contractibility selects the trivial (rigid) bottom.
+>
+> > [!note]- Full proof
+> > Since a $0$-globular set is a set and $T^{(0)} = \mathrm{id}$, a $0$-operad is exactly a monoid $M$, and a $T^{(0)}_M$-algebra is a set carrying an $M$-action. Every $0$-operad admits a unique precontraction; the contraction condition (tameness in the top, here only, dimension $0$) forces $M$ to have cardinality $1$. Thus $0\text{-}\mathbf{OC}$ is the category of one-element monoids, in which every object is both initial and terminal. For the trivial monoid $M = 1$, an algebra is a set with the trivial action, i.e. just a set, so $\mathbf{Wk\text{-}0\text{-}Cat} = \mathrm{Alg}(L_0) \simeq \mathbf{Set}$. $\blacksquare$
+
+> [!note]- Lemma 2: The initial 1-operad-with-contraction is the terminal 1-operad
+> **Statement:** The initial $1$-operad-with-contraction coincides with the terminal $1$-operad, whose algebras are categories; hence $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$.
+>
+> **Hint:** A $1$-operad-with-precontraction is determined by a monoid-like datum that, being initial = terminal in one dimension, collapses to the terminal $1$-operad; its algebras are $T^{(1)}$-algebras = categories.
+>
+> **Why needed:** It establishes $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$, the first non-trivial confirmation that the definition recovers a known notion.
+>
+> > [!note]- Full proof
+> > A $1$-globular set is a directed graph and $T^{(1)} = fc$, the free category monad, so a $1$-operad is an $fc$-operad. As in the $0$-dimensional case, in one dimension a $0$-operad-with-precontraction is a monoid and the initial such is also terminal. The equivalence $1\text{-}\mathbf{OC} \simeq 0\text{-}\mathbf{OP}$ (Leinster 9.3.8) then identifies the initial $1$-operad-with-contraction with the *terminal* $1$-operad. Algebras for the terminal $T^{(1)}$-operad are exactly $T^{(1)}$-algebras, i.e. (small) categories. Hence $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$. $\blacksquare$
+
+> [!note]- Lemma 3: Tree-generated operads have matching algebras (Leinster 9.4.2)
+> **Statement:** For any plain operad $P$, there is an isomorphism of categories $\mathrm{Alg}\big((I^2_1)_\ast\,\delta_\ast\,P\big) \cong \mathrm{Alg}\big(\delta_\ast I_\ast\, P\big)$.
+>
+> **Hint:** Both sides are algebras for monads on $2$-globular sets obtained by gluing the same two constituent monads ($fc\text{-}\mathbf{Gph}$ and the free $\mathbf{Gph}$-enriched-category monad) via a distributive law; identify the two gluings.
+>
+> **Why needed:** Applied to $P = \mathrm{tr}$ (the operad of trees) it equates $\mathbf{Wk\text{-}2\text{-}Cat}$ with $\mathbf{UBicat}_{str}$, which is the theorem in dimension $2$.
+>
+> > [!note]- Full proof
+> > Work on the category $\mathbf{Gph}\text{-}\mathbf{Gph}$ of $2$-globular sets. There are three relevant monads: $fc\text{-}\mathbf{Gph}$ (apply the $2$-functor $(-)\text{-}\mathbf{Gph}$ to the monad $fc$ on $\mathbf{Gph}$); $fc_{\mathbf{Gph}}$ (the free $\mathbf{Gph}$-enriched-category monad); and $T^{(2)}$. As shown in the proof of Leinster F.1.1, $T^{(2)}$ is obtained by gluing $fc\text{-}\mathbf{Gph}$ to $fc_{\mathbf{Gph}}$ via a distributive law $\lambda : (fc\text{-}\mathbf{Gph})\,fc_{\mathbf{Gph}} \Rightarrow fc_{\mathbf{Gph}}\,(fc\text{-}\mathbf{Gph})$. The operad $(I^2_1)_\ast\,\delta_\ast\,P$ presents the "horizontal-then-coherence" gluing of $P$ and $(I^2_1)_\ast\,\delta_\ast\,P$ presents the "coherence-then-horizontal" gluing $\delta_\ast I_\ast P$; the distributive law identifies the two orders of gluing, giving a canonical isomorphism of the induced monads, hence of their algebra categories. (Full distributive-law bookkeeping is Leinster's; the point is that one and the same $P$ generates both, glued in the two compatible orders.) $\blacksquare$
+
+---
+
+# Formal Proof
+
+> [!note]- Complete formal proof
+> **Step 0 — the operads exist.** By [[Thm - The Initial Contractible Globular Operad Exists]] applied in $n = 0, 1, 2$ dimensions, the initial $n$-operads-with-contraction $L_0, L_1, L_2$ exist, so $\mathbf{Wk\text{-}n\text{-}Cat} = \mathrm{Alg}(L_n)$ is well-defined for $n \leq 2$.
+>
+> **Step 1 — $\mathbf{Wk\text{-}0\text{-}Cat} \simeq \mathbf{Set}$.** By Lemma 1, $L_0$ is the trivial monoid and its algebras are sets.
+>
+> **Step 2 — $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$.** By Lemma 2, $L_1$ is the terminal $1$-operad and its algebras are categories. (Alternatively this follows from the $n=2$ case via Theorem 9.3.17, a weak $1$-category being a $1$-dimensional weak $2$-category.)
+>
+> **Step 3 — compute $L_2$.** A $1$-operad-with-precontraction induced from a plain operad $P$ via the embedding $\delta : \mathbf{Operad} \hookrightarrow fc\text{-}\mathbf{Operad}$ consists of a chosen element of each $P(r)$, $r \in \mathbb{N}$. Taking $P = \mathrm{tr}$, the operad of trees, with the $r$-leafed corolla $\tau_r \in \mathrm{tr}(r)$, the fact that $\mathrm{tr}$ is the free operad containing one operation of each arity makes $\delta_\ast \mathrm{tr}$ the *initial* $1$-operad-with-precontraction. Enforcing tameness in dimension $2$ then yields
+> $$
+> L_2 \;=\; (I^2_1)_\ast\,\delta_\ast\,\mathrm{tr}, \qquad \text{hence}\qquad \mathbf{Wk\text{-}2\text{-}Cat} \cong \mathrm{Alg}\big((I^2_1)_\ast\,\delta_\ast\,\mathrm{tr}\big). \tag{$\ast$}
+> $$
+>
+> **Step 4 — identify $\mathbf{UBicat}_{str}$.** From the coherence results of Leinster Ch. 3 (the $\mathbf{Cat}$-operad / unbiased-bicategory correspondence),
+> $$
+> \mathbf{UBicat}_{str} \cong 1\text{-}\mathbf{Bicat}_{str} = \mathrm{CatAlg}_{str}\, I_\ast \mathrm{tr} \cong \mathrm{Alg}\big(\delta_\ast I_\ast\, \mathrm{tr}\big), \tag{$\ast\ast$}
+> $$
+> using the maps of monads $(\mathbf{Set}, W) \xrightarrow{I} (\mathbf{Cat}, W) \xrightarrow{\delta} (\mathbf{Cat}\text{-}\mathbf{Gph}, fc_{\mathbf{Cat}})$ and the induced functors on operads and algebras.
+>
+> **Step 5 — match.** By Lemma 3 with $P = \mathrm{tr}$,
+> $$
+> \mathrm{Alg}\big((I^2_1)_\ast\,\delta_\ast\,\mathrm{tr}\big) \cong \mathrm{Alg}\big(\delta_\ast I_\ast\, \mathrm{tr}\big).
+> $$
+> Combining with $(\ast)$ and $(\ast\ast)$ gives $\mathbf{Wk\text{-}2\text{-}Cat} \simeq \mathbf{UBicat}_{str}$.
+>
+> **Step 6 — biased form.** By the biased-equals-unbiased coherence results (Leinster Ch. 3.4), unbiased bicategories are equivalent as a doctrine to classical bicategories: every biased bicategory extends to an unbiased one and conversely, coherently. Hence a weak $2$-category is essentially the same as a bicategory. (The equivalence at the level of *morphisms* is with $\mathbf{UBicat}_{str}$ because the maps in $\mathbf{Wk\text{-}2\text{-}Cat}$ are strict; one expects equivalence with biased bicategories and weak functors once weak $2$-functors are defined.) $\blacksquare$
+
+---
+
+# Cross-Field Exercise Suggestions
+
+**Monoidal categories as one-object bicategories.** Specialize the theorem to bicategories with a single object: these are monoidal categories. The result recovers, operadically, that a monoidal category is a "weak $2$-category with one object", and the top-dimensional tameness becomes [[Thm - Mac Lane Coherence Theorem|Mac Lane's coherence theorem]] ("all diagrams of associators and unitors commute"). The non-obvious recognition is that the *same* tameness condition that defines weak $2$-categories *is* monoidal coherence — a structural proof of a theorem usually proved by rewriting.
+
+**The fundamental $2$-groupoid of a space.** For a topological space $X$, points, paths, and homotopy-classes-of-homotopies assemble into a bicategory (in fact a $2$-groupoid). The theorem says this is a weak $2$-category in the Batanin–Leinster sense, so the abstract definition applies to a concrete homotopical object. The application is illuminating because it connects the algebraic ($L$-algebra) and the topological ($\Pi_2(X)$) descriptions of the same structure — a finite-dimensional shadow of the homotopy hypothesis.
+
+**Spans and relations.** The bicategory $\mathbf{Span}(\mathcal{C})$ (objects of $\mathcal{C}$, spans as $1$-cells, maps of spans as $2$-cells) and the bicategory $\mathbf{Rel}$ of sets and relations are bicategories whose composition is associative only up to canonical iso (pullback is associative up to iso). The theorem certifies these as weak $2$-categories, testing the definition against examples where weakness is unavoidable (you cannot strictify the pullback on the nose without choices). Recognizing "composition via pullback $\implies$ genuinely weak associativity" is the transferable diagnostic.
+
+---
+
+# Bridges
+
+- **[[Def - 2-Category and Bicategory|Bicategory]]** — the classical object this theorem matches. A bicategory has objects, $1$-cells, $2$-cells, horizontal and vertical composition, and invertible associator/unitor $2$-cells satisfying the pentagon and triangle. The theorem says this hand-written structure is *exactly* what the abstract weak-$2$-category machine produces, with the pentagon/triangle equations arising as top-dimensional tameness.
+
+- **[[Thm - Mac Lane Coherence Theorem|Mac Lane Coherence]]** — the one-object case. A monoidal category is a one-object bicategory, so restricting the equivalence to one-object structures recovers Mac Lane coherence; the operadic proof presents coherence as "the dimension-$2$ part of $L_2$ is tree-generated with all parallel $2$-cells equal", a structural rather than combinatorial derivation.
+
+- **[[Thm - The Initial Contractible Globular Operad Exists]]** — the prerequisite. That theorem's finite-dimensional form produces $L_2$; this theorem *computes* $L_2$ (as the tree-generated operad) and identifies its algebras. Existence there, identification here.
+
+- **[[Def - Weak ω-Category and Weak n-Category (Batanin-Leinster)|Weak $n$-category]]** — the general definition this theorem validates. By exhibiting $\mathbf{Wk\text{-}n\text{-}Cat}$ for $n \leq 2$ as the expected $\mathbf{Set}$, $\mathbf{Cat}$, $\mathbf{Bicat}$, it provides the evidence that the definition is correct in *all* dimensions, including the inaccessibly high ones.
+
+---
+
+# Unlocked by This
+
+> [!tip] Weak 3-Categories and Tricategories *(from Higher Category Theory)*
+> The natural next test is $n = 3$: a Batanin–Leinster weak $3$-category should be a **tricategory** (Gordon–Power–Street). This is expected but technically heavy — $2$-operads are "just about manageable", $3$-operads much less so. The comparison, and the strictification "every weak $3$-category is equivalent to a **Gray-category**", are the frontier this theorem points toward.
+
+> [!tip] The Periodic Table and Stabilization *(from Higher Operads)*
+> A one-object bicategory is a monoidal category; a one-object, one-$1$-cell tricategory is a braided monoidal category (Eckmann–Hilton). The low-dimensional equivalences proved here are the bottom row of the **Baez–Dolan periodic table** of $k$-tuply monoidal $n$-categories; the operadic framework is what makes the table's entries precise and its stabilization phenomena provable.

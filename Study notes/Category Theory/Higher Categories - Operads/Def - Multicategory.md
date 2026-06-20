@@ -104,7 +104,7 @@ A multicategory is the natural home of **multilinear algebra done abstractly**: 
 > A one-object multicategory is exactly an [[Def - Operad|operad]]: with a single colour the multimap sets become $P(n) = \mathcal{M}(\underbrace{a, \dots, a}_{n}; a)$, the substitution becomes the operadic composition, and the symmetric action becomes the $S_n$-action. Everything in this chapter about operads is the one-object specialisation of multicategory theory.
 
 > [!tip] Generalized Multicategories *(from Higher Categories — Generalized Operads)*
-> Replacing the free-monoid monad $(-)^*$ in the structural definition by an arbitrary **cartesian monad** $T$ produces **$T$-multicategories**, the framework that unifies categories ($T = \mathrm{id}$), classical multicategories ($T = (-)^*$), and globular operads ($T = $ free strict $\omega$-category) under one roof. The whole next chapter is this generalisation.
+> Replacing the free-monoid monad $(-)^*$ in the structural definition by an arbitrary **cartesian monad** $T$ produces **$T$-multicategories**, the framework that unifies categories ($T = \mathrm{id}$), classical multicategories ($T = (-)^*$), and globular operads ($T =$ free strict $\omega$-category) under one roof. The whole next chapter is this generalisation.
 
 > [!tip] Coloured Operads in Homotopy Theory *(from Operadic Homotopy Theory)*
 > Multicategories (= coloured operads) enriched in spaces or chain complexes are the modern tool for encoding **algebraic structures with several interacting types** — a pair (algebra, module), or the input/output wiring of **factorization homology** and **TQFT**. The coloured generality is exactly what lets one operad govern several objects at once.
