@@ -179,7 +179,7 @@ Reduce both axioms to lifting-property characterizations of (trivial) cofibratio
 
 # Bridges
 
-- **[[Thm - The Homotopy Category of a Monoidal Model Category is Monoidal|The derived monoidal structure on $\mathrm{Ho}(\mathcal{C})$]]** — the immediate payoff. This theorem supplies the well-defined, associative derived tensor $\otimes^{\mathbf{L}}$ and the derived internal hom; the next theorem adds the unit (via the unit axiom) and the coherence to make $(\mathrm{Ho}(\mathcal{C}), \otimes^{\mathbf{L}}, QI)$ a closed monoidal category. In other words, this theorem is the multiplication, the next is the full algebra.
+- **[[Thm - The Homotopy Category of a Monoidal Model Category is Monoidal|The derived monoidal structure on Ho(𝒞)]]** — the immediate payoff. This theorem supplies the well-defined, associative derived tensor $\otimes^{\mathbf{L}}$ and the derived internal hom; the next theorem adds the unit (via the unit axiom) and the coherence to make $(\mathrm{Ho}(\mathcal{C}), \otimes^{\mathbf{L}}, QI)$ a closed monoidal category. In other words, this theorem is the multiplication, the next is the full algebra.
 
 - **[[Def - Quillen Adjunction and Quillen Equivalence|Quillen adjunctions and left Quillen functors]]** — the one-variable analogue. A left Quillen functor preserves cofibrations and trivial cofibrations; a Quillen bifunctor is "left Quillen in two variables at once" via the pushout-product. Fixing one cofibrant variable in a Quillen bifunctor literally produces a left Quillen functor (Lemma 3), so every theorem about derived functors of Quillen adjunctions specializes here.
 

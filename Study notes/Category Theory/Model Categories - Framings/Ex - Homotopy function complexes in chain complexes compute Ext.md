@@ -12,7 +12,7 @@ tags: [category-theory, homotopy-theory, foundations]
 
 # Problem Statement
 
-Work in $\mathcal{M} = \mathbf{Ch}_{\ge 0}(R)$, non-negatively graded chain complexes of [[Def - Module|$R$-modules]], with the projective model structure: weak equivalences are quasi-isomorphisms, fibrations are the maps that are surjective in positive degrees, cofibrations are the monomorphisms with degreewise-projective cokernel; cofibrant objects are (essentially) the complexes of projectives. Let $M, N$ be $R$-modules, regarded as complexes concentrated in degree $0$, with $M$ replaced by a projective resolution $P_\bullet \xrightarrow{\sim} M$ (a cofibrant model) and $N$ fibrant.
+Work in $\mathcal{M} = \mathbf{Ch}_{\ge 0}(R)$, non-negatively graded chain complexes of [[Def - Module|R-modules]], with the projective model structure: weak equivalences are quasi-isomorphisms, fibrations are the maps that are surjective in positive degrees, cofibrations are the monomorphisms with degreewise-projective cokernel; cofibrant objects are (essentially) the complexes of projectives. Let $M, N$ be $R$-modules, regarded as complexes concentrated in degree $0$, with $M$ replaced by a projective resolution $P_\bullet \xrightarrow{\sim} M$ (a cofibrant model) and $N$ fibrant.
 
 Prove that the [[Def - Homotopy Function Complex|homotopy function complex]] satisfies
 $$\pi_n\,\mathrm{map}(M, N) \;\cong\; \mathrm{Ext}^{-n}_R(M, N) \quad (n \ge 0),$$

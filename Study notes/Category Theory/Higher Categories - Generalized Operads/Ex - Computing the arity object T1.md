@@ -80,7 +80,7 @@ The plan is four substitutions $X = 1$ into the known descriptions of $T$, each 
 **Step 4: Free-strict-$\omega$-category monad — $T1$ is the set of globular pasting diagrams.**
 
 > [!note]- Derivation
-> Over globular sets, $\mathbb{T}1$ is the set of **globular pasting diagrams** — the formal shapes in which higher cells paste together (a point in dimension $0$, an arrow in dimension $1$, composable strings and whiskerings in higher dimensions). The arity map $\mathrm{ar} : P \to \mathbb{T}1$ assigns each operation its pasting shape, so a $\mathbb{T}$-operad is a **globular operad**: an operation of a given arity is "a way to compose that pasting diagram into a single cell" (full development in HC7).
+> Over globular sets, $\mathbb{T}1$ is the set of **globular pasting diagrams** — the formal shapes in which higher cells paste together (a point in dimension $0$, an arrow in dimension $1$, composable strings and whiskerings in higher dimensions). The arity map $\mathrm{ar} : P \to \mathbb{T}1$ assigns each operation its pasting shape, so a $\mathbb{T}$-operad is a **[[Def - Globular Operad|globular operad]]**: an operation of a given arity is "a way to compose that pasting diagram into a single cell" (full development in HC7).
 
 > [!note]- Complete formal solution
 > (a) $T = \mathrm{id}$: $T1 = 1$, one arity-shape, so a $T$-operad is a [[Def - Monoid in a Monoidal Category|monoid]].

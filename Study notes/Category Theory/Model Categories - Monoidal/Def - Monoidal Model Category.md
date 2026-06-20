@@ -90,7 +90,7 @@ A monoidal model category is the homotopical upgrade of a [[Def - Closed Monoida
 # Unlocked by This
 
 > [!tip] The Derived Tensor Product and a Monoidal Homotopy Category *(from this chapter)*
-> The two axioms are exactly what is needed for [[Thm - The Homotopy Category of a Monoidal Model Category is Monoidal|$\mathrm{Ho}(\mathcal{C})$ to be closed symmetric monoidal]] under the derived tensor $\otimes^{\mathbf{L}}$, with unit $QI$. The pushout-product axiom makes $\otimes^{\mathbf{L}}$ well-defined and associative; the unit axiom makes $QI$ a genuine unit.
+> The two axioms are exactly what is needed for [[Thm - The Homotopy Category of a Monoidal Model Category is Monoidal|Ho(𝒞) to be closed symmetric monoidal]] under the derived tensor $\otimes^{\mathbf{L}}$, with unit $QI$. The pushout-product axiom makes $\otimes^{\mathbf{L}}$ well-defined and associative; the unit axiom makes $QI$ a genuine unit.
 
 > [!tip] Model Structures on Modules and Algebras *(from Stable Homotopy / Derived Algebra)*
 > Once $\mathcal{C}$ is a monoidal model category satisfying the additional **monoid axiom**, the category of [[Def - Module over a Monoidal Model Category|modules]] over a monoid $R$, and even the category of $R$-algebras, inherits a model structure (Schwede–Shipley). This is the foundation for the homotopy theory of **ring spectra**, **differential graded algebras**, and **$E_\infty$- and $A_\infty$-algebras**.

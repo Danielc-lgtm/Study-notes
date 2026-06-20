@@ -71,7 +71,7 @@ Modules over a monoidal model category are the homotopical version of [[Def - Mo
 
 # Examples / Corollaries
 
-**Is an instance — ordinary modules over a ring.** Take $\mathcal{C} = (\mathbf{Ab}, \otimes_{\mathbb{Z}})$ with the trivial model structure (isomorphisms only). A monoid is a [[Def - Ring|ring]] $R$, a module is an ordinary [[Def - Module|$R$-module]], and $\mathbf{Mod}_R$ is the ordinary module category with its trivial model structure. This degenerate case confirms the definitions reduce to classical algebra when the homotopy theory is switched off.
+**Is an instance — ordinary modules over a ring.** Take $\mathcal{C} = (\mathbf{Ab}, \otimes_{\mathbb{Z}})$ with the trivial model structure (isomorphisms only). A monoid is a [[Def - Ring|ring]] $R$, a module is an ordinary [[Def - Module|R-module]], and $\mathbf{Mod}_R$ is the ordinary module category with its trivial model structure. This degenerate case confirms the definitions reduce to classical algebra when the homotopy theory is switched off.
 
 **Is an instance — differential graded modules over a DGA.** Take $\mathcal{C} = \mathbf{Ch}(k)$ over a field $k$, with quasi-isomorphisms. A monoid is a differential graded algebra $A$, a module is a DG $A$-module, and $\mathbf{Mod}_A$ has the projective model structure (quasi-isomorphisms, degreewise epis as fibrations). Its homotopy category is the derived category $D(A)$, and the derived tensor $- \otimes^{\mathbf{L}}_A -$ computes the relative $\mathrm{Tor}^A_*$. This is the home of derived Morita theory.
 
