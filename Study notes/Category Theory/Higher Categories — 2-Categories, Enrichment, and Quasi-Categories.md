@@ -276,3 +276,17 @@ Finally, a meta-strategy threads through everything: **when composition refuses 
 **Eckmann–Hilton is the reason high-dimensional algebra is commutative, and it is a one-line consequence of interchange.** If a set carries two unital binary operations that satisfy the interchange law and share a unit, the two operations are equal and commutative — proved in two lines by inserting units. The payoff is structural and surprising: a one-object, one-1-cell bicategory is a *commutative* monoid of 2-cells; the second homotopy group $\pi_2(X)$, which can be computed as 2-cells in a 2-truncated fundamental groupoid, is therefore abelian, as are all $\pi_n$ for $n \ge 2$. The same argument explains why a "doubly degenerate" monoidal category is symmetric. Whenever you find two compatible compositions sharing a unit, expect commutativity, and expect interchange to be the mechanism.
 
 **Weakness is removable at dimension two and essential from dimension three — and this is not a technicality but the shape of the subject.** [[Thm - Strictification of Bicategories|Coherence for bicategories]] says every bicategory is biequivalent to a strict 2-category, so for most purposes one may pretend associators are identities. It is tempting to extrapolate that all higher weakness is bookkeeping. The extrapolation is false: tricategories are *not* all strictifiable, and the obstruction is genuine (it is detected by braidings, the same phenomenon that makes $\pi_3(S^2) = \mathbb{Z}$). The lesson is that the difficulty of higher category theory is real and grows with dimension; the simplicial models of this chapter are valuable precisely because they sidestep the impossible task of writing down all the coherence laws by hand and replace it with the single, uniform, dimension-independent condition of horn-filling.
+
+---
+
+# Further Chapters in This Series
+
+This is the entry chapter of the Higher Categories sequence (2-categories, enrichment, simplicial sets, quasi-categories). The full programme, following Leinster's *Higher Operads, Higher Categories*, continues across:
+
+- [[Higher Categories — Strict n-Categories and Notions of Monoidal Category]] — globular sets, strict $n$- and $\omega$-categories, unbiased monoidal categories, coherence, the Baez–Dolan periodic table.
+- [[Higher Categories — Operads and Multicategories]] — classical (symmetric and plain) operads, multicategories, algebras, the little discs operad and May's recognition principle.
+- [[Higher Categories — Generalized Operads via Cartesian Monads]] — cartesian monads, $T$-operads and $T$-multicategories, the single frame that recovers categories, classical operads, and globular operads.
+- [[Higher Categories — fc-Multicategories and Weak Double Categories]] — the free-category monad, weak double categories, monads/monoids/modules in a bicategory.
+- [[Higher Categories — Opetopes and Opetopic Sets]] — the slice construction, opetopes as iterated pasting diagrams, the Baez–Dolan opetopic definition of weak $n$-category.
+- [[Higher Categories — Globular Operads and Weak n-Categories]] — the free strict $\omega$-category monad, globular operads, contractions, the Batanin–Leinster definition of weak $\omega$- and $n$-category.
+- [[Higher Categories — Other Definitions of Weak n-Categories]] — Penon, Segal categories, complete Segal spaces, Tamsamani–Simpson, the homotopy hypothesis, and the comparison of models for $(\infty,1)$-categories.

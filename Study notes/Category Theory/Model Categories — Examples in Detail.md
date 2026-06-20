@@ -69,7 +69,7 @@ This chapter assumes you have the axioms and their consequences from [[Model Cat
 	- Show that a bounded-below complex is cofibrant in the projective model structure if and only if it is degreewise projective, and that cofibrant replacement of a module (as a complex in degree zero) is its projective resolution.
 - **[[Ex - Sphere and disk complexes and the lifting axiom]]** (⭐⭐)
 	- Compute $\mathbf{Ch}(R)(D^n, C)$ and $\mathbf{Ch}(R)(S^n, C)$ in terms of the chain groups and cycles of $C$, and use this to show a map has the RLP against $\{S^{n-1} \hookrightarrow D^n\}$ exactly when it is a degreewise-surjective quasi-isomorphism.
-- **[[Ex - The homotopy category of chain complexes is the derived category]]** (⭐⭐⭐)
+- **[[Ex - The projective model structure presents the derived category]]** (⭐⭐⭐)
 	- Prove that $\mathrm{Ho}(\mathbf{Ch}(R)) \simeq D(R)$, identifying the abstract homotopy relation with chain homotopy and fibrant–cofibrant replacement with projective resolution.
 - **[[Ex - The derived tensor product computes Tor on chain complexes]]** (⭐⭐⭐)
 	- Show that the total left derived functor of $-\otimes_R N$ computes $\mathrm{Tor}^R_*(M, N)$ by replacing $M$ with a complex of projectives, and check the answer against a direct projective resolution of $M = \mathbb{Z}/n$ over $R = \mathbb{Z}$.
@@ -104,7 +104,7 @@ This chapter assumes you have the axioms and their consequences from [[Model Cat
 	- Exhibit a weak homotopy equivalence that is not a homotopy equivalence (the inclusion of a point into the Warsaw circle, or the map from a CW approximation to a non-CW space), and locate exactly where Whitehead's theorem's CW hypothesis is used.
 
 > [!note] Exercise Index — §2
-> [[Exercise Index - §2 Topological Spaces]]
+> [[Exercise Index - §2 Model Structures on Topological Spaces]]
 
 ## §3 Stable Module Categories and Comodules
 

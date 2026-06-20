@@ -28,7 +28,7 @@ In a [[Def - Model Category|model category]], $i$ has the **left lifting propert
 
 # Convergent Strategy
 
-**Problem class:** This is a "lifting against generators" problem — the central computational move of cofibrantly generated model categories, and the technique behind verifying [[Thm - Chain Complexes of Modules Form a Model Category|the model-category axioms on $\mathbf{Ch}(R)$]]. The routine is to translate an abstract lifting square into a concrete algebraic statement using a representability isomorphism, then read off the condition on $p$.
+**Problem class:** This is a "lifting against generators" problem — the central computational move of cofibrantly generated model categories, and the technique behind verifying [[Thm - Chain Complexes of Modules Form a Model Category|the model-category axioms on Ch(R)]]. The routine is to translate an abstract lifting square into a concrete algebraic statement using a representability isomorphism, then read off the condition on $p$.
 
 **Assumption pattern:** The recognisable structure is "right lifting property against a *set* of generators". The assumptions present are the specific shapes of the generators $0 \hookrightarrow D^n$ and $S^{n-1}\hookrightarrow D^n$; what they unlock is, via part (a), a description of maps *out of* the generators as cycles and chains, converting the lifting square into a surjectivity question.
 

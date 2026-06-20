@@ -246,3 +246,17 @@ A meta-strategy threads through all of these: **when something fails to be homot
 **Per-axiom necessity is the cleanest way to understand the definition: drop any one axiom and a specific construction breaks.** Drop 2-out-of-3 (MC2) and the homotopy relation fails to be transitive, because transitivity of homotopy is proved by gluing cylinders and certifying the result is still a cylinder using 2-out-of-3. Drop lifting (MC4) and you cannot construct homotopies or comparison maps at all, since every homotopy in the theory is a lift. Drop factorization (MC5) and there are no (co)fibrant replacements, so the homotopy category cannot be computed and derived functors do not exist. Each axiom is load-bearing for one named feature, which is the surest sign the list is not arbitrary: it is exactly what is needed, and no more, to make localization computable.
 
 **Everything "derived" in mathematics is an ordinary construction with a replacement step bolted onto the front.** The derived tensor product is $\otimes$ applied after projective resolution; the homotopy colimit is $\mathrm{colim}$ applied after cofibrant replacement of the diagram; the total left derived functor $\mathbf{L}F$ is $F$ applied after cofibrant replacement $Q$. The reason the bare functor must be corrected is always the same — it fails to respect weak equivalences on raw objects but does respect them on (co)fibrant ones (Ken Brown's lemma), so you slide a replacement in front. Once you see this pattern, the proliferation of "derived" gadgets across homological algebra, algebraic geometry, and homotopy theory collapses into a single mechanism, and the model-category axioms are precisely the hypotheses that make the mechanism run.
+
+---
+
+# Further Chapters in This Series
+
+This is the entry chapter of the Model Categories sequence (the axioms, the homotopy category, Quillen functors). The full treatment, following Hovey's *Model Categories*, continues across:
+
+- [[Model Categories — Cofibrantly Generated Model Categories and the Small Object Argument]] — transfinite composition, smallness, relative cell complexes, the small object argument, and Kan's recognition theorem.
+- [[Model Categories — Examples in Detail]] — the projective model structure on chain complexes (and $D(R)$), the Quillen model structure on spaces, and stable module categories, with full verifications.
+- [[Model Categories — The Model Category of Simplicial Sets]] — the Kan–Quillen model structure, anodyne extensions, simplicial homotopy groups, minimal fibrations, and the Quillen equivalence with spaces.
+- [[Model Categories — Monoidal Model Categories]] — closed monoidal categories, the pushout-product axiom, modules, and the derived tensor product.
+- [[Model Categories — Framings and Function Complexes]] — Reedy categories, framings, and homotopy function complexes / derived mapping spaces.
+- [[Model Categories — Pointed Model Categories and Cofiber Sequences]] — suspension and loop, Puppe cofiber/fiber sequences, and pre-triangulated categories.
+- [[Model Categories — Stable Model Categories and Triangulated Categories]] — triangulated categories, stable model categories, compact generators, and the vista toward stable $\infty$-categories.
