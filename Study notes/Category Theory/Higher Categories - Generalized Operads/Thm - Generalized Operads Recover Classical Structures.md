@@ -12,7 +12,7 @@ tags: [category-theory, higher-categories, foundations]
 
 # Notation
 
-Throughout, the ambient category is $\mathbf{Set}$ unless stated otherwise, and $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on it. We use three monads: the **identity monad** $T = \mathrm{id}$; the **free-monoid (list) monad** $T = (-)^{*}$, $X \mapsto X^{*} = \coprod_{n \geq 0} X^n$; and (over globular sets $\mathbf{GSet}$) the **free-strict-$\omega$-category monad** $\mathbb{T}$. A [[Def - Generalized Multicategory|$T$-multicategory]] has data $(C_0, C_1, \mathrm{dom} : C_1 \to T C_0, \mathrm{cod} : C_1 \to C_0, \mathrm{ids}, \mathrm{comp})$; a [[Def - Generalized Operad|$T$-operad]] is the case $C_0 = 1$, with arity $\mathrm{ar} : P \to T1$. We write $\simeq$ for equivalence of categories. The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
+Throughout, the ambient category is $\mathbf{Set}$ unless stated otherwise, and $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on it. We use three monads: the **identity monad** $T = \mathrm{id}$; the **free-monoid (list) monad** $T = (-)^{*}$, $X \mapsto X^{*} = \coprod_{n \geq 0} X^n$; and (over globular sets $\mathbf{GSet}$) the **free-strict-$\omega$-category monad** $\mathbb{T}$. A [[Def - Generalized Multicategory|T-multicategory]] has data $(C_0, C_1, \mathrm{dom} : C_1 \to T C_0, \mathrm{cod} : C_1 \to C_0, \mathrm{ids}, \mathrm{comp})$; a [[Def - Generalized Operad|T-operad]] is the case $C_0 = 1$, with arity $\mathrm{ar} : P \to T1$. We write $\simeq$ for equivalence of categories. The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
 
 ---
 
@@ -23,7 +23,7 @@ Throughout, the ambient category is $\mathbf{Set}$ unless stated otherwise, and 
 > 2. For the **free-monoid monad** $T = (-)^{*}$, the category of $T$-multicategories is equivalent to the category of classical (plain, non-symmetric) **multicategories**, and $T$-operads are equivalent to classical non-symmetric **operads**.
 > 3. Each equivalence restricts to algebras: an algebra for a $\mathrm{id}$-operad (a monoid) is a monoid-set acted on; an algebra for a $(-)^{*}$-operad is a classical operad-algebra; in particular, algebras for the associative operad are monoids.
 
-> **Theorem (Globular instance).** Over [[Def - Globular Set|globular sets]] $\mathbf{GSet}$ with $T = \mathbb{T}$ the [[Def - The Free Strict ω-Category Monad|free-strict-$\omega$-category monad]], $T$-operads are exactly the **[[Def - Globular Operad|globular operads]]**, and their algebras are the weak higher categories of the corresponding signature (HC7). The three rows $T = \mathrm{id},\ (-)^{*},\ \mathbb{T}$ assemble into the chapter's unifying table.
+> **Theorem (Globular instance).** Over [[Def - Globular Set|globular sets]] $\mathbf{GSet}$ with $T = \mathbb{T}$ the [[Def - The Free Strict ω-Category Monad|free-strict-ω-category monad]], $T$-operads are exactly the **[[Def - Globular Operad|globular operads]]**, and their algebras are the weak higher categories of the corresponding signature (HC7). The three rows $T = \mathrm{id},\ (-)^{*},\ \mathbb{T}$ assemble into the chapter's unifying table.
 
 ---
 
@@ -51,7 +51,7 @@ The third disguised source is **a structure whose cells have pasting-diagram sou
 
 The bare conclusion is "$T$-multicategories $\simeq$ [classical structure]". Combined with other facts it transfers theorems wholesale.
 
-Combine the equivalence with **a generic theorem about $T$-multicategories**, e.g. [[Thm - The Free Multicategory Monad|the free $T$-multicategory monad]]. Transporting along the equivalence yields the classical free-category and free-multicategory monads *for free*, with no separate construction. The further result is that "free category on a graph" and "free operad on a signature" are one theorem seen through two monads — a genuine economy, not a coincidence.
+Combine the equivalence with **a generic theorem about $T$-multicategories**, e.g. [[Thm - The Free Multicategory Monad|the free T-multicategory monad]]. Transporting along the equivalence yields the classical free-category and free-multicategory monads *for free*, with no separate construction. The further result is that "free category on a graph" and "free operad on a signature" are one theorem seen through two monads — a genuine economy, not a coincidence.
 
 Combine the equivalence with **the algebra identification (part 3)**. Knowing that $\mathrm{Assoc}$-algebras are monoids, plus the equivalence, lets one read classical structure theorems (e.g. "monoids are the algebras of the simplest operad") as instances of the operad-algebra framework. The further result is a uniform definition of "model of a theory" that covers monoids, operad-algebras, and weak higher categories in one stroke.
 
@@ -147,7 +147,7 @@ For each monad, compute $T C_0$ (and $T C_1$), substitute into the $T$-multicate
 > > For a $(-)^{*}$-operad $P$, the induced monad is $T_P X = P \times_{\mathbb{N}} X^{*} = \coprod_n P(n) \times X^n$, which is exactly the classical operad-monad whose algebras are $P$-algebras in the classical sense (sets $X$ with maps $P(n) \times X^n \to X$ satisfying unit and associativity). By the [[Def - Algebra for a Generalized Operad|generalized-algebra]] definition, $P$-algebras are $T_P$-algebras, so the two notions of algebra coincide. For $\mathrm{Assoc}$ with $P(n) = 1$: an algebra is a set with one map $X^n \to X$ per $n$, forced by composition to be the $n$-fold product of a single associative binary operation with unit, i.e. a monoid. $\square$
 
 > [!note]- Lemma 4: The globular monad recovers globular operads
-> **Statement:** Over $\mathbf{GSet}$ with $T = \mathbb{T}$ the [[Def - The Free Strict ω-Category Monad|free-strict-$\omega$-category monad]], $\mathbb{T}$-operads are exactly [[Def - Globular Operad|globular operads]], and algebras are weak higher categories of the signature.
+> **Statement:** Over $\mathbf{GSet}$ with $T = \mathbb{T}$ the [[Def - The Free Strict ω-Category Monad|free-strict-ω-category monad]], $\mathbb{T}$-operads are exactly [[Def - Globular Operad|globular operads]], and algebras are weak higher categories of the signature.
 >
 > **Hint:** $\mathbb{T}1$ is the set of globular pasting diagrams; $\mathrm{ar} : P \to \mathbb{T}1$ records each operation's pasting shape.
 >
@@ -189,9 +189,9 @@ For each monad, compute $T C_0$ (and $T C_1$), substitute into the $T$-multicate
 
 # Bridges
 
-- **[[Def - Generalized Multicategory|$T$-multicategories]] and [[Def - Generalized Operad|$T$-operads]]** — the objects being identified. The theorem is the bridge that turns the abstract §2 definitions into the concrete classical structures, by computing $T C_0$ and $T1$. Everything generic proved about $T$-multicategories descends to categories, multicategories, operads, and globular operads through these equivalences.
+- **[[Def - Generalized Multicategory|T-multicategories]] and [[Def - Generalized Operad|T-operads]]** — the objects being identified. The theorem is the bridge that turns the abstract §2 definitions into the concrete classical structures, by computing $T C_0$ and $T1$. Everything generic proved about $T$-multicategories descends to categories, multicategories, operads, and globular operads through these equivalences.
 
-- **[[Thm - The Free Multicategory Monad|The free $T$-multicategory monad]]** — transported. Applying the free-multicategory theorem and then this recovery theorem yields the classical free-category and free-operad constructions as instances, with the same proof. The two theorems together say "free constructions exist and specialize correctly", the engineering backbone of the chapter.
+- **[[Thm - The Free Multicategory Monad|The free T-multicategory monad]]** — transported. Applying the free-multicategory theorem and then this recovery theorem yields the classical free-category and free-operad constructions as instances, with the same proof. The two theorems together say "free constructions exist and specialize correctly", the engineering backbone of the chapter.
 
 - **Burroni's theorem** — the $\mathrm{id}$ row in disguise. The identification "$\mathrm{id}$-multicategory = small category" is Burroni's "category = monad in $\mathrm{Span}(\mathbf{Set})$" read through this framework; the recovery theorem situates Burroni's result as one instance of a parameterized family.
 

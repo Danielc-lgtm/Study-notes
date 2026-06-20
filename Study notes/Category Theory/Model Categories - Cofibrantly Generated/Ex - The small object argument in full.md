@@ -28,7 +28,7 @@ State precisely how the length $\lambda$ is chosen from the smallness data.
 
 ![[Thm - The Small Object Argument#Statement]]
 
-A [[Def - Relative Cell Complex|relative $I$-cell complex]] is a transfinite composite of pushouts of coproducts of maps of $I$; $I\text{-inj} = \mathrm{RLP}(I)$ is the maps lifting against every generator. An object $A$ is [[Def - Transfinite Composition and Smallness|$\kappa$-small relative to $I\text{-cell}$]] if for regular $\lambda\geq\kappa$, maps $A\to\mathrm{colim}_\beta Z_\beta$ out of a $\lambda$-sequence of $I$-cell maps factor essentially uniquely through a bounded stage.
+A [[Def - Relative Cell Complex|relative I-cell complex]] is a transfinite composite of pushouts of coproducts of maps of $I$; $I\text{-inj} = \mathrm{RLP}(I)$ is the maps lifting against every generator. An object $A$ is [[Def - Transfinite Composition and Smallness|κ-small relative to I-cell]] if for regular $\lambda\geq\kappa$, maps $A\to\mathrm{colim}_\beta Z_\beta$ out of a $\lambda$-sequence of $I$-cell maps factor essentially uniquely through a bounded stage.
 
 ---
 
@@ -98,7 +98,7 @@ The construction builds a transfinite tower of cell attachments (Step 1), shows 
 **Step 3 (part b): The left factor is a relative $I$-cell complex.**
 
 > [!note]- Derivation
-> Each successor map $Z_\beta\to Z_{\beta+1}$ is, by Step 1, a pushout of $\coprod_{S_\beta} i$, a coproduct of maps of $I$. The map $i(f) : Z_0\to Z_\lambda$ is the transfinite composition of the $\lambda$-sequence (Step 2). A transfinite composite of pushouts of coproducts of maps of $I$ is exactly a [[Def - Relative Cell Complex|relative $I$-cell complex]]. So $i(f)\in I\text{-cell}$.
+> Each successor map $Z_\beta\to Z_{\beta+1}$ is, by Step 1, a pushout of $\coprod_{S_\beta} i$, a coproduct of maps of $I$. The map $i(f) : Z_0\to Z_\lambda$ is the transfinite composition of the $\lambda$-sequence (Step 2). A transfinite composite of pushouts of coproducts of maps of $I$ is exactly a [[Def - Relative Cell Complex|relative I-cell complex]]. So $i(f)\in I\text{-cell}$.
 
 **Step 4 (part c): The right factor lifts against $I$ (the smallness step).**
 

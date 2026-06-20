@@ -12,7 +12,7 @@ tags: [category-theory, higher-categories, foundations]
 
 # Notation
 
-Throughout, $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on a category $\mathcal{E}$ with [[Def - Pullback and Pushout|pullbacks]] (and, for existence, suitable colimits). A **$T$-graph** is the data $(C_0, C_1, \mathrm{dom} : C_1 \to T C_0, \mathrm{cod} : C_1 \to C_0)$ — a [[Def - Generalized Multicategory|$T$-multicategory]] without identities or composition. We write $T\text{-}\mathbf{Gph}$ for the category of $T$-graphs and $(\mathcal{E}, T)\text{-}\mathbf{Multicat}$ for the category of $T$-multicategories. The **forgetful functor** $U : (\mathcal{E}, T)\text{-}\mathbf{Multicat} \to T\text{-}\mathbf{Gph}$ drops identities and composition. The monad it induces is written $T^{+}$ (the **free $T$-multicategory monad**). The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
+Throughout, $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on a category $\mathcal{E}$ with [[Def - Pullback and Pushout|pullbacks]] (and, for existence, suitable colimits). A **$T$-graph** is the data $(C_0, C_1, \mathrm{dom} : C_1 \to T C_0, \mathrm{cod} : C_1 \to C_0)$ — a [[Def - Generalized Multicategory|T-multicategory]] without identities or composition. We write $T\text{-}\mathbf{Gph}$ for the category of $T$-graphs and $(\mathcal{E}, T)\text{-}\mathbf{Multicat}$ for the category of $T$-multicategories. The **forgetful functor** $U : (\mathcal{E}, T)\text{-}\mathbf{Multicat} \to T\text{-}\mathbf{Gph}$ drops identities and composition. The monad it induces is written $T^{+}$ (the **free $T$-multicategory monad**). The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
 
 ---
 
@@ -126,7 +126,7 @@ Build the free $T$-multicategory on a $T$-graph $X$ explicitly as an "object of 
 > > the pullback of $\mathrm{dom}_X : X_1 \to T X_0$ against $T(\mathrm{cod}_n) : T(\mathrm{tr}_n(X)) \to T X_0$. An element is "an arrow of $X$ whose inputs are filled by a $T$-shape of height-$\leq n$ trees with matching outputs". The output map is $\mathrm{cod}_X$ of the top arrow; the input-shape is $\mu_{X_0}$ applied to the $T$-shape of the children's input-shapes. The inclusions $\mathrm{tr}_n \hookrightarrow \mathrm{tr}_{n+1}$ (a tree of height $\leq n$ is a tree of height $\leq n+1$) form a chain, and $\mathrm{tr}(X) = \mathrm{colim}_n \mathrm{tr}_n(X)$ exists by the colimit hypothesis. Cartesianness of $T$ ensures $T$ commutes with these filtered colimits sufficiently for the construction to close up. $\square$
 
 > [!note]- Lemma 2: Grafting trees is associative and unital
-> **Statement:** The grafting operation $\mathrm{comp} : \mathrm{tr}(X) \times_{T X_0} T(\mathrm{tr}(X)) \to \mathrm{tr}(X)$, "plug a $T$-shape of trees into the inputs of a tree", together with identities (height-zero trees), satisfies the [[Def - Generalized Multicategory|$T$-multicategory]] axioms.
+> **Statement:** The grafting operation $\mathrm{comp} : \mathrm{tr}(X) \times_{T X_0} T(\mathrm{tr}(X)) \to \mathrm{tr}(X)$, "plug a $T$-shape of trees into the inputs of a tree", together with identities (height-zero trees), satisfies the [[Def - Generalized Multicategory|T-multicategory]] axioms.
 >
 > **Hint:** Grafting is "stack trees"; both associativity and unitality are formal properties of stacking, with no relations imposed because the object is free.
 >
@@ -186,7 +186,7 @@ Build the free $T$-multicategory on a $T$-graph $X$ explicitly as an "object of 
 
 - **[[Def - Cartesian Monad|Cartesian monads]]** — the input *and* the output. The theorem takes a cartesian monad $T$ and returns a cartesian monad $T^{+}$. This closure under the free construction is what distinguishes cartesian monads as the right setting: the framework reproduces its own hypotheses, so it can be iterated. The cartesianness of $T^{+}$ is read off the rigidity of trees, which is inherited node-by-node from the rigidity of $T$'s arities.
 
-- **[[Def - Generalized Multicategory|$T$-multicategories]] as algebras** — the theorem realizes $T$-multicategories as the Eilenberg–Moore category of $T^{+}$. This means the entire theory of [[Def - Algebra for a Monad|monad algebras]] applies to multicategories: limits are computed on underlying $T$-graphs, the free–forgetful adjunction is monadic, and "free multicategory on a signature" is a legitimate, computable object.
+- **[[Def - Generalized Multicategory|T-multicategories]] as algebras** — the theorem realizes $T$-multicategories as the Eilenberg–Moore category of $T^{+}$. This means the entire theory of [[Def - Algebra for a Monad|monad algebras]] applies to multicategories: limits are computed on underlying $T$-graphs, the free–forgetful adjunction is monadic, and "free multicategory on a signature" is a legitimate, computable object.
 
 - **Burroni's "category = monad in spans"** — the bottom case. For $T = \mathrm{id}$ the free $T$-multicategory monad is the free-category monad on graphs, whose algebras are small categories; this is the free version of Burroni's identification of categories with monads in $\mathrm{Span}(\mathbf{Set})$. The theorem generalizes the free-category construction to every cartesian monad at once.
 

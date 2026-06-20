@@ -11,7 +11,7 @@ tags: [category-theory, higher-categories, foundations]
 
 # Notation
 
-Throughout, $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on a category $\mathcal{E}$ with [[Def - Pullback and Pushout|pullbacks]] and terminal object $1$, and $P$ is a [[Def - Generalized Operad|$T$-operad]] with operation-object $P$, arity $\mathrm{ar} : P \to T1$, unit $e : 1 \to P$, and composition $\mathrm{comp} : P \times_{T1} TP \to P$. An **algebra** for $P$ is an object $X \in \mathcal{E}$ with an action $h$. We write $!_X : X \to 1$ for the unique map to the terminal object, so $T(!_X) : TX \to T1$ grades $TX$ by arity-shape, and $P \times_{T1} TX$ is the pullback of $\mathrm{ar}$ against $T(!_X)$. The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
+Throughout, $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on a category $\mathcal{E}$ with [[Def - Pullback and Pushout|pullbacks]] and terminal object $1$, and $P$ is a [[Def - Generalized Operad|T-operad]] with operation-object $P$, arity $\mathrm{ar} : P \to T1$, unit $e : 1 \to P$, and composition $\mathrm{comp} : P \times_{T1} TP \to P$. An **algebra** for $P$ is an object $X \in \mathcal{E}$ with an action $h$. We write $!_X : X \to 1$ for the unique map to the terminal object, so $T(!_X) : TX \to T1$ grades $TX$ by arity-shape, and $P \times_{T1} TX$ is the pullback of $\mathrm{ar}$ against $T(!_X)$. The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
 
 ---
 
@@ -31,7 +31,7 @@ There is a structural reformulation that makes the definition inevitable. A $T$-
 
 # The Definition
 
-Let $P$ be a [[Def - Generalized Operad|$T$-operad]] over a [[Def - Cartesian Monad|cartesian monad]] $(T, \eta, \mu)$ on $\mathcal{E}$.
+Let $P$ be a [[Def - Generalized Operad|T-operad]] over a [[Def - Cartesian Monad|cartesian monad]] $(T, \eta, \mu)$ on $\mathcal{E}$.
 
 An **algebra for $P$** (a **$P$-algebra**) is an object $X \in \mathcal{E}$ together with an **action**
 $$h : P \times_{T1} TX \longrightarrow X,$$

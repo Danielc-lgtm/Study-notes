@@ -11,13 +11,13 @@ tags: [category-theory, higher-categories, foundations]
 
 # Notation
 
-Throughout, $\mathcal{E}$ is a category with [[Def - Pullback and Pushout|pullbacks]] and a terminal object $1$, and $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on $\mathcal{E}$. A **$T$-operad** is a [[Def - Generalized Multicategory|$T$-multicategory]] $C$ whose object-of-objects is terminal, $C_0 = 1$. We then write $P := C_1$ for the **object of operations**, $T1$ for the **arity object**, and the structure maps become $\mathrm{ar} : P \to T1$ (arity), $e : 1 \to P$ (unit operation), and $\mathrm{comp} : P \times_{T1} TP \to P$ (operadic composition). For $\mathcal{E} = \mathbf{Set}, T = (-)^{*}$ we recover $P(n) = \mathrm{ar}^{-1}(n)$, the set of $n$-ary operations. The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
+Throughout, $\mathcal{E}$ is a category with [[Def - Pullback and Pushout|pullbacks]] and a terminal object $1$, and $(T, \eta, \mu)$ is a [[Def - Cartesian Monad|cartesian monad]] on $\mathcal{E}$. A **$T$-operad** is a [[Def - Generalized Multicategory|T-multicategory]] $C$ whose object-of-objects is terminal, $C_0 = 1$. We then write $P := C_1$ for the **object of operations**, $T1$ for the **arity object**, and the structure maps become $\mathrm{ar} : P \to T1$ (arity), $e : 1 \to P$ (unit operation), and $\mathrm{comp} : P \times_{T1} TP \to P$ (operadic composition). For $\mathcal{E} = \mathbf{Set}, T = (-)^{*}$ we recover $P(n) = \mathrm{ar}^{-1}(n)$, the set of $n$-ary operations. The full symbol registry is on [[Higher Categories — Generalized Operads via Cartesian Monads]].
 
 ---
 
 # Axiom Motivation
 
-A $T$-operad is what you get from a [[Def - Generalized Multicategory|$T$-multicategory]] by demanding there be essentially *one object*. The motivation is the same as the relationship between a [[Def - Category|category]] and a [[Def - Monoid in a Monoidal Category|monoid]]: a monoid is a one-object category, where "one object" means the object-of-objects is the terminal set $1$. Make the analogous restriction in the generalized setting — set $C_0 = 1$ — and ask what survives.
+A $T$-operad is what you get from a [[Def - Generalized Multicategory|T-multicategory]] by demanding there be essentially *one object*. The motivation is the same as the relationship between a [[Def - Category|category]] and a [[Def - Monoid in a Monoidal Category|monoid]]: a monoid is a one-object category, where "one object" means the object-of-objects is the terminal set $1$. Make the analogous restriction in the generalized setting — set $C_0 = 1$ — and ask what survives.
 
 Two things happen, and the interplay between them is the whole point. First, the *colours collapse*: with only one object there is nothing to label inputs and outputs by, so the multicategory becomes "single-sorted" or "monochromatic". Second — and this is the subtlety that makes operads richer than monoids — the *arities do not collapse*. The domain map was $\mathrm{dom} : C_1 \to T C_0$; setting $C_0 = 1$ turns it into $\mathrm{ar} : P \to T1$, and $T1$ is generally far from trivial. It is the object of *arity-shapes*: for $T = (-)^{*}$ it is $1^{*} = \mathbb{N}$, so even with one object there is a different "slot" for each natural-number arity, and $P$ decomposes as a sequence of operation-objects $P(0), P(1), P(2), \dots$. This is exactly why a $(-)^{*}$-operad is a classical operad and not merely a monoid: the monoid case ($T = \mathrm{id}$, $T1 = 1$) is the degenerate one where there is a single arity.
 
@@ -31,14 +31,14 @@ The test "could a reader invent this?" passes cleanly: take the multicategory de
 
 Let $(T, \eta, \mu)$ be a [[Def - Cartesian Monad|cartesian monad]] on a category $\mathcal{E}$ with pullbacks and terminal object $1$.
 
-A **$T$-operad** is a [[Def - Generalized Multicategory|$T$-multicategory]] $C$ with $C_0 = 1$. Spelled out, it is:
+A **$T$-operad** is a [[Def - Generalized Multicategory|T-multicategory]] $C$ with $C_0 = 1$. Spelled out, it is:
 
 - an object $P \in \mathcal{E}$ (the **object of operations**),
 - a morphism $\mathrm{ar} : P \to T1$ (the **arity**, recording the shape of each operation),
 - a morphism $e : 1 \to P$ (the **unit operation**), with $\mathrm{ar} \circ e = \eta_1 : 1 \to T1$,
 - a morphism $\mathrm{comp} : P \times_{T1} TP \to P$ (**operadic composition**), where the pullback is of $\mathrm{ar} : P \to T1$ against $T(!) \circ \cdots$ matching the flattened arity,
 
-subject to **associativity** and **left/right unitality**, the one-object specializations of the [[Def - Generalized Multicategory|$T$-multicategory]] axioms.
+subject to **associativity** and **left/right unitality**, the one-object specializations of the [[Def - Generalized Multicategory|T-multicategory]] axioms.
 
 Equivalently, in span-and-monoid form: a $T$-operad is a **monoid in the monoidal category of "collections" over $T1$** — i.e. a monoid for the substitution tensor product on the slice-like category $\mathcal{E}/T1$ induced by $T$. (When $\mathcal{E} = \mathbf{Set}, T = (-)^{*}$, this is exactly "a monoid in non-symmetric sequences under the substitution product".)
 
@@ -50,7 +50,7 @@ A **morphism of $T$-operads** $P \to P'$ is a map commuting with $\mathrm{ar}$, 
 
 A $T$-operad is a [[Def - Monoid in a Monoidal Category|monoid]] in a monoidal category built from $T$. Concretely, consider the slice category $\mathcal{E}/T1$, whose objects are maps $X \to T1$ ("collections of $X$-elements graded by arity-shape"). The monad $T$ induces a **substitution tensor product** $\otimes$ on $\mathcal{E}/T1$: given collections $X \to T1$ and $Y \to T1$, their substitution $X \otimes Y$ is formed by the pullback that records "an $X$-operation with a $T$-shaped family of $Y$-operations plugged into its slots", then flattening the arity via $\mu$. The unit object is $\eta_1 : 1 \to T1$ (the trivial unary operation). A monoid in $(\mathcal{E}/T1, \otimes, \eta_1)$ is precisely a $T$-operad: the monoid multiplication is operadic composition, the monoid unit is the unit operation, and associativity/unitality of the monoid are operadic associativity/unitality.
 
-This is the operadic specialization of the [[Def - Generalized Multicategory#Categorical / Structural Definition|monoid-in-$T$-spans]] picture: a $T$-multicategory is a monoid in the *bicategory* of $T$-spans, and a $T$-operad is the endomorphism-monoid at the single object $1$, which lives in the *monoidal category* of endo-$T$-spans on $1$, i.e. $\mathcal{E}/T1$ with substitution. The general slogan — **operad = monoid in a category of collections under substitution** — specializes the symmetric-sequence statement of HC3 (operad = monoid in symmetric sequences) to the non-symmetric, $T$-parameterized setting, and explains why the two definitions of "operad" agree where they overlap.
+This is the operadic specialization of the [[Def - Generalized Multicategory#Categorical / Structural Definition|monoid-in-T-spans]] picture: a $T$-multicategory is a monoid in the *bicategory* of $T$-spans, and a $T$-operad is the endomorphism-monoid at the single object $1$, which lives in the *monoidal category* of endo-$T$-spans on $1$, i.e. $\mathcal{E}/T1$ with substitution. The general slogan — **operad = monoid in a category of collections under substitution** — specializes the symmetric-sequence statement of HC3 (operad = monoid in symmetric sequences) to the non-symmetric, $T$-parameterized setting, and explains why the two definitions of "operad" agree where they overlap.
 
 ---
 

@@ -17,7 +17,7 @@ Let $A$ be a **compact** topological space. Show that $A$ is [[Def - Transfinite
 
 ![[Def - Transfinite Composition and Smallness#The Definition]]
 
-A [[Def - Relative Cell Complex|relative $I$-cell complex]] is a transfinite composite of pushouts of coproducts of the boundary inclusions $S^{n-1}\hookrightarrow D^n$; geometrically, each stage attaches a collection of disks $D^n$ to the previous space along attaching maps $S^{n-1}\to X_\beta$. A space $A$ is **compact** if every open cover has a finite subcover; equivalently every net has a convergent subnet.
+A [[Def - Relative Cell Complex|relative I-cell complex]] is a transfinite composite of pushouts of coproducts of the boundary inclusions $S^{n-1}\hookrightarrow D^n$; geometrically, each stage attaches a collection of disks $D^n$ to the previous space along attaching maps $S^{n-1}\to X_\beta$. A space $A$ is **compact** if every open cover has a finite subcover; equivalently every net has a convergent subnet.
 
 ---
 

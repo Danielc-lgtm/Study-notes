@@ -29,7 +29,7 @@ A $T$-operad over a [[Def - Cartesian Monad|cartesian monad]] has an operation-o
 
 **Assumption pattern:** Two assumptions drive everything. First, $C_0 = 1$ collapses the *colours* — there are no input/output labels. Second, $T = (-)^{*}$ makes $T1 = 1^{*} = \mathbb{N}$ *non-trivial* — there is a separate arity for each natural number. The interplay (colours collapse, arities survive) is the whole content, and recognizing that the richness lives in $T1$ rather than $C_0$ is the key.
 
-**Theorem routing:** Direct from the [[Def - Generalized Operad|definition of a $T$-operad]] with $T = (-)^{*}$; this is the operad half of the $(-)^{*}$ row of [[Thm - Generalized Operads Recover Classical Structures]]. The composition pullback $P \times_{T1} TP$ unwinds into the classical substitution domain $\coprod_k P(k) \times P(n_1) \times \cdots \times P(n_k)$.
+**Theorem routing:** Direct from the [[Def - Generalized Operad|definition of a T-operad]] with $T = (-)^{*}$; this is the operad half of the $(-)^{*}$ row of [[Thm - Generalized Operads Recover Classical Structures]]. The composition pullback $P \times_{T1} TP$ unwinds into the classical substitution domain $\coprod_k P(k) \times P(n_1) \times \cdots \times P(n_k)$.
 
 **Key decision point:** The non-obvious point is to resist the analogy with the *identity* case, where $C_0 = 1$ gives a monoid. Here $C_0 = 1$ does *not* give a monoid, because $T1 = \mathbb{N}$ keeps infinitely many arities alive. Identifying $T1$ correctly — and noticing it is $\mathbb{N}$, not $1$ — is the decision that separates "operad" from "monoid". The tempting alternative ("one object, so it must be a monoid") is exactly the error to avoid.
 
@@ -79,7 +79,7 @@ The plan: compute $T1 = \mathbb{N}$ and partition $P$ into the sets $P(n)$ (Step
 **Step 3: Axioms, and why $C_0 = 1$ is not a monoid.**
 
 > [!note]- Derivation
-> The [[Def - Generalized Operad|$T$-operad]] associativity axiom states that grafting a tower of operations is independent of grouping; unwound through Step 2, this is the classical operad associativity $\theta \circ (\theta_1 \circ (\ldots), \dots) = (\theta \circ (\theta_1, \dots)) \circ (\ldots)$. The unitality axiom states that grafting the unit $\mathrm{id} \in P(1)$ on either side returns the operation, the classical operad unit law. So a $T$-operad is precisely a classical non-symmetric operad.
+> The [[Def - Generalized Operad|T-operad]] associativity axiom states that grafting a tower of operations is independent of grouping; unwound through Step 2, this is the classical operad associativity $\theta \circ (\theta_1 \circ (\ldots), \dots) = (\theta \circ (\theta_1, \dots)) \circ (\ldots)$. The unitality axiom states that grafting the unit $\mathrm{id} \in P(1)$ on either side returns the operation, the classical operad unit law. So a $T$-operad is precisely a classical non-symmetric operad.
 >
 > Why is this not a monoid? In the *identity*-monad case, $C_0 = 1$ gives a one-object category, which is a monoid, because $T1 = 1$ provides a single arity. Here $T1 = \mathbb{N}$ provides infinitely many arities, so $P$ is not a single set with a binary operation but an $\mathbb{N}$-graded family $P(n)$ with substitution. The collapse $C_0 = 1$ removed the colours, but the arity object $T1 = \mathbb{N}$ — which depends on $T$, not on $C_0$ — keeps the structure as rich as a full operad. A monoid is the degenerate operad with $P(n) = \emptyset$ for $n \neq 1$ and $P(1)$ a monoid; a general operad is far more.
 

@@ -27,7 +27,7 @@ A small [[Def - Category|category]] $\mathcal{C}$ consists of a set $\mathrm{ob}
 
 **Assumption pattern:** The decisive substitution is $T = \mathrm{id}$, which makes $T C_0 = C_0$ — so the domain map $\mathrm{dom} : C_1 \to T C_0$ becomes an *ordinary* source map $C_1 \to C_0$. Once that single simplification is in place, every other piece of the $T$-multicategory definition reverts to its category counterpart, because the identity monad introduces no arities.
 
-**Theorem routing:** The route is direct from the [[Def - Generalized Multicategory|definition of a $T$-multicategory]] with $T = \mathrm{id}$; the conclusion is the $T = \mathrm{id}$ case of [[Thm - Generalized Operads Recover Classical Structures]]. To prove the equivalence rigorously, exhibit functors both ways and check they are mutually inverse on objects *and* morphisms.
+**Theorem routing:** The route is direct from the [[Def - Generalized Multicategory|definition of a T-multicategory]] with $T = \mathrm{id}$; the conclusion is the $T = \mathrm{id}$ case of [[Thm - Generalized Operads Recover Classical Structures]]. To prove the equivalence rigorously, exhibit functors both ways and check they are mutually inverse on objects *and* morphisms.
 
 **Key decision point:** The non-obvious obligation is to verify the claim at the level of *morphisms*, not just objects. It is easy to see the data of a $\mathrm{id}$-multicategory match the data of a category; the equivalence requires also that a morphism of $\mathrm{id}$-multicategories (a pair of maps commuting with the structure) is exactly a functor. Skipping this leaves only an object-level analogy. The natural shortcut of "the data match, so we are done" is precisely the trap.
 
@@ -75,7 +75,7 @@ The plan: substitute $T = \mathrm{id}$, identify the data and axioms with those 
 > [!note]- Derivation
 > The composition domain is the pullback of $\mathrm{dom} : C_1 \to T C_0 = C_0$ against $T(\mathrm{cod}) = \mathrm{cod} : C_1 \to C_0$, namely
 > $$C_1 \times_{C_0} C_1 = \{(g, f) \in C_1 \times C_1 : \mathrm{dom}(g) = \mathrm{cod}(f)\},$$
-> the set of composable pairs. So $\mathrm{comp}(g, f)$ is defined exactly when $\mathrm{dom}(g) = \mathrm{cod}(f)$ — the classical composability condition. The [[Def - Generalized Multicategory|$T$-multicategory]] associativity axiom states that the two ways of composing a composable triple agree, $\mathrm{comp}(\mathrm{comp}(h,g), f) = \mathrm{comp}(h, \mathrm{comp}(g,f))$, which is $(h \circ g) \circ f = h \circ (g \circ f)$. The unitality axiom states that grafting identities returns the arrow: $\mathrm{comp}(\mathrm{ids}(\mathrm{cod}(f)), f) = f = \mathrm{comp}(f, \mathrm{ids}(\mathrm{dom}(f)))$, i.e. $\mathrm{id} \circ f = f = f \circ \mathrm{id}$. Both are exactly the category axioms.
+> the set of composable pairs. So $\mathrm{comp}(g, f)$ is defined exactly when $\mathrm{dom}(g) = \mathrm{cod}(f)$ — the classical composability condition. The [[Def - Generalized Multicategory|T-multicategory]] associativity axiom states that the two ways of composing a composable triple agree, $\mathrm{comp}(\mathrm{comp}(h,g), f) = \mathrm{comp}(h, \mathrm{comp}(g,f))$, which is $(h \circ g) \circ f = h \circ (g \circ f)$. The unitality axiom states that grafting identities returns the arrow: $\mathrm{comp}(\mathrm{ids}(\mathrm{cod}(f)), f) = f = \mathrm{comp}(f, \mathrm{ids}(\mathrm{dom}(f)))$, i.e. $\mathrm{id} \circ f = f = f \circ \mathrm{id}$. Both are exactly the category axioms.
 
 **Step 3: The equivalence of categories, on objects and morphisms.**
 
