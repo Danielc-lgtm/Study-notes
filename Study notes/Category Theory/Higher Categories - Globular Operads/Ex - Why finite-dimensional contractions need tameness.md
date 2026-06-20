@@ -21,7 +21,7 @@ In the finite-dimensional ($n$-category) theory, a [[Def - Contraction on a Glob
 
 **Recall:**
 
-For an $n$-globular operad $P$, a [[Def - Contraction on a Globular Operad|precontraction]] supplies lifts of parallel pairs in dimensions $1 \le m \le n$ (the source/target/shape conditions). A map $q$ is **tame** if any two parallel top-dimensional cells $\alpha^-, \alpha^+$ with $q(\alpha^-) = q(\alpha^+)$ satisfy $\alpha^- = \alpha^+$; a **contraction** is a precontraction on a tame map. The source-target pairing is $(s,t) : P(\pi) \to \mathrm{Par}_P(\pi)$, $\theta \mapsto (s\theta, t\theta)$. In the $\omega$-theory there is no top dimension. A [[Def - Weak ω-Category and Weak n-Category (Batanin-Leinster)|weak $n$-category]] is an $L_n$-algebra for the initial tame $n$-operad-with-contraction.
+For an $n$-globular operad $P$, a [[Def - Contraction on a Globular Operad|precontraction]] supplies lifts of parallel pairs in dimensions $1 \le m \le n$ (the source/target/shape conditions). A map $q$ is **tame** if any two parallel top-dimensional cells $\alpha^-, \alpha^+$ with $q(\alpha^-) = q(\alpha^+)$ satisfy $\alpha^- = \alpha^+$; a **contraction** is a precontraction on a tame map. The source-target pairing is $(s,t) : P(\pi) \to \mathrm{Par}_P(\pi)$, $\theta \mapsto (s\theta, t\theta)$. In the $\omega$-theory there is no top dimension. A [[Def - Weak ω-Category and Weak n-Category (Batanin-Leinster)|weak n-category]] is an $L_n$-algebra for the initial tame $n$-operad-with-contraction.
 
 ---
 

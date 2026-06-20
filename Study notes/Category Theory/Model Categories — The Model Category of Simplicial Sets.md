@@ -61,6 +61,15 @@ This topic assumes the reader has refreshed the Higher Categories material on [[
 > [!tip] Unlocked: The Joyal Model Structure *(from Higher Category Theory)*
 > Keep the cofibrations (monomorphisms) but enlarge the fibrant objects from Kan complexes to **quasi-categories** by testing only *inner* horns, and you get the **Joyal model structure**, whose homotopy theory is that of [[Def - Quasi-Category|∞-categories]] rather than of spaces. The Kan–Quillen structure is the $\infty$-groupoid special case of the Joyal one.
 
+- **[[Ex - Monomorphisms are the cofibrations]]** (⭐⭐)
+	- Identify the cofibrations with the monomorphisms by the skeletal cell-attachment construction, and deduce that every simplicial set is cofibrant. The technique is the two-inclusion saturation argument: monomorphisms are saturated and contain the boundary inclusions, while any monomorphism is built cell-by-cell as a pushout of boundary inclusions.
+
+- **[[Ex - Kan fibrations are closed under pullback]]** (⭐)
+	- Show that a [[Def - Pullback and Pushout|pullback]] of a Kan fibration is a Kan fibration by a single diagram chase, and deduce that the fibre of a Kan fibration is a Kan complex. The drill is the universal fact that right lifting classes are closed under pullback, and that fibres are pullbacks along a point.
+
+- **[[Ex - Trivial fibrations lift against all monomorphisms]]** (⭐⭐)
+	- Promote "lifts against the generating boundary inclusions" to "lifts against every monomorphism", and conclude that a trivial fibration is a Kan fibration. The technique is propagating a lifting property from the generators to the full saturated class through pushout, transfinite composition, and retract.
+
 > [!note] Exercise Index — §3.1
 > [[Exercise Index - §3.1 The Kan-Quillen Model Structure]]
 
@@ -77,6 +86,15 @@ This topic assumes the reader has refreshed the Higher Categories material on [[
 
 > [!tip] Unlocked: Bousfield Localization *(from Model Categories)*
 > Once the weak equivalences of $\mathbf{sSet}$ are characterised by homotopy groups, one can enlarge them — invert a chosen set of maps — to obtain a **Bousfield localization**, the model-categorical way to build localised homotopy theories (rational spaces, $K(n)$-local spectra, **simplicial presheaves** for sheaf cohomology). The anodyne extensions are the fixed left class these localisations are built on top of.
+
+- **[[Ex - The simplicial homotopy relation is transitive only for Kan complexes]]** (⭐⭐)
+	- Prove the homotopy relation on spheroids is reflexive for any simplicial set but transitive only when the object is Kan, pinpointing the single horn-fill where fibrancy is used; with the non-Kan counterexample $\Delta^1$, whose vertex relation is not symmetric. This is why $\pi_n$ is defined only for Kan complexes.
+
+- **[[Ex - Anodyne extensions are trivial cofibrations]]** (⭐⭐)
+	- Prove the Gabriel–Zisman characterisation that anodyne maps are exactly the trivial cofibrations, via the [[Thm - The Retract Argument|retract argument]] applied to a small-object-argument factorisation. The decisive step is that the residual fibration is *trivial*, so the cofibration lifts against it and is exhibited as a retract of the anodyne factor.
+
+- **[[Ex - The fundamental group of the nerve of a group]]** (⭐⭐)
+	- Compute all simplicial homotopy groups of the [[Def - Kan Complex and the Nerve|nerve]] $N(G)$ of a group: $\pi_1 \cong G$, all others trivial, so $|N(G)| = BG = K(G,1)$. The group operation on $\pi_1$ is read off the unique filler of the inner horn $\Lambda^2_1$ — operations as horn fillers, made concrete.
 
 > [!note] Exercise Index — §3.2
 > [[Exercise Index - §3.2 Anodyne Extensions and Simplicial Homotopy Groups]]

@@ -18,7 +18,7 @@ where $P(n) \times_{S_n} X^n$ is the quotient of $P(n) \times X^n$ by the relati
 
 (a) Equip $T_P$ with a unit $\eta : \mathrm{Id} \to T_P$ and multiplication $\mu : T_P T_P \to T_P$ making it a [[Def - Monad and Comonad|monad]]; verify the monad axioms (using the operad unit and composition).
 
-(b) Prove that the category of [[Def - Algebra for an Operad|$P$-algebras]] is isomorphic to the category of [[Def - Algebra for a Monad|Eilenberg–Moore algebras]] for $T_P$.
+(b) Prove that the category of [[Def - Algebra for an Operad|P-algebras]] is isomorphic to the category of [[Def - Algebra for a Monad|Eilenberg–Moore algebras]] for $T_P$.
 
 (c) Identify $T_P$ for $P = \mathrm{Assoc}$ and for $P = \mathrm{Comm}$, and recognise these as the free-monoid and free-commutative-monoid monads.
 
@@ -88,7 +88,7 @@ The plan: define $\eta, \mu$ from the operad unit and $\gamma$ and verify the mo
 **Step 2: $P$-algebras = $T_P$-algebras.**
 
 > [!note]- Derivation
-> A $T_P$-algebra is $h : T_P X \to X$ with $h\eta = \mathrm{id}$, $h\mu = h \circ T_P h$. Now $h : \coprod_n P(n)\times_{S_n} X^n \to X$ is the same data as a family $\rho_n : P(n)\times_{S_n} X^n \to X$, i.e. $S_n$-equivariant maps $P(n)\times X^n \to X$ — exactly the structure maps of a [[Def - Algebra for an Operad|$P$-algebra]]. The condition $h\eta = \mathrm{id}$ is $\rho_1(\mathrm{id}; x) = x$, the algebra unit law. The condition $h\mu = h\circ T_P h$ unwinds: $h\mu[\theta; \varphi_\bullet; x_\bullet] = \rho(\gamma(\theta; \varphi_\bullet); x_\bullet)$, while $h \circ T_P h$ first applies $\rho$ to each inner layer then $\rho(\theta; -)$, giving $\rho(\theta; \rho(\varphi_1; x_{1,\bullet}), \dots)$. Their equality is the algebra associativity. So $T_P$-algebra structures = $P$-algebra structures, and a morphism of $T_P$-algebras is a morphism of $P$-algebras. Hence $\mathbf{Set}^{T_P} \cong \mathrm{Alg}_P$.
+> A $T_P$-algebra is $h : T_P X \to X$ with $h\eta = \mathrm{id}$, $h\mu = h \circ T_P h$. Now $h : \coprod_n P(n)\times_{S_n} X^n \to X$ is the same data as a family $\rho_n : P(n)\times_{S_n} X^n \to X$, i.e. $S_n$-equivariant maps $P(n)\times X^n \to X$ — exactly the structure maps of a [[Def - Algebra for an Operad|P-algebra]]. The condition $h\eta = \mathrm{id}$ is $\rho_1(\mathrm{id}; x) = x$, the algebra unit law. The condition $h\mu = h\circ T_P h$ unwinds: $h\mu[\theta; \varphi_\bullet; x_\bullet] = \rho(\gamma(\theta; \varphi_\bullet); x_\bullet)$, while $h \circ T_P h$ first applies $\rho$ to each inner layer then $\rho(\theta; -)$, giving $\rho(\theta; \rho(\varphi_1; x_{1,\bullet}), \dots)$. Their equality is the algebra associativity. So $T_P$-algebra structures = $P$-algebra structures, and a morphism of $T_P$-algebras is a morphism of $P$-algebras. Hence $\mathbf{Set}^{T_P} \cong \mathrm{Alg}_P$.
 
 **Step 3: $T_{\mathrm{Assoc}}$ and $T_{\mathrm{Comm}}$.**
 

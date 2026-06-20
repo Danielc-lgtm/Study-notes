@@ -85,7 +85,7 @@ The solution builds a contraction on $\mathrm{End}(X)$ from the contractibility 
 **Step 2: initiality gives the $L$-algebra structure.**
 
 > [!note]- Derivation
-> By [[Thm - The Initial Contractible Globular Operad Exists|initiality of $L$ in $\mathbf{OC}$]], there is a *unique* contraction-preserving operad map
+> By [[Thm - The Initial Contractible Globular Operad Exists|initiality of the Batanin–Leinster operad]] in $\mathbf{OC}$, there is a *unique* contraction-preserving operad map
 > $$
 > f : (L, \chi) \longrightarrow (\mathrm{End}(X), \chi').
 > $$

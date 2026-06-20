@@ -92,7 +92,7 @@ The conceptual leap is easy once operads are monoids; the technical difficulty i
 
 **Subgoal decomposition:**
 
-1. **Reduce to free monoids.** Use [[Thm - Operads as Monoids in Symmetric Sequences|operads = monoids in $\mathrm{SymSeq}$]] to restate "free operad on $E$" as "free monoid on the symmetric sequence $E$ for the product $\circ$".
+1. **Reduce to free monoids.** Use [[Thm - Operads as Monoids in Symmetric Sequences|operads = monoids in SymSeq]] to restate "free operad on $E$" as "free monoid on the symmetric sequence $E$ for the product $\circ$".
    - *Hint:* Free objects for a forgetful functor are computed in the algebraic structure; the algebraic structure here is "monoid in $(\mathrm{SymSeq}, \circ, I)$".
    - *Why needed:* It converts an operad construction into a known monoidal construction.
 
