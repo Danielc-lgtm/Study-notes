@@ -15,7 +15,7 @@ Let $X$ be a set. Define $\mathrm{End}_X(n) = \mathrm{Hom}(X^n, X)$, the set of 
 
 (a) Equip this sequence with a unit, an $S_n$-action, and a composition, and verify in full that $(\mathrm{End}_X, \gamma, \mathrm{id})$ is a symmetric [[Def - Operad|operad]] — checking associativity, the unit law, and equivariance from first principles (no appeal to a general theorem).
 
-(b) Prove that a [[Def - Algebra for an Operad|$P$-algebra]] structure on $X$, for any operad $P$, is the same as an operad morphism $\rho : P \to \mathrm{End}_X$. 
+(b) Prove that a [[Def - Algebra for an Operad|P-algebra]] structure on $X$, for any operad $P$, is the same as an operad morphism $\rho : P \to \mathrm{End}_X$. 
 
 (c) Identify $\mathrm{End}_X(1)$ as a monoid and $\mathrm{End}_X(0)$ as a set, and interpret what an operad map $P \to \mathrm{End}_X$ does to the unit and nullary operations.
 
