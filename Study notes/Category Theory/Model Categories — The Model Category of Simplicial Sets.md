@@ -113,6 +113,15 @@ This topic assumes the reader has refreshed the Higher Categories material on [[
 > [!tip] Unlocked: Simplicial Presheaves and ∞-Topoi *(from Higher Topos Theory)*
 > Because every space is modelled by a Kan complex, sheaves *valued in spaces* are modelled by **simplicial presheaves** with a localised (Bousfield) model structure, and their homotopy theories are the **∞-topoi** where nonabelian and derived cohomology live. This chapter is the bottom rung of that ladder.
 
+- **[[Ex - Realization preserves products of standard simplices]]** (⭐⭐)
+	- Prove $|\Delta^m \times \Delta^n| \cong |\Delta^m| \times |\Delta^n|$ by density reduction to representables plus the shuffle triangulation of the prism, and extend to $|X \times Y| \cong |X| \times |Y|$. This is the key non-formal lemma behind the Quillen equivalence, and it explains why one must work in compactly generated spaces.
+
+- **[[Ex - A minimal Kan complex with trivial homotopy is a point]]** (⭐⭐⭐)
+	- Prove a connected [[Def - Minimal Fibration|minimal Kan complex]] with vanishing homotopy groups is isomorphic to the point. The mechanism is "homotopy from connectivity, equality from minimality": vanishing $\pi_n$ gives a homotopy to the degenerate simplex, and minimality upgrades it to equality, collapsing the complex by induction on dimension.
+
+- **[[Ex - The unit map into the singular complex is a weak equivalence]]** (⭐⭐)
+	- Deduce that the unit $X \to \mathrm{Sing}|X|$ is a weak equivalence from the (assumed) fact that the counit is, using only a triangle identity and two-out-of-three; then assemble the [[Def - Quillen Adjunction and Quillen Equivalence|Quillen equivalence]]. The exercise isolates how one half of an equivalence follows formally from the other.
+
 > [!note] Exercise Index — §3.3
 > [[Exercise Index - §3.3 Minimal Fibrations and Geometric Realization]]
 
