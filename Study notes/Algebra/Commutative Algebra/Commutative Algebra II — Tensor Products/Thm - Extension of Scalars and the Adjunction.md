@@ -22,7 +22,7 @@ All rings are commutative with $1$; ring homomorphisms send $1\mapsto 1$. Fix a 
 > **Theorem (Extension of scalars: factorisation, isomorphisms, adjunction).** Let $f : R\to S$ be a ring homomorphism, $M, M'$ be $S$-modules, $N, N'$ be $R$-modules.
 >
 > 1. **(Two-step factorisation.)** There is an $S$-module isomorphism
-> $$M\otimes_R N\ \cong\ M\otimes_S(S\otimes_R N), \qquad m\otimes n\mapsto m\otimes(1\otimes n),\quad (sm)\otimes n\mapsfrom m\otimes(s\otimes n).$$
+> $$M\otimes_R N\ \cong\ M\otimes_S(S\otimes_R N), \qquad m\otimes n\mapsto m\otimes(1\otimes n),\quad m\otimes(s\otimes n)\mapsto(sm)\otimes n.$$
 > 2. **(Standard isomorphisms over $S$.)** As $S$-modules: $M\otimes_R N\cong N\otimes_R M$; $(M\otimes_R N)\otimes_R N'\cong M\otimes_R(N\otimes_R N')$; $(M\otimes_R N)\otimes_S M'\cong M\otimes_S(N\otimes_R M')$; and $M\otimes_R\big(\bigoplus_i N_i\big)\cong\bigoplus_i(M\otimes_R N_i)$.
 > 3. **(Base-change identity.)** $S\otimes_R(N\otimes_R N')\cong(S\otimes_R N)\otimes_S(S\otimes_R N')$ as $S$-modules, $s\otimes(n\otimes n')\mapsto s\big((1\otimes n)\otimes(1\otimes n')\big)$.
 > 4. **(Adjunction.)** Extension of scalars is left adjoint to restriction: for an $R$-module $N$ and an $S$-module $M$,
@@ -89,7 +89,7 @@ Everything rests on part 1, the two-step factorisation, and part 1 is the univer
 
 # What Makes This Hard
 
-The technically delicate point is the *backward map* in part 1: it must be built in two stages — first $H_m : S\otimes_R N\to M\otimes_R N$ for fixed $m$, then assemble over $m$ into an *$S$-bilinear* map $M\times(S\otimes_R N)\to M\otimes_R N$ — and verifying the $S$-bilinearity (not just $R$-bilinearity) of the second stage is the step most people botch. The conceptual hurdle is part 4: seeing "an $S$-linear map out of the extension = an $R$-linear map out of $N$" as an *adjunction*, and recognising that this is *why* extension preserves colimits. The common error is to expect the base-change identity (part 3) to hold for a general $S$-module $M$ in place of $S$ — it does not; $\mathbb{C}^n\otimes_{\mathbb{R}}(N\otimes_R N')\not\cong(\mathbb{C}^n\otimes_R N)\otimes_{\mathbb{C}}(\mathbb{C}^n\otimes_R N')$ (dimensions $n\cdot mℓ$ versus $n^2 mℓ$).
+The technically delicate point is the *backward map* in part 1: it must be built in two stages — first $H_m : S\otimes_R N\to M\otimes_R N$ for fixed $m$, then assemble over $m$ into an *$S$-bilinear* map $M\times(S\otimes_R N)\to M\otimes_R N$ — and verifying the $S$-bilinearity (not just $R$-bilinearity) of the second stage is the step most people botch. The conceptual hurdle is part 4: seeing "an $S$-linear map out of the extension = an $R$-linear map out of $N$" as an *adjunction*, and recognising that this is *why* extension preserves colimits. The common error is to expect the base-change identity (part 3) to hold for a general $S$-module $M$ in place of $S$ — it does not; $\mathbb{C}^n\otimes_{\mathbb{R}}(N\otimes_R N')\not\cong(\mathbb{C}^n\otimes_R N)\otimes_{\mathbb{C}}(\mathbb{C}^n\otimes_R N')$ (dimensions $n\cdot m\ell$ versus $n^2 m\ell$).
 
 ---
 
