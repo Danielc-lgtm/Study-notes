@@ -79,7 +79,7 @@ The Thomas rotation is the **holonomy of velocity space**. Geometrically, the ba
 
 **Is NOT an instance — collinear boosts.** Two boosts along the same line ($\chi = 0$) compose to a pure boost, $R = \mathrm{Id}$, $\varphi_T = 0$: there is *no* Thomas rotation. This is the degenerate case the definition excludes from the "non-collinear" hypothesis, and it is why the relativistic velocity-addition formula for collinear velocities is commutative.
 
-**Is NOT an instance — a single boost.** A single boost has no Thomas rotation: the phenomenon requires *two* boosts in different directions. Polar-decomposing a single boost gives $S = $ that boost and $R = \mathrm{Id}$.
+**Is NOT an instance — a single boost.** A single boost has no Thomas rotation: the phenomenon requires *two* boosts in different directions. Polar-decomposing a single boost gives $S =$ that boost and $R = \mathrm{Id}$.
 
 **Corollary — the maximal Thomas angle.** Fixing the speeds and varying $\chi$, the Thomas angle is maximal at $\cos\chi_m = -\sqrt{(\Gamma_1-1)(\Gamma_2-1)/((\Gamma_1+1)(\Gamma_2+1))}$ (so $\chi_m > \pi/2$), where $\cos\varphi_{T,\max} = 1 - 2(\Gamma_1-1)(\Gamma_2-1)/((\Gamma_1+1)(\Gamma_2+1))$. As $\Gamma_1, \Gamma_2 \to \infty$ the maximal Thomas angle approaches $\pi$: ultrarelativistic boosts can produce nearly a half-turn.
 

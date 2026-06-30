@@ -102,7 +102,7 @@ Use the equivalence principle to import the accelerated-frame redshift, giving $
    - *Why needed:* It is the symmetry the flat metric must respect.
 
 4. **Apply translation-invariance of $\eta$ and reach the contradiction.** A time-translation-invariant metric assigns equal proper times to a curve and its translate, so the Minkowski assumption gives $\Delta t = \Delta t'$, contradicting step 1.
-   - *Hint:* $\eta_{\mu\nu}$ is the same constant array everywhere, hence invariant under $t \to t + $ const.
+   - *Hint:* $\eta_{\mu\nu}$ is the same constant array everywhere, hence invariant under $t \to t +$ const.
    - *Why needed:* The contradiction is the theorem; the only false assumption is that proper time is Minkowskian.
 
 ---

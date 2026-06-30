@@ -99,7 +99,7 @@ In **general relativity** the four-force is what remains of the equation of moti
 
 **Corollary — a pure force preserves the mass shell.** If $F\cdot U = 0$ then $dm/d\tau = 0$, so $P\cdot P = m^2$ stays constant along the worldline: the four-momentum slides along a fixed mass-shell hyperboloid. This is why an electron in any electromagnetic field remains an electron with the same rest mass, however violently it is accelerated.
 
-**Corollary — the power is the work component.** Projecting $F = dP/d\tau$ onto an inertial observer, the time component gives $dE/d\tau = $ (time part of $F$), which converts via $d/d\tau = \gamma\,d/dt$ to $dE/dt = \mathbf{f}\cdot\mathbf{u}$ for a pure force — the rate of working equals the power delivered, the relativistic work–energy theorem ([[Thm - Relativistic Newton's Second Law]]).
+**Corollary — the power is the work component.** Projecting $F = dP/d\tau$ onto an inertial observer, the time component gives $dE/d\tau =$ (time part of $F$), which converts via $d/d\tau = \gamma\,d/dt$ to $dE/dt = \mathbf{f}\cdot\mathbf{u}$ for a pure force — the rate of working equals the power delivered, the relativistic work–energy theorem ([[Thm - Relativistic Newton's Second Law]]).
 
 **Calibration check.** If you have understood the definition you should be able to: (1) derive the mass-evolution identity $F\cdot U = dm/d\tau$ from $F = dP/d\tau$ and the normalisation $U\cdot U = 1$; (2) explain why the electromagnetic Lorentz force preserves rest mass, in one line — its $F\cdot U = qF_{\mu\nu}U^\mu U^\nu$ vanishes by antisymmetry; (3) state what physical content the equation $F^\mu = dP^\mu/d\tau$ carries on its own — none, until the form of $F$ is specified by an interaction.
 

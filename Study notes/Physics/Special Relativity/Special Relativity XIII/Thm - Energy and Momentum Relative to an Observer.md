@@ -73,7 +73,7 @@ That the energy is positive is the geometric fact that the inner product of two 
 
 # What Makes This Hard
 
-The subtlety is that energy is *both* observer-dependent and an invariant: it depends on which observer's $U_0$ you choose, but for a fixed observer it is the scalar $P\cdot U_0$, computable in any frame. Beginners either think energy is absolute (it is not — different observers disagree) or think the contraction $P\cdot U_0$ is frame-dependent (it is not — it is a Lorentz scalar). The non-obvious step is realising that "energy" requires *two* inputs, the particle and the observer, and the contraction is the unique bilinear map combining them. The common error is to forget the projection for the momentum and write $\mathbf{p} = $ (spatial part of $P$) in the *wrong* frame, rather than projecting onto the chosen observer's rest space.
+The subtlety is that energy is *both* observer-dependent and an invariant: it depends on which observer's $U_0$ you choose, but for a fixed observer it is the scalar $P\cdot U_0$, computable in any frame. Beginners either think energy is absolute (it is not — different observers disagree) or think the contraction $P\cdot U_0$ is frame-dependent (it is not — it is a Lorentz scalar). The non-obvious step is realising that "energy" requires *two* inputs, the particle and the observer, and the contraction is the unique bilinear map combining them. The common error is to forget the projection for the momentum and write $\mathbf{p} =$ (spatial part of $P$) in the *wrong* frame, rather than projecting onto the chosen observer's rest space.
 
 ---
 

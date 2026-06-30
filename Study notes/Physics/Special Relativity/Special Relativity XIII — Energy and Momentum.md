@@ -23,7 +23,7 @@ A standing convention for the whole topic: **we set $c = 1$**, and we use the **
 - $P^\mu = m U^\mu = (E, \mathbf{p})$ — the **four-momentum**; satisfies $P\cdot P = m^2$
 - $E = \gamma m$ — the **total energy**; $\mathbf{p} = \gamma m\mathbf{u}$ — the **relativistic three-momentum**; $E^2 = \mathbf{p}^2 + m^2$ — the **dispersion relation**
 - $E_{\text{kin}} = (\gamma - 1)m$ — the **kinetic energy** relative to an observer
-- $U_0$ — the four-velocity of an **observer** $\mathcal{O}$; for a particle of four-momentum $P$, $E = P\cdot U_0$ and $\mathbf{p} = $ the orthogonal projection of $P$ onto $\mathcal{O}$'s rest space
+- $U_0$ — the four-velocity of an **observer** $\mathcal{O}$; for a particle of four-momentum $P$, $E = P\cdot U_0$ and $\mathbf{p} =$ the orthogonal projection of $P$ onto $\mathcal{O}$'s rest space
 - $\hbar$ — the reduced Planck constant; for a photon $E = \hbar\omega$, $\mathbf{p} = \hbar\mathbf{k}$, $P^\mu = \hbar K^\mu$ with $K^\mu$ the wave four-vector
 - $F^\mu = dP^\mu/d\tau$ — the **four-force**; satisfies $F\cdot U = dm/d\tau$, so a mass-preserving (**pure**) force has $F\cdot U = 0$
 - $s, t, u$ — the **Mandelstam variables** of a two-body process; $s = (P_1+P_2)^2$ is the invariant mass squared of the system

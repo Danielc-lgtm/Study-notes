@@ -92,7 +92,7 @@ For the free gyroscope, write "no torque" as $D^{\mathrm{FW}}_u\vec s = 0$ and r
 
 **Subgoal decomposition:**
 
-1. **Free gyroscope.** From $D^{\mathrm{FW}}_u\vec s = 0$ deduce $\|\vec s\| = $ const and precession.
+1. **Free gyroscope.** From $D^{\mathrm{FW}}_u\vec s = 0$ deduce $\|\vec s\| =$ const and precession.
    - *Hint:* $D^{\mathrm{FW}}_u\vec s = \frac{d\vec s}{d\tau} - (\vec a\cdot\vec s)\vec u$; contract with $\vec s$ and use $\vec s\cdot\vec u = 0$.
    - *Why needed:* It establishes the kinematic precession and the norm conservation that BMT inherits.
 
@@ -117,7 +117,7 @@ For the free gyroscope, write "no torque" as $D^{\mathrm{FW}}_u\vec s = 0$ and r
 # Lemma Decomposition
 
 > [!note]- Lemma 1: Fermi–Walker transport preserves the norm
-> **Statement:** If $D^{\mathrm{FW}}_u\vec s = 0$ (or more generally $D^{\mathrm{FW}}_u\vec s = \vec C$ with $\vec u\cdot\vec C = 0$ and the dynamics below), then $\|\vec s\|_g = $ const.
+> **Statement:** If $D^{\mathrm{FW}}_u\vec s = 0$ (or more generally $D^{\mathrm{FW}}_u\vec s = \vec C$ with $\vec u\cdot\vec C = 0$ and the dynamics below), then $\|\vec s\|_g =$ const.
 >
 > **Hint:** Differentiate $\vec s\cdot\vec s$ and use $\vec s\cdot\vec u = 0$.
 >

@@ -163,7 +163,7 @@ Write $\Lambda_1$ in its adapted basis and $\Lambda_2$ in a semi-adapted basis w
 > [!note]- Complete formal proof
 > Write $\Lambda_1$ as a boost of rapidity $\psi_1$ in the $(e_0, e_1)$-plane and $\Lambda_2$ as a boost of rapidity $\psi_2$ with velocity at angle $\chi$ to $e_1$, in the semi-adapted basis. Set $c_i = \cosh\psi_i = \Gamma_i$, $s_i = \sinh\psi_i = \Gamma_iV_i$.
 >
-> By Lemma 1, the polar-decomposition boost factor $S = $ (boost carrying $e_0$ to $\Lambda_2\Lambda_1(e_0)$) has Lorentz factor $\Gamma = \Gamma_1\Gamma_2(1+V_1V_2\cos\chi)$, and the rotation factor $R = S^{-1}\Lambda_2\Lambda_1$ acts in the $(e_1, e_2)$-plane.
+> By Lemma 1, the polar-decomposition boost factor $S =$ (boost carrying $e_0$ to $\Lambda_2\Lambda_1(e_0)$) has Lorentz factor $\Gamma = \Gamma_1\Gamma_2(1+V_1V_2\cos\chi)$, and the rotation factor $R = S^{-1}\Lambda_2\Lambda_1$ acts in the $(e_1, e_2)$-plane.
 >
 > By Lemma 2, $\cos\varphi_T = R(e_1)\cdot e_1 = 1 - \frac{(\Gamma_1-1)(\Gamma_2-1)}{1+\Gamma}\sin^2\chi$.
 >

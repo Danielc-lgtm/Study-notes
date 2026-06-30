@@ -113,7 +113,7 @@ Compute the energy-momentum tensor of the radiative ($1/r$, null) field; integra
    - *Why needed:* It is the invariant object; $R$-independence is the consistency check.
 
 5. **Power as a scalar; Larmor and Liénard.** Compute $\mathcal P = \mathrm dE/\mathrm dt = -\langle\mathrm dp^{\text{rad}}, U_0\rangle/\mathrm dt$ with $\mathrm dt = \Gamma\mathrm d\tau$; the $\Gamma$ factors cancel, giving $\mathcal P = q^2|A|^2/6\pi\varepsilon_0$. Rewrite $|A|^2 = \Gamma^6[\boldsymbol\gamma^2 - (\boldsymbol\gamma\times\mathbf V)^2/c^2]$.
-   - *Hint:* $\langle U, U_0\rangle = \Gamma$ and $\mathrm dt = \Gamma\mathrm d\tau$ cancel; for $U_0 = $ rest frame, $|A|^2 = a^2$.
+   - *Hint:* $\langle U, U_0\rangle = \Gamma$ and $\mathrm dt = \Gamma\mathrm d\tau$ cancel; for $U_0 =$ rest frame, $|A|^2 = a^2$.
    - *Why needed:* It delivers both boxed formulas.
 
 ---

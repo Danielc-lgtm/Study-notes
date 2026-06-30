@@ -74,7 +74,7 @@ The proof breaks into three parts. The identity and determinant conditions are i
 **Step 1: The identity is restricted, and the determinant propagates.**
 
 > [!note]- Derivation
-> $\det\mathrm{Id} = 1 \ge $ (proper) and $\mathrm{Id}^0{}_0 = 1 \ge 1$ (orthochronous), so $\mathrm{Id} \in SO^+(1,3)$.
+> $\det\mathrm{Id} = 1 \ge$ (proper) and $\mathrm{Id}^0{}_0 = 1 \ge 1$ (orthochronous), so $\mathrm{Id} \in SO^+(1,3)$.
 >
 > For a product, $\det(\Lambda\Lambda') = \det\Lambda\,\det\Lambda' = (+1)(+1) = +1$ by multiplicativity of the determinant, so the product is proper. For an inverse, $\det\Lambda^{-1} = (\det\Lambda)^{-1} = 1$, so the inverse is proper. The determinant condition is thus closed under products and inverses for free.
 
