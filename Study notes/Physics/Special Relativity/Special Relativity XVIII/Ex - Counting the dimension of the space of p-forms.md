@@ -21,7 +21,7 @@ Work in four dimensions, mostly-minus signature, $c = 1$.
 
 ![[Def - Alternate Forms and the Exterior Product#The Definition]]
 
-A [[Def - Alternate Forms and the Exterior Product|$p$-form]] is a fully antisymmetric type-$(0,p)$ tensor; its components $A_{\alpha_1\dots\alpha_p}$ are antisymmetric, vanishing when two indices coincide and equal up to sign when the indices are permuted. The [[Def - The Hodge Star|Hodge star]] $\star : \mathscr{A}_p \to \mathscr{A}_{4-p}$ requires $\dim\mathscr{A}_p = \dim\mathscr{A}_{4-p}$ to be an isomorphism.
+A [[Def - Alternate Forms and the Exterior Product|p-form]] is a fully antisymmetric type-$(0,p)$ tensor; its components $A_{\alpha_1\dots\alpha_p}$ are antisymmetric, vanishing when two indices coincide and equal up to sign when the indices are permuted. The [[Def - The Hodge Star|Hodge star]] $\star : \mathscr{A}_p \to \mathscr{A}_{4-p}$ requires $\dim\mathscr{A}_p = \dim\mathscr{A}_{4-p}$ to be an isomorphism.
 
 ---
 
@@ -63,7 +63,7 @@ The dimensions of the exterior algebra are pure combinatorics: an independent co
 **Step 1: $\dim\mathscr{A}_p(E) = \binom{4}{p}$.**
 
 > [!note]- Derivation
-> A [[Def - Alternate Forms and the Exterior Product|$p$-form]] has components $A_{\alpha_1\dots\alpha_p}$ that are fully antisymmetric. Two consequences:
+> A [[Def - Alternate Forms and the Exterior Product|p-form]] has components $A_{\alpha_1\dots\alpha_p}$ that are fully antisymmetric. Two consequences:
 > - *Repeats vanish.* If any two indices are equal, swapping them leaves the component unchanged but antisymmetry flips its sign, so $A_{\dots\alpha\dots\alpha\dots} = -A_{\dots\alpha\dots\alpha\dots} = 0$.
 > - *Orderings are equal up to sign.* For distinct indices, any permutation $\sigma$ gives $A_{\alpha_{\sigma(1)}\dots\alpha_{\sigma(p)}} = (-1)^{k(\sigma)}A_{\alpha_1\dots\alpha_p}$, so all orderings of the same set are determined by one.
 >

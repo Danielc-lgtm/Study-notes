@@ -66,7 +66,7 @@ The exercise certifies that both $g_{\alpha\beta}$ and $g^{\alpha\beta}$ are hon
 **Step 1: $g_{\alpha\beta}$ is a type-$(0,2)$ tensor, transforming by $g' = {}^tP\,g\,P$.**
 
 > [!note]- Derivation
-> The metric is the bilinear map $g : E\times E \to \mathbb{R}$, a [[Def - Tensors on Minkowski Space|type-$(0,2)$ tensor]] by definition (two vector slots). Its components are $g_{\alpha\beta} = g(e_\alpha, e_\beta)$. Under $e'_\alpha = P^\mu{}_\alpha e_\mu$, bilinearity gives
+> The metric is the bilinear map $g : E\times E \to \mathbb{R}$, a [[Def - Tensors on Minkowski Space|type-(0,2) tensor]] by definition (two vector slots). Its components are $g_{\alpha\beta} = g(e_\alpha, e_\beta)$. Under $e'_\alpha = P^\mu{}_\alpha e_\mu$, bilinearity gives
 > $$g'_{\alpha\beta} = g(e'_\alpha, e'_\beta) = g(P^\mu{}_\alpha e_\mu, P^\nu{}_\beta e_\nu) = P^\mu{}_\alpha P^\nu{}_\beta\, g(e_\mu, e_\nu) = P^\mu{}_\alpha P^\nu{}_\beta\, g_{\mu\nu}.$$
 > This is the type-$(0,2)$ law (one $P$ per lower index), and in matrix form $g'_{\alpha\beta} = (P^{\mathsf T})_\alpha{}^\mu g_{\mu\nu}P^\nu{}_\beta$, i.e. $g' = {}^{t}P\,g\,P$ — the standard change-of-basis law for the matrix of a bilinear form.
 

@@ -66,7 +66,7 @@ The exercise is a tour of the [[Def - Tensor Operations|contraction]] operation 
 **Step 1: the trace $T^\mu{}_\mu$ is a Lorentz scalar.**
 
 > [!note]- Derivation
-> Under a change of basis with matrix $P$, a [[Def - Tensors on Minkowski Space|type-$(1,1)$ tensor]] transforms by
+> Under a change of basis with matrix $P$, a [[Def - Tensors on Minkowski Space|type-(1,1) tensor]] transforms by
 > $$T'^\mu{}_\nu = (P^{-1})^\mu{}_\alpha\, P^\beta{}_\nu\, T^\alpha{}_\beta.$$
 > Contract (set $\nu = \mu$, sum):
 > $$T'^\mu{}_\mu = (P^{-1})^\mu{}_\alpha\, P^\beta{}_\mu\, T^\alpha{}_\beta = \big(P^\beta{}_\mu(P^{-1})^\mu{}_\alpha\big)T^\alpha{}_\beta = \delta^\beta{}_\alpha\, T^\alpha{}_\beta = T^\alpha{}_\alpha.$$
