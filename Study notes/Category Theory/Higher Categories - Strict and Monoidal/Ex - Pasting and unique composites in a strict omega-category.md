@@ -25,7 +25,7 @@ where on the left $\alpha : f\Rightarrow f'$ and $\beta : f'\Rightarrow f''$ are
 
 A [[Def - Strict n-Category and Strict ω-Category|strict 2-category]] has $2$-cells composed vertically ($\circ_1$, along a shared $1$-cell) and horizontally ($\circ_0$, along a shared $0$-cell), with the [[Thm - The Interchange Law|interchange law]]
 $$(\delta\circ_1\gamma)\circ_0(\beta\circ_1\alpha) = (\delta\circ_0\beta)\circ_1(\gamma\circ_0\alpha).$$
-In a [[Def - 2-Category and Bicategory|bicategory]] the horizontal composition of $1$-cells is associative and unital only up to coherent $2$-isomorphisms (associator, unitors).
+In a [[Def - 2-Category and Bicategory|bicategory]] the horizontal composition of $1$-cells is associative and unital only up to coherent $2$-[[Def - Isomorphism|isomorphisms]] (associator, unitors).
 
 ---
 
@@ -57,7 +57,7 @@ In a [[Def - 2-Category and Bicategory|bicategory]] the horizontal composition o
 > For (a), write the two evaluation orders explicitly. "Vertical then horizontal" computes $\beta\circ_1\alpha$ and $\delta\circ_1\gamma$ first, then $\circ_0$'s them. "Horizontal then vertical" computes $\gamma\circ_0\alpha$ and $\delta\circ_0\beta$ first, then $\circ_1$'s them. The interchange law says these are equal — that is its entire content.
 
 > [!note]- Hint 2
-> For (b), think of contracting the diagram one cell at a time. At each step where two different cells could be contracted next, the two resulting partial composites must agree for the final answer to be order-independent. Each such "diamond" is an instance of interchange (or, in dimension above $2$, an interchange between the appropriate pair of dimensions).
+> For (b), think of contracting the diagram one cell at a time. At each step where two different cells could be contracted next, the two resulting partial composites must agree for the final answer to be order-independent. Each such "diamond" is an instance of interchange (or, in dimension above $2$, an interchange between the appropriate pair of [[Def - Dimension|dimensions]]).
 
 > [!note]- Hint 3
 > For the bicategory part of (b): interchange still holds, but horizontal composition of $1$-cells is associative only up to the associator. A row $h\ast g\ast f$ must be bracketed; different bracketings of a long pasting diagram differ by associators, and uniqueness of the composite is then [[Thm - Coherence for Unbiased Monoidal Categories|coherence]], not interchange.
@@ -115,7 +115,7 @@ The two orders give $(\delta\circ_1\gamma)\circ_0(\beta\circ_1\alpha)$ and $(\de
 
 # Key Takeaways
 
-**Interchange is precisely the well-definedness of two-dimensional pasting, and pasting is the entire reason higher categories are useful.** The deepest lesson of this exercise is that the interchange law is not a decorative compatibility but the load-bearing axiom: it is the exact condition under which a grid — and by induction any pasting diagram — has a single composite. Without it, "the composite of this diagram" is not even defined, so the whole graphical calculus of $2$-cells collapses. Whenever you build or check a higher-categorical structure, the interchange law is the first thing to verify and the last to take for granted; a "$2$-category" missing interchange is not a degenerate $2$-category but a non-category, exactly as a "group" missing associativity is not a group.
+**Interchange is precisely the well-definedness of two-dimensional pasting, and pasting is the entire reason higher categories are useful.** The deepest lesson of this exercise is that the interchange law is not a decorative compatibility but the load-bearing axiom: it is the exact condition under which a grid — and by induction any pasting diagram — has a single composite. Without it, "the composite of this diagram" is not even defined, so the whole graphical calculus of $2$-cells collapses. Whenever you build or check a higher-categorical structure, the interchange law is the first thing to verify and the last to take for granted; a "$2$-category" missing interchange is not a degenerate $2$-category but a non-category, exactly as a "[[Def - Group|group]]" missing associativity is not a group.
 
 **Two distinct sources of ambiguity, two distinct repairs: interchange fixes contraction order, coherence fixes bracketing.** The exercise carefully separates two phenomena that are easy to conflate. The ambiguity in *which order* you contract a grid is repaired by interchange (part a, c). The ambiguity in *how you bracket* a row of horizontally composed cells — present only when horizontal composition is weakly associative, as in a [[Def - 2-Category and Bicategory|bicategory]] — is repaired by [[Thm - Coherence for Unbiased Monoidal Categories|coherence]] (part b, weak case). In a strict $2$-category the second ambiguity vanishes because associators are identities, so interchange alone suffices; in a bicategory you need both. Recognising which kind of ambiguity you face tells you which theorem to cite, and prevents the classic error of "proving" a bicategory composite well-defined by interchange alone.
 

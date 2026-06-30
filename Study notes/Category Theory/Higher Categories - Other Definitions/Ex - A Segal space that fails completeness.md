@@ -11,7 +11,7 @@ tags: [category-theory, higher-categories, foundations]
 
 # Problem Statement
 
-Construct an explicit **Segal space** $X$ that is *not* a **[[Def - Segal Category and Complete Segal Space|complete Segal space]]**, by arranging two objects that are *equivalent* but lie in *distinct path-components* of the object-space $X_0$. Verify that $X$ satisfies the Segal condition but fails Rezk's completeness condition, and explain why this makes $X$ *not* equivalence-invariant: the homotopy theory it presents is wrong, because the localisation that should identify equivalent objects genuinely changes $X$. Then describe the *completion* of $X$ and confirm it has a single path-component of objects.
+Construct an explicit **Segal space** $X$ that is *not* a **[[Def - Segal Category and Complete Segal Space|complete Segal space]]**, by arranging two objects that are *equivalent* but lie in *distinct path-components* of the object-space $X_0$. Verify that $X$ satisfies the Segal condition but fails Rezk's completeness condition, and explain why this makes $X$ *not* equivalence-invariant: the [[Def - Homotopy|homotopy]] theory it presents is wrong, because the localisation that should identify equivalent objects genuinely changes $X$. Then describe the *completion* of $X$ and confirm it has a single path-component of objects.
 
 **Recall:**
 
@@ -78,7 +78,7 @@ The construction is the walking isomorphism with an under-recorded object-space.
 **Step 2: completeness fails.**
 
 > [!note]- Derivation
-> The space of homotopy equivalences $X^{\mathrm{heq}}_1 \subseteq X_1$ consists of those morphisms that are invertible in $\mathrm{ho}(X) = \mathcal{I}$ — i.e. *all* of them: $\mathrm{id}_a, \mathrm{id}_b, u, u^{-1}$ are all isomorphisms. As a sub-simplicial-set this is (the nerve of) the maximal subgroupoid of $\mathcal{I}$, which is $\mathcal{I}$ itself, a *contractible* (connected, simply connected) groupoid: every two of its objects are uniquely isomorphic, so $X^{\mathrm{heq}}_1$ is connected. But $X_0 = \{a, b\}$ has *two* path-components. The degeneracy $s_0 : X_0 \to X^{\mathrm{heq}}_1$ sends $a \mapsto \mathrm{id}_a$, $b \mapsto \mathrm{id}_b$, which lie in the *same* path-component of $X^{\mathrm{heq}}_1$ (connected by $u$). So $s_0$ is not surjective on $\pi_0$ inverse-image-wise — precisely, it is not a weak equivalence: $\pi_0(X_0) = \{a, b\}$ has two elements while $\pi_0(X^{\mathrm{heq}}_1)$ has one. **Completeness fails.**
+> The space of homotopy equivalences $X^{\mathrm{heq}}_1 \subseteq X_1$ consists of those morphisms that are invertible in $\mathrm{ho}(X) = \mathcal{I}$ — i.e. *all* of them: $\mathrm{id}_a, \mathrm{id}_b, u, u^{-1}$ are all [[Def - Isomorphism|isomorphisms]]. As a sub-simplicial-set this is (the nerve of) the maximal subgroupoid of $\mathcal{I}$, which is $\mathcal{I}$ itself, a *contractible* (connected, simply connected) groupoid: every two of its objects are uniquely isomorphic, so $X^{\mathrm{heq}}_1$ is connected. But $X_0 = \{a, b\}$ has *two* path-components. The degeneracy $s_0 : X_0 \to X^{\mathrm{heq}}_1$ sends $a \mapsto \mathrm{id}_a$, $b \mapsto \mathrm{id}_b$, which lie in the *same* path-component of $X^{\mathrm{heq}}_1$ (connected by $u$). So $s_0$ is not surjective on $\pi_0$ inverse-image-wise — precisely, it is not a weak equivalence: $\pi_0(X_0) = \{a, b\}$ has two elements while $\pi_0(X^{\mathrm{heq}}_1)$ has one. **Completeness fails.**
 
 **Step 3: failure of invariance, and the completion.**
 

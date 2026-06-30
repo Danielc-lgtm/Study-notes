@@ -31,13 +31,13 @@ A [[Def - Weak and Lax Monoidal Functor|lax monoidal functor]] $(F,\varphi,\varp
 
 # Convergent Strategy
 
-**Problem class:** This is a *dimension-shift identification* problem (topic-page target four): recognising one structure (a monoid) as a degenerate instance of another (a functor out of a point). The technique is to feed the smallest possible source category into the general definition and read off what survives.
+**Problem class:** This is a *[[Def - Dimension|dimension]]-shift identification* problem (topic-page target four): recognising one structure (a monoid) as a degenerate instance of another (a functor out of a point). The technique is to feed the smallest possible source category into the general definition and read off what survives.
 
 **Assumption pattern:** The source $\mathbf{1}$ has exactly one object and one morphism, so a functor $F:\mathbf{1}\to\mathcal{D}$ carries no information except the single object $M=F(\ast)$. The lax structure $\varphi, \varphi_0$ then has nowhere to vary — there is only one instance of each — so they collapse to two specific morphisms $M\boxtimes M\to M$ and $J\to M$. Recognising that "functor from a point" $=$ "an object" and "lax structure on it" $=$ "multiplication and unit" is the entire unlock.
 
 **Theorem routing:** The proof routes straight through the [[Def - Weak and Lax Monoidal Functor|definition of a lax monoidal functor]], specialized to source $\mathbf{1}$: the tensor comparison $\varphi_{\ast,\ast}:F\ast\boxtimes F\ast\to F(\ast\boxtimes\ast)=F\ast$ becomes $\mu:M\boxtimes M\to M$, the unit comparison $\varphi_0:J\to F\ast$ becomes $\eta:J\to M$, and the three lax coherence diagrams become the three [[Def - Monoid in a Monoidal Category|monoid]] axioms.
 
-**Key decision point:** The non-obvious point is *why lax and not weak*. If we demanded $\varphi$ be an isomorphism (the weak/strong level), then $\mu$ would have to be invertible — but a monoid's multiplication is almost never invertible (the multiplication on $k[x]$, on a group algebra, on the natural numbers, is not). So insisting on weak would exclude essentially every interesting monoid. The correct level is lax precisely *because* multiplication is allowed to be non-invertible, and choosing the wrong level is the natural error.
+**Key decision point:** The non-obvious point is *why lax and not weak*. If we demanded $\varphi$ be an isomorphism (the weak/strong level), then $\mu$ would have to be invertible — but a monoid's multiplication is almost never invertible (the multiplication on $k[x]$, on a [[Def - Group|group]] algebra, on the natural numbers, is not). So insisting on weak would exclude essentially every interesting monoid. The correct level is lax precisely *because* multiplication is allowed to be non-invertible, and choosing the wrong level is the natural error.
 
 ---
 
@@ -97,7 +97,7 @@ A lax monoidal functor $F:\mathbf{1}\to\mathcal{D}$ gives an object $M=F(\ast)$,
 >
 > *Right unit coherence.* Dually $\mu\circ(1_M\boxtimes\eta) = \rho'_M$, the right unit law.
 >
-> These are precisely the three axioms of a monoid in $\mathcal{D}$. So lax monoidal functors $\mathbf{1}\to\mathcal{D}$ are monoids in $\mathcal{D}$, and the correspondence is a bijection (it is also functorial: monoidal natural transformations between such functors are monoid homomorphisms).
+> These are precisely the three axioms of a monoid in $\mathcal{D}$. So lax monoidal functors $\mathbf{1}\to\mathcal{D}$ are monoids in $\mathcal{D}$, and the correspondence is a bijection (it is also functorial: monoidal natural transformations between such functors are monoid [[Def - Homomorphism|homomorphisms]]).
 
 **Step 3: Comonoids and the level of laxness.**
 
@@ -117,7 +117,7 @@ A lax monoidal functor $F:\mathbf{1}\to\mathcal{D}$ gives an object $M=F(\ast)$,
 
 # Key Takeaways
 
-**A monoid is a lax functor from a point — the single most useful slogan about lax monoidal functors.** This correspondence is the operational definition of "lax monoidal functor carries algebraic structure," made into an exact statement. The terminal category $\mathbf{1}$ is the free monoidal category on nothing, so a lax functor out of it is "structure with no underlying variation," which is precisely an object equipped with a multiplication and unit — a monoid. The trigger to internalise: whenever you want to know what kind of map preserves [[Def - Monoid in a Monoidal Category|monoids]], remember that monoids *are* lax functors from a point, so the maps that preserve them are the ones that compose with lax functors — namely lax (or weak) monoidal functors. This single identification organizes a large amount of algebra: rings, algebras, monads, and operad algebras are all monoids, hence all lax functors from a point into the right monoidal category.
+**A monoid is a lax functor from a point — the single most useful slogan about lax monoidal functors.** This correspondence is the operational definition of "lax monoidal functor carries algebraic structure," made into an exact statement. The terminal category $\mathbf{1}$ is the free monoidal category on nothing, so a lax functor out of it is "structure with no underlying variation," which is precisely an object equipped with a multiplication and unit — a monoid. The trigger to internalise: whenever you want to know what kind of map preserves [[Def - Monoid in a Monoidal Category|monoids]], remember that monoids *are* lax functors from a point, so the maps that preserve them are the ones that compose with lax functors — namely lax (or weak) monoidal functors. This single identification organizes a large amount of algebra: [[Def - Ring|rings]], algebras, monads, and [[Def - Operad|operad]] algebras are all monoids, hence all lax functors from a point into the right monoidal category.
 
 **The level of laxness is dictated by the invertibility of the structure map, and choosing it wrongly silently discards your examples.** The exercise's key decision — lax, not weak — is a special case of a general diagnostic. When encoding an algebraic structure as a functor, ask whether the structure's defining operation is invertible: if not (multiplications, comultiplications, most natural transformations of interest), you must work at the lax or oplax level, never the weak one. Working at the weak level when the operation is non-invertible does not produce an error message; it silently restricts you to the degenerate sub-case where the operation happens to be an isomorphism, which is almost never what you want. This is why the four flavours of monoidal functor are kept distinct and why "monoidal functor" unqualified is ambiguous.
 

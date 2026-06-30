@@ -23,7 +23,7 @@ Throughout, $\mathcal{C}$ is a [[Def - Pointed Model Category Suspension and Loo
 > $$\cdots \to [\Sigma X, Z] \to [C_f, Z] \to [Y, Z] \xrightarrow{f^*} [X, Z].$$
 > 2. Applying $[Z, -]$ to the [[Def - Cofiber and Fiber Sequence|fiber sequence]] $\cdots \to \Omega Y \xrightarrow{\partial} F_f \to X \xrightarrow{f} Y$ gives a long exact sequence
 > $$[Z, \Omega Y] \to [Z, F_f] \to [Z, X] \xrightarrow{f_*} [Z, Y].$$
-> 3. Under the [[Thm - The Suspension-Loop Adjunction|adjunction]] isomorphisms $[\Sigma X, Z] \cong [X, \Omega Z]$ and the natural identification of the homotopy cofiber and homotopy fiber connecting maps, these two long exact sequences are isomorphic up to sign on the connecting maps. Consequently $\mathrm{Ho}(\mathcal{C})$ is a [[Def - Pre-Triangulated Category|pre-triangulated category]].
+> 3. Under the [[Thm - The Suspension-Loop Adjunction|adjunction]] [[Def - Isomorphism|isomorphisms]] $[\Sigma X, Z] \cong [X, \Omega Z]$ and the natural identification of the [[Def - Homotopy|homotopy]] cofiber and homotopy fiber connecting maps, these two long exact sequences are isomorphic up to sign on the connecting maps. Consequently $\mathrm{Ho}(\mathcal{C})$ is a [[Def - Pre-Triangulated Category|pre-triangulated category]].
 
 ---
 
@@ -157,11 +157,11 @@ Prove exactness of each long exact sequence from the universal property of the h
 
 # Cross-Field Exercise Suggestions
 
-**Snake lemma as agreement of sequences.** In $D(R)$, take a short exact sequence of complexes and form both its cofiber sequence (giving a long exact sequence via $\mathrm{Hom}(-, Z)$, i.e. $\mathrm{Ext}^*$) and, since $D(R)$ is stable, the matching fiber sequence (via $\mathrm{Hom}(Z, -)$). Verify the two connecting homomorphisms are the snake-lemma boundary map, up to sign. The non-obvious content is that the "$\delta$" of homological algebra is simultaneously a cofiber and a fiber connecting map.
+**Snake lemma as agreement of sequences.** In $D(R)$, take a short exact sequence of complexes and form both its cofiber sequence (giving a long exact sequence via $\mathrm{Hom}(-, Z)$, i.e. $\mathrm{Ext}^*$) and, since $D(R)$ is stable, the matching fiber sequence (via $\mathrm{Hom}(Z, -)$). Verify the two connecting [[Def - Homomorphism|homomorphisms]] are the snake-lemma boundary map, up to sign. The non-obvious content is that the "$\delta$" of homological algebra is simultaneously a cofiber and a fiber connecting map.
 
-**Long exact sequences of a pair and of a fibration.** For a cofibration pair $A \hookrightarrow X$ with quotient $X/A$ and the associated fibration story, compare the long exact sequence of the pair (cohomology, via cofiber) with the long exact sequence of a fibration (homotopy, via fiber). The theorem explains why the connecting maps are "the same" — they are adjoint transposes — even though the two sequences are usually proved by entirely separate arguments in a first algebraic topology course.
+**Long exact sequences of a pair and of a [[Def - Fibration|fibration]].** For a cofibration pair $A \hookrightarrow X$ with quotient $X/A$ and the associated fibration story, compare the long exact sequence of the pair (cohomology, via cofiber) with the long exact sequence of a fibration (homotopy, via fiber). The theorem explains why the connecting maps are "the same" — they are adjoint transposes — even though the two sequences are usually proved by entirely separate arguments in a first algebraic topology course.
 
-**EHP and the comparison of suspension and loop.** In unstable homotopy theory the EHP sequence interleaves a fiber sequence and a cofiber sequence to compute homotopy groups of spheres. Recognizing where the agreement theorem (and its failure to be an *isomorphism* on objects, only on mapping sets, because $\mathbf{Top}_*$ is not stable) enters is a genuine application; the non-obviousness is that the unstable phenomena are exactly where "agree up to sign on mapping sets" is weaker than "literally coincide."
+**EHP and the comparison of suspension and loop.** In unstable homotopy theory the EHP sequence interleaves a fiber sequence and a cofiber sequence to compute homotopy [[Def - Group|groups]] of spheres. Recognizing where the agreement theorem (and its failure to be an *isomorphism* on objects, only on mapping sets, because $\mathbf{Top}_*$ is not stable) enters is a genuine application; the non-obviousness is that the unstable phenomena are exactly where "agree up to sign on mapping sets" is weaker than "literally coincide."
 
 ---
 

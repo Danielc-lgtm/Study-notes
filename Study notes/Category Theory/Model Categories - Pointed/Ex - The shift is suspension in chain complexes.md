@@ -12,7 +12,7 @@ tags: [category-theory, homotopy-theory, foundations]
 
 # Problem Statement
 
-Let $R$ be a ring and $\mathrm{Ch}(R)$ the category of (unbounded) chain complexes of $R$-modules, with the projective model structure, pointed by the zero complex $0$. Its homotopy category is the derived category $D(R)$.
+Let $R$ be a [[Def - Ring|ring]] and $\mathrm{Ch}(R)$ the category of (unbounded) chain complexes of $R$-[[Def - Module|modules]], with the projective model structure, pointed by the zero complex $0$. Its [[Def - Homotopy|homotopy]] category is the derived category $D(R)$.
 
 1. Recall the **shift** $X[1]$ of a complex $X_\bullet$: $X[1]_n = X_{n-1}$ with differential $d_{X[1]} = -d_X$. Show that the [[Def - Pointed Model Category Suspension and Loop|suspension]] $\Sigma X$ in this pointed model category is naturally isomorphic to $X[1]$ in $D(R)$, by computing the homotopy pushout of $0 \leftarrow X \rightarrow 0$ as a mapping cone.
 2. Show dually that the [[Def - Pointed Model Category Suspension and Loop|loop]] $\Omega X$ is $X[-1]$.
@@ -55,7 +55,7 @@ The [[Def - Pointed Model Category Suspension and Loop|suspension]] $\Sigma X$ i
 > The mapping cone of $X \xrightarrow{0} 0$ is $0 \oplus X[1]$ with differential $\begin{pmatrix} d_0 & 0 \\ 0 & -d_X\end{pmatrix} = (-d_X)$ on $X[1]$. That is exactly the shift $X[1]$.
 
 > [!note]- Hint 3
-> For part (3), shifting up by one is invertible: $(X[1])[-1] = X$. So $\Sigma = [1]$ and $\Omega = [-1]$ are mutually inverse, the unit and counit of the adjunction are isomorphisms, and the adjunction bijection is just the tautology that an invertible functor and its inverse are adjoint.
+> For part (3), shifting up by one is invertible: $(X[1])[-1] = X$. So $\Sigma = [1]$ and $\Omega = [-1]$ are mutually inverse, the unit and counit of the adjunction are [[Def - Isomorphism|isomorphisms]], and the adjunction bijection is just the tautology that an invertible functor and its inverse are adjoint.
 
 ---
 
@@ -95,7 +95,7 @@ The solution computes $\Sigma X = X[1]$ as the mapping cone of $X \to 0$, dualiz
 
 # Key Takeaways
 
-**Suspension is "add a dimension" in topology and "shift the grading" in homological algebra — one construction, two faces.** The computation $\Sigma X = X[1]$ is the cleanest demonstration that the abstract suspension is not a topological accident: in chain complexes it is the degree shift, an utterly algebraic operation, arising from the *same* homotopy pushout that produces the topological reduced suspension. The transferable insight is that any time you see a "shift" or "degree-raising" operation in a homotopical setting, suspect it is the suspension of the relevant pointed model category, and expect it to obey the cofiber-sequence and adjunction machinery. Recognizing the mapping cone as the homotopy cofiber is the bridge that makes this identification a one-line computation rather than a coincidence.
+**Suspension is "add a [[Def - Dimension|dimension]]" in topology and "shift the grading" in homological algebra — one construction, two faces.** The computation $\Sigma X = X[1]$ is the cleanest demonstration that the abstract suspension is not a topological accident: in chain complexes it is the degree shift, an utterly algebraic operation, arising from the *same* homotopy pushout that produces the topological reduced suspension. The transferable insight is that any time you see a "shift" or "degree-raising" operation in a homotopical setting, suspect it is the suspension of the relevant pointed model category, and expect it to obey the cofiber-sequence and adjunction machinery. Recognizing the mapping cone as the homotopy cofiber is the bridge that makes this identification a one-line computation rather than a coincidence.
 
 **Invertibility of the shift is exactly stability, and stability is exactly what makes the derived category triangulated.** The fact that $[1]$ and $[-1]$ are inverse is what separates $\mathrm{Ch}(R)$ from $\mathbf{Top}_*$: in spaces $\Sigma$ is wildly non-invertible, so $\mathrm{Ho}(\mathbf{Top}_*)$ is only pre-triangulated, whereas in chain complexes $\Sigma$ is an equivalence, so $D(R)$ is fully triangulated. The diagnostic to carry is "is $\Omega\Sigma X \simeq X$?" — if yes, the category is stable and the cofiber sequences are distinguished triangles; if no, you are in the unstable, merely pre-triangulated world. This single question is the dividing line between the two halves of the subject, and the derived category is the prototypical example of the stable side.
 

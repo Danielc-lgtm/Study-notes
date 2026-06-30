@@ -14,7 +14,7 @@ tags: [category-theory, homotopy-theory, foundations]
 
 Let $p : E \to B$ be a [[Def - Cofibrant and Fibrant Objects|fibration]] of pointed spaces with [[Def - Cofiber and Fiber Sequence|homotopy fiber]] $F = F_p$.
 
-1. Write down the dual Puppe **fiber sequence** of $p$ and apply $[S^n, -]$ to obtain the long exact sequence of the fibration
+1. Write down the dual Puppe **fiber sequence** of $p$ and apply $[S^n, -]$ to obtain the long exact sequence of the [[Def - Fibration|fibration]]
 $$\cdots \to \pi_n(F) \to \pi_n(E) \xrightarrow{p_*} \pi_n(B) \xrightarrow{\partial} \pi_{n-1}(F) \to \cdots \to \pi_0(E) \to \pi_0(B).$$
 2. Identify the connecting map $\partial : \pi_n(B) \to \pi_{n-1}(F)$ as the map induced by $\Omega B \to F$ (the fiber connecting map) together with $\pi_n(B) = \pi_{n-1}(\Omega B)$.
 3. Specialize to the path–loop fibration $\Omega B \to PB \to B$ (with $PB \simeq *$) to recover $\pi_n(\Omega B) \cong \pi_{n+1}(B)$.
@@ -23,13 +23,13 @@ $$\cdots \to \pi_n(F) \to \pi_n(E) \xrightarrow{p_*} \pi_n(B) \xrightarrow{\part
 
 ![[Def - Cofiber and Fiber Sequence#The Definition]]
 
-The [[Def - Cofiber and Fiber Sequence|fiber sequence]] of $p : E \to B$ is $\cdots \to \Omega B \xrightarrow{\partial} F \xrightarrow{j} E \xrightarrow{p} B$, where $F = F_p$ is the homotopy fiber. Applying $[Z, -]$ to a fiber sequence gives a long exact sequence of pointed sets. The [[Def - Higher Homotopy Group|homotopy group]] $\pi_n(Y) = [S^n, Y]$, and $\pi_n(\Omega Y) \cong \pi_{n+1}(Y)$ by the [[Thm - The Suspension-Loop Adjunction|suspension–loop adjunction]] $[S^n, \Omega Y] \cong [\Sigma S^n, Y] = [S^{n+1}, Y]$.
+The [[Def - Cofiber and Fiber Sequence|fiber sequence]] of $p : E \to B$ is $\cdots \to \Omega B \xrightarrow{\partial} F \xrightarrow{j} E \xrightarrow{p} B$, where $F = F_p$ is the [[Def - Homotopy|homotopy]] fiber. Applying $[Z, -]$ to a fiber sequence gives a long exact sequence of pointed sets. The [[Def - Higher Homotopy Group|homotopy group]] $\pi_n(Y) = [S^n, Y]$, and $\pi_n(\Omega Y) \cong \pi_{n+1}(Y)$ by the [[Thm - The Suspension-Loop Adjunction|suspension–loop adjunction]] $[S^n, \Omega Y] \cong [\Sigma S^n, Y] = [S^{n+1}, Y]$.
 
 ---
 
 # Convergent Strategy
 
-**Problem class:** This is a "produce a long exact sequence from a fiber sequence" exercise — the maps-into-objects half of the chapter's computational machinery. The route is to take the dual Puppe fiber sequence and apply $[S^n, -]$, then translate the abstract terms into homotopy groups.
+**Problem class:** This is a "produce a long exact sequence from a fiber sequence" exercise — the maps-into-objects half of the chapter's computational machinery. The route is to take the dual Puppe fiber sequence and apply $[S^n, -]$, then translate the abstract terms into homotopy [[Def - Group|groups]].
 
 **Assumption pattern:** The assumption is that $p$ is a fibration, so its homotopy fiber is the actual fiber and the fiber sequence is the classical $F \to E \to B$. Applying $[S^n, -]$ converts the fiber sequence into the long exact sequence; the key is recognizing that the $\Omega B$ term in the fiber sequence, hit by $[S^n, -]$, becomes $\pi_n(\Omega B) = \pi_{n+1}(B)$, which is what shifts the degree in the connecting map.
 

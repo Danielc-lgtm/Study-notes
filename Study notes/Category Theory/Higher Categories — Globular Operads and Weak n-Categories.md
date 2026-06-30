@@ -44,7 +44,7 @@ $$
 $$
 Section §1 builds $T$ and proves the one fact everything depends on — that $T$ is *cartesian*, with operations the pasting diagrams. Section §2 defines a **globular operad** as a $T$-operad: a collection of abstract composition operations indexed by pasting shapes, with substitution. Section §3 adds the **contraction** that injects weakness and coherence, takes the initial such operad $L$, and *defines* a weak $\omega$-category as an $L$-algebra — then validates the definition by proving its dimension-$2$ instances are exactly bicategories.
 
-This chapter is the culmination of the higher-operads programme (Leinster Chapters 8–9), and it assumes you have met the surrounding machinery. You should have refreshed: **globular sets** and **strict $\omega$-categories** (the substrate and the rigid model), [[Def - Monad and Comonad|monads]] and [[Def - Algebra for a Monad|their algebras]] (the language of $T$ and of $P$-algebras), the idea of a **cartesian monad** and of a **generalized operad** / **$T$-operad** (the framework, from the preceding chapter), [[Def - Pullback and Pushout|pullbacks]] (cartesianness is stated with them), and classical **operads** and **multicategories** (the prototype this generalizes). A reader who knows what a [[Def - 2-Category and Bicategory|bicategory]] is will find §3 anchored by the theorem that weak $2$-categories *are* bicategories. The reward for the climb is a definition of weak higher category that fits on one line and works in every dimension.
+This chapter is the culmination of the higher-operads programme (Leinster Chapters 8–9), and it assumes you have met the surrounding machinery. You should have refreshed: **globular sets** and **strict $\omega$-categories** (the substrate and the rigid model), [[Def - Monad and Comonad|monads]] and [[Def - Algebra for a Monad|their algebras]] (the language of $T$ and of $P$-algebras), the idea of a **cartesian monad** and of a **generalized operad** / **$T$-operad** (the framework, from the preceding chapter), [[Def - Pullback and Pushout|pullbacks]] (cartesianness is stated with them), and classical **operads** and **[[Def - Multicategory|multicategories]]** (the prototype this generalizes). A reader who knows what a [[Def - 2-Category and Bicategory|bicategory]] is will find §3 anchored by the theorem that weak $2$-categories *are* bicategories. The reward for the climb is a definition of weak higher category that fits on one line and works in every dimension.
 
 ---
 
@@ -64,11 +64,11 @@ This chapter is the culmination of the higher-operads programme (Leinster Chapte
 - **[[Ex - Pasting diagrams as labelled composites]]** (⭐⭐)
 	- Show that for a globular set $X$, an element of $(TX)(m)$ is a pasting diagram together with a compatible labelling of its cells by cells of $X$, and that the projection $TX \to T1$ forgets the labels.
 
-> [!tip] Unlocked: Generalized Operads and the Cartesian-Monad Recipe *(from Higher Operads)*
+> [!tip] Unlocked: [[Def - Generalized Operad|Generalized Operads]] and the Cartesian-Monad Recipe *(from Higher [[Def - Operad|Operads]])*
 > Once $T$ is known to be cartesian, the entire theory of **generalized operads** ($T$-operads) becomes available over it. The recipe "cartesian monad $T$ on a presheaf category $\rightsquigarrow$ theory of $T$-shaped higher categories" is uniform: $T = (-)^{\ast}$ gives classical **operads**, $T = \mathrm{id}$ gives **categories**, the free-category monad gives **fc-multicategories**, and this $T$ gives globular operads.
 
 > [!tip] Unlocked: Opetopic and Cubical Higher Categories *(from Higher Category Theory)*
-> Swapping the globular $T$ for the free strict $n$-tuple-category monad yields *cubical* higher categories; replacing it by the slice construction on the identity operad yields **opetopes** and the Baez–Dolan opetopic definition. The globular $T$ of this section is one corner of that landscape.
+> Swapping the globular $T$ for the free strict $n$-tuple-category monad yields *cubical* higher categories; replacing it by the slice construction on the identity operad yields **[[Def - Opetope|opetopes]]** and the Baez–Dolan opetopic definition. The globular $T$ of this section is one corner of that landscape.
 
 > [!note] Exercise Index — §1
 > [[Exercise Index - §1 The Free Strict ω-Category Monad]]
@@ -90,7 +90,7 @@ This chapter is the culmination of the higher-operads programme (Leinster Chapte
 > [!tip] Unlocked: Algebras as Higher-Categorical Signatures *(from Universal Algebra)*
 > A globular operad is a *signature* for a flavour of $\omega$-category, and $P \mapsto \mathrm{Alg}(P)$ is functorial. This is the operadic face of universal algebra: just as a Lawvere theory's models are its algebras, a globular operad's algebras are the higher categories of its prescribed composition structure.
 
-> [!tip] Unlocked: The Endomorphism Operad and Recognition *(from Operad Theory)*
+> [!tip] Unlocked: The [[Def - Endomorphism Operad|Endomorphism Operad]] and Recognition *(from Operad Theory)*
 > The **endomorphism operad** $\mathrm{End}(X)$ packages all actual operations on a globular set $X$; a $P$-algebra is a map $P \to \mathrm{End}(X)$. This is the globular analogue of May's recognition principle, where an action of an operad on a space detects the structure (e.g. an $n$-fold loop space) carried by that space.
 
 > [!note] Exercise Index — §2
@@ -108,7 +108,7 @@ This chapter is the culmination of the higher-operads programme (Leinster Chapte
 	- The category $\mathbf{OC}$ of globular operads-with-contraction has an initial object $(L, \chi)$, unique up to unique isomorphism; the finite-dimensional category $\mathbf{OC}_n$ likewise has an initial object $L_n$. The construction is a *stratified* free build: dimension $n$ is generated from the frozen dimension $n-1$ by alternately lifting parallel pairs (contraction) and forming composites (operad), with no downward feedback, so each stage closes off and the tower never stalls. Cartesianness of $T$ is what makes the ambient category $\mathbf{OC}$ well-defined.
 
 - **[[Thm - Weak 2-Categories are Bicategories]]**
-	- $\mathbf{Wk\text{-}0\text{-}Cat} \simeq \mathbf{Set}$, $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$, and $\mathbf{Wk\text{-}2\text{-}Cat} \simeq \mathbf{UBicat}_{str}$ — so a weak $2$-category is precisely an unbiased [[Def - 2-Category and Bicategory|bicategory]], hence essentially a classical bicategory. The mechanism: in dimension $2$ the contraction supplies associators and unitors (tree-generated composites in dimension $1$), and top-dimensional tameness forces them to satisfy every coherence equation — which is exactly bicategory coherence / [[Thm - Mac Lane Coherence Theorem|Mac Lane's theorem]]. This is the validation that the definition is correct in all dimensions.
+	- $\mathbf{Wk\text{-}0\text{-}Cat} \simeq \mathbf{Set}$, $\mathbf{Wk\text{-}1\text{-}Cat} \simeq \mathbf{Cat}$, and $\mathbf{Wk\text{-}2\text{-}Cat} \simeq \mathbf{UBicat}_{str}$ — so a weak $2$-category is precisely an unbiased [[Def - 2-Category and Bicategory|bicategory]], hence essentially a classical bicategory. The mechanism: in dimension $2$ the contraction supplies associators and unitors (tree-generated composites in dimension $1$), and top-dimensional tameness forces them to satisfy every coherence equation — which is exactly bicategory coherence / [[Thm - Mac Lane Coherence Theorem|Mac Lane's theorem]]. This is the [[Def - Validation (Training and Test Error)|validation]] that the definition is correct in all [[Def - Dimension|dimensions]].
 
 - **[[Ex - A contraction supplies the associator and unitor cells]]** (⭐⭐)
 	- For the relevant low-dimensional pasting diagrams, exhibit the associator and unitor as contraction lifts $\chi_\pi(\alpha^-, \alpha^+)$, identifying $\alpha^-, \alpha^+$ as the two parallel bracketings.
@@ -122,8 +122,8 @@ This chapter is the culmination of the higher-operads programme (Leinster Chapte
 - **[[Ex - Why finite-dimensional contractions need tameness]]** (⭐⭐⭐)
 	- Exhibit a precontractible $n$-operad that is not contractible (its top-dimensional source-target pairing is not injective) and explain why the missing dimension $n+1$ forces the tameness condition.
 
-> [!tip] Unlocked: The Homotopy Hypothesis and Grothendieck ∞-Groupoids *(from Higher Category Theory)*
-> Restricting to invertible cells, weak $\omega$-**groupoids** should be equivalent to topological spaces — Grothendieck's **homotopy hypothesis**. The **Grothendieck–Maltsiniotis** definition via *coherators* is a close relative of "operad-with-contraction"; that a contractible globular set is a weak $\omega$-category is the algebraic mirror of "a contractible space is an $\infty$-groupoid".
+> [!tip] Unlocked: [[Thm - The Homotopy Hypothesis|The Homotopy Hypothesis]] and Grothendieck ∞-Groupoids *(from Higher Category Theory)*
+> Restricting to invertible cells, weak $\omega$-**groupoids** should be equivalent to topological spaces — Grothendieck's **[[Def - Homotopy|homotopy]] hypothesis**. The **Grothendieck–Maltsiniotis** definition via *coherators* is a close relative of "operad-with-contraction"; that a contractible globular set is a weak $\omega$-category is the algebraic mirror of "a contractible space is an $\infty$-groupoid".
 
 > [!tip] Unlocked: The Comparison Problem for Models of (∞,1)-Categories *(from Higher Category Theory)*
 > The algebraic definition here sits opposite the geometric ones — [[Def - Quasi-Category|quasi-categories]], Segal categories, complete Segal spaces. For $(\infty,1)$-categories the **Bergner–Joyal–Lurie** comparison proves all these models equivalent (via Quillen equivalences of [[Def - Model Category|model categories]]); for general weak $\omega$-categories the comparison is largely open.

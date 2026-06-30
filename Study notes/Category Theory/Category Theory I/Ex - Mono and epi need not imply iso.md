@@ -11,13 +11,13 @@ tags: [category-theory, foundations]
 
 # Problem Statement
 
-Show that the inclusion $\iota : \mathbb{Z} \hookrightarrow \mathbb{Q}$ of [[Def - Ring|rings]] is **both a monomorphism and an epimorphism** in the category $\mathbf{CRing}$ of commutative rings, yet is **not an isomorphism**. Conclude that "mono and epi" does not imply "iso" in a general category. (Optionally, give a second witness in $\mathbf{Top}$.)
+Show that the inclusion $\iota : \mathbb{Z} \hookrightarrow \mathbb{Q}$ of [[Def - Ring|rings]] is **both a monomorphism and an epimorphism** in the category $\mathbf{CRing}$ of commutative [[Def - Ring|rings]], yet is **not an isomorphism**. Conclude that "mono and epi" does not imply "iso" in a general category. (Optionally, give a second witness in $\mathbf{Top}$.)
 
 **Recall:**
 
 ![[Def - Isomorphism, Monomorphism, Epimorphism#The Definition]]
 
-A [[Def - Ring Homomorphism|ring homomorphism]] $\varphi : R \to S$ is a map preserving $+$, $\times$, and $1$. In $\mathbf{CRing}$ the objects are commutative rings and the morphisms are ring homomorphisms. A field such as $\mathbb{Q}$ has every nonzero element invertible, so a ring map out of $\mathbb{Q}$ is forced on fractions: $\varphi(a/b) = \varphi(a)\varphi(b)^{-1}$.
+A [[Def - Ring Homomorphism|ring homomorphism]] $\varphi : R \to S$ is a map preserving $+$, $\times$, and $1$. In $\mathbf{CRing}$ the objects are commutative rings and the morphisms are ring [[Def - Homomorphism|homomorphisms]]. A field such as $\mathbb{Q}$ has every nonzero element invertible, so a ring map out of $\mathbb{Q}$ is forced on fractions: $\varphi(a/b) = \varphi(a)\varphi(b)^{-1}$.
 
 ---
 
@@ -93,13 +93,13 @@ The proof has three parts. We show $\iota$ is mono (immediate from injectivity),
 > Hence $\iota$ is mono and epi but not iso. $\blacksquare$
 
 > [!warning] A second witness, in $\mathbf{Top}$
-> The continuous map $f : [0, 1) \to S^1$, $t \mapsto (\cos 2\pi t, \sin 2\pi t)$, onto the circle $S^1 = \{(x,y) : x^2 + y^2 = 1\}$, is a continuous *bijection*, hence both mono and epi in $\mathbf{Top}$ (its underlying function is injective and surjective). But it is not a homeomorphism: $f^{-1}$ is discontinuous at the join point $(1,0)$, where preimages near $t = 0$ and the "end" of $[0,1)$ are torn apart. So $f$ is mono and epi but not iso in $\mathbf{Top}$ either. The two witnesses illustrate the same gap by different mechanisms — algebraic generation versus topological tearing.
+> The continuous map $f : [0, 1) \to S^1$, $t \mapsto (\cos 2\pi t, \sin 2\pi t)$, onto the circle $S^1 = \{(x,y) : x^2 + y^2 = 1\}$, is a continuous *bijection*, hence both mono and epi in $\mathbf{Top}$ (its underlying function is injective and surjective). But it is not a [[Def - Homeomorphism|homeomorphism]]: $f^{-1}$ is discontinuous at the join point $(1,0)$, where preimages near $t = 0$ and the "end" of $[0,1)$ are torn apart. So $f$ is mono and epi but not iso in $\mathbf{Top}$ either. The two witnesses illustrate the same gap by different mechanisms — algebraic generation versus topological tearing.
 
 ---
 
 # Key Takeaways
 
-**Epimorphism is not surjectivity outside $\mathbf{Set}$.** The single most important lesson is that "epi" is a cancellation property, and cancellation can hold for non-surjective maps when the target is *generated* by the image under the operations morphisms must respect. The trigger to recognize this: whenever the target object is "built from" the source by operations every morphism preserves — fractions from integers, a field from a subring, a completion from a dense subset — suspect that the inclusion is epi without being surjective. The general principle is that pre-composition $g \mapsto g \circ \iota$ is injective exactly when $\iota$ has dense or generating image in the relevant algebraic sense, and this is the right way to think about epimorphisms in any algebraic category.
+**Epimorphism is not surjectivity outside $\mathbf{Set}$.** The single most important lesson is that "epi" is a cancellation property, and cancellation can hold for non-surjective maps when the target is *generated* by the image under the operations morphisms must respect. The trigger to recognize this: whenever the target object is "built from" the source by operations every morphism preserves — fractions from integers, a field from a [[Def - Subring|subring]], a completion from a dense subset — suspect that the inclusion is epi without being surjective. The general principle is that pre-composition $g \mapsto g \circ \iota$ is injective exactly when $\iota$ has dense or generating image in the relevant algebraic sense, and this is the right way to think about epimorphisms in any algebraic category.
 
 **The inverse arrow must live in the category.** Mono and epi only ever inspect how a morphism interacts with *other morphisms of the same category*; they cannot manufacture an inverse out of thin air. The reason $\iota$ fails to be iso is not a defect of cancellability but the genuine absence of any morphism $\mathbb{Q} \to \mathbb{Z}$ — the category is "too rigid" to provide one. This diagnostic recurs constantly: to decide whether a mono-epi is an iso, stop testing cancellation and instead ask directly whether a candidate inverse morphism exists in the category. In $\mathbf{Set}$ it always does (set-theoretic inverse of a bijection); in $\mathbf{CRing}$, $\mathbf{Top}$, $\mathbf{Ring}$ it often does not.
 

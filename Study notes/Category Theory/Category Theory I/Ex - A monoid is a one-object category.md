@@ -67,7 +67,7 @@ The proof is a two-way dictionary. We send a monoid to a one-object category by 
 > [!note]- Derivation
 > Let $\mathcal{C}$ have one object $\ast$. The only hom-set is $M := \mathcal{C}(\ast, \ast)$, and composition restricts to a *total* operation $M \times M \to M$ (every pair is composable because every morphism has domain and codomain $\ast$). This operation is associative by the category's associativity axiom. The identity morphism $1_\ast \in M$ satisfies $1_\ast \circ f = f = f \circ 1_\ast$ for all $f \in M$, i.e. it is a two-sided identity element. So $(M, \circ, 1_\ast)$ is a monoid. The two constructions are mutually inverse: starting from $M$, building $\mathbf{B}M$, and reading off its endomorphism monoid returns $M$ on the nose.
 
-**Step 3: Groupoids and groups.**
+**Step 3: Groupoids and [[Def - Group|groups]].**
 
 > [!note]- Derivation
 > A one-object category $\mathbf{B}M$ is a [[Def - Groupoid|groupoid]] iff every morphism is an [[Def - Isomorphism, Monomorphism, Epimorphism|isomorphism]], i.e. iff every element of $M$ has a two-sided inverse under $\cdot$. That is exactly the condition that the monoid $M$ is a [[Def - Group|group]]. So: **one-object categories ↔ monoids, and one-object groupoids ↔ groups.** This recovers the slogan "a group is a one-object groupoid" and "a category is a many-object monoid".

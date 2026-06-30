@@ -23,7 +23,7 @@ The [[Def - Dual Space|dual space]] is $V^* = \mathrm{Hom}_k(V, k)$; the double 
 
 # Convergent Strategy
 
-**Problem class:** This is a "verify naturality and decide invertibility" exercise — the defining example of the subject. The route is to compute both legs of the naturality square on an element and observe they agree, then count dimensions for invertibility.
+**Problem class:** This is a "verify naturality and decide invertibility" exercise — the defining example of the subject. The route is to compute both legs of the naturality square on an element and observe they agree, then count [[Def - Dimension|dimensions]] for invertibility.
 
 **Assumption pattern:** The crucial structural fact is that $(-)^{**}$ is *covariant* (a composite of two contravariant duals), so a candidate natural transformation $1 \Rightarrow (-)^{**}$ between covariant functors can be drawn; the single dual $(-)^*$ is contravariant, so the variances clash and no square against $1$ can even be formed.
 
@@ -82,7 +82,7 @@ The plan: chase $v$ around the naturality square and show both legs land on the 
 **Step 3: No natural isomorphism $1 \cong (-)^*$.**
 
 > [!note]- Derivation
-> The single-dual functor $(-)^* : \mathbf{Vect}_k^{\mathrm{op}} \to \mathbf{Vect}_k$ is **contravariant** (it sends $f : V \to W$ to $f^* : W^* \to V^*$, reversing direction). A [[Def - Natural Transformation|natural transformation]] $\alpha : 1_{\mathbf{Vect}_k} \Rightarrow (-)^*$ would require, for each $f : V \to W$, a commuting square with $\alpha_V : V \to V^*$, $\alpha_W : W \to W^*$, the covariant leg $f : V \to W$, and the dual leg $f^* : W^* \to V^*$. But these arrows do not assemble into a square: the would-be naturality condition $f^* \circ \alpha_W = \alpha_V \circ f$ has $f^* \circ \alpha_W : W \to V^*$ on one side and $\alpha_V \circ f : V \to V^*$ on the other — different domains. The square cannot be drawn, so no natural transformation $1 \Rightarrow (-)^*$ exists. (Even componentwise, choosing isomorphisms $V \cong V^*$ requires a basis, and no basis-free, morphism-compatible choice exists.) **This variance mismatch is exactly why $V \cong V^*$ is "unnatural" while $V \cong V^{**}$ is "natural".**
+> The single-dual functor $(-)^* : \mathbf{Vect}_k^{\mathrm{op}} \to \mathbf{Vect}_k$ is **contravariant** (it sends $f : V \to W$ to $f^* : W^* \to V^*$, reversing direction). A [[Def - Natural Transformation|natural transformation]] $\alpha : 1_{\mathbf{Vect}_k} \Rightarrow (-)^*$ would require, for each $f : V \to W$, a commuting square with $\alpha_V : V \to V^*$, $\alpha_W : W \to W^*$, the covariant leg $f : V \to W$, and the dual leg $f^* : W^* \to V^*$. But these arrows do not assemble into a square: the would-be naturality condition $f^* \circ \alpha_W = \alpha_V \circ f$ has $f^* \circ \alpha_W : W \to V^*$ on one side and $\alpha_V \circ f : V \to V^*$ on the other — different domains. The square cannot be drawn, so no natural transformation $1 \Rightarrow (-)^*$ exists. (Even componentwise, choosing [[Def - Isomorphism|isomorphisms]] $V \cong V^*$ requires a basis, and no basis-free, morphism-compatible choice exists.) **This variance mismatch is exactly why $V \cong V^*$ is "unnatural" while $V \cong V^{**}$ is "natural".**
 
 > [!note]- Complete formal solution
 > *Naturality:* for $f : V \to W$, $\psi \in W^*$, $v \in V$: $(f^{**}\eta_V(v))(\psi) = (\mathrm{ev}_v \circ f^*)(\psi) = (\psi f)(v) = \psi(f(v)) = (\eta_W f(v))(\psi)$, so $f^{**}\eta_V = \eta_W f$.

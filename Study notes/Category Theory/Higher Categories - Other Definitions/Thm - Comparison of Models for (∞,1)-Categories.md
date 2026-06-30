@@ -32,7 +32,7 @@ We write $\dashv$ for adjunction, $\simeq$ for Quillen equivalence, $\mathfrak{C
 > $$
 > \mathfrak{C} : \mathbf{sSet}_{\mathrm{Joyal}} \;\xrightarrow{\;\simeq\;}\; \mathbf{sCat}_{\mathrm{Bergner}} : N^{\mathrm{hc}}
 > $$
-> (the homotopy-coherent nerve adjunction, Lurie) is a Quillen equivalence; quasi-categories, complete Segal spaces, and Segal categories are connected by Quillen equivalences (Joyal–Tierney); Segal categories and complete Segal spaces sit in a chain of equivalences with simplicial categories (Bergner); and relative categories are Quillen equivalent to complete Segal spaces (Barwick–Kan). Consequently all five present **the same** homotopy theory: a single $(\infty,1)$-category $\mathbf{Cat}_\infty$, the "$\infty$-category of $\infty$-categories". Any homotopy-invariant statement proved in one model holds in all.
+> (the [[Def - Homotopy|homotopy]]-coherent nerve adjunction, Lurie) is a Quillen equivalence; quasi-categories, complete Segal spaces, and Segal categories are connected by Quillen equivalences (Joyal–Tierney); Segal categories and complete Segal spaces sit in a chain of equivalences with simplicial categories (Bergner); and relative categories are Quillen equivalent to complete Segal spaces (Barwick–Kan). Consequently all five present **the same** homotopy theory: a single $(\infty,1)$-category $\mathbf{Cat}_\infty$, the "$\infty$-category of $\infty$-categories". Any homotopy-invariant statement proved in one model holds in all.
 
 ---
 
@@ -98,7 +98,7 @@ For each adjacent pair of models, exhibit an adjunction, prove it is Quillen (le
    - *Why needed:* Reduces a complete web to finitely many pairwise comparisons.
 
 2. **Quasi-categories ↔ simplicial categories.** Show $\mathfrak{C} \dashv N^{\mathrm{hc}}$ is Quillen and compute $\mathfrak{C}(\Delta^n)$.
-   - *Hint:* $N^{\mathrm{hc}}$ is right Quillen by checking it sends fibrations and trivial fibrations correctly; the equivalence reduces to $\mathfrak{C}(\Delta^n)$ having cube (contractible) mapping spaces.
+   - *Hint:* $N^{\mathrm{hc}}$ is right Quillen by checking it sends [[Def - Fibration|fibrations]] and trivial fibrations correctly; the equivalence reduces to $\mathfrak{C}(\Delta^n)$ having cube (contractible) mapping spaces.
    - *Why needed:* This is the keystone comparison; it ties the most-used model to the most explicit one.
 
 3. **Quasi-categories ↔ complete Segal spaces ↔ Segal categories.** Use Joyal–Tierney's two adjunctions ($p_1^*$ and $i_1^*$).
@@ -172,9 +172,9 @@ For each adjacent pair of models, exhibit an adjunction, prove it is Quillen (le
 
 # Cross-Field Exercise Suggestions
 
-**Derived categories done right (homological algebra).** The naive **derived category** $D(R)$ of a ring is a triangulated category with well-known defects: cones are not functorial, and there are no mapping *spaces*, only Hom-*sets*. Realise $D(R)$ instead as the homotopy category of the $(\infty,1)$-category presented by (chain complexes, quasi-isomorphisms) as a [[Def - Quillen Adjunction and Quillen Equivalence|relative category]], and use the comparison theorem to compute its derived mapping spaces $\mathrm{Map}(X,Y)$ in whichever model is convenient. The application is non-obvious because the same triangulated category arises from a much richer $(\infty,1)$-category, and the comparison says the enrichment is model-independent.
+**Derived categories done right (homological algebra).** The naive **derived category** $D(R)$ of a [[Def - Ring|ring]] is a triangulated category with well-known defects: cones are not functorial, and there are no mapping *spaces*, only Hom-*sets*. Realise $D(R)$ instead as the homotopy category of the $(\infty,1)$-category presented by (chain complexes, quasi-[[Def - Isomorphism|isomorphisms]]) as a [[Def - Quillen Adjunction and Quillen Equivalence|relative category]], and use the comparison theorem to compute its derived mapping spaces $\mathrm{Map}(X,Y)$ in whichever model is convenient. The application is non-obvious because the same triangulated category arises from a much richer $(\infty,1)$-category, and the comparison says the enrichment is model-independent.
 
-**Spaces with group action (equivariant homotopy theory).** The $(\infty,1)$-category of $G$-spaces can be presented as a simplicial category (with mapping spaces of equivariant maps) or as a quasi-category (via the equivariant singular complex). Use the comparison to show these agree, so that equivariant homotopy limits computed in one model match those in the other. The non-obvious recognition is that the *choice* of equivariant model (genuine vs. naive) is a choice of *which* $(\infty,1)$-category, but for a fixed choice the *model* is immaterial.
+**Spaces with [[Def - Group|group]] action (equivariant homotopy theory).** The $(\infty,1)$-category of $G$-spaces can be presented as a simplicial category (with mapping spaces of equivariant maps) or as a quasi-category (via the equivariant singular complex). Use the comparison to show these agree, so that equivariant homotopy limits computed in one model match those in the other. The non-obvious recognition is that the *choice* of equivariant model (genuine vs. naive) is a choice of *which* $(\infty,1)$-category, but for a fixed choice the *model* is immaterial.
 
 **Logic: the $\infty$-category of types (type theory).** A model of homotopy type theory presents an $(\infty,1)$-category (indeed an **∞-topos**) of types and functions. Use the comparison theorem to argue that the semantics is independent of whether one models types as simplicial sets, simplicial categories, or complete Segal spaces — so the *meaning* of a type-theoretic statement does not depend on the chosen categorical semantics. The application is non-obvious because it grounds the robustness of type-theoretic semantics in a purely homotopy-theoretic comparison theorem.
 

@@ -32,11 +32,11 @@ Throughout this chapter $\mathcal{M}, \mathcal{N}$ denote model categories, and 
 
 # Motivation
 
-Here is the entire chapter in one sentence: **a model category is a category in which you can do homotopy theory, packaged as five axioms.** The phrase "do homotopy theory" sounds vague, so let us make it sharp. In topology you do not really care whether two spaces are equal, or even homeomorphic; you care whether they are the same *up to continuous deformation*. The maps you want to treat as invertible are the **weak homotopy equivalences** — maps inducing isomorphisms on all homotopy groups — even though they are very far from being actual isomorphisms. In homological algebra the analogous wish is to treat **quasi-isomorphisms** of chain complexes (maps inducing isomorphisms on homology) as if they were invertible. In both cases there is a class $\mathcal{W}$ of maps we have decided to declare "equivalences," and the whole subject is the study of the category we get after forcing every map in $\mathcal{W}$ to become an isomorphism.
+Here is the entire chapter in one sentence: **a model category is a category in which you can do homotopy theory, packaged as five axioms.** The phrase "do homotopy theory" sounds vague, so let us make it sharp. In topology you do not really care whether two spaces are equal, or even homeomorphic; you care whether they are the same *up to continuous deformation*. The maps you want to treat as invertible are the **weak homotopy equivalences** — maps inducing [[Def - Isomorphism|isomorphisms]] on all homotopy [[Def - Group|groups]] — even though they are very far from being actual isomorphisms. In homological algebra the analogous wish is to treat **quasi-isomorphisms** of chain complexes (maps inducing isomorphisms on homology) as if they were invertible. In both cases there is a class $\mathcal{W}$ of maps we have decided to declare "equivalences," and the whole subject is the study of the category we get after forcing every map in $\mathcal{W}$ to become an isomorphism.
 
 That operation has a name: **localization**. Given a category $\mathcal{C}$ and a class $\mathcal{W}$, the localization $\mathcal{C}[\mathcal{W}^{-1}]$ is the universal category receiving a functor from $\mathcal{C}$ that sends every map of $\mathcal{W}$ to an isomorphism. The trouble is that the naive construction — formally adjoin inverses and take zig-zags of maps — is a disaster. The morphisms between two objects can fail to form a *set* (you hit set-theoretic size problems), and even when they do, you have no way to compute them: a morphism in the localization is an equivalence class of arbitrarily long zig-zags $X \leftarrow \bullet \to \bullet \leftarrow \cdots \to Y$, and there is no algorithm for deciding when two zig-zags are equal. The localization exists abstractly but is computationally inert.
 
-Quillen's insight, in 1967, was that you can *tame* the localization by adding auxiliary structure. Alongside $\mathcal{W}$, decree two more classes of maps — **cofibrations** and **fibrations** — chosen so that they interlock with $\mathcal{W}$ through a *lifting* relation and a *factorization* property. The cofibrations are the "good inclusions" (think: a subcomplex sitting inside a CW complex) and the fibrations are the "good surjections" (think: a fiber bundle projection). This auxiliary scaffolding never changes what the localization *is* — $\mathrm{Ho}(\mathcal{M})$ depends only on $(\mathcal{M}, \mathcal{W})$ — but it makes it *computable*. The structural backbone of the chapter is the single relationship
+Quillen's insight, in 1967, was that you can *tame* the localization by adding auxiliary structure. Alongside $\mathcal{W}$, decree two more classes of maps — **cofibrations** and **[[Def - Fibration|fibrations]]** — chosen so that they interlock with $\mathcal{W}$ through a *lifting* relation and a *factorization* property. The cofibrations are the "good inclusions" (think: a subcomplex sitting inside a CW complex) and the fibrations are the "good surjections" (think: a fiber bundle projection). This auxiliary scaffolding never changes what the localization *is* — $\mathrm{Ho}(\mathcal{M})$ depends only on $(\mathcal{M}, \mathcal{W})$ — but it makes it *computable*. The structural backbone of the chapter is the single relationship
 
 $$\text{(weak equivalences} = \text{maps to invert)} \;+\; \text{(cofibrations, fibrations} = \text{the computational scaffolding)} \;\Longrightarrow\; \mathrm{Ho}(\mathcal{M}) \text{ is tractable.}$$
 
@@ -80,7 +80,7 @@ This chapter assumes you are fluent with the categorical machinery of the earlie
 - **[[Thm - Closure Properties of the Model Structure]]**
 	- The cofibrations are *exactly* the maps with the LLP against all trivial fibrations; trivial cofibrations are exactly the maps with LLP against all fibrations; fibrations are exactly the maps with RLP against all trivial cofibrations (and dually). Consequently each class is closed under retracts, cofibrations are closed under pushout and fibrations under pullback, and any two of the three classes determine the third. The proofs all run through the retract argument combined with factorization.
 
-> [!tip] Unlocked: The Small Object Argument and Cofibrant Generation *(from Homotopical Algebra)*
+> [!tip] Unlocked: [[Thm - The Small Object Argument|The Small Object Argument]] and Cofibrant Generation *(from Homotopical Algebra)*
 > The factorization axiom MC5 is not magic — in all standard examples the factorizations are *built* by Quillen's **small object argument**, which transfinitely attaches cells from a set of generating cofibrations. A model category produced this way is **cofibrantly generated**, and almost every model structure in nature (on $\mathbf{Top}$, $\mathbf{sSet}$, $\mathbf{Ch}(R)$) is of this form.
 
 - **[[Ex - The retract argument in detail]]** (⭐⭐)
@@ -101,7 +101,7 @@ This chapter assumes you are fluent with the categorical machinery of the earlie
 - **[[Thm - The Homotopy Category of a Model Category]]**
 	- The localization $\mathrm{Ho}(\mathcal{M}) = \mathcal{M}[\mathcal{W}^{-1}]$ exists and is equivalent to the category whose objects are the bifibrant objects of $\mathcal{M}$ and whose morphisms are homotopy classes of maps; for general $X, Y$ one has $\mathrm{Ho}(\mathcal{M})(X,Y) \cong \pi(QRX, QRY)$, computed through cofibrant–fibrant replacement. This is the fundamental theorem: it replaces opaque zig-zags by honest homotopy classes and is the entire reason the axioms are worth imposing.
 
-> [!tip] Unlocked: The Derived Category and Triangulated Categories *(from Homological Algebra)*
+> [!tip] Unlocked: The Derived Category and [[Def - Triangulated Category|Triangulated Categories]] *(from Homological Algebra)*
 > Applied to $\mathbf{Ch}(R)$ with quasi-isomorphisms as weak equivalences, the homotopy category *is* the **derived category** $D(R)$. The fundamental theorem is exactly the statement that maps in $D(R)$ are chain-homotopy classes of maps between complexes of projectives. The extra structure of distinguished triangles makes $D(R)$ a **triangulated category**, and the model-categorical viewpoint explains where that structure comes from.
 
 - **[[Ex - Left homotopy is an equivalence relation on cofibrant objects]]** (⭐⭐⭐)
@@ -125,7 +125,7 @@ This chapter assumes you are fluent with the categorical machinery of the earlie
 - **[[Thm - Quillen Adjunctions Descend to Derived Adjunctions]]**
 	- A Quillen adjunction $F \dashv U$ induces a **total derived adjunction** $\mathbf{L}F \dashv \mathbf{R}U$ between homotopy categories, with $\mathbf{L}F = F \circ Q$ (apply $F$ after cofibrant replacement) and $\mathbf{R}U = U \circ R$ (apply $U$ after fibrant replacement). If the Quillen adjunction is a Quillen equivalence, the derived adjunction is an equivalence of categories $\mathrm{Ho}(\mathcal{M}) \simeq \mathrm{Ho}(\mathcal{N})$. This is how one proves two model categories present the *same* homotopy theory.
 
-> [!tip] Unlocked: The Homotopy Hypothesis and ∞-Topoi *(from Higher Category Theory)*
+> [!tip] Unlocked: [[Thm - The Homotopy Hypothesis|The Homotopy Hypothesis]] and ∞-Topoi *(from Higher Category Theory)*
 > The Quillen equivalence $\mathbf{Top} \simeq_Q \mathbf{sSet}$ is the rigorous form of the slogan that spaces and combinatorial simplicial models carry the same homotopy theory — a baby case of the **homotopy hypothesis** (∞-groupoids = spaces). Stacking Quillen equivalences is how one shows different models of **∞-categories** agree, and ultimately how Lurie's theory of **∞-topoi** is set up.
 
 > [!tip] Unlocked: Derived Functors, Tor, Ext, and Spectral Sequences *(from Homological Algebra)*
@@ -163,7 +163,7 @@ These are the moves nearly every argument in this chapter is built from. When st
 
 1. **Factor a map (MC5).** Any map $f$ splits two ways: as a cofibration followed by a trivial fibration, and as a trivial cofibration followed by a fibration. *Trigger:* you need an intermediate object with good properties — a cofibrant or fibrant replacement, or a "fattened" version of a map. *Pattern:* "factor $\varnothing \to X$ as $\varnothing \rightarrowtail QX \xrightarrow{\sim} X$" produces a cofibrant object weakly equivalent to $X$. This is the single most-used operation, because every derived construction begins by replacing objects with (co)fibrant ones.
 
-2. **Lift across a square (MC4).** Given a commuting square with a cofibration on the left and a trivial fibration on the right (or a trivial cofibration on the left and a fibration on the right), fill in the diagonal. *Trigger:* you want to construct a map but can only specify it on a subobject and after a projection. *Pattern:* the homotopies in this chapter are all lifts, and so are the comparison maps between two cofibrant replacements.
+2. **Lift across a square (MC4).** Given a commuting square with a cofibration on the left and a trivial fibration on the right (or a trivial cofibration on the left and a fibration on the right), fill in the diagonal. *Trigger:* you want to construct a map but can only specify it on a subobject and after a projection. *Pattern:* the [[Def - Homotopy|homotopies]] in this chapter are all lifts, and so are the comparison maps between two cofibrant replacements.
 
 3. **Run the retract argument.** If $f = p \circ i$ and $f$ lifts against $p$, then $f$ is a retract of $i$. *Trigger:* you know $f$ has a lifting property and want to conclude $f$ lies in a class (cofibration, fibration). *Pattern:* factor $f$, observe it lifts against the second factor, retract onto the first; see [[Thm - The Retract Argument]].
 
@@ -251,12 +251,12 @@ A meta-strategy threads through all of these: **when something fails to be homot
 
 # Further Chapters in This Series
 
-This is the entry chapter of the Model Categories sequence (the axioms, the homotopy category, Quillen functors). The full treatment, following Hovey's *Model Categories*, continues across:
+This is the entry chapter of the [[Def - Model Category|Model Categories]] sequence (the axioms, the homotopy category, Quillen functors). The full treatment, following Hovey's *Model Categories*, continues across:
 
 - [[Model Categories — Cofibrantly Generated Model Categories and the Small Object Argument]] — transfinite composition, smallness, relative cell complexes, the small object argument, and Kan's recognition theorem.
 - [[Model Categories — Examples in Detail]] — the projective model structure on chain complexes (and $D(R)$), the Quillen model structure on spaces, and stable module categories, with full verifications.
 - [[Model Categories — The Model Category of Simplicial Sets]] — the Kan–Quillen model structure, anodyne extensions, simplicial homotopy groups, minimal fibrations, and the Quillen equivalence with spaces.
-- [[Model Categories — Monoidal Model Categories]] — closed monoidal categories, the pushout-product axiom, modules, and the derived tensor product.
+- [[Model Categories — Monoidal Model Categories]] — closed monoidal categories, the pushout-product axiom, [[Def - Module|modules]], and the derived tensor product.
 - [[Model Categories — Framings and Function Complexes]] — Reedy categories, framings, and homotopy function complexes / derived mapping spaces.
 - [[Model Categories — Pointed Model Categories and Cofiber Sequences]] — suspension and loop, Puppe cofiber/fiber sequences, and pre-triangulated categories.
 - [[Model Categories — Stable Model Categories and Triangulated Categories]] — triangulated categories, stable model categories, compact generators, and the vista toward stable $\infty$-categories.

@@ -87,7 +87,7 @@ The reader is assumed to have refreshed the language of [[Def - Category|categor
 	- The **pullback** $A \times_C B$ is the limit of a cospan $A \to C \leftarrow B$ (the fibre product); in $\mathbf{Set}$, $\{(a,b) : f(a) = g(b)\}$, computing preimages, intersections, fibres, kernels. The **pushout** is dual — the amalgamated sum gluing $A$ and $B$ along $C$; in $\mathbf{Grp}$ the amalgamated free product ([[Thm - Seifert-van Kampen Theorem (Statement)|Seifert–van Kampen]]), in $\mathbf{Top}$ gluing of spaces. The pasting lemma composes pullback squares.
 
 - **[[Ex - Equalizers and coequalizers in Set and Grp]]** (⭐⭐)
-	- Equalizers are agreement-subobjects, coequalizers are quotients; in $\mathbf{Grp}$ the coequalizer needs the [[Def - Normal Subgroup|normal closure]] because group quotients require normality.
+	- Equalizers are agreement-subobjects, coequalizers are quotients; in $\mathbf{Grp}$ the coequalizer needs the [[Def - Normal Subgroup|normal closure]] because [[Def - Group|group]] quotients require normality.
 
 - **[[Ex - The kernel as a pullback]]** (⭐⭐)
 	- The kernel of $\varphi$ is the pullback $G \times_H \{e\}$ against the basepoint, distinct from the kernel *pair*; normality is transported through the pullback.
@@ -96,9 +96,9 @@ The reader is assumed to have refreshed the language of [[Def - Category|categor
 	- The quotient map $G \to G/\ker\varphi$ is the coequalizer of the kernel pair; the [[Thm - First Isomorphism Theorem|first isomorphism theorem]] is the (regular epi, mono) image factorisation, making $\mathbf{Grp}$ a regular category.
 
 > [!tip] Unlocked: Fibre Products of Schemes and Base Change *(from Algebraic Geometry)*
-> The [[Def - Pullback and Pushout|pullback]] is the engine of scheme theory: $\mathrm{Spec}(R_1 \otimes_S R_2) \cong \mathrm{Spec}\,R_1 \times_{\mathrm{Spec}\,S} \mathrm{Spec}\,R_2$, so **fibre products of schemes** are pullbacks computed by tensoring rings, and **base change** is the functor $- \times_{\mathrm{Spec}\,S} \mathrm{Spec}\,S'$. Intersections, fibres, and base change become one construction. See [[Ex - Fibre products of schemes are pullbacks]].
+> The [[Def - Pullback and Pushout|pullback]] is the engine of scheme theory: $\mathrm{Spec}(R_1 \otimes_S R_2) \cong \mathrm{Spec}\,R_1 \times_{\mathrm{Spec}\,S} \mathrm{Spec}\,R_2$, so **fibre products of schemes** are pullbacks computed by tensoring [[Def - Ring|rings]], and **base change** is the functor $- \times_{\mathrm{Spec}\,S} \mathrm{Spec}\,S'$. Intersections, fibres, and base change become one construction. See [[Ex - Fibre products of schemes are pullbacks]].
 
-> [!tip] Unlocked: Homotopy Pullbacks and Pushouts *(from Model Categories)*
+> [!tip] Unlocked: [[Def - Homotopy|Homotopy]] Pullbacks and Pushouts *(from [[Def - Model Category|Model Categories]])*
 > Strict pullbacks and pushouts are not homotopy-invariant; the **homotopy pullback / pushout** (mapping cone, homotopy fibre) is the derived version, the starting point of **model categories** (Chapter VI) and of **stable** homotopy theory.
 
 > [!note] Exercise Index — §3.2
@@ -159,7 +159,7 @@ The reader is assumed to have refreshed the language of [[Def - Category|categor
 - **[[Ex - Limits in presheaf categories are computed pointwise]]** (⭐⭐)
 	- (Co)limits of [[Def - Presheaf|presheaves]] are computed objectwise in $\mathbf{Set}$; every presheaf category is bicomplete, with each evaluation functor creating (co)limits.
 
-> [!tip] Unlocked: RAPL and the Adjoint Functor Theorem *(from Chapter IV)*
+> [!tip] Unlocked: RAPL and [[Thm - The Adjoint Functor Theorem|the Adjoint Functor Theorem]] *(from Chapter IV)*
 > Limit-preservation is the first obstruction to a functor having a left adjoint: every **right adjoint preserves limits** (RAPL), and the **Adjoint Functor Theorem** turns the converse into a near-equivalence. This theorem, generalised, is the foundation of the entire adjoint-functor program. See [[Thm - Right Adjoints Preserve Limits]].
 
 > [!tip] Unlocked: Monadicity and Descent *(from Chapter V)*
@@ -200,7 +200,7 @@ These are the moves almost every limit/colimit problem is assembled from. When s
 
 6. **Build limits objectwise in functor categories.** (Co)limits in $[\mathcal{A}, \mathcal{D}]$ are computed pointwise when $\mathcal{D}$ has them ([[Thm - Limits in Set and in Functor Categories]]); compute at each object and assemble. *Trigger:* a category of functors/presheaves/diagrams; *Pattern:* do it one object at a time.
 
-7. **Transport structural properties through (co)limits.** The pullback of a [[Def - Isomorphism, Monomorphism, Epimorphism|monomorphism]] is a mono; the preimage/pullback of a normal subgroup is normal; an equalizer is monic, a coequalizer epic. Use these to inherit properties without re-proving. *Trigger:* a subobject or structured map sits in a (co)limit diagram; *Pattern:* the property transports.
+7. **Transport structural properties through (co)limits.** The pullback of a [[Def - Isomorphism, Monomorphism, Epimorphism|monomorphism]] is a mono; the preimage/pullback of a normal [[Def - Subgroup|subgroup]] is normal; an equalizer is monic, a coequalizer epic. Use these to inherit properties without re-proving. *Trigger:* a subobject or structured map sits in a (co)limit diagram; *Pattern:* the property transports.
 
 8. **Dualize.** Every statement about limits has a mirror about colimits, obtained by reversing arrows ($\operatorname{colim}_J D = (\lim_{J^{op}} D^{op})^{op}$). Prove one, get the other free. *Trigger:* you have a limit result and want the colimit version; *Pattern:* work in $\mathcal{C}^{op}$.
 

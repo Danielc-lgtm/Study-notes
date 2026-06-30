@@ -12,7 +12,7 @@ tags: [category-theory, homotopy-theory, foundations]
 
 # Problem Statement
 
-Let $\mathcal{T} = \mathrm{Ho}(\mathbf{Top}_*)$ be the homotopy category of pointed spaces.
+Let $\mathcal{T} = \mathrm{Ho}(\mathbf{Top}_*)$ be the [[Def - Homotopy|homotopy]] category of pointed spaces.
 
 1. Verify that $\mathcal{T}$ is a [[Def - Pre-Triangulated Category|pre-triangulated category]]: it is pointed, carries the adjunction $\Sigma \dashv \Omega$, has cofiber and fiber sequences, and the long-exact-sequence axioms hold.
 2. Show that $\Sigma : \mathcal{T} \to \mathcal{T}$ is **not** an equivalence, so $\mathcal{T}$ is **not** triangulated. Give two distinct witnesses: (a) the unit $\eta : X \to \Omega\Sigma X$ is not an isomorphism for $X = S^0$; (b) not every object is a suspension.
@@ -22,7 +22,7 @@ Let $\mathcal{T} = \mathrm{Ho}(\mathbf{Top}_*)$ be the homotopy category of poin
 
 ![[Def - Pre-Triangulated Category#The Definition]]
 
-A [[Def - Pre-Triangulated Category|pre-triangulated category]] becomes **triangulated** exactly when $\Sigma$ is an equivalence (so $\Omega = \Sigma^{-1}$ and the unit/counit are isomorphisms). By [[Thm - The Puppe Cofiber and Fiber Sequences Agree]], $\mathrm{Ho}(\mathcal{C})$ is always pre-triangulated. The [[Def - Higher Homotopy Group|homotopy group]] $\pi_n(Y) = [S^n, Y]$; $\Omega S^1 \simeq \mathbb{Z}$ (discrete), since $\pi_n(\Omega S^1) = \pi_{n+1}(S^1) = 0$ for $n \ge 1$ and $\pi_0(\Omega S^1) = \pi_1(S^1) = \mathbb{Z}$.
+A [[Def - Pre-Triangulated Category|pre-triangulated category]] becomes **triangulated** exactly when $\Sigma$ is an equivalence (so $\Omega = \Sigma^{-1}$ and the unit/counit are [[Def - Isomorphism|isomorphisms]]). By [[Thm - The Puppe Cofiber and Fiber Sequences Agree]], $\mathrm{Ho}(\mathcal{C})$ is always pre-triangulated. The [[Def - Higher Homotopy Group|homotopy group]] $\pi_n(Y) = [S^n, Y]$; $\Omega S^1 \simeq \mathbb{Z}$ (discrete), since $\pi_n(\Omega S^1) = \pi_{n+1}(S^1) = 0$ for $n \ge 1$ and $\pi_0(\Omega S^1) = \pi_1(S^1) = \mathbb{Z}$.
 
 ---
 
@@ -32,7 +32,7 @@ A [[Def - Pre-Triangulated Category|pre-triangulated category]] becomes **triang
 
 **Assumption pattern:** The pre-triangulated structure on $\mathrm{Ho}(\mathbf{Top}_*)$ is *given* by the chapter's main theorem; the work is the refutation of triangulation. The key assumption to exploit is that $\Omega\Sigma X \simeq X$ is the precise condition for $\Sigma$ to be invertible, so a single object where it fails settles the matter.
 
-**Theorem routing:** Part (1) routes through [[Thm - The Puppe Cofiber and Fiber Sequences Agree]] (which proves $\mathrm{Ho}(\mathcal{C})$ is pre-triangulated) and the chapter's constructions. Part (2a) routes through computing $\Omega\Sigma S^0 = \Omega S^1$ and comparing homotopy types with $S^0$. Part (2b) routes through a connectivity/dimension obstruction to being a suspension. Part (3) routes through the definition's "$\Sigma$ an equivalence" clause.
+**Theorem routing:** Part (1) routes through [[Thm - The Puppe Cofiber and Fiber Sequences Agree]] (which proves $\mathrm{Ho}(\mathcal{C})$ is pre-triangulated) and the chapter's constructions. Part (2a) routes through computing $\Omega\Sigma S^0 = \Omega S^1$ and comparing homotopy types with $S^0$. Part (2b) routes through a connectivity/[[Def - Dimension|dimension]] obstruction to being a suspension. Part (3) routes through the definition's "$\Sigma$ an equivalence" clause.
 
 **Key decision point:** The interesting choice is *which object* to test for $\Omega\Sigma X \simeq X$. Choosing $X = S^0$ is decisive because $\Sigma S^0 = S^1$ and $\Omega S^1$ is computable (homotopy equivalent to the discrete space $\mathbb{Z}$), which is manifestly not $S^0$. A poor choice (an object where $\eta$ happens to be close to an iso) would obscure the failure; $S^0$ makes it stark.
 
@@ -54,7 +54,7 @@ A [[Def - Pre-Triangulated Category|pre-triangulated category]] becomes **triang
 > Part (1) is mostly citation: the chapter proves $\mathrm{Ho}(\mathcal{C})$ is pre-triangulated for any pointed model category. List the four ingredients and point to where each was established.
 
 > [!note]- Hint 2
-> For (2a), compute $\Sigma S^0 = S^1$, then $\Omega S^1$. Use $\pi_n(\Omega S^1) = \pi_{n+1}(S^1)$. What are the homotopy groups of $S^1$?
+> For (2a), compute $\Sigma S^0 = S^1$, then $\Omega S^1$. Use $\pi_n(\Omega S^1) = \pi_{n+1}(S^1)$. What are the homotopy [[Def - Group|groups]] of $S^1$?
 
 > [!note]- Hint 3
 > $\pi_{n+1}(S^1) = 0$ for $n \ge 1$ and $\pi_1(S^1) = \mathbb{Z}$, so $\Omega S^1$ has $\pi_0 = \mathbb{Z}$ and all higher groups zero — it is homotopy equivalent to the discrete space $\mathbb{Z}$. That is not $S^0$ (which has $\pi_0$ a two-element set). So $\eta : S^0 \to \Omega\Sigma S^0$ is not an isomorphism.
@@ -68,7 +68,7 @@ The solution confirms the pre-triangulated axioms by citing the chapter's constr
 **Step 1: $\mathrm{Ho}(\mathbf{Top}_*)$ is pre-triangulated.**
 
 > [!note]- Derivation
-> Check the four ingredients of a [[Def - Pre-Triangulated Category|pre-triangulated category]]. (i) *Pointed:* the one-point space $*$ is the zero object of $\mathbf{Top}_*$, so $\mathcal{T}$ is pointed with zero maps. (ii) *Adjunction $\Sigma \dashv \Omega$:* established in [[Thm - The Suspension-Loop Adjunction]] for any pointed model category. (iii) *Cofiber and fiber sequences:* the [[Def - Cofiber and Fiber Sequence|Puppe sequences]] of cofibrations and fibrations, established in §6.2. (iv) *Long-exact-sequence and compatibility axioms:* exactly the content of [[Thm - The Puppe Cofiber and Fiber Sequences Agree]], which proves $\mathrm{Ho}(\mathcal{C})$ is pre-triangulated for any pointed model category $\mathcal{C}$; specialize $\mathcal{C} = \mathbf{Top}_*$. Hence $\mathcal{T}$ is pre-triangulated.
+> Check the four ingredients of a [[Def - Pre-Triangulated Category|pre-triangulated category]]. (i) *Pointed:* the one-point space $*$ is the zero object of $\mathbf{Top}_*$, so $\mathcal{T}$ is pointed with zero maps. (ii) *Adjunction $\Sigma \dashv \Omega$:* established in [[Thm - The Suspension-Loop Adjunction]] for any pointed model category. (iii) *Cofiber and fiber sequences:* the [[Def - Cofiber and Fiber Sequence|Puppe sequences]] of cofibrations and [[Def - Fibration|fibrations]], established in §6.2. (iv) *Long-exact-sequence and compatibility axioms:* exactly the content of [[Thm - The Puppe Cofiber and Fiber Sequences Agree]], which proves $\mathrm{Ho}(\mathcal{C})$ is pre-triangulated for any pointed model category $\mathcal{C}$; specialize $\mathcal{C} = \mathbf{Top}_*$. Hence $\mathcal{T}$ is pre-triangulated.
 
 **Step 2: $\Sigma$ is not an equivalence.**
 
@@ -97,6 +97,6 @@ The solution confirms the pre-triangulated axioms by citing the chapter's constr
 
 **The pre-triangulated/triangulated divide is a single axiom — invertibility of $\Sigma$ — and it is the unstable/stable divide.** Everything else in the two structures is shared; the only difference is whether $\Sigma$ is an equivalence. This is not a technicality but the most important dichotomy in homotopy theory: spaces are eternally unstable because $\Sigma$ is far from invertible, while spectra and derived categories are stable because $\Sigma$ is inverted (by construction or automatically). The diagnostic to carry into any such question is the single test "is $\Omega\Sigma X \simeq X$?" — answering it decides triangulation, and the productive object to test is usually a low-dimensional sphere where both sides are computable.
 
-**Suspensions are special objects, and cup products detect that they are special.** The witness $\mathbb{C}P^2$ is worth remembering as the canonical "not a suspension," and the reason — suspensions have square-zero reduced cohomology rings (they are co-$H$-spaces, so the diagonal is coreduced) — is a reusable obstruction. The transferable trigger is: to show an object is not a suspension, exhibit a nontrivial cup product, since the reduced cohomology of any $\Sigma A$ has trivial products. This is one of the cleanest "is NOT" tests in the subject and generalizes: co-$H$-structure forces vanishing products, so any nonvanishing product obstructs being a (co-)suspension.
+**Suspensions are special objects, and cup products detect that they are special.** The witness $\mathbb{C}P^2$ is worth remembering as the canonical "not a suspension," and the reason — suspensions have square-zero reduced cohomology [[Def - Ring|rings]] (they are co-$H$-spaces, so the diagonal is coreduced) — is a reusable obstruction. The transferable trigger is: to show an object is not a suspension, exhibit a nontrivial cup product, since the reduced cohomology of any $\Sigma A$ has trivial products. This is one of the cleanest "is NOT" tests in the subject and generalizes: co-$H$-structure forces vanishing products, so any nonvanishing product obstructs being a (co-)suspension.
 
 **The Freudenthal theorem is the precise measure of how non-invertible suspension is.** That $\eta : X \to \Omega\Sigma X$ is an isomorphism only in a stable range — degrees below roughly twice the connectivity — is the quantitative heart of the unstable/stable story. It explains why $\mathbf{Top}_*$ is merely pre-triangulated (invertibility fails outside the range) and why stabilizing (forcing $\eta$ to be an iso in all degrees by passing to spectra) yields a triangulated category. The takeaway for working with these structures is that "pre-triangulated" is the honest level for unstable homotopy theory, and any time you find yourself wanting $\Omega\Sigma X = X$, you are implicitly working stably and should pass to spectra to make it true.

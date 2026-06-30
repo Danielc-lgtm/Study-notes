@@ -32,7 +32,7 @@ Throughout this chapter we work one dimension above ordinary category theory, so
 
 # Motivation
 
-Here is the entire chapter in one sentence: a higher category is what you get when "the morphisms between two objects" stop being a set and start being a structured object — a category, an abelian group, a space — so that there are morphisms between morphisms, and composition holds only up to those higher morphisms. Ordinary category theory packages mathematical structure by recording objects and the maps between them. But over and over the maps between maps are themselves interesting: between two functors sit natural transformations, between two continuous maps sit homotopies, between two chain maps sit chain homotopies. The moment you take those seriously, a category is no longer the right home, because a category only knows how to compose along one dimension. You need a place where you can compose 1-cells end-to-end *and* compose 2-cells, both vertically (stacking homotopies) and horizontally (whiskering them along maps). That place is a **2-category**, and the most important example is $\mathbf{Cat}$ itself.
+Here is the entire chapter in one sentence: a higher category is what you get when "the morphisms between two objects" stop being a set and start being a structured object — a category, an abelian group, a space — so that there are morphisms between morphisms, and composition holds only up to those higher morphisms. Ordinary category theory packages mathematical structure by recording objects and the maps between them. But over and over the maps between maps are themselves interesting: between two functors sit natural transformations, between two continuous maps sit [[Def - Homotopy|homotopies]], between two chain maps sit chain homotopies. The moment you take those seriously, a category is no longer the right home, because a category only knows how to compose along one [[Def - Dimension|dimension]]. You need a place where you can compose 1-cells end-to-end *and* compose 2-cells, both vertically (stacking homotopies) and horizontally (whiskering them along maps). That place is a **2-category**, and the most important example is $\mathbf{Cat}$ itself.
 
 There is a second, deeper pressure, and it is the real reason this chapter exists. In a 2-category we still demand that 1-cells compose *strictly* associatively. For algebra that is fine — functor composition is associative on the nose. But for geometry it is a lie. Concatenate three paths $\alpha, \beta, \gamma$ in a space: $(\alpha \cdot \beta) \cdot \gamma$ and $\alpha \cdot (\beta \cdot \gamma)$ are *different parametrised paths*, equal only after a reparametrisation — that is, after a homotopy. The composite of two paths is not a single path at all; it is a *contractible space of choices*. Insisting on a single strict composite throws this structure away, and with it the homotopy type of the space. The fix is to let composition be defined only up to coherent higher cells, and to keep track of all the coherences at once. This chapter builds the two great formalisms for doing so: at level two, **bicategories**, where associativity is weakened to a natural isomorphism (the associator) satisfying a pentagon; and at level infinity, **quasi-categories**, where composition is encoded not by an operation at all but by the *fillability* of certain horns in a simplicial set.
 
@@ -85,7 +85,7 @@ This chapter assumes you are fluent in ordinary category theory: categories, fun
 	- For a [[Def - Monoidal Category|monoidal category]] $(\mathcal{V}, \otimes, I)$, a **$\mathcal{V}$-category** $\mathcal{C}$ has objects, a **hom-object** $\mathcal{C}(A,B) \in \mathcal{V}$ for each pair, composition morphisms $\mathcal{C}(B,C) \otimes \mathcal{C}(A,B) \to \mathcal{C}(A,C)$ in $\mathcal{V}$, and identities $I \to \mathcal{C}(A,A)$, satisfying associativity and unit laws drawn as commuting diagrams in $\mathcal{V}$. Specialising $\mathcal{V}$ recovers a zoo: $\mathbf{Set}$-enrichment is ordinary category theory, $\mathbf{Ab}$-enrichment is preadditive categories, $\mathbf{Vect}_k$-enrichment is $k$-linear categories, $\mathbf{Cat}$-enrichment is 2-categories, and enrichment over $([0,\infty], \geq, +)$ is — astonishingly — a metric space.
 
 > [!tip] Unlocked: Stable ∞-Categories and Spectra *(from Higher Algebra)*
-> Enriching in a category of **spectra** (the homotopy-theoretic analogue of abelian groups) produces **stable ∞-categories**, where every object has a loop/suspension and mapping objects are themselves spectra. This is the natural home of **derived categories**, **Tor** and **Ext**, and the entire apparatus of homological algebra done $\infty$-categorically — see §H.5.
+> Enriching in a category of **spectra** (the homotopy-theoretic analogue of abelian [[Def - Group|groups]]) produces **stable ∞-categories**, where every object has a loop/suspension and mapping objects are themselves spectra. This is the natural home of **derived categories**, **Tor** and **Ext**, and the entire apparatus of homological algebra done $\infty$-categorically — see §H.5.
 
 > [!note] Exercise Index — §H.2
 > [[Exercise Index - §H.2 Enriched Categories]]
@@ -107,8 +107,8 @@ This chapter assumes you are fluent in ordinary category theory: categories, fun
 - **[[Def - Kan Complex and the Nerve]]**
 	- A **Kan complex** is a simplicial set with the right lifting property against *all* horn inclusions $\Lambda^n_i \hookrightarrow \Delta^n$, $0 \le i \le n$: every horn has a (not necessarily unique) filler. The **nerve** $N(\mathcal{C})$ of a [[Def - Category|category]] has $N(\mathcal{C})_n = \mathrm{Fun}([n], \mathcal{C})$, the strings of $n$ composable arrows; faces compose or drop, degeneracies insert identities. The **inner horns** are the $\Lambda^n_i$ with $0 < i < n$, exactly the horns whose filling encodes composition. (Compound page: defines Kan complex, nerve, and inner horn.)
 
-> [!tip] Unlocked: Model Categories *(from Quillen's Homotopy Theory — Chapter M)*
-> The right lifting property packaged in the Kan condition is the local face of a global structure: **model categories** axiomatise homotopy theory through interacting classes of cofibrations, fibrations, and weak equivalences defined by exactly such lifting properties. Simplicial sets carry the **Kan–Quillen model structure** whose fibrant objects are precisely the Kan complexes — see the Model Categories chapter.
+> [!tip] Unlocked: [[Def - Model Category|Model Categories]] *(from Quillen's Homotopy Theory — Chapter M)*
+> The right lifting property packaged in the Kan condition is the local face of a global structure: **model categories** axiomatise homotopy theory through interacting classes of cofibrations, [[Def - Fibration|fibrations]], and weak equivalences defined by exactly such lifting properties. Simplicial sets carry the **Kan–Quillen model structure** whose fibrant objects are precisely the Kan complexes — see the Model Categories chapter.
 
 > [!note] Exercise Index — §H.3
 > [[Exercise Index - §H.3 Simplicial Sets and Kan Complexes]]
@@ -156,7 +156,7 @@ This chapter assumes you are fluent in ordinary category theory: categories, fun
 - **[[Thm - Geometric Realization is Left Adjoint to the Singular Nerve]]**
 	- Geometric realisation $|{-}| : \mathbf{sSet} \to \mathbf{Top}$ is left [[Def - Adjunction|adjoint]] to the singular nerve $\mathrm{Sing}$, where $|X| = \mathrm{colim}_{\Delta^n \to X} |\Delta^n|$ and $\mathrm{Sing}(X)_n = \mathbf{Top}(|\Delta^n|, X)$ — the set of [[Def - Singular Simplex|singular simplices]]. For any space $X$, $\mathrm{Sing}(X)$ is a Kan complex, the **fundamental ∞-groupoid** of $X$: Kan complexes *are* the $\infty$-groupoids, the content of the homotopy hypothesis.
 
-> [!tip] Unlocked: The Homotopy Hypothesis and Homotopy Type Theory *(from Foundations)*
+> [!tip] Unlocked: [[Thm - The Homotopy Hypothesis|The Homotopy Hypothesis]] and Homotopy Type Theory *(from Foundations)*
 > That $\infty$-groupoids and spaces are the same thing (**the homotopy hypothesis**, Grothendieck) is the bridge from homotopy theory to logic: in **homotopy type theory** a type *is* an $\infty$-groupoid, equality is a path, and proofs of equality of proofs are higher paths — coherence becomes a foundational principle rather than a bookkeeping nuisance.
 
 > [!note] Exercise Index — §H.5
@@ -281,12 +281,12 @@ Finally, a meta-strategy threads through everything: **when composition refuses 
 
 # Further Chapters in This Series
 
-This is the entry chapter of the Higher Categories sequence (2-categories, enrichment, simplicial sets, quasi-categories). The full programme, following Leinster's *Higher Operads, Higher Categories*, continues across:
+This is the entry chapter of the Higher Categories sequence (2-categories, enrichment, simplicial sets, quasi-categories). The full programme, following Leinster's *Higher [[Def - Operad|Operads]], Higher Categories*, continues across:
 
 - [[Higher Categories — Strict n-Categories and Notions of Monoidal Category]] — globular sets, strict $n$- and $\omega$-categories, unbiased monoidal categories, coherence, the Baez–Dolan periodic table.
-- [[Higher Categories — Operads and Multicategories]] — classical (symmetric and plain) operads, multicategories, algebras, the little discs operad and May's recognition principle.
+- [[Higher Categories — Operads and Multicategories]] — classical (symmetric and plain) operads, [[Def - Multicategory|multicategories]], algebras, the little discs operad and May's recognition principle.
 - [[Higher Categories — Generalized Operads via Cartesian Monads]] — cartesian monads, $T$-operads and $T$-multicategories, the single frame that recovers categories, classical operads, and globular operads.
-- [[Higher Categories — fc-Multicategories and Weak Double Categories]] — the free-category monad, weak double categories, monads/monoids/modules in a bicategory.
-- [[Higher Categories — Opetopes and Opetopic Sets]] — the slice construction, opetopes as iterated pasting diagrams, the Baez–Dolan opetopic definition of weak $n$-category.
+- [[Higher Categories — fc-Multicategories and Weak Double Categories]] — the free-category monad, weak double categories, monads/monoids/[[Def - Module|modules]] in a bicategory.
+- [[Higher Categories — Opetopes and Opetopic Sets]] — the slice construction, [[Def - Opetope|opetopes]] as iterated pasting diagrams, the Baez–Dolan opetopic definition of weak $n$-category.
 - [[Higher Categories — Globular Operads and Weak n-Categories]] — the free strict $\omega$-category monad, globular operads, contractions, the Batanin–Leinster definition of weak $\omega$- and $n$-category.
 - [[Higher Categories — Other Definitions of Weak n-Categories]] — Penon, Segal categories, complete Segal spaces, Tamsamani–Simpson, the homotopy hypothesis, and the comparison of models for $(\infty,1)$-categories.

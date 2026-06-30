@@ -27,7 +27,7 @@ The [[Def - Functor Category|functor category]] $[\mathcal{C}, \mathcal{D}]$ has
 
 # Convergent Strategy
 
-**Problem class:** This is a "unwind the definitions on a minimal shape, then prove a structural fact" exercise. The route is to make the abstract notions concrete on $\mathbf{2}$, then verify the functor-category axioms and the componentwise characterization of isomorphisms.
+**Problem class:** This is a "unwind the definitions on a minimal shape, then prove a structural fact" exercise. The route is to make the abstract notions concrete on $\mathbf{2}$, then verify the functor-category axioms and the componentwise characterization of [[Def - Isomorphism|isomorphisms]].
 
 **Assumption pattern:** On $\mathbf{2}$, a functor is just an arrow and a natural transformation is just a commuting square — the smallest nontrivial instance. For the structural part, everything is *componentwise*: composition, identities, and isomorphisms in $[\mathcal{C}, \mathcal{D}]$ are checked one object at a time in $\mathcal{D}$.
 
@@ -101,7 +101,7 @@ The plan: unwind functors and natural transformations on $\mathbf{2}$ (arrow; co
 
 # Key Takeaways
 
-**Everything in a functor category is componentwise — except naturality, which binds the components.** The structural lesson is that composition, identities, and isomorphism-testing in $[\mathcal{C}, \mathcal{D}]$ all happen one object at a time in $\mathcal{D}$, so the functor-category axioms are inherited for free. The single piece of "glue" is the naturality square, which couples the components across the morphisms of $\mathcal{C}$. This split — componentwise data plus naturality glue — is the right mental model for every functor category: representations (componentwise linear maps, glued by equivariance), presheaves (componentwise set maps, glued by compatibility with restriction), chain complexes (componentwise group maps, glued by commuting with differentials).
+**Everything in a functor category is componentwise — except naturality, which binds the components.** The structural lesson is that composition, identities, and isomorphism-testing in $[\mathcal{C}, \mathcal{D}]$ all happen one object at a time in $\mathcal{D}$, so the functor-category axioms are inherited for free. The single piece of "glue" is the naturality square, which couples the components across the morphisms of $\mathcal{C}$. This split — componentwise data plus naturality glue — is the right mental model for every functor category: representations (componentwise linear maps, glued by equivariance), presheaves (componentwise set maps, glued by compatibility with restriction), chain complexes (componentwise [[Def - Group|group]] maps, glued by commuting with differentials).
 
 **A natural isomorphism is exactly a transformation whose components are all invertible.** The practical payoff of Step 3 is a checkable criterion: to prove $\alpha$ is a natural isomorphism, you do *not* construct a global inverse — you simply verify each component $\alpha_A$ is invertible in $\mathcal{D}$, and naturality of the inverse comes free by inverting the square. This is the standard route to natural isomorphisms throughout the subject (the double dual, the unit/counit of an equivalence, the comparison maps of adjunctions): check invertibility pointwise. The trigger "I want a natural iso" should immediately become "check each component is an iso", with the inverse-square argument as the guaranteed follow-through.
 

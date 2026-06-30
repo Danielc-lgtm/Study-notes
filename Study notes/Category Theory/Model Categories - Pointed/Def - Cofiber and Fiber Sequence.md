@@ -28,7 +28,7 @@ and the connecting map $\partial : C_f \to \Sigma X$ is precisely the cofiber-of
 
 Now the exactness, because it dictates the precise shape of the definition. Apply the contravariant $[-, Z]$ to $X \xrightarrow{f} Y \xrightarrow{i} C_f$. A map $Y \to Z$ extends over the cone $C_f$ exactly when its restriction to $X$ is null-homotopic — that is the universal property of the homotopy pushout. In the language of pointed sets this says: the image of $i^* : [C_f, Z] \to [Y, Z]$ is exactly the preimage of the basepoint under $f^* : [Y, Z] \to [X, Z]$, i.e. $\ker(f^*) = \mathrm{im}(i^*)$. That is exactness at $[Y, Z]$. Continuing with the suspension terms gives exactness everywhere, and the sequence
 $$\cdots \to [\Sigma X, Z] \to [C_f, Z] \xrightarrow{i^*} [Y, Z] \xrightarrow{f^*} [X, Z]$$
-is exact as a sequence of pointed sets (and of groups from the $[\Sigma X, Z]$ term leftward, because suspensions carry a co-group structure). If you had used the strict cofiber, this exactness would fail — extensions over a non-cofibrant quotient are not controlled by null-homotopies — so the **homotopy** pushout is non-negotiable.
+is exact as a sequence of pointed sets (and of [[Def - Group|groups]] from the $[\Sigma X, Z]$ term leftward, because suspensions carry a co-group structure). If you had used the strict cofiber, this exactness would fail — extensions over a non-cofibrant quotient are not controlled by null-[[Def - Homotopy|homotopies]] — so the **homotopy** pushout is non-negotiable.
 
 The fiber sequence is the exact dual, and writing both is justified by the dual exactness it produces. The homotopy fiber $F_f$ is the homotopy pullback of $X \xrightarrow{f} Y \leftarrow *$ — "the part of $X$ that maps to the basepoint, fattened to be homotopy-invariant." Iterating the fiber construction loops back to $\Omega Y$ (the fiber of the fiber is the loop), giving the dual Puppe sequence
 $$\cdots \to \Omega Y \xrightarrow{\partial} F_f \to X \xrightarrow{f} Y,$$
@@ -50,7 +50,7 @@ arising as above from some map $f$. Iterating yields the **Puppe sequence**
 $$X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{\partial} \Sigma X \xrightarrow{-\Sigma f} \Sigma Y \xrightarrow{-\Sigma i} \Sigma C_f \xrightarrow{-\Sigma\partial} \Sigma^2 X \to \cdots,$$
 where each consecutive triple is again a cofiber sequence (the signs record that re-suspending introduces a sign, exactly as for triangulated categories).
 
-**Homotopy fiber.** Dually, the **homotopy fiber** $F_f$ of $f$ is the [[Def - Pullback and Pushout|homotopy pullback]] of $X \xrightarrow{f} Y \xleftarrow{} *$; concretely, factor $f$ as a weak equivalence followed by a fibration $\widetilde{X} \twoheadrightarrow Y$, then take the strict pullback $F_f = * \times_Y \widetilde{X}$. There is a canonical connecting map $\partial : \Omega Y \to F_f$.
+**Homotopy fiber.** Dually, the **homotopy fiber** $F_f$ of $f$ is the [[Def - Pullback and Pushout|homotopy pullback]] of $X \xrightarrow{f} Y \xleftarrow{} *$; concretely, factor $f$ as a weak equivalence followed by a [[Def - Fibration|fibration]] $\widetilde{X} \twoheadrightarrow Y$, then take the strict pullback $F_f = * \times_Y \widetilde{X}$. There is a canonical connecting map $\partial : \Omega Y \to F_f$.
 
 **Fiber sequence.** A **fiber sequence** is a diagram in $\mathrm{Ho}(\mathcal{C})$ isomorphic to one of the form
 $$\Omega Y \xrightarrow{\partial} F_f \xrightarrow{p} X \xrightarrow{f} Y,$$

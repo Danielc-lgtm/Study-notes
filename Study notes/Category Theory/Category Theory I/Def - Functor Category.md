@@ -65,7 +65,7 @@ The compression worth carrying: **whenever a kind of mathematical object is "a s
 
 # Examples / Corollaries
 
-**Representations of a group.** $[\mathbf{B}G, \mathbf{Vect}_k]$ is the category of $k$-linear [[Def - Group|group]] representations of $G$: an object is a functor $\mathbf{B}G \to \mathbf{Vect}_k$, i.e. a vector space with a $G$-action, and a morphism is a natural transformation, which works out to be exactly a $G$-equivariant linear map (an intertwiner). The naturality square is the equivariance condition $\rho'(g) \circ \alpha = \alpha \circ \rho(g)$.
+**Representations of a [[Def - Group|group]].** $[\mathbf{B}G, \mathbf{Vect}_k]$ is the category of $k$-linear [[Def - Group|group]] representations of $G$: an object is a functor $\mathbf{B}G \to \mathbf{Vect}_k$, i.e. a vector space with a $G$-action, and a morphism is a natural transformation, which works out to be exactly a $G$-equivariant linear map (an intertwiner). The naturality square is the equivariance condition $\rho'(g) \circ \alpha = \alpha \circ \rho(g)$.
 
 **Presheaves.** $[\mathcal{C}^{\mathrm{op}}, \mathbf{Set}]$ is the presheaf category. When $\mathcal{C}$ is the poset of open sets of a [[Def - Topological Space|space]] (ordered by inclusion), a presheaf is the familiar "assign data to each open set, with restriction maps" — the starting point for **sheaves**. The morphisms are natural transformations, i.e. families of maps commuting with restriction.
 

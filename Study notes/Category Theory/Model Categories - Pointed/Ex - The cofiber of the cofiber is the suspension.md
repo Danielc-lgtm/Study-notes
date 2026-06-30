@@ -13,7 +13,7 @@ tags: [category-theory, homotopy-theory, foundations]
 
 Let $\mathcal{C}$ be a [[Def - Pointed Model Category Suspension and Loop|pointed model category]] and $f : X \to Y$ a map of cofibrant objects, with [[Def - Cofiber and Fiber Sequence|homotopy cofiber]] $i : Y \to C_f$.
 
-1. Prove that the homotopy cofiber of $i : Y \to C_f$ is canonically weakly equivalent to the [[Def - Pointed Model Category Suspension and Loop|suspension]] $\Sigma X$, by pasting homotopy-pushout squares.
+1. Prove that the [[Def - Homotopy|homotopy]] cofiber of $i : Y \to C_f$ is canonically weakly equivalent to the [[Def - Pointed Model Category Suspension and Loop|suspension]] $\Sigma X$, by pasting homotopy-pushout squares.
 2. Conclude that the cofiber sequence extends to the infinite **Puppe sequence**
 $$X \xrightarrow{f} Y \xrightarrow{i} C_f \xrightarrow{\partial} \Sigma X \xrightarrow{-\Sigma f} \Sigma Y \to \cdots,$$
 with each consecutive triple a cofiber sequence and $\partial$ the connecting map.

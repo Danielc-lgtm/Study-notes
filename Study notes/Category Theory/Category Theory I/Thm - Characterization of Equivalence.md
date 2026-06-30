@@ -19,7 +19,7 @@ $F : \mathcal{C} \to \mathcal{D}$ is a [[Def - Functor|functor]]; $G : \mathcal{
 
 > **Theorem (Characterization of Equivalence).** A [[Def - Functor|functor]] $F : \mathcal{C} \to \mathcal{D}$ is an [[Def - Equivalence of Categories|equivalence of categories]] if and only if $F$ is [[Def - Full, Faithful, and Essentially Surjective Functor|full, faithful, and essentially surjective]].
 
-The forward direction ($\Rightarrow$) is the easy half: an equivalence is automatically full, faithful, and essentially surjective. The reverse direction ($\Leftarrow$) is the substantive half: from a full, faithful, essentially surjective $F$ one *constructs* a quasi-inverse $G$ together with the natural isomorphisms — a construction that requires the **axiom of choice** (one chooses, for each object $D$ of $\mathcal{D}$, an object $GD$ of $\mathcal{C}$ and an isomorphism $FGD \cong D$).
+The forward direction ($\Rightarrow$) is the easy half: an equivalence is automatically full, faithful, and essentially surjective. The reverse direction ($\Leftarrow$) is the substantive half: from a full, faithful, essentially surjective $F$ one *constructs* a quasi-inverse $G$ together with the natural [[Def - Isomorphism|isomorphisms]] — a construction that requires the **axiom of choice** (one chooses, for each object $D$ of $\mathcal{D}$, an object $GD$ of $\mathcal{C}$ and an isomorphism $FGD \cong D$).
 
 ---
 
@@ -160,7 +160,7 @@ The proof is conceptually clean but has three places people stumble. First, the 
 
 **Stone duality.** The category of Boolean algebras is equivalent to the opposite of the category of Stone spaces (compact, Hausdorff, totally disconnected). Proving the comparison functor is full, faithful, and essentially surjective is exactly an instance of this theorem, and it is the template for all "concrete vs. spatial" dualities, including $\mathbf{CRing}^{\mathrm{op}} \simeq$ affine schemes.
 
-**Representations and modules.** For a group $G$ and field $k$, the category of $k$-linear representations of $G$ is equivalent to the category of modules over the group algebra $k[G]$. Verify the comparison functor (a representation *is* a $k[G]$-module) is fully faithful and essentially surjective; this is how representation theory is absorbed into module theory.
+**Representations and [[Def - Module|modules]].** For a [[Def - Group|group]] $G$ and field $k$, the category of $k$-linear representations of $G$ is equivalent to the category of modules over the group algebra $k[G]$. Verify the comparison functor (a representation *is* a $k[G]$-module) is fully faithful and essentially surjective; this is how representation theory is absorbed into module theory.
 
 ---
 

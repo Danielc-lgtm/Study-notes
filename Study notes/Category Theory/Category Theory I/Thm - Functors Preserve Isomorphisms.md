@@ -16,7 +16,7 @@ $F : \mathcal{C} \to \mathcal{D}$ is a [[Def - Functor|functor]], sending object
 
 # Statement
 
-> **Theorem (Functors preserve isomorphisms).** Let $F : \mathcal{C} \to \mathcal{D}$ be a [[Def - Functor|functor]] and let $f : A \to B$ be an [[Def - Isomorphism, Monomorphism, Epimorphism|isomorphism]] in $\mathcal{C}$. Then $Ff : FA \to FB$ is an isomorphism in $\mathcal{D}$, with inverse
+> **Theorem (Functors preserve [[Def - Isomorphism|isomorphisms]]).** Let $F : \mathcal{C} \to \mathcal{D}$ be a [[Def - Functor|functor]] and let $f : A \to B$ be an [[Def - Isomorphism, Monomorphism, Epimorphism|isomorphism]] in $\mathcal{C}$. Then $Ff : FA \to FB$ is an isomorphism in $\mathcal{D}$, with inverse
 > $$(Ff)^{-1} = F(f^{-1}).$$
 > Consequently $F$ sends isomorphic objects to isomorphic objects: $A \cong B \implies FA \cong FB$.
 
@@ -70,7 +70,7 @@ The corollary's intuition: a [[Def - Full, Faithful, and Essentially Surjective 
 
 # What Makes This Hard
 
-The theorem itself is a two-line consequence of the axioms; the only way to get it wrong is to forget that *both* defining equations of an isomorphism must be pushed through $F$. The genuine subtlety, and where intuition misleads, is the corollary's hypothesis: students expect *every* functor to reflect isomorphisms, but reflection requires fully faithfulness. The forgetful functor $\mathbf{Top} \to \mathbf{Set}$ does not reflect isos — a continuous bijection is an iso of underlying sets without being a homeomorphism. The error to avoid is conflating preservation (true for all functors) with reflection (true only for fully faithful ones).
+The theorem itself is a two-line consequence of the axioms; the only way to get it wrong is to forget that *both* defining equations of an isomorphism must be pushed through $F$. The genuine subtlety, and where intuition misleads, is the corollary's hypothesis: students expect *every* functor to reflect isomorphisms, but reflection requires fully faithfulness. The forgetful functor $\mathbf{Top} \to \mathbf{Set}$ does not reflect isos — a continuous bijection is an iso of underlying sets without being a [[Def - Homeomorphism|homeomorphism]]. The error to avoid is conflating preservation (true for all functors) with reflection (true only for fully faithful ones).
 
 ---
 
@@ -150,11 +150,11 @@ The theorem itself is a two-line consequence of the axioms; the only way to get 
 
 # Cross-Field Exercise Suggestions
 
-**Homotopy invariance of homology.** The functor $H_n : \mathbf{Top} \to \mathbf{Ab}$ (singular [[Def - Singular Homology|homology]]) sends [[Def - Homotopy Equivalence and Contractible Space|homotopy equivalences]] to isomorphisms. Phrased through this theorem: homotopy equivalences are isomorphisms in the homotopy category, and $H_n$ factors through it, so it preserves them. This is the basis for computing homology by replacing a space with a simpler homotopy-equivalent one.
+**[[Def - Homotopy|Homotopy]] invariance of homology.** The functor $H_n : \mathbf{Top} \to \mathbf{Ab}$ (singular [[Def - Singular Homology|homology]]) sends [[Def - Homotopy Equivalence and Contractible Space|homotopy equivalences]] to isomorphisms. Phrased through this theorem: homotopy equivalences are isomorphisms in the homotopy category, and $H_n$ factors through it, so it preserves them. This is the basis for computing homology by replacing a space with a simpler homotopy-equivalent one.
 
-**Group invariants distinguish groups.** Functors $\mathbf{Grp} \to \mathbf{Set}$ such as "order of the group", "number of elements of order 2", or "abelianization" are isomorphism invariants by this theorem. To prove two groups non-isomorphic, exhibit a functor whose values differ — the contrapositive of preservation. This is why "they have different numbers of elements of order 2" is a valid non-isomorphism proof.
+**Group invariants distinguish [[Def - Group|groups]].** Functors $\mathbf{Grp} \to \mathbf{Set}$ such as "order of the group", "number of elements of order 2", or "abelianization" are isomorphism invariants by this theorem. To prove two groups non-isomorphic, exhibit a functor whose values differ — the contrapositive of preservation. This is why "they have different numbers of elements of order 2" is a valid non-isomorphism proof.
 
-**Spectra of rings.** Applying the contravariant [[Def - Functor|Spec functor]] to a ring isomorphism gives a homeomorphism of spectra: $R \cong S \implies \mathrm{Spec}\,R \cong \mathrm{Spec}\,S$ in $\mathbf{Top}$. Conversely, if two affine schemes are non-homeomorphic the rings are non-isomorphic. This is the algebra-geometry dictionary respecting isomorphism in both directions.
+**Spectra of [[Def - Ring|rings]].** Applying the contravariant [[Def - Functor|Spec functor]] to a ring isomorphism gives a homeomorphism of spectra: $R \cong S \implies \mathrm{Spec}\,R \cong \mathrm{Spec}\,S$ in $\mathbf{Top}$. Conversely, if two affine schemes are non-homeomorphic the rings are non-isomorphic. This is the algebra-geometry dictionary respecting isomorphism in both directions.
 
 ---
 

@@ -41,7 +41,7 @@ An [[Def - Equivalence of Categories|equivalence]] is [[Def - Full, Faithful, an
 
 2. **Operation: cover all test objects via essential surjectivity** (topic page, Legal Operation 4). Every $\mathcal{D}$-object is iso to some $FX$, extending the quantifier.
 
-3. **Operation: invariance of mono/epi under composition with isomorphisms** (topic page, Legal Operation 6). Replacing a test object by an isomorphic one preserves cancellation.
+3. **Operation: invariance of mono/epi under composition with [[Def - Isomorphism|isomorphisms]]** (topic page, Legal Operation 6). Replacing a test object by an isomorphic one preserves cancellation.
 
 ---
 

@@ -27,11 +27,11 @@ The [[Def - Determinant|determinant]] of an $n \times n$ matrix is the polynomia
 
 **Problem class:** This is a "verify naturality of a uniform formula" exercise. The route is to recognize that $\mathrm{GL}_n$ and $(-)^\times$ are functors $\mathbf{CRing} \to \mathbf{Grp}$, then check the naturality square reduces to "$\varphi$ commutes with the determinant polynomial".
 
-**Assumption pattern:** The leverage is that the determinant is a *fixed polynomial in the matrix entries with integer coefficients*, and a ring homomorphism $\varphi$ preserves $+$ and $\times$ and fixes integer coefficients. So applying $\varphi$ after computing $\det$ equals computing $\det$ after applying $\varphi$ entrywise — naturality is "polynomials commute with ring homomorphisms".
+**Assumption pattern:** The leverage is that the determinant is a *fixed polynomial in the matrix entries with integer coefficients*, and a ring homomorphism $\varphi$ preserves $+$ and $\times$ and fixes integer coefficients. So applying $\varphi$ after computing $\det$ equals computing $\det$ after applying $\varphi$ entrywise — naturality is "polynomials commute with ring [[Def - Homomorphism|homomorphisms]]".
 
-**Theorem routing:** First confirm $\mathrm{GL}_n$ and $(-)^\times$ are functors (a ring map induces a group map on matrices and on units). Then the naturality square is the identity $\varphi(\det_R(A)) = \det_S(\varphi(A))$, proved by pushing $\varphi$ through the determinant sum.
+**Theorem routing:** First confirm $\mathrm{GL}_n$ and $(-)^\times$ are functors (a ring map induces a [[Def - Group|group]] map on matrices and on units). Then the naturality square is the identity $\varphi(\det_R(A)) = \det_S(\varphi(A))$, proved by pushing $\varphi$ through the determinant sum.
 
-**Key decision point:** The conceptual realization is that "the determinant is the same formula in every ring" is *precisely* the statement of naturality — the uniformity of the formula across rings is what makes the square commute. The decision is to verify naturality at the level of the defining polynomial rather than case by case.
+**Key decision point:** The conceptual realization is that "the determinant is the same formula in every ring" is *precisely* the statement of naturality — the uniformity of the formula across [[Def - Ring|rings]] is what makes the square commute. The decision is to verify naturality at the level of the defining polynomial rather than case by case.
 
 ---
 
