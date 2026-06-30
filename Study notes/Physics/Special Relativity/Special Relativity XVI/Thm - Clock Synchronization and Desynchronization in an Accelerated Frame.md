@@ -124,7 +124,7 @@ Write the worldline of the comoving observer $\mathcal{O}'$ by substituting $x =
 > > $$ct_* = (x_0 + a^{-1})\sinh(act), \quad x_* = (x_0 + a^{-1})\cosh(act) - a^{-1}, \quad y_* = y_0, \ z_* = z_0.$$
 > > Introduce the shifted inertial coordinate $x_*' := x_* - x_0$ and set $a' := a/(1 + ax_0)$, so that $x_0 + a^{-1} = a'^{-1}$ and $x_* + a^{-1} = x_*' + x_0 + a^{-1} = x_*' + a'^{-1}$. Then $a'x_*' + 1 = a'(x_* + a^{-1}) = a'(x_0 + a^{-1})\cosh(act) = \cosh(act)$ and $a'ct_* = a'(x_0 + a^{-1})\sinh(act) = \sinh(act)$, whence
 > > $$(a'x_*' + 1)^2 - (a'ct_*)^2 = \cosh^2(act) - \sinh^2(act) = 1.$$
-> > This is the equation of a uniformly accelerated worldline of proper acceleration $a'$ (the same form as [[Thm - Worldline of a Uniformly Accelerated Observer|$\mathcal{O}$'s hyperbola]], with $a\to a'$ and shifted spatial origin). Hence $\mathcal{O}'$ is uniformly accelerated with $a' = a/(1+ax_0)$. $\blacksquare$
+> > This is the equation of a uniformly accelerated worldline of proper acceleration $a'$ (the same form as the [[Thm - Worldline of a Uniformly Accelerated Observer|hyperbola of the fiducial observer]], with $a\to a'$ and shifted spatial origin). Hence $\mathcal{O}'$ is uniformly accelerated with $a' = a/(1+ax_0)$. $\blacksquare$
 
 > [!note]- Lemma 2: The proper time of $\mathcal{O}'$ is $t' = (1+ax_0)t$
 > **Statement:** Along $\mathcal{O}'$'s worldline, $c\,\mathrm{d}t' = (1 + ax_0)\,c\,\mathrm{d}t$, integrating to $t' = (1+ax_0)t$.

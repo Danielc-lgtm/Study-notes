@@ -66,6 +66,15 @@ The reader is assumed to have worked through the whole special-relativity sequen
 > [!tip] Unlocked: The Trace of the Stress Tensor as a Source *(from Field Theory)*
 > The scalar theory exposes a structural fact reused throughout field theory: a scalar field can only couple to the Lorentz scalar built from matter, namely the **trace** $T = T^\mu{}_\mu$ of the energy-momentum tensor. Because the electromagnetic field is conformally invariant its stress tensor is traceless, $T^{\mathrm{em}} = 0$, so light is blind to any scalar field — the same mechanism that makes the **dilaton** couple to the trace anomaly and that governs scale invariance in [[Special Relativity XXIII — The Energy-Momentum Tensor and Field Energy|relativistic field theory]].
 
+- **[[Ex - Deriving the Nordström field equation]]** (⭐⭐)
+	- Vary the action $S_{\mathrm{field}} + S_{\mathrm{inter}}$ to obtain $\Box\Phi = -4\pi G\,T/c^2$, identify the source as the trace $\mathcal{S} = -T/c^2$, and verify the Newtonian limit $\Delta\Phi = 4\pi G\rho$.
+
+- **[[Ex - Why scalar gravity does not bend light]]** (⭐⭐)
+	- Show the electromagnetic stress tensor is traceless, $T^{\mathrm{em}} = 0$, conclude that light produces and feels no Nordström field, and hence that scalar gravity predicts no light deflection — the observational death of the theory.
+
+- **[[Ex - The negative field energy of vector gravity]]** (⭐⭐)
+	- Perform the substitution $\varepsilon_0 \to -1/(4\pi G)$ in the electromagnetic energy density, obtain $\rho_{\mathrm{grav}} = -(1/8\pi G)(\vec E\cdot\vec E + c^2\vec B\cdot\vec B) < 0$, and argue the theory is unstable because the field can carry arbitrarily negative energy.
+
 > [!note] Exercise Index — §25.1
 > [[Exercise Index - §25.1 Gravity in Minkowski Spacetime and Its Failure]]
 
@@ -83,6 +92,15 @@ The reader is assumed to have worked through the whole special-relativity sequen
 > [!tip] Unlocked: Gravitational Lensing *(from Astrophysics and Cosmology)*
 > Light deflection by mass is the basis of **gravitational lensing** — the bending, magnification, and multiple-imaging of background sources by foreground masses, now a primary tool for mapping dark matter and measuring cosmological distances. The deflection angle this section introduces, doubled by general relativity, is the kernel of the lens equation.
 
+- **[[Ex - The Einstein elevator thought-experiment]]** (⭐)
+	- Argue that a windowless cabin cannot, by any local experiment, distinguish rest in a uniform gravitational field from uniform acceleration in free space; deduce that light must fall and clocks at different heights must disagree, the two testable consequences of the equivalence principle.
+
+- **[[Ex - Universality of free fall from the equality of masses]]** (⭐⭐)
+	- Starting from $m_{\mathrm{grav}} = m_{\mathrm{inert}}$, show the acceleration of a body in a gravitational field is independent of its mass and composition, and that this universality is what allows the trajectory to be a geodesic of spacetime rather than a property of the body — the bridge from the equality of masses to geometry.
+
+- **[[Ex - Tidal forces and the limits of the equivalence principle]]** (⭐⭐⭐)
+	- Show that two particles released apart in a real (inhomogeneous) field accelerate relative to each other, so no single accelerated frame can mimic the field over a finite region; identify this irreducible tidal effect with geodesic deviation and curvature, and conclude that the equivalence principle holds only locally.
+
 > [!note] Exercise Index — §25.2
 > [[Exercise Index - §25.2 The Equivalence Principle]]
 
@@ -97,8 +115,14 @@ The reader is assumed to have worked through the whole special-relativity sequen
 > [!tip] Unlocked: The Metric as a Dynamical Field and the Curved Spacetime of General Relativity *(from General Relativity)*
 > The redshift forces the single most consequential idea in physics: the metric is not a fixed background but a **field** $g_{\mu\nu}(x)$, a different symmetric bilinear form at each event, obeying its own equation of motion sourced by energy and momentum. Spacetime becomes a **differentiable manifold** with a tangent space $E_A$ at each event; the metric $g_{\mu\nu}$ has signature $(+,-,-,-)$ everywhere but is no longer globally $\eta_{\mu\nu}$; freely-falling bodies follow **geodesics**; and the obstruction to making $g$ equal $\eta$ everywhere at once is the **curvature**, which *is* the gravitational field. Minkowski space survives as the tangent-space model at each point. This is general relativity — see [[General Relativity I — Einstein's Equations and Schwarzschild]] and, for the differential geometry of position-dependent metrics, [[Def - Semi-Riemannian Metric and Signature]].
 
+- **[[Ex - Gravitational redshift from the equivalence principle]]** (⭐⭐)
+	- Convert the uniform field to an acceleration $a = \gamma/c^2$, do the accelerated-receiver Doppler bookkeeping to get $\Delta t = \Delta t'/(1+\gamma x_{\mathrm{em}}/c^2)$, hence $\Delta\nu/\nu = -\Delta\Phi/c^2$, and cross-check by photon energy conservation; evaluate the Pound-Rebka shift over a $22\,\mathrm{m}$ tower.
+
 - **[[Ex - Why the gravitational redshift forces a position-dependent metric]]** (⭐⭐⭐)
 	- Run Schild's argument in full: two successive light signals in a static field differ by a time translation, so their Minkowski lengths must be equal, giving $\Delta t = \Delta t'$; but the equivalence principle gives $\Delta t \neq \Delta t'$; conclude the metric cannot be $\eta$ and must be a field $g_{\mu\nu}(x)$.
+
+- **[[Ex - The relativistic clock corrections in GPS]]** (⭐⭐)
+	- Compute the two competing relativistic effects on a GPS satellite clock — kinematic time dilation (slows it by $8.3\times 10^{-11}$) and gravitational redshift (speeds it by $5.3\times 10^{-10}$) — show they have opposite sign and the redshift dominates, and find that the uncorrected drift of $46\,\mu\mathrm{s}/\mathrm{day}$ would give a $14\,\mathrm{km}$ position error.
 
 > [!note] Exercise Index — §25.3
 > [[Exercise Index - §25.3 Gravitational Redshift and the Road to General Relativity]]
