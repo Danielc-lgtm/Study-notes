@@ -3,7 +3,7 @@ type: definition
 subject: special-relativity
 prereqs:
   - "Def - The Electromagnetic Field Tensor"
-  - "Def - Worldlines, Proper Time and Four-Velocity"
+  - "Def - Four-Velocity and Four-Acceleration"
   - "Def - The Hodge Star"
 tags: [physics, special-relativity]
 ---
