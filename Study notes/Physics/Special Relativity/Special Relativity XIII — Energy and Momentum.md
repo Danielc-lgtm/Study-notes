@@ -147,6 +147,9 @@ The reader is assumed to have worked through [[Special Relativity V — Worldlin
 - **[[Ex - The relativistic work-energy theorem]]** (⭐)
 	- Derive $dE/dt = \mathbf{F}\cdot\mathbf{u}$ from $\tfrac{d}{d\tau}(P\cdot P) = 0$ for a pure force, confirm it is the time component of $F^\mu = dP^\mu/d\tau$, and integrate it to find the work needed to accelerate a particle from rest to speed $u$.
 
+- **[[Ex - The four-force along the four-velocity and rest-mass change]]** (⭐⭐)
+	- Decompose the four-force as $F = mA + (dm/d\tau)U$ and prove $F\cdot U = dm/d\tau$, so a pure force preserves rest mass; apply to an excited atom emitting a photon (the recoil deficit $\omega < m_i - m_f$) and show the electromagnetic Lorentz force is pure because the field tensor is antisymmetric.
+
 - **Charged particle in a uniform electric field** (forward to [[Special Relativity XXI — The Electromagnetic Field|Special Relativity XXI]])
 	- The cleanest worked application of the equation of motion to a concrete force solves $d\mathbf{p}/dt = q\mathbf{E}$ for a charge released from rest, obtaining $\mathbf{p} = q\mathbf{E}t$ and the hyperbolic worldline $x(t) = \tfrac{1}{a}(\sqrt{1+a^2t^2}-1)$ with $a = qE/m$ — the speed approaches but never reaches $c$, and the rest mass is preserved because the Lorentz force is pure. Because the electromagnetic field is owned by [[Special Relativity XXI — The Electromagnetic Field|Special Relativity XXI]], this exercise is developed there; the present chapter supplies the force-free and pure-force machinery it relies on.
 
