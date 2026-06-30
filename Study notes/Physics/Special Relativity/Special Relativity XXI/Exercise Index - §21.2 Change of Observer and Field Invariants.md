@@ -1,0 +1,16 @@
+---
+type: exercise-index
+subject: special-relativity
+section: "21.2"
+tags: [physics, special-relativity, electromagnetism]
+---
+
+## §21.2 Change of Observer and Field Invariants — Exercises
+
+The exercises of §21.2 drill how the electromagnetic field looks to different observers and what survives the change. The first is the recreated vault problem: assemble $\mathbf{E}$ and $\mathbf{B}$ into the tensor $F$, boost it, and watch the longitudinal components stay fixed while the transverse ones mix by $\Gamma$ — culminating in the fact that a pure electric field acquires a magnetic field $\mathbf{B}' = -\frac{\gamma}{c^2}\mathbf{U}\times\mathbf{E}$ in a moving frame. The second computes the two Lorentz scalars $I_1 = c^2\mathbf{B}^2 - \mathbf{E}^2$ and $I_2 = c\,\mathbf{E}\cdot\mathbf{B}$ for several fields and uses their signs to classify each as mostly electric, mostly magnetic, or null, and to decide what canonical form it can be boosted to — with the plane wave as the irreducible null field. The third boosts the Coulomb field to derive the full electromagnetic field of a uniformly moving charge: the radial-from-present-position electric field, its $\Gamma^2$/$\Gamma$ pancaking, and the circulating magnetic field that recovers Biot–Savart in the slow limit — the relativistic *origin* of magnetism. The unifying observation: $\mathbf{E}$ and $\mathbf{B}$ are observer-dependent slices of one tensor, but the invariants $I_1$, $I_2$ and the field's class are objective.
+
+- [[Ex - Transforming electric and magnetic fields between frames]] (⭐⭐) — build $F_{\mu\nu}$ from $\mathbf{E}$, $\mathbf{B}$ and apply the tensor transformation law, showing longitudinal components are unchanged and transverse ones mix by $\Gamma$; specialise to a pure electric field to exhibit the generated $\mathbf{B}' = -\frac{\Gamma}{c^2}\mathbf{U}\times\mathbf{E}$, and verify the invariants are preserved ([[Thm - Transformation of Electric and Magnetic Fields]], [[Def - The Electromagnetic Field Tensor]], [[Def - The Lorentz Transformation]], [[Thm - The Electromagnetic Field Invariants]]).
+
+- [[Ex - Field invariants classify the field]] (⭐⭐) — compute $I_1$ and $I_2$ for a plane wave (null, irreducible), crossed fields (mostly magnetic, reducible to purely magnetic at $U = E/B$), the moving-charge field (mostly electric, reducible to purely electric), and parallel fields ($I_2\ne0$, irreducible to a single field), reading the class and reducibility off the invariants ([[Thm - The Electromagnetic Field Invariants]], [[Thm - Reduction to Parallel Electric and Magnetic Fields]], [[Def - The Electromagnetic Field Tensor]], [[Def - Field of a Charge in Uniform Translation]]).
+
+- [[Ex - The field of a uniformly moving charge]] (⭐⭐⭐) — boost the Coulomb field via the transformation law and the Lorentz coordinate transformation to derive the radial-from-present-position electric field, its magnitude $\propto[1-(U/c)^2\sin^2\theta]^{-3/2}$ (weaker by $\Gamma^2$ ahead, stronger by $\Gamma$ abreast), the magnetic field $\mathbf{B} = \frac{1}{c^2}\mathbf{U}\times\mathbf{E}$ recovering Biot–Savart, and the invariants confirming it is a boosted Coulomb field ([[Def - Field of a Charge in Uniform Translation]], [[Thm - Transformation of Electric and Magnetic Fields]], [[Def - The Lorentz Transformation]], [[Thm - The Electromagnetic Field Invariants]]).

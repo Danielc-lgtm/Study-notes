@@ -1,0 +1,18 @@
+---
+type: exercise-index
+subject: special-relativity
+section: "21.3"
+tags: [physics, special-relativity, electromagnetism]
+---
+
+## §21.3 Charged-Particle Motion and Accelerators — Exercises
+
+The exercises of §21.3 turn the equation of motion $m\,dU^\mu/d\tau = qF^\mu{}_\nu U^\nu$ into concrete trajectories and accelerator designs. The first solves the circular motion in a magnetic field: the cyclotron frequency $\omega_B = qB/m$, the Larmor radius $R = P\sin\theta/(qB)$ (run backwards, the momentum measurement $P_\perp = qBR$), and the crucial distinction between the constant cyclotron frequency and the velocity-slowed orbital frequency $\omega = \omega_B/\Gamma_0$ that detunes a fixed-frequency cyclotron. The second studies crossed fields: the Wien velocity $U = E/B$ at which the electric and magnetic forces cancel, identified with the boost to the purely-magnetic frame, and the requirement (a mostly-magnetic field, $I_1 > 0$) for the selector to work. The third does the energy accounting: only the electric field does work, $\mathfrak{E}_{\mathrm{kin}} = qEz = q\Delta V$, identical in form to the non-relativistic result, with the relativity hidden in the energy–speed relation — explaining why electrons go relativistic cheaply and protons expensively. The fourth designs the synchrotron field ramp $B = P/(qR)$ that holds an accelerating particle on a fixed radius, and computes the LHC's bending field. The unifying fact threading all four: the magnetic field steers (does no work), the electric field accelerates, and the relativistic kinematics ($P = \Gamma mV$, $\mathfrak{E} = \Gamma mc^2$) connects energy, momentum, and speed.
+
+- [[Ex - The cyclotron frequency and momentum from orbit radius]] (⭐) — derive $\omega_B = qB/m$ and the Larmor radius $R = P\sin\theta/(qB)$ from the equation of motion, use $P_\perp = qBR$ to measure momentum from a track radius, distinguish the orbital frequency $\omega = \omega_B/\Gamma_0$ from $\omega_B$, and explain why a fixed-frequency cyclotron works for protons but not electrons ([[Thm - Motion of a Charge in a Uniform Field]], [[Def - The Lorentz Four-Force]], [[Def - Four-Momentum and Rest Mass]]).
+
+- [[Ex - The Wien filter velocity selector]] (⭐⭐) — show a particle of speed $U = E/B$ in crossed $\mathbf{E}\perp\mathbf{B}$ passes undeflected (forces cancel), identify $E/B$ as the boost to the purely-magnetic frame (where a particle at rest feels no force), verify subluminality requires $cB > E$ ($I_1 > 0$, mostly magnetic), and design a selector for a given speed ([[Thm - Motion of a Charge in a Uniform Field]], [[Thm - Reduction to Parallel Electric and Magnetic Fields]], [[Def - The Lorentz Four-Force]]).
+
+- [[Ex - Energy gain in a linear accelerator]] (⭐⭐) — integrate the power equation to get $\mathfrak{E}_{\mathrm{kin}} = qEz = q\Delta V$ (the non-relativistic formula, relativity in the energy–speed relation), show the energy is electric-only, compute the Lorentz factors an electron and proton reach across $10^6\,$V, and explain why electrons go relativistic cheaply while a single gap is breakdown-limited to $\lesssim10^7\,$V ([[Thm - Motion of a Charge in a Uniform Field]], [[Def - The Lorentz Four-Force]], [[Thm - Mass-Energy Equivalence]]).
+
+- [[Ex - Synchrotron field ramp and the LHC magnets]] (⭐⭐) — derive the field-ramp condition $B = P/(qR)$ that holds a particle on a fixed radius, contrast the synchrotron with the cyclotron and synchrocyclotron, compute the $\sim5.4\,$T bending field for $7\,$TeV LHC protons on a $4.3\,$km radius, and explain why the real field ($\sim8.3\,$T) is larger and requires superconducting magnets ([[Thm - Motion of a Charge in a Uniform Field]], [[Def - Four-Momentum and Rest Mass]], [[Thm - Mass-Energy Equivalence]]).
