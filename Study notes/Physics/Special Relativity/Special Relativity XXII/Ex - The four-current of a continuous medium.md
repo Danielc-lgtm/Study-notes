@@ -74,7 +74,7 @@ The four-current of a medium is $\rho_0 U$, and everything an observer measures 
 > $$\rho = U_0\cdot J = U_0\cdot(\rho_0 U) = \rho_0\,(U_0\cdot U) = \rho_0\gamma,$$
 > using $\gamma = U_0\cdot U$ for the Lorentz factor between observer and matter. So $\rho = \gamma\rho_0 \geq \rho_0$.
 >
-> **Physical reason for the enhancement.** Consider a small element of charge $dq$ occupying rest-frame volume $dV_0 = $ (length)$\times$(area), so $\rho_0 = dq/dV_0$. To the observer, the element moves at speed $|\mathbf v|$, and its extent along the motion is **length-contracted** by $1/\gamma$: $dV = dV_0/\gamma$. The charge $dq$ is invariant (a Lorentz scalar), so the observed density is $\rho = dq/dV = \gamma\,dq/dV_0 = \gamma\rho_0$. The density goes *up*, not down — the same charge is squeezed into a contracted volume. This is the charge analogue of relativistic mass-density increase.
+> **Physical reason for the enhancement.** Consider a small element of charge $dq$ occupying rest-frame volume $dV_0$ = (length)$\times$(area), so $\rho_0 = dq/dV_0$. To the observer, the element moves at speed $|\mathbf v|$, and its extent along the motion is **length-contracted** by $1/\gamma$: $dV = dV_0/\gamma$. The charge $dq$ is invariant (a Lorentz scalar), so the observed density is $\rho = dq/dV = \gamma\,dq/dV_0 = \gamma\rho_0$. The density goes *up*, not down — the same charge is squeezed into a contracted volume. This is the charge analogue of relativistic mass-density increase.
 
 **Step 2: The observed current is $\mathbf J = \rho\mathbf v$.**
 
