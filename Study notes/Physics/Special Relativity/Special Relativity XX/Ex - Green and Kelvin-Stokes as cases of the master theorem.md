@@ -24,7 +24,7 @@ Stokes' theorem and the exterior derivative are as follows.
 
 ![[Thm - Stokes Theorem on Spacetime#Statement]]
 
-The exterior derivative of a $0$-form (scalar) $f$ is the 1-form $\mathrm{d}f = \partial_\mu f\,\mathrm{d}x^\mu$. The exterior derivative of a 1-form $A = A_\mu\,\mathrm{d}x^\mu$ is the 2-form $\mathrm{d}A = \partial_\mu A_\nu\,\mathrm{d}x^\mu\wedge\mathrm{d}x^\nu = \sum_{\mu<\nu}(\partial_\mu A_\nu - \partial_\nu A_\mu)\,\mathrm{d}x^\mu\wedge\mathrm{d}x^\nu$. See [[Def - The Exterior Derivative]].
+The exterior derivative of a $0$-form (scalar) $f$ is the 1-form $\mathrm{d}f = \partial_\mu f\,\mathrm{d}x^\mu$. The exterior derivative of a 1-form $A = A_\mu\,\mathrm{d}x^\mu$ is the 2-form $\mathrm{d}A = \partial_\mu A_\nu\,\mathrm{d}x^\mu\wedge\mathrm{d}x^\nu = \sum_{\mu<\nu}(\partial_\mu A_\nu - \partial_\nu A_\mu)\,\mathrm{d}x^\mu\wedge\mathrm{d}x^\nu$. See [[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]].
 
 ---
 
@@ -34,7 +34,7 @@ The exterior derivative of a $0$-form (scalar) $f$ is the 1-form $\mathrm{d}f = 
 
 **Assumption pattern.** A low-dimensional region and a form of a specified type. The signpost is the dimension $p$ and the degree of $A$: $p=1$ with a scalar gives FTC, $p=2$ with a 1-form gives Green or Kelvin–Stokes. The work is computing $\mathrm{d}A$ and recognising the classical "derivative" inside it.
 
-**Theorem routing.** Each part applies [[Thm - Stokes Theorem on Spacetime]] with a particular $A$, then computes $\mathrm{d}A$ via [[Def - The Exterior Derivative]] and reads off the classical operator (gradient component, the combination $\partial_x Q - \partial_y P$, a curl component).
+**Theorem routing.** Each part applies [[Thm - Stokes Theorem on Spacetime]] with a particular $A$, then computes $\mathrm{d}A$ via [[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]] and reads off the classical operator (gradient component, the combination $\partial_x Q - \partial_y P$, a curl component).
 
 **Key decision point.** The instructive choice is to see that the *same* Stokes theorem produces all three classical theorems, distinguished only by the dimension and the form's degree. The recognition step — identifying $\partial_x Q - \partial_y P$ as the relevant curl/Green combination and $\partial_2 A_3 - \partial_3 A_2$ as a Cartesian curl component — is where the classical operators emerge from the exterior derivative.
 

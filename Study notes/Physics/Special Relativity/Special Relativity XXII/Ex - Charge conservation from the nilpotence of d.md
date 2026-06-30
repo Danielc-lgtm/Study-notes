@@ -22,7 +22,7 @@ Prove that electric charge is conserved as a *consequence* of Maxwell's equation
 
 ![[Thm - Electric Charge Conservation and the Gauss Theorem#Statement]]
 
-The [[Def - The Electric Four-Current|four-current]] $J$ has, relative to an observer of four-velocity $U_0$, the decomposition $J = \rho U_0 + \mathbf J$ with charge density $\rho = U_0\cdot J$ and current density $\mathbf J$ (the spatial part); in the observer's frame $J^\mu = (\rho, \mathbf J)$. The [[Def - The Exterior Derivative|exterior derivative]] is nilpotent, $d\circ d = 0$. [[Thm - Stokes Theorem on Spacetime|Stokes' theorem]] states $\int_{\partial\mathcal U}\omega = \int_{\mathcal U}d\omega$ for a form $\omega$ and a domain $\mathcal U$ with boundary $\partial\mathcal U$.
+The [[Def - The Electric Four-Current|four-current]] $J$ has, relative to an observer of four-velocity $U_0$, the decomposition $J = \rho U_0 + \mathbf J$ with charge density $\rho = U_0\cdot J$ and current density $\mathbf J$ (the spatial part); in the observer's frame $J^\mu = (\rho, \mathbf J)$. The [[Special Relativity XIX/Def - The Exterior Derivative|exterior derivative]] is nilpotent, $d\circ d = 0$. [[Thm - Stokes Theorem on Spacetime|Stokes' theorem]] states $\int_{\partial\mathcal U}\omega = \int_{\mathcal U}d\omega$ for a form $\omega$ and a domain $\mathcal U$ with boundary $\partial\mathcal U$.
 
 ---
 

@@ -19,7 +19,7 @@ Prove that the exterior derivative is nilpotent, $\mathbf{d}\circ\mathbf{d} = 0$
 
 **Recall:**
 
-![[Def - The Exterior Derivative#The Definition]]
+![[Special Relativity XIX/Def - The Exterior Derivative#The Definition]]
 
 In a coordinate basis $(\mathbf{d}f)_\alpha = \partial_\alpha f$, $(\mathbf{d}A)_{\alpha\beta} = \partial_\alpha A_\beta - \partial_\beta A_\alpha$, and $(\mathbf{d}A)_{\alpha\beta\gamma} = \partial_\alpha A_{\beta\gamma} + \partial_\beta A_{\gamma\alpha} + \partial_\gamma A_{\alpha\beta}$. A form is **closed** if $\mathbf{d}A = 0$ and **exact** if $A = \mathbf{d}B$ (see [[Thm - Properties of the Exterior Derivative]]).
 
@@ -31,7 +31,7 @@ In a coordinate basis $(\mathbf{d}f)_\alpha = \partial_\alpha f$, $(\mathbf{d}A)
 
 **Assumption pattern.** Smoothness of the forms (so mixed partials commute) is the only hypothesis. Antisymmetry of the output indices is what makes the symmetric second-derivative pairs cancel.
 
-**Theorem routing.** Parts 1–2 use the partial-derivative form of $\mathbf{d}$ from [[Def - The Exterior Derivative]]. Part 3 is the conceptual generalisation. Part 4 cites the Poincaré lemma from [[Thm - Properties of the Exterior Derivative]].
+**Theorem routing.** Parts 1–2 use the partial-derivative form of $\mathbf{d}$ from [[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]]. Part 3 is the conceptual generalisation. Part 4 cites the Poincaré lemma from [[Thm - Properties of the Exterior Derivative]].
 
 **Key decision point.** The crux is recognising that the second partial derivatives $\partial_\alpha\partial_\beta(\cdots)$ are symmetric in $\alpha\beta$ while the exterior derivative antisymmetrises them, so the antisymmetric-symmetric contraction is zero. This is the whole mechanism, identical at every degree.
 

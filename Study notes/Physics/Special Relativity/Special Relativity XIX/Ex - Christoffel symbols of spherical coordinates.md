@@ -19,7 +19,7 @@ On flat spacetime in spherical coordinates $(x^\alpha) = (ct,r,\theta,\varphi)$ 
 
 **Recall:**
 
-![[Def - Christoffel Symbols#The Definition]]
+![[Special Relativity XIX/Def - Christoffel Symbols#The Definition]]
 
 The Christoffel formula is valid only in a coordinate basis, and the symbols are symmetric in their lower indices, $\Gamma^\gamma{}_{\alpha\beta}=\Gamma^\gamma{}_{\beta\alpha}$.
 
@@ -27,11 +27,11 @@ The Christoffel formula is valid only in a coordinate basis, and the symbols are
 
 # Convergent Strategy
 
-**Problem class.** A *compute-the-connection-from-the-metric* problem, the central mechanical drill of [[Def - Christoffel Symbols]]. The route is: invert the (diagonal) metric, then evaluate the formula term by term, exploiting diagonality and the symmetry in $\alpha\beta$.
+**Problem class.** A *compute-the-connection-from-the-metric* problem, the central mechanical drill of [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]. The route is: invert the (diagonal) metric, then evaluate the formula term by term, exploiting diagonality and the symmetry in $\alpha\beta$.
 
 **Assumption pattern.** The metric is diagonal, so $g^{\gamma\mu}$ is diagonal and the sum over $\mu$ in the formula collapses to $\mu = \gamma$. Only the few metric components that depend on $r$ or $\theta$ have nonzero derivatives ($g_{\theta\theta} = -r^2$, $g_{\varphi\varphi} = -r^2\sin^2\theta$), so only Christoffels with the right index pattern survive.
 
-**Theorem routing.** Part 1 inverts a diagonal matrix. Part 2 applies the formula of [[Def - Christoffel Symbols]]. Parts 3–4 are checks.
+**Theorem routing.** Part 1 inverts a diagonal matrix. Part 2 applies the formula of [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]. Parts 3–4 are checks.
 
 **Key decision point.** The labour-saving choice is to use diagonality to set $\mu = \gamma$ immediately, and the symmetry $\Gamma^\gamma{}_{\alpha\beta} = \Gamma^\gamma{}_{\beta\alpha}$ to compute each symbol once. The only nonzero derivatives are $\partial_r g_{\theta\theta} = -2r$, $\partial_r g_{\varphi\varphi} = -2r\sin^2\theta$, $\partial_\theta g_{\varphi\varphi} = -2r^2\sin\theta\cos\theta$, so the entire computation is driven by these three.
 

@@ -18,7 +18,7 @@ Let $\vec{v}$ be a vector field on a spacelike hyperplane $\Sigma$ (the $x^0 = 0
 
 **Recall:**
 
-![[Def - The Exterior Derivative#The Definition]]
+![[Special Relativity XIX/Def - The Exterior Derivative#The Definition]]
 
 The Hodge star $\star$ sends a $2$-form on a $3$-space to a $1$-form (and conversely); on the Levi-Civita tensor $\epsilon_{ijk}$ of the orthonormal spatial frame, $(\star\mathbf{d}\underline{v})^i \propto \epsilon^{ijk}(\mathbf{d}\underline{v})_{jk}$ (see [[Def - The Hodge Star]]).
 
@@ -30,7 +30,7 @@ The Hodge star $\star$ sends a $2$-form on a $3$-space to a $1$-form (and conver
 
 **Assumption pattern.** A $1$-form on a $3$-space; the Hodge star on a $3$-space sends $2$-forms to $1$-forms (i.e. vectors via the metric), which is exactly the dimension count that makes the curl a vector in three dimensions. The orthonormal right-handed basis is needed so that $\epsilon^{ijk}$ is the ordinary Levi-Civita symbol.
 
-**Theorem routing.** Part 1 uses the exterior-derivative formula of [[Def - The Exterior Derivative]] and the cancellation of Christoffels. Part 2 applies the Hodge star of [[Def - The Hodge Star]]. Part 3 invokes $\mathbf{d}^2 = 0$ from [[Thm - Properties of the Exterior Derivative]].
+**Theorem routing.** Part 1 uses the exterior-derivative formula of [[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]] and the cancellation of Christoffels. Part 2 applies the Hodge star of [[Def - The Hodge Star]]. Part 3 invokes $\mathbf{d}^2 = 0$ from [[Thm - Properties of the Exterior Derivative]].
 
 **Key decision point.** The crux is that the curl is special to three dimensions because only there does the Hodge star carry a $2$-form (which $\mathbf{d}$ of a $1$-form always is) back to a $1$-form. In four dimensions $\mathbf{d}\underline{v}$ stays a $2$-form (the electromagnetic field strength), which is why "curl" generalises to "$\mathbf{d}$ of a $1$-form" rather than to a vector.
 

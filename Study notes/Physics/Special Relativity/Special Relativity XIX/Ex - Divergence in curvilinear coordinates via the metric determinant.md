@@ -28,7 +28,7 @@ The metric determinant in spherical coordinates is $\det g = -r^4\sin^2\theta$, 
 
 **Assumption pattern.** Spherical coordinates with diagonal metric; the determinant is the product of the diagonal entries, $\det g = -r^4\sin^2\theta$. The two test fields, $\vec{e}_r$ and $\vec{e}_x$, are chosen to probe opposite extremes: $\vec{e}_r$ has constant components but nonzero divergence, $\vec{e}_x$ has varying components but zero divergence.
 
-**Theorem routing.** Part 1 substitutes $\sqrt{-\det g} = r^2\sin\theta$ into the determinant formula. Part 2 applies it to $\vec{e}_r$ and cross-checks with the trace-of-Christoffel form $\Gamma^\nu{}_{\mu\nu}$ from [[Def - Christoffel Symbols]]. Part 3 applies it to $\vec{e}_x$.
+**Theorem routing.** Part 1 substitutes $\sqrt{-\det g} = r^2\sin\theta$ into the determinant formula. Part 2 applies it to $\vec{e}_r$ and cross-checks with the trace-of-Christoffel form $\Gamma^\nu{}_{\mu\nu}$ from [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]. Part 3 applies it to $\vec{e}_x$.
 
 **Key decision point.** The instructive choice is to verify the radial result *both* ways — determinant formula and connection-coefficient formula — to see that they agree, and to recognise that the $\vec{e}_x$ case *must* give zero (a constant field has zero divergence) as a sanity check that the curvilinear machinery is correct.
 

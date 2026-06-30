@@ -20,7 +20,7 @@ A perfect fluid is in **irrotational flow** if its vorticity two-form vanishes, 
 
 **Recall:**
 
-The vorticity two-form is $\Omega = d\pi$ with $\pi = hu$, $h = (\rho+p)/n$ the enthalpy per baryon (see [[Def - Vorticity 2-Form]]). The [[Def - The Exterior Derivative|exterior derivative]] satisfies $d^2 = 0$, and the **Poincaré lemma** states that a closed form ($d\omega = 0$) is locally exact ($\omega = d\Psi$). Baryon conservation is $\nabla_\mu(nu^\mu) = 0$ (see [[Def - Baryon Four-Current and Its Conservation]]). The four-velocity normalisation $u\cdot u = 1$ becomes, via $u = h^{-1}d\Psi$, a relation $h = (\nabla\Psi\cdot\nabla\Psi)^{1/2}$. The d'Alembertian is $\square = \eta^{\mu\nu}\partial_\mu\partial_\nu$.
+The vorticity two-form is $\Omega = d\pi$ with $\pi = hu$, $h = (\rho+p)/n$ the enthalpy per baryon (see [[Def - Vorticity 2-Form]]). The [[Special Relativity XIX/Def - The Exterior Derivative|exterior derivative]] satisfies $d^2 = 0$, and the **Poincaré lemma** states that a closed form ($d\omega = 0$) is locally exact ($\omega = d\Psi$). Baryon conservation is $\nabla_\mu(nu^\mu) = 0$ (see [[Def - Baryon Four-Current and Its Conservation]]). The four-velocity normalisation $u\cdot u = 1$ becomes, via $u = h^{-1}d\Psi$, a relation $h = (\nabla\Psi\cdot\nabla\Psi)^{1/2}$. The d'Alembertian is $\square = \eta^{\mu\nu}\partial_\mu\partial_\nu$.
 
 ---
 

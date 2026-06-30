@@ -10,7 +10,7 @@ tags: [physics, special-relativity]
 
 # Notation
 
-We set $c = 1$, mostly-minus signature $\eta = \mathrm{diag}(1,-1,-1,-1)$. On flat spacetime with arbitrary coordinates $(x^\alpha)$, the metric components are $g_{\alpha\beta}$, with inverse $g^{\alpha\beta}$ and determinant $\det g < 0$ (signature $(1,3)$), so $\sqrt{-\det g}$ is real. The covariant derivative is $\boldsymbol{\nabla}$ with components $\nabla_\mu$ and Christoffel symbols $\Gamma^\gamma{}_{\alpha\beta}$ (see [[Def - Christoffel Symbols]]); $\partial_\mu \equiv \partial/\partial x^\mu$. A vector field is $\vec{v}$ with components $v^\mu$; a tensor field $\boldsymbol{T}$. Full registry on [[Special Relativity XIX — Fields on Spacetime and the Covariant Derivative]].
+We set $c = 1$, mostly-minus signature $\eta = \mathrm{diag}(1,-1,-1,-1)$. On flat spacetime with arbitrary coordinates $(x^\alpha)$, the metric components are $g_{\alpha\beta}$, with inverse $g^{\alpha\beta}$ and determinant $\det g < 0$ (signature $(1,3)$), so $\sqrt{-\det g}$ is real. The covariant derivative is $\boldsymbol{\nabla}$ with components $\nabla_\mu$ and Christoffel symbols $\Gamma^\gamma{}_{\alpha\beta}$ (see [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]); $\partial_\mu \equiv \partial/\partial x^\mu$. A vector field is $\vec{v}$ with components $v^\mu$; a tensor field $\boldsymbol{T}$. Full registry on [[Special Relativity XIX — Fields on Spacetime and the Covariant Derivative]].
 
 ---
 
@@ -118,7 +118,7 @@ For the antisymmetric corollary, insert the extra subgoal: $\Gamma^\alpha{}_{\nu
 > **Why needed:** It is the only Christoffel quantity entering a divergence; reducing it to metric derivatives is the crux.
 >
 > > [!note]- Full proof
-> > From [[Def - Christoffel Symbols]], $\Gamma^\gamma{}_{\nu\beta} = \tfrac12 g^{\gamma\mu}(\partial_\nu g_{\mu\beta}+\partial_\beta g_{\nu\mu}-\partial_\mu g_{\nu\beta})$. Set $\gamma=\beta$ and sum:
+> > From [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]], $\Gamma^\gamma{}_{\nu\beta} = \tfrac12 g^{\gamma\mu}(\partial_\nu g_{\mu\beta}+\partial_\beta g_{\nu\mu}-\partial_\mu g_{\nu\beta})$. Set $\gamma=\beta$ and sum:
 > > $$\Gamma^\beta{}_{\nu\beta} = \tfrac12 g^{\beta\mu}\big(\partial_\nu g_{\mu\beta}+\partial_\beta g_{\nu\mu}-\partial_\mu g_{\nu\beta}\big).$$
 > > In the last two terms, $g^{\beta\mu}\partial_\beta g_{\nu\mu}$ and $g^{\beta\mu}\partial_\mu g_{\nu\beta}$ are equal: relabel the dummy pair $\beta\leftrightarrow\mu$ in one of them and use $g^{\beta\mu}=g^{\mu\beta}$. Hence they cancel ($+$ and $-$), leaving $\Gamma^\beta{}_{\nu\beta} = \tfrac12 g^{\beta\mu}\partial_\nu g_{\mu\beta} = \tfrac12 g^{\rho\sigma}\partial_\nu g_{\rho\sigma}$. $\blacksquare$
 
@@ -140,7 +140,7 @@ For the antisymmetric corollary, insert the extra subgoal: $\Gamma^\alpha{}_{\nu
 > **Why needed:** It removes one of the two Christoffel terms in the tensor divergence, leaving only the trace term and so the determinant form.
 >
 > > [!note]- Full proof
-> > In a coordinate basis $\Gamma^\alpha{}_{\nu\mu} = \Gamma^\alpha{}_{\mu\nu}$ (symmetry of the Christoffel symbols, [[Def - Christoffel Symbols]]). For antisymmetric $T$, $T^{\nu\mu} = -T^{\mu\nu}$. Then $\Gamma^\alpha{}_{\nu\mu}T^{\nu\mu} = \Gamma^\alpha{}_{\mu\nu}T^{\nu\mu}$ (rename, symmetry) $= -\Gamma^\alpha{}_{\mu\nu}T^{\mu\nu}$ (antisymmetry) $= -\Gamma^\alpha{}_{\nu\mu}T^{\nu\mu}$ (rename back). A quantity equal to its own negative is zero. $\blacksquare$
+> > In a coordinate basis $\Gamma^\alpha{}_{\nu\mu} = \Gamma^\alpha{}_{\mu\nu}$ (symmetry of the Christoffel symbols, [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]). For antisymmetric $T$, $T^{\nu\mu} = -T^{\mu\nu}$. Then $\Gamma^\alpha{}_{\nu\mu}T^{\nu\mu} = \Gamma^\alpha{}_{\mu\nu}T^{\nu\mu}$ (rename, symmetry) $= -\Gamma^\alpha{}_{\mu\nu}T^{\mu\nu}$ (antisymmetry) $= -\Gamma^\alpha{}_{\nu\mu}T^{\nu\mu}$ (rename back). A quantity equal to its own negative is zero. $\blacksquare$
 
 ---
 
@@ -172,9 +172,9 @@ For the antisymmetric corollary, insert the extra subgoal: $\Gamma^\alpha{}_{\nu
 
 # Bridges
 
-- **[[Def - The Exterior Derivative]]** — the divergence is the exterior derivative in disguise: $\boldsymbol{\nabla}\!\cdot\vec{v} = -\star\mathbf{d}\star\underline{v}$, the codifferential of the metric-dual $1$-form. So the metric-dependent divergence and the metric-free exterior derivative are linked by two Hodge stars, and the determinant formula is the component-level shadow of $\mathbf{d}\star\underline{v} = (\boldsymbol{\nabla}\!\cdot\vec{v})\boldsymbol{\epsilon}$ — see [[Thm - Properties of the Exterior Derivative]].
+- **[[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]]** — the divergence is the exterior derivative in disguise: $\boldsymbol{\nabla}\!\cdot\vec{v} = -\star\mathbf{d}\star\underline{v}$, the codifferential of the metric-dual $1$-form. So the metric-dependent divergence and the metric-free exterior derivative are linked by two Hodge stars, and the determinant formula is the component-level shadow of $\mathbf{d}\star\underline{v} = (\boldsymbol{\nabla}\!\cdot\vec{v})\boldsymbol{\epsilon}$ — see [[Thm - Properties of the Exterior Derivative]].
 
-- **[[Def - Christoffel Symbols]]** — the theorem is really a fact about the *trace* of the Christoffels: $\Gamma^\nu{}_{\mu\nu} = \partial_\mu\ln\sqrt{-\det g}$. The full Christoffel symbols carry much more information (the whole connection), but only their trace enters a vector divergence, which is why the determinant suffices.
+- **[[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]** — the theorem is really a fact about the *trace* of the Christoffels: $\Gamma^\nu{}_{\mu\nu} = \partial_\mu\ln\sqrt{-\det g}$. The full Christoffel symbols carry much more information (the whole connection), but only their trace enters a vector divergence, which is why the determinant suffices.
 
 - **Energy–momentum conservation** — the symmetric energy–momentum tensor obeys $\nabla_\mu T^{\mu\nu} = 0$, the relativistic continuity equation for energy and momentum (see [[Special Relativity XXIII — The Energy-Momentum Tensor and Field Energy]]). Because $T^{\mu\nu}$ is symmetric (not antisymmetric), its divergence does *not* fully reduce to the determinant form — one Christoffel term survives — and that surviving term is exactly the gravitational "force density" in curved spacetime. The contrast with the antisymmetric case is instructive: antisymmetry buys the clean formula, symmetry does not.
 

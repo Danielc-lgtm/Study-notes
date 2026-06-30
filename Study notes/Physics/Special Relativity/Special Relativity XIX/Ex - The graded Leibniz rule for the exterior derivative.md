@@ -19,7 +19,7 @@ $$\mathbf{d}(A\wedge B) = \mathbf{d}A\wedge B + (-1)^{p}\,A\wedge\mathbf{d}B.$$
 
 **Recall:**
 
-![[Def - The Exterior Derivative#The Definition]]
+![[Special Relativity XIX/Def - The Exterior Derivative#The Definition]]
 
 The wedge product is graded-anticommutative: $\alpha\wedge\beta = (-1)^{pq}\beta\wedge\alpha$ for a $p$-form $\alpha$ and $q$-form $\beta$ (see [[Def - Alternate Forms and the Exterior Product]]). In a coordinate basis $e^\alpha = \mathbf{d}x^\alpha$ and $\mathbf{d}(\mathbf{d}x^\alpha) = 0$.
 

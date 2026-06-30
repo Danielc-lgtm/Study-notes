@@ -20,7 +20,7 @@ $$ct' = ct, \quad x' = x\cos\omega t - y\sin\omega t, \quad y' = x\sin\omega t +
 
 **Recall:**
 
-![[Def - Christoffel Symbols#The Definition]]
+![[Special Relativity XIX/Def - Christoffel Symbols#The Definition]]
 
 The geodesic equation $\ddot{x}^\gamma + \Gamma^\gamma{}_{\alpha\beta}\dot{x}^\alpha\dot{x}^\beta = 0$ (dots are derivatives with respect to proper time) is the equation of a free particle; see [[Def - The Covariant Derivative]] for its origin as $\boldsymbol{\nabla}_{\vec u}\vec u = 0$. In mostly-minus signature $\eta = \mathrm{diag}(1,-1,-1,-1)$.
 
@@ -28,11 +28,11 @@ The geodesic equation $\ddot{x}^\gamma + \Gamma^\gamma{}_{\alpha\beta}\dot{x}^\a
 
 # Convergent Strategy
 
-**Problem class.** A *compute-the-connection-and-interpret-it-physically* problem, the ⭐⭐⭐ synthesis of [[Def - Christoffel Symbols]] with the geodesic equation. It demonstrates the chapter's central thesis — Christoffel symbols are fictitious forces — on the cleanest possible example.
+**Problem class.** A *compute-the-connection-and-interpret-it-physically* problem, the ⭐⭐⭐ synthesis of [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]] with the geodesic equation. It demonstrates the chapter's central thesis — Christoffel symbols are fictitious forces — on the cleanest possible example.
 
 **Assumption pattern.** The coordinate change is a time-dependent rotation, so the Jacobian carries time-derivatives of the rotation matrix, producing cross terms and a position-dependent $g_{tt} = 1 - \omega^2(x^2+y^2)$. The signpost that centrifugal and Coriolis terms will appear is the explicit $\omega$ in the rotation.
 
-**Theorem routing.** Part 1: metric transformation law. Part 2: Christoffel formula of [[Def - Christoffel Symbols]]. Part 3: geodesic equation in the slow-motion limit. Part 4: vanishing of the Riemann tensor by flatness.
+**Theorem routing.** Part 1: metric transformation law. Part 2: Christoffel formula of [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]. Part 3: geodesic equation in the slow-motion limit. Part 4: vanishing of the Riemann tensor by flatness.
 
 **Key decision point.** The crux is the slow-motion limit in Part 3: setting $\dot t \approx 1$ (proper time $\approx$ coordinate time) and keeping the velocity-linear (Coriolis) and velocity-independent (centrifugal) Christoffel contributions, while dropping higher-order terms. Identifying which Christoffel symbol is centrifugal ($\Gamma^x{}_{tt}$, velocity-independent) versus Coriolis ($\Gamma^x{}_{ty}$, velocity-linear) is the physical payoff.
 

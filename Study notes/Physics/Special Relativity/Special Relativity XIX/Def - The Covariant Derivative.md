@@ -45,7 +45,7 @@ The components are written $\nabla_\beta T^{\alpha_1\cdots\alpha_k}{}_{\beta_1\c
 2. **Leibniz rule** for $\otimes$: $\quad\boldsymbol{\nabla}_{\vec v}(A\otimes B) = \boldsymbol{\nabla}_{\vec v}A\otimes B + A\otimes\boldsymbol{\nabla}_{\vec v}B$, and in particular $\boldsymbol{\nabla}_{\vec v}(fB) = (\boldsymbol{\nabla}_{\vec v}f)\,B + f\,\boldsymbol{\nabla}_{\vec v}B$.
 3. **Commutes with contraction**: $\quad\boldsymbol{\nabla}(C^p_q\boldsymbol{T}) = C^p_q(\boldsymbol{\nabla}\boldsymbol{T})$.
 
-**Component formula.** In any coordinate basis, with connection coefficients $\Gamma^\gamma{}_{\alpha\beta}$ (see [[Def - Christoffel Symbols]]),
+**Component formula.** In any coordinate basis, with connection coefficients $\Gamma^\gamma{}_{\alpha\beta}$ (see [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]),
 $$\boxed{\;\nabla_\beta v^\alpha = \frac{\partial v^\alpha}{\partial x^\beta} + \Gamma^\alpha{}_{\mu\beta}\,v^\mu\;}\qquad\text{and}\qquad\boxed{\;\nabla_\beta \omega_\alpha = \frac{\partial \omega_\alpha}{\partial x^\beta} - \Gamma^\mu{}_{\alpha\beta}\,\omega_\mu\;}$$
 for a vector field $\vec{v}$ and a $1$-form $\omega$, and for a general type $(k,\ell)$ field one $+\Gamma$ term per contravariant index and one $-\Gamma$ term per covariant index:
 $$\nabla_\rho T^{\alpha_1\cdots\alpha_k}{}_{\beta_1\cdots\beta_\ell} = \frac{\partial T^{\alpha_1\cdots\alpha_k}{}_{\beta_1\cdots\beta_\ell}}{\partial x^\rho} + \sum_{p=1}^{k}\Gamma^{\alpha_p}{}_{\mu\rho}\,T^{\alpha_1\cdots\mu\cdots\alpha_k}{}_{\beta_1\cdots\beta_\ell} - \sum_{q=1}^{\ell}\Gamma^{\mu}{}_{\beta_q\rho}\,T^{\alpha_1\cdots\alpha_k}{}_{\beta_1\cdots\mu\cdots\beta_\ell}.$$

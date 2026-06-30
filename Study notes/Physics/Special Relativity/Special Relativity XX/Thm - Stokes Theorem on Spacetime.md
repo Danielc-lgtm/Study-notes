@@ -11,7 +11,7 @@ tags: [physics, special-relativity]
 
 # Notation
 
-We set $c = 1$. $\mathscr{V}$ is an oriented compact submanifold-with-boundary of spacetime $\mathscr{E}$, of dimension $p$, with boundary $\partial\mathscr{V}$ of dimension $p-1$ carrying the [[Def - Submanifolds of Spacetime|induced (outward-normal-first) orientation]]. $A$ is a differential $(p-1)$-form on $\mathscr{E}$ and $\mathrm{d}A$ its [[Def - The Exterior Derivative|exterior derivative]], a $p$-form. Integration of a $p$-form over a $p$-submanifold is as defined in [[Def - Integration of Forms and the Volume Element]]. Full registry on [[Special Relativity XX — Integration in Spacetime and Stokes' Theorem]].
+We set $c = 1$. $\mathscr{V}$ is an oriented compact submanifold-with-boundary of spacetime $\mathscr{E}$, of dimension $p$, with boundary $\partial\mathscr{V}$ of dimension $p-1$ carrying the [[Def - Submanifolds of Spacetime|induced (outward-normal-first) orientation]]. $A$ is a differential $(p-1)$-form on $\mathscr{E}$ and $\mathrm{d}A$ its [[Special Relativity XIX/Def - The Exterior Derivative|exterior derivative]], a $p$-form. Integration of a $p$-form over a $p$-submanifold is as defined in [[Def - Integration of Forms and the Volume Element]]. Full registry on [[Special Relativity XX — Integration in Spacetime and Stokes' Theorem]].
 
 ---
 
@@ -173,7 +173,7 @@ Reduce to the manifold version of Stokes' theorem by recognising Minkowski space
 
 - **The classical integral theorems of vector calculus** — the fundamental theorem of calculus, the Green–Riemann formula, the Kelvin–Stokes curl theorem, and the Gauss divergence theorem are the cases $p=1,2,2,3$ of this single identity. Each is obtained by choosing $A$ and reading off which component of $\mathrm{d}A$ the classical "derivative" (gradient, curl, divergence) corresponds to — the gradient, curl, and divergence being the exterior derivative on $0$-, $1$-, and $2$-forms in three dimensions dressed with the Hodge star.
 
-- **[[Def - The Exterior Derivative]]** — the property $\mathrm{d}\circ\mathrm{d} = 0$ is the dual of $\partial\circ\partial = 0$ (the boundary of a boundary is empty), and Stokes' theorem is the pairing that makes them adjoint. This is why a form that is exact ($A = \mathrm{d}B$) integrates to zero over any cycle, and a region that is a boundary ($\mathscr{V} = \partial W$) gives zero for any closed form — the two halves of de Rham theory.
+- **[[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]]** — the property $\mathrm{d}\circ\mathrm{d} = 0$ is the dual of $\partial\circ\partial = 0$ (the boundary of a boundary is empty), and Stokes' theorem is the pairing that makes them adjoint. This is why a form that is exact ($A = \mathrm{d}B$) integrates to zero over any cycle, and a region that is a boundary ($\mathscr{V} = \partial W$) gives zero for any closed form — the two halves of de Rham theory.
 
 ---
 

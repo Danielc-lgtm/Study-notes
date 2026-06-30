@@ -10,7 +10,7 @@ tags: [physics, special-relativity]
 
 # Notation
 
-We set $c = 1$, mostly-minus signature $\eta = \mathrm{diag}(1,-1,-1,-1)$. On flat spacetime $\mathscr{E}$ with arbitrary coordinates $(x^\alpha)$, $\Omega^p(\mathscr{E})$ is the space of differential $p$-forms; $\mathbf{d}$ is the exterior derivative, with $(\mathbf{d}A)_{\alpha\beta} = \partial_\alpha A_\beta - \partial_\beta A_\alpha$ for a $1$-form (see [[Def - The Exterior Derivative]]); $\wedge$ is the wedge product; $\star$ the Hodge star; $\boldsymbol{\epsilon} = \pm\sqrt{-\det g}\,\mathbf{d}x^0\wedge\cdots\wedge\mathbf{d}x^3$ the Levi-Civita (volume) form; $\partial_\alpha\equiv\partial/\partial x^\alpha$. A $p$-form is **closed** if $\mathbf{d}A = 0$, **exact** if $A = \mathbf{d}B$. Full registry on [[Special Relativity XIX — Fields on Spacetime and the Covariant Derivative]].
+We set $c = 1$, mostly-minus signature $\eta = \mathrm{diag}(1,-1,-1,-1)$. On flat spacetime $\mathscr{E}$ with arbitrary coordinates $(x^\alpha)$, $\Omega^p(\mathscr{E})$ is the space of differential $p$-forms; $\mathbf{d}$ is the exterior derivative, with $(\mathbf{d}A)_{\alpha\beta} = \partial_\alpha A_\beta - \partial_\beta A_\alpha$ for a $1$-form (see [[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]]); $\wedge$ is the wedge product; $\star$ the Hodge star; $\boldsymbol{\epsilon} = \pm\sqrt{-\det g}\,\mathbf{d}x^0\wedge\cdots\wedge\mathbf{d}x^3$ the Levi-Civita (volume) form; $\partial_\alpha\equiv\partial/\partial x^\alpha$. A $p$-form is **closed** if $\mathbf{d}A = 0$, **exact** if $A = \mathbf{d}B$. Full registry on [[Special Relativity XIX — Fields on Spacetime and the Covariant Derivative]].
 
 ---
 
@@ -121,7 +121,7 @@ For nilpotency, the only subtlety is trusting that the alternating sum of symmet
 > **Why needed:** It is the base case of nilpotency and contains its entire mechanism.
 >
 > > [!note]- Full proof
-> > $(\mathbf{d}f)_\alpha = \partial_\alpha f$ by [[Def - The Exterior Derivative]]. Then $(\mathbf{d}(\mathbf{d}f))_{\alpha\beta} = \partial_\alpha(\mathbf{d}f)_\beta - \partial_\beta(\mathbf{d}f)_\alpha = \partial_\alpha\partial_\beta f - \partial_\beta\partial_\alpha f$. For a smooth $f$ the mixed second partials are equal (Schwarz's theorem), so this is $0$. $\blacksquare$
+> > $(\mathbf{d}f)_\alpha = \partial_\alpha f$ by [[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]]. Then $(\mathbf{d}(\mathbf{d}f))_{\alpha\beta} = \partial_\alpha(\mathbf{d}f)_\beta - \partial_\beta(\mathbf{d}f)_\alpha = \partial_\alpha\partial_\beta f - \partial_\beta\partial_\alpha f$. For a smooth $f$ the mixed second partials are equal (Schwarz's theorem), so this is $0$. $\blacksquare$
 
 > [!note]- Lemma 2: $\mathbf{d}\mathbf{d}A = 0$ for $p$-forms
 > **Statement:** For any differential $p$-form $A$, $\mathbf{d}(\mathbf{d}A) = 0$.
@@ -131,7 +131,7 @@ For nilpotency, the only subtlety is trusting that the alternating sum of symmet
 > **Why needed:** It is the general nilpotency, from which "exact implies closed" follows.
 >
 > > [!note]- Full proof
-> > Work in a coordinate basis, where $\mathbf{d}$ acts by the alternating sum of partial derivatives ([[Def - The Exterior Derivative]]). Applying $\mathbf{d}$ twice produces, for each output index slot, an alternating sum of terms $\partial_{\mu}\partial_{\nu}A_{\rho_1\cdots\rho_p}$. In each such term the two derivative indices $\mu,\nu$ are antisymmetrised (they sit in distinct antisymmetrised output slots), while $\partial_\mu\partial_\nu = \partial_\nu\partial_\mu$ is symmetric in $\mu,\nu$. A symmetric tensor antisymmetrised over the same pair of indices is zero, so every term cancels and $\mathbf{d}\mathbf{d}A = 0$. (Equivalently, the result is connection-independent and metric-free, so it can only depend on the symmetry of second partials, which forces it to vanish.) $\blacksquare$
+> > Work in a coordinate basis, where $\mathbf{d}$ acts by the alternating sum of partial derivatives ([[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]]). Applying $\mathbf{d}$ twice produces, for each output index slot, an alternating sum of terms $\partial_{\mu}\partial_{\nu}A_{\rho_1\cdots\rho_p}$. In each such term the two derivative indices $\mu,\nu$ are antisymmetrised (they sit in distinct antisymmetrised output slots), while $\partial_\mu\partial_\nu = \partial_\nu\partial_\mu$ is symmetric in $\mu,\nu$. A symmetric tensor antisymmetrised over the same pair of indices is zero, so every term cancels and $\mathbf{d}\mathbf{d}A = 0$. (Equivalently, the result is connection-independent and metric-free, so it can only depend on the symmetry of second partials, which forces it to vanish.) $\blacksquare$
 
 > [!note]- Lemma 3: The graded Leibniz rule
 > **Statement:** For a $p$-form $A$ and any form $B$, $\mathbf{d}(A\wedge B) = \mathbf{d}A\wedge B + (-1)^p A\wedge\mathbf{d}B$.
@@ -182,7 +182,7 @@ For nilpotency, the only subtlety is trusting that the alternating sum of symmet
 
 # Bridges
 
-- **[[Def - The Exterior Derivative]]** — this theorem is the catalogue of structural properties of the operator defined there; nilpotency and Leibniz are the two axioms (together with the rule that $\mathbf{d}f$ is the gradient) that *characterise* $\mathbf{d}$ uniquely, so the theorem is in a sense a restatement that the construction has the right properties.
+- **[[Special Relativity XIX/Def - The Exterior Derivative|Def - The Exterior Derivative]]** — this theorem is the catalogue of structural properties of the operator defined there; nilpotency and Leibniz are the two axioms (together with the rule that $\mathbf{d}f$ is the gradient) that *characterise* $\mathbf{d}$ uniquely, so the theorem is in a sense a restatement that the construction has the right properties.
 
 - **[[Thm - Divergence of a Vector and Tensor Field]]** — the corollary $\mathbf{d}\star\underline{v} = (\boldsymbol{\nabla}\!\cdot\vec{v})\boldsymbol{\epsilon}$ identifies the divergence with the codifferential $-\star\mathbf{d}\star$, so the determinant divergence formula and the exterior derivative are two views of one operator; the metric enters only through the Hodge stars.
 

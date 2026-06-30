@@ -21,7 +21,7 @@ Show that the covariant derivative of the metric tensor vanishes, $\boldsymbol{\
 
 ![[Def - The Covariant Derivative#The Definition]]
 
-The covariant derivative of a type $(0,2)$ tensor is $\nabla_\gamma T_{\alpha\beta} = \partial_\gamma T_{\alpha\beta} - \Gamma^\mu{}_{\alpha\gamma}T_{\mu\beta} - \Gamma^\mu{}_{\beta\gamma}T_{\alpha\mu}$. The Christoffel symbols are $\Gamma^\gamma{}_{\alpha\beta} = \tfrac12 g^{\gamma\mu}(\partial_\alpha g_{\mu\beta}+\partial_\beta g_{\alpha\mu}-\partial_\mu g_{\alpha\beta})$ (see [[Def - Christoffel Symbols]]).
+The covariant derivative of a type $(0,2)$ tensor is $\nabla_\gamma T_{\alpha\beta} = \partial_\gamma T_{\alpha\beta} - \Gamma^\mu{}_{\alpha\gamma}T_{\mu\beta} - \Gamma^\mu{}_{\beta\gamma}T_{\alpha\mu}$. The Christoffel symbols are $\Gamma^\gamma{}_{\alpha\beta} = \tfrac12 g^{\gamma\mu}(\partial_\alpha g_{\mu\beta}+\partial_\beta g_{\alpha\mu}-\partial_\mu g_{\alpha\beta})$ (see [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]).
 
 ---
 
@@ -31,7 +31,7 @@ The covariant derivative of a type $(0,2)$ tensor is $\nabla_\gamma T_{\alpha\be
 
 **Assumption pattern.** Conceptually: the flat metric is the same bilinear form at every event, hence a constant tensor field. Computationally: the Christoffel symbols are *built from* the metric derivatives, so substituting them into $\nabla_\gamma g_{\alpha\beta}$ is bound to cancel.
 
-**Theorem routing.** Part 1 uses the definition of the covariant derivative of a constant field. Part 2 routes through the lower-index rule and the Christoffel formula of [[Def - Christoffel Symbols]]. Part 3 uses the Leibniz rule. Part 4 is conceptual, contrasting flat and curved.
+**Theorem routing.** Part 1 uses the definition of the covariant derivative of a constant field. Part 2 routes through the lower-index rule and the Christoffel formula of [[Special Relativity XIX/Def - Christoffel Symbols|Def - Christoffel Symbols]]. Part 3 uses the Leibniz rule. Part 4 is conceptual, contrasting flat and curved.
 
 **Key decision point.** The computational crux is recognising that $\nabla_\gamma g_{\alpha\beta} = \partial_\gamma g_{\alpha\beta} - \Gamma^\mu{}_{\alpha\gamma}g_{\mu\beta} - \Gamma^\mu{}_{\beta\gamma}g_{\alpha\mu}$ is *exactly* the relation the Christoffel formula was constructed to satisfy — the two $\Gamma g$ terms reassemble $\partial_\gamma g_{\alpha\beta}$. Seeing this is the whole point; brute-forcing it in components also works but obscures why it had to vanish.
 

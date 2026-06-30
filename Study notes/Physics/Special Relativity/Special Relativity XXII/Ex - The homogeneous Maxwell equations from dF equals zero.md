@@ -29,7 +29,7 @@ The component dictionary (in an observer's inertial frame) is $F_{0i} = E_i$ and
 
 ![[Thm - Maxwell Equations#Statement]]
 
-The [[Def - The Exterior Derivative|exterior derivative]] of a $2$-form $F = \tfrac12 F_{\mu\nu}\,dx^\mu\wedge dx^\nu$ is the $3$-form $dF$ with components $(dF)_{\alpha\beta\gamma} = \partial_\alpha F_{\beta\gamma} + \partial_\beta F_{\gamma\alpha} + \partial_\gamma F_{\alpha\beta}$, the cyclic (antisymmetrised) sum of gradients.
+The [[Special Relativity XIX/Def - The Exterior Derivative|exterior derivative]] of a $2$-form $F = \tfrac12 F_{\mu\nu}\,dx^\mu\wedge dx^\nu$ is the $3$-form $dF$ with components $(dF)_{\alpha\beta\gamma} = \partial_\alpha F_{\beta\gamma} + \partial_\beta F_{\gamma\alpha} + \partial_\gamma F_{\alpha\beta}$, the cyclic (antisymmetrised) sum of gradients.
 
 ---
 
@@ -39,7 +39,7 @@ The [[Def - The Exterior Derivative|exterior derivative]] of a $2$-form $F = \tf
 
 **Assumption pattern.** The given is $dF = 0$, a statement about a $2$-form. The signpost is "homogeneous" — the equation has no source, which means it concerns the geometry of $F$ alone, and (by the Poincaré lemma) is equivalent to the existence of a potential. What this unlocks is the component dictionary $F_{0i} = E_i$, $F_{ij} = -\epsilon_{ijk}B_k$, which converts index statements into vector statements.
 
-**Theorem routing.** The route is: $dF = 0 \to$ Bianchi identity (by the definition of the [[Def - The Exterior Derivative|exterior derivative]] of a $2$-form) $\to$ split by index type (all spatial, one temporal) $\to$ the two three-dimensional equations via the dictionary, exactly as in [[Thm - Maxwell Equations]] Lemmas 1 and 3. The all-spatial case gives no-monopole; the one-temporal case gives Faraday.
+**Theorem routing.** The route is: $dF = 0 \to$ Bianchi identity (by the definition of the [[Special Relativity XIX/Def - The Exterior Derivative|exterior derivative]] of a $2$-form) $\to$ split by index type (all spatial, one temporal) $\to$ the two three-dimensional equations via the dictionary, exactly as in [[Thm - Maxwell Equations]] Lemmas 1 and 3. The all-spatial case gives no-monopole; the one-temporal case gives Faraday.
 
 **Key decision point.** The non-obvious choice is *which index combinations to take*. There are $\binom{4}{3} = 4$ independent index triples; the one with no temporal index ($123$) gives a scalar equation (no-monopole), and the three with one temporal index ($0ij$) give a vector equation (Faraday). Mistaking which triple gives which equation, or failing to contract the Faraday case with $\epsilon_{ij\ell}$ to extract the curl, is where the bookkeeping fails.
 
@@ -78,7 +78,7 @@ The proof unpacks $dF = 0$ into the Bianchi identity, then sorts its components 
 **Step 1: $dF = 0$ is the Bianchi identity $\partial_\alpha F_{\beta\gamma} + \partial_\beta F_{\gamma\alpha} + \partial_\gamma F_{\alpha\beta} = 0$.**
 
 > [!note]- Derivation
-> The field is the $2$-form $F = \tfrac12 F_{\mu\nu}\,dx^\mu\wedge dx^\nu$. Its [[Def - The Exterior Derivative|exterior derivative]] is the $3$-form $dF = \tfrac12\partial_\lambda F_{\mu\nu}\,dx^\lambda\wedge dx^\mu\wedge dx^\nu$. Collecting the fully antisymmetric components, $(dF)_{\alpha\beta\gamma}$ is the alternating sum of $\partial_\alpha F_{\beta\gamma}$ over permutations; because $F_{\beta\gamma}$ is already antisymmetric, the six permutations collapse to the three cyclic terms with a common sign:
+> The field is the $2$-form $F = \tfrac12 F_{\mu\nu}\,dx^\mu\wedge dx^\nu$. Its [[Special Relativity XIX/Def - The Exterior Derivative|exterior derivative]] is the $3$-form $dF = \tfrac12\partial_\lambda F_{\mu\nu}\,dx^\lambda\wedge dx^\mu\wedge dx^\nu$. Collecting the fully antisymmetric components, $(dF)_{\alpha\beta\gamma}$ is the alternating sum of $\partial_\alpha F_{\beta\gamma}$ over permutations; because $F_{\beta\gamma}$ is already antisymmetric, the six permutations collapse to the three cyclic terms with a common sign:
 > $$(dF)_{\alpha\beta\gamma} = \partial_\alpha F_{\beta\gamma} + \partial_\beta F_{\gamma\alpha} + \partial_\gamma F_{\alpha\beta}.$$
 > Setting $dF = 0$ requires this to vanish for every index triple — the **Bianchi identity** $\partial_{[\alpha}F_{\beta\gamma]} = 0$.
 
@@ -103,7 +103,7 @@ The proof unpacks $dF = 0$ into the Bianchi identity, then sorts its components 
 > [!note]- Derivation
 > Suppose the field comes from a [[Def - The Four-Potential|potential]], $F = dA$. Then
 > $$dF = d(dA) = 0$$
-> identically, because the [[Def - The Exterior Derivative|exterior derivative]] is nilpotent: $d\circ d = 0$ (the [[Thm - Properties of the Exterior Derivative|defining property]] of $d$). So the Bianchi identity, and with it both $\nabla\cdot\mathbf B = 0$ and $\nabla\times\mathbf E = -\partial_t\mathbf B$, hold *automatically* the instant a potential exists — with no physical input beyond "$F$ has a potential". The homogeneous Maxwell equations are not laws of nature in the usual sense; they are identities of the exterior calculus, forced by the structure $F = dA$.
+> identically, because the [[Special Relativity XIX/Def - The Exterior Derivative|exterior derivative]] is nilpotent: $d\circ d = 0$ (the [[Thm - Properties of the Exterior Derivative|defining property]] of $d$). So the Bianchi identity, and with it both $\nabla\cdot\mathbf B = 0$ and $\nabla\times\mathbf E = -\partial_t\mathbf B$, hold *automatically* the instant a potential exists — with no physical input beyond "$F$ has a potential". The homogeneous Maxwell equations are not laws of nature in the usual sense; they are identities of the exterior calculus, forced by the structure $F = dA$.
 
 > [!note]- Complete formal solution
 > Write $F = \tfrac12 F_{\mu\nu}dx^\mu\wedge dx^\nu$; its exterior derivative has components $(dF)_{\alpha\beta\gamma} = \partial_\alpha F_{\beta\gamma} + \partial_\beta F_{\gamma\alpha} + \partial_\gamma F_{\alpha\beta}$, so $dF = 0$ is the Bianchi identity $\partial_{[\alpha}F_{\beta\gamma]} = 0$. With the dictionary $F_{0i} = E_i$, $F_{ij} = -\epsilon_{ijk}B_k$: the triple $123$ gives $-\partial_i B_i = 0$, i.e. $\nabla\cdot\mathbf B = 0$; the triple $0ij$ gives $-\partial_t(\epsilon_{ijk}B_k) - \partial_i E_j + \partial_j E_i = 0$, which contracted with $\epsilon_{ij\ell}$ yields $\nabla\times\mathbf E = -\partial_t\mathbf B$. These are the two homogeneous Maxwell equations. Finally, if $F = dA$ then $dF = d(dA) = 0$ by nilpotence of $d$, so both equations hold automatically — the homogeneous pair is the geometric, source-free half of Maxwell, free once a potential exists. $\blacksquare$

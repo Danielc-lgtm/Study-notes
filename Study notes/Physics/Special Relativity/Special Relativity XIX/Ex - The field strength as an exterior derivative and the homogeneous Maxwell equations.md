@@ -20,7 +20,7 @@ This exercise previews electromagnetism using only the exterior-derivative machi
 
 **Recall:**
 
-![[Def - The Exterior Derivative#The Definition]]
+![[Special Relativity XIX/Def - The Exterior Derivative#The Definition]]
 
 The exterior derivative is nilpotent, $\mathbf{d}^2 = 0$ ([[Thm - Properties of the Exterior Derivative]]). The divergence of an antisymmetric tensor is $\nabla_\mu T^{\alpha\mu} = \frac{1}{\sqrt{-\det g}}\partial_\mu(\sqrt{-\det g}\,T^{\alpha\mu})$ ([[Thm - Divergence of a Vector and Tensor Field]]).
 
