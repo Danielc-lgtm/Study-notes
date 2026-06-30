@@ -91,7 +91,7 @@ In three dimensions the Hodge star is the operation that turns a vector into the
 
 **Corollary — $\star$ is invertible.** $\star^{-1} = (-1)^{p+1}\star$, so $\star$ is a bijection $\mathscr{A}_p \cong \mathscr{A}_{4-p}$; in particular it is an automorphism of $\mathscr{A}_2(E)$.
 
-**Corollary — $\star$ defines a complex structure on $2$-forms.** Since $\star^2 = -1$ on the real six-dimensional $\mathscr{A}_2(E)$, $\star$ makes it a complex three-dimensional space, with $\star = $ "multiplication by $i$." The eigenspaces over $\mathbb{C}$ are the self-dual ($\star F = iF$) and anti-self-dual ($\star F = -iF$) subspaces, each of complex dimension $3$.
+**Corollary — $\star$ defines a complex structure on $2$-forms.** Since $\star^2 = -1$ on the real six-dimensional $\mathscr{A}_2(E)$, $\star$ makes it a complex three-dimensional space, with $\star$ playing the role of "multiplication by $i$." The eigenspaces over $\mathbb{C}$ are the self-dual ($\star F = iF$) and anti-self-dual ($\star F = -iF$) subspaces, each of complex dimension $3$.
 
 **Calibration check.** If you have understood the definition you can: (i) compute $\star(e^0\wedge e^1)$ in an orthonormal frame and verify $\star^2(e^0\wedge e^1) = -e^0\wedge e^1$; (ii) explain why $\star$ needs a metric but $d$ does not; (iii) state why $\star^2 = -1$ forces complexification and name the resulting eigenspaces.
 

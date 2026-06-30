@@ -1,0 +1,15 @@
+---
+type: exercise-index
+subject: special-relativity
+section: "18.1"
+tags: [physics, special-relativity]
+---
+
+## §18.1 Tensors and Their Operations — Exercises
+
+The exercises of §18.1 drill the three operations that generate tensor algebra — [[Def - Metric Duality and Index Manipulation|raising and lowering with the metric]], [[Def - Tensor Operations|contraction]], and the [[Def - Tensor Operations|tensor product]] — and, above all, the *index discipline* that makes an expression Lorentz-covariant: every free index matched, every summed index once up and once down. The recurring lesson is Tong's "indices up, indices down": $X^\mu X_\mu$ is the invariant Minkowski norm because it pairs an upper with a lower index, while $X^\mu X^\mu$ is the frame-dependent Euclidean norm and is "illegal" to write. The drills move from mechanical sign-counting (raising the field strength, flipping the electric field's sign) through the symmetric-times-antisymmetric vanishing trick (the field strength is traceless) to the structural fact that the metric and its inverse are genuinely different tensors that merely share components in an orthonormal frame.
+
+- [[Ex - Raising and lowering indices on a four-tensor]] (⭐) — lower a four-vector ($X_i = -X^i$) and raise the field strength, reproducing Tong's matrix $G^{\mu\nu}$ with the electric field's sign flipped, and explain why the mixed-index $F^\mu{}_\nu$ is not an antisymmetric matrix even though $F_{\mu\nu}$ is ([[Def - Metric Duality and Index Manipulation]], [[Def - Tensor Operations]], [[Def - Tensors on Minkowski Space]]).
+- [[Ex - Contracting a tensor and recovering the trace]] (⭐) — show the trace $T^\mu{}_\mu$ is a Lorentz scalar, compute $\delta^\mu{}_\mu = g_{\mu\nu}g^{\mu\nu} = 4$, prove $F^\mu{}_\mu = 0$ by symmetric-times-antisymmetric, and recover the form–vector pairing $C^1_1(\vec v\otimes\omega) = \langle\omega, \vec v\rangle$ ([[Def - Tensor Operations]], [[Def - Tensors on Minkowski Space]], [[Def - Metric Duality and Index Manipulation]]).
+- [[Ex - Change of basis and why X-mu X-mu is illegal]] (⭐⭐) — derive the contravariant ($v'^\alpha = (P^{-1})^\alpha{}_\beta v^\beta$) and covariant ($\omega'_\alpha = P^\beta{}_\alpha\omega_\beta$) transformation laws, show the up–down contraction is invariant because $PP^{-1} = \mathbb{1}$, and compute that $X^\mu X^\mu = \cosh 2\varphi$ under a boost (frame-dependent, illegal) while $X^\mu X_\mu$ is unchanged ([[Def - Tensors on Minkowski Space]], [[Def - Metric Duality and Index Manipulation]], [[Def - The Lorentz Group]]).
+- [[Ex - The metric and its inverse as tensors]] (⭐⭐) — verify $g_{\alpha\beta}$ is type $(0,2)$ (law $g' = {}^tP g P$) and $g^{\alpha\beta}$ type $(2,0)$, that $\eta^{\mu\nu} = \eta_{\mu\nu}$ numerically in an orthonormal frame is a basis-dependent coincidence (not a tensor equation), and that raising one index of the metric gives $\delta^\alpha{}_\beta$ ([[Def - Tensors on Minkowski Space]], [[Def - Metric Duality and Index Manipulation]], [[Def - Tensor Operations]]).

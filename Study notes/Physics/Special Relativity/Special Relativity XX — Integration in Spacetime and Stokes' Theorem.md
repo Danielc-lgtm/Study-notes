@@ -66,6 +66,9 @@ The reader is assumed to be comfortable with differential forms, the exterior de
 - **[[Ex - Coordinate-independence of the four-volume]]** (⭐⭐)
 	- Show directly from the change-of-variables formula that $\mathrm{vol}\,\mathscr{V} = \int\sqrt{|g|}\,\mathrm{d}^4x$ does not depend on the coordinate system, using $\sqrt{-\det g'} = |J|\sqrt{-\det g}$ with $J$ the Jacobian, and explain why the integral of a 4-form is independent of coordinates *without* invoking the metric at all. (⭐⭐)
 
+- **[[Ex - Only an antisymmetric form integrates coordinate-independently]]** (⭐⭐)
+	- Show that the single component $A_{0123}$ of a 4-form integrates to a coordinate-independent number, but the analogous integral $\int T_{0123}\,\mathrm{d}^4x$ of one component of a generic (non-antisymmetric) type-(0,4) tensor does not, by tracking the change-of-variable transformation and seeing that only the alternating combination matches the Jacobian — the structural reason forms, not tensors, are the objects of integration. (⭐⭐)
+
 > [!tip] Unlocked: The Action Integral of a Field Theory *(from Classical Field Theory and QFT)*
 > The metric four-volume element $\sqrt{|g|}\,\mathrm{d}^4x$ is the measure with respect to which every **field action** $S = \int \mathcal{L}\,\sqrt{|g|}\,\mathrm{d}^4x$ is built. Lorentz invariance of the action is exactly the statement that $\mathcal{L}$ is a scalar and $\sqrt{|g|}\,\mathrm{d}^4x$ is an invariant measure; varying such an action gives the **Euler–Lagrange field equations**, and in curved spacetime the very same $\sqrt{|g|}\,\mathrm{d}^4x$ is the measure of the Einstein–Hilbert action whose variation yields **Einstein's equations**.
 

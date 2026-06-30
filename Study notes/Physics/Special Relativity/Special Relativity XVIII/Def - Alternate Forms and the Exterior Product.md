@@ -75,7 +75,7 @@ $\mathscr{A}_p(E)$ is the $p$-th **exterior power** $\Lambda^p E^*$, the antisym
 
 The dimensions $\dim\Lambda^p E^* = \binom{4}{p}$ are the binomial coefficients because a basis monomial is a choice of $p$ distinct generators out of $4$; the total dimension $\sum_p\binom{4}{p} = 2^4 = 16$. The symmetry $\binom{4}{p} = \binom{4}{4-p}$ is the equality $\dim\Lambda^p E^* = \dim\Lambda^{4-p}E^*$ that makes the [[Def - The Hodge Star|Hodge star]] an isomorphism. Antisymmetrisation $(E^*)^{\otimes p} \to \Lambda^p E^*$ is the projector $\mathrm{Alt} = \frac{1}{p!}\sum_\sigma \mathrm{sgn}(\sigma)\,\sigma$, and the wedge product is $A\wedge B = \frac{(p+q)!}{p!q!}\,\mathrm{Alt}(A\otimes B)$ — the normalisation in the definition is exactly what implements this projector while keeping the basis components unchanged.
 
-This is the flat, single-fibre case of the **bundle of differential forms** $\Lambda^p T^*M$ over a manifold; a [[Def - Exterior Derivative on a Manifold|differential $p$-form]] is a smooth section of it, and the algebra here is the fibrewise algebra of [[Differential Geometry VIII — Differential Forms|differential forms]].
+This is the flat, single-fibre case of the **bundle of differential forms** $\Lambda^p T^*M$ over a manifold; a [[Def - Exterior Derivative on a Manifold|differential p-form]] is a smooth section of it, and the algebra here is the fibrewise algebra of [[Differential Geometry VIII — Differential Forms|differential forms]].
 
 ---
 
