@@ -87,7 +87,7 @@ The orthogonal projection of the conservation law isolates the transverse pressu
 > [!note]- Derivation
 > Contract the four-dimensional Euler equation with $u_\mu$:
 > $$(\rho+p)\,u_\mu a^\mu = -u_\mu\nabla^\mu p - (u^\nu\nabla_\nu p)(u_\mu u^\mu).$$
-> Left side: $u_\mu a^\mu = 0$ ([[Def - Four-Velocity and Four-Acceleration|four-acceleration orthogonal to four-velocity]]), so it is zero. Right side: $-u^\mu\nabla_\mu p - (u^\nu\nabla_\nu p)(1) = -(u\cdot\nabla p) + (u\cdot\nabla p) = 0$. Hence $0 = 0$ identically. The $\nu = $ (time) component carries no information; the four-dimensional Euler equation is genuinely the *three* rest-space components of momentum balance. (The fourth equation — the energy equation — comes from the *parallel* projection, see [[Ex - Projecting the conservation law onto the four-velocity]].)
+> Left side: $u_\mu a^\mu = 0$ ([[Def - Four-Velocity and Four-Acceleration|four-acceleration orthogonal to four-velocity]]), so it is zero. Right side: $-u^\mu\nabla_\mu p - (u^\nu\nabla_\nu p)(1) = -(u\cdot\nabla p) + (u\cdot\nabla p) = 0$. Hence $0 = 0$ identically. The time ($\nu = 0$) component carries no information; the four-dimensional Euler equation is genuinely the *three* rest-space components of momentum balance. (The fourth equation — the energy equation — comes from the *parallel* projection, see [[Ex - Projecting the conservation law onto the four-velocity]].)
 
 **Step 3: The nonrelativistic limit.**
 

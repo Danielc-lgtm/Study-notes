@@ -80,7 +80,7 @@ This is the analogue of squared Euclidean distance with the signature changed fr
 # Unlocked by This
 
 > [!tip] Proper Time *(from Relativistic Kinematics)*
-> The interval along a particle's worldline, integrated, gives the **proper time** — the time read by a clock carried along that worldline; see [[Def - Proper Time]] in [[Special Relativity V — Worldlines, Proper Time, Four-Velocity and Four-Acceleration]]. This is the parameter with respect to which four-velocity and four-acceleration are defined, and the invariance of the interval is exactly what makes proper time a genuine, observer-independent quantity.
+> The interval along a particle's worldline, integrated, gives the **proper time** — the time read by a clock carried along that worldline; see [[Def - Proper Time]] in [[Special Relativity V — Worldlines, Proper Time and Four-Velocity]]. This is the parameter with respect to which four-velocity and four-acceleration are defined, and the invariance of the interval is exactly what makes proper time a genuine, observer-independent quantity.
 
 > [!tip] The Line Element of General Relativity *(from General Relativity)*
 > In a curved spacetime the constant line element $ds^2 = \eta_{\mu\nu}dx^\mu dx^\nu$ is replaced by $ds^2 = g_{\mu\nu}(x)\,dx^\mu dx^\nu$ with a position-dependent metric — the form in which the gravitational field is encoded. The interval of this page is the flat, special-relativistic case, and the geodesics that extremise it become, in the curved case, the worldlines of freely-falling bodies.
