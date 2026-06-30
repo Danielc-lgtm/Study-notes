@@ -1,0 +1,16 @@
+---
+type: exercise-index
+subject: special-relativity
+section: "11.3"
+tags: [physics, special-relativity]
+---
+
+## §11.3 What the Observer Observes — the Celestial Sphere — Exercises
+
+The exercises of §11.3 develop Tong's celestial-sphere picture: the null directions of an observer's sky form the Riemann sphere $\mathbb{C}\mathrm{P}^1$, and a change of observer acts on it by a Möbius transformation. The first establishes the Möbius action itself — a null direction is a spinor $\xi$ up to phase, its stereographic coordinate is $\omega = \xi_1/\xi_2$, and $\xi \mapsto A\xi$ pushes down to $\omega \mapsto (a\omega+b)/(c\omega+d)$ — and identifies the faithful sky-group as $PSL(2,\mathbb{C}) \cong SO^+(1,3)$, the conformal group of the two-sphere. The second extracts the quantitative aberration formula $\cot(\theta'/2) = e^{-\psi}\cot(\theta/2)$ from the Möbius dilation of a line-of-sight boost, recovers the velocity form $\cos\theta' = (\cos\theta+\beta)/(1+\beta\cos\theta)$, and explains the headlight effect. The third draws the conceptual payoff: because Möbius maps preserve circles, a moving sphere always photographs as a circle (Penrose–Terrell), and a moving cube appears rotated (Terrell) rather than contracted. The unifying theme is that *appearance is conformal* — governed by the circle-preserving Möbius action on the sky — while *coordinates are affine* — governed by the Lorentz transformation — and the two must not be conflated.
+
+- [[Ex - The sky-map of a Lorentz transformation is a Möbius transformation]] (⭐⭐) — factor a null direction as $\underline X = \xi\xi^\dagger$, deduce the single-factor spinor law $\xi \mapsto A\xi$ from the two-factor four-vector law, push it down to the Möbius action $\omega \mapsto (a\omega+b)/(c\omega+d)$ on $\omega = \xi_1/\xi_2$, verify composition matches matrix multiplication and $A, -A$ give the same map, and run the rotation example $\omega \mapsto e^{-i\theta}\omega$ with its forward/backward fixed points ([[Thm - What the Observer Actually Observes (the Celestial Sphere and Möbius Transformations)]], [[Def - Weyl Spinors (Left and Right Handed)]], [[Def - Pauli Matrices and the Hermitian-Matrix Correspondence]]).
+
+- [[Ex - Aberration of starlight via stereographic projection]] (⭐⭐⭐) — show a line-of-sight boost is the Möbius dilation $\omega \mapsto e^{-\psi}\omega$, deduce $\cot(\theta'/2) = e^{-\psi}\cot(\theta/2)$, convert to $\cos\theta' = (\cos\theta+\beta)/(1+\beta\cos\theta)$ with $e^{-\psi} = \sqrt{(1-\beta)/(1+\beta)}$, analyse the headlight effect (sky bunched into a $\sim 1/\gamma$ forward cone as $\beta\to 1$), and conclude circular patterns stay circular ([[Thm - What the Observer Actually Observes (the Celestial Sphere and Möbius Transformations)]], [[Def - Pauli Matrices and the Hermitian-Matrix Correspondence]]).
+
+- [[Ex - A moving sphere always looks like a circle (Penrose-Terrell)]] (⭐⭐⭐) — show a sphere's silhouette is a circle on the celestial sphere that maps to a circle under the conformal observer-change, resolve the apparent paradox (coordinates contract, appearance does not — light-travel-time delay converts the affine contraction into a conformal map), and explain the Terrell rotation of a moving cube ([[Thm - What the Observer Actually Observes (the Celestial Sphere and Möbius Transformations)]]).
