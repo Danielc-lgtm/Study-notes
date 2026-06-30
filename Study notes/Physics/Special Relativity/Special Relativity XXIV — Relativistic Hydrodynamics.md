@@ -66,6 +66,15 @@ The reader is assumed to be fluent in nonrelativistic fluid dynamics — the con
 - **[[Def - Equation of State and Speed of Sound]]**
 	- The equation of state is the thermodynamic relation $\rho = \rho(s, n_1, \dots, n_N)$ fixing the proper energy density from the entropy and particle densities; temperature and chemical potentials are its partial derivatives, $T = (\partial\rho/\partial s)$ and $\mu_a = (\partial\rho/\partial n_a)$, and the fundamental relation $d\rho = T\,ds + \sum_a \mu_a\,dn_a$ holds. A **simple fluid** has an equation of state in two variables, $\rho = \rho(s,n)$; a **barotropic** fluid has $\rho = \rho(n)$ alone (then $T=0$). The speed of sound is $c_s^2 = (\partial p/\partial \rho)_S$ at fixed entropy per baryon; causality demands $c_s \le 1$, and the "hardest" causal equation of state $p = \rho$ saturates $c_s = c$.
 
+- **[[Ex - The energy-momentum tensor of a perfect fluid in the rest frame]]** (⭐)
+	- Evaluate $T^{\mu\nu} = (\rho+p)u^\mu u^\nu - p\,\eta^{\mu\nu}$ in the rest frame ($u = (1,0,0,0)$) to get $\mathrm{diag}(\rho,p,p,p)$, confirm $\rho = T_{\mu\nu}u^\mu u^\nu$ and vanishing rest-frame momentum density, and compute the trace $T^\mu{}_\mu = \rho - 3p$ to show radiation ($p = \rho/3$) is the traceless case. (⭐)
+
+- **[[Ex - Baryon conservation as the relativistic continuity equation]]** (⭐⭐)
+	- Decompose $\nabla_\mu(nu^\mu) = 0$ relative to an inertial observer to get the continuity equation $\partial_t N + \nabla\cdot(N\mathbf{V}) = 0$ (no relativistic correction factor), establish $\nabla_\mu u^\mu = \dot V/V$ as the comoving expansion rate, and conclude the comoving baryon count $nV$ is constant. (⭐⭐)
+
+- **[[Ex - The proper enthalpy density and the polytropic equation of state]]** (⭐⭐)
+	- Derive the Euler relation $\rho + p = Ts + \sum\mu_a n_a$ (so $\rho+p$ is the proper enthalpy density) and Gibbs–Duhem $dp = s\,dT + \sum n_a\,d\mu_a$, specialise to barotropic matter ($\mu = h = (\rho+p)/n$), and compute the polytropic pressure $p = \kappa n^\gamma$ from $\rho = m_{\mathrm b}n + \frac{\kappa}{\gamma-1}n^\gamma$. (⭐⭐)
+
 > [!tip] Unlocked: The Tolman–Oppenheimer–Volkoff Equation *(from General Relativity and Astrophysics)*
 > A perfect fluid in a static, spherically symmetric **general-relativistic** spacetime obeys the **Tolman–Oppenheimer–Volkoff equation**, the relativistic equation of hydrostatic equilibrium $dp/dr = -(\rho + p)(m + 4\pi r^3 p)/[r(r - 2m)]$. It is the static, gravitating version of the relativistic Euler equation: the inertia $\rho + p$ of this chapter reappears, and so does the fact that pressure gravitates. Closed with an equation of state $p = p(\rho)$, it determines the structure of **neutron stars** and the maximum mass beyond which collapse to a black hole is unavoidable — see [[General Relativity I — Einstein's Equations and Schwarzschild]].
 
