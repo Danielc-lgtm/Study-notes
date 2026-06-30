@@ -44,7 +44,7 @@ The genuinely new physics is hidden in a place that looks innocuous: the relatio
 
 The hypothesis is "a particle subject to a four-force", and input-broadening is about recognising the projected forms.
 
-The first disguised source is **"a known three-force in the lab"** — an applied electric field, a mechanical push. The lab force $\mathbf{f}$ is the spatial part of the four-force (up to $\gamma$), so $d\mathbf{p}/dt = \mathbf{f}$ governs the motion, with $\mathbf{p} = \gamma m\mathbf{u}$. The bridge is the projection of $F^\mu = dP^\mu/d\tau$ onto the lab observer. *Example problem:* a charge in a uniform electric field, $d\mathbf{p}/dt = q\mathbf{E}$ ([[Ex - A charged particle in a uniform electric field]]).
+The first disguised source is **"a known three-force in the lab"** — an applied electric field, a mechanical push. The lab force $\mathbf{f}$ is the spatial part of the four-force (up to $\gamma$), so $d\mathbf{p}/dt = \mathbf{f}$ governs the motion, with $\mathbf{p} = \gamma m\mathbf{u}$. The bridge is the projection of $F^\mu = dP^\mu/d\tau$ onto the lab observer. *Example problem:* a charge in a uniform electric field, $d\mathbf{p}/dt = q\mathbf{E}$ (worked out in [[Special Relativity XXI — The Electromagnetic Field|Special Relativity XXI]]).
 
 The second disguised source is **"the power delivered to a particle"** — the rate of working $\mathbf{f}\cdot\mathbf{u}$. This is the temporal part of the four-force law, equal to $dE/dt$. The bridge is the work–energy theorem. *Example problem:* finding how fast a particle's energy grows in an accelerator, $dE/dt = \mathbf{f}\cdot\mathbf{u}$.
 
@@ -184,7 +184,7 @@ Start from the covariant $F^\mu = dP^\mu/d\tau$, convert proper time to coordina
 
 - **[[Def - Four-Momentum and Rest Mass]]** — the relativistic momentum $\mathbf{p} = \gamma m\mathbf{u}$ and energy $E = \gamma m$ that appear here are the spatial and time parts of the four-momentum. The non-parallelism of force and acceleration comes from the speed-dependence of $\gamma$ in $\mathbf{p} = \gamma m\mathbf{u}$.
 
-- **Hyperbolic motion under constant force** — integrating $d\mathbf{p}/dt = \mathbf{f}$ with constant $\mathbf{f}$ gives not constant acceleration but constant *proper* acceleration, the hyperbolic worldline $x^2 - t^2 = 1/a^2$ with $a = f/m$. A constant force in the lab is a constant proper acceleration for the particle, the worldline of a [[Special Relativity XVI — Accelerated Observers|uniformly accelerated observer]]; see [[Ex - A charged particle in a uniform electric field]].
+- **Hyperbolic motion under constant force** — integrating $d\mathbf{p}/dt = \mathbf{f}$ with constant $\mathbf{f}$ gives not constant acceleration but constant *proper* acceleration, the hyperbolic worldline $x^2 - t^2 = 1/a^2$ with $a = f/m$. A constant force in the lab is a constant proper acceleration for the particle, the worldline of a [[Special Relativity XVI — Accelerated Observers|uniformly accelerated observer]]; see [[Special Relativity XXI — The Electromagnetic Field|Special Relativity XXI]] for the charged-particle case.
 
 - **The Lorentz force and accelerators** — the one fundamental relativistic force is electromagnetic, $\mathbf{f} = q(\mathbf{E} + \mathbf{u}\times\mathbf{B})$, the spatial part of the [[Def - Four-Force|Lorentz four-force]]. Because it is pure, the rest mass is preserved, and the motion is found by integrating $d\mathbf{p}/dt = q(\mathbf{E} + \mathbf{u}\times\mathbf{B})$ — linear acceleration from $\mathbf{E}$, circular from $\mathbf{B}$. The full theory is [[Special Relativity XXI — The Electromagnetic Field|Special Relativity XXI]].
 
@@ -193,7 +193,7 @@ Start from the covariant $F^\mu = dP^\mu/d\tau$, convert proper time to coordina
 # Unlocked by This
 
 > [!tip] Charged-Particle Motion and Accelerators *(from Electromagnetism)*
-> Projected with the Lorentz force $\mathbf{f} = q(\mathbf{E} + \mathbf{u}\times\mathbf{B})$, the equation $d\mathbf{p}/dt = \mathbf{f}$ governs every accelerator: a uniform $\mathbf{E}$ gives hyperbolic (linear-accelerator) motion, a uniform $\mathbf{B}$ gives circular motion at the relativistic cyclotron frequency $\omega = qB/\gamma m$. The longitudinal/transverse mass anisotropy explains why accelerating a beam is harder than steering it. See [[Ex - A charged particle in a uniform electric field]].
+> Projected with the Lorentz force $\mathbf{f} = q(\mathbf{E} + \mathbf{u}\times\mathbf{B})$, the equation $d\mathbf{p}/dt = \mathbf{f}$ governs every accelerator: a uniform $\mathbf{E}$ gives hyperbolic (linear-accelerator) motion, a uniform $\mathbf{B}$ gives circular motion at the relativistic cyclotron frequency $\omega = qB/\gamma m$. The longitudinal/transverse mass anisotropy explains why accelerating a beam is harder than steering it. See [[Special Relativity XXI — The Electromagnetic Field|Special Relativity XXI]].
 
 > [!tip] Hyperbolic Motion and Accelerated Observers *(from §16)*
 > A constant force produces constant *proper* acceleration — the hyperbolic worldline $x^2 - t^2 = 1/a^2$ — not the constant coordinate acceleration of Newton. This is the worldline of a **uniformly accelerated observer**, the carrier of the Rindler horizon and accelerated-frame redshift, developed in [[Special Relativity XVI — Accelerated Observers|Special Relativity XVI]].
