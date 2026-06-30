@@ -182,7 +182,7 @@ For nilpotency, the only subtlety is trusting that the alternating sum of symmet
 
 # Bridges
 
-- **[[Def - The Exterior Derivative]]** — this theorem is the catalogue of structural properties of the operator defined there; nilpotency and Leibniz are the two axioms (with $\mathbf{d}f = $ gradient) that *characterise* $\mathbf{d}$ uniquely, so the theorem is in a sense a restatement that the construction has the right properties.
+- **[[Def - The Exterior Derivative]]** — this theorem is the catalogue of structural properties of the operator defined there; nilpotency and Leibniz are the two axioms (together with the rule that $\mathbf{d}f$ is the gradient) that *characterise* $\mathbf{d}$ uniquely, so the theorem is in a sense a restatement that the construction has the right properties.
 
 - **[[Thm - Divergence of a Vector and Tensor Field]]** — the corollary $\mathbf{d}\star\underline{v} = (\boldsymbol{\nabla}\!\cdot\vec{v})\boldsymbol{\epsilon}$ identifies the divergence with the codifferential $-\star\mathbf{d}\star$, so the determinant divergence formula and the exterior derivative are two views of one operator; the metric enters only through the Hodge stars.
 

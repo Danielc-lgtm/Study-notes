@@ -65,6 +65,15 @@ The reader is assumed to have just worked through [[Special Relativity XVIII —
 > [!tip] Unlocked: The Connection on a Manifold *(from Differential Geometry and General Relativity)*
 > The covariant derivative defined here is, in the language of [[Riemannian Geometry I — Connections and Covariant Differentiation|Riemannian geometry]], an **affine connection** — a rule for differentiating tensor fields that produces tensors. On flat spacetime it is forced to be the trivial one (partial derivatives in inertial coordinates), but the *definition* makes no use of flatness. Promoting the constant $\eta$ to a position-dependent metric field $g_{\mu\nu}(x)$ keeps every formula on this page word-for-word; what changes is that the connection acquires curvature. This is the single most important continuity in physics: the derivative that organises relativistic field theory *is* the derivative that organises gravitation.
 
+- **[[Ex - The metric and coordinate basis in rotating coordinates]]** (⭐⭐)
+	- Transform the inertial metric through a co-rotating coordinate change to the Langevin metric, exhibiting the frame-dragging cross term $g_{(ct)\varphi} = -\omega r^2\sin^2\theta$ and the position-dependent $g_{(ct)(ct)} = 1-\omega^2 r^2\sin^2\theta$ that vanishes at the light cylinder; then confirm the spacetime is flat by the vanishing of the Riemann tensor — a complicated metric need not mean curvature.
+
+- **[[Ex - The coordinate basis of spherical coordinates is orthogonal but not orthonormal]]** (⭐)
+	- Compute the spherical coordinate basis and metric $\mathrm{diag}(1,-1,-r^2,-r^2\sin^2\theta)$, show the basis is orthogonal but not orthonormal (the $g_{\theta\theta}=-r^2$ scale factor), and prove the orthonormal frame $\hat r,\hat\theta,\hat\varphi$ is not a coordinate basis because it has a nonzero Lie bracket $[\hat r,\hat\theta] = -r^{-1}\hat\theta$.
+
+- **[[Ex - The gradient of a coordinate is the dual basis vector]]** (⭐)
+	- Show $\langle\boldsymbol{\nabla}x^\alpha,\vec{e}_\beta\rangle = \delta^\alpha{}_\beta$, so the coordinate gradients are the dual basis $e^\alpha = \mathbf{d}x^\alpha$; deduce a scalar gradient has components $\nabla_\alpha f = \partial f/\partial x^\alpha$ with no Christoffel correction, and that the gradient is intrinsically a covector requiring the metric to become a vector.
+
 > [!note] Exercise Index — §19.1
 > [[Exercise Index - §19.1 Arbitrary Coordinates and Tensor Fields]]
 
@@ -82,6 +91,18 @@ The reader is assumed to have just worked through [[Special Relativity XVIII —
 > [!tip] Unlocked: Curvature as the Obstruction to Flatness *(from General Relativity)*
 > On this flat spacetime the Christoffels are nonzero in curvilinear coordinates but can be transformed away *globally* by returning to inertial coordinates. The tensor that measures the failure of this — built from the *derivatives and squares* of the Christoffel symbols, $R^\rho{}_{\sigma\mu\nu} = \partial_\mu\Gamma^\rho{}_{\nu\sigma} - \partial_\nu\Gamma^\rho{}_{\mu\sigma} + \Gamma^\rho{}_{\mu\lambda}\Gamma^\lambda{}_{\nu\sigma} - \Gamma^\rho{}_{\nu\lambda}\Gamma^\lambda{}_{\mu\sigma}$ — is the **Riemann curvature tensor**, and it vanishes identically here. Its non-vanishing is the invariant signature of a true gravitational field; see [[Riemannian Geometry III — Riemann Curvature and Topology|Riemann curvature]] and [[General Relativity I — Einstein's Equations and Schwarzschild]].
 
+- **[[Ex - Christoffel symbols of spherical coordinates]]** (⭐⭐)
+	- Invert the diagonal spherical metric and compute all nonzero Christoffel symbols from $\Gamma^\gamma{}_{\alpha\beta} = \tfrac12 g^{\gamma\mu}(\partial_\alpha g_{\mu\beta}+\partial_\beta g_{\alpha\mu}-\partial_\mu g_{\alpha\beta})$: $\Gamma^r{}_{\theta\theta}=-r$, $\Gamma^\theta{}_{r\theta}=1/r$, $\Gamma^\varphi{}_{\theta\varphi}=\cot\theta$, and relatives. They are purely spatial (the time part is flat) and identical to Euclidean $\mathbb{R}^3$, and the result is signature-independent.
+
+- **[[Ex - The covariant derivative of the metric is zero]]** (⭐⭐)
+	- Prove $\boldsymbol{\nabla}g = 0$ both conceptually (the flat metric is a constant tensor) and by computation (the Christoffel terms reassemble $\partial_\gamma g_{\alpha\beta}$), check $\nabla_r g_{\theta\theta}=0$ in spherical coordinates, and deduce that index-raising commutes with $\boldsymbol{\nabla}$ — trivial here, but the defining condition of the connection in general relativity.
+
+- **[[Ex - Divergence in curvilinear coordinates via the metric determinant]]** (⭐⭐)
+	- Derive the spherical divergence from $\sqrt{-\det g}=r^2\sin\theta$, compute $\boldsymbol{\nabla}\!\cdot\vec{e}_r = 2/r$ both ways (determinant formula and Christoffel trace), and verify $\boldsymbol{\nabla}\!\cdot\vec{e}_x = 0$ for the constant Cartesian field — constant components can have nonzero divergence and varying components zero.
+
+- **[[Ex - Christoffel symbols and fictitious forces in rotating coordinates]]** (⭐⭐⭐)
+	- Compute the rotating-frame Christoffels, identify the centrifugal ($\Gamma^i{}_{tt}=-\omega^2 x^i$) and Coriolis ($\Gamma^i{}_{tj}=\mp\omega$) symbols, recover the Newtonian accelerations $\ddot x = \omega^2 x + 2\omega\dot y$ from the slow-motion geodesic equation, and confirm via zero Riemann tensor that these forces are fictitious — the flat-space rehearsal for gravity.
+
 > [!note] Exercise Index — §19.2
 > [[Exercise Index - §19.2 The Covariant Derivative and Christoffel Symbols]]
 
@@ -98,6 +119,18 @@ The reader is assumed to have just worked through [[Special Relativity XVIII —
 
 > [!tip] Unlocked: Charge Conservation as a Closed Form *(from Electromagnetism)*
 > The identity $\mathbf{d}\star\underline{v} = (\boldsymbol{\nabla}\!\cdot\vec{v})\,\boldsymbol{\epsilon}$ turns a divergence into an exterior derivative, so a divergence-free current $\boldsymbol{\nabla}\!\cdot J = 0$ becomes the statement that the $3$-form $\star\underline{J}$ is **closed**. Combined with Stokes' theorem in the next chapter, this is the geometric content of electric-charge conservation: the flux of charge through any closed hypersurface vanishes. The codifferential $-\star\mathbf{d}\star$ introduced here is the adjoint of $\mathbf{d}$ and the operator whose kernel-and-image structure underlies the **Hodge decomposition**.
+
+- **[[Ex - The exterior derivative of a 1-form is the curl]]** (⭐⭐)
+	- Compute $(\mathbf{d}\underline{v})_{\alpha\beta} = \partial_\alpha v_\beta - \partial_\beta v_\alpha$ (Christoffels cancelling by symmetry), show its Hodge dual is the Cartesian curl $\epsilon^{ijk}\partial_j v_k$, and conclude that $\mathrm{curl}\,\mathrm{grad}=0$ and $\mathrm{div}\,\mathrm{curl}=0$ are both the single identity $\mathbf{d}^2 = 0$.
+
+- **[[Ex - The exterior derivative is nilpotent]]** (⭐)
+	- Prove $\mathbf{d}\mathbf{d}f = 0$ and $\mathbf{d}\mathbf{d}A = 0$ directly, the second-derivative terms cancelling in pairs by the equality of mixed partials; explain why this is connection-independent (unlike $[\nabla,\nabla]$ = curvature), and deduce exact $\Rightarrow$ closed, with the converse the Poincaré lemma.
+
+- **[[Ex - The graded Leibniz rule for the exterior derivative]]** (⭐⭐)
+	- Prove $\mathbf{d}(A\wedge B) = \mathbf{d}A\wedge B + (-1)^{\deg A}A\wedge\mathbf{d}B$ by expanding in a coordinate basis, and identify the sign $(-1)^{\deg A}$ as the transposition cost of sliding the degree-$1$ operator past the factors of $A$ — making $\mathbf{d}$ a graded derivation of the exterior algebra.
+
+- **[[Ex - The field strength as an exterior derivative and the homogeneous Maxwell equations]]** (⭐⭐⭐)
+	- Define $F = \mathbf{d}A$, derive the homogeneous Maxwell equations $\mathbf{d}F = 0$ and gauge invariance $A\to A+\mathbf{d}\chi$ from nilpotency alone, and show the inhomogeneous equation $\nabla_\mu F^{\mu\nu} = \mu_0 J^\nu$ forces charge conservation $\nabla_\nu J^\nu = 0$ via the determinant divergence formula.
 
 > [!note] Exercise Index — §19.3
 > [[Exercise Index - §19.3 Differential Forms and the Exterior Derivative]]
