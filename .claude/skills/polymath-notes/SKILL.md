@@ -409,6 +409,56 @@ In component-only mode, output the content in chat. If the user asks to add it t
 
 ---
 
+## Study Orchestrator Mode
+
+When the user asks "what should I study next," "pick a subject," "plan my study," "what's high leverage right now," or otherwise delegates the choice of topic rather than naming one, enter Study Orchestrator mode. The job is to route the polymathic programme — pick the next subject to study based on prerequisite readiness, downstream leverage, and interest — not to produce content for a named topic.
+
+The single source of truth for this decision is the prerequisite DAG, mirrored into the vault at `Study notes/Prerequisite DAG.md`. Read that file first, every time. Do not answer from memory of prior sessions: nodes get updated, prereqs get satisfied, interest scores drift.
+
+### Prerequisite DAG reference
+
+**What it is.** The master study-planning document for the polymathic vault. Each node is a subject; each node's fields encode its prerequisites, its connections to other subjects, whether it has been studied, what it unlocks downstream, and one or two reference textbooks or papers. The Notion original lives at https://www.notion.so/35bf76ffda148143abcad0be3ca296f4; the working copy Claude Code reads and edits is `Study notes/Prerequisite DAG.md`. The vault copy is authoritative for orchestration; the Notion page is the human-facing mirror.
+
+**Legend.**
+
+- 🟢 — **Anchor.** Foundation already solid / known well; can be assumed as background when studying downstream nodes.
+- 🔵 — **Study target.** Not yet studied, or in progress. This is what orchestration is picking among.
+- ⭐ — **High-leverage hub.** Gates many downstream nodes. Prioritising these compounds — one hub studied unlocks a wide swath of downstream subjects. The top three hubs are Topology, Differential Geometry, and Category Theory.
+
+**Node format.** Every node is a `<details>` HTML block whose `<summary>` line has the form `🔵 Subject Name (familiarity, interest)` (the emoji reflects status, familiarity and interest are each roughly 1–10; some nodes omit the score pair). Inside the block, tab-indented fields describe the node. Fields (any subset may appear on a given node):
+
+- **Prereqs:** — the incoming edges of the DAG for this node, referring to other node names.
+- **Connects:** — nontrivial two-way relationships to other nodes (analogy, cross-pollination) that are not strict prereqs.
+- **Note:** — the substantive one-paragraph description: what the subject is, why it matters, why it is placed where it is placed.
+- **Unlocks:** — the outgoing edges: downstream subjects, applications, or research programmes this node opens up.
+- **Reference(s):** / **Key refs:** — one or two textbooks or papers used as the primary source when the subject is studied.
+- **Description:** — occasional longer prose block when the subject needs more framing than **Note:** allows.
+- **Gaps:** — for 🔵 nodes, what specifically is missing / not yet studied.
+- **Status:** — for 🟢 nodes, a one-line summary of how the subject is currently used.
+
+Not every field appears on every node — a node freshly added to the DAG might have only **Prereqs:** and **Note:**; a mature anchor might have **Status:** and nothing else.
+
+**Sections.** Nodes are grouped under `##` headers by area: Foundations, Geometry, Analysis, Stochastics, Algebra, Probability, Category Theory, Foundations and Logic, Physics, Computation, Engineering, Statistics, Mechanism Design / Game Theory, Niche Connecting Fields, Cutting-Edge Subfields. Section membership is loose — a node about categorical probability might live under Category Theory or under Probability depending on where its primary payload sits.
+
+**Synergy clusters.** After the by-area sections, the document lists numbered `## Cluster N: Title` blocks. Each cluster has a `**Members:**` line naming the nodes in it, followed by a `> 💡` blockquote stating the unifying theme — the single idea that makes the members feel like one subject rather than several. Clusters are the polymathic payoff: they say "if you study these together, you will see a picture that studying them separately would obscure." Guiding strategy — **diversity through specialization**: prioritize hub fields (⭐) that force genuine breadth rather than chasing many shallow subjects. A cluster whose members are mostly 🔵 is a target for a coordinated study campaign.
+
+**Maintenance.** Edit `Study notes/Prerequisite DAG.md` directly when a node changes state (🔵 → 🟢 once studied, familiarity / interest scores updated), when a new node is added, or when a new prereq / connection is discovered. When a node belongs to a synergy cluster, update that cluster's **Members:** line in the same edit — otherwise the cluster drifts out of sync with the by-area listing. The top hubs (Topology, Differential Geometry, Category Theory) gate the most downstream subjects, so prereq-graph edits near them cascade widely; check downstream nodes when a hub's status changes.
+
+### Picking the next subject
+
+The Study Orchestrator's job on each invocation:
+
+1. **Read `Study notes/Prerequisite DAG.md` in full.** Do not skip. Every scoring decision is grounded in the current file.
+2. **Filter to eligible study targets.** A node is eligible if it is 🔵 (not yet studied) and every entry on its **Prereqs:** line is either 🟢 in the DAG or already treated as background from the owner's stated background in `CLAUDE.md`. Nodes with unmet prereqs are not eligible — surface them separately as "unlocks after you finish X."
+3. **Rank by `interest × leverage`.** Interest is the second number in the score pair on the `<summary>` line. Leverage is roughly (a) whether the node is marked ⭐, (b) how many downstream nodes name it on their **Prereqs:** line, and (c) how many synergy clusters list it in **Members:**. A ⭐ node that gates a large downstream cone and appears in two or three clusters beats a niche node of comparable interest.
+4. **Prefer synergy over isolation.** When two candidates are close on interest × leverage, pick the one whose cluster has more 🔵 members ready to be studied next — that is the "diversity through specialization" heuristic in action.
+5. **Recommend one primary subject plus one or two adjacent bridging subjects.** Explain the pick in terms of what it unlocks (name specific downstream nodes) and what synergy clusters it activates. Cite the node's **Reference(s):** as the source material to start from.
+6. **Treat `Study notes/Prerequisite DAG.md` as source of truth going forward.** Once a subject is picked and the user agrees, subsequent content-generation work (Steps 1–8 of the standard workflow) should still cross-reference the DAG — the picked node's **Note:** and **Unlocks:** fields feed directly into the topic page's Motivation and "Unlocked by This" callouts.
+
+If the user's request names a subject directly, skip orchestration and go to the normal workflow — but still glance at the DAG entry for that subject so the topic page's Motivation, Bridges, and "Unlocked by This" sections stay consistent with the DAG's framing.
+
+---
+
 ## Quality Standards — Self-Evaluation Checklist
 
 Before finalizing, evaluate against this checklist. For each item, verify compliance and fix issues before presenting the result.
