@@ -425,7 +425,7 @@ The single source of truth for this decision is the prerequisite DAG, mirrored i
 - 🔵 — **Study target.** Not yet studied, or in progress. This is what orchestration is picking among.
 - ⭐ — **High-leverage hub.** Gates many downstream nodes. Prioritising these compounds — one hub studied unlocks a wide swath of downstream subjects. The top three hubs are Topology, Differential Geometry, and Category Theory.
 
-**Node format.** Every node is a `<details>` HTML block whose `<summary>` line has the form `🔵 Subject Name (familiarity, interest)` (the emoji reflects status, familiarity and interest are each roughly 1–10; some nodes omit the score pair). Inside the block, tab-indented fields describe the node. Fields (any subset may appear on a given node):
+**Node format.** Every node is a `<details>` HTML block whose `<summary>` line has the form `🔵 Subject Name (familiarity, interest)` (the emoji reflects status, familiarity and interest are each roughly 1–10; some nodes omit the score pair). Inside the block, each field is a bold-labelled paragraph, separated from the `<summary>` line, from the other fields, and from the closing `</details>` by blank lines — the blank lines are load-bearing: they are what makes Obsidian parse the interior as markdown (bold labels, italics, inline `$…$` math) instead of raw HTML. Preserve this layout when editing: never re-indent field lines (a leading tab or four spaces turns the field into a code block) and never delete the blank lines around them. Fields (any subset may appear on a given node):
 
 - **Prereqs:** — the incoming edges of the DAG for this node, referring to other node names.
 - **Connects:** — nontrivial two-way relationships to other nodes (analogy, cross-pollination) that are not strict prereqs.
