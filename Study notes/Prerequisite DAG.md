@@ -264,8 +264,21 @@ Legend: 🟢 = Anchor (familiarity ≥ 7, known) · 🔵 = To learn · ⭐ = Hig
 >
 > **Unlocks:** Elliptic genus / Witten genus (a modular-form-valued index, bridging Index Theory and TQFT), monstrous moonshine (the $j$-function and the Monster via VOAs and string theory on the Leech orbifold — Borcherds), mock modular forms and black-hole microstate counting (Dabholkar-Murthy-Zagier, Sen), the modular prepotential of Seiberg-Witten theory
 
+> [!note]- 🔵 Automorphic Forms / Selberg Trace Formula
+> **Prereqs:** Modular Forms (the holomorphic $SL(2,\mathbb{Z})$ case is the entry point), Harmonic Analysis, Spectral Theory, Lie Groups / Lie Algebras / Representation Theory, Riemann Surfaces (hyperbolic surfaces $\Gamma \backslash \mathbb{H}$), 🟢 Functional Analysis (self-adjoint operators, $L^2$ decompositions); the adelic / Langlands track additionally uses Galois Theory / Automorphic Forms
+>
+> **Connects:** Modular Forms ↔ Harmonic Analysis (the trace formula as non-abelian Poisson summation) ↔ Spectral Geometry (Laplace spectrum ↔ length spectrum on hyperbolic surfaces) ↔ Representation Theory (decomposition of $L^2(\Gamma \backslash G)$) ↔ Ergodic Theory (quantum unique ergodicity) ↔ Microlocal / Semiclassical Analysis (quantum chaos, Weyl law)
+>
+> **Note:** The analytic-spectral theory of automorphic forms: functions on $\Gamma \backslash G$ for a Lie group $G$ and arithmetic lattice $\Gamma$, organized by the spectral decomposition of the Laplacian (equivalently the Casimir). On the modular surface $SL(2,\mathbb{Z}) \backslash \mathbb{H}$ the spectrum splits into cusp forms (Maass forms — non-holomorphic Laplace eigenfunctions, the discrete spectrum) and Eisenstein series (the continuous spectrum, whose meromorphic continuation is Langlands' first theorem). The engine of the subject is the **Selberg trace formula**: a non-abelian Poisson summation identifying the Laplace eigenvalue spectrum of $\Gamma \backslash \mathbb{H}$ with the length spectrum of its closed geodesics. The two applications tracks: (1) **Spectral geometry** — the trace formula yields the Weyl law and the prime geodesic theorem, produces isospectral non-isometric hyperbolic surfaces (Vignéras; the arithmetic ancestor of Sunada's construction), and controls the spectral gap: Selberg's $\lambda_1 \geq \tfrac{3}{16}$ toward the $\lambda_1 \geq \tfrac{1}{4}$ conjecture. Arithmetic hyperbolic surfaces are *the* model systems of quantum chaos — quantum unique ergodicity was proved there first (Lindenstrauss, via measure rigidity). (2) **Harmonic analysis** — the subject is harmonic analysis on $\Gamma \backslash G$: classical Poisson summation is the $GL(1)$ trace formula (theta functions, Tate's thesis), Hecke operators give a commuting algebra of self-adjoint operators diagonalized simultaneously with the Laplacian, and spherical functions / Harish-Chandra transforms are the non-compact analogue of Fourier analysis on compact groups. Member of Cluster 5 (the trace formula is the arithmetic instance of the cluster's spectral-asymptotics machine); the Langlands-correspondence side ties to Cluster 13 via the Galois Theory / Automorphic Forms node.
+>
+> **Unlocks:** The analytic theory of $L$-functions (spectral methods for subconvexity and moments), the Langlands program's analytic entrance (Eisenstein series, the Arthur-Selberg trace formula for general groups), arithmetic quantum chaos and QUE, Ramanujan graphs / expanders (Lubotzky-Phillips-Sarnak, powered by Ramanujan-Petersson bounds), the prime geodesic theorem, and Kim-Sarnak progress toward the Ramanujan conjecture
+>
+> **Key refs:** Iwaniec, *Spectral Methods of Automorphic Forms* (AMS GSM 53, 2nd ed., 2002) — the canonical text for the spectral side; Bergeron, *The Spectrum of Hyperbolic Surfaces* (Springer Universitext, 2016) — the spectral-geometry track including QUE; Bump, *Automorphic Forms and Representations* (Cambridge Studies 55, 1997) — the representation-theoretic side; Sarnak, *Spectra of Hyperbolic Surfaces* (Bull. AMS 40, 2003) — the survey to read first
+
 > [!note]- 🔵 Galois Theory / Automorphic Forms (1,7)
 > **Prereqs:** Abstract Algebra, Commutative Algebra, Complex Analysis (for automorphic)
+>
+> **Note:** Carries the algebraic track — Galois theory proper, Galois representations, and the arithmetic Langlands correspondence. The analytic-spectral side of automorphic forms (Maass forms, the Selberg trace formula, applications to spectral geometry and harmonic analysis) has its own node directly above: Automorphic Forms / Selberg Trace Formula.
 
 > [!note]- ⭐🔵 Algebraic Topology (1,10)
 > **Prereqs:** Topology, Abstract Algebra
@@ -955,7 +968,7 @@ These are groups of subjects that accelerate each other when studied together �
 
 ## Cluster 5: Spectral / Index / Microlocal
 
-**Members:** Spectral Theory · Index Theory · Microlocal Analysis · Probabilistic Geometric Analysis · Witten Laplacian / Metastability · Riemannian Geometry · Symplectic Geometry · Geometric Quantization · Functional Analysis (Fredholm) · Operator Theory · Spectral Geometry · Noncommutative Geometry · Harmonic Analysis · Floer Theory / Symplectic Field Theory
+**Members:** Spectral Theory · Index Theory · Microlocal Analysis · Probabilistic Geometric Analysis · Witten Laplacian / Metastability · Riemannian Geometry · Symplectic Geometry · Geometric Quantization · Automorphic Forms / Selberg Trace Formula · Functional Analysis (Fredholm) · Operator Theory · Spectral Geometry · Noncommutative Geometry · Harmonic Analysis · Floer Theory / Symplectic Field Theory
 
 > 💡 Microlocal analysis is "Fourier transform + symplectic phase space" — the cotangent bundle's symplectic structure is exactly the home of wavefront sets. Atiyah-Singer is proved by reducing index to a symbol on T*M (microlocal symbol calculus) — so Riemannian geometry, Fredholm theory, and microlocal symbol algebras click into one machine. Studying spectral asymptotics (Weyl law) alongside Egorov's theorem makes "quantization = symplectic→Hilbert" tangible.
 
