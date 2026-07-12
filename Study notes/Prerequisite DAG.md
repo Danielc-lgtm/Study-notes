@@ -101,6 +101,17 @@ Legend: 🟢 = Anchor (familiarity ≥ 7, known) · 🔵 = To learn · ⭐ = Hig
 >
 > **Note:** HIGH LEVERAGE HUB — out-degree ~8, gates Gauge Theory, QFT, GR, Geometric Mechanics in Robotics
 
+> [!note]- 🔵 Geometric Quantization
+> **Prereqs:** Symplectic Geometry, Differential Geometry (line bundles, connections, curvature), Lie Groups / Lie Algebras / Representation Theory (orbit method), Quantum Mechanics for Mathematicians (the target formalism), Kähler Geometry (for Kähler polarizations)
+>
+> **Connects:** Symplectic Geometry ↔ Representation Theory (Kirillov orbit method, Borel-Weil-Bott) ↔ Index Theory (quantization commutes with reduction) ↔ Kähler Geometry (Kähler polarizations, Berezin-Toeplitz) ↔ Microlocal / Semiclassical Analysis (the $\hbar \to 0$ comparison) ↔ TQFT (Chern-Simons quantization of moduli of flat connections) ↔ Geometric Mechanics (momentum maps, coadjoint orbits)
+>
+> **Note:** The program that manufactures a quantum Hilbert space from a classical phase space $(M, \omega)$, in two stages. **Prequantization:** a Hermitian line bundle $L \to M$ with connection of curvature proportional to $\omega$ exists exactly when the Weil integrality condition $[\omega/2\pi\hbar] \in H^2(M;\mathbb{Z})$ holds, and the Kostant-Souriau operator $\hat{f} = -i\hbar\nabla_{X_f} + f$ then represents the full Poisson algebra on sections of $L$ — but the space is too big (states depend on position *and* momentum). **Polarization:** an integrable Lagrangian subbundle $P \subset TM \otimes \mathbb{C}$ cuts the sections down to those covariantly constant along $P$ — the vertical polarization on $T^*Q$ recovers the position representation $L^2(Q)$, a Kähler polarization gives holomorphic sections (Bargmann-Fock, Borel-Weil), and the half-form (metaplectic) correction repairs the vacuum energy and inner products. The Groenewold-van Hove no-go theorem is the reason the subject exists at all: no map quantizes every classical observable consistently, so quantization is genuinely extra structure, and the polarization-dependence question (do different polarizations give unitarily equivalent theories?) is the deep open nerve of the subject. Member of Cluster 5 — the cluster theme "quantization = symplectic → Hilbert" is literally this node; also ties to Cluster 19 (the mathematical substrate of QM and gauge theory) and Cluster 4 (momentum maps and coadjoint orbits are the geometric-mechanics inputs).
+>
+> **Unlocks:** Kirillov's orbit method (coadjoint orbits ↔ irreducible unitary representations, turning representation theory of nilpotent and compact groups into symplectic geometry), Borel-Weil-Bott as Kähler quantization of flag manifolds, Guillemin-Sternberg "quantization commutes with reduction" ($[Q, R] = 0$, proved via the Spin-c Dirac index — the bridge to the Index Theory node), Chern-Simons / Reshetikhin-Turaev TQFT from quantizing moduli of flat connections (the bridge to the TQFT node), Berezin-Toeplitz and deformation quantization (Fedosov, Kontsevich — the formal-algebraic counterpart, and the bridge to Noncommutative Geometry)
+>
+> **Key refs:** Woodhouse, *Geometric Quantization* (Oxford, 2nd ed., 1992) — the standard reference; Hall, *Quantum Theory for Mathematicians* (Springer GTM 267, 2013), Chapters 22–23 — the gentlest rigorous entry; Bates-Weinstein, *Lectures on the Geometry of Quantization* (AMS Berkeley Mathematics Lecture Notes 8, 1997); Kirillov, *Lectures on the Orbit Method* (AMS GSM 64, 2004)
+
 > [!note]- 🔵 Hodge Theory
 > **Prereqs:** Riemannian Geometry, De Rham Cohomology, 🟢 Functional Analysis (elliptic), Complex Geometry
 
@@ -944,7 +955,7 @@ These are groups of subjects that accelerate each other when studied together �
 
 ## Cluster 5: Spectral / Index / Microlocal
 
-**Members:** Spectral Theory · Index Theory · Microlocal Analysis · Probabilistic Geometric Analysis · Witten Laplacian / Metastability · Riemannian Geometry · Symplectic Geometry · Functional Analysis (Fredholm) · Operator Theory · Spectral Geometry · Noncommutative Geometry · Harmonic Analysis · Floer Theory / Symplectic Field Theory
+**Members:** Spectral Theory · Index Theory · Microlocal Analysis · Probabilistic Geometric Analysis · Witten Laplacian / Metastability · Riemannian Geometry · Symplectic Geometry · Geometric Quantization · Functional Analysis (Fredholm) · Operator Theory · Spectral Geometry · Noncommutative Geometry · Harmonic Analysis · Floer Theory / Symplectic Field Theory
 
 > 💡 Microlocal analysis is "Fourier transform + symplectic phase space" — the cotangent bundle's symplectic structure is exactly the home of wavefront sets. Atiyah-Singer is proved by reducing index to a symbol on T*M (microlocal symbol calculus) — so Riemannian geometry, Fredholm theory, and microlocal symbol algebras click into one machine. Studying spectral asymptotics (Weyl law) alongside Egorov's theorem makes "quantization = symplectic→Hilbert" tangible.
 
