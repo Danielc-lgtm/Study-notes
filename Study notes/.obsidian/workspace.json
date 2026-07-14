@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Probability/Measure Theory/Measure Theory I — §1 Measure Spaces.md",
+                "file": "Prerequisite DAG.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Measure Theory I — §1 Measure Spaces"
+              "title": "Prerequisite DAG"
             }
           }
         ]
@@ -183,34 +183,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "e34e12ff53ef1cb9",
+  "active": "c5b52a9d138c61af",
   "lastOpenFiles": [
+    "Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
+    "Geometry/Differential Geometry/Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map.md",
+    "Geometry/Differential Geometry/Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds.md",
+    "Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
+    "Geometry/Differential Geometry/Differential Geometry VIII — Differential Forms.md",
+    "Geometry/Differential Geometry/Differential Geometry VII — Tensors and Tensor Fields.md",
+    "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
+    "Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
+    "Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
+    "Geometry/Differential Geometry/Differential Geometry IV/Thm - The Rank Theorem.md",
+    "Analysis/Multivariate Analysis/Multivariate Analysis II/Thm - The Inverse Function Theorem.md",
+    "Geometry/Differential Geometry/Differential Geometry III — Tangent Vectors and the Differential.md",
+    "Geometry/Differential Geometry/Differential Geometry III/Thm - The Tangent Bundle is a Smooth Manifold.md",
+    "Geometry/Differential Geometry/Differential Geometry III/Thm - Equivalence of Tangent Vector Definitions.md",
+    "Geometry/Differential Geometry/Differential Geometry II — Smooth Maps and Partitions of Unity.md",
+    "Geometry/Differential Geometry/Differential Geometry II/Def - Bump Function and Smooth Cutoff.md",
+    "Geometry/Differential Geometry/Differential Geometry II/Thm - Smooth Maps are Continuous.md",
+    "Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md",
+    "Geometry/Differential Geometry/Differential Geometry I/Thm - Invariance of Dimension.md",
+    "Prerequisite DAG.md",
+    "Probability/Measure Theory/Measure Theory I — §1 Measure Spaces.md",
     "Probability/Advanced Probability/Advanced Probability I — Probability Spaces and Random Variables.md",
     "Probability/Measure Theory/Measure Theory III — §3–4 Product Measures and Differentiation.md",
     "Probability/Measure Theory/Measure Theory II — §2 Integration.md",
-    "Probability/Measure Theory/Measure Theory I — §1 Measure Spaces.md",
     "Geometry/Geometry of Physics/Hodge Theory/Hodge Theory I — Harmonic Forms and the Hodge Decomposition.md",
     "Geometry/Geometry of Physics/Geometric Mechanics/Geometric Mechanics I — Symplectic Manifolds and Hamiltonian Dynamics.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV — Yang–Mills Fields and Instantons.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology III — Higher Homotopy and Chern Forms.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology II — Fundamental Group and Covering Spaces.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I — Singular Homology and the de Rham Theorem.md",
-    "Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
-    "Geometry/Differential Geometry/Differential Geometry III — Tangent Vectors and the Differential.md",
-    "Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
-    "Geometry/Differential Geometry/Differential Geometry II — Smooth Maps and Partitions of Unity.md",
-    "Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md",
-    "Geometry/Differential Geometry/Differential Geometry I/Exercise Index - §1.2 Smooth Structures.md",
-    "Geometry/Differential Geometry/Differential Geometry I/Exercise Index - §1.1 Topological Manifolds.md",
-    "Geometry/Differential Geometry/Differential Geometry I/Ex - Real Projective Space is a Smooth Manifold.md",
-    "Geometry/Differential Geometry/Differential Geometry I/Ex - The Sphere as a Smooth Manifold via Stereographic Projection.md",
-    "Geometry/Differential Geometry/Differential Geometry II/Thm - Smooth Maps are Continuous.md",
-    "Geometry/Differential Geometry/Differential Geometry I/Ex - Compatibility of Two Atlases on the Sphere.md",
-    "Geometry/Differential Geometry/Differential Geometry I/Thm - Invariance of Dimension.md",
-    "Geometry/Differential Geometry/Differential Geometry I/Def - Topological Manifold.md",
-    "Algebra/Linear Algebra/Linear Algebra II/Def - Dimension.md",
-    "Algebra/Linear Algebra/Linear Algebra II/Thm - Bases are Equinumerous.md",
     "Category Theory/Higher Categories - Globular Operads",
     "Category Theory/Higher Categories - Generalized Operads"
   ]
