@@ -1,116 +1,379 @@
 # Paper-Note Page Templates
 
-The page-level skeletons produced by the `paper-notes` skill. Six shapes: map page, section page, `Def -`, `Thm -`, `Constr -`, and the local prerequisite DAG.
+Page skeletons for the `paper-notes` skill. Seven shapes: map, section, `Def -`, `Thm -`, `Constr -`, `Ext -`, prereq DAG.
 
-Low-level Obsidian syntax is **not** repeated here. Wikilinks, transclusion, collapsible callouts, foldable bullets, frontmatter schema, Windows-portable filenames, and the math-delimiter rules all live in `../../polymath-notes/references/obsidian-patterns.md`, which is the source of truth. Read it first. Two reminders only, because they are the ones most easily lost when transcribing from a PDF:
+Low-level Obsidian syntax is **not** repeated here — see `../../polymath-notes/references/obsidian-patterns.md`, which is the source of truth. Two reminders, because they are the ones most easily lost when transcribing from a PDF:
 
 - Math is `$...$` inline and `$$...$$` display. Nothing else.
 - Never put `$...$` inside `[[ ]]`. Wikilink display text uses Unicode: `[[Constr - The Weighted Potential Measure Vϕ|weighted potential measure]]`, `[[Def - Sigma-Finite Measure|σ-finite]]`.
 
+**Page order is fixed and identical across page types.** Signature → Type card → Statement/Definition/Construction → Discharges/Depends on → Proof (folded) → Checks → Consumed by → Commentary (folded). Formal content above; prose folded at the foot.
+
 ---
 
-## The type-card block
+## The three recurring blocks
 
-The one construct this skill adds. It appears on the map page (compressed), on the section page (full), and on each `Thm -` / `Constr -` subpage (full). Always a **non-folding** `[!abstract]` callout — no `-` on the marker — so it survives a skim and cannot be collapsed away.
+### 1. Signature block — always first
+
+A two-column table. **Every symbol used on the page appears.** The right column gives a *type*, never a name.
 
 ```markdown
-> [!abstract] Type card — Theorem 3.5 (mass of the subordinate Brownian loop measure)
-> **Given.** A [[Def - Bernstein Function and the Lévy–Khintchine Representation|Bernstein function]] $\phi$ satisfying [[Constr - Assumption 2.3 (Strictly Increasing Subordinator)|Assumption 2.3]]; a [[Def - Primitive Hyperbolic Element and Translation Length|primitive closed geodesic]] $\gamma \in \mathcal{P}_X$ of length $\ell_\gamma$; a winding number $m \geq 1$.
->
-> **Produces.** A closed-form value for $\mu_X^\phi(\mathcal{C}_X(\gamma^m))$ — a single non-negative real number — as one integral of an explicit heat-kernel factor against the [[Constr - The Weighted Potential Measure Vϕ|weighted potential measure]] $V_\phi$.
->
-> **Lets you.** Replace the double $(t,s)$ integral by a single integral against $V_\phi$, which is what makes every later special case — Brownian, killing, α-stable, shifted α-stable — a one-line substitution of $V_\phi$.
+# Signature
+
+| symbol | type |
+|---|---|
+| $(X,g)$ | complete orientable Riemannian surface; $\partial X$ possibly non-empty |
+| $\Delta_X$ | $-\operatorname{div}_g\operatorname{grad}_g$; self-adjoint on $L^2(X,\mathrm{vol}_g)$; $\operatorname{spec}\subseteq[0,\infty)$ |
+| $p_X$ | $(0,\infty)\times X\times X\to(0,\infty)$; symmetric; density w.r.t. $\mathrm{vol}_g$; kernel of $e^{-t\Delta_X}$ |
+| $W^t_{x\to y}$ | measure on $C([0,t],X)$; **unnormalised**: $\lvert W^t_{x\to y}\rvert = p_X(t,x,y)$ |
+| $\mu_X$ | $\sigma$-finite measure on $\mathcal{C}_X$; $\mu_X(\mathcal{C}_X)=\infty$ |
+| $V_\phi$ | $\sigma$-finite measure on $(0,\infty)$; **not** finite |
+| $m$ | $\in\mathbb{Z}_{\geq1}$ |
+
+**Conventions.** $\Delta_X\geq0$ (opposite sign to the analyst's). Brownian motion at speed $2$: generator $-\Delta_X$, not $-\tfrac12\Delta_X$. Dirichlet conditions on $\partial X$. Throughout, $\kappa$ and $s$ are linked by
+$$s=\tfrac12+\sqrt{\tfrac14+\kappa}\iff\kappa=s(s-1).$$
 ```
 
-Three fields, always in this order, always all three.
+Flag symbol collisions here rather than letting the reader discover them: *"$L$ is real ($=m\ell_\gamma$) in §3–§6 and complex ($=mL_\gamma$) in §7"*; *"$s$ is the subordination variable in §2–§3 and the spectral parameter in §4–§6"*.
 
-- **Given** — every hypothesis, each a wikilink to its `Def -` or `Constr -` page. A bare undefined term here is a bug.
-- **Produces** — the object *with its type*. Not "a formula" but "a non-negative real number", "a σ-finite measure on $(0,\infty)$", "an identity between two meromorphic functions on $\mathrm{Re}(s) > \delta$".
-- **Lets you** — one sentence of operational payoff. What you may now do that you could not do before.
-
-The strategy line is a separate visible paragraph, sitting between the type card and the folded proof:
+### 2. Type card — always second, never folds
 
 ```markdown
-**Strategy.** Evaluate the spatial integral by the Wang–Xue identity (Lemma 3.4), then collapse the $\mathrm{d}t/t$ integral into $V_\phi$ by Lemma 2.11.
+# Type card
+
+> [!abstract] Type card — Theorem 3.5 (mass of the subordinate loop measure)
+> **Given.**
+> **(H1)** $\phi$ a [[Def - Bernstein Function and the Lévy–Khintchine Representation|Bernstein function]] satisfying [[Constr - Assumption 2.3 (Strictly Increasing Subordinator)|(A2.3)]]: $b>0$ or $\nu(0,\infty)=\infty$.
+> **(H2)** $\gamma\in\mathcal{P}_X$ with translation length $\ell_\gamma>0$.
+> **(H3)** $m\in\mathbb{Z}_{\geq1}$; set $L:=m\ell_\gamma$.
+>
+> **Produces.** $\mu^\phi_X(\mathcal{C}_X(\gamma^m))\in[0,\infty]$, in closed form
+> $$\mu^\phi_X\big(\mathcal{C}_X(\gamma^m)\big)=\frac{\ell_\gamma}{2\sinh(L/2)}\int_0^\infty\frac{e^{-s/4}e^{-L^2/(4s)}}{2\sqrt{\pi s}}\,V_\phi(\mathrm{d}s).$$
+>
+> **Lets you.** Replace the double $(t,s)$ integral by one integral against $V_\phi$; every special case is then a one-line substitution of a measure on $(0,\infty)$.
+```
+
+- **Given** — numbered **(H1)…(Hn)**, each a typed proposition, symbolic or a wikilink. Never a sentence listing them.
+- **Produces** — the object *with its type*, and the formula when there is one. "A non-negative real number", "a $\sigma$-finite measure on $(0,\infty)$", "an identity of meromorphic functions on $\operatorname{Re}(s)>\delta$" — not "a formula".
+- **Lets you** — one sentence.
+
+### 3. Strategy line and folded proof
+
+```markdown
+**Strategy.** Evaluate the spatial integral by [[Ext - Wang–Xue Strip Identity|(WX)]], then collapse $\int_0^\infty\mathrm{d}t/t$ into $V_\phi$ by [[Thm - Collapsing the Time Integral into the Weighted Potential Measure|Lemma 2.11]].
 
 > [!note]- Proof (skippable)
-> [the full proof]
+> **Step 1.** By (H1) and [[Ext - Phillips Subordination|(PH)]], $p^\phi_{\mathbb{H}^2}(t,z,w)=\int_{[0,\infty)}p_{\mathbb{H}^2}(s,z,w)\,\psi^\phi_t(\mathrm{d}s)$. Substituting into (14),
+> $$\mu^\phi_X\big(\mathcal{C}_X(\gamma^m)\big)=\int_0^\infty\frac{\mathrm{d}t}{t}\int_{F_\tau}\int_{[0,\infty)}p_{\mathbb{H}^2}(s,z,\tau^mz)\,\psi^\phi_t(\mathrm{d}s)\,\mathrm{d}\rho(z).$$
+> **Step 2.** Integrand $\geq0$, so [[Thm - Fubini-Tonelli Theorem|Tonelli]] exchanges the $z$- and $s$-integrals. By (H2), (H3) and (WX) the inner integral is $\frac{\ell_\gamma}{2\sinh(L/2)}h(s)$ with $h(s)=\frac{e^{-s/4}e^{-L^2/4s}}{2\sqrt{\pi s}}$.
+> **Step 3.** Apply Lemma 2.11 to $h$. $\;\square$
 ```
+
+Every step cites a labelled hypothesis, a linked page, or an explicit computation.
 
 ---
 
-## Map page
+## Definition subpage
 
-Filename: `Map - <Paper Short Title>.md`.
+Filename `Def - <Concept>.md`.
 
 ````markdown
 ---
-type: paper-map
+type: definition
 paper: "<CiteKey>"
 subject: <subject-slug>
-title: "<Full Paper Title> — <Authors>"
-tags: [paper, <area-tag>, <subject-tag>]
+prereqs: ["Def - <dep>"]
+tags: [paper, <area-tag>]
 ---
 
-# What this paper does
+# Signature
 
-[One paragraph. Not an abstract — an account of the move the paper makes. What object it builds, what it computes about that object, and what the payoff is. Written so that reading only this paragraph leaves the reader able to say what the paper is for.]
-
-[A second paragraph naming the paper's one central identity or construction, as a display equation, and saying in words what it says. This is the thing every other result is in service of.]
-
-**Source.** `paper_source/<filename>.pdf` — <full citation>.
-
----
-
-# Notation registry
-
-[Every symbol used anywhere in this note-set, with its type. Always visible, never folded. Opens with a standing-convention preamble when the paper fixes conventions the reader might otherwise mis-apply — sign of the Laplacian, speed of the process, orientation, normalisation of a measure.]
-
-- $X = \Gamma \backslash \mathbb{H}^2$ — the quotient surface; $\Gamma$ a torsion-free Fuchsian group
-- $p_X(t,x,y)$ — heat kernel, $p : (0,\infty) \times X \times X \to (0,\infty)$, a density with respect to $\mathrm{vol}_g$
-- [...]
+| symbol | type |
+|---|---|
+| ... | ... |
 
 ---
 
-# Type index
+# Definition
 
-[Every theorem, lemma, proposition, corollary and construction in the paper, in paper order, with a compressed type card and a link. This is the skimmable spine: reading only this section, top to bottom, must give a correct mental model of the paper's argument.]
+> **Definition (<name>).** [Formal statement. When there are $n\geq2$ independent conditions, number them:]
+> **(D1)** $\dots$
+> **(D2)** $\dots$
+> **(D3)** $\dots$
 
-## §2 <Section title> → [[§2.1–2.2 <Section Title>|section page]]
+**Gloss.** [At most ONE sentence, and only when the formal statement is genuinely opaque without it. Anything longer is Commentary.]
 
-- **[[Constr - The Brownian Loop Measure|Definition 2.1 — Brownian loop measure]]** — *Given* a complete orientable Riemannian surface $(X,g)$. *Produces* a σ-finite measure on the space of unrooted unparametrised loops. *Lets you* speak of "the measure of a set of loops" without a probability normalisation.
-- **[[Thm - Collapsing the Time Integral into the Weighted Potential Measure|Lemma 2.11]]** — *Given* [...]. *Produces* [...]. *Lets you* [...].
-
-## §3 <Section title> → [[§3 <Section Title>|section page]]
-
-[...]
+[Equivalent formulations as a second blockquote, with a clause-level note on which is operationally cheaper to check.]
 
 ---
 
-# Local prerequisite DAG
+# Type card
 
-[Two or three sentences summarising what the paper reduces to, then a link.]
-
-The full backchain, with every leaf either an anchor or a page in this folder, is on [[Prereq DAG - <Paper Short Title>]].
-
----
-
-# Suggested reading order
-
-[Prose, not a bare list. Name a first pass that reads only type cards, a second pass that reads the section pages, and the points where dropping into a proof actually pays. Say explicitly which sections can be skipped on a first reading and what is lost by skipping them.]
+> [!abstract] Type card — <name>
+> **Given.** **(H1)** … **(H2)** … *(the data the definition consumes)*
+>
+> **Produces.** *(the object, with its type)*
+>
+> **Lets you.** *(one sentence)*
 
 ---
 
-# What this paper leaves open
+# Depends on
 
-[The paper's own stated open questions, plus anything the note-set noticed: a hypothesis that looks stronger than needed, a special case that collapses, a construction that plainly extends. Keep honest about which is which.]
+- [[Def - <X>]] — used for (D1) only
+- 🟢 *anchor concept* — used for (D2)
+
+---
+
+# Checks
+
+**Instance.** $\dots$ — (D1) holds because $\dots$; (D2) because $\dots$
+
+**Non-instance.** $\dots$ — satisfies (D1), (D3); **fails (D2)**, because $\dots$. Consequence: $\dots$
+
+[A non-instance is required whenever a clause's necessity is not obvious. It must name the clause it fails.]
+
+---
+
+# Used at
+
+- [[Thm - <name>]] — as (H2)
+- [[Constr - <name>]] — in the construction of $\dots$
+
+---
+
+# Commentary
+
+> [!note]- Commentary (skippable)
+> [Motivation, intuition, history, "why this definition and not a nearby variant", cross-references. Tong register permitted here and nowhere else.]
+````
+
+---
+
+## Theorem subpage
+
+Filename `Thm - <Name>.md`. Used for theorems, lemmas, propositions and corollaries the paper states as its own; the blockquote label distinguishes them.
+
+````markdown
+---
+type: theorem
+paper: "<CiteKey>"
+subject: <subject-slug>
+prereqs: ["Def - <X>", "Constr - <Y>", "Ext - <Z>"]
+tags: [paper, <area-tag>]
+---
+
+# Signature
+
+| symbol | type |
+|---|---|
+| ... | ... |
+
+---
+
+# Type card
+
+> [!abstract] Type card — Theorem N.M (<short name>)
+> **Given.** **(H1)** … **(H2)** … **(H3)** …
+>
+> **Produces.** …
+>
+> **Lets you.** …
+
+---
+
+# Statement
+
+> **Theorem N.M (<name>).** Assume (H1)–(H3). Then
+> $$\dots\tag{N}$$
+
+[Specialisations as further blockquotes, each stating which hypotheses it strengthens.]
+
+---
+
+# Discharges
+
+[The imported results this proof consumes, one line each: name, what it is applied to, what it returns. This is the section that makes the proof checkable without opening it.]
+
+| result | applied to | returns |
+|---|---|---|
+| [[Ext - Wang–Xue Strip Identity\|(WX)]] | $\int_{F_\tau}p_{\mathbb{H}^2}(s,z,\tau^mz)\,\mathrm{d}\rho$ | $\frac{\ell_\gamma}{2\sinh(L/2)}\cdot\frac{e^{-s/4}e^{-L^2/4s}}{2\sqrt{\pi s}}$ |
+| [[Thm - Fubini-Tonelli Theorem\|Tonelli]] | non-negative integrand on $(0,\infty)\times F_\tau\times[0,\infty)$ | exchange of $\int\mathrm{d}\rho$ and $\int\psi^\phi_t$ |
+
+---
+
+# Proof
+
+**Strategy.** [One or two moves, named.]
+
+> [!note]- Proof (skippable)
+> **Step 1.** …
+> **Step 2.** …
+
+---
+
+# Consumed by
+
+- [[Thm - <downstream>]] — as (H1)
+- [[§N <Section Title>]]
+
+---
+
+# Commentary
+
+> [!note]- Commentary (skippable)
+> [Why one should expect it; the one-line mechanism; where it sits relative to the literature; what breaks without each hypothesis.]
+````
+
+---
+
+## Construction subpage
+
+Filename `Constr - <Object>.md`. One per object that later appears as a hypothesis.
+
+````markdown
+---
+type: construction
+paper: "<CiteKey>"
+subject: <subject-slug>
+prereqs: ["Def - <X>"]
+tags: [paper, <area-tag>]
+---
+
+# Signature
+
+| symbol | type |
+|---|---|
+| ... | ... |
+
+---
+
+# Construction
+
+> **Construction / Definition N.M (<name>).** [Every ingredient typed; every choice explicit, with a note on which choices the output is independent of, and why.]
+> $$\dots\tag{N}$$
+
+[When this is the paper's instance of a general notion, transclude the general definition:]
+
+![[Def - <general notion>#Definition]]
+
+**Well-definedness.** [The one check that the construction does not depend on the choices made — stated, and either discharged in a line or linked.]
+
+---
+
+# Type card
+
+> [!abstract] Type card — <object>
+> **Given.** **(H1)** … **(H2)** …
+>
+> **Produces.** *(the object with its type: which space, what it is a function of, what it is normalised against, whether finite)*
+>
+> **Lets you.** …
+
+---
+
+# Depends on
+
+- [[Def - <X>]] — for …
+
+---
+
+# Properties
+
+[Only the properties actually consumed later. Each as a labelled symbolic statement, with its consumer named.]
+
+**(P1) Restriction.** $X'\subseteq X$ open $\implies\ \mathrm{d}\mu_{X'}(\eta)=\mathbf{1}_{\eta\subseteq X'}\,\mathrm{d}\mu_X(\eta)$. *Consumed by:* [[Ext - <name>]].
+
+**(P2) Conformal invariance.** $\mu_{X,e^{2\sigma}g}=\mu_{X,g}$ for every $\sigma\in C^\infty(X,\mathbb{R})$. *Consumed by:* … *Fails for:* …
+
+---
+
+# Consumed by
+
+- [[Thm - <name>]] — as (H1)
+- [[Thm - <name>]] — as (H2)
+
+---
+
+# Commentary
+
+> [!note]- Commentary (skippable)
+> […]
+````
+
+---
+
+## External-result subpage
+
+Filename `Ext - <Name>.md`. One per result the paper invokes but does not prove. **The point of the page is that a reader who accepts it on blind faith can still follow every proof that uses it** — so precondition and conclusion must be exact.
+
+````markdown
+---
+type: external
+paper: "<CiteKey>"
+subject: <subject-slug>
+tags: [paper, external, <area-tag>]
+---
+
+# Signature
+
+| symbol | type |
+|---|---|
+| ... | ... |
+
+---
+
+# Statement
+
+> **(WX) Wang–Xue strip identity.** *Precondition:*
+> **(P1)** $s>0$;
+> **(P2)** $m\in\mathbb{Z}_{\geq1}$, $\ell_\gamma>0$, $L:=m\ell_\gamma$;
+> **(P3)** $\tau\in\mathrm{PSL}(2,\mathbb{R})$ in standard form $\tau:z\mapsto e^{\ell_\gamma}z$, $F_\tau=\{1\leq\operatorname{Im}z<e^{\ell_\gamma}\}$;
+> **(P4)** $p_{\mathbb{H}^2}$ the speed-$2$ Brownian heat kernel on $\mathbb{H}^2$.
+>
+> *Conclusion:*
+> $$\int_{F_\tau}p_{\mathbb{H}^2}\big(s,z,e^Lz\big)\,\mathrm{d}\rho_{\mathbb{H}^2}(z)=\frac{\ell_\gamma}{2\sinh(L/2)}\cdot\frac{e^{-s/4}e^{-L^2/(4s)}}{2\sqrt{\pi s}}.$$
+
+---
+
+# Type card
+
+> [!abstract] Type card — (WX)
+> **Given.** (P1)–(P4).
+>
+> **Produces.** A positive real number, factorising as *(geometric prefactor)* $\times$ *(analytic factor in $(s,L)$)*.
+>
+> **Lets you.** Discharge the spatial integral of [[Thm - …|Theorem 3.2]] completely, leaving a one-dimensional integral in $t$.
+
+---
+
+# Status
+
+- **Proved here:** no.
+- **Source:** [WX25, Lemma 3.2].
+- **DAG node that would close this:** *<node name>* (🔵/🟢).
+- **What is safe to assume:** the conclusion, verbatim, under (P1)–(P4). Nothing about the proof is used downstream.
+
+---
+
+# Used at
+
+- [[Thm - <name>]] — with $a=\tfrac14$, $b=L^2/4$
+- [[Thm - <name>]] — with $a=\tfrac14+\kappa$, $b=L^2/4$
+
+---
+
+# Commentary
+
+> [!note]- Commentary (skippable)
+> [Why the statement has the shape it has; what the analogous statement in another dimension or setting is; how hard the gap is to close.]
 ````
 
 ---
 
 ## Section page
 
-Filename: `§N.M <Section Title>.md` — the paper's own section numbering, so the note-set stays aligned with the PDF.
+Filename `§N.M <Section Title>.md` — the paper's own numbering, so the note-set stays aligned with the PDF.
 
 ````markdown
 ---
@@ -118,289 +381,150 @@ type: paper-section
 paper: "<CiteKey>"
 subject: <subject-slug>
 section: "<N.M>"
-prereqs:
-  - "Def - <X>"
-  - "Constr - <Y>"
+prereqs: [...]
 tags: [paper, <area-tag>]
 ---
 
-# Notation
+# Signature
 
-[Every symbol used on this page and its subpages, with its type. Unfolded, first. Restated even where it duplicates the map page — this page must be readable cold.]
+| symbol | type |
+|---|---|
+| ... | ... |
 
----
-
-# What this section is for
-
-[David-Tong-register prose. What problem the section solves, what the previous section left dangling, and what the next section will need from this one. Two to four paragraphs. Concrete before abstract: open with the difficulty, arrive at the construction.]
+**Conventions.** […]
 
 ---
 
 # Results
 
-[Each result: a heading, the type card, the statement (transcluded from the subpage where the statement is short, restated where transclusion would be bulky), the strategy line, and a link to the subpage carrying the full proof. Interleave the narrative prose between results — the section page is a guided read, not a list.]
+[One `##` per result. Each: type card, statement (transcluded where short), strategy line, link to the subpage. **No connecting narrative here** — the narrative is in the section's Commentary block at the foot.]
 
 ## Lemma 2.11 — collapsing the time integral
 
 > [!abstract] Type card — Lemma 2.11
-> **Given.** [...]
+> **Given.** **(H1)** … **(H2)** …
 >
-> **Produces.** [...]
+> **Produces.** …
 >
-> **Lets you.** [...]
+> **Lets you.** …
 
 ![[Thm - Collapsing the Time Integral into the Weighted Potential Measure#Statement]]
 
-**Strategy.** [One or two moves.]
+**Strategy.** […] · Full page: [[Thm - Collapsing the Time Integral into the Weighted Potential Measure]].
 
-Full proof and the input-broadening discussion: [[Thm - Collapsing the Time Integral into the Weighted Potential Measure]].
+## Theorem 3.5 — …
 
-[Prose paragraph on what this buys, leading into the next result.]
-
-## Theorem 3.5 — [...]
-
-[...]
+[…]
 
 ---
 
-# Worked special cases
+# Special cases
 
-[Where the paper specialises a general formula — Brownian, killing, α-stable — give each case its visible one-line answer and fold the computation.]
+[Where the paper specialises a general formula, a table of substitutions with the visible answer, and the computation folded.]
 
-**Brownian ($\phi(\lambda) = \lambda$).** $V_\phi(\mathrm{d}s) = \mathrm{d}s/s$, and the mass is $\frac{1}{m}\cdot\frac{1}{e^{L}-1}$.
+| $\phi(\lambda)$ | $V_\phi(\mathrm{d}s)$ | $I_\phi(L)$ | $\mu^\phi_X(\mathcal{C}_X(\gamma^m))$ |
+|---|---|---|---|
+| $\lambda$ | $\mathrm{d}s/s$ | $e^{-L/2}/L$ | $\frac1m\cdot\frac{1}{e^L-1}$ |
 
 > [!note]- Calculation (skippable)
-> [the substitution and the integral identity]
+> […]
 
 ---
 
-# What to carry forward
+# Exports
 
-[One paragraph naming exactly what later sections use from this one. This is the section's export list — if a later section needs something not named here, either this list or that section is wrong.]
+[Exactly what later sections consume from this one, as a numbered list of typed statements. If a later section needs something not listed, either this list or that section is wrong.]
+
+**(E1)** $\mu^\kappa_X(\mathcal{C}_X(\gamma^m))=\frac1m\frac{e^{(1-s)L}}{e^L-1}$, $s=\tfrac12+\sqrt{\tfrac14+\kappa}$, $L=m\ell_\gamma$. → §4, §5, §6.
+**(E2)** … → §7.
+
+---
+
+# Commentary
+
+> [!note]- Commentary (skippable)
+> [What the section is for, the difficulty it resolves, the narrative connecting the results. Tong register permitted.]
 ````
 
 ---
 
-## Definition subpage
+## Map page
 
-Filename: `Def - <Concept Name>.md`.
-
-````markdown
----
-type: definition
-paper: "<CiteKey>"
-subject: <subject-slug>
-prereqs:
-  - "Def - <dependency>"
-tags: [paper, <area-tag>]
----
-
-# Notation
-
-[Symbols this page uses, typed. Unfolded, first.]
-
----
-
-# In plain language
-
-[One or two sentences. What this thing *is*, said to someone who will never read the formal version. This section is mandatory and comes before the formal definition — it is the single highest-value paragraph on the page for a cold re-entry.]
-
-[Then a paragraph of David-Tong-register motivation: what goes wrong without this concept, what the definition is engineered to make true. Where the definition has independent clauses, say what each clause is buying.]
-
----
-
-# The definition
-
-> **Definition (<name>).** [The formal statement. Precise, complete, in the paper's own convention, with the convention named.]
-
-[Equivalent formulations, when the paper or the literature uses more than one, with a sentence on which is operationally more useful and why.]
-
----
-
-# Types and signatures
-
-[Every object the definition introduces, with its type. One bullet each.]
-
-- $\phi : (0,\infty) \to [0,\infty)$ — the Bernstein function; smooth, non-negative, with alternating-sign derivatives from the first onward.
-- $\nu$ — the Lévy measure, a measure on $(0,\infty)$ with $\int_0^\infty (1 \wedge s)\,\nu(\mathrm{d}s) < \infty$; not finite in general.
-
----
-
-# Example
-
-[One minimal example, worked concretely enough to be checkable. Not a list of examples — one, done properly.]
-
-**Near-miss non-example.** [An object failing exactly one clause, with that clause named and the consequence of the failure spelled out. Include when the definition has a clause whose necessity is not obvious; omit when it would be padding.]
-
----
-
-# Used in this paper at
-
-- [[Thm - <name>]] — [how it is used there, in a clause]
-- [[Constr - <name>]] — [...]
-
----
-
-# Where this sits in my DAG
-
-[One or two sentences: which DAG node this concept's home subject is, whether it is an anchor, and — for non-anchors — what it reduces to. Links onward to whatever it depends on. This is the local rung of the backchain.]
-````
-
----
-
-## Theorem subpage
-
-Filename: `Thm - <Theorem Name>.md`. Used for theorems, lemmas, propositions and corollaries alike; the blockquote label distinguishes them.
+Filename `Map - <Paper Short Title>.md`.
 
 ````markdown
 ---
-type: theorem
+type: paper-map
 paper: "<CiteKey>"
 subject: <subject-slug>
-prereqs:
-  - "Def - <X>"
-  - "Constr - <Y>"
+title: "<Full Paper Title> — <Authors>"
 tags: [paper, <area-tag>]
 ---
 
-# Notation
+# Signature
 
-[Typed symbol list. Unfolded, first.]
+[The global symbol table: every symbol used anywhere in the note-set, typed. This is the page a returning reader opens first, and it must be sufficient to read any type card in the index below.]
 
----
+| symbol | type |
+|---|---|
+| ... | ... |
 
-# Type card
-
-> [!abstract] Type card — Theorem N.M (<short name>)
-> **Given.** [Every hypothesis, each a wikilink.]
->
-> **Produces.** [The object, with its type.]
->
-> **Lets you.** [One sentence of operational payoff.]
+**Conventions.** […] **Collisions.** […]
 
 ---
 
-# Statement
+# The one identity
 
-> **Theorem N.M (<name>).** [The precise formal statement, hypotheses and conclusion in one block, in the paper's numbering.]
+$$\dots$$
 
-[Companion or specialised forms as further blockquotes, with a sentence tying them together.]
+[Two sentences: what it says, and what every other result does to it. No more.]
 
----
-
-# Why it is true
-
-[The intuition, independent of the proof. Not a proof sketch — the reason one should expect the result. Include a single bolded one-line mechanism summary. Written in David-Tong register.]
+**Source.** `paper_source/<file>.pdf` — <full citation>.
 
 ---
 
-# Strategy
+# Type index
 
-**Strategy.** [The one or two moves the proof turns on, named. This line plus the type card must be enough to take the result on faith and use it correctly downstream.]
+[Every result in paper order, with a compressed type card and a link. Reading only this section must give a correct account of the logical spine. Group by section with a link to the section page.]
 
-> [!note]- Proof (skippable)
-> [The complete proof, in the paper's steps, with each step's purpose named before its computation. Long sub-computations get their own nested `> > [!note]- Calculation (skippable)` fold.]
+## §2 <title> → [[§2.1–2.2 <Section Title>|section]]
 
----
-
-# What this assumes, and where to climb
-
-[Prose walking the hypotheses one at a time: for each, which `Constr -` or `Def -` page carries it, and — briefly — what would break without it. This is the upward half of rule D, and it is what makes the theorem page a valid entry point into the paper.]
+- **[[Constr - …|Definition 2.1]]** — *Given* (H1) $(X,g)$ complete orientable Riemannian surface; (H2) $p_X$, $W^t_{x\to x}$. *Produces* a $\sigma$-finite measure on $\mathcal{C}_X$ of infinite total mass. *Lets you* assign mass to a family of loops with no normalisation, and inherit (P1) restriction, (P2) conformal invariance.
 
 ---
 
-# What consumes this
+# Imported results
 
-- [[Thm - <downstream result>]] — [in a clause, how this feeds it]
-- [[§N <Section Title>]] — [...]
+[Every `Ext -` page in one table — the complete list of what must be taken on faith, with what each is used for. This is the honest inventory of the note-set's floor.]
 
----
-
-# Reading it against the rest of the paper
-
-[Optional. Where the result sits relative to the literature the paper cites, or relative to a result elsewhere in the note-set that has the same shape. Only when there is something real to say.]
-````
+| result | precondition (abbrev.) | used at | closes with |
+|---|---|---|---|
+| [[Ext - …]] | … | §3, §7 | *<DAG node>* |
 
 ---
 
-## Construction / assumption subpage
+# Prerequisite DAG
 
-Filename: `Constr - <Object Name>.md`. One per object that later appears as a hypothesis.
-
-````markdown
----
-type: construction
-paper: "<CiteKey>"
-subject: <subject-slug>
-prereqs:
-  - "Def - <X>"
-tags: [paper, <area-tag>]
----
-
-# Notation
-
-[Typed symbol list. Unfolded, first.]
+[Two sentences, then the link to [[Prereq DAG - <Paper Short Title>]].]
 
 ---
 
-# In plain language
+# Reading order
 
-[What this object is and why the paper builds it. One or two sentences, then a motivating paragraph.]
-
----
-
-# The construction
-
-> **Construction / Definition N.M (<name>).** [The formal construction. Every ingredient named and typed; every choice made explicit, with a note on which choices the result is independent of.]
-
-[When the object is this paper's instance of a general notion, transclude the general definition here rather than restating it:]
-
-![[Def - <general notion>#The definition]]
+[Three passes, terse: what each pass reads, and what is skippable with what cost. A list, not prose.]
 
 ---
 
-# Type card
+# Open
 
-> [!abstract] Type card — <object>
-> **Given.** [What must be in hand to perform the construction.]
->
-> **Produces.** [The object, with its type — what space it lives in, what it is a function of, what it is normalised against.]
->
-> **Lets you.** [What downstream results become available once you have it.]
-
----
-
-# Properties relied on later
-
-[Each property the paper actually uses, as a named item with a sentence of justification or a link to where it is proved. Only the ones that get used — this is not a survey.]
-
-**Restriction.** [...]
-
-**Conformal invariance.** [...]
-
----
-
-# Consumed by
-
-[The downward half of rule D. Every theorem and section that assumes this object.]
-
-- [[Thm - <name>]] — assumed as [which hypothesis]
-- [[Thm - <name>]] — [...]
-
----
-
-# Where this sits in my DAG
-
-[Which anchors it reduces to; what non-anchor concepts it stands on, each linked.]
+[The paper's stated open questions and anything the note-set noticed, each stated as a precise question rather than a gesture.]
 ````
 
 ---
 
 ## Local prerequisite DAG page
 
-Filename: `Prereq DAG - <Paper Short Title>.md`.
-
-The point of this page is a single glance that answers "does this bottom out at things I actually know?" So: an indented dependency list, anchors marked 🟢 at the leaves, every non-anchor a link. Not a graph diagram, not prose.
+Filename `Prereq DAG - <Paper Short Title>.md`. An indented dependency list; anchors marked 🟢 at the leaves; every non-anchor a link. Not a diagram, not prose.
 
 ````markdown
 ---
@@ -410,42 +534,34 @@ subject: <subject-slug>
 tags: [paper, prereq-dag]
 ---
 
-# How to read this page
+# How to read
 
-[Two or three sentences. Indentation is dependency: a child is something its parent needs. 🟢 marks an anchor — a concept from a 🟢 node of `Study notes/Prerequisite DAG.md`, where the backchain stops. Every non-anchor is a link to a page in this folder. An unlinked, unmarked leaf is a bug, and finding one is the point of reading this page.]
-
----
-
-# Anchors this paper stands on
-
-[The full anchor list up front, so the reader can sanity-check the floor before reading the tree. One line each, naming the DAG node it comes from.]
-
-- 🟢 **Heat kernel and heat semigroup** — from *Analysis of PDEs*, *Spectral Theory*
-- 🟢 **Brownian motion, Brownian bridge, disintegration by endpoint** — from *SDEs*, *Advanced Probability*
-- [...]
+Indentation is dependency. 🟢 marks an anchor — a concept from a 🟢 node of `Study notes/Prerequisite DAG.md`, where the backchain stops. Every non-anchor is a link. **An unlinked, unmarked leaf is a bug**, and finding one is the point of this page.
 
 ---
 
-# The backchain
+# Anchors
 
-## <Top-level result 1>
+[The floor, up front, so it can be sanity-checked before reading the tree. One line each, naming the DAG node and the specific facts used.]
+
+- 🟢 **Heat semigroup and kernel** — *Analysis of PDEs*, *Functional Analysis*. Used: $e^{-t\Delta}$ strongly continuous contraction; kernel as density; $p(t,x,x)\sim1/4\pi t$ on a surface; $\operatorname{Tr}e^{-t\Delta}=\int p(t,x,x)$.
+
+---
+
+# Backchain
+
+## <Top-level result>
 
 - [[Thm - <name>]]
 	- [[Constr - <hypothesis object>]]
 		- [[Def - <term>]]
-			- 🟢 anchor concept
-			- 🟢 anchor concept
-		- 🟢 anchor concept
-	- [[Def - <term>]]
-		- 🟢 anchor concept
-
-## <Top-level result 2>
-
-[...]
+			- 🟢 …
+		- [[Ext - <import>]] ← **gap**
+	- 🟢 …
 
 ---
 
-# Leaves that are not anchors
+# Gaps
 
-[Ideally empty. If a leaf genuinely cannot be reduced to an anchor — the paper cites a black-box result from a subject the reader has not studied — say so here explicitly, name the result, and say what would have to be studied to close the gap. An honest gap recorded here is far better than a silent one buried in the tree.]
+[Leaves that are not anchors. Each: the `Ext -` page carrying it, what it is used for, and what would close it. An honest gap recorded here is far better than a silent one buried in the tree. Ideally the list matches the `Ext -` inventory on the map page exactly.]
 ````

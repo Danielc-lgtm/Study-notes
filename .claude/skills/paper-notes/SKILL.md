@@ -1,204 +1,238 @@
 ---
 name: paper-notes
 description: >
-  Rewrite a finished research paper into a self-contained, re-enterable Obsidian note-set: a map page with a
-  type index, section pages, and Def / Thm / Constr subpages, with every unfamiliar term backchained to an
-  anchor concept the reader already knows. Use whenever the user points at a paper (in `paper_source/` or
-  `sources/`) and asks for notes on it, a breakdown of it, a reading guide for it, or wants to "understand what
-  each result is for" without reading the proofs. Trigger phrases: "make notes on this paper," "break down this
-  paper," "write up this paper," "paper notes for X," "what does each theorem in X let me do," "backchain this
-  paper," "make this paper re-enterable," "type cards for this paper." Distinct from polymath-notes (which
-  writes chapter-level study notes with exercises from textbooks and lecture notes) and from prereq-backchain
-  (which plans what to study). This skill takes a *specific finished paper* as input and produces a note-set
-  optimised for skimming the logical spine, climbing any hypothesis down to anchors, and dropping into a full
-  proof only on purpose.
+  Rewrite a finished research paper into a self-contained, machine-checkable Obsidian note-set: a map page with a
+  type index, section pages, and Def / Thm / Constr / Ext subpages, in which every page opens with a typed
+  signature block, every hypothesis is a symbolic proposition, every invoked external result is stated with exact
+  preconditions and conclusion, and all prose is demoted to the bottom or folded away. Use whenever the user
+  points at a paper (in `paper_source/` or `sources/`) and asks for notes on it, a breakdown of it, a reading
+  guide for it, or wants to "understand what every result is for" without reading the proofs. Trigger phrases:
+  "make notes on this paper," "break down this paper," "write up this paper," "paper notes for X," "what does
+  each theorem in X let me do," "backchain this paper," "make this paper re-enterable," "type cards for this
+  paper." Distinct from polymath-notes (which writes chapter-level study notes with exercises from textbooks and
+  lecture notes) and from prereq-backchain (which plans what to study). This skill takes a *specific finished
+  paper* as input and produces a note-set optimised for typechecking the logical spine, climbing any hypothesis
+  down to anchors, and dropping into a full proof only on purpose.
 ---
 
 # Paper Notes — Obsidian Edition
 
 A specialisation of [`polymath-notes`](../polymath-notes/SKILL.md) and `prereq-backchain` for a single finished paper.
 
-Same philosophy — self-containedness, insight density, progressive disclosure, David-Tong-style prose for everything that is not a formal statement. Same Obsidian mechanics. The difference is the input and the job. The input is a paper somebody else wrote, in the order they chose to write it, with the proofs in the way. The job is to rewrite it so that the owner can:
+## The reader model
 
-1. **understand what every result is for without reading any proof**;
-2. **click into a definition-or-justification chain from anywhere and climb it until they hit concepts they already know**;
-3. **drop into the full proof only when they choose to**.
+**Write for a reader who is a slightly less pedantic Lean.**
 
-`prereq-backchain` backchains a *subject* to plan study. This skill backchains a *paper* to make it comprehensible.
+They have the definitions somewhere but have forgotten which ones, they cannot resolve an ambiguous English predicate into a proposition, and they will not accept a step whose hypothesis they cannot check. What they *will* do, cheerfully, is take a result on faith — provided its precondition and its conclusion are both stated precisely enough to be applied.
+
+So the job is: **find the minimal reconstruction that makes the whole paper typecheck, and lay it out so that checking it is cheap.** Three failure modes follow directly.
+
+1. **An untyped symbol.** $p$ appears and the reader does not know its domain, codomain, or reference measure. Bug.
+2. **An ambiguous predicate.** "$\Gamma$ acts freely and properly discontinuously", "the form is regular", "$X$ is geometrically finite", "$P$ is polar". Each is a proposition the reader cannot expand. Either write it symbolically at point of use, or link to a page whose definition gives it as numbered symbolic clauses. **Prose predicates are bugs.**
+3. **An unstated import.** A proof says "by the Wang–Xue identity" or "by the trace formula" and the reader does not know what those say. Even a black box must have a precondition and a conclusion, or the chain does not typecheck.
+
+Everything below serves that. `prereq-backchain` backchains a *subject* to plan study; this skill backchains a *paper* until it typechecks.
 
 **Read first, every time:**
 
-- `references/paper-note-templates.md` — the page-level skeletons this skill produces (map, section, `Def -`, `Thm -`, `Constr -`, prereq DAG).
-- `../polymath-notes/references/obsidian-patterns.md` — **the source of truth for all low-level Obsidian syntax**: wikilinks `[[Page]]` / `[[Page|alias]]`, transclusion `![[Page#Section]]`, collapsible callouts, foldable bullets, frontmatter, Windows-portable filenames, and math delimiters (Obsidian uses standard `$...$` and `$$...$$`; never Notion's variant, never `\(...\)`). None of those rules are restated here. When this skill and that file appear to disagree, that file wins.
-- `../polymath-notes/SKILL.md` — Core Philosophy and Writing Style. Everything there about register, prose over bullets, no abbreviation, no hedge stacking, concrete before abstract, and formulaic specification of every geometric object applies here unchanged.
-- `Study notes/Prerequisite DAG.md` — the anchor set (see *Anchors* below).
+- `references/paper-note-templates.md` — the page skeletons (map, section, `Def -`, `Thm -`, `Constr -`, `Ext -`, prereq DAG).
+- `../polymath-notes/references/obsidian-patterns.md` — **the source of truth for all low-level Obsidian syntax**: wikilinks `[[Page]]` / `[[Page|alias]]`, transclusion `![[Page#Section]]`, collapsible callouts, tables, frontmatter, Windows-portable filenames, and math delimiters (Obsidian uses standard `$...$` and `$$...$$`; never Notion's variant, never `\(...\)`; never LaTeX inside `[[ ]]`). None of those rules are restated here. When this skill and that file appear to disagree, that file wins.
+- `../polymath-notes/SKILL.md` — Core Philosophy only. **Its Writing Style section does *not* apply here**: this skill's register is specification, not David Tong. Tong-style prose is permitted only inside the folded `Commentary` block at the foot of a page.
+- `Study notes/Prerequisite DAG.md` — the anchor set (see *Anchors*).
 
 ---
 
-## The output structure
+## Page order is fixed
 
-For one paper, the skill produces a folder under `Study notes/Papers/<Paper Short Title> (<Authors>)/` containing:
+Every page, without exception, in this order. **Formal content first; prose last or folded.**
 
-| Page | Filename | What it is |
+| # | Section | Folding |
 |---|---|---|
-| Map page | `Map - <Paper Short Title>.md` | One paragraph on what the paper does; the **type index** (every theorem, lemma, proposition, corollary and construction with its one-line type card and a link); the local prerequisite DAG in summary; a suggested reading order. |
-| Section pages | `§N.M <Section Title>.md` | One per section or coherent cluster of results. Holds the narrative and the full type cards; proofs folded; subpages linked. |
-| Definition subpages | `Def - <name>.md` | One per term the reader might not know (decided by the DAG — see *Anchors*). |
-| Theorem subpages | `Thm - <name>.md` | Statement, type card, strategy line, folded proof. |
-| Construction / assumption subpages | `Constr - <name>.md` | One per object that later appears as a *hypothesis* of some theorem, so that hypothesis is a link, not a black box. |
-| Local prereq DAG | `Prereq DAG - <Paper Short Title>.md` | The backchain as an indented dependency list, bottoming out at anchors. |
+| 1 | `# Signature` — typed declaration table | never |
+| 2 | `# Type card` — Given / Produces / Lets you | never |
+| 3 | `# Statement` (Thm, Ext) or `# Definition` (Def) or `# Construction` (Constr) | never |
+| 4 | `# Discharges` (Thm) or `# Depends on` (Def, Constr) | never |
+| 5 | `# Proof` — `> [!note]- Proof (skippable)`, with a visible `**Strategy.**` line above it | folded |
+| 6 | `# Checks` (Def, Constr) — instance / non-instance | never, but terse |
+| 7 | `# Consumed by` / `# Used at` | never |
+| 8 | `# Commentary` — `> [!note]- Commentary (skippable)` | folded |
 
-Section-page filenames carry the paper's own section numbers. This is deliberate: it makes "where was that in the paper" a one-glance question and keeps the note-set aligned with the PDF the reader will have open alongside it.
+Anything a reader needs in order to *apply* the result is above the fold. Anything that explains *why one might care* is in Commentary. If you find yourself writing a paragraph of motivation in section 3, it belongs in section 8.
 
-Every page gets YAML frontmatter. Use `type: paper-map`, `type: paper-section`, `type: definition`, `type: theorem`, `type: construction`, `type: prereq-dag`, plus `paper:` (a short citation key), `subject:`, `prereqs:`, and `tags:`. Schema details are in `obsidian-patterns.md`; the `paper:` and the four new `type:` values are this skill's additions.
+**Length target: 60–110 lines per subpage.** Density comes from symbols, not from sentences. A page that has grown past 130 lines almost always has prose that belongs in Commentary, or a second concept that belongs on its own page.
 
 ---
 
 ## The rules
 
-### A. Type-first
+### A. Signature block first
 
-**Every result carries an always-visible type card.** Before any proof, and again in the map page's type index, each theorem, lemma, proposition, corollary and construction gets a short block stating three things in words, with links:
+Every page opens with `# Signature`: a two-column table, **symbol** and **type / defining property**. Every symbol used anywhere on the page appears in it. No exceptions, including on section and map pages.
 
-- **Given** — the hypotheses, each one a wikilink to its `Def -` or `Constr -` subpage. Never an undefined term inline.
-- **Produces** — the object or bound the result yields, *with its type*: what space it lives in, what it is a function of, whether it is a number, a measure, an identity, a bound.
-- **Lets you** — the operational payoff. One sentence: "under these assumptions you may now construct / compute / bound / replace X."
+A type is not a name. Write
 
-The governing rule: **reading only the type cards, top to bottom, should give a correct mental model of the paper's logical spine.** Test it by reading only the type index on the map page and asking whether the paper's argument is recoverable from it. If a step in the spine is missing, some result's "Lets you" line is wrong.
+| symbol | type |
+|---|---|
+| $p_X$ | $(0,\infty)\times X\times X\to(0,\infty)$; symmetric; density w.r.t. $\mathrm{vol}_g$; kernel of $e^{-t\Delta_X}$ |
+| $\mu_X$ | $\sigma$-finite measure on $\mathcal{C}_X$; $\mu_X(\mathcal{C}_X)=\infty$ |
+| $V_\phi$ | $\sigma$-finite measure on $(0,\infty)$; **not** finite |
 
-Type cards are **non-folding**. They are the thing that must survive a skim. Write them as a `> [!abstract] Type card` callout with no `-` on the marker, so it renders expanded and cannot be collapsed away by accident.
+not "the heat kernel", "the loop measure", "the weighted potential measure".
 
-**Type-first at the object level, too.** Every function, operator, measure, kernel or map introduced anywhere states its signature explicitly at first use — domain and codomain, the space each input lives in, what it returns, and any normalisation or reference measure. The heat kernel is $p : (0,\infty) \times X \times X \to (0,\infty)$, a density with respect to the Riemannian volume $\mathrm{vol}_g$, not "the heat kernel". The loop measure is a $\sigma$-finite — emphatically not finite — measure on the space of unrooted unparametrised loops. A sum is over what index set, ranging over what. An integral is against which measure on which space.
+Include, wherever they apply: domain and codomain; the reference measure a density is taken against; whether a measure is finite, $\sigma$-finite, or a probability; whether a sum ranges over primitives or all iterates; which normalisation is in force. **Standing conventions** (sign of the Laplacian, speed of the process, boundary conditions) go in a short block immediately after the table, as displayed equations where possible.
 
-If a symbol appears exactly once, prefer prose to a symbol. Otherwise declare it, type it, and never reuse it for anything else. Follow the terminology and notation discipline already in `obsidian-patterns.md`: standard field names with the tradition named when traditions disagree, no coined Capitalised terms, one symbol one meaning.
+### B. No ambiguous predicate
 
-### B. A definition subpage for every term the reader might not know
+Every predicate applied to an object must be checkable. Two legal forms:
 
-Decide "might not know" against the DAG, not by intuition. Any concept whose home subject sits below anchor familiarity gets a `Def -` subpage. Each such page contains, in this order:
+- **Symbolic at point of use.** "$\Gamma$ acts freely: $\forall h\in\Gamma\setminus\{1\},\ \forall z\in\mathbb{H}^2,\ hz\neq z$."
+- **A link to a page whose `# Definition` gives numbered symbolic clauses.** `[[Def - Free and Properly Discontinuous Action]]`.
 
-1. **Plain-language gloss first.** One or two sentences that would satisfy someone who will never read the formal version. This comes *before* the formal definition, always.
-2. **The formal definition.**
-3. **The type or signature of every object the definition introduces.**
-4. **One minimal example**, and where it earns its place, **one near-miss non-example** — an object that fails exactly one clause, with that clause named.
-5. **"Used in this paper at:"** — a list of backlinks to every page that consumes the definition.
+Predicates that always need one of the two: *free*, *properly discontinuous*, *regular*, *Markovian*, *closed* (of a form), *geometrically finite*, *polar*, *primitive*, *peripheral*, *trace class*, *σ-finite*, *conservative*, *complete*, *unitary*, *torsion-free*. When in doubt, it needs one.
 
-A `Def -` page may reference other `Def -` pages. That is the backchain in action, not a failure of self-containedness.
+**Number the clauses.** A definition with $n$ independent conditions states them as **(D1)…(Dn)**, and downstream pages cite them by number: "fails (D2)", "uses only (D1) and (D3)". This is what makes a non-instance checkable in one line instead of a paragraph.
 
-### C. Backchain until it bottoms out at anchors
+### C. Hypotheses are labelled propositions
 
-For each definition and each theorem, list the concepts it depends on. For every dependency that is not an anchor, create (or link) a subpage and recurse. Stop when every leaf is an anchor.
+The `# Type card`'s **Given** field is a numbered list **(H1)…(Hn)** of typed propositions, not a sentence. Each is either symbolic or a wikilink to the page defining it. The `# Statement` then quantifies over exactly those. The `# Discharges` section says which hypothesis each invoked result consumes.
 
-**Anchors** are the concepts the reader already owns. The authority is `Study notes/Prerequisite DAG.md`: a node marked 🟢 (familiarity roughly $\geq 7$) is an anchor, and so is anything the owner's background paragraph in `CLAUDE.md` names as strong. A 🔵 node is not an anchor even if it feels elementary. When the DAG is ambiguous for a specific concept — the node exists but the paper uses a corner of it the node does not obviously cover — ask, rather than guessing; a wrongly-assumed anchor is the one failure mode this skill exists to prevent.
+```markdown
+> [!abstract] Type card — Theorem 3.5
+> **Given.**
+> **(H1)** $\phi$ a [[Def - Bernstein Function|Bernstein function]] with $b>0$ or $\nu(0,\infty)=\infty$ ([[Constr - Assumption 2.3|Assumption 2.3]]).
+> **(H2)** $\gamma\in\mathcal{P}_X$, $\ell_\gamma>0$ its translation length.
+> **(H3)** $m\in\mathbb{Z}_{\geq1}$; write $L:=m\ell_\gamma$.
+>
+> **Produces.** $\mu^\phi_X(\mathcal{C}_X(\gamma^m))\in[0,\infty]$, in closed form: $\dfrac{\ell_\gamma}{2\sinh(L/2)}\,I_\phi(L)$.
+>
+> **Lets you.** Replace the double $(t,s)$ integral by one integral against $V_\phi$; each special case is then one substitution.
+```
 
-Record the result in `Prereq DAG - <Paper Short Title>.md` as an **indented dependency list**, deepest anchors at the leaves, so the whole reduction is visible at a glance and the reader can confirm nothing bottoms out at something they do not actually know. Mark anchors explicitly (🟢) and mark every non-anchor with a link to its subpage. The page is a checklist as much as a map: an unmarked leaf is a bug.
+**Produces** states the object *and its type*, with the formula when there is one. **Lets you** is one sentence of operational payoff. All three fields, always, in this order. Type cards are **non-folding**: `> [!abstract] Type card`, no `-` on the marker.
 
-### D. Assumptions built from earlier constructions get linkable subpages
+### D. Every import gets an `Ext -` page
 
-When a theorem's hypothesis is itself the output of an earlier construction — "let $V_\phi$ be the weighted potential measure", "let $\tau$ be the standard-form loxodromic representative", "assume the kernel is the periodisation (11)" — that construction lives on its own `Constr -` page and the hypothesis links to it.
+When a proof invokes a result the paper does not prove — a cited lemma, a classical theorem, an analytic identity — that result gets an `Ext -` page stating:
 
-**Links are bidirectional.** The `Constr -` page carries a "Consumed by" section listing every theorem that assumes it; each theorem's type card links back to the constructions it assumes. Keeping both directions is what makes the graph climbable: from a theorem you go up to its assumptions, and from an assumption you go down to everything it is load-bearing for.
+- its **signature** (what the symbols are);
+- its **precondition**, symbolically, as numbered clauses;
+- its **conclusion**, symbolically;
+- **Status**: not proved here; the source; the DAG node that would close the gap.
 
-Net effect: the reader can land on any theorem and climb its hypotheses, construction by construction, until reaching anchors, then climb back down, without ever hitting an unexplained assumption.
+The test: **a reader who accepts the `Ext -` page on blind faith must be able to follow every proof that uses it.** If they would have to go and read the source to know what was applied, the page is underspecified.
 
-### E. Tedious proofs and calculations are folded and genuinely skippable
+This includes analytic identities that feel too small to name. If $\int_0^\infty s^{-3/2}e^{-as-b/s}\,\mathrm{d}s=\sqrt{\pi/b}\,e^{-2\sqrt{ab}}$ discharges six computations, it is an `Ext -` page with precondition $a,b>0$, and each of those six cites it with its $a$ and $b$.
 
-Full proofs and long calculations go inside a collapsed-by-default callout, `> [!note]- Proof (skippable)`. Use the nesting and blank-line rules from `obsidian-patterns.md`. Long routine computations that are not proofs — a change of variables, an evaluation of a Gaussian-type integral — get their own `> [!note]- Calculation (skippable)` fold.
+### E. Proofs are folded; what is above the fold is enough to apply the result
 
-Immediately above the fold, always visible, two things:
+Full proofs and long computations go inside `> [!note]- Proof (skippable)` and `> [!note]- Calculation (skippable)`, collapsed. Above the fold, always visible: the **type card**, and a one-line **`**Strategy.**`** naming the one or two moves the proof turns on.
 
-- the **type card**, and
-- a single **strategy line** naming the one or two moves the proof turns on.
+Inside the fold, every step names what it consumes: "by (H2) and [[Ext - Tonelli]]", not "by a standard argument". A proof step whose justification is not a link or a labelled hypothesis is a bug.
 
-A strategy line is not a proof sketch. It names moves. "Unfold the conjugacy-class sum over cosets of the cyclic centraliser, then collapse the $\mathrm{d}t/t$ integral into $V_\phi$ via Lemma 2.11" is a strategy line. "First we show that the series converges, then we exchange the order of integration, then we substitute" is not — it describes the shape of a proof without naming what makes it work.
+A strategy line names moves. *"Unfold the conjugacy-class sum over cosets of $C_\Gamma(\tau^m)=\langle\tau\rangle$, then collapse $\int\mathrm{d}t/t$ into $V_\phi$ via Lemma 2.11"* is a strategy line. *"First we show convergence, then exchange integrals"* is not.
 
-The test: **the reader should be able to take the result on faith and move on having read only the type card and the strategy line.** If taking the result on faith after reading those two leaves them unable to use it correctly downstream, the type card is underspecified.
+### F. Backchain until every leaf is an anchor
 
-### F. Self-containedness and re-entry
+For each definition, theorem and construction, list its dependencies. Every non-anchor dependency gets a page and recurses. Stop at anchors.
 
-Every page must be comprehensible from itself via links. Order on every page: **notation registry first, motivation second, then content.** The notation registry is not optional and is never folded — it is the first thing a reader sees on returning after months, and it is what lets them read the formal statement below it without navigating away.
+**Anchors** are what the reader already owns. The authority is `Study notes/Prerequisite DAG.md`: a 🟢 node (familiarity roughly $\geq 7$) is an anchor, as is anything the owner's background paragraph in `CLAUDE.md` names as strong. A 🔵 node is not an anchor even if it feels elementary. When the DAG is ambiguous for a corner of a node, ask rather than guess — a wrongly assumed anchor is the failure this skill exists to prevent.
 
-A page is "done" only when the owner could open it cold after months and reach full understanding by clicking links — never needing knowledge that appears nowhere in the graph. Where a hypothesis or a definition is short, prefer Obsidian transclusion (`![[Def - X#The Definition]]`) over restatement, so the statement stays in sync with its source.
+Record the reduction in `Prereq DAG - <Paper Short Title>.md` as an indented list, anchors marked 🟢 at the leaves, every non-anchor a link. An unmarked, unlinked leaf is a bug. Gaps that genuinely cannot be closed are listed explicitly in a final section, each naming the `Ext -` page that carries it.
 
-**What this skill does not produce.** No exercises, no exercise indices, no difficulty tags, no "legal operations" or "sources and targets" apparatus. Those belong to `polymath-notes` and to a *subject*, not to a paper. If, while writing, a result turns out to deserve drills, note it in the map page's closing section as a pointer to `exercise-builder` rather than building them here.
+### G. Assumptions that are outputs of earlier constructions are `Constr -` pages, linked both ways
+
+When a hypothesis is itself something the paper built — "let $V_\phi$ be the weighted potential measure", "let $\tau$ be the standard-form representative" — it lives on a `Constr -` page, and the hypothesis is a link.
+
+**Bidirectional.** The `Constr -` page carries `# Consumed by` listing every result that assumes it; each such result's type card links back. Both directions present, or the graph is not climbable.
+
+### H. Prose last
+
+Motivation, intuition, historical remarks, "why this is the natural object", comparisons with other sections — all of it goes in the folded `# Commentary` block at the foot of the page. This is where Tong-register writing is allowed and welcome; it is not allowed anywhere else.
+
+The one exception: a `Def -` page may carry a **single sentence** of gloss immediately under `# Definition`, tagged `**Gloss.**`, when the formal definition is genuinely opaque without it. One sentence. Anything longer is Commentary.
+
+**What this skill does not produce.** No exercises, no difficulty tags, no "legal operations" or "sources and targets" apparatus — those belong to `polymath-notes` and to a *subject*. If a result deserves drills, note it once in the map page's closing section as a pointer to `exercise-builder`.
 
 ---
 
 ## Procedure
 
-Two passes, for the same reason `polymath-notes` uses two: a paper read once and written up in one go produces notes whose early pages do not know what the later pages need. Keep working notes in `.scratch/` (already gitignored; see `polymath-notes/SKILL.md` § Working Memory) so the inventory survives a context reset.
+Keep working notes in `.scratch/` (gitignored).
 
 ### Pass 1 — Skim: build the inventory
 
-Read the whole paper. Extract text with `pdftotext -layout`, or `python3 -c "from pypdf import PdfReader; ..."` if poppler is absent. Then produce, as scratch files, four things:
+Read the whole paper. Extract text with `pdftotext -layout`, or `python3 -c "from pypdf import PdfReader; ..."` if poppler is absent. Produce four scratch files:
 
-1. **The result inventory.** Every definition, theorem, lemma, proposition, corollary, remark, and construction, with its paper number, its one-line content, and which section it lives in. Remarks matter — papers routinely hide a definition inside a remark (this paper defines the jump-process homotopy mass in Remark 3.1), and a remark that is load-bearing gets a page like anything else.
-2. **The term list**, each term tagged `anchor` or `needs-subpage` against the DAG. Be honest here: the whole value of the note-set is that the `needs-subpage` list is complete.
-3. **The backchain** — the local prereq DAG, recursed to anchors.
-4. **The page split** — which sections become which pages, and which results become `Def -`, `Thm -` or `Constr -` subpages.
+1. **The result inventory** — every definition, theorem, lemma, proposition, corollary, remark and construction, with paper number and section. Remarks matter: papers routinely hide a definition in one.
+2. **The symbol table** — every symbol in the paper with its type. Building this first is what makes the signature blocks cheap later, and it surfaces collisions (the paper reusing $s$ for two things, $L$ real in one section and complex in another) that must be flagged in the notes.
+3. **The predicate list** — every predicate applied to an object anywhere in the paper, each tagged *symbolic at point of use* or *needs a page*. This is the rule-B worklist and it is the one most often under-built.
+4. **The import list** — every result the paper invokes but does not prove. This is the `Ext -` worklist. Include analytic identities.
 
-**Confirm the split and the `needs-subpage` list with the user before writing if either is large** (more than roughly ten section pages, or more than roughly twenty-five definition subpages). If the user has already specified a split or an explicit needs-subpage list in their request, adopt it and report any revisions you make rather than blocking on confirmation.
+Then the term list (anchor / needs-subpage against the DAG), the backchain, and the page split.
 
-Deciding `Def -` versus `Constr -` versus neither:
+**Confirm the split and the needs-subpage list with the user before writing if either is large** (more than roughly ten section pages, or twenty-five definition subpages). If the user has already specified a split, adopt it and report revisions rather than blocking.
 
-- **`Def -`** if it is a *term* — something with a definition the reader might not know.
-- **`Constr -`** if it is an *object the paper builds* and then later *assumes*. The test is whether it ever appears as a hypothesis. The Brownian loop measure is a `Constr -` because Theorem 3.2 assumes it; the Selberg zeta function is a `Def -` because theorems conclude *about* it rather than assuming it.
-- **Neither** if it appears once, in one place, and is fully explained where it appears. Prose on the section page.
+Deciding the page type:
 
-A single object can warrant both a `Def -` for the general notion and a `Constr -` for this paper's particular instance. When that happens, the `Constr -` page opens by transcluding the `Def -` page's definition section.
+- **`Def -`** — a *term*: something with a definition the reader might not know.
+- **`Thm -`** — a result the paper *states as its own*, whether or not it proves it in full.
+- **`Constr -`** — an *object the paper builds and later assumes*. Test: does it ever appear as a hypothesis?
+- **`Ext -`** — a result the paper *invokes without proof*. Test: is its justification a citation?
+- **Neither** — appears once, fully explained where it appears. Prose in the section page.
 
-### Pass 2 — Write: sequentially, one page at a time
+`Thm -` and `Ext -` can both apply: a numbered result of the paper that the paper cites rather than proves. Prefer `Ext -` and say so in Status — the reader's question is "may I assume this?", and `Ext -` answers it.
 
-Order: **map page and prereq DAG first**, then section pages in paper order, then subpages. Write one page fully before starting the next; do not leave stubs to fill in later.
+### Pass 2 — Write
 
-Writing the map page first is what makes the type index coherent — you draft each type card once at the map level, then expand the same card on the section page and again on the subpage. The three copies must agree; the map version is the shortest, the subpage version the fullest, and none of them may contradict the others.
+Order: map page and prereq DAG first, then section pages in paper order, then subpages. Write one page fully before the next; no stubs.
 
-Only wikilink a page that exists or is being created in the same batch. Everything else is **bold plain text** — clicking a wikilink to a missing file creates an empty stub in Obsidian. Since the subpages are written last, keep the filename manifest in `.scratch/` and hold to it exactly.
+Only wikilink pages that exist or are being created in the same batch; everything else is bold plain text. Keep the filename manifest in `.scratch/`.
 
 ### Pass 3 — Self-check
 
-Run the checklist below, then run the mechanical audits shipped with `polymath-notes` over the new folder: `find-math-bugs.py`, `find-latex-bugs.py`, `find-wikilink-bugs.py`, and the wikilink-resolution audit. Do **not** run `autolinker.py` over a paper folder — it is tuned for the subject vault's canonical term names and will mislink paper-local notation.
+Run the checklist below, then the mechanical audits shipped with `polymath-notes` (`find-math-bugs.py`, `find-latex-bugs.py`, `find-wikilink-bugs.py`) plus a wikilink-resolution and transclusion-anchor audit over the new folder. Do **not** run `autolinker.py` over a paper folder — it is tuned for the subject vault's canonical term names and will mislink paper-local notation.
 
-Then commit with a descriptive message. Push only when the user asks.
+Commit with a descriptive message. Push only when the user asks.
 
 ---
 
 ## Self-check
 
-Before declaring a paper note-set complete, verify each of the following and report the result.
+Verify each and report.
 
-**Type-first (rule A)**
+**Typing (rules A, B, C)**
 
-1. Every theorem, lemma, proposition, corollary and construction has a type card with all three fields — Given, Produces, Lets you.
-2. Reading only the map page's type index gives a correct account of the paper's logical spine. Verify by writing out that account and comparing it against the paper's own introduction.
-3. Every "Given" entry is a wikilink, not a bare term. Mechanical check: no type card contains a capitalised defined term outside `[[ ]]`.
-4. Every function, operator, measure and map states its signature — domain, codomain, reference measure where relevant — at first use on each page where it appears.
-5. Type cards are non-folding (`> [!abstract] Type card`, no `-` on the marker).
+1. Every page opens with `# Signature`, and every symbol used on the page appears in the table.
+2. Every entry in the table gives a *type*, not a name: domain and codomain for maps; reference measure for densities; finite / $\sigma$-finite / probability for measures; index set for sums.
+3. No ambiguous predicate anywhere above the fold. Grep the folder for *free*, *properly discontinuous*, *regular*, *Markovian*, *geometrically finite*, *polar*, *primitive*, *peripheral*, *trace class*, *torsion-free*, *unitary*: each occurrence is either symbolic on the spot or inside a wikilink.
+4. Every multi-clause definition numbers its clauses **(D1)…(Dn)**, and every non-instance names the clause it fails.
+5. Every type card's **Given** is a numbered list **(H1)…(Hn)** of typed propositions.
+6. Every type card has all three fields, and **Produces** states a type.
+7. Type cards are non-folding.
 
-**Definitions and backchaining (rules B, C)**
+**Imports (rule D)**
 
-6. Every non-anchor term has a `Def -` subpage. Mechanical check: grep the section pages for defined-looking terms and confirm each resolves.
-7. Every `Def -` page leads with a plain-language gloss, before the formal definition.
-8. Every `Def -` page gives the type of every object it introduces, one minimal example, and a "Used in this paper at" backlink list.
-9. `Prereq DAG - <paper>.md` bottoms out at anchors only. Every leaf is either marked 🟢 or is a link to a page in this folder. An unmarked leaf is a bug.
-10. No anchor was assumed that the DAG does not support. Spot-check three leaves against `Study notes/Prerequisite DAG.md`.
-
-**Assumptions (rule D)**
-
-11. Every object that appears as a hypothesis of some theorem has a `Constr -` page.
-12. Every `Constr -` page has a "Consumed by" section, and every theorem listed there links back to it from its type card. Both directions present.
-13. Landing on any theorem page, every hypothesis is climbable in one click.
+8. Every result invoked without proof has an `Ext -` page.
+9. Every `Ext -` page states precondition and conclusion symbolically, and a Status line naming the source.
+10. Blind-faith test: pick three proofs; assuming only the `Ext -` pages they cite, does each proof typecheck?
 
 **Proofs (rule E)**
 
-14. Every proof is inside a collapsed `> [!note]- Proof (skippable)` callout.
-15. Every folded proof has a visible type card and a visible strategy line immediately above it.
-16. Every strategy line names moves, not proof shape.
+11. Every proof is folded, under a visible type card and a visible `**Strategy.**` line.
+12. Inside every fold, each step cites a labelled hypothesis, a linked page, or an explicit computation.
+13. Every strategy line names moves, not proof shape.
 
-**Re-entry (rule F)**
+**Structure (rules F, G, H)**
 
-17. Every page opens with a notation registry, unfolded, before any formal content.
-18. Spot-check three subpages cold: is each comprehensible from itself plus one click?
-19. All math uses Obsidian delimiters `$...$` / `$$...$$`; no LaTeX inside any `[[ ]]`; every wikilink resolves; every transclusion anchor points at a real section.
+14. Page order matches the fixed table; prose is in the folded `# Commentary` block and nowhere else.
+15. No subpage exceeds ~130 lines without a reason.
+16. `Prereq DAG - <paper>.md` bottoms out at anchors only; unmarked, unlinked leaves are bugs; gaps are listed with their `Ext -` pages.
+17. Every `Constr -` page has `# Consumed by`, and every result listed there links back from its type card.
+18. Landing on any theorem page, every hypothesis is climbable in one click.
+
+**Mechanics**
+
+19. All math uses `$...$` / `$$...$$`; no LaTeX inside any `[[ ]]`; every wikilink resolves; every transclusion anchor points at a real heading.
 20. Filenames are Windows-portable — none of `< > : " / \ | ? *`.
 
 Report as: "Paper-notes self-check: N of 20 verified" plus any item that required a fix.
