@@ -1,0 +1,1 @@
+../../polymath-notes/references/obsidian-patterns.md

@@ -29,11 +29,21 @@ If the Notion MCP is connected, fetch the DAG page directly. Otherwise, ask the 
   CLAUDE.md                        # this file
   .claude/                         # Claude Code skills
     skills/
-      polymath-notes/
+      polymath-notes/              # chapter-level study notes from textbooks
         SKILL.md
         references/
           obsidian-patterns.md
           templates.md
+      exercise-builder/            # practice exercises / drills
+      paper-notes/                 # self-contained notes from a single paper
+        SKILL.md
+        references/
+          notation-discipline.md
+          companion-page-template.md
+          recall-callouts.md
+          atomic-note-templates.md
+          obsidian-patterns.md     # symlink to polymath-notes' copy
+  paper_source/                    # source PDFs for paper-notes (incl. the reference thesis)
   Study notes/                     # the Obsidian vault
     [Subject Area]/                # e.g., Algebra/, Analysis/, Geometry/
       [Subtopic]/                  # e.g., Group Theory/, Functional Analysis/
@@ -41,8 +51,14 @@ If the Notion MCP is connected, fetch the DAG page directly. Otherwise, ask the 
         [Topic Name]/              # subfolder for that topic's subpages
           Def - [Name].md
           Thm - [Name].md
+          Lemma - [Name].md        # atomic lemma note (paper-notes; Thm-shaped)
           Ex - [Name].md
           Exercise Index - §X.Y.md
+    Papers/                        # paper-notes output
+      [Short Title]/
+        Paper - [Short Title].md   # companion page (reading surface)
+        Def - [Name].md            # paper-result stubs → link back to companion
+        Thm - [Name].md
     .obsidian/                     # Obsidian configuration
 ```
 
@@ -73,13 +89,19 @@ After creating or modifying study notes, always commit with a descriptive messag
 
 ## Skills
 
-The `.claude/skills/polymath-notes/` skill contains the full specification for creating study notes. **Read the SKILL.md and both reference files before creating any study notes.** The skill defines:
+Three skills build vault content. Each has its own `SKILL.md` and `references/`; read a skill's spec before invoking it.
+
+**`.claude/skills/polymath-notes/`** — the full specification for creating chapter-level study notes from textbooks and lecture notes. **Read the SKILL.md and both reference files before creating any study notes.** The skill defines:
 - Core philosophy (6 principles)
 - Conceptual insight standards
 - Page types and their sections (topic, definition, theorem, exercise, exercise index)
 - Templates for each page type
 - Obsidian formatting patterns
 - A 24-item self-evaluation checklist
+
+**`.claude/skills/exercise-builder/`** — practice exercises and drills as interlinked vault pages; the practice-generating companion to `polymath-notes`. Six modes (algorithm derivations, competitive programming, calculation drills, physical modelling, approximation methods, exam-level exercises).
+
+**`.claude/skills/paper-notes/`** — turns a single research paper (usually a PDF in `paper_source/`) into a self-contained note-set that a reader competent at undergraduate analysis, linear algebra, and elementary probability — but not a specialist in the paper's field — can follow without looking anything up. **Read the SKILL.md, `notation-discipline.md`, the three template references, and the reference thesis before making paper notes.** The skill backchains everything above the undergraduate floor into atomic `Def -`/`Thm -`/`Lemma -` notes, recalls unfamiliar terms at their point of use, types every symbol, rewrites every proof gap-free, and writes in the prose voice of the reference thesis (`paper_source/Chiang Sung En-Thesis.pdf`), which supersedes the David Tong style for paper notes. Output: a companion page `Study notes/Papers/[Short Title]/Paper - [Short Title].md` plus reusable atomic prerequisite notes (in their subject folders) and paper-result stubs. It does **not** consult the Notion DAG.
 
 ## Personal Notes
 
