@@ -49,7 +49,7 @@ which has *exactly the same shape*: a factor $1/m$ times a function of $L$. So t
 
 **The mechanism in one line: the loop mass and the logarithm of the Selberg zeta function are both of the form $\frac1m f(L)$ summed over $\gamma$ and $m$, so an identity between them is an identity between two functions of one variable.**
 
-What makes this worth stating as a lemma rather than an observation is what it *removes*. The hypothesis (33) contains no surface, no group, no kernel — it is a functional equation for a function $(0,\infty)\to(0,\infty)$ built from $V_\phi$. So the question "does this process give a Selberg zeta identity?" is answerable without any geometry, by a one-variable calculation. **All four of the paper's processes are verified this way in §4.1, and a fifth would be too.**
+What makes this worth stating as a lemma rather than an observation is what it *removes*. The hypothesis (33) contains no surface, no group, no kernel — it is a functional equation for a function $(0,\infty)\to(0,\infty)$ built from the [[Constr - The Weighted Potential Measure Vϕ|weighted potential measure]] $V_\phi$. So the question "does this process give a Selberg zeta identity?" is answerable without any geometry, by a one-variable calculation. **All four of the paper's processes are verified this way in §4.1, and a fifth would be too.**
 
 The requirement that $C$ and $s$ be **independent of $L$** is the whole substance of the hypothesis. Any $I_\phi$ can be forced into the form (33) pointwise by letting $C$ depend on $L$; the content is that a single pair $(C,s)$ works for all $L$ at once, which is what allows the sum to be recognised as $-C\log Z_X(s)$ with a *fixed* argument $s$.
 

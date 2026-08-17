@@ -87,6 +87,6 @@ Its role is interpretive. It answers the question a reader will have after Theor
 
 # Reading it against the rest of the paper
 
-Set this beside [[Thm - Concentration on Systolic Classes|the $s\to\infty$ analysis of §6.1]] to see the trade-off the paper makes. Corollary 3.12 uses the *entire function* of class masses and recovers the *entire* hyperbolic structure. Section 6.1 normalises those masses into a probability measure, which necessarily discards the overall scale, and from the resulting single function $-\log Z_X(s)$ recovers only the systole and its multiplicity, asymptotically. Aggregation costs information, and these two results bracket how much.
+Set this beside [[Thm - Concentration on Systolic Classes|the s→∞ analysis of §6.1]] to see the trade-off the paper makes. Corollary 3.12 uses the *entire function* of class masses and recovers the *entire* hyperbolic structure. Section 6.1 normalises those masses into a probability measure, which necessarily discards the overall scale, and from the resulting single function $-\log Z_X(s)$ recovers only the systole and its multiplicity, asymptotically. Aggregation costs information, and these two results bracket how much.
 
 Note also what the corollary does **not** say: nothing about which functions on classes arise as loop masses. The map from Teichmüller space to mass functions is injective by this corollary; its image is not characterised, and the paper does not ask.

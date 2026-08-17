@@ -14,7 +14,7 @@ tags: [paper, spectral-geometry, homology, harmonic-analysis]
 - $X=\Gamma\backslash\mathbb{H}^2$ — geometrically finite, with $H_1(X,\mathbb{Z})\cong\mathbb{Z}^r$; $r=2g+b-1$ for a non-compact surface of genus $g$ with $b\geq1$ ends, and $r=2g$ when $X$ is closed
 - $\kappa\geq-\tfrac14$ with $s=\tfrac12+\sqrt{\tfrac14+\kappa}$ satisfying $\operatorname{Re}(s)>\delta$
 - $\chi\in\widehat{H_1(X,\mathbb{Z})}$ — a unitary character; $\mathrm{d}\chi$ the normalised Haar measure on the torus $\cong(S^1)^r$
-- $L_X(s,\chi)$ — the [[Def - Selberg L-Function|Selberg $L$-function]]; $\mu^\kappa_X(\beta)$ the [[Constr - The Mass in a Homology Class|mass in a homology class]]
+- $L_X(s,\chi)$ — the [[Def - Selberg L-Function|Selberg L-function]]; $\mu^\kappa_X(\beta)$ the [[Constr - The Mass in a Homology Class|mass in a homology class]]
 - $\mathrm{Jac}(X)$ — the [[Def - The Jacobian as a Principally Polarised Abelian Variety|Jacobian]], for the closed-case restatement
 
 ---

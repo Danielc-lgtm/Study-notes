@@ -20,7 +20,7 @@ tags: [paper, probability, zeta-functions]
 # Type card
 
 > [!abstract] Type card — moments of $L$ under $\mathbb{P}_s$
-> **Given.** $F(s):=-\log Z_X(s)$ for $s>\delta$, the [[Constr - The Probability Measure on Free Homotopy Classes|measure $\mathbb{P}_s$]], and a tilting parameter $r>1-s$.
+> **Given.** $F(s):=-\log Z_X(s)$ for $s>\delta$, the [[Constr - The Probability Measure on Free Homotopy Classes|measure ℙₛ]], and a tilting parameter $r>1-s$.
 >
 > **Produces.** The tilting identity and **all moments at once**: $\mathbb{E}_s[e^{-rL}] = \log Z_X(s+r)/\log Z_X(s)$ and $\mathbb{E}_s[L^n]=(-1)^nF^{(n)}(s)/F(s)$ for $n\geq1$; together with the first two cumulants as first and second derivatives of $\log F$.
 >

@@ -13,7 +13,7 @@ tags: [paper, probability, homology, loop-measures]
 - $\beta\in H_1(X,\mathbb{Z})$ — a homology class; $[\gamma]$ the image of $\gamma\in\mathcal{P}_X$ under $\Gamma\twoheadrightarrow H_1(X,\mathbb{Z})$, so $[\gamma^m]=m[\gamma]$
 - $\kappa$ — the killing rate; $s=\tfrac12+\sqrt{\tfrac14+\kappa}$ with $\operatorname{Re}(s)>\delta$
 - $\mu^\kappa_X(\beta)$ — the mass of the Brownian loop measure with killing in the homology class $\beta$
-- $\chi$ — a unitary character of $H_1(X,\mathbb{Z})$; $L_X(s,\chi)$ the [[Def - Selberg L-Function|Selberg $L$-function]]
+- $\chi$ — a unitary character of $H_1(X,\mathbb{Z})$; $L_X(s,\chi)$ the [[Def - Selberg L-Function|Selberg L-function]]
 
 ---
 

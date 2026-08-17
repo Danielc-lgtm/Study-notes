@@ -58,7 +58,7 @@ and the two visible terms do different things. The $t^{-1}$ term produces a **si
 - $\zeta_X(0)=\chi(X)/6-1$ — a rational number determined by topology alone
 - $\log\det_\zeta\Delta_X=-\zeta'_X(0)$ — a real number; **not** a product of anything, despite the name
 - $\det_\zeta$ excludes $\lambda_0=0$ by construction; on a surface where $0$ is not an eigenvalue the exclusion is vacuous
-- the definition requires **discrete spectrum and trace-class $e^{-t\Delta_X}$** — both fail in the non-compact case, which is why [[Def - Renormalised Integral and the 0-Trace|$\det_0$]] is needed there
+- the definition requires **discrete spectrum and trace-class $e^{-t\Delta_X}$** — both fail in the non-compact case, which is why [[Def - Renormalised Integral and the 0-Trace|det₀]] is needed there
 
 ---
 
@@ -68,11 +68,11 @@ The value the paper computes. By [[Thm - Zeta-Regularised Determinant via Loop M
 $$\log\det{}_\zeta\Delta = \mathrm{Area}(X)\,E + \log Z'_X(1),\qquad E=\frac{4\zeta'_{\mathbb{R}}(-1)-\tfrac12+\log(2\pi)}{4\pi}\approx0.0538,$$
 which with $\mathrm{Area}(X)=4\pi(g-1)$ from Gauss–Bonnet is the classical D'Hoker–Phong formula
 $$\det{}_\zeta\Delta = Z'_X(1)\,e^{(2g-2)\left(2\zeta'_{\mathbb{R}}(-1)-\frac14+\frac12\log2\pi\right)}.$$
-Note that the answer contains $Z'_X(1)$, the *derivative* — because $\lambda_0=0$ is in the spectrum, [[Def - Selberg Zeta Function|$Z_X$]] has a simple zero at $s=1$, and excluding $\lambda_0$ from $\det_\zeta$ corresponds to dividing that zero out.
+Note that the answer contains $Z'_X(1)$, the *derivative* — because $\lambda_0=0$ is in the spectrum, [[Def - Selberg Zeta Function|the Selberg zeta function]] has a simple zero at $s=1$, and excluding $\lambda_0$ from $\det_\zeta$ corresponds to dividing that zero out.
 
 **Near-miss non-example — the naive determinant.** $\prod_{j\geq1}\lambda_j$ diverges, and so does $\int_0^\infty\frac{\mathrm{d}t}{t}(\operatorname{Tr}(e^{-t\Delta_X})-1)$, at $t=0$ like $\int_0\mathrm{Area}(X)/(4\pi t^2)\,\mathrm{d}t$. **These are the same divergence seen from the two sides of the Mellin transform**, which is exactly why inserting $t^s$ cures both at once. And it is why §5's renormalisation of the loop mass is *forced* rather than chosen: the divergent part of the total mass is the pole of $\zeta_X$, and there is only one way to subtract a pole.
 
-**Second near-miss — the non-compact case.** On a finite-area cusped surface the spectrum is not discrete: alongside the $L^2$ eigenvalues there is continuous spectrum filling $[\tfrac14,\infty)$ with multiplicity the number of cusps, so $\sum_j\lambda_j^{-s}$ has no meaning and $e^{-t\Delta_X}$ is not trace class. The definition above simply does not parse, and §5.2 replaces it with [[Def - Renormalised Integral and the 0-Trace|the $0$-trace and $\det_0$]]. On a closed surface the $0$-trace is the ordinary trace and $\det_0$ reduces to $\det_\zeta$.
+**Second near-miss — the non-compact case.** On a finite-area cusped surface the spectrum is not discrete: alongside the $L^2$ eigenvalues there is continuous spectrum filling $[\tfrac14,\infty)$ with multiplicity the number of cusps, so $\sum_j\lambda_j^{-s}$ has no meaning and $e^{-t\Delta_X}$ is not trace class. The definition above simply does not parse, and §5.2 replaces it with [[Def - Renormalised Integral and the 0-Trace|the 0-trace and det₀]]. On a closed surface the $0$-trace is the ordinary trace and $\det_0$ reduces to $\det_\zeta$.
 
 ---
 

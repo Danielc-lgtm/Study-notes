@@ -10,7 +10,7 @@ tags: [paper, spectral-geometry, zeta-functions, homology]
 
 # Notation
 
-- $\chi : H_1(X,\mathbb{Z})\to S^1$ — a unitary character; $L_X(s,\chi)$ the [[Def - Selberg L-Function|Selberg $L$-function]]
+- $\chi : H_1(X,\mathbb{Z})\to S^1$ — a unitary character; $L_X(s,\chi)$ the [[Def - Selberg L-Function|Selberg L-function]]
 - $\kappa$ — the killing rate; $s=\tfrac12+\sqrt{\tfrac14+\kappa}$ with $\operatorname{Re}(s)>\delta$
 - $\mu^\kappa_X(\mathcal{C}_X(\gamma^m))=\frac1m\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1}$ — the killing loop mass
 - $\mathbf{1}$ — the trivial character

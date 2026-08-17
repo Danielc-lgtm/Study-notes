@@ -59,7 +59,7 @@ The behaviour at the two ends of the real axis, both of which the paper uses.
 
 **As $s\to\infty$**: the sum in (32) is dominated by the slowest-decaying terms, which are the primitive ($m=1$) classes realising the systole. So
 $$-\log Z_X(s)\sim \frac{N_{\mathrm{sys}}}{1-e^{-\ell_{\mathrm{sys}}}}\,e^{-s\ell_{\mathrm{sys}}}\qquad(s\to\infty),$$
-from which both the [[Def - Systole|systole]] and its multiplicity are recoverable — this is [[Thm - Concentration on Systolic Classes|the $s\to\infty$ analysis of §6.1]].
+from which both the [[Def - Systole|systole]] and its multiplicity are recoverable — this is [[Thm - Concentration on Systolic Classes|the s→∞ analysis of §6.1]].
 
 **At $s=1$ with $\mathrm{Area}(X)<\infty$**: $\lambda_0=0$ is in the spectrum, and $Z_X$ has a **simple zero** at $s=1$. This is why $\log Z'_X(1)$ and not $\log Z_X(1)$ appears in $\log\det_\zeta\Delta=\mathrm{Area}(X)E+\log Z'_X(1)$, and why the $\kappa\to0^+$ limit in [[Thm - Zeta-Regularised Determinant via Loop Measure (Compact Case)|Theorem 5.1(ii)]] works: the $\log\kappa$ divergence of the exponential integral cancels against $-\log(s-1)$ coming from the simple zero, since $s-1\sim\kappa$.
 
