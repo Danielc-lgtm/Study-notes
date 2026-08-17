@@ -7,6 +7,8 @@ prereqs:
 tags: [paper, section, kleinian-groups]
 ---
 
+> [!info] Part of [[Map - Brownian Loops on Homotopy and Homology Classes]]
+
 # Signature
 
 | symbol | type |

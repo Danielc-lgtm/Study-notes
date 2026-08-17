@@ -88,6 +88,16 @@ tags: [paper, probability, hyperbolic-geometry, loop-measures]
 
 ---
 
+# What this assumes, and where to climb
+
+- **The measure being decomposed** — [[Constr - The Dirichlet-Form Loop Measure]], and its Brownian special case [[Constr - The Brownian Loop Measure]].
+- **The covering-space apparatus** — [[Def - Fuchsian Group and the Quotient Surface]], [[Def - Deck Transformations and the Lift of a Rooted Loop]], [[Constr - The Periodised Kernel]].
+- **The group theory** — [[Def - Centraliser and Coset Enumeration of a Conjugacy Class]], [[Def - Free Homotopy Class and Conjugacy Class Correspondence]].
+- **The unfolding identities (U),(I),(R)** — [[Def - Fundamental Region]].
+- **Not assumed:** any property of $\phi$, or dimension $2$. See [[Thm - General Homotopy Class Decomposition for Hyperbolic 3-Manifolds]].
+
+---
+
 # Consumed by
 
 - [[Thm - Mass of the Subordinate Brownian Loop Measure on Surfaces]] — starts from (14) with $p^{\mathcal{E}}_{\mathbb{H}^2}=p^\phi_{\mathbb{H}^2}$

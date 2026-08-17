@@ -86,6 +86,7 @@ tags: [paper, probability, zeta-functions]
 - **The closed form (26)** — [[Thm - Mass of the Subordinate Brownian Loop Measure on Surfaces]]. The tilting identity (b) works *only* because $s$ enters the weight through a single exponential in $L$; for a general subordinator it would fail.
 - **$Z_X$ real and positive on $(\delta,\infty)$** — so $\log Z_X$ and its derivatives are real; from the Euler product, since each factor $1-e^{-(s+k)\ell_\gamma}\in(0,1)$.
 - **Not assumed:** any continuation of $Z_X$. Everything happens inside the region of absolute convergence.
+- **The measure** — [[Constr - The Probability Measure on Free Homotopy Classes]]; (H1) is its construction.
 
 ---
 

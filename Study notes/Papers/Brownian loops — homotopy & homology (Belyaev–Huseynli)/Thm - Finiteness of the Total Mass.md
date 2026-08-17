@@ -83,6 +83,7 @@ tags: [paper, zeta-functions, loop-measures]
 - **$\ell_{\mathrm{sys}}>0$** — [[Def - Systole|(F1)]]. Needed for Step 1's constant; fails on infinite-type surfaces with arbitrarily short geodesics.
 - **The four closed forms** — [[Thm - Selberg Zeta Criterion]]. The corollary is stated only for the $\phi$ that satisfy (33); for a general Bernstein $\phi$, (H1) fails and the argument does not start.
 - **The boundary case is decided by the $1/R$**, not by the exponential. This is why the statement is $s>\delta$ strictly.
+- **The measure and the analytic factor** — [[Constr - The Subordinate Brownian Loop Measure]], [[Constr - The Weighted Heat-Kernel Integral Iϕ]].
 
 ---
 
@@ -100,7 +101,7 @@ tags: [paper, zeta-functions, loop-measures]
 - [[Constr - The Probability Measure on Free Homotopy Classes]] — (41) is its existence hypothesis
 - [[Thm - Zeta-Regularised Determinant via Loop Measure (Compact Case)]] — the divergence in the finite-area Brownian case is what §5 renormalises
 - [[Thm - Distribution of the Total Homology of the Loop Soup]] — $\#\mathcal{L}^*_\lambda$ is Poisson with finite mean
-- [[Ext - Exponential Formula for Poisson Point Processes\|(F2)]] — discharges its precondition (P3)
+- [[Ext - Exponential Formula for Poisson Point Processes|(F2)]] — discharges its precondition (P3)
 - [[§4 Zeta Identities and Finiteness of the Total Mass]] §4.2
 
 ---

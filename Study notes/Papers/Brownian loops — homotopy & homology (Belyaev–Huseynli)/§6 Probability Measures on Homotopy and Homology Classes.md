@@ -8,6 +8,8 @@ prereqs:
 tags: [paper, section, probability, zeta-functions]
 ---
 
+> [!info] Part of [[Map - Brownian Loops on Homotopy and Homology Classes]]
+
 # Signature
 
 | symbol | type |

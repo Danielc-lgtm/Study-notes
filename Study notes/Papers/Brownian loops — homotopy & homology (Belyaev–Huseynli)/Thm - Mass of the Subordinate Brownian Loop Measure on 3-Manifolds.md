@@ -76,6 +76,7 @@ tags: [paper, loop-measures, kleinian-groups]
 - **Lemma 2.11 and Assumption 2.3** — [[Thm - Collapsing the Time Integral into the Weighted Potential Measure]], [[Constr - Assumption 2.3 (Strictly Increasing Subordinator)]]. Both are dimension-independent: they are statements about $(0,\infty)$.
 - **Invariance transfer under subordination** — [[Ext - Phillips Subordination of Semigroups and Dirichlet Forms|(C5)]], which is what lets the subordinate kernel be lifted and periodised like the Brownian one.
 - **Not assumed:** conformal invariance, or any restriction to $\theta_\gamma=0$.
+- **The measure being computed** — [[Constr - The Subordinate Brownian Loop Measure]]; for jump $\phi$ the class must be read as in [[Constr - Loop Mass in a Homotopy Class for Jump Processes]].
 
 ---
 

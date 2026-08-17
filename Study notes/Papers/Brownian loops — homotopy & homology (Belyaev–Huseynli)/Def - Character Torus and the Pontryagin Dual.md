@@ -65,7 +65,7 @@ tags: [paper, algebraic-topology, harmonic-analysis]
 
 **Instance.** $X$ a once-punctured torus: $g=1$, $b=1$, so $r=2\cdot1+1-1=2$ and $\widehat{H_1}\cong(S^1)^2$. Note $H_1$ is **free** even though $X$ is non-compact — no torsion, so the dual is a torus with no finite factor.
 
-**Non-instance (fails F1 for non-unitary $\chi$).** $\chi:H_1\to\mathbb{C}^\times$ with $\lvert\chi\rvert\neq1$: then $\lvert\chi([\gamma])^m\rvert$ grows or decays in $m$ and the Euler product (75)'s convergence region moves — the situation of [[Def - Ruelle Zeta Function and its Twist|$c_\rho$]]. §6 uses only unitary characters, so $\lvert z\rvert=e^{-(\mathrm{Re}(s)+k)\ell_\gamma}<1$ holds throughout.
+**Non-instance (fails F1 for non-unitary $\chi$).** $\chi:H_1\to\mathbb{C}^\times$ with $\lvert\chi\rvert\neq1$: then $\lvert\chi([\gamma])^m\rvert$ grows or decays in $m$ and the Euler product (75)'s convergence region moves — the situation of [[Def - Ruelle Zeta Function and its Twist|c_ρ]]. §6 uses only unitary characters, so $\lvert z\rvert=e^{-(\mathrm{Re}(s)+k)\ell_\gamma}<1$ holds throughout.
 
 **Non-instance (fails the abelian reduction).** Two free homotopy classes with the same homology, e.g. $aba^{-1}b^{-1}$ vs. the trivial class in homology: they are distinct in $\pi_1$ but both map to $0\in H_1$. **Consequence:** (F3) — $\mu^\kappa_X(\beta)$ is an infinite sum of class masses, and §6.2 has to say so.
 

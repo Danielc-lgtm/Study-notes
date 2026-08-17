@@ -7,6 +7,8 @@ prereqs:
 tags: [paper, section, spectral-theory]
 ---
 
+> [!info] Part of [[Map - Brownian Loops on Homotopy and Homology Classes]]
+
 # Signature
 
 | symbol | type |
@@ -65,7 +67,7 @@ tags: [paper, section, spectral-theory]
 |---|---|---|
 | [[Ext - Selberg Trace Formula (Heat Kernel Form)\|(STF)]] | identifies $\int S_X\,\mathrm{d}t/t$ with the total loop mass | **yes** |
 | [[Ext - Naud's Formula for the Log-Determinant\|(N)]] | the starting identity (45) of all of §5.1 | **yes** — deepest of §5.1 |
-| [[Ext - Prime Geodesic Theorem\|(PGT$'$)]] (43) | convergence of the (46) integral | **yes** |
+| [[Ext - Prime Geodesic Theorem\|(PGT′)]] (43) | convergence of the (46) integral | **yes** |
 | Wang–Xue [WX25, (4.13)–(4.16)] | the error-function evaluation collapsing to $1/(e^R-1)$ | quoted, not reproduced |
 | [[Ext - Polyakov Conformal Anomaly Formula\|(P)]] | (E4) | **yes**, shallow |
 | [[Ext - Melrose Renormalised Trace Expansion\|(M)]] | well-posedness of $\det_0$ | **yes** — no DAG node at all |

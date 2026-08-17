@@ -72,6 +72,7 @@ tags: [paper, probability, hyperbolic-geometry]
 - **$N_{\mathrm{sys}}\geq2$** — [[Def - Systole|(F4)]]: $\mathcal{P}_X$ consists of *oriented* geodesics and a hyperbolic element is never conjugate to its inverse. So the limiting measure is never a point mass; it is uniform on at least two classes.
 - **The domination of the tail** — needs a gap between $\ell_{\mathrm{sys}}$ and the next value of $L$, which holds by discreteness of the length spectrum.
 - **Not assumed:** anything about $Z_X$ beyond its Euler product in $\{\mathrm{Re}(s)>\delta\}$; $s\to\infty$ stays inside it.
+- **The measure** — [[Constr - The Probability Measure on Free Homotopy Classes]]; the limit is taken in its parameter $s$.
 
 ---
 

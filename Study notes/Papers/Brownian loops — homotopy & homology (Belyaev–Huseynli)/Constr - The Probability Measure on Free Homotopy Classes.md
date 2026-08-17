@@ -55,6 +55,7 @@ tags: [paper, probability, zeta-functions]
 - [[Thm - Selberg Zeta Identity (Killing Case)]] — the normalising constant
 - [[Thm - Finiteness of the Total Mass]] — (P1)
 - [[Thm - Mass of the Subordinate Brownian Loop Measure on Surfaces]] — the weights
+- [[Constr - The Subordinate Brownian Loop Measure]] — the measure being normalised; §6 takes $\phi(\lambda)=\lambda+\kappa$ with $\kappa>0$
 - [[Def - Free Homotopy Class and Conjugacy Class Correspondence]] — the index set: every class is $\mathcal{C}_X(\gamma^m)$ for a **unique** $(\gamma,m)$
 
 ---

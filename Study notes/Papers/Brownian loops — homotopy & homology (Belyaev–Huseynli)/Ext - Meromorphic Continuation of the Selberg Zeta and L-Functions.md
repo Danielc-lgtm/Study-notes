@@ -10,7 +10,7 @@ tags: [paper, external, zeta-functions, spectral-theory]
 | symbol | type |
 |---|---|
 | $Z_X$ | $\{\mathrm{Re}(s)>\delta\}\to\mathbb{C}$, defined by the Euler product (31) |
-| $L_X(\cdot,\chi)$ | the [[Def - Selberg L-Function\|Selberg $L$-function]] for a unitary character $\chi$ |
+| $L_X(\cdot,\chi)$ | the [[Def - Selberg L-Function\|Selberg L-function]] for a unitary character $\chi$ |
 | $R_X$ | the [[Def - Ruelle Zeta Function and its Twist\|Ruelle zeta]]; $R_X(s)=Z_X(s)/Z_X(s+1)$ |
 | $\lambda_j$ | eigenvalues of $\Delta_X$; $s_j=\tfrac12\pm\sqrt{\tfrac14-\lambda_j}$ |
 

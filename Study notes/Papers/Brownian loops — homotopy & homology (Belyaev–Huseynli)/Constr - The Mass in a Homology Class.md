@@ -54,6 +54,7 @@ tags: [paper, probability, algebraic-topology]
 - [[Def - Character Torus and the Pontryagin Dual]] — the index group and $[\gamma^m]=m[\gamma]$
 - [[Thm - Finiteness of the Total Mass]] — (P1)
 - 🟢 Hurewicz: $H_1=\pi_1^{\mathrm{ab}}$ — [[Thm - Hurewicz Theorem (Statement)]], [[Def - Hurewicz Map]]
+- [[Constr - The Probability Measure on Free Homotopy Classes]] — normalising (74) gives its pushforward under $(\gamma,m)\mapsto m[\gamma]$
 
 ---
 

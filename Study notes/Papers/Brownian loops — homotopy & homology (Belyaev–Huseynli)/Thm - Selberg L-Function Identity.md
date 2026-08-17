@@ -46,7 +46,7 @@ tags: [paper, zeta-functions, loop-measures]
 | $-\log(1-z)=\sum_{m\geq1}z^m/m$ | $z=\chi([\gamma])e^{-(s+k)\ell_\gamma}$ | $\sum_m\frac{\chi([\gamma])^m}{m}e^{-(s+k)m\ell_\gamma}$ |
 | geometric series in $k$ | $\sum_{k\geq0}e^{-(s+k)m\ell_\gamma}$ | $\dfrac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1}$ |
 | [[Thm - Mass of the Subordinate Brownian Loop Measure on Surfaces\|(26)]] | that expression | $m\,\mu^\kappa_X(\mathcal{C}_X(\gamma^m))$, giving (76) |
-| [[Def - Critical Exponent\|$\mathrm{Re}(s)>\delta$]] | the double sum | absolute convergence |
+| [[Def - Critical Exponent\|Re(s) > δ]] | the double sum | absolute convergence |
 
 ---
 
@@ -63,7 +63,7 @@ tags: [paper, zeta-functions, loop-measures]
 
 # What this assumes, and where to climb
 
-- **Unitarity of $\chi$** — the only hypothesis doing work. Without it the expansion is invalid where $\lvert z\rvert\geq1$, and the abscissa moves; cf. [[Def - Ruelle Zeta Function and its Twist|$c_\rho$]].
+- **Unitarity of $\chi$** — the only hypothesis doing work. Without it the expansion is invalid where $\lvert z\rvert\geq1$, and the abscissa moves; cf. [[Def - Ruelle Zeta Function and its Twist|c_ρ]].
 - **The mass formula (26)** — [[Thm - Mass of the Subordinate Brownian Loop Measure on Surfaces]], hence the §3 stack. Without it (76) is a statement about $L$-functions with no probabilistic content.
 - **$\mathrm{Re}(s)>\delta$** — [[Def - Critical Exponent]]; for convergence only, not for the term-by-term identity.
 - **Not assumed:** any continuation of $L_X$. Everything is inside the Euler-product region.

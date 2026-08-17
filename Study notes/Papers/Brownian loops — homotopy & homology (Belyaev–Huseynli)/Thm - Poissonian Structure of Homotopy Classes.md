@@ -68,6 +68,8 @@ tags: [paper, probability, loop-measures]
 - **Disjointness, not just distinctness** — [[Def - Free Homotopy Class and Conjugacy Class Correspondence]]. Two classes are either equal or disjoint because "freely homotopic" is an equivalence relation; independence is a consequence of *disjointness*, not of any probabilistic estimate.
 - **Measurability for jump processes** — Remark 3.1, [[Constr - The Loop Soup|(P4)]]. This is the only non-formal ingredient.
 - **Not assumed:** any summability over classes. The proposition is finite-family; the infinite sums appear only in §4 and §6, where [[Thm - Finiteness of the Total Mass|Cor 4.7]] does the work.
+- **The measure being sampled** — [[Constr - The Brownian Loop Measure]] and [[Constr - The Subordinate Brownian Loop Measure]]; the soup's intensity is one of these.
+- **The marked construction for jump $\phi$** — [[Constr - Loop Mass in a Homotopy Class for Jump Processes]] is where Remark 3.1's measurability problem and its fix are set out.
 
 ---
 

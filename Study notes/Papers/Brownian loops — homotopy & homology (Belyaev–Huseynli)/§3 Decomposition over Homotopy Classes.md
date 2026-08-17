@@ -11,6 +11,8 @@ prereqs:
 tags: [paper, probability, hyperbolic-geometry, loop-measures]
 ---
 
+> [!info] Part of [[Map - Brownian Loops on Homotopy and Homology Classes]]
+
 # Signature
 
 | symbol | type |

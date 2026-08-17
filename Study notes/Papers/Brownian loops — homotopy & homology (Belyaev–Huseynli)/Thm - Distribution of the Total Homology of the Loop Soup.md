@@ -77,6 +77,7 @@ tags: [paper, probability, zeta-functions]
 - **$\chi$ a homomorphism** — this is what converts a **product over loops** into a **character of a sum of homology classes**. The entire proposition rests on that one line.
 - **Complex powers** — $L_X(s,\chi)^{-\lambda}:=\exp(-\lambda\log L_X(s,\chi))$ with $\log L_X$ **defined by the series (76)**, not by a branch choice. Inside $\mathrm{Re}(s)>\delta$ the series converges, so no ambiguity arises.
 - **Not assumed:** any continuation of $L_X$, or the Jacobian identification.
+- **The objects summed** — [[Constr - The Loop Soup]] supplies $\mathcal{L}_\lambda$; [[Constr - The Mass in a Homology Class]] is what (81) computes.
 
 ---
 

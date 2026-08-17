@@ -51,7 +51,7 @@ tags: [paper, topology, hyperbolic-geometry]
 >
 > **Produces.** A unique lift $\tilde\omega$ and a unique element $h_\omega\in\Gamma$, with $h_\omega=1\iff\omega$ contractible; an isomorphism $\pi_1(X,x)\cong\Gamma$; and the conjugation law (F2).
 >
-> **Lets you.** Convert topology into group theory. Since [[Constr - The Periodised Kernel|the heat kernel downstairs is a $\Gamma$-indexed sum]], the analytic object arrives already decomposed by topological type: restricting the sum to a conjugacy class **is** restricting the loop measure to a free homotopy class.
+> **Lets you.** Convert topology into group theory. Since [[Constr - The Periodised Kernel|the heat kernel downstairs is a Γ-indexed sum]], the analytic object arrives already decomposed by topological type: restricting the sum to a conjugacy class **is** restricting the loop measure to a free homotopy class.
 
 ---
 

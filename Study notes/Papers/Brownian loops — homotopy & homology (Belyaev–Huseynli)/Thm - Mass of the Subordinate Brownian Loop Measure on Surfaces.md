@@ -84,6 +84,15 @@ tags: [paper, probability, hyperbolic-geometry, loop-measures]
 
 ---
 
+# What this assumes, and where to climb
+
+- **The objects on both sides** — [[Constr - The Subordinate Brownian Loop Measure]] (the measure), [[Constr - The Weighted Potential Measure Vϕ]] (the weight collapsed into), [[Constr - Standard-Form Representative and the Fundamental Strip]] (the region integrated over).
+- **The unfolding** — [[Thm - General Homotopy Class Decomposition for Hyperbolic Surfaces]], hence the whole §3 geometry stack.
+- **(WX)** — [[Ext - Wang–Xue Strip Identity]]: quoted, and the one gap in this proof.
+- **Lemma 2.11 and Assumption 2.3** — [[Thm - Collapsing the Time Integral into the Weighted Potential Measure]], [[Constr - Assumption 2.3 (Strictly Increasing Subordinator)]].
+
+---
+
 # Consumed by
 
 - [[Constr - The Weighted Heat-Kernel Integral Iϕ]] — names the integral, giving (24)

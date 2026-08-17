@@ -22,7 +22,7 @@ tags: [paper, external, spectral-theory, zeta-functions]
 > **(N) Naud's length-spectrum formula for the determinant.** *Precondition:*
 > **(P1)** $X$ closed hyperbolic;
 > **(P2)** $S_X$ the geometric term of (44), with the asymptotics [[Ext - Selberg Trace Formula (Heat Kernel Form)|(F1)]];
-> **(P3)** the refined prime geodesic theorem (43) — [[Ext - Prime Geodesic Theorem|(PGT$'$)]].
+> **(P3)** the refined prime geodesic theorem (43) — [[Ext - Prime Geodesic Theorem|(PGT′)]].
 >
 > *Conclusion:*
 > $$-\log{\det}_\zeta\Delta_X=-\mathrm{Area}(X)\,E-\gamma_{\mathrm{EM}}+\int_0^1\frac{S_X(t)}{t}\,\mathrm{d}t+\int_1^\infty\frac{S_X(t)-1}{t}\,\mathrm{d}t.\tag{45}$$

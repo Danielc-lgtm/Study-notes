@@ -48,7 +48,7 @@ tags: [paper, zeta-functions, loop-measures]
 | [[Constr - The Weighted Heat-Kernel Integral Iϕ\|(24)]] | $L=m\ell_\gamma$ | $\mu^\phi_X(\mathcal{C}_X(\gamma^m))=\frac1m\cdot\frac{L}{2\sinh(L/2)}I_\phi(L)$ |
 | **(H2)**, i.e. (33) | that expression | $\mu^\phi_X(\mathcal{C}_X(\gamma^m))=C\cdot\frac1m\cdot\frac{e^{(1-s)L}}{e^L-1}$ |
 | [[Def - Selberg Zeta Function\|(F1)]], eq. (32) | summing over $\gamma\in\mathcal{P}_X$, $m\geq1$ | $-C\log Z_X(s)$ |
-| [[Def - Critical Exponent\|$s>\delta$]] | the double sum | absolute convergence |
+| [[Def - Critical Exponent\|s > δ]] | the double sum | absolute convergence |
 
 ---
 
@@ -71,6 +71,7 @@ tags: [paper, zeta-functions, loop-measures]
 - **Independence of $L$ in (H2)** is the entire content of the hypothesis. If $C$ or $s$ were allowed to depend on $L=m\ell_\gamma$, (33) would be vacuous — it could be solved for $C(L)$ pointwise — and the sum would not collapse to a zeta value.
 - **$s>\delta$** — [[Def - Critical Exponent]]. Needed only for convergence, not for the term-by-term identity.
 - **Not assumed:** any property of $\phi$ beyond Assumption 2.3. The lemma is a statement about the *function* $I_\phi$, and does not know where it came from.
+- **The measure and the weight** — [[Constr - The Subordinate Brownian Loop Measure]], [[Constr - The Weighted Potential Measure Vϕ]]; $I_\phi$ is built from the second.
 
 ---
 

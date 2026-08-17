@@ -63,7 +63,7 @@ tags: [paper, spectral-theory, loop-measures]
 |---|---|---|
 | [[Ext - Naud's Formula for the Log-Determinant\|(N)]] | $X$ closed | (45) — the starting identity of all three parts |
 | [[Ext - Selberg Trace Formula (Heat Kernel Form)\|(F2)]] | $S_X-S_X^{\mathrm{p}}$ | $\int_0^\infty\frac{S_X-S_X^{\mathrm{p}}}{t}\mathrm{d}t=\sum_{m\geq2}$ masses $=\sum_{\mathcal{G}(X)\setminus\mathcal{P}_X}\mu_X$ |
-| [[Ext - Prime Geodesic Theorem\|(PGT$'$)]] (43) | $N_X-\widetilde{\mathrm{Li}}(e^R)$ | $O_X(e^{(1-\epsilon)R})$, hence convergence of the (46) integral |
+| [[Ext - Prime Geodesic Theorem\|(PGT′)]] (43) | $N_X-\widetilde{\mathrm{Li}}(e^R)$ | $O_X(e^{(1-\epsilon)R})$, hence convergence of the (46) integral |
 | Wang–Xue [WX25, (4.13)–(4.16)] | the primitive $t$-integrals | error-function evaluation, collapsing to $1/(e^R-1)$ |
 | [[Ext - Selberg Trace Formula (Heat Kernel Form)\|(F1)]] | $R_\kappa$ | $\lvert R_\kappa\rvert\leq\kappa\big(\int_0^1S_X+\int_1^\infty\lvert S_X-1\rvert\big)=O(\kappa)$ |
 | $E_1(\kappa)=-\gamma_{\mathrm{EM}}-\log\kappa+O(\kappa)$ | the exponential integral | the $\gamma_{\mathrm{EM}}$ cancellation and the $\log\kappa$ |
@@ -117,6 +117,7 @@ tags: [paper, spectral-theory, loop-measures]
 - **The simple zero of $Z_X$ at $s=1$** — [[Ext - Meromorphic Continuation of the Selberg Zeta and L-Functions|(MC)(F1)]], and it exists precisely because $\lambda_0=0$. This is the same fact as the divergence of the total mass at $\kappa=0$, seen from the other side.
 - **Universal constants $E,C,C_1,\gamma_{\mathrm{EM}}$** are not computed here; only their $X$-independence is used.
 - **Not assumed:** any finiteness at $\kappa=0$. (i) works by renormalisation, (ii) by taking a limit; they are two different repairs of the same divergence and they agree.
+- **The measures appearing in (i)–(iii)** — [[Constr - The Brownian Loop Measure]], [[Constr - The Subordinate Brownian Loop Measure]]; part (iii)'s stable case is a jump process, [[Constr - Loop Mass in a Homotopy Class for Jump Processes]].
 
 ---
 

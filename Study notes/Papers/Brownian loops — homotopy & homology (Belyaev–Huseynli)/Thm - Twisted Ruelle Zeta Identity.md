@@ -51,7 +51,7 @@ tags: [paper, zeta-functions, loop-measures]
 | [[Thm - Mass of the Subordinate Brownian Loop Measure on Surfaces\|(26)]] | $\kappa=\kappa_-(s)$ | $\mu^{\kappa_-}_X(\mathcal{C}_X(\gamma^m))=\frac1m\frac{e^{(1-s)L}}{e^L-1}$ |
 | [[Thm - Mass of the Subordinate Brownian Loop Measure on Surfaces\|(26)]] | $\kappa=\kappa_+(s)$ | $\mu^{\kappa_+}_X(\mathcal{C}_X(\gamma^m))=\frac1m\frac{e^{-sL}}{e^L-1}$ |
 | algebra: $e^{(1-s)L}-e^{-sL}=e^{-sL}(e^L-1)$ | the difference | $\frac{e^{-sL}}{m}$ — the summand above |
-| [[Def - Ruelle Zeta Function and its Twist\|$c_\rho$]] | the double sum | absolute convergence for $\mathrm{Re}(s)>\max(c_\rho,\tfrac12)$ |
+| [[Def - Ruelle Zeta Function and its Twist\|c_ρ]] | the double sum | absolute convergence for $\mathrm{Re}(s)>\max(c_\rho,\tfrac12)$ |
 
 ---
 

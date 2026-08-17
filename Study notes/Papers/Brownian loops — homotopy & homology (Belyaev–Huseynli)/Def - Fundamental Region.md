@@ -40,6 +40,8 @@ tags: [paper, group-theory, hyperbolic-geometry]
 
 **Gloss.** (U) converts "integrate downstairs" into "integrate over $F$"; (R) plus (I) is the unfolding move of §3 and §7 in two lines.
 
+**Strategy.** (I) compares two regions by translating one into the other and using $G$-invariance of the integrand; (R) partitions $H$-cosets inside a $G$-region.
+
 > [!note]- Proof of (I) and (R) (skippable)
 > **(I).** By (D1) for $F'$, $\int_Ff\,\mathrm{d}\rho=\sum_{h\in G}\int_{F\cap hF'}f\,\mathrm{d}\rho$ up to a $\rho$-null overlap by (D2). Substituting $z=hw$ and using $\rho$-invariance and $f(hw)=f(w)$, $\int_{F\cap hF'}f\,\mathrm{d}\rho=\int_{h^{-1}F\cap F'}f\,\mathrm{d}\rho$. Summing over $h$ and applying (D1) for $F$ gives $\int_{F'}f\,\mathrm{d}\rho$.
 >

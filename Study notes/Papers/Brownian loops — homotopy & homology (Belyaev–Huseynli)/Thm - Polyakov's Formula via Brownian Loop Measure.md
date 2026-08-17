@@ -70,6 +70,7 @@ tags: [paper, spectral-theory, conformal-geometry]
 - **Existence and uniqueness of $g_{\mathrm{hyp}}$ in the conformal class** — uniformisation, genus $g\geq2$. Cf. [[Ext - Uniformisation of Punctured Hyperbolic Surfaces]].
 - **Theorem 5.1** — hence (N), (STF), (PGT$'$), and the whole §3–§4 stack.
 - **Not assumed:** anything about $\sigma$ beyond smoothness. $P_X(\sigma)$ is finite for every smooth $\sigma$ on a closed surface.
+- **The loop measure itself** — [[Constr - The Brownian Loop Measure]]; the right-hand sides of (57) are its class masses in the hyperbolic metric.
 
 ---
 

@@ -27,7 +27,7 @@ tags: [paper, zeta-functions, harmonic-analysis]
 
 > **(F1) Trivial character.** $\chi\equiv1\Rightarrow L_X(s,\chi)=Z_X(s)$.
 >
-> **(F2) Same convergence region.** $\lvert\chi([\gamma])e^{-(s+k)\ell_\gamma}\rvert=e^{-(\mathrm{Re}(s)+k)\ell_\gamma}<1$, so (75) converges absolutely exactly where (31) does. **Unitarity is what makes the abscissa $\delta$ rather than something larger** — contrast [[Def - Ruelle Zeta Function and its Twist|$c_\rho$]].
+> **(F2) Same convergence region.** $\lvert\chi([\gamma])e^{-(s+k)\ell_\gamma}\rvert=e^{-(\mathrm{Re}(s)+k)\ell_\gamma}<1$, so (75) converges absolutely exactly where (31) does. **Unitarity is what makes the abscissa $\delta$ rather than something larger** — contrast [[Def - Ruelle Zeta Function and its Twist|c_ρ]].
 >
 > **(F3) It is a one-dimensional twisted Selberg zeta.** $\chi$ is a one-dimensional abelian representation of $\Gamma$ factoring through $H_1(X,\mathbb{Z})$; $L_X(\cdot,\chi)$ is the corresponding twisted Selberg zeta, and admits a meromorphic continuation to $\mathbb{C}$ by [[Ext - Meromorphic Continuation of the Selberg Zeta and L-Functions|(MC)]].
 >

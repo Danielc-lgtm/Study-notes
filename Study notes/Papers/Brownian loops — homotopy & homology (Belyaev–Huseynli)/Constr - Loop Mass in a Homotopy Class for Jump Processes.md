@@ -68,6 +68,7 @@ tags: [paper, probability, topology, loop-measures]
 - [[Def - The Space of Unrooted Unparametrised Loops]] — (F4) there is the same statement on the loop space
 - [[Def - Free Homotopy Class and Conjugacy Class Correspondence]] — the class being restricted to
 - [[Def - Subordinator]] — the marked pair $(B,S)$
+- [[Constr - The Dirichlet-Form Loop Measure]] — the measure whose classes are being read
 
 ---
 

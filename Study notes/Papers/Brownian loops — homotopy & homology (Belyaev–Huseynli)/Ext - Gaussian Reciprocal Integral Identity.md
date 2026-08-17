@@ -28,10 +28,15 @@ tags: [paper, external, analysis]
 > $$\int_{c}^\infty u\,e^{-u^2/4t}\,\mathrm{d}u = 2t\,e^{-c^2/4t},\qquad t>0.$$
 > (Elementary: the integrand is $-2t\frac{\mathrm{d}}{\mathrm{d}u}e^{-u^2/4t}$.)
 
+**Strategy.** Rescale $s$ so the exponent becomes $-c(v+1/v)$ with $c=\sqrt{ab}$; then the substitution $w=\sqrt v-1/\sqrt v$ turns the symmetrised integrand into a bare Gaussian.
+
 > [!note]- Proof of (GI) (skippable)
-> Substitute $u=\sqrt{as}-\sqrt{b/s}$, so $u:\ (0,\infty)\to(-\infty,\infty)$ is an increasing bijection with $u^2=as+b/s-2\sqrt{ab}$ and $\mathrm{d}u=\tfrac12(\sqrt{a/s}+\sqrt{b}\,s^{-3/2})\,\mathrm{d}s$. Writing $I$ for the integral and $J:=\int_0^\infty s^{-1/2}e^{-as-b/s}\,\mathrm{d}s$, the substitution $s\mapsto b/(as)$ gives $J=\sqrt{b/a}\,I$, and
-> $$\int_{-\infty}^\infty e^{-u^2}\,\mathrm{d}u = e^{2\sqrt{ab}}\cdot\tfrac12\Big(\sqrt a\,J\,b^{-1/2}\cdot\sqrt b + \sqrt b\,I\Big)\cdot\!\!\ \text{(combining the two halves)} = e^{2\sqrt{ab}}\sqrt b\,I,$$
-> whence $I=\sqrt{\pi/b}\,e^{-2\sqrt{ab}}$.
+> Put $s=\sqrt{b/a}\,v$. Then $s^{-3/2}\,\mathrm{d}s=(b/a)^{-1/4}v^{-3/2}\,\mathrm{d}v$ and $as+b/s=c\,(v+1/v)$ with $c:=\sqrt{ab}$, so
+> $$I:=\int_0^\infty s^{-3/2}e^{-as-b/s}\,\mathrm{d}s=\Big(\tfrac ab\Big)^{1/4}K(c),\qquad K(c):=\int_0^\infty v^{-3/2}e^{-c(v+1/v)}\,\mathrm{d}v.$$
+> The substitution $v\mapsto1/v$ leaves $v+1/v$ fixed and carries $v^{-3/2}\,\mathrm{d}v$ to $v^{-1/2}\,\mathrm{d}v$, so $K(c)=\int_0^\infty v^{-1/2}e^{-c(v+1/v)}\,\mathrm{d}v$ as well. Adding the two expressions and substituting $w=\sqrt v-1/\sqrt v$, for which $\mathrm{d}w=\tfrac12(v^{-1/2}+v^{-3/2})\,\mathrm{d}v$ and $v+1/v=w^2+2$,
+> $$2K(c)=\int_0^\infty\big(v^{-1/2}+v^{-3/2}\big)e^{-c(v+1/v)}\,\mathrm{d}v=2\int_{-\infty}^{\infty}e^{-c(w^2+2)}\,\mathrm{d}w=2e^{-2c}\sqrt{\pi/c}.$$
+> Hence $K(c)=e^{-2c}\sqrt{\pi/c}$ and
+> $$I=\Big(\tfrac ab\Big)^{1/4}e^{-2\sqrt{ab}}\sqrt{\pi}\,(ab)^{-1/4}=\sqrt{\frac\pi b}\;e^{-2\sqrt{ab}}.\;\square$$
 
 ---
 
