@@ -76,8 +76,10 @@ If the Notion MCP is connected, fetch the DAG page directly. Otherwise, ask the 
 ```
 Def - [Concept Name].md
 Thm - [Theorem Name].md
+Lemma - [Lemma Name].md        # atomic lemma note (Thm-shaped; used by paper-notes)
 Ex - [Short Description].md
 Exercise Index - §X.Y [Section Title].md
+Paper - [Short Title].md       # paper-notes companion page
 [Topic Name].md
 ```
 

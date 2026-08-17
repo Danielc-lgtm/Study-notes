@@ -60,7 +60,7 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 
 [Then walk the section. For each definition the paper states:]
 
-**Definition (paper's name, paper's number).** [Introduce it intuition-first: say in plain words what the object is and what problem it solves, in the concrete smallest case if there is one. Then state it formally, fully typed. Then unpack the formal statement in a concrete instance, as the thesis unpacks the Lancaster measure for $D = 2$ before general $D$.]
+**Definition (paper's name, paper's number).** [Motivate it first: say in plain words what the object is and what problem it solves, leading up to the statement. Then state it formally and crisply, fully typed. Then unpack the formal statement in its smallest concrete instance, as the thesis unpacks the general Lancaster measure (Definition 2.1.1) into the $D = 2$ case $\Delta_L P = P_{XY} - P_X P_Y$ immediately after stating it. The formal statement is the opening move; the concrete case is the unpacking that follows.]
 
 [Insert a point-of-use recall for every above-floor term the definition uses:]
 
@@ -115,11 +115,13 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 
 # Verification log
 
-[The honesty record (Rule 6). Two short lists:]
+[The honesty record (Rule 6). Three short lists:]
 
 **Verified.** [Each definition or lemma you supplied from your own knowledge, with the source you confirmed it against. "Radon–Nikodym theorem statement checked against Folland, *Real Analysis*, Thm 3.8." ]
 
 **Flagged / uncertain.** [Everything you marked with the uncertainty marker, gathered here: what you were unsure of and why. If empty, say "No unresolved uncertainties." Do not leave this blank — an empty log should be an explicit statement that nothing is outstanding, not an omission.]
+
+**Intuition not yet formalised.** [Every place where the notes give an intuition, heuristic, or plausibility picture that has not been made rigorous — gathered from the ⚠️ / intuition-not-proof markers in the body. Name each and say what a full formalisation would need. If empty, say so explicitly.]
 ```
 
 ---
