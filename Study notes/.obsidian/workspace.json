@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Category Theory/Category Theory V — Monads, Algebras, and Monoidal Categories.md",
+                "file": "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§4 Zeta Identities and Finiteness.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Category Theory V — Monads, Algebras, and Monoidal Categories"
+              "title": "§4 Zeta Identities and Finiteness"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -185,32 +187,32 @@
   },
   "active": "c5b52a9d138c61af",
   "lastOpenFiles": [
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/External Inputs and Gaps.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Anchors and Prerequisites.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Map - Brownian Loops on Homotopy and Homology Classes.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§3 Mass of a Homotopy Class.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§2 The Loop Measure and Subordination.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Constr - The Loop Soup.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Thm - Poissonian Structure of Homotopy Classes.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Constr - The Brownian Loop Measure.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Def - The Space of Unrooted Unparametrised Loops.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Ext - Le Jan Shift-Invariance of the Parametrised Loop Measure.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§2.1–2.2 Loop Measures — Brownian and Dirichlet Form.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Def - Regular Symmetric Dirichlet Form.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Def - Transition Density and Heat Kernel.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§3 Decomposition over Homotopy Classes.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§3.2 Euclidean Quantum Mechanics and the Path Integral.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Def - Free Homotopy Class and Conjugacy Class Correspondence.md",
+    "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§2.3–2.4 Subordination and the Weighted Potential Measure.md",
+    "Category Theory/Category Theory V — Monads, Algebras, and Monoidal Categories.md",
     "Category Theory/Higher Categories — 2-Categories, Enrichment, and Quasi-Categories.md",
     "Category Theory/Higher Categories — fc-Multicategories and Weak Double Categories.md",
     "Category Theory/Higher Categories — Generalized Operads via Cartesian Monads.md",
-    "Category Theory/Category Theory V — Monads, Algebras, and Monoidal Categories.md",
     "Category Theory/Category Theory IV/Def - Unit and Counit of an Adjunction.md",
     "Category Theory/Category Theory IV — Adjunctions.md",
     "Category Theory/Category Theory III — Limits and Colimits.md",
     "Category Theory/Category Theory II — Universal Properties, Representability, and the Yoneda Lemma.md",
     "Category Theory/Higher Categories/Def - 2-Category and Bicategory.md",
-    "Category Theory/Category Theory IV/Def - Adjunction.md",
-    "Category Theory/Category Theory III/Def - Limit and Colimit.md",
-    "Category Theory/Category Theory III/Def - Cone and Cocone.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Bracket of g-Valued Forms.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Lie-Algebra-Valued Differential Form.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Orthonormal Frame Bundle.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Frame Bundle of a Vector Bundle.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Def - Wilson Line and Holonomy of a Connection.md",
-    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology II — Fundamental Group and Covering Spaces.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology II/Def - Deck Transformation Group.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology II/Def - Universal Cover.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology II/Def - Simply Connected Space.md",
-    "Geometry/Geometry of Physics/Algebraic Topology/Algebraic Topology I — Singular Homology and the de Rham Theorem.md",
-    "Prerequisite DAG.md",
     "Category Theory/Higher Categories - Globular Operads",
     "Category Theory/Higher Categories - Generalized Operads"
   ]
