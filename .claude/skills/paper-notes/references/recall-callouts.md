@@ -6,26 +6,79 @@ The paper-notes callouts that carry point-of-use recalls (Rule 2), imported exte
 
 ## The recall callout — `> [!recall]-`
 
-The core device of the skill. Whenever a term or notation above the undergraduate floor is used, insert a recall **at the point of use**. It is collapsed (`-`) so a reader who knows the term is not slowed, and it must be **self-sufficient**: a reader who never clicks the wikilink still gets both the formal content and the plain-language meaning.
+The core device of the skill. Whenever a term or notation above the undergraduate floor is used, insert a recall **at the point of use**. It is collapsed (`-`) so a reader who knows the term is not slowed, and it must be **self-sufficient**: a reader who never clicks the wikilink still gets the formal content, a jargon-free paraphrase, *and* a concrete mental model.
 
-**Both halves are mandatory:**
+**Three fields are mandatory:**
 
 - **Formally:** the precise definition, fully typed (domain/codomain, ambient space, what a measure is over, quantifiers). This is the statement the reader can *use* in a proof.
-- **In words:** what the term *means* or *does* — the intuition, the picture, the role it plays. This is what lets the reader *recognise* when the term applies.
+- **In words:** what the term *means* or *does*, in plain language. **No above-floor jargon is allowed in this field.** If the paraphrase needs another above-floor term, either replace it with a floor-level phrase or nest a `> > [!recall]-` for it inside the current recall. This is what lets the reader *recognise* when the term applies.
+- **Concretely:** a specific mental model the reader can hold in working memory — a small example (the $n=2$ case, the smallest non-trivial instance), a physical picture (a rubber sheet, a cylinder, a random walk on $\mathbb{Z}$), a computation the reader can do on paper, or a picture-in-words with explicit coordinates. This field must not be empty and must not consist solely of "See [[Def - X]]" — the wikilink is a supplement, not a substitute.
 
 ```markdown
 > [!recall]- Absolutely continuous (μ ≪ ν)
 > **Formally:** for measures $\mu, \nu$ on a measurable space $(X, \mathcal{F})$, $\mu \ll \nu$ means every $\nu$-null set is $\mu$-null: for all $A \in \mathcal{F}$, $\nu(A) = 0 \Rightarrow \mu(A) = 0$.
-> **In words:** $\nu$ cannot be blind to anything $\mu$ sees — wherever $\mu$ puts mass, $\nu$ already puts some. This is exactly the condition under which $\mu$ has a density with respect to $\nu$. See [[Def - Absolute Continuity of Measures]].
+> **In words:** $\nu$ sees at least everything $\mu$ sees. Wherever $\mu$ puts positive mass, $\nu$ already put some.
+> **Concretely:** on the real line, the standard normal probability measure $\gamma$ (bell curve) is absolutely continuous with respect to Lebesgue length $\lambda$: any set of length zero also has probability zero, because $\gamma$ has the density $\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$ against $\lambda$. But Lebesgue length is *not* absolutely continuous with respect to the point mass $\delta_0$ at zero: the set $\{0\}$ has $\delta_0(\{0\})=1\ne0$ yet length $0$. See [[Def - Absolute Continuity of Measures]].
 ```
 
 Rules for recalls:
 
-- **Title = the term, as it appears in the text**, with its notation in parentheses if it has a symbol. Use Unicode inside the title, never LaTeX: math in a callout *title* (fold line) renders inconsistently across Obsidian versions and themes — some show `$\sigma$` literally — so Unicode is the portable choice, exactly as for wikilink display text. The *body* renders LaTeX reliably and must use it. So `> [!recall]- σ-algebra`, not `> [!recall]- $\sigma$-algebra`; the body then uses `$\sigma$-algebra` freely. (This is a deliberate carve-out from `obsidian-patterns.md`, which says markdown renders in titles — see SKILL.md's precedence note.)
-- **Put the wikilink to the atomic note inside the recall**, after the plain-language half. The recall is the just-in-time reminder; the atomic note is the full treatment.
-- **Duplicate freely.** Repeat the recall the first time a term is used in each new section. A collapsed one-liner is cheaper to re-read than to hunt down. Do not make later sections depend on a recall the reader saw sections ago.
+- **Title = the term, as it appears in the text**, with its notation in parentheses if it has a symbol. Use Unicode inside the title, never LaTeX: math in a callout *title* (fold line) renders inconsistently across Obsidian versions and themes — some show `$\sigma$` literally — so Unicode is the portable choice, exactly as for wikilink display text. The *body* renders LaTeX reliably and must use it. So `> [!recall]- σ-algebra`, not `> [!recall]- $\sigma$-algebra`; the body then uses `$\sigma$-algebra` freely.
+- **Put the wikilink to the atomic note at the end of the Concretely field.** The recall is the just-in-time reminder; the atomic note is the full treatment.
+- **Duplicate freely across sections.** Repeat the recall the first time a term is used in each new section. A collapsed recall is cheaper to re-read than to hunt down.
+- **Length is not a virtue and not a vice.** A one-sentence recall (for a floor-adjacent term) is fine; an eight-line recall (for a genuinely alien object) is fine. What matters is that a floor reader closes the recall with a picture. Rule 7 (prose over compression) governs — err on the long side.
+- **Nest freely.** When the "In words" field must use another above-floor term, nest a recall for it: `> > [!recall]- [nested term]` inside the outer recall. Two levels of nesting is the practical maximum; beyond that, restructure so each layer is its own top-level recall.
+- **The three fields are non-negotiable.** Skipping "Concretely" because "the definition is basically the picture" is a bug — the *reader* does not have your familiarity. Empty fields, or fields containing only "See [[Def - X]]", fail the recall.
 - **A recall is not a proof dependency you can wave at.** If the argument *uses a property* of the term (not just its definition), that property is a separate recall or an external-input callout — the recall states what the term *is*, not every theorem about it.
-- **For a term the paper itself defines** (not a prerequisite), you still recall it at re-use across sections, but the primary treatment is the definition walk-through in the companion section plus its stub note — not a `[!recall]`.
+- **For a term the paper itself defines** (not a prerequisite), you still recall it at re-use across sections, but the primary treatment is the item's own atomic subpage.
+
+### The jargon-in-plain-language failure — an anti-example and its fix
+
+**Anti-example (from an early draft of this vault's Brownian-loops notes — do not do this):**
+
+```markdown
+> [!recall]- Free homotopy classes ↔ conjugacy classes; closed geodesics; fundamental strip
+> **Formally:** free homotopy classes of oriented closed curves on X correspond bijectively to
+>   conjugacy classes in Γ; a non-trivial non-peripheral class corresponds to a primitive
+>   hyperbolic τ, conjugated to standard form τ:z↦e^ℓz with axis the imaginary half-line and
+>   translation length ℓ; the class contains the unique closed geodesic γ of length ℓ. The class
+>   winding m times is C_X(γ^m)↔[τ^m]_conj. The centraliser is C_Γ(τ^m)=⟨τ⟩, so
+>   [τ^m]_conj = ⊔_{r∈Γ/⟨τ⟩} {rτ^m r^{-1}} (one conjugate per coset). Since Im(τz)=e^ℓ Im z,
+>   the fundamental strip F_τ = {z : 1 ≤ Im z < e^ℓ} is a fundamental region for ⟨τ⟩.
+> **In words:** "which hole, how many times" is recorded by a conjugacy class; each class has one
+>   taut geodesic representative of a definite length; the strip is one period of the cylinder
+>   that ⟨τ⟩ wraps up.
+```
+
+Why this fails: the "In words" field uses *another* pile of above-floor terms — "conjugacy class", "taut geodesic representative", "period of the cylinder that $\langle\tau\rangle$ wraps up". A floor reader cannot draw a picture, cannot name what the strip *is* as a set, cannot say what "primitive hyperbolic" excludes. There is no concrete instance the reader can compute on. The recall *looks* comprehensive because every symbol is typed and every term named — but it fails the actual test, which is *can the reader hold this in working memory*.
+
+**Fix (the pattern to imitate):**
+
+```markdown
+> [!recall]- Free homotopy classes on X ↔ conjugacy classes in Γ
+> **Formally:** two oriented closed curves on X are *freely homotopic* if one can be continuously
+>   deformed into the other in X — no basepoint fixed. The set of free homotopy classes is in
+>   bijection with the set of conjugacy classes of Γ (two group elements h, h' are conjugate if
+>   h' = q h q^{-1} for some q ∈ Γ).
+> **In words:** each loop on the surface "goes around some holes in some pattern"; two loops that
+>   go around the same holes in the same pattern (allowing you to slide the starting point) are
+>   in one class. On the algebraic side, Γ is the group of deck moves of the covering
+>   ℍ^2 → X, and moving the starting point of a loop *by* a group element q changes its
+>   recorded deck move from h to qhq^{-1} — that is exactly conjugation. So free homotopy
+>   classes (basepoint-free geometry) ↔ conjugacy classes (basepoint-free algebra).
+> **Concretely:** think of a torus T² = ℝ²/ℤ². Its deck group is Γ = ℤ² (translations by
+>   integer vectors). A loop that goes once around the horizontal circle records the deck move
+>   (1, 0); once around the vertical, (0, 1). Because ℤ² is abelian, its conjugacy classes are
+>   singletons, so free homotopy classes are in bijection with ℤ² itself — every integer pair
+>   (a, b) is one class, indexed by "a times around horizontally, b times around vertically". In
+>   the hyperbolic case Γ is *not* abelian, so a conjugacy class is a genuine equivalence class
+>   of many group elements — but the picture is the same: one class per topological type of loop.
+> See [[Def - Closed Geodesics, Conjugacy Classes, and Translation Length]].
+```
+
+This recall passes: the "In words" field uses only "closed curve", "continuously deformed", "group element", "conjugation", "covering", "deck move" — all either floor-level or nested into their own recalls or given a picture. The "Concretely" field puts a *specific compact object* (the torus, $\mathbb{Z}^2$, the pair $(a, b)$) in the reader's head. A floor reader closes this recall able to answer "what is a free homotopy class?" without needing to click through.
+
+**When a term genuinely needs its own space — the anti-example continues.** "Primitive hyperbolic $\tau$", "translation length", "fundamental strip" each carry as much content as the recall above; do *not* pack them into one recall. Give them separate top-level recalls (or one atomic subpage that treats them together), each with its own three fields. Cross-recall as needed.
 
 ---
 

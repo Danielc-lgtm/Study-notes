@@ -55,10 +55,17 @@ If the Notion MCP is connected, fetch the DAG page directly. Otherwise, ask the 
           Exercise Index - §X.Y.md
     paper/                         # paper-notes output — one folder per paper
       [Short Title]/               # everything newly created for that paper
-        Paper - [Short Title].md   # companion page (reading surface)
-        Def - [Name].md            # prerequisite notes + paper-result stubs,
-        Thm - [Name].md            #   all in this one folder
-        Lemma - [Name].md          # atomic lemma note (Thm-shaped)
+        Paper - [Short Title].md               # hub page (short scaffolding)
+        Paper - [Short Title] — §N [Title].md  # one section page per paper section
+                                               #   (polymath-style concept-map index)
+        Def - [Name].md            # atomic subpage per paper Definition
+        Thm - [Name].md            # atomic subpage per paper Theorem
+        Lemma - [Name].md          # atomic subpage per paper Lemma
+        Cor - [Name].md            # atomic subpage per paper Corollary
+        Prop - [Name].md           # atomic subpage per paper Proposition
+        Remark - [Name].md         # atomic subpage per paper Remark
+        Ex - [Name].md             # atomic subpage per paper Example
+        # (also: prerequisite Def/Thm/Lemma notes, same folder)
         # prerequisites already in the vault are wikilinked, not copied here
     .obsidian/                     # Obsidian configuration
 ```
@@ -104,7 +111,7 @@ Three skills build vault content. Each has its own `SKILL.md` and `references/`;
 
 **`.claude/skills/exercise-builder/`** — practice exercises and drills as interlinked vault pages; the practice-generating companion to `polymath-notes`. Six modes (algorithm derivations, competitive programming, calculation drills, physical modelling, approximation methods, exam-level exercises).
 
-**`.claude/skills/paper-notes/`** — turns a single research paper (usually a PDF in `paper_source/`) into a self-contained note-set that a reader competent at undergraduate analysis, linear algebra, and elementary probability — but not a specialist in the paper's field — can follow without looking anything up. **Read the SKILL.md, `notation-discipline.md`, the three template references, and the reference thesis before making paper notes.** The skill backchains everything above the undergraduate floor into atomic `Def -`/`Thm -`/`Lemma -` notes, recalls unfamiliar terms at their point of use, types every symbol, rewrites every proof gap-free, and writes in the prose voice of the reference thesis (`paper_source/Chiang Sung En-Thesis.pdf`), which supersedes the David Tong style for paper notes. Output: **one folder per paper**, `Study notes/paper/[Short Title]/`, holding the companion page `Paper - [Short Title].md`, the atomic prerequisite notes newly created for the paper, and the paper-result stubs. Prerequisites that already have a note elsewhere in the vault are wikilinked, not duplicated into the folder. It does **not** consult the Notion DAG.
+**`.claude/skills/paper-notes/`** — turns a single research paper (usually a PDF in `paper_source/`) into a modularly self-contained note-set that a reader competent at undergraduate analysis, linear algebra, and elementary probability — but not a specialist in the paper's field — can follow without looking anything up. **Read the SKILL.md, `notation-discipline.md`, the three template references, and the reference thesis before making paper notes.** The skill backchains everything above the undergraduate floor into atomic notes, recalls unfamiliar terms at their point of use, types every symbol, rewrites every proof gap-free, and writes in the prose voice of the reference thesis (`paper_source/Chiang Sung En-Thesis.pdf`), which supersedes the David Tong style for paper notes. Output: **one folder per paper**, `Study notes/paper/[Short Title]/`, holding a short **hub** page, one **section page per paper section** (polymath-style concept-map index with foldable-bullet statements), **one atomic subpage per named paper item** (Def/Thm/Lemma/Cor/Prop/Remark/Ex), and the atomic prerequisite notes. Every section page is modularly self-contained — a reader jumping into §5 without reading §2–§4 finds every prerequisite recalled or transcluded there. Every atomic subpage is self-contained too — a reader landing on it cold can read and check it without opening any other file. Prerequisites that already have a note elsewhere in the vault are wikilinked, not duplicated into the folder. It does **not** consult the Notion DAG.
 
 ## Personal Notes
 

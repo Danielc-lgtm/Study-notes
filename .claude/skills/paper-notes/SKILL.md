@@ -22,7 +22,13 @@ description: >
 
 A skill for rewriting one finished research paper into an Obsidian note-set that a strong generalist — not a specialist in the paper's field — can read front to back, checking every step, without ever leaving the page to look something up. Where `polymath-notes` builds chapter-level study notes from textbooks and `exercise-builder` builds drills, this skill takes a *specific paper* and makes it *legible to a non-specialist* by backchaining everything it uses down to an undergraduate floor.
 
-The deliverable is **one folder per paper**, `Study notes/paper/[Short Title]/`, holding a **companion page** that walks the paper section by section — carrying the paper's own definitions and theorems, point-of-use recalls for everything unfamiliar, and gap-free proofs — plus **atomic `Def -`/`Thm -`/`Lemma -` notes** for every above-floor prerequisite the vault does not already have and **stub notes** for the paper's own principal results, all wikilinked. Prerequisites that already have a note elsewhere in the vault are wikilinked from that folder, not copied into it.
+The deliverable is **one folder per paper**, `Study notes/paper/[Short Title]/`, holding:
+- A short **hub page** with the plain-language abstract, the floor statement, the paper-wide Notation and Standing Conventions, the Prerequisites map, a table of contents linking each section page, and the Verification log.
+- One **section page per paper section**, structured as a polymath-style **index / concept map**: a foldable-bullet list of every named item in that section (definition, theorem, lemma, corollary, proposition, remark, example, and any standalone paragraph carrying an argument), each entry wikilinking to its atomic subpage and holding an indented child bullet with the formal statement plus a 3–5 sentence unpacking. Each section page is **modularly self-contained** — a reader landing on §5 without having read §2–§4 can follow it, because §5 opens with a "Prerequisites recap" section that recalls (or transcludes) every earlier-section definition it uses.
+- One **atomic subpage per named paper item**: every Def X, Thm X, Lemma X, Cor X, Prop X, Remark X, and Example X becomes its own `Def -`/`Thm -`/`Lemma -`/`Cor -`/`Prop -`/`Remark -`/`Ex -` page in the folder, fully self-contained (own recalls, own formal statement, own gap-free proof or worked case). Standalone paragraphs of argument that do not carry a paper number can become `Remark -` pages if they are load-bearing.
+- **Atomic prerequisite notes** for every above-floor concept the vault does not already have (same folder). Prerequisites already elsewhere in the vault are wikilinked, not duplicated.
+
+The reader has two entry modes. **Big-picture mode**: open a section page, scan the foldable-bullet index — you see every named item's statement inline without leaving the page. **Detail mode**: click into an atomic subpage — you get the full motivation, gap-free proof, and all point-of-use recalls; you can jump in cold without reading anything else.
 
 ---
 
@@ -99,17 +105,31 @@ Build the backchain as an explicit per-section prerequisite list during Pass 1 (
 
 `prereq-backchain` backchains a *subject* to plan study; this skill backchains a *paper* until every step reads without leaving the page.
 
-### Rule 2 — Recall every unfamiliar term at its point of use
+### Rule 2 — Recall every unfamiliar term at its point of use, with a picture the reader can hold
 
-Whenever the paper (or your own exposition) uses a term or notation that is above the floor, insert a collapsible recall **right where it is used** — not only a wikilink to its atomic note. The recall gives **both** the formal definition **and** a plain-language statement of what it means or does:
+Whenever the paper (or your own exposition) uses a term or notation above the floor, insert a collapsible recall **right where it is used** — not only a wikilink to its atomic note. The recall has **three fields**, not two:
+
+1. **Formally** — the precise, typed definition (the formal content).
+2. **In words** — a plain-language paraphrase using *no other above-floor jargon*. If the paraphrase must use another above-floor term, either replace it with a floor-level phrase or nest a `> [!recall]-` for that term inside this one. This field must land: reading it alone, a floor-level reader must be able to state, in their own words, what the object is.
+3. **Concretely** — a specific mental model the reader can hold: a small example ($n = 2$, or the smallest non-trivial instance), a physical picture (a rubber sheet, a cylinder, a random walk on $\mathbb{Z}$), a computation they can do on paper, or a picture-in-words with explicit coordinates. Never "See [[Def - X]]" as the whole of this field. A recall without a concrete anchor fails.
 
 ```markdown
 > [!recall]- Absolutely continuous (μ ≪ ν)
-> **Formally:** for measures $\mu, \nu$ on a measurable space $(X, \mathcal{F})$, $\mu$ is absolutely continuous with respect to $\nu$, written $\mu \ll \nu$, if every $\nu$-null set is $\mu$-null: $\nu(A) = 0 \Rightarrow \mu(A) = 0$ for all $A \in \mathcal{F}$.
-> **In words:** $\nu$ cannot be blind to anything $\mu$ sees — wherever $\mu$ puts mass, $\nu$ already puts some. This is exactly the condition under which $\mu$ has a density with respect to $\nu$ (the Radon–Nikodym derivative). See [[Def - Absolute Continuity of Measures]].
+> **Formally:** for measures $\mu, \nu$ on a measurable space $(X, \mathcal{F})$, $\mu \ll \nu$ means every $\nu$-null set is $\mu$-null: $\nu(A) = 0 \Rightarrow \mu(A) = 0$ for all $A \in \mathcal{F}$.
+> **In words:** $\nu$ sees at least everything $\mu$ sees. Wherever $\mu$ puts positive mass, $\nu$ already put some.
+> **Concretely:** on $\mathbb{R}$, Lebesgue measure $\lambda$ (length) and the standard normal measure $\gamma$ (bell curve density) satisfy $\gamma \ll \lambda$: any set of zero length also has zero probability, because $\gamma$ has a density $\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$ with respect to $\lambda$. But $\lambda \not\ll \delta_0$: the single point $\{0\}$ has $\delta_0(\{0\}) = 1 \ne 0$ yet $\lambda(\{0\}) = 0$. See [[Def - Absolute Continuity of Measures]].
 ```
 
-The recall is collapsed (`-`) so a reader who knows the term is not slowed, and one click away for a reader who does not. Full callout catalogue — recall, external-input, uncertainty — in `references/recall-callouts.md`. The wikilink to the atomic note goes *inside* the recall (or right after it); the recall itself must be self-sufficient, so a reader who never clicks the link still gets both the formal content and the intuition. Duplicate a recall freely at each new section that uses the term — a collapsed one-liner is cheaper to re-read than to hunt down.
+The recall is collapsed (`-`) so a knowing reader is not slowed. **Do not economise on length** — Rule 7 governs. A recall that runs eight lines but leaves the reader holding a picture is a win; a recall that runs three lines of dense jargon and links out is a bug. Nested recalls are permitted (a `> > [!recall]-` inside a `> [!recall]-`). Duplicate freely across sections.
+
+**Failure modes to watch for.** The following are the specific bugs the "In words" and "Concretely" fields exist to prevent — each is a Rule-2 violation:
+
+- **Jargon-in-plain-language.** A paraphrase that reads "the non-trivial non-peripheral primitive hyperbolic element with axis the imaginary half-line and translation length $\ell$" is not plain language — every one of "non-trivial", "non-peripheral", "primitive", "hyperbolic (of a group element)", "axis", "translation length" is above the floor. Fix: rewrite in floor-level words *or* nest a recall for each term inside this one.
+- **Metaphor-with-no-referent.** "The strip is one period of the cylinder that $\langle\tau\rangle$ wraps up" reads like exposition but leaves the reader unable to name what the strip *is*. Fix: give the strip's coordinates (an explicit set of complex numbers with explicit bounds), and separately give the physical picture.
+- **See-the-definition-page-only.** "See [[Def - X]]" as the entire "In words" field is a total failure — the recall exists so the reader does not have to click through. Fix: put the plain-language content on this page, then wikilink for further detail.
+- **Type-collision hidden in a name.** "Free homotopy classes correspond bijectively to conjugacy classes" makes sense only once the reader has *both* concepts. If a floor reader has neither, define both on the page — do not lean on the correspondence to do the defining work.
+
+Full callout catalogue — recall (three-field), external-input, uncertainty — in `references/recall-callouts.md`.
 
 ### Rule 3 — Type everything (see `references/notation-discipline.md`)
 
@@ -135,23 +155,46 @@ Comprehensive standard prose is preferred to compact formalism, **even when it r
 
 ## What you produce
 
-For one paper, the note-set is **one folder** — `Study notes/paper/[Short Title]/` — holding the companion page and every atomic note newly created for that paper. There are three kinds of page, all in that single folder. The only thing that lives outside it is an already-existing vault note for a prerequisite, which is wikilinked from the recall rather than duplicated (Rule 1's exception).
+For one paper, the note-set is **one folder** — `Study notes/paper/[Short Title]/` — holding the hub page, one section page per paper section, and every atomic note newly created for that paper. The only thing that lives outside the folder is an already-existing vault note for a prerequisite, which is wikilinked from the recall rather than duplicated (Rule 1's exception).
 
-### 1. The companion page (the reading surface)
+There are **four kinds of page**, all in that single folder:
 
-`Study notes/paper/[Short Title]/Paper - [Short Title].md` — walks the paper section by section in the thesis voice, carrying the point-of-use recalls and the gap-free proofs. This is the page a reader opens to read the whole paper. Skeleton in `references/companion-page-template.md`. It opens with a header (full citation, plain-language abstract, the explicit floor statement), a **Notation and Standing Conventions** section (Rule 3), and a **Prerequisites** map (the backchain — every above-floor concept wikilinked to its atomic note), then one section per paper section, then **External inputs** and the **Verification log**.
+### 1. The hub page
 
-**For a long paper, split the reading surface** into one page per paper section — `Study notes/paper/[Short Title]/Paper - [Short Title] — §N [Section].md` — with `Paper - [Short Title].md` as a short hub that carries the header, the Notation and Standing Conventions table, the prerequisites map, a table of contents linking the section pages in order, and the **Verification log** (so Rule 6's honesty record still has a home in a split note-set). Split only at the paper's own section boundaries, exactly as `polymath-notes` splits a topic page at sub-chapter boundaries. Default to the single page; split when a single file would become unwieldy.
+`Study notes/paper/[Short Title]/Paper - [Short Title].md` — the paper's entry point. It carries the header (full citation, plain-language abstract, the explicit floor statement), the **paper-wide Notation and Standing Conventions** section (Rule 3), the **Prerequisites map** (the backchain — every above-floor concept wikilinked to its atomic prerequisite note, with a one-line reminder), a **table of contents** linking each section page in order, and the **Verification log**. This is a short page: it does not carry the paper's content, only its scaffolding.
 
-### 2. Atomic prerequisite notes (in the paper folder)
+### 2. Section pages — modular, self-contained indices
 
-`Def -`/`Thm -`/`Lemma -` notes for every above-floor concept the paper uses that the vault does **not** already have, **each in this paper's folder** `Study notes/paper/[Short Title]/` (Rule 1), following the atomic-note template. These follow the `polymath-notes` Def/Thm structure (Notation → Axiom Motivation / Statement → the formal content → intuition → examples), scaled to what the paper needs — enough that the concept is fully usable and correctly typed, without necessarily the full topic-page apparatus. `Lemma -` is a new atomic type, structured like `Thm -` (see the template). **If a note for the concept already exists elsewhere in the vault, wikilink it instead of creating a copy here** — that is the one thing that lives outside the paper folder.
+`Study notes/paper/[Short Title]/Paper - [Short Title] — §N [Section].md` — one per paper section. These are **polymath-style index pages**, not narrative walk-throughs. Each opens with:
 
-### 3. Paper-result stub notes
+1. A one-paragraph **section opener** (orient the reader; recall where we are and preview what this section does).
+2. A **Prerequisites recap** — every earlier-section paper result and every external above-floor concept the section uses, each as either a `> [!recall]-` callout with the formal statement + plain-language meaning, or a `![[...]]` transclusion of a prior section's stub. The purpose: a reader who lands on §5 without having read §2–§4 can still follow it. **The rule is strict**: nothing above the floor is used without being recalled or transcluded on this page.
+3. A **Concept map** — the section's named items (Definitions, Theorems, Corollaries, Lemmas, Propositions, Remarks, Examples) as **foldable bullets in the paper's order**. Each entry is a parent bullet whose text is a wikilink to the item's atomic subpage, with an indented child bullet holding a 3–5 sentence unpacking that names the formal statement, the intuition, and where it is used. Folding the parent collapses the child; the wikilink remains clickable in Editing and Reading view because it is ordinary Markdown (do not use HTML `<details>` — wikilinks inside HTML tags are not clickable in Obsidian). Sub-sections (§3.1, §3.2, …) are `###` sub-headers under the concept map; do not re-order.
+4. A **Section verification log** — the section's honesty record (Rule 6): what was checked, what is flagged uncertain, what is intuition-not-proof.
 
-`Def -`/`Thm -`/`Lemma -` notes for the paper's *own* principal definitions and theorems, placed **in the paper folder** `Study notes/paper/[Short Title]/`, each giving the formal statement, its typing, and a one-line intuition, then linking back to the companion page for the full treatment (motivation, gap-free proof, recalls). These make the paper's results reusable and greppable across the vault without duplicating the full exposition. Stub template in `references/atomic-note-templates.md`.
+The reader has two entry modes: **fold-out mode** — read the section's index without leaving the page, seeing every statement inline; **click-through mode** — jump into an atomic subpage for the full proof, motivation, and recalls. Both modes must work.
 
-**Wikilink everything.** Every above-floor term in the companion page links to its atomic note (in this paper's folder, or an existing note elsewhere in the vault); every paper result links to its stub; every stub and atomic note links back appropriately. Follow the vault's actual folder conventions (`obsidian-patterns.md`). Forward references to concepts with no page yet are **bold plain text**, never wikilinks (an unresolved `[[ ]]` creates an empty stub when clicked).
+### 3. Atomic subpages for every named paper item
+
+**One subpage per named item.** Every Def X, Thm X, Lemma X, Cor X, Prop X, Remark X, and Example X in the paper becomes its own file in the paper folder:
+
+- `Def - [Name].md`, `Thm - [Name].md`, `Lemma - [Name].md`, `Cor - [Name].md`, `Prop - [Name].md`, `Remark - [Name].md`, `Ex - [Name].md`.
+
+The naming uses the concept's name (`Thm - Homotopy Decomposition for Hyperbolic Surfaces`), not the paper's number, so the page is a usable wikilink target across the vault. The paper's number lives in the YAML `paper-ref` field.
+
+Each atomic subpage is **fully self-contained**: it carries its own Notation section (with `> [!recall]-` callouts for every above-floor term it uses — do not assume the reader has read the section page or any earlier subpage), its own formal Statement, its own intuition, its own gap-free proof or worked-out example (in `> [!note]-` collapsibles), and a "Where the paper uses this" link back to the section page and any downstream results. A reader who lands on `Thm - Homotopy Decomposition for Hyperbolic Surfaces.md` cold — through Obsidian search, a wikilink from a different paper, or an old bookmark — must be able to read and check it without opening any other file.
+
+**Standalone paragraphs of argument.** When the paper has a paragraph that carries a substantive argument or definition-in-prose without a number, and that argument is *load-bearing* (a later result depends on it), promote it to a `Remark - [Descriptive Name].md` subpage so it is greppable, wikilinkable, and holds its own recalls. Non-load-bearing prose stays on the section page.
+
+**Scale each subpage to what the paper actually needs.** A definition whose properties are hammered on in later proofs gets the full apparatus (Axiom Motivation with per-condition failure analysis, Examples and Non-Examples with a calibration check). A remark that just names a comparison to prior literature is one paragraph plus a link. The polymath-notes Def/Thm template is the ceiling; scale down to fit. Skip polymath-specific sections that make no sense for a paper item (Convergent Strategies, Sources and Targets in the polymath sense, Bridges, Legal Operations, Cross-Field Exercise Suggestions — these belong to `polymath-notes`/`exercise-builder`).
+
+### 4. Atomic prerequisite notes
+
+`Def -`/`Thm -`/`Lemma -` notes for every above-floor **prerequisite** concept the vault does not already have — same folder, same self-containment discipline as the paper-item subpages. **If a note for the concept already exists elsewhere in the vault, wikilink it instead of duplicating** (searchable with `grep`/`find` over `Study notes/`).
+
+**Wikilink everything.** Every above-floor term on the section page (recap or concept-map bullet) links to its atomic note; every atomic subpage links back to the section page and to any subpages it depends on; every wikilink resolves before commit. Forward references to concepts with no page yet are **bold plain text**, never wikilinks (an unresolved `[[ ]]` creates an empty stub when clicked).
+
+**De-jargon aggressively.** The emphasis of this skill over `polymath-notes` is that every above-floor term gets a plain-language unpacking, not just a formal recall. If the term has both a formal name and an operational-intuition name, give both (Rule 4). The reader is a strong generalist, not a specialist — write for someone who has never met the concept.
 
 ---
 
@@ -183,6 +226,21 @@ Order: create the atomic prerequisite notes a section needs, then write that com
 
 **For a long paper, commit and push incrementally as you go** — after each section (its atomic notes, its companion section, its stubs), stage and commit with a descriptive message ("Paper notes: [Short Title] §3 — Radon–Nikodym backchain + gap-free proof of Thm 3.1") and push. This preserves work across a long task and is the workflow the user expects for multi-section papers. Push **per the repository's git workflow and the session's branch requirements** — the working branch the session designates, not `main` directly unless that is the repo's stated convention. The point is incremental commits and pushes across a long paper, not batching everything to the end; where the repository's convention is push-on-request, commit each section and push when the user asks.
 
+### Pass 2.5 — De-jargon audit (enter the floor reader's mindstate)
+
+Before the leon pass, do an explicit **de-jargon walk** of every page you wrote. **Read every sentence with the mindset of the floor reader** — someone who has done a good undergraduate degree in maths and has never met your paper's field. For every sentence:
+
+1. **List every noun and adjective** that would not appear in a first-year analysis / probability / linear algebra course. That is the sentence's jargon load.
+2. **For each jargon word, ask**: "Can the reader, at this point on the page, produce a concrete mental model of what this refers to — a set of points, a formula, a picture with explicit coordinates?" Not "have they seen the word before"; not "is there a wikilink"; not "is there a definition somewhere on the page". The test is *concrete mental model in working memory, right now*.
+3. **If the answer is no**, the sentence has failed the reader. Fix it by:
+   - (a) replacing the word with a floor-level phrase that carries the same content; or
+   - (b) inserting a `> [!recall]-` callout with the full three-field form (Formally / In words / Concretely) *before* the sentence; or
+   - (c) rewriting the sentence to define the word in place with an explicit example.
+
+The specific failure mode this pass catches: a recall or an atomic subpage that *looks* self-contained because it names all its terms and links to them, but whose "In words" field is itself jargon-heavy — "the non-trivial non-peripheral primitive hyperbolic $\tau$ conjugated to standard form with axis the imaginary half-line and translation length $\ell_\gamma$". The formal content is right, but no floor reader can *see* what is being described. That is a Rule-2 failure and it is caught only by explicitly entering the reader's mindstate — the mechanical audits below will not catch it, because syntactically everything is fine.
+
+**Concrete drill.** Pick three atomic subpages at random. For each, cover the wikilinks and the "Formally" fields with a hand; read only the "In words" and "Concretely" fields and any prose you wrote. If a floor reader could not draw a picture, name a small example, or write a formula from what remains, the subpage fails. Rewrite before continuing.
+
 ### Pass 3 — Low-context-reader pass (leon-proofreader)
 
 After a companion page is drafted, run a low-context-reader pass over it with the **`leon-proofreader` skill** — invoke it through the Skill tool (`Skill(skill: "leon-proofreader")`, or `/leon-proofreader`) in review mode over the companion page; if it is unavailable in the session, do the pass in its spirit. Read the page as someone with exactly the floor and nothing above it, walking top to bottom, and check every place the reader's attention is directed. Specifically for paper notes:
@@ -206,9 +264,11 @@ Verify each item and report which passed and which required a fix.
 
 **The floor and self-containment (the point of the skill)**
 
-1. **Floor respected.** The companion page states the floor explicitly, and nothing above the floor is used without being either recalled (Rule 2) or created as an atomic note and linked. Pick two sections and read them as a floor-level reader: no unexpanded term survives.
-2. **Recall coverage.** Every above-floor term in a statement or proof has a point-of-use `[!recall]-` (or an atomic note linked with a one-line reminder) giving *both* formal content and plain-language meaning. Grep the section for the above-floor term list from Pass 1; each occurrence is covered.
+1. **Floor respected.** The hub page states the floor explicitly, and nothing above the floor is used without being either recalled (Rule 2, three-field form) or created as an atomic subpage and linked. Pick two section pages and two atomic subpages, read them as a floor-level reader: no unexpanded term survives.
+2. **Recall coverage.** Every above-floor term in a statement or proof has a three-field point-of-use `[!recall]-` (Formally / In words / Concretely). Grep the section for the above-floor term list from Pass 1; each occurrence is covered.
 3. **Backchain terminates at the floor.** Every atomic note's own prerequisites are either floor-level or themselves have atomic notes; no atomic note leaves a dangling above-floor dependency.
+3a. **Jargon-free "In words" and picture-carrying "Concretely".** For every recall on every page, verify (a) the "In words" field uses no above-floor jargon — every noun/adjective is either floor-level or itself unpacked in a nested recall; (b) the "Concretely" field gives a specific mental model — a small example, a physical picture, a computation the reader can do, or explicit coordinates. A recall whose "Concretely" is empty or is "See [[Def - X]]" is a bug. Spot-check three recalls at random; if any fail, the whole page needs a de-jargon pass.
+3b. **De-jargon audit performed.** Pass 2.5 was carried out on every page — for every sentence, the jargon load was listed and each jargon word was either replaced, recalled inline with the three-field form, or defined in place with a concrete example. Report what was flagged and what was fixed.
 
 **Typing and terminology (Rules 3, 4)**
 
@@ -227,8 +287,12 @@ Verify each item and report which passed and which required a fix.
 
 **Structure and mechanics**
 
-10. **Output structure.** Everything newly created for the paper lives in the single folder `Study notes/paper/[Short Title]/`: the companion page `Paper - [Short Title].md` (or a hub + section pages for a long paper), the atomic prerequisite notes, and the paper-result stubs (which link back to the companion). The only prerequisites outside that folder are ones that already had a note elsewhere in the vault, which are wikilinked, not duplicated.
-11. **Low-context pass done.** Pass 3 was run and its findings fixed.
-12. **Mechanics clean.** Math is `$...$`/`$$...$$`; no LaTeX inside `[[ ]]`; every wikilink resolves; filenames are Windows-portable (`< > : " / \ | ? *` all avoided; `§`, `—`, and Unicode math are fine); `find-math-bugs.py`, `find-latex-bugs.py`, `find-wikilink-bugs.py` and the resolution audit come back clean.
+10. **Output structure.** Everything newly created for the paper lives in the single folder `Study notes/paper/[Short Title]/`: the hub `Paper - [Short Title].md`, one section page per paper section `Paper - [Short Title] — §N [Section].md`, one atomic subpage per named paper item, and the atomic prerequisite notes. The only prerequisites outside that folder are ones that already had a note elsewhere in the vault, which are wikilinked, not duplicated.
+11. **Modular self-containment of section pages.** A reader can open any single section page cold and read it without opening any other section page. Every earlier-section paper result and every above-floor prerequisite used in the section is present as a `> [!recall]-` callout or a transclusion in that section's Prerequisites recap. Spot-check: pick one section, list every above-floor term it uses, verify each is on the page.
+12. **Modular self-containment of atomic subpages.** A reader can land on any atomic subpage cold — through Obsidian search, a wikilink from a different note, an old bookmark — and read it without opening any other file. Every above-floor term in its Statement / Proof / Example is recalled in that subpage's own Notation or `> [!recall]-` callouts. Spot-check three random subpages.
+13. **Every named paper item is an atomic subpage.** Every Definition, Theorem, Lemma, Corollary, Proposition, Remark, and Example the paper numbers or names has its own subpage in the folder. Mechanical check: grep the paper for `Definition\|Theorem\|Lemma\|Corollary\|Proposition\|Remark\|Example` items with paper numbers, and verify each has a corresponding subpage (naming is by concept, not by paper number — cross-check via the `paper-ref` YAML field).
+14. **Section page is a concept-map index.** Every section page uses foldable bullets (parent = wikilink to subpage, indented child = 3–5 sentence unpacking), in the paper's order, one per named item. No HTML `<details>`. The page carries no long narrative and no gap-free proofs — those live in the atomic subpages.
+15. **Low-context pass done.** Pass 3 was run and its findings fixed.
+16. **Mechanics clean.** Math is `$...$`/`$$...$$`; no LaTeX inside `[[ ]]`; every wikilink resolves; filenames are Windows-portable (`< > : " / \ | ? *` all avoided; `§`, `—`, and Unicode math are fine); `find-math-bugs.py`, `find-latex-bugs.py`, `find-wikilink-bugs.py` and the resolution audit come back clean.
 
-**Report** as: "Paper-notes self-check: N of 12 verified", plus any item that required a fix and the low-context-pass result.
+**Report** as: "Paper-notes self-check: N of 16 verified", plus any item that required a fix and the low-context-pass result.

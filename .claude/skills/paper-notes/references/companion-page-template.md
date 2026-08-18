@@ -1,12 +1,18 @@
-# Companion Page Template
+# Companion Page Template — hub + section indices
 
-The companion page is the reading surface: the page a reader opens to read the whole paper front to back, in the thesis voice, checking every step, without leaving the page. One companion page per paper (or, for a long paper, a short hub page plus one page per paper section — see the note at the end).
+The paper's reading surface is **not one long walk-through**. It is a **hub page** plus **one section page per paper section**, each structured as a polymath-style concept-map index. Every named paper item is its own atomic subpage (see `atomic-note-templates.md`); the section page's job is to give the reader the big picture at a glance and provide the self-contained recap that makes the section readable cold.
 
-Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the reference thesis for the prose voice. Every section is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
+Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the reference thesis for the prose voice. Every subpage is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
 
-Filename: `Study notes/paper/[Short Title]/Paper - [Short Title].md`. The `[Short Title]` is a few words identifying the paper (Windows-portable: no `< > : " / \ | ? *`).
+Filename pattern:
+- Hub: `Study notes/paper/[Short Title]/Paper - [Short Title].md`
+- Section: `Study notes/paper/[Short Title]/Paper - [Short Title] — §N [Section].md`
+
+The `[Short Title]` is a few words identifying the paper (Windows-portable: no `< > : " / \ | ? *`).
 
 ---
+
+## Hub page template
 
 ```markdown
 ---
@@ -20,117 +26,139 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 # Paper — [Short Title]
 
 > [!abstract] What this paper does
-> [A one-to-two-paragraph plain-language account of the paper's goal and result, in thesis voice: what problem it addresses, what it establishes, and why that matters. State it so a floor-level reader understands the point of the paper before any machinery appears. Model on the thesis's Motivation section, which names the two research goals in plain words before any formalism.]
+> [A one-to-two-paragraph plain-language account, thesis voice: what problem it addresses, what it establishes, why that matters. State it so a floor-level reader understands the point of the paper before any machinery appears.]
 
 **Citation.** [Full citation, with a link or DOI if available.]
 
-**The floor.** These notes assume only undergraduate analysis, linear algebra, and elementary probability. Everything the paper uses above that floor is recalled at its point of use or written out in a linked atomic note; every proof is rewritten so that each step is checkable without leaving the page. [If the paper's field has one unavoidable prerequisite that pervades everything — e.g. "the whole paper lives in measure-theoretic probability" — name it here and point to the atomic notes that establish it.]
+**The floor.** These notes assume only undergraduate analysis, linear algebra, and elementary probability. Everything above that floor is recalled at its point of use or written out in a linked atomic note; every proof is rewritten so that each step is checkable without leaving the page.
 
-**How to read this.** [One or two sentences: read top to bottom; expand a `[!recall]-` callout only if the term is unfamiliar; the Prerequisites map lists the atomic notes; the paper's own results have stub notes linked at each theorem.]
+**How to read this.** Each section page is a **concept-map index** — foldable bullets holding every named paper item's statement inline. Fold-out mode: read the section page top to bottom without leaving it. Click-through mode: click into any atomic subpage for the full proof and motivation. **Every section page is modularly self-contained** — you can open §5 without reading §2–§4.
 
 ---
 
 # Notation and Standing Conventions
 
-[The signature table (notation-discipline.md, Rule 3): every symbol used anywhere in the paper, with its full type and its meaning. Open with a standing-conventions paragraph if the paper fixes any convention — units, sign, a default assumption ("all variables discrete unless stated", "$c = 1$"), a symbol collision you resolved with a distinct glyph. State the collision resolutions explicitly.]
+[The paper-wide signature table (notation-discipline.md, Rule 3): every symbol used in more than one section, with its full type and its meaning. Standing conventions (units, sign, default assumption) go in a preamble paragraph above the table. Section-local symbols live on the section page or on the atomic subpage that introduces them.]
 
 | Symbol | Type | Meaning |
 |---|---|---|
 | ... | ... | ... |
 
-[When a convention diverges between the paper and standard usage, add a `> [!warning] Convention:` callout naming both.]
-
 ---
 
 # Prerequisites (backchained to the floor)
 
-[The backchain map (Rule 1): a wikilinked list of every above-floor concept the paper uses, grouped by field, each with a one-line reminder of what it is. Concepts with an existing vault note link to it; concepts you created an atomic note for link to the new note. This is the reader's index into the atomic notes — a reader can see, before starting, exactly what machinery the paper leans on and where each piece is written out.]
+[The backchain map (Rule 1): a wikilinked list of every above-floor concept, grouped by field, each with a one-line reminder. Concepts with existing vault notes link to them; concepts you created an atomic note for link to the new note.]
 
 **From measure-theoretic probability.** [[Def - Absolute Continuity of Measures|absolute continuity]] ($\mu \ll \nu$ — wherever $\mu$ has mass, $\nu$ does too), [[Thm - Radon–Nikodym Theorem|the Radon–Nikodym theorem]] (an absolutely continuous measure has a density), …
 
 **From [field].** [[Def - ...]] (one-line reminder), …
 
-[Everything here is also recalled at its point of use in the sections below — this map is the overview, the recalls are the just-in-time reminders. Do not rely on the map alone for self-containment.]
-
 ---
 
-# §1 [Paper's Section Title]
+# Sections
 
-[Open by orienting the reader, thesis-style: recall where we are, preview what this section does, and — where the thesis does this — state the guiding questions as questions. "Having fixed the notation and the objects, we now turn to the paper's first construction: …"]
-
-[Then walk the section. For each definition the paper states:]
-
-**Definition (paper's name, paper's number).** [Motivate it first: say in plain words what the object is and what problem it solves, leading up to the statement. Then state it formally and crisply, fully typed. Then unpack the formal statement in its smallest concrete instance, as the thesis unpacks the general Lancaster measure (Definition 2.1.1) into the $D = 2$ case $\Delta_L P = P_{XY} - P_X P_Y$ immediately after stating it. The formal statement is the opening move; the concrete case is the unpacking that follows.]
-
-[Insert a point-of-use recall for every above-floor term the definition uses:]
-
-> [!recall]- [term]
-> **Formally:** [precise statement, typed]
-> **In words:** [plain-language meaning] See [[Def - term]].
-
-[Give the paper's own definition a stub note and wikilink it: **[[Def - Paper's Object]]**.]
-
-[For each theorem the paper states and proves:]
-
-**Theorem (paper's name, paper's number).** [State it formally and fully typed as a blockquote:]
-
-> **Theorem ([name]).** [Hypotheses, each typed and with its quantifier explicit; then the conclusion. One block.]
-
-[Then, before the proof: a paragraph of *why one should expect this to be true* (thesis voice — intuition independent of the proof), and a plain-language paraphrase of what the theorem buys.]
-
-[Then the gap-free proof (Rule 5), in the thesis's labelled-step style:]
-
-**Proof.** [Split bidirectional proofs into "Direction 1"/"Direction 2" as the thesis does. Proceed by bolded lead-ins, one justified move each:]
-
-**[First move — what it establishes]:** [the move, with every step justified; expand every "clearly"/"it follows"/"by X" into explicit reasoning. Show computations line by line.]
-
-**[Second move]:** [...]
-
-[When the proof invokes an external result the paper does not prove, use an external-input callout (recall-callouts.md) rather than a bare citation:]
-
-> [!cite]- External input — [Name of result]
-> **Statement (typed):** [precondition → conclusion]
-> **Why it's true (intuition):** [one or two sentences]
-> **Source:** [citation]. [Include the proof only if short or illuminating; otherwise: "Take on faith with the precondition and conclusion above."]
-
-[Flag anything you could not verify or filled from your own knowledge with the uncertainty marker (recall-callouts.md).]
-
-[Longer digressions, alternative proofs, or worked numerical checks go in a collapsible `> [!note]- ...` so the main line stays readable, exactly as the thesis folds detail — but the main reasoning line stays above the fold and checkable.]
-
----
-
-# §2 [Paper's Section Title]
-
-[Same pattern. Open by orienting; recall earlier objects with a collapsed `[!recall]-` chip rather than assuming them carried over.]
-
-...
+- **[[Paper - [Short Title] — §1 [Title]|§1 — [Title]]]** — one-line description of what the section does.
+- **[[Paper - [Short Title] — §2 [Title]|§2 — [Title]]]** — …
+- …
 
 ---
 
 # External inputs
 
-[A consolidated list of every result the paper imports without proof — each as an external-input callout with statement, type, intuition, and source. This duplicates the inline callouts on purpose (Rule 7 favours the reader over DRY): it is the reader's single ledger of "what this paper stands on". Optional if there are only one or two, which can live inline.]
+[Consolidated list of every result the paper imports without proof — each as an external-input callout with statement, type, intuition, and source. Optional if there are only one or two.]
 
 ---
 
 # Verification log
 
-[The honesty record (Rule 6). Three short lists:]
-
-**Verified.** [Each definition or lemma you supplied from your own knowledge, with the source you confirmed it against. "Radon–Nikodym theorem statement checked against Folland, *Real Analysis*, Thm 3.8." ]
-
-**Flagged / uncertain.** [Everything you marked with the uncertainty marker, gathered here: what you were unsure of and why. If empty, say "No unresolved uncertainties." Do not leave this blank — an empty log should be an explicit statement that nothing is outstanding, not an omission.]
-
-**Intuition not yet formalised.** [Every place where the notes give an intuition, heuristic, or plausibility picture that has not been made rigorous — gathered from the ⚠️ / intuition-not-proof markers in the body. Name each and say what a full formalisation would need. If empty, say so explicitly.]
+[The paper-wide honesty record (Rule 6). Three lists — Verified, Flagged / uncertain, Intuition not yet formalised. Merges the per-section verification logs from every section page.]
 ```
 
 ---
 
-## Long papers: hub + section pages
+## Section page template (the concept-map index)
 
-When a single companion page would become unwieldy, split the reading surface at the paper's own section boundaries:
+```markdown
+---
+type: paper-section
+paper: "[Full citation]"
+section: "N — [Title]"
+tags: [paper, primary-field-tag]
+---
 
-- `Study notes/paper/[Short Title]/Paper - [Short Title].md` becomes a **hub**: it carries the header (`# Paper — [Short Title]`, the abstract, the floor statement), the **Notation and Standing Conventions** table, the **Prerequisites** map, a one-line table of contents linking each section page in order, and the **Verification log**.
-- Each paper section becomes `Study notes/paper/[Short Title]/Paper - [Short Title] — §N [Section].md`, holding that section's walk-through (opener, definitions, theorems, gap-free proofs, recalls). Each section page opens by orienting the reader and recalls earlier objects with collapsed `[!recall]-` chips, so it is readable on its own.
+# §N — [Paper's Section Title]
 
-Split only at the paper's real section boundaries, and only when length demands it. Default to the single page. This mirrors how `polymath-notes` splits a topic page at sub-chapter boundaries with cross-references between them.
+Back to the [[Paper - [Short Title]|hub]]. **[One-paragraph section opener, thesis voice: orient the reader, recall where we are in the paper, preview what this section does, state the guiding question. This is the only extended prose on the section page.]**
+
+---
+
+## Prerequisites recap
+
+[Every earlier-section paper result and every external above-floor concept used in this section, as `> [!recall]-` callouts and/or transclusions. The rule is strict: a reader who lands on this section without having read any prior section must find every prerequisite here.]
+
+> [!recall]- Selberg zeta function (Definition 4.1)
+> **Formally:** [precise statement, typed]
+> **In words:** [plain-language meaning] See [[Def - Selberg and Ruelle Zeta Functions and the Critical Exponent]].
+
+> [!recall]- Absolutely continuous (μ ≪ ν)
+> **Formally:** …
+> **In words:** … See [[Def - Absolute Continuity of Measures]].
+
+[Also list the atomic paper-item subpages this section builds on, with a one-line reminder each:]
+
+**From earlier sections.** [[Thm - Homotopy Decomposition for Hyperbolic Surfaces|Theorem 3.2]] (the lift-and-unfold identity for one homotopy class), …
+
+---
+
+## Concept map
+
+[Every named item in this section as a foldable bullet, in the paper's order. Parent = wikilink to the atomic subpage (using the concept's name, not the paper number); child = 3–5 sentence unpacking naming the formal statement, the intuition, and where the result is used. Sub-sections of the paper (§3.1, §3.2) are `###` sub-headers grouping the bullets; do not re-order.]
+
+### §N.1 — [Sub-section Title]
+
+- **[[Def - [Concept Name]|Definition N.1 (Concept Name)]]** — Introduces $X$ as the object $X := \{\ldots\}$, typed as $X : A \to B$. Motivated by the question "…", it captures the class of $A$'s with property $P$ and excludes those with $Q$. In one line: [the operational essence]. Used in [[Thm - …|Theorem N.3]] and downstream in §N+1.
+  - [A second layer of detail if the item deserves it — an equivalent formulation, a subtle typing pitfall, or a link to the ambient context.]
+
+- **[[Thm - [Result Name]|Theorem N.2 (Result Name)]]** — Under hypothesis $H$, conclusion $C$. The mechanism: [one-sentence intuition]. Proved by [one-phrase proof strategy]. Used to give [[Cor - …|Corollary N.4]] and drives the argument of §N.2.
+
+- **[[Remark - [Descriptive Name]|Remark N.5]]** — Points out that [what the remark observes]. Its relevance: [why it matters for later results].
+
+- **[[Ex - [Descriptive Name]|Example N.6]]** — Works out [the concrete case], giving [the explicit value]. Calibrates: [what invariant the example checks].
+
+### §N.2 — [Sub-section Title]
+
+- …
+
+---
+
+## Section verification log
+
+**Verified.** [What was rigorously reproduced.]
+**Flagged / uncertain.** [What is flagged with ⚠️.]
+**Intuition not yet formalised.** [Heuristics stated without formal derivation.]
+```
+
+---
+
+## The foldable-bullet format — details
+
+The concept map's `- **[[…]]** — text` bullet is Obsidian's default Markdown outline: click the fold triangle next to the bullet to collapse the child bullets under it. Requirements:
+
+- **Parent bullet:** starts with `- ` and holds the wikilink to the atomic subpage as bold text (`- **[[Thm - Selberg Zeta Identity for the Total Loop Mass|Corollary 4.3 (Selberg zeta identity)]]** — …`). The `**…**` is Markdown bold, not a callout; the wikilink stays clickable in Reading view because it is ordinary Markdown.
+- **Child bullets:** indented (two spaces or a tab), plain `- …`. Fold the parent to collapse the children.
+- **Do NOT use `> [!details]` or HTML `<details>` for concept-map entries** — wikilinks inside HTML tags are not clickable in Obsidian and HTML details do not collapse reliably in Reading view.
+- **Item order** matches the paper's own numbering. Do not reorder, do not renumber, do not merge.
+- **One bullet per named item** — Def N.1, Rem N.2, Thm N.3, … are separate bullets even when they are tightly related.
+- **Sub-sections** (§N.1, §N.2) are `###` sub-headers grouping the bullets, not levels of nesting.
+
+## The Prerequisites recap — details
+
+Two ways to build the recap:
+
+1. **Point-of-use `> [!recall]-` callout** — a paper-notes staple; the callout body carries both the formal statement (typed) and the plain-language meaning, plus a wikilink to the atomic note. Best when the reader needs a compact, section-local reminder.
+2. **Transclusion** `![[Def - Selberg and Ruelle Zeta Functions and the Critical Exponent#The Definition]]` — pulls the formal Definition block into the section page verbatim. Best when the definition is short, or when the reader benefits from seeing the *exact* text used elsewhere.
+
+Choose per prerequisite. When in doubt, use the recall callout: it is faster to write, more compact to fold, and carries the plain-language unpacking that transclusion lacks.
+
+**Duplication across sections is intentional.** A term used in §3, §5, and §7 has three recall callouts, one per section — a floor-level reader lands on a section cold and finds everything there. Do not deduplicate; the section page is the reader's local ledger.
