@@ -67,9 +67,11 @@ Every above-floor concept the paper leans on, grouped by field, each linked to i
 
 **From Lévy processes.** [[Def - Bernstein Function, Subordinator, and Subordination|Bernstein functions, subordinators, and subordination]] (running a process on a random clock to make a new process).
 
-**From hyperbolic geometry (added in §3).** [[Def - Fuchsian Group and the Hyperbolic Quotient Surface|Fuchsian groups and Γ\ℍ²]]; [[Def - Closed Geodesics, Conjugacy Classes, and Translation Length|closed geodesics, conjugacy classes, translation length]]; [[Def - Universal Cover|universal cover and deck transformations]] (*existing vault note*).
+**From hyperbolic geometry (§3).** [[Def - Fuchsian Group and the Hyperbolic Quotient Surface|Fuchsian groups and Γ\ℍ²]]; [[Def - Closed Geodesics, Conjugacy Classes, and Translation Length|closed geodesics, conjugacy classes, translation length]]; [[Def - Universal Cover|universal cover and deck transformations]] (*existing vault note*); [[Def - Poisson Point Process and the Loop Soup|Poisson point processes and the loop soup]] (§3.3).
 
-*(Later sections add: Poisson point processes and the loop soup (§3.3); Selberg and Ruelle zeta functions (§4); spectral zeta functions and zeta-regularised determinants (§5); first homology, unitary characters, and finite Fourier analysis (§6); loxodromic elements and hyperbolic 3-manifolds (§7). Their notes appear in this folder as those sections are written.)*
+**From spectral geometry (§4–§5).** [[Def - Selberg and Ruelle Zeta Functions and the Critical Exponent|Selberg and Ruelle zeta functions and the critical exponent]]; [[Thm - Prime Geodesic Theorem|the prime geodesic theorem]]; [[Def - Zeta-Regularised Determinant of the Laplacian|the zeta-regularised determinant of the Laplacian]].
+
+**From homology and 3-manifolds (§6–§7).** [[Def - First Homology, Characters, and Finite Fourier Analysis|first homology, unitary characters, and finite Fourier analysis]]; [[Def - Hyperbolic 3-Space, Kleinian Groups, and Complex Length|hyperbolic 3-space, Kleinian groups, and complex length]].
 
 ---
 
@@ -92,4 +94,4 @@ Every above-floor concept the paper leans on, grouped by field, each linked to i
 
 **Intuition not yet formalised.** *(Places where these notes give a heuristic picture in lieu of a full derivation, gathered as they arise.)*
 
-**Coverage note.** This is a long research paper spanning six major areas above the floor. The notes are written section by section; this log and the section list above record exactly how far the coverage has reached at any commit.
+**Coverage note.** All seven sections (§2–§7) are drafted, each as its own companion page with point-of-use recalls and gap-free proofs, backed by atomic prerequisite notes and paper-result stubs in this folder. The paper's *own* derivations are proved gap-free throughout (the decomposition theorem, every closed-form mass, the zeta identities, the κ→0 determinant cancellations, the Fourier inversion and loop-soup homology distribution, and the self-contained ℍ³ strip integral). Results the paper itself invokes without proof — the Selberg trace formula, Naud's and D'Hoker–Phong's determinant formulas, Borthwick–Judge–Perry, Polyakov's formula, the Wang–Xue strip integral and length-spectrum identity — are stated as external-input callouts with precise statement, type, intuition, and source, not re-proved (they lie above the undergraduate floor and beyond the paper's own content). Every such point, and each constant not fully reconciled, is flagged ⚠️ in the relevant section's verification log.
