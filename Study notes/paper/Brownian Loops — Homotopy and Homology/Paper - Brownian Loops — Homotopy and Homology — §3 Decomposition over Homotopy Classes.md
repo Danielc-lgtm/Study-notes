@@ -58,6 +58,10 @@ Stub: [[Thm - Mass of a Free Homotopy Class]]. The point is that the messy sum o
 > $$\mu^E_X(C_X(\gamma^m))=\int_0^\infty\frac{dt}{t}\int_{\mathcal F_\tau}p^E_{\mathbb{H}^2}(t,z,\tau^m z)\,d\rho_{\mathbb{H}^2}(z).\qquad\blacksquare$$
 > *(This is the paper's two-step proof — "isolating the conjugacy class" and "unfolding to the fundamental strip" — with the two uses of $\Gamma$-invariance written out, the isometry substitution's Jacobian noted, and the $\langle\tau\rangle$-invariance of the integrand verified explicitly.)*
 
+**Remark 3.3 (relation to the path integral).** The loop measure decomposes over free homotopy classes, and the non-trivial, non-peripheral classes contribute $\sum_{\gamma,m}\mu^E_X(C_X(\gamma^m))$, each term evaluated by Theorem 3.2. Heuristically this is an interpretation of the **homotopy theorem for path integration**, which writes a transition amplitude on a topological space $X$ as a sum over homotopy classes,
+$$K=\sum_{[\alpha]\in\pi_1(X,x)}\chi(\alpha)\,K_\alpha,$$
+of a partial amplitude $K_\alpha$ from paths in the class $[\alpha]$, weighted by a unitary character $\chi$ of $\pi_1(X,x)$. In the loop-measure setting the masses $\mu^E_X(C_X(\gamma^m))$ play the role of **Wick-rotated partial amplitudes**, conjugacy classes replace based classes (the loops are unrooted), and the character is trivial, $\chi\equiv1$. On a multiply-connected space (a genus-$g$ surface, $g\ge2$) different characters $\chi$ give physically distinct theories: the corresponding move is to **twist** the loop measure by a flat unitary bundle on $X$ — equivalently a unitary representation of $\pi_1(X)$ — which replaces the periodisation by its twisted form. This is exactly what §6 does with characters of homology; see [LJ24] and [PS25] for physical interpretations and a detailed construction.
+
 ---
 
 ## §3.1 — Subordinate cases: closed-form masses
@@ -84,31 +88,61 @@ Specialising Theorem 3.2 to a [[Def - Subordinate Brownian Loop Measure|subordin
 > **In words:** the standard "heat-kernel in disguise" integral; it is why every closed-form mass below is an exponential in $L$.
 > **Proof (short):** substitute $s=\sqrt{b/a}\,u$ to reduce to $\int_0^\infty u^{-3/2}e^{-\sqrt{ab}(u+1/u)}\,du$; then $u\mapsto1/u$ shows $\int_0^\infty u^{-3/2}e^{-c(u+1/u)}du=\int_0^\infty u^{-1/2}e^{-c(u+1/u)}du$, and their average, with $w=\sqrt u-1/\sqrt u$ (so $dw=\frac12(u^{-1/2}+u^{-3/2})du$ and $u+1/u=w^2+2$), becomes $\int_{-\infty}^\infty e^{-c(w^2+2)}dw=\sqrt{\pi/c}\,e^{-2c}$. Back-substituting $c=\sqrt{ab}$ and the $s$-scaling gives $\sqrt{\pi/b}\,e^{-2\sqrt{ab}}$. (This is the standard evaluation; see e.g. Gradshteyn–Ryzhik 3.471.)
 
-**Case computations** (each $V_\phi$ from Example 2.10):
+The four cases the paper treats (§3.1.1–3.1.4), each using $V_\phi$ from Example 2.10:
 
-- **Brownian ($\phi=\lambda$, $V_\phi=\frac{ds}{s}$).** $I_{\mathrm{BM}}(L)=\int_0^\infty\frac{e^{-s/4}e^{-L^2/4s}}{2\sqrt\pi\,s^{3/2}}\,ds=\frac{1}{2\sqrt\pi}\sqrt{\frac{\pi}{L^2/4}}\,e^{-2\sqrt{(1/4)(L^2/4)}}=\frac{1}{2\sqrt\pi}\cdot\frac{2\sqrt\pi}{L}\,e^{-L/2}=\frac{e^{-L/2}}{L}$ (identity with $a=\frac14$, $b=\frac{L^2}{4}$, so $2\sqrt{ab}=L/2$). Hence
+**§3.1.1 — Recovery of the Brownian case ($\phi=\lambda$, $V_\phi=\frac{ds}{s}$).** $I_{\mathrm{BM}}(L)=\int_0^\infty\frac{e^{-s/4}e^{-L^2/4s}}{2\sqrt\pi\,s^{3/2}}\,ds=\frac{1}{2\sqrt\pi}\sqrt{\frac{\pi}{L^2/4}}\,e^{-2\sqrt{(1/4)(L^2/4)}}=\frac{1}{2\sqrt\pi}\cdot\frac{2\sqrt\pi}{L}\,e^{-L/2}=\frac{e^{-L/2}}{L}$ (Gaussian-type identity with $a=\frac14$, $b=\frac{L^2}{4}$, so $2\sqrt{ab}=L/2$). Hence
 $$\mu_X(C_X(\gamma^m))=\frac{\ell_\gamma}{2\sinh(L/2)}\cdot\frac{e^{-L/2}}{L}=\frac{\ell_\gamma}{L}\cdot\frac{e^{-L/2}}{2\sinh(L/2)}=\frac1m\cdot\frac{1}{e^{L}-1},$$
-using $\ell_\gamma/L=1/m$ and $e^{-L/2}/(2\sinh(L/2))=e^{-L/2}/(e^{L/2}-e^{-L/2})=1/(e^{L}-1)$. This recovers Wang–Xue [WX25].
-- **Killing ($\phi=\lambda+\kappa$, $\kappa\ge0$, $V_\phi=e^{-\kappa s}\frac{ds}{s}$).** Same identity with $a=\frac14+\kappa$, $b=\frac{L^2}{4}$: $I_\kappa(L)=\frac{e^{-L\sqrt{1/4+\kappa}}}{L}$, so
+using $\ell_\gamma/L=1/m$ and $e^{-L/2}/(2\sinh(L/2))=e^{-L/2}/(e^{L/2}-e^{-L/2})=1/(e^{L}-1)$. This recovers the Wang–Xue formula [WX25, Lemma 3.2].
+
+**§3.1.2 — Brownian with killing ($\phi=\lambda+\kappa$, $\kappa\ge0$, $V_\phi=e^{-\kappa s}\frac{ds}{s}$).** Same identity with $a=\frac14+\kappa$, $b=\frac{L^2}{4}$: $I_\kappa(L)=\frac{e^{-L\sqrt{1/4+\kappa}}}{L}$, so
 $$\mu^\kappa_X(C_X(\gamma^m))=\frac{\ell_\gamma}{2\sinh(L/2)}\cdot\frac{e^{-L\sqrt{1/4+\kappa}}}{L}=\frac1m\cdot\frac{e^{(\frac12-\sqrt{1/4+\kappa})L}}{e^{L}-1},$$
-exactly Lemonde–Wang [LW26]; $\kappa=0$ recovers the Brownian formula.
-- **$\alpha$-stable ($\phi=\lambda^{\alpha/2}$, $V_\phi=\frac\alpha2\frac{ds}{s}$).** $I_\alpha(L)=\frac\alpha2 I_{\mathrm{BM}}(L)=\frac\alpha2\cdot\frac{e^{-L/2}}{L}$, so $\mu^\alpha_X(C_X(\gamma^m))=\frac\alpha2\,\mu_X(C_X(\gamma^m))$ — just a constant multiple of the Brownian answer. This is forced by scale-invariance: stable subordinators are the self-similar ones and $dt/t$ is scale-invariant, so $V_\phi$ can only be a constant times $ds/s$; the geometry drops out. **Breaking scale-invariance** (e.g. shifting to $(\Delta+\kappa)^{\alpha/2}$, the *shifted $\alpha$-stable* case, giving $V_\phi=\frac\alpha2 e^{-\kappa s}\frac{ds}{s}$ and $\mu=\frac\alpha2\cdot\frac1m\cdot\frac{e^{(\frac12-\sqrt{1/4+\kappa})L}}{e^L-1}$) is what makes the decomposition see the geometry again.
+exactly Lemonde–Wang [LW26, Lemma 3.1]; $\kappa=0$ recovers §3.1.1. Here the operator is no longer the Laplacian but the Schrödinger operator with constant potential $+\kappa$.
+
+**§3.1.3 — $\alpha$-stable ($\phi=\lambda^{\alpha/2}$, $\alpha\in(0,2)$, $V_\phi=\frac\alpha2\frac{ds}{s}$).** $I_\alpha(L)=\frac\alpha2 I_{\mathrm{BM}}(L)=\frac\alpha2\cdot\frac{e^{-L/2}}{L}$, so
+$$\mu^\alpha_X(C_X(\gamma^m))=\frac\alpha2\,\mu_X(C_X(\gamma^m)),$$
+just a constant multiple of the Brownian answer (interpreted as in Remark 3.1). This collapse is forced by **scale-invariance**: the self-similar subordinators are exactly the stable ones, and the weight $dt/t$ is itself scale-invariant, so the only measure on $(0,\infty)$ compatible with both scalings is a constant times $ds/s$; the geometry of $X$ drops out and no extra information is gained. To get a decomposition differing *in form* from the Brownian one, one must break scale-invariance — e.g. by subordinating the shifted Laplacian $\Delta_{\mathbb{H}^2}+\kappa$.
+
+**§3.1.4 — Shifted $\alpha$-stable ($\phi(\lambda)=(\lambda+\kappa)^{\alpha/2}$, $\alpha\in(0,2)$, $\kappa\ge0$).** The operator is $(\Delta_{\mathbb{H}^2}+\kappa)^{\alpha/2}$; this $\phi$ is a **complete Bernstein function** (composition of $\lambda\mapsto\lambda+\kappa$ with $u\mapsto u^{\alpha/2}$), so the §2 framework applies. Its subordinator law is an exponential tilt of the $\alpha$-stable law: from $e^{-t(\lambda+\kappa)^{\alpha/2}}=\int_0^\infty e^{-u(\lambda+\kappa)}\eta^\alpha_t(u)\,du=\int_0^\infty e^{-\lambda s}\,e^{-\kappa s}\eta^\alpha_t(s)\,ds$ one reads $\psi^\phi_t(ds)=e^{-\kappa s}\eta^\alpha_t(s)\,ds$. Collapsing against $dt/t$ (Def 2.9) with the extra $e^{-\kappa s}$ gives $V_\phi(ds)=\frac\alpha2 e^{-\kappa s}\frac{ds}{s}$, so by the Gaussian-type identity ($a=\frac14+\kappa$, $b=\frac{L^2}{4}$),
+$$I_\phi(L)=\frac\alpha2\int_0^\infty\frac{e^{-(1/4+\kappa)s}e^{-L^2/4s}}{2\sqrt\pi\,s^{3/2}}\,ds=\frac\alpha2\cdot\frac{e^{-L\sqrt{1/4+\kappa}}}{L},\qquad \mu^\phi_X(C_X(\gamma^m))=\frac\alpha2\cdot\frac1m\cdot\frac{e^{(\frac12-\sqrt{1/4+\kappa})L}}{e^{L}-1}.$$
+The killing restores the geometry-sensitive exponent $\frac12-\sqrt{1/4+\kappa}$ (with an extra constant $\alpha/2$).
 
 **Remark 3.7 (the range $\kappa\ge-\frac14$).** For $\kappa\in[-\frac14,0)$, $\phi(\lambda)=\lambda+\kappa$ is no longer Bernstein (negative killing), but formula for $\mu^\kappa_X$ still makes sense analytically. Writing the **spectral parameter** $\mathfrak s=\frac12+\sqrt{\frac14+\kappa}$ (⚠️ the paper calls this $s$; here $\mathfrak s$, to avoid clashing with the subordination variable $s$), the condition $\kappa\ge-\frac14$ is exactly what keeps $\mathfrak s$ real, with $\kappa=-\frac14\Rightarrow\mathfrak s=\frac12$ — the bottom of the $L^2$-spectrum of $\mathbb{H}^2$. The integral $I_\kappa$ converges throughout $[-\frac14,\infty)$. This $\mathfrak s\leftrightarrow\kappa$ dictionary $\kappa=\mathfrak s(\mathfrak s-1)$ is the bridge to the Selberg zeta variable in §4.
 
 ---
 
-## §3.2 — Quantum-mechanical digression (physics motivation)
+## §3.2 — A quantum-mechanical digression
 
-This subsection is motivation, not new theorems; it explains *why* the killed loop measure equals a partition function, which §5 makes rigorous. It is safe to skim on a first pass.
+This subsection is physics motivation — it explains *why* the killed loop measure equals a field-theory partition function, which §5 makes rigorous — but the paper develops it in full, so it is reproduced here in full. ⚠️ *The whole subsection is heuristic at the path-integral level: the formal "$\int D\omega\,e^{-S[\omega]}$" is not an integral against any measure (there is no Lebesgue measure on path space), and the determinant identities are rigorous only after §5's regularisation. The rigorous content is the Feynman–Kac formula and, later, §5.*
 
-> [!recall]- Wick rotation, Feynman–Kac, Schwinger proper time
-> **Wick rotation:** replacing real time $t$ by imaginary time $t=-i\tau$ turns the Schrödinger unitary group $e^{-it\hat H/\hbar}$ into the contraction semigroup $e^{-\tau\hat H/\hbar}$ (well-defined for $\tau\ge0$ since $\hat H\ge0$); the "Euclidean time" $\tau$ is the diffusion time $t$ of §2.
-> **Feynman–Kac formula (typed):** for a killing potential $V\ge0$, the killed heat kernel is $p_V(t,x,y)=\int_{C([0,t];X)}e^{-\int_0^t V(\omega(r))\,dr}\,\mathbb{W}^t_{x\to y}(d\omega)$ — each Brownian bridge weighted by its survival probability. For $V\equiv\kappa$ this is $e^{-\kappa t}p(t,x,y)$, recovering Example 2.6.
-> **Schwinger proper-time:** $-\log\det(\Delta_X+\kappa)=\int_0^\infty\frac{dt}{t}e^{-\kappa t}\operatorname{Tr}(e^{-t\Delta_X})$, expressing a determinant as a $\frac{dt}{t}$-integral of the heat trace with killing weight — exactly the structure of the killed loop measure.
-> **In words:** statistical mechanics (heat) and quantum mechanics (waves) are the same equations in imaginary time; Feynman–Kac writes the killed kernel as a path integral; Schwinger's formula is the bridge to §5's determinant. See the external inputs; full treatment of the determinant is [[Paper - Brownian Loops — Homotopy and Homology — §5 Renormalising the Total Mass|§5]].
+**Euclidean quantum mechanics.** It is classical (Euclidean quantum mechanics) that ordinary Brownian motion corresponds, after Wick rotation, to a free non-relativistic quantum particle; the interesting connections appear once a potential is added, and here the potential is the constant killing $\kappa$. With the paper's sign convention, the wave function $\psi$ of an isolated system obeys the **Schrödinger equation**
+$$i\hbar\,\frac{\partial\psi}{\partial t}=\hat H\psi,\qquad \hat H=\frac{\hbar^2}{2m}\,\Delta_X+V(x),$$
+with Hamiltonian $\hat H$ and potential energy $V(x)\ge0$ at $x\in X$. Its solution is the **unitary group** $\psi(x,t)=e^{-it\hat H/\hbar}\psi(x,0)$ (unitary because $\hat H$ is self-adjoint), and the **propagator** (transition amplitude) is
+$$K(t,x,y)=\langle y\,|\,e^{-it\hat H/\hbar}\,|\,x\rangle,$$
+which is exactly the object that appeared, sorted by homotopy class, in Remark 3.3.
 
-The upshot the paper draws: for a free real scalar field of mass $\sqrt\kappa$ on $X$, the Gaussian path integral gives the partition function $Z^\kappa_X\propto\det(\Delta_X+\kappa)^{-1/2}$, and the Schwinger representation identifies $-\log\det(\Delta_X+\kappa)=|\mu^\kappa_X|_{\mathrm{reg}}$ (the **regularised total mass** of the killed loop measure — the divergent contractible/peripheral part renormalised, §5). Thus $Z^\kappa_X\propto\exp(\frac12|\mu^\kappa_X|_{\mathrm{reg}})$: the scalar partition function is, up to normalisation, the exponential of half the regularised total loop mass, the $\frac12$ being the power $\det^{-1/2}$ of one real field. ⚠️ *Intuition/heuristic (path-integral level); made rigorous only after §5's regularisation. The "$Dω\,e^{-S[\omega]}$" path integral is formal (no Lebesgue measure on paths), the rigorous content being Feynman–Kac.*
+> [!recall]- Wick rotation
+> **Formally:** under $t=-i\tau$ the unitary group $e^{-it\hat H/\hbar}$ becomes the contraction semigroup $e^{-\tau\hat H/\hbar}$, well-defined for $\tau\ge0$ since $\hat H\ge0$. The **Euclidean time** $\tau$ is precisely the diffusion time of §2 (written $t$ from here on), and in units where $\hbar^2/2m=1$ (absorbing $\hbar$ into $V$) the semigroup has integral kernel $p_V(t,x,y)$, the transition density of Brownian motion killed at rate $V$.
+> **In words:** rotating time to the imaginary axis turns "oscillating waves" (quantum) into "decaying heat" (diffusion) — the same equation read in imaginary time.
+
+> [!cite]- External input — Feynman–Kac formula
+> **Statement (typed):** for a killing potential $V\ge0$, the killed heat kernel is $p_V(t,x,y)=\int_{C([0,t];X)}e^{-\int_0^t V(\omega(r))\,dr}\,\mathbb{W}^t_{x\to y}(d\omega)$ — each Brownian bridge from $x$ to $y$ weighted by its survival probability under the killing. For $V\equiv\kappa$ the weight is the constant $e^{-\kappa t}$, so $p^\kappa(t,x,y)=e^{-\kappa t}p(t,x,y)$, recovering Example 2.6.
+> **Why it's true (intuition):** discretise time; the semigroup $e^{-t(\Delta+V)}$ is a product of short-time diffusion-then-decay steps, and the continuum limit is the bridge measure weighted by the accumulated decay $e^{-\int V}$. **Source:** standard (e.g. Simon, *Functional Integration and Quantum Physics*); the paper uses it as its rigorous form of the Euclidean path integral $\int D\omega\,e^{-S[\omega]}$ with action $S[\omega]=\int_0^t\big(\frac14|\dot\omega(r)|^2+V(\omega(r))\big)\,dr$ — the kinetic part $\frac14|\dot\omega|^2$ absorbed into the bridge measure $\mathbb{W}^t_{x\to y}$, the potential part into the weight.
+
+So $\mu^\kappa_X$ is the intensity of the loop ensemble of a Euclidean quantum particle in a constant potential — the intensity of the loop soup of §3.3.
+
+**The scalar-field partition function.** Looking ahead, this links Brownian loops with killing to the zeta-regularised determinants of §5. In Euclidean quantum field theory, take a free real scalar field $\varphi$ of mass $m$ on $X$, with $\kappa=m^2>0$ and effective action
+$$S_E[\varphi]=\frac12\int_X\big(|\nabla\varphi|^2+\kappa\,\varphi^2\big)\,d\!\operatorname{vol}_g=\frac12\,\langle\varphi,(\Delta_X+\kappa)\varphi\rangle,$$
+the second equality because $\Delta_X$ is the *positive* Laplacian. The action is quadratic, so the Euclidean path integral is Gaussian and gives
+$$Z^\kappa_X=\int D\varphi\,e^{-S_E[\varphi]}\ \propto\ \det(\Delta_X+\kappa)^{-1/2},$$
+whence the **one-loop effective action** of the real scalar field is
+$$\Gamma^{(1)}_X(\kappa)=-\log Z^\kappa_X=\frac12\log\det(\Delta_X+\kappa).$$
+The determinant is expressed through the heat semigroup by the **Schwinger proper-time representation**
+$$-\log\det(\Delta_X+\kappa)=\int_0^\infty\frac{dt}{t}\,e^{-\kappa t}\,\operatorname{Tr}\!\big(e^{-t\Delta_X}\big),$$
+(details in §5), and when $e^{-t\Delta_X}$ is trace-class, $\operatorname{Tr}(e^{-t\Delta_X})=\int_X p(t,x,x)\,d\!\operatorname{vol}_g(x)$ — the **heat trace**, built from Brownian paths that start and return to the same point. Integrating over $t$ with the Haar weight $\frac{dt}{t}$ and the killing weight $e^{-\kappa t}$ is *precisely* the structure of the [[Def - Brownian Loop Measure|Brownian loop measure]] with killing, so the Schwinger representation reads
+$$-\log\det(\Delta_X+\kappa)=\big|\mu^\kappa_X\big|_{\mathrm{reg}},$$
+the (regularised) total mass of the killed loop measure over all loops — including the divergent contribution of the contractible class and, when present, the peripheral classes (renormalised in §5). Hence
+$$Z^\kappa_X\ \propto\ \exp\!\Big(\frac12\,\big|\mu^\kappa_X\big|_{\mathrm{reg}}\Big):$$
+the partition function of a free real scalar field of mass $\sqrt\kappa$ is, up to normalisation, the exponential of *half* the regularised total mass of Brownian loops with killing rate $\kappa$ — the $\frac12$ being the power $\det^{-1/2}$ of a single real field. This is the physical motivation for §5. Full, rigorous treatment of the determinant: [[Paper - Brownian Loops — Homotopy and Homology — §5 Renormalising the Total Mass|§5]].
 
 ---
 

@@ -48,7 +48,11 @@ Homotopy is a fine partition (a conjugacy class in the non-abelian $\Gamma$); **
 > $$\mu^\kappa_X(\beta):=\sum_{\substack{\gamma\in\mathcal P_X,\,m\ge1\\ m[\gamma]=\beta}}\mu^\kappa_X(C_X(\gamma^m))=\sum_{\substack{\gamma,m\\ m[\gamma]=\beta}}\frac1m\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1},$$
 > the loop mass summed over the infinitely many free homotopy classes lying in $\beta$.
 
-Stub: [[Def - Mass in a Homology Class]]. To detect this by homology one twists the Selberg zeta by a character — the exact analogue of Dirichlet $L$-functions detecting primes in arithmetic progressions.
+Stub: [[Def - Mass in a Homology Class]].
+
+**Remark 6.2 (provenance and motivation).** A notion of Brownian loop measure on homology classes appeared earlier in Le Jan's work [LJ11]; the authors developed the definition above independently (differing conventions made the earlier one initially opaque to them) and then found the two agree, with the Selberg-$L$-function route here giving a *dual* approach that recovers Le Jan's results in greater generality — in particular extending to the non-compact case. The motivation for grading by homology rather than homotopy: geometric intersection numbers of geodesics are homotopy invariants, but *algebraic* intersection numbers are defined on homology, so the homology-graded measure is the right object for intersection questions. The technical fact that makes homology tractable is that the character weight $\chi([\gamma])^m=\chi(m[\gamma])$ appearing below depends only on the homology class $\beta=m[\gamma]$ of the iterate, not on the representative geodesic — so the double sum may be regrouped by $\beta$.
+
+To detect this by homology one twists the Selberg zeta by a character — the exact analogue of Dirichlet $L$-functions detecting primes in arithmetic progressions.
 
 > **Definition 6.3 (Selberg $L$-function).** For a unitary character $\chi:H_1(X,\mathbb{Z})\to S^1$ and $\operatorname{Re}s>\delta$,
 > $$L_X(s,\chi):=\prod_{\gamma\in\mathcal P_X}\prod_{k=0}^\infty\big(1-\chi([\gamma])\,e^{-(s+k)\ell_\gamma}\big),$$
@@ -73,7 +77,13 @@ The key point: since $\chi([\gamma])^m=\chi(m[\gamma])=\chi(\beta)$ whenever $m[
 > $$\int_{\widehat{H_1}}\big(-\log L_X(s,\chi)\big)\overline{\chi(\beta)}\,d\chi=\sum_{\beta'}\mu^\kappa_X(\beta')\int_{\widehat{H_1}}\chi(\beta')\overline{\chi(\beta)}\,d\chi.$$
 > By [[Def - First Homology, Characters, and Finite Fourier Analysis|character orthogonality]] the inner integral is $\mathbf 1_{\beta'=\beta}$, so only $\beta'=\beta$ survives, giving $\mu^\kappa_X(\beta)=\int_{\widehat{H_1}}(-\log L_X(s,\chi))\overline{\chi(\beta)}\,d\chi$. $\blacksquare$
 
-Stub: [[Thm - Fourier Inversion by Homology Class]]. In the closed case, $\widehat{H_1}\cong\operatorname{Jac}(X)$ and the inversion becomes an integral over the Jacobian against $e^{-2\pi i\int_\beta\omega}$ (Remark 6.6). Finally, the loop soup's total homology has an explicit distribution.
+Stub: [[Thm - Fourier Inversion by Homology Class]].
+
+**Remark 6.6 (Jacobian form of the inversion, closed case).** On a closed surface the character torus is the (real) Jacobian $\widehat{H_1(X,\mathbb{Z})}\cong\operatorname{Jac}(X)$: a harmonic $1$-form $\omega$ gives the character $\chi_{[\omega]}(\beta)=e^{2\pi i\int_\beta\omega}$, and the inversion formula of Theorem 6.5 becomes
+$$\mu^\kappa_X(\beta)=\int_{\operatorname{Jac}(X)}\big(-\log L_X(s,\chi_{[\omega]})\big)\,e^{-2\pi i\int_\beta\omega}\,d[\omega],$$
+with $d[\omega]$ the normalised Haar measure on the Jacobian torus. This is the same statement as Theorem 6.5, written in the Hodge-theoretic coordinates that make the characters explicit periods of harmonic forms.
+
+Finally, the loop soup's total homology has an explicit distribution.
 
 > **Proposition 6.7 (distribution of the loop soup's total homology).** Let $\mathcal L_\lambda$ be the [[Def - Poisson Point Process and the Loop Soup|loop soup]] of intensity $\lambda>0$, and $\beta(\lambda):=\sum_{\eta\in\mathcal L^*_\lambda}[\eta]\in H_1(X,\mathbb{Z})$ the total homology of its non-contractible, non-cusp-peripheral loops (a finite sum: $\#\mathcal L^*_\lambda$ is Poisson with mean $-\lambda\log Z_X(s)<\infty$). Then for every unitary $\chi$,
 > $$\mathbb E\big[\chi(\beta(\lambda))\big]=\Big(\frac{Z_X(s)}{L_X(s,\chi)}\Big)^{\!\lambda},\qquad\text{and}\qquad \mathbb P\big(\beta(\lambda)=\beta\big)=Z_X(s)^\lambda\int_{\widehat{H_1}}L_X(s,\chi)^{-\lambda}\,\overline{\chi(\beta)}\,d\chi.$$

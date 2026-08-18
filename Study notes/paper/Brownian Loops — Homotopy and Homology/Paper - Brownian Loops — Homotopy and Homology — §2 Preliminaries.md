@@ -84,17 +84,50 @@ Reusable statement: [[Def - Dirichlet Form Loop Measure]].
 
 ## §2.3 — Bernstein functions and subordination
 
-The paper now produces a *family* of Dirichlet forms from one, by running the process on a random clock — **subordination**. This is where killed Brownian motion and the $\alpha$-stable processes enter.
+The paper now produces a *family* of Dirichlet forms from one, by running the process on a random clock — **subordination** (following [SSV12], [FOT11]). This is where killed Brownian motion and the $\alpha$-stable processes enter. The paper develops it in three steps: the clocks themselves (§2.3.1), how they act on a semigroup and Dirichlet form (§2.3.2), and the specialisation to the hyperbolic plane (§2.3.3).
+
+### §2.3.1 — Bernstein functions and subordinators
 
 > [!recall]- Bernstein function, subordinator, subordination
-> **Formally:** a **Bernstein function** $\phi:(0,\infty)\to[0,\infty)$ is $C^\infty$ with $(-1)^{n-1}\phi^{(n)}\ge0$; it has a unique **Lévy–Khintchine representation** $\phi(\lambda)=a+b\lambda+\int_0^\infty(1-e^{-\lambda s})\,\nu(ds)$ with killing rate $a\ge0$, drift $b\ge0$, and Lévy measure $\nu$ ($\int(1\wedge s)\,\nu(ds)<\infty$). A **subordinator** $S_t$ is an increasing Lévy process with $\mathbb{E}[e^{-\lambda S_t}]=e^{-t\phi(\lambda)}$ and law $\psi^\phi_t$ on $[0,\infty)$. **Subordination** replaces $A$ by $\phi(A)$: the subordinate semigroup is $e^{-t\phi(A)}=\int_{[0,\infty)}e^{-sA}\psi^\phi_t(ds)$, with transition density $p^\phi(t,x,y)=\int_{[0,\infty)}p^E(s,x,y)\,\psi^\phi_t(ds)$ and Dirichlet form $\mathcal E^\phi(u,u)=a\|u\|^2+b\,\mathcal E(u,u)+\int_0^\infty(\|u\|^2-\langle e^{-sA}u,u\rangle)\,\nu(ds)$.
-> **In words:** watch the process at a random increasing time $S_t$ instead of at $t$; if the clock jumps, the observed process jumps. The exponent $\phi$ encodes how much killing/drift/jumping the clock carries. See [[Def - Bernstein Function, Subordinator, and Subordination]].
-
-**The subordination formula, read.** The subordinate kernel $p^\phi(t,x,y)=\int_{[0,\infty)}p^E(s,x,y)\,\psi^\phi_t(ds)$ (from the recall above) is the *average of the original heat kernel against the clock's law* — this identity is used in every subsequent mass computation, so keep it in view.
+> **Formally:** a **Bernstein function** $\phi:(0,\infty)\to[0,\infty)$ is $C^\infty$ with $(-1)^{n-1}\phi^{(n)}\ge0$; it has a unique **Lévy–Khintchine representation** $\phi(\lambda)=a+b\lambda+\int_0^\infty(1-e^{-\lambda s})\,\nu(ds)$ with killing rate $a\ge0$, drift $b\ge0$, and Lévy measure $\nu$ ($\int(1\wedge s)\,\nu(ds)<\infty$). A **subordinator** $S_t$ is an increasing Lévy process (possibly killed at constant rate) with $\mathbb{E}[e^{-\lambda S_t}]=e^{-t\phi(\lambda)}$ and law $\psi^\phi_t$ on $[0,\infty)$; when $a=0$ it is *conservative* ($\psi^\phi_t$ a probability measure), when $a>0$ it is killed at rate $a$ ($|\psi^\phi_t|=e^{-at}$). See [[Def - Bernstein Function, Subordinator, and Subordination]].
+> **In words:** watch the process at a random increasing time $S_t$ instead of at $t$; if the clock jumps, the observed process jumps. The exponent $\phi$ encodes how much killing/drift/jumping the clock carries.
 
 **Assumption 2.3 (why it is there).** The paper assumes $b>0$ **or** $\nu(0,\infty)=\infty$; equivalently $S_t>0$ almost surely for every $t>0$, i.e. $\psi^\phi_t(\{0\})=0$. This excludes **compound Poisson** subordinators, whose clock has a positive chance of not having moved, giving the subordinate semigroup an atom and hence *no transition density* — and a density is exactly what the loop measure needs.
 
-**Example 2.5 (the processes used).** $\phi(\lambda)=\lambda$ is Brownian motion ($\psi^\phi_t=\delta_t$, deterministic clock); $\phi(\lambda)=\lambda+\kappa$ is Brownian motion killed at rate $\kappa$ ($\psi^\phi_t=e^{-\kappa t}\delta_t$, so $p^\phi=e^{-\kappa t}p^E$); $\phi(\lambda)=\lambda^{\alpha/2}$, $\alpha\in(0,2)$, is the $\alpha$-stable (pure-jump) process, operator $\Delta^{\alpha/2}$, with $\psi^\phi_t$ the $\alpha/2$-stable law. Applied to $\mathbb{H}^2$ (§2.3.3) these have $\mathrm{PSL}(2,\mathbb{R})$-invariant heat kernels $p^\phi_{\mathbb{H}^2}(t,z,w)$ — the invariance that §3 exploits.
+**Remark 2.4 (subordination versus time change by a PCAF).** Two constructions both "run the process on a different clock" but act differently on the data $(\mathcal E,\mathcal F,\operatorname{vol}_g)$, and it is worth keeping them apart. A **subordinator** $S_t$ is *independent* of the original process and *not adapted* to its filtration; it replaces the generator $-A$ by $-\phi(A)$, changing the Dirichlet form while **keeping the reference measure $\operatorname{vol}_g$**, and (when $\nu\ne0$) introduces jumps even into a diffusion. By contrast, a **positive continuous additive functional (PCAF)** clock is built from the process's *own* trajectory and *is* adapted; the resulting time change reparametrises the same path, so **continuity of paths is preserved**, but the reference measure is replaced by the **Revuz measure** of the additive functional (see [RY99, Ch. 10]). The canonical PCAF example is **Liouville Brownian motion** [GRV16]: planar Brownian motion $B_t$ time-changed by the inverse of the "quantum clock" $F_t=\int_0^t e^{\gamma\varphi(B_s)}\,ds$ — with $e^{\gamma\varphi}$ the exponential of the Gaussian free field $\varphi$ defined through Gaussian multiplicative chaos — giving $Z_t=B_{F^{-1}(t)}$, coupling constant $\gamma\in[0,2)$. The paper uses subordination, not PCAF time change.
+
+**Example 2.5 (the Bernstein functions used in the paper).** Three clocks recur; their data $(a,b,\nu)$ and laws $\psi^\phi_t$ are:
+
+| Resulting process | $\phi(\lambda)$ | $(a,b,\nu)$ | Law $\psi^\phi_t$ |
+|---|---|---|---|
+| Brownian motion | $\lambda$ | $(0,1,0)$ | $\delta_t$ |
+| Brownian with killing ($\kappa>0$) | $\lambda+\kappa$ | $(\kappa,1,0)$ | $e^{-\kappa t}\,\delta_t$ |
+| $\alpha$-stable ($\alpha\in(0,2)$) | $\lambda^{\alpha/2}$ | $(0,0,\nu_\alpha)$ | density $\eta^\alpha_t(s)=t^{-2/\alpha}\,g_{\alpha/2}(s\,t^{-2/\alpha})$ |
+
+Here $\nu_\alpha(ds)=\frac{\alpha/2}{\Gamma(1-\alpha/2)}\,s^{-1-\alpha/2}\,ds$ is the $\alpha$-stable Lévy measure and $g_{\alpha/2}$ is the density of the standard $\alpha/2$-stable distribution on $(0,\infty)$ (see [BBK+09, Ch. 5] for the explicit form). The framework also covers gamma, inverse-Gaussian, and relativistic-stable subordinators.
+
+### §2.3.2 — Subordination of semigroups and Dirichlet forms
+
+Given a regular symmetric [[Def - Dirichlet Form and its Operator and Semigroup|Dirichlet form]] $(\mathcal E,\mathcal F)$ on $L^2(X,\operatorname{vol}_g)$ with operator $A$, and a Bernstein $\phi$ with subordinator independent of the process, the **subordinate semigroup** is the average of $e^{-sA}$ against the clock law,
+$$e^{-t\phi(A)}=\int_{[0,\infty)}e^{-sA}\,\psi^\phi_t(ds),\qquad \phi(A)=aI+bA+\int_0^\infty\big(I-e^{-sA}\big)\,\nu(ds),$$
+so the generator of the subordinate process is $-\phi(A)$, and its **transition density** is the average of the original heat kernel against the clock law,
+$$p^\phi(t,x,y)=\int_{[0,\infty)}p^E(s,x,y)\,\psi^\phi_t(ds).$$
+This last identity is used in *every* subsequent mass computation — keep it in view. The subordinate process is again a $\operatorname{vol}_g$-symmetric Hunt process associated with a regular symmetric Dirichlet form $(\mathcal E^\phi,\mathcal F^\phi)$ on $L^2(X,\operatorname{vol}_g)$,
+$$\mathcal E^\phi(u,u)=a\|u\|^2+b\,\mathcal E(u,u)+\int_0^\infty\big(\|u\|^2-\langle e^{-sA}u,u\rangle\big)\,\nu(ds),\qquad \mathcal F^\phi=\{u\in L^2(X,\operatorname{vol}_g):\mathcal E^\phi(u,u)<\infty\},$$
+where $\|\cdot\|,\langle\cdot,\cdot\rangle$ are the $L^2(X,\operatorname{vol}_g)$ norm and inner product.
+
+### §2.3.3 — Application to the hyperbolic plane
+
+Applying the above to Brownian motion on the [[Def - Hyperbolic Plane|hyperbolic plane]] $\mathbb{H}^2$, whose volume measure is the hyperbolic area $\rho$: for a Bernstein $\phi$, the subordinate Dirichlet form $(\mathcal E^\phi,\mathcal F^\phi)$ on $L^2(\mathbb{H}^2,\rho)$ has operator $\phi(\Delta_{\mathbb{H}^2})$ and heat kernel
+$$p^\phi_{\mathbb{H}^2}(t,z,w)=\int_{[0,\infty)}p_{\mathbb{H}^2}(s,z,w)\,\psi^\phi_t(ds),\qquad z,w\in\mathbb{H}^2.$$
+Because $\Delta_{\mathbb{H}^2}$ is $\mathrm{PSL}(2,\mathbb{R})$-invariant, so is $p^\phi_{\mathbb{H}^2}$ — the invariance §3 exploits to descend to a quotient surface.
+
+**Example 2.6 (killing, $\phi(\lambda)=\lambda+\kappa$, $\kappa>0$).** The subordinate form is the killed Dirichlet energy and the kernel is a pure exponential tilt:
+$$\mathcal E_\kappa(f,f)=\int_{\mathbb{H}^2}|\nabla f|^2\,d\rho+\kappa\int_{\mathbb{H}^2}f^2\,d\rho,\qquad p^\kappa_{\mathbb{H}^2}(t,z,w)=e^{-\kappa t}\,p_{\mathbb{H}^2}(t,z,w).$$
+
+**Example 2.7 ($\alpha$-stable, $\phi(\lambda)=\lambda^{\alpha/2}$, $\alpha\in(0,2)$).** The operator is the **fractional Laplacian** $\Delta^{\alpha/2}_{\mathbb{H}^2}$ and the heat kernel is the $\alpha/2$-stable average,
+$$p^\alpha_{\mathbb{H}^2}(t,z,w)=\int_0^\infty p_{\mathbb{H}^2}(s,z,w)\,\eta^\alpha_t(s)\,ds,$$
+with $\eta^\alpha_t$ the density of the $\alpha/2$-stable subordinator law $\psi^\phi_t$. The process is **pure-jump** for every $\alpha\in(0,2)$; the boundary case $\alpha=2$ recovers Brownian motion.
 
 ---
 
