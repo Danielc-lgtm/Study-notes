@@ -4,7 +4,7 @@ The companion page is the reading surface: the page a reader opens to read the w
 
 Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the reference thesis for the prose voice. Every section is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
 
-Filename: `Study notes/Papers/[Short Title]/Paper - [Short Title].md`. The `[Short Title]` is a few words identifying the paper (Windows-portable: no `< > : " / \ | ? *`).
+Filename: `Study notes/paper/[Short Title]/Paper - [Short Title].md`. The `[Short Title]` is a few words identifying the paper (Windows-portable: no `< > : " / \ | ? *`).
 
 ---
 
@@ -130,7 +130,7 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 
 When a single companion page would become unwieldy, split the reading surface at the paper's own section boundaries:
 
-- `Study notes/Papers/[Short Title]/Paper - [Short Title].md` becomes a **hub**: it carries the header (`# Paper — [Short Title]`, the abstract, the floor statement), the **Notation and Standing Conventions** table, the **Prerequisites** map, a one-line table of contents linking each section page in order, and the **Verification log**.
-- Each paper section becomes `Study notes/Papers/[Short Title]/Paper - [Short Title] — §N [Section].md`, holding that section's walk-through (opener, definitions, theorems, gap-free proofs, recalls). Each section page opens by orienting the reader and recalls earlier objects with collapsed `[!recall]-` chips, so it is readable on its own.
+- `Study notes/paper/[Short Title]/Paper - [Short Title].md` becomes a **hub**: it carries the header (`# Paper — [Short Title]`, the abstract, the floor statement), the **Notation and Standing Conventions** table, the **Prerequisites** map, a one-line table of contents linking each section page in order, and the **Verification log**.
+- Each paper section becomes `Study notes/paper/[Short Title]/Paper - [Short Title] — §N [Section].md`, holding that section's walk-through (opener, definitions, theorems, gap-free proofs, recalls). Each section page opens by orienting the reader and recalls earlier objects with collapsed `[!recall]-` chips, so it is readable on its own.
 
 Split only at the paper's real section boundaries, and only when length demands it. Default to the single page. This mirrors how `polymath-notes` splits a topic page at sub-chapter boundaries with cross-references between them.

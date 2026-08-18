@@ -1,22 +1,22 @@
 # Atomic Note Templates
 
-Two kinds of atomic note come out of a paper backchain: **prerequisite notes** (vault assets, in the subject hierarchy) and **paper-result stubs** (in the paper folder). Both reuse the vault's existing `Def -`/`Thm -` types and introduce a new `Lemma -` type. Follow `../polymath-notes/references/templates.md` for the full Def/Thm section structure and `obsidian-patterns.md` for syntax; the templates here are the paper-notes-specific shape and the placement rules.
+Two kinds of atomic note come out of a paper backchain: **prerequisite notes** and **paper-result stubs**. Both are newly created for the paper and both live **in the paper's own folder** `Study notes/paper/[Short Title]/`, alongside the companion page. Both reuse the vault's existing `Def -`/`Thm -` types and introduce a new `Lemma -` type. Follow `../polymath-notes/references/templates.md` for the full Def/Thm section structure and `obsidian-patterns.md` for syntax; the templates here are the paper-notes-specific shape and the placement rules.
 
 `Lemma -` is a new atomic type in this vault. Structure it exactly like `Thm -` (statement-first, then intuition, then proof), just for a result that is auxiliary rather than headline. Use `Lemma -` for the paper's own auxiliary results and for named external lemmas the paper leans on that deserve a reusable page.
 
 ---
 
-## Part 1 — Prerequisite atomic notes (vault assets)
+## Part 1 — Prerequisite atomic notes (in the paper folder)
 
-A concept the paper uses that lives **above the floor** and has **no existing vault note** (Rule 1). Create it in its **natural subject-area folder**, matching the vault's organisation, so it cross-links with the study notes and the next paper can reuse it.
+A concept the paper uses that lives **above the floor** and has **no existing vault note** (Rule 1). Create it **in this paper's own folder**, `Study notes/paper/[Short Title]/`, alongside the companion page and the paper-result stubs. Everything newly created for the paper lives together in that one folder — the note-set is self-contained.
 
-**Placement — match the vault's actual nesting.** The vault stores *every* leaf `Def -`/`Thm -` note **inside a topic-page subfolder**, never bare under a subject folder: e.g. `Study notes/Probability/Measure Theory/Measure Theory III — §3–4 Product Measures and Differentiation/Def - X.md`. A subject folder (`Measure Theory/`) holds topic pages and their subfolders, not loose leaf notes. So place each prerequisite note under a topic-page subfolder:
+**Placement — one flat folder per paper.**
 
-- absolute continuity of measures → `Study notes/Probability/Measure Theory/[host topic subfolder]/Def - Absolute Continuity of Measures.md`
-- Radon–Nikodym theorem → the same Measure Theory topic subfolder, `Thm - Radon–Nikodym Theorem.md`
-- the spectral theorem for compact self-adjoint operators → `Study notes/Analysis/[Functional Analysis subject]/[host topic subfolder]/Thm - Spectral Theorem for Compact Self-Adjoint Operators.md`
+- absolute continuity of measures → `Study notes/paper/[Short Title]/Def - Absolute Continuity of Measures.md`
+- Radon–Nikodym theorem → `Study notes/paper/[Short Title]/Thm - Radon–Nikodym Theorem.md`
+- the spectral theorem for compact self-adjoint operators → `Study notes/paper/[Short Title]/Thm - Spectral Theorem for Compact Self-Adjoint Operators.md`
 
-**When there is no host topic page** (the concept fits an existing subject but no existing topic subfolder), create a topic subfolder to hold it — either a minimal topic page named for the sub-area, or a catch-all subfolder `Prerequisites from [Short Title]/` co-located with the subject's other topics. **When the field is not represented at all** (e.g. the vault has no Hyperbolic Geometry under `Geometry/`), create the full `[Area]/[Subject]/[Topic]/` chain — e.g. `Study notes/Geometry/Hyperbolic Geometry/Hyperbolic Geometry — Prerequisites from [Short Title]/Def - ….md` — so the leaves nest consistently and future study notes on that field co-locate with them. **Do not** put prerequisite notes in the paper folder — they are shared assets. **Do** search the vault first (`grep`/`find`) and link an existing note instead of duplicating.
+**The one exception — reuse, do not duplicate.** Before creating a prerequisite note, search the vault (`grep`/`find` over `Study notes/`) for an existing note on that concept. If one exists **anywhere** in the vault — in a subject folder, or in another paper's folder — **wikilink it from the recall instead of copying it into this paper's folder**. Only concepts the vault does not yet cover get a new note here. (This replaces the earlier convention of scattering prerequisite notes into subject-area folders; new notes are now paper-local, so one paper is one folder.)
 
 These notes follow the `polymath-notes` Def/Thm structure, **scaled to what the paper needs**: enough that the concept is fully usable and correctly typed, without necessarily the full topic-page apparatus (no exercises, no legal-operations section — those belong to `polymath-notes`/`exercise-builder`). A single-mention, non-load-bearing term may not warrant a full note at all — a point-of-use recall (or a scoped stub carrying only the fact the paper uses) suffices; reserve the full apparatus below for concepts whose properties the proofs actually lean on, and cluster tightly-related prerequisites into one compound note rather than many tiny ones (Rule 1). Write them in the thesis voice (motivate, state formally, then unpack concretely). Verify from a source and cite it (Rule 6).
 
@@ -125,7 +125,7 @@ source: "[paper Short Title]"
 
 For the paper's **own** principal definitions and theorems. These make the paper's results reusable and greppable across the vault **without duplicating the full exposition** — the full treatment (motivation, gap-free proof, recalls) lives in the companion page; the stub carries the formal statement, its typing, and a one-line intuition, then links back.
 
-Placement: **in the paper folder**, `Study notes/Papers/[Short Title]/Def - [Name].md` (or `Thm -`, `Lemma -`). Naming uses the concept's name, not the paper's number, so it is a usable wikilink target (`Def - Interaction Hypergraph`, not `Def - Definition 3.2`).
+Placement: **in the paper folder**, `Study notes/paper/[Short Title]/Def - [Name].md` (or `Thm -`, `Lemma -`). Naming uses the concept's name, not the paper's number, so it is a usable wikilink target (`Def - Interaction Hypergraph`, not `Def - Definition 3.2`).
 
 ### Paper definition stub
 
@@ -180,10 +180,11 @@ paper-ref: "Theorem [paper's number]"
 
 ## Placement summary
 
-| Note | Lives in | Reusable across papers? | Full or stub |
-|---|---|---|---|
-| Prerequisite `Def -`/`Thm -`/`Lemma -` | subject hierarchy, nested under a topic-page subfolder (`Study notes/[Area]/[Subject]/[Topic]/…`) — never bare under a subject folder | yes — vault asset | full (scaled to need) |
-| Paper's own `Def -`/`Thm -`/`Lemma -` | paper folder (`Study notes/Papers/[Short Title]/`) | as a reference/wikilink target | stub → links to companion |
-| Companion page | paper folder | — | full walk-through |
+| Note | Lives in | Full or stub |
+|---|---|---|
+| Prerequisite `Def -`/`Thm -`/`Lemma -` (new) | this paper's folder (`Study notes/paper/[Short Title]/`) | full (scaled to need) |
+| Prerequisite that already exists in the vault | wherever it already is — **wikilinked, not copied** | (reused as-is) |
+| Paper's own `Def -`/`Thm -`/`Lemma -` | this paper's folder (`Study notes/paper/[Short Title]/`) | stub → links to companion |
+| Companion page | this paper's folder (`Study notes/paper/[Short Title]/`) | full walk-through |
 
-Every atomic note carries a `source:` field naming the paper, and a "Where the paper uses this" / "Full treatment" link back, so the backchain is navigable in both directions. Forward references to concepts with no page yet are **bold plain text**, never wikilinks.
+Everything newly created for the paper lives in the one folder `Study notes/paper/[Short Title]/`. Every atomic note carries a `source:` field naming the paper, and a "Where the paper uses this" / "Full treatment" link back, so the backchain is navigable in both directions. Forward references to concepts with no page yet are **bold plain text**, never wikilinks.
