@@ -23,7 +23,7 @@ The lifting picture is identical to §3: free homotopy classes ↔ loxodromic co
 
 > **Theorem 7.1 (homotopy-class decomposition, 3-manifolds).** For $\gamma\in\mathcal P_X$ with loxodromic representative $\tau$ (standard form) and $m\ge1$, the Dirichlet-form loop mass of $C_X(\gamma^m)$ is
 > $$\mu^E_X(C_X(\gamma^m))=\int_0^\infty\frac{dt}{t}\int_{\mathcal F_\tau}p^E_{\mathbb{H}^3}(t,w,\tau^m w)\,d\!\operatorname{vol}_{\mathbb{H}^3}(w).$$
-> **Proof.** Identical in structure to [[Thm - Mass of a Free Homotopy Class|Theorem 3.2]] (isolate the conjugacy class, unfold over cosets $\Gamma/\langle\tau\rangle$ using $\Gamma$-invariance of the kernel, reassemble onto the slab using $\langle\tau\rangle$-invariance of $w\mapsto p^E_{\mathbb{H}^3}(t,w,\tau^m w)$), now with the loxodromic standard form (82). $\blacksquare$
+> **Proof.** Identical in structure to [[Thm - Mass of a Free Homotopy Class|Theorem 3.2]] (isolate the conjugacy class, unfold over cosets $\Gamma/\langle\tau\rangle$ using $\Gamma$-invariance of the kernel, reassemble onto the slab using $\langle\tau\rangle$-invariance of $w\mapsto p^E_{\mathbb{H}^3}(t,w,\tau^m w)$), now with the loxodromic standard form from the recall above. $\blacksquare$
 
 Stub: [[Thm - Homotopy Decomposition for 3-Manifolds]].
 
@@ -33,7 +33,7 @@ Stub: [[Thm - Homotopy Decomposition for 3-Manifolds]].
 
 Specialising to a subordinate Brownian loop measure and expanding gives $\mu^\phi_X(C_X(\gamma^m))=\int_0^\infty\frac{dt}{t}\int_{\mathcal F_\tau}\int_{[0,\infty)}p_{\mathbb{H}^3}(s,w,\tau^m w)\,\psi^\phi_t(ds)\,d\!\operatorname{vol}_{\mathbb{H}^3}(w)$. The paper evaluates the spatial integral directly from the explicit $\mathbb{H}^3$ heat kernel.
 
-> [!note]- Gap-free derivation of the H³ strip integral (eq. 88–89)
+> [!note]- Gap-free derivation of the H³ strip integral
 > **Distance to the image.** For $w=(z,y)$ in standard coordinates, $\tau^m w=(e^{L}z,e^{m\ell_\gamma}y)$ with $L=mL_\gamma$. The hyperbolic distance $u=d(w,\tau^m w)$ satisfies
 > $$\cosh u=1+\frac{|z-e^{L}z|^2+(y-e^{m\ell_\gamma}y)^2}{2\,e^{m\ell_\gamma}y^2}=\cosh(m\ell_\gamma)+\frac{|e^{L}-1|^2\,|z|^2}{2\,e^{m\ell_\gamma}y^2},$$
 > using $|e^{L}-1|^2=1-2e^{m\ell_\gamma}\cos(m\theta_\gamma)+e^{2m\ell_\gamma}$ and $1+\frac{(1-e^{m\ell_\gamma})^2}{2e^{m\ell_\gamma}}=\cosh(m\ell_\gamma)$. So $u$ depends on $z$ only through $|z|=r$.
