@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§4 Zeta Identities and Finiteness.md",
+                "file": "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology — §3 Decomposition over Homotopy Classes.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "§4 Zeta Identities and Finiteness"
+              "title": "Paper - Brownian Loops — Homotopy and Homology — §3 Decomposition over Homotopy Classes"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "365b19c7bfd998b8",
@@ -187,6 +188,13 @@
   },
   "active": "c5b52a9d138c61af",
   "lastOpenFiles": [
+    "paper/Brownian Loops — Homotopy and Homology/Thm - Mass of a Free Homotopy Class.md",
+    "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology — §3 Decomposition over Homotopy Classes.md",
+    "paper/Brownian Loops — Homotopy and Homology/Def - Weighted Potential Measure.md",
+    "paper/Brownian Loops — Homotopy and Homology/Def - Dirichlet Form and its Operator and Semigroup.md",
+    "paper/Brownian Loops — Homotopy and Homology/Remark - Homotopy Classes for Jump Processes.md",
+    "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology.md",
+    "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology — §2 Preliminaries.md",
     "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/External Inputs and Gaps.md",
     "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Anchors and Prerequisites.md",
     "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/Map - Brownian Loops on Homotopy and Homology Classes.md",
@@ -206,13 +214,6 @@
     "Papers/Brownian loops — homotopy & homology (Belyaev–Huseynli)/§2.3–2.4 Subordination and the Weighted Potential Measure.md",
     "Category Theory/Category Theory V — Monads, Algebras, and Monoidal Categories.md",
     "Category Theory/Higher Categories — 2-Categories, Enrichment, and Quasi-Categories.md",
-    "Category Theory/Higher Categories — fc-Multicategories and Weak Double Categories.md",
-    "Category Theory/Higher Categories — Generalized Operads via Cartesian Monads.md",
-    "Category Theory/Category Theory IV/Def - Unit and Counit of an Adjunction.md",
-    "Category Theory/Category Theory IV — Adjunctions.md",
-    "Category Theory/Category Theory III — Limits and Colimits.md",
-    "Category Theory/Category Theory II — Universal Properties, Representability, and the Yoneda Lemma.md",
-    "Category Theory/Higher Categories/Def - 2-Category and Bicategory.md",
     "Category Theory/Higher Categories - Globular Operads",
     "Category Theory/Higher Categories - Generalized Operads"
   ]
