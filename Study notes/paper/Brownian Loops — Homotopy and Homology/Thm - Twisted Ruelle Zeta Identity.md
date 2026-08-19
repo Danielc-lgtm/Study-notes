@@ -17,8 +17,8 @@ paper-ref: "Corollary 4.6"
 - $\rho : \Gamma \to \mathrm{GL}(V_\rho)$ — a finite-dimensional complex representation of $\Gamma$: a group homomorphism from $\Gamma$ to the invertible linear maps of a finite-dimensional complex vector space $V_\rho$, with $\dim V_\rho < \infty$. Not necessarily unitary.
 - $c_\rho \in [0, \infty)$ — the convergence exponent of the twisted Ruelle product: the infimum of $s > 0$ such that $\prod_{\gamma}\det(I - \rho(\tau) e^{-s\ell_\gamma})$ converges absolutely. When $\rho$ is unitary, $c_\rho = \delta$.
 - $\operatorname{tr}\rho(\tau^m) \in \mathbb C$ — the trace of the matrix $\rho(\tau^m) = \rho(\tau)^m \in \mathrm{GL}(V_\rho)$ (using that $\rho$ is a homomorphism).
-- $s \in \mathbb C$ — the spectral variable, with $\operatorname{Re} s > \max(c_\rho, \tfrac12)$.
-- $\kappa_-(s) := s(s - 1)$, $\kappa_+(s) := s(s + 1)$ — two killing rates keyed to $s$, chosen so that $\frac12 + \sqrt{\tfrac14 + \kappa_-(s)} = s$ and $\frac12 + \sqrt{\tfrac14 + \kappa_+(s)} = s + 1$.
+- $s \in \mathbb C$ — the spectral variable, with $\operatorname{Re} s > \max(c_\rho, \frac12)$.
+- $\kappa_-(s) := s(s - 1)$, $\kappa_+(s) := s(s + 1)$ — two killing rates keyed to $s$, chosen so that $\frac12 + \sqrt{\frac14 + \kappa_-(s)} = s$ and $\frac12 + \sqrt{\frac14 + \kappa_+(s)} = s + 1$.
 - $\mu^{\kappa}_X$ — the killing-$\kappa$ Brownian loop measure on $X$.
 - $R_X(s, \rho) := \prod_{\gamma \in \mathcal P_X}\det(I - \rho(\tau) e^{-s\ell_\gamma})$ — the twisted Ruelle zeta function; well-defined since $\det(I - \rho(q \tau q^{-1}) e^{-s\ell_\gamma}) = \det(\rho(q)(I - \rho(\tau)e^{-s\ell_\gamma})\rho(q^{-1})) = \det(I - \rho(\tau) e^{-s\ell_\gamma})$.
 
@@ -38,7 +38,7 @@ paper-ref: "Corollary 4.6"
 > **Concretely:** for $M = \lambda I$ (scalar), $\det(I - \lambda I) = (1 - \lambda)^{\dim V}$ and $-\log\det(I - M) = -\dim V \log(1 - \lambda) = \dim V \sum_{m \ge 1}\lambda^m/m$; the formula says the same thing, since $\operatorname{tr}(\lambda^m I) = \dim V \cdot \lambda^m$. For $M = \begin{pmatrix} 0.5 & 0 \\ 0 & 0.3\end{pmatrix}$, $-\log\det(I - M) = -\log(0.5) - \log(0.7) = \log 2 + \log(10/7) \approx 0.693 + 0.357 = 1.050$; the series gives $\sum_m (0.5^m + 0.3^m)/m = (0.5 + 0.25/2 + \ldots) + (0.3 + 0.09/2 + \ldots) \approx 0.693 + 0.357 = 1.050$. **Short derivation:** for $M$ diagonalisable with eigenvalues $\lambda_j$, $\det(I - M) = \prod_j(1 - \lambda_j)$, so $\log\det(I - M) = \sum_j \log(1 - \lambda_j) = -\sum_j \sum_m \lambda_j^m/m = -\sum_m (\sum_j \lambda_j^m)/m = -\sum_m \operatorname{tr}(M^m)/m$; extend to non-diagonalisable $M$ by continuity.
 
 > [!recall]- Killed class-mass shape $\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-\sigma)L}}{e^L - 1}$
-> **Formally:** for killing rate $\kappa \ge -\tfrac14$ and spectral parameter $\sigma(\kappa) := \frac12 + \sqrt{\tfrac14 + \kappa}$, the killed class-mass computed in §3.1.2 is $\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-\sigma(\kappa))L}}{e^L - 1}$ with $L = m\ell_\gamma$.
+> **Formally:** for killing rate $\kappa \ge -\frac14$ and spectral parameter $\sigma(\kappa) := \frac12 + \sqrt{\frac14 + \kappa}$, the killed class-mass computed in §3.1.2 is $\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-\sigma(\kappa))L}}{e^L - 1}$ with $L = m\ell_\gamma$.
 > **In words:** for the killed Brownian loop measure, each free homotopy class's mass has an explicit closed form: the $1/m$ from the winding, and a ratio of two exponentials in $L$ controlled by $\sigma$. This is what makes the [[Lemma - Selberg Zeta Criterion|Selberg zeta criterion]] applicable and, here, will produce the difference identity below.
 > **Concretely:** at $\kappa = 0$ ($\sigma = 1$), $\mu^0_X(C_X(\gamma^m)) = \frac{1}{m(e^L - 1)}$ — the pure Brownian formula. At $\kappa = 2$ ($\sigma = 2$), $\mu^2_X(C_X(\gamma^m)) = \frac{e^{-L}}{m(e^L - 1)}$. Full detail: [[Thm - Mass of a Subordinate Brownian Loop Class|Theorem 3.5]] and its §3.1.2 case.
 
@@ -46,7 +46,7 @@ paper-ref: "Corollary 4.6"
 
 # Statement
 
-> **Corollary (twisted Ruelle zeta identity; Belyaev–Huseynli 4.6).** Let $\rho : \Gamma \to \mathrm{GL}(V_\rho)$ be a finite-dimensional complex representation with convergence exponent $c_\rho$, and set $\kappa_\pm(s) := s(s \pm 1)$ for $s \in \mathbb C$. Then for every $s$ with $\operatorname{Re} s > \max(c_\rho, \tfrac12)$,
+> **Corollary (twisted Ruelle zeta identity; Belyaev–Huseynli 4.6).** Let $\rho : \Gamma \to \mathrm{GL}(V_\rho)$ be a finite-dimensional complex representation with convergence exponent $c_\rho$, and set $\kappa_\pm(s) := s(s \pm 1)$ for $s \in \mathbb C$. Then for every $s$ with $\operatorname{Re} s > \max(c_\rho, \frac12)$,
 > $$-\log R_X(s, \rho) \;=\; \sum_{\gamma \in \mathcal P_X}\sum_{m \ge 1}\operatorname{tr}\rho(\tau^m)\,\Big[\mu^{\kappa_-(s)}_X\big(C_X(\gamma^m)\big) - \mu^{\kappa_+(s)}_X\big(C_X(\gamma^m)\big)\Big] \;=\; \sum_{\gamma \in \mathcal P_X}\sum_{m \ge 1}\frac{\operatorname{tr}\rho(\tau^m)\,e^{-s m \ell_\gamma}}{m}.$$
 
 ---
@@ -76,9 +76,9 @@ The construction of $\kappa_\pm(s) := s(s \pm 1)$ is chosen precisely so that th
 > $$-\log R_X(s, \rho) \;=\; \sum_{\gamma \in \mathcal P_X}\sum_{m \ge 1}\frac{\operatorname{tr}\rho(\tau^m)\,e^{-sm\ell_\gamma}}{m} \qquad (*).$$
 > The rearrangement of the (triple) sum is legitimate because the absolute value of each term is at most $\|\rho(\tau^m)\|\,e^{-\operatorname{Re}(s)\,m\ell_\gamma}/m$, and this is summable for $\operatorname{Re} s > c_\rho$ by definition of $c_\rho$. This proves the equality of the middle expression and the rightmost expression once we have Step 2's algebra.
 >
-> **Step 2 — compute the difference of two killed class-masses.** By the killed class-mass formula ([[Thm - Mass of a Subordinate Brownian Loop Class|Theorem 3.5]] with §3.1.2), for $\kappa \ge -\tfrac14$ and $\sigma(\kappa) := \frac12 + \sqrt{\tfrac14 + \kappa}$,
+> **Step 2 — compute the difference of two killed class-masses.** By the killed class-mass formula ([[Thm - Mass of a Subordinate Brownian Loop Class|Theorem 3.5]] with §3.1.2), for $\kappa \ge -\frac14$ and $\sigma(\kappa) := \frac12 + \sqrt{\frac14 + \kappa}$,
 > $$\mu^\kappa_X\big(C_X(\gamma^m)\big) \;=\; \frac{1}{m}\cdot\frac{e^{(1-\sigma(\kappa))L}}{e^L - 1}, \qquad L = m\ell_\gamma.$$
-> Verify the branch identities: with $\kappa_-(s) = s(s - 1) = s^2 - s$, we have $\tfrac14 + \kappa_-(s) = \tfrac14 + s^2 - s = (s - \tfrac12)^2$, so $\sqrt{\tfrac14 + \kappa_-(s)} = s - \tfrac12$ (for $\operatorname{Re} s > \tfrac12$, the principal square root is $s - \tfrac12$), hence $\sigma(\kappa_-(s)) = \tfrac12 + (s - \tfrac12) = s$. Similarly $\tfrac14 + \kappa_+(s) = \tfrac14 + s^2 + s = (s + \tfrac12)^2$, so $\sqrt{\cdots} = s + \tfrac12$ and $\sigma(\kappa_+(s)) = s + 1$. So
+> Verify the branch identities: with $\kappa_-(s) = s(s - 1) = s^2 - s$, we have $\frac14 + \kappa_-(s) = \frac14 + s^2 - s = (s - \frac12)^2$, so $\sqrt{\frac14 + \kappa_-(s)} = s - \frac12$ (for $\operatorname{Re} s > \frac12$, the principal square root is $s - \frac12$), hence $\sigma(\kappa_-(s)) = \frac12 + (s - \frac12) = s$. Similarly $\frac14 + \kappa_+(s) = \frac14 + s^2 + s = (s + \frac12)^2$, so $\sqrt{\cdots} = s + \frac12$ and $\sigma(\kappa_+(s)) = s + 1$. So
 > $$\mu^{\kappa_-(s)}_X\big(C_X(\gamma^m)\big) \;=\; \frac{1}{m}\cdot\frac{e^{(1-s)L}}{e^L - 1}, \qquad \mu^{\kappa_+(s)}_X\big(C_X(\gamma^m)\big) \;=\; \frac{1}{m}\cdot\frac{e^{(1-(s+1))L}}{e^L - 1} \;=\; \frac{1}{m}\cdot\frac{e^{-sL}}{e^L - 1}.$$
 > Their difference is
 > $$\mu^{\kappa_-(s)}_X\big(C_X(\gamma^m)\big) - \mu^{\kappa_+(s)}_X\big(C_X(\gamma^m)\big) \;=\; \frac{1}{m}\cdot\frac{e^{(1-s)L} - e^{-sL}}{e^L - 1}.$$
@@ -90,7 +90,7 @@ The construction of $\kappa_\pm(s) := s(s \pm 1)$ is chosen precisely so that th
 > $$\sum_{\gamma}\sum_{m \ge 1}\operatorname{tr}\rho(\tau^m)\,\big[\mu^{\kappa_-(s)}_X - \mu^{\kappa_+(s)}_X\big]\big(C_X(\gamma^m)\big) \;=\; \sum_{\gamma}\sum_{m \ge 1}\frac{\operatorname{tr}\rho(\tau^m)\,e^{-sm\ell_\gamma}}{m},$$
 > which is exactly the right side of $(*)$. Combining with $(*)$,
 > $$-\log R_X(s, \rho) \;=\; \sum_{\gamma}\sum_{m \ge 1}\operatorname{tr}\rho(\tau^m)\,\big[\mu^{\kappa_-(s)}_X - \mu^{\kappa_+(s)}_X\big]\big(C_X(\gamma^m)\big).$$
-> The condition $\operatorname{Re} s > \max(c_\rho, \tfrac12)$ ensures both the Step-1 convergence ($c_\rho$) and the Step-2 branch choice ($\tfrac12$; and, via the reindexing $\sigma = s + 1 > \tfrac32$, also that the $\kappa_+(s)$-class-mass is well-defined). $\blacksquare$
+> The condition $\operatorname{Re} s > \max(c_\rho, \frac12)$ ensures both the Step-1 convergence ($c_\rho$) and the Step-2 branch choice ($\frac12$; and, via the reindexing $\sigma = s + 1 > \frac32$, also that the $\kappa_+(s)$-class-mass is well-defined). $\blacksquare$
 
 ---
 

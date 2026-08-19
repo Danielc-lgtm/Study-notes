@@ -17,7 +17,7 @@ paper-ref: "Remark 4.4"
 - For each $\gamma \in \mathcal P_X$ and $s > \delta$, set the **per-geodesic bosonic partition function**
   $$Z_\gamma(s) := \prod_{k \ge 0}\big(1 - e^{-(s + k)\ell_\gamma}\big)^{-1}.$$
 - $\mathcal Z(s) := \prod_{\gamma \in \mathcal P_X} Z_\gamma(s)$ — the **grand partition function** (a product of the per-geodesic ones); by construction $\mathcal Z(s) = Z_X(s)^{-1}$.
-- $\mu^\kappa_X$ — the killing-$\kappa$ Brownian loop measure ($\kappa \ge -\tfrac14$); with spectral parameter $s(\kappa) = \tfrac12 + \sqrt{\tfrac14 + \kappa}$.
+- $\mu^\kappa_X$ — the killing-$\kappa$ Brownian loop measure ($\kappa \ge -\frac14$); with spectral parameter $s(\kappa) = \frac12 + \sqrt{\frac14 + \kappa}$.
 
 > [!recall]- Selberg zeta $Z_X(s)$ and its log-expansion
 > **Formally:** $Z_X(s) = \prod_{\gamma \in \mathcal P_X}\prod_{k \ge 0}(1 - e^{-(s + k)\ell_\gamma})$ for $\operatorname{Re} s > \delta$; $-\log Z_X(s) = \sum_\gamma\sum_{m \ge 1}\frac{1}{m}\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma} - 1}$.
@@ -25,7 +25,7 @@ paper-ref: "Remark 4.4"
 > **Concretely:** for a single-geodesic toy $\Gamma = \langle \tau_0 : z \mapsto e^\ell z\rangle$, $Z_X(s) = \prod_{k \ge 0}(1 - e^{-(s+k)\ell})$; at $s = 1$, $\ell = 1$: $Z_X(1) \approx 0.521$. Full detail: [[Def - Selberg and Ruelle Zeta Functions and the Critical Exponent]].
 
 > [!recall]- Selberg zeta identity for the total loop mass
-> **Formally:** for $\kappa \ge -\tfrac14$ with $s(\kappa) = \tfrac12 + \sqrt{\tfrac14 + \kappa} > \delta$, $\sum_{\gamma, m}\mu^\kappa_X(C_X(\gamma^m)) = -\log Z_X(s(\kappa))$; in particular at $\kappa = 0$ (plain Brownian, $s = 1$), the total mass equals $-\log Z_X(1)$.
+> **Formally:** for $\kappa \ge -\frac14$ with $s(\kappa) = \frac12 + \sqrt{\frac14 + \kappa} > \delta$, $\sum_{\gamma, m}\mu^\kappa_X(C_X(\gamma^m)) = -\log Z_X(s(\kappa))$; in particular at $\kappa = 0$ (plain Brownian, $s = 1$), the total mass equals $-\log Z_X(1)$.
 > **In words:** the sum of the killed Brownian loop masses over all non-trivial-non-peripheral topological types on the surface is a specific value of the Selberg zeta function.
 > **Concretely:** on an infinite-area surface with $\delta = 1/2$, at $\kappa = 0$, $-\log Z_X(1)$ is a finite positive number equal to the total Brownian loop mass over non-trivial classes. Full detail: [[Thm - Selberg Zeta Identity for the Total Loop Mass]].
 

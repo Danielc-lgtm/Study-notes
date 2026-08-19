@@ -43,10 +43,8 @@ paper-ref: "Lemma 3.4"
 
 # Statement
 
-> **Lemma (Wang–Xue strip integral; Belyaev–Huseynli 3.4, after Wang–Xue [WX25]).** For the Brownian heat kernel $p_{\mathbb{H}^2}$ on $\mathbb{H}^2$, every $s > 0$, every $L > 0$, and $\tau : z\mapsto e^L z$,
-> $$\int_{\mathcal{F}_\tau} p_{\mathbb{H}^2}\big(s, z, e^L z\big)\,d\rho_{\mathbb{H}^2}(z) \;=\; \frac{L\cdot(1/L)\cdot\ell_\gamma}{\ldots}\quad\text{i.e.}\quad \int_{\mathcal{F}_\tau} p_{\mathbb{H}^2}(s, z, \tau z)\,d\rho_{\mathbb{H}^2}(z) \;=\; \frac{\ell_\gamma}{2\sinh(L/2)}\cdot\frac{e^{-s/4}\,e^{-L^2/(4s)}}{2\sqrt{\pi s}},$$
-> where $L = m\ell_\gamma$ (so the "single winding around the axis by translation length $L$" corresponds to $\tau^m$ acting on the strip $\mathcal{F}_\tau$ built from $\ell_\gamma$). Equivalently, writing $\tau^m : z\mapsto e^{L}z$ directly and $\mathcal{F}_\tau$ for the strip of the primitive $\tau$:
-> $$\boxed{\;\int_{\mathcal{F}_\tau} p_{\mathbb{H}^2}\big(s, z, \tau^m z\big)\,d\rho_{\mathbb{H}^2}(z) \;=\; \frac{\ell_\gamma}{2\sinh(L/2)}\cdot\frac{e^{-s/4}\,e^{-L^2/(4s)}}{2\sqrt{\pi s}}\;}\qquad(L = m\ell_\gamma).$$
+> **Lemma (Wang–Xue strip integral; Belyaev–Huseynli 3.4, after Wang–Xue [WX25]).** Let $\tau : z \mapsto e^{\ell_\gamma} z$ be a primitive hyperbolic isometry of $\mathbb{H}^2$ with translation length $\ell_\gamma > 0$, let $\mathcal{F}_\tau = \{z \in \mathbb{H}^2 : 1 \le \mathrm{Im}\,z < e^{\ell_\gamma}\}$ be its fundamental strip, and let $p_{\mathbb{H}^2}$ be the Brownian heat kernel on $\mathbb{H}^2$. For every $s > 0$ and every $m \ge 1$ (with $L := m\ell_\gamma$),
+> $$\int_{\mathcal{F}_\tau} p_{\mathbb{H}^2}\big(s, z, \tau^m z\big)\,d\rho_{\mathbb{H}^2}(z) \;=\; \frac{\ell_\gamma}{2\sinh(L/2)}\cdot\frac{e^{-s/4}\,e^{-L^2/(4s)}}{2\sqrt{\pi s}}.$$
 
 ---
 

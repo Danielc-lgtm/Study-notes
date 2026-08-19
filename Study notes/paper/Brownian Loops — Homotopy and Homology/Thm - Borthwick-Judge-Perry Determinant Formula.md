@@ -47,8 +47,8 @@ paper-ref: "Theorem 5.5"
 # Statement
 
 > **Theorem (Borthwick–Judge–Perry determinant formula; Belyaev–Huseynli Theorem 5.5, external input).** Let $X = \Gamma\backslash\mathbb H^2$ be a geometrically finite hyperbolic surface with $n_C$ cusps and Euler characteristic $\chi = \chi(X)$. Then for $s \in \mathbb C$ (avoiding poles),
-> $${\det}_0\!\big(\Delta_X - s(1-s)\big) \;=\; Z_X(s)\,e^{M + F\,s(1-s)}\,G_\infty(s)^\chi\,\Big(\sqrt 2 \big[2s\sqrt\pi\,(s - \tfrac12)\big]\,\Gamma(s - \tfrac12)\Big)^{-n_C},$$
-> where $G_\infty(s) = (2\pi)^{-s}\,\Gamma(s)\,G(s)^2$ (with $G$ the Barnes $G$-function), $M = \chi\!\left(\tfrac12\log 2\pi - 2\zeta_R'(-1) + \tfrac14\right)$, and $F = -\chi$.
+> $${\det}_0\!\big(\Delta_X - s(1-s)\big) \;=\; Z_X(s)\,e^{M + F\,s(1-s)}\,G_\infty(s)^\chi\,\Big(\sqrt 2 \big[2s\sqrt\pi\,(s - \frac12)\big]\,\Gamma(s - \frac12)\Big)^{-n_C},$$
+> where $G_\infty(s) = (2\pi)^{-s}\,\Gamma(s)\,G(s)^2$ (with $G$ the Barnes $G$-function), $M = \chi\!\left(\frac12\log 2\pi - 2\zeta_R'(-1) + \frac14\right)$, and $F = -\chi$.
 >
 > **Consequence.** Evaluating at $s = 1$ (or taking the appropriate limit if $Z_X(1) = 0$), the renormalised determinant of $\Delta_X$ itself is $\det_0 \Delta_X = C_X\,Z_X'(1)$ (finite-area case; the simple zero of $Z_X$ at $s = 1$ is divided out to leave the derivative) or $\det_0\Delta_X = C_X\,Z_X(1)$ (infinite-area case), with the explicit constant $C_X = e^M (2\pi)^{-\chi} (\sqrt 2\,\pi)^{-n_C}$.
 
@@ -62,7 +62,7 @@ The renormalised determinant of the shifted Laplacian on a geometrically finite 
 
 # Why It's True (intuition)
 
-**Mechanism (one sentence).** *Both sides satisfy the same second-order differential equation in the spectral variable $s$ — namely $\big(\tfrac{1}{2s-1}\partial_s\big)^2 \log F(s) = -\,^{0}\!\operatorname{Tr}(R_X(s)^2)$, where $R_X(s) = (\Delta_X - s(1-s))^{-1}$ is the resolvent — so they agree up to an integration constant $e^{M + Fs(1-s)}$ that is pinned down by the small-$s$ asymptotics, and the explicit cusp factors come from the contribution of the continuous spectrum (parametrised by the Eisenstein series, whose scattering matrix contributes $\Gamma$ and $G$ pieces).*
+**Mechanism (one sentence).** *Both sides satisfy the same second-order differential equation in the spectral variable $s$ — namely $\big(\frac{1}{2s-1}\partial_s\big)^2 \log F(s) = -\,^{0}\!\operatorname{Tr}(R_X(s)^2)$, where $R_X(s) = (\Delta_X - s(1-s))^{-1}$ is the resolvent — so they agree up to an integration constant $e^{M + Fs(1-s)}$ that is pinned down by the small-$s$ asymptotics, and the explicit cusp factors come from the contribution of the continuous spectrum (parametrised by the Eisenstein series, whose scattering matrix contributes $\Gamma$ and $G$ pieces).*
 
 **Where the pieces come from.**
 - $Z_X(s)$: the **discrete-spectrum content**, encoded in the closed geodesics via the Selberg product. This is the piece that becomes the loop mass when combined with the Selberg zeta identity.

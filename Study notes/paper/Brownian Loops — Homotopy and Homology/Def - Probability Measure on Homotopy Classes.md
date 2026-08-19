@@ -15,7 +15,7 @@ paper-ref: "Section 6.1 (opening)"
 - $X = \Gamma\backslash\mathbb{H}^2$ a geometrically finite hyperbolic surface; $\Gamma \subset \mathrm{PSL}(2,\mathbb{R})$ a discrete torsion-free subgroup.
 - $\mathcal{P}_X$ — the set of oriented primitive closed geodesics on $X$; $\gamma \in \mathcal{P}_X$ has length $\ell_\gamma > 0$.
 - $C_X(\gamma^m)$ — the free homotopy class of loops winding $m \ge 1$ times around $\gamma$.
-- $\kappa > 0$ the killing rate, $s := \tfrac12 + \sqrt{\tfrac14 + \kappa} \in (1, \infty)$ the spectral parameter (so $\kappa = s(s-1)$). Section 6.1 assumes $\kappa > 0$, equivalently $s > 1$; the $\kappa = 0$ case uses §5's renormalisation.
+- $\kappa > 0$ the killing rate, $s := \frac12 + \sqrt{\frac14 + \kappa} \in (1, \infty)$ the spectral parameter (so $\kappa = s(s-1)$). Section 6.1 assumes $\kappa > 0$, equivalently $s > 1$; the $\kappa = 0$ case uses §5's renormalisation.
 - $\mu^\kappa_X(C_X(\gamma^m))$ — the killed loop-measure mass of the class, given in closed form by $\frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1}$ (§3.1.2).
 - $Z_X(s) = \prod_{\gamma\in\mathcal P_X}\prod_{k\ge 0}(1 - e^{-(s+k)\ell_\gamma})$ — the Selberg zeta function; $F(s) := -\log Z_X(s)$ the total killed mass.
 - $L := m\ell_\gamma$ — the geodesic length attached to the class $C_X(\gamma^m)$, viewed as a random variable on the probability space of classes.
@@ -29,21 +29,21 @@ paper-ref: "Section 6.1 (opening)"
 
 > [!recall]- Killed loop-measure mass $\mu^\kappa_X(C_X(\gamma^m))$
 > **Formally:** for the Brownian loop measure on $X$ with killing at rate $\kappa \ge 0$, the mass of the free homotopy class $C_X(\gamma^m)$ is
-> $$\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1},\qquad s = \tfrac12 + \sqrt{\tfrac14 + \kappa},$$
+> $$\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1},\qquad s = \frac12 + \sqrt{\frac14 + \kappa},$$
 > a positive real number depending only on the geodesic length $\ell_\gamma$, the winding $m$, and the spectral parameter $s$. (Derivation: apply Theorem 3.5 with Bernstein function $\phi(\lambda) = \lambda + \kappa$.)
 > **In words:** a single number attached to each topological class, telling you how much "loop-measure weight" the class carries. Longer classes ($L = m\ell_\gamma$ large) get exponentially suppressed weight $\propto e^{-sL}$; the parameter $s$ controls how heavily the suppression penalises length. Summed over all classes the total is finite (Corollary 4.3) and equals $-\log Z_X(s)$, which is what makes normalisation to a probability measure possible.
 > **Concretely:** on an infinite-area surface with a single closed geodesic of length $\ell = \log 2$ and $\kappa = 0$ (so $s = 1$), the mass of the once-wound class $C_X(\gamma)$ is $\frac11\cdot\frac{e^0}{e^{\log 2}-1} = \frac{1}{2-1} = 1$; the twice-wound class $C_X(\gamma^2)$ has mass $\frac12\cdot\frac{1}{e^{2\log 2}-1} = \frac12\cdot\frac13 = \frac16$; the iterates decay geometrically. Full derivation: [[Thm - Mass of a Subordinate Brownian Loop Class]].
 
 > [!recall]- Selberg zeta function $Z_X(s)$ and $F(s) = -\log Z_X(s)$
 > **Formally:** $Z_X(s) := \prod_{\gamma \in \mathcal P_X}\prod_{k \ge 0}(1 - e^{-(s+k)\ell_\gamma})$, absolutely convergent for $\operatorname{Re}s > \delta$ (the critical exponent of $\Gamma$) and meromorphically continued to $\mathbb{C}$. Its logarithm expands as $-\log Z_X(s) = \sum_{\gamma, m \ge 1}\frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1}$, term-by-term equal to the sum of killed loop masses over all $(\gamma, m)$. Write $F(s) := -\log Z_X(s) > 0$ (positive because it is a sum of positive masses).
-> **In words:** an analytic generating function assembled from the whole length spectrum, playing for closed geodesics the role Riemann zeta plays for primes. Its numerical *value* at $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ is the total mass of killed loops; its *derivatives* generate the moments of the length random variable $L$ under the probability measure below. For $s > \delta$ the value is finite and positive.
+> **In words:** an analytic generating function assembled from the whole length spectrum, playing for closed geodesics the role Riemann zeta plays for primes. Its numerical *value* at $s = \frac12 + \sqrt{\frac14 + \kappa}$ is the total mass of killed loops; its *derivatives* generate the moments of the length random variable $L$ under the probability measure below. For $s > \delta$ the value is finite and positive.
 > **Concretely:** for a toy surface $X$ with just one primitive geodesic of length $\ell = 1$, $Z_X(s) = \prod_{k \ge 0}(1 - e^{-(s+k)})$; at $s = 2$, $Z_X(2) = (1-e^{-2})(1-e^{-3})(1-e^{-4})\cdots \approx 0.865\cdot 0.950\cdot 0.982\cdots \approx 0.774$, so $F(2) = -\log 0.774 \approx 0.257$; each factor is closer to $1$ as $k$ grows, so the product converges. Full detail: [[Def - Selberg and Ruelle Zeta Functions and the Critical Exponent]].
 
 ---
 
 # Statement
 
-> **Definition (probability measure on free homotopy classes; Belyaev–Huseynli §6.1).** Let $X = \Gamma\backslash\mathbb{H}^2$ be a geometrically finite hyperbolic surface, $\kappa > 0$, and $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ (so $s > 1$). The *probability measure on free homotopy classes* is
+> **Definition (probability measure on free homotopy classes; Belyaev–Huseynli §6.1).** Let $X = \Gamma\backslash\mathbb{H}^2$ be a geometrically finite hyperbolic surface, $\kappa > 0$, and $s = \frac12 + \sqrt{\frac14 + \kappa}$ (so $s > 1$). The *probability measure on free homotopy classes* is
 > $$\mathbb{P}_s\big(C_X(\gamma^m)\big) := \frac{\mu^\kappa_X(C_X(\gamma^m))}{-\log Z_X(s)} = \frac{\mu^\kappa_X(C_X(\gamma^m))}{\displaystyle\sum_{\gamma' \in \mathcal P_X}\sum_{m' \ge 1}\mu^\kappa_X(C_X((\gamma')^{m'}))},\qquad \gamma \in \mathcal P_X,\ m \ge 1.$$
 > Each class $C_X(\gamma^m)$ carries a weight proportional to its killed-loop mass. The normalising constant $-\log Z_X(s)$ is finite and positive for $s > \delta$ ([[Thm - Selberg Zeta Identity for the Total Loop Mass|Corollary 4.3]]); since $\kappa > 0$ implies $s > 1 \ge \delta$, the measure is well-defined on every such $X$.
 

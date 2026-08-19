@@ -114,7 +114,7 @@ $$-\log\det(\Delta_X + \kappa) \;=\; \int_0^\infty\frac{dt}{t}\,e^{-\kappa t}\,\
 (rigorously via zeta regularisation, details in §5). When $e^{-t\Delta_X}$ is trace class, $\operatorname{Tr}(e^{-t\Delta_X}) = \int_X p(t,x,x)\,d\!\operatorname{vol}_g(x)$ — the **heat trace**, built from Brownian round-trip densities. Integrating over $t$ against $dt/t$ and the killing weight $e^{-\kappa t}$ is *exactly* the structure of the [[Def - Brownian Loop Measure|Brownian loop measure]] with killing, so the Schwinger representation reads
 $$-\log\det(\Delta_X + \kappa) \;=\; \big|\mu^\kappa_X\big|_{\mathrm{reg}},$$
 the (regularised) total mass of the killed loop measure. The regularisation is needed because the unregularised total mass diverges (short-loop contribution of the trivial class + peripheral classes); §5 makes the identity rigorous. Hence
-$$Z^\kappa_X \;\propto\; \exp\Big(\tfrac12\,|\mu^\kappa_X|_{\mathrm{reg}}\Big):$$
+$$Z^\kappa_X \;\propto\; \exp\Big(\frac12\,|\mu^\kappa_X|_{\mathrm{reg}}\Big):$$
 the partition function of a free real scalar field of mass $\sqrt\kappa$ is, up to normalisation, the exponential of *half* the regularised total mass of Brownian loops with killing rate $\kappa$. The factor $\frac12$ comes from the $\det^{-1/2}$ power of a single real (as opposed to complex) field; a complex field would give $\det^{-1}$ and no $\frac12$.
 
 This is the physical motivation for §5: the ill-defined "sum over loops" of a Euclidean quantum field theory is exactly the divergent total mass of the Brownian loop measure; renormalising the latter renormalises the former, and the outcome is the zeta-regularised determinant.

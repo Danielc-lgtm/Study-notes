@@ -73,7 +73,7 @@ Loop measures and the Selberg zeta are conformally *invariant* on a hyperbolic s
 > The first three terms on the right collect (with $\operatorname{vol}_{g_{\mathrm{hyp}}}(X) = 4\pi(g - 1)$) to exactly $P_X(\sigma)$ as defined in the Notation. So
 > $$\log\det_\zeta\Delta_g \;=\; P_X(\sigma) \;+\; \log\det_\zeta\Delta_{g_{\mathrm{hyp}}}.$$
 >
-> **Step 2 — substitute Theorem 5.1's $\kappa \to 0$ line.** By [[Thm - Determinant as Renormalised Loop Mass|Theorem 5.1(ii), $\kappa \to 0^+$ limit]], on the hyperbolic representative
+> **Step 2 — substitute Theorem 5.1's $\kappa \to 0$ line.** By Theorem 5.1(ii), $\kappa \to 0^+$ limit ([[Thm - Determinant as Renormalised Loop Mass]]), on the hyperbolic representative
 > $$\log\det_\zeta\Delta_{g_{\mathrm{hyp}}} \;=\; \operatorname{Area}(X)\,E + \log Z_X'(1).$$
 > Substituting into Step 1's conclusion gives the second form of the corollary. For the first form, use case (i) of Theorem 5.1 (the Brownian identity for $-\log\det_\zeta\Delta_{g_{\mathrm{hyp}}}$) and negate to get $\log\det_\zeta\Delta_{g_{\mathrm{hyp}}} = \operatorname{Area}(X)\,E - C - \sum_{\gamma \in \mathcal G(X)\setminus\mathcal P_X}\mu_X(C_X(\gamma)) - \int_0^\infty \frac{1}{e^R - 1}\,d(N_X - \widetilde{\mathrm{Li}}(e^R))$; adding $P_X(\sigma)$ yields the first display. $\blacksquare$
 

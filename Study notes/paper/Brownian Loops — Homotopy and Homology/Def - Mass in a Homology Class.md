@@ -15,7 +15,7 @@ paper-ref: "Definition 6.1"
 - $\pi_1(X) \cong \Gamma$ the fundamental group; $H_1(X, \mathbb{Z})$ the first (integer) homology group; $[\cdot] : \Gamma \twoheadrightarrow H_1(X, \mathbb{Z})$ the Hurewicz abelianisation map, sending $\gamma \mapsto [\gamma]$. Rank: $r = 2g$ if $X$ is closed, $r = 2g + b - 1$ if $X$ has $b \ge 1$ ends.
 - $\mathcal P_X$ the set of oriented primitive closed geodesics; $\ell_\gamma > 0$ the length of $\gamma \in \mathcal P_X$; $m \ge 1$ the winding count.
 - $\beta \in H_1(X, \mathbb{Z}) \cong \mathbb{Z}^r$ a homology class.
-- $\kappa \ge -\tfrac14$ the killing parameter; $s := \tfrac12 + \sqrt{\tfrac14 + \kappa}$ the spectral parameter (assumed $\operatorname{Re}s > \delta$).
+- $\kappa \ge -\frac14$ the killing parameter; $s := \frac12 + \sqrt{\frac14 + \kappa}$ the spectral parameter (assumed $\operatorname{Re}s > \delta$).
 - $\delta$ the critical exponent of $\Gamma$ (equivalently, the Hausdorff dimension of $\Gamma$'s limit set).
 - $C_X(\gamma^m)$ the free homotopy class winding $m$ times around $\gamma$; $\mu^\kappa_X(C_X(\gamma^m))$ its killed loop-measure mass.
 
@@ -25,8 +25,8 @@ paper-ref: "Definition 6.1"
 > **Concretely:** on a torus $T^2 = \mathbb{R}^2/\mathbb{Z}^2$ (genus $1$, closed), $\Gamma = \mathbb{Z}^2$ is already abelian, so $[\Gamma, \Gamma] = 0$ and $H_1 = \mathbb{Z}^2$: a class is an integer pair $(a, b) = ($net horizontal winding, net vertical winding$)$; the Hurewicz map is the identity. On a genus-$2$ closed surface, $\Gamma$ has $4$ generators $\alpha_1, \beta_1, \alpha_2, \beta_2$ with the relation $[\alpha_1,\beta_1][\alpha_2,\beta_2] = 1$ — the two commutators (order-of-traversal information) — and abelianising kills these commutators to give $H_1 = \mathbb{Z}^4$. On a once-punctured torus ($g=1$, $b=1$), $r = 2\cdot 1 + 1 - 1 = 2$, so $H_1 = \mathbb{Z}^2$ still. Full detail: [[Def - First Homology, Characters, and Finite Fourier Analysis]].
 
 > [!recall]- Killed loop-measure mass $\mu^\kappa_X(C_X(\gamma^m))$
-> **Formally:** the mass, under the killed Brownian loop measure with killing rate $\kappa \ge -\tfrac14$, of the free homotopy class $C_X(\gamma^m)$ is
-> $$\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1},\qquad s = \tfrac12 + \sqrt{\tfrac14 + \kappa},$$
+> **Formally:** the mass, under the killed Brownian loop measure with killing rate $\kappa \ge -\frac14$, of the free homotopy class $C_X(\gamma^m)$ is
+> $$\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1},\qquad s = \frac12 + \sqrt{\frac14 + \kappa},$$
 > a positive real number (§3.1.2, from Theorem 3.5 with $\phi(\lambda) = \lambda + \kappa$).
 > **In words:** a single weight assigned to each free-homotopy loop class; long classes are exponentially penalised. The sum of all these weights across every $(\gamma, m)$ is finite (Corollary 4.3) and equals $-\log Z_X(s)$. In this note we regroup those weights not by free-homotopy class but by their common homology class — an infinite-to-one collapse, but one whose partial sums still converge.
 > **Concretely:** on an infinite-area surface with one primitive geodesic of length $\ell = 1$ and $\kappa = 0$ (so $s = 1$), $\mu(C_X(\gamma^m)) = \frac{1}{m(e^m - 1)}$: about $0.582$ for $m=1$, $0.078$ for $m=2$, $0.017$ for $m=3$; the total mass over all $m$ is about $0.68$. Full derivation: [[Thm - Mass of a Subordinate Brownian Loop Class]].
@@ -35,7 +35,7 @@ paper-ref: "Definition 6.1"
 
 # Statement
 
-> **Definition 6.1 (mass in a homology class; Belyaev–Huseynli 6.1).** For $\beta \in H_1(X, \mathbb{Z})$ and $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ with $\operatorname{Re}s > \delta$,
+> **Definition 6.1 (mass in a homology class; Belyaev–Huseynli 6.1).** For $\beta \in H_1(X, \mathbb{Z})$ and $s = \frac12 + \sqrt{\frac14 + \kappa}$ with $\operatorname{Re}s > \delta$,
 > $$\mu^\kappa_X(\beta) := \sum_{\substack{\gamma \in \mathcal P_X,\ m \ge 1\\ m[\gamma] = \beta}}\mu^\kappa_X(C_X(\gamma^m)) = \sum_{\substack{\gamma \in \mathcal P_X,\ m \ge 1\\ m[\gamma] = \beta}}\frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma} - 1}.$$
 > The mass of the killed Brownian loop measure grouped by homology class $\beta$ is the sum of the free-homotopy-class masses over all pairs $(\gamma, m)$ whose iterate $\gamma^m$ lies in the class $\beta$.
 
@@ -57,7 +57,7 @@ The killed loop mass grouped by *homology* (net winding around each cycle) rathe
 
 **Why the definition is stated with the sum written twice.** The two right-hand sides of the formula are literally the same thing: the first names the summand as the free-homotopy mass $\mu^\kappa_X(C_X(\gamma^m))$, and the second substitutes its closed-form value $\frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma}-1}$. Writing it both ways makes clear that the *definition* is measure-theoretic (a partial sum of the free-homotopy masses) and the *computation* rides on the §3.1.2 closed form.
 
-**Detection by the Selberg $L$-function.** The paper never computes $\mu^\kappa_X(\beta)$ directly by enumerating conjugacy classes above $\beta$; that would be intractable. Instead, it defines a *character-twisted* Selberg zeta — the [[Def - Selberg L-Function|Selberg $L$-function]] $L_X(s, \chi)$ — whose logarithm's Fourier coefficients over the character torus $\widehat{H_1(X, \mathbb{Z})}$ are exactly the $\mu^\kappa_X(\beta)$. Fourier inversion ([[Thm - Fourier Inversion by Homology Class|Theorem 6.5]]) then recovers $\mu^\kappa_X(\beta)$ as a single integral over the character torus, bypassing the enumeration.
+**Detection by the Selberg $L$-function.** The paper never computes $\mu^\kappa_X(\beta)$ directly by enumerating conjugacy classes above $\beta$; that would be intractable. Instead, it defines a *character-twisted* Selberg zeta — the Selberg $L$-function ([[Def - Selberg L-Function]]) $L_X(s, \chi)$ — whose logarithm's Fourier coefficients over the character torus $\widehat{H_1(X, \mathbb{Z})}$ are exactly the $\mu^\kappa_X(\beta)$. Fourier inversion ([[Thm - Fourier Inversion by Homology Class|Theorem 6.5]]) then recovers $\mu^\kappa_X(\beta)$ as a single integral over the character torus, bypassing the enumeration.
 
 ---
 

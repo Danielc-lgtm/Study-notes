@@ -17,7 +17,7 @@ paper-ref: "Theorem 6.5"
 - $H_1(X, \mathbb{Z}) \cong \mathbb{Z}^r$, $r = 2g$ (closed) or $r = 2g + b - 1$ (with $b$ ends).
 - $\widehat{H_1(X, \mathbb{Z})} \cong (S^1)^r$ the *character torus* (Pontryagin dual), a compact abelian group; $d\chi$ its normalised Haar measure (total mass $1$).
 - $\beta \in H_1(X, \mathbb{Z})$ a homology class; $\chi \in \widehat{H_1(X, \mathbb{Z})}$ a unitary character; $\chi(\beta) \in S^1$ the phase; $\overline{\chi(\beta)}$ its complex conjugate.
-- $\kappa \ge -\tfrac14$ the killing parameter; $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$; $\operatorname{Re}s > \delta$.
+- $\kappa \ge -\frac14$ the killing parameter; $s = \frac12 + \sqrt{\frac14 + \kappa}$; $\operatorname{Re}s > \delta$.
 - $L_X(s, \chi) = \prod_\gamma \prod_{k \ge 0}(1 - \chi([\gamma])e^{-(s+k)\ell_\gamma})$ the Selberg $L$-function.
 - $\mu^\kappa_X(\beta) = \sum_{m[\gamma] = \beta}\mu^\kappa_X(C_X(\gamma^m))$ the killed loop mass in homology class $\beta$ (Def 6.1).
 
@@ -43,7 +43,7 @@ paper-ref: "Theorem 6.5"
 
 # Statement
 
-> **Theorem 6.5 (Fourier expansion and inversion by homology class; Belyaev–Huseynli 6.5).** Let $X$ be a geometrically finite hyperbolic surface with $H_1(X, \mathbb{Z}) \cong \mathbb{Z}^r$, and let $\kappa \ge -\tfrac14$ with $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ satisfying $\operatorname{Re}s > \delta$.
+> **Theorem 6.5 (Fourier expansion and inversion by homology class; Belyaev–Huseynli 6.5).** Let $X$ be a geometrically finite hyperbolic surface with $H_1(X, \mathbb{Z}) \cong \mathbb{Z}^r$, and let $\kappa \ge -\frac14$ with $s = \frac12 + \sqrt{\frac14 + \kappa}$ satisfying $\operatorname{Re}s > \delta$.
 >
 > **(Fourier expansion.)** For every unitary character $\chi \in \widehat{H_1(X, \mathbb{Z})}$, the logarithm of the Selberg $L$-function admits the absolutely convergent expansion
 > $$-\log L_X(s, \chi) = \sum_{\beta \in H_1(X, \mathbb{Z})}\chi(\beta)\,\mu^\kappa_X(\beta).\qquad (\star)$$

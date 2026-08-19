@@ -15,7 +15,7 @@ paper-ref: "Corollary 6.4"
 - $X = \Gamma\backslash\mathbb{H}^2$ a geometrically finite hyperbolic surface.
 - $\chi : H_1(X, \mathbb{Z}) \to S^1$ a unitary character; $\widehat{H_1(X, \mathbb{Z})}$ the character torus.
 - $\mathcal P_X$ the set of oriented primitive closed geodesics; $\ell_\gamma > 0$ the length of $\gamma \in \mathcal P_X$; $[\gamma] \in H_1(X, \mathbb{Z})$ its homology class.
-- $\kappa \ge -\tfrac14$ the killing parameter; $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ the spectral parameter (assumed $\operatorname{Re}s > \delta$).
+- $\kappa \ge -\frac14$ the killing parameter; $s = \frac12 + \sqrt{\frac14 + \kappa}$ the spectral parameter (assumed $\operatorname{Re}s > \delta$).
 - $\mu^\kappa_X(C_X(\gamma^m))$ the killed loop-measure mass of the free homotopy class winding $m$ times around $\gamma$ (§3.1.2): $\frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma} - 1}$.
 - $L_X(s, \chi) = \prod_\gamma \prod_{k \ge 0}(1 - \chi([\gamma])e^{-(s+k)\ell_\gamma})$ the Selberg $L$-function (Def 6.3).
 
@@ -25,7 +25,7 @@ paper-ref: "Corollary 6.4"
 > **Concretely:** on the torus $T^2$, $\chi_{(u,v)}((a, b)) = e^{2\pi i(au + bv)}$; iterating a horizontal loop $2$ times gives homology class $(2, 0)$, so $\chi_{(u,v)}((2, 0)) = e^{4\pi i u} = (e^{2\pi i u})^2 = \chi_{(u,v)}((1, 0))^2$ — the identity in play. See [[Def - First Homology, Characters, and Finite Fourier Analysis]].
 
 > [!recall]- Killed loop-measure mass of $C_X(\gamma^m)$
-> **Formally:** $\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma} - 1}$, positive, with $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$. Summing over all pairs $(\gamma, m)$ gives $\sum_{\gamma, m}\mu^\kappa_X(C_X(\gamma^m)) = -\log Z_X(s)$, the Selberg zeta identity ([[Thm - Selberg Zeta Identity for the Total Loop Mass|Corollary 4.3]]).
+> **Formally:** $\mu^\kappa_X(C_X(\gamma^m)) = \frac{1}{m}\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma} - 1}$, positive, with $s = \frac12 + \sqrt{\frac14 + \kappa}$. Summing over all pairs $(\gamma, m)$ gives $\sum_{\gamma, m}\mu^\kappa_X(C_X(\gamma^m)) = -\log Z_X(s)$, the Selberg zeta identity ([[Thm - Selberg Zeta Identity for the Total Loop Mass|Corollary 4.3]]).
 > **In words:** the number attached to each free-homotopy loop class, exponentially penalising length; its total over all classes is a value of the Selberg zeta. The identity below writes the same partition function structure with a character insertion.
 > **Concretely:** at $s = 2$, $\ell_\gamma = 1$, $m = 1$: $\mu^\kappa(C_X(\gamma)) = \frac11\cdot\frac{e^{-1}}{e - 1} \approx \frac{0.368}{1.718} \approx 0.214$. Full derivation: [[Thm - Mass of a Subordinate Brownian Loop Class]].
 
@@ -33,7 +33,7 @@ paper-ref: "Corollary 6.4"
 
 # Statement
 
-> **Corollary 6.4 (Selberg $L$-function identity; Belyaev–Huseynli 6.4).** Let $\chi : H_1(X, \mathbb{Z}) \to S^1$ be a unitary character and $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ with $\operatorname{Re}s > \delta$. Then
+> **Corollary 6.4 (Selberg $L$-function identity; Belyaev–Huseynli 6.4).** Let $\chi : H_1(X, \mathbb{Z}) \to S^1$ be a unitary character and $s = \frac12 + \sqrt{\frac14 + \kappa}$ with $\operatorname{Re}s > \delta$. Then
 > $$-\log L_X(s, \chi) = \sum_{\gamma \in \mathcal P_X}\sum_{m = 1}^\infty \chi([\gamma])^m\,\mu^\kappa_X(C_X(\gamma^m)) = \sum_{\gamma \in \mathcal P_X}\sum_{m = 1}^\infty \frac{1}{m}\cdot\chi([\gamma])^m\cdot\frac{e^{(1-s)m\ell_\gamma}}{e^{m\ell_\gamma} - 1}.$$
 > The middle expression is the log-expansion of the Selberg $L$-function, term-by-term equal to the sum of *character-weighted* free-homotopy-class masses; the right-hand equality substitutes the closed-form mass from §3.1.2.
 

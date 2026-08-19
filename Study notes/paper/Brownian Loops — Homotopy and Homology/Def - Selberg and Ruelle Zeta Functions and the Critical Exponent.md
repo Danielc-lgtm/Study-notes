@@ -4,8 +4,9 @@ subject: geometry
 prereqs:
   - "Def - Closed Geodesics, Conjugacy Classes, and Translation Length"
   - "Def - Fuchsian Group and the Hyperbolic Quotient Surface"
-tags: [geometry, hyperbolic-geometry, spectral-geometry, zeta-functions, paper-prereq]
+tags: [paper, brownian-loops, geometry, hyperbolic-geometry, spectral-geometry, zeta-functions]
 source: "Brownian Loops — Homotopy and Homology"
+paper-ref: "Definition 4.1, Definition 4.5"
 ---
 
 # Notation

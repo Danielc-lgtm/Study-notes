@@ -14,7 +14,7 @@ paper-ref: "Proposition 6.7"
 # Notation
 
 - $X = \Gamma\backslash\mathbb{H}^2$ a geometrically finite hyperbolic surface with $H_1(X, \mathbb{Z}) \cong \mathbb{Z}^r$.
-- $\kappa > 0$ the killing rate, $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ the spectral parameter, $\operatorname{Re}s > \delta$.
+- $\kappa > 0$ the killing rate, $s = \frac12 + \sqrt{\frac14 + \kappa}$ the spectral parameter, $\operatorname{Re}s > \delta$.
 - $\mu^\kappa_X$ the killed Brownian loop measure on the loop space $C_X$; total mass $-\log Z_X(s) < \infty$.
 - $\lambda > 0$ the intensity of the loop soup; $\mathcal L_\lambda$ the Poisson point process on $C_X$ with intensity measure $\lambda\,\mu^\kappa_X$ (a random countable collection of loops on $X$).
 - $\mathcal L^*_\lambda \subset \mathcal L_\lambda$ the *non-contractible, non-cusp-peripheral* loops of the soup: those whose free-homotopy class is neither the trivial class nor a class winding only around a cusp; equivalently, those with a non-trivial homology-class-carrying representative.
@@ -38,7 +38,7 @@ paper-ref: "Proposition 6.7"
 
 # Statement
 
-> **Proposition 6.7 (distribution of the loop soup's total homology; Belyaev–Huseynli 6.7).** Let $s = \tfrac12 + \sqrt{\tfrac14 + \kappa}$ with $\operatorname{Re}s > \delta$; let $\mathcal L_\lambda$ be the killed Brownian loop soup of intensity $\lambda > 0$; and let
+> **Proposition 6.7 (distribution of the loop soup's total homology; Belyaev–Huseynli 6.7).** Let $s = \frac12 + \sqrt{\frac14 + \kappa}$ with $\operatorname{Re}s > \delta$; let $\mathcal L_\lambda$ be the killed Brownian loop soup of intensity $\lambda > 0$; and let
 > $$\beta(\lambda) := \sum_{\eta \in \mathcal L^*_\lambda}[\eta] \in H_1(X, \mathbb{Z})$$
 > be the total homology of the non-contractible, non-cusp-peripheral loops in the soup. The sum is finite almost surely, because $\#\mathcal L^*_\lambda$ is Poisson of finite mean $\lambda\sum_{\gamma, m}\mu^\kappa_X(C_X(\gamma^m)) = -\lambda\log Z_X(s)$.
 >

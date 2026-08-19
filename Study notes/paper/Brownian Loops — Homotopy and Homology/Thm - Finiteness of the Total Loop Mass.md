@@ -18,7 +18,7 @@ paper-ref: "Corollary 4.7"
 - $C_X(\gamma^m)$ — the free homotopy class winding $m$ times around $\gamma$; $L := m\ell_\gamma$.
 - $\phi : (0,\infty) \to (0,\infty)$ — a Bernstein function; the paper works with four concrete cases (Brownian $\phi = \lambda$; killed $\phi = \lambda + \kappa$; $\alpha$-stable $\phi = \lambda^{\alpha/2}$; shifted stable $\phi = (\lambda + \kappa)^{\alpha/2}$).
 - $\mu^\phi_X$ — the $\phi$-subordinate loop measure on $X$.
-- $s(\phi) \in \mathbb R$ — the **spectral parameter** attached to $\phi$: $s = 1$ for Brownian and $\alpha$-stable; $s = \frac12 + \sqrt{\tfrac14 + \kappa}$ for killed and shifted stable.
+- $s(\phi) \in \mathbb R$ — the **spectral parameter** attached to $\phi$: $s = 1$ for Brownian and $\alpha$-stable; $s = \frac12 + \sqrt{\frac14 + \kappa}$ for killed and shifted stable.
 - $C(\phi) > 0$ — the multiplicative constant in the canonical class-mass shape: $C = 1$ for Brownian and killed; $C = \alpha/2$ for $\alpha$-stable and shifted stable.
 - $N_X(R) := \#\{\gamma \in \mathcal P_X : \ell_\gamma \le R\}$ — the primitive geodesic counting function.
 
@@ -38,7 +38,7 @@ paper-ref: "Corollary 4.7"
 > **Concretely:** on a finite-area surface ($\delta = 1$): $N_X(10) \approx e^{10}/10 \approx 2200$ geodesics of length up to $10$; $N_X(20) \approx e^{20}/20 \approx 2.4 \times 10^7$. On an infinite-area surface with $\delta = 1/2$: $N_X(10) \approx 2e^5/10 \approx 30$. The exponential rate makes the geodesics multiply overwhelmingly fast; the sum $\sum_\gamma e^{-s\ell_\gamma}$ then converges iff $s$ beats $\delta$. Full detail: [[Thm - Prime Geodesic Theorem]].
 
 > [!recall]- Canonical shape $\mu^\phi_X(C_X(\gamma^m)) = \frac{C}{m}\cdot\frac{e^{(1-s)L}}{e^L - 1}$
-> **Formally:** for each of the paper's four Bernstein functions, the $\phi$-subordinate class-mass has the closed form $\mu^\phi_X(C_X(\gamma^m)) = \frac{C(\phi)}{m}\cdot\frac{e^{(1-s(\phi))L}}{e^L - 1}$ with $L = m\ell_\gamma$: $(C, s) = (1, 1)$ (Brownian), $(C, s) = (1, \frac12 + \sqrt{\tfrac14 + \kappa})$ (killed), $(C, s) = (\alpha/2, 1)$ ($\alpha$-stable), $(C, s) = (\alpha/2, \frac12 + \sqrt{\tfrac14 + \kappa})$ (shifted stable).
+> **Formally:** for each of the paper's four Bernstein functions, the $\phi$-subordinate class-mass has the closed form $\mu^\phi_X(C_X(\gamma^m)) = \frac{C(\phi)}{m}\cdot\frac{e^{(1-s(\phi))L}}{e^L - 1}$ with $L = m\ell_\gamma$: $(C, s) = (1, 1)$ (Brownian), $(C, s) = (1, \frac12 + \sqrt{\frac14 + \kappa})$ (killed), $(C, s) = (\alpha/2, 1)$ ($\alpha$-stable), $(C, s) = (\alpha/2, \frac12 + \sqrt{\frac14 + \kappa})$ (shifted stable).
 > **In words:** all four class-masses studied in §3.1 share the same algebraic silhouette — a $1/m$ from the winding, a $1/(e^L - 1)$ from the geometry, and an exponential decay $e^{(1-s)L}$ controlled by the process's spectral parameter $s$. Only the pair $(C, s)$ changes; the finiteness argument below only uses this shared shape.
 > **Concretely:** Brownian, $L = 1$: $\mu(C) = 1/(e - 1) \approx 0.582$; the summed mass over all $\gamma$ and $m$ will be dominated (asymptotically in the geodesic length) by $\sum_\gamma e^{-\ell_\gamma}$. Full detail: [[Ex - The Four Bernstein Functions of the Paper]] and [[Thm - Mass of a Subordinate Brownian Loop Class]].
 
@@ -46,7 +46,7 @@ paper-ref: "Corollary 4.7"
 
 # Statement
 
-> **Corollary (finiteness of the total loop mass; Belyaev–Huseynli 4.7).** Let $X = \Gamma\backslash\mathbb H^2$ be a geometrically finite hyperbolic surface with critical exponent $\delta$. For each of the paper's four Bernstein functions $\phi$, with spectral parameter $s(\phi) \in \mathbb R$ (namely $s = 1$ for Brownian and $\alpha$-stable; $s = \frac12 + \sqrt{\tfrac14 + \kappa}$ for killed and shifted stable, with $\kappa \ge -\tfrac14$): if
+> **Corollary (finiteness of the total loop mass; Belyaev–Huseynli 4.7).** Let $X = \Gamma\backslash\mathbb H^2$ be a geometrically finite hyperbolic surface with critical exponent $\delta$. For each of the paper's four Bernstein functions $\phi$, with spectral parameter $s(\phi) \in \mathbb R$ (namely $s = 1$ for Brownian and $\alpha$-stable; $s = \frac12 + \sqrt{\frac14 + \kappa}$ for killed and shifted stable, with $\kappa \ge -\frac14$): if
 > $$s(\phi) \;>\; \delta,$$
 > then the total mass over non-trivial non-peripheral homotopy classes is finite,
 > $$\sum_{\gamma \in \mathcal P_X}\sum_{m = 1}^{\infty}\mu^\phi_X\big(C_X(\gamma^m)\big) \;<\; \infty.$$

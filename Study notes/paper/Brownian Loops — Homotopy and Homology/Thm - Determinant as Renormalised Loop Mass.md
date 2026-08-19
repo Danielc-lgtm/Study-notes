@@ -21,10 +21,10 @@ paper-ref: "Theorem 5.1"
 - $C_X(\gamma^m)$ — the free homotopy class winding $m$ times around $\gamma$.
 - $\phi$ — a Bernstein function; the four paper cases are $\phi = \lambda$ (Brownian, case (i)), $\phi = \lambda + \kappa$ ($\kappa > 0$, killed, case (ii)), $\phi = \lambda^{\alpha/2}$ ($\alpha \in (0, 2)$, $\alpha$-stable, case (iii)).
 - $\mu^\phi_X$ — the $\phi$-subordinate loop measure on $X$; $\mu_X = \mu^\lambda_X$ the plain Brownian loop measure; $\mu^\kappa_X = \mu^{\lambda + \kappa}_X$ the killed version.
-- $\kappa \ge 0$ — a killing rate; $s := \frac12 + \sqrt{\tfrac14 + \kappa}$ the associated spectral parameter, with $s = 1 \Leftrightarrow \kappa = 0$.
+- $\kappa \ge 0$ — a killing rate; $s := \frac12 + \sqrt{\frac14 + \kappa}$ the associated spectral parameter, with $s = 1 \Leftrightarrow \kappa = 0$.
 - $Z_X(s)$ — the Selberg zeta function; on a closed surface, $Z_X(s) = Z_X'(1)(s - 1) + O((s-1)^2)$ near $s = 1$.
 - $N_X(R) := \#\{\gamma \in \mathcal P_X : \ell_\gamma \le R\}$ — the primitive geodesic counting function.
-- $E := \frac{1}{4\pi}\!\left(4\zeta_R'(-1) - \tfrac12 + \log 2\pi\right) \approx 0.0538$ — the universal Naud constant (the "area density" of $\log\det_\zeta\Delta$).
+- $E := \frac{1}{4\pi}\!\left(4\zeta_R'(-1) - \frac12 + \log 2\pi\right) \approx 0.0538$ — the universal Naud constant (the "area density" of $\log\det_\zeta\Delta$).
 - $C$ — a universal constant appearing only in case (i); explicitly $C = -\gamma_{\mathrm{EM}} + C_1$ with $\gamma_{\mathrm{EM}} \approx 0.5772$ the Euler–Mascheroni constant and $C_1$ the universal integration constant of case (i)'s Step 3.
 - $\widetilde{\mathrm{Li}}(x) := \int_2^x \frac{du}{\log u}$ — the **cutoff logarithmic integral**; the standard $\operatorname{Li}(x)$ with the singular lower endpoint replaced by $2$ so the integral is convergent as written; $\widetilde{\mathrm{Li}}(x) \sim x/\log x$ as $x \to \infty$.
 - $S_X(t) := \sum_{\gamma \in \mathcal P_X}\sum_{m \ge 1}\frac{e^{-t/4}}{(4\pi t)^{1/2}}\frac{\ell_\gamma\,e^{-(m\ell_\gamma)^2/4t}}{2\sinh(m\ell_\gamma/2)}$ — Naud's **geodesic heat-trace term** (the length-spectrum part of the trace formula); exponentially small as $t \to 0$, tends to $1$ as $t \to \infty$.
@@ -42,7 +42,7 @@ paper-ref: "Theorem 5.1"
 > **Concretely:** a genus-$2$ closed hyperbolic surface has area $4\pi$, systole (shortest closed geodesic) bounded below by a positive constant; every free homotopy class contains a unique closed geodesic of definite positive length. See [[Def - Fuchsian Group and the Hyperbolic Quotient Surface]].
 
 > [!recall]- Brownian loop measure with killing $\mu^\kappa_X$
-> **Formally:** for $\kappa \ge 0$, the killing-$\kappa$ Brownian loop measure on $X$ is the loop measure of the semigroup $e^{-t(\Delta_X + \kappa)} = e^{-\kappa t}\,e^{-t\Delta_X}$; equivalently its heat kernel is $p^\kappa_X(t, z, w) = e^{-\kappa t}\,p_X(t, z, w)$, weighting Brownian bridges by the survival factor $e^{-\kappa t}$. Extended to $\kappa \ge -\tfrac14$ analytically.
+> **Formally:** for $\kappa \ge 0$, the killing-$\kappa$ Brownian loop measure on $X$ is the loop measure of the semigroup $e^{-t(\Delta_X + \kappa)} = e^{-\kappa t}\,e^{-t\Delta_X}$; equivalently its heat kernel is $p^\kappa_X(t, z, w) = e^{-\kappa t}\,p_X(t, z, w)$, weighting Brownian bridges by the survival factor $e^{-\kappa t}$. Extended to $\kappa \ge -\frac14$ analytically.
 > **In words:** ordinary Brownian loop measure tilted by a time-decay $e^{-\kappa t}$: longer loops are penalised more. Corresponds to the Schrödinger operator $\Delta_X + \kappa$ (constant potential $\kappa$).
 > **Concretely:** at $\kappa = 0$, no killing — plain Brownian; at $\kappa = 1$, loops of duration $\sim 1$ are damped by $e^{-1} \approx 0.37$. See [[Def - Subordinate Brownian Loop Measure]] and [[Ex - The Subordinate Form of Brownian Motion with Killing]].
 
@@ -51,8 +51,8 @@ paper-ref: "Theorem 5.1"
 > **In words:** a "prime-power" product over closed geodesics, generating the length spectrum. Its zeros encode the discrete Laplace spectrum; the zero eigenvalue produces the simple zero at $s = 1$.
 > **Concretely:** near $s = 1$, $-\log Z_X(s) = -\log Z_X'(1) - \log(s - 1) + O(s - 1)$; the $-\log(s - 1) \to +\infty$ as $s \to 1$ is the source of the total loop mass divergence on a closed surface. See [[Def - Selberg and Ruelle Zeta Functions and the Critical Exponent]].
 
-> [!recall]- Spectral parameter $s(\kappa) = \frac12 + \sqrt{\tfrac14 + \kappa}$
-> **Formally:** the map $\kappa \mapsto s$ solving $s(s - 1) = \kappa$ (with the branch $s \ge \tfrac12$) is $s(\kappa) = \frac12 + \sqrt{\tfrac14 + \kappa}$. Real for $\kappa \ge -\tfrac14$; $s(0) = 1$, $s(\kappa) \to \infty$ as $\kappa \to \infty$; and near $\kappa = 0$, $s - 1 = \kappa / (\sqrt{1/4 + \kappa} + 1/2) \sim \kappa$.
+> [!recall]- Spectral parameter $s(\kappa) = \frac12 + \sqrt{\frac14 + \kappa}$
+> **Formally:** the map $\kappa \mapsto s$ solving $s(s - 1) = \kappa$ (with the branch $s \ge \frac12$) is $s(\kappa) = \frac12 + \sqrt{\frac14 + \kappa}$. Real for $\kappa \ge -\frac14$; $s(0) = 1$, $s(\kappa) \to \infty$ as $\kappa \to \infty$; and near $\kappa = 0$, $s - 1 = \kappa / (\sqrt{1/4 + \kappa} + 1/2) \sim \kappa$.
 > **In words:** the killing rate $\kappa$ and the zeta variable $s$ are two coordinates on the same parameter; the map converts $\sqrt{1/4 + \kappa}$ to $s - 1/2$, aligning the killed loop-mass exponent with the Selberg zeta variable.
 > **Concretely:** $\kappa = 0 \Leftrightarrow s = 1$ (the critical point); $\kappa = 2 \Leftrightarrow s = 2$. The equivalence $s - 1 \sim \kappa$ as $\kappa \to 0^+$ is the elementary limit used repeatedly in the killed proof. See [[Remark - The Range of the Killing Parameter]].
 
@@ -67,12 +67,12 @@ paper-ref: "Theorem 5.1"
 >
 > **(ii) Killing case ($\phi = \lambda + \kappa$, $\kappa > 0$):**
 > $$-\log\det_\zeta\Delta_X \;=\; -\operatorname{Area}(X)\,E + \log\kappa + \sum_{\gamma \in \mathcal P_X}\sum_{m \ge 1}\mu^\kappa_X\big(C_X(\gamma^m)\big) + O(\kappa)$$
-> $$\;=\; -\operatorname{Area}(X)\,E + \log\kappa - \log Z_X\!\big(\tfrac12 + \sqrt{\tfrac14 + \kappa}\big) + O(\kappa),$$
+> $$\;=\; -\operatorname{Area}(X)\,E + \log\kappa - \log Z_X\!\big(\frac12 + \sqrt{\frac14 + \kappa}\big) + O(\kappa),$$
 > and, letting $\kappa \to 0^+$,
 > $$\log\det_\zeta\Delta_X \;=\; \operatorname{Area}(X)\,E + \log Z_X'(1).$$
 >
 > **(iii) $\alpha$-stable case ($\phi = \lambda^{\alpha/2}$, $\alpha \in (0, 2)$):** the analogue of (i) for the *spectral fractional Laplacian* $\Delta_X^{\alpha/2}$, obtained by scaling the geometric terms by $\alpha/2$:
-> $$-\log\det_\zeta\Delta_X^{\alpha/2} \;=\; \tfrac{\alpha}{2}\Big[-\operatorname{Area}(X)\,E + C + \!\!\!\sum_{\gamma \in \mathcal G(X) \setminus \mathcal P_X}\!\!\!\mu_X\big(C_X(\gamma)\big) + \int_0^\infty\!\!\frac{1}{e^R - 1}\,d\!\big(N_X - \widetilde{\mathrm{Li}}(e^R)\big)\Big].$$
+> $$-\log\det_\zeta\Delta_X^{\alpha/2} \;=\; \frac{\alpha}{2}\Big[-\operatorname{Area}(X)\,E + C + \!\!\!\sum_{\gamma \in \mathcal G(X) \setminus \mathcal P_X}\!\!\!\mu_X\big(C_X(\gamma)\big) + \int_0^\infty\!\!\frac{1}{e^R - 1}\,d\!\big(N_X - \widetilde{\mathrm{Li}}(e^R)\big)\Big].$$
 
 ---
 
@@ -110,7 +110,7 @@ The proofs of the four sub-claims are given below, each in its own collapsible b
 > [!cite]- External input — refined prime geodesic theorem (closed case)
 > **Statement (typed):** for a closed hyperbolic surface ($\delta = 1$), as $R \to \infty$
 > $$N_X(R) \;=\; \operatorname{Li}(e^R) \;+\; \!\!\sum_{0 < \lambda_j \le 1/4}\!\operatorname{Li}(e^{s_j R}) \;+\; O_X(e^{3R/4}/R),$$
-> where $\operatorname{Li}(x) = \int_2^x du/\log u \sim x/\log x$ and $s_j = \frac12 + \sqrt{\tfrac14 - \lambda_j} \in [\tfrac12, 1]$. Consequently $|N_X(R) - \widetilde{\mathrm{Li}}(e^R)| = O_X(e^{(1 - \epsilon)R})$ for some $\epsilon > 0$.
+> where $\operatorname{Li}(x) = \int_2^x du/\log u \sim x/\log x$ and $s_j = \frac12 + \sqrt{\frac14 - \lambda_j} \in [\frac12, 1]$. Consequently $|N_X(R) - \widetilde{\mathrm{Li}}(e^R)| = O_X(e^{(1 - \epsilon)R})$ for some $\epsilon > 0$.
 > **Why it's true:** the leading $\operatorname{Li}(e^R)$ is the classical prime geodesic theorem (analogue of PNT for hyperbolic surfaces); small eigenvalues $\lambda_j < 1/4$ contribute extra $\operatorname{Li}(e^{s_j R})$ terms via the corresponding zeros of $Z_X$ off the critical line; the error is controlled by the zero-free region of $Z_X$ (Selberg's spectral theory).
 > **Source.** Selberg's zeta and Hejhal's *Selberg trace formula for PSL(2, ℝ)*, vol. I–II (Springer 1976, 1983); used in Wang–Xue via [WX25]. Take on faith — the point for us is the $O(e^{(1-\epsilon)R})$ bound on $N_X - \widetilde{\mathrm{Li}}(e^R)$, which makes the renormalising integral in case (i) converge.
 
@@ -139,7 +139,7 @@ The proofs of the four sub-claims are given below, each in its own collapsible b
 > The two $\gamma_{\mathrm{EM}}$'s cancel exactly — that is the point of the $\gamma_{\mathrm{EM}}$ counterterm in Naud's formula. This is the first line of (ii). $\blacksquare$
 
 > [!note]- Gap-free proof of case (ii) as $\kappa \to 0^+$ (the limit line of the theorem)
-> **Step 1 — insert the Selberg zeta identity.** By [[Thm - Selberg Zeta Identity for the Total Loop Mass|Corollary 4.3]] applied to the killing rate $\kappa$, with $s = s(\kappa) = \frac12 + \sqrt{\tfrac14 + \kappa}$,
+> **Step 1 — insert the Selberg zeta identity.** By [[Thm - Selberg Zeta Identity for the Total Loop Mass|Corollary 4.3]] applied to the killing rate $\kappa$, with $s = s(\kappa) = \frac12 + \sqrt{\frac14 + \kappa}$,
 > $$M_\kappa \;=\; \sum_{\gamma \in \mathcal P_X}\sum_{m \ge 1}\mu^\kappa_X\big(C_X(\gamma^m)\big) \;=\; -\log Z_X(s).$$
 > Substituting into the first line of (ii),
 > $$-\log\det_\zeta\Delta_X \;=\; -\operatorname{Area}(X)\,E + \log\kappa - \log Z_X(s) + O(\kappa),$$
@@ -148,8 +148,8 @@ The proofs of the four sub-claims are given below, each in its own collapsible b
 > **Step 2 — expand $-\log Z_X(s)$ near $s = 1$.** On a closed surface, $\lambda_0 = 0$ is an $L^2$-eigenvalue (constants are integrable on a compact surface), forcing $Z_X$ a **simple zero at $s = 1$**. So $Z_X(s) = Z_X'(1)(s - 1) + O((s - 1)^2)$ with $Z_X'(1) > 0$, giving
 > $$-\log Z_X(s) \;=\; -\log Z_X'(1) \;-\; \log(s - 1) \;+\; O(s - 1).$$
 >
-> **Step 3 — relate $\log(s - 1)$ to $\log\kappa$.** By definition $s = \frac12 + \sqrt{\tfrac14 + \kappa}$, so
-> $$s - 1 \;=\; \sqrt{\tfrac14 + \kappa} - \tfrac12 \;=\; \frac{(1/4 + \kappa) - 1/4}{\sqrt{1/4 + \kappa} + 1/2} \;=\; \frac{\kappa}{\sqrt{1/4 + \kappa} + 1/2}.$$
+> **Step 3 — relate $\log(s - 1)$ to $\log\kappa$.** By definition $s = \frac12 + \sqrt{\frac14 + \kappa}$, so
+> $$s - 1 \;=\; \sqrt{\frac14 + \kappa} - \frac12 \;=\; \frac{(1/4 + \kappa) - 1/4}{\sqrt{1/4 + \kappa} + 1/2} \;=\; \frac{\kappa}{\sqrt{1/4 + \kappa} + 1/2}.$$
 > As $\kappa \to 0^+$, the denominator tends to $1$, so $s - 1 = \kappa\,(1 + O(\kappa)) \sim \kappa$; taking logarithms,
 > $$\log(s - 1) \;=\; \log\kappa \;+\; \log(1 + O(\kappa)) \;=\; \log\kappa \;+\; o(1).$$
 >
@@ -159,7 +159,7 @@ The proofs of the four sub-claims are given below, each in its own collapsible b
 > The $\log\kappa$ from the killing counterterm cancels **exactly** the $-\log\kappa$ from the Selberg zeta's simple zero. Taking $\kappa \to 0^+$, the $o(1)$ vanishes and, negating,
 > $$\log\det_\zeta\Delta_X \;=\; \operatorname{Area}(X)\,E + \log Z_X'(1). \qquad \blacksquare$$
 >
-> *This is precisely the classical D'Hoker–Phong determinant formula; see [[Remark - D'Hoker-Phong Determinant Formula|Remark 5.2]] for the identification $\det_\zeta\Delta_X = Z_X'(1)\,e^{(2g - 2)(2\zeta_R'(-1) - 1/4 + \tfrac12\log 2\pi)}$ and the ⚠️ factor-of-2 flag.*
+> *This is precisely the classical D'Hoker–Phong determinant formula; see [[Remark - D'Hoker-Phong Determinant Formula|Remark 5.2]] for the identification $\det_\zeta\Delta_X = Z_X'(1)\,e^{(2g - 2)(2\zeta_R'(-1) - 1/4 + \frac12\log 2\pi)}$ and the ⚠️ factor-of-2 flag.*
 
 > [!note]- Gap-free proof of case (i), Brownian ($\kappa = 0$)
 > With no killing there is no $\log\kappa$ to absorb the divergence, so the paper renormalises **geometrically**, following Wang–Xue [WX25].

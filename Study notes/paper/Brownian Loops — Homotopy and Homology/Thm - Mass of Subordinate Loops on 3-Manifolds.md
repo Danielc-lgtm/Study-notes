@@ -43,7 +43,7 @@ paper-ref: "Theorem 7.2"
 > **Concretely:** $\tau(z, y) = (2 i z, 2 y)$: $\ell_\gamma = \log 2$, $\theta_\gamma = \pi/2$; then $\tau^2(z, y) = (-4 z, 4 y)$ ($L = 2\log 2 + i\pi$, i.e. rotate $180°$ and double twice). At $m\theta_\gamma$ equal to a multiple of $2\pi$ the rotation becomes trivial modulo $2\pi$. See [[Def - Hyperbolic 3-Space, Kleinian Groups, and Complex Length]].
 
 > [!recall]- The $\mathbb{H}^3$ heat kernel $p_{\mathbb{H}^3}(t, z, w)$
-> **Formally:** $p_{\mathbb{H}^3}(t, z, w) = (4\pi t)^{-3/2}\,\frac{u}{\sinh u}\,e^{-t - u^2/(4t)}$ where $u = d(z, w)$ is the hyperbolic distance; this is the fundamental solution of $\partial_t f = \tfrac12 \Delta_{\mathbb{H}^3} f$.
+> **Formally:** $p_{\mathbb{H}^3}(t, z, w) = (4\pi t)^{-3/2}\,\frac{u}{\sinh u}\,e^{-t - u^2/(4t)}$ where $u = d(z, w)$ is the hyperbolic distance; this is the fundamental solution of $\partial_t f = \frac12 \Delta_{\mathbb{H}^3} f$.
 > **In words:** the probability density of a 3D hyperbolic Brownian particle being near $w$ at time $t$ given it started at $z$. Equals the flat-3D Gaussian $(4\pi t)^{-3/2} e^{-u^2/(4t)}$ times two curvature corrections: $u/\sinh u$ (suppresses long paths because negative curvature spreads paths thin) and $e^{-t}$ (uniform exponential decay, reflecting that hyperbolic Brownian motion escapes to infinity).
 > **Concretely:** at $u = 1$, $t = 1$: $p_{\mathbb{H}^3} \approx 0.0141$ vs. flat-space $0.0350$; the $u/\sinh u$ and $e^{-t}$ factors suppress by about $60\%$. See [[Def - Hyperbolic 3-Space, Kleinian Groups, and Complex Length]].
 
@@ -67,7 +67,7 @@ paper-ref: "Theorem 7.2"
 > **In words:** the mass of a free homotopy class on the 3-manifold equals a single upstairs-kernel integral from a point to its $\tau^m$-image, integrated over one geodesic period (the slab) and over time with weight $dt/t$. The 3D analogue of Theorem 3.2.
 > **Concretely:** when the Dirichlet form is Brownian motion, $p^E = p_{\mathbb{H}^3}$ (the explicit heat kernel above); when it is the subordinate variant $p^\phi_{\mathbb{H}^3}$, the same formula holds with $p^E$ replaced by $p^\phi_{\mathbb{H}^3}$. See [[Thm - Homotopy Decomposition for 3-Manifolds]].
 
-> [!recall]- From earlier sections — [[Lemma - Hyperbolic 3-Space Strip Integral|$\mathbb{H}^3$ strip integral]]
+> [!recall]- From earlier sections — $\mathbb{H}^3$ strip integral ([[Lemma - Hyperbolic 3-Space Strip Integral]])
 > **Formally:** $\int_{\mathcal{F}_\tau} p_{\mathbb{H}^3}(t, w, \tau^m w)\,d\!\operatorname{vol}_{\mathbb{H}^3}(w) = 2\pi\,\frac{e^{m\ell_\gamma}\,\ell_\gamma}{|e^L - 1|^2}\cdot\frac{2t\,e^{-t}}{(4\pi t)^{3/2}}\,e^{-(m\ell_\gamma)^2/(4t)}$, derived directly from the explicit heat kernel by polar coordinates on the horizontal $\mathbb{C}$-plane and the change of variables $r = |z| \to u = d(w, \tau^m w)$ that cancels the $1/\sinh u$ in $p_{\mathbb{H}^3}$.
 > **In words:** the space integral of the $\mathbb{H}^3$ heat kernel from a point to its $\tau^m$-image over one slab is completely explicit — a 1-D Gaussian in $\sqrt{t}$ with a purely-geometric prefactor built from the complex length.
 > **Concretely:** at $\theta_\gamma = 0$, $|e^L - 1|^2 = (e^{m\ell_\gamma} - 1)^2$ and the identity reduces to $\int_{\mathcal{F}_\tau} = 2\pi\,\frac{e^{m\ell_\gamma}\ell_\gamma}{(e^{m\ell_\gamma} - 1)^2}\cdot\frac{2t\,e^{-t}}{(4\pi t)^{3/2}}\,e^{-(m\ell_\gamma)^2/(4t)}$. See [[Lemma - Hyperbolic 3-Space Strip Integral]].
@@ -88,7 +88,7 @@ paper-ref: "Theorem 7.2"
 
 # In One Line
 
-The subordinate loop-measure mass of the class $C_X(\gamma^m)$ on a 3-manifold is a single 1-D integral in the subordination variable $s$: [[Thm - Homotopy Decomposition for 3-Manifolds|Theorem 7.1]] evaluated via the closed-form [[Lemma - Hyperbolic 3-Space Strip Integral|$\mathbb{H}^3$ strip integral]] and [[Lemma - Collapsing the Time Integral of the Subordinate Kernel|Lemma 2.11]]. The complex length enters through the denominator $|e^L - 1|^2 = 2 e^{m\ell_\gamma}(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma))$.
+The subordinate loop-measure mass of the class $C_X(\gamma^m)$ on a 3-manifold is a single 1-D integral in the subordination variable $s$: [[Thm - Homotopy Decomposition for 3-Manifolds|Theorem 7.1]] evaluated via the closed-form $\mathbb{H}^3$ strip integral ([[Lemma - Hyperbolic 3-Space Strip Integral]]) and [[Lemma - Collapsing the Time Integral of the Subordinate Kernel|Lemma 2.11]]. The complex length enters through the denominator $|e^L - 1|^2 = 2 e^{m\ell_\gamma}(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma))$.
 
 ---
 
@@ -112,7 +112,7 @@ The subordinate kernel is $p^\phi_{\mathbb{H}^3}(t, z, w) = \int_{[0, \infty)} p
 >
 > **Step 2 — swap the $s$- and $w$-integrals; apply the $\mathbb{H}^3$ strip integral.** Substitute $(\ast)$ into ($\dagger$). By Tonelli (the integrand is non-negative), swap the $s$-integral against $\psi^\phi_t$ with the spatial integral over $\mathcal{F}_\tau$:
 > $$\int_{\mathcal{F}_\tau} p^\phi_{\mathbb{H}^3}(t, w, \tau^m w)\,d\!\operatorname{vol}_{\mathbb{H}^3}(w) \;=\; \int_{[0, \infty)} \left[\int_{\mathcal{F}_\tau} p_{\mathbb{H}^3}(s, w, \tau^m w)\,d\!\operatorname{vol}_{\mathbb{H}^3}(w)\right]\psi^\phi_t(ds).$$
-> The inner strip integral is [[Lemma - Hyperbolic 3-Space Strip Integral|the $\mathbb{H}^3$ strip integral]] at time $s$:
+> The inner strip integral is the $\mathbb{H}^3$ strip integral ([[Lemma - Hyperbolic 3-Space Strip Integral]]) at time $s$:
 > $$\int_{\mathcal{F}_\tau} p_{\mathbb{H}^3}(s, w, \tau^m w)\,d\!\operatorname{vol}_{\mathbb{H}^3}(w) \;=\; 2\pi\,\frac{e^{m\ell_\gamma}\,\ell_\gamma}{|e^L - 1|^2}\cdot\frac{2 s\,e^{-s}}{(4\pi s)^{3/2}}\,e^{-(m\ell_\gamma)^2/(4 s)}. \tag{$\ddagger$}$$
 > Substituting $(\ddagger)$ back and pulling the $w$-independent prefactor out of the $s$-integral,
 > $$\int_{\mathcal{F}_\tau} p^\phi_{\mathbb{H}^3}(t, w, \tau^m w)\,d\!\operatorname{vol}_{\mathbb{H}^3}(w) \;=\; 2\pi\,\frac{e^{m\ell_\gamma}\,\ell_\gamma}{|e^L - 1|^2}\int_{[0, \infty)} h(s)\,\psi^\phi_t(ds),$$

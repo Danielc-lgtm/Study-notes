@@ -46,7 +46,7 @@ paper-ref: "Corollary 7.3"
 > **Concretely:** at $\theta_\gamma = 0$ (no twist), $|e^L - 1|^2 = (e^{m\ell_\gamma} - 1)^2$ and the prefactor is $e^{m\ell_\gamma}/(e^{m\ell_\gamma} - 1)^2$. See [[Thm - Mass of Subordinate Loops on 3-Manifolds]].
 
 > [!recall]- The Gaussian-type integral $\int_0^\infty s^{-3/2} e^{-a s - b/s}\,ds$
-> **Formally:** for $a, b > 0$, $\int_0^\infty s^{-3/2} e^{-a s - b/s}\,ds = \sqrt{\pi/b}\,e^{-2\sqrt{a b}}$. Derived by completing the square: set $u = \sqrt{a s} - \sqrt{b/s}$, then $a s + b/s = u^2 + 2\sqrt{a b}$ and $du = \tfrac12(\sqrt{a/s} + \sqrt{b}/s^{3/2})\,ds$; the integrand rearranges to $\sqrt{\pi/b}\,e^{-2\sqrt{a b}}$ times the standard Gaussian in $u$ integrated over $\mathbb{R}$.
+> **Formally:** for $a, b > 0$, $\int_0^\infty s^{-3/2} e^{-a s - b/s}\,ds = \sqrt{\pi/b}\,e^{-2\sqrt{a b}}$. Derived by completing the square: set $u = \sqrt{a s} - \sqrt{b/s}$, then $a s + b/s = u^2 + 2\sqrt{a b}$ and $du = \frac12(\sqrt{a/s} + \sqrt{b}/s^{3/2})\,ds$; the integrand rearranges to $\sqrt{\pi/b}\,e^{-2\sqrt{a b}}$ times the standard Gaussian in $u$ integrated over $\mathbb{R}$.
 > **In words:** a standard modified-Bessel-related identity that turns a "small-$s$ Gaussian in $1/\sqrt{s}$ against a large-$s$ decay $e^{-a s}$" into an exponential in the geometric mean $\sqrt{a b}$.
 > **Concretely:** at $a = 1$, $b = 1$: $\int_0^\infty s^{-3/2}e^{-s - 1/s}\,ds = \sqrt{\pi}\,e^{-2}$. Full proof: given in [[Paper - Brownian Loops — Homotopy and Homology — §3 Decomposition over Homotopy Classes|§3.1]].
 
@@ -55,7 +55,7 @@ paper-ref: "Corollary 7.3"
 # Statement
 
 > **Corollary (Brownian mass, 3-manifolds; Belyaev–Huseynli 7.3).** Let $X = \Gamma\backslash\mathbb{H}^3$ be a geometrically finite hyperbolic 3-manifold, $\gamma \in \mathcal{P}_X$ a primitive closed geodesic (complex length $L_\gamma = \ell_\gamma + i\theta_\gamma$), and $m \ge 1$. Then the Brownian loop-measure mass of the class $C_X(\gamma^m)$ is
-> $$\mu_X\big(C_X(\gamma^m)\big) \;=\; \frac{1}{m}\cdot\frac{1}{|e^{m L_\gamma} - 1|^2} \;=\; \frac{e^{-m\ell_\gamma}}{2 m\,(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma))} \;=\; \frac{1}{m}\Big[(e^{m\ell_\gamma} - 1)^2 + 4 e^{m\ell_\gamma}\sin^2\tfrac{m\theta_\gamma}{2}\Big]^{-1}.$$
+> $$\mu_X\big(C_X(\gamma^m)\big) \;=\; \frac{1}{m}\cdot\frac{1}{|e^{m L_\gamma} - 1|^2} \;=\; \frac{e^{-m\ell_\gamma}}{2 m\,(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma))} \;=\; \frac{1}{m}\Big[(e^{m\ell_\gamma} - 1)^2 + 4 e^{m\ell_\gamma}\sin^2\frac{m\theta_\gamma}{2}\Big]^{-1}.$$
 
 ---
 
@@ -84,7 +84,7 @@ The exact 3-manifold analogue of the surface formula $\mu_X(C_X(\gamma^m)) = \fr
 > $$\mu_X(C_X(\gamma^m)) \;=\; 2\pi\,\frac{e^{m\ell_\gamma}\,\ell_\gamma}{|e^L - 1|^2}\cdot\frac{2}{(4\pi)^{3/2}}\int_0^\infty s^{-3/2}\,e^{-s - (m\ell_\gamma)^2/(4 s)}\,ds. \tag{$\ddagger$}$$
 >
 > **Step 2 — evaluate the Gaussian-type integral.** Apply the identity $\int_0^\infty s^{-3/2} e^{-a s - b/s}\,ds = \sqrt{\pi/b}\,e^{-2\sqrt{a b}}$ (recall above) with $a = 1$, $b = (m\ell_\gamma)^2/4$:
-> $$\sqrt{\pi/b} \;=\; \sqrt{\pi \cdot \frac{4}{(m\ell_\gamma)^2}} \;=\; \frac{2\sqrt{\pi}}{m\ell_\gamma}, \qquad 2\sqrt{a b} \;=\; 2\sqrt{\tfrac{(m\ell_\gamma)^2}{4}} \;=\; m\ell_\gamma,$$
+> $$\sqrt{\pi/b} \;=\; \sqrt{\pi \cdot \frac{4}{(m\ell_\gamma)^2}} \;=\; \frac{2\sqrt{\pi}}{m\ell_\gamma}, \qquad 2\sqrt{a b} \;=\; 2\sqrt{\frac{(m\ell_\gamma)^2}{4}} \;=\; m\ell_\gamma,$$
 > so
 > $$\int_0^\infty s^{-3/2}\,e^{-s - (m\ell_\gamma)^2/(4 s)}\,ds \;=\; \frac{2\sqrt{\pi}}{m\ell_\gamma}\,e^{-m\ell_\gamma}. \tag{$\S$}$$
 >
@@ -93,15 +93,15 @@ The exact 3-manifold analogue of the surface formula $\mu_X(C_X(\gamma^m)) = \fr
 > Compute the constant: $(4\pi)^{3/2} = 4^{3/2}\pi^{3/2} = 8\pi^{3/2} = 8\pi\sqrt{\pi}$, and $2\pi \cdot 2 \cdot 2\sqrt{\pi} = 8\pi\sqrt{\pi}$. So the constant is $8\pi\sqrt{\pi}/8\pi\sqrt{\pi} = 1$. The $\ell_\gamma$ in the prefactor and the $m\ell_\gamma$ in the denominator combine to give $1/m$; the exponentials cancel: $e^{m\ell_\gamma}\cdot e^{-m\ell_\gamma} = 1$. Therefore
 > $$\mu_X(C_X(\gamma^m)) \;=\; \frac{1}{m}\cdot\frac{1}{|e^L - 1|^2} \;=\; \frac{1}{m}\cdot\frac{1}{|e^{m L_\gamma} - 1|^2}. \tag{form 1}$$
 >
-> **Step 4 — derive the equivalent forms.** Apply the auxiliary identity $|e^{a + ib} - 1|^2 = 2 e^a(\cosh a - \cos b)$ (derived by direct computation: $|e^{a+ib} - 1|^2 = (e^a\cos b - 1)^2 + (e^a\sin b)^2 = e^{2a} - 2 e^a\cos b + 1 = 2 e^a\big(\tfrac{e^a + e^{-a}}{2} - \cos b\big)$) with $a = m\ell_\gamma$, $b = m\theta_\gamma$:
+> **Step 4 — derive the equivalent forms.** Apply the auxiliary identity $|e^{a + ib} - 1|^2 = 2 e^a(\cosh a - \cos b)$ (derived by direct computation: $|e^{a+ib} - 1|^2 = (e^a\cos b - 1)^2 + (e^a\sin b)^2 = e^{2a} - 2 e^a\cos b + 1 = 2 e^a\big(\frac{e^a + e^{-a}}{2} - \cos b\big)$) with $a = m\ell_\gamma$, $b = m\theta_\gamma$:
 > $$|e^{m L_\gamma} - 1|^2 \;=\; 2 e^{m\ell_\gamma}\big(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma)\big).$$
 > Substituting in form 1,
 > $$\mu_X(C_X(\gamma^m)) \;=\; \frac{1}{m}\cdot\frac{1}{2 e^{m\ell_\gamma}(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma))} \;=\; \frac{e^{-m\ell_\gamma}}{2 m(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma))}. \tag{form 2}$$
 >
-> For form 3, apply the double-angle identity $\cos(m\theta_\gamma) = 1 - 2\sin^2(m\theta_\gamma/2)$ and expand $\cosh(m\ell_\gamma) = \tfrac{e^{m\ell_\gamma} + e^{-m\ell_\gamma}}{2}$:
-> $$2 e^{m\ell_\gamma}(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma)) \;=\; 2 e^{m\ell_\gamma}\cdot\tfrac{e^{m\ell_\gamma} + e^{-m\ell_\gamma}}{2} - 2 e^{m\ell_\gamma} + 4 e^{m\ell_\gamma}\sin^2(m\theta_\gamma/2).$$
+> For form 3, apply the double-angle identity $\cos(m\theta_\gamma) = 1 - 2\sin^2(m\theta_\gamma/2)$ and expand $\cosh(m\ell_\gamma) = \frac{e^{m\ell_\gamma} + e^{-m\ell_\gamma}}{2}$:
+> $$2 e^{m\ell_\gamma}(\cosh(m\ell_\gamma) - \cos(m\theta_\gamma)) \;=\; 2 e^{m\ell_\gamma}\cdot\frac{e^{m\ell_\gamma} + e^{-m\ell_\gamma}}{2} - 2 e^{m\ell_\gamma} + 4 e^{m\ell_\gamma}\sin^2(m\theta_\gamma/2).$$
 > The first two terms give $e^{2m\ell_\gamma} + 1 - 2 e^{m\ell_\gamma} = (e^{m\ell_\gamma} - 1)^2$. Therefore $|e^{m L_\gamma} - 1|^2 = (e^{m\ell_\gamma} - 1)^2 + 4 e^{m\ell_\gamma}\sin^2(m\theta_\gamma/2)$, giving
-> $$\mu_X(C_X(\gamma^m)) \;=\; \frac{1}{m}\Big[(e^{m\ell_\gamma} - 1)^2 + 4 e^{m\ell_\gamma}\sin^2\tfrac{m\theta_\gamma}{2}\Big]^{-1}. \qquad \tag{form 3} \blacksquare$$
+> $$\mu_X(C_X(\gamma^m)) \;=\; \frac{1}{m}\Big[(e^{m\ell_\gamma} - 1)^2 + 4 e^{m\ell_\gamma}\sin^2\frac{m\theta_\gamma}{2}\Big]^{-1}. \qquad \tag{form 3} \blacksquare$$
 >
 > **Cross-check ($\theta_\gamma = 0$).** With no twist, $\sin(m\theta_\gamma/2) = 0$ and $\cos(m\theta_\gamma) = 1$, so form 2 reads $\frac{e^{-m\ell_\gamma}}{2m(\cosh(m\ell_\gamma) - 1)}$, and using $\cosh a - 1 = 2\sinh^2(a/2)$: $\frac{e^{-m\ell_\gamma}}{4m\sinh^2(m\ell_\gamma/2)}$. Since $2\sinh(a/2) = e^{a/2}(1 - e^{-a})$, $4\sinh^2(m\ell_\gamma/2) = e^{m\ell_\gamma}(1 - e^{-m\ell_\gamma})^2 = e^{-m\ell_\gamma}(e^{m\ell_\gamma} - 1)^2$; so form 2 simplifies to $\frac{1}{m(e^{m\ell_\gamma} - 1)^2}$ — indeed the square of the surface mass $\frac{1}{m(e^{m\ell_\gamma} - 1)}$, as anticipated.
 
