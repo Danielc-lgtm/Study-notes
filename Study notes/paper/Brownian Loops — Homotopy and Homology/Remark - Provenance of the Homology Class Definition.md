@@ -18,7 +18,7 @@ paper-ref: "Remark 6.2"
 
 > [!recall]- Homology class $[\gamma]$ and character $\chi([\gamma])$
 > **Formally:** the Hurewicz map $\gamma \mapsto [\gamma] \in H_1(X, \mathbb{Z})$ is a group homomorphism from $\Gamma$ to its abelianisation, so it satisfies $[\gamma_1 \gamma_2] = [\gamma_1] + [\gamma_2]$ and $[\gamma^m] = m[\gamma]$. A *unitary character* $\chi : H_1(X, \mathbb{Z}) \to S^1 = \{z \in \mathbb{C} : |z| = 1\}$ is a group homomorphism; because it is a homomorphism, $\chi(m[\gamma]) = \chi([\gamma])^m$, and this value depends only on $m[\gamma]$, not on which $(\gamma, m)$ realises it.
-> **In words:** the character value $\chi([\gamma])$ is a complex number of modulus $1$ attached to each conjugacy class in $\Gamma$; and because $\chi$ only sees the homology (net winding), *many* different conjugacy classes above the same $\beta = m[\gamma]$ get the same value $\chi(\beta)$. This is exactly the property the Fourier regrouping in Corollary 6.4 needs.
+> **In words:** the character value $\chi([\gamma])$ is a complex number of modulus $1$ attached to each topological type of loop on $X$; because $\chi$ only sees the net winding around each independent cycle (not the internal order in which handles are traversed), many different topological types with the same net winding get the same value $\chi(\beta)$. This is exactly the property the Fourier regrouping in Corollary 6.4 needs.
 > **Concretely:** on the torus $T^2$ with $H_1 = \mathbb{Z}^2$, a character $\chi_{(u,v)}(a, b) = e^{2\pi i(au + bv)}$ evaluates on the class $(3, 5) \in H_1$ to $e^{2\pi i(3u + 5v)}$; the same value would be produced by any $(\gamma, m)$ whose iterate lies in $(3, 5)$. See [[Def - First Homology, Characters, and Finite Fourier Analysis]].
 
 ---

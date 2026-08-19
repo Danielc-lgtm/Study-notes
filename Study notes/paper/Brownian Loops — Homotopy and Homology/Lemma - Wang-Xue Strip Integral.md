@@ -36,7 +36,7 @@ paper-ref: "Lemma 3.4"
 
 > [!recall]- Translation length $L$ and $d_{\mathbb{H}^2}(z, e^L z)$
 > **Formally:** $\tau : z\mapsto e^L z$ has axis the imaginary half-line $\{iy : y>0\}$ and moves each axis point by hyperbolic distance $L$. For a general $z = x+iy$, the distance $d_{\mathbb{H}^2}(z, e^L z)$ depends on how far $z$ is from the axis; the *minimum* value $L$ is attained on the axis, and the distance grows for off-axis points.
-> **In words:** every hyperbolic isometry has a preferred geodesic (its *axis*) along which it translates by a fixed distance; off the axis, points move further because they follow curves that swing around the axis.
+> **In words:** The Möbius map $\tau(z) = e^L z$ is one of the isometries of $\mathbb{H}^2$ that behave like "translations along a specific line" — it fixes a preferred geodesic axis (here the imaginary half-line) and slides every point on that axis by a fixed hyperbolic distance $L$. Points not on the axis move further, because they must follow curves that swing around the axis.
 > **Concretely:** with $L = \log 2$ and $\tau : z\mapsto 2z$: on the axis, $d(i, 2i) = \log 2$; off-axis at $z = 1+i$, $d(1+i, 2+2i) = \operatorname{arcosh}(1 + |1+i - 2 - 2i|^2/(2\cdot 1\cdot 2)) = \operatorname{arcosh}(1 + 2/4) = \operatorname{arcosh}(3/2) \approx 0.962 > \log 2 \approx 0.693$. So off-axis paths are strictly longer than the axis translation.
 
 ---

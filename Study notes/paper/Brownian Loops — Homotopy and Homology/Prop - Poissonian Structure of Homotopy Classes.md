@@ -38,7 +38,7 @@ paper-ref: "Proposition 3.8"
 
 > [!recall]- Class-mass $\mu^\phi_X(C_X(\gamma^m))$ is finite
 > **Formally:** by [[Thm - Mass of a Subordinate Brownian Loop Class|Theorem 3.5]], $\mu^\phi_X(C_X(\gamma^m)) = \frac{\ell_\gamma}{2\sinh(L/2)}I_\phi(L)$ with $L = m\ell_\gamma > 0$; for every Bernstein $\phi$ this is a finite positive number.
-> **In words:** each non-trivial non-peripheral free homotopy class has finite loop-mass — the divergence of the total loop mass is a "small loop" (contractible class) effect, not present in any class of positive winding.
+> **In words:** each free homotopy class that genuinely wraps at least one hole (not one that just circles a puncture / cusp — a "peripheral" class, whose loops can be shrunk right up to the puncture and so have no shortest length) has finite loop-mass. The divergence of the total loop mass is a "small loop" (contractible class) effect, not present in any class of positive winding.
 > **Concretely:** on a genus-2 surface with all geodesic lengths $\ge 1$, the Brownian mass of $C_X(\gamma)$ is $1/(e^{\ell_\gamma} - 1) \le 1/(e - 1) \approx 0.582$, and shrinks exponentially for longer geodesics.
 
 ---

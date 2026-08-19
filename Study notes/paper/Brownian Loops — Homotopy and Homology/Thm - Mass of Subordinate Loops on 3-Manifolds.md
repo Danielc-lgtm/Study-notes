@@ -49,6 +49,21 @@ paper-ref: "Theorem 7.2"
 
 > [!recall]- Bernstein function $\phi$, subordinator $(S_t)$, subordinate process $Y = B \circ S$
 > **Formally:** $\phi : (0, \infty) \to (0, \infty)$ is a **Bernstein function** if it is $C^\infty$, concave, non-decreasing, with completely monotone derivative $\phi'$. Its **subordinator** is a non-decreasing càdlàg Lévy process $(S_t)_{t \ge 0}$ with Laplace transform $\mathbb{E}[e^{-\lambda S_t}] = e^{-t \phi(\lambda)}$; write $\psi^\phi_t$ for the law of $S_t$ (a probability measure on $[0, \infty)$). The **subordinate process** $Y_t = B_{S_t}$ (Brownian motion time-changed by $S$) has transition kernel $p^\phi(t, z, w) = \int_{[0, \infty)} p(s, z, w)\,\psi^\phi_t(ds)$.
+>
+> > [!recall]- càdlàg
+> > **Formally:** a function $f:[0,\infty)\to\mathbb{R}$ is **càdlàg** if it is right-continuous and has left limits at every point: $\lim_{s\downarrow t}f(s)=f(t)$ and $\lim_{s\uparrow t}f(s)$ exists.
+> > **In words:** right-continuous with left limits — a path that can jump, but each jump is to a value the path itself takes at the jump time (no accumulation of jumps or wild oscillation).
+> > **Concretely:** the sample paths of a Poisson process $N_t$ are càdlàg: piecewise constant with unit jumps at random times, right-continuous at each jump (the process value at a jump time equals the post-jump value).
+>
+> > [!recall]- Completely monotone derivative $\phi'$
+> > **Formally:** a function $g:(0,\infty)\to(0,\infty)$ is **completely monotone** if all its derivatives alternate in sign: $g>0$, $-g'>0$, $g''>0$, $-g'''>0$, … i.e. $(-1)^k g^{(k)}\ge 0$ for all $k\ge 0$. Equivalently (Bernstein's theorem), $g$ is the Laplace transform $g(\lambda)=\int_{[0,\infty)}e^{-\lambda s}\,\nu(ds)$ of a positive Borel measure $\nu$ on $[0,\infty)$.
+> > **In words:** a positive, monotonically decreasing function whose successive derivatives keep flipping sign — the shape of a Laplace transform of a positive measure.
+> > **Concretely:** $g(\lambda)=1/\lambda$ is completely monotone: $g>0$, $g'=-1/\lambda^2<0$, $g''=2/\lambda^3>0$, $g'''=-6/\lambda^4<0$, …; it is the Laplace transform of the constant measure $\nu(ds)=ds$.
+>
+> > [!recall]- Lévy process
+> > **Formally:** a stochastic process $(X_t)_{t\ge 0}$ is a **Lévy process** if $X_0=0$, it has stationary independent increments (for $0\le s<t$, $X_t-X_s$ is independent of $(X_u)_{u\le s}$ and has the same law as $X_{t-s}$), and it has càdlàg paths.
+> > **In words:** the continuous-time analogue of a random walk with i.i.d. steps — increments over disjoint intervals are independent, and the law of an increment depends only on the interval's length, with paths that jump but stay càdlàg.
+> > **Concretely:** Brownian motion $B_t$ (continuous paths) and the Poisson process $N_t$ (unit jumps at rate $\lambda$) are both Lévy processes; a stable subordinator $S_t$ with $\mathbb{E}[e^{-\lambda S_t}]=e^{-t\lambda^{\alpha/2}}$ is a pure-jump Lévy process taking values in $[0,\infty)$.
 > **In words:** a subordinator is a "random clock" that runs forward but in jumps rather than continuously. Composing a Brownian motion with a subordinator gives a *jump* process — the composition covers Brownian paths with pieces skipped over — whose density at time $t$ is the Brownian density averaged over how far the random clock has advanced.
 > **Concretely:** $\phi(\lambda) = \lambda$: subordinator is the identity $S_t = t$, subordinate process is ordinary Brownian motion, $p^\phi = p$. $\phi(\lambda) = \lambda + \kappa$: $S_t = t$ but the process is killed at rate $\kappa$; $p^\phi = e^{-\kappa t} p$. $\phi(\lambda) = \lambda^{\alpha/2}$ ($0 < \alpha < 2$): $S_t$ is an $\alpha/2$-stable subordinator, subordinate process is the (rotationally invariant) $\alpha$-stable Lévy process. See [[Def - Bernstein Function, Subordinator, and Subordination]] and [[Def - Subordinate Brownian Loop Measure]].
 

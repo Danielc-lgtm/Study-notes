@@ -25,7 +25,12 @@ $X=\Gamma\backslash\mathbb{H}^2$ a geometrically finite hyperbolic surface; $\ma
 
 **One-line mechanism:** primitive closed geodesics are the "primes" of a hyperbolic surface, and their counting function obeys the same $e^{x}/x$ law as $\pi(x)\sim x/\log x=e^{\log x}/\log x$ for ordinary primes — with "length" playing the role of "log of a prime" and $\delta$ the growth rate. The exponential rate $\delta$ is forced because $\delta$ is *defined* as the proliferation rate of the orbit $\Gamma z$, and closed geodesics are in bijection with primitive conjugacy classes, whose count tracks the orbit.
 
-The proof (not reproduced; see the source) runs through the Selberg zeta function: the geodesics' generating function $Z_X(s)$ has its first singularity at $s=\delta$, and a Tauberian/contour argument converts that analytic fact into the asymptotic count, exactly as the prime number theorem is proved from the Riemann zeta's behaviour at $s=1$.
+---
+
+# Proof
+
+> [!note]- Proof-sketch (external)
+> The proof (not reproduced here) runs through the Selberg zeta function: the geodesics' generating function $Z_X(s)$ has its first singularity at $s=\delta$, and a Tauberian/contour argument converts that analytic fact into the asymptotic count, exactly as the prime number theorem is proved from the Riemann zeta's behaviour at $s=1$. In the cocompact case ($\delta=1$) this is Selberg's trace-formula derivation, worked out in detail in Buser, *Geometry and Spectra of Compact Riemann Surfaces*, Ch. 9; in the geometrically finite infinite-area setting the argument is Borthwick's, *Spectral Theory of Infinite-Area Hyperbolic Surfaces*, Ch. 14.
 
 ---
 

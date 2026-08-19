@@ -22,7 +22,7 @@ $(X,g)$ a Riemannian surface; $(\mathcal E,\mathcal F)$ a regular symmetric Diri
 
 > [!recall]- Weighted potential measure $V_\phi$
 > **Formally:** the $\sigma$-finite measure on $(0,\infty)$ characterised by $\int h(s)\,V_\phi(ds)=\int_0^\infty\frac{dt}{t}\int h(s)\,\psi^\phi_t(ds)$ for every non-negative measurable $h$ making the right side finite. In every case of the paper, $V_\phi(ds)=V_\phi(s)\,ds$ (absolutely continuous), with explicit densities: $\frac{1}{s}$ (Brownian), $\frac{e^{-\kappa s}}{s}$ (killing), $\frac{\alpha}{2s}$ ($\alpha$-stable), $\frac{\alpha e^{-\kappa s}}{2s}$ (shifted $\alpha$-stable).
-> **In words:** the compressed record of "apply the multiplicative Haar measure $\frac{dt}{t}$ to the subordinator's law." A measure that lives on the subordination variable $s$, encoding all the $t$-averaging.
+> **In words:** the compressed record of averaging the subordinator's law $\psi^\phi_t$ against the scale-invariant duration weight $\frac{dt}{t}$ (invariant under $t \to \lambda t$), applied to the subordinator's law. A measure that lives on the subordination variable $s$, encoding all the $t$-averaging.
 > **Concretely:** for Brownian ($\phi=\lambda$), $\psi^\phi_t=\delta_t$, so $\int h(s)\,V_\phi(ds)=\int h(t)\,\frac{dt}{t}$ — reading off $V_\phi=\frac{ds}{s}$. The identity says: instead of doing the $t$-integral first, absorb it into a single measure $V_\phi$ in $s$. See [[Def - Weighted Potential Measure]] and [[Ex - Weighted Potential Measures of the Paper's Bernstein Functions]] for all four cases.
 
 > [!recall]- $\sigma$-finite measure

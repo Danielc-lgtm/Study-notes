@@ -38,7 +38,7 @@ paper-ref: "Theorem 5.1"
 
 > [!recall]- Hyperbolic surface $X = \Gamma\backslash\mathbb H^2$ (closed case)
 > **Formally:** $\mathbb H^2 = \{x + iy : y > 0\}$ with metric $ds^2 = (dx^2 + dy^2)/y^2$; $\Gamma \subset \mathrm{PSL}(2, \mathbb R)$ a discrete torsion-free subgroup with **compact quotient** (a *cocompact* Fuchsian group); $X = \Gamma\backslash\mathbb H^2$ is a closed hyperbolic surface of genus $g \ge 2$ with $K \equiv -1$ and $\operatorname{Area}(X) = 4\pi(g - 1)$.
-> **In words:** the upper half-plane with a curved ruler, quotiented by a discrete group whose fundamental region is a compact hyperbolic polygon (with sides identified). The result is a compact surface of constant negative curvature, like a "many-holed pretzel" made hyperbolic.
+> **In words:** the upper half-plane with a curved ruler, quotiented by a discrete group $\Gamma$ whose orbits have a compact set of representatives (a compact hyperbolic polygon with edges identified in pairs by elements of $\Gamma$). The result is a compact surface of constant negative curvature, like a "many-holed pretzel" made hyperbolic.
 > **Concretely:** a genus-$2$ closed hyperbolic surface has area $4\pi$, systole (shortest closed geodesic) bounded below by a positive constant; every free homotopy class contains a unique closed geodesic of definite positive length. See [[Def - Fuchsian Group and the Hyperbolic Quotient Surface]].
 
 > [!recall]- Brownian loop measure with killing $\mu^\kappa_X$

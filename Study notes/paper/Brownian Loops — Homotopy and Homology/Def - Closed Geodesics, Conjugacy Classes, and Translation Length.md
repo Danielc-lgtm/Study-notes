@@ -40,7 +40,7 @@ Two facts make the dictionary work. First, a loop upstairs lifts to an *arc* who
 
 # Examples and Non-Examples
 
-**Is an instance.** On a genus-2 surface, each of the $2g=4$ standard generators is a primitive hyperbolic element with its own closed geodesic; their conjugacy classes are distinct free homotopy classes. $\tau^m$ ($m\ge2$) is non-primitive: it wraps the primitive geodesic $m$ times, length $m\ell_\gamma$.
+**Is an instance.** On a genus-2 surface, each of the $2g=4$ standard generators is a primitive hyperbolic element with its own closed geodesic; their conjugacy classes are distinct free homotopy classes. (The genus-2 surface has fundamental group $\langle a_1,b_1,a_2,b_2\mid [a_1,b_1][a_2,b_2]=1\rangle$, with $a_i,b_i$ two loops around handle $i$ — an around-the-hole loop and an around-the-handle loop; each of these 4 generators represents a primitive hyperbolic element of $\Gamma$.) $\tau^m$ ($m\ge2$) is non-primitive: it wraps the primitive geodesic $m$ times, length $m\ell_\gamma$.
 
 **Is NOT an instance.** A **parabolic** element (fixing one boundary point, $|\operatorname{tr}|=2$) has *no* axis and no closed geodesic — its class is **peripheral** (winds into a cusp) and is excluded. Its "class" has zero translation length, so the mass formulas (which divide by $\sinh(\ell/2)$) do not apply.
 

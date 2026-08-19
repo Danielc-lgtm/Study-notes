@@ -14,7 +14,7 @@ paper-ref: "Corollary 5.4"
 # Notation
 
 - $X$ — a closed hyperbolic surface of genus $g \ge 2$, with its **hyperbolic metric** $g_{\mathrm{hyp}}$ (constant curvature $K \equiv -1$, so $\operatorname{Area}(X) = 4\pi(g - 1)$ by Gauss–Bonnet).
-- $\sigma : X \to \mathbb R$ — a smooth real function on $X$, the **conformal factor**.
+- $\sigma : X \to \mathbb R$ — a smooth real function on $X$, the **conformal factor** — i.e. $\sigma$ is the pointwise "log stretch factor" of the new metric relative to the hyperbolic one: at a point $p$ where $\sigma(p) = a$, every $g_{\mathrm{hyp}}$-length near $p$ is multiplied by $e^a$ to get the $g$-length.
 - $g := e^{2\sigma}\,g_{\mathrm{hyp}}$ — an arbitrary smooth metric in the conformal class of $g_{\mathrm{hyp}}$.
 - $\Delta_X = \Delta_{g_{\mathrm{hyp}}}$ (in the loop-measure identity) — the positive Laplace–Beltrami operator of the *hyperbolic* representative, whose loop measures $\mu^\kappa_X$ appear on the right-hand side.
 - $\Delta_g$ — the positive Laplace–Beltrami operator of the general conformal metric $g$; its zeta-determinant $\det_\zeta\Delta_g$ (zero mode excluded) is the object of the corollary.
@@ -29,8 +29,8 @@ paper-ref: "Corollary 5.4"
 > **Concretely:** on the round sphere $S^2$ with the standard metric $g_0$ of curvature $+1$, take $\sigma \equiv \log R$: then $g = R^2 g_0$ is the round metric of radius $R$; lengths are scaled by $R$, angles are unchanged. On a genus-$2$ hyperbolic surface, any smooth metric can be written $g = e^{2\sigma}\,g_{\mathrm{hyp}}$ for a unique $\sigma$ (up to a constant).
 
 > [!recall]- Zeta-regularised determinant $\det_\zeta\Delta_g$
-> **Formally:** for a closed surface with metric $g$ and Laplace eigenvalues $0 = \lambda_0 < \lambda_1 \le \cdots$, the spectral zeta $\zeta_{X,g}(s) = \sum_{j \ge 1}\lambda_j^{-s}$ continues meromorphically, is regular at $s = 0$, and $\log\det_\zeta\Delta_g := -\zeta_{X,g}'(0)$.
-> **In words:** the finite canonical stand-in for the divergent product of Laplace eigenvalues, obtained by analytic continuation of the spectral zeta.
+> **Formally:** for a closed surface with metric $g$ and Laplace eigenvalues $0 = \lambda_0 < \lambda_1 \le \cdots$, the spectral zeta $\zeta_{X,g}(s) = \sum_{j \ge 1}\lambda_j^{-s}$ (a series in a complex variable $s$) continues meromorphically, is regular at $s = 0$, and $\log\det_\zeta\Delta_g := -\zeta_{X,g}'(0)$.
+> **In words:** the finite canonical stand-in for the divergent product of Laplace eigenvalues. Although the series $\sum_j \lambda_j^{-s}$ in a complex variable $s$ only converges when $\operatorname{Re} s > 1$, it extends to a well-defined complex-analytic function of $s$ on all of $\mathbb C$ except a few isolated poles — so its derivative at $s = 0$ is a definite finite number, and $-\zeta'(0)$ is finite.
 > **Concretely:** $\det_\zeta\Delta_g$ is a positive real number attached to the surface-with-metric $(X, g)$. It depends on $g$ (not just the conformal class), and its dependence on the conformal factor is given by [[Thm - Polyakov Conformal Anomaly Formula|Polyakov's formula]]. See [[Def - Zeta-Regularised Determinant of the Laplacian]].
 
 > [!recall]- Polyakov's conformal anomaly formula
@@ -81,4 +81,4 @@ Loop measures and the Selberg zeta are conformally *invariant* on a hyperbolic s
 
 # Where the paper uses this
 
-Central result of [[Paper - Brownian Loops — Homotopy and Homology — §5 Renormalising the Total Mass|§5.1.1]] — extends [[Thm - Determinant as Renormalised Loop Mass|Theorem 5.1]] from the hyperbolic representative to every metric in the conformal class. This is the version that connects the paper to Polyakov / bosonic-string / worldsheet-partition-function contexts, where $\log\det_\zeta\Delta_g$ appears as the one-loop effective action and one wants its dependence on the conformal factor.
+Central result of [[Paper - Brownian Loops — Homotopy and Homology — §5 Renormalising the Total Mass|§5.1.1]] — extends [[Thm - Determinant as Renormalised Loop Mass|Theorem 5.1]] from the hyperbolic representative to every metric in the conformal class. This is the version that connects the paper to Polyakov / bosonic-string / worldsheet-partition-function contexts, where $\log\det_\zeta\Delta_g$ appears as the sum-over-fluctuations weight around a classical background and one wants its dependence on the conformal factor.

@@ -22,6 +22,25 @@ The one genuinely new feature is that a closed geodesic on a 3-manifold carries 
 
 ---
 
+# Recalls for the definition
+
+> [!recall]- "Freely and properly discontinuously" (what it means for $\Gamma$ to act nicely on $\mathbb{H}^3$)
+> **Formally:** an action $\Gamma\times\mathbb{H}^3\to\mathbb{H}^3$ is **free** if no non-identity $h\in\Gamma$ fixes any point ($h\cdot p=p$ forces $h=\mathrm{id}$), and **properly discontinuous** if every point has a neighbourhood $U$ with $\{h\in\Gamma:h\cdot U\cap U\ne\varnothing\}$ finite (so orbits do not accumulate). Together they mean the quotient $\Gamma\backslash\mathbb{H}^3$ inherits a smooth manifold structure with no orbifold points.
+> **In words:** "free" means no wallpaper symmetry pins any point in place; "properly discontinuous" means when you take a small patch, only finitely many wallpaper symmetries can move it back onto itself.
+> **Concretely:** the standard integer-lattice action of $\mathbb{Z}^3$ on $\mathbb{R}^3$ by translation is both free (no non-identity vector fixes any point) and properly discontinuous (a ball of radius $0.4$ only intersects finitely many translates); the quotient is the $3$-torus. Rotation by $\pi/3$ around the origin in $\mathbb{R}^2$ is **not** free (fixes the origin); the corresponding quotient is a cone-point orbifold, not a smooth manifold.
+
+> [!recall]- Parabolic, elliptic, loxodromic elements of $\mathrm{PSL}(2,\mathbb{C})$
+> **Formally:** for $\tau\in\mathrm{PSL}(2,\mathbb{C})$, classify by the (complex) trace-squared $|\mathrm{tr}\,\tau|^2$: **elliptic** ($0\le|\mathrm{tr}|^2<4$ and real; finite-order rotation, fixes a whole geodesic axis in $\mathbb{H}^3$), **parabolic** ($|\mathrm{tr}|^2=4$; fixes one boundary point, translation-like near infinity), **loxodromic** ($|\mathrm{tr}|^2>4$ real, or complex with nonzero imaginary part; fixes two boundary points; screw motion).
+> **In words:** three families of $\mathbb{H}^3$-isometries; loxodromic is the interesting one for closed geodesics — it slides along an axis by real length $\ell_\gamma$ **and** rotates by angle $\theta_\gamma$ around the axis, packaged into $L_\gamma=\ell_\gamma+i\theta_\gamma$.
+> **Concretely:** $\tau(z,y)=(2z,2y)$ has real trace with $|\mathrm{tr}|^2>4$ and is loxodromic with real complex length $\ell_\gamma=\log 2$, $\theta_\gamma=0$ (pure translation, a "hyperbolic" element). $\tau(z,y)=(2iz,2y)$ has complex trace with nonzero imaginary part and is again loxodromic, with $L_\gamma=\log 2+i\pi/2$ (a screw motion with a quarter-turn per period).
+
+> [!recall]- Centraliser $C_\Gamma(g)$
+> **Formally:** $C_\Gamma(g):=\{q\in\Gamma:qg=gq\}$, the subgroup of $\Gamma$ commuting with $g$. **Fact:** for $\tau\in\Gamma$ a primitive loxodromic element ($\Gamma$ torsion-free discrete in $\mathrm{PSL}(2,\mathbb{C})$), $C_\Gamma(\tau^m)=\langle\tau\rangle=\{\tau^k:k\in\mathbb{Z}\}$.
+> **In words:** the set of wallpaper symmetries that don't change $g$ when you conjugate by them — "the symmetries preserving $g$'s action". Any $q$ commuting with $\tau$ must preserve $\tau$'s axis (the unique geodesic $\tau$ preserves) and preserve the complex length; the only elements of $\Gamma$ doing that are the powers of $\tau$.
+> **Concretely:** if $\tau(z,y)=(2z,2y)$, then $C_\Gamma(\tau)$ contains all $\tau^m:(z,y)\mapsto(2^m z,2^m y)$ and nothing else — no other element of a torsion-free $\Gamma$ can commute with $\tau$ without being a proper power thereof.
+
+---
+
 # The Definition
 
 > **Definition (hyperbolic 3-space; Kleinian group; complex length).** **Hyperbolic 3-space** is $\mathbb{H}^3=\{(z,y):z\in\mathbb{C},y>0\}$ with the constant-curvature-$(-1)$ metric $ds^2=(|dz|^2+dy^2)/y^2$, volume $d\!\operatorname{vol}_{\mathbb{H}^3}=y^{-3}\,dA(z)\,dy$ ($dA$ Euclidean area on $\mathbb{C}$), and isometry group $\mathrm{PSL}(2,\mathbb{C})$. A **Kleinian group** is a discrete torsion-free $\Gamma\subset\mathrm{PSL}(2,\mathbb{C})$ acting freely and properly discontinuously; then $X=\Gamma\backslash\mathbb{H}^3$ is a complete orientable **hyperbolic 3-manifold**. A non-parabolic, non-elliptic $\tau\in\Gamma$ is **loxodromic**: it fixes two boundary points, preserves the geodesic between them (its axis), and acts by translating length $\ell_\gamma>0$ *and* rotating angle $\theta_\gamma\in\mathbb{R}/2\pi\mathbb{Z}$ about it. Its **complex length** is
@@ -40,7 +59,7 @@ The one genuinely new feature is that a closed geodesic on a 3-manifold carries 
 
 # Examples and Non-Examples
 
-**Is an instance.** A hyperbolic knot complement (e.g. the figure-eight knot complement, $\Gamma\subset\mathrm{PSL}(2,\mathbb{Z}[\omega])$) is a finite-volume hyperbolic 3-manifold; its closed geodesics have genuinely complex lengths. A purely-translating loxodromic ($\theta_\gamma=0$) is called *hyperbolic*; a general one rotates too.
+**Is an instance.** Take $\Gamma=\langle(z,y)\mapsto(z+1,y),\,(z,y)\mapsto(z+i,y)\rangle$ (translations by $1$ and $i$ in the horizontal $\mathbb{C}$-plane) — this is the 3D analogue of the flat torus setup and $\Gamma\backslash\mathbb{H}^3$ is a solid rectangular chimney (a rank-2 cusp). For a genuinely hyperbolic (loxodromic) example, take $\Gamma=\langle\tau\rangle$ with $\tau(z,y)=(2iz,2y)$; $\Gamma\backslash\mathbb{H}^3$ is a solid torus with a quarter-twist per period. A famous compact example is the **figure-eight knot complement** — its fundamental group is a Kleinian $\Gamma\subset\mathrm{PSL}(2,\mathbb{Z}[\omega])$ where $\omega$ is a primitive cube root of unity (so $\mathbb{Z}[\omega]$ is the Eisenstein integers); full construction details are beyond our floor (see Thurston), but the takeaway is that infinitely many complicated $3$-manifolds arise this way. A purely-translating loxodromic ($\theta_\gamma=0$) is called *hyperbolic*; a general one rotates too.
 
 **Is NOT an instance.** A **parabolic** element of $\mathrm{PSL}(2,\mathbb{C})$ (one fixed boundary point) has no axis and no complex length — its class is peripheral (into a cusp), excluded as in 2D. A **purely elliptic** element (rotation, finite order) is excluded by torsion-freeness.
 

@@ -19,9 +19,9 @@ paper-ref: "Remark 5.2"
 - $E := \frac{1}{4\pi}\!\left(4\zeta_R'(-1) - \frac12 + \log 2\pi\right) \approx 0.0538$ — the universal Naud constant of the paper (the area-density part of $\log\det_\zeta\Delta$).
 
 > [!recall]- Zeta-regularised determinant of the Laplacian
-> **Formally:** on a closed surface with Laplace eigenvalues $0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\to\infty$, the spectral zeta function $\zeta_X(s):=\sum_{j\ge1}\lambda_j^{-s}$ continues meromorphically and is regular at $s=0$; $\log\det_\zeta\Delta_X := -\zeta_X'(0)$.
-> **In words:** the finite, canonical stand-in for the divergent product $\prod_{j\ge1}\lambda_j$ of Laplace eigenvalues, obtained by analytic continuation of the spectral zeta.
-> **Concretely:** for three eigenvalues $1, 2, 3$ the recipe recovers the ordinary product $6 = 1\cdot 2\cdot 3$; for infinitely many, the analytic continuation gives a finite $\det_\zeta$. See [[Def - Zeta-Regularised Determinant of the Laplacian]].
+> **Formally:** on a closed surface with Laplace eigenvalues $0=\lambda_0<\lambda_1\le\lambda_2\le\cdots\to\infty$, the series $\zeta_X(s):=\sum_{j\ge1}\lambda_j^{-s}$ (in a complex variable $s$) continues meromorphically and is regular at $s=0$; $\log\det_\zeta\Delta_X := -\zeta_X'(0)$.
+> **In words:** the finite, canonical stand-in for the divergent product $\prod_{j\ge1}\lambda_j$ of Laplace eigenvalues. Although the series $\sum_j \lambda_j^{-s}$ (in a complex variable $s$) only converges when $\operatorname{Re} s > 1$, it extends to a well-defined complex-analytic function of $s$ on all of $\mathbb C$ except a few isolated poles — so its derivative at $s = 0$ is a definite finite number, and $-\zeta'(0)$ is finite.
+> **Concretely:** for three eigenvalues $1, 2, 3$ the recipe recovers the ordinary product $6 = 1\cdot 2\cdot 3$; for infinitely many, the extension gives a finite $\det_\zeta$. See [[Def - Zeta-Regularised Determinant of the Laplacian]].
 
 > [!recall]- Selberg zeta $Z_X(s)$: the simple zero at $s=1$ on a closed surface
 > **Formally:** $Z_X(s) := \prod_{\gamma\in\mathcal P_X}\prod_{k\ge0}(1 - e^{-(s+k)\ell_\gamma})$ for $\operatorname{Re}s > 1$; extends meromorphically. On a closed hyperbolic surface the eigenvalue $\lambda_0 = 0$ (corresponding to constant functions) forces $Z_X$ a **simple zero at $s = 1$**: $Z_X(s) = Z_X'(1)(s - 1) + O((s-1)^2)$ near $s = 1$.

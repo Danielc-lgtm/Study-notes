@@ -31,7 +31,7 @@ paper-ref: "Theorem 6.5"
 > **Formally:** for a unitary $\chi$ and $\operatorname{Re}s > \delta$,
 > $$-\log L_X(s, \chi) = \sum_{\gamma \in \mathcal P_X}\sum_{m = 1}^\infty \chi([\gamma])^m\,\mu^\kappa_X(C_X(\gamma^m)),$$
 > the double sum absolutely convergent (by the Selberg zeta convergence estimates for $\operatorname{Re}s > \delta$, since $|\chi([\gamma])^m| = 1$).
-> **In words:** the log of the twisted zeta is a character-weighted sum of the killed loop masses over free-homotopy classes. Each $(\gamma, m)$ contributes its mass multiplied by a character phase depending only on the homology of the iterate $\gamma^m$.
+> **In words:** the log of the character-twisted Selberg zeta $L_X(s, \chi)$ (defined in the notation above — the Selberg zeta with each geodesic factor multiplied by the character phase $\chi([\gamma])$) is a character-weighted sum of the killed loop masses over free-homotopy classes. Each $(\gamma, m)$ contributes its mass multiplied by a character phase depending only on the homology of the iterate $\gamma^m$.
 > **Concretely:** on the toy $\Gamma = \langle \tau_0 \rangle$ with $\ell = 1$, $s = 2$, and $\chi_u([\tau_0^n]) = e^{2\pi i n u}$: $-\log L_X(2, \chi_u) = \sum_{m \ge 1}\frac{e^{2\pi i m u}}{m}\cdot\frac{e^{-m}}{e^m - 1}$; at $u = 0$ this collapses to $-\log Z_X(2)$; at $u = 1/2$ every second term has a minus sign. Full derivation: [[Cor - Selberg L-Function Identity]].
 
 > [!recall]- Mass in a homology class $\mu^\kappa_X(\beta)$

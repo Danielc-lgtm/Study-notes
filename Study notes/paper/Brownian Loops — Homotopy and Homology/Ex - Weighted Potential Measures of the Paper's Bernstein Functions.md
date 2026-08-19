@@ -15,7 +15,7 @@ $\phi:(0,\infty)\to[0,\infty)$ a Bernstein function with subordinator law $\psi^
 
 > [!recall]- Weighted potential measure $V_\phi$
 > **Formally:** the $\sigma$-finite measure on $(0,\infty)$ characterised by $\int h(s)\,V_\phi(ds)=\int_0^\infty\frac{dt}{t}\int h(s)\,\psi^\phi_t(ds)$ for every non-negative measurable $h$ making the right-hand side finite.
-> **In words:** the compressed record of "apply the multiplicative Haar measure $\frac{dt}{t}$ to the subordinator's law $\psi^\phi_t$." A measure on the subordination variable $s$ that packages the outer $t$-integral for use in [[Lemma - Collapsing the Time Integral of the Subordinate Kernel|Lemma 2.11]].
+> **In words:** the compressed record of "average the subordinator's law $\psi^\phi_t$ over duration $t$ using the scale-invariant weight $\frac{dt}{t}$ (the weight for which multiplication $t \to \lambda t$ preserves total mass on $(0,\infty)$)". A measure on the subordination variable $s$ packaging the outer $t$-integral for [[Lemma - Collapsing the Time Integral of the Subordinate Kernel|Lemma 2.11]].
 > **Concretely:** for Brownian ($\psi^\phi_t=\delta_t$), the identity localises at $s=t$ so $\int h(s)\,V_\phi(ds)=\int h(t)\,\frac{dt}{t}$, i.e. $V_\phi(ds)=\frac{ds}{s}$. See [[Def - Weighted Potential Measure]].
 
 > [!recall]- Bernstein functions and subordinator laws of the paper's four cases
