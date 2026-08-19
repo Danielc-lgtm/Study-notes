@@ -54,19 +54,25 @@ If the Notion MCP is connected, fetch the DAG page directly. Otherwise, ask the 
           Ex - [Name].md
           Exercise Index - §X.Y.md
     paper/                         # paper-notes output — one folder per paper
-      [Short Title]/               # everything newly created for that paper
-        Paper - [Short Title].md               # hub page (short scaffolding)
-        Paper - [Short Title] — §N [Title].md  # one section page per paper section
-                                               #   (polymath-style concept-map index)
-        Def - [Name].md            # atomic subpage per paper Definition
-        Thm - [Name].md            # atomic subpage per paper Theorem
-        Lemma - [Name].md          # atomic subpage per paper Lemma
-        Cor - [Name].md            # atomic subpage per paper Corollary
-        Prop - [Name].md           # atomic subpage per paper Proposition
-        Remark - [Name].md         # atomic subpage per paper Remark
-        Ex - [Name].md             # atomic subpage per paper Example
-        # (also: prerequisite Def/Thm/Lemma notes, same folder)
-        # prerequisites already in the vault are wikilinked, not copied here
+      [Short Title]/               # index at the top; everything else in Subpages/
+        Paper - [Short Title].md               # INDEX (front door; short scaffolding
+                                               #   with prominent link to Whole-Paper Story)
+        Subpages/
+          Paper - [Short Title] — Whole-Paper Story.md
+                                               # single coherent narrative walking the
+                                               #   entire paper (voice: paper_source/example.md)
+          Paper - [Short Title] — §N [Title].md  # one section page per paper section
+                                                 #   (polymath-style concept-map index)
+          Def - [Name].md          # atomic subpage per paper Definition
+          Thm - [Name].md          # atomic subpage per paper Theorem
+          Lemma - [Name].md        # atomic subpage per paper Lemma
+          Cor - [Name].md          # atomic subpage per paper Corollary
+          Prop - [Name].md         # atomic subpage per paper Proposition
+          Remark - [Name].md       # atomic subpage per paper Remark
+                                   #   OR per load-bearing paragraph (descriptive name)
+          Ex - [Name].md           # atomic subpage per paper Example
+          # (also: prerequisite Def/Thm/Lemma notes, same Subpages folder)
+          # prerequisites already in the vault are wikilinked, not copied here
     .obsidian/                     # Obsidian configuration
 ```
 
@@ -111,7 +117,7 @@ Three skills build vault content. Each has its own `SKILL.md` and `references/`;
 
 **`.claude/skills/exercise-builder/`** — practice exercises and drills as interlinked vault pages; the practice-generating companion to `polymath-notes`. Six modes (algorithm derivations, competitive programming, calculation drills, physical modelling, approximation methods, exam-level exercises).
 
-**`.claude/skills/paper-notes/`** — turns a single research paper (usually a PDF in `paper_source/`) into a modularly self-contained note-set that a reader competent at undergraduate analysis, linear algebra, and elementary probability — but not a specialist in the paper's field — can follow without looking anything up. **Read the SKILL.md, `notation-discipline.md`, the three template references, and the reference thesis before making paper notes.** The skill backchains everything above the undergraduate floor into atomic notes, recalls unfamiliar terms at their point of use, types every symbol, rewrites every proof gap-free, and writes in the prose voice of the reference thesis (`paper_source/Chiang Sung En-Thesis.pdf`), which supersedes the David Tong style for paper notes. Output: **one folder per paper**, `Study notes/paper/[Short Title]/`, holding a short **hub** page, one **section page per paper section** (polymath-style concept-map index with foldable-bullet statements), **one atomic subpage per named paper item** (Def/Thm/Lemma/Cor/Prop/Remark/Ex), and the atomic prerequisite notes. Every section page is modularly self-contained — a reader jumping into §5 without reading §2–§4 finds every prerequisite recalled or transcluded there. Every atomic subpage is self-contained too — a reader landing on it cold can read and check it without opening any other file. Prerequisites that already have a note elsewhere in the vault are wikilinked, not duplicated into the folder. It does **not** consult the Notion DAG.
+**`.claude/skills/paper-notes/`** — turns a single research paper (usually a PDF in `paper_source/`) into a modularly self-contained note-set that a reader competent at undergraduate analysis, linear algebra, and elementary probability — but not a specialist in the paper's field — can follow without looking anything up. **Read the SKILL.md, `notation-discipline.md`, the three template references, the reference thesis `paper_source/Chiang Sung En-Thesis.pdf` (the prose exemplar for atomic subpages), and `paper_source/example.md` (the prose exemplar for the Whole-Paper Story page) before making paper notes.** The skill backchains everything above the undergraduate floor into atomic notes, recalls unfamiliar terms at their point of use, types every symbol, rewrites every proof gap-free, and writes in the prose voice of the two exemplars. Output: **one folder per paper**, `Study notes/paper/[Short Title]/`, laid out with an **index page** at the top and everything else in a `Subpages/` folder beside it — the index carries a prominent link at the top to the **Whole-Paper Story** (a mandatory single coherent narrative that walks the entire paper at `paper_source/example.md`-level detail, with mental pictures at every step). The `Subpages/` folder holds the Whole-Paper Story, one **section page per paper section** (polymath-style concept-map index with foldable-bullet statements), **one atomic subpage per named paper item** (Def/Thm/Lemma/Cor/Prop/Remark/Ex), **one atomic subpage per load-bearing paragraph** (descriptively-named `Remark - ...` for the paragraphs the paper spends real prose *establishing* rather than *stating* — periodisations, coset enumerations, changes of variables, invariance arguments, dictionaries), and the atomic prerequisite notes. Every section page is modularly self-contained — a reader jumping into §5 without reading §2–§4 finds every prerequisite recalled or transcluded there. Every atomic subpage is self-contained too — a reader landing on it cold can read and check it without opening any other file. Prerequisites that already have a note elsewhere in the vault are wikilinked, not duplicated into the folder. It does **not** consult the Notion DAG.
 
 ## Personal Notes
 

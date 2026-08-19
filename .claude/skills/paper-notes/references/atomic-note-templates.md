@@ -1,6 +1,6 @@
 # Atomic Note Templates
 
-Two kinds of atomic note come out of a paper backchain, and both live **in the paper's own folder** `Study notes/paper/[Short Title]/`, alongside the hub and section pages:
+Two kinds of atomic note come out of a paper backchain, and both live **in the paper's own folder** `Study notes/paper/[Short Title]/Subpages/`, alongside the hub and section pages:
 
 1. **Prerequisite notes** — atomic notes for above-floor concepts the paper leans on that the vault does not already have.
 2. **Paper-item subpages** — one subpage per named item in the paper (Def X, Thm X, Lemma X, Cor X, Prop X, Remark X, Ex X). Every named item gets its own file, so a reader can jump into any one cold.
@@ -13,11 +13,11 @@ Both kinds are **fully self-contained**: their own Notation with `> [!recall]-` 
 
 ## Part 1 — Prerequisite atomic notes (above-floor concepts)
 
-Concepts the paper uses that live **above the floor** and have **no existing vault note** (Rule 1). Create them **in this paper's own folder**, `Study notes/paper/[Short Title]/`.
+Concepts the paper uses that live **above the floor** and have **no existing vault note** (Rule 1). Create them **in this paper's own folder**, `Study notes/paper/[Short Title]/Subpages/`.
 
 **Placement — one flat folder per paper.**
-- absolute continuity of measures → `Study notes/paper/[Short Title]/Def - Absolute Continuity of Measures.md`
-- Radon–Nikodym theorem → `Study notes/paper/[Short Title]/Thm - Radon–Nikodym Theorem.md`
+- absolute continuity of measures → `Study notes/paper/[Short Title]/Subpages/Def - Absolute Continuity of Measures.md`
+- Radon–Nikodym theorem → `Study notes/paper/[Short Title]/Subpages/Thm - Radon–Nikodym Theorem.md`
 
 **The one exception — reuse, do not duplicate.** Search the vault first (`grep`/`find` over `Study notes/`). If a note exists **anywhere** — subject folder or another paper's folder — **wikilink it instead of copying**. Only concepts the vault does not yet cover get a new note here.
 
@@ -126,7 +126,7 @@ source: "[paper Short Title]"
 
 ## Part 2 — Paper-item subpages
 
-**Every named item in the paper is its own subpage** in `Study notes/paper/[Short Title]/`. The paper's own Definitions, Theorems, Lemmas, Corollaries, Propositions, Remarks, and Examples each get a file. Naming uses the concept's name, not the paper number (`Thm - Homotopy Decomposition for Hyperbolic Surfaces`, not `Thm - Theorem 3.2`), so the file is a usable wikilink target. The paper number lives in the YAML `paper-ref` field.
+**Every named item in the paper is its own subpage** in `Study notes/paper/[Short Title]/Subpages/`. The paper's own Definitions, Theorems, Lemmas, Corollaries, Propositions, Remarks, and Examples each get a file. Naming uses the concept's name, not the paper number (`Thm - Homotopy Decomposition for Hyperbolic Surfaces`, not `Thm - Theorem 3.2`), so the file is a usable wikilink target. The paper number lives in the YAML `paper-ref` field.
 
 Each subpage is **fully self-contained**: it can be opened cold, without reading any section page or any other subpage. That means:
 
@@ -310,14 +310,84 @@ paper-ref: "Example [paper's number]"
 
 ---
 
-## Part 3 — Standalone-paragraph subpages
+## Part 3 — Load-bearing-paragraph subpages (mandatory)
 
-When the paper has a paragraph carrying a substantive argument or a definition-in-prose without a number, and that argument is **load-bearing** (a later item depends on it), promote it to a `Remark - [Descriptive Name].md` subpage. This preserves the argument as a greppable, wikilinkable, self-contained note. Non-load-bearing prose stays on the section page as part of the section opener or as inline commentary next to the concept-map bullet.
+**Every paragraph the paper argues for gets its own subpage.** The section pages are indices — they *link* to arguments, they never *carry* them. So whenever the paper devotes more than a sentence to *establishing* a fact rather than *stating* it, that argument is promoted to its own `Remark - [Descriptive Name].md` subpage in `Subpages/`, and the section page's concept map gets one more foldable bullet pointing at it.
 
-Descriptive-name examples:
+### The test for load-bearing
+
+Not every paragraph is load-bearing. The test:
+
+- Does the paragraph carry a **computation** the reader needs to follow (a change of variables, an integration by parts, an evaluation of a limit, a coset enumeration)? → Load-bearing.
+- Does it carry an **identification** of one object with another (this sum equals that integral; this random-walk semigroup is that operator; this loop-mass integral is that Selberg zeta value)? → Load-bearing.
+- Does it establish an **invariance property** the later argument depends on (Γ-invariance of a kernel, ⟨τ⟩-invariance of an integrand, conformal invariance of a measure)? → Load-bearing.
+- Does it walk a **dictionary between two languages** (Wick rotation between quantum and diffusion; abelianisation between fundamental group and homology; Poincaré series ↔ orbit growth)? → Load-bearing.
+- Does it establish a **descent / periodisation construction** (downstairs kernel = sum over the group of upstairs kernel; class-mass isolated by restricting the periodisation to one conjugacy class)? → Load-bearing.
+
+Compare to non-load-bearing prose: pure section-opener text ("we now turn to §5.2, the cusped case"), one-line pointers ("recall §3.1's formula"), summary sentences at the end of a section. These stay on the section page.
+
+**When in doubt, promote.** A promoted paragraph becomes a greppable, wikilinkable, self-contained note. A paragraph left inline on the section page is invisible outside its section and re-fills the section page with the very prose the concept-map format is meant to compress.
+
+### Descriptive-name examples
+
+Named paper remarks:
 - `Remark - Bosonic Partition Function Interpretation.md` (the paper's Remark 4.4)
 - `Remark - Range of Killing Rate.md` (the paper's Remark 3.7)
-- `Remark - Motivation for the Path-Integral Digression.md` (an unnumbered load-bearing paragraph opening a section)
+
+Unnumbered load-bearing paragraphs (from the reference Brownian-loops paper):
+- `Remark - Descent of the Heat Kernel by Periodisation.md` — the paragraph identifying $p_X(t,z,w) = \sum_{h\in\Gamma} p_{\mathbb{H}^2}(t,\tilde z, h\tilde w)$ and explaining why this sum is *pre-sorted by homotopy class*.
+- `Remark - Collapsing the Conjugacy Sum to One Strip.md` — the argument that the double structure "sum over $[\tau^m]_{\mathrm{conj}}$ × integrate over $X$" collapses to one integral over $\mathcal F_\tau$ via the centraliser $\langle\tau\rangle$.
+- `Remark - Standard Form as Coordinates on the Axis.md` — the paragraph explaining why conjugating $\tau$ inside $\mathrm{PSL}(2,\mathbb{R})$ to $z\mapsto e^\ell z$ is the natural coordinate for the strip computation.
+- `Remark - Wick Rotation Dictionary.md` — the paragraph translating quantum $e^{-it\hat H/\hbar}$ into diffusion $e^{-\tau\hat H/\hbar}$ under $t = -i\tau$.
+
+### Template for a load-bearing-paragraph subpage
+
+```markdown
+---
+type: remark
+subject: [primary-field-slug]
+prereqs:
+  - "[whatever above-floor concepts the argument uses]"
+tags: [paper, primary-field-tag]
+source: "[paper Short Title]"
+paper-ref: "unnumbered; §N — [short description of the paragraph]"
+---
+
+# Notation
+
+[Every symbol the argument uses, typed. Three-field `> [!recall]-` for every above-floor term — same discipline as any other atomic subpage.]
+
+---
+
+# Claim / Identity
+
+> **Claim (descriptive name).** [The precise statement the paragraph is arguing for — a specific identity, an equality of measures, a periodisation formula, whatever the paper's own prose established. Fully typed.]
+
+---
+
+# In One Line
+
+[One or two plain-language sentences: what is being claimed and why it matters. Same discipline as the "In One Line" field on paper-item subpages.]
+
+---
+
+# Why It's True
+
+[Thesis-voice intuition — the mental picture behind the argument, in bold at least one line of "mechanism in one sentence".]
+
+---
+
+# Derivation
+
+> [!note]- Gap-free derivation
+> [The paper's argument rewritten with every step justified (Rule 5). Labelled-step style — each move on its own line with its bolded lead-in.]
+
+---
+
+# Where the paper uses this
+
+[Section link and downstream items. This paragraph is load-bearing precisely because a downstream result depends on it — name the dependency.]
+```
 
 ---
 
@@ -325,10 +395,12 @@ Descriptive-name examples:
 
 | Note | Lives in | Full or scoped |
 |---|---|---|
-| Prerequisite `Def -`/`Thm -`/`Lemma -` (new) | this paper's folder | full (scaled to need) |
+| Prerequisite `Def -`/`Thm -`/`Lemma -` (new) | this paper's `Subpages/` folder | full (scaled to need) |
 | Prerequisite that already exists in the vault | wherever it already is — **wikilinked, not copied** | (reused as-is) |
-| Paper-item `Def -`/`Thm -`/`Lemma -`/`Cor -`/`Prop -`/`Remark -`/`Ex -` subpage | this paper's folder | one per named item, self-contained |
-| Section page (concept-map index) | this paper's folder | one per paper section |
-| Hub page | this paper's folder | one per paper |
+| Paper-item `Def -`/`Thm -`/`Lemma -`/`Cor -`/`Prop -`/`Remark -`/`Ex -` subpage | this paper's `Subpages/` folder | one per named item, self-contained |
+| Load-bearing paragraph as `Remark - [Descriptive Name]` | this paper's `Subpages/` folder | one per argued paragraph, self-contained |
+| Section page (concept-map index) | this paper's `Subpages/` folder | one per paper section |
+| Whole-Paper Story page | this paper's `Subpages/` folder | one per paper (mandatory) |
+| Index page | this paper's folder (top level) | one per paper |
 
-Everything newly created for the paper lives in the one folder `Study notes/paper/[Short Title]/`. Every atomic subpage carries a `source:` field naming the paper, a `paper-ref:` field naming the paper number, and a "Where the paper uses this" link, so the DAG is navigable both ways. Forward references to concepts with no page yet are **bold plain text**, never wikilinks.
+Everything newly created for the paper lives in the one folder `Study notes/paper/[Short Title]/` — with the **index at the top of the folder** and every other page in the `Subpages/` subfolder beside it. Every atomic subpage carries a `source:` field naming the paper, a `paper-ref:` field (paper number for named items; `"unnumbered; §N — description"` for load-bearing paragraphs), and a "Where the paper uses this" link, so the DAG is navigable both ways. Forward references to concepts with no page yet are **bold plain text**, never wikilinks.

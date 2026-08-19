@@ -1,18 +1,23 @@
-# Companion Page Template — hub + section indices
+# Companion Page Template — index + story + section indices
 
-The paper's reading surface is **not one long walk-through**. It is a **hub page** plus **one section page per paper section**, each structured as a polymath-style concept-map index. Every named paper item is its own atomic subpage (see `atomic-note-templates.md`); the section page's job is to give the reader the big picture at a glance and provide the self-contained recap that makes the section readable cold.
+The paper's reading surface has three layers: an **index page** at the top of the paper folder (front door), a **Whole-Paper Story page** in `Subpages/` (a single coherent narrative — the primary reading deliverable), and **one section page per paper section** in `Subpages/` (polymath-style concept-map indices linking to atomic subpages). Every named paper item and every load-bearing paragraph gets its own atomic subpage (see `atomic-note-templates.md`).
+
+The index is short scaffolding — it names the paper, links prominently to the Whole-Paper Story, and lists the section pages. The Whole-Paper Story is the *reading experience* — a reader who wants to understand the paper reads it top to bottom. The section pages are for looking things up and for depth — big-picture indices that click through to atomic subpages.
 
 Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the reference thesis for the prose voice. Every subpage is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
 
-Filename pattern:
-- Hub: `Study notes/paper/[Short Title]/Paper - [Short Title].md`
-- Section: `Study notes/paper/[Short Title]/Paper - [Short Title] — §N [Section].md`
+Filename pattern (**index at the top of the folder, everything else in `Subpages/`**):
+- Index: `Study notes/paper/[Short Title]/Paper - [Short Title].md`
+- Story: `Study notes/paper/[Short Title]/Subpages/Paper - [Short Title] — Whole-Paper Story.md`
+- Section: `Study notes/paper/[Short Title]/Subpages/Paper - [Short Title] — §N [Section].md`
+
+Obsidian resolves wikilinks by filename regardless of subfolder, so cross-links across the index/Subpages split still work with bare `[[Filename]]` targets.
 
 The `[Short Title]` is a few words identifying the paper (Windows-portable: no `< > : " / \ | ? *`).
 
 ---
 
-## Hub page template
+## Index page template (at the top of the folder)
 
 ```markdown
 ---
@@ -25,6 +30,9 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 
 # Paper — [Short Title]
 
+> [!tip] Whole-paper story — read this first
+> **[[Paper - [Short Title] — Whole-Paper Story|The whole paper as one connected story]]** — a single top-to-bottom narrative with mental pictures at every step, in the voice of `paper_source/example.md`. If you are here to understand the paper (rather than look up a specific theorem), start there.
+
 > [!abstract] What this paper does
 > [A one-to-two-paragraph plain-language account, thesis voice: what problem it addresses, what it establishes, why that matters. State it so a floor-level reader understands the point of the paper before any machinery appears.]
 
@@ -32,7 +40,12 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 
 **The floor.** These notes assume only undergraduate analysis, linear algebra, and elementary probability. Everything above that floor is recalled at its point of use or written out in a linked atomic note; every proof is rewritten so that each step is checkable without leaving the page.
 
-**How to read this.** Each section page is a **concept-map index** — foldable bullets holding every named paper item's statement inline. Fold-out mode: read the section page top to bottom without leaving it. Click-through mode: click into any atomic subpage for the full proof and motivation. **Every section page is modularly self-contained** — you can open §5 without reading §2–§4.
+**How to read this.** Three entry modes:
+- **Story:** read the [[Paper - [Short Title] — Whole-Paper Story|Whole-Paper Story]] top to bottom.
+- **Big-picture:** open a section page below — every named item and every load-bearing argument appears as one foldable bullet with statement + short unpacking.
+- **Detail:** click into any atomic subpage from a section page — full proof, motivation, and recalls; self-contained cold.
+
+Every section page is **modularly self-contained** — you can open §5 without reading §2–§4.
 
 ---
 
@@ -74,6 +87,55 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 
 [The paper-wide honesty record (Rule 6). Three lists — Verified, Flagged / uncertain, Intuition not yet formalised. Merges the per-section verification logs from every section page.]
 ```
+
+---
+
+## Whole-Paper Story page template (mandatory; in `Subpages/`)
+
+Filename: `Subpages/Paper - [Short Title] — Whole-Paper Story.md`.
+
+**The exemplar is `paper_source/example.md`.** Read it end to end before writing. The template below records the structural elements; it does not substitute for reading the exemplar's prose voice.
+
+```markdown
+---
+type: paper-story
+paper: "[Full citation]"
+tags: [paper, primary-field-tag, story]
+---
+
+# [Short Title] — the whole paper as one connected story
+
+[**One opening paragraph in the exemplar's voice.** Announce the frame: "Here's the whole mental picture as one connected story. I'll keep it in ordinary language, pull in symbols only where they're carrying weight, and make each of your [N] pieces flow into the next — because they really are one chain, not [N] facts." Adapt the phrasing to the paper; keep the *promise* — one narrative, mental pictures over machinery, connective sentences between sections.]
+
+## 1. [Section 1's job, phrased as the story-step it plays]
+
+[The first section walked as prose. Every named object gets a mental picture in the sentence that introduces it. Symbols only where they carry weight (a computation, a specific formula). Argue every construction the paper argues for; don't state facts. Close with the connective sentence that carries the reader into §2 — name the mechanism, not the section number.]
+
+## 2. [Section 2's job — phrased so §1's story-step motivates §2's]
+
+[…]
+
+## 3. [continues, one section per level-2 header, in the paper's order …]
+
+[Every paper section appears in some level-2 header of the story. Do not skip. Do not summarise the section as a bullet list — write it as a paragraph, or several, in prose. Where the paper walks a construction the reader must feel the mechanism of, walk it in the story too (see the exemplar's §4 "Descent = summing over the group (periodisation)" paragraph — a whole construction laid out step by step in the story's own voice).]
+
+[**Sprinkle "one-line versions to hold onto"** where useful — the exemplar's "based loop = element; free loop = conjugacy class; the difference between them = the freedom to move the basepoint = conjugation; the invariant that survives = the geodesic length." One per section is roughly right.]
+
+## [N+1]. [If the paper has a coordinate/convention section — "Standard form" in the exemplar — walk it as its own step.]
+
+## The whole picture in one paragraph
+
+[A single dense paragraph that folds the entire paper into one continuous sentence-chain — the paper's whole story compressed to what a reader can carry away in their head. This is the payoff. See the exemplar's final paragraph.]
+```
+
+**Coverage.** Every paper section appears in the story. Every named theorem and every load-bearing paragraph the paper makes a fuss over appears as a *character in the narrative* — walked as prose with a mental picture, not merely mentioned as "see [[Thm - X]]". Wikilink every named item you mention (so a reader wanting depth can jump), but the story is complete without any click-through: the reader who never clicks a link still gets the whole picture.
+
+**Style discipline** (all from `paper_source/example.md`):
+- Ordinary language; symbols only where they carry weight.
+- Every object gets a mental picture in prose ("*not* a matrix, but **an oriented geodesic line with a translation length**").
+- Every joint gets a "why" ("Why two boundary points: the fixed points of the Möbius map solve a quadratic, and the sign of its discriminant is …").
+- Connective sentences at every section boundary that name the mechanism ("And here's the payoff of Section 3's whole setup …").
+- Optional pull-quotes for one-line summaries the reader should carry.
 
 ---
 

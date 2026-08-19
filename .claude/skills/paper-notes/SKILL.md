@@ -22,27 +22,51 @@ description: >
 
 A skill for rewriting one finished research paper into an Obsidian note-set that a strong generalist — not a specialist in the paper's field — can read front to back, checking every step, without ever leaving the page to look something up. Where `polymath-notes` builds chapter-level study notes from textbooks and `exercise-builder` builds drills, this skill takes a *specific paper* and makes it *legible to a non-specialist* by backchaining everything it uses down to an undergraduate floor.
 
-The deliverable is **one folder per paper**, `Study notes/paper/[Short Title]/`, holding:
-- A short **hub page** with the plain-language abstract, the floor statement, the paper-wide Notation and Standing Conventions, the Prerequisites map, a table of contents linking each section page, and the Verification log.
-- One **section page per paper section**, structured as a polymath-style **index / concept map**: a foldable-bullet list of every named item in that section (definition, theorem, lemma, corollary, proposition, remark, example, and any standalone paragraph carrying an argument), each entry wikilinking to its atomic subpage and holding an indented child bullet with the formal statement plus a 3–5 sentence unpacking. Each section page is **modularly self-contained** — a reader landing on §5 without having read §2–§4 can follow it, because §5 opens with a "Prerequisites recap" section that recalls (or transcludes) every earlier-section definition it uses.
-- One **atomic subpage per named paper item**: every Def X, Thm X, Lemma X, Cor X, Prop X, Remark X, and Example X becomes its own `Def -`/`Thm -`/`Lemma -`/`Cor -`/`Prop -`/`Remark -`/`Ex -` page in the folder, fully self-contained (own recalls, own formal statement, own gap-free proof or worked case). Standalone paragraphs of argument that do not carry a paper number can become `Remark -` pages if they are load-bearing.
-- **Atomic prerequisite notes** for every above-floor concept the vault does not already have (same folder). Prerequisites already elsewhere in the vault are wikilinked, not duplicated.
+The deliverable is **one folder per paper**, `Study notes/paper/[Short Title]/`, laid out with the index at the top and everything else in one `Subpages/` folder beside it:
 
-The reader has two entry modes. **Big-picture mode**: open a section page, scan the foldable-bullet index — you see every named item's statement inline without leaving the page. **Detail mode**: click into an atomic subpage — you get the full motivation, gap-free proof, and all point-of-use recalls; you can jump in cold without reading anything else.
+```
+Study notes/paper/[Short Title]/
+  Paper - [Short Title].md            ← the INDEX (front door)
+  Subpages/
+    Paper - [Short Title] — Whole-Paper Story.md
+    Paper - [Short Title] — §N [Section].md   (one per paper section)
+    Def - [Name].md
+    Thm - [Name].md
+    Lemma - [Name].md
+    Cor - [Name].md
+    Prop - [Name].md
+    Remark - [Name].md
+    Ex - [Name].md
+```
+
+The index is the front door. It carries the plain-language abstract, the floor statement, the paper-wide Notation and Standing Conventions, the Prerequisites map, a **prominent link at the top to the Whole-Paper Story page**, a table of contents linking each section page, and the Verification log. Everything else — the Whole-Paper Story, the section pages, and the atomic subpages — lives in `Subpages/`. Obsidian resolves wikilinks by filename, so links across the split still work without path qualification.
+
+The subfolder contains:
+
+- The **Whole-Paper Story page** (`Paper - [Short Title] — Whole-Paper Story.md`). A single, coherent, top-to-bottom narrative that walks the *entire* paper as one connected story, at the level of `paper_source/example.md` — mental pictures for every object, explicit sentences chaining each section into the next, symbols pulled in only where they carry weight, geometric/probabilistic intuition made visible at every step. Nothing from the paper is missing; nothing is a stated fact without an argued reason. This is the *reading* deliverable — a reader who wants to understand the paper (rather than look up a specific theorem) reads this page cover to cover.
+
+- One **section page per paper section**, structured as a polymath-style **index / concept map**: a foldable-bullet list of every named item in that section (definition, theorem, lemma, corollary, proposition, remark, example, *and every load-bearing paragraph that carries an argument the paper spends real prose on* — see below), each entry wikilinking to its atomic subpage and holding an indented child bullet with the formal statement plus a 3–5 sentence unpacking. Each section page is **modularly self-contained** — a reader landing on §5 without having read §2–§4 can follow it, because §5 opens with a "Prerequisites recap" section that recalls (or transcludes) every earlier-section definition it uses.
+
+- One **atomic subpage per named paper item AND per load-bearing paragraph**: every Def X, Thm X, Lemma X, Cor X, Prop X, Remark X, and Example X becomes its own `Def -`/`Thm -`/`Lemma -`/`Cor -`/`Prop -`/`Remark -`/`Ex -` page. **Beyond named items, every paragraph the paper *argues for* — periodisation identities, descent constructions, why-it-collapses computations, dictionary paragraphs like "Wick rotation turns quantum into diffusion" — is promoted to its own `Remark - [Descriptive Name].md` subpage.** The test: if the paper spends more than a sentence *establishing* a fact rather than just *stating* it, the fact carries an argument, and the argument goes on its own subpage with its own three-field recalls and its own gap-free derivation. Section pages then wikilink to it in the concept map; they never carry the argument as inline prose.
+
+- **Atomic prerequisite notes** for every above-floor concept the vault does not already have (same `Subpages/` folder). Prerequisites already elsewhere in the vault are wikilinked, not duplicated.
+
+The reader has three entry modes. **Story mode**: read the Whole-Paper Story page — an end-to-end coherent walk with mental pictures at every step. **Big-picture mode**: open a section page, scan the foldable-bullet index — every named item and every load-bearing argument appears as one bullet with statement + short description. **Detail mode**: click into an atomic subpage — full motivation, gap-free proof, all point-of-use recalls; jump in cold without opening anything else.
 
 ---
 
 ## Read first, every time
 
-Before writing a single note, read these in order. This is not optional; the skill's entire quality bar is set by the first item.
+Before writing a single note, read these in order. This is not optional; the skill's entire quality bar is set by the first two items.
 
-1. **The reference thesis — the prose exemplar.** `paper_source/Chiang Sung En-Thesis.pdf` (extract with `pdftotext -layout`, or `pymupdf`/`pypdf` if poppler is absent — `pip install pymupdf` then `import pymupdf`). **Study its prose closely before writing anything.** For paper notes the thesis governs the writing voice and *supersedes* the David-Tong register used elsewhere in the vault. What you replicate from it is specified in **The Prose Standard** below — read that section against the thesis open beside you.
-2. `references/notation-discipline.md` — the typing, terminology, and prose-over-compression rules (Rules 3, 4, 7 below live here in full; the body only summarises them).
-3. `references/companion-page-template.md` — the section-by-section companion-page skeleton.
-4. `references/recall-callouts.md` — the point-of-use recall callout, the external-input callout, and the uncertainty marker.
-5. `references/atomic-note-templates.md` — the prerequisite `Def -`/`Thm -`/`Lemma -` note and the paper's-own-result stub note.
-6. `references/obsidian-patterns.md` (a symlink to the polymath-notes copy — **the source of truth for Obsidian syntax**: wikilinks, transclusion, collapsible callouts, math delimiters `$...$` / `$$...$$`, never LaTeX inside `[[ ]]`, Windows-portable filenames, YAML frontmatter). When this skill and that file disagree on *syntax*, that file wins — **with two deliberate paper-notes carve-outs**: (a) callout *titles* (fold lines) use Unicode, not LaTeX, for portability across Obsidian versions and themes, even though `obsidian-patterns.md` says markdown renders in titles (LaTeX in a callout *body* is fine — the carve-out is titles only); and (b) the custom callout labels `[!recall]` (a paper-notes device) and `[!cite]` (a native `quote` alias) are intended and permitted, not to be "corrected" against that file's callout-type list. See `references/recall-callouts.md`.
-7. `../polymath-notes/SKILL.md` — **Core Philosophy only** (self-containedness via DAG links, hierarchical structure, connections, insight density). Reuse its atomic note types and its Obsidian conventions. **Do not** import its *Writing Style* section — the thesis replaces it here — and **do not** run its `autolinker.py` over a paper folder (it mislinks paper-local notation).
+1. **The reference thesis — the prose exemplar for atomic subpages.** `paper_source/Chiang Sung En-Thesis.pdf` (extract with `pdftotext -layout`, or `pymupdf`/`pypdf` if poppler is absent — `pip install pymupdf` then `import pymupdf`). **Study its prose closely before writing anything.** For paper notes the thesis governs the writing voice on section pages and atomic subpages and *supersedes* the David-Tong register used elsewhere in the vault. What you replicate from it is specified in **The Prose Standard** below — read that section against the thesis open beside you.
+2. **`paper_source/example.md` — the prose exemplar for the Whole-Paper Story page.** A worked example of the story-mode writing this skill produces, covering §3 of the reference paper end to end. It sets the standard for the mandatory Whole-Paper Story page (kind 2 in **What you produce**): one flowing narrative with a mental picture for every object, explicit connective sentences at every section boundary, symbols only where they carry weight, and a final one-paragraph total-picture. Study it before writing the Story page for any new paper; the standard is not negotiable.
+3. `references/notation-discipline.md` — the typing, terminology, and prose-over-compression rules (Rules 3, 4, 7 below live here in full; the body only summarises them).
+4. `references/companion-page-template.md` — the index + section-page skeleton and the Whole-Paper Story skeleton.
+5. `references/recall-callouts.md` — the point-of-use recall callout, the external-input callout, and the uncertainty marker.
+6. `references/atomic-note-templates.md` — the atomic-subpage templates (paper items and load-bearing paragraphs).
+7. `references/obsidian-patterns.md` (a symlink to the polymath-notes copy — **the source of truth for Obsidian syntax**: wikilinks, transclusion, collapsible callouts, math delimiters `$...$` / `$$...$$`, never LaTeX inside `[[ ]]`, Windows-portable filenames, YAML frontmatter). When this skill and that file disagree on *syntax*, that file wins — **with two deliberate paper-notes carve-outs**: (a) callout *titles* (fold lines) use Unicode, not LaTeX, for portability across Obsidian versions and themes, even though `obsidian-patterns.md` says markdown renders in titles (LaTeX in a callout *body* is fine — the carve-out is titles only); and (b) the custom callout labels `[!recall]` (a paper-notes device) and `[!cite]` (a native `quote` alias) are intended and permitted, not to be "corrected" against that file's callout-type list. See `references/recall-callouts.md`.
+8. `../polymath-notes/SKILL.md` — **Core Philosophy only** (self-containedness via DAG links, hierarchical structure, connections, insight density). Reuse its atomic note types and its Obsidian conventions. **Do not** import its *Writing Style* section — the thesis replaces it here for section pages and atomic subpages — and **do not** run its `autolinker.py` over a paper folder (it mislinks paper-local notation).
 
 **Do NOT consult the Notion prerequisite DAG for this skill.** Backchaining here bottoms out at a fixed undergraduate floor (below), not at the vault's anchor set. The DAG is for planning what to study; this skill makes one paper self-contained against a fixed floor.
 
@@ -155,42 +179,76 @@ Comprehensive standard prose is preferred to compact formalism, **even when it r
 
 ## What you produce
 
-For one paper, the note-set is **one folder** — `Study notes/paper/[Short Title]/` — holding the hub page, one section page per paper section, and every atomic note newly created for that paper. The only thing that lives outside the folder is an already-existing vault note for a prerequisite, which is wikilinked from the recall rather than duplicated (Rule 1's exception).
+For one paper, the note-set is **one folder** — `Study notes/paper/[Short Title]/` — with the index at the top and every other page in a `Subpages/` folder beside it. Obsidian resolves wikilinks by filename regardless of path, so all cross-links keep working across the split.
 
-There are **four kinds of page**, all in that single folder:
+```
+Study notes/paper/[Short Title]/
+  Paper - [Short Title].md          ← INDEX (front door, at the top)
+  Subpages/
+    Paper - [Short Title] — Whole-Paper Story.md   ← story (mandatory)
+    Paper - [Short Title] — §N [Section].md        ← one per paper section
+    Def - [Name].md
+    Thm - [Name].md
+    Lemma - [Name].md
+    Cor - [Name].md
+    Prop - [Name].md
+    Remark - [Name].md
+    Ex - [Name].md
+```
 
-### 1. The hub page
+There are **five kinds of page**:
 
-`Study notes/paper/[Short Title]/Paper - [Short Title].md` — the paper's entry point. It carries the header (full citation, plain-language abstract, the explicit floor statement), the **paper-wide Notation and Standing Conventions** section (Rule 3), the **Prerequisites map** (the backchain — every above-floor concept wikilinked to its atomic prerequisite note, with a one-line reminder), a **table of contents** linking each section page in order, and the **Verification log**. This is a short page: it does not carry the paper's content, only its scaffolding.
+### 1. The index page (at the top of the paper folder)
 
-### 2. Section pages — modular, self-contained indices
+`Study notes/paper/[Short Title]/Paper - [Short Title].md` — the front door. It carries the header (full citation, plain-language abstract, the explicit floor statement), a **prominent link at the very top to the Whole-Paper Story page** (so a reader hitting the index knows where the story lives), the **paper-wide Notation and Standing Conventions** section (Rule 3), the **Prerequisites map** (the backchain — every above-floor concept wikilinked to its atomic prerequisite note, with a one-line reminder), a **table of contents** linking each section page in order, and the **Verification log**. This is a short page: it does not carry the paper's content, only its scaffolding and the pointer to the story.
 
-`Study notes/paper/[Short Title]/Paper - [Short Title] — §N [Section].md` — one per paper section. These are **polymath-style index pages**, not narrative walk-throughs. Each opens with:
+### 2. The Whole-Paper Story page (in `Subpages/`, mandatory)
+
+`Subpages/Paper - [Short Title] — Whole-Paper Story.md` — a single, coherent, top-to-bottom narrative that walks the *entire* paper as one connected story. **The exemplar of the required voice is `paper_source/example.md`.** Read it before writing the story; the standard is not negotiable. What the exemplar shows and what your story must match:
+
+- **One flowing narrative from start to finish**, not a per-section summary and not a per-item table. Each section flows into the next through explicit connective sentences that name the mechanism carrying the reader across the boundary ("Now quotient …", "Watch what happens to $\tau$'s axis under $\pi$ …", "And here's the payoff of §3's whole setup …").
+- **Mental pictures for every object**: a hyperbolic $\tau$ is "an oriented geodesic line in $\mathbb{H}^2$ with a marked step length" — a directed track and a step size, not a matrix. The heat kernel is a "density of Brownian bridges". The strip is "one period of the cylinder". Every abstract object gets an image the reader can see.
+- **Symbols pulled in only where they carry weight** — a computation, a precise identification, a formula the reader needs to hold. When prose does the same work as a formula, prose wins.
+- **The "why" at every joint**: why two boundary points force one axis, why free loops correspond to conjugacy classes (and not to elements), why the centraliser collapses the double sum to a single strip. The story argues for every result rather than stating it.
+- **Short "one-line versions to hold onto"** scattered where useful ("based loop = element; free loop = conjugacy class; the difference between them = the freedom to move the basepoint = conjugation; the invariant that survives = the geodesic length").
+- **A final one-paragraph total-picture** that folds the entire paper into a single dense paragraph the reader can carry away.
+
+**Coverage:** every paper section appears in the story. Definitions and theorems named on the section pages appear in the story as *characters in the narrative* — the story mentions them, walks their construction, gives their intuition — but never demands the reader open the section page or an atomic subpage to follow along. The story is complete on its own; the section pages are for depth and formality.
+
+**Length:** proportional to the paper. For the reference paper (~35 pages) the story is on the order of a few thousand words; err long, not short. Rule 7 (prose over compression) governs — the story is the place the vault most explicitly rewards prose density.
+
+### 3. Section pages — modular, self-contained indices
+
+`Subpages/Paper - [Short Title] — §N [Section].md` — one per paper section. These are **polymath-style index pages**, not narrative walk-throughs. Each opens with:
 
 1. A one-paragraph **section opener** (orient the reader; recall where we are and preview what this section does).
-2. A **Prerequisites recap** — every earlier-section paper result and every external above-floor concept the section uses, each as either a `> [!recall]-` callout with the formal statement + plain-language meaning, or a `![[...]]` transclusion of a prior section's stub. The purpose: a reader who lands on §5 without having read §2–§4 can still follow it. **The rule is strict**: nothing above the floor is used without being recalled or transcluded on this page.
-3. A **Concept map** — the section's named items (Definitions, Theorems, Corollaries, Lemmas, Propositions, Remarks, Examples) as **foldable bullets in the paper's order**. Each entry is a parent bullet whose text is a wikilink to the item's atomic subpage, with an indented child bullet holding a 3–5 sentence unpacking that names the formal statement, the intuition, and where it is used. Folding the parent collapses the child; the wikilink remains clickable in Editing and Reading view because it is ordinary Markdown (do not use HTML `<details>` — wikilinks inside HTML tags are not clickable in Obsidian). Sub-sections (§3.1, §3.2, …) are `###` sub-headers under the concept map; do not re-order.
+2. A **Prerequisites recap** — every earlier-section paper result and every external above-floor concept the section uses, each as either a `> [!recall]-` callout with the three-field form (Formally / In words / Concretely), or a `![[...]]` transclusion of a prior section's stub. The purpose: a reader who lands on §5 without having read §2–§4 can still follow it. **The rule is strict**: nothing above the floor is used without being recalled or transcluded on this page.
+3. A **Concept map** — the section's named items (Definitions, Theorems, Corollaries, Lemmas, Propositions, Remarks, Examples) *and every load-bearing paragraph that carries an argument* as **foldable bullets in the paper's order**. Each entry is a parent bullet whose text is a wikilink to the item's atomic subpage, with an indented child bullet holding a 3–5 sentence unpacking that names the formal statement, the intuition, and where it is used. Folding the parent collapses the child; the wikilink remains clickable in Editing and Reading view because it is ordinary Markdown (do not use HTML `<details>` — wikilinks inside HTML tags are not clickable in Obsidian). Sub-sections (§3.1, §3.2, …) are `###` sub-headers under the concept map; do not re-order.
 4. A **Section verification log** — the section's honesty record (Rule 6): what was checked, what is flagged uncertain, what is intuition-not-proof.
 
-The reader has two entry modes: **fold-out mode** — read the section's index without leaving the page, seeing every statement inline; **click-through mode** — jump into an atomic subpage for the full proof, motivation, and recalls. Both modes must work.
+The reader has two entry modes on the section page: **fold-out mode** — read the section's index without leaving the page, seeing every statement inline; **click-through mode** — jump into an atomic subpage for the full proof, motivation, and recalls. Both modes must work.
 
-### 3. Atomic subpages for every named paper item
+### 4. Atomic subpages — every named item AND every load-bearing paragraph
 
-**One subpage per named item.** Every Def X, Thm X, Lemma X, Cor X, Prop X, Remark X, and Example X in the paper becomes its own file in the paper folder:
+**Everything the paper argues for gets its own subpage.** For named items — every Def X, Thm X, Lemma X, Cor X, Prop X, Remark X, Example X — a file `Def - [Name].md` / `Thm - [Name].md` / etc. **For unnumbered load-bearing paragraphs — the paragraphs where the paper spends real prose *establishing* a fact rather than just *stating* it — a `Remark - [Descriptive Name].md` subpage.**
 
-- `Def - [Name].md`, `Thm - [Name].md`, `Lemma - [Name].md`, `Cor - [Name].md`, `Prop - [Name].md`, `Remark - [Name].md`, `Ex - [Name].md`.
+The test for "load-bearing paragraph": if the paper devotes more than a sentence to arguing why the fact holds (a computation, a periodisation, a coset enumeration, a change of variables, a dictionary between two languages, an invariance proof, an identification of one object with another), the argument is load-bearing and gets promoted. Examples from the reference paper — each of these was a paragraph the paper reasoned through, and each becomes its own subpage:
 
-The naming uses the concept's name (`Thm - Homotopy Decomposition for Hyperbolic Surfaces`), not the paper's number, so the page is a usable wikilink target across the vault. The paper's number lives in the YAML `paper-ref` field.
+- `Remark - Descent of the Heat Kernel by Periodisation.md` — the paragraph identifying the downstairs kernel as $\sum_{h\in\Gamma}$ (upstairs kernel).
+- `Remark - Collapsing the Conjugacy Sum to One Strip.md` — the argument that the double sum over $[\tau^m]$ and $X$ folds to one integral over $\mathcal F_\tau$ via the centraliser $\langle\tau\rangle$.
+- `Remark - Standard Form as Coordinates on the Axis.md` — the paragraph explaining why conjugating $\tau$ inside $\mathrm{PSL}(2,\mathbb{R})$ to $z\mapsto e^\ell z$ is the natural coordinate.
 
-Each atomic subpage is **fully self-contained**: it carries its own Notation section (with `> [!recall]-` callouts for every above-floor term it uses — do not assume the reader has read the section page or any earlier subpage), its own formal Statement, its own intuition, its own gap-free proof or worked-out example (in `> [!note]-` collapsibles), and a "Where the paper uses this" link back to the section page and any downstream results. A reader who lands on `Thm - Homotopy Decomposition for Hyperbolic Surfaces.md` cold — through Obsidian search, a wikilink from a different paper, or an old bookmark — must be able to read and check it without opening any other file.
+**Do not** let a load-bearing paragraph stay as inline prose on a section page. The section page's concept map wikilinks to it; the argument lives on the subpage.
 
-**Standalone paragraphs of argument.** When the paper has a paragraph that carries a substantive argument or definition-in-prose without a number, and that argument is *load-bearing* (a later result depends on it), promote it to a `Remark - [Descriptive Name].md` subpage so it is greppable, wikilinkable, and holds its own recalls. Non-load-bearing prose stays on the section page.
+The naming uses the concept's name (`Thm - Homotopy Decomposition for Hyperbolic Surfaces`), not the paper's number, so the page is a usable wikilink target across the vault. The paper's number lives in the YAML `paper-ref` field. For load-bearing paragraphs there is no paper number; use `paper-ref: "unnumbered; §N [paragraph description]"`.
+
+Each atomic subpage is **fully self-contained**: it carries its own Notation section (with `> [!recall]-` callouts for every above-floor term it uses — do not assume the reader has read the section page or any earlier subpage), its own formal Statement (or, for load-bearing paragraphs, a "Claim" or "Identity" block that states what is being argued), its own intuition, its own gap-free proof or worked-out derivation (in `> [!note]-` collapsibles), and a "Where the paper uses this" link back to the section page and any downstream results. A reader who lands on `Thm - Homotopy Decomposition for Hyperbolic Surfaces.md` cold — through Obsidian search, a wikilink from a different paper, or an old bookmark — must be able to read and check it without opening any other file.
 
 **Scale each subpage to what the paper actually needs.** A definition whose properties are hammered on in later proofs gets the full apparatus (Axiom Motivation with per-condition failure analysis, Examples and Non-Examples with a calibration check). A remark that just names a comparison to prior literature is one paragraph plus a link. The polymath-notes Def/Thm template is the ceiling; scale down to fit. Skip polymath-specific sections that make no sense for a paper item (Convergent Strategies, Sources and Targets in the polymath sense, Bridges, Legal Operations, Cross-Field Exercise Suggestions — these belong to `polymath-notes`/`exercise-builder`).
 
-### 4. Atomic prerequisite notes
+### 5. Atomic prerequisite notes
 
-`Def -`/`Thm -`/`Lemma -` notes for every above-floor **prerequisite** concept the vault does not already have — same folder, same self-containment discipline as the paper-item subpages. **If a note for the concept already exists elsewhere in the vault, wikilink it instead of duplicating** (searchable with `grep`/`find` over `Study notes/`).
+`Def -`/`Thm -`/`Lemma -` notes for every above-floor **prerequisite** concept the vault does not already have — same `Subpages/` folder, same self-containment discipline as the paper-item subpages. **If a note for the concept already exists elsewhere in the vault, wikilink it instead of duplicating** (searchable with `grep`/`find` over `Study notes/`).
 
 **Wikilink everything.** Every above-floor term on the section page (recap or concept-map bullet) links to its atomic note; every atomic subpage links back to the section page and to any subpages it depends on; every wikilink resolves before commit. Forward references to concepts with no page yet are **bold plain text**, never wikilinks (an unresolved `[[ ]]` creates an empty stub when clicked).
 
@@ -222,9 +280,28 @@ If the paper is large or the section split is non-obvious, confirm the split wit
 
 ### Pass 2 — Write
 
-Order: create the atomic prerequisite notes a section needs, then write that companion section, then its paper-result stubs — section by section through the paper. Write each page fully; no stubs-as-placeholders on the reading path. Only wikilink pages that exist or are being written in the same batch.
+Order: create the atomic prerequisite notes a section needs, then write that section's page, then its paper-item and load-bearing-paragraph atomic subpages — section by section through the paper. Write each page fully; no stubs-as-placeholders on the reading path. Only wikilink pages that exist or are being written in the same batch.
 
-**For a long paper, commit and push incrementally as you go** — after each section (its atomic notes, its companion section, its stubs), stage and commit with a descriptive message ("Paper notes: [Short Title] §3 — Radon–Nikodym backchain + gap-free proof of Thm 3.1") and push. This preserves work across a long task and is the workflow the user expects for multi-section papers. Push **per the repository's git workflow and the session's branch requirements** — the working branch the session designates, not `main` directly unless that is the repo's stated convention. The point is incremental commits and pushes across a long paper, not batching everything to the end; where the repository's convention is push-on-request, commit each section and push when the user asks.
+Files live at `Study notes/paper/[Short Title]/Paper - [Short Title].md` (index, top) and `Study notes/paper/[Short Title]/Subpages/*.md` (everything else). Do not scatter atomic notes into subject-area folders.
+
+**For a long paper, commit and push incrementally as you go** — after each section (its atomic notes, its section page, its load-bearing-paragraph subpages), stage and commit with a descriptive message ("Paper notes: [Short Title] §3 — Radon–Nikodym backchain + gap-free proof of Thm 3.1") and push. This preserves work across a long task and is the workflow the user expects for multi-section papers. Push **per the repository's git workflow and the session's branch requirements** — the working branch the session designates, not `main` directly unless that is the repo's stated convention. The point is incremental commits and pushes across a long paper, not batching everything to the end; where the repository's convention is push-on-request, commit each section and push when the user asks.
+
+### Pass 2.25 — Write the Whole-Paper Story page (mandatory)
+
+**After every section page and every atomic subpage exists**, write the Whole-Paper Story page (kind 2 in **What you produce**) at `Subpages/Paper - [Short Title] — Whole-Paper Story.md`. Do this before the audit passes below — the story is a *deliverable*, not a summary; the audit passes cover the story alongside everything else.
+
+Method:
+
+1. **Re-read `paper_source/example.md` end to end** immediately before writing. That is the voice.
+2. **Draft one flowing narrative** covering every paper section in the paper's order. Each section flows into the next through an explicit connective sentence that names the mechanism carrying the reader across the boundary (see the exemplar's "Now quotient …", "Watch what happens to $\tau$'s axis under $\pi$ …", "And here's the payoff of §3's whole setup …" transitions).
+3. **For every object the story mentions**, give a mental picture in the same sentence or the sentence right after: "$\tau$ is not a matrix but an oriented geodesic line with a translation length"; "the heat kernel is a density of Brownian bridges"; "the strip is one period of the cylinder".
+4. **Argue at every joint**: why two boundary points force one axis, why free loops are conjugacy classes not elements, why the centraliser collapses the double sum. The story says *why* every result holds, not just *that* it holds. When the paper devotes a paragraph to establishing something, the story devotes at least a paragraph to explaining why the establishment works.
+5. **Symbols only where they earn their place** (Rule 7): a computation, a precise identification, a specific formula.
+6. **Sprinkle one-line versions to hold onto** where useful ("based loop = element; free loop = conjugacy class; the difference between them = the freedom to move the basepoint = conjugation; the invariant that survives = the geodesic length").
+7. **End with a one-paragraph total picture** that folds the whole paper into one dense paragraph a reader can carry away.
+8. **Length**: proportional to the paper. For a ~35-page paper the story is on the order of a few thousand words; err long, not short.
+9. **Wikilink** every named paper item and every load-bearing subpage the story mentions, so a reader who wants to drop into detail can. But the story itself must be complete without any click-through — the reader who never clicks any wikilink gets the whole picture.
+10. **Link the story from the top of the index page** — first content line, above the abstract if that reads well, or immediately after the abstract at the very top of the notation section. Named prominently: "Whole-paper story (read this first)".
 
 ### Pass 2.5 — De-jargon audit (enter the floor reader's mindstate)
 
@@ -287,12 +364,14 @@ Verify each item and report which passed and which required a fix.
 
 **Structure and mechanics**
 
-10. **Output structure.** Everything newly created for the paper lives in the single folder `Study notes/paper/[Short Title]/`: the hub `Paper - [Short Title].md`, one section page per paper section `Paper - [Short Title] — §N [Section].md`, one atomic subpage per named paper item, and the atomic prerequisite notes. The only prerequisites outside that folder are ones that already had a note elsewhere in the vault, which are wikilinked, not duplicated.
-11. **Modular self-containment of section pages.** A reader can open any single section page cold and read it without opening any other section page. Every earlier-section paper result and every above-floor prerequisite used in the section is present as a `> [!recall]-` callout or a transclusion in that section's Prerequisites recap. Spot-check: pick one section, list every above-floor term it uses, verify each is on the page.
-12. **Modular self-containment of atomic subpages.** A reader can land on any atomic subpage cold — through Obsidian search, a wikilink from a different note, an old bookmark — and read it without opening any other file. Every above-floor term in its Statement / Proof / Example is recalled in that subpage's own Notation or `> [!recall]-` callouts. Spot-check three random subpages.
-13. **Every named paper item is an atomic subpage.** Every Definition, Theorem, Lemma, Corollary, Proposition, Remark, and Example the paper numbers or names has its own subpage in the folder. Mechanical check: grep the paper for `Definition\|Theorem\|Lemma\|Corollary\|Proposition\|Remark\|Example` items with paper numbers, and verify each has a corresponding subpage (naming is by concept, not by paper number — cross-check via the `paper-ref` YAML field).
-14. **Section page is a concept-map index.** Every section page uses foldable bullets (parent = wikilink to subpage, indented child = 3–5 sentence unpacking), in the paper's order, one per named item. No HTML `<details>`. The page carries no long narrative and no gap-free proofs — those live in the atomic subpages.
-15. **Low-context pass done.** Pass 3 was run and its findings fixed.
-16. **Mechanics clean.** Math is `$...$`/`$$...$$`; no LaTeX inside `[[ ]]`; every wikilink resolves; filenames are Windows-portable (`< > : " / \ | ? *` all avoided; `§`, `—`, and Unicode math are fine); `find-math-bugs.py`, `find-latex-bugs.py`, `find-wikilink-bugs.py` and the resolution audit come back clean.
+10. **Output structure.** Everything newly created for the paper lives in the single folder `Study notes/paper/[Short Title]/` — with the **index** `Paper - [Short Title].md` at the top of the folder, and every other page in `Subpages/`: the **Whole-Paper Story** `Paper - [Short Title] — Whole-Paper Story.md`, one **section page** per paper section `Paper - [Short Title] — §N [Section].md`, one **atomic subpage** per named paper item, one atomic subpage per **load-bearing paragraph** (as `Remark - [Descriptive Name].md`), and the **atomic prerequisite notes**. The only prerequisites outside that folder are ones that already had a note elsewhere in the vault, which are wikilinked, not duplicated. Mechanical check: `ls Study\ notes/paper/[Short\ Title]/` returns exactly the index + `Subpages/`.
+11. **Whole-Paper Story exists, is linked at the top of the index, and matches the `paper_source/example.md` standard.** The file `Subpages/Paper - [Short Title] — Whole-Paper Story.md` exists; the index page's first content link (above or immediately after the abstract) points to it with prominent framing ("Whole-paper story — read this first"); and the story matches the example.md exemplar on every dimension named in **What you produce §2** (one flowing narrative in the paper's order, mental picture for every object, connective sentences at every section boundary, symbols only where they earn their place, arguments-at-every-joint rather than stated facts, one-line versions to hold onto scattered where useful, and a final one-paragraph total picture). Coverage: every paper section appears in the story.
+12. **Modular self-containment of section pages.** A reader can open any single section page cold and read it without opening any other section page. Every earlier-section paper result and every above-floor prerequisite used in the section is present as a three-field `> [!recall]-` callout or a transclusion in that section's Prerequisites recap. Spot-check: pick one section, list every above-floor term it uses, verify each is on the page.
+13. **Modular self-containment of atomic subpages.** A reader can land on any atomic subpage cold — through Obsidian search, a wikilink from a different note, an old bookmark — and read it without opening any other file. Every above-floor term in its Statement / Proof / Example is recalled in that subpage's own Notation or `> [!recall]-` callouts. Spot-check three random subpages.
+14. **Every named paper item is an atomic subpage.** Every Definition, Theorem, Lemma, Corollary, Proposition, Remark, and Example the paper numbers or names has its own subpage in `Subpages/`. Mechanical check: grep the paper for `Definition\|Theorem\|Lemma\|Corollary\|Proposition\|Remark\|Example` items with paper numbers, and verify each has a corresponding subpage (naming is by concept, not by paper number — cross-check via the `paper-ref` YAML field).
+15. **Every load-bearing paragraph is an atomic subpage.** Scan every section page for prose paragraphs that carry an argument (a computation, a periodisation, a coset enumeration, a change of variables, an identification of one object with another, a dictionary between languages) — anywhere the paper spends more than a sentence *establishing* a fact rather than *stating* it. Each such paragraph must be a `Remark - [Descriptive Name].md` subpage in `Subpages/`, wikilinked from the section page's concept map. If a section page carries an argument as inline prose, that is a bug: promote the paragraph to a subpage.
+16. **Section page is a concept-map index.** Every section page uses foldable bullets (parent = wikilink to subpage, indented child = 3–5 sentence unpacking), in the paper's order, one per named item and one per load-bearing paragraph. No HTML `<details>`. The page carries no long narrative and no gap-free proofs — those live in the atomic subpages and in the Whole-Paper Story.
+17. **Low-context pass done.** Pass 3 was run and its findings fixed.
+18. **Mechanics clean.** Math is `$...$`/`$$...$$`; no LaTeX inside `[[ ]]`; every wikilink resolves; filenames are Windows-portable (`< > : " / \ | ? *` all avoided; `§`, `—`, and Unicode math are fine); `find-math-bugs.py`, `find-latex-bugs.py`, `find-wikilink-bugs.py` and the resolution audit come back clean.
 
-**Report** as: "Paper-notes self-check: N of 16 verified", plus any item that required a fix and the low-context-pass result.
+**Report** as: "Paper-notes self-check: N of 18 verified", plus any item that required a fix and the low-context-pass result.
