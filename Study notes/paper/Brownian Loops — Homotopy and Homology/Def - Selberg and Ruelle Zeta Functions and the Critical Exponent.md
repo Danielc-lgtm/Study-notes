@@ -10,7 +10,29 @@ source: "Brownian Loops — Homotopy and Homology"
 
 # Notation
 
-$X=\Gamma\backslash\mathbb{H}^2$ a geometrically finite hyperbolic surface; $\mathcal P_X$ the set of primitive oriented closed [[Def - Closed Geodesics, Conjugacy Classes, and Translation Length|geodesics]], $\ell_\gamma$ the length of $\gamma\in\mathcal P_X$; $s\in\mathbb{C}$ a complex variable (**not** the subordination variable of §2 — here it is the *spectral/zeta* variable). $\operatorname{Re}(s)$ its real part.
+- $X = \Gamma\backslash\mathbb H^2$ — a geometrically finite hyperbolic surface (the quotient of the upper half-plane by a discrete isometry group $\Gamma$).
+- $\mathcal P_X$ — the set of primitive oriented closed geodesics of $X$; each $\gamma \in \mathcal P_X$ has a definite length $\ell_\gamma > 0$.
+- $\tau \in \Gamma$ — a primitive hyperbolic element representing $\gamma$; in standard coordinates $\tau : z \mapsto e^{\ell_\gamma} z$.
+- $s \in \mathbb C$ — a complex variable, the **spectral/zeta variable** (distinct from the §2 subordination internal-clock variable, also traditionally called $s$).
+- $\operatorname{Re}(s) \in \mathbb R$ — its real part.
+- $d : \mathbb H^2 \times \mathbb H^2 \to [0, \infty)$ — the hyperbolic distance on $\mathbb H^2$.
+- $\rho : \Gamma \to \mathrm{GL}(V_\rho)$ — a finite-dimensional complex representation of $\Gamma$: a group homomorphism to invertible linear maps on a finite-dimensional complex vector space $V_\rho$.
+- $\delta \in (0, 1]$ — the critical exponent (defined below).
+
+> [!recall]- Hyperbolic surface $X = \Gamma\backslash\mathbb H^2$ (geometrically finite)
+> **Formally:** $\mathbb H^2 = \{z = x + iy \in \mathbb C : y > 0\}$ with the Riemannian metric $ds^2 = (dx^2 + dy^2)/y^2$; its isometry group is $\mathrm{PSL}(2, \mathbb R)$ acting by Möbius transformations $z \mapsto (az + b)/(cz + d)$ with $ad - bc = 1$. A **Fuchsian group** $\Gamma \subset \mathrm{PSL}(2, \mathbb R)$ is a discrete torsion-free subgroup; $X := \Gamma\backslash\mathbb H^2$ (glue $z$ to $hz$ for every $h \in \Gamma$) is a smooth surface inheriting the hyperbolic metric. Geometrically finite: a technical bound (finitely many geometric ends) that includes compact and finite-area cases, plus the "convex-cocompact + cusps" infinite-area cases.
+> **In words:** the upper half-plane with a curved ruler that makes it a negatively-curved surface, quotiented by a discrete group of rigid motions with no fixed points. The result is a surface with the same local geometry as $\mathbb H^2$ but a nontrivial global shape — handles, holes, cusps.
+> **Concretely:** the Euclidean analogue is the flat torus $T^2 = \mathbb R^2/\mathbb Z^2$ (take $\Gamma = \mathbb Z^2$ of integer translations). In the hyperbolic setting, a compact genus-2 surface is $\Gamma\backslash\mathbb H^2$ for a 4-generator Fuchsian $\Gamma$; a "3-funnel sphere" (a sphere with three infinite trumpets) is a geometrically finite infinite-area example. Full detail: [[Def - Fuchsian Group and the Hyperbolic Quotient Surface]].
+
+> [!recall]- Primitive closed geodesic $\gamma$ and its length $\ell_\gamma$
+> **Formally:** an element $\tau \in \mathrm{PSL}(2, \mathbb R)$ is **hyperbolic** if it is conjugate to $\tau_0 : z \mapsto e^\ell z$ for some $\ell > 0$; the number $\ell$ is the **translation length** — the hyperbolic distance $\tau$ slides points along its **axis** (the unique geodesic invariant under $\tau$). $\tau \in \Gamma$ is **primitive** if $\tau \ne \sigma^k$ for any $\sigma \in \Gamma$ and $k \ge 2$. Every non-trivial non-peripheral free homotopy class on $X$ contains a unique closed geodesic $\gamma$ of length $\ell_\gamma$ equal to $\tau$'s translation length, with $\tau^m$ representing the class of $\gamma$ traversed $m$ times.
+> **In words:** among isometries of $\mathbb H^2$, the hyperbolic ones are "translations along a specific line" — pick a geodesic, slide everything along it by a fixed distance. Primitive means "not a proper power of anything else". On the quotient $X$, every interesting (non-cusp-wrapping) loop has a unique shortest curve — a closed geodesic — of a definite length $\ell_\gamma$.
+> **Concretely:** for $\tau_0 : z \mapsto e^\ell z$, the axis is the imaginary half-line $\{iy : y > 0\}$; the distance from $i$ to $\tau_0(i) = e^\ell i$ along it is $\int_1^{e^\ell} dy/y = \ell$. On the cylinder $\langle\tau_0\rangle\backslash\mathbb H^2$, the axis projects to a closed geodesic of length $\ell$; iterating $\tau_0^m : z \mapsto e^{m\ell}z$ gives the same geodesic traversed $m$ times, so $\ell_{\gamma^m} = m\ell$. Full detail: [[Def - Closed Geodesics, Conjugacy Classes, and Translation Length]].
+
+> [!recall]- Group representation $\rho : \Gamma \to \mathrm{GL}(V_\rho)$ (with unitary as a special case)
+> **Formally:** a **finite-dimensional complex representation** of $\Gamma$ is a group homomorphism $\rho : \Gamma \to \mathrm{GL}(V_\rho)$ where $V_\rho$ is a finite-dimensional complex vector space and $\mathrm{GL}(V_\rho)$ is the group of invertible linear maps $V_\rho \to V_\rho$. So $\rho(\mathrm{id}) = I$ and $\rho(gh) = \rho(g)\rho(h)$. **Unitary**: if $V_\rho$ carries a Hermitian inner product and every $\rho(g)$ satisfies $\rho(g)^*\rho(g) = I$.
+> **In words:** a rule assigning a matrix to each group element so that composition of group elements matches multiplication of matrices; unitary means the matrices preserve length. It lets a group act on a vector space.
+> **Concretely:** the **trivial representation** sends every $g \in \Gamma$ to the $1 \times 1$ identity ($V_\rho = \mathbb C$, $\dim = 1$; $\rho(\tau) = 1$ for all $\tau$). A **character** is a $1$-dimensional unitary representation, i.e. a homomorphism $\chi : \Gamma \to S^1 \subset \mathbb C^*$; on $\Gamma = \mathbb Z^2$ they are $\chi_{(u, v)}(a, b) = e^{2\pi i(au + bv)}$ for $(u, v) \in [0, 1)^2$. Higher-dimensional example: the embedding $\Gamma \subset \mathrm{PSL}(2, \mathbb R) \subset \mathrm{GL}_2(\mathbb C)$ is a $2$-dimensional (non-unitary) representation.
 
 ---
 
