@@ -9,7 +9,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 1. Differential Geometry I — Smooth Manifolds and Atlases — complete
 2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
 3. Differential Geometry III — Tangent Vectors and the Differential — complete
-4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — pending
+4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — in progress
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — pending
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — pending
 7. Differential Geometry VII — Tensors and Tensor Fields — pending
@@ -49,7 +49,7 @@ The DG IV Whitney page states a proper noncompact theorem but formally proves on
 Continue the rank-theorem proof audit at the coordinate-change construction, then audit the local immersion and submersion specializations for fully typed domains and inverses.
 
 ## Last completed commit
-`cafd8be`
+`4c0281e`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

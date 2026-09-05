@@ -645,7 +645,7 @@
   "current_unit": "dg-iv",
   "next_action": "Continue the rank-theorem proof audit at the coordinate-change construction, then audit the local immersion and submersion specializations for fully typed domains and inverses.",
   "unresolved": [],
-  "last_commit": "cafd8be",
+  "last_commit": "4c0281e",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
