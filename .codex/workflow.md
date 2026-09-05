@@ -44,7 +44,8 @@ Then read, in order: `AGENTS.md`, `.codex/current-task.md`,
 
 | Prompt shape | Classification |
 |---|---|
-| `Continue`, `Do the next batch`, `Keep going`, `Next` | **resume** the active task |
+| `Continue`, `Keep going`, `Next` | **resume** and continue through all remaining units this run |
+| `Do the next batch` | **resume**, but stop after exactly one completed atomic unit |
 | `Improve <Topic>` where `<Topic>` is inside the active task's scope | **resume**, narrowed to that unit |
 | `Improve <Topic>` / `Improve all <area> notes` / `Create notes on <X>` naming something outside the active scope | **new task** |
 | `Merge`, `Merge the PR` | finish the unit whose PR is open from a previous run, then merge it (merging is the default anyway — see Phase 6) |
@@ -138,9 +139,9 @@ standing assumptions) so the unit agrees with its neighbours.
 
 ---
 
-## Phase 3 — Diagnose (improve mode) or plan (create mode)
+## Phase 3 — Diagnose and envision (improve mode) or plan (create mode)
 
-### 3.1 Improve mode: diagnosis before edits
+### 3.1 Improve mode: diagnosis and target description before edits
 
 For the topic page and each subpage, write a short diagnosis in
 `.scratch/<slug>/diagnosis-<unit>.md`. Score the **rewrite priorities**
@@ -149,9 +150,18 @@ quality with a `keep / tighten / replace` verdict per explanatory section, P4
 conciseness — where the page repeats itself or restates formulas), then
 the thirteen defects in `AGENTS.md` §7 and the applicable criteria in
 `note-quality.md` §A–F. Mark each criterion **applicable / not applicable /
-pass / fail**. Only failing, applicable criteria drive edits, and P1–P3
-failures are fixed before anything else in the unit. This is what prevents gratuitous regeneration:
-if the diagnosis is clean, the unit is already done — record it and move on.
+pass / fail**. P1–P3 failures are fixed before anything else in the unit.
+
+Then add a short **target description** for the unit: describe what the ideal
+topic page and subpages would contain if written from scratch today to the
+polymath-notes specification—structure, unifying frame, true names, legal
+operations, exercises, examples and counterexamples, and proofs that should be
+restructured. Diff the existing unit against that target and against the
+gold-standard subjects in `note-quality.md` F4. Every gap in this comparison
+drives edits as surely as a diagnosed defect. A clean defect diagnosis is not
+an exemption: rewrite wherever the unit falls short of the best note Codex can
+produce. Preserve all correct useful content and source coverage; ambition is
+not change for its own sake.
 
 Also run the mechanical audits (Phase 4.2) now to see the baseline.
 
@@ -172,6 +182,15 @@ Apply the polymath-notes templates section by section. Preserve filenames,
 frontmatter, and existing correct content (`AGENTS.md` §3). Before renaming any
 page or heading, grep for incoming `[[...]]` and `![[...#...]]` references and
 update all of them in the same edit.
+
+Checkpoint after every coherent sub-step: after the diagnosis and target are
+recorded in the ledgers, after each subpage or small group of subpages is
+rewritten and passes the mechanical audits, and after each review pass. Before
+each checkpoint, update both ledgers with the exact next action; then commit as
+`Checkpoint <unit>: <what>` and immediately run `git push -u origin HEAD`.
+Never accumulate unpushed commits. The operating invariant is: **at every
+instant, everything completed so far is on GitHub, and the ledgers on that
+branch say exactly what comes next.**
 
 ### 4.2 Mechanical audits (must be clean before review sign-off)
 
@@ -212,6 +231,13 @@ Record the per-pass verdicts in `progress.json` → `units[<id>].review`.
 
 ## Phase 5 — Commit and checkpoint
 
+Checkpoint commits are normal inside an unfinished unit. After every coherent
+sub-step described in Phase 4, update `.codex/current-task.md` and
+`.codex/progress.json`, commit with `Checkpoint <unit>: <what>`, and push with
+`git push -u origin HEAD`. These commits remain on the unit branch and are
+merged together through the unit's single PR only after the final checklist
+passes. An unfinished unit is never merged.
+
 ### 5.1 Commit the completed unit
 
     git add -A "Study notes" .codex
@@ -243,6 +269,11 @@ Bring it to a coherent state (no half-rewritten page that contradicts its
 neighbours; audits clean), set the unit's status to `in_progress` with an
 explicit `next_action`, checkpoint-commit, push. Prefer finishing one unit over
 starting a second.
+
+**Three-run watchdog.** If the same unit has remained `in_progress` across
+three runs, the next run must split it rather than continue indefinitely:
+finish and merge the coherent pages already at standard as a smaller unit,
+then record the remaining pages as a new unit with its own branch and PR.
 
 ---
 
@@ -303,6 +334,14 @@ small PR.
 
 ## Phase 7 — End of run
 
+**Loop before reporting.** Unless the user explicitly requested `Do the next
+batch`, inspect `progress.json` before ending. If any unit is not `complete`,
+return to Phase 1.4 for the next unit and continue in this same run. The
+end-of-run report below is written only when no work remains in scope or the
+platform is actually cutting the run off. One merged unit is never a stopping
+condition; never ask whether to continue when the ledger already says what is
+next.
+
 1. Working tree clean; ledgers updated; every completed unit merged; any
    unfinished unit checkpointed on its pushed branch with an open PR.
 2. Report to the user, in this order: PRs merged this run (numbers, URLs);
@@ -318,4 +357,5 @@ Phase 0 → read ledgers → if `branch` is null, start the next unit from
 `last_commit` in `progress.json` (if the branch is ahead, the previous run
 committed but did not update the ledger: reconcile from the diff before doing
 anything else) → go straight to the unit and step named in `next_action` →
-Phases 2–7 for that unit only → checkpoint → next unit if budget remains.
+Phases 2–6 for that unit → merge it → Phase 7 loop → next unit immediately;
+continue until the task is complete or the platform interrupts the run.
