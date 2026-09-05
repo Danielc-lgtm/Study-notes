@@ -5,39 +5,78 @@
     "goal": "string — the user's request, expanded per AGENTS.md §2",
     "mode": "improve | create | mixed",
     "status": "none | planning | in_progress | paused | review | complete | merged",
-    "branch": "codex/<slug> or null (null while active after a mid-project merge → next run creates a successor branch)",
-    "pr": {"number": "int or null", "url": "string or null", "state": "open | merged | null"},
-    "merged_prs": [{"number": "int", "main_sha": "string", "date": "YYYY-MM-DD"}],
-    "sources": ["repository paths consulted"],
-    "unit_order": ["unit ids in execution order"],
+    "branch": "codex/<slug> while a unit is in progress; null between units (completed units are merged and their branches deleted)",
+    "pr": {
+      "number": "int or null",
+      "url": "string or null",
+      "state": "open | null — the in-progress unit's PR; merged PRs are listed in merged_prs"
+    },
+    "merged_prs": [
+      {
+        "number": "int",
+        "unit": "unit id",
+        "main_sha": "string",
+        "date": "YYYY-MM-DD"
+      }
+    ],
+    "sources": [
+      "repository paths consulted"
+    ],
+    "unit_order": [
+      "unit ids in execution order"
+    ],
     "units": {
       "<unit id>": {
         "title": "topic page name",
         "mode": "improve | create",
         "status": "pending | in_progress | review | complete",
         "topic_page": "path to the topic page",
-        "paths": ["every file in the unit"],
+        "paths": [
+          "every file in the unit"
+        ],
         "diagnosis": "one line, improve mode: what was wrong",
-        "review": {"correctness": "pass | fixed | open | n/a", "pedagogy": "…", "rederivation": "…", "graph": "…", "prose": "…", "checklist": "pass | open"},
+        "review": {
+          "correctness": "pass | fixed | open | n/a",
+          "pedagogy": "…",
+          "rederivation": "…",
+          "graph": "…",
+          "prose": "…",
+          "checklist": "pass | open"
+        },
         "commit": "SHA of the commit that completed the unit, or null",
         "notes": "free text"
       }
     },
     "current_unit": "unit id or null",
     "next_action": "one imperative sentence a fresh run can execute without any other context",
-    "unresolved": ["strings"],
+    "unresolved": [
+      "strings"
+    ],
     "last_commit": "SHA of the last commit made by this task",
-    "ready_to_merge": "boolean — true only when every unit is complete and the cross-topic check is done",
-    "updated": "ISO-8601 timestamp"
+    "ready_to_merge": "boolean — true when the task is complete and the final cross-topic check is on main (under auto policy every unit is already merged)",
+    "updated": "ISO-8601 timestamp",
+    "merge_policy": "auto | hold | direct — auto (default) merges every completed unit into main immediately; hold keeps one open PR for the task; direct pushes completed units to main without PRs"
   },
   "version": 1,
   "active": false,
   "goal": null,
   "mode": null,
+  "merge_policy": "auto",
   "status": "none",
   "branch": null,
-  "pr": {"number": null, "url": null, "state": null},
-  "merged_prs": [],
+  "pr": {
+    "number": null,
+    "url": null,
+    "state": null
+  },
+  "merged_prs": [
+    {
+      "number": 2,
+      "unit": "smoke-test",
+      "main_sha": "eba050d",
+      "date": "2026-09-05"
+    }
+  ],
   "sources": [],
   "unit_order": [],
   "units": {},

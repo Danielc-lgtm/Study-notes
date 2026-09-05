@@ -32,15 +32,16 @@ Prompts can be one line. Codex expands them using `AGENTS.md` §2 and
 → Start a task for that topic (the topic page plus every page in its
 subfolder). Run the full workflow: read sources and neighbours, diagnose, edit,
 five review passes, mechanical audits, final checklist; update both ledgers;
-commit the completed topic; push to the task branch `codex/improve-complex-analysis-ii`
-and open (or update) its PR. Report the PR link. Not merged unless asked.
+commit the completed topic on `codex/improve-complex-analysis-ii`, push, open
+its PR, and **merge it into `main` immediately**. Report the merged PR link.
 
 `Improve all complex analysis notes`
 → Inventory every topic page under that subject (I, II, III, IV …), write a
 persistent multi-topic plan into the ledgers, then complete the topics one at a
-time in dependency order on one branch and one PR. Each finished topic is its
-own commit. A run that cannot finish the next topic checkpoints it coherently
-rather than starting another.
+time in dependency order. Each finished topic is its own branch, commit, PR,
+and merge into `main`; the next topic starts from the updated `main`. A run
+that cannot finish the next topic checkpoints it on its branch with the PR left
+open, rather than merging a half-done topic or starting another.
 
 `Create notes on spectral sequences`
 → Locate sources in `sources/`, build the content map (two-pass procedure),
@@ -56,9 +57,13 @@ action.
 `Do the next batch`
 → Same as `Continue`, but stop after completing the next atomic unit.
 
-`Improve Complex Analysis II and merge` / `Merge`
-→ As above, then merge the PR into `main` (see lifecycle). Only a prompt that
-says "merge" merges.
+`Merge`
+→ Finish the unit whose PR was left open by a previous run and merge it.
+(Merging is the default, so this is only needed after an interrupted run.)
+
+`Improve Topology III without merging` / `Improve Topology III directly on main`
+→ Per-task overrides: leave the PR open for you to review, or skip PRs and
+push completed units straight to `main`.
 
 ### When another task is already active
 
@@ -77,22 +82,22 @@ says "merge" merges.
 
 ---
 
-## PR lifecycle
+## PR lifecycle (default: auto-merge per completed unit)
 
-    main ──► codex/<slug> ──► commit per completed unit ──► one PR ──► merge when the task is complete
+    main ──► codex/<slug> ──► complete one unit ──► commit ──► PR ──► merge into main ──► next unit from main
 
-- One large task uses one working branch and one pull request.
-- Intermediate batches are committed and pushed to that branch and update the
-  same PR; they are **not** merged by default.
-- Merge happens when every unit is complete and `progress.json` says
-  `ready_to_merge: true`, or when the user explicitly requests it.
-- Mid-project merge on request: Codex commits the `.codex` state first, merges
-  the PR (`gh pr merge --merge --delete-branch`), records the merge in the
-  ledgers, and leaves the task active with `branch: null`. The next run starts
-  from the updated `main`, creates a successor branch (`codex/<slug>-2`) and a
-  new PR, and resumes from the recorded next action. Because the ledgers are in
-  `main`, no state is lost across the merge.
-- Codex never commits on `main` directly and never force-pushes.
+- Every completed unit (one topic page plus its subpages) gets its own branch,
+  commit, PR, and immediate merge by Codex. You never click Merge; the PR is
+  the record of what changed.
+- Unfinished units are never merged. An interrupted run leaves the unit
+  checkpointed on its branch with the PR open; the next run (`Continue`)
+  resumes that branch, finishes, and merges.
+- The task plan lives in `.codex/` and therefore on `main` after every merge,
+  so a multi-topic task continues across any number of runs and merges.
+- Codex never commits on `main` directly and never force-pushes (unless you
+  ask for `directly on main`, which pushes fast-forward commits only).
+- Overrides per task: `without merging` (one PR for the whole task, left open)
+  or `directly on main` (no PRs).
 
 ---
 
@@ -145,7 +150,9 @@ Task 1: `Run the preflight in .codex/workflow.md Phase 0 and report the output. 
 Expected: logged in to github.com, fetch clean.
 
 Task 2: `Create branch codex/smoke-test, add the line "smoke test <date>" under Merge history in .codex/current-task.md, push, open a PR, merge it, delete the branch.`
-If that round-trips, short prompts work end to end.
+If that round-trips, short prompts work end to end. Run these as **new Codex
+tasks on the Study-notes environment**, not as follow-ups in an ordinary
+ChatGPT chat — a plain chat has no repository checkout and no `gh`.
 
 ### 5. Rotating the token
 

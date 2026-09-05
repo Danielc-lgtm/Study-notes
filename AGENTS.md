@@ -178,6 +178,60 @@ Then improve the topic based on that diagnosis.
 
 Do not preserve weaknesses merely because they occur in the existing note.
 
+### Rewrite priorities
+
+When rewriting existing notes, three dimensions take precedence over every
+other improvement and are diagnosed and fixed first, in this order:
+
+1. **Rigour.** Every theorem, lemma, proposition, and corollary page carries a
+   complete, fully rigorous proof (in its collapsible `Formal Proof` section,
+   with the lemma decomposition feeding it). Every existing proof is audited
+   line by line: no "clearly", "it is easy to see", "similarly", or omitted
+   case that a careful reader could not expand in under a minute; every
+   hypothesis used is named at the point of use; every limit interchange,
+   measurability, well-definedness, or convergence step is justified. Claims
+   made in definition pages (examples, non-examples, corollaries, calibration
+   checks) and in exercise solutions get the same treatment: a stated fact is
+   either proved on the page or transcluded from the page that proves it.
+   Comprehensive means all cases and all directions of an equivalence, not a
+   representative one.
+
+2. **Self-containedness.** Every page links or loads the context needed to
+   understand it: every definition and theorem it uses is transcluded
+   (`![[Def - X#The Definition]]`, `![[Thm - Y#Statement]]`) or briefly
+   restated with a wikilink at the point of first use, every symbol is
+   introduced on the page, and the prerequisite chain resolves through
+   existing vault pages. The test is a cold read: a reader who opens only this
+   page must be able to follow it, clicking links for depth but never for
+   necessity.
+
+3. **Explanation quality, with permission to replace.** The polymath-notes
+   register (motivation before formalism, concrete before abstract, Tong-style
+   prose) remains the target. But when Codex's own default explanation of a
+   construction or proof is clearly superior to the existing note's — clearer
+   mechanism, better-chosen example, more honest about what is hard, tighter
+   route to the result — Codex replaces the existing explanation rather than
+   patching it. "Clearly superior" means a reader would learn more, or more
+   correctly, from the new text; it does not mean merely different. Record the
+   judgement in the diagnosis in one line. Formal statements stay conventional
+   regardless; the freedom is in the explanatory prose, proof architecture,
+   and choice of examples.
+
+4. **Conciseness without loss.** After the three above are satisfied, tighten
+   the prose: remove repetition, throat-clearing, restated formulas, sentences
+   that only announce the next sentence, and explanations of the same point
+   made twice in different words. The constraint is strict: a cut is allowed
+   only if no mathematical content, no case, no justification, no example, and
+   no connection is lost. Comprehensiveness (every source item covered) and
+   completeness of proofs are never traded for length; the target is the
+   shortest text that still says everything. Structure — collapsible
+   callouts, subpages, transclusion — is the preferred way to make a page feel
+   short; deletion is the last resort and only for text that carries nothing.
+
+These four are the definition of a successful rewrite. Insight sections,
+bridges, unlocks, and exercise supplementation are improved after them, never
+instead of them.
+
 ---
 
 ## 8. Review every completed topic
@@ -257,36 +311,30 @@ Exact commands live in `.codex/workflow.md`. Read it and run its preflight
 is pre-authenticated by `.codex/setup.sh`; if preflight fails, report the
 misconfiguration (see `.codex/README.md`) instead of improvising credentials.
 
-Policy:
+Policy — **auto-merge per completed unit**:
 
-`main -> codex/<slug> task branch -> one commit per completed atomic unit -> one PR -> merge when the overall task is complete`
+`main -> codex/<slug> branch -> complete one atomic unit -> commit -> push -> PR -> merge into main immediately -> next unit on a fresh branch from main`
 
-- Never commit on `main` directly; never force-push.
-- Each completed atomic unit gets its own descriptive commit, for example
+- Never commit on `main` directly; never force-push. Every change reaches
+  `main` through a pull request, but the user never has to click anything: Codex
+  opens the PR and merges it itself (`gh pr merge --merge --delete-branch`) as
+  soon as a unit passes the final checklist in `.codex/note-quality.md`.
+- One PR per completed unit. Its title is the unit's commit message, for example
   `Improve Complex Analysis II: Cauchy theory and theorem pages`.
-- Push after every unit and keep exactly one open PR per task; subsequent runs
-  continue the same branch and PR (recorded in `.codex/current-task.md`).
-- Merge into `main` (`gh pr merge --merge --delete-branch`) only when the
-  overall task is complete per §11, or when the user explicitly asks to merge.
-  A plain instruction such as "do X" without "merge" means: finish X, open or
-  update the PR, and report the link. "Do X and merge" means: do X, then merge
-  it yourself; the user does not want to click anything on GitHub.
+- An *unfinished* unit is never merged. If a run ends mid-unit, checkpoint it on
+  its branch, push, leave the PR open, and record the branch in
+  `.codex/current-task.md`; the next run resumes that branch, finishes the unit,
+  and merges.
+- Because every completed unit lands on `main`, the persistent task state in
+  `.codex/` is always on `main` too; a multi-topic task simply continues from
+  `main` with a new branch for each unit. Nothing about the plan is lost between
+  merges.
+- The user can override for one task with `... without merging` (leave PRs
+  open) or `... directly on main` (skip PRs; commit and push to `main`).
 
-If the user explicitly asks to merge before the overall task is complete:
-
-1. make sure all current durable progress and `.codex` state are committed;
-2. merge the PR into `main`;
-3. preserve the unfinished task state in `.codex`;
-4. for subsequent continuation, start from the updated `main` branch;
-5. create a new working branch and PR for the remaining work;
-6. resume from the recorded next action.
-
-Because `.codex/current-task.md` and `.codex/progress.json` are committed, merging
-an intermediate PR must not lose project state. Never assume conversational
-memory will bridge a merge.
-
-Always end a run by telling the user the PR URL, what was completed, what
-remains, and whether the PR was merged.
+Always end a run by telling the user which units were merged (PR numbers),
+what remains, the exact next action, and whether an unfinished unit was left
+on an open branch.
 
 ---
 

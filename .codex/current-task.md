@@ -19,10 +19,10 @@ _none_ — list the units (one topic page + its subfolder each), in order.
 _none_ — `improve` | `create` | `mixed` (mode per unit in Scope if mixed).
 
 ## Working branch
-_none_ — `codex/<slug>`; `none (merged)` after a mid-project merge until the next run creates a successor.
+_none_ — `codex/<slug>` while a unit is in progress; `none (merged)` between units (each completed unit is merged into `main` and its branch deleted).
 
 ## Pull request
-_none_ — `#<number> <url> (<open|merged>)`.
+_none_ — the PR of the unit currently in progress, `#<number> <url> (open)`; merged PRs move to Merge history.
 
 ## Sources
 _none_ — repository files under `sources/` or `paper_source/` used for this task; DAG entry consulted.
@@ -45,6 +45,9 @@ Wait for a user prompt. On `Improve <Topic>`, `Improve all <area> notes`, or `Cr
 ## Last completed commit
 _none_
 
+## Merge policy
+`auto` — merge each completed unit into `main` immediately (default). Alternatives set by the prompt: `hold` (one PR, left open), `direct` (no PRs, push to `main`).
+
 ## Merge history
-smoke test 2026-09-05
-_none_ — PRs merged mid-project, with the `main` SHA each produced.
+One line per merged unit: `#<PR> <unit> → main @ <sha> (<date>)`.
+- #2 smoke test → main @ eba050d (2026-09-05)

@@ -47,12 +47,18 @@ Then read, in order: `AGENTS.md`, `.codex/current-task.md`,
 | `Continue`, `Do the next batch`, `Keep going`, `Next` | **resume** the active task |
 | `Improve <Topic>` where `<Topic>` is inside the active task's scope | **resume**, narrowed to that unit |
 | `Improve <Topic>` / `Improve all <area> notes` / `Create notes on <X>` naming something outside the active scope | **new task** |
-| `... and merge`, `Merge`, `Merge the PR` | the active task's **merge** instruction (see Phase 6) |
+| `Merge`, `Merge the PR` | finish the unit whose PR is open from a previous run, then merge it (merging is the default anyway — see Phase 6) |
+| `... without merging`, `... directly on main` | merge-policy override for this task (Phase 6.4) |
 | anything else | interpret expansively per `AGENTS.md` §2; if it cannot be mapped to one of the above, ask one precise question |
 
 If `progress.json` has `"active": true` and the new prompt starts a **different**
 task: first checkpoint the old task (Phase 5.2 with status `paused`), commit,
 then proceed. Never mix two unrelated tasks on one branch or in one ledger.
+
+Merge-policy overrides in the prompt (default is auto-merge per unit):
+`... without merging` → open PRs but leave them unmerged; `... directly on
+main` → skip PRs, commit and push each completed unit to `main`. Record the
+override in `progress.json` → `merge_policy`.
 
 ### 1.2 Determine mode
 
@@ -94,7 +100,12 @@ Resume:
     git checkout <branch from current-task.md>
     git pull --ff-only origin <that branch>
 
-Never commit on `main`. Never force-push. One task ↔ one branch ↔ one PR.
+Never commit on `main`. Never force-push. One **unit** ↔ one branch ↔ one PR,
+merged as soon as the unit is complete (Phase 6). Branch slugs for later units
+of the same task: `codex/<slug>-<unit id>` (e.g.
+`codex/improve-all-topology-topology-iii`). After a merge there is no active
+branch; `current-task.md` says `none (merged)` and the next unit starts from
+`origin/main`.
 
 ---
 
@@ -132,10 +143,14 @@ standing assumptions) so the unit agrees with its neighbours.
 ### 3.1 Improve mode: diagnosis before edits
 
 For the topic page and each subpage, write a short diagnosis in
-`.scratch/<slug>/diagnosis-<unit>.md` against the thirteen defects in
-`AGENTS.md` §7 and the applicable criteria in `.codex/note-quality.md`. Mark
-each criterion **applicable / not applicable / pass / fail**. Only failing,
-applicable criteria drive edits. This is what prevents gratuitous regeneration:
+`.scratch/<slug>/diagnosis-<unit>.md`. Score the **rewrite priorities**
+first (`note-quality.md` §0: P1 rigour, P2 self-containedness, P3 explanation
+quality with a `keep / tighten / replace` verdict per explanatory section, P4
+conciseness — where the page repeats itself or restates formulas), then
+the thirteen defects in `AGENTS.md` §7 and the applicable criteria in
+`note-quality.md` §A–F. Mark each criterion **applicable / not applicable /
+pass / fail**. Only failing, applicable criteria drive edits, and P1–P3
+failures are fixed before anything else in the unit. This is what prevents gratuitous regeneration:
 if the diagnosis is clean, the unit is already done — record it and move on.
 
 Also run the mechanical audits (Phase 4.2) now to see the baseline.
@@ -175,13 +190,20 @@ heading. Unresolved forward references become **bold plain text**.
 
 Run them as separate passes, in this order, and *fix* what they find:
 
-1. **Correctness** — statements, hypotheses, proofs, examples, conventions.
+1. **Correctness and rigour** — statements, hypotheses, conventions, and a
+   line-by-line audit of every proof and solution against `note-quality.md`
+   P1 (complete, all cases, every step justified, no "clearly").
 2. **Pedagogy** — motivation precedes machinery; concrete before abstract.
 3. **Rederivation** — scaffolds, "why is it true", true names, legal operations
    are enough to reconstruct the development from a few handles.
-4. **Knowledge graph** — filenames, YAML, links, transclusions, prerequisite
-   recall, concept-map ↔ subpage consistency.
-5. **Prose** — two registers, no filler, no restated formulas, no abbreviations.
+4. **Knowledge graph and self-containedness** — filenames, YAML, links,
+   transclusions at first use, prerequisite recall, cold-read test on every
+   Thm and Ex page (P2), concept-map ↔ subpage consistency.
+5. **Prose, explanation, and conciseness** — two registers, no filler, no
+   restated formulas, no abbreviations; every section marked `replace` in the
+   diagnosis has been rewritten in Codex's own best explanation and re-read for
+   register (P3); then a tightening pass that shortens only where nothing is
+   lost, verified by reading the removals in `git diff --word-diff` (P4).
 
 Finish with the **final checklist** at the end of `.codex/note-quality.md`.
 Record the per-pass verdicts in `progress.json` → `units[<id>].review`.
@@ -195,6 +217,9 @@ Record the per-pass verdicts in `progress.json` → `units[<id>].review`.
     git add -A "Study notes" .codex
     git commit -m "<Topic>: <what changed>"
     git push -u origin HEAD
+
+Then go straight to Phase 6 and merge it (default policy). Do not start the
+next unit before the previous one is on `main`.
 
 Commit message examples: `Improve Complex Analysis II: Cauchy theory and
 theorem pages`, `Create Spectral Sequences I — §1.1–1.3: 9 definitions, 5
@@ -221,63 +246,75 @@ starting a second.
 
 ---
 
-## Phase 6 — Pull request and merge
+## Phase 6 — Pull request and merge (per completed unit)
 
-### 6.1 Open the PR (once per task, after the first pushed commit)
+Default policy: **every completed unit is merged into `main` immediately by
+Codex.** The user never clicks Merge. PRs exist for the record and for the
+review diff, not as a gate.
 
-    gh pr view --json number,url,state 2>/dev/null   # if it exists, just push; never open a second
+### 6.1 Open the PR for this unit
+
+    gh pr view --json number,url,state 2>/dev/null   # exists → skip create
     gh pr create --base main --head "$(git branch --show-current)" \
-      --title "<Task goal>" --body-file .scratch/<slug>/pr-body.md
+      --title "<unit commit message>" --body-file .scratch/<slug>/pr-body.md
 
-PR body: goal and scope; units completed (bullet per unit, one line each);
-review passes performed; remaining units / next action; whether ready to merge.
-Record the PR number and URL in both ledgers and commit. On later runs, refresh
-the body with `gh pr edit --body-file ...` when the unit list changes.
+PR body: the unit, what changed and why (from the diagnosis), review passes
+and checklist result, and — for multi-unit tasks — which units remain.
 
-### 6.2 When to merge
+### 6.2 Merge it
 
-Merge only if **(a)** every unit is `complete`, the final cross-topic
-consistency check is done, and `progress.json` has `ready_to_merge: true`; or
-**(b)** the user explicitly asked to merge (`... and merge`, `Merge`).
-Otherwise end the run with the PR open and report its URL.
-
-### 6.3 How to merge
-
-    git status --porcelain            # must be empty apart from .scratch/
+    git status --porcelain            # empty apart from .scratch/
     gh pr merge --merge --delete-branch
     git checkout main && git pull --ff-only origin main
 
-`--merge` keeps the per-unit commits in history. If the merge is refused
-(conflicts, protection), merge `origin/main` into the task branch, resolve, re-run
-the audits on touched pages, push, retry once; otherwise report — never bypass.
+`--merge` keeps the unit's commits in history. Record the PR number and the
+resulting `main` SHA in `progress.json` → `merged_prs` and in
+`current-task.md` → Merge history; set `branch: null` / `none (merged)`;
+commit that ledger update on the **next** unit's branch (or push it to `main`
+via a tiny follow-up PR if the task is now complete).
 
-### 6.4 Mid-project merge (user asked to merge before the task is complete)
+If the merge is refused (conflicts, protection): merge `origin/main` into the
+branch, resolve, re-run the audits on touched pages, push, retry once;
+otherwise stop and report — never bypass, never force.
 
-1. Checkpoint per 5.2/5.3 and commit — the ledgers must say the task is
-   *incomplete* and name the next unit.
-2. Merge per 6.3.
-3. Do NOT reset the ledgers. In `progress.json` set `"branch": null`,
-   `"pr": null`, append the merged PR to `"merged_prs"`; in `current-task.md`
-   record "merged into main at <sha>; continuation needs a new branch".
-4. The next run (Phase 1.4) sees an active task with no branch → creates
-   `codex/<slug>-2` from the updated `origin/main`, opens a new PR, and resumes
-   from `next_action`. Nothing about the plan is lost because the plan lives in
-   `main` now.
+### 6.3 What is never merged
 
----
+An unfinished unit. If the run ends mid-unit: checkpoint (5.3), push, open the
+PR if it does not exist, leave it **open**, and record the branch in both
+ledgers. The next run resumes that branch (Phase 1.4), finishes the unit, and
+merges.
+
+### 6.4 Overrides
+
+- `without merging`: do 6.1, skip 6.2, continue the task on the same branch
+  (one PR for the whole task, as in the previous policy). Merge only on an
+  explicit later `Merge`.
+- `directly on main`: skip 6.1–6.2; after 5.1 run `git push origin
+  HEAD:main` from a branch created off `origin/main` (rebase onto
+  `origin/main` first if it moved). Still never force-push.
+
+### 6.5 Task completion
+
+When the last unit is merged, run the cross-topic consistency check
+(`note-quality.md` F3) on `main`; if it needs edits, treat them as one more
+unit (branch, commit, PR, merge). Then set `status: complete`,
+`active: false`, and `ready_to_merge: true` in `progress.json` via a final
+small PR.
 
 ## Phase 7 — End of run
 
-1. Working tree clean; ledgers updated; branch pushed; PR exists (or task done and merged).
-2. Report to the user, in this order: PR URL and state (open / merged); units
-   completed this run; units remaining; exact next action; any unresolved
-   issue that needs a human decision.
+1. Working tree clean; ledgers updated; every completed unit merged; any
+   unfinished unit checkpointed on its pushed branch with an open PR.
+2. Report to the user, in this order: PRs merged this run (numbers, URLs);
+   an open PR if a unit was left unfinished; units remaining; exact next
+   action; any unresolved issue that needs a human decision.
 
 ---
 
 ## Resuming in a completely fresh session (the `Continue` path, end to end)
 
-Phase 0 → read ledgers → Phase 1.4 resume branch → confirm `git log -1` matches
+Phase 0 → read ledgers → if `branch` is null, start the next unit from
+`origin/main` on a fresh branch; otherwise Phase 1.4 resume branch → confirm `git log -1` matches
 `last_commit` in `progress.json` (if the branch is ahead, the previous run
 committed but did not update the ledger: reconcile from the diff before doing
 anything else) → go straight to the unit and step named in `next_action` →

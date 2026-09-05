@@ -18,6 +18,63 @@ for later, unless it needs a decision from the user (then it goes under
 
 ---
 
+## 0. Priority dimensions for rewrites (score these first)
+
+For improve-mode units these three are diagnosed and fixed before anything in
+sections A–F, and a unit cannot be `complete` while any of them fails.
+`AGENTS.md` §7 "Rewrite priorities" is the governing text.
+
+**P1. Rigour — complete proofs everywhere.** Applicable to every Thm / Lemma /
+Prop / Cor page (Formal Proof section), every Def page (Examples /
+Corollaries and Calibration check), and every Ex page (Complete formal
+solution). Pass when: every proof is complete with all cases and both
+directions; each step's justification is explicit (which hypothesis, which
+earlier lemma, which theorem — wikilinked); no "clearly / obviously /
+similarly / it is easy to see / the other case is analogous" stands in for an
+argument a careful reader could not expand within a minute; interchanges of
+limits, sums, integrals, and derivatives cite the theorem that licenses them;
+well-definedness and existence are checked before use (Step 0 pattern);
+stated facts on Def and Ex pages are proved on the page or transcluded from the
+page that proves them. Fail examples: a proof sketch labelled as a proof; a
+"Lemma decomposition" whose full proofs are missing; an example asserted
+without verification; an equivalence with one direction shown.
+
+**P2. Self-containedness — context is linked or loaded.** Applicable to every
+page. Pass when: every definition and theorem used is transcluded or restated
+with a wikilink at first use; every symbol is introduced on the page (A3);
+every prerequisite resolves to an existing vault page (or is bold plain text
+if the vault lacks it, with a one-line inline explanation so the page still
+reads); a cold read of the page succeeds with no click needed for necessity.
+This is criterion A5 promoted to a gate.
+
+**P3. Explanation quality — replace when clearly superior.** Applicable to
+every explanatory section (Motivation, Axiom Motivation, Why Is It True,
+Rederivation Scaffold, Convergent Strategy, Key Takeaways, Bridges, Insights)
+and to proof architecture. Pass when the explanation is at least as good as
+Codex's own best default explanation of the same point; when it is not,
+Codex writes its own and replaces the existing text, recording the reason in
+the diagnosis. Guard rails: formal statements stay in standard form (A1);
+replacement is for clearly better mechanism, examples, or route — not for
+stylistic difference; correct content that only needed tightening is
+tightened, not regenerated (`AGENTS.md` §3).
+
+**P4. Conciseness without loss.** Applicable to every page, scored after
+P1–P3. Pass when no sentence can be deleted or shortened without losing a
+mathematical fact, a case, a justification, an example, or a connection. Fail
+signals: the same point explained twice in different words on one page;
+formulas restated in prose immediately after the display; sentences that only
+announce what the next sentence will do; hedges and qualifiers that carry no
+information; paragraphs of motivation that repeat the topic page's Motivation
+verbatim on a subpage instead of transcluding or linking it. What P4 must
+never do: drop a source item, shorten a proof by omitting a step, collapse two
+examples into one, or remove a bridge. When a page feels long but every
+sentence earns its place, the remedy is structure (a `> [!note]-` callout, a
+subpage, a transclusion), not deletion. Measure by content, not by word count:
+a diff that is shorter and loses nothing passes; a diff that is shorter and
+loses one justification fails P1 and P4 together.
+
+---
+
 ## A. Standards that apply to every page
 
 **A1. Formal register where it belongs.** Definitions and theorem statements are
@@ -289,6 +346,10 @@ Record the result in `progress.json` → `units[<id>].review`.
 17. Parity sample against a gold-standard subject done; every "materially behind" section rewritten (F4).
 18. Nothing correct from the pre-edit version was lost (diff reviewed); no planning text leaked (F6).
 19. Improve mode only: every "fail" in the Phase-3 diagnosis is now "pass" or listed under Unresolved with a reason.
-20. Unit committed with a descriptive message; ledgers updated; branch pushed.
+20. **P1 rigour gate:** `grep -n -i "clearly\|obviously\|it is easy to see\|similarly\|analogous\|left to the reader\|omitted" "<unit>"/*.md` reviewed line by line — every hit either expanded into an argument or justified as genuinely trivial; every Thm/Lemma/Prop/Cor page has a non-empty `Formal Proof` covering all cases and directions; every `> [!note]- Full proof` inside a lemma callout is present and complete; every Ex page has its `Complete formal solution`.
+21. **P2 self-containedness gate:** for every page in the unit, the first use of each Def/Thm is a transclusion or a restatement-with-wikilink (grep each `[[Def -` / `[[Thm -` target and confirm a `![[` or restatement precedes or accompanies it); cold-read test done on every Thm page and every Ex page, not just three samples.
+22. **P3 explanation gate:** the diagnosis names, per explanatory section, `keep / tighten / replace`, and every `replace` has a one-line reason; replaced sections re-read against A2 (register) and A1 (statements untouched).
+23. **P4 conciseness gate:** a final tightening pass was made over every page in the unit; for each page the pre/post diff was checked to confirm that every deleted or shortened passage carried no fact, case, justification, example, or connection that is absent from the final text (`git diff --word-diff` on the page, read the removals); no proof step, source item, example, or bridge was removed.
+24. Unit committed with a descriptive message; ledgers updated; branch pushed.
 
 A unit with any line unresolved stays `review`, not `complete`.
