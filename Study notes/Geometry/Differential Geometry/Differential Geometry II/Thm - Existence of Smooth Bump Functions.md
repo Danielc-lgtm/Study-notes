@@ -25,7 +25,7 @@ This is Lee Proposition 2.25.
 
 # Motivation
 
-The motivating question: how rigid is the structure of $C^\infty(M)$? Real-analytic functions are extremely rigid — a real-analytic function vanishing on any non-empty open set must vanish identically. Could the same hold for smooth functions? The answer is dramatically *no*: smooth functions can be tailored to vanish exactly where we want and equal $1$ exactly where we want, with smooth interpolation in between.
+The motivating question: how rigid is the structure of $C^\infty(M)$? Real-analytic functions are extremely rigid — a real-analytic function on a connected manifold that vanishes on a nonempty open set must vanish identically. Could the same hold for smooth functions? The answer is dramatically *no*: smooth functions can be tailored to vanish exactly where we want and equal $1$ exactly where we want, with smooth interpolation in between.
 
 This is the *softness* property of $C^\infty(M)$, and the theorem makes it precise. Given any two regions of $M$ — a "fully on" region $A$ and a "fully off" region $M \setminus U$ — there is a smooth function realizing this pattern. The interpolation between the two regions happens smoothly, with values in $(0, 1)$, in the buffer zone $U \setminus A$.
 
@@ -37,7 +37,7 @@ This is therefore a *corollary* of [[Thm - Existence of Smooth Partitions of Uni
 
 The bump-function theorem has many applications, often more direct than appealing to the full partition-of-unity machinery. Bump functions are used to *localize* global problems, to *extend* functions defined on closed subsets ([[Thm - Smooth Extension Lemma]]), and to *truncate* unbounded functions to compactly-supported ones. The theorem licenses the constant phrase "let $\psi$ be a smooth bump function equal to $1$ on $K$ and supported in a neighbourhood of $K$" — used in every chapter of every textbook on smooth manifolds.
 
-The smooth-vs-analytic gap is essential here. The theorem fails in the analytic category — there are no analytic bump functions, no analytic partitions of unity, no analytic extension lemma. This is why smooth manifold theory is so much "softer" and more flexible than complex analytic or algebraic geometry, and why so many constructions that work for smooth manifolds (gluing local data, deforming, perturbing) fail in the analytic / algebraic settings.
+The smooth-vs-analytic gap is essential here. The theorem fails in the analytic category — there are no nonzero compactly supported analytic functions on a connected noncompact analytic manifold, so analytic analogues of these arbitrary-support constructions fail. This is why smooth manifold theory is so much "softer" and more flexible than complex analytic or algebraic geometry, and why so many constructions that work for smooth manifolds (gluing local data, deforming, perturbing) fail in the analytic / algebraic settings.
 
 ---
 
@@ -184,7 +184,7 @@ Cover $M$ by $U$ and $M \setminus A$, apply the smooth partition of unity theore
 
 - **[[Thm - Urysohn's Lemma]]** — the topological analogue. Urysohn's lemma produces continuous separators on normal spaces; the bump-function theorem produces smooth ones on smooth manifolds. The two theorems have isomorphic structure, with the topological "continuous Urysohn-style bump" replaced by the smooth "$\psi_0$-based bump".
 
-- **The smooth-vs-analytic distinction** — in the real-analytic or holomorphic category, there are *no* bump functions: an analytic function vanishing on a non-empty open set vanishes identically. This is the defining flexibility-vs-rigidity distinction between smooth and analytic categories, and the bump-function theorem is the existence statement that licenses the flexibility.
+- **The smooth-vs-analytic distinction** — on a connected real-analytic or complex manifold, there are no nonzero compactly supported analytic functions unless the relevant connected component is compact: vanishing on a nonempty open set forces vanishing on that component. This is the defining flexibility-vs-rigidity distinction between smooth and analytic categories, and the bump-function theorem is the existence statement that licenses the flexibility.
 
 ---
 

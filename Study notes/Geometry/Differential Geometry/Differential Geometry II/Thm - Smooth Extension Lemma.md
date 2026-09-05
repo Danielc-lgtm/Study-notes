@@ -124,8 +124,8 @@ Cover $A$ by sets on which $f$ extends smoothly. Add $M \setminus A$ to make a c
    - *Hint:* Use the agreement of $\widetilde f_p$ with $f$ on $W_p \cap A$ and the sum-to-$1$ property.
    - *Why needed:* This is the extension condition.
 
-6. **Verify $\operatorname{supp}(\widetilde f) \subseteq U$.** $\widetilde f$ is the sum of $\psi_p \widetilde f_p$, each supported in $W_p \subseteq U$. So $\operatorname{supp}(\widetilde f) \subseteq \bigcup_p \overline{W_p} \subseteq \overline U$ (or actually $\subseteq U$ when $U$ is suitably chosen; in standard cases with $W_p \subseteq U$, the support is in $\overline{\bigcup W_p}$, which is closed and contained in $\overline U$).
-   - *Hint:* Use the partition of unity's subordination.
+6. **Verify $\operatorname{supp}(\widetilde f) \subseteq U$.** Each summand is supported in the closed set $\operatorname{supp}(\psi_p)\subseteq W_p\subseteq U$. These supports form a locally finite family, so their union is closed. The nonzero set of $\widetilde f$ lies in this union; taking its closure therefore still lies in the same union, hence in $U$.
+   - *Hint:* Use both subordination and the fact that a locally finite union of closed sets is closed.
    - *Why needed:* Support condition of the lemma.
 
 ---
@@ -224,7 +224,7 @@ Cover $A$ by sets on which $f$ extends smoothly. Add $M \setminus A$ to make a c
 > The extension lemma extends to smooth sections of vector bundles: a smooth section defined on a closed subset extends to a global smooth section, supported in any prescribed open neighbourhood. The proof uses local trivializations to reduce to the $\mathbb{R}^k$-valued case. See [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle|DG VI]].
 
 > [!tip] Approximating Continuous Functions by Smooth Ones *(from Approximation Theory)*
-> Any continuous function on a smooth manifold can be uniformly approximated by smooth functions. The approximation uses the extension lemma to build smooth approximations of indicator functions of small open sets, then combines them via partition of unity. This is the **smooth Stone–Weierstrass theorem** for manifolds.
+> The Whitney approximation theorem says that a continuous function on a smooth manifold admits smooth pointwise approximations with any prescribed positive continuous error tolerance. On compact manifolds, taking a constant tolerance gives uniform approximation. The proof uses charts, Euclidean smoothing, and a locally finite partition of unity; it is an approximation theorem, not a direct consequence of the extension lemma alone.
 
 > [!tip] Smooth Lifting from Closed Subsets *(from Algebraic Topology and Differential Geometry)*
 > When a continuous map $f : A \to N$ from a closed subset $A \subseteq M$ to a smooth manifold $N$ lifts to a smooth map (in the local-extension sense), the lift extends globally to a smooth $\widetilde f : M \to N$ — provided $N$ is a vector space, or, in the general case, provided the continuous version of $f$ extends globally (Lee Corollary 6.27).

@@ -37,11 +37,11 @@ This is the central existence theorem of smooth manifold theory. Its role is to 
 
 The theorem is the **smooth-category upgrade of the topological partition-of-unity existence theorem** ([[Thm - Paracompact Has Partitions of Unity]]). The topological version produces continuous partitions of unity on any paracompact Hausdorff space; the smooth version produces smooth partitions of unity on any smooth manifold. The strengthening is non-trivial: it requires the construction of smooth bump functions on $\mathbb{R}^n$, which themselves rest on the $\psi_0(t) = e^{-1/t}$-trick — a piece of real analysis that has no topological analogue.
 
-The proof has three steps. **First, reduce to a countable locally finite refinement by regular coordinate balls.** A smooth manifold is second-countable Hausdorff, hence Lindelöf, hence any open cover admits a countable subcover. The countable subcover can be refined (using paracompactness, which follows from second-countable Hausdorff via [[Thm - Locally Compact σ-Compact Hausdorff is Paracompact]] — smooth manifolds are locally compact because they are locally Euclidean) to a countable locally finite cover by regular coordinate balls. Each ball is in the closure of a chart, so a chart-pulled-back smooth bump function exists supported in it.
+The proof has three steps. **First, choose countably many nested coordinate-ball pairs subordinate to the cover.** A smooth manifold is locally compact and second-countable, so it admits a compact exhaustion. On each compact shell, choose finitely many pairs $V_i,W_i$ with $\overline{V_i}\subseteq W_i\subseteq\overline{W_i}\subseteq U_{a(i)}$. Choosing the pairs inside locally finite exhaustion bands makes $\{W_i\}$ locally finite, while the smaller balls $V_i$ still cover $M$.
 
-**Second, build smooth bumps on each refinement ball.** For each ball $B_i$ in the refinement, use the chart on which it sits and pull back the standard Euclidean bump function $H_i : \mathbb{R}^m \to [0, 1]$ (equal to $1$ on a smaller ball, supported in $B_i$'s image). The pullback gives a smooth $f_i : M \to [0, 1]$ supported in $\overline{B_i}$, positive on $B_i$.
+**Second, build smooth bumps on each pair.** Pull back a Euclidean radial cutoff through the common chart to obtain $f_i:M\to[0,1]$ equal to $1$ on $\overline{V_i}$ and supported in $\overline{W_i}\subseteq U_{a(i)}$.
 
-**Third, sum and normalize.** Define $f = \sum_i f_i$; by local finiteness this is a finite sum at each point, hence smooth, and $f(p) > 0$ for every $p$ because every $p$ is in some $B_i$ where $f_i(p) > 0$. Set $g_i = f_i / f$. The $g_i$ are smooth (ratio of smooth functions with positive denominator), nonnegative, sum to $1$, locally finite. Re-index over the original cover: for each $\alpha$, set $\psi_\alpha = \sum_{i : a(i) = \alpha} g_i$ where $a(i)$ chooses an $\alpha$ such that $B_i \subseteq U_{a(i)}$.
+**Third, sum and normalize.** Define $f = \sum_i f_i$; by local finiteness this is a finite sum at each point, hence smooth, and $f(p) > 0$ for every $p$ because every $p$ is in some $V_i$ where $f_i(p)=1$. Set $g_i = f_i / f$. The $g_i$ are smooth (ratio of smooth functions with positive denominator), nonnegative, sum to $1$, locally finite. Re-index over the original cover: for each $\alpha$, set $\psi_\alpha = \sum_{i : a(i) = \alpha} g_i$ where $a(i)$ chooses an $\alpha$ attached to the pair $V_i,W_i$.
 
 This three-step structure — refine, bump, normalize — is the canonical partition-of-unity construction. It is parallel to the topological proof (refine, Urysohn-bump, normalize), differing only in step 2 where the smooth bumps replace continuous Urysohn bumps.
 
@@ -89,7 +89,7 @@ The three ingredients:
 
 2. **Smooth bumps.** On $\mathbb{R}^m$, the standard radial bump $H : \mathbb{R}^m \to [0, 1]$ — built from the cutoff $h(t) = \psi_0(r_2 - t)/(\psi_0(r_2 - t) + \psi_0(t - r_1))$ via $H(x) = h(|x|)$ — is equal to $1$ on $\overline{B(0, r_1)}$ and supported in $\overline{B(0, r_2)}$. Pulled back through a chart, this gives a smooth bump on the manifold supported in the chart's domain, equal to $1$ on a smaller ball.
 
-3. **Sum and normalize.** On each regular coordinate ball $B_i$, place a smooth bump $f_i$ supported in $\overline{B_i}$, equal to $1$ on a smaller ball, with $\bigcup_i \{f_i > 0\}$ covering $M$. The sum $f = \sum_i f_i$ is locally finite (so smooth) and positive everywhere (since $\bigcup_i \{f_i > 0\} = M$). Normalize: $g_i = f_i / f$. Then $\sum_i g_i = 1$, $g_i \geq 0$, $\operatorname{supp}(g_i) \subseteq \overline{B_i}$, locally finite. This is a partition of unity subordinate to the refinement; re-index to get one subordinate to the original cover.
+3. **Sum and normalize.** For each nested pair, place a smooth bump $f_i$ supported in $\overline{W_i}$ and equal to $1$ on $\overline{V_i}$. The sum $f=\sum_i f_i$ is smooth by local finiteness and positive because the $V_i$ cover $M$. Normalize by $g_i=f_i/f$, then group the $g_i$ having the same cover index $a(i)$. The closure containments and local finiteness prove strict subordination after grouping.
 
 The argument is conceptually like a *topological [[Def - Convolution|convolution]]*: convolve the indicator function of $M$ (which is everywhere $1$) with a family of smooth bumps that respect the cover, and obtain a smooth identity-of-mass decomposition.
 
@@ -110,25 +110,24 @@ The third common error is to forget that the partition is *subordinate* to the o
 **This section is self-sufficient: reading only what follows should let you reconstruct the entire proof.**
 
 **High-level strategy:**
-Refine the cover to a countable locally finite refinement by regular coordinate balls. Build a smooth bump on each ball using a chart and the standard Euclidean bump. Sum and normalize.
+Choose a countable locally finite family of nested coordinate-ball pairs subordinate to the cover. Build a smooth bump supported in each outer ball and equal to $1$ on the inner ball. Sum and normalize.
 
 **Subgoal decomposition:**
 
-1. **Refine the cover.** By second-countability and paracompactness of $M$, the open cover $\{U_\alpha\}$ has a countable locally finite refinement $\{B_i\}_{i \in \mathbb{N}}$ by regular coordinate balls (Lee Theorem 1.15).
-   - *Hint:* Smooth manifolds are paracompact, and regular coordinate balls form a basis.
-   - *Why needed:* Step 2 needs a locally finite family on which to place bumps.
+1. **Choose nested coordinate balls.** Use Lemma 1 to obtain $\overline{V_i}\subseteq W_i\subseteq\overline{W_i}\subseteq U_{a(i)}$, with $\{V_i\}$ covering $M$ and $\{W_i\}$ locally finite.
+   - *Hint:* Compact exhaustion shells make the construction countable and locally finite.
+   - *Why needed:* The outer balls control support; the inner balls guarantee positivity.
 
-2. **Place smooth bumps.** For each $B_i$ (a chart-pullback of $B_{r_i'}(0) \subseteq \mathbb{R}^m$ with $\overline{B_{r_i}(0)} \subseteq B_{r_i'}(0)$, $r_i < r_i'$), define $f_i = H_i \circ \varphi_i$ on $B_i$ (extended by zero outside), with $H_i$ a Euclidean radial bump equal to $1$ on $\overline{B_{r_i}(0)}$ and supported in $B_{r_i'}(0)$. Then $f_i \in C^\infty(M)$, $\operatorname{supp}(f_i) = \overline{B_i}$, $f_i = 1$ on the smaller ball, $f_i \in [0, 1]$.
-   - *Hint:* Use the standard Euclidean bump built from $\psi_0(t) = e^{-1/t}$. Smoothness extends from the chart into $M \setminus \overline{B_i}$ because $f_i \equiv 0$ there.
-   - *Why needed:* Provides the local data for the sum.
-
+2. **Place smooth bumps.** Pull a Euclidean radial cutoff back through the chart for each pair to obtain $f_i\in C^\infty(M,[0,1])$ with $f_i=1$ on $\overline{V_i}$ and $\operatorname{supp}(f_i)\subseteq\overline{W_i}$.
+   - *Hint:* The containment $\overline{W_i}\subseteq U_{a(i)}$ leaves a zero neighbourhood around the seam where the chart formula is extended by zero.
+   - *Why needed:* Provides local weights already subordinate to the original cover.
 3. **Sum and normalize.** Define $f = \sum_i f_i$. By local finiteness, this is a finite sum at each point, hence $f \in C^\infty(M)$ and $f(p) > 0$ for every $p$ (since every $p$ is in some smaller ball where $f_i(p) = 1$, contributing at least $1$ to the sum).
 Set $g_i = f_i / f$. Then $g_i \in C^\infty(M)$, $g_i \in [0, 1]$, $\sum_i g_i = 1$, supports still locally finite.
    - *Hint:* The denominator's positivity is what makes the ratio smooth.
    - *Why needed:* Gives a partition of unity subordinate to the refinement.
 
-4. **Re-index.** For each $i$, choose $a(i) \in A$ with $B_i \subseteq U_{a(i)}$. For each $\alpha \in A$, define $\psi_\alpha = \sum_{i : a(i) = \alpha} g_i$ (with empty sum equal to $0$).
-Verify: $\psi_\alpha \in C^\infty(M)$ (locally finite sum), $\operatorname{supp}(\psi_\alpha) \subseteq U_\alpha$ (union of $\overline{B_i}$ with $B_i \subseteq U_{a(i)} = U_\alpha$; this union is contained in $\overline{U_\alpha}$, and inside $U_\alpha$ because the $B_i$ are inside open $U_\alpha$... use the fact that closures of subsets in open sets stay within), $\sum_\alpha \psi_\alpha = \sum_i g_i = 1$, supports locally finite.
+4. **Re-index.** Use the indices $a(i)$ chosen with the coordinate-ball pairs. For each $\alpha \in A$, define $\psi_\alpha = \sum_{i : a(i) = \alpha} g_i$ (with empty sum equal to $0$).
+Verify: $\psi_\alpha \in C^\infty(M)$ because the sum is locally finite. Since $\operatorname{supp}(g_i)\subseteq\overline{W_i}\subseteq U_{a(i)}$, the locally finite union $\bigcup_{a(i)=\alpha}\operatorname{supp}(g_i)$ is closed and contained in $U_\alpha$; it contains $\{\psi_\alpha\neq0\}$, so $\operatorname{supp}(\psi_\alpha)\subseteq U_\alpha$. Finally $\sum_\alpha\psi_\alpha=\sum_i g_i=1$, and the re-indexed supports remain locally finite.
    - *Hint:* The re-indexing step is bookkeeping; the work is already done in steps 1–3.
    - *Why needed:* Produces a partition subordinate to the original cover, not just the refinement.
 
@@ -136,21 +135,29 @@ Verify: $\psi_\alpha \in C^\infty(M)$ (locally finite sum), $\operatorname{supp}
 
 # Lemma Decomposition
 
-> [!note]- Lemma 1: Smooth manifolds admit countable locally finite refinements by regular coordinate balls
-> **Statement:** Let $M$ be a smooth manifold and $\{U_\alpha\}$ an open cover. Then there exists a countable, locally finite open refinement $\{B_i\}_{i \in \mathbb{N}}$ of $\{U_\alpha\}$ such that each $B_i$ is a regular coordinate ball (a chart-pullback of an open Euclidean ball whose closure is in the chart's image).
+> [!note]- Lemma 1: Smooth manifolds admit countable locally finite coordinate-ball pairs subordinate to a cover
+> **Statement:** Let $M$ be a smooth manifold and $\{U_\alpha\}_{\alpha\in A}$ an open cover. There are countably many pairs of open coordinate balls $V_i,W_i$ and indices $a(i)\in A$ such that
+> $$\overline{V_i}\subseteq W_i\subseteq\overline{W_i}\subseteq U_{a(i)},$$
+> the sets $V_i$ cover $M$, and the family $\{W_i\}$ is locally finite.
 >
-> **Hint:** Regular coordinate balls form a basis for the topology of $M$. $M$ is second-countable, hence Lindelöf; any open cover has a countable subcover. Use paracompactness (from [[Thm - Locally Compact σ-Compact Hausdorff is Paracompact]]) to refine to locally finite.
+> **Hint:** Use a compact exhaustion and treat one compact shell at a time. Choose the balls meeting the $j$th shell inside the open band between the $(j-2)$nd and $(j+1)$st exhaustion sets; compactness makes each shell contribute only finitely many balls, while the bands give local finiteness.
 >
-> **Why needed:** Step 1 of the main proof — provides the underlying combinatorial structure on which the bumps will be placed.
+> **Why needed:** A bump supported in $W_i$ and equal to $1$ on $\overline{V_i}$ is subordinate to the original cover, and the smaller balls guarantee that the eventual sum is positive.
 >
-> > [!note]- Full proof (sketch — Lee Theorem 1.15)
-> > Each $U_\alpha$ is open in $M$. The collection of all regular coordinate balls is a basis: every point of $U_\alpha$ has a neighbourhood that is a regular coordinate ball, contained in $U_\alpha$. So $\{U_\alpha\}$ is refined by the collection $\mathcal{B}$ of all regular coordinate balls contained in some $U_\alpha$. $\mathcal{B}$ is itself an open cover of $M$. Since $M$ is second-countable (basis $\subseteq$ countable subcover via Lindelöf), $\mathcal{B}$ has a countable subcover $\{B_i\}_{i \in \mathbb{N}}$. Since $M$ is paracompact, this countable cover has a locally finite open refinement. The locally finite refinement still consists of regular coordinate balls (we can refine each ball to a smaller one if needed). The result is a countable locally finite refinement by regular coordinate balls.
+> > [!note]- Full proof
+> > Because $M$ is locally compact, Hausdorff, and second-countable, the standard precompact-basis construction gives a compact exhaustion $K_1\subseteq\operatorname{Int}K_2\subseteq\cdots$ with $\bigcup_jK_j=M$. Set $K_j=\varnothing$ for $j\leq0$ and
+> > $$S_j=K_j\setminus\operatorname{Int}K_{j-1},\qquad O_j=\operatorname{Int}K_{j+1}\setminus K_{j-2}.$$
+> > Each $S_j$ is compact, $S_j\subseteq O_j$, and the family $\{O_j\}$ is locally finite: if $x\in\operatorname{Int}K_N$, then the neighbourhood $\operatorname{Int}K_N$ misses $O_j$ for $j\geq N+2$, while there are only finitely many smaller indices.
+> >
+> > Fix $j$ and $x\in S_j$. Choose $\alpha(x)$ with $x\in U_{\alpha(x)}$. The intersection $O_j\cap U_{\alpha(x)}$ is an open neighbourhood of $x$. In a chart about $x$, nested Euclidean balls can therefore be chosen whose pullbacks $V_x,W_x$ satisfy
+> > $$x\in V_x,\qquad \overline{V_x}\subseteq W_x\subseteq\overline{W_x}\subseteq O_j\cap U_{\alpha(x)}.$$
+> > The sets $V_x$ cover the compact set $S_j$, so finitely many, denoted $V_{j,1},\ldots,V_{j,N_j}$, cover it. Keep the corresponding $W_{j,\ell}$ and cover indices. Taking all pairs over $j\in\mathbb N$ gives a countable family, because each shell contributes finitely many pairs. The $V_{j,\ell}$ cover $M$ since the shells do. Finally, $W_{j,\ell}\subseteq O_j$, and replacing every member of a locally finite family by finitely many subsets preserves local finiteness. Thus the family of all $W_{j,\ell}$ is locally finite and has every asserted closure containment.
 
 > [!note]- Lemma 2: Pulling back smooth bumps through charts gives smooth manifold-level bumps
 > **Statement:** Let $B$ be a regular coordinate ball in $M$, the pullback under a chart $\varphi : W \to \mathbb{R}^m$ of $B_{r'}(0)$, with $\overline{B_r(0)} \subseteq B_{r'}(0)$ for some $r < r'$. Let $H : \mathbb{R}^m \to [0, 1]$ be a smooth radial bump equal to $1$ on $\overline{B_r(0)}$ and supported in $\overline{B_{r'}(0)}$.
 > Define $f : M \to [0, 1]$ by $f(p) = H(\varphi(p))$ for $p \in W$ and $f(p) = 0$ for $p \notin W$. Then $f \in C^\infty(M)$, $\operatorname{supp}(f) \subseteq \overline B$, and $f \equiv 1$ on the smaller ball $\varphi^{-1}(\overline{B_r(0)})$.
 >
-> **Hint:** Smoothness on $W$ is clear ($f|_W = H \circ \varphi$, composition of smooth maps). Smoothness on $M \setminus \overline B$ is also clear ($f \equiv 0$, which is smooth). The non-trivial part is smoothness on the boundary $\partial B$, where the two pieces overlap on a buffer zone where $f$ is zero from both sides — and both definitions yield the same zero function on the overlap.
+> **Hint:** On $W$, the formula $f|_W=H\circ\varphi$ is a composition of smooth maps. On $M\setminus\overline B$, the function is identically zero and therefore smooth. The non-trivial part is smoothness on the boundary $\partial B$, where the two pieces overlap on a buffer zone where $f$ is zero from both sides — and both definitions yield the same zero function on the overlap.
 >
 > **Why needed:** Step 2 of the main proof — produces the local bumps.
 >
@@ -182,23 +189,21 @@ Verify: $\psi_\alpha \in C^\infty(M)$ (locally finite sum), $\operatorname{supp}
 > [!note]- Complete formal proof
 > Let $M$ be a smooth manifold and $\{U_\alpha\}_{\alpha \in A}$ an open cover.
 >
-> **Step 1 — refine.** By Lemma 1 (Lee Theorem 1.15), $\{U_\alpha\}$ has a countable locally finite refinement $\{B_i\}_{i \in \mathbb{N}}$ by regular coordinate balls. For each $i$, choose $a(i) \in A$ with $B_i \subseteq U_{a(i)}$.
+> **Step 1 — subordinate coordinate-ball pairs.** By Lemma 1, choose pairs $V_i,W_i$ and $a(i)\in A$ such that $\overline{V_i}\subseteq W_i\subseteq\overline{W_i}\subseteq U_{a(i)}$, the $V_i$ cover $M$, and $\{W_i\}$ is locally finite.
 >
-> **Step 2 — local bumps.** For each $i$, $B_i$ is the pullback under some chart $\varphi_i : W_i \to \mathbb{R}^m$ of $B_{r_i'}(0)$, with $\overline{B_{r_i}(0)} \subseteq B_{r_i'}(0)$ for some $r_i < r_i'$ chosen so $\{B_i^{\text{small}} := \varphi_i^{-1}(B_{r_i}(0))\}$ also covers $M$ (which we may arrange by refining further, since the regular coordinate balls form a basis).
+> **Step 2 — local bumps.** For each $i$, use the common coordinate chart containing $\overline{W_i}$ and Lemma 2 to construct $f_i:M\to[0,1]$ with $f_i\equiv1$ on $\overline{V_i}$ and $\operatorname{supp}(f_i)\subseteq\overline{W_i}\subseteq U_{a(i)}$. Because $\operatorname{supp}(f_i)\subseteq\overline{W_i}$ and local finiteness passes from an open family to its closures, the family $\{\operatorname{supp}(f_i)\}$ is locally finite.
 >
-> Choose a smooth radial bump $H_i : \mathbb{R}^m \to [0, 1]$ equal to $1$ on $\overline{B_{r_i}(0)}$ and supported in $\overline{B_{r_i'}(0)}$ (from [[Def - Bump Function and Smooth Cutoff]]). By Lemma 2, define $f_i : M \to [0, 1]$ by $f_i = H_i \circ \varphi_i$ on $W_i$ and $f_i = 0$ outside $\overline{B_i}$. Then $f_i \in C^\infty(M)$, $\operatorname{supp}(f_i) \subseteq \overline{B_i}$, $f_i \equiv 1$ on $B_i^{\text{small}}$.
+> **Step 3 — sum and normalize.** By Lemma 3, $f = \sum_i f_i \in C^\infty(M)$. For every $p \in M$, $p$ is in some $V_i$, where $f_i(p) = 1$, so $f(p) \geq 1 > 0$.
 >
-> **Step 3 — sum and normalize.** By Lemma 3, $f = \sum_i f_i \in C^\infty(M)$. For every $p \in M$, $p$ is in some $B_i^{\text{small}}$, where $f_i(p) = 1$, so $f(p) \geq 1 > 0$.
->
-> Define $g_i = f_i / f$. Then $g_i \in C^\infty(M)$ (ratio of smooth functions with positive denominator), $0 \leq g_i \leq 1$ (since $0 \leq f_i \leq f$), $\operatorname{supp}(g_i) = \operatorname{supp}(f_i) \subseteq \overline{B_i}$ (locally finite as a subfamily of a locally finite family), and $\sum_i g_i = \sum_i f_i / f = f/f = 1$.
+> Define $g_i = f_i / f$. Then $g_i \in C^\infty(M)$ (ratio of smooth functions with positive denominator), $0 \leq g_i \leq 1$ (since $0 \leq f_i \leq f$), $\operatorname{supp}(g_i) = \operatorname{supp}(f_i) \subseteq \overline{W_i}$ (locally finite because $\{W_i\}$ is locally finite), and $\sum_i g_i = \sum_i f_i / f = f/f = 1$.
 >
 > **Step 4 — re-index.** For each $\alpha \in A$, define
 > $$\psi_\alpha = \sum_{i : a(i) = \alpha} g_i,$$
-> with empty sum equal to the zero function. This is a smooth function (locally finite sum of smooth functions, by Lemma 3 applied to a sub-family) with $\operatorname{supp}(\psi_\alpha) \subseteq \bigcup_{i : a(i) = \alpha} \overline{B_i}$.
+> with empty sum equal to the zero function. This is a smooth function (locally finite sum of smooth functions, by Lemma 3 applied to a sub-family) and its nonzero set is contained in $\bigcup_{i:a(i)=\alpha}\operatorname{supp}(g_i)$.
 >
-> The locally finiteness of $\{\overline{B_i}\}$ ensures that this union has the locally finite property as $\alpha$ varies: each point $p$ has a neighbourhood meeting only finitely many $\overline{B_i}$, hence meeting at most $|\{i : a(i) = \alpha, \overline{B_i} \cap V_p \neq \emptyset\}|$ supports for each $\alpha$, but only finitely many $\alpha$ have any $i$ with both conditions (since only finitely many $i$ have $\overline{B_i} \cap V_p \neq \emptyset$). So the family $\{\operatorname{supp}(\psi_\alpha)\}_\alpha$ is locally finite.
+> The local finiteness of $\{\overline{W_i}\}$ ensures that this union has the locally finite property as $\alpha$ varies: each point $p$ has a neighbourhood meeting only finitely many $\overline{W_i}$, hence meeting at most $|\{i : a(i) = \alpha, \overline{W_i} \cap V_p \neq \emptyset\}|$ supports for each $\alpha$, but only finitely many $\alpha$ have any $i$ with both conditions (since only finitely many $i$ have $\overline{W_i} \cap V_p \neq \emptyset$). So the family $\{\operatorname{supp}(\psi_\alpha)\}_\alpha$ is locally finite.
 >
-> Each $\overline{B_i}$ with $a(i) = \alpha$ is in $U_\alpha$ (since $B_i \subseteq U_{a(i)} = U_\alpha$ and supports are closures of subsets of open sets, contained in the open set when the open set is large enough — but we need $\overline{B_i} \subseteq U_\alpha$, which holds because $\overline{B_i}$ is compact in $W_i$ and $W_i \subseteq U_\alpha$ when chosen carefully; or by shrinking $B_i$ if needed). So $\operatorname{supp}(\psi_\alpha) \subseteq U_\alpha$.
+> For fixed $\alpha$, the union $C_\alpha=\bigcup_{a(i)=\alpha}\operatorname{supp}(g_i)$ is closed because it is a locally finite union of closed sets. It lies in $U_\alpha$ because each $\operatorname{supp}(g_i)\subseteq\overline{W_i}\subseteq U_{a(i)}$. Since $\{\psi_\alpha\neq0\}\subseteq C_\alpha$, taking closures gives $\operatorname{supp}(\psi_\alpha)\subseteq C_\alpha\subseteq U_\alpha$.
 >
 > Finally, $\sum_\alpha \psi_\alpha = \sum_\alpha \sum_{i : a(i) = \alpha} g_i = \sum_i g_i = 1$, since every $i$ is in exactly one of the inner sums.
 >
