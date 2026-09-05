@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry II merged; Differential Geometry III queued for diagnosis
+**Overall status:** active — Differential Geometry III complete and ready to merge; Differential Geometry IV next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -8,7 +8,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 ## Scope
 1. Differential Geometry I — Smooth Manifolds and Atlases — complete
 2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
-3. Differential Geometry III — Tangent Vectors and the Differential — in progress
+3. Differential Geometry III — Tangent Vectors and the Differential — complete
 4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — pending
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — pending
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — pending
@@ -36,19 +36,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry II — Smooth Maps and Partitions of Unity (`7071255`)
 
 ## Current unit
-`dg-iii` — Differential Geometry III, workflow Phase 4.1 (diagnosis and target description complete).
+`dg-iii` — Differential Geometry III, complete and ready to merge in PR #5.
 
 ## Remaining units
-Differential Geometry III–XII (ten units; III is active).
+Differential Geometry IV–XII (nine units).
 
 ## Unresolved issues
-_none_; the target requires correcting false Euler-class and jet claims and making the tangent-bundle topology construction non-circular.
+_none_.
 
 ## Exact next action
-Run the final mechanical and graph audits for DG III, record the five review passes and checklist, then complete and merge PR #5.
+Merge completed PR #5, update from `main`, create the DG IV unit branch, and diagnose and envision Differential Geometry IV.
 
 ## Last completed commit
-`d262af7`
+`0eb5fe6`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
