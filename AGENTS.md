@@ -17,7 +17,7 @@ Before creating or substantially rewriting study notes, read:
 5. `.codex/note-quality.md`
 6. `.codex/workflow.md`
 
-The directory name `.claude` is historical. Its specifications are authoritative for Codex as well.
+The directory name `.claude` is historical. Its specifications are authoritative for Codex as well. The `.agents/skills/` directory contains pointer skills only, so that Codex's skill loader sees the same three skills; the content is in `.claude/skills/`.
 
 For paper-specific notes, exercises, or other work covered by another skill in `.claude/skills/`, read that skill and its referenced files before working.
 
@@ -252,28 +252,25 @@ A fresh Codex task must be able to continue solely from the repository.
 
 ## 10. Git and PR workflow
 
-For a multi-session task, keep the whole task on one working branch and, when applicable, one pull request.
+Exact commands live in `.codex/workflow.md`. Read it and run its preflight
+(`gh auth status`, `git fetch origin`) at the start of every run. The environment
+is pre-authenticated by `.codex/setup.sh`; if preflight fails, report the
+misconfiguration (see `.codex/README.md`) instead of improvising credentials.
 
-Do not merge intermediate batches into `main` by default.
+Policy:
 
-The normal workflow is:
+`main -> codex/<slug> task branch -> one commit per completed atomic unit -> one PR -> merge when the overall task is complete`
 
-`main -> task branch -> repeated topic commits -> one PR -> merge when overall task is complete`
-
-Each completed atomic unit should receive its own descriptive commit.
-
-For example:
-
-`Improve Complex Analysis II: Cauchy theory and theorem pages`
-
-Subsequent Codex sessions should continue from the same working branch and update the same task state and PR where possible.
-
-Do not create a new branch or PR for every batch unless the current environment requires it.
-
-Do not merge into the default branch unless:
-
-- the overall task is complete; or
-- the user explicitly asks to merge.
+- Never commit on `main` directly; never force-push.
+- Each completed atomic unit gets its own descriptive commit, for example
+  `Improve Complex Analysis II: Cauchy theory and theorem pages`.
+- Push after every unit and keep exactly one open PR per task; subsequent runs
+  continue the same branch and PR (recorded in `.codex/current-task.md`).
+- Merge into `main` (`gh pr merge --merge --delete-branch`) only when the
+  overall task is complete per §11, or when the user explicitly asks to merge.
+  A plain instruction such as "do X" without "merge" means: finish X, open or
+  update the PR, and report the link. "Do X and merge" means: do X, then merge
+  it yourself; the user does not want to click anything on GitHub.
 
 If the user explicitly asks to merge before the overall task is complete:
 
@@ -281,12 +278,15 @@ If the user explicitly asks to merge before the overall task is complete:
 2. merge the PR into `main`;
 3. preserve the unfinished task state in `.codex`;
 4. for subsequent continuation, start from the updated `main` branch;
-5. create a new working branch or PR for the remaining work;
+5. create a new working branch and PR for the remaining work;
 6. resume from the recorded next action.
 
-Because `.codex/current-task.md` and `.codex/progress.json` are committed, merging an intermediate PR must not lose project state.
+Because `.codex/current-task.md` and `.codex/progress.json` are committed, merging
+an intermediate PR must not lose project state. Never assume conversational
+memory will bridge a merge.
 
-Never assume conversational memory will bridge a merge.
+Always end a run by telling the user the PR URL, what was completed, what
+remains, and whether the PR was merged.
 
 ---
 

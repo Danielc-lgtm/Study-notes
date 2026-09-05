@@ -1,0 +1,10 @@
+# Normalise line endings in the repository to LF. Codex cloud runs on Linux and
+# the vault is edited on Windows; without this every file flips between CRLF and
+# LF and shows as modified. Run once after adding this file:
+#   git add --renormalize . && git commit -m "Normalise line endings"
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
