@@ -224,7 +224,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Target recorded. All content edits complete: canonical curve/derivation/compatible-chart equivalence, atlas-generated tangent-bundle topology including boundary case, corrected characteristic-class and jet claims, rigorous matrix commutator expansion, corrected polar-coordinate computation, and complete concept-map exercise coverage. Mechanical and custom 23-page graph audits pass. Next execute and record the five review passes and final parity/checklist."
+      "notes": "Target-driven rewrite complete. The final correctness pass additionally distinguished principal from associated bundles, qualified characteristic-class detection, handled the tangent-bundle boundary model explicitly, and stated the regularity condition for Lagrangian dynamics. Next: final audits and checklist, then merge PR #5."
     },
     "dg-iv": {
       "title": "Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds",
@@ -637,7 +637,7 @@
     }
   },
   "current_unit": "dg-iii",
-  "next_action": "Execute the five review passes, compare the DG III sample against gold-standard and from-scratch targets, fix any findings, then complete and merge PR #5.",
+  "next_action": "Run the final mechanical and graph audits for DG III, record the five review passes and checklist, then complete and merge PR #5.",
   "unresolved": [],
   "last_commit": "aadffa4",
   "ready_to_merge": false,

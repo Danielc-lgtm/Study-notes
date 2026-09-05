@@ -211,7 +211,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 > [!note]- Complete formal proof
 > **Theorem.** The disjoint union $TM = \bigsqcup_{p \in M} T_{p}M$ has a unique smooth structure of dimension $2n$ making the natural charts smoothly compatible, the projection $\pi$ a smooth submersion, and every global differential $dF$ smooth.
 >
-> *Proof.* By Lemma 1, the natural chart $\tilde\varphi$ associated to a chart $(U, \varphi)$ on $M$ is a bijection $\pi^{-1}(U) \to \varphi(U) \times \mathbb{R}^{n}$, with $\varphi(U) \times \mathbb{R}^{n}$ open in $\mathbb{R}^{2n}$.
+> *Proof.* Assume first that $M$ has no boundary. By Lemma 1, the natural chart $\tilde\varphi$ associated to a chart $(U, \varphi)$ on $M$ is a bijection $\pi^{-1}(U) \to \varphi(U) \times \mathbb{R}^{n}$, with $\varphi(U) \times \mathbb{R}^{n}$ open in $\mathbb{R}^{2n}$.
 >
 > By Lemma 2, the transition between two natural charts is smooth on the overlap. So the natural charts form a smoothly compatible collection.
 >
@@ -235,7 +235,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 
 **Classical mechanics — the state space of a Lagrangian system.** For a mechanical system with configuration manifold $Q$, the tangent bundle $TQ$ is the state space, equipped with a smooth structure making the Lagrangian $L : TQ \to \mathbb{R}$ a smooth function. The Euler–Lagrange equations are a smooth ODE on $TQ$ — and "smooth ODE" requires the smooth structure of $TQ$ produced by this theorem.
 
-**Gauge theory — principal bundles and connections.** The tangent bundle $TM$ is associated to the **principal frame bundle** $FM$, whose fibre at $p$ is the set of ordered bases of $T_{p}M$. The smooth structure on $TM$ given by this theorem extends to a smooth structure on $FM$; both are smooth principal $\mathrm{GL}(n)$-bundles. The whole machinery of connections, curvature, and Yang–Mills theory rests on these smooth structures.
+**Gauge theory — principal bundles and connections.** The **frame bundle** $FM$ has as its fibre at $p$ the ordered bases of $T_{p}M$ and is a principal $\mathrm{GL}(n,\mathbb R)$-bundle. The tangent bundle is the associated vector bundle $FM\times_{\mathrm{GL}(n,\mathbb R)}\mathbb R^n$, not itself a principal bundle. Connections on $FM$ induce covariant derivatives on $TM$; this principal/associated-bundle pattern is the model later used in gauge theory.
 
 **Information geometry — the tangent bundle of a statistical model.** A parametric statistical model is a smooth submanifold of the space of probability measures, with the Fisher information defining a Riemannian metric. The tangent bundle of the model is a smooth manifold whose fibres carry the Fisher metric, used in maximum-likelihood estimation, natural-gradient optimization, and information-geometric methods in machine learning.
 
@@ -249,7 +249,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 
 - **The tangent bundle is a $\mathrm{GL}(n)$-bundle.** The transition functions of $TM$ between natural charts are Jacobian matrices, elements of $\mathrm{GL}(n, \mathbb{R})$. This places $TM$ in the framework of **structure group** for fibre bundles: the structure group of $TM$ is $\mathrm{GL}(n, \mathbb{R})$, and reducing this structure group to a subgroup gives additional geometric structure on $M$ (orientation, Riemannian metric, almost complex structure). See [[Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds]].
 
-- **Local triviality and global non-triviality.** The natural charts provide local diffeomorphisms $\pi^{-1}(U) \cong U \times \mathbb{R}^{n}$. The failure to choose compatible global fibre coordinates is the **non-triviality of the vector bundle**, measured by characteristic classes. The tangent bundle of $\mathbb{R}^{n}$ or any Lie group is globally trivial; the tangent bundle of $S^{2}$ is not. This is the first geometric content of the difference between a manifold and its tangent bundle.
+- **Local triviality and global non-triviality.** The natural charts provide local vector-bundle trivializations $\pi^{-1}(U) \cong U \times \mathbb{R}^{n}$. The obstruction to choosing one global fibrewise-linear trivialization is the **non-triviality of the vector bundle**. Characteristic classes can detect this obstruction, although their vanishing need not prove triviality. The tangent bundle of $\mathbb{R}^{n}$ or any Lie group is globally trivial; the tangent bundle of $S^{2}$ is not.
 
 ---
 
@@ -262,7 +262,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 > A **vector field** on $M$ is a smooth section $X : M \to TM$ of $\pi$, i.e., a smooth map with $\pi \circ X = \mathrm{id}_{M}$. Smoothness of $X$ is now a meaningful condition (smoothness of a map between smooth manifolds). The space $\Gamma(TM)$ of vector fields is a module over $C^{\infty}(M)$. See [[Differential Geometry V — Vector Fields, Flows, and the Lie Bracket]].
 
 > [!tip] Characteristic Classes *(from Algebraic Topology)*
-> The non-triviality of $TM$ — its failure to be diffeomorphic to $M \times \mathbb{R}^{n}$ — is measured by **characteristic classes** in the cohomology of $M$: the Euler class, the Pontryagin classes, the Stiefel-Whitney classes. The Euler class of $TS^{2}$ is $\chi(S^{2}) = 2$, encoding the hairy ball theorem.
+> The non-triviality of $TM$ as a vector bundle — its failure to admit a fibrewise-linear bundle isomorphism with $M \times \mathbb{R}^{n}$ — can be detected by **characteristic classes** in the cohomology of $M$, including Euler, Pontryagin, and Stiefel–Whitney classes. These invariants are generally not a complete test for triviality. For $S^2$, $\langle e(TS^2),[S^2]\rangle=2$, which obstructs a nowhere-zero tangent field and hence encodes the hairy ball theorem.
 
 > [!tip] Lagrangian Mechanics *(from Classical Mechanics)*
-> A **Lagrangian** $L : TQ \to \mathbb{R}$ is a smooth function on the tangent bundle of the configuration manifold. The Euler–Lagrange equations are a second-order smooth ODE on $TQ$, with solutions the dynamical trajectories. The smooth-manifold structure of $TQ$ given by this theorem is what makes the variational formulation rigorous.
+> A **Lagrangian** $L : TQ \to \mathbb{R}$ is a smooth function on the tangent bundle of the configuration manifold. Its Euler–Lagrange equations are second-order equations on $Q$; when $L$ is regular, they determine a smooth vector field on $TQ$, whose integral curves are the lifted dynamical trajectories. The smooth-manifold structure of $TQ$ given by this theorem makes that formulation precise.
