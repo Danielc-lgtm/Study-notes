@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-iii`
 
 ## Pull request
-_none yet — checkpoint PR will be opened for the unfinished unit_
+`#5 https://github.com/Danielc-lgtm/Study-notes/pull/5 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
