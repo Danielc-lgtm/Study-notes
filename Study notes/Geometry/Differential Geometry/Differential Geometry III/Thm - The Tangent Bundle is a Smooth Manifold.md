@@ -67,7 +67,7 @@ Target 2: **combined with the structure-group $\mathrm{GL}(n, \mathbb{R})$, the 
 
 Target 3: **combined with the existence of smooth sections, the conclusion gives the space of vector fields a manifold-level meaning**. A vector field $X$ on $M$ is a smooth map $X : M \to TM$ with $\pi \circ X = \mathrm{id}_{M}$. Smoothness of $X$ is now meaningful (it is smoothness of a map between smooth manifolds), and the space $\Gamma(TM)$ of vector fields becomes a $C^{\infty}(M)$-module. See [[Differential Geometry V — Vector Fields, Flows, and the Lie Bracket]].
 
-Target 4: **combined with topological obstructions, the conclusion exposes the non-triviality of $TM$**. The natural charts make $TM$ *locally* a product, but globally $TM$ need not be diffeomorphic to $M \times \mathbb{R}^{n}$. Failure of triviality is measured by characteristic classes (Euler class, Pontryagin classes). The hairy ball theorem is the simplest example: $TS^{2} \not\cong S^{2} \times \mathbb{R}^{2}$.
+Target 4: **combined with topological obstructions, the conclusion exposes the non-triviality of $TM$**. The natural charts make $TM$ *locally* a product, but globally $TM$ need not be isomorphic to $M \times \mathbb{R}^{n}$ as a vector bundle. Failure of triviality is measured by characteristic classes (Euler class, Pontryagin classes). The hairy ball theorem is the simplest example: $TS^{2} \not\cong S^{2} \times \mathbb{R}^{2}$.
 
 ---
 
@@ -91,7 +91,7 @@ So the transition $\tilde\psi \circ \tilde\varphi^{-1} : \hat{U} \times \mathbb{
 $$(x, v) \mapsto (\psi \circ \varphi^{-1}(x),\; D(\psi \circ \varphi^{-1})_{x} \cdot v).$$
 The first component is the original transition map, smooth in $x$ by assumption. The second component is *linear* in $v$ (matrix-vector product), with the coefficients being entries of a Jacobian matrix, which are smooth functions of $x$. So the second component is smooth in $(x, v)$. Combined, the transition is smooth.
 
-This is the only non-trivial check. Once it is in place, $TM$ inherits the topology and smooth structure from the smooth atlas of natural charts. Hausdorff and second-countability follow from the corresponding properties of $M$ and the fact that the natural-chart construction respects them.
+The transition calculation licenses the atlas-generated topology on $TM$: a set is declared open when its image in every natural chart is open. Hausdorffness and second countability must then be proved for this topology; they do not follow merely by referring to $\pi^{-1}(U)$ as open before the topology has been constructed.
 
 Smoothness of $\pi$ in natural coordinates is $(x, v) \mapsto x$ — projection onto the first $n$ coordinates, manifestly smooth and submersive.
 
@@ -105,7 +105,7 @@ The conceptual difficulty is **recognizing that the transition formula on $TM$ h
 
 The technical subtlety is verifying **smoothness of the Jacobian as a function of $x$**. The transition formula's velocity part is $(D(\psi \circ \varphi^{-1})_{x})^{j}_{i}\,v^{i}$, where the Jacobian entries $(D \cdot)^{j}_{i}(x)$ are smooth functions of $x$ — this is the statement that smooth maps have smooth partial derivatives, a foundational fact of multivariate analysis.
 
-A secondary subtlety is the **Hausdorff condition on $TM$**. Two points $(p, v), (q, w) \in TM$ in different fibres are separated using disjoint charts on $M$; two points in the same fibre are separated using a single natural chart's $\mathbb{R}^{n}$ component. This is straightforward but needs to be checked carefully.
+A secondary subtlety is the **Hausdorff condition on $TM$**. Two points $(p, v), (q, w) \in TM$ in different fibres are separated using disjoint charts on $M$; two points in the same fibre are separated using a single natural chart's $\mathbb{R}^{n}$ component. The proof must use the atlas-generated topology explicitly, because invoking open inverse images under $\pi$ before continuity of $\pi$ is established would be circular.
 
 ---
 
@@ -130,7 +130,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
    - *Hint:* The position part is smooth by the manifold structure of $M$. The velocity part is linear in $v$ (matrix-vector product), with smooth coefficients.
    - *Why needed:* This is the heart of the proof.
 
-4. **Apply the smooth-manifold chart lemma to assemble the structure.** The countably many natural charts from a countable atlas on $M$ cover $TM$, are smoothly compatible, and satisfy the topological conditions of Lee's Lemma 1.35, so $TM$ becomes a smooth manifold.
+4. **Generate the topology and smooth structure.** Declare the natural charts to be homeomorphisms and use their smooth transition maps to generate the unique atlas topology. Verify the chart-lemma separation and countability conditions without assuming $\pi$ is already continuous.
    - *Hint:* Use the cover of $TM$ by $\pi^{-1}(U_{i})$ where $\{U_{i}\}$ is a countable atlas on $M$.
    - *Why needed:* Lifts the natural charts to a full smooth manifold structure.
 
@@ -138,7 +138,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
    - *Hint:* Same as $M$, with the natural charts providing the open sets.
    - *Why needed:* Required by the definition of a topological manifold.
 
-6. **Smoothness of $\pi$.** In natural coordinates, $\pi(x, v) = x$, projection onto the first $n$ coordinates, manifestly smooth and submersive.
+6. **Smoothness of $\pi$.** In natural coordinates, $\pi(x,v)=x$. Its coordinate derivative is the projection $\mathbb R^{2n}\to\mathbb R^n$, which is surjective, so $\pi$ is a smooth submersion.
    - *Hint:* Read off directly.
    - *Why needed:* Property 3 of the theorem.
 
@@ -186,9 +186,11 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 > **Why needed:** These topological properties are required for $TM$ to be a topological (hence smooth) manifold.
 >
 > > [!note]- Full proof
-> > *Hausdorff:* Let $(p, v) \neq (q, w) \in TM$. If $p \neq q$, then since $M$ is Hausdorff, there exist disjoint open sets $U, V \subseteq M$ with $p \in U, q \in V$, and after refining we can take both to be chart domains. Then $\pi^{-1}(U), \pi^{-1}(V)$ are disjoint open sets in $TM$ containing the two points. If $p = q$ and $v \neq w$, both lie in $\pi^{-1}(U)$ for some chart $U$ around $p$; their $\tilde\varphi$ images are $(\varphi(p), v^{i})$ and $(\varphi(p), w^{i})$, which are distinct in $\varphi(U) \times \mathbb{R}^{n}$, hence separated by disjoint open sets there.
+> > Give $TM$ the topology generated by the natural charts: a subset $O\subseteq TM$ is open exactly when $\widetilde\varphi(O\cap\pi^{-1}(U))$ is open for every base chart $(U,\varphi)$. Smooth compatibility proves that this definition is consistent on overlaps.
 > >
-> > *Second-countable:* $M$ has a countable smooth atlas $\{(U_{i}, \varphi_{i})\}$. Then $\{\pi^{-1}(U_{i})\}$ is a countable open cover of $TM$, each $\pi^{-1}(U_{i})$ being homeomorphic to $\varphi_{i}(U_{i}) \times \mathbb{R}^{n}$ (which is second-countable). A countable union of second-countable spaces is second-countable.
+> > *Hausdorff:* Let $(p,v)\neq(q,w)$. If $p\neq q$, choose disjoint chart neighbourhoods $U$ of $p$ and $V$ of $q$ by first taking disjoint open neighbourhoods in the Hausdorff space $M$ and then shrinking charts into them. The sets $\pi^{-1}(U)$ and $\pi^{-1}(V)$ are open by the defining atlas topology and are disjoint. If $p=q$ and $v\neq w$, choose a chart $(U,\varphi)$ at $p$. Their images under $\widetilde\varphi$ are distinct points of the Hausdorff Euclidean open set $\varphi(U)\times\mathbb R^n$; disjoint Euclidean neighbourhoods pull back to disjoint open neighbourhoods in $TM$.
+> >
+> > *Second-countable:* choose a countable atlas $\{(U_i,\varphi_i)\}_{i\in\mathbb N}$ on $M$ and, for each $i$, a countable Euclidean basis $\mathcal B_i$ for $\varphi_i(U_i)\times\mathbb R^n$. The countable family $\{\widetilde\varphi_i^{-1}(B):i\in\mathbb N, B\in\mathcal B_i\}$ is a basis for the atlas topology: every open set and every point in it can be tested in some natural chart and then refined by a member of that chart's Euclidean basis.
 
 > [!note]- Lemma 4: Smoothness of $\pi$ and $dF$
 > **Statement:** The projection $\pi : TM \to M$ is a smooth submersion. For any smooth map $F : M \to N$, the global differential $dF : TM \to TN$ is smooth.
@@ -227,7 +229,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 
 # Cross-Field Exercise Suggestions
 
-**Algebraic topology — the Euler class of $TS^{2}$.** The tangent bundle of $S^{2}$ is a non-trivial rank-2 vector bundle. Its **Euler class** $e(TS^{2}) \in H^{2}(S^{2}, \mathbb{Z}) \cong \mathbb{Z}$ has the value $\chi(S^{2}) = 2$, the Euler characteristic of $S^{2}$. The non-vanishing of this class is the quantitative form of the hairy ball theorem. The construction of $TS^{2}$ as a smooth manifold (this theorem) is the prerequisite for even posing the question of characteristic classes.
+**Algebraic topology — the Euler class of $TS^{2}$.** The tangent bundle of $S^{2}$ is a non-trivial rank-2 vector bundle. Its **Euler class** $e(TS^{2}) \in H^{2}(S^{2};\mathbb{Z}) \cong \mathbb{Z}$ evaluates on the fundamental class as $\langle e(TS^2),[S^2]\rangle=\chi(S^{2})=2$, the Euler characteristic of $S^{2}$. The non-vanishing of this class is the quantitative form of the hairy ball theorem. The construction of $TS^{2}$ as a smooth manifold (this theorem) is the prerequisite for even posing the question of characteristic classes.
 
 **Classical mechanics — the state space of a Lagrangian system.** For a mechanical system with configuration manifold $Q$, the tangent bundle $TQ$ is the state space, equipped with a smooth structure making the Lagrangian $L : TQ \to \mathbb{R}$ a smooth function. The Euler–Lagrange equations are a smooth ODE on $TQ$ — and "smooth ODE" requires the smooth structure of $TQ$ produced by this theorem.
 
@@ -245,7 +247,7 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 
 - **The tangent bundle is a $\mathrm{GL}(n)$-bundle.** The transition functions of $TM$ between natural charts are Jacobian matrices, elements of $\mathrm{GL}(n, \mathbb{R})$. This places $TM$ in the framework of **structure group** for fibre bundles: the structure group of $TM$ is $\mathrm{GL}(n, \mathbb{R})$, and reducing this structure group to a subgroup gives additional geometric structure on $M$ (orientation, Riemannian metric, almost complex structure). See [[Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds]].
 
-- **Local triviality and global non-triviality.** The natural charts provide local diffeomorphisms $\pi^{-1}(U) \cong U \times \mathbb{R}^{n}$. The failure of these local trivializations to extend globally is the **non-triviality of the bundle**, measured by characteristic classes. The tangent bundle of $\mathbb{R}^{n}$ or any Lie group is globally trivial; the tangent bundle of $S^{2}$ is not. This is the first geometric content of the difference between a manifold and its tangent bundle.
+- **Local triviality and global non-triviality.** The natural charts provide local diffeomorphisms $\pi^{-1}(U) \cong U \times \mathbb{R}^{n}$. The failure to choose compatible global fibre coordinates is the **non-triviality of the vector bundle**, measured by characteristic classes. The tangent bundle of $\mathbb{R}^{n}$ or any Lie group is globally trivial; the tangent bundle of $S^{2}$ is not. This is the first geometric content of the difference between a manifold and its tangent bundle.
 
 ---
 

@@ -56,7 +56,7 @@ The third source is **a velocity computation that needs to be transferred betwee
 
 The conclusion is $d(G \circ F)_{p} = dG_{F(p)} \circ dF_{p}$. Combined with various properties this gives:
 
-Target 1: **combined with linear algebra invariants, the chain rule gives chain rules for ranks, determinants, traces**. $\mathrm{rank}\,d(G \circ F)_{p} \leq \min(\mathrm{rank}\,dG_{F(p)}, \mathrm{rank}\,dF_{p})$; $\det d(G \circ F)_{p} = \det dG_{F(p)} \cdot \det dF_{p}$ (when dimensions match); and similarly for trace, characteristic polynomial, etc. These are non-obvious chain rules at the linear-algebra level that the chain rule for differentials yields directly.
+Target 1: **combined with linear algebra invariants, the chain rule controls rank, determinant, and invertibility**. One has $\operatorname{rank}d(G\circ F)_p\leq\min(\operatorname{rank}dF_p,\operatorname{rank}dG_{F(p)})$. When all tangent spaces have the same finite dimension, $\det d(G\circ F)_p=(\det dG_{F(p)})(\det dF_p)$, so a composition is infinitesimally invertible exactly when both factors are. There is no analogous multiplicative formula for trace or characteristic polynomial; those are not functorial under composition.
 
 Target 2: **combined with surjectivity/injectivity, the chain rule classifies submersions and immersions**. If $G \circ F$ has surjective differential at $p$, then so does $G$ at $F(p)$ — surjectivity is preserved by left-divisor in composition. If $G \circ F$ has injective differential, then so does $F$ at $p$. These input/output recognitions are the basis of submanifold theory in [[Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds]].
 
@@ -122,7 +122,7 @@ Unwind the precomposition definition of the differential. The chain rule for dif
    - *Why needed:* The second functor axiom.
 
 6. **Derive the diffeomorphism corollary.** $F \circ F^{-1} = \mathrm{id}_{N}$, $F^{-1} \circ F = \mathrm{id}_{M}$. Apply the chain rule and identity rule.
-   - *Hint:* The chain rule gives $dF_{p} \circ d(F^{-1})_{F(p)} = \mathrm{id}_{T_{F(p)}N}$ and similarly the reverse.
+   - *Hint:* The chain rule gives $dF_{p} \circ d(F^{-1})_{F(p)} = \mathrm{id}_{T_{F(p)}N}$ and applying the chain rule to $F^{-1}\circ F=\operatorname{id}_M$ gives the reverse composite $d(F^{-1})_{F(p)}\circ dF_p=\operatorname{id}_{T_pM}$.
    - *Why needed:* The most-used corollary.
 
 ---
@@ -187,7 +187,7 @@ Unwind the precomposition definition of the differential. The chain rule for dif
 > >
 > > By Lemma 3, $d(F \circ F^{-1})_{F(p)} = dF_{p} \circ d(F^{-1})_{F(p)}$. By Lemma 1, $d(F \circ F^{-1})_{F(p)} = d(\mathrm{id}_{N})_{F(p)} = \mathrm{id}_{T_{F(p)}N}$. So $dF_{p} \circ d(F^{-1})_{F(p)} = \mathrm{id}_{T_{F(p)}N}$.
 > >
-> > Similarly, applying the chain rule to $F^{-1} \circ F = \mathrm{id}_{M}$: $d(F^{-1})_{F(p)} \circ dF_{p} = \mathrm{id}_{T_{p}M}$.
+> > Applying the chain rule separately to $F^{-1} \circ F = \mathrm{id}_{M}$ gives $d(F^{-1})_{F(p)} \circ dF_{p} = \mathrm{id}_{T_{p}M}$.
 > >
 > > These two identities certify that $dF_{p}$ has the two-sided inverse $d(F^{-1})_{F(p)}$, hence $dF_{p}$ is a vector-space isomorphism with the stated inverse.
 

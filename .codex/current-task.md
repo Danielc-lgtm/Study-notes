@@ -45,10 +45,10 @@ Differential Geometry III–XII (ten units; III is active).
 _none_; the target requires correcting false Euler-class and jet claims and making the tangent-bundle topology construction non-circular.
 
 ## Exact next action
-Rewrite and audit `Thm - Equivalence of Tangent Vector Definitions` and `Thm - The Tangent Bundle is a Smooth Manifold`, fixing all diagnosed mathematical and architectural gaps.
+Audit and ambitiously improve the remaining Differential Geometry III definition and exercise pages, then reconcile the topic page and exercise indexes.
 
 ## Last completed commit
-`275d812`
+`8b6dec0`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

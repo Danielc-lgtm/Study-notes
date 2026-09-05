@@ -15,7 +15,7 @@ tags: [geometry, differential-geometry]
 $M$ is a smooth $n$-manifold and $p \in M$. We compare three constructions of the tangent space at $p$:
 - $T_{p}M$ = derivations of $C^{\infty}(M)$ at $p$ ([[Def - The Tangent Space]]);
 - $V_{p}M$ = equivalence classes of smooth curves through $p$ under "same velocity" ([[Def - Tangent Vector via Equivalence Classes of Curves]]);
-- $\mathrm{Chart}_{p}(M)$ = tuples $(v^{1}, \dots, v^{n})$ per chart with the Jacobian transformation law.
+- $\mathrm{Chart}_{p}(M)$ is the vector space of compatible families $(v_{\varphi})_{\varphi}$, one tuple $v_{\varphi}\in\mathbb R^n$ for every chart $\varphi$ at $p$, satisfying $v_{\psi}=D(\psi\circ\varphi^{-1})_{\varphi(p)}v_{\varphi}$ on every overlap.
 
 The natural map from $V_{p}M$ to $T_{p}M$ sends $[\gamma] \mapsto v_{\gamma}$ where $v_{\gamma}(f) = (f \circ \gamma)'(0)$. The natural map from $\mathrm{Chart}_{p}(M)$ to $T_{p}M$, given a chart $(U, \varphi)$, sends $(v^{1}, \dots, v^{n}) \mapsto v^{i}\,\partial/\partial x^{i}|_{p}$. The full notation registry is on [[Differential Geometry III — Tangent Vectors and the Differential]].
 
@@ -24,15 +24,15 @@ The natural map from $V_{p}M$ to $T_{p}M$ sends $[\gamma] \mapsto v_{\gamma}$ wh
 # Statement
 
 > **Theorem (Equivalence of Tangent Vector Definitions).** Let $M$ be a smooth $n$-manifold and $p \in M$. There are canonical vector-space [[Def - Isomorphism|isomorphisms]]
-> $$V_{p}M \;\xleftarrow{\sim}\; T_{p}M \;\xrightarrow{\sim}\; \mathrm{Chart}_{p}(M),$$
+> $$V_{p}M \;\xrightarrow{\;\Theta\;}\; T_{p}M \;\xrightarrow{\;\Xi\;}\; \mathrm{Chart}_{p}(M),$$
 > commuting with the differentials of every smooth map $F : M \to N$.
 >
 > Concretely:
 >
 > 1. The map $\Theta : V_{p}M \to T_{p}M$, $[\gamma] \mapsto v_{\gamma}$, where $v_{\gamma}(f) = (f \circ \gamma)'(0)$, is a well-defined bijection. It carries the vector-space structure on $T_{p}M$ uniquely back to $V_{p}M$.
-> 2. For any chart $(U, \varphi)$ at $p$, the map $\Psi_{\varphi} : \mathbb{R}^{n} \to T_{p}M$, $(v^{1}, \dots, v^{n}) \mapsto v^{i}\,\partial/\partial x^{i}|_{p}$, is a vector-space isomorphism. Under change of chart from $\varphi$ to $\tilde\varphi$, the components $(v^{i})$ and $(\tilde v^{j})$ are related by the Jacobian: $\tilde v^{j} = (\partial \tilde x^{j}/\partial x^{i})(\varphi(p))\,v^{i}$.
+> 2. The map $\Xi:T_pM\to\mathrm{Chart}_p(M)$ sends a derivation to its compatible family of coordinate components and is a canonical vector-space isomorphism. Choosing one chart $(U,\varphi)$ identifies $\mathrm{Chart}_p(M)$ with $\mathbb R^n$; the inverse into $T_pM$ is $\Psi_\varphi(v^1,\ldots,v^n)=v^i\,\partial/\partial x^i|_p$. Under a change from $\varphi$ to $\widetilde\varphi$, the components satisfy $\widetilde v^j=(\partial\widetilde x^j/\partial x^i)(\varphi(p))v^i$.
 >
-> Moreover the maps $\Theta$ and $\Psi_{\varphi}$ are **natural in $F$**: for a smooth map $F : M \to N$, the differentials $dF_{p}$ defined separately in the curve picture ($[\gamma] \mapsto [F \circ \gamma]$), the derivation picture ($v \mapsto (f \mapsto v(f \circ F))$), and the chart picture (Jacobian matrix multiplication) all agree under the [[Def - Isomorphism|isomorphisms]].
+> Moreover $\Theta$ and $\Xi$ are **natural in $F$**: for a smooth map $F : M \to N$, the differentials $dF_{p}$ defined separately in the curve picture ($[\gamma] \mapsto [F \circ \gamma]$), the derivation picture ($v \mapsto (f \mapsto v(f \circ F))$), and the chart picture (Jacobian matrix multiplication) all agree under the [[Def - Isomorphism|isomorphisms]].
 
 > **Corollary 1.** $T_{p}M$ has [[Def - Dimension|dimension]] $n$. (Proved separately as [[Thm - Dimension of the Tangent Space]].)
 >
@@ -96,7 +96,7 @@ Concretely, the proof of the derivation-curve bijection runs by Taylor's theorem
 $$f(x) = f(a) + \sum_{i} (x^{i} - a^{i})\,g_{i}(x), \qquad g_{i} \in C^{\infty},\, g_{i}(a) = \partial f/\partial x^{i}(a).$$
 A derivation $v$ at $a$ annihilates the constant $f(a)$ and, by the Leibniz rule applied to each $(x^{i} - a^{i})\,g_{i}$, gives $v(f) = \sum_{i} (g_{i}(a) \cdot v(x^{i} - a^{i})) = \sum_{i} v^{i}\,\partial f/\partial x^{i}(a)$ where $v^{i} = v(x^{i})$. So $v$ is exactly the directional derivative $D_{v}|_{a}$, and the bijection derivation $\leftrightarrow$ vector is established. The manifold case reduces to this via a chart.
 
-The naturality (commutativity with differentials) is a routine check: $dF_{p}$ in each picture is defined by the natural operation — pre-composition for derivations, post-composition for curves, Jacobian multiplication for chart-tuples — and these agree under the isomorphisms.
+Naturality follows from two explicit identities: $dF_{p}$ in each picture is defined by the natural operation — pre-composition for derivations, post-composition for curves, Jacobian multiplication for chart-tuples — and these agree under the isomorphisms.
 
 ---
 
@@ -133,7 +133,7 @@ Reduce to $\mathbb{R}^{n}$ via a chart. In $\mathbb{R}^{n}$, prove three facts: 
    - *Hint:* From subgoal 3, $f(x) = f(a) + \sum_{i} (x^{i} - a^{i})\,g_{i}(x)$. Apply $v$ using linearity and the Leibniz rule. The constant $f(a)$ contributes $0$ (subgoal 1). Each term $(x^{i} - a^{i})\,g_{i}(x)$ contributes $v(x^{i} - a^{i})\,g_{i}(a) + (x^{i} - a^{i})(a) \cdot v(g_{i})$; but $(x^{i} - a^{i})(a) = 0$ and $v(x^{i} - a^{i}) = v(x^{i})$ (since $a^{i}$ is constant), so the contribution is $v(x^{i})\,g_{i}(a) = v^{i}\,\partial_{i} f(a)$.
    - *Why needed:* This identifies every Euclidean derivation as a directional derivative — the punchline of the proof.
 
-5. **The derivation-vector bijection on $\mathbb{R}^{n}$.** Subgoal 4 shows the map $v \mapsto (v(x^{1}), \dots, v(x^{n}))$ from $T_{a}\mathbb{R}^{n}$ to $\mathbb{R}^{n}$ is injective (and obviously surjective via $(v^{i}) \mapsto v^{i}\,\partial/\partial x^{i}|_{a}$).
+5. **The derivation-vector bijection on $\mathbb{R}^{n}$.** Subgoal 4 shows the map $v \mapsto (v(x^{1}), \dots, v(x^{n}))$ from $T_{a}\mathbb{R}^{n}$ to $\mathbb{R}^{n}$ is injective . Surjectivity is witnessed explicitly by sending $(c^{i})$ to the derivation $f\mapsto c^{i}\partial_i f(a)$.
    - *Hint:* Injectivity by subgoal 4; surjectivity by direct construction.
    - *Why needed:* This is the equivalence on the local model.
 
@@ -229,13 +229,15 @@ Reduce to $\mathbb{R}^{n}$ via a chart. In $\mathbb{R}^{n}$, prove three facts: 
 >
 > *Proof.* We establish each isomorphism separately.
 >
-> **Step 0 (well-posedness of curve picture).** Verify that the relation $\gamma_{1} \sim \gamma_{2} \iff (f \circ \gamma_{1})'(0) = (f \circ \gamma_{2})'(0)$ for all smooth $f$ defined near $p$ is an equivalence relation: reflexivity, symmetry, and transitivity are immediate from the corresponding properties of equality in $\mathbb{R}$.
+> **Step 0 (well-posedness of curve picture).** Verify that the relation $\gamma_{1} \sim \gamma_{2} \iff (f \circ \gamma_{1})'(0) = (f \circ \gamma_{2})'(0)$ for all smooth $f$ defined near $p$ is an equivalence relation: reflexivity holds because each derivative equals itself; symmetry follows by reversing each equality; and transitivity follows because equality of the derivatives for $\gamma_1,\gamma_2$ and for $\gamma_2,\gamma_3$ implies equality for $\gamma_1,\gamma_3$, for every test function $f$.
 >
 > **Step 1 (derivation-vector isomorphism on $\mathbb{R}^{n}$).** This is Lemma 4 (above): for $a \in \mathbb{R}^{n}$, the map $v \mapsto (v(x^{1}), \dots, v(x^{n}))$ is a vector-space isomorphism $T_{a}\mathbb{R}^{n} \to \mathbb{R}^{n}$, with inverse $(v^{i}) \mapsto v^{i}\,\partial/\partial x^{i}|_{a}$. The proof uses Lemmas 1, 2, and 3 (constants annihilated, double-vanishing annihilated, Taylor expansion).
 >
 > **Step 2 (transport to manifold via chart).** Let $(U, \varphi)$ be a chart at $p$. By locality of derivations (Lemma in [[Def - Derivation at a Point]]), $T_{p}M = T_{p}U$. The [[Def - Diffeomorphism|diffeomorphism]] $\varphi : U \to \hat{U} \subseteq \mathbb{R}^{n}$ induces an isomorphism $d\varphi_{p} : T_{p}U \to T_{\varphi(p)}\hat{U}$. And $T_{\varphi(p)}\hat{U} = T_{\varphi(p)}\mathbb{R}^{n}$ (open subset has the same tangent space). Composing: $T_{p}M \cong T_{\varphi(p)}\mathbb{R}^{n} \cong \mathbb{R}^{n}$, with the chart basis $\partial/\partial x^{i}|_{p}$ corresponding to the standard basis $\partial/\partial x^{i}|_{\varphi(p)}$ of $\mathbb{R}^{n}$. This establishes the chart-tuple isomorphism.
 >
 > **Step 3 (change of chart formula).** Suppose $(U, \varphi)$ and $(V, \tilde\varphi)$ are two charts at $p$, with coordinates $x^{i}$ and $\tilde x^{j}$. Applying $\partial/\partial x^{i}|_{p}$ to $\tilde x^{j}$: $(\partial/\partial x^{i}|_{p})(\tilde x^{j}) = \partial(\tilde\varphi \circ \varphi^{-1})^{j}/\partial x^{i}(\varphi(p)) = \partial \tilde x^{j}/\partial x^{i}(\varphi(p))$. Hence the components transform contragrediently by the Jacobian.
+>
+> Consequently a derivation determines a compatible family of tuples, giving $\Xi$. Conversely, a compatible family is determined by its tuple $(v^i)$ in any one chart; define $v=v^i\,\partial/\partial x^i|_p$. The change-of-chart formula shows that choosing a different chart produces the same derivation. These constructions are linear and inverse to each other, so $\Xi$ is canonical even though an identification with one copy of $\mathbb R^n$ depends on a chart.
 >
 > **Step 4 (derivation-curve isomorphism).** This is Lemma 5 (above): the map $\Theta : V_{p}M \to T_{p}M$ is a well-defined bijection. It is linear after vector-space structure is transported from $T_{p}M$ to $V_{p}M$.
 >
@@ -280,7 +282,7 @@ Reduce to $\mathbb{R}^{n}$ via a chart. In $\mathbb{R}^{n}$, prove three facts: 
 > The bijection between Lie groups and Lie algebras (in a suitable category) rests on the equivalence theorem: the tangent space at the identity can be computed via curves (one-parameter subgroups), derivations (left-invariant vector fields), or chart-tuples (matrix entries in an embedding) — all three give the same Lie algebra. See [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]].
 
 > [!tip] Jet Bundles *(from Differential Geometry)*
-> The equivalence theorem identifies the tangent space with "first-order Taylor data at $p$". Generalizing to "$k$-th order Taylor data at $p$" produces the **jet bundle** $J^{k}(M)$, with $J^{1}(M) = TM$. Jets are the natural setting for higher-order calculus on manifolds — partial differential equations, the Cartan distribution, the variational bicomplex. The equivalence theorem is the order-1 case of the more general jet equivalence.
+> The equivalence theorem identifies the tangent space with "first-order Taylor data at $p$". Generalizing to $k$th-order Taylor data produces **jet bundles**. Precisely, $TM$ is canonically the bundle of $1$-jets at $0$ of curves $\gamma:(\mathbb R,0)\to M$; the notation $J^1(M)$ by itself is convention-dependent and often denotes a different jet construction. Jets are the natural setting for higher-order calculus on manifolds — partial differential equations, the Cartan distribution, the variational bicomplex. The equivalence theorem is the order-1 case of the more general jet equivalence.
 
 > [!tip] Synthetic Differential Geometry *(from Category Theory)*
 > An alternative foundation called **synthetic differential geometry** takes "infinitesimal" elements seriously and works in a topos where there are non-zero infinitesimals $\varepsilon$ with $\varepsilon^{2} = 0$. In this framework, a tangent vector at $p$ is literally a curve $\gamma : D \to M$ from the "infinitesimal interval" $D = \{\varepsilon : \varepsilon^{2} = 0\}$ with $\gamma(0) = p$, and the equivalence theorem becomes a definitional matter. The classical equivalence theorem is the reflection of this in the topos of sheaves on smooth manifolds.

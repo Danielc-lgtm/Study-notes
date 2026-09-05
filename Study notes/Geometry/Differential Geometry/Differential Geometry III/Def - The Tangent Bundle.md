@@ -111,7 +111,7 @@ In **algebraic topology**, the topology of $TM$ encodes information about $M$ vi
 
 **Tangent bundle of $\mathrm{GL}(n, \mathbb{R})$.** $\mathrm{GL}(n)$ is an open subset of $M_{n}(\mathbb{R})$, so its tangent bundle is $\mathrm{GL}(n) \times M_{n}(\mathbb{R})$ — every point has tangent space $M_{n}(\mathbb{R})$, and the bundle is trivial.
 
-**Is NOT a trivial bundle: $TS^{2}, TS^{4}, TS^{n}$ for $n \notin \{1, 3, 7\}$.** The classical theorem of Bott, Milnor, and Kervaire is that the only parallelizable spheres are $S^{1}, S^{3}, S^{7}$. This is a deep result connecting tangent bundles to the algebra of normed division algebras (real, complex, quaternion, octonion) — these are the only normed division algebras over $\mathbb{R}$, and they provide trivializations $TS^{n-1} \cong S^{n-1} \times \mathbb{R}^{n-1}$ for $n = 1, 2, 4, 8$.
+**Is NOT a trivial bundle: $TS^{n}$ for positive $n \notin \{1,3,7\}$.** The classical theorem of Bott, Milnor, and Kervaire is that the only parallelizable spheres are $S^{1}, S^{3}, S^{7}$. This is a deep result connecting tangent bundles to the algebra of normed division algebras (real, complex, quaternion, octonion) — these are the only normed division algebras over $\mathbb{R}$, and they provide trivializations $TS^{n-1} \cong S^{n-1} \times \mathbb{R}^{n-1}$ for $n = 1, 2, 4, 8$.
 
 **Corollary — the projection $\pi : TM \to M$ is a smooth submersion.** $\pi$ in coordinates is the projection $(x, v) \mapsto x$ from $\mathbb{R}^{2n}$ to $\mathbb{R}^{n}$, which has surjective differential. Hence $\pi$ is a smooth submersion globally, with each fibre an $n$-dimensional submanifold.
 
