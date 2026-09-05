@@ -1,13 +1,13 @@
 # Current task
 
-**Overall status:** active — Differential Geometry I merged; Differential Geometry II queued for diagnosis
+**Overall status:** active — Differential Geometry II complete; PR #4 ready to merge
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
 
 ## Scope
 1. Differential Geometry I — Smooth Manifolds and Atlases — complete
-2. Differential Geometry II — Smooth Maps and Partitions of Unity — in progress
+2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
 3. Differential Geometry III — Tangent Vectors and the Differential — pending
 4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — pending
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — pending
@@ -26,28 +26,29 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-ii`
 
 ## Pull request
-`#4 https://github.com/Danielc-lgtm/Study-notes/pull/4 (open checkpoint)`
+`#4 https://github.com/Danielc-lgtm/Study-notes/pull/4 (open; ready to merge)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
 
 ## Completed units
 - Differential Geometry I — Smooth Manifolds and Atlases (`3ac9654`)
+- Differential Geometry II — Smooth Maps and Partitions of Unity (`7071255`)
 
 ## Current unit
-`dg-ii` — Differential Geometry II, workflow Phase 3 (diagnosis not yet begun).
+`dg-ii` — Differential Geometry II, workflow Phase 6 (merge).
 
 ## Remaining units
-Differential Geometry II–XII (eleven units).
+Differential Geometry III–XII (ten units).
 
 ## Unresolved issues
 _none_
 
 ## Exact next action
-Diagnose every Differential Geometry II page against P1–P4 and the page-type criteria, then fix all applicable failures before running the five review passes.
+Merge PR #4, record its main commit, then create a fresh branch from `origin/main` and diagnose Differential Geometry III.
 
 ## Last completed commit
-`3ac9654`
+`7071255`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
