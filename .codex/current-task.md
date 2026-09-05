@@ -47,7 +47,7 @@ _none_
 Diagnose every Differential Geometry II page against P1–P4 and the page-type criteria, then fix all applicable failures before running the five review passes.
 
 ## Last completed commit
-`5767242`
+`3ac9654`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
