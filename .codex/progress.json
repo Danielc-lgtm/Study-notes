@@ -62,12 +62,12 @@
   "goal": "Improve every differential geometry topic and its complete subpage graph, sequentially, to the repository's rigour, self-containedness, explanation, and concision standards.",
   "mode": "improve",
   "merge_policy": "auto",
-  "status": "review",
-  "branch": "codex/improve-all-differential-geometry-dg-ii",
+  "status": "in_progress",
+  "branch": "codex/improve-all-differential-geometry-dg-iii",
   "pr": {
-    "number": 4,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/4",
-    "state": "open"
+    "number": null,
+    "url": null,
+    "state": null
   },
   "merged_prs": [
     {
@@ -80,6 +80,12 @@
       "number": 3,
       "unit": "dg-i",
       "main_sha": "3ac9654",
+      "date": "2026-09-05"
+    },
+    {
+      "number": 4,
+      "unit": "dg-ii",
+      "main_sha": "089fad6",
       "date": "2026-09-05"
     }
   ],
@@ -176,12 +182,12 @@
         "checklist": "pass"
       },
       "commit": "7071255",
-      "notes": "Complete and reviewed; PR #4 ready for auto-merge."
+      "notes": "Complete and merged in PR #4."
     },
     "dg-iii": {
       "title": "Differential Geometry III — Tangent Vectors and the Differential",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry III — Tangent Vectors and the Differential.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry III — Tangent Vectors and the Differential.md",
@@ -630,10 +636,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-ii",
-  "next_action": "Merge PR #4, record its main commit, then create a fresh branch from origin/main and diagnose Differential Geometry III.",
+  "current_unit": "dg-iii",
+  "next_action": "Diagnose every Differential Geometry III page against P1–P4 and the page-type criteria, prioritizing equivalence of tangent-vector definitions and tangent-bundle proofs.",
   "unresolved": [],
-  "last_commit": "7071255",
+  "last_commit": "089fad6",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

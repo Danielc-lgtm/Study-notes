@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry II complete; PR #4 ready to merge
+**Overall status:** active — Differential Geometry II merged; Differential Geometry III queued for diagnosis
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -8,7 +8,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 ## Scope
 1. Differential Geometry I — Smooth Manifolds and Atlases — complete
 2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
-3. Differential Geometry III — Tangent Vectors and the Differential — pending
+3. Differential Geometry III — Tangent Vectors and the Differential — in progress
 4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — pending
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — pending
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — pending
@@ -23,10 +23,10 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `improve`
 
 ## Working branch
-`codex/improve-all-differential-geometry-dg-ii`
+`codex/improve-all-differential-geometry-dg-iii`
 
 ## Pull request
-`#4 https://github.com/Danielc-lgtm/Study-notes/pull/4 (open; ready to merge)`
+_none yet — checkpoint PR will be opened for the unfinished unit_
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -36,19 +36,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry II — Smooth Maps and Partitions of Unity (`7071255`)
 
 ## Current unit
-`dg-ii` — Differential Geometry II, workflow Phase 6 (merge).
+`dg-iii` — Differential Geometry III, workflow Phase 3 (diagnosis not yet begun).
 
 ## Remaining units
-Differential Geometry III–XII (ten units).
+Differential Geometry III–XII (ten units; III is active).
 
 ## Unresolved issues
 _none_
 
 ## Exact next action
-Merge PR #4, record its main commit, then create a fresh branch from `origin/main` and diagnose Differential Geometry III.
+Diagnose every Differential Geometry III page against P1–P4 and the page-type criteria, prioritizing equivalence of tangent-vector definitions and tangent-bundle proofs.
 
 ## Last completed commit
-`7071255`
+`089fad6`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
@@ -56,3 +56,4 @@ Merge PR #4, record its main commit, then create a fresh branch from `origin/mai
 ## Merge history
 - #2 smoke test → main @ eba050d (2026-09-05)
 - #3 Differential Geometry I → main @ 3ac9654 (2026-09-05)
+- #4 Differential Geometry II → main @ 089fad6 (2026-09-05)
