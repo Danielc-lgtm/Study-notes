@@ -37,19 +37,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry III — Tangent Vectors and the Differential (`8228dec`, PR #5)
 
 ## Current unit
-`dg-iv` — Differential Geometry IV, workflow Phase 3.1 (diagnose and envision).
+`dg-iv` — Differential Geometry IV, workflow Phase 4.1 (target-driven rewrite).
 
 ## Remaining units
 Differential Geometry IV–XII (nine units).
 
 ## Unresolved issues
-_none_.
+The DG IV Whitney page states a proper noncompact theorem but formally proves only the compact case; several global-theory bridges also require correction or missing hypotheses.
 
 ## Exact next action
-Read the complete DG IV topic graph, audit its theorem proofs and examples, compare it with the target and gold-standard subjects, and record the diagnosis and target description before editing.
+Repair the DG IV Whitney theorem statement/proof contract and false polynomial-restriction claim, then run the first mechanical audit checkpoint.
 
 ## Last completed commit
-`31ef0ac`
+`02ad63e`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
