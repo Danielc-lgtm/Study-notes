@@ -113,7 +113,7 @@ In condensed-matter physics, a topological manifold is the appropriate setting f
 # Unlocked by This
 
 > [!tip] Smooth Manifold *(from this topic)*
-> Adding a maximal smooth atlas to a topological manifold gives a [[Def - Smooth Manifold|smooth manifold]] — the object on which calculus is defined. The smooth structure is a refinement, not an automatic consequence: there are topological manifolds with no smooth structure (Kervaire 1960, dim 10) and topological manifolds with many inequivalent smooth structures (Milnor's 28 exotic 7-spheres, Donaldson's uncountably many exotic $\mathbb{R}^4$'s).
+> Adding a maximal smooth atlas to a topological manifold gives a [[Def - Smooth Manifold|smooth manifold]] — the object on which calculus is defined. The smooth structure is a refinement, not an automatic consequence: there are topological manifolds with no smooth structure (Kervaire 1960, dim 10) and topological manifolds with many inequivalent smooth structures (the 28 oriented diffeomorphism classes of homotopy $7$-spheres (27 exotic and one standard), Donaldson's uncountably many exotic $\mathbb{R}^4$'s).
 
 > [!tip] Manifold with Boundary *(from this topic, §1.4)*
 > Generalizing to allow boundary points — [[Def - Smooth Manifold with Boundary|topological/smooth manifolds with boundary]] — by replacing the chart target $\mathbb{R}^n$ with either $\mathbb{R}^n$ or the closed upper half-space $\mathbb{H}^n$. This is the framework needed for Stokes's theorem and integration by parts in [[Differential Geometry IX — Orientation, Integration, and Stokes' Theorem|DG IX]].
