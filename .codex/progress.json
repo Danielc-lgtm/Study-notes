@@ -63,10 +63,10 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "review",
-  "branch": "codex/improve-all-differential-geometry",
+  "branch": "codex/improve-all-differential-geometry-dg-ii",
   "pr": {
-    "number": 3,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/3",
+    "number": 4,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/4",
     "state": "open"
   },
   "merged_prs": [
@@ -74,6 +74,12 @@
       "number": 2,
       "unit": "smoke-test",
       "main_sha": "eba050d",
+      "date": "2026-09-05"
+    },
+    {
+      "number": 3,
+      "unit": "dg-i",
+      "main_sha": "3ac9654",
       "date": "2026-09-05"
     }
   ],
@@ -132,12 +138,12 @@
         "checklist": "pass"
       },
       "commit": "5767242",
-      "notes": "Complete and reviewed; PR #3 opened for auto-merge."
+      "notes": "Complete and merged in PR #3."
     },
     "dg-ii": {
       "title": "Differential Geometry II — Smooth Maps and Partitions of Unity",
       "mode": "improve",
-      "status": "pending",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry II — Smooth Maps and Partitions of Unity.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry II — Smooth Maps and Partitions of Unity.md",
@@ -160,17 +166,17 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry II/Thm - Smooth Extension Lemma.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry II/Thm - Smooth Maps are Continuous.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Replaced a non-rigorous partition-of-unity refinement argument and corrected support, zero-extension, smooth-function algebra, analytic-identity, and approximation claims.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "fixed",
+        "pedagogy": "fixed",
+        "rederivation": "fixed",
+        "graph": "pass",
+        "prose": "fixed",
+        "checklist": "pass"
       },
-      "commit": null,
-      "notes": ""
+      "commit": "7071255",
+      "notes": "Complete and reviewed; PR #4 ready for auto-merge."
     },
     "dg-iii": {
       "title": "Differential Geometry III — Tangent Vectors and the Differential",
@@ -624,10 +630,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-i",
-  "next_action": "Merge PR #3, update the merge ledger on main, then create a fresh branch from origin/main and diagnose Differential Geometry II.",
+  "current_unit": "dg-ii",
+  "next_action": "Merge PR #4, record its main commit, then create a fresh branch from origin/main and diagnose Differential Geometry III.",
   "unresolved": [],
-  "last_commit": "5767242",
+  "last_commit": "7071255",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
