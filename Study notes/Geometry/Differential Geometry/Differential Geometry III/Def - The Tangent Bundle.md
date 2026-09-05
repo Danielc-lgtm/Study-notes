@@ -95,7 +95,7 @@ In **classical mechanics**, the tangent bundle of the configuration manifold $Q$
 
 In **gauge theory**, the tangent bundle is one example of a **principal $\mathrm{GL}(n)$-bundle's associated vector bundle**: the principal frame bundle $FM$ has fibre at $p$ the set of ordered bases of $T_{p}M$, and $TM$ is associated to $FM$ via the defining representation of $\mathrm{GL}(n)$. This perspective is foundational for Yang–Mills theory and characteristic classes.
 
-In **algebraic topology**, the topology of $TM$ encodes information about $M$ via characteristic classes — the **Euler class** $e(TM) \in H^{n}(M)$, the **Pontryagin classes** $p_{i}(TM) \in H^{4i}(M)$, the **Chern classes** (for complex structures). The non-triviality of $TM$ as a vector bundle is exactly the non-vanishing of these classes. For $M = S^{2}$, the Euler class of $TS^{2}$ is the generator of $H^{2}(S^{2}) \cong \mathbb{Z}$, with value $2$ (the Euler characteristic of $S^{2}$) — this is the *quantitative form* of the hairy ball theorem.
+In **algebraic topology**, the topology of $TM$ encodes information about $M$ via characteristic classes — the **Euler class** $e(TM) \in H^{n}(M)$, the **Pontryagin classes** $p_{i}(TM) \in H^{4i}(M)$, the **Chern classes** (for complex structures). Non-vanishing of any characteristic class proves non-triviality, but simultaneous vanishing is not generally sufficient for triviality: characteristic classes do not classify all vector bundles. For $M=S^2$, after choosing the generator $u\in H^2(S^2;\mathbb Z)$ with $\langle u,[S^2]\rangle=1$, one has $e(TS^2)=2u$ because $\langle e(TS^2),[S^2]\rangle=\chi(S^2)=2$. This is the quantitative form of the hairy ball theorem.
 
 ---
 
@@ -111,7 +111,7 @@ In **algebraic topology**, the topology of $TM$ encodes information about $M$ vi
 
 **Tangent bundle of $\mathrm{GL}(n, \mathbb{R})$.** $\mathrm{GL}(n)$ is an open subset of $M_{n}(\mathbb{R})$, so its tangent bundle is $\mathrm{GL}(n) \times M_{n}(\mathbb{R})$ — every point has tangent space $M_{n}(\mathbb{R})$, and the bundle is trivial.
 
-**Is NOT a trivial bundle: $TS^{2}, TS^{4}, TS^{n}$ for $n \notin \{1, 3, 7\}$.** The classical theorem of Bott, Milnor, and Kervaire is that the only parallelizable spheres are $S^{1}, S^{3}, S^{7}$. This is a deep result connecting tangent bundles to the algebra of normed division algebras (real, complex, quaternion, octonion) — these are the only normed division algebras over $\mathbb{R}$, and they provide trivializations $TS^{n-1} \cong S^{n-1} \times \mathbb{R}^{n-1}$ for $n = 1, 2, 4, 8$.
+**Is NOT a trivial bundle: $TS^{n}$ for positive $n \notin \{1,3,7\}$.** The classical theorem of Bott, Milnor, and Kervaire is that the only parallelizable spheres are $S^{1}, S^{3}, S^{7}$. This is a deep result connecting tangent bundles to the algebra of normed division algebras (real, complex, quaternion, octonion) — these are the only normed division algebras over $\mathbb{R}$, and they provide trivializations $TS^{n-1} \cong S^{n-1} \times \mathbb{R}^{n-1}$ for $n = 1, 2, 4, 8$.
 
 **Corollary — the projection $\pi : TM \to M$ is a smooth submersion.** $\pi$ in coordinates is the projection $(x, v) \mapsto x$ from $\mathbb{R}^{2n}$ to $\mathbb{R}^{n}$, which has surjective differential. Hence $\pi$ is a smooth submersion globally, with each fibre an $n$-dimensional submanifold.
 

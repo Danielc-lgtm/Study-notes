@@ -41,7 +41,7 @@ The **stereographic projection from $S$** sends a point $(x, y, z) \neq S$ to th
 
 **Assumption pattern:** $S^{2}$ is presented as a regular level set of $f(x, y, z) = x^{2} + y^{2} + z^{2} - 1$ in $\mathbb{R}^{3}$, with smooth structure from the stereographic chart $\varphi_{N}$ at the south pole. The chart is centered such that the north pole has coordinates $(0, 0)$ — convenient for the computation. The chart's inverse $\varphi_{N}^{-1}$ is an explicit formula, allowing direct differentiation.
 
-**Theorem routing:** From [[Ex - Tangent Vectors as Velocities of Coordinate Curves]], $\partial/\partial u|_{N}$ is the velocity of the coordinate curve $\gamma_{u}(t) = \varphi_{N}^{-1}(t, 0)$, and similarly for $\partial/\partial v|_{N}$. Differentiate each curve at $t = 0$ to get a velocity vector in $\mathbb{R}^{3}$. Verify the result lies in the tangent plane $\{w_{3} = 0\}$, which by [[Def - The Tangent Space to a Submanifold]] is exactly $\ker df_{N}$ where $f(x, y, z) = x^{2} + y^{2} + z^{2} - 1$ and $df_{N}(w) = 2 \cdot N \cdot w = 2 w_{3}$. So the tangent plane is $\{w : w_{3} = 0\}$.
+**Theorem routing:** From [[Ex - Tangent Vectors as Velocities of Coordinate Curves]], $\partial/\partial u|_{N}$ is the velocity of the coordinate curve $\gamma_{u}(t) = \varphi_{N}^{-1}(t, 0)$, while $\partial/\partial v|_N$ is the velocity of $\gamma_v(t)=\varphi_N^{-1}(0,t)$. Differentiate each curve at $t = 0$ to get a velocity vector in $\mathbb{R}^{3}$. Verify the result lies in the tangent plane $\{w_{3} = 0\}$, which by [[Def - The Tangent Space to a Submanifold]] is exactly $\ker df_{N}$ where $f(x, y, z) = x^{2} + y^{2} + z^{2} - 1$ and $df_{N}(w) = 2 \cdot N \cdot w = 2 w_{3}$. So the tangent plane is $\{w : w_{3} = 0\}$.
 
 **Key decision point:** The non-obvious step is choosing the chart $\varphi_{N}$ from the south pole — *not* from the north pole. This puts $N$ at the origin of the chart, where the inverse formula simplifies. The temptation is to use a chart from $N$ itself, but that excludes $N$ from the chart's domain. The choice to use the *opposite-pole* chart for computations at $N$ is the standard trick.
 
@@ -66,7 +66,7 @@ The **stereographic projection from $S$** sends a point $(x, y, z) \neq S$ to th
 > By [[Ex - Tangent Vectors as Velocities of Coordinate Curves]], $\partial/\partial u|_{N}$ is the velocity of the coordinate curve $\gamma_{u}(t) = \varphi_{N}^{-1}(t, 0)$. Compute $\gamma_{u}(t) \in \mathbb{R}^{3}$ explicitly using the formula for $\varphi_{N}^{-1}$, then differentiate at $t = 0$.
 
 > [!note]- Hint 3
-> Similarly compute $\partial/\partial v|_{N}$ as the velocity of $\gamma_{v}(t) = \varphi_{N}^{-1}(0, t)$ at $t = 0$. Verify both velocity vectors lie in the plane $\{w : w_{3} = 0\}$ — the tangent plane to $S^{2}$ at $N$.
+> Compute the second vector independently from $\gamma_v(t)=\varphi_N^{-1}(0,t)$ by differentiating all three ambient coordinate functions at $t=0$. Verify both velocity vectors lie in the plane $\{w : w_{3} = 0\}$ — the tangent plane to $S^{2}$ at $N$.
 
 > [!note]- Hint 4
 > For the inclusion's differential $d\iota_{N}$: since the inclusion is the identity in the ambient coordinates, $d\iota_{N}(v)$ is just $v$ viewed as an ambient $\mathbb{R}^{3}$ vector. So the velocities computed in Steps 2–3 *are* the embedded tangent vectors.
@@ -109,7 +109,7 @@ The inclusion $\iota : S^{2} \hookrightarrow \mathbb{R}^{3}$ has $d\iota_{N}(v) 
 > [!note]- Derivation
 > By the curve formula for the differential (Corollary 3.25 of Lee), $d\iota_{N}(\partial/\partial u|_{N}) = (\iota \circ \gamma_{u})'(0)$. Since $\iota$ is the inclusion, $\iota \circ \gamma_{u} = \gamma_{u}$ as smooth curves $J \to \mathbb{R}^{3}$, so $d\iota_{N}(\partial/\partial u|_{N}) = \gamma_{u}'(0) = (2, 0, 0)$.
 >
-> Similarly $d\iota_{N}(\partial/\partial v|_{N}) = (0, 2, 0)$.
+> The same coordinate formula with $u=0$ gives $\gamma_v(t)=(0,2t/(1+t^2),(1-t^2)/(1+t^2))$, whose derivative at $0$ is $(0,2,0)$. Hence $d\iota_N(\partial/\partial v|_N)=(0,2,0)$.
 >
 > So the embedded tangent vectors at $N$ corresponding to the coordinate basis are $(2, 0, 0)$ and $(0, 2, 0)$ — both lying in the equatorial plane $z = 0$ of $\mathbb{R}^{3}$.
 
