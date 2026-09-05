@@ -273,7 +273,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded before content editing. Exact next action: repair the Whitney theorem statement/proof contract and false polynomial-restriction claim, then run the first mechanical audit checkpoint."
+      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs."
     },
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
@@ -643,9 +643,9 @@
     }
   },
   "current_unit": "dg-iv",
-  "next_action": "Repair the DG IV Whitney theorem statement/proof contract and false polynomial-restriction claim, then run the first mechanical audit checkpoint.",
+  "next_action": "Audit and rewrite the rank, immersion, and submersion normal-form proofs, beginning with every omitted or circular step in the Rank Theorem page.",
   "unresolved": [],
-  "last_commit": "02ad63e",
+  "last_commit": "600253b",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
