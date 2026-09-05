@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry III complete and ready to merge; Differential Geometry IV next
+**Overall status:** active — Differential Geometry III merged; Differential Geometry IV diagnosis in progress
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -23,10 +23,10 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `improve`
 
 ## Working branch
-`codex/improve-all-differential-geometry-dg-iii`
+`codex/improve-all-differential-geometry-dg-iv`
 
 ## Pull request
-`#5 https://github.com/Danielc-lgtm/Study-notes/pull/5 (open checkpoint)`
+_not opened yet for DG IV_
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -34,9 +34,10 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 ## Completed units
 - Differential Geometry I — Smooth Manifolds and Atlases (`3ac9654`)
 - Differential Geometry II — Smooth Maps and Partitions of Unity (`7071255`)
+- Differential Geometry III — Tangent Vectors and the Differential (`8228dec`, PR #5)
 
 ## Current unit
-`dg-iii` — Differential Geometry III, complete and ready to merge in PR #5.
+`dg-iv` — Differential Geometry IV, workflow Phase 3.1 (diagnose and envision).
 
 ## Remaining units
 Differential Geometry IV–XII (nine units).
@@ -45,10 +46,10 @@ Differential Geometry IV–XII (nine units).
 _none_.
 
 ## Exact next action
-Merge completed PR #5, update from `main`, create the DG IV unit branch, and diagnose and envision Differential Geometry IV.
+Read the complete DG IV topic graph, audit its theorem proofs and examples, compare it with the target and gold-standard subjects, and record the diagnosis and target description before editing.
 
 ## Last completed commit
-`0eb5fe6`
+`31ef0ac`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
@@ -57,3 +58,4 @@ Merge completed PR #5, update from `main`, create the DG IV unit branch, and dia
 - #2 smoke test → main @ eba050d (2026-09-05)
 - #3 Differential Geometry I → main @ 3ac9654 (2026-09-05)
 - #4 Differential Geometry II → main @ 089fad6 (2026-09-05)
+- #5 Differential Geometry III → main @ 31ef0ac (2026-09-05)
