@@ -46,10 +46,10 @@ Differential Geometry IV–XII (nine units).
 The DG IV Whitney page states a proper noncompact theorem but formally proves only the compact case; several global-theory bridges also require correction or missing hypotheses.
 
 ## Exact next action
-Continue the rank-theorem proof audit at the coordinate-change construction, then audit the local immersion and submersion specializations for fully typed domains and inverses.
+Audit the local immersion and submersion normal-form proofs for fully typed coordinate changes, then repair the regular-value theorem proof and examples.
 
 ## Last completed commit
-`4c0281e`
+`d28eac2`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
