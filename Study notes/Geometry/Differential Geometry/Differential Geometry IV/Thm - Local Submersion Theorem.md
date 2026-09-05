@@ -162,32 +162,32 @@ Reduce to Euclidean coordinates. Permute source coordinates so the first $n$ col
 >
 > **Step 1 (permute source).** $D\hat F(0)$ has rank $n$, so it has $n$ linearly independent columns. After permuting source coordinates, assume these are the first $n$: write source as $\mathbb{R}^n_x \times \mathbb{R}^{m-n}_y$, $\partial\hat F/\partial x|_0$ invertible.
 >
-> **Step 2 (carry-along construction).** By Lemma 1, $\varphi(x, y) = (\hat F(x, y), y)$ is a smooth local diffeomorphism near $(0, 0)$. The [[Thm - The Inverse Function Theorem|inverse function theorem]] gives a smooth local inverse $\varphi^{-1}$ defined on a neighbourhood of $(0,0)$.
+> **Step 2 (carry-along construction).** On the open coordinate domain $\Omega=\varphi_0(U_0)$ define $H(x,y)=(\hat F(x,y),y)$. Lemma 1 shows that $DH_{(0,0)}$ is invertible. Hence the inverse function theorem gives open neighbourhoods $A\subseteq\Omega$ and $B\subseteq\mathbb R^m$ of the origin such that $H|_A:A\to B$ is a diffeomorphism. Write $K:B\to A$ for its smooth inverse.
 >
-> **Step 3 (verify normal form).** For $(\tilde x, \tilde y)$ in the domain of $\varphi^{-1}$, by definition of $\varphi$:
-> $$\varphi(\varphi^{-1}(\tilde x, \tilde y)) = (\tilde x, \tilde y) = (\hat F(\varphi^{-1}(\tilde x, \tilde y)), (\varphi^{-1}(\tilde x, \tilde y))_2),$$
-> so equating the first $n$ components: $\hat F(\varphi^{-1}(\tilde x, \tilde y)) = \tilde x$. Hence
-> $$\hat F \circ \varphi^{-1}(\tilde x, \tilde y) = \tilde x = (\tilde x^1, \dots, \tilde x^n).$$
+> **Step 3 (verify normal form).** For $(\tilde x,\tilde y)\in B$, the identity $H(K(\tilde x,\tilde y))=(\tilde x,\tilde y)$ reads
+> $$(\hat F(K(\tilde x,\tilde y)),K(\tilde x,\tilde y)_2)=(\tilde x,\tilde y),$$
+> so equating the first $n$ components gives
+> $$\hat F\circ K(\tilde x,\tilde y)=\tilde x.$$
 >
-> **Step 4 (manifold charts).** Define the new source chart on $M$ as $(U, \tilde\varphi)$ where $\tilde\varphi = \varphi \circ \varphi_0$ and $U$ is suitable. The target chart $\psi_0$ remains unchanged. In these charts the coordinate representation of $F$ is the standard projection.
+> **Step 4 (manifold charts).** Let $U=\varphi_0^{-1}(A)$ and use the source chart $\widetilde\varphi=H\circ\varphi_0:U\to B$. After shrinking $U$ so that $F(U)\subseteq V_0$, keep the target chart $\psi_0$. Its coordinate representative is $\hat F\circ K$, which Step 3 identifies with the standard projection.
 >
-> **Step 5 (local section).** Define $\hat\sigma(\tilde x) = \varphi^{-1}(\tilde x, 0)$ on a neighbourhood of $0$ in $\mathbb{R}^n$ (target coordinates). This is smooth, and $\hat F(\hat\sigma(\tilde x)) = \hat F(\varphi^{-1}(\tilde x, 0)) = \tilde x$ by Step 3. Pulling back through the charts, $\sigma = \varphi_0^{-1} \circ \hat\sigma \circ \psi_0$ is a smooth local section of $F$ with $\sigma(F(p)) = p$.
+> **Step 5 (local section).** Because $B$ is open and contains $(0,0)$, choose a neighbourhood $W$ of $0\in\mathbb R^n$ with $W\times\{0\}\subseteq B$. Define $\hat\sigma(\tilde x)=K(\tilde x,0)$. Then $\hat F(\hat\sigma(\tilde x))=\tilde x$ by Step 3. On the target neighbourhood $\psi_0^{-1}(W)$, the map $\sigma=\varphi_0^{-1}\circ\hat\sigma\circ\psi_0$ is smooth, satisfies $F\circ\sigma=\mathrm{id}$, and sends $F(p)$ to $p$.
 >
 > $\qquad\blacksquare$
 >
-> The converse (2 ⟹ 1) is trivial: a coordinate projection has surjective differential. The local section corollary (1 ⟺ existence of local section through $p$) is direct: the section's existence gives $dF \circ d\sigma = \mathrm{id}$ at $F(p)$, forcing $dF$ to be surjective; conversely, a submersion admits a local section by Step 5.
+> Conversely, the differential of the coordinate projection is surjective, and conjugating it by the two chart differentials preserves surjectivity. If a local section through $p$ exists, differentiating $F\circ\sigma=\mathrm{id}$ at $F(p)$ gives $dF_p\circ d\sigma_{F(p)}=\mathrm{id}_{T_{F(p)}N}$, so $dF_p$ is surjective; Step 5 proves the reverse implication.
 
 ---
 
 # Cross-Field Exercise Suggestions
 
-**Fibre bundles in physics.** A gauge theory's principal bundle $P \to M$ has the projection a smooth surjective submersion. The local submersion theorem provides local trivialisations: in coordinates, $P$ looks like $U \times G$ over $U \subseteq M$, with the projection the first-coordinate map. Gauge connections, parallel transport, and the field strength are organised around this local trivialisation structure.
+**Fibre bundles in physics.** A principal-bundle projection $P\to M$ is a smooth surjective submersion, so this theorem supplies local sections through chosen points. The principal action then upgrades a section $s:U\to P$ to the equivariant trivialization $(x,g)\mapsto s(x)g$ of $P|_U$. The submersion theorem alone gives ordinary product coordinates with a Euclidean fibre; the group-compatible trivialization uses the principal action as additional structure.
 
 **The smooth quotient theorem.** A free, proper smooth action of a Lie [[Def - Group|group]] $G$ on $M$ produces a smooth manifold structure on the orbit space $M/G$ such that the projection $M \to M/G$ is a smooth submersion. This is the manifold-level version of the topological quotient construction, and the local submersion theorem is the technical foundation: locally, the quotient map is a coordinate projection.
 
 **Implicit function theorem applications in PDEs.** A nonlinear PDE $F(u, \lambda) = 0$ on a Banach space, depending on a parameter $\lambda$, has solutions $u(\lambda)$ that depend smoothly on $\lambda$ whenever the linearised operator $F_u$ is invertible (in the appropriate Banach-space sense). This is the implicit function theorem in infinite [[Def - Dimension|dimensions]], and at the level of finite-dimensional approximations it is the local submersion theorem applied to the map $F : E \times \Lambda \to E$.
 
-**Path lifting in covering spaces.** A smooth covering map $\pi : \tilde M \to M$ is a local diffeomorphism, hence a submersion. Given a smooth path $\gamma : [0,1] \to M$, the local section theorem allows the path to be lifted to $\tilde M$: cover $\gamma$ by finitely many neighbourhoods of section domains, paste the sections together over the lifted path's overlaps. This is the path-lifting lemma at the smooth-category level.
+**Path lifting in covering spaces.** A smooth covering map $\pi:\widetilde M\to M$ is a local diffeomorphism and hence a submersion. Its path-lifting property is stronger than the local-section conclusion here: evenly covered neighbourhoods provide disjoint inverse branches, and the chosen initial point selects a unique branch on successive subintervals. Arbitrary local sections of a general submersion need not paste uniquely and do not imply path lifting.
 
 ---
 

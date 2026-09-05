@@ -158,9 +158,12 @@ Reduce to Euclidean coordinates via initial charts. Permute target coordinates s
 >
 > **Step 1 (permute target coordinates).** $D\hat F(0)$ has rank $m$, so it has $m$ linearly independent rows. After permuting target coordinates, assume the first $m$ rows are linearly independent, i.e., the upper $m \times m$ block of $D\hat F(0)$ is invertible.
 >
-> **Step 2 (square completion).** By Lemma 1, the map $G(x, t) = (\hat F^1(x), \dots, \hat F^m(x), \hat F^{m+1}(x) + t^1, \dots, \hat F^n(x) + t^{n-m})$ from $U_0 \times \mathbb{R}^{n-m}$ to $\mathbb{R}^n$ is a smooth local diffeomorphism near $(0, 0)$. The [[Thm - The Inverse Function Theorem|inverse function theorem]] gives a smooth local inverse $\psi = G^{-1}$ defined on a neighbourhood of $0$ in $\mathbb{R}^n$ (target).
+> **Step 2 (square completion).** Put $\Omega=\varphi_0(U_0)\subseteq\mathbb R^m$. By Lemma 1, the map
+> $$G:\Omega\times\mathbb R^{n-m}\to\mathbb R^n,qquad G(x,t)=(\hat F^1(x),\ldots,\hat F^m(x),\hat F^{m+1}(x)+t^1,\ldots,\hat F^n(x)+t^{n-m})$$
+> has invertible differential at $(0,0)$. The inverse function theorem supplies open neighbourhoods $A$ of $(0,0)$ and $B$ of $0$ such that $G|_A:A\to B$ is a diffeomorphism. Denote its inverse by $\psi:B\to A$.
 >
-> **Step 3 (verify normal form).** For $x$ in a neighbourhood of $0$, $G(x, 0) = \hat F(x)$ (the $t$-terms vanish when $t = 0$). Hence $\psi(\hat F(x)) = G^{-1}(\hat F(x)) = (x, 0)$, i.e., $\psi \circ \hat F(x) = (x^1, \dots, x^m, 0, \dots, 0)$.
+> **Step 3 (verify normal form).** Shrink to an open neighbourhood $A_0\subseteq\Omega$ of $0$ for which $(x,0)\in A$ and $\hat F(x)\in B$. Since $G(x,0)=\hat F(x)$, uniqueness of the inverse gives
+> $$\psi(\hat F(x))=(x,0),\qquad x\in A_0.$$
 >
 > **Step 4 (manifold charts).** Define the new target chart on $N$ as $(V, \tilde\psi)$ where $V$ is a suitable open subset of $V_0$ and $\tilde\psi = \psi \circ \psi_0|_V$. With the source chart $\varphi_0$ unchanged and the target chart $\tilde\psi$, the coordinate representation of $F$ is the standard inclusion $(x^1, \dots, x^m) \mapsto (x^1, \dots, x^m, 0, \dots, 0)$.
 >
@@ -168,17 +171,17 @@ Reduce to Euclidean coordinates via initial charts. Permute target coordinates s
 >
 > $\qquad\blacksquare$
 >
-> The converse (2 ⟹ 1) is trivial: if $F$ has coordinate representation the standard inclusion, its differential is the standard inclusion's linear map $(v^1, \dots, v^m) \mapsto (v^1, \dots, v^m, 0, \dots, 0)$, which is injective. So 1 and 2 are equivalent.
+> Conversely, if $F$ has the standard-inclusion coordinate representation, the chain rule expresses $dF_p$ as the composition of the inverse source-chart differential, the injective linear map $v\mapsto(v,0)$, and the target-chart differential. The outer maps are isomorphisms, so $dF_p$ is injective.
 
 ---
 
 # Cross-Field Exercise Suggestions
 
-**Parametrised surfaces in $\mathbb{R}^3$.** A smooth map $X : U \to \mathbb{R}^3$ from an open $U \subseteq \mathbb{R}^2$ with linearly independent partials $\partial X/\partial u, \partial X/\partial v$ is an immersion. The local immersion theorem says that locally the parametrised surface is the standard inclusion $\mathbb{R}^2 \hookrightarrow \mathbb{R}^3$ — that is, locally a flat plane in suitable coordinates. The application is to surface theory: many results about smooth surfaces (first fundamental form, Gauss map, curvature) are local and reduce to the standard plane via the immersion theorem.
+**Parametrised surfaces in $\mathbb{R}^3$.** A smooth map $X:U\to\mathbb R^3$ with linearly independent partials $X_u,X_v$ is an immersion. The theorem makes its image a coordinate slice locally, so self-intersections are purely global and local calculations may use $(u,v)$ as genuine surface coordinates. This does **not** make the surface metrically flat: the target coordinate change need not preserve the Euclidean metric, and the first fundamental form and curvature retain geometric information.
 
 **Smooth knot theory.** A smooth knot is a smooth embedding $S^1 \hookrightarrow \mathbb{R}^3$ — and equivalently a smooth injective immersion from $S^1$ (which is compact, so injective immersion = embedding automatically). The local immersion theorem says any smooth knot is, near each point, the standard inclusion of an arc into $\mathbb{R}^3$ — locally trivial. The interesting knot theory is in the *global* topology of the embedding, not the local structure.
 
-**Smooth sections of vector bundles.** Given a smooth vector bundle $\pi : E \to M$, a smooth section is a smooth map $s : M \to E$ with $\pi \circ s = \mathrm{id}_M$. Differentiating, $d\pi_{s(p)} \circ ds_p = \mathrm{id}_{T_p M}$, which forces $ds_p$ to be injective — so every smooth section of a vector bundle is an immersion. The image $s(M)$ is locally embedded by the local immersion theorem (and globally embedded if $s$ is sufficiently nice).
+**Smooth sections of vector bundles.** If $s:M\to E$ satisfies $\pi\circ s=\mathrm{id}_M$, then $d\pi_{s(p)}\circ ds_p=\mathrm{id}$, so $s$ is an immersion. It is in fact automatically an embedding: it is injective, and the restriction $\pi|_{s(M)}$ is the continuous inverse of $s:M\to s(M)$. Thus a section identifies $M$ with a globally embedded copy of itself in the total space.
 
 **Submanifold reconstructions in geometric measure theory.** Smooth approximations of irregular sets often start with a smooth immersion from a regularised parameter domain. The local immersion theorem ensures the image is locally a smooth embedded submanifold — providing a local smoothness baseline against which the regularity of the approximation is measured.
 

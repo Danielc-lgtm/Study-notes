@@ -273,7 +273,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs. Rank-theorem checkpoint expands the inverse calculation and corrects the overbroad algebraic-geometry Jacobian criterion by stating the expected-codimension caveat. Sard checkpoint corrects the vanishing-set filtration, zero-dimensional edge cases, hypersurface induction, and false claims that Sard alone yields slice transversality or Morse nondegeneracy."
+      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs. Rank-theorem checkpoint expands the inverse calculation and corrects the overbroad algebraic-geometry Jacobian criterion by stating the expected-codimension caveat. Sard checkpoint corrects the vanishing-set filtration, zero-dimensional edge cases, hypersurface induction, and false claims that Sard alone yields slice transversality or Morse nondegeneracy. Local normal-form checkpoint types every Euclidean domain and shrinking, proves both converses by the chain rule, and corrects overclaims about bundle trivializations, covering lifts, metric flatness, and section embeddings."
     },
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
@@ -643,9 +643,9 @@
     }
   },
   "current_unit": "dg-iv",
-  "next_action": "Audit the local immersion and submersion normal-form proofs for fully typed coordinate changes, then repair the regular-value theorem proof and examples.",
+  "next_action": "Repair the regular-value theorem proof and its matrix-group examples, then audit the embedded and immersed submanifold definition pages.",
   "unresolved": [],
-  "last_commit": "d28eac2",
+  "last_commit": "5901c80",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
