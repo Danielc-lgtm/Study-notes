@@ -175,7 +175,11 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
 > **Why needed:** It executes the final coordinate change on the target, mapping the graph $\{(v, S(v))\}$ onto the standard slice $\{(v, 0)\}$.
 >
 > > [!note]- Full proof
-> > The proposed inverse is $\psi^{-1}(v, w) = (v, w + S(v))$. Check: $\psi(\psi^{-1}(v, w)) = \psi(v, w + S(v)) = (v, (w + S(v)) - S(v)) = (v, w)$, and similarly $\psi^{-1}(\psi(v, w)) = (v, w)$. So $\psi$ is a bijection. Both $\psi$ and $\psi^{-1}$ are smooth (they are smooth combinations of smooth functions), so $\psi$ is a smooth diffeomorphism. Finally, $\psi(\tilde x, S(\tilde x)) = (\tilde x, S(\tilde x) - S(\tilde x)) = (\tilde x, 0)$.
+> > The proposed inverse is $\psi^{-1}(v, w) = (v, w + S(v))$. The two compositions are
+> > $$\psi(\psi^{-1}(v,w))=(v,w+S(v)-S(v))=(v,w)$$
+> > and
+> > $$\psi^{-1}(\psi(v,w))=(v,w-S(v)+S(v))=(v,w).$$
+> > Thus $\psi$ is bijective. Both $\psi$ and $\psi^{-1}$ are smooth combinations of smooth functions, so $\psi$ is a diffeomorphism. Finally, $\psi(\tilde x, S(\tilde x)) = (\tilde x, S(\tilde x) - S(\tilde x)) = (\tilde x, 0)$.
 
 ---
 
@@ -211,7 +215,7 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
 
 **Catastrophe theory and singularity theory.** Catastrophe theory classifies the *failures* of constant rank — the singularities of smooth maps near critical points. The rank theorem handles the regular case (constant rank), and the classification of catastrophes (fold, cusp, swallowtail, butterfly, ...) handles the next-order corrections when rank drops. The application is to classifying the local behaviour of smooth maps *near* points where rank drops; the rank theorem says that away from such points, the behaviour is trivial.
 
-**Algebraic geometry: smoothness of varieties.** A polynomial map $F : \mathbb{R}^m \to \mathbb{R}^n$ defining a variety $V = F^{-1}(0)$ has $V$ a smooth submanifold near a point $p$ iff $F$ has constant rank $n$ at $p$ — this is the polynomial version of the regular value theorem, and it follows from the rank theorem applied to $F$. The application is in classifying singular points of varieties as exactly the points where the rank theorem fails.
+**Algebraic geometry: the Jacobian criterion in the complete-intersection case.** Let $F:\mathbb R^m\to\mathbb R^n$ be polynomial and $V=F^{-1}(0)$. If $dF_p$ is surjective at $p\in V$, surjectivity persists near $p$, and the regular value theorem makes $V$ a smooth submanifold of codimension $n$ there. The converse needs the equations to cut out $V$ with the expected codimension: redundant equations can make $dF_p$ non-surjective even when the underlying set is smooth. Thus failure of this Jacobian test detects a singularity of the chosen complete-intersection presentation, not automatically a singularity of every possible presentation of the set.
 
 ---
 

@@ -273,7 +273,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs."
+      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs. Rank-theorem checkpoint expands the inverse calculation and corrects the overbroad algebraic-geometry Jacobian criterion by stating the expected-codimension caveat."
     },
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
@@ -643,9 +643,9 @@
     }
   },
   "current_unit": "dg-iv",
-  "next_action": "Audit and rewrite the rank, immersion, and submersion normal-form proofs, beginning with every omitted or circular step in the Rank Theorem page.",
+  "next_action": "Continue the rank-theorem proof audit at the coordinate-change construction, then audit the local immersion and submersion specializations for fully typed domains and inverses.",
   "unresolved": [],
-  "last_commit": "600253b",
+  "last_commit": "cafd8be",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
