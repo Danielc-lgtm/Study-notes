@@ -219,6 +219,8 @@ Define the natural charts $\tilde\varphi : \pi^{-1}(U) \to \varphi(U) \times \ma
 >
 > Applying the smooth manifold chart lemma (Lee Lemma 1.35), the natural charts assemble into a smooth atlas on $TM$, defining the smooth structure. The dimension is $\dim(\varphi(U) \times \mathbb{R}^{n}) = n + n = 2n$.
 >
+> If $M$ has boundary, use boundary charts with $\varphi(U)\subseteq\mathbb H^n$. Then $\varphi(U)\times\mathbb R^n$ is, after permuting coordinates, an open subset of $\mathbb H^{2n}$. The base transition maps admit smooth extensions across the boundary; differentiating those extensions shows that the tangent-bundle transition formula does as well. Thus the same construction makes $TM$ a smooth $2n$-manifold with boundary, with $\partial(TM)=\pi^{-1}(\partial M)$.
+>
 > Smoothness of $\pi$ and of $dF$ follow from Lemma 4.
 >
 > Uniqueness: any other topology/smooth structure making the natural charts smoothly compatible would have to agree with this one on each natural-chart neighborhood, hence agree everywhere.

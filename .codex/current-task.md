@@ -45,10 +45,10 @@ Differential Geometry III–XII (ten units; III is active).
 _none_; the target requires correcting false Euler-class and jet claims and making the tangent-bundle topology construction non-circular.
 
 ## Exact next action
-Audit and ambitiously improve the remaining Differential Geometry III definition and exercise pages, then reconcile the topic page and exercise indexes.
+Execute the five review passes, compare the DG III sample against gold-standard and from-scratch targets, fix any findings, then complete and merge PR #5.
 
 ## Last completed commit
-`8b6dec0`
+`aadffa4`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

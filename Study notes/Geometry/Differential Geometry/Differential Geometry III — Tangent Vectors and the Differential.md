@@ -72,11 +72,20 @@ This topic assumes a working command of [[Differential Geometry I — Smooth Man
 - **[[Thm - Dimension of the Tangent Space]]**
 	- For an $n$-dimensional smooth manifold $M$ and any $p \in M$, the tangent space $T_{p}M$ is an $n$-dimensional real vector space. The proof uses any chart $(U, \varphi)$ around $p$ together with the local nature of derivations: a derivation $v$ is determined by its values on a small neighbourhood of $p$, so $T_{p}M \cong T_{p}U \cong T_{\varphi(p)}\mathbb{R}^{n}$, and the last space is $n$-dimensional with basis $\partial/\partial x^{i}|_{\varphi(p)}$. The corollary is that *every* tangent space, at every point of every $n$-manifold, looks the same as a vector space.
 
+- **[[Ex - Tangent Vectors as Velocities of Coordinate Curves]]** (⭐)
+	- Realize each coordinate basis derivation as the velocity of the corresponding coordinate line. This is the shortest bridge from the algebraic definition to the geometric picture.
+
+- **[[Ex - Tangent Space to a Sphere at the North Pole]]** (⭐⭐)
+	- Compute the abstract tangent basis in a stereographic chart and push it through the inclusion into $\mathbb R^3$, recovering the embedded tangent plane.
+
+- **[[Ex - Tangent Space of the General Linear Group at the Identity]]** (⭐⭐)
+	- Use that $\mathrm{GL}(n,\mathbb R)$ is open in matrix space, differentiate inversion, and extract the matrix commutator as a second-order group displacement.
+
 > [!tip] Unlocked: [[Def - The Lie Algebra of a Lie Group|Lie Algebra of a Lie Group]] *(from Lie Theory)*
 > For a [[Def - Group|group]] $G$ that is also a smooth manifold with smooth multiplication and inversion (a **Lie group** — to be developed in [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]]), the tangent space $T_{e}G$ at the identity carries an extra structure, the **Lie bracket**, making it a **Lie algebra** $\mathfrak{g}$. The bracket on $\mathfrak{g}$ comes from the commutator of left-invariant vector fields; it is the infinitesimal version of group commutators. The exponential map $\exp : \mathfrak{g} \to G$ then re-inflates the infinitesimal structure into the group. The whole machine starts with the tangent space at one point.
 
 > [!tip] Cotangent Space *(from Differential Geometry)*
-> The dual of $T_{p}M$ is the **cotangent space** $T^{*}_{p}M$, see [[Def - Dual Space]] for the linear-algebra prototype. Its elements are linear functionals on tangent vectors — covectors, or 1-forms at $p$. The canonical 1-form on $T^{*}_{p}M$ is $df_{p}$, the differential of $f$ at $p$ viewed as a covector, since $df_{p}(v) = v(f)$ pairs tangent vectors against functions. The cotangent bundle $T^{*}M$ will be developed in [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]] and is the natural setting for Hamiltonian mechanics.
+> The dual of $T_{p}M$ is the **cotangent space** $T^{*}_{p}M$, see [[Def - Dual Space]] for the linear-algebra prototype. Its elements are linear functionals on tangent vectors — covectors, or 1-forms at $p$. For each smooth $f$, the differential $df_p\in T_p^*M$ is the covector $df_p(v)=v(f)$. This should not be confused with the tautological (Liouville) $1$-form on the total cotangent bundle $T^*M$. The cotangent bundle $T^{*}M$ will be developed in [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]] and is the natural setting for Hamiltonian mechanics.
 
 > [!note] Exercise Index — §3.1
 > [[Exercise Index - §3.1 Tangent Vectors as Derivations]]
@@ -116,7 +125,10 @@ This topic assumes a working command of [[Differential Geometry I — Smooth Man
 	- For a chart $(U, \varphi)$ around $p$, define the $i$-th coordinate curve $\gamma_{i}(t) = \varphi^{-1}(\varphi(p) + t\,e_{i})$. Show that $\gamma_{i}'(0) = \partial/\partial x^{i}|_{p}$. This grounds the abstract coordinate vector in a literal curve along the $i$-th coordinate axis.
 
 - **[[Ex - Tangent Space to a Sphere at the North Pole]]** (⭐⭐)
-	- Compute $T_{N}S^{2}$ where $N = (0, 0, 1)$ is the north pole, using stereographic-projection coordinates from $N$. Show that the coordinate basis at $N$ consists of two tangent vectors, and identify them with two specific elements of $\mathbb{R}^{3}$ orthogonal to the radius — recovering the geometric tangent space [[Def - The Tangent Space to a Submanifold|to the embedded sphere]].
+	- Compute $T_{N}S^{2}$ where $N = (0, 0, 1)$ is the north pole, using stereographic projection from the south pole, whose chart contains $N$. Show that the coordinate basis at $N$ consists of two tangent vectors, and identify them with two specific elements of $\mathbb{R}^{3}$ orthogonal to the radius — recovering the geometric tangent space [[Def - The Tangent Space to a Submanifold|to the embedded sphere]].
+
+- **[[Ex - Computing the Differential in Local Coordinates]]** (⭐⭐)
+	- Derive the Jacobian matrix of $dF_p$ from the intrinsic precomposition definition and verify how the source and target coordinate bases enter the formula.
 
 > [!tip] Unlocked: Tensor Field in Local Coordinates *(from Differential Geometry)*
 > Once you have the coordinate basis $\partial/\partial x^{i}$ for $T_{p}M$ and its dual $dx^{i}$ for $T^{*}_{p}M$ (see [[Def - Dual Basis]]), every **tensor field** on $M$ acquires local coordinate components — a $(p,q)$-tensor field is a smooth assignment of multilinear functions, written in coordinates as $T^{i_{1}\dots i_{p}}_{j_{1}\dots j_{q}}\,\partial/\partial x^{i_{1}} \otimes \dots \otimes dx^{j_{q}}$. The change-of-chart formula for tensor components — the famous "transformation law" — is the same Jacobian rule that governs tangent vectors, applied repeatedly. [[Differential Geometry VII — Tensors and Tensor Fields]] develops this.
@@ -137,6 +149,12 @@ This topic assumes a working command of [[Differential Geometry I — Smooth Man
 
 - **[[Ex - Tangent Space of the General Linear Group at the Identity]]** (⭐⭐)
 	- Compute $T_{I}\mathrm{GL}(n, \mathbb{R})$. Since $\mathrm{GL}(n, \mathbb{R})$ is an open subset of the vector space $M_{n}(\mathbb{R})$ of all $n \times n$ matrices, its tangent space at any point is canonically identified with $M_{n}(\mathbb{R})$ itself. This preview of the Lie algebra $\mathfrak{gl}(n, \mathbb{R}) = M_{n}(\mathbb{R})$ shows the tangent space at the identity of a matrix Lie group is just the matrices.
+
+- **[[Ex - The Differential of a Diffeomorphism is an Isomorphism]]** (⭐)
+	- Differentiate both inverse identities to obtain the two-sided inverse of $dF_p$ and deduce equality of dimensions.
+
+- **[[Ex - Tangent Vectors as Velocities of Coordinate Curves]]** (⭐)
+	- View a coordinate basis vector as a point of $TM$ obtained from a lifted velocity curve, preparing the section viewpoint used for vector fields.
 
 > [!tip] Unlocked: Vector Field as a Section of TM *(from Differential Geometry)*
 > A **vector field** on $M$ is a smooth section of the tangent bundle — a smooth map $X : M \to TM$ with $\pi \circ X = \mathrm{id}_{M}$, so $X$ assigns to each $p \in M$ a tangent vector $X_{p} \in T_{p}M$ smoothly. The space of vector fields is denoted $\Gamma(TM)$ and is a [[Def - Module|module]] over $C^{\infty}(M)$. The flows of vector fields are the dynamical systems on $M$; their Lie bracket measures the failure of two flows to commute. All of this is developed in [[Differential Geometry V — Vector Fields, Flows, and the Lie Bracket]].

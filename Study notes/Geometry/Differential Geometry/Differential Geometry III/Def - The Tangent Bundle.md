@@ -95,7 +95,7 @@ In **classical mechanics**, the tangent bundle of the configuration manifold $Q$
 
 In **gauge theory**, the tangent bundle is one example of a **principal $\mathrm{GL}(n)$-bundle's associated vector bundle**: the principal frame bundle $FM$ has fibre at $p$ the set of ordered bases of $T_{p}M$, and $TM$ is associated to $FM$ via the defining representation of $\mathrm{GL}(n)$. This perspective is foundational for Yang–Mills theory and characteristic classes.
 
-In **algebraic topology**, the topology of $TM$ encodes information about $M$ via characteristic classes — the **Euler class** $e(TM) \in H^{n}(M)$, the **Pontryagin classes** $p_{i}(TM) \in H^{4i}(M)$, the **Chern classes** (for complex structures). The non-triviality of $TM$ as a vector bundle is exactly the non-vanishing of these classes. For $M = S^{2}$, the Euler class of $TS^{2}$ is the generator of $H^{2}(S^{2}) \cong \mathbb{Z}$, with value $2$ (the Euler characteristic of $S^{2}$) — this is the *quantitative form* of the hairy ball theorem.
+In **algebraic topology**, the topology of $TM$ encodes information about $M$ via characteristic classes — the **Euler class** $e(TM) \in H^{n}(M)$, the **Pontryagin classes** $p_{i}(TM) \in H^{4i}(M)$, the **Chern classes** (for complex structures). Non-vanishing of any characteristic class proves non-triviality, but simultaneous vanishing is not generally sufficient for triviality: characteristic classes do not classify all vector bundles. For $M=S^2$, after choosing the generator $u\in H^2(S^2;\mathbb Z)$ with $\langle u,[S^2]\rangle=1$, one has $e(TS^2)=2u$ because $\langle e(TS^2),[S^2]\rangle=\chi(S^2)=2$. This is the quantitative form of the hairy ball theorem.
 
 ---
 

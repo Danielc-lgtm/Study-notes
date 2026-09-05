@@ -224,7 +224,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Target recorded. Load-bearing theorem pass complete: canonical compatible-chart model clarified; tangent-bundle topology made non-circular; false Euler, jet, trace, support, and coordinate claims corrected; GL commutator derivation rewritten without leaked drafting text. Next audit remaining definitions and exercises, then topic graph and reviews."
+      "notes": "Target recorded. All content edits complete: canonical curve/derivation/compatible-chart equivalence, atlas-generated tangent-bundle topology including boundary case, corrected characteristic-class and jet claims, rigorous matrix commutator expansion, corrected polar-coordinate computation, and complete concept-map exercise coverage. Mechanical and custom 23-page graph audits pass. Next execute and record the five review passes and final parity/checklist."
     },
     "dg-iv": {
       "title": "Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds",
@@ -637,9 +637,9 @@
     }
   },
   "current_unit": "dg-iii",
-  "next_action": "Audit and ambitiously improve the remaining Differential Geometry III definition and exercise pages, then reconcile the topic page and exercise indexes.",
+  "next_action": "Execute the five review passes, compare the DG III sample against gold-standard and from-scratch targets, fix any findings, then complete and merge PR #5.",
   "unresolved": [],
-  "last_commit": "8b6dec0",
+  "last_commit": "aadffa4",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

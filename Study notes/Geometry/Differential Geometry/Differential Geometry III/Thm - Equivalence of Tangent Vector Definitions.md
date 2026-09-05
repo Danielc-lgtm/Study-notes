@@ -186,7 +186,7 @@ Reduce to $\mathbb{R}^{n}$ via a chart. In $\mathbb{R}^{n}$, prove three facts: 
 > > $$f(x) - f(a) = \int_{0}^{1} \frac{d}{dt} f(a + t(x - a))\,dt.$$
 > > By the chain rule, $\frac{d}{dt} f(a + t(x - a)) = \sum_{i} (x^{i} - a^{i})\,\partial_{i} f(a + t(x - a))$. So
 > > $$f(x) - f(a) = \sum_{i} (x^{i} - a^{i}) \int_{0}^{1} \partial_{i} f(a + t(x - a))\,dt.$$
-> > Define $g_{i}(x) = \int_{0}^{1} \partial_{i} f(a + t(x - a))\,dt$. Each $g_{i}$ is smooth (smooth dependence on $x$ through the integrand). At $x = a$, $g_{i}(a) = \int_{0}^{1} \partial_{i} f(a)\,dt = \partial_{i} f(a)$, as claimed.
+> > Define $g_{i}(x) = \int_{0}^{1} \partial_{i} f(a + t(x - a))\,dt$. For every multi-index $\alpha$, the derivative $\partial_x^\alpha\partial_i f(a+t(x-a))$ is continuous jointly in $(t,x)$. On each compact $x$-neighbourhood it is uniformly bounded for $t\in[0,1]$, so differentiation under the integral sign gives $\partial_x^\alpha g_i(x)=\int_0^1\partial_x^\alpha[\partial_i f(a+t(x-a))]\,dt$. Hence every derivative of $g_i$ exists and is continuous, so $g_i$ is smooth. At $x = a$, $g_{i}(a) = \int_{0}^{1} \partial_{i} f(a)\,dt = \partial_{i} f(a)$, as claimed.
 
 > [!note]- Lemma 4: Every derivation at $a \in \mathbb{R}^{n}$ is a directional derivative
 > **Statement:** For $a \in \mathbb{R}^{n}$ and $v \in T_{a}\mathbb{R}^{n}$, $v(f) = v^{i}\,\partial f/\partial x^{i}(a)$ where $v^{i} = v(x^{i})$. Hence the map $T_{a}\mathbb{R}^{n} \to \mathbb{R}^{n}$, $v \mapsto (v(x^{1}), \dots, v(x^{n}))$, is a vector-space isomorphism.
