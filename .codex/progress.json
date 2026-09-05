@@ -63,10 +63,10 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/improve-all-differential-geometry-dg-iii",
+  "branch": "codex/improve-all-differential-geometry-dg-iv",
   "pr": {
-    "number": 5,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/5",
+    "number": 7,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/7",
     "state": "open"
   },
   "merged_prs": [
@@ -86,6 +86,12 @@
       "number": 4,
       "unit": "dg-ii",
       "main_sha": "089fad6",
+      "date": "2026-09-05"
+    },
+    {
+      "number": 5,
+      "unit": "dg-iii",
+      "main_sha": "31ef0ac",
       "date": "2026-09-05"
     }
   ],
@@ -229,7 +235,7 @@
     "dg-iv": {
       "title": "Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
@@ -267,7 +273,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Phase 3.1 active: diagnose and envision the complete topic graph before editing."
     },
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
@@ -636,10 +642,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-iii",
-  "next_action": "Merge completed PR #5, update from main, create the DG IV unit branch, and diagnose and envision Differential Geometry IV.",
+  "current_unit": "dg-iv",
+  "next_action": "Read the complete DG IV topic graph, audit its theorem proofs and examples, compare it with the target and gold-standard subjects, and record the diagnosis and target description before editing.",
   "unresolved": [],
-  "last_commit": "aadffa4",
+  "last_commit": "6e167db",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
