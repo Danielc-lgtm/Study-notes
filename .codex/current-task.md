@@ -1,12 +1,12 @@
 # Current task
 
-**Overall status:** active — improving Differential Geometry I
+**Overall status:** active — Differential Geometry I complete; PR #3 ready to merge
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
 
 ## Scope
-1. Differential Geometry I — Smooth Manifolds and Atlases — in progress
+1. Differential Geometry I — Smooth Manifolds and Atlases — complete
 2. Differential Geometry II — Smooth Maps and Partitions of Unity — pending
 3. Differential Geometry III — Tangent Vectors and the Differential — pending
 4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — pending
@@ -26,28 +26,28 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry`
 
 ## Pull request
-_none yet_
+`#3 https://github.com/Danielc-lgtm/Study-notes/pull/3 (open)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
 
 ## Completed units
-_none_
+- Differential Geometry I — Smooth Manifolds and Atlases (`5767242`)
 
 ## Current unit
-`dg-i` — Differential Geometry I, workflow Phase 3 (diagnosis).
+`dg-i` — Differential Geometry I, workflow Phase 6 (merge).
 
 ## Remaining units
-Differential Geometry I–XII (twelve units; I is active).
+Differential Geometry II–XII (eleven units).
 
 ## Unresolved issues
 _none_
 
 ## Exact next action
-Complete the diagnosis, rewrite, five review passes, and mechanical audits for Differential Geometry I, then commit, push, open a PR, and merge it before starting Differential Geometry II.
+Merge PR #3, update the merge ledger on `main`, then create a fresh branch from `origin/main` and diagnose Differential Geometry II.
 
 ## Last completed commit
-_none_
+`5767242`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

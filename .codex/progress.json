@@ -62,12 +62,12 @@
   "goal": "Improve every differential geometry topic and its complete subpage graph, sequentially, to the repository's rigour, self-containedness, explanation, and concision standards.",
   "mode": "improve",
   "merge_policy": "auto",
-  "status": "in_progress",
+  "status": "review",
   "branch": "codex/improve-all-differential-geometry",
   "pr": {
-    "number": null,
-    "url": null,
-    "state": null
+    "number": 3,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/3",
+    "state": "open"
   },
   "merged_prs": [
     {
@@ -98,7 +98,7 @@
     "dg-i": {
       "title": "Differential Geometry I — Smooth Manifolds and Atlases",
       "mode": "improve",
-      "status": "in_progress",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md",
@@ -122,17 +122,17 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry I/Thm - Product of Smooth Manifolds is a Smooth Manifold.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry I/Thm - Smooth Structure from Maximal Atlas.md"
       ],
-      "diagnosis": "Diagnosis pending; audit rigour, cold-read self-containedness, explanation quality, and concision across the complete unit.",
+      "diagnosis": "Fixed edge-case errors in the local-homology proof, a false manifold-comparison claim, and imprecise quotient-manifold arguments; retained the strong coordinate-invariance explanation.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "fixed",
+        "pedagogy": "fixed",
+        "rederivation": "fixed",
+        "graph": "fixed",
+        "prose": "fixed",
+        "checklist": "pass"
       },
-      "commit": null,
-      "notes": ""
+      "commit": "5767242",
+      "notes": "Complete and reviewed; PR #3 opened for auto-merge."
     },
     "dg-ii": {
       "title": "Differential Geometry II — Smooth Maps and Partitions of Unity",
@@ -625,9 +625,9 @@
     }
   },
   "current_unit": "dg-i",
-  "next_action": "Complete the diagnosis, rewrite, five review passes, and mechanical audits for Differential Geometry I, then commit, push, open a PR, and merge it before starting Differential Geometry II.",
+  "next_action": "Merge PR #3, update the merge ledger on main, then create a fresh branch from origin/main and diagnose Differential Geometry II.",
   "unresolved": [],
-  "last_commit": null,
+  "last_commit": "5767242",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
