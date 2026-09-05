@@ -214,7 +214,7 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry III/Thm - Tangent Space of a Product Manifold.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry III/Thm - The Tangent Bundle is a Smooth Manifold.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: correct the false Euler-class triviality criterion and jet identification; make tangent-bundle topology non-circular; remove omitted/similar cases; strengthen curve–derivation naturality and algebraic first-order viewpoint. Target: a topic graph organized around tangent vectors as first-order probes, with derivation/curve/coordinate models proved naturally equivalent, a rigorous chart-generated topology on TM, precise functoriality, calibrated examples, and exercises that move fluently among intrinsic, curve, coordinate, and embedded computations.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -224,7 +224,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Target description recorded before edits under the ambition policy. Begin with the two load-bearing theorem pages, then reconcile definitions, examples, exercises, topic map, and indexes."
     },
     "dg-iv": {
       "title": "Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds",
@@ -637,9 +637,9 @@
     }
   },
   "current_unit": "dg-iii",
-  "next_action": "Diagnose every Differential Geometry III page against P1–P4 and the page-type criteria, prioritizing equivalence of tangent-vector definitions and tangent-bundle proofs.",
+  "next_action": "Rewrite and audit Thm - Equivalence of Tangent Vector Definitions and Thm - The Tangent Bundle is a Smooth Manifold, fixing all diagnosed mathematical and architectural gaps.",
   "unresolved": [],
-  "last_commit": "089fad6",
+  "last_commit": "275d812",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

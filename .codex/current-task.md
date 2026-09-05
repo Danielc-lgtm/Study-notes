@@ -36,19 +36,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry II — Smooth Maps and Partitions of Unity (`7071255`)
 
 ## Current unit
-`dg-iii` — Differential Geometry III, workflow Phase 3 (diagnosis not yet begun).
+`dg-iii` — Differential Geometry III, workflow Phase 4.1 (diagnosis and target description complete).
 
 ## Remaining units
 Differential Geometry III–XII (ten units; III is active).
 
 ## Unresolved issues
-_none_
+_none_; the target requires correcting false Euler-class and jet claims and making the tangent-bundle topology construction non-circular.
 
 ## Exact next action
-Diagnose every Differential Geometry III page against P1–P4 and the page-type criteria, prioritizing equivalence of tangent-vector definitions and tangent-bundle proofs.
+Rewrite and audit `Thm - Equivalence of Tangent Vector Definitions` and `Thm - The Tangent Bundle is a Smooth Manifold`, fixing all diagnosed mathematical and architectural gaps.
 
 ## Last completed commit
-`089fad6`
+`275d812`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
