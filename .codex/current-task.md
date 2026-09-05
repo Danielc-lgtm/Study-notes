@@ -46,4 +46,5 @@ Wait for a user prompt. On `Improve <Topic>`, `Improve all <area> notes`, or `Cr
 _none_
 
 ## Merge history
+smoke test 2026-09-05
 _none_ — PRs merged mid-project, with the `main` SHA each produced.
