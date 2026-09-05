@@ -46,10 +46,10 @@ Differential Geometry IV–XII (nine units).
 The DG IV Whitney page states a proper noncompact theorem but formally proves only the compact case; several global-theory bridges also require correction or missing hypotheses.
 
 ## Exact next action
-Repair the regular-value theorem proof and its matrix-group examples, then audit the embedded and immersed submanifold definition pages.
+Audit and rewrite the embedded and immersed submanifold definition pages, including all topology, initial-structure, and tangent-space claims.
 
 ## Last completed commit
-`5901c80`
+`d8df201`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
