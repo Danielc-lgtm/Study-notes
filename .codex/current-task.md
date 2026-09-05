@@ -1,53 +1,56 @@
 # Current task
 
-**Overall status:** no active large task
-
-<!--
-Keep every field below, even when empty. Update this file on every commit that
-touches notes and always before a run ends (workflow.md Phase 5.2). Keep it in
-sync with progress.json — that file is the machine copy of the same state.
-A human reading only this file should understand the state of the project.
--->
+**Overall status:** active — improving Differential Geometry I
 
 ## Goal
-_none_
+Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
 
 ## Scope
-_none_ — list the units (one topic page + its subfolder each), in order.
+1. Differential Geometry I — Smooth Manifolds and Atlases — in progress
+2. Differential Geometry II — Smooth Maps and Partitions of Unity — pending
+3. Differential Geometry III — Tangent Vectors and the Differential — pending
+4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — pending
+5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — pending
+6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — pending
+7. Differential Geometry VII — Tensors and Tensor Fields — pending
+8. Differential Geometry VIII — Differential Forms — pending
+9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — pending
+10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — pending
+11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — pending
+12. Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds — pending
 
 ## Mode
-_none_ — `improve` | `create` | `mixed` (mode per unit in Scope if mixed).
+`improve`
 
 ## Working branch
-_none_ — `codex/<slug>` while a unit is in progress; `none (merged)` between units (each completed unit is merged into `main` and its branch deleted).
+`codex/improve-all-differential-geometry`
 
 ## Pull request
-_none_ — the PR of the unit currently in progress, `#<number> <url> (open)`; merged PRs move to Merge history.
+_none yet_
 
 ## Sources
-_none_ — repository files under `sources/` or `paper_source/` used for this task; DAG entry consulted.
+`Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
 
 ## Completed units
 _none_
 
 ## Current unit
-_none_ — unit id, and which workflow phase it is in.
+`dg-i` — Differential Geometry I, workflow Phase 3 (diagnosis).
 
 ## Remaining units
-_none_
+Differential Geometry I–XII (twelve units; I is active).
 
 ## Unresolved issues
-_none_ — anything a review left open or that needs a human decision.
+_none_
 
 ## Exact next action
-Wait for a user prompt. On `Improve <Topic>`, `Improve all <area> notes`, or `Create notes on <X>`: run workflow.md Phase 0, then Phase 1 to populate this file, commit it as the first commit on a new `codex/<slug>` branch, and proceed.
+Complete the diagnosis, rewrite, five review passes, and mechanical audits for Differential Geometry I, then commit, push, open a PR, and merge it before starting Differential Geometry II.
 
 ## Last completed commit
 _none_
 
 ## Merge policy
-`auto` — merge each completed unit into `main` immediately (default). Alternatives set by the prompt: `hold` (one PR, left open), `direct` (no PRs, push to `main`).
+`auto` — merge each completed unit into `main` immediately.
 
 ## Merge history
-One line per merged unit: `#<PR> <unit> → main @ <sha> (<date>)`.
 - #2 smoke test → main @ eba050d (2026-09-05)
