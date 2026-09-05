@@ -81,10 +81,25 @@ if command -v gh >/dev/null 2>&1 && [ -n "${GH_TOKEN:-}" ]; then
   fi
 fi
 
-# ---- 5. Make sure the remote is plain HTTPS so the stored credential applies ----
-if git -C "$(git rev-parse --show-toplevel 2>/dev/null || echo .)" remote get-url origin >/dev/null 2>&1; then
-  git remote set-url origin https://github.com/Danielc-lgtm/Study-notes.git || true
-  git fetch origin --prune --quiet || log "WARNING: fetch failed (check internet/allowlist and GH_TOKEN)"
+# ---- 5. Ensure an `origin` remote exists and points at GitHub over HTTPS ----
+# Codex Cloud checks the repo out without leaving an `origin` remote, so
+# `git fetch origin` fails with "'origin' does not appear to be a git repository".
+REPO_URL="https://github.com/${GH_REPO:-Danielc-lgtm/Study-notes}.git"
+if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  if git remote get-url origin >/dev/null 2>&1; then
+    git remote set-url origin "$REPO_URL"
+  else
+    git remote add origin "$REPO_URL"
+    log "added missing origin remote -> $REPO_URL"
+  fi
+  git fetch origin --prune --quiet && log "fetch from origin OK" \
+    || log "WARNING: fetch failed (check GH_TOKEN and that internet is allowed for github.com)"
+  # Make the checked-out branch track origin/main when it is main.
+  if [ "$(git branch --show-current)" = "main" ]; then
+    git branch --set-upstream-to=origin/main main >/dev/null 2>&1 || true
+  fi
+else
+  log "WARNING: not inside a git work tree; skipping remote setup"
 fi
 
 # ---- 6. Python for the vault audit scripts (stdlib only; nothing to install) ----

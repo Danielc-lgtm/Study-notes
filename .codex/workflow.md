@@ -17,9 +17,14 @@ a future run needs).
 
 ## Phase 0 — Preflight (every run, before anything else)
 
+    git remote get-url origin >/dev/null 2>&1 || git remote add origin https://github.com/Danielc-lgtm/Study-notes.git
     gh auth status
     git fetch origin --prune
     git status --porcelain
+
+(The first line is needed because Codex Cloud's checkout has no `origin`
+remote; adding it is not a credential workaround, the credential itself comes
+from `setup.sh`.)
 
 Expected: `gh` logged in as the repository owner; fetch succeeds; working tree
 clean. The environment is pre-authenticated by `.codex/setup.sh`. If `gh auth
