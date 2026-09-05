@@ -65,9 +65,9 @@
   "status": "in_progress",
   "branch": "codex/improve-all-differential-geometry-dg-ii",
   "pr": {
-    "number": null,
-    "url": null,
-    "state": null
+    "number": 4,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/4",
+    "state": "open"
   },
   "merged_prs": [
     {
