@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-iii",
+  "branch": "codex/create-complete-gauge-theory-gt-iv",
   "pr": {
-    "number": 21,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/21",
+    "number": null,
+    "url": null,
     "status": "open"
   },
   "merged_prs": [
@@ -248,7 +248,7 @@
     "gt-iv": {
       "title": "Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli",
       "mode": "create",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV — Chern–Weil Theory, Chern–Simons, and Flat Connections.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV — Chern–Weil Theory, Chern–Simons, and Flat Connections.md",
@@ -463,7 +463,7 @@
     }
   },
   "current_unit": "gt-iv",
-  "next_action": "Create Gauge Theory IV on a fresh branch from merged main, covering invariant polynomials, Chern–Weil, characteristic classes, Chern–Simons, and flat moduli.",
+  "next_action": "Build the Gauge Theory IV topic and atomic Chern–Weil, characteristic-class, transgression, Chern–Simons, and flat-moduli pages.",
   "unresolved": [],
   "last_commit": "c83565e",
   "ready_to_merge": false,
