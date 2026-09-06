@@ -273,7 +273,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs. Rank-theorem checkpoint expands the inverse calculation and corrects the overbroad algebraic-geometry Jacobian criterion by stating the expected-codimension caveat. Sard checkpoint corrects the vanishing-set filtration, zero-dimensional edge cases, hypersurface induction, and false claims that Sard alone yields slice transversality or Morse nondegeneracy. Local normal-form checkpoint types every Euclidean domain and shrinking, proves both converses by the chain rule, and corrects overclaims about bundle trivializations, covering lifts, metric flatness, and section embeddings. Regular-value checkpoint qualifies the constant-rank fibre statement, replaces metric-dependent perpendicular language by annihilators, types the Lie-subgroup inference, and separates quotient fibres from orbit-map constant rank. Submanifold-definition checkpoint clarifies the graph parametrization, gives a differentiable obstruction for corners, fixes the direction of the immersed-versus-subspace topology comparison, and qualifies canonicity relative to a chosen injective immersion."
+      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs. Rank-theorem checkpoint expands the inverse calculation and corrects the overbroad algebraic-geometry Jacobian criterion by stating the expected-codimension caveat. Sard checkpoint corrects the vanishing-set filtration, zero-dimensional edge cases, hypersurface induction, and false claims that Sard alone yields slice transversality or Morse nondegeneracy. Local normal-form checkpoint types every Euclidean domain and shrinking, proves both converses by the chain rule, and corrects overclaims about bundle trivializations, covering lifts, metric flatness, and section embeddings. Regular-value checkpoint qualifies the constant-rank fibre statement, replaces metric-dependent perpendicular language by annihilators, types the Lie-subgroup inference, and separates quotient fibres from orbit-map constant rank. Submanifold-definition checkpoint clarifies the graph parametrization, gives a differentiable obstruction for corners, fixes the direction of the immersed-versus-subspace topology comparison, and qualifies canonicity relative to a chosen injective immersion. Example checkpoint replaces the circular Hopf-kernel dimension argument with a projective-chart computation, removes drafting leakage, distinguishes submersions from fibre bundles, corrects the orthogonal-group tangent-codomain explanation, and qualifies density of nonclosed subgroups."
     },
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
@@ -643,9 +643,9 @@
     }
   },
   "current_unit": "dg-iv",
-  "next_action": "Audit the rank, regular-point, and tangent-space definition pages, then verify and repair all six DG IV worked examples.",
+  "next_action": "Finish the DG IV definition/example audit, then execute the five review passes and all mechanical and graph audits for the complete unit.",
   "unresolved": [],
-  "last_commit": "d7e0990",
+  "last_commit": "6a36372",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
