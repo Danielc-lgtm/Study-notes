@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-v",
+  "branch": "codex/create-complete-gauge-theory-gt-vi",
   "pr": {
-    "number": 24,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/24",
+    "number": null,
+    "url": null,
     "status": "open"
   },
   "merged_prs": [
@@ -80,6 +80,24 @@
       "number": 20,
       "unit": "gt-ii",
       "main_sha": "40e54fd",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 21,
+      "unit": "gt-iii",
+      "main_sha": "ce4a900",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 23,
+      "unit": "gt-iv",
+      "main_sha": "6173fb5",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 24,
+      "unit": "gt-v",
+      "main_sha": "6f77dba",
       "date": "2026-09-06"
     }
   ],
@@ -335,7 +353,7 @@
     "gt-vi": {
       "title": "Gauge Theory VI — Clifford Algebras, Spin Geometry, and Dirac Operators",
       "mode": "create",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI — Spin Geometry and Dirac Operators.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI — Spin Geometry and Dirac Operators.md"
@@ -472,9 +490,9 @@
     }
   },
   "current_unit": "gt-vi",
-  "next_action": "Merge Gauge Theory V, then create Gauge Theory VI covering Clifford algebras, spin and Spin^c structures, Dirac operators, and the Weitzenböck formula.",
+  "next_action": "Extract Haydys §4 and build Gauge Theory VI: Clifford algebras, spin representations, spin and Spin^c structures, Dirac operators, and the Weitzenböck formula.",
   "unresolved": [],
-  "last_commit": "c83565e",
+  "last_commit": "6f77dba",
   "ready_to_merge": false,
   "updated": "2026-09-06T00:00:00Z"
 }
