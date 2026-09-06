@@ -463,7 +463,7 @@
   "current_unit": "gt-iii",
   "next_action": "Rebuild the seven Gauge Theory III calibration examples and four exercise indexes, then execute the five review passes and source-coverage audit.",
   "unresolved": [],
-  "last_commit": "58fa2e4",
+  "last_commit": "75d6073",
   "ready_to_merge": false,
   "updated": "2026-09-06T00:00:00Z"
 }

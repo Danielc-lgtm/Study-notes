@@ -53,7 +53,7 @@ _none_. Source convention conflicts will be made explicit rather than silently n
 Rebuild the seven Gauge Theory III calibration examples and four exercise indexes; then execute correctness, pedagogy, rederivation, graph, and prose reviews and close the mapped source rows.
 
 ## Last completed commit
-`40e54fd` — merge of Gauge Theory II through PR #20.
+`75d6073` — transport/holonomy/flat-monodromy core plus corrected electromagnetic Bianchi calibration.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
