@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I complete and ready to merge; Gauge Theory II follows immediately
+**Overall status:** in progress — Gauge Theory I merged; Gauge Theory II is the current unit
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -25,10 +25,10 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
 
 ## Working branch
-`codex/create-complete-gauge-theory-gt-i`
+`codex/create-complete-gauge-theory-gt-ii`
 
 ## Pull request
-PR #19 — open; remains unmerged until Gauge Theory I passes every review.
+_none yet — open after the Gauge Theory II initialization checkpoint_.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -40,7 +40,7 @@ PR #19 — open; remains unmerged until Gauge Theory I passes every review.
 - Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, PR #19 ready to merge.
 
 ## Current unit
-Gauge Theory I — complete; transport through PR #19 is the next action.
+Gauge Theory II — Principal bundles, representations, and bundle classification.
 
 ## Remaining units
 Gauge Theory II–XI and the final audit.
@@ -49,13 +49,13 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Merge completed Gauge Theory I in PR #19, then create the Gauge Theory II branch from updated `main` and begin its source-grounded diagnosis.
+Read Haydys §§2.2.1–2.2.2 and §2.4 and Wernli chapter 1 plus §§2.1–2.2; audit the full existing Gauge Theory II graph, then record its diagnosis, target, and filename manifest.
 
 ## Last completed commit
-`082129c` — Gauge Theory I completion commit.
+`961b960` — merge of Gauge Theory I through PR #19.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
 
 ## Merge history
-_none for this task_.
+- #19 Gauge Theory I → `main` (`961b960`, 2026-09-06).

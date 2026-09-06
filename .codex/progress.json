@@ -63,13 +63,20 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-i",
+  "branch": "codex/create-complete-gauge-theory-gt-ii",
   "pr": {
-    "number": 19,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/19",
-    "status": "open"
+    "number": null,
+    "url": null,
+    "status": null
   },
-  "merged_prs": [],
+  "merged_prs": [
+    {
+      "number": 19,
+      "unit": "gt-i",
+      "main_sha": "961b960",
+      "date": "2026-09-06"
+    }
+  ],
   "sources": [
     "sources/IntroGaugeTheory_LectNotes.pdf",
     "sources/mathematical_gauge_theory.pdf",
@@ -139,7 +146,7 @@
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet.md",
@@ -435,10 +442,10 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-i",
-  "next_action": "Merge completed Gauge Theory I in PR #19, then create the Gauge Theory II branch from updated main and begin its source-grounded diagnosis.",
+  "current_unit": "gt-ii",
+  "next_action": "Read Haydys §§2.2.1–2.2.2 and §2.4 and Wernli chapter 1 plus §§2.1–2.2; audit the full existing Gauge Theory II graph, then record its diagnosis, target, and filename manifest.",
   "unresolved": [],
-  "last_commit": "082129c",
+  "last_commit": "961b960",
   "ready_to_merge": false,
-  "updated": "2026-09-06T06:45:00Z"
+  "updated": "2026-09-06T07:00:00Z"
 }
