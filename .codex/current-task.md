@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry VI merged; Differential Geometry VII diagnosis complete and rewrite in progress
+**Overall status:** active — Differential Geometry VII complete and ready to merge; Differential Geometry VIII is next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -40,16 +40,16 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry VI — Vector Bundles and the Cotangent Bundle (`5384ab2`, PR #10)
 
 ## Current unit
-`dg-vii` — Differential Geometry VII, workflow Phase 3.1 (diagnosis and target complete).
+`dg-vii` — Differential Geometry VII, workflow Phase 6 (final checklist passed; ready to merge).
 
 ## Remaining units
-Differential Geometry VII–XII (six units; VII is active).
+Differential Geometry VIII–XII (five pending units).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Audit tensoriality, contraction, pullback, and tensor-bundle pages; then review all examples and the complete DG VII graph.
+Commit and push DG VII, merge PR #11, then create the DG VIII branch and diagnose differential forms.
 
 ## Last completed commit
 `5384ab2`
