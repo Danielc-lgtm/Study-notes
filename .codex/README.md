@@ -39,9 +39,14 @@ its PR, and **merge it into `main` immediately**. Report the merged PR link.
 → Inventory every topic page under that subject (I, II, III, IV …), write a
 persistent multi-topic plan into the ledgers, then complete the topics one at a
 time in dependency order. Each finished topic is its own branch, commit, PR,
-and merge into `main`; the next topic starts from the updated `main`. A run
-that cannot finish the next topic checkpoints it on its branch with the PR left
-open, rather than merging a half-done topic or starting another.
+and immediate merge into `main`; the next topic starts from the updated `main`
+**in the same run**. Codex keeps going until every topic in scope is complete or
+an actual external cutoff prevents another tool call. It checkpoint-commits and
+pushes after every coherent sub-step, with the ledgers naming the exact next action, so everything
+completed is always on GitHub. It never stops merely because one topic finished
+and never asks whether to continue when the ledger already says what is next.
+An interrupted run leaves the current topic checkpointed on its branch with
+the PR open and never merges the unfinished unit.
 
 `Create notes on spectral sequences`
 → Locate sources in `sources/`, build the content map (two-pass procedure),
@@ -52,10 +57,16 @@ auto-link, audit, review, commit, PR.
 `Continue`
 → Resume the active task from `current-task.md`, `progress.json`, and recent
 commits, on the existing branch and PR, starting at the recorded exact next
-action.
+action. After completing and merging that unit, continue through every
+remaining unit in the same run until the task is complete or the platform
+actually prevents another tool call. Codex does not emit an interim progress
+response merely because a checkpoint or topic is complete; it consults the
+ledger and performs the next action. A progress summary is an end-of-run
+artifact, not a substitute for continued execution.
 
 `Do the next batch`
-→ Same as `Continue`, but stop after completing the next atomic unit.
+→ Same as `Continue`, but intentionally stop after completing exactly the next
+atomic unit. Use this when one unit—not the entire remaining task—is desired.
 
 `Merge`
 → Finish the unit whose PR was left open by a previous run and merge it.
@@ -84,16 +95,27 @@ push completed units straight to `main`.
 
 ## PR lifecycle (default: auto-merge per completed unit)
 
-    main ──► codex/<slug> ──► complete one unit ──► commit ──► PR ──► merge into main ──► next unit from main
+    main ──► codex/<slug> ──► checkpoint + push repeatedly ──► complete one unit ──► PR ──► merge into main ──► next unit immediately
 
 - Every completed unit (one topic page plus its subpages) gets its own branch,
   commit, PR, and immediate merge by Codex. You never click Merge; the PR is
   the record of what changed.
+- Within a unit, Codex updates both ledgers, checkpoint-commits, and pushes
+  after every coherent sub-step. At every instant, completed work is on GitHub
+  and the branch ledgers state exactly what comes next.
 - Unfinished units are never merged. An interrupted run leaves the unit
   checkpointed on its branch with the PR open; the next run (`Continue`)
   resumes that branch, finishes, and merges.
 - The task plan lives in `.codex/` and therefore on `main` after every merge,
-  so a multi-topic task continues across any number of runs and merges.
+  so a multi-topic task continues across any number of runs and merges. After
+  each merge, Codex immediately starts the next unit in the same run unless the
+  task is complete, an external cutoff prevents another tool call, or the
+  prompt was `Do the next batch`. Before any final or progress response, Codex
+  checks the ledgers; remaining work plus available tool execution means it
+  continues rather than responds.
+- If one unit remains in progress across three runs, the next run splits it:
+  pages already at standard become a smaller completed unit, and the remainder
+  becomes a new unit rather than staying open-ended.
 - Codex never commits on `main` directly and never force-pushes (unless you
   ask for `directly on main`, which pushes fast-forward commits only).
 - Overrides per task: `without merging` (one PR for the whole task, left open)

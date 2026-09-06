@@ -125,7 +125,7 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
    - *Hint:* Apply $\hat F$ to $\varphi^{-1}(\tilde x, \tilde y) = (A(\tilde x, \tilde y), \tilde y)$, and use $Q(A(\tilde x, \tilde y), \tilde y) = \tilde x$ (from $\varphi \circ \varphi^{-1} = \mathrm{Id}$).
    - *Why needed:* It puts $\hat F$ into the partial standard form needed for the next step.
 
-5. **Use constant rank to force the remainder to be independent of $\tilde y$.** The Jacobian of $\hat F \circ \varphi^{-1}$ at $(\tilde x, \tilde y)$ is $\begin{pmatrix} I_r & 0 \\ \partial \tilde R / \partial \tilde x & \partial \tilde R / \partial \tilde y \end{pmatrix}$. Since composing with a diffeomorphism preserves rank, this matrix has rank $r$ everywhere. The first $r$ rows are already linearly independent (the identity block); for the total rank to be exactly $r$, the bottom-right block $\partial \tilde R / \partial \tilde y$ must vanish identically. Hence $\tilde R$ depends only on $\tilde x$: $\tilde R(\tilde x, \tilde y) = S(\tilde x)$ for some smooth $S : \mathbb{R}^r \to \mathbb{R}^{n-r}$.
+5. **Use constant rank to force the remainder to be independent of $\tilde y$.** Shrink the coordinate domain to a product of balls. The Jacobian of $\hat F \circ \varphi^{-1}$ is $\begin{pmatrix} I_r & 0 \\ \partial \tilde R / \partial \tilde x & \partial \tilde R / \partial \tilde y \end{pmatrix}$. Rank $r$ forces the bottom-right block to vanish. Integrating along line segments in each convex $\tilde y$-fibre then gives $\tilde R(\tilde x,\tilde y)=\tilde R(\tilde x,0)=S(\tilde x)$.
    - *Hint:* If $\partial \tilde R / \partial \tilde y$ had even one nonzero entry, the rank would jump above $r$.
    - *Why needed:* This is the constant-rank-essential step; it eliminates the $\tilde y$-dependence and produces a graph over $\tilde x$.
 
@@ -133,7 +133,7 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
    - *Hint:* The diffeomorphism shifts the $w$-coordinate by $-S(v)$ at each point, absorbing the graph.
    - *Why needed:* It produces the final normal form $(\tilde x, \tilde y) \mapsto (\tilde x, 0)$.
 
-7. **Repackage as manifold charts.** Combine $\varphi$ with the initial chart $\varphi_0$ to get a chart $(U, \varphi) = (\varphi_0^{-1}(U_0'), \varphi \circ \varphi_0)$ on $M$; similarly combine $\psi$ with $\psi_0$. These are smooth charts on $M$ and $N$ centred at $p$ and $F(p)$, in which $F$ has the form $(x^1, \dots, x^m) \mapsto (x^1, \dots, x^r, 0, \dots, 0)$.
+7. **Repackage as manifold charts.** On the restricted source domain use $\varphi\circ\varphi_0$; on a target neighbourhood containing its image use $\psi\circ\psi_0$. Both are charts because the newly introduced maps are local diffeomorphisms. Their coordinate representative of $F$ is $(x^1,\ldots,x^m)\mapsto(x^1,\ldots,x^r,0,\ldots,0)$.
    - *Hint:* Composition of smooth charts with smooth [[Def - Diffeomorphism|diffeomorphisms]] is again a smooth chart.
    - *Why needed:* It returns from Euclidean coordinates to genuine manifold charts.
 
@@ -156,7 +156,7 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
 > > The first component is $Q(A(\tilde x, \tilde y), \tilde y) = \tilde x$, since $\varphi(A(\tilde x, \tilde y), \tilde y) = (\tilde x, \tilde y)$ unpacked says $Q(A, \tilde y) = \tilde x$. So $\hat F \circ \varphi^{-1}(\tilde x, \tilde y) = (\tilde x, \tilde R(\tilde x, \tilde y))$ with $\tilde R(\tilde x, \tilde y) = R(A(\tilde x, \tilde y), \tilde y)$, which is smooth.
 
 > [!note]- Lemma 2: Constant rank forces the remainder to depend on only $r$ variables
-> **Statement:** Suppose $\hat G : V \to \mathbb{R}^n$ is a smooth map on $V \subseteq \mathbb{R}^m = \mathbb{R}^r \times \mathbb{R}^{m-r}$ with the form $\hat G(\tilde x, \tilde y) = (\tilde x, \tilde R(\tilde x, \tilde y))$, and $\hat G$ has constant rank $r$ on $V$. Then $\tilde R$ is independent of $\tilde y$ on a connected open neighbourhood of any point: there is a smooth $S : \mathbb{R}^r \to \mathbb{R}^{n-r}$ such that $\tilde R(\tilde x, \tilde y) = S(\tilde x)$.
+> **Statement:** Suppose $\hat G:P\times Q\to\mathbb R^n$ has the form $\hat G(\tilde x,\tilde y)=(\tilde x,\tilde R(\tilde x,\tilde y))$, where $P$ and $Q$ are open balls centred at the origin, and has constant rank $r$. Then $S(\tilde x)=\tilde R(\tilde x,0)$ satisfies $\tilde R(\tilde x,\tilde y)=S(\tilde x)$.
 >
 > **Hint:** Compute the Jacobian of $\hat G$ explicitly and use that the rank equals $r$ to force the bottom-right block to vanish.
 >
@@ -165,7 +165,9 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
 > > [!note]- Full proof
 > > The Jacobian of $\hat G(\tilde x, \tilde y) = (\tilde x, \tilde R(\tilde x, \tilde y))$ is
 > > $$D\hat G(\tilde x, \tilde y) = \begin{pmatrix} I_r & 0 \\ \partial \tilde R/\partial \tilde x & \partial \tilde R/\partial \tilde y \end{pmatrix}.$$
-> > The top $r$ rows are the identity on $\mathbb{R}^r$, so they are linearly independent. For the total rank to be $r$, no additional row can be linearly independent of these — that is, the last $n - r$ rows must all be in the row span of the first $r$. Examining the column structure: the first $r$ columns of the bottom-right block are $\partial \tilde R/\partial \tilde x$, which can be anything; the last $m - r$ columns of the bottom-right block are $\partial \tilde R/\partial \tilde y$, and the rank-$r$ condition forces *these* to vanish, because in the first $r$ rows the last $m - r$ entries are zero, so the only way for the bottom-right block to not add new rank is for it to be zero on the last $m - r$ columns. Hence $\partial \tilde R/\partial \tilde y \equiv 0$ on the connected neighbourhood. Since the neighbourhood is connected, $\tilde R$ is independent of $\tilde y$, i.e., $\tilde R(\tilde x, \tilde y) = S(\tilde x)$ for some smooth $S$.
+> > The first $r$ rows are independent and vanish in the last $m-r$ columns. Rank $r$ forces every remaining row to lie in their span, so its last $m-r$ entries vanish. Hence $\partial\tilde R/\partial\tilde y=0$. For fixed $\tilde x$ and $\tilde y\in Q$, the segment $t\mapsto t\tilde y$ stays in $Q$, and
+> > $$\tilde R(\tilde x,\tilde y)-\tilde R(\tilde x,0)=\int_0^1D_{\tilde y}\tilde R(\tilde x,t\tilde y)[\tilde y]\,dt=0.$$
+> > Thus $\tilde R(\tilde x,\tilde y)=S(\tilde x)$, where $S(\tilde x)=\tilde R(\tilde x,0)$ is smooth.
 
 > [!note]- Lemma 3: A graph over the first $r$ variables is killed by a target diffeomorphism
 > **Statement:** Let $S : \mathbb{R}^r \to \mathbb{R}^{n-r}$ be smooth. The map $\psi : \mathbb{R}^r \times \mathbb{R}^{n-r} \to \mathbb{R}^r \times \mathbb{R}^{n-r}$ defined by $\psi(v, w) = (v, w - S(v))$ is a smooth diffeomorphism with inverse $\psi^{-1}(v, w) = (v, w + S(v))$, and $\psi(\tilde x, S(\tilde x)) = (\tilde x, 0)$ for all $\tilde x$.
@@ -175,7 +177,11 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
 > **Why needed:** It executes the final coordinate change on the target, mapping the graph $\{(v, S(v))\}$ onto the standard slice $\{(v, 0)\}$.
 >
 > > [!note]- Full proof
-> > The proposed inverse is $\psi^{-1}(v, w) = (v, w + S(v))$. Check: $\psi(\psi^{-1}(v, w)) = \psi(v, w + S(v)) = (v, (w + S(v)) - S(v)) = (v, w)$, and similarly $\psi^{-1}(\psi(v, w)) = (v, w)$. So $\psi$ is a bijection. Both $\psi$ and $\psi^{-1}$ are smooth (they are smooth combinations of smooth functions), so $\psi$ is a smooth diffeomorphism. Finally, $\psi(\tilde x, S(\tilde x)) = (\tilde x, S(\tilde x) - S(\tilde x)) = (\tilde x, 0)$.
+> > The proposed inverse is $\psi^{-1}(v, w) = (v, w + S(v))$. The two compositions are
+> > $$\psi(\psi^{-1}(v,w))=(v,w+S(v)-S(v))=(v,w)$$
+> > and
+> > $$\psi^{-1}(\psi(v,w))=(v,w-S(v)+S(v))=(v,w).$$
+> > Thus $\psi$ is bijective. Both $\psi$ and $\psi^{-1}$ are smooth combinations of smooth functions, so $\psi$ is a diffeomorphism. Finally, $\psi(\tilde x, S(\tilde x)) = (\tilde x, S(\tilde x) - S(\tilde x)) = (\tilde x, 0)$.
 
 ---
 
@@ -192,12 +198,12 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
 > $$\hat F \circ \varphi^{-1}(\tilde x, \tilde y) = (\tilde x, \tilde R(\tilde x, \tilde y))$$
 > for $\tilde R(\tilde x, \tilde y) = R(A(\tilde x, \tilde y), \tilde y)$.
 >
-> **Step 3 (constant rank kills the $\tilde y$-dependence).** By Lemma 2, the constant-rank hypothesis forces $\partial \tilde R / \partial \tilde y \equiv 0$ on a connected neighbourhood of $0$, hence $\tilde R(\tilde x, \tilde y) = S(\tilde x)$ for some smooth $S : \mathbb{R}^r \to \mathbb{R}^{n-r}$.
+> **Step 3 (constant rank kills the $\tilde y$-dependence).** Shrink the new source-coordinate domain to a product of balls $P\times Q$ about $0$. Lemma 2 forces $\partial\tilde R/\partial\tilde y=0$ there, and convexity of $Q$ gives $\tilde R(\tilde x,\tilde y)=\tilde R(\tilde x,0)=:S(\tilde x)$.
 >
 > **Step 4 (target diffeomorphism).** By Lemma 3, the map $\psi(v, w) = (v, w - S(v))$ is a smooth diffeomorphism. Compose:
 > $$\psi \circ \hat F \circ \varphi^{-1}(\tilde x, \tilde y) = \psi(\tilde x, S(\tilde x)) = (\tilde x, 0).$$
 >
-> **Step 5 (return to manifold charts).** Define the new chart on $M$ as $(U, \varphi)$ where $U = \varphi_0^{-1}(\text{image of }\varphi^{-1}\text{ shrunk to fit})$ and the chart map is $\varphi \circ \varphi_0|_U$; similarly the new chart on $N$ is $(V, \psi \circ \psi_0|_V)$ for an appropriate $V$. In these charts $F$ has the coordinate representation $(\tilde x, \tilde y) \mapsto (\tilde x, 0)$, i.e., $(x^1, \dots, x^m) \mapsto (x^1, \dots, x^r, 0, \dots, 0)$. $\qquad\blacksquare$
+> **Step 5 (return to manifold charts).** Let $A$ be the restricted original-coordinate domain mapped by $\varphi$ onto $P\times Q$, and put $U=\varphi_0^{-1}(A)$. Then $\varphi\circ\varphi_0$ is a source chart. Choose an open target neighbourhood $W\subseteq\psi_0(V_0)$ on which $(v,w)\mapsto(v,w-S(v))$ is defined, shrink $U$ so that $F(U)\subseteq\psi_0^{-1}(W)$, and use $\psi\circ\psi_0$ as target chart. The coordinate representative is $(\tilde x,\tilde y)\mapsto(\tilde x,0)$. $\qquad\blacksquare$
 >
 > The submersion case ($r = n$): the $w$-block is empty, the "graph" is automatic, and Step 4 is trivial — the result is the projection $(x^1, \dots, x^n, \dots, x^m) \mapsto (x^1, \dots, x^n)$. The immersion case ($r = m$): the $y$-block is empty, Step 3 is vacuous (there is no $\tilde y$ to kill), and the result is the inclusion $(x^1, \dots, x^m) \mapsto (x^1, \dots, x^m, 0, \dots, 0)$.
 
@@ -211,7 +217,7 @@ By choosing initial charts, reduce to the case where $F$ is a smooth map from an
 
 **Catastrophe theory and singularity theory.** Catastrophe theory classifies the *failures* of constant rank — the singularities of smooth maps near critical points. The rank theorem handles the regular case (constant rank), and the classification of catastrophes (fold, cusp, swallowtail, butterfly, ...) handles the next-order corrections when rank drops. The application is to classifying the local behaviour of smooth maps *near* points where rank drops; the rank theorem says that away from such points, the behaviour is trivial.
 
-**Algebraic geometry: smoothness of varieties.** A polynomial map $F : \mathbb{R}^m \to \mathbb{R}^n$ defining a variety $V = F^{-1}(0)$ has $V$ a smooth submanifold near a point $p$ iff $F$ has constant rank $n$ at $p$ — this is the polynomial version of the regular value theorem, and it follows from the rank theorem applied to $F$. The application is in classifying singular points of varieties as exactly the points where the rank theorem fails.
+**Algebraic geometry: the Jacobian criterion in the complete-intersection case.** Let $F:\mathbb R^m\to\mathbb R^n$ be polynomial and $V=F^{-1}(0)$. If $dF_p$ is surjective at $p\in V$, surjectivity persists near $p$, and the regular value theorem makes $V$ a smooth submanifold of codimension $n$ there. The converse needs the equations to cut out $V$ with the expected codimension: redundant equations can make $dF_p$ non-surjective even when the underlying set is smooth. Thus failure of this Jacobian test detects a singularity of the chosen complete-intersection presentation, not automatically a singularity of every possible presentation of the set.
 
 ---
 

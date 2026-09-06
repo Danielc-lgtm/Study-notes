@@ -54,7 +54,7 @@ The argument is *intrinsically topological* — local Euclidean structure plus t
 
 The hypothesis is "two nonempty homeomorphic open subsets of Euclidean spaces". The skill is recognizing situations where this hypothesis is in play but not obvious.
 
-The first source is **two manifolds claimed to be diffeomorphic or homeomorphic**. The implication is that any chart on one corresponds to a chart on the other, and the chart dimensions must match. If we conjecture $S^3$ is homeomorphic to $\mathbb{RP}^3$ (a true statement — see [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map|DG XI]], where $\mathbb{RP}^3 \cong \mathrm{SO}(3)$ is shown not to be $S^3$), the dimensions must agree (both are 3). Invariance of dimension is the *necessary condition* for homeomorphism.
+The first source is **two manifolds claimed to be diffeomorphic or homeomorphic**. The implication is that any chart on one corresponds to a chart on the other, and the chart dimensions must match. For example, $S^3$ and $\mathbb{RP}^3$ both have dimension $3$, so dimension does not rule out a homeomorphism; their different fundamental groups do. By contrast, dimension alone immediately rules out a homeomorphism between $S^2$ and $\mathbb{RP}^3 \cong \mathrm{SO}(3)$. Invariance of dimension supplies a fast *necessary*, not sufficient, condition for homeomorphism.
 
 The second source is **a continuous bijection from $\mathbb{R}^n$ to $\mathbb{R}^m$**. Even though Cantor showed $|\mathbb{R}| = |\mathbb{R}^2|$ as sets, no homeomorphism exists. The contrapositive: a *continuous bijection* $\mathbb{R}^n \to \mathbb{R}^m$ with $n \neq m$, if one exists, cannot have continuous inverse. (In fact, by invariance of domain — a stronger theorem of Brouwer — no such continuous bijection exists between *open* subsets of unequal-dimensional Euclidean spaces.)
 
@@ -118,7 +118,7 @@ The other source of confusion: the theorem applies to *open subsets* of $\mathbb
    - *Hint:* Apply the excision theorem to the pair $(\mathbb{R}^n, \mathbb{R}^n \setminus \{p\})$ and a small neighbourhood of $p$.
    - *Why needed:* Reduces the question about open subsets to the question about all of $\mathbb{R}^n$.
 
-4. **Conclude $n = m$.** From the isomorphism of step 2 and the computation of step 3, both $H_n(\mathbb{R}^n)$ and $H_m(\mathbb{R}^m)$ must agree with each other up to the homeomorphism, forcing the nontrivial degree to coincide — hence $n = m$.
+4. **Conclude $n = m$.** From the isomorphism of step 2 and the computation of step 3, the local relative homology groups in dimensions $n$ and $m$ must agree under the homeomorphism, forcing the nontrivial degree to coincide — hence $n = m$.
    - *Hint:* Compare the degree where the local homology is nonzero.
    - *Why needed:* Closes the argument.
 
@@ -134,12 +134,15 @@ The other source of confusion: the theorem applies to *open subsets* of $\mathbb
 > **Why needed:** This is the *dimension detector* — a topological invariant of $\mathbb{R}^n$ that vanishes outside degree $n$.
 >
 > > [!note]- Full proof
-> > The long exact sequence of the pair $(\mathbb{R}^n, \mathbb{R}^n \setminus \{0\})$ gives
-> > $$\cdots \to H_k(\mathbb{R}^n \setminus \{0\}) \to H_k(\mathbb{R}^n) \to H_k(\mathbb{R}^n, \mathbb{R}^n \setminus \{0\}) \to H_{k-1}(\mathbb{R}^n \setminus \{0\}) \to \cdots.$$
-> > $\mathbb{R}^n$ is contractible, so $H_k(\mathbb{R}^n) = 0$ for $k > 0$ and $H_0(\mathbb{R}^n) = \mathbb{Z}$. The space $\mathbb{R}^n \setminus \{0\}$ deformation retracts onto $S^{n-1}$ via $x \mapsto x/|x|$, so $H_k(\mathbb{R}^n \setminus \{0\}) \cong H_k(S^{n-1})$, which is $\mathbb{Z}$ for $k = 0$ or $k = n-1$ (assuming $n \geq 1$), and $0$ otherwise. Plugging into the long exact sequence and simplifying:
-> > - For $k > n$: $0 \to 0 \to H_k \to 0$, so $H_k = 0$.
-> > - For $k = n$: $0 \to 0 \to H_n \to H_{n-1}(S^{n-1}) = \mathbb{Z} \to H_{n-1}(\mathbb{R}^n) = 0$, so $H_n \cong \mathbb{Z}$.
-> > - For $0 < k < n$: $H_k(S^{n-1}) = 0 \to H_k(\mathbb{R}^n) = 0 \to H_k \to H_{k-1}(S^{n-1})$. For $1 \leq k \leq n - 1$, $H_{k-1}(S^{n-1})$ is $\mathbb{Z}$ if $k = 1$ and $0$ otherwise; similarly $H_k(S^{n-1})$ is $\mathbb{Z}$ if $k = n-1$ and $0$ otherwise. A small case analysis yields $H_k = 0$ in this range.
+> > If $n=0$, then $\mathbb{R}^0=\{0\}$ and $\mathbb{R}^0\setminus\{0\}=\varnothing$. Hence $H_k(\{0\},\varnothing;\mathbb{Z})$ is $\mathbb{Z}$ for $k=0$ and $0$ otherwise.
+> >
+> > Assume now that $n\geq 1$. Because $\mathbb{R}^n$ is contractible, the long exact sequence of the pair yields the standard natural isomorphism
+> > $$H_k(\mathbb{R}^n,\mathbb{R}^n\setminus\{0\};\mathbb{Z})\cong \widetilde H_{k-1}(\mathbb{R}^n\setminus\{0\};\mathbb{Z})$$
+> > for every $k$: for $k\geq2$ this follows directly from the two adjacent zero groups of $\mathbb{R}^n$, while for $k=1$ exactness identifies the relative group with the kernel of $H_0(\mathbb{R}^n\setminus\{0\})\to H_0(\mathbb{R}^n)$, which is precisely reduced $H_0$. For $k=0$, the map $H_0(\mathbb{R}^n\setminus\{0\})\to H_0(\mathbb{R}^n)$ is surjective, so the relative group vanishes.
+> >
+> > Radial projection gives a deformation retraction $\mathbb{R}^n\setminus\{0\}\simeq S^{n-1}$. Therefore
+> > $$H_k(\mathbb{R}^n,\mathbb{R}^n\setminus\{0\};\mathbb{Z})\cong \widetilde H_{k-1}(S^{n-1};\mathbb{Z}).$$
+> > The reduced homology of $S^{n-1}$ is $\mathbb{Z}$ in degree $n-1$ and zero in every other degree. This includes $n=1$: $\widetilde H_0(S^0)\cong\mathbb{Z}$, even though $H_0(S^0)\cong\mathbb{Z}\oplus\mathbb{Z}$. Thus the relative group is $\mathbb{Z}$ exactly when $k=n$ and is zero otherwise.
 
 > [!note]- Lemma 2: Homeomorphisms induce [[Def - Isomorphism|isomorphisms]] on local homology
 > **Statement:** Let $f : U \to V$ be a homeomorphism between open subsets of Euclidean spaces, with $f(p) = q$. Then $f$ induces an isomorphism $f_* : H_k(U, U \setminus \{p\}) \to H_k(V, V \setminus \{q\})$ for all $k$.
@@ -174,7 +177,7 @@ The other source of confusion: the theorem applies to *open subsets* of $\mathbb
 > $$H_k(V, V \setminus \{q\}; \mathbb{Z}) \cong \begin{cases} \mathbb{Z} & k = m, \\ 0 & k \neq m. \end{cases}$$
 > By Lemma 2, $f$ induces an isomorphism $H_k(U, U \setminus \{p\}) \cong H_k(V, V \setminus \{q\})$ for every $k$. Comparing degrees, both groups are nonzero only in a single degree, which must coincide. Hence $n = m$. $\blacksquare$
 >
-> *Proof of the manifold corollary.* Suppose $M$ is a connected topological $n$-manifold and $N$ is a connected topological $m$-manifold and they are homeomorphic via $F : M \to N$. Pick a smooth chart $(U, \varphi)$ on $M$ with image $\widehat{U} \subseteq \mathbb{R}^n$ open, and a chart $(V, \psi)$ on $N$ with image $\widehat{V} \subseteq \mathbb{R}^m$ open and $F(U) \subseteq V$ (possible by continuity and shrinking $U$). Then $\psi \circ F \circ \varphi^{-1} : \widehat{U} \to \widehat{V}$ is a continuous injective map between open subsets of $\mathbb{R}^n$ and $\mathbb{R}^m$. Restricting to a smaller chart $(U_0, \varphi_0)$ containing a point and a chart $(V_0, \psi_0)$ containing its image — and ensuring the restriction is still a homeomorphism (which follows from $F$ being a homeomorphism of the manifolds) — gives a homeomorphism between nonempty open subsets of $\mathbb{R}^n$ and $\mathbb{R}^m$. By the theorem, $n = m$. $\blacksquare$
+> *Proof of the manifold corollary.* Suppose $M$ is a connected topological $n$-manifold and $N$ is a connected topological $m$-manifold and they are homeomorphic via $F : M \to N$. Pick a chart $(U, \varphi)$ on $M$ with image $\widehat{U} \subseteq \mathbb{R}^n$ open, and a chart $(V, \psi)$ on $N$ with image $\widehat{V} \subseteq \mathbb{R}^m$ open and $F(U) \subseteq V$ (possible by continuity and shrinking $U$). Then $\psi \circ F \circ \varphi^{-1} : \widehat{U} \to \widehat{V}$ is a continuous injective map between open subsets of $\mathbb{R}^n$ and $\mathbb{R}^m$. Restricting to a smaller chart $(U_0, \varphi_0)$ containing a point and a chart $(V_0, \psi_0)$ containing its image — and ensuring the restriction is still a homeomorphism (which follows from $F$ being a homeomorphism of the manifolds) — gives a homeomorphism between nonempty open subsets of $\mathbb{R}^n$ and $\mathbb{R}^m$. By the theorem, $n = m$. $\blacksquare$
 >
 > *Note on the smooth case (Lee Theorem 2.17).* If $F : M \to N$ is a diffeomorphism between smooth manifolds, the proof is much simpler: in the coordinate representation $\psi \circ F \circ \varphi^{-1}$, the Jacobian is a linear isomorphism $\mathbb{R}^n \to \mathbb{R}^m$, forcing $n = m$. This smooth version is part of multivariable calculus and requires no algebraic topology.
 

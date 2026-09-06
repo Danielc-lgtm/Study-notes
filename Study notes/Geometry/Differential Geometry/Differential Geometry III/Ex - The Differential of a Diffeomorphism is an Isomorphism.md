@@ -36,7 +36,7 @@ The [[Thm - Dimension of the Tangent Space|dimension theorem]]: $\dim T_{p}M = \
 
 **Assumption pattern:** $F$ is smooth and has smooth inverse $F^{-1}$, so both $F \circ F^{-1} = \mathrm{id}_{N}$ and $F^{-1} \circ F = \mathrm{id}_{M}$ are valid smooth-map identities. These are the algebraic inputs. The chain rule and identity rule for the differential are the tools.
 
-**Theorem routing:** Apply the [[Thm - Chain Rule for the Differential|chain rule]] to $F \circ F^{-1} = \mathrm{id}_{N}$ at the point $F(p)$, giving $dF_{p} \circ d(F^{-1})_{F(p)} = d(\mathrm{id}_{N})_{F(p)} = \mathrm{id}_{T_{F(p)}N}$. Similarly apply it to $F^{-1} \circ F = \mathrm{id}_{M}$ at $p$, giving $d(F^{-1})_{F(p)} \circ dF_{p} = \mathrm{id}_{T_{p}M}$. The two equations together say $d(F^{-1})_{F(p)}$ is the two-sided inverse of $dF_{p}$, hence $dF_{p}$ is a vector-space isomorphism. For part (b), apply the [[Thm - Dimension of the Tangent Space|dimension theorem]]: an isomorphism between vector spaces forces equal [[Def - Dimension|dimensions]], hence $\dim T_{p}M = \dim T_{F(p)}N$, hence $\dim M = \dim N$.
+**Theorem routing:** Apply the [[Thm - Chain Rule for the Differential|chain rule]] to $F \circ F^{-1} = \mathrm{id}_{N}$ at the point $F(p)$, giving $dF_{p} \circ d(F^{-1})_{F(p)} = d(\mathrm{id}_{N})_{F(p)} = \mathrm{id}_{T_{F(p)}N}$. Apply the chain rule again, now to $F^{-1} \circ F = \mathrm{id}_{M}$ at $p$, to obtain $d(F^{-1})_{F(p)} \circ dF_{p} = \mathrm{id}_{T_{p}M}$. The two equations together say $d(F^{-1})_{F(p)}$ is the two-sided inverse of $dF_{p}$, hence $dF_{p}$ is a vector-space isomorphism. For part (b), apply the [[Thm - Dimension of the Tangent Space|dimension theorem]]: an isomorphism between vector spaces forces equal [[Def - Dimension|dimensions]], hence $\dim T_{p}M = \dim T_{F(p)}N$, hence $\dim M = \dim N$.
 
 **Key decision point:** The non-obvious feature is that *both directions of the inverse* are needed — one application of the chain rule gives one direction; the other direction comes from the *other* composition $F^{-1} \circ F$. The temptation is to apply the chain rule once and declare victory, forgetting that linear-map inversion is a two-sided condition. The choice to apply the chain rule *twice* — once to each composition — is the decisive move.
 
@@ -85,7 +85,7 @@ Apply the chain rule to $F \circ F^{-1} = \mathrm{id}_{N}$ at $F(p)$.
 Apply the chain rule to $F^{-1} \circ F = \mathrm{id}_{M}$ at $p$.
 
 > [!note]- Derivation
-> Similarly, $F^{-1} \circ F = \mathrm{id}_{M}$. Apply the chain rule at $p \in M$:
+> For the other composite, $F^{-1} \circ F = \mathrm{id}_{M}$. Applying the chain rule at $p \in M$ gives:
 > $$d(F^{-1} \circ F)_{p} = d(F^{-1})_{F(p)} \circ dF_{p}.$$
 > But $F^{-1} \circ F = \mathrm{id}_{M}$, so $d(F^{-1} \circ F)_{p} = d(\mathrm{id}_{M})_{p} = \mathrm{id}_{T_{p}M}$. Therefore $d(F^{-1})_{F(p)} \circ dF_{p} = \mathrm{id}_{T_{p}M}$.
 

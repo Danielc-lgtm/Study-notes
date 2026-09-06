@@ -76,7 +76,7 @@ In **foliation theory**, the leaves of a foliation are immersed submanifolds —
 
 **Is an instance — every embedded submanifold.** Every embedded submanifold is automatically an immersed submanifold, with the subspace topology and the inherited smooth structure. The immersion condition follows from the embedding condition.
 
-**Is an instance — the figure-eight image set.** The image of $\beta(t) = (\sin 2t, \sin t)$ on $(-\pi, \pi) \to \mathbb{R}^2$, equipped with the topology and smooth structure making $\beta$ a diffeomorphism onto the image, is an immersed (but not embedded) submanifold of $\mathbb{R}^2$. The inclusion is a smooth injective immersion, but not a topological embedding because the subspace topology on the image has more open sets than the pulled-back topology. See [[Ex - The Figure-Eight Immersion]].
+**Is an instance — the accumulating figure-eight image.** The image of $\beta(t)=(\sin 2t,\sin t)$ on $(-\pi,\pi)$, equipped with the topology transported from the parameter interval, is an immersed but nonembedded submanifold. The inclusion is an injective immersion, but its inverse is not continuous for the ambient subspace topology: images of sequences tending to either missing endpoint converge to $\beta(0)$. Accordingly, the transported manifold topology is **finer** than the ambient subspace topology, not coarser. See [[Ex - The Figure-Eight Immersion]].
 
 **Is an instance — the irrational line on the torus.** For irrational $\alpha$, the image of $\gamma(t) = (e^{2\pi i t}, e^{2\pi i \alpha t})$ on $\mathbb{R} \to T^2$ is an immersed submanifold of $T^2$ with the topology of $\mathbb{R}$. It is *dense* in $T^2$ and not locally closed, but as an immersed $1$-manifold it is diffeomorphic to $\mathbb{R}$. Remarkably, this is a *weakly embedded* immersed submanifold despite not being embedded.
 
@@ -86,7 +86,7 @@ In **foliation theory**, the leaves of a foliation are immersed submanifolds —
 
 **Is NOT an immersed submanifold structure — the $x$-axis with $\mathbb{R}$ via $t \mapsto t^3$.** The map $\phi : \mathbb{R} \to \mathbb{R}^2$, $\phi(t) = (t^3, 0)$, is smooth and injective, but not an immersion (derivative vanishes at $0$). So the smooth structure on the $x$-axis induced by $\phi^{-1}$ does not make the inclusion an immersion. The valid immersed structure on the $x$-axis comes from $t \mapsto (t, 0)$, giving the standard smooth structure.
 
-**Corollary — image of an injective immersion is canonically an immersed submanifold.** Given $F : N \to M$ an injective smooth immersion, the image $F(N)$ has a unique topology and smooth structure as an immersed submanifold, namely the one making $F$ a diffeomorphism onto its image.
+**Corollary — an injective immersion transports an immersed structure.** Given an injective smooth immersion $F:N\to M$, transport the topology and smooth atlas of this specified domain $N$ across its bijection onto $F(N)$. This makes $F(N)$ an immersed submanifold and $F$ a diffeomorphism onto it. The word “canonical” is relative to the parametrized immersion: another injective immersion with the same point-set image can induce a different immersed-submanifold topology.
 
 **Corollary — uniqueness of smooth structure given topology.** If two smooth structures on a set $S$ both make the inclusion into $M$ a smooth immersion *and* both induce the same topology on $S$, then the smooth structures agree. (The topology, however, can vary across different immersed-submanifold structures.)
 

@@ -184,7 +184,7 @@ At a regular point $p$, $X$ is transverse to some hypersurface $S$ through $p$. 
 >
 > **Step 1 — Parametrize $S$.** Choose a smooth local parametrization $\psi : W \to S$ with $\psi(0) = p$, $W \subseteq \mathbb{R}^{n-1}$ open.
 >
-> **Step 2 — Construct the flow-from-$S$ map.** By the [[Thm - Fundamental Theorem on Flows]], the flow $\phi^X$ is defined and smooth on an open subset of $\mathbb{R} \times M$ containing $\{0\} \times M$. Choose $\varepsilon > 0$ small enough that $(-\varepsilon, \varepsilon) \times \psi(W) \subseteq \mathcal{D}_{\phi^X}$ (the flow domain). Define $\Phi : (-\varepsilon, \varepsilon) \times W \to M$, $\Phi(t, a) := \phi^X_t(\psi(a))$.
+> **Step 2 — Construct the flow-from-$S$ map.** The open flow domain contains $(0,p)$. Hence it contains a product $(-\varepsilon,\varepsilon)\times U$ for some neighbourhood $U$ of $p$. Shrink $W$ so that $\psi(W)\subseteq U$, and define $\Phi(t,a)=\phi^X_t(\psi(a))$ on $(-\varepsilon,\varepsilon)\times W$.
 >
 > **Step 3 — $\Phi$ is a local diffeomorphism.** By Lemma 2, $\Phi$ is a local diffeomorphism near $(0, 0)$. Shrink $W$ and $\varepsilon$ as needed so $\Phi$ is a diffeomorphism onto its image (an open subset $V \subseteq M$ containing $p$).
 >
@@ -196,13 +196,13 @@ At a regular point $p$, $X$ is transverse to some hypersurface $S$ through $p$. 
 
 # Cross-Field Exercise Suggestions
 
-**Local form of [[Def - Geodesic|geodesics]] on a Riemannian manifold.** The geodesic spray on $TM$ is a vector field on the tangent bundle; near any point $(p, v) \in TM$ with $v \neq 0$, the geodesic spray is straightening-equivalent to $\partial/\partial s^1$. The geodesic-completeness question becomes whether the flow of the spray is global, which the Straightening Theorem reduces to questions about behaviour as one approaches the boundary of $TM$.
+**Local form of [[Def - Geodesic|geodesics]].** Away from the zero section, the geodesic spray is nonzero and can be straightened locally. This explains the local simplicity of geodesic evolution but does not decide completeness, which is global: an incomplete lifted geodesic eventually leaves every compact subset of $TM$, not necessarily through a manifold boundary.
 
 **Reduction of an autonomous ODE to a quadrature.** If $X$ is a nonvanishing autonomous vector field on $\mathbb{R}^n$, the Straightening Theorem locally reduces the ODE $\dot x = X(x)$ to the trivial ODE $\dot s^1 = 1$, $\dot s^i = 0$. The "quadrature" — finding the integral curve by integration — is exactly the inverse of the straightening map. In dynamical systems this is the local rectifiability theorem.
 
 **The Frobenius theorem as a multi-field straightening.** The [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius|Frobenius theorem]] is the multi-field generalization: a smooth involutive [[Def - Subbundle|subbundle]] $D \subseteq TM$ of rank $k$ is locally tangent to coordinate slices $\{s^{k+1} = c^{k+1}, \dots, s^n = c^n\}$ in suitable coordinates. The rank-1 case is the Straightening Theorem. The proof in the general case uses the bracket-closure to commute the flows of a chosen basis of $D$ until they jointly straighten.
 
-**Existence of action-angle coordinates in integrable systems.** A completely integrable Hamiltonian system has $n$ commuting Hamiltonian flows on a $2n$-dimensional symplectic manifold. By the multi-field straightening theorem (Lee 9.46), in a neighborhood of a regular orbit there are coordinates in which each of these flows becomes $\partial/\partial s^i$ — these are the **angle coordinates**. The action coordinates are the conserved Hamiltonians, complementing the angles. The Liouville–Arnold theorem upgrades this local statement to a global one.
+**Toward action-angle coordinates.** Independent commuting Hamiltonian fields can be straightened locally, producing translation coordinates along their joint orbits. Calling these coordinates “angles” and completing them by action variables requires the symplectic hypotheses and compact connected regular fibres of Liouville–Arnold; it does not follow from smooth straightening alone.
 
 ---
 

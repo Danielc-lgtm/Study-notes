@@ -28,7 +28,7 @@ $M$ is a smooth $n$-manifold (without boundary, by our convention). A **smooth e
 
 > **Theorem (Whitney Immersion Theorem).** Every smooth $n$-manifold admits a smooth immersion into $\mathbb{R}^{2n}$.
 
-The weak theorem is the version we prove here (the easier "$2n+1$" bound); the strong theorem requires more sophisticated algebraic-topological techniques.
+The complete formal proof on this page establishes the compact $2n+1$ theorem. The general proper theorem requires an additional locally finite construction controlled by an exhaustion; its mechanism is outlined below but is not silently passed off as part of the compact proof. The strong theorem requires more sophisticated techniques.
 
 ---
 
@@ -62,7 +62,7 @@ The conclusion is "$M$ embeds properly in $\mathbb{R}^{2n+1}$".
 
 Combine with **the goal of doing geometry on $M$ concretely.** Property $D$: you want to develop a theory of curvature, geodesics, volume on $M$. The amplified result $E$: with $M$ realised as a submanifold of $\mathbb{R}^{2n+1}$, the standard inner product on $\mathbb{R}^{2n+1}$ restricts to a Riemannian metric on $M$ (the **first fundamental form**); all of submanifold differential geometry transfers via the embedding. So Whitney provides a *constructive* way to put a Riemannian metric on $M$ (though typically not the most natural one).
 
-Combine with **the goal of doing computation.** Property $D$: you want to specify a smooth function or vector field on $M$ explicitly. The amplified result $E$: with $M \subset \mathbb{R}^{2n+1}$, smooth functions on $M$ can be specified as restrictions of polynomials on $\mathbb{R}^{2n+1}$; vector fields as restrictions of vector fields on $\mathbb{R}^{2n+1}$ (suitably tangent to $M$). This is the computational content of Whitney: the abstract objects on $M$ acquire concrete polynomial / coordinate descriptions via the embedding.
+Combine with **the goal of doing computation.** Property $D$: you want to express intrinsic objects using ambient coordinates. The amplified result $E$: after a proper embedding, every smooth function on $M$ extends to a smooth function on a neighbourhood of the closed embedded image (and then globally after inserting a cutoff). A tangent vector field can likewise be treated as an ambient vector field along $M$ and extended locally, for example using a tubular neighbourhood. These are smooth extensions, not generally restrictions of polynomials.
 
 Combine with **the question of intrinsic vs. extrinsic differential geometry.** Property $D$: you want to know whether a property of $M$ is *intrinsic* (depending only on $M$'s smooth structure) or *extrinsic* (depending on the embedding). The amplified result $E$: Whitney shows that *every* property can be made extrinsic (by realising $M$ via some embedding), but the question of which properties are *invariant* under change of embedding is the foundation of intrinsic differential geometry. Curvature in the embedded sense (a property of the embedding) versus the intrinsic Gaussian curvature (a property of $M$) is the canonical distinction.
 
@@ -92,7 +92,7 @@ where $\rho_i(p) \varphi_i(p)$ is understood to be zero outside $U_i$ (since $\r
 
 **Step G (dimension reduction via Sard).** $F$ embeds $M$ in $\mathbb{R}^{nm + m}$, but we want to embed in $\mathbb{R}^{2n+1}$. Apply Sard repeatedly: at each step, project from $\mathbb{R}^{N}$ to $\mathbb{R}^{N-1}$ along a direction $v$. The "bad" directions — those for which the projection fails to be injective or an immersion — form a set of dimension at most $2n$ in $\mathbb{RP}^{N-1}$ (the projective space of directions), which has dimension $N - 1$. As long as $N - 1 > 2n$, i.e., $N > 2n + 1$, Sard guarantees a "good" direction exists. Repeat until $N = 2n + 1$.
 
-The non-compact case is similar but uses an exhaustion function to control the embedding at infinity. The exhaustion function ensures the embedding into $\mathbb{R}^{N+1}$ (with the exhaustion function as the extra coordinate) is *proper*; the dimension reduction then preserves properness because the projections are along "horizontal" directions.
+The non-compact case is not a formal consequence of the finite construction: it requires a countable locally finite atlas and an exhaustion function to control behaviour at infinity. One first constructs a proper embedding in a sufficiently large Euclidean space, then chooses dimension-reducing projections with both local rank control and global properness control. Establishing those choices is additional work; the formal proof below therefore claims only the compact theorem.
 
 **Why is Sard the engine?** The proof reduces the existence of a "good" embedding direction to a measure-zero / density argument: for each $v \in \mathbb{RP}^{N-1}$, the projection $\pi_v$ fails to be an immersion or fails injectivity on a set of $v$'s that has measure zero in $\mathbb{RP}^{N-1}$ (by Sard applied to the natural maps from $TM \setminus 0$ and $M \times M \setminus \Delta$ to $\mathbb{RP}^{N-1}$). The complement is dense, so a good $v$ exists. This is the **density-of-good-directions** application of Sard.
 
@@ -184,7 +184,7 @@ For compact $M$, cover by finitely many regular coordinate balls. Build cutoff f
 > $$F_0(p) = (\rho_1(p) \varphi_1(p), \dots, \rho_m(p) \varphi_m(p),\, \rho_1(p), \dots, \rho_m(p)),$$
 > with $\rho_i(p) \varphi_i(p) := 0$ when $p \notin U_i$. Each component is smooth (because $\rho_i$ kills the discontinuity outside its support).
 >
-> *$F_0$ is injective.* If $F_0(p) = F_0(q)$, then $\rho_i(p) = \rho_i(q)$ for all $i$. The $V_i$ cover $M$, so $p \in V_j$ for some $j$, hence $\rho_j(p) = 1$, hence $\rho_j(q) = 1$, hence $q \in \mathrm{supp}\, \rho_j \subseteq U_j$ — in fact $q \in V_j$ (otherwise $\rho_j(q) < 1$). The coordinate component gives $\varphi_j(p) = \rho_j(p)\varphi_j(p) = \rho_j(q) \varphi_j(q) = \varphi_j(q)$, and $\varphi_j$ is injective on $U_j$, so $p = q$.
+> *$F_0$ is injective.* If $F_0(p) = F_0(q)$, then $\rho_i(p) = \rho_i(q)$ for all $i$. The $V_i$ cover $M$, so $p \in V_j$ for some $j$, hence $\rho_j(p) = 1$ and therefore $\rho_j(q) = 1$. In particular, $q\in\{\rho_j\ne0\}\subseteq\operatorname{supp}\rho_j\subseteq U_j$, so both chart values below are defined. The coordinate component gives $\varphi_j(p) = \rho_j(p)\varphi_j(p) = \rho_j(q) \varphi_j(q) = \varphi_j(q)$, and $\varphi_j$ is injective on $U_j$, so $p = q$.
 >
 > *$F_0$ is an immersion.* At $p \in V_i$, $\rho_i$ is constantly $1$ on a neighbourhood, so $d(\rho_i \varphi_i)_p = d\varphi_{i\,p}$ is injective (chart differentials are [[Def - Isomorphism|isomorphisms]]). Hence $dF_{0,p}$ is injective.
 >
@@ -202,7 +202,7 @@ For compact $M$, cover by finitely many regular coordinate balls. Build cutoff f
 >
 > $\qquad\blacksquare$
 >
-> The non-compact case is similar but uses an exhaustion function as one of the embedding coordinates to ensure properness; the projection step preserves properness because the projections are "horizontal" (do not involve the exhaustion-function direction).
+> This proves the compact theorem stated above. A proof of the general proper theorem must add the locally finite exhaustion-controlled construction described in the overview; it is not included in this formal proof.
 
 ---
 

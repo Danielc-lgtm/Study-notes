@@ -35,7 +35,7 @@ Examples:
   means: locate that topic and all associated subpages, inspect relevant sources and neighbouring vault pages, perform the full rewrite and quality workflow, validate the resulting note graph, update persistent progress, and commit the completed work.
 
 - `Improve all complex analysis notes`
-  means: create or update a persistent multi-topic task plan, then work through the relevant topics sequentially. Finish complete topics rather than leaving many half-edited.
+  means: create or update a persistent multi-topic task plan, then work through every relevant topic sequentially in the same run, committing and merging each completed topic before immediately starting the next. Continue until the entire scope is complete or the platform interrupts the run.
 
 - `Create notes on spectral sequences`
   means: locate supplied or repository sources, determine the correct vault location, inspect related notes and prerequisites, and create a complete topic according to the polymath-notes skill.
@@ -44,7 +44,7 @@ Examples:
   means: read `.codex/current-task.md`, `.codex/progress.json`, and recent relevant commits, then resume the recorded task from the exact next action.
 
 - `Do the next batch`
-  means: continue the current persistent task and complete the next sensible atomic unit.
+  means: continue the current persistent task, complete exactly the next sensible atomic unit, and then stop. This is the explicit one-unit exception to the normal keep-going policy.
 
 Prefer reasonable inference from repository context over asking the user to repeat information already recoverable from the repository.
 
@@ -71,14 +71,23 @@ Treat the entire topic graph as the unit of understanding.
 When rewriting an existing topic:
 
 - preserve filenames unless renaming materially improves the knowledge architecture;
-- preserve useful existing content;
+- preserve every correct and useful piece of existing content and all source coverage, integrating it into the best new structure rather than treating the old structure as fixed;
 - preserve YAML frontmatter;
-- preserve the topic/subpage architecture unless there is a substantive reason to change it;
+- preserve the topic/subpage architecture unless splitting, merging, adding, or reordering pages materially improves the knowledge architecture;
 - preserve and improve cross-topic links;
 - inspect associated definition, theorem, example, and exercise pages rather than editing only the topic page;
-- do not regenerate content merely to make it stylistically different.
+- make substantial changes only when they improve what the reader learns, the rigour, re-entry speed, or the ability to rederive the mathematics—not merely to produce a larger diff.
 
-A rewrite should be semantic refactoring, not gratuitous regeneration.
+A rewrite is a **re-derivation of the whole topic from the sources and the
+specification**, using the existing note as material rather than as the frame.
+Codex is expected to restructure sections, reorder a concept map when the
+source order is pedagogically wrong, split or merge subpages, add missing
+definition/theorem/exercise pages, rewrite proofs from scratch when the
+architecture is weak, replace explanations wholesale under priority P3, and
+add examples, counterexamples, bridges, and exercises that the existing note
+lacks. Radical means that the reader learns substantially more, more
+rigorously, and can re-enter the topic faster; it never means change for its
+own sake.
 
 Before renaming any page, heading, or anchor, search the vault for incoming wikilinks and transclusions. Update every affected reference.
 
@@ -156,7 +165,8 @@ The goal is not source imitation. Reconstruct the best explanation consistent wi
 
 ## 7. Existing-note rewrite protocol
 
-Before editing a topic, diagnose it.
+Before editing a topic, diagnose it and envision the best version it could
+become.
 
 Look specifically for:
 
@@ -174,9 +184,19 @@ Look specifically for:
 12. weak connections to neighbouring notes;
 13. content that is technically complete but difficult to re-enter after months away.
 
-Then improve the topic based on that diagnosis.
+The diagnosis is a floor, not a ceiling. After finding defects, write a target
+description of the ideal topic graph: its structure, unifying frame, true
+names, proof architecture, examples, counterexamples, bridges, and exercises.
+Compare the existing unit with that target and with the gold-standard vault
+subjects. Every gap is work even when the existing note has no visible defect.
+The target is the best note Codex can write from the sources and specification
+today, subject to preserving correct useful content and complete source
+coverage.
 
 Do not preserve weaknesses merely because they occur in the existing note.
+Do not declare a clean diagnosis complete without performing the target
+comparison. Ambition operates inside the unchanged order P1 rigour, P2
+self-containedness, P3 explanation, then P4 conciseness.
 
 ### Rewrite priorities
 
@@ -285,7 +305,26 @@ For vault-wide rewrites, the default atomic unit is one complete topic and its a
 
 Never intentionally leave many topics simultaneously half-rewritten.
 
-Before a run ends:
+Completing one unit is not a reason to end a run. After a unit passes review,
+is committed, pushed, and merged, immediately begin the next unit from the
+updated `main` in the same run. Continue through the ledger until every unit in
+scope is complete or the platform interrupts the run. Never end a run
+voluntarily while units and working budget remain, and never ask “should I
+continue?” when the ledger already supplies the next action. `Do the next
+batch` is the explicit user request that limits a run to one unit.
+
+**The continuation check controls whether Codex may answer, not merely what it
+should do after a merge.** Before sending any user-facing final or progress
+report, reread both ledgers. If an in-scope unit remains and the execution
+environment still accepts tool calls, sending that report is prohibited:
+perform the recorded next action instead. A clean checkpoint, a merged PR, the
+completion of a review pass, or the availability of a useful progress summary
+does not count as an interruption. “The platform interrupts the run” means an
+actual external cutoff that prevents another tool call, not an anticipated
+limit, elapsed effort, or a convenient response boundary.
+
+If the platform explicitly signals an imminent hard cutoff but still permits a
+final checkpoint tool call:
 
 - bring the current atomic unit to a coherent state if feasible;
 - run the required review;
@@ -301,6 +340,11 @@ If the current unit genuinely cannot be finished, record precisely:
 - the exact next action.
 
 A fresh Codex task must be able to continue solely from the repository.
+
+If the same unit remains in progress across three runs, the next run must
+split it: finish and merge the pages already at standard as a smaller coherent
+unit, and record the remainder as a new unit. Do not let one oversized unit
+remain open-ended indefinitely.
 
 ---
 
@@ -332,9 +376,9 @@ Policy — **auto-merge per completed unit**:
 - The user can override for one task with `... without merging` (leave PRs
   open) or `... directly on main` (skip PRs; commit and push to `main`).
 
-Always end a run by telling the user which units were merged (PR numbers),
-what remains, the exact next action, and whether an unfinished unit was left
-on an open branch.
+When—and only when—the continuation check permits a run to end, tell the user
+which units were merged (PR numbers), what remains, the exact next action, and
+whether an unfinished unit was left on an open branch.
 
 ---
 
@@ -359,6 +403,11 @@ A large task is complete only when:
 - `.codex/current-task.md` and `.codex/progress.json` record completion;
 - all durable work is committed;
 - the working branch is ready to merge.
+
+After any individual topic becomes complete, begin the next planned topic in
+the same run as soon as its PR is merged. A run is finished only when no work
+remains in scope or the platform interrupts it; one completed topic is never a
+voluntary stopping condition when units and budget remain.
 
 The objective is not to maximize the amount Codex changes.
 

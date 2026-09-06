@@ -1,53 +1,69 @@
 # Current task
 
-**Overall status:** no active large task
-
-<!--
-Keep every field below, even when empty. Update this file on every commit that
-touches notes and always before a run ends (workflow.md Phase 5.2). Keep it in
-sync with progress.json — that file is the machine copy of the same state.
-A human reading only this file should understand the state of the project.
--->
+**Overall status:** active — Differential Geometry VII merged; Differential Geometry VIII diagnosis complete and rewrite in progress
 
 ## Goal
-_none_
+Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
 
 ## Scope
-_none_ — list the units (one topic page + its subfolder each), in order.
+1. Differential Geometry I — Smooth Manifolds and Atlases — complete
+2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
+3. Differential Geometry III — Tangent Vectors and the Differential — complete
+4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — complete
+5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — complete
+6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — complete
+7. Differential Geometry VII — Tensors and Tensor Fields — in progress
+8. Differential Geometry VIII — Differential Forms — in progress
+9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — pending
+10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — pending
+11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — pending
+12. Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds — pending
 
 ## Mode
-_none_ — `improve` | `create` | `mixed` (mode per unit in Scope if mixed).
+`improve`
 
 ## Working branch
-_none_ — `codex/<slug>` while a unit is in progress; `none (merged)` between units (each completed unit is merged into `main` and its branch deleted).
+`codex/improve-all-differential-geometry-dg-viii`
 
 ## Pull request
-_none_ — the PR of the unit currently in progress, `#<number> <url> (open)`; merged PRs move to Merge history.
+`not opened yet`
 
 ## Sources
-_none_ — repository files under `sources/` or `paper_source/` used for this task; DAG entry consulted.
+`Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
 
 ## Completed units
-_none_
+- Differential Geometry I — Smooth Manifolds and Atlases (`3ac9654`)
+- Differential Geometry II — Smooth Maps and Partitions of Unity (`7071255`)
+- Differential Geometry III — Tangent Vectors and the Differential (`8228dec`, PR #5)
+- Differential Geometry IV — Rank and Submanifold Theory (`937c276`, PR #7)
+- Differential Geometry V — Vector Fields, Flows, and Brackets (`b6c873f`, PR #9)
+- Differential Geometry VI — Vector Bundles and the Cotangent Bundle (`5b34532`, PR #10)
+- Differential Geometry VII — Tensors and Tensor Fields (`5b34532`, PR #11)
 
 ## Current unit
-_none_ — unit id, and which workflow phase it is in.
+`dg-viii` — Differential Geometry VIII, workflow Phase 3.1 (diagnosis and target complete).
 
 ## Remaining units
-_none_
+Differential Geometry VIII–XII (five units; VIII is active).
 
 ## Unresolved issues
-_none_ — anything a review left open or that needs a human decision.
+_none_.
 
 ## Exact next action
-Wait for a user prompt. On `Improve <Topic>`, `Improve all <area> notes`, or `Create notes on <X>`: run workflow.md Phase 0, then Phase 1 to populate this file, commit it as the first commit on a new `codex/<slug>` branch, and proceed.
+Open the DG VIII checkpoint PR, then replace the tangled uniqueness/locality and pullback proofs and repair every coordinate sign derivation.
 
 ## Last completed commit
-_none_
+`5384ab2`
 
 ## Merge policy
-`auto` — merge each completed unit into `main` immediately (default). Alternatives set by the prompt: `hold` (one PR, left open), `direct` (no PRs, push to `main`).
+`auto` — merge each completed unit into `main` immediately.
 
 ## Merge history
-One line per merged unit: `#<PR> <unit> → main @ <sha> (<date>)`.
 - #2 smoke test → main @ eba050d (2026-09-05)
+- #3 Differential Geometry I → main @ 3ac9654 (2026-09-05)
+- #4 Differential Geometry II → main @ 089fad6 (2026-09-05)
+- #5 Differential Geometry III → main @ 31ef0ac (2026-09-05)
+- #7 Differential Geometry IV → main @ 86a334b (2026-09-06)
+- #9 Differential Geometry V → main @ 577a002 (2026-09-06)
+- #10 Differential Geometry VI → main @ 9aea8d5 (2026-09-06)
+- #11 Differential Geometry VII → main @ 2e5c3ac (2026-09-06)

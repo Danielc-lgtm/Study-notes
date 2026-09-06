@@ -116,7 +116,7 @@ The chain rule for smooth curves: $\tilde\gamma'(s) = (\gamma \circ \sigma)'(s) 
 
 # Key Takeaways
 
-**The line integral depends only on the oriented image of $\gamma$.** A smooth curve $\gamma : [a, b] \to M$ defines an oriented arc (the image with a direction of travel); reparameterizing changes the parametrization but not the oriented arc. The theorem says the integral is well-defined as a function of the oriented arc, not just of the parametrization. This is what justifies writing $\int_\gamma \omega$ without specifying the parametrization explicitly.
+**The line integral depends on the oriented parametrized curve modulo admissible reparameterization, not merely on its image.** An orientation-preserving diffeomorphism of parameter intervals changes the clock but preserves the traversal, hence preserves the integral. The image set alone is insufficient: a curve may traverse the same arc twice, pause, or retrace part of it, and multiplicity and direction affect the integral.
 
 **The structural reason is the chain rule plus linearity of the pairing.** The chain rule gives $\tilde\gamma' = \sigma' \cdot \gamma' \circ \sigma$; linearity of the pairing $\omega(v)$ in $v$ lets us factor the scalar $\sigma'$ out; the substitution rule converts the inner-integral measure $\sigma'(s) ds$ to $dt$. So the structural pieces of the proof are exactly the chain rule, linearity, and the substitution rule — each of which is a fundamental property of smooth maps and integration. The composite gives the invariance.
 

@@ -189,11 +189,13 @@ The key bridge is the Lie derivative identification $\mathcal{L}_X Y = [X, Y]$. 
 
 # Cross-Field Exercise Suggestions
 
-**Torus action on a manifold from commuting periodic flows.** If $X_1, \dots, X_n$ are linearly independent commuting smooth complete vector fields on $M$ with periodic flows of period $2\pi$, then their joint flow defines a smooth action of the torus $T^n = (\mathbb{R}/2\pi\mathbb{Z})^n$ on $M$. The commutativity assumption is what makes the joint flow well-defined as a $T^n$-action; without it, only an $\mathbb{R}^n$-action emerges. This is the geometric source of toric symplectic geometry — see Atiyah and Guillemin–Sternberg's convexity theorems.
+**Torus action from commuting periodic flows.** If $X_1,\ldots,X_n$ are complete, commute pairwise, and each flow has period $2\pi$, then
+$$([t_1],\ldots,[t_n])\cdot p=\phi^{X_1}_{t_1}\circ\cdots\circ\phi^{X_n}_{t_n}(p)$$
+defines a $T^n$-action. Commutativity is what first produces an $\mathbb R^n$-action; periodicity then makes it descend to the quotient torus. Without commutativity there is generally no $\mathbb R^n$-action at all.
 
 **Symmetries of a Hamiltonian system.** In Hamiltonian mechanics, a function $F : T^*M \to \mathbb{R}$ that Poisson-commutes with the Hamiltonian $H$ — $\{F, H\} = 0$ — gives a conserved quantity. The Hamiltonian flows of $F$ and $H$ commute (by $[X_F, X_H] = -X_{\{F, H\}} = 0$), so the flow of $F$ is a symmetry of the dynamics of $H$. The Commuting Flows Theorem is what licences this geometric interpretation of Poisson-commuting observables.
 
-**Action-angle coordinates on a completely integrable system.** A Hamiltonian system on a $2n$-dimensional symplectic manifold is **completely integrable** if it has $n$ independent commuting conserved quantities. The Liouville–Arnold theorem says the joint level sets of these quantities are diffeomorphic to tori, and on these tori the system is conjugate to a linear flow. The Commuting Flows Theorem certifies that the joint flow is a torus action, and the existence of action-angle coordinates is the multi-field Straightening Theorem (Lee 9.46) applied to the commuting Hamiltonian flows.
+**Action-angle coordinates on a completely integrable system.** For $n$ independent Poisson-commuting integrals on a $2n$-dimensional symplectic manifold, Liouville–Arnold says each **compact connected regular** joint level set is a torus and has a neighbourhood with action-angle coordinates. The commuting-flows theorem supplies the local $\mathbb R^n$-action; compactness and the period lattice produce the torus action. Multi-field straightening alone does not supply the action coordinates or the global torus conclusion.
 
 **Linear flows on the torus.** On $T^n = \mathbb{R}^n / \mathbb{Z}^n$, the constant-coefficient vector fields $X_a = a^i \partial_i$ all commute pairwise. The flow of $X_a$ is the linear flow $\phi^a_t(\theta) = \theta + ta$, and these commute. The full toric symmetry $T^n \times T^n \to T^n$ is the joint flow of an abelian Lie algebra of commuting vector fields. The bracket condition is automatic from the abelian Lie algebra structure.
 
@@ -209,7 +211,7 @@ The key bridge is the Lie derivative identification $\mathcal{L}_X Y = [X, Y]$. 
 
 - **[[Def - Lie Derivative of a Vector Field|Lie derivative]]** — the meaning of (b) and (c). $\mathcal{L}_X Y = 0$ is exactly "$Y$ is invariant under the flow of $X$", and the Commuting Flows Theorem connects this to bracket-vanishing and to flow commutation.
 
-- **Lie's third theorem** — a global converse of sorts. Every finite-dimensional Lie algebra integrates to a connected simply-connected Lie group. The proof requires assembling commuting flows of left-invariant vector fields into a coherent group operation; the Commuting Flows Theorem is the prerequisite that lets you make sense of "commuting flows of commuting fields" globally.
+- **Lie integration is a different level of result.** Lie's third theorem integrates every finite-dimensional Lie algebra to a connected simply connected Lie group. The present theorem handles commuting pairs of already existing vector fields; it is useful in studying actions of abelian Lie algebras but is not, by itself, a proof of Lie's third theorem.
 
 ---
 
@@ -219,7 +221,7 @@ The key bridge is the Lie derivative identification $\mathcal{L}_X Y = [X, Y]$. 
 > Given $k$ linearly independent commuting smooth vector fields $V_1, \dots, V_k$ on $M$, there are local coordinates $(s^1, \dots, s^n)$ in which $V_i = \partial/\partial s^i$ for $i = 1, \dots, k$. This is the multi-field generalization of [[Thm - Canonical Form for a Nonvanishing Vector Field]]; the commutativity is what licenses the coordinate construction.
 
 > [!tip] Frobenius Theorem *(from Distributions)*
-> A smooth distribution $D \subseteq TM$ is **integrable** (tangent to a foliation) if and only if it is **involutive** ($[X, Y] \in \Gamma(D)$ for $X, Y \in \Gamma(D)$). See [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius]]. The Commuting Flows Theorem is the rank-one ancestor: bracket vanishing of a single pair of fields is the bracket-closure condition on the span of those two fields, and the canonical-form coordinates are the integral leaves.
+> A smooth distribution $D\subseteq TM$ is integrable exactly when it is involutive. Pairwise bracket **vanishing** is stronger than closure of brackets inside $D$; it permits simultaneous straightening of a chosen frame. Frobenius handles the harder case in which brackets need only remain in the distribution and the frame need not commute initially.
 
 > [!tip] Hamiltonian Torus Action *(from Symplectic Geometry)*
 > Commuting periodic Hamiltonian flows assemble into a smooth **torus action** $T^n \to \mathrm{Symp}(M, \omega)$ on a symplectic manifold. The Atiyah–Guillemin–Sternberg convexity theorem says the momentum map image is a convex polytope; the toric setting is when the torus has half the dimension of the manifold. The Commuting Flows Theorem certifies the underlying $T^n$-action exists.

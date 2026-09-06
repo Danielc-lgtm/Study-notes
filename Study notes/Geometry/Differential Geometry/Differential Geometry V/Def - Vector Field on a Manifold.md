@@ -72,7 +72,7 @@ In linear algebra terms, a vector field $X$ is a **choice of element from each f
 
 **Is an instance: the rotation field on $\mathbb{R}^2$.** Define $W = -y\,\partial/\partial x + x\,\partial/\partial y$. Its integral curves are circles centred at the origin, traversed counterclockwise. The flow is rotation: $\phi_t(x, y) = (x\cos t - y\sin t, x\sin t + y\cos t)$.
 
-**Is an instance: the velocity field of a flow.** Given any smooth one-parameter family of [[Def - Diffeomorphism|diffeomorphisms]] $\phi_t : M \to M$ with $\phi_0 = \mathrm{id}$, the assignment $p \mapsto \frac{d}{dt}\big|_{t=0} \phi_t(p)$ is a smooth vector field on $M$. The flow recovers the vector field by differentiation at $t = 0$ — see [[Def - Flow of a Vector Field]].
+**Is an instance: the velocity field of a flow.** Any smooth family of diffeomorphisms $\phi_t$ with $\phi_0=\mathrm{id}$ defines an initial velocity field $X_p=\partial_t|_0\phi_t(p)$. It is the infinitesimal generator of the whole family only when the local group law holds; an arbitrary isotopy can have the same initial velocity without solving the autonomous equation $\partial_t\phi_t=X\circ\phi_t$. For a genuine flow, differentiation at zero recovers its generator uniquely.
 
 **Is an instance: the angle vector field $d/d\theta$ on $S^1$.** Choose an angle coordinate $\theta$ on any proper open subset of $S^1$; the coordinate vector field $d/d\theta$ extends to a globally defined nonvanishing smooth vector field on $S^1$ (because $d\theta$ is determined up to additive constants by any choice of angle coordinate). $S^1$ is therefore *parallelizable*: it admits a global nonvanishing vector field.
 

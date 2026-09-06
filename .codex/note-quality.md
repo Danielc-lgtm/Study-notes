@@ -24,6 +24,19 @@ For improve-mode units these three are diagnosed and fixed before anything in
 sections A–F, and a unit cannot be `complete` while any of them fails.
 `AGENTS.md` §7 "Rewrite priorities" is the governing text.
 
+**Ambition standard.** Diagnosis supplies the minimum repair list, not the
+definition of success. Before editing, write a target description of the best
+topic graph Codex could produce from the sources and the polymath-notes
+specification today: its structure, unifying frame, true names, proof
+architecture, examples, counterexamples, bridges, and exercises. Compare the
+existing unit with that target and with the gold-standard subjects; every gap
+is work even if no visible defect triggered it. Restructure, reorder, split,
+merge, add pages, or rewrite from scratch wherever doing so materially improves
+learning, rigour, re-entry, or rederivation. Preserve every correct useful item,
+complete source coverage, and all updated incoming links. Ambition applies
+within the unchanged priority order P1 rigour → P2 self-containedness → P3
+explanation → P4 conciseness; diff size and length are not objectives.
+
 **P1. Rigour — complete proofs everywhere.** Applicable to every Thm / Lemma /
 Prop / Cor page (Formal Proof section), every Def page (Examples /
 Corollaries and Calibration check), and every Ex page (Complete formal
@@ -308,11 +321,14 @@ entry has a subpage, statements match.
 **F3. Neighbour consistency** — conventions, names, and notation agree with the
 preceding/following topic pages and with the DAG entry's framing.
 
-**F4. Cross-subject parity** — sample one topic page, two Def, two Thm, two Ex
-from the unit and compare against the gold-standard subjects (Group Theory,
-Multivariate Analysis, Special Relativity). Any dimension materially behind
-triggers a rewrite of that section. The bar is "as good as the best existing
-subject", not "meets the minimum".
+**F4. Cross-subject and from-scratch parity** — sample one topic page, two Def,
+two Thm, two Ex from the unit and compare both against the gold-standard
+subjects (Group Theory, Multivariate Analysis, Special Relativity) and against
+what each page would contain if Codex wrote it from scratch today to the
+specification. Any dimension where the rewritten page would lose either
+comparison triggers another rewrite. The bar is "as good as the best existing
+subject and as good as today's best from-scratch Codex page", not "meets the
+minimum".
 
 **F5. Mechanical audits clean** — the five scripts in `workflow.md` Phase 4.2
 plus the link audit.
@@ -343,7 +359,7 @@ Record the result in `progress.json` → `units[<id>].review`.
 14. Every Thm: ≥ 3 disguised sources and ≥ 3 target combinations, or explicit not-applicable (D3); bold mechanism one-liner in Why Is It True (D4); What Makes This Hard present (D5); scaffold contract present (D6).
 15. Topic page: hook, backbone (if any), audience paragraph (B2); ≥ 7 legal + ≥ 3 illegal operations with counterexample and legalising condition (B5); unifying-question close (B6); ≥ 2 Insights paragraphs (B9); bridges unpacked (B8).
 16. Concept map ↔ subpages reconciled (F2); neighbours and DAG consistent (F3).
-17. Parity sample against a gold-standard subject done; every "materially behind" section rewritten (F4).
+17. Parity sample against gold-standard subjects and a from-scratch Codex target done; every losing dimension rewritten (F4).
 18. Nothing correct from the pre-edit version was lost (diff reviewed); no planning text leaked (F6).
 19. Improve mode only: every "fail" in the Phase-3 diagnosis is now "pass" or listed under Unresolved with a reason.
 20. **P1 rigour gate:** `grep -n -i "clearly\|obviously\|it is easy to see\|similarly\|analogous\|left to the reader\|omitted" "<unit>"/*.md` reviewed line by line — every hit either expanded into an argument or justified as genuinely trivial; every Thm/Lemma/Prop/Cor page has a non-empty `Formal Proof` covering all cases and directions; every `> [!note]- Full proof` inside a lemma callout is present and complete; every Ex page has its `Complete formal solution`.
@@ -351,5 +367,6 @@ Record the result in `progress.json` → `units[<id>].review`.
 22. **P3 explanation gate:** the diagnosis names, per explanatory section, `keep / tighten / replace`, and every `replace` has a one-line reason; replaced sections re-read against A2 (register) and A1 (statements untouched).
 23. **P4 conciseness gate:** a final tightening pass was made over every page in the unit; for each page the pre/post diff was checked to confirm that every deleted or shortened passage carried no fact, case, justification, example, or connection that is absent from the final text (`git diff --word-diff` on the page, read the removals); no proof step, source item, example, or bridge was removed.
 24. Unit committed with a descriptive message; ledgers updated; branch pushed.
+25. **Ambition gate:** the target description was written before editing, and every gap between the existing unit and that target has been closed or listed under Unresolved with a concrete reason.
 
 A unit with any line unresolved stays `review`, not `complete`.

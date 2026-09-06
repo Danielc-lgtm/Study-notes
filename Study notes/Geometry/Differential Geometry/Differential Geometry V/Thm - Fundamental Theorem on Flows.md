@@ -141,25 +141,22 @@ Get integral curves through every point from [[Thm - Existence and Uniqueness of
 > > [!note]- Full proof
 > > $\tilde\gamma'(t) := d\tilde\gamma_t(d/dt|_t)$. By the chain rule for smooth curves, $\tilde\gamma'(t) = \frac{d}{dt} \gamma(t + b) = \gamma'(t + b)$. Since $\gamma$ is an integral curve, $\gamma'(t + b) = X_{\gamma(t+b)} = X_{\tilde\gamma(t)}$. Hence $\tilde\gamma$ is an integral curve.
 
-> [!note]- Lemma 2: The flow domain $\mathcal{D}$ is open
-> **Statement:** Let $X$ be a smooth vector field on $M$ with maximal integral curves $\phi^{(p)}$, and define $\mathcal{D} = \{(t, p) : t \in \mathcal{D}^{(p)}\}$. Then $\mathcal{D}$ is open in $\mathbb{R} \times M$.
+> [!note]- Lemma 2: The flow domain is open and the assembled map is smooth
+> **Statement:** For the maximal integral curves $\phi^{(p)}$, the set $\mathcal D=\{(t,p):t\in\mathcal D^{(p)}\}$ is open in $\mathbb R\times M$, and $\phi(t,p)=\phi^{(p)}(t)$ is smooth on $\mathcal D$.
 >
-> **Hint:** Given $(t_0, p_0) \in \mathcal{D}$ with $t_0 > 0$, cover the trajectory $\phi^{(p_0)}([0, t_0])$ by finitely many open product-neighbourhoods $J_i \times U_i \subseteq \mathcal{D}$ from local Picard–Lindelöf; the group law then lets you "concatenate" to produce a product-neighbourhood of $(t_0, p_0)$.
->
-> **Why needed:** Without openness of $\mathcal{D}$, the flow $\phi$ is not smooth on its domain (smoothness requires an open domain).
+> **Why needed:** Pointwise maximal curves do not automatically assemble into a smooth map on an open domain; this is precisely where smooth dependence on initial data enters.
 >
 > > [!note]- Full proof
-> > Let $(t_0, p_0) \in \mathcal{D}$ with $t_0 \geq 0$ (the case $t_0 < 0$ is symmetric). Consider the trajectory $K = \phi^{(p_0)}([0, t_0]) \subset M$, a compact connected curve.
+> > Fix $(t_0,p_0)\in\mathcal D$ and suppose first that $t_0>0$. The compact trajectory segment $K=\phi^{(p_0)}([0,t_0])$ is covered by finitely many coordinate neighbourhoods on which the local ODE theorem supplies a smooth solution map
+> > $$\Theta_j:(-\varepsilon_j,\varepsilon_j)\times U_j\to M,
+> > \qquad \Theta_j(0,q)=q.$$
+> > Choose a partition $0=t_0^{(0)}<t_0^{(1)}<\cdots<t_0^{(r)}=t_0$ fine enough that the piece of the reference trajectory over each interval lies in one such flow box and has length less than its available time. Shrinking the initial neighbourhood successively, continuity of each $\Theta_j$ ensures that nearby initial points remain in the next box. Therefore the finite composition
+> > $$q\longmapsto
+> > \Theta_r(\Delta t_r,\Theta_{r-1}(\Delta t_{r-1},\ldots,
+> > \Theta_1(\Delta t_1,q)\ldots))$$
+> > is defined and smooth for $q$ in some neighbourhood $U$ of $p_0$. Uniqueness identifies this composition with $\phi(t_0,q)$.
 > >
-> > Define $W \subseteq \mathcal{D}$ as the set of $(t, p) \in \mathcal{D}$ such that $\phi$ is defined and smooth on a product neighbourhood $J \times U$ of $(t, p)$ with $J$ open interval containing $0$ and $t$, and $U$ an open neighbourhood of $p$. $W$ is open by definition. We show $(t_0, p_0) \in W$.
-> >
-> > Let $T = \sup \{t \in [0, t_0] : (t, p_0) \in W\}$. By local Picard–Lindelöf there is a product neighbourhood $(-\varepsilon, \varepsilon) \times U_0$ of $(0, p_0)$ in $\mathcal{D}$ with $\phi$ smooth, so $T \geq \varepsilon > 0$.
-> >
-> > Suppose $T \leq t_0$, aiming for contradiction. Let $q = \phi^{(p_0)}(T)$. By local Picard–Lindelöf at $q$, there is $\eta > 0$ and an open $V \ni q$ with $\phi$ defined and smooth on $(-\eta, \eta) \times V$. Pick $T - \eta/2 < t_1 < T$ with $(t_1, p_0) \in W$, so $\phi$ is smooth on a product neighbourhood $J_1 \times U_1$ of $(t_1, p_0)$ contained in $\mathcal{D}$. Shrink $U_1$ so $\phi(\{t_1\} \times U_1) \subseteq V$.
-> >
-> > Define $\tilde \phi$ on $(t_1 - \eta/2, t_1 + \eta) \times U_1$ by $\tilde\phi(t, p) = \phi(t - t_1, \phi(t_1, p))$, the composition of smooth maps, hence smooth. By the group law, $\tilde\phi = \phi$ where both are defined, so $\phi$ extends smoothly to $(t_1 - \eta/2, t_1 + \eta) \times U_1$. This contains a product neighbourhood of $(T, p_0)$, contradicting maximality of $T$.
-> >
-> > Hence $T > t_0$ and $(t_0, p_0) \in W$. So $\mathcal{D} \subseteq W$, hence $\mathcal{D} = W$ is open.
+> > The final flow box has spare time. Hence the same composition remains defined when the last time increment is varied in an interval $(t_0-\delta,t_0+\delta)$. It gives a smooth map on $(t_0-\delta,t_0+\delta)\times U$, and uniqueness again identifies it with $\phi$. Thus this product neighbourhood lies in $\mathcal D$. For $t_0<0$ use backward-time boxes; $t_0=0$ is the local existence theorem itself. Every point of $\mathcal D$ therefore has such a product neighbourhood, proving both openness of $\mathcal D$ and smoothness of $\phi$.
 
 > [!note]- Lemma 3: The maximal flow is unique
 > **Statement:** If $\phi, \tilde\phi : \mathcal{D}, \tilde{\mathcal D} \to M$ are two smooth maximal flows with infinitesimal generator $X$, then $\mathcal{D} = \tilde{\mathcal D}$ and $\phi = \tilde\phi$.
@@ -186,11 +183,9 @@ Get integral curves through every point from [[Thm - Existence and Uniqueness of
 >
 > **Step 3 — Group law (proves (b)).** Suppose $s \in \mathcal{D}^{(p)}$ and let $q = \phi_s(p) = \phi^{(p)}(s)$. By Lemma 1 (translation lemma), $t \mapsto \phi^{(p)}(t + s)$ is an integral curve starting at $q$, defined for $t$ in the shifted interval $\mathcal{D}^{(p)} - s$. By uniqueness of maximal integral curves ([[Thm - Existence and Uniqueness of Integral Curves]]), this curve agrees with $\phi^{(q)}$ on $\mathcal{D}^{(p)} - s \cap \mathcal{D}^{(q)}$, and maximality of $\phi^{(q)}$ forces $\mathcal{D}^{(p)} - s \subseteq \mathcal{D}^{(q)}$. Applying the same argument with $q$ and $-s$ gives $\mathcal{D}^{(q)} + s \subseteq \mathcal{D}^{(p)}$, i.e. $\mathcal{D}^{(q)} \subseteq \mathcal{D}^{(p)} - s$. Hence $\mathcal{D}^{(q)} = \mathcal{D}^{(p)} - s$, and $\phi^{(q)}(t) = \phi^{(p)}(t + s)$, i.e. $\phi_t(\phi_s(p)) = \phi_{t+s}(p)$.
 >
-> **Step 4 — Openness of $\mathcal{D}$ (proves (c) part 1).** By Lemma 2, $\mathcal{D}$ is open in $\mathbb{R} \times M$.
+> **Steps 4–5 — Open domain and smooth dependence.** Lemma 2 applies local smooth-dependence flow boxes successively along each compact trajectory segment. It produces, around every $(t_0,p_0)\in\mathcal D$, a product neighbourhood contained in $\mathcal D$ on which the assembled map is a finite composition of smooth local solution maps. Hence $\mathcal D$ is open and $\phi$ is smooth on all of it.
 >
-> **Step 5 — Smoothness of $\phi$.** Local Picard–Lindelöf gives, around each $(t_0, p_0) \in \mathcal{D}$, a product neighbourhood $J \times U \subseteq \mathcal{D}$ on which $\phi$ is smooth (the smooth-dependence statement of [[Thm - The Contraction Mapping Principle|Picard–Lindelöf]] in $\mathbb{R}^n$, applied in a chart). The proof of openness in Lemma 2 also shows that smoothness extends globally on $\mathcal{D}$ using the group law $\phi_t = \phi_{t - t_0} \circ \phi_{t_0}$, since each factor is smooth on a small set.
->
-> **Step 6 — Each $\phi_t$ is a diffeomorphism (proves (c) part 2).** For each $t \in \mathbb{R}$, $M_t = \{p : (t, p) \in \mathcal{D}\}$ is the projection of the open set $\{t\} \times M \cap \mathcal{D}$ in $\mathcal{D}$ onto $M$, hence open in $M$. From the group law, for $p \in M_t$, $\phi_{-t}(\phi_t(p)) = \phi_0(p) = p$, so $\phi_t : M_t \to M_{-t}$ has the smooth left inverse $\phi_{-t}$ on $M_{-t}$ (and the analogous right inverse). Hence $\phi_t$ is a diffeomorphism.
+> **Step 6 — Each $\phi_t$ is a diffeomorphism (proves (c) part 2).** The slice $M_t=\{p:(t,p)\in\mathcal D\}$ is open because it is the inverse image of the open set $\mathcal D$ under the continuous embedding $p\mapsto(t,p)$. The domain-translation identity in Step 3 shows $\phi_t(M_t)=M_{-t}$. On these domains the group law gives $\phi_{-t}\circ\phi_t=\mathrm{id}_{M_t}$ and $\phi_t\circ\phi_{-t}=\mathrm{id}_{M_{-t}}$. Both maps are smooth restrictions of $\phi$, so they are inverse diffeomorphisms.
 >
 > **Step 7 — Maximality and uniqueness.** By construction, each $\phi^{(p)}$ is maximal as an integral curve, so $\phi$ is maximal as a flow. By Lemma 3, $\phi$ is the unique smooth maximal flow with infinitesimal generator $X$.
 >

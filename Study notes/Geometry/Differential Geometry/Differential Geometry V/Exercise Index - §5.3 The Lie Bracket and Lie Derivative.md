@@ -16,3 +16,5 @@ These exercises drill the central object of the chapter — the Lie bracket — 
 - [[Ex - The Jacobi Identity for Vector Fields]] (⭐⭐) — Prove the Jacobi identity $[X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0$ by direct expansion using the commutator definition, and interpret it as the statement that $\mathrm{ad}_X = [X, \cdot]$ is a derivation of the Lie bracket. ([[Def - The Lie Bracket of Vector Fields]], [[Thm - Lie Bracket Properties]])
 
 - [[Ex - The Coordinate Vector Fields Commute]] (⭐) — Bracket of coordinate vector fields vanishes, via two routes (coordinate formula and equality of mixed partials). Establishes the calibration point against which non-trivial brackets are measured. ([[Def - The Lie Bracket of Vector Fields]], [[Def - Smooth Vector Field]])
+
+- [[Ex - Faraday's Law via Reynolds Transport]] (⭐⭐⭐) — Differentiate magnetic flux through a moving surface and derive the motional EMF term using the time-dependent Reynolds theorem, Cartan's formula, and Stokes's theorem. ([[Thm - Reynolds Transport Theorem]], [[Def - Lie Derivative of a Vector Field]])

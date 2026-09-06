@@ -104,45 +104,23 @@ The proof has three parts. Part (a) is immediate from the open-submanifold of a 
 Expand $e^{tA}e^{tB}e^{-tA}e^{-tB}$ to second order and read off the leading term.
 
 > [!note]- Derivation
-> Use the Taylor expansion of the matrix exponential:
-> $$e^{tA} = I + tA + \frac{t^{2}}{2}A^{2} + O(t^{3}).$$
-> Similarly for $e^{tB}, e^{-tA}, e^{-tB}$. Multiply out, keeping terms through $t^{2}$.
->
-> $e^{tA} e^{tB} = (I + tA + t^{2}A^{2}/2)(I + tB + t^{2}B^{2}/2) + O(t^{3})$
-> $= I + tA + tB + t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2 + O(t^{3})$.
->
-> $e^{-tA} e^{-tB} = I - tA - tB + t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2 + O(t^{3})$ — same as above with $t \to -t$ (since the expansion is symmetric in the sense that $t^{2}$ terms are unchanged).
->
-> Wait, that is wrong. Let me redo it. With $t \to -t$:
-> $e^{-tA} e^{-tB} = I + (-t)A + (-t)B + (-t)^{2}AB + (-t)^{2}A^{2}/2 + (-t)^{2}B^{2}/2 + O(t^{3})$
-> $= I - tA - tB + t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2 + O(t^{3})$.
->
-> Now the full product:
-> $\gamma_{A,B}(t) = (e^{tA}e^{tB})(e^{-tA}e^{-tB}) = (I + tA + tB + t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2)(I - tA - tB + t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2) + O(t^{3})$.
->
-> Multiply out, keeping only terms through $t^{2}$:
-> - $I \cdot I = I$
-> - $I \cdot (-tA - tB) = -tA - tB$
-> - $(tA + tB) \cdot I = tA + tB$
-> - $I \cdot (t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2) = t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2$
-> - $(tA + tB) \cdot (-tA - tB) = -t^{2}A^{2} - t^{2}AB - t^{2}BA - t^{2}B^{2}$
-> - $(t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2) \cdot I = t^{2}AB + t^{2}A^{2}/2 + t^{2}B^{2}/2$
->
-> Sum:
-> $t^{0}$: $I$
-> $t^{1}$: $-tA - tB + tA + tB = 0$
-> $t^{2}$: $AB + A^{2}/2 + B^{2}/2 - A^{2} - AB - BA - B^{2} + AB + A^{2}/2 + B^{2}/2$
-> $= AB \cdot 1 + AB \cdot 1 + AB \cdot (-1) + A^{2}(1/2 + 1/2 - 1) + B^{2}(1/2 + 1/2 - 1) + BA \cdot (-1)$
-> Wait, let me carefully collect:
-> - $AB$ coefficient: $1$ (from $I \cdot t^{2}AB$) + $(-1)$ (from $(tA + tB)(-tA - tB)$ contributing $-AB$) + $1$ (from $t^{2}AB \cdot I$) = $1$
-> - $BA$ coefficient: $0$ (from $I \cdot t^{2}AB$, which is $AB$ not $BA$) + $(-1)$ (from $(tA + tB)(-tA - tB)$ contributing $-BA$) + $0$ (from $t^{2}AB \cdot I$, again $AB$) = $-1$
-> - $A^{2}$ coefficient: $1/2 + (-1) + 1/2 = 0$
-> - $B^{2}$ coefficient: $1/2 + (-1) + 1/2 = 0$
->
-> So the $t^{2}$ coefficient is $AB - BA = [A, B]$.
->
-> Therefore $\gamma_{A, B}(t) = I + t^{2}[A, B] + O(t^{3})$. The velocity $\gamma_{A, B}'(0) = 0$ as claimed, and the *second-order* coefficient is $[A, B]$ — the commutator. Geometrically: the curve $\gamma_{A, B}$ measures the failure of $e^{tA}$ and $e^{tB}$ to commute, and that failure is "infinitesimally $[A, B]$".
-
+> Taylor's formula for the matrix exponential gives, in any matrix norm,
+> $$e^{\pm tA}=I\pm tA+\frac{t^2}{2}A^2+O(t^3),\qquad e^{\pm tB}=I\pm tB+\frac{t^2}{2}B^2+O(t^3).$$
+> Multiplication is continuous and bilinear on the finite-dimensional matrix space, so products containing an $O(t^3)$ factor remain $O(t^3)$. Set
+> $$X=A+B,\qquad P_2=\frac12A^2+AB+\frac12B^2.$$
+> Multiplying the first two and last two exponentials in their displayed order yields
+> $$e^{tA}e^{tB}=I+tX+t^2P_2+O(t^3),$$
+> $$e^{-tA}e^{-tB}=I-tX+t^2P_2+O(t^3).$$
+> Therefore
+> \begin{align*}
+> \gamma_{A,B}(t)
+> &=\bigl(I+tX+t^2P_2\bigr)\bigl(I-tX+t^2P_2\bigr)+O(t^3)\\
+> &=I+t^2(2P_2-X^2)+O(t^3)\\
+> &=I+t^2(AB-BA)+O(t^3).
+> \end{align*}
+> The linear terms cancel, and the last equality follows from
+> $$2P_2-X^2=(A^2+2AB+B^2)-(A^2+AB+BA+B^2)=AB-BA.$$
+> Hence $\gamma_{A,B}'(0)=0$ and $\frac12\gamma_{A,B}''(0)=[A,B]$. The bracket is the first nonzero displacement of the group commutator, occurring at second order.
 > [!note]- Complete formal solution
 > *Part (a).* $\mathrm{GL}(n, \mathbb{R})$ is the open subset $\{A \in M_{n}(\mathbb{R}) : \det A \neq 0\}$ of the vector space $M_{n}(\mathbb{R})$. For an open subset of a finite-dimensional vector space, $T_{a}\mathrm{GL}(n) \cong T_{a}M_{n}(\mathbb{R}) \cong M_{n}(\mathbb{R})$ canonically (the second isomorphism being $v \mapsto D_{v}|_{a}$). So $T_{I}\mathrm{GL}(n) \cong M_{n}(\mathbb{R})$.
 >
@@ -152,12 +130,11 @@ Expand $e^{tA}e^{tB}e^{-tA}e^{-tB}$ to second order and read off the leading ter
 > $$\frac{d}{dt}\bigg|_{t=0} (I + tH)^{-1} = -H.$$
 > Hence $d\iota_{I}(H) = -H$. Sanity check: $\iota \circ \iota = \mathrm{id}$ forces $(d\iota_{I})^{2} = \mathrm{id}$, and indeed $H \mapsto -H$ squares to identity.
 >
-> *Part (c).* Expand each exponential to second order:
-> $e^{\pm tA} = I \pm tA + t^{2}A^{2}/2 + O(t^{3})$, similarly for $B$.
->
-> Computing $\gamma_{A,B}(t) = e^{tA}e^{tB}e^{-tA}e^{-tB}$ to order $t^{2}$ and collecting terms (as in Step 3 above): the $t^{0}$ term is $I$, the $t^{1}$ terms cancel, and the $t^{2}$ term is $AB - BA = [A, B]$. So
-> $$\gamma_{A, B}(t) = I + t^{2}\,[A, B] + O(t^{3}).$$
-> Hence $\gamma_{A, B}'(0) = 0$, and the second-order coefficient is $[A, B]$ — the commutator of matrices. This is the *Lie algebra structure* on $T_{I}\mathrm{GL}(n) \cong M_{n}(\mathbb{R})$, coming from the infinitesimal failure of commutativity in the group. $\qquad\blacksquare$
+> *Part (c).* Put $X=A+B$ and $P_2=A^2/2+AB+B^2/2$. Taylor's formula and bilinearity of matrix multiplication give
+> $$e^{tA}e^{tB}=I+tX+t^2P_2+O(t^3),\qquad e^{-tA}e^{-tB}=I-tX+t^2P_2+O(t^3).$$
+> Multiplying these expressions gives
+> $$\gamma_{A,B}(t)=I+t^2(2P_2-X^2)+O(t^3)=I+t^2(AB-BA)+O(t^3).$$
+> Thus $\gamma_{A,B}'(0)=0$ and $\frac12\gamma_{A,B}''(0)=[A,B]$. The matrix commutator is therefore the leading infinitesimal failure of the two one-parameter subgroups to commute. $\qquad\blacksquare$
 
 ---
 

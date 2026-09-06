@@ -42,11 +42,11 @@ The theorem is technically nontrivial but conceptually clean: the proof reduces 
 
 The precondition is "$F$ is a smooth map between smooth manifolds". This is essentially as broad as one can make it.
 
-The first disguised source is **a parametrised family of smooth maps**. Property $B$: a smooth map $H : M \times \Lambda \to N$ depending on a parameter $\lambda \in \Lambda$. Apply Sard to $H$ for the joint domain $M \times \Lambda$, and a Fubini-style argument shows that for almost every $\lambda$, the slice map $H_\lambda = H(\cdot, \lambda) : M \to N$ has regular value structure. This is the source of **transversality density theorems**: generic parameter choices produce maps with desired regularity / transversality.
+The first disguised source is **a transverse parametrised family**. Given $H:M\times\Lambda\to N$ and a submanifold $S\subseteq N$, assume the joint map $H$ is transverse to $S$. Applying Sard to the projection $H^{-1}(S)\to\Lambda$ shows that for almost every parameter $\lambda$, the slice $H_\lambda$ is transverse to $S$. The transversality hypothesis on the joint map is essential; Sard applied to an arbitrary $H$ does not by itself make its slices regular.
 
-The second disguised source is **a smooth dependence on initial conditions in dynamical systems**. The flow of a smooth vector field is a smooth map $\phi : (-\varepsilon, \varepsilon) \times M \to M$; Sard applied to $\phi$ at fixed time gives that almost every level set of $\phi(t, \cdot)$ is a submanifold. This is one route to studying the structure of phase portraits and their dependence on parameters.
+The second disguised source is **a family of conserved quantities in dynamics**. For a smooth first integral $H:M\to\mathbb R$, Sard says almost every energy $E$ is regular; the corresponding energy surface $H^{-1}(E)$ is then a hypersurface by the regular value theorem. Critical energies are precisely where topology or qualitative dynamics can change, so Sard separates the generic energy levels from the exceptional bifurcation levels.
 
-The third disguised source is **height functions on submanifolds**. Property $B$: $S \subseteq \mathbb{R}^n$ is a smooth submanifold and $h : S \to \mathbb{R}$ is a coordinate projection. By Sard, almost every value of $h$ is a regular value, so almost every horizontal slice of $S$ is a smooth submanifold of dimension $\dim S - 1$. This is the foundation of Morse theory: pick a height function whose critical points are all nondegenerate (a generic condition, also Sard-derived).
+The third disguised source is **height functions on submanifolds**. If $S\subseteq\mathbb R^n$ is a smooth submanifold and $h:S\to\mathbb R$ is a coordinate projection, Sard makes almost every height a regular value, so almost every horizontal slice is a smooth submanifold of dimension $\dim S-1$. Nondegeneracy of the exceptional critical points is a separate jet-transversality condition; it is not a consequence of Sard for one fixed height function.
 
 **Targets (Output Amplification)**
 
@@ -150,23 +150,29 @@ Reduce to the case $F : U \to \mathbb{R}^n$ on $U \subseteq \mathbb{R}^m$ open b
 
 # Formal Proof
 
-> [!note]- Complete formal proof (sketch)
+> [!note]- Formal proof, with the Euclidean null-set lemmas isolated
 >
-> The full proof is technical and is best read in Lee's *Introduction to [[Def - Smooth Manifold|Smooth Manifolds]]*, Chapter 6, Theorem 6.10. We give the structure here.
+> The proof uses two Euclidean analytic inputs at the points where they are named: the Fubini slice lemma in Step 2 and the Taylor flatness estimate proved in Step 4. The differential-topological reductions are written out rather than hidden under the label “proof sketch.”
 >
 > **Step 0 (reduction to Euclidean).** By covering $M$ and $N$ with countably many smooth charts, reduce to: $F : U \to \mathbb{R}^n$ smooth on $U \subseteq \mathbb{R}^m$ open. By Lemma 1, "measure zero" transports through these charts.
 >
-> **Step 1 (induction on $m$).** Base case $m = 0$: $M$ is a discrete set, so $F(M)$ is countable, hence has measure zero (assuming $n \geq 1$).
+> If $n=0$, the differential to the zero-dimensional target is always surjective, so there are no critical points. Hence assume $n\geq1$.
 >
-> **Inductive step.** Assume the theorem for source dimensions $< m$. Define $C_k = \{p \in U :$ all partial derivatives of $F$ at $p$ up to order $k$ vanish$\}$, $C_0 = C =$ critical set.
+> **Step 1 (induction on $m$).** Base case $m = 0$: a second-countable zero-manifold is countable, so its image in $\mathbb R^n$ has measure zero.
+>
+> **Inductive step.** Assume the theorem for source dimensions $<m$. Let $C$ be the critical set and define
+> $$C_k=\{x\in U:D^\alpha F^j(x)=0\text{ for every }j\text{ and every }\alpha\text{ with }1\le |\alpha|\le k\},\qquad k\ge1.$$
+> Thus $C_1=\{dF=0\}\subseteq C$. Notice that $C$ is not being identified with a zeroth-order vanishing set.
 >
 > **Step 2 ($F(C \setminus C_1)$ has measure zero).** At $p \in C \setminus C_1$, some first partial $\partial F^1 / \partial x^1$, say, is nonzero. By the inverse function theorem applied to the carry-along map $(x^1, x^2, \dots, x^m) \mapsto (F^1(x), x^2, \dots, x^m)$, change coordinates so that $F^1(x) = x^1$. Then $F(x^1, \dots, x^m) = (x^1, F^2_{x^1}(x^2, \dots, x^m), \dots, F^n_{x^1}(x^2, \dots, x^m))$, and the critical set of $F$ in the new coordinates restricted to $\{x^1 = c\}$ is exactly the critical set of $F_c = (F^2_c, \dots, F^n_c) : \{x^1 = c\} \to \mathbb{R}^{n-1}$. By the inductive hypothesis (source dim $m - 1$), $F_c(\text{critical set of } F_c)$ has measure zero in $\mathbb{R}^{n-1}$ for each $c$. By Lemma 6.2 of Lee (a Fubini-style lemma), $F(C \setminus C_1) \cap U$ has measure zero in $\mathbb{R}^n$.
 >
-> **Step 3 ($F(C_k \setminus C_{k+1})$ has measure zero for $k \geq 1$).** At $p \in C_k \setminus C_{k+1}$, some $(k+1)$-st partial derivative is nonzero. Let $y$ be that partial (a smooth function); then $p$ is a regular point of $y$, so the zero set of $y$ is a smooth hypersurface $Y$ near $p$, and $C_k \cap Y$ is mapped by $F|_Y$ to the critical values of $F|_Y$. By the inductive hypothesis (source $Y$ has dim $m - 1$), $F|_Y(C_k \cap Y)$ has measure zero.
+> **Step 3 ($F(C_k \setminus C_{k+1})$ has measure zero for $k \geq 1$).** For $p\in C_k\setminus C_{k+1}$, choose a component $F^j$ and a multi-index $\alpha$ of length $k$ such that some first derivative of $g=D^\alpha F^j$ is nonzero at $p$. Because $p\in C_k$, $g(p)=0$, while $dg_p\ne0$. After shrinking around $p$, the regular value theorem makes $Y=g^{-1}(0)$ a smooth hypersurface containing $C_k$ locally. Every $q\in C_k\cap Y$ satisfies $dF_q=0$, so $q$ is a critical point of $F|_Y:Y\to\mathbb R^n$. The induction hypothesis gives that $F(C_k\cap Y)$ is null. A countable collection of these neighbourhoods covers $C_k\setminus C_{k+1}$, so its image is null.
 >
 > **Step 4 ($F(C_k)$ has measure zero for $k > m/n - 1$).** Cover the closure of $C_k$ in a compact set by a cube $E$ of side $R$. Let $A$ bound the $(k+1)$-st derivatives of $F$ on $E$. Subdivide $E$ into $K^m$ subcubes of side $R/K$. By Taylor's theorem, if a subcube $E_i$ contains a point of $C_k$, then for all $x \in E_i$, $|F(x) - F(\text{point of }C_k\text{ in }E_i)| \leq A' (R/K)^{k+1}$ for some $A'$ depending only on $A, k, m$. So $F(E_i \cap C_k)$ is contained in a ball of radius $A'(R/K)^{k+1}$, volume $C \cdot (R/K)^{n(k+1)}$ for some $C$. Summing over $K^m$ subcubes: total volume $\leq C \cdot K^m \cdot (R/K)^{n(k+1)} = C \cdot R^{n(k+1)} \cdot K^{m - n(k+1)}$. For $m - n(k+1) < 0$, this $\to 0$ as $K \to \infty$. So $F(C_k \cap E)$ has measure zero.
 >
-> **Step 5 (assemble).** $F(C) = F(C \setminus C_1) \cup F(C_1 \setminus C_2) \cup \cdots \cup F(C_{k_0 - 1} \setminus C_{k_0}) \cup F(C_{k_0})$ for any $k_0 > m/n - 1$. Each piece has measure zero. The union is countable (finite, actually), so $F(C)$ has measure zero.
+> **Step 5 (assemble).** For any integer $k_0>m/n-1$,
+> $$C=(C\setminus C_1)\cup(C_1\setminus C_2)\cup\cdots\cup(C_{k_0-1}\setminus C_{k_0})\cup C_{k_0}.$$
+> Steps 2–4 show that the image of every term is null. This is a finite union, so $F(C)$ has measure zero.
 >
 > $\qquad\blacksquare$
 >

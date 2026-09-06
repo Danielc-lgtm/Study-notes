@@ -34,7 +34,7 @@ The full notation registry for this topic is on [[Differential Geometry V — Ve
 > Equivalently, using Cartan's magic formula,
 > $$\frac{d}{dt}\int_{\phi_t(D)}\omega = \int_{\phi_t(D)}(\iota_X\,d\omega + d\,\iota_X\omega) = \int_{\phi_t(D)}\iota_X\,d\omega + \int_{\partial\phi_t(D)}\iota_X\omega.$$
 
-> **Theorem (Reynolds Transport — Time-Dependent Form).** With $X = X(t, \cdot)$ a smooth time-dependent vector field, $\phi_t$ the (in general not [[Def - Group|group]]-like) family of [[Def - Diffeomorphism|diffeomorphisms]] it generates, $D$ compact oriented as above, and $\omega_t \in \Omega^p(M)$ a smooth time-dependent $p$-form,
+> **Theorem (Reynolds Transport — Time-Dependent Form).** Let $\phi_t$ be a smooth isotopy with $\phi_0=\mathrm{id}$, defined on a neighbourhood of compact $D$, and let its Eulerian velocity be $X_t=\dot\phi_t\circ\phi_t^{-1}$. For a smooth family $\omega_t\in\Omega^p(M)$,
 > $$\frac{d}{dt}\int_{\phi_t(D)}\omega_t = \int_{\phi_t(D)}\left(\frac{\partial \omega_t}{\partial t} + \mathcal{L}_{X(t,\cdot)}\omega_t\right).$$
 
 > **Corollary (Classical Reynolds Transport on $\mathbb{R}^3$).** Let $\vec u(t, \vec x)$ be a smooth time-dependent velocity field on $\mathbb{R}^3$, $V(t)$ a material volume transported by $\vec u$, and $f(t, \vec x)$ a smooth scalar density. Then
