@@ -93,21 +93,26 @@ $$\varphi_{n+1}^+(\sigma_N^{-1}(u)) = \frac{2u}{|u|^2 + 1} \in \mathbb{B}^n.$$
 
 **Step 2: Compute the inverse transition $\sigma_N \circ (\varphi_{n+1}^+)^{-1}$.**
 
-The inverse chart $(\varphi_{n+1}^+)^{-1} : \mathbb{B}^n \to U_{n+1}^+$ is $(\varphi_{n+1}^+)^{-1}(y) = (y^1, \dots, y^n, \sqrt{1 - |y|^2})$. Compose with $\sigma_N$ to get
-$$\sigma_N \circ (\varphi_{n+1}^+)^{-1}(y) = \frac{y}{1 - \sqrt{1 - |y|^2}} \in \mathbb{R}^n,$$
-defined for $|y| < 1$ (i.e., $y \in \mathbb{B}^n$).
+The inverse chart $(\varphi_{n+1}^+)^{-1} : \mathbb{B}^n \to U_{n+1}^+$ is
+$$(\varphi_{n+1}^+)^{-1}(y)=(y^1,\dots,y^n,\sqrt{1-|y|^2}).$$
+The overlap with the domain of $\sigma_N$ excludes precisely $N$, whose graph coordinate is $0$. Hence the inverse transition has domain $\mathbb{B}^n\setminus\{0\}$, and there
+$$
+\sigma_N\circ(\varphi_{n+1}^+)^{-1}(y)
+=\frac{y}{1-\sqrt{1-|y|^2}}
+=\frac{1+\sqrt{1-|y|^2}}{|y|^2}y.
+$$
 
 > [!note]- Derivation
-> *Inverse chart.* $\varphi_{n+1}^+$ drops the last coordinate; its inverse fills it back in. For $x \in S^n$, $x^{n+1} = \sqrt{1 - \sum_{j=1}^n (x^j)^2}$ (positive root, since $U_{n+1}^+$ has $x^{n+1} > 0$). So $(\varphi_{n+1}^+)^{-1}(y) = (y^1, \dots, y^n, \sqrt{1 - |y|^2})$.
+> *Determine the domain before simplifying the formula.* The chart $\sigma_N$ is undefined only at $N=(0,\dots,0,1)$. Since
+> $$(\varphi_{n+1}^+)^{-1}(y)=(y,\sqrt{1-|y|^2}),$$
+> this point equals $N$ exactly when $y=0$. Thus the coordinate representation of the overlap is the open punctured ball $\mathbb{B}^n\setminus\{0\}$, not all of $\mathbb{B}^n$.
 >
-> *Apply $\sigma_N$.* The image $(\varphi_{n+1}^+)^{-1}(y)$ has $(n+1)$-th coordinate $\sqrt{1 - |y|^2}$. So $\sigma_N$ divides the first $n$ coordinates by $1 - \sqrt{1 - |y|^2}$:
-> $$\sigma_N \circ (\varphi_{n+1}^+)^{-1}(y) = \frac{(y^1, \dots, y^n)}{1 - \sqrt{1 - |y|^2}}.$$
->
-> *Smoothness.* The denominator $1 - \sqrt{1 - |y|^2}$ is positive for $|y| > 0$ (since $\sqrt{1 - |y|^2} < 1$ when $|y| > 0$); however, $|y| > 0$ does *not* include $y = 0$, and at $y = 0$ we have $\sqrt{1 - |y|^2} = 1$, so the denominator vanishes. This singularity at $y = 0$ corresponds to the south pole $\sigma_N(0) \notin S^n \setminus \{N\}$ — but wait, $\sigma_N(S) = 0$, so $\sigma_N \circ (\varphi_{n+1}^+)^{-1}(0)$ would be $\sigma_N(S) = 0$, and indeed the formula gives $0/0$.
->
-> So actually we need to be careful about the domain of the inverse transition. The inverse transition is defined on $\varphi_{n+1}^+(U_{n+1}^+ \cap (S^n \setminus \{N\})) = \mathbb{B}^n \setminus \{y : (\varphi_{n+1}^+)^{-1}(y) = N\}$. Since $N = (0, \dots, 0, 1)$ has $(\varphi_{n+1}^+)^{-1}(N) = (0, 1)$, we have $(\varphi_{n+1}^+)^{-1}(y) = N$ iff $(y, \sqrt{1 - |y|^2}) = (0, 1)$ iff $y = 0$ and $|y| = 0$. So the inverse transition is defined on $\mathbb{B}^n \setminus \{0\}$.
->
-> On $\mathbb{B}^n \setminus \{0\}$, the denominator $1 - \sqrt{1 - |y|^2}$ is positive (since $|y| > 0$), so the transition is smooth (square root of a positive smooth function is smooth, and quotient with nonzero denominator is smooth).
+> *Compute and verify smoothness.* Substitution in $\sigma_N(x)=x'/(1-x^{n+1})$ gives the first displayed quotient. For $y\ne0$, multiplication by the conjugate gives
+> $$
+> \frac{y}{1-\sqrt{1-|y|^2}}
+> =\frac{1+\sqrt{1-|y|^2}}{|y|^2}y.
+> $$
+> On $\mathbb{B}^n\setminus\{0\}$, both $1-|y|^2$ and $|y|^2$ are positive. The square root and reciprocal are therefore smooth there, so the inverse transition is smooth. The apparent $0/0$ at the origin is not a removable-coordinate issue: the origin represents the omitted north pole and is not in the overlap.
 
 **Step 3: All transitions are smooth; conclude same smooth structure.**
 
