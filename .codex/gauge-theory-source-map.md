@@ -6,7 +6,7 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 
 | Source section | PDF pages | Destination unit | Status |
 |---|---:|---|---|
-| §1, moduli-space blueprint and purpose of gauge theory | 2–4 | IX, X | pending |
+| §1, moduli-space blueprint and purpose of gauge theory | 2–4 | IX, X | IX complete; X pending |
 | §2.1, vector bundles, operations, sections, covariant derivatives, curvature, gauge group | 4–10 | I | complete |
 | §2.2.1–2.2.2, frame bundles, structure groups, associated bundles | 11–15 | II | complete |
 | §2.2.3–2.2.5, principal connections, curvature, gauge group | 16–21 | III | complete |
@@ -28,8 +28,8 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §6.4, determinant line bundle | 56–58 | VIII | complete |
 | §6.5, orientations and integer-valued degree | 58–59 | VIII | complete |
 | §6.6, equivariant setup | 59–60 | VIII | complete |
-| §7.1–7.1.3, Seiberg–Witten equations, gauge action, deformation complex, Sobolev completion | 61–64 | IX | pending |
-| §7.1.4–7.1.8, compactness, slices, perturbations, reducibles, orientability | 64–70 | IX | pending |
+| §7.1–7.1.3, Seiberg–Witten equations, gauge action, deformation complex, Sobolev completion | 61–64 | IX | complete |
+| §7.1.4–7.1.8, compactness, slices, perturbations, reducibles, orientability | 64–70 | IX | complete |
 | §7.2, Seiberg–Witten invariant | 71 | X | pending |
 | §7.2.1, sample application | 72–73 | X | pending |
 

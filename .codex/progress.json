@@ -62,11 +62,11 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "in_progress",
+  "status": "review",
   "branch": "codex/create-complete-gauge-theory-gt-ix",
   "pr": {
-    "number": null,
-    "url": null,
+    "number": 28,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/28",
     "status": "open"
   },
   "merged_prs": [
@@ -464,22 +464,33 @@
     "gt-ix": {
       "title": "Gauge Theory IX — Seiberg–Witten Equations and Moduli-Space Analysis",
       "mode": "create",
-      "status": "in_progress",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX — The Seiberg–Witten Moduli Space.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX — Seiberg–Witten Equations, Compactness, and Moduli Spaces.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX — The Seiberg–Witten Moduli Space.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX — Seiberg–Witten Equations, Compactness, and Moduli Spaces.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Def - Gauge Action and Seiberg-Witten Moduli Space.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Def - Seiberg-Witten Equations and Quadratic Spinor Map.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Def - Sobolev Seiberg-Witten Configuration Space.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Ex - Maximum-Principle Bound for a Seiberg-Witten Spinor.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Ex - Stabilizers of Seiberg-Witten Configurations.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Exercise Index - §9.1 Equations, Gauge Symmetry, and Ellipticity.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Exercise Index - §9.2 Compactness, Regularity, and Orientation.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Thm - Compactness and Smoothness of the Seiberg-Witten Moduli Space.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Thm - Reducibles and Orientation of Seiberg-Witten Moduli.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Thm - Seiberg-Witten Deformation Complex is Elliptic.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX/Thm - Slices and Generic Regularity for Seiberg-Witten Moduli.md"
       ],
-      "diagnosis": "Create-mode unit; filename manifest pending.",
+      "diagnosis": "Create mode. The source requires a single analytic narrative joining the equations, gauge quotient, elliptic deformation complex, Sobolev completion, a priori estimates, slices, generic perturbations, reducibles, and determinant-line orientation; isolated definitions would conceal the dependence of each stage on the preceding one.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Independent reconstruction of Haydys §§7.1–7.1.8. Conventions, symbol exactness, stabilizers, expected dimension, Weitzenböck compactness, slices, generic regularity, reducible walls, and homology orientation were checked as one pipeline."
     },
     "gt-x": {
       "title": "Gauge Theory X — Seiberg–Witten Invariants and Four-Manifold Applications",
@@ -541,9 +552,9 @@
     }
   },
   "current_unit": "gt-ix",
-  "next_action": "Build Gauge Theory IX from Haydys §7.1: equations, gauge action, elliptic deformation complex, Sobolev setup, compactness, slices, perturbations, reducibles, expected dimension, and orientation.",
+  "next_action": "Commit and merge Gauge Theory IX, then create Gauge Theory X from Haydys §7.2 and §7.2.1.",
   "unresolved": [],
   "last_commit": "a72d973",
   "ready_to_merge": false,
-  "updated": "2026-09-06T00:00:00Z"
+  "updated": "2026-09-06T23:15:00Z"
 }
