@@ -20,7 +20,7 @@ This is a compound page: it defines three interlocking notions — **immersion**
 
 # Axiom Motivation
 
-The differential $dF_p$ at a point is a linear map between finite-dimensional vector spaces, so it can be either injective, surjective, both (an isomorphism), or neither. These four cases correspond to four geometric types of behaviour for $F$ near $p$, and the local-normal-form theorems of this chapter ([[Thm - The Rank Theorem|the rank theorem]] and its specialisations) say *the local behaviour of $F$ near $p$ is determined entirely by which of these four cases $dF_p$ falls into*. Naming these cases is therefore essential — they are the categories the local theory is built around.
+The differential $dF_p$ is a linear map, so injectivity and surjectivity single out its two maximal-rank regimes. In those regimes a nonzero maximal minor remains nonzero nearby, and the local-normal-form theorems turn the pointwise condition into a standard inclusion or projection. In the remaining regime, knowing only “neither injective nor surjective” says far too little: a normal form requires the **exact rank to remain constant nearby**. Thus the chapter is organized by rank, with immersions and submersions as the stable extreme cases.
 
 **Why "immersion" for $dF_p$ injective.** The picture is that $F$ "immerses" $M$ into $N$ — like dipping a curve into a higher-dimensional space, the image is locally an $m$-dimensional piece of $N$. This requires $m \leq n$, since an injective linear map can exist only when the source has [[Def - Dimension|dimension]] no greater than the target. Injectivity of the *differential* (not of $F$ itself) is the right condition because injectivity at the linear level is exactly what prevents the image from collapsing dimensionally — by the [[Thm - Local Immersion Theorem|local immersion theorem]], an immersion is locally the standard inclusion of $\mathbb{R}^m$ into $\mathbb{R}^n$. Note that immersion is a *local* condition: every immersion is locally injective (as a map), but globally an immersion may not be injective. The classic example is a smooth curve in the plane that crosses itself — at the crossing point the curve is not injective as a map, but its derivative is non-zero everywhere, so it is an immersion.
 
@@ -30,7 +30,7 @@ The differential $dF_p$ at a point is a linear map between finite-dimensional ve
 
 What if we tried to drop the immersion condition from "embedding"? Then we would have a topological embedding that need not be smooth in the way we want — for instance the map $\gamma(t) = (t^3, 0)$ from $\mathbb{R}$ to $\mathbb{R}^2$ is a topological embedding (a homeomorphism onto its image, the $x$-axis) and smooth as a map, but its derivative at $0$ is zero, so it is not an immersion. Its image is fine as a submanifold (the $x$-axis), but the *map* $\gamma$ is not the right kind: the smooth structure on the image inherited via $\gamma$ disagrees with the embedded-submanifold smooth structure. So "smooth embedding" demands both ingredients — smooth immersion *and* topological embedding — to ensure the image is a clean smooth submanifold and the map is a diffeomorphism onto it.
 
-What if we tried to *strengthen* the submersion condition (by requiring constant rank rather than just pointwise surjectivity)? It turns out you don't need to: pointwise surjectivity in a neighbourhood already implies constant rank in that neighbourhood, by the upper bound $\mathrm{rank}\, dF_p \leq n$ and lower semicontinuity from [[Def - Rank of a Smooth Map]]. The local definitions are stable, and constant rank is automatic for immersions and submersions in the open neighbourhood where they hold.
+What if we required constant rank near $p$ in the definition? It is automatic at maximal rank. If $dF_p$ is surjective, some $n\times n$ minor is nonzero at $p$ and remains nonzero nearby, so the rank stays $n$; the injective case is identical with an $m\times m$ minor. No analogous conclusion holds at an intermediate-rank point.
 
 ---
 
@@ -72,7 +72,7 @@ More cleanly: the differential functor $dF_p : T_p M \to T_{F(p)} N$ lives in th
 The triple **(immersion, submersion, embedding)** is the manifold version of the analysis triple **(injective derivative, surjective derivative, locally a graph)** in [[Multivariate Analysis II — Inverse and Implicit Function Theorems]]. In Euclidean space, a smooth map $F : U \to \mathbb{R}^n$ from an open $U \subseteq \mathbb{R}^m$ has:
 - $DF_p$ injective ⟺ $F$ is an immersion at $p$;
 - $DF_p$ surjective ⟺ $F$ is a submersion at $p$;
-- $F$ injective with closed image ⟹ $F$ is a topological embedding.
+- an injective map is a topological embedding when it is open onto its image or closed as a map; merely having a closed image is not sufficient without an additional condition such as properness.
 
 So the manifold definitions are the Euclidean ones promoted to chart-independent statements via the differential.
 

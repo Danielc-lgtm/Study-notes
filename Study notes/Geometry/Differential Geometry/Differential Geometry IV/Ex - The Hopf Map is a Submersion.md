@@ -64,7 +64,7 @@ $$h(z, w) = (2(ac + bd),\, 2(bc - ad),\, a^2 + b^2 - c^2 - d^2) \in S^2 \subsete
 > The infinitesimal generator of the $S^1$-action at $(z, w)$ is the velocity of the curve $t \mapsto (e^{it} z, e^{it} w)$ at $t = 0$, which is $(iz, iw)$ — a real tangent vector to $S^3$ at $(z, w)$. This is the "vertical" direction tangent to the Hopf fibre.
 
 > [!note]- Hint 4
-> The differential $dh_{(z,w)}$ vanishes on $(iz, iw)$ because moving in this direction stays on the same Hopf fibre. So $\ker dh_{(z,w)}$ contains the line through $(iz, iw)$. To show $\ker dh_{(z,w)}$ is *exactly* this line, show it is $1$-dimensional — by dimension count, $\dim S^3 - \dim S^2 = 3 - 2 = 1$.
+> The differential $dh_{(z,w)}$ vanishes on $(iz,iw)$ because this is the orbit direction. Containment alone does not determine the kernel: rank-nullity yields dimension one only **after** surjectivity is known. Instead, in the affine chart $[z:w]\mapsto w/z$, solve $d(w/z)_{(z,w)}(u,v)=0$ and use the tangent equation for $S^3$; the solution is exactly $\mathbb R(iz,iw)$.
 
 > [!note]- Hint 5
 > Alternative approach: differentiate the explicit real formula for $h$ and verify the Jacobian has rank $2$ at every point of $S^3$. (This is computationally laborious but direct.)
@@ -95,53 +95,35 @@ The proof breaks into three steps. Step 1 identifies the vertical tangent direct
 > $$dh_{(z,w)}(\gamma'(0)) = 0,$$
 > so $dh_{(z,w)}(iz, iw) = 0$. Hence $(iz, iw) \in \ker dh_{(z,w)}$, confirming that the vertical direction is in the kernel.
 
-**Step 3: $\ker dh_{(z,w)}$ has dimension exactly $1$, hence $dh_{(z,w)}$ is surjective.**
+**Step 3: compute the kernel in projective coordinates.**
 
 > [!note]- Derivation
-> We use a dimension count. The differential $dh_{(z,w)} : T_{(z,w)} S^3 \to T_{[z:w]} S^2$ is a linear map between a $3$-dimensional and a $2$-dimensional vector space. By rank-nullity,
-> $$\dim \ker dh_{(z,w)} + \mathrm{rank}\, dh_{(z,w)} = \dim T_{(z,w)} S^3 = 3.$$
-> We need to show $\mathrm{rank}\, dh_{(z,w)} = 2$, equivalently $\dim \ker dh_{(z,w)} = 1$. We already know $(iz, iw) \in \ker dh_{(z,w)}$ (Step 2), giving a non-trivial element. To show this is the only direction, we use the *transverse-to-fibre* description: any element of $T_{(z,w)} S^3$ not parallel to $(iz, iw)$ should map to a nonzero tangent vector in $T_{[z:w]} S^2$.
+> Regard the target as $\mathbb{CP}^1$. On the chart where $z\ne0$, the Hopf map has affine coordinate
+> $$q(z,w)=\frac{w}{z}.$$
+> For $(u,v)\in T_{(z,w)}S^3$,
+> $$dq_{(z,w)}(u,v)=\frac{zv-wu}{z^2}.$$
+> Thus $dq(u,v)=0$ exactly when $zv-wu=0$. Since $z\ne0$, this says $(u,v)=\lambda(z,w)$ for some $\lambda\in\mathbb C$. Tangency to $S^3$ means
+> $$0=\operatorname{Re}(\bar zu+\bar wv)=\operatorname{Re}(\lambda)(|z|^2+|w|^2)=\operatorname{Re}(\lambda),$$
+> so $\lambda=it$ for a unique $t\in\mathbb R$. Hence the kernel is precisely $\mathbb R(iz,iw)$.
 >
-> An efficient argument: the tangent space $T_{(z,w)} S^3$ at $(z, w) \in S^3 \subseteq \mathbb{C}^2$ is $\{(\dot z, \dot w) \in \mathbb{C}^2 : \mathrm{Re}(\bar z \dot z + \bar w \dot w) = 0\}$ (the real-codimension-$1$ subspace orthogonal to the outward normal $(z, w)$ — see [[Ex - The Sphere as a Level Set]]). This is a real $3$-dimensional space.
->
-> Within this tangent space, the vertical direction $(iz, iw)$ is the imaginary part of $(z, w)$ multiplied by $(z, w)$ itself in some sense; the *horizontal* directions are the elements $(\dot z, \dot w) \in T_{(z,w)} S^3$ with $\mathrm{Im}(\bar z \dot z + \bar w \dot w) = 0$ (real-orthogonal to the vertical in the Hermitian metric). This is a real $2$-dimensional subspace.
->
-> *Claim: $dh_{(z,w)}$ restricted to the horizontal subspace is a linear isomorphism onto $T_{[z:w]} S^2$.*
->
-> Proof sketch: the Hopf map $h$ is induced by the $\mathbb{C}^*$-action on $\mathbb{C}^2 \setminus 0$, and at the linear level, $dh_{(z,w)}$ kills the $\mathbb{C}^*$-orbit's tangent. Restricted to $S^3$, the $\mathbb{C}^*$-orbit tangent decomposes into the radial direction (which is normal to $S^3$ and not in $T_{(z,w)} S^3$ at all) plus the $S^1$-orbit tangent $(iz, iw)$ (the vertical). So in $T_{(z,w)} S^3$, only the vertical direction is killed; the horizontal complement maps isomorphically.
->
-> More explicitly: define the **horizontal subspace** $H_{(z,w)} = \{(\dot z, \dot w) \in T_{(z,w)} S^3 : \mathrm{Re}(\bar z \dot z + \bar w \dot w) = 0, \mathrm{Im}(\bar z \dot z + \bar w \dot w) = 0\} = \{(\dot z, \dot w) : \bar z \dot z + \bar w \dot w = 0\}$. This is a real $2$-dimensional subspace of $T_{(z,w)} S^3$ (the conditions $\mathrm{Re} = 0$ and $\mathrm{Im} = 0$ give $2$ real codimension-$1$ conditions on the $4$-real-dimensional $\mathbb{C}^2$, but one is the sphere condition, so $H$ has real dimension $4 - 2 = 2$). On $H_{(z,w)}$, $dh$ is injective (since $\ker dh =$ span of $(iz, iw) \notin H_{(z,w)}$); hence by dimension count $dh|_H$ is an isomorphism onto $T_{[z:w]} S^2$.
->
-> Therefore $\mathrm{rank}\, dh_{(z,w)} = 2$, so $dh_{(z,w)}$ is surjective, so $h$ is a submersion at every point of $S^3$.
+> If $z=0$, then $w\ne0$ and the other affine coordinate $z/w$ gives the same conclusion. The kernel is therefore one-dimensional everywhere. Rank-nullity gives $\operatorname{rank}dh=3-1=2$, equal to $\dim S^2$, so $dh$ is surjective.
 
 > [!note]- Complete formal solution
+> The map $h:S^3\to\mathbb{CP}^1$, $(z,w)\mapsto[z:w]$, is smooth in the two standard affine charts. Its fibre through $(z,w)$ is the $S^1$-orbit $\{(e^{it}z,e^{it}w):t\in\mathbb R\}$, whose velocity at $t=0$ is $(iz,iw)$; hence $\mathbb R(iz,iw)\subseteq\ker dh_{(z,w)}$.
 >
-> Identify $T_{(z,w)} S^3 = \{(\dot z, \dot w) \in \mathbb{C}^2 : \mathrm{Re}(\bar z \dot z + \bar w \dot w) = 0\}$ — a real $3$-dimensional subspace of $T_{(z,w)} \mathbb{C}^2 = \mathbb{C}^2 \cong \mathbb{R}^4$. The curve $\gamma(t) = (e^{it}z, e^{it}w)$ lies in $S^3$ (norm preserved by multiplication by $e^{it}$), so $\gamma'(0) = (iz, iw) \in T_{(z,w)} S^3$.
+> Suppose first that $z\ne0$. In the target coordinate $q([z:w])=w/z$, the quotient rule gives
+> $$d(q\circ h)_{(z,w)}(u,v)=\frac{zv-wu}{z^2}.$$
+> If this vanishes, then $(u,v)=\lambda(z,w)$. Because $(u,v)$ is tangent to the unit sphere,
+> $$0=\frac12d(|z|^2+|w|^2)_{(z,w)}(u,v)=\operatorname{Re}(\bar zu+\bar wv)=\operatorname{Re}\lambda,$$
+> and therefore $(u,v)=t(iz,iw)$ for some real $t$. Conversely every such vector is killed because $h$ is constant on the orbit. Thus $\ker dh_{(z,w)}=\mathbb R(iz,iw)$ when $z\ne0$. When $w\ne0$, the coordinate $[z:w]\mapsto z/w$ proves the identical statement; these two cases cover $S^3$.
 >
-> The Hopf map $h$ is constant on the curve $\gamma$ (the curve traces out a single Hopf fibre $[z:w]$). Differentiating at $t = 0$: $dh_{(z,w)}(iz, iw) = 0$. So $(iz, iw) \in \ker dh_{(z,w)}$.
->
-> Decompose $T_{(z,w)} S^3$ into the vertical direction $V_{(z,w)} = \mathbb{R}(iz, iw)$ and the horizontal complement $H_{(z,w)} = \{(\dot z, \dot w) \in T_{(z,w)} S^3 : \mathrm{Im}(\bar z \dot z + \bar w \dot w) = 0\}$. The vertical direction is real-$1$-dimensional; the horizontal is real-$2$-dimensional (since both real and imaginary parts of $\bar z \dot z + \bar w \dot w$ vanish, giving two real conditions on the $4$-real-dimensional $\mathbb{C}^2$ — and removing one duplicate-with-sphere-condition gives codimension $2$ within $T S^3 = \mathbb{R}^3$).
->
-> $dh_{(z,w)}$ vanishes on the vertical $V_{(z,w)}$. We claim it is injective on the horizontal $H_{(z,w)}$. Indeed, any element $(\dot z, \dot w) \in H_{(z,w)} \cap \ker dh_{(z,w)}$ must be in the kernel and horizontal. The kernel of $dh$ in $T_{(z,w)} S^3$ is at most $\dim T S^3 - \dim T S^2 = 3 - 2 = 1$-dimensional (rank-nullity, given that the rank is at most $\dim T S^2 = 2$). Since $V_{(z,w)} \subseteq \ker dh_{(z,w)}$ is already $1$-dimensional, the kernel equals $V_{(z,w)}$ — but $V_{(z,w)} \cap H_{(z,w)} = 0$ (vertical and horizontal are complementary in $T S^3$). So $H_{(z,w)} \cap \ker dh_{(z,w)} = 0$, i.e., $dh|_{H_{(z,w)}}$ is injective.
->
-> By dimension count, $dh_{(z,w)}|_{H_{(z,w)}} : H_{(z,w)} \to T_{[z:w]} S^2$ is an injective linear map between $2$-dimensional spaces, hence an isomorphism. So $dh_{(z,w)}$ is surjective onto $T_{[z:w]} S^2$, i.e., $h$ is a submersion at $(z,w)$.
->
-> Since $(z, w) \in S^3$ was arbitrary, $h$ is a smooth submersion. The fibre $h^{-1}([z:w]) = \{(\lambda z, \lambda w) : \lambda \in S^1\}$ is a great circle in $S^3$ (the unit-norm scalar multiples of $(z, w)$). $\qquad\blacksquare$
-
-> [!note]- Sanity check via explicit Jacobian
-> Using the real coordinate form $h(a + bi, c + di) = (2(ac + bd), 2(bc - ad), a^2 + b^2 - c^2 - d^2)$ at the point $(z, w) = (1, 0)$ (i.e., $a = 1, b = c = d = 0$), compute the Jacobian:
-> $$Dh(1, 0, 0, 0) = \begin{pmatrix} 0 & 0 & 2 & 0 \\ 0 & 0 & 0 & -2 \\ 2 & 0 & 0 & 0 \end{pmatrix}.$$
-> Restricted to $T_{(1,0,0,0)} S^3$ = $\{v : v_1 = 0\}$ (the orthogonal complement of $(1, 0, 0, 0)$), this becomes
-> $$\begin{pmatrix} 0 & 2 & 0 \\ 0 & 0 & -2 \\ 0 & 0 & 0 \end{pmatrix}\quad\text{on the basis } (e_2, e_3, e_4) \text{ of } T_{(1,0,0,0)} S^3 \subseteq \mathbb{R}^4.$$
-> Wait, this has rank $2$ but only because of the last row being zero. Let me reconsider: the image lies in $T_{h(1,0)} S^2$, which has dimension $2$. At $(1,0)$, $h(1, 0) = (0, 0, 1)$ (the north pole), and $T_{(0,0,1)} S^2 = \{(u, v, 0) : u, v \in \mathbb{R}\}$. The Jacobian $Dh(1,0,0,0)$ restricted to $T_{(1,0,0,0)} S^3$ has image in $T_{(0,0,1)} S^2$:
-> $$Dh(1,0,0,0) \cdot (0, b, c, d)^T = (2c, -2d, 0).$$
-> This is surjective onto $T_{(0,0,1)} S^2 = \{(u, v, 0)\}$: for any $(u, v, 0)$, take $c = u/2$, $d = -v/2$, $b$ arbitrary. The kernel within $T S^3$ is $b$-axis, i.e., the direction $(0, 1, 0, 0)$ in $\mathbb{R}^4$ — which in complex coordinates corresponds to $(i \cdot 1, 0) = (i, 0)$, exactly the vertical direction $(iz, iw) = (i, 0)$ at $(z, w) = (1, 0)$. Sanity check passed.
+> Consequently $\dim\ker dh=1$ and $\operatorname{rank}dh=3-1=2$. Since the target tangent space has dimension $2$, $dh$ is surjective at every point. Hence the Hopf map is a smooth submersion, and every fibre is the great circle $\{(e^{it}z,e^{it}w):t\in\mathbb R\}$. $\qquad\blacksquare$
 
 ---
 
 # Key Takeaways
 
-**The Hopf map is a fibre bundle.** Beyond being a submersion, the Hopf map is a smooth $S^1$-bundle over $S^2$: $S^3 \to S^2$ with fibre $S^1$. The submersion structure is what makes it locally trivial (locally the projection $U \times S^1 \to U$). Globally, the bundle is *nontrivial*: $S^3$ is not diffeomorphic to $S^2 \times S^1$ (their fundamental [[Def - Group|groups]] differ — $\pi_1(S^3) = 0$ versus $\pi_1(S^2 \times S^1) = \mathbb{Z}$). The non-triviality is encoded in the **Hopf invariant**, an integer-valued topological invariant detecting the linking number of the Hopf fibres. The Hopf bundle is the prototypical nontrivial principal bundle and appears throughout physics (Dirac monopoles, $\mathrm{SU}(2)$ gauge theory, quantum information).
+**The Hopf map is a fibre bundle.** Beyond being a submersion, the Hopf map is a principal $S^1$-bundle $S^1\to S^3\to S^2$. Local triviality follows from the free proper $S^1$-action (or explicit local sections), not from submersivity alone: a general surjective submersion need not be a fibre bundle without additional hypotheses. The bundle is nontrivial because $S^3$ and $S^2\times S^1$ have different fundamental groups. Its principal-bundle class is the first Chern class, a generator of $H^2(S^2;\mathbb Z)$; the related Hopf invariant of the map records the linking of distinct fibres.
 
 **Quotient maps under group actions are submersions.** The Hopf map is the quotient of the $S^1$-action on $S^3$; more generally, the quotient map of a free, proper Lie group action on a manifold is a smooth submersion (by the smooth quotient theorem). This is the cleanest source of submersions: take a manifold with a nice group action and project to the orbit space. The fibres are the orbits, each diffeomorphic to the group; the base is the orbit space, which is itself a manifold.
 

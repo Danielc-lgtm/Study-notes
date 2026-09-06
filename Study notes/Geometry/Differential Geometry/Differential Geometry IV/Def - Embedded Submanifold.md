@@ -82,7 +82,7 @@ In algebraic geometry, the analogue is a **smooth subvariety** — a subset cut 
 
 **Is an instance — the sphere $S^n \subseteq \mathbb{R}^{n+1}$.** By [[Ex - The Sphere as a Level Set]], $S^n$ is a regular level set of $f(x) = |x|^2 - 1$ on $\mathbb{R}^{n+1}$, hence (by [[Thm - Regular Value Theorem on Manifolds]]) an embedded $n$-dimensional submanifold. The subspace topology coincides with the standard topology on the sphere, and the smooth structure agrees with the one defined via stereographic projection.
 
-**Is an instance — graphs of smooth maps.** For $g \in C^\infty(M, N)$ between smooth manifolds, the graph $\Gamma(g) = \{(p, g(p)) : p \in M\} \subseteq M \times N$ is an embedded submanifold of $M \times N$, diffeomorphic to $M$. The inclusion $M \to \Gamma(g)$ given by $p \mapsto (p, g(p))$ is a smooth embedding (its inverse is the projection $\Gamma(g) \to M$).
+**Is an instance — graphs of smooth maps.** For $g\in C^\infty(M,N)$, the graph $\Gamma(g)=\{(p,g(p)):p\in M\}$ is an embedded submanifold of $M\times N$. The graph parametrization $p\mapsto(p,g(p))$ is an embedding because projection onto the first factor restricts to its smooth inverse. Thus $\Gamma(g)$ is diffeomorphic to $M$.
 
 **Is an instance — the orthogonal group $\mathrm{O}(n) \subseteq \mathrm{GL}(n,\mathbb{R})$.** By [[Ex - The Orthogonal Group as a Regular Level Set]], $\mathrm{O}(n)$ is a regular level set of $\Phi(A) = A^T A$ valued in symmetric matrices, hence an embedded submanifold of dimension $n(n-1)/2$. Being closed in $\mathrm{GL}(n)$ (and even in $\mathrm{Mat}_n$), it is properly embedded.
 
@@ -92,7 +92,7 @@ In algebraic geometry, the analogue is a **smooth subvariety** — a subset cut 
 
 **Is NOT an embedded submanifold — the dense line on the torus.** For irrational $\alpha$, the line $\{(e^{2\pi i t}, e^{2\pi i \alpha t}) : t \in \mathbb{R}\} \subseteq T^2$ is dense in the torus. In the subspace topology, it is not locally Euclidean (every neighbourhood of any point contains pieces of infinitely many "wraps" of the line). So it is not embedded, though it is immersed.
 
-**Is NOT an embedded submanifold — a set with a corner.** The set $S = \{(x, y) : y = |x|\} \subseteq \mathbb{R}^2$ has a corner at the origin: in the subspace topology, no neighbourhood of the origin in $S$ is homeomorphic to an open interval and *also* smoothly compatible with $\mathbb{R}^2$. So $S$ is not an embedded $1$-submanifold (it can be made into a topological $1$-manifold via the homeomorphism $\mathbb{R} \to S$, $t \mapsto (t, |t|)$, but the inclusion of this manifold into $\mathbb{R}^2$ is not smooth at the origin).
+**Is NOT an embedded submanifold — a set with a corner.** The set $S=\{(x,y):y=|x|\}$ is topologically a line, so topology alone does not reveal the defect. If it were a smooth embedded curve, its tangent line at the origin would be the common limit of secant directions. Approaching from the right gives the line spanned by $(1,1)$, while approaching from the left gives the line spanned by $(1,-1)$, a contradiction. Equivalently, the homeomorphism $t\mapsto(t,|t|)$ is not a smooth immersion at the corner.
 
 **Corollary — uniqueness of smooth structure.** If $S \subseteq M$ is an embedded submanifold, the smooth structure making it so is unique. *Proof sketch:* given two such structures, the identity map between them is smooth in both directions (by restricting the codomain of the inclusion), so it is a [[Def - Diffeomorphism|diffeomorphism]].
 
