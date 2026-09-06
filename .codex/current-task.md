@@ -50,10 +50,10 @@ Gauge Theory III–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Rebuild the seven Gauge Theory III calibration examples and four exercise indexes; then execute correctness, pedagogy, rederivation, graph, and prose reviews and close the mapped source rows.
+Perform a specification-depth review of every Gauge Theory III definition and theorem page, expanding motivation, axiom-failure analysis, examples, proof lemmas, and topic-level legal operations; then rerun graph and source-coverage audits.
 
 ## Last completed commit
-`75d6073` — transport/holonomy/flat-monodromy core plus corrected electromagnetic Bianchi calibration.
+ — rebuilt the seven inherited calibration exercises and added the flat-circle holonomy exercise and §3.5 index.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
