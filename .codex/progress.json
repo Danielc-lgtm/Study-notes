@@ -63,10 +63,10 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/improve-all-differential-geometry-dg-iv",
+  "branch": "codex/improve-all-differential-geometry-dg-v",
   "pr": {
-    "number": 7,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/7",
+    "number": 9,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/9",
     "state": "open"
   },
   "merged_prs": [
@@ -93,6 +93,12 @@
       "unit": "dg-iii",
       "main_sha": "31ef0ac",
       "date": "2026-09-05"
+    },
+    {
+      "number": 7,
+      "unit": "dg-iv",
+      "main_sha": "86a334b",
+      "date": "2026-09-06"
     }
   ],
   "sources": [
@@ -278,7 +284,7 @@
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
       "mode": "improve",
-      "status": "pending",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
@@ -310,17 +316,17 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry V/Thm - Pushforward of Vector Fields under a Diffeomorphism.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry V/Thm - Reynolds Transport Theorem.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the graph is extensive but repeatedly substitutes slogans for hypotheses. The Hopf proof contains a circular rank-nullity argument; arbitrary one-parameter families are conflated with flows; submersions with fibre bundles; flowout charts with tubular neighbourhoods; and Sard-style genericity with transversality. Several flow and bracket pages use untyped local-domain compositions, omit the maximal-flow-domain logic, or state noncommutation remainders and sign conventions imprecisely. The straightening, commuting-flow, compact-support completeness, Reynolds transport, and Jacobi proofs require line-by-line review. Target: organize DG V around a vector field as both a derivation and an autonomous ODE, with the maximal flow as its local one-parameter action. Prove existence, uniqueness, smooth dependence, the group law, completeness criteria, straightening, bracket naturality/Jacobi, and the bracket–flow commutator relation with all domains and signs explicit. Separate local from global statements, distinguish arbitrary isotopies from flows, explain vertical/horizontal and Lie-derivative constructions without importing later bundle hypotheses, and use examples/exercises that move between coordinate ODEs, derivations, flows, pushforwards, and commutators.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "fixed",
+        "pedagogy": "fixed",
+        "rederivation": "fixed",
+        "graph": "fixed",
+        "prose": "fixed",
+        "checklist": "pass"
       },
-      "commit": null,
-      "notes": ""
+      "commit": "eb331bd",
+      "notes": "Diagnosis and target recorded before content editing. First target gap: repair flow definitions and maximal-flow theorem, then audit bracket/commuting-flow calculus. Flow-definition checkpoint separates open total domains from open time slices, records maximal-domain translation, avoids assuming a Lie structure on Diff(M), distinguishes regular from singular orbit foliations, and separates isotopies from autonomous flows. Maximal-flow checkpoint replaces a circular openness proof by finite smooth-dependence compositions, types time-slice openness and inverse domains, repairs the uniform-time extension interval, and qualifies Hamiltonian/geodesic completeness claims. Bracket checkpoint fixes singular-set continuity, removes unsupported natural-operation and scalar-curvature claims, states two-parameter commutator remainders correctly, and restores hypotheses for torus actions and Liouville–Arnold. Final review corrected the flow-commutator order, removed drafting leakage, integrated Reynolds/Faraday into the concept and exercise maps, fixed Faraday orientation, and passed all mechanical plus 28-page graph audits. Every target gap is closed."
     },
     "dg-vi": {
       "title": "Differential Geometry VI — Vector Bundles and the Cotangent Bundle",
@@ -642,10 +648,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-iv",
-  "next_action": "Merge completed PR #7, update from main, create the DG V unit branch, and diagnose and envision Differential Geometry V.",
+  "current_unit": "dg-v",
+  "next_action": "Merge completed PR #9, update from main, create the DG VI unit branch, and diagnose and envision Differential Geometry VI.",
   "unresolved": [],
-  "last_commit": "c0766e4",
+  "last_commit": "eb331bd",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

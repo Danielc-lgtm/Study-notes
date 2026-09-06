@@ -126,8 +126,7 @@ $$\begin{aligned}
 **Step 3: Reinterpret as $\mathrm{ad}_X$ is a derivation.**
 
 The Jacobi identity rewrites as
-$$[X, [Y, Z]] = [Y, [X, Z]] + [[X, Y], Z] \quad \text{(*)},$$
-obtained by rearranging $[X, [Y, Z]] = -[Y, [Z, X]] - [Z, [X, Y]] = [Y, [X, Z]] - [[X, Y], Z]^{-1} = \ldots$ Let me redo this more carefully.
+$$[X,[Y,Z]]=[[X,Y],Z]+[Y,[X,Z]]. \tag{*}$$
 
 Starting from Jacobi $[X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0$, move the second and third terms to the right and apply antisymmetry:
 $$[X, [Y, Z]] = -[Y, [Z, X]] - [Z, [X, Y]] = [Y, [X, Z]] + [[X, Y], Z].$$

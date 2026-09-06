@@ -89,7 +89,7 @@ In quantum mechanics, the commutator $[\hat A, \hat B] = \hat A \hat B - \hat B 
 
 In Poisson geometry, the analogue is the **Poisson bracket** $\{f, g\}$ on a Poisson manifold, which makes $C^\infty(M)$ into a Lie algebra. The bracket of Hamiltonian vector fields satisfies $[X_f, X_g] = -X_{\{f, g\}}$, so the Lie bracket on vector fields and the Poisson bracket on functions are anti-isomorphic Lie algebras when restricted to Hamiltonian vector fields. See [[Differential Geometry VIII — Differential Forms]] forward.
 
-**True name:** The Lie bracket of $X$ and $Y$ is **the infinitesimal commutator of their flows** — the leading-order failure of the parallelogram $\phi^X_{-t} \circ \phi^Y_{-t} \circ \phi^X_t \circ \phi^Y_t$ to be the identity. Algebraically it is the commutator of $X$ and $Y$ as derivations of $C^\infty(M)$; geometrically it is the rate at which $Y$ changes along the flow of $X$.
+**True name:** The Lie bracket is the **mixed second-order commutator of the flows**. With the convention used here, the loop $\phi^Y_{-t}\circ\phi^X_{-s}\circ\phi^Y_t\circ\phi^X_s$ has leading displacement $st[X,Y]$ in local coordinates. Reversing the loop reverses the sign. Algebraically the same object is the commutator of derivations; geometrically it is the rate at which $Y$ changes in the moving frame of $X$.
 
 ---
 
@@ -105,7 +105,9 @@ In Poisson geometry, the analogue is the **Poisson bracket** $\{f, g\}$ on a Poi
 
 **Is an instance: matrix Lie group bracket.** On $\mathrm{GL}(n, \mathbb{R})$ — an open subset of $\mathbb{R}^{n^2}$ — the left-invariant vector field $A^L$ associated with $A \in \mathfrak{gl}(n)$ has value at $X \in \mathrm{GL}(n)$ given by $A^L_X = X^i_j A^j_k (\partial/\partial X^i_k)$. The Lie bracket of $A^L$ and $B^L$ at the identity reduces to the matrix commutator $[A, B] = AB - BA$. So the Lie algebra of $\mathrm{GL}(n)$ is exactly the matrix algebra with the commutator bracket — Lee Proposition 8.41.
 
-**Is NOT an instance: a $C^\infty(M)$-bilinear operation.** The bracket is *not* $C^\infty(M)$-bilinear: $[fX, gY] \neq fg [X, Y]$ in general. **Counterexample:** with $f = x$, $g = 1$, $X = \partial_x$, $Y = \partial_y$, the right side $xg[X, Y] = 0$, but the left side $[x \partial_x, \partial_y] =$ computing: $(\partial_y)^y(x) = 0$, $(x)(0) = 0$ — actually $[x \partial_x, \partial_y]^y = (x)(\partial_x 1) - (0)(\partial_y x) = 0$ and the $x$-component is $(x)(0) - (0)(1) = 0$, so $[x\partial_x, \partial_y] = 0$. Let me try $f = x$, $X = \partial_x$, $g = 1$, $Y = \partial_x$: then $fg[X, Y] = 0$ but $[x \partial_x, \partial_x] = ?$ — $X' = x \partial_x$, $Y' = \partial_x$, so $[X', Y']^x = (x)(0) - (1)(1) = -1$, giving $[x \partial_x, \partial_x] = -\partial_x \neq 0$. Confirms non-$C^\infty(M)$-bilinearity.
+**Is NOT an instance: a $C^\infty(M)$-bilinear operation.** Take $X=Y=\partial_x$ and $f=x$. Although $[X,Y]=0$, the product rule gives
+$$[fX,Y]=f[X,Y]-Y(f)X=-\partial_x\ne0.$$
+Thus the bracket is real-bilinear but not $C^\infty(M)$-bilinear.
 
 **Is NOT an instance: the product $XY$ as an operator.** $XY$ is a second-order differential operator on $C^\infty(M)$, not a derivation, hence not a vector field. The commutator $XY - YX$ is the lowest-order cancellation that produces a vector field.
 
