@@ -1,79 +1,61 @@
 # Current task
 
-**Overall status:** complete — all twelve Differential Geometry units and the final cross-topic review have passed
+**Overall status:** in progress — source coverage mapped; Gauge Theory I is the current unit
 
 ## Goal
-Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
+Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
 
 ## Scope
-1. Differential Geometry I — Smooth Manifolds and Atlases — complete
-2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
-3. Differential Geometry III — Tangent Vectors and the Differential — complete
-4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — complete
-5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — complete
-6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — complete
-7. Differential Geometry VII — Tensors and Tensor Fields — complete
-8. Differential Geometry VIII — Differential Forms — complete
-9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — complete
-10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — complete
-11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — complete
-12. Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds — complete
+1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — in progress
+2. Gauge Theory II — Principal bundles, representations, and bundle classification — pending
+3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — pending
+4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — pending
+5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — pending
+6. Gauge Theory VI — Clifford algebras, spin geometry, and Dirac operators — pending
+7. Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes — pending
+8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — pending
+9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — pending
+10. Gauge Theory X — Seiberg–Witten invariants and four-manifold applications — pending
+11. Gauge Theory XI — Algebraic topology, intersection forms, classification, and Donaldson theory — pending
+12. Final source-coverage and cross-topic consistency audit — pending
+
+The persistent section-by-section coverage matrix is `.codex/gauge-theory-source-map.md`.
 
 ## Mode
-`improve`
+`mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
 
 ## Working branch
-_none — completed unit branches were merged and deleted; the final-review branch is transport only_.
+`codex/create-complete-gauge-theory-gt-i`
 
 ## Pull request
-_none — the final-review change is ready for its transport PR_.
+Open after this initialization checkpoint; it remains unmerged until Gauge Theory I passes every review.
 
 ## Sources
-`Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
+- `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
+- `sources/mathematical_gauge_theory.pdf` — Konstantin Wernli, 155 pages
+- Existing Gauge Theory I–IV graph, used only as mathematical/structural material under the user's style override
+- Relevant prerequisite pages in Differential Geometry, Functional Analysis, Algebraic Topology, and Special Relativity
 
 ## Completed units
-- Differential Geometry I — Smooth Manifolds and Atlases (PR #3)
-- Differential Geometry II — Smooth Maps and Partitions of Unity (PR #4)
-- Differential Geometry III — Tangent Vectors and the Differential (PR #5)
-- Differential Geometry IV — Rank and Submanifold Theory (PR #7)
-- Differential Geometry V — Vector Fields, Flows, and Brackets (PR #9)
-- Differential Geometry VI — Vector Bundles and the Cotangent Bundle (PR #10)
-- Differential Geometry VII — Tensors and Tensor Fields (PR #11)
-- Differential Geometry VIII — Differential Forms (PR #12)
-- Differential Geometry IX — Orientation, Integration, and Stokes (PR #13)
-- Differential Geometry X — de Rham Theory and Frobenius (PR #14)
-- Differential Geometry XI — Lie Groups and the Exponential Map (PR #15)
-- Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds (PR #16)
-- Final cross-topic consistency review — complete; all 300 Differential Geometry pages resolve their internal wikilinks, all exercise indexes are nonempty, and no drafting leakage or stale renamed links remain.
+_none_.
 
 ## Current unit
-_none — task complete_.
+Gauge Theory I — Vector-bundle connections and the electromagnetic prototype.
 
 ## Remaining units
-_none_.
+Gauge Theory II–XI and the final audit.
 
 ## Unresolved issues
-_none_.
+_none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-None. Start a new task only when the user supplies a new goal.
+Read Haydys §§2.1 and Wernli §§3.1–3.2 plus every existing Gauge Theory I page and its prerequisite links; record the unit diagnosis and filename manifest, then rebuild the unit.
 
 ## Last completed commit
-`7a61643` (DG XII merge); the final-review transport commit follows this ledger update.
+`570c6a7` is the user-provided source import immediately preceding this task; the task initialization commit follows this ledger update.
 
 ## Merge policy
-`auto` — every completed topic unit was merged into `main` immediately.
+`auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
 
 ## Merge history
-- #3 Differential Geometry I → main (2026-09-05)
-- #4 Differential Geometry II → main (2026-09-05)
-- #5 Differential Geometry III → main (2026-09-05)
-- #7 Differential Geometry IV → main (2026-09-06)
-- #9 Differential Geometry V → main (2026-09-06)
-- #10 Differential Geometry VI → main (2026-09-06)
-- #11 Differential Geometry VII → main (2026-09-06)
-- #12 Differential Geometry VIII → main (2026-09-06)
-- #13 Differential Geometry IX → main (2026-09-06)
-- #14 Differential Geometry X → main (2026-09-06)
-- #15 Differential Geometry XI → main (2026-09-06)
-- #16 Differential Geometry XII → main (2026-09-06)
+_none for this task_.
