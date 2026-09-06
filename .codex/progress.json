@@ -63,12 +63,8 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "active",
-  "branch": "codex/improve-all-differential-geometry-dg-ix",
-  "pr": {
-    "number": 13,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/13",
-    "status": "open"
-  },
+  "branch": "codex/improve-all-differential-geometry-dg-x",
+  "pr": null,
   "merged_prs": [
     {
       "number": 2,
@@ -517,7 +513,7 @@
     "dg-x": {
       "title": "Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
@@ -548,7 +544,7 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Thm - The Poincaré Lemma on a Star-Shaped Region.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Thm - The de Rham Theorem (Statement).md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the unit connects de Rham theory and Frobenius well, but one exercise is named “involutive” although its computed brackets prove non-involutivity and contains a failed attempt to rewrite its own problem. The cohomology sequence, homotopy operator, and Poincaré lemma need degree, connectedness, compactness, and sign audits; Frobenius needs constant-rank and local/global distinctions; forms-language ideals and PDE compatibility require complete equivalence proofs. Target: organize the chapter around two obstruction theories: cohomology measures failure of closed data to have global potentials, while Lie brackets measure failure of tangent directions to close into leaves. Build the de Rham complex, Poincaré homotopy, Mayer–Vietoris, homotopy invariance, de Rham comparison statement, distributions, integral manifolds, involutivity, Frobenius normal form, and foliations with explicit maps and hypotheses. Exercises should compute R^n, S^1, tori, contact structures, PDE compatibility, and holomorphic/Stokes bridges without misleading titles or drafting remnants.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -558,7 +554,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Diagnosis and target written before editing; the first architectural repair renames the falsely titled distribution exercise and updates every incoming link."
     },
     "dg-xi": {
       "title": "Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map",
@@ -654,10 +650,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-ix",
-  "next_action": "Commit and push DG IX, merge PR #13, then create the DG X branch and diagnose de Rham cohomology, distributions, and Frobenius.",
+  "current_unit": "dg-x",
+  "next_action": "Open the DG X checkpoint PR, rename and rewrite the misleading distribution exercise, then audit Poincaré, Mayer–Vietoris, homotopy invariance, and both Frobenius statements.",
   "unresolved": [],
   "last_commit": "8994ef6",
-  "ready_to_merge": true,
+  "ready_to_merge": false,
   "updated": "2026-09-06"
 }
