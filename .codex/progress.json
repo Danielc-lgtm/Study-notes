@@ -134,7 +134,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Core calculus plus the chapter map and abelian specialization are independently rebuilt: complex/Hermitian lines, U(1) connection, active/passive gauge laws, Wilson transport, minimal coupling, monopole bundle, flux quantization, and Aharonov–Bohm holonomy use one convention. Math, LaTeX, wikilink, and notation-gap audits are clean. Remaining unit pages are the Levi–Civita/trivial-curvature/monopole calculations, exercise indexes, and preserved vector-field enrichment; audit or rewrite these, then perform five reviews."
+      "notes": "All source-critical Gauge Theory I pages are now independently rebuilt with a single ∇=d+iqA convention. The Levi–Civita, flat-trivial, monopole, minimal-coupling, and Aharonov–Bohm computations have complete solutions; exercise indexes match. Mechanical audits pass. Remaining: audit the five preserved vector-field enrichment pages/index, perform all five unit reviews, and correct source coverage/ledgers."
     },
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
@@ -436,9 +436,9 @@
     }
   },
   "current_unit": "gt-i",
-  "next_action": "Audit and rewrite the remaining Gauge Theory I examples and vector-field enrichment, repair exercise indexes, then run the five substantive review passes and full mechanical/link audits.",
+  "next_action": "Audit and tighten the Gauge Theory I vector-field enrichment pages (index, Poincare–Hopf, hairy ball, and two examples), fixing or replacing incomplete proofs; then execute correctness, pedagogy, rederivation, graph, and prose reviews for the entire unit.",
   "unresolved": [],
-  "last_commit": "d699b78",
+  "last_commit": "7b09c9a",
   "ready_to_merge": false,
-  "updated": "2026-09-06T05:35:00Z"
+  "updated": "2026-09-06T05:55:00Z"
 }
