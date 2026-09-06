@@ -63,12 +63,8 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "active",
-  "branch": "codex/improve-all-differential-geometry-dg-xi",
-  "pr": {
-    "number": 15,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/15",
-    "status": "open"
-  },
+  "branch": "codex/improve-all-differential-geometry-dg-xii",
+  "pr": null,
   "merged_prs": [
     {
       "number": 2,
@@ -612,7 +608,7 @@
     "dg-xii": {
       "title": "Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds.md",
@@ -641,7 +637,7 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry XII/Thm - Musical Isomorphism Identifies Tangent and Cotangent Bundles.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry XII/Thm - The Riemannian Distance Makes M a Metric Space.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the final unit has a useful metric–distance–musical–Lorentzian arc, but the polar-coordinate exercise states a wrong gradient before correcting itself through visible failed calculations. The Lorentzian-existence theorem mixes line-field, vector-field, time-orientability, and Euler-characteristic arguments and includes a false noncompact Euler-characteristic claim. Metric-existence gluing, induced metrics, distance topology, musical bundle maps, causal signs, isometry/geodesic claims, and the Levi-Civita statement need convention and proof audits. Target: organize the chapter around a metric as the device that turns tangent-space linear algebra into measurement and duality. Build Riemannian metrics globally, induced metrics, length and distance, topology equivalence, flat/sharp, isometries, the Levi-Civita statement and geodesic naturality, then separate semi-Riemannian signature and Lorentzian causal structure from positive-definite arguments. Exercises should compute sphere, polar, hyperbolic, Minkowski, distance topology, and Lorentzian obstructions with consistent signs and no circular reliance on later theory.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -651,13 +647,13 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Diagnosis and target written before editing; first pass repairs the polar gradient and Lorentzian existence discussion."
     }
   },
-  "current_unit": "dg-xi",
-  "next_action": "Commit and push DG XI, merge PR #15, then create the DG XII branch and diagnose Riemannian and semi-Riemannian geometry.",
+  "current_unit": "dg-xii",
+  "next_action": "Open the DG XII checkpoint PR, repair polar musical calculations and Lorentzian existence, then audit metric existence, distance topology, isometries, causal conventions, and graph consistency.",
   "unresolved": [],
   "last_commit": "8994ef6",
-  "ready_to_merge": true,
+  "ready_to_merge": false,
   "updated": "2026-09-06"
 }
