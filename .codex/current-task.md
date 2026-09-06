@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–VIII merged; Gauge Theory X is ready to commit and merge
+**Overall status:** in progress — Gauge Theory I–VIII merged; Gauge Theory I–X merged; Gauge Theory XI is current
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -15,8 +15,8 @@ Create a complete, self-contained Obsidian lecture-note series covering both `so
 7. Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes — complete (PR #26; merged)
 8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — complete (PR #27; merged)
 9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — complete (PR #28; merged)
-10. Gauge Theory X — Seiberg–Witten invariants and four-manifold applications — complete; PR pending
-11. Gauge Theory XI — Algebraic topology, intersection forms, classification, and Donaldson theory — pending
+10. Gauge Theory X — Seiberg–Witten invariants and four-manifold applications — complete (PR #29; merged)
+11. Gauge Theory XI — Algebraic topology, intersection forms, classification, and Donaldson theory — in progress
 12. Final source-coverage and cross-topic consistency audit — pending
 
 The persistent section-by-section coverage matrix is `.codex/gauge-theory-source-map.md`.
@@ -25,10 +25,10 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
 
 ## Working branch
-`codex/create-complete-gauge-theory-gt-x`
+`codex/create-complete-gauge-theory-gt-xi`
 
 ## Pull request
-Gauge Theory X PR pending creation.
+Gauge Theory XI PR pending creation.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -41,7 +41,7 @@ Gauge Theory X PR pending creation.
 - Gauge Theory II — Principal bundles, representations, and classification — complete, merged in PR #20.
 
 ## Current unit
-Gauge Theory X — Seiberg–Witten invariants and four-manifold applications; reviewed and ready to merge.
+Gauge Theory XI — algebraic topology, intersection forms, classification, and Donaldson theory.
 
 ## Remaining units
 Gauge Theory XI and the final audit.
@@ -50,7 +50,7 @@ Gauge Theory XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Commit Gauge Theory X, open and merge its PR, then initialize Gauge Theory XI from Wernli Chapters 4–5.
+Extract Wernli §§4.1–5.3 and build Gauge Theory XI from homotopy and homology through intersection forms, four-manifold classification, and Donaldson theory.
 
 ## Last completed commit
 `a72d973` — initialized Gauge Theory VIII after merging the completed Sobolev and elliptic unit.
@@ -68,3 +68,4 @@ Commit Gauge Theory X, open and merge its PR, then initialize Gauge Theory XI fr
 - #26 Gauge Theory VII → `main` (`746386e`, 2026-09-06).
 - #27 Gauge Theory VIII → `main` (`102510d`, 2026-09-06).
 - #28 Gauge Theory IX → `main` (`19b1031`, 2026-09-06).
+- #29 Gauge Theory X → `main` (`e7fcf5c`, 2026-09-06).

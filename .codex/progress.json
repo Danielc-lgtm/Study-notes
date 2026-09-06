@@ -62,8 +62,8 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "review",
-  "branch": "codex/create-complete-gauge-theory-gt-x",
+  "status": "in_progress",
+  "branch": "codex/create-complete-gauge-theory-gt-xi",
   "pr": {
     "number": null,
     "url": null,
@@ -122,6 +122,12 @@
       "number": 28,
       "unit": "gt-ix",
       "main_sha": "19b1031",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 29,
+      "unit": "gt-x",
+      "main_sha": "e7fcf5c",
       "date": "2026-09-06"
     }
   ],
@@ -529,7 +535,7 @@
     "gt-xi": {
       "title": "Gauge Theory XI — Algebraic Topology, Intersection Forms, Classification, and Donaldson Theory",
       "mode": "create",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI — Four-Manifold Topology and Donaldson Theory.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI — Four-Manifold Topology and Donaldson Theory.md"
@@ -565,10 +571,10 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-x",
-  "next_action": "Commit Gauge Theory X, open and merge its PR, then initialize Gauge Theory XI from Wernli Chapters 4–5.",
+  "current_unit": "gt-xi",
+  "next_action": "Extract Wernli §§4.1–5.3 and build Gauge Theory XI from homotopy and homology through intersection forms, four-manifold classification, and Donaldson theory.",
   "unresolved": [],
-  "last_commit": "b0d29f1",
+  "last_commit": "4745d4a",
   "ready_to_merge": false,
-  "updated": "2026-09-06T23:40:00Z"
+  "updated": "2026-09-06T23:50:00Z"
 }
