@@ -64,7 +64,11 @@
   "merge_policy": "auto",
   "status": "active",
   "branch": "codex/improve-all-differential-geometry-dg-x",
-  "pr": null,
+  "pr": {
+    "number": 14,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/14",
+    "status": "open"
+  },
   "merged_prs": [
     {
       "number": 2,
@@ -513,7 +517,7 @@
     "dg-x": {
       "title": "Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius",
       "mode": "improve",
-      "status": "in_progress",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
@@ -526,7 +530,7 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Def - Smooth Homotopy of Maps.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Def - de Rham Cohomology.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Ex - A Non-Integrable Distribution on R^3 from the Standard Contact Form.md",
-        "Study notes/Geometry/Differential Geometry/Differential Geometry X/Ex - An Involutive Distribution from Three Vector Fields.md",
+        "Study notes/Geometry/Differential Geometry/Differential Geometry X/Ex - A Non-Involutive Distribution from Three Vector Fields.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Ex - Computing H^1 of S^1 via Mayer-Vietoris.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Ex - Frobenius Theorem Applied to an Overdetermined PDE.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry X/Ex - Holomorphic Forms and the Cauchy–Riemann Equations.md",
@@ -546,15 +550,15 @@
       ],
       "diagnosis": "Diagnosis: the unit connects de Rham theory and Frobenius well, but one exercise is named “involutive” although its computed brackets prove non-involutivity and contains a failed attempt to rewrite its own problem. The cohomology sequence, homotopy operator, and Poincaré lemma need degree, connectedness, compactness, and sign audits; Frobenius needs constant-rank and local/global distinctions; forms-language ideals and PDE compatibility require complete equivalence proofs. Target: organize the chapter around two obstruction theories: cohomology measures failure of closed data to have global potentials, while Lie brackets measure failure of tangent directions to close into leaves. Build the de Rham complex, Poincaré homotopy, Mayer–Vietoris, homotopy invariance, de Rham comparison statement, distributions, integral manifolds, involutivity, Frobenius normal form, and foliations with explicit maps and hypotheses. Exercises should compute R^n, S^1, tori, contact structures, PDE compatibility, and holomorphic/Stokes bridges without misleading titles or drafting remnants.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Diagnosis and target written before editing; the first architectural repair renames the falsely titled distribution exercise and updates every incoming link."
+      "notes": "Diagnosis and target written before editing; the first architectural repair renames the falsely titled distribution exercise and updates every incoming link. Review renames and rewrites the falsely titled non-involutive example, removes Mayer–Vietoris drafting leakage, corrects the integral-manifold dimension statement and the infinite-component H0 description, and restores the missing holomorphic-form topic link. Mechanical audits and the 27-page graph audit pass."
     },
     "dg-xi": {
       "title": "Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map",
@@ -651,9 +655,9 @@
     }
   },
   "current_unit": "dg-x",
-  "next_action": "Open the DG X checkpoint PR, rename and rewrite the misleading distribution exercise, then audit Poincaré, Mayer–Vietoris, homotopy invariance, and both Frobenius statements.",
+  "next_action": "Commit and push DG X, merge PR #14, then create the DG XI branch and diagnose Lie groups, Lie algebras, and the exponential map.",
   "unresolved": [],
   "last_commit": "8994ef6",
-  "ready_to_merge": false,
+  "ready_to_merge": true,
   "updated": "2026-09-06"
 }

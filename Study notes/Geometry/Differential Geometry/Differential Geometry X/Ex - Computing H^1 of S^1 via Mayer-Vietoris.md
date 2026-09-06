@@ -95,8 +95,6 @@ The plan: cover $S^1$ by two open arcs, identify each as contractible, identify 
 >
 > The map $i^* - j^* : \mathbb{R} \oplus \mathbb{R} \to \mathbb{R}^2$ sends $(f_U, f_V)$ (constants on $U$, $V$) to the differences on the two components of $U \cap V$. Call the two arcs $A_1$ and $A_2$. On $A_1$: $f_U - f_V = a - b$. On $A_2$: $f_U - f_V = a - b$ (the same value, since both $f_U$ and $f_V$ are constants on their respective contractible domains). So $(a, b) \mapsto (a - b, a - b) \in \mathbb{R}^2$, image is the diagonal.
 >
-> *Wait — this is wrong: on different components, $f_U|_{A_1}$ and $f_U|_{A_2}$ are the same constant $a$ (since $f_U$ is constant on $U$, a connected set), but $f_V|_{A_1}$ and $f_V|_{A_2}$ are different in general? No — they are also both equal to the constant $b$ (since $f_V$ is constant on $V$). So $f_U - f_V = a - b$ on both components, i.e. the map is $(a, b) \mapsto (a - b, a - b)$, image = diagonal $\cong \mathbb{R}$.*
->
 > So $\dim \mathrm{image}(i^* - j^*) = 1$, $\dim \ker(i^* - j^*) = 2 - 1 = 1$.
 >
 > By exactness at $\mathbb{R}^2 = H^0(U \cap V)$: $\dim H^1(S^1) = \dim H^0(U \cap V) - \dim \mathrm{image}(i^* - j^*) = 2 - 1 = 1$.

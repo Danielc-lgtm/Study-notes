@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry IX merged; Differential Geometry X diagnosis complete and rewrite in progress
+**Overall status:** active — Differential Geometry X complete and ready to merge; Differential Geometry XI is next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-x`
 
 ## Pull request
-`not opened yet`
+`#14 https://github.com/Danielc-lgtm/Study-notes/pull/14 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -43,16 +43,16 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry IX — Orientation, Integration, and Stokes (`ef7a109`, PR #13)
 
 ## Current unit
-`dg-x` — Differential Geometry X, workflow Phase 3.1 (diagnosis and target complete).
+`dg-x` — Differential Geometry X, workflow Phase 6 (final checklist passed; ready to merge).
 
 ## Remaining units
-Differential Geometry X–XII (three units; X is active).
+Differential Geometry XI–XII (two pending units).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Open the DG X checkpoint PR, rename and rewrite the misleading distribution exercise, then audit Poincaré, Mayer–Vietoris, homotopy invariance, and both Frobenius statements.
+Commit and push DG X, merge PR #14, then create the DG XI branch and diagnose Lie groups, Lie algebras, and the exponential map.
 
 ## Last completed commit
 `5384ab2`
