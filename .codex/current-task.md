@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry III merged; Differential Geometry IV diagnosis in progress
+**Overall status:** active — Differential Geometry IV complete and ready to merge; Differential Geometry V next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -9,7 +9,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 1. Differential Geometry I — Smooth Manifolds and Atlases — complete
 2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
 3. Differential Geometry III — Tangent Vectors and the Differential — complete
-4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — in progress
+4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — complete
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — pending
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — pending
 7. Differential Geometry VII — Tensors and Tensor Fields — pending
@@ -37,19 +37,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry III — Tangent Vectors and the Differential (`8228dec`, PR #5)
 
 ## Current unit
-`dg-iv` — Differential Geometry IV, workflow Phase 4.1 (target-driven rewrite).
+`dg-iv` — Differential Geometry IV, complete and ready to merge in PR #7.
 
 ## Remaining units
-Differential Geometry IV–XII (nine units).
+Differential Geometry V–XII (eight units).
 
 ## Unresolved issues
-The DG IV Whitney page states a proper noncompact theorem but formally proves only the compact case; several global-theory bridges also require correction or missing hypotheses.
+_none_.
 
 ## Exact next action
-Finish the DG IV definition/example audit, then execute the five review passes and all mechanical and graph audits for the complete unit.
+Merge completed PR #7, update from `main`, create the DG V unit branch, and diagnose and envision Differential Geometry V.
 
 ## Last completed commit
-`6a36372`
+`c0766e4`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

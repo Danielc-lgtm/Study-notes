@@ -235,7 +235,7 @@
     "dg-iv": {
       "title": "Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds",
       "mode": "improve",
-      "status": "in_progress",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
@@ -265,15 +265,15 @@
       ],
       "diagnosis": "Diagnosis: the graph has a strong constant-rank/regular-level-set spine, but its global-theorem layer overclaims completeness. The Whitney page states a proper noncompact theorem while its formal proof only proves the compact case; it also falsely says smooth functions become polynomial restrictions. The topic attributes genericity of Morse functions to Sard alone, states an overbroad transversality openness claim, and contains several bridges that confuse detection with classification or require missing hypotheses. Proof audit must also eliminate abbreviated “similarly/clearly” cases and verify the quotient-property, figure-eight, Hopf, Sard, and projection arguments line by line. Target: organize the chapter around rank as first-order normal form data, then present embedded and immersed submanifolds as the parametric/implicit outputs of that normal form. Give fully typed local normal-form proofs, a reusable regular-value workflow with calibrated matrix-group examples, an honest coordinate-invariant measure-zero definition and complete Sard proof at the stated differentiability, and a Whitney page whose statement matches a complete compact/noncompact proof. Separate Sard, parametric transversality, and jet transversality; distinguish injective immersion, embedding, proper embedding, and initial submanifold; and make exercises train transitions among parametrizations, equations, tangent kernels/images, and genericity arguments.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "fixed",
+        "pedagogy": "fixed",
+        "rederivation": "fixed",
+        "graph": "pass",
+        "prose": "fixed",
+        "checklist": "pass"
       },
-      "commit": null,
-      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs. Rank-theorem checkpoint expands the inverse calculation and corrects the overbroad algebraic-geometry Jacobian criterion by stating the expected-codimension caveat. Sard checkpoint corrects the vanishing-set filtration, zero-dimensional edge cases, hypersurface induction, and false claims that Sard alone yields slice transversality or Morse nondegeneracy. Local normal-form checkpoint types every Euclidean domain and shrinking, proves both converses by the chain rule, and corrects overclaims about bundle trivializations, covering lifts, metric flatness, and section embeddings. Regular-value checkpoint qualifies the constant-rank fibre statement, replaces metric-dependent perpendicular language by annihilators, types the Lie-subgroup inference, and separates quotient fibres from orbit-map constant rank. Submanifold-definition checkpoint clarifies the graph parametrization, gives a differentiable obstruction for corners, fixes the direction of the immersed-versus-subspace topology comparison, and qualifies canonicity relative to a chosen injective immersion. Example checkpoint replaces the circular Hopf-kernel dimension argument with a projective-chart computation, removes drafting leakage, distinguishes submersions from fibre bundles, corrects the orthogonal-group tangent-codomain explanation, and qualifies density of nonclosed subgroups."
+      "commit": "c0766e4",
+      "notes": "Diagnosis and target recorded. First rewrite checkpoint corrects the compact/general Whitney proof contract, a false cutoff inference in injectivity, the polynomial-restriction claim, and the hypotheses behind Morse/transversality genericity. Next: normal-form theorem proofs. Rank-theorem checkpoint expands the inverse calculation and corrects the overbroad algebraic-geometry Jacobian criterion by stating the expected-codimension caveat. Sard checkpoint corrects the vanishing-set filtration, zero-dimensional edge cases, hypersurface induction, and false claims that Sard alone yields slice transversality or Morse nondegeneracy. Local normal-form checkpoint types every Euclidean domain and shrinking, proves both converses by the chain rule, and corrects overclaims about bundle trivializations, covering lifts, metric flatness, and section embeddings. Regular-value checkpoint qualifies the constant-rank fibre statement, replaces metric-dependent perpendicular language by annihilators, types the Lie-subgroup inference, and separates quotient fibres from orbit-map constant rank. Submanifold-definition checkpoint clarifies the graph parametrization, gives a differentiable obstruction for corners, fixes the direction of the immersed-versus-subspace topology comparison, and qualifies canonicity relative to a chosen injective immersion. Example checkpoint replaces the circular Hopf-kernel dimension argument with a projective-chart computation, removes drafting leakage, distinguishes submersions from fibre bundles, corrects the orthogonal-group tangent-codomain explanation, and qualifies density of nonclosed subgroups. Final pass fixed the rank theorem’s disconnected-fibre gap by shrinking to product balls and integrating along fibres, repaired remaining map-typing and topology claims, and passed all four mechanical audits plus a 24-page link/exercise graph audit. All target gaps are closed; advanced noncompact Whitney variants are explicitly separated from the complete compact proof."
     },
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
@@ -643,9 +643,9 @@
     }
   },
   "current_unit": "dg-iv",
-  "next_action": "Finish the DG IV definition/example audit, then execute the five review passes and all mechanical and graph audits for the complete unit.",
+  "next_action": "Merge completed PR #7, update from main, create the DG V unit branch, and diagnose and envision Differential Geometry V.",
   "unresolved": [],
-  "last_commit": "6a36372",
+  "last_commit": "c0766e4",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

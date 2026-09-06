@@ -81,11 +81,11 @@ which is block-upper-triangular with diagonal blocks invertible ($\partial \hat 
 
 By the [[Thm - The Inverse Function Theorem|inverse function theorem]], $\varphi$ is a local [[Def - Diffeomorphism|diffeomorphism]] near $(0,0)$. So $\varphi$ provides a new system of source coordinates, in which the *first $n$ source coordinates are the components of $\hat F$* and the *last $m - n$ source coordinates are the original $y$ coordinates carried unchanged*.
 
-In these new source coordinates, $\hat F$ becomes the *standard projection* onto the first $n$ coordinates. Let me verify: in the new coordinates $(\tilde x, \tilde y) = \varphi(x, y) = (\hat F(x, y), y)$, the original $\hat F(x, y) = \tilde x$ by the definition of $\varphi$. So $\hat F \circ \varphi^{-1}(\tilde x, \tilde y) = \hat F(\varphi^{-1}(\tilde x, \tilde y))$ — and $\varphi^{-1}(\tilde x, \tilde y)$ is the $(x, y)$ such that $\hat F(x, y) = \tilde x$ and $y = \tilde y$, so $\hat F(\varphi^{-1}(\tilde x, \tilde y)) = \tilde x$. Hence
+In these new source coordinates, $\hat F$ becomes the standard projection. Indeed, $(\tilde x,\tilde y)=\varphi(x,y)=(\hat F(x,y),y)$ implies directly that
 $$\hat F \circ \varphi^{-1}(\tilde x, \tilde y) = \tilde x = (\tilde x^1, \dots, \tilde x^n)$$
 — the standard projection. The target chart can remain unchanged.
 
-The local section corollary follows. Given the normal-form coordinates, define $\sigma(\tilde x) = \varphi^{-1}(\tilde x, 0)$ on a neighbourhood of $0$ in $N$. This is smooth (composition of smooth maps), and $F(\sigma(\tilde x)) = F(\varphi^{-1}(\tilde x, 0)) = \tilde x$ (the standard projection applied to $(\tilde x, 0)$ is $\tilde x$). So $\sigma$ is a smooth local section, with $\sigma(0) = \varphi^{-1}(0, 0) = 0 = p$.
+The normal form gives a coordinate section $\widehat\sigma(\tilde x)=\varphi^{-1}(\tilde x,0)$. Returning through the original charts yields $\sigma=\varphi_0^{-1}\circ\widehat\sigma\circ\psi_0$ on a neighbourhood of $F(p)$. The coordinate identity $\hat F\circ\widehat\sigma=\mathrm{id}$ implies $F\circ\sigma=\mathrm{id}$, and $\sigma(F(p))=p$.
 
 Why does surjectivity of $dF_p$ correspond to invertibility of $\varphi$'s Jacobian? Surjectivity means the columns of $D\hat F(0)$ span $\mathbb{R}^n$ — equivalently, after permutation, the first $n$ columns are linearly independent, equivalently $\partial \hat F/\partial x|_0$ is invertible. The carry-along construction adds the identity $I_{m-n}$ in the bottom-right of $\varphi$'s Jacobian, giving the block-triangular structure with invertible blocks. So surjectivity of the differential is exactly what makes the carry-along construction work — and the construction's invertibility produces the new source coordinates.
 
