@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry IV merged; Differential Geometry V diagnosis in progress
+**Overall status:** active — Differential Geometry V complete and ready to merge; Differential Geometry VI next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -10,7 +10,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 2. Differential Geometry II — Smooth Maps and Partitions of Unity — complete
 3. Differential Geometry III — Tangent Vectors and the Differential — complete
 4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — complete
-5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — in progress
+5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — complete
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — pending
 7. Differential Geometry VII — Tensors and Tensor Fields — pending
 8. Differential Geometry VIII — Differential Forms — pending
@@ -38,19 +38,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry IV — Rank and Submanifold Theory (`937c276`, PR #7)
 
 ## Current unit
-`dg-v` — Differential Geometry V, workflow Phase 4.1 (target-driven rewrite).
+`dg-v` — Differential Geometry V, complete and ready to merge in PR #9.
 
 ## Remaining units
-Differential Geometry V–XII (eight units; V is active).
+Differential Geometry VI–XII (seven units).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Finish the DG V bracket/Lie-derivative audit, then review straightening and Reynolds transport and run the complete unit audits.
+Merge completed PR #9, update from `main`, create the DG VI unit branch, and diagnose and envision Differential Geometry VI.
 
 ## Last completed commit
-`25bb1a8`
+`eb331bd`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

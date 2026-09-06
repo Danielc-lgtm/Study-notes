@@ -32,9 +32,9 @@ The standing convention is that $M$ is a smooth manifold without boundary unless
 
 # Motivation
 
-A vector field on a manifold is a velocity field: at every point of $M$ it specifies a direction and a speed, and the manifold-version of "follow the arrows" is the central construction of this chapter. If you stand at $p$, the vector field $X$ tells you which way to step; if you keep stepping, you trace out a curve $\gamma^{(p)}$ whose tangent at every moment is $X$ at the point you have reached. That curve is an [[Def - Integral Curve of a Vector Field|integral curve]] of $X$, and the assembly of all such curves into one map $\phi : \mathbb{R} \times M \to M$ is the **flow** of $X$. The whole chapter is built on a single idea: a vector field is an infinitesimal recipe, and the flow is the global object you get by integrating that recipe.
+A vector field on a manifold is a velocity field: at every point it specifies a direction and speed. Following those arrows produces integral curves, and their maximal assembly is a smooth map $\phi:\mathcal D\to M$ on an open $\mathcal D\subseteq\mathbb R\times M$. Only complete fields have $\mathcal D=\mathbb R\times M$. Thus a vector field is an infinitesimal recipe, while its maximal **local** flow is the integrated dynamical object.
 
-This single idea has three rich consequences, and §5.1–§5.4 unpack them in turn. First, integral curves exist and are unique — at every point, for a short time. The proof is not a manifold-theoretic argument at all; it is [[Thm - The Contraction Mapping Principle|Picard–Lindelöf]] applied chart-by-chart. The interesting part is geometric: the local solutions on overlapping charts glue, and the [[Thm - Fundamental Theorem on Flows|Fundamental Theorem on Flows]] (Lee Theorem 9.12) assembles every integral curve into a unique *maximal* flow whose domain is an open subset $\mathcal{D} \subseteq \mathbb{R} \times M$. Existence for all time — completeness — is a separate question, and the standard sufficient condition is *compact support*: any [[Def - Complete Vector Field|complete vector field]] that vanishes outside a compact set generates a global one-parameter group of [[Def - Diffeomorphism|diffeomorphisms]].
+This single idea has three rich consequences, and §5.1–§5.4 unpack them in turn. First, Picard–Lindelöf in charts gives local existence, uniqueness, and smooth dependence; the manifold argument glues these solutions into a maximal flow. Existence for all time is separate: every **compactly supported smooth vector field is complete**, and its maximal local flow becomes a global one-parameter group of diffeomorphisms.
 
 Second, vector fields can be added, scaled by smooth functions, *and* multiplied together in a noncommutative way. The space $\mathfrak{X}(M)$ is a [[Def - Module|module]] over the [[Def - Ring|ring]] $C^\infty(M)$, but it carries an extra operation — the **Lie bracket** $[X, Y]$ — which makes it into something richer than a [[Def - Module|module]]: a **Lie algebra**. The bracket arises because each smooth vector field is also a derivation of $C^\infty(M)$, and the commutator of two derivations is again a derivation. The bracket is the central object of the chapter, and the structural backbone of the whole subject is the chain of equivalences
 
@@ -105,7 +105,9 @@ The audience-assumption for this chapter is the rest of the smooth manifold back
 ## §5.3 The Lie Bracket and Lie Derivative
 
 - **[[Def - The Lie Bracket of Vector Fields]]**
-	- The **Lie bracket** of two smooth vector fields $X, Y \in \mathfrak{X}(M)$ is the vector field $[X, Y]$ defined as the commutator of derivations: $[X, Y]f = X(Yf) - Y(Xf)$ for every $f \in C^\infty(M)$. In coordinates, $[X, Y] = (X^i \partial_i Y^j - Y^i \partial_i X^j)\partial_j$. The bracket is $\mathbb{R}$-bilinear and antisymmetric, satisfies the Jacobi identity, and obeys the function product rule $[fX, gY] = fg[X, Y] + f(Xg)Y - g(Yf)X$. Three equivalent perspectives: (i) the commutator of $X, Y$ as derivations of $C^\infty(M)$; (ii) the failure of the flows $\phi^X$ and $\phi^Y$ to commute, $\frac{d}{dt}\big|_{t=0} (\phi^X_{-t} \circ \phi^Y_t)$; (iii) the Lie derivative $\mathcal{L}_X Y$. The **true name** of the bracket is "infinitesimal commutator of flows".
+	- The **Lie bracket** is the commutator of derivations, $[X,Y]f=X(Yf)-Y(Xf)$. In coordinates, $[X,Y]=(X^i\partial_iY^j-Y^i\partial_iX^j)\partial_j$. Its flow interpretation is genuinely second order: in a chart $\kappa$ at $p$, the mixed derivative at $(0,0)$ of
+	  $$\kappa\!\left(\phi^Y_{-t}\circ\phi^X_{-s}\circ\phi^Y_t\circ\phi^X_s(p)\right)$$
+	  is the coordinate vector of $[X,Y]_p$. The first derivative of $\phi^X_{-t}\circ\phi^Y_t$ is merely $Y_p-X_p$, not the bracket. The third perspective is $\mathcal L_XY=[X,Y]$.
 
 - **[[Def - Lie Derivative of a Vector Field]]**
 	- The **Lie derivative** of $Y$ along $X$ is the vector field $\mathcal{L}_X Y$ defined by pulling $Y$ back along the flow of $X$ and differentiating: $(\mathcal{L}_X Y)_p = \lim_{t \to 0} \frac{d(\phi^X_{-t})_{\phi^X_t(p)}(Y_{\phi^X_t(p)}) - Y_p}{t}$. The key theorem ([[Thm - Lie Bracket Properties|Lee Theorem 9.38]]) is the identification $\mathcal{L}_X Y = [X, Y]$ — the Lie bracket *is* the Lie derivative. This makes the bracket geometric: it measures how $Y$ changes when viewed in the moving frame of $\phi^X_t$. The Lie derivative extends to functions ($\mathcal{L}_X f = Xf$), tensor fields, and forms; see [[Differential Geometry VIII — Differential Forms]] for the form case and Cartan's magic formula.
@@ -127,6 +129,14 @@ The audience-assumption for this chapter is the rest of the smooth manifold back
 
 - **[[Ex - The Jacobi Identity for Vector Fields]]** (⭐⭐)
 	- Prove the Jacobi identity $[X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0$ by direct computation, and interpret it as the statement that $\mathrm{ad}_X := [X, \cdot\,]$ is a derivation of the bracket.
+
+- **[[Thm - Reynolds Transport Theorem]]**
+	- Differentiating an integral over a domain transported by a time-dependent isotopy gives
+	  $$\frac d{dt}\int_{\phi_t(D)}\omega_t=\int_{\phi_t(D)}(\partial_t\omega_t+\mathcal L_{X_t}\omega_t),$$
+	  where $X_t=\dot\phi_t\circ\phi_t^{-1}$ is the Eulerian velocity. This is the integral-level payoff of the Lie derivative and requires neither an autonomous flow nor a group law.
+
+- **[[Ex - Faraday's Law via Reynolds Transport]]** (⭐⭐⭐)
+	- Apply Reynolds, Cartan, and Stokes to a moving magnetic-flux surface. The exercise derives the motional term $\vec u\times\vec B$ with a declared boundary orientation and separates the geometric transport identity from Maxwell's dynamical input.
 
 > [!tip] Unlocked: [[Def - The Lie Algebra of a Lie Group|Lie Algebra of a Lie Group]] *(from Lie Theory)*
 > The Lie bracket on $\mathfrak{X}(M)$ specializes to the **Lie algebra of a Lie group**: if $G$ is a Lie group, the left-invariant vector fields on $G$ form a finite-dimensional Lie subalgebra $\mathfrak{g} \subset \mathfrak{X}(G)$, isomorphic to $T_e G$ as a vector space. The bracket on $\mathfrak{g}$ recovers, in the matrix case, the commutator $AB - BA$. The whole edifice of [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]] is what you get by reading this section in the category of Lie [[Def - Group|groups]].

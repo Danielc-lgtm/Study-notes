@@ -74,9 +74,7 @@ We have $X^1 = x, X^2 = 1, X^3 = x(y+1)$ and $Y^1 = 1, Y^2 = 0, Y^3 = y$. The co
 
 $$[X, Y]^k = X^i \partial_i Y^k - Y^i \partial_i X^k = X^1 \partial_x Y^k + X^2 \partial_y Y^k + X^3 \partial_z Y^k - Y^1 \partial_x X^k - Y^2 \partial_y X^k - Y^3 \partial_z X^k.$$
 
-For $k = 1$: $Y^1 = 1$ (constant), so $\partial_i Y^1 = 0$; the first three terms vanish. $X^1 = x$ has $\partial_x X^1 = 1$ and other partials zero; the last three terms give $-Y^1 \cdot 1 = -1$. So $[X, Y]^1 = -1$, but let's recompute: $-Y^1 \partial_x X^1 - Y^2 \partial_y X^1 - Y^3 \partial_z X^1 = -(1)(1) - (0)(0) - (y)(0) = -1$. So $[X, Y]^1 = 0 - (-1)$? Wait — re-read the formula: $[X, Y]^k = X^i \partial_i Y^k - Y^i \partial_i X^k$. For $k = 1$: first term is $X^i \partial_i Y^1 = 0$ (since $Y^1 = 1$). Second term is $Y^i \partial_i X^1 = Y^1 \partial_x X^1 + Y^2 \partial_y X^1 + Y^3 \partial_z X^1 = (1)(1) + 0 + 0 = 1$. So $[X, Y]^1 = 0 - 1 = -1$.
-
-Hmm, let me recompute using Lee's published Example 8.27, where the answer should be $-\partial/\partial x + (\text{something}) \partial/\partial z$. Let me re-read Lee's calculation carefully — actually Lee's result is $[X, Y] = -\partial/\partial x - y \partial/\partial z$. Let me recompute with this in mind.
+For $k=1$, $Y^1=1$ is constant, so $X^i\partial_iY^1=0$. Since $X^1=x$, we have $Y^i\partial_iX^1=\partial_xx=1$. Therefore $[X,Y]^1=0-1=-1$. The remaining components are computed below without using the anticipated answer.
 
 > [!note]- Derivation (Step 1)
 > $X^1 = x, X^2 = 1, X^3 = x(y+1)$; $Y^1 = 1, Y^2 = 0, Y^3 = y$.

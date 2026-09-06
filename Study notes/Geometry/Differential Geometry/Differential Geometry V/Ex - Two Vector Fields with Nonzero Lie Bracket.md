@@ -137,7 +137,7 @@ The [[Thm - Commuting Flows Theorem]] says flows commute iff bracket vanishes. W
 >
 > Interpret this in $T_p \mathbb{R}^2 \cong \mathbb{R}^2$: the vector $(0, ts) = ts \cdot (0, 1) = ts \cdot \partial_y|_p = ts \cdot [X, Y]_p$.
 >
-> In this affine example the coordinate difference between the two ordered compositions is exactly $st\,\partial_y$. In general, after choosing a chart and fixing an order convention, the difference has leading mixed term $st[X,Y]_p$ and remainder $O(|s|^2|t|+|s||t|^2)$. Thus bracket vanishing removes the mixed second-order term; the expression $O(\sqrt{st}^{,3})$ is neither a well-defined two-parameter estimate nor needed here.
+> In this affine example the coordinate difference between the two ordered compositions is exactly $st\,\partial_y$. In general, after choosing a chart and fixing an order convention, the difference has leading mixed term $st[X,Y]_p$ and remainder $O(|s|^2|t|+|s||t|^2)$. Thus bracket vanishing removes the mixed second-order term.
 
 > [!note]- Complete formal solution
 > **(a)** With $X = \partial_x$ ($X^1 = 1, X^2 = 0$) and $Y = x \partial_y$ ($Y^1 = 0, Y^2 = x$), the coordinate formula gives $[X, Y]^1 = 0 - 0 = 0$ and $[X, Y]^2 = X^1 \partial_x Y^2 + X^2 \partial_y Y^2 - 0 = 1 \cdot 1 + 0 = 1$. So $[X, Y] = \partial/\partial y \neq 0$.
