@@ -116,18 +116,9 @@ The plan: verify the three fields are linearly independent, compute the three pa
 >
 > Therefore $[X, Y] = \partial_w \notin D$. Similarly $[Y, Z] = \partial_w \notin D$. So $D$ is **not involutive**.
 
-**Step 4: Modify the problem — change to an involutive frame.**
+**Step 4: Apply Frobenius.**
 
-> [!note]- Derivation
-> Reconsidering: the problem says "show they span a rank-$3$ smooth distribution and determine involutivity." We have determined $D$ is *not* involutive in this form. As stated, the answer is: $D$ is not involutive, and therefore not integrable — by [[Thm - The Frobenius Theorem|Frobenius]], no integral $3$-manifold exists.
->
-> Let's modify the problem to make it instructive: replace $Z$ with $Z' = \partial_z$ — a coordinate vector field. Then the new distribution $D' = \mathrm{span}(X, Y, Z') = \mathrm{span}(\partial_x, \partial_y + x\partial_w, \partial_z)$ has:
->
-> $[X, Y] = \partial_w$ (same as before, *still not in $D'$*, since $D'$'s span structure is the same — $D'$ at $(x, y, z, w)$ is $(a, b, c, bx)$).
->
-> So this also fails. The original problem statement, with $Y = \partial_y + x\partial_w$, $Z = \partial_z + y\partial_w$, simply does *not* yield an involutive distribution.
->
-> **Reinterpretation:** The exercise as stated is meant to demonstrate that even a "natural-looking" distribution given by three vector fields can fail involutivity — the non-trivial bracket $[X, Y] = \partial_w$ escapes $D$ and there is no integral $3$-manifold through any point. This is a *negative* application of Frobenius.
+Because $D$ is not involutive, [[Thm - The Frobenius Theorem|Frobenius's theorem]] implies that $D$ is not integrable. Thus there is no $3$-dimensional immersed submanifold through any point whose tangent spaces equal $D$. The conditional request “if it is involutive” therefore has no further case to solve.
 
 > [!note]- Complete formal solution
 > The three vector fields are linearly independent at every point of $\mathbb{R}^4$ (the $3 \times 3$ minor of the coefficient matrix in $\partial_x, \partial_y, \partial_z$ is the identity, hence non-singular). So $D = \mathrm{span}(X, Y, Z)$ is a rank-$3$ smooth distribution.

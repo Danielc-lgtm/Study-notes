@@ -32,7 +32,7 @@ The choice to require $T_pN = D_p$ rather than $T_pN \subseteq D_p$ is deliberat
 
 # The Definition
 
-Let $M$ be a smooth manifold and $D$ a smooth distribution of rank $k$ on $M$. An **integral manifold** of $D$ is a nonempty immersed submanifold $N \hookrightarrow M$ (typically of dimension $k$, though connected components of arbitrary dimension can also be considered) such that
+Let $M$ be a smooth manifold and $D$ a smooth distribution of rank $k$ on $M$. An **integral manifold** of $D$ is a nonempty immersed submanifold $N \hookrightarrow M$ of dimension $k$ such that
 
 $$T_pN = D_p \qquad \text{for every } p \in N.$$
 
