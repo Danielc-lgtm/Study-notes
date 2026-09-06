@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry X complete and ready to merge; Differential Geometry XI is next
+**Overall status:** active — Differential Geometry X merged; Differential Geometry XI diagnosis complete and rewrite in progress
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -16,17 +16,17 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 8. Differential Geometry VIII — Differential Forms — in progress
 9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — in progress
 10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — in progress
-11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — pending
+11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — in progress
 12. Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds — pending
 
 ## Mode
 `improve`
 
 ## Working branch
-`codex/improve-all-differential-geometry-dg-x`
+`codex/improve-all-differential-geometry-dg-xi`
 
 ## Pull request
-`#14 https://github.com/Danielc-lgtm/Study-notes/pull/14 (open checkpoint)`
+`not opened yet`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -41,18 +41,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry VII — Tensors and Tensor Fields (`5b34532`, PR #11)
 - Differential Geometry VIII — Differential Forms (`a85c2ca`, PR #12)
 - Differential Geometry IX — Orientation, Integration, and Stokes (`ef7a109`, PR #13)
+- Differential Geometry X — de Rham Theory and Frobenius (`30b8944`, PR #14)
 
 ## Current unit
-`dg-x` — Differential Geometry X, workflow Phase 6 (final checklist passed; ready to merge).
+`dg-xi` — Differential Geometry XI, workflow Phase 3.1 (diagnosis and target complete).
 
 ## Remaining units
-Differential Geometry XI–XII (two pending units).
+Differential Geometry XI–XII (two units; XI is active).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Commit and push DG X, merge PR #14, then create the DG XI branch and diagnose Lie groups, Lie algebras, and the exponential map.
+Open the DG XI checkpoint PR, repair SU(2), so(3), and transported-group calculations, then audit exp naturality, closed subgroups, actions, orbits, and homogeneous spaces.
 
 ## Last completed commit
 `5384ab2`
@@ -71,3 +72,4 @@ Commit and push DG X, merge PR #14, then create the DG XI branch and diagnose Li
 - #11 Differential Geometry VII → main @ 2e5c3ac (2026-09-06)
 - #12 Differential Geometry VIII → main @ 3666316 (2026-09-06)
 - #13 Differential Geometry IX → main @ 2d7fd55 (2026-09-06)
+- #14 Differential Geometry X → main @ 28328e0 (2026-09-06)
