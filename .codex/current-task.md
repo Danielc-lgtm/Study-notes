@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–VIII merged; Gauge Theory I–X merged; Gauge Theory XI is current
+**Overall status:** in progress — Gauge Theory I–X merged; Gauge Theory XI is current
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -53,7 +53,7 @@ _none_. Source convention conflicts will be made explicit rather than silently n
 Extract Wernli §§4.1–5.3 and build Gauge Theory XI from homotopy and homology through intersection forms, four-manifold classification, and Donaldson theory.
 
 ## Last completed commit
-`a72d973` — initialized Gauge Theory VIII after merging the completed Sobolev and elliptic unit.
+`e7fcf5c` — merged Gauge Theory X: Seiberg–Witten invariants and applications.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
