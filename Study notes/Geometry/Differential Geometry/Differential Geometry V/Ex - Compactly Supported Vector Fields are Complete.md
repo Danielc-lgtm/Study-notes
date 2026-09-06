@@ -100,11 +100,11 @@ By Steps 1 and 2, every integral curve $\phi^{(p)}$ — whether $p$ is in $K$ or
 >
 > Pick $t_0$ with $b - \varepsilon < t_0 < b$, and let $q := \phi^{(p)}(t_0)$. By hypothesis, the integral curve $\phi^{(q)}$ exists at least on $(-\varepsilon, \varepsilon)$.
 >
-> Define $\tilde\gamma : (-\varepsilon, t_0 + \varepsilon) \to M$ by
-> $$\tilde\gamma(t) = \begin{cases} \phi^{(p)}(t) & \text{if } -\varepsilon < t < b, \\ \phi^{(q)}(t - t_0) & \text{if } t_0 - \varepsilon < t < t_0 + \varepsilon.\end{cases}$$
+> Define $\tilde\gamma:(a,t_0+\varepsilon)\to M$ by
+> $$\tilde\gamma(t) = \begin{cases} \phi^{(p)}(t) & \text{if } a<t<b, \\ \phi^{(q)}(t - t_0) & \text{if } t_0 - \varepsilon < t < t_0 + \varepsilon.\end{cases}$$
 > These two definitions agree where they overlap, by the group law: $\phi^{(q)}(t - t_0) = \phi_{t - t_0}(q) = \phi_{t - t_0}(\phi_{t_0}(p)) = \phi_t(p) = \phi^{(p)}(t)$.
 >
-> So $\tilde\gamma$ is a well-defined integral curve of $X$ through $p$, defined on $(-\varepsilon, t_0 + \varepsilon)$, which strictly contains $(a, b) = \mathcal{D}^{(p)}$ since $t_0 + \varepsilon > b$. This contradicts the maximality of $\phi^{(p)}$.
+> The two intervals cover $(a,t_0+\varepsilon)$ and the definitions agree on their overlap, so $\tilde\gamma$ is a well-defined integral curve through $p$. Its domain strictly contains $(a,b)$ because $t_0+\varepsilon>b$, contradicting maximality.
 >
 > Hence $\mathcal{D}^{(p)} = \mathbb{R}$ for every $p \in M$, i.e. $X$ is complete.
 
@@ -117,8 +117,8 @@ By Steps 1 and 2, every integral curve $\phi^{(p)}$ — whether $p$ is in $K$ or
 >
 > **Step 3 — Uniform Time Lemma.** From Steps 1 and 2, for every $p \in M$ the integral curve $\phi^{(p)}$ exists at least on $(-\varepsilon, \varepsilon)$ (with $\varepsilon$ from Step 1).
 >
-> Suppose for contradiction $\mathcal{D}^{(p)} = (a, b)$ for some $p$ with $b < \infty$. Pick $t_0 \in (b - \varepsilon, b)$ and let $q = \phi^{(p)}(t_0)$. The integral curve $\phi^{(q)}$ exists at least on $(-\varepsilon, \varepsilon)$. Define $\tilde\gamma$ on $(-\varepsilon, t_0 + \varepsilon)$ by
-> $$\tilde\gamma(t) = \begin{cases} \phi^{(p)}(t) & -\varepsilon < t < b, \\ \phi^{(q)}(t - t_0) & t_0 - \varepsilon < t < t_0 + \varepsilon. \end{cases}$$
+> Suppose for contradiction $\mathcal{D}^{(p)} = (a, b)$ for some $p$ with $b < \infty$. Pick $t_0 \in (b - \varepsilon, b)$ and let $q = \phi^{(p)}(t_0)$. The integral curve $\phi^{(q)}$ exists at least on $(-\varepsilon, \varepsilon)$. Define $\tilde\gamma$ on $(a,t_0+\varepsilon)$ by
+> $$\tilde\gamma(t) = \begin{cases} \phi^{(p)}(t) & a<t<b, \\ \phi^{(q)}(t - t_0) & t_0 - \varepsilon < t < t_0 + \varepsilon. \end{cases}$$
 > These agree on the overlap by the group law of the flow. Hence $\tilde\gamma$ is an integral curve through $p$ extending past $b$ — contradicting maximality of $\phi^{(p)}$.
 >
 > Therefore $\mathcal{D}^{(p)} = \mathbb{R}$ for every $p$. $\qquad\blacksquare$

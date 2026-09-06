@@ -47,10 +47,10 @@ Differential Geometry V–XII (eight units; V is active).
 _none_.
 
 ## Exact next action
-Audit and rebuild the Fundamental Theorem on Flows and completeness pages, with maximal-domain and smooth-dependence arguments explicit.
+Audit the Lie bracket, Lie derivative, pushforward, Jacobi, and commuting-flow pages, making every sign and local-domain condition explicit.
 
 ## Last completed commit
-`070c227`
+`cc3617f`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

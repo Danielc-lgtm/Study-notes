@@ -326,7 +326,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded before content editing. First target gap: repair flow definitions and maximal-flow theorem, then audit bracket/commuting-flow calculus. Flow-definition checkpoint separates open total domains from open time slices, records maximal-domain translation, avoids assuming a Lie structure on Diff(M), distinguishes regular from singular orbit foliations, and separates isotopies from autonomous flows."
+      "notes": "Diagnosis and target recorded before content editing. First target gap: repair flow definitions and maximal-flow theorem, then audit bracket/commuting-flow calculus. Flow-definition checkpoint separates open total domains from open time slices, records maximal-domain translation, avoids assuming a Lie structure on Diff(M), distinguishes regular from singular orbit foliations, and separates isotopies from autonomous flows. Maximal-flow checkpoint replaces a circular openness proof by finite smooth-dependence compositions, types time-slice openness and inverse domains, repairs the uniform-time extension interval, and qualifies Hamiltonian/geodesic completeness claims."
     },
     "dg-vi": {
       "title": "Differential Geometry VI — Vector Bundles and the Cotangent Bundle",
@@ -649,9 +649,9 @@
     }
   },
   "current_unit": "dg-v",
-  "next_action": "Audit and rebuild the Fundamental Theorem on Flows and completeness pages, with maximal-domain and smooth-dependence arguments explicit.",
+  "next_action": "Audit the Lie bracket, Lie derivative, pushforward, Jacobi, and commuting-flow pages, making every sign and local-domain condition explicit.",
   "unresolved": [],
-  "last_commit": "070c227",
+  "last_commit": "cc3617f",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
