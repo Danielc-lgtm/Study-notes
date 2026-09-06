@@ -430,22 +430,30 @@
     "gt-viii": {
       "title": "Gauge Theory VIII — Fredholm Maps, Transversality, Determinant Lines, and Degree",
       "mode": "create",
-      "status": "in_progress",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII — Fredholm Theory and Transversality.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII — Fredholm Maps, Transversality, Determinant Lines, and Degree.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII — Fredholm Theory and Transversality.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII — Fredholm Maps, Transversality, Determinant Lines, and Degree.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Def - Smooth Fredholm Map and Regular Value.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Ex - Degree is Invariant Under Birth-Death of Two Solutions.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Thm - Sard-Smale and Parametric Transversality.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Def - Integer Degree of an Oriented Fredholm Map.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Def - Determinant Line and Orientation of a Fredholm Operator.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Def - Equivariant Fredholm Problem.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Thm - Kuranishi Model for a Fredholm Map.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII/Def - Mod-2 Degree of a Proper Fredholm Map.md"
       ],
       "diagnosis": "Create-mode unit; filename manifest pending.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Kuranishi reduction, Sard-Smale/parametric transversality, proper mod-2 and oriented degree, determinant-line stabilization, and equivariant gauge slices."
     },
     "gt-ix": {
       "title": "Gauge Theory IX — Seiberg–Witten Equations and Moduli-Space Analysis",
@@ -526,8 +534,8 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-viii",
-  "next_action": "Extract Haydys §6 and build Gauge Theory VIII: Kuranishi models, Sard-Smale and parametric transversality, mod-2 and integer degree, determinant lines, orientations, and equivariant Fredholm maps.",
+  "current_unit": "gt-ix",
+  "next_action": "Merge Gauge Theory VIII and build Gauge Theory IX from Haydys §7.1: Seiberg-Witten equations, gauge action, deformation complex, Sobolev completion, compactness, slices, perturbations, reducibles, and orientations.",
   "unresolved": [],
   "last_commit": "a72d973",
   "ready_to_merge": false,

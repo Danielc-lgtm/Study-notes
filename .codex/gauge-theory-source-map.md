@@ -22,12 +22,12 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §5.1, Sobolev spaces | 43–46 | VII | complete |
 | §5.2, elliptic operators | 46–49 | VII | complete |
 | §5.3, elliptic complexes, gauge interpretation, de Rham complex | 49–51 | VII | complete |
-| §6.1, Kuranishi model and Sard–Smale theorem | 52–53 | VIII | pending |
-| §6.2, $\mathbb Z/2\mathbb Z$ degree | 53–55 | VIII | pending |
-| §6.3, parametric transversality | 55–56 | VIII | pending |
-| §6.4, determinant line bundle | 56–58 | VIII | pending |
-| §6.5, orientations and integer-valued degree | 58–59 | VIII | pending |
-| §6.6, equivariant setup | 59–60 | VIII | pending |
+| §6.1, Kuranishi model and Sard–Smale theorem | 52–53 | VIII | complete |
+| §6.2, $\mathbb Z/2\mathbb Z$ degree | 53–55 | VIII | complete |
+| §6.3, parametric transversality | 55–56 | VIII | complete |
+| §6.4, determinant line bundle | 56–58 | VIII | complete |
+| §6.5, orientations and integer-valued degree | 58–59 | VIII | complete |
+| §6.6, equivariant setup | 59–60 | VIII | complete |
 | §7.1–7.1.3, Seiberg–Witten equations, gauge action, deformation complex, Sobolev completion | 61–64 | IX | pending |
 | §7.1.4–7.1.8, compactness, slices, perturbations, reducibles, orientability | 64–70 | IX | pending |
 | §7.2, Seiberg–Witten invariant | 71 | X | pending |
