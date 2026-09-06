@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–II merged; Gauge Theory III is current
+**Overall status:** in progress — Gauge Theory I–II merged; Gauge Theory III complete and ready to merge
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -8,7 +8,7 @@ Create a complete, self-contained Obsidian lecture-note series covering both `so
 ## Scope
 1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete (PR #19)
 2. Gauge Theory II — Principal bundles, representations, and bundle classification — complete (PR #20)
-3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — in progress
+3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — complete (PR #21; ready to merge)
 4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — pending
 5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — pending
 6. Gauge Theory VI — Clifford algebras, spin geometry, and Dirac operators — pending
@@ -41,16 +41,16 @@ PR #21 — open; remains unmerged until Gauge Theory III passes every review.
 - Gauge Theory II — Principal bundles, representations, and classification — complete, merged in PR #20.
 
 ## Current unit
-Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry.
+Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli.
 
 ## Remaining units
-Gauge Theory III–XI and the final audit.
+Gauge Theory IV–XI and the final audit.
 
 ## Unresolved issues
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Perform a specification-depth review of every Gauge Theory III definition and theorem page, expanding motivation, axiom-failure analysis, examples, proof lemmas, and topic-level legal operations; then rerun graph and source-coverage audits.
+Merge PR #21, branch fresh from main for Gauge Theory IV, and build the Chern–Weil/Chern–Simons/flat-moduli graph.
 
 ## Last completed commit
 `978d5c8` — deepened the principal-connection definition with axiom-failure analysis, examples, calibration, and operational interpretation.
