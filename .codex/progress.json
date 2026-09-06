@@ -134,7 +134,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "All source-critical Gauge Theory I pages are now independently rebuilt with a single ∇=d+iqA convention. The Levi–Civita, flat-trivial, monopole, minimal-coupling, and Aharonov–Bohm computations have complete solutions; exercise indexes match. Mechanical audits pass. Remaining: audit the five preserved vector-field enrichment pages/index, perform all five unit reviews, and correct source coverage/ledgers."
+      "notes": "The optional vector-field enrichment is now corrected and compressed: the coordinate-singularity error in ∂θ is replaced by the smooth height gradient, Poincaré–Hopf has a complete oriented-surface proof through moving frames and Gauss–Bonnet, and hairy ball has an independent degree proof. All 26 subpages have now been rewritten or audited. Next execute the five unit reviews."
     },
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
@@ -436,9 +436,9 @@
     }
   },
   "current_unit": "gt-i",
-  "next_action": "Audit and tighten the Gauge Theory I vector-field enrichment pages (index, Poincare–Hopf, hairy ball, and two examples), fixing or replacing incomplete proofs; then execute correctness, pedagogy, rederivation, graph, and prose reviews for the entire unit.",
+  "next_action": "Perform separate correctness, pedagogy, rederivation, knowledge-graph/self-containedness, and prose/conciseness reviews of all 27 Gauge Theory I files; fix every finding, run final mechanical audits, and update source coverage.",
   "unresolved": [],
-  "last_commit": "7b09c9a",
+  "last_commit": "fc5e357",
   "ready_to_merge": false,
-  "updated": "2026-09-06T05:55:00Z"
+  "updated": "2026-09-06T06:20:00Z"
 }

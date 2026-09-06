@@ -32,6 +32,16 @@ The chapter develops this claim in the smallest setting where every mechanism is
 
 ## §1.1 Connections as differentiation between fibres
 
+Before adding a connection, recall the bundle operations used throughout the sources. If
+$E$ and $K$ are bundles over $M$, then $E\oplus K$, $E\otimes K$, $E^*$,
+$\operatorname{Hom}(E,K)=E^*\otimes K$, and $\operatorname{End}E$ are formed
+fibrewise and glued by the induced transition functions. A smooth map $f:N\to M$
+produces the pullback bundle $f^*E\to N$. Sections form a
+$C^\infty(M)$-module, not ordinarily a vector space with pointwise-independent
+coefficients. These facts are developed in [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]];
+here they matter because a connection must propagate through every one of these
+operations by a Leibniz rule.
+
 - **[[Def - Connection on a Vector Bundle]]**
   - A connection is a first-order operator $\nabla:\Gamma(E)\to\Omega^1(M;E)$ satisfying the Leibniz rule.
   - In a frame, $\nabla=d+A$ and $A'=g^{-1}Ag+g^{-1}dg$.
@@ -109,7 +119,10 @@ Local questions are answered by choosing a frame. Global questions are answered 
 3. **Take differences of connections.** The inhomogeneous terms cancel, so $\nabla'-\nabla\in\Omega^1(M;\operatorname{End}E)$.
 4. **Square the covariant derivative.** On sections, $d_\nabla^2=F_\nabla\wedge(-)$.
 5. **Specialize to rank one.** Commutators vanish, hence $F=dA$ and $dF=0$.
-6. **Integrate curvature over a closed surface.** For a Hermitian line bundle, $(2\pi i)^{-1}\int F_\nabla$ is an integer when evaluated on an integral $2$-cycle.
+6. **Integrate curvature over a closed surface.** With the convention
+   $c_1(L)=[iF_\nabla/(2\pi)]$, a Hermitian line bundle has integral normalized
+   curvature periods. Reversing this convention reverses every displayed Chern
+   number but changes no integrality statement.
 7. **Integrate the connection along a path.** In $U(1)$, transport is $\exp(-iq\int_\gamma A)$ for the convention $\nabla=d+iqA$.
 
 # Problem-Solving Strategy

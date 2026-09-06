@@ -34,12 +34,16 @@ Differentiate each potential, compare them on the overlap, exponentiate the gaug
 > $$h(\varphi)=e^{-2iqg\varphi}.$$
 > This is single-valued under $\varphi\mapsto\varphi+2\pi$ exactly when $e^{-4\pi iqg}=1$, equivalently $2qg\in\mathbb Z$.
 >
-> The unitary curvature is $\mathcal F=iqF$. With the Chern–Weil convention $c_1(L)=[\mathcal F/(2\pi i)]$,
+> The unitary curvature is $\mathcal F=iqF$. With the convention
+> $c_1(L)=[i\mathcal F/(2\pi)]$,
 > $$
-> c_1(L)[S^2]=\frac{q}{2\pi}\int_{S^2}F
-> =\frac{q}{2\pi}(4\pi g)=2qg.
+> c_1(L)[S^2]=-\frac{q}{2\pi}\int_{S^2}F
+> =-\frac{q}{2\pi}(4\pi g)=-2qg.
 > $$
-> Hence the gluing condition and curvature integrality give the same integer. Since line bundles over $S^2$ are classified by this integer, the bundle is the corresponding tensor power of a Hopf line bundle, with dual chosen if the sign convention for the Hopf generator is opposite.
+> The sign agrees with the degree of the transition map for the overlap
+> convention used here. Since line bundles over $S^2$ are classified by this
+> integer, the bundle is the corresponding tensor power of a Hopf line bundle,
+> with the dual chosen if the opposite Hopf generator is used.
 
 # Key Takeaways
 

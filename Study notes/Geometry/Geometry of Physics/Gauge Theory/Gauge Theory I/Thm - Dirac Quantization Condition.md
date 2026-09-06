@@ -18,7 +18,9 @@ Let $L\to S^2$ be a Hermitian line bundle with unitary connection $\nabla=d+iqA_
 > $$
 > \frac{q}{2\pi}\int_{S^2}F\in\mathbb Z.
 > $$
-> Equivalently, $[qF/(2\pi)]$ is the real image of $c_1(L)$. If a monopole convention defines magnetic charge $g$ by $\int_{S^2}F=4\pi g$, then
+> With the convention $c_1(L)=[iF_\nabla/(2\pi)]$, the real image of
+> $c_1(L)$ is $[-qF/(2\pi)]$. If a monopole convention defines magnetic
+> charge $g$ by $\int_{S^2}F=4\pi g$, then
 > $$2qg\in\mathbb Z.$$
 > Restoring $\hbar$ gives $2qg/\hbar\in\mathbb Z$; additional factors of $c$ depend on the electromagnetic unit convention.
 
@@ -45,6 +47,8 @@ Cover $S^2$ by two discs, use Stokes on each, reduce the result to the equator, 
 > $$
 > For a smooth map $h:S^1\to U(1)$, $(2\pi i)^{-1}\int_C h^{-1}dh=\deg(h)\in\mathbb Z$. The preceding sign depends on which overlap transition is called $h$; therefore
 > $$\frac{q}{2\pi}\int_{S^2}F=-\deg(h)\in\mathbb Z.$$
+> Since $F_\nabla=iqF$, it follows at the same time that
+> $c_1(L)[S^2]=\deg(h)$ in the convention fixed above.
 > This proves integrality. Substituting $\int F=4\pi g$ gives $2qg\in\mathbb Z$.
 
 # What Makes This Hard

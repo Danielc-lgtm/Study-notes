@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Audit and tighten the Gauge Theory I vector-field enrichment pages (index, Poincaré–Hopf, hairy ball, and two examples), fixing or replacing incomplete proofs; then execute correctness, pedagogy, rederivation, graph, and prose reviews for the entire unit.
+Perform separate correctness, pedagogy, rederivation, knowledge-graph/self-containedness, and prose/conciseness reviews of all 27 Gauge Theory I files; fix every finding, run final mechanical audits, and update source coverage.
 
 ## Last completed commit
 `570c6a7` is the user-provided source import immediately preceding this task; the task initialization commit follows this ledger update.
