@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry VIII complete and ready to merge; Differential Geometry IX is next
+**Overall status:** active — Differential Geometry VIII merged; Differential Geometry IX diagnosis complete and rewrite in progress
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -14,7 +14,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — complete
 7. Differential Geometry VII — Tensors and Tensor Fields — complete
 8. Differential Geometry VIII — Differential Forms — in progress
-9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — pending
+9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — in progress
 10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — pending
 11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — pending
 12. Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds — pending
@@ -23,10 +23,10 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `improve`
 
 ## Working branch
-`codex/improve-all-differential-geometry-dg-viii`
+`codex/improve-all-differential-geometry-dg-ix`
 
 ## Pull request
-`#12 https://github.com/Danielc-lgtm/Study-notes/pull/12 (open checkpoint)`
+`not opened yet`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -39,18 +39,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry V — Vector Fields, Flows, and Brackets (`b6c873f`, PR #9)
 - Differential Geometry VI — Vector Bundles and the Cotangent Bundle (`5b34532`, PR #10)
 - Differential Geometry VII — Tensors and Tensor Fields (`5b34532`, PR #11)
+- Differential Geometry VIII — Differential Forms (`a85c2ca`, PR #12)
 
 ## Current unit
-`dg-viii` — Differential Geometry VIII, workflow Phase 6 (final checklist passed; ready to merge).
+`dg-ix` — Differential Geometry IX, workflow Phase 3.1 (diagnosis and target complete).
 
 ## Remaining units
-Differential Geometry IX–XII (four pending units).
+Differential Geometry IX–XII (four units; IX is active).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Commit and push DG VIII, merge PR #12, then create the DG IX branch and diagnose orientation, integration, and Stokes.
+Open the DG IX checkpoint PR, then repair the Riemannian-volume Jacobian proof and audit boundary orientation, integration well-definedness, change of variables, and Stokes.
 
 ## Last completed commit
 `5384ab2`
@@ -67,3 +68,4 @@ Commit and push DG VIII, merge PR #12, then create the DG IX branch and diagnose
 - #9 Differential Geometry V → main @ 577a002 (2026-09-06)
 - #10 Differential Geometry VI → main @ 9aea8d5 (2026-09-06)
 - #11 Differential Geometry VII → main @ 2e5c3ac (2026-09-06)
+- #12 Differential Geometry VIII → main @ 3666316 (2026-09-06)

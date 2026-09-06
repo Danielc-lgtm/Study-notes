@@ -63,12 +63,8 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "active",
-  "branch": "codex/improve-all-differential-geometry-dg-viii",
-  "pr": {
-    "number": 12,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/12",
-    "status": "open"
-  },
+  "branch": "codex/improve-all-differential-geometry-dg-ix",
+  "pr": null,
   "merged_prs": [
     {
       "number": 2,
@@ -472,7 +468,7 @@
     "dg-ix": {
       "title": "Differential Geometry IX — Orientation, Integration, and Stokes' Theorem",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
@@ -502,7 +498,7 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry IX/Thm - Integration is Well-Defined on Oriented Manifolds.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry IX/Thm - Stokes' Theorem on Manifolds.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the unit has a strong orientation–top-form–integration spine, but the Riemannian volume proof contains contradictory Jacobian calculations, and the boundary-orientation derivation needs a single audited sign convention. Density, twisted-form, and ordinary-form transformation laws must be sharply separated; integration proofs need locally finite partitions and compact-support hypotheses stated at use; sphere parametrizations and Stokes/Green signs require direct checks. Several forward claims about canonical densities, regular-level-set orientations, and top cohomology need their auxiliary hypotheses made explicit. Target: organize the unit around integration as the pairing of orientation-sensitive top forms with oriented manifolds, with densities/twisted forms as the orientation-free replacement. Derive orientation equivalences, induced boundary signs, partition-of-unity integration, change of variables, Riemannian volume, and Stokes from one consistent determinant convention. Exercises should calculate signs and Jacobians explicitly and connect Green, divergence, sphere volume, Möbius integration, Maxwell, and de Rham periods without hiding hypotheses.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -512,7 +508,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Diagnosis and target description written before editing; first pass will repair determinant and boundary signs."
     },
     "dg-x": {
       "title": "Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius",
@@ -654,10 +650,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-viii",
-  "next_action": "Commit and push DG VIII, merge PR #12, then create the DG IX branch and diagnose orientation, integration, and Stokes.",
+  "current_unit": "dg-ix",
+  "next_action": "Open the DG IX checkpoint PR, then repair the Riemannian-volume Jacobian proof and audit boundary orientation, integration well-definedness, change of variables, and Stokes.",
   "unresolved": [],
   "last_commit": "8994ef6",
-  "ready_to_merge": true,
+  "ready_to_merge": false,
   "updated": "2026-09-06"
 }
