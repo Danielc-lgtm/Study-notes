@@ -89,7 +89,7 @@ The Dirac operator $\not D = c \circ \nabla^S$ is the composition of the spin co
 Connections:
 
 - **Hodge theory.** The Dirac operator on the spinor bundle is the spin-geometric analog of the **Hodge–de Rham operator** $d + d^*$ acting on forms (see [[Hodge Theory I — Harmonic Forms and the Hodge Decomposition]]). Both square to Laplacian-like operators; both have finite-dimensional kernels on closed manifolds (giving rise to topological invariants); both fit into index-theoretic frameworks (the de Rham Laplacian gives the Euler characteristic, the Dirac operator gives the $\hat A$-genus).
-- **Yang–Mills / gauge theory.** Twisting the spinor bundle by a vector bundle $E$ with connection $A$ gives the twisted Dirac operator $\not D_E$, central to the Seiberg–Witten equations and to the Atiyah–Singer index theorem in its general form. See [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+- **Yang–Mills / gauge theory.** Twisting the spinor bundle by a vector bundle $E$ with connection $A$ gives the twisted Dirac operator $\not D_E$, central to the Seiberg–Witten equations and to the Atiyah–Singer index theorem in its general form. See [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 - **General relativity.** On a curved Lorentzian spacetime with a chosen spin structure, the Dirac equation $\not D\psi = m\psi$ describes spin-$\tfrac{1}{2}$ matter in a gravitational field. The curvature correction $R/4$ in the Lichnerowicz formula tells us that scalar curvature *directly* affects the Dirac spectrum — a fact used by Witten in his proof of the **positive mass theorem**.
 
 ---

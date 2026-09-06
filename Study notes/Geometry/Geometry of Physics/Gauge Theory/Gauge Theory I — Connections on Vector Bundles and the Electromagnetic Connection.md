@@ -26,7 +26,7 @@ A derivative compares nearby values. For an ordinary function those values lie i
 
 Gauge theory begins when the comparison rule itself is dynamical or physically observable. In electromagnetism, a charged wavefunction is locally a complex function only after choosing a unitary frame of a line bundle. Changing that frame changes the local potential $A$ but not the connection. The field strength is curvature, and a charged particle transported around a loop acquires its holonomy. Thus “gauge freedom” is not freedom to change the physical field; it is freedom to change a local representative of one global geometric object.
 
-The chapter develops this claim in the smallest setting where every mechanism is visible. Principal bundles and non-abelian structure are deferred to [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] and [[Gauge Theory III — Connections in Principal and Associated Bundles]].
+The chapter develops this claim in the smallest setting where every mechanism is visible. Principal bundles and non-abelian structure are deferred to [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] and [[Gauge Theory III — Connections in Principal and Associated Bundles]].
 
 # Concept Map
 

@@ -1,13 +1,13 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I complete and ready to merge; Gauge Theory II follows immediately
+**Overall status:** in progress — Gauge Theory II complete and ready to merge; Gauge Theory III follows
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
 
 ## Scope
-1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — in progress
-2. Gauge Theory II — Principal bundles, representations, and bundle classification — pending
+1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete (PR #19)
+2. Gauge Theory II — Principal bundles, representations, and bundle classification — in progress
 3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — pending
 4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — pending
 5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — pending
@@ -25,10 +25,10 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
 
 ## Working branch
-`codex/create-complete-gauge-theory-gt-i`
+`codex/create-complete-gauge-theory-gt-ii`
 
 ## Pull request
-PR #19 — open; remains unmerged until Gauge Theory I passes every review.
+PR #20 — open; remains unmerged until Gauge Theory II passes every review.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -37,10 +37,10 @@ PR #19 — open; remains unmerged until Gauge Theory I passes every review.
 - Relevant prerequisite pages in Differential Geometry, Functional Analysis, Algebraic Topology, and Special Relativity
 
 ## Completed units
-- Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, PR #19 ready to merge.
+- Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, merged in PR #19.
 
 ## Current unit
-Gauge Theory I — complete; transport through PR #19 is the next action.
+Gauge Theory II — complete; transport through PR #20 is the next action.
 
 ## Remaining units
 Gauge Theory II–XI and the final audit.
@@ -49,13 +49,13 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Merge completed Gauge Theory I in PR #19, then create the Gauge Theory II branch from updated `main` and begin its source-grounded diagnosis.
+Merge Gauge Theory II through PR #20, then create the Gauge Theory III branch and diagnose principal connections, curvature, holonomy, and gauge symmetry from both sources.
 
 ## Last completed commit
-`082129c` — Gauge Theory I completion commit.
+`ea7d623` — Gauge Theory II completion commit.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
 
 ## Merge history
-_none for this task_.
+- #19 Gauge Theory I → `main` (`961b960`, 2026-09-06).

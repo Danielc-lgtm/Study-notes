@@ -58,7 +58,7 @@ In the category of pointed connected covers of $(X, x_0)$ — objects are coveri
 
 Under the [[Thm - Galois Correspondence for Covering Spaces|Galois correspondence]] (pointed connected covers ↔ subgroups of $\pi_1(X, x_0)$, with the cover dominating the smaller subgroup), the universal cover corresponds to the **trivial subgroup** $\{1\} \leq \pi_1(X, x_0)$. It is the cover whose subgroup is as small as possible.
 
-In the language of [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet|fibre bundles]], the universal cover is the **principal $\pi_1(X)$-bundle** over $X$ — the action of $\pi_1(X)$ on $\widetilde X$ by deck transformations is free, transitive on fibres, and produces $X$ as the quotient $\widetilde X / \pi_1(X)$.
+In the language of [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification|fibre bundles]], the universal cover is the **principal $\pi_1(X)$-bundle** over $X$ — the action of $\pi_1(X)$ on $\widetilde X$ by deck transformations is free, transitive on fibres, and produces $X$ as the quotient $\widetilde X / \pi_1(X)$.
 
 ---
 
