@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-viii",
+  "branch": "codex/create-complete-gauge-theory-gt-ix",
   "pr": {
-    "number": 27,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/27",
+    "number": null,
+    "url": null,
     "status": "open"
   },
   "merged_prs": [
@@ -110,6 +110,12 @@
       "number": 26,
       "unit": "gt-vii",
       "main_sha": "746386e",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 27,
+      "unit": "gt-viii",
+      "main_sha": "102510d",
       "date": "2026-09-06"
     }
   ],
@@ -458,7 +464,7 @@
     "gt-ix": {
       "title": "Gauge Theory IX — Seiberg–Witten Equations and Moduli-Space Analysis",
       "mode": "create",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX — The Seiberg–Witten Moduli Space.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IX — The Seiberg–Witten Moduli Space.md"
@@ -535,7 +541,7 @@
     }
   },
   "current_unit": "gt-ix",
-  "next_action": "Merge Gauge Theory VIII and build Gauge Theory IX from Haydys §7.1: Seiberg-Witten equations, gauge action, deformation complex, Sobolev completion, compactness, slices, perturbations, reducibles, and orientations.",
+  "next_action": "Build Gauge Theory IX from Haydys §7.1: equations, gauge action, elliptic deformation complex, Sobolev setup, compactness, slices, perturbations, reducibles, expected dimension, and orientation.",
   "unresolved": [],
   "last_commit": "a72d973",
   "ready_to_merge": false,

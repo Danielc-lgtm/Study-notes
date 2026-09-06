@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–VII merged; Gauge Theory VIII is current
+**Overall status:** in progress — Gauge Theory I–VIII merged; Gauge Theory IX is current
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -13,8 +13,8 @@ Create a complete, self-contained Obsidian lecture-note series covering both `so
 5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — complete (PR #24; merged)
 6. Gauge Theory VI — Clifford algebras, spin geometry, and Dirac operators — complete (PR #25; merged)
 7. Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes — complete (PR #26; merged)
-8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — in progress
-9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — pending
+8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — complete (PR #27; merged)
+9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — in progress
 10. Gauge Theory X — Seiberg–Witten invariants and four-manifold applications — pending
 11. Gauge Theory XI — Algebraic topology, intersection forms, classification, and Donaldson theory — pending
 12. Final source-coverage and cross-topic consistency audit — pending
@@ -25,10 +25,10 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
 
 ## Working branch
-`codex/create-complete-gauge-theory-gt-viii`
+`codex/create-complete-gauge-theory-gt-ix`
 
 ## Pull request
-PR #27 — open; remains unmerged until Gauge Theory VIII passes every review.
+Gauge Theory IX PR pending creation.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -41,7 +41,7 @@ PR #27 — open; remains unmerged until Gauge Theory VIII passes every review.
 - Gauge Theory II — Principal bundles, representations, and classification — complete, merged in PR #20.
 
 ## Current unit
-Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree.
+Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis.
 
 ## Remaining units
 Gauge Theory VIII–XI and the final audit.
@@ -50,7 +50,7 @@ Gauge Theory VIII–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Extract Haydys §6 and build Gauge Theory VIII from Kuranishi models through equivariant degree.
+Build Gauge Theory IX from Haydys §7.1, including compactness, slices, perturbations, reducibles, and orientations.
 
 ## Last completed commit
 `a72d973` — initialized Gauge Theory VIII after merging the completed Sobolev and elliptic unit.
@@ -66,3 +66,4 @@ Extract Haydys §6 and build Gauge Theory VIII from Kuranishi models through equ
 - #24 Gauge Theory V → `main` (`6f77dba`, 2026-09-06).
 - #25 Gauge Theory VI → `main` (`c296516`, 2026-09-06).
 - #26 Gauge Theory VII → `main` (`746386e`, 2026-09-06).
+- #27 Gauge Theory VIII → `main` (`102510d`, 2026-09-06).
