@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-iv",
+  "branch": "codex/create-complete-gauge-theory-gt-v",
   "pr": {
-    "number": 23,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/23",
+    "number": null,
+    "url": null,
     "status": "open"
   },
   "merged_prs": [
@@ -286,7 +286,7 @@
     "gt-v": {
       "title": "Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons.md",
@@ -469,7 +469,7 @@
     }
   },
   "current_unit": "gt-v",
-  "next_action": "Audit and expand Gauge Theory V for Wernli §§3.1–3.3: arbitrary-signature Hodge star, Maxwell action and stress-energy, Yang–Mills variation, topological charge, self-duality, and BPST.",
+  "next_action": "Rebuild Gauge Theory V topic around signature-aware Hodge theory, Maxwell, Yang–Mills variation, self-duality, the BPS bound, and BPST.",
   "unresolved": [],
   "last_commit": "c83565e",
   "ready_to_merge": false,

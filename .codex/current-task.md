@@ -25,10 +25,10 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
 
 ## Working branch
-`codex/create-complete-gauge-theory-gt-iv`
+`codex/create-complete-gauge-theory-gt-v`
 
 ## Pull request
-PR #23 — Gauge Theory IV complete and ready to merge.
+Gauge Theory V PR pending creation.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
