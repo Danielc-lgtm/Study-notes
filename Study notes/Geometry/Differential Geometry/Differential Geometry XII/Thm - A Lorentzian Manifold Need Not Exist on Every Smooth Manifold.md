@@ -21,9 +21,9 @@ $M$ — a smooth $n$-manifold. A **Lorentzian metric** on $M$ is a [[Def - Semi-
 >
 > (i) A smooth manifold $M$ admits a Lorentzian metric if and only if it admits a nowhere-vanishing line field.
 >
-> (ii) A compact even-dimensional smooth manifold $M$ admits a Lorentzian metric if and only if its Euler characteristic $\chi(M)$ is zero. In particular, the even-dimensional spheres $S^{2k}$ (which have $\chi(S^{2k}) = 2$) admit no Lorentzian metric.
+> (ii) A compact smooth manifold $M$ **without boundary** admits a Lorentzian metric if and only if its Euler characteristic $\chi(M)$ is zero. In particular, the even-dimensional spheres $S^{2k}$ (which have $\chi(S^{2k}) = 2$) admit no Lorentzian metric.
 
-Statement (i) is the line-field characterisation. Statement (ii) is the Euler-characteristic consequence in the compact even-dimensional case (e.g., for surfaces), the most quotable form of the obstruction.
+Statement (i) is the line-field characterisation. Statement (ii) is the Euler-characteristic criterion in the compact boundaryless case (e.g., for surfaces), the most quotable form of the obstruction.
 
 The 2-sphere $S^2$ is the standard example of a smooth manifold admitting no Lorentzian metric, even though it admits a Riemannian metric (the round one).
 
@@ -37,7 +37,7 @@ The reason the partition-of-unity argument fails is the **non-convexity** of the
 
 The theorem identifies precisely what makes Lorentzian existence work: the existence of a **nowhere-vanishing line field** on $M$. Given such a line field $L \subseteq TM$, one can construct a Lorentzian metric by taking a Riemannian metric $g_R$ and "flipping the sign" along $L$. Without such a line field, the construction fails — and there are smooth manifolds with no nowhere-vanishing line field, of which the simplest is $S^2$.
 
-The combinatorial significance of the line-field requirement, via the Euler characteristic, gives a clean topological criterion: in the compact even-dimensional case, $\chi(M) = 0$ is necessary and sufficient. This connects the Lorentzian existence question to the topology of $M$ in a quantitative way.
+The combinatorial significance of the line-field requirement, via the Euler characteristic, gives a clean topological criterion: for compact manifolds without boundary, $\chi(M)=0$ is necessary and sufficient. This connects the Lorentzian existence question to the topology of $M$ in a quantitative way.
 
 The conceptual upshot: the geometry of relativity is *not* available on every smooth manifold — it requires the manifold to be topologically suitable. The class of manifolds that can be spacetimes is a strict subclass of the class of smooth manifolds.
 
@@ -51,7 +51,7 @@ The conceptual upshot: the geometry of relativity is *not* available on every sm
 
 *Source 2: Existence of a non-vanishing 1-form.* By a similar construction (taking the kernel of the 1-form to get a hyperplane field and the orthogonal complement to get a line field), a manifold with a nowhere-vanishing 1-form admits a Lorentzian metric. This is sometimes the easier criterion to check.
 
-*Source 3: Compact orientable manifold of dimension $\neq 2k$ with even $k$.* For dimension reasons, $\chi(M)$ vanishes automatically for compact orientable manifolds of odd dimension (Poincaré duality). So every compact orientable odd-dimensional manifold admits a Lorentzian metric.
+*Source 3: Compact orientable odd-dimensional manifold without boundary.* Poincaré duality forces $\chi(M)=0$, so the criterion supplies a Lorentzian metric. The boundaryless hypothesis matters: Euler characteristic is not the correct criterion for compact manifolds with boundary (a disk has a constant line field despite Euler characteristic $1$).
 
 **Targets (Output Amplification)**
 
@@ -65,7 +65,7 @@ The conceptual upshot: the geometry of relativity is *not* available on every sm
 
 # Why Is It True
 
-**Mechanism summary:** **a Lorentzian metric picks out, at each point, a one-dimensional "timelike" [[Def - Subspace|subspace]] of $T_pM$ — and a smoothly varying choice of one-dimensional [[Def - Subspace|subspace]] globally is exactly a nowhere-vanishing line field. The Euler characteristic is the obstruction to such a field (for compact even-dimensional manifolds), via the Hopf–Poincaré index theorem for line fields.**
+**Mechanism summary:** **a Lorentzian metric picks out, at each point, a one-dimensional "timelike" [[Def - Subspace|subspace]] of $T_pM$ — and a smoothly varying choice of one-dimensional [[Def - Subspace|subspace]] globally is exactly a nowhere-vanishing line field. For compact manifolds without boundary, the Euler characteristic detects the existence of such a field via Poincaré–Hopf and the orientation double cover of the line bundle.**
 
 The argument has two halves.
 
@@ -77,7 +77,7 @@ More carefully: choose a local nowhere-vanishing vector field $X$ generating $L$
 
 **Necessity (Lorentzian metric $\Rightarrow$ line field):** Given a Lorentzian metric $g$ on $M$, the set of timelike vectors at each point $T_pM$ is an open cone (two-component for time-orientable case, otherwise still two components locally, glued in a globally-twisted way). One can extract a line field by, e.g., taking the $g$-eigenspace for the positive eigenvalue (if one diagonalises $g_p$ with respect to a chosen reference Riemannian metric); this gives a line field at each $p$. Smoothness of the line field follows from smoothness of $g$.
 
-**The Euler-characteristic obstruction:** For a compact even-dimensional smooth manifold $M$, the existence of a nowhere-vanishing line field is equivalent to $\chi(M) = 0$. The non-trivial direction ("$\chi(M) \neq 0$ implies no nowhere-vanishing line field") is a generalisation of the **Hopf–Poincaré theorem** (sometimes attributed to Markus): for line fields, the sum of local indices around the zero set equals $\chi(M)$, so if $\chi(M) \neq 0$, every line field must have a zero. For the 2-sphere $S^2$, $\chi(S^2) = 2 \neq 0$, so no nowhere-vanishing line field exists.
+**The Euler-characteristic criterion:** Assume $M$ is compact and has no boundary. If $M$ has a line field $L$, pass to the two-sheeted orientation cover of $L$. The pullback line bundle is oriented and therefore has a nowhere-zero section, which is a nowhere-zero vector field on the covering manifold $\widetilde M$. Poincaré–Hopf gives $\chi(\widetilde M)=0$, while multiplicativity of Euler characteristic under a two-sheeted cover gives $\chi(\widetilde M)=2\chi(M)$; hence $\chi(M)=0$. Conversely, if $\chi(M)=0$, the converse form of Poincaré–Hopf gives a nowhere-zero vector field on $M$, whose span is a line field. Thus line fields, Lorentzian metrics, and $\chi(M)=0$ are equivalent in the compact boundaryless case.
 
 (The line-field statement is slightly weaker than the vector-field hairy ball theorem: a line field need not be coherent in direction. But on $S^2$ specifically, both fail.)
 
@@ -121,7 +121,7 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
    - *Hint:* Pick a Riemannian metric $g_R$ on $M$; diagonalise $g$ relative to $g_R$ at each point. There is a unique positive eigenvalue (signature $(1, n-1)$); its eigenline gives the line field.
    - *Why needed:* The "necessity" direction of the characterisation.
 
-6. **The Euler-characteristic obstruction.** For compact even-dim $M$, no nowhere-vanishing line field exists if $\chi(M) \neq 0$, by Hopf–Poincaré.
+6. **The Euler-characteristic obstruction.** For compact boundaryless $M$, a line field exists exactly when $\chi(M)=0$.
    - *Hint:* The Hopf–Poincaré theorem expresses $\chi(M)$ as the sum of indices of zeros of any line field. Nowhere-vanishing means zero indices, hence $\chi(M) = 0$.
    - *Why needed:* The topological statement of the theorem.
 
@@ -173,17 +173,10 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
 > >
 > > The eigenline spanned by the positive-eigenvalue eigenvector is a one-dimensional subspace of $T_pM$. By smoothness of $g$ and continuity of eigenvalues and eigenvectors (in the regions where they are simple and isolated, which is the case here since the positive eigenvalue is unique), this line varies smoothly with $p$, giving a smooth line field on $M$.
 
-> [!note]- Lemma 3: The Hopf–Poincaré index theorem for line fields
-> **Statement:** Let $M$ be a compact smooth manifold of [[Def - Dimension|dimension]] $n$, and let $L$ be a smooth line field on $M$ with isolated zeros (where $L_p$ is not well-defined or is the zero subspace). Then the sum of the indices of the zeros equals $\chi(M)$ for even $n$, and equals $0$ for odd $n$.
+> [!note]- Lemma 3: Euler characteristic criterion for a line field
+> **Statement:** A compact smooth manifold without boundary admits a line field if and only if its Euler characteristic is zero.
 >
-> **Hint:** This is a generalisation of the Hopf index theorem for vector fields; the proof uses a double cover where the line field lifts to a vector field, and the index counts double.
->
-> **Why needed:** This is the topological obstruction underlying the Euler-characteristic statement.
->
-> > [!note]- Full proof (sketch)
-> > The line bundle of orientations of $L$ is a $\mathbb{Z}/2$-cover of the complement of the zero set. On the (oriented) double cover, the line field becomes an oriented line field, hence a vector field up to choice of orientation. The Hopf index theorem applies to this vector field, expressing $\chi(\tilde M)$ as the sum of indices. Descending to $M$, one obtains the line-field version. (Details: see Markus's theorem in differential topology.)
-> >
-> > For odd $n$: $\chi(M) = 0$ for any compact $n$-manifold (Poincaré duality), so the Hopf–Poincaré sum is also zero. Even-dimensional case is the non-trivial one.
+> **Proof:** If $L\subset TM$ is a line field, let $q:\widetilde M\to M$ be the two-sheeted orientation cover of $L$. The oriented line bundle $q^*L$ is trivial, hence has a nowhere-zero section and gives a nowhere-zero vector field on $\widetilde M$. Poincaré–Hopf gives $\chi(\widetilde M)=0$. Euler characteristic is multiplicative under finite covers, so $0=\chi(\widetilde M)=2\chi(M)$ and $\chi(M)=0$. Conversely, the existence theorem complementary to Poincaré–Hopf says that a compact boundaryless manifold with $\chi(M)=0$ admits a nowhere-zero vector field. Its pointwise span is a line field. $\square$
 
 ---
 
@@ -198,7 +191,7 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
 >
 > **Step 2 (Necessity).** Conversely, if $(M, g)$ is Lorentzian, by Lemma 2 there exists a smooth nowhere-vanishing line field on $M$ (the eigenline of the positive eigenvalue of $g$ relative to a Riemannian reference metric).
 >
-> **Step 3 (Euler-characteristic obstruction).** Suppose $M$ is compact and even-dimensional. By Lemma 3, any line field on $M$ has total index $\chi(M)$ at its zeros. A nowhere-vanishing line field has no zeros, hence total index zero, hence $\chi(M) = 0$. So $M$ admits a nowhere-vanishing line field iff $\chi(M) = 0$ — and by Steps 1 and 2, iff $M$ admits a Lorentzian metric.
+> **Step 3 (Euler-characteristic criterion).** Suppose $M$ is compact without boundary. A line field lifts on its two-sheeted orientation cover $\widetilde M$ to a nowhere-zero vector field. Poincaré–Hopf and covering multiplicativity give $0=\chi(\widetilde M)=2\chi(M)$, so $\chi(M)=0$. Conversely, if $\chi(M)=0$, Poincaré–Hopf yields a nowhere-zero vector field on $M$; its span is a line field. Steps 1 and 2 now identify this condition with existence of a Lorentzian metric.
 >
 > **Step 4 (Application to $S^{2k}$).** The Euler characteristic of the $2k$-sphere is $\chi(S^{2k}) = 2$, so by Step 3, $S^{2k}$ admits no Lorentzian metric. In particular $S^2$ — the simplest non-trivial smooth manifold beyond Euclidean space — does not. $\blacksquare$
 
@@ -212,7 +205,7 @@ The other hard part is **the Euler-characteristic computation**: for $\chi(M) \n
 
 *3. Application: torus admits a Lorentzian metric.* The 2-torus $T^2$ has $\chi(T^2) = 0$, so it admits a Lorentzian metric. Explicitly: the quotient of Minkowski $(\mathbb{R}^2, dt^2 - dx^2)$ by an integer lattice $\Lambda = \mathbb{Z}(1, 0) + \mathbb{Z}(0, 1)$ gives a Lorentzian 2-torus. This is a toy spacetime with closed timelike curves, often used as an illustrative example in causality theory.
 
-*4. Cosmological topologies.* In cosmology, the underlying spatial manifold $\Sigma$ in an FRW spacetime $\mathbb{R} \times \Sigma$ can be any 3-manifold; the full spacetime $M = \mathbb{R} \times \Sigma$ has $\chi(M) = \chi(\mathbb{R}) \chi(\Sigma) = 0$ (since $\chi(\mathbb{R}) = 0$ on the non-compact factor and the product formula). So all FRW cosmologies are automatically compatible with Lorentzian existence.
+*4. Product spacetimes.* For every smooth manifold $\Sigma$, the product $\mathbb{R}\times\Sigma$ has the nowhere-vanishing vector field $\partial_t$ and therefore admits a Lorentzian metric, for example $dt^2-h$ after choosing a Riemannian metric $h$ on $\Sigma$. No Euler-characteristic argument is needed; ordinary Euler characteristic is not the appropriate shortcut for this noncompact product.
 
 ---
 

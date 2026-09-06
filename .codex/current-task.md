@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry XI complete and ready to merge; Differential Geometry XII is next
+**Overall status:** active — Differential Geometry XII complete and ready to merge; final cross-topic review remains
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -17,16 +17,16 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — in progress
 10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — in progress
 11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — in progress
-12. Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds — pending
+12. Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds — in progress
 
 ## Mode
 `improve`
 
 ## Working branch
-`codex/improve-all-differential-geometry-dg-xi`
+`codex/improve-all-differential-geometry-dg-xii`
 
 ## Pull request
-`#15 https://github.com/Danielc-lgtm/Study-notes/pull/15 (open checkpoint)`
+`#16 https://github.com/Danielc-lgtm/Study-notes/pull/16 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -42,18 +42,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry VIII — Differential Forms (`a85c2ca`, PR #12)
 - Differential Geometry IX — Orientation, Integration, and Stokes (`ef7a109`, PR #13)
 - Differential Geometry X — de Rham Theory and Frobenius (`30b8944`, PR #14)
+- Differential Geometry XI — Lie Groups and the Exponential Map (`85139f3`, PR #15)
 
 ## Current unit
-`dg-xi` — Differential Geometry XI, workflow Phase 6 (final checklist passed; ready to merge).
+`dg-xii` — Differential Geometry XII, workflow Phase 6 (final checklist passed; ready to merge).
 
 ## Remaining units
-Differential Geometry XII (one pending unit).
+No topic units remain after DG XII merges; the final cross-topic review remains.
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Commit and push DG XI, merge PR #15, then create the DG XII branch and diagnose Riemannian and semi-Riemannian geometry.
+Commit and push DG XII, merge PR #16, then run the final cross-topic consistency and repository-wide Differential Geometry graph audit and close the ledgers.
 
 ## Last completed commit
 `5384ab2`
@@ -73,3 +74,4 @@ Commit and push DG XI, merge PR #15, then create the DG XII branch and diagnose 
 - #12 Differential Geometry VIII → main @ 3666316 (2026-09-06)
 - #13 Differential Geometry IX → main @ 2d7fd55 (2026-09-06)
 - #14 Differential Geometry X → main @ 28328e0 (2026-09-06)
+- #15 Differential Geometry XI → main @ 885c869 (2026-09-06)
