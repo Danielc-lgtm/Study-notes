@@ -62,12 +62,12 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "review",
+  "status": "in_progress",
   "branch": "codex/create-complete-gauge-theory-gt-i",
   "pr": {
-    "number": null,
-    "url": null,
-    "status": null
+    "number": 19,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/19",
+    "status": "open"
   },
   "merged_prs": [],
   "sources": [
@@ -93,7 +93,7 @@
     "gt-i": {
       "title": "Gauge Theory I — Vector-Bundle Connections and the Electromagnetic Prototype",
       "mode": "improve",
-      "status": "review",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
@@ -133,7 +133,7 @@
         "prose": "pass",
         "checklist": "pass"
       },
-      "commit": null,
+      "commit": "082129c",
       "notes": "All 27 pages reviewed. Correctness fixed the Bianchi cyclic sign, unified the Chern-class sign convention, corrected the nonsmooth ∂θ sphere field, and removed unsupported local-flatness overclaims. Pedagogy now follows comparison→curvature→U(1)→global effects; rederivation scaffolds cover every theorem; all 113 incoming references retain valid anchors; prose and concision pass after independent replacement. Mechanical and 27-page structural audits pass."
     },
     "gt-ii": {
@@ -436,9 +436,9 @@
     }
   },
   "current_unit": "gt-i",
-  "next_action": "Commit the reviewed Gauge Theory I unit, record its completion SHA and source coverage in both ledgers, update PR #19, and merge it into main.",
+  "next_action": "Merge completed Gauge Theory I in PR #19, then create the Gauge Theory II branch from updated main and begin its source-grounded diagnosis.",
   "unresolved": [],
-  "last_commit": "fc5e357",
+  "last_commit": "082129c",
   "ready_to_merge": false,
-  "updated": "2026-09-06T06:40:00Z"
+  "updated": "2026-09-06T06:45:00Z"
 }

@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** review — Gauge Theory I passes all five review passes and awaits its completion commit
+**Overall status:** in progress — Gauge Theory I complete and ready to merge; Gauge Theory II follows immediately
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -37,10 +37,10 @@ PR #19 — open; remains unmerged until Gauge Theory I passes every review.
 - Relevant prerequisite pages in Differential Geometry, Functional Analysis, Algebraic Topology, and Special Relativity
 
 ## Completed units
-_none_.
+- Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, PR #19 ready to merge.
 
 ## Current unit
-Gauge Theory I — Vector-bundle connections and the electromagnetic prototype.
+Gauge Theory I — complete; transport through PR #19 is the next action.
 
 ## Remaining units
 Gauge Theory II–XI and the final audit.
@@ -49,10 +49,10 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Commit the reviewed Gauge Theory I unit, record its completion SHA and source coverage in both ledgers, update PR #19, and merge it into main.
+Merge completed Gauge Theory I in PR #19, then create the Gauge Theory II branch from updated `main` and begin its source-grounded diagnosis.
 
 ## Last completed commit
-`570c6a7` is the user-provided source import immediately preceding this task; the task initialization commit follows this ledger update.
+`082129c` — Gauge Theory I completion commit.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
