@@ -19,9 +19,9 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §4.2, Dirac operators | 36–37 | VI | complete |
 | §4.3, spin and $\operatorname{Spin}^c$ structures and their classification | 37–41 | VI | complete |
 | §4.4, Weitzenböck formula | 41–42 | VI | complete |
-| §5.1, Sobolev spaces | 43–46 | VII | pending |
-| §5.2, elliptic operators | 46–49 | VII | pending |
-| §5.3, elliptic complexes, gauge interpretation, de Rham complex | 49–51 | VII | pending |
+| §5.1, Sobolev spaces | 43–46 | VII | complete |
+| §5.2, elliptic operators | 46–49 | VII | complete |
+| §5.3, elliptic complexes, gauge interpretation, de Rham complex | 49–51 | VII | complete |
 | §6.1, Kuranishi model and Sard–Smale theorem | 52–53 | VIII | pending |
 | §6.2, $\mathbb Z/2\mathbb Z$ degree | 53–55 | VIII | pending |
 | §6.3, parametric transversality | 55–56 | VIII | pending |

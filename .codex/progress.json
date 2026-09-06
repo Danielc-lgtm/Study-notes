@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-vi",
+  "branch": "codex/create-complete-gauge-theory-gt-vii",
   "pr": {
-    "number": 25,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/25",
+    "number": 26,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/26",
     "status": "open"
   },
   "merged_prs": [
@@ -98,6 +98,12 @@
       "number": 24,
       "unit": "gt-v",
       "main_sha": "6f77dba",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 25,
+      "unit": "gt-vi",
+      "main_sha": "c296516",
       "date": "2026-09-06"
     }
   ],
@@ -386,22 +392,34 @@
     "gt-vii": {
       "title": "Gauge Theory VII — Sobolev Spaces, Elliptic Operators, and Elliptic Complexes",
       "mode": "create",
-      "status": "pending",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII — Elliptic Analysis for Gauge Theory.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII — Sobolev Spaces, Elliptic Operators, and Gauge-Fixing Complexes.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII — Elliptic Analysis for Gauge Theory.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII — Sobolev Spaces, Elliptic Operators, and Gauge-Fixing Complexes.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Thm - Elliptic Operators are Fredholm and the Fredholm Alternative.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Thm - Elliptic Estimate and Regularity.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Def - Elliptic Complex and Associated Laplacian.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Def - Principal Symbol and Elliptic Differential Operator.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Def - Sobolev Space of Bundle Sections.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Ex - Coulomb Gauge as Harmonic Representative.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Def - Fredholm Operator and Index.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Exercise Index - §7.1 Sobolev Spaces.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Thm - Hodge Theorem for an Elliptic Complex.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Exercise Index - §7.2 Elliptic Operators and Complexes.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Ex - Sobolev Embedding on the Circle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII/Thm - Sobolev Embedding, Compactness, and Multiplication.md"
       ],
       "diagnosis": "Create-mode unit; filename manifest pending.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Built Haydys §5 with bundle Sobolev spaces, embedding/Rellich/multiplication, intrinsic symbols, elliptic estimate and bootstrapping, corrected Fredholm alternative, elliptic complexes, Hodge decomposition, and gauge-slice interpretation."
     },
     "gt-viii": {
       "title": "Gauge Theory VIII — Fredholm Maps, Transversality, Determinant Lines, and Degree",
@@ -502,8 +520,8 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-vii",
-  "next_action": "Merge Gauge Theory VI and create Gauge Theory VII for Sobolev spaces, elliptic operators, Fredholm theory, elliptic complexes, gauge deformation complexes, and Hodge theory.",
+  "current_unit": "gt-viii",
+  "next_action": "Merge Gauge Theory VII, then create Gauge Theory VIII for Kuranishi models, Sard-Smale and parametric transversality, mod-2 and integer degree, determinant lines, orientations, and equivariance.",
   "unresolved": [],
   "last_commit": "0c79aa2",
   "ready_to_merge": false,
