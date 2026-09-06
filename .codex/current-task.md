@@ -53,7 +53,7 @@ _none_. Source convention conflicts will be made explicit rather than silently n
 Perform a specification-depth review of every Gauge Theory III definition and theorem page, expanding motivation, axiom-failure analysis, examples, proof lemmas, and topic-level legal operations; then rerun graph and source-coverage audits.
 
 ## Last completed commit
-`44c08a1` — rebuilt the seven inherited calibration exercises and added the flat-circle holonomy exercise and §3.5 index.
+`978d5c8` — deepened the principal-connection definition with axiom-failure analysis, examples, calibration, and operational interpretation.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
