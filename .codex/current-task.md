@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Create the representation, extension/reduction, universal-bundle, classifying theorem, U(1)-weight, and quaternionic-Hopf atomic pages; then rebuild Fibre Bundle, Principal G-Bundle, Associated Bundle, and their two core theorem pages.
+Rebuild the frame, orthonormal-frame, homogeneous, and Hopf pages plus their three core exercises; audit the universal classification proof; then separate the deferred characteristic/Berry preview and run all five reviews.
 
 ## Last completed commit
 `961b960` — merge of Gauge Theory I through PR #19.
