@@ -55,7 +55,7 @@ The second source is **$M$ is a Lie group with a left-invariant metric**. Any Li
 
 The third source is **$M$ is a Kähler manifold**. A Kähler manifold has a complex structure plus a compatible closed Hermitian form $\omega$; the resulting Riemannian metric inherits a canonical orientation from the complex structure, and the volume form is $\omega^n/n!$. Non-obvious: the volume form of a Kähler manifold has a *deeper* structure than a generic Riemannian volume form (the top power of a 2-form, related to characteristic classes).
 
-The fourth source is **a regular level set of a smooth function**. By the regular value theorem, $f^{-1}(c) \subseteq N$ is a submanifold; with the induced metric and the natural orientation (via the gradient $\nabla f$ as outward normal), the theorem gives a volume form on the level set.
+The fourth source is **a regular level set of a smooth function**. By the regular value theorem, $f^{-1}(c) \subseteq N$ is a submanifold; with the induced metric and the coorientation specified by the nowhere-zero normal $\nabla f$, the theorem gives a volume form on the level set.
 
 **Targets (Output Amplification)**
 
@@ -153,17 +153,16 @@ A second subtlety is the *consistency of the coordinate formula across charts*: 
 > **Why needed:** It shows the local formulas glue into a single global form.
 >
 > > [!note]- Full proof
-> > Let $F : \varphi(U \cap \widetilde U) \to \widetilde\varphi(U \cap \widetilde U)$ be the transition map, with positive Jacobian $J = \det DF > 0$. The metric components transform as
-> > $$g_{ij} = \frac{\partial\widetilde x^k}{\partial x^i}\frac{\partial\widetilde x^\ell}{\partial x^j}\widetilde g_{k\ell}, \quad\text{so}\quad \det g_{ij} = (\det DF^{-1})^2\det\widetilde g_{k\ell} = J^{-2}\det\widetilde g_{k\ell}.$$
-> > Hence $\sqrt{\det g_{ij}} = J^{-1}\sqrt{\det\widetilde g_{k\ell}}$. The top-form transforms as
-> > $$dx^1\wedge\cdots\wedge dx^n = (\det DF^{-1})\,d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n = J^{-1}\,d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n.$$
-> > Wait, this gives an extra $J^{-1}$. Recomputing: actually the form transforms as $d\widetilde x^j = \sum_i(\partial\widetilde x^j/\partial x^i)dx^i$, so wedging gives $d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n = (\det DF)\,dx^1\wedge\cdots\wedge dx^n = J\,dx^1\wedge\cdots\wedge dx^n$. Putting it together,
-> > $$\sqrt{\det\widetilde g}\,d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n = (J\sqrt{\det g})(J\,dx^1\wedge\cdots\wedge dx^n)^{-1}\cdot\cdots,$$
-> > but more directly: $\sqrt{\det\widetilde g} = J\sqrt{\det g}$, and $d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n = J\,dx^1\wedge\cdots\wedge dx^n$, so $\sqrt{\det\widetilde g}\,d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n = J\cdot\sqrt{\det g}\cdot dx^1\wedge\cdots\wedge dx^n\cdot J$. This gives an extra $J$, which is wrong.
-> >
-> > Let me re-derive. With $\widetilde x = F(x)$, we have $d\widetilde x^j = (\partial F^j/\partial x^i)dx^i$, so $d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n = (\det DF)\,dx^1\wedge\cdots\wedge dx^n = J\,dx^1\wedge\cdots\wedge dx^n$. The metric transforms as $g_{ij}(x) = (\partial F^k/\partial x^i)(\partial F^\ell/\partial x^j)\widetilde g_{k\ell}(F(x))$, i.e. $g = (DF)^T\widetilde g(F)\,DF$, so $\det g = (\det DF)^2\det\widetilde g(F) = J^2\det\widetilde g$. Hence $\sqrt{\det g} = J\sqrt{\det\widetilde g}$, equivalently $\sqrt{\det\widetilde g} = J^{-1}\sqrt{\det g}$. Then
-> > $$\sqrt{\det\widetilde g}\,d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n = J^{-1}\sqrt{\det g}\cdot J\,dx^1\wedge\cdots\wedge dx^n = \sqrt{\det g}\,dx^1\wedge\cdots\wedge dx^n.$$
-> > The two formulas agree on the overlap. $\square$
+> > Write $\widetilde x=F(x)$ and $J=\det DF>0$. The coordinate frames satisfy
+> > $$g(x)=(DF(x))^T\,\widetilde g(F(x))\,DF(x),$$
+> > hence $\det g=J^2\det(\widetilde g\circ F)$ and
+> > $$\sqrt{\det(\widetilde g\circ F)}=J^{-1}\sqrt{\det g}.$$
+> > Meanwhile,
+> > $$d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n=J\,dx^1\wedge\cdots\wedge dx^n.$$
+> > Multiplying the two identities cancels $J$:
+> > $$\sqrt{\det(\widetilde g\circ F)}\,d\widetilde x^1\wedge\cdots\wedge d\widetilde x^n
+> > =\sqrt{\det g}\,dx^1\wedge\cdots\wedge dx^n.$$
+> > Thus the local expressions agree on the overlap. $\square$
 
 ---
 
