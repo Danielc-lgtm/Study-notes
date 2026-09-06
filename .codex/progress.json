@@ -195,9 +195,9 @@
       "title": "Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry",
       "mode": "improve",
       "status": "in_progress",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Adjoint Bundle.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Bracket of g-Valued Forms.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Connection 1-Form on a Principal Bundle.md",
@@ -241,7 +241,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target complete. Manifest adds principal parallel transport, holonomy group, gauge group, horizontal-lift existence/uniqueness, and flat-monodromy classification."
+      "notes": "Topic renamed and all 18 incoming title links updated. The independent topic map and core are rebuilt: valued forms and graded bracket normalization, Maurer–Cartan form/equation, fundamental fields with right-action anti-homomorphism sign, horizontal distributions, principal connection forms, trivial-bundle formula, affine structure, and the two-way connection/distribution theorem."
     },
     "gt-iv": {
       "title": "Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli",
@@ -461,9 +461,9 @@
     }
   },
   "current_unit": "gt-iii",
-  "next_action": "Rebuild the Gauge Theory III topic page and the Maurer–Cartan, fundamental-field, horizontal-space, principal-connection, and horizontal-distribution-equivalence core with fixed right-action conventions.",
+  "next_action": "Rebuild local connection forms and their gauge law, principal curvature/Cartan/Bianchi, adjoint and induced associated-bundle connections, eliminating all abandoned chain-rule calculations.",
   "unresolved": [],
-  "last_commit": "7f98559",
+  "last_commit": "15b8956",
   "ready_to_merge": false,
-  "updated": "2026-09-06T10:10:00Z"
+  "updated": "2026-09-06T10:40:00Z"
 }

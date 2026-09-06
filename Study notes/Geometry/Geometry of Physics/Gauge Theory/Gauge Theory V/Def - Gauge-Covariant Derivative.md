@@ -70,7 +70,7 @@ of $G$-equivariant vector bundles on $M$. The covariant derivative is then the "
 
 A more elementary structural definition uses parallel transport: a connection on $E$ is a choice, for every smooth curve $\gamma : [0, 1] \to M$, of a linear isomorphism $P_\gamma : E_{\gamma(0)} \to E_{\gamma(1)}$ between fibres at the endpoints, smooth in the curve, satisfying $P_{\gamma_1 \cdot \gamma_2} = P_{\gamma_2}\circ P_{\gamma_1}$ for concatenation. The covariant derivative is then the infinitesimal version of parallel transport: $D_X\psi|_p = \lim_{t\to 0} (P_{\gamma_{|[0,t]}}^{-1}\psi(\gamma(t)) - \psi(p))/t$ for a curve $\gamma$ with $\gamma(0) = p$, $\dot\gamma(0) = X$.
 
-See [[Gauge Theory III — Connections in Principal and Associated Bundles]] for the full development.
+See [[Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry]] for the full development.
 
 ---
 

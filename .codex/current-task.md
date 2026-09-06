@@ -50,7 +50,7 @@ Gauge Theory III–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Rebuild the Gauge Theory III topic page and the Maurer–Cartan, fundamental-field, horizontal-space, principal-connection, and horizontal-distribution-equivalence core with fixed right-action conventions.
+Rebuild local connection forms and their gauge law, principal curvature/Cartan/Bianchi, adjoint and induced associated-bundle connections, eliminating all abandoned chain-rule calculations.
 
 ## Last completed commit
 `40e54fd` — merge of Gauge Theory II through PR #20.

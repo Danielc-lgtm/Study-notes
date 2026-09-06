@@ -16,7 +16,7 @@ An **internal symmetry** is one that acts only on the fibre coordinates $\phi^a$
 
 For a 1-parameter subgroup $g(\alpha) = e^{\alpha E}$ of $G$ with generator $E \in \mathfrak{g}$, the symmetry transformation is $\phi \to g(\alpha)\phi$, and the infinitesimal variation is $\delta\phi^a = E^a{}_b\,\phi^b$, where $E^a{}_b$ are the matrix entries of $E$ in the representation.
 
-The Lie algebra index conventions match [[Gauge Theory III — Connections in Principal and Associated Bundles]].
+The Lie algebra index conventions match [[Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry]].
 
 ---
 

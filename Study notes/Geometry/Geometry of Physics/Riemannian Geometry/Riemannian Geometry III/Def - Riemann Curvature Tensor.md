@@ -60,7 +60,7 @@ The Riemann tensor is the **curvature of the Levi-Civita connection viewed as a 
 
 $$F = dA + \tfrac{1}{2}[A, A] = dA + A \wedge A.$$
 
-For the Levi-Civita connection on $\mathrm{Fr}(M)$, $G = \mathrm{O}(n)$ and $\mathfrak{g} = \mathfrak{o}(n)$ (skew-symmetric matrices). The connection 1-form has components $A^a_{\;b} = \omega^a_{\;b}$ (skew in $(a, b)$), and the curvature 2-form has components $F^a_{\;b} = \Omega^a_{\;b}$. Pulling these back to $M$ via a local frame (section of $\mathrm{Fr}(M)$) recovers the structural equations above. This perspective makes the Riemann tensor an instance of the universal notion of curvature for principal bundles and connects it directly to gauge theory; see [[Gauge Theory III — Connections in Principal and Associated Bundles]].
+For the Levi-Civita connection on $\mathrm{Fr}(M)$, $G = \mathrm{O}(n)$ and $\mathfrak{g} = \mathfrak{o}(n)$ (skew-symmetric matrices). The connection 1-form has components $A^a_{\;b} = \omega^a_{\;b}$ (skew in $(a, b)$), and the curvature 2-form has components $F^a_{\;b} = \Omega^a_{\;b}$. Pulling these back to $M$ via a local frame (section of $\mathrm{Fr}(M)$) recovers the structural equations above. This perspective makes the Riemann tensor an instance of the universal notion of curvature for principal bundles and connects it directly to gauge theory; see [[Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry]].
 
 ---
 
