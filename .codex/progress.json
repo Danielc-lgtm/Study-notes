@@ -63,11 +63,11 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/improve-all-differential-geometry-dg-v",
+  "branch": "codex/improve-all-differential-geometry-dg-vi",
   "pr": {
-    "number": 9,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/9",
-    "state": "open"
+    "number": null,
+    "url": null,
+    "state": null
   },
   "merged_prs": [
     {
@@ -98,6 +98,12 @@
       "number": 7,
       "unit": "dg-iv",
       "main_sha": "86a334b",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 9,
+      "unit": "dg-v",
+      "main_sha": "577a002",
       "date": "2026-09-06"
     }
   ],
@@ -331,7 +337,7 @@
     "dg-vi": {
       "title": "Differential Geometry VI — Vector Bundles and the Cotangent Bundle",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
@@ -374,7 +380,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Phase 3.1 active."
     },
     "dg-vii": {
       "title": "Differential Geometry VII — Tensors and Tensor Fields",
@@ -648,10 +654,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-v",
-  "next_action": "Merge completed PR #9, update from main, create the DG VI unit branch, and diagnose and envision Differential Geometry VI.",
+  "current_unit": "dg-vi",
+  "next_action": "Read the complete 29-page DG VI graph, audit bundle gluing, cotangent, pullback, exactness, and line-integral claims, then record the target.",
   "unresolved": [],
-  "last_commit": "eb331bd",
+  "last_commit": "577a002",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
