@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I merged; Gauge Theory II is the current unit
+**Overall status:** review — Gauge Theory II passes all reviews and awaits completion transport
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Perform separate correctness, pedagogy, rederivation, graph/self-containedness, and prose/conciseness reviews of all 22 Gauge Theory II files, fix findings, update source coverage, and merge PR #20.
+Commit Gauge Theory II after review, record its SHA and completed source rows, update PR #20, merge it, and start Gauge Theory III from `main`.
 
 ## Last completed commit
 `961b960` — merge of Gauge Theory I through PR #19.

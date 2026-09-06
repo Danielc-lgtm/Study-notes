@@ -31,7 +31,7 @@ The needed Lie theory is recalled rather than duplicated:
 - [[Def - Smooth Action of a Lie Group]], [[Thm - Orbit-Stabilizer for Lie Group Actions]], and [[Thm - Homogeneous Space is a Smooth Manifold]];
 - [[Thm - The Closed Subgroup Theorem]].
 
-The new bridge is **[[Def - Representation of a Lie Group]]**. Direct sums, tensor products, duals, exterior and symmetric powers, complexification, and differentiation to a Lie-algebra representation are the operations that later generate matter bundles. [[Ex - Weight Representations of U(1)]] records the integer weights; the standard and symmetric-power representations of $SU(2)$ supply the spin examples used later.
+The new bridge is **[[Def - Representation of a Lie Group]]**. Direct sums, tensor products, duals, exterior and symmetric powers, complexification, and differentiation to a Lie-algebra representation are the operations that later generate matter bundles. [[Ex - Weight Representations of U(1)]] records the integer weights, and [[Thm - Irreducible Representations of U(1) and SU(2)]] proves the rank-one compact classification used by the sources.
 
 Two quotient criteria from the source will be used repeatedly. A free action of a
 compact Lie group is proper, and its orbit space is a smooth manifold for which

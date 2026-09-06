@@ -62,7 +62,7 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "in_progress",
+  "status": "review",
   "branch": "codex/create-complete-gauge-theory-gt-ii",
   "pr": {
     "number": 20,
@@ -146,7 +146,7 @@
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
       "mode": "improve",
-      "status": "in_progress",
+      "status": "review",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
@@ -170,19 +170,20 @@
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Universal Bundle and Classifying Space.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - Classification of Principal Bundles by Maps to BG.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Ex - Weight Representations of U(1).md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Ex - Quaternionic Hopf Bundle and SU(2) Classification.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Ex - Quaternionic Hopf Bundle and SU(2) Classification.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - Irreducible Representations of U(1) and SU(2).md"
       ],
       "diagnosis": "Rigour failures include treating freeness as sufficient for a smooth quotient, abandoned Hopf-quaternion algebra, a Berry factor-of-two false start, and mixed frame conventions. The graph lacks a representation bridge, extension/reduction of structure group, and Haydys universal-bundle classification. Replace the prose around the independent question “what topology exists before a connection?”, using cocycles, representations, reductions, classifying maps, and the Hopf obstruction; reserve characteristic forms and Berry theory for Gauge Theory IV.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Gauge Theory II now contains only its 22-page bundle-theory graph. The 12 characteristic/Berry preview files were moved intact to the new Gauge Theory IV folder, while the former Yang–Mills Gauge Theory IV folder/topic became Gauge Theory V with all 46 incoming topic links updated. GT II frame/Hopf definitions and four core exercises are rebuilt; both exercise indexes are synchronized. Mechanical and 75-reference incoming-anchor audits pass."
+      "notes": "All 23 pages pass review. Correctness repaired quotient properness, associated-action inverses, frame columns, Hopf quaternion algebra, and supplied a highest-weight proof for U(1)/SU(2) representation coverage. Pedagogy follows topology-before-connection; theorem pages have rederivation scaffolds and proofs; all 76 incoming refs and anchors resolve; source coverage includes Wernli ch.1 and §§2.1–2.2 and Haydys frame/associated/classification sections. Characteristic/Berry files are cleanly assigned to IV and Yang–Mills to V."
     },
     "gt-iii": {
       "title": "Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry",
@@ -449,9 +450,9 @@
     }
   },
   "current_unit": "gt-ii",
-  "next_action": "Perform separate correctness, pedagogy, rederivation, graph/self-containedness, and prose/conciseness reviews of all 22 Gauge Theory II files, fix findings, update source coverage, and merge PR #20.",
+  "next_action": "Commit Gauge Theory II after review, record its SHA and completed source rows, update PR #20, merge it, and start Gauge Theory III from main.",
   "unresolved": [],
   "last_commit": "b7a9521",
   "ready_to_merge": false,
-  "updated": "2026-09-06T09:10:00Z"
+  "updated": "2026-09-06T09:35:00Z"
 }
