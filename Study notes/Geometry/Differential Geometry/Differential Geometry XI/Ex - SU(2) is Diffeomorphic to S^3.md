@@ -71,7 +71,11 @@ The diffeomorphism is constructed via the quaternion parametrization. The Lie al
 
 **Step 1: Parametrize $\mathrm{SU}(2)$ as the set of matrices $\begin{pmatrix} z & -\bar w \\ w & \bar z \end{pmatrix}$ with $|z|^2 + |w|^2 = 1$.**
 
-A unitary $2 \times 2$ matrix $U$ has columns that form an orthonormal basis of $\mathbb{C}^2$. Write the first column as $\binom{z}{w}$ with $|z|^2 + |w|^2 = 1$. The second column is orthogonal to the first; up to phase, the unique orthogonal unit vector is $\binom{-\bar w}{\bar z}$ (check: $\langle (z, w), (-\bar w, \bar z) \rangle = -z \bar w + w \bar z$... wait, this needs care with complex inner products). The condition $\det U = 1$ then pins down the phase as $+1$.
+A unitary $2\times2$ matrix has orthonormal columns for the Hermitian product $\langle u,v\rangle=\bar u_1v_1+\bar u_2v_2$. Write its first column as $\binom zw$, where $|z|^2+|w|^2=1$. The vector $\binom{-\bar w}{\bar z}$ is unit and orthogonal to it because
+$$\left\langle\binom zw,\binom{-\bar w}{\bar z}\right\rangle=-\bar z\bar w+\bar w\bar z=0.$$
+Every unit vector orthogonal to the first is a phase multiple of this one. Since
+$$\det\begin{pmatrix}z&-\bar w\\w&\bar z\end{pmatrix}=|z|^2+|w|^2=1,$$
+the determinant-one condition forces that phase to be $1$.
 
 > [!note]- Derivation
 > The complex inner product on $\mathbb{C}^2$ is $\langle u, v \rangle = u_1 \bar v_1 + u_2 \bar v_2$ (linear in the first slot, conjugate-linear in the second). The second column $\binom{a}{b}$ orthogonal to $\binom{z}{w}$ satisfies $\langle (a, b), (z, w) \rangle = a \bar z + b \bar w = 0$. Up to phase, the unit orthogonal direction is $\binom{-\bar w}{\bar z}/|(-\bar w, \bar z)| = \binom{-\bar w}{\bar z}$ (already unit since $|-\bar w|^2 + |\bar z|^2 = |w|^2 + |z|^2 = 1$). So the second column is $\alpha \binom{-\bar w}{\bar z}$ with $|\alpha| = 1$. Computing $\det U = z \cdot \alpha \bar z - (-\bar w \alpha) \cdot w = \alpha(|z|^2 + |w|^2) = \alpha$. Setting $\det U = 1$ gives $\alpha = 1$, so $U = \begin{pmatrix} z & -\bar w \\ w & \bar z \end{pmatrix}$.

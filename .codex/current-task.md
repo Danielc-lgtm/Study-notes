@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry X merged; Differential Geometry XI diagnosis complete and rewrite in progress
+**Overall status:** active — Differential Geometry XI complete and ready to merge; Differential Geometry XII is next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-xi`
 
 ## Pull request
-`not opened yet`
+`#15 https://github.com/Danielc-lgtm/Study-notes/pull/15 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -44,16 +44,16 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry X — de Rham Theory and Frobenius (`30b8944`, PR #14)
 
 ## Current unit
-`dg-xi` — Differential Geometry XI, workflow Phase 3.1 (diagnosis and target complete).
+`dg-xi` — Differential Geometry XI, workflow Phase 6 (final checklist passed; ready to merge).
 
 ## Remaining units
-Differential Geometry XI–XII (two units; XI is active).
+Differential Geometry XII (one pending unit).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Open the DG XI checkpoint PR, repair SU(2), so(3), and transported-group calculations, then audit exp naturality, closed subgroups, actions, orbits, and homogeneous spaces.
+Commit and push DG XI, merge PR #15, then create the DG XII branch and diagnose Riemannian and semi-Riemannian geometry.
 
 ## Last completed commit
 `5384ab2`
