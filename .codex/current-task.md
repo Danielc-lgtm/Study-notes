@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry VII merged; Differential Geometry VIII diagnosis complete and rewrite in progress
+**Overall status:** active — Differential Geometry VIII complete and ready to merge; Differential Geometry IX is next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -12,7 +12,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — complete
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — complete
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — complete
-7. Differential Geometry VII — Tensors and Tensor Fields — in progress
+7. Differential Geometry VII — Tensors and Tensor Fields — complete
 8. Differential Geometry VIII — Differential Forms — in progress
 9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — pending
 10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — pending
@@ -41,16 +41,16 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry VII — Tensors and Tensor Fields (`5b34532`, PR #11)
 
 ## Current unit
-`dg-viii` — Differential Geometry VIII, workflow Phase 3.1 (diagnosis and target complete).
+`dg-viii` — Differential Geometry VIII, workflow Phase 6 (final checklist passed; ready to merge).
 
 ## Remaining units
-Differential Geometry VIII–XII (five units; VIII is active).
+Differential Geometry IX–XII (four pending units).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Audit the exterior-derivative uniqueness proof after cleanup, then verify wedge, d-squared, pullback, Cartan, and every exercise sign computation.
+Commit and push DG VIII, merge PR #12, then create the DG IX branch and diagnose orientation, integration, and Stokes.
 
 ## Last completed commit
 `5384ab2`

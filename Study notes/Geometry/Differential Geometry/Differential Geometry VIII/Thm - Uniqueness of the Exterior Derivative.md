@@ -51,7 +51,7 @@ The theorem accomplishes two things: it constructs the exterior derivative on an
 - *Drop linearity:* Then $d$ could be a nonlinear function, which is too weak to do calculus.
 - *Drop boundary condition:* Then $d$ is undetermined on functions; the zero operator and many others satisfy the remaining three axioms.
 - *Drop Leibniz:* Then $d$ is undetermined on higher-degree forms, even with the boundary condition fixed. The chart formula would not give a consistent operator.
-- *Drop $d^2 = 0$:* This is the deepest. The coordinate formula automatically satisfies $d^2 = 0$ (by Schwarz's theorem). But if one tried to *define* $d$ by another formula not satisfying $d^2 = 0$, the chart formulas would not patch correctly, and no consistent global operator would exist. So $d^2 = 0$ is forced once the other three are imposed.
+- *Drop $d^2=0$:* The value of the operator on exact $1$-forms is no longer forced to vanish, so the boundary condition and Leibniz rule do not determine higher degrees. Nilpotence supplies precisely the missing relation $D(df)=0$.
 
 The most useful version of the theorem is **for proving identities**. Given any candidate operator $D$ on $\Omega^\bullet(M)$, one can check the four axioms. If $D$ satisfies them, $D = d$ — no further verification needed. This is the modern, slick approach: instead of computing in coordinates and checking chart-independence, one verifies the four axioms abstractly.
 
@@ -81,7 +81,7 @@ The conclusion is "the four axioms uniquely determine $d$". Combined with other 
 
 The first target combination is **uniqueness + chart-by-chart agreement = global well-definedness**. The coordinate formula defines $d$ chart by chart; on overlaps, two chart formulas might disagree. But each satisfies the four axioms, so both equal the same operator. This is the chart-independence of $d$.
 
-The second target combination is **uniqueness + naturality = $F^* d = d F^*$**. The operator $F^* \circ d_N$ on $\Omega^k(N)$ vs $d_M \circ F^*$ on $\Omega^k(M)$ — both satisfy the four axioms when restricted to the image of $F^*$, so they agree. This is the cleanest proof of naturality.
+A second target is **coordinate-independent recognition of $d$ under diffeomorphisms**. If $F:M\to N$ is a diffeomorphism, conjugating $d_N$ by $F^*$ gives a degree-one derivation on $\Omega^\bullet(M)$ with the four defining properties, so uniqueness yields $F^*d_N=d_MF^*$. For an arbitrary smooth map, $F^*$ need not be invertible; naturality is instead proved directly on local generators or by the coordinate formula.
 
 The third target combination is **uniqueness + invariant formula = equivalence of coordinate and invariant descriptions of $d$**. The invariant formula and the coordinate formula define operators; both satisfy the four axioms; so they are equal.
 
@@ -206,7 +206,7 @@ The common error in the uniqueness proof is to overlook the locality step and th
 > **Why needed:** Without locality, the chart definition might not match the axiomatic $D$ at points where the chart breaks down.
 >
 > > [!note]- Full proof
-> > pick a bump $\psi$ with $\psi(p) = 1$ and $\operatorname{supp}\psi \subset U$. Then $\psi \cdot \omega$ vanishes everywhere ($\psi = 0$ outside $U$, where $\omega$ is arbitrary; $\omega = 0$ on $U$, where $\psi \cdot \omega = 0$). So $\psi\omega \equiv 0$ identically. Applying $D$: $D(\psi\omega) = 0$. By Leibniz, $D(\psi\omega) = D\psi \wedge \omega + \psi D\omega = D\psi \wedge \omega + \psi D\omega$. At $p$, $\psi(p) = 1$ and $\omega_p = 0$ (since $p \in U$ where $\omega = 0$), so the first term is $D\psi \wedge 0 = 0$ and the equation becomes $0 = 0 + 1 \cdot D\omega(p) = D\omega(p)$. So $D\omega(p) = 0$, as claimed.
+> > Pick a bump $\psi$ with $\psi(p) = 1$ and $\operatorname{supp}\psi \subset U$. Then $\psi \cdot \omega$ vanishes everywhere ($\psi = 0$ outside $U$, where $\omega$ is arbitrary; $\omega = 0$ on $U$, where $\psi \cdot \omega = 0$). So $\psi\omega \equiv 0$ identically. Applying $D$: $D(\psi\omega) = 0$. By Leibniz, $D(\psi\omega) = D\psi \wedge \omega + \psi D\omega = D\psi \wedge \omega + \psi D\omega$. At $p$, $\psi(p) = 1$ and $\omega_p = 0$ (since $p \in U$ where $\omega = 0$), so the first term is $D\psi \wedge 0 = 0$ and the equation becomes $0 = 0 + 1 \cdot D\omega(p) = D\omega(p)$. So $D\omega(p) = 0$, as claimed.
 
 > [!note]- Lemma 4: $D = d$ on $k$-forms by induction
 > **Statement:** For any operator $D$ satisfying the four axioms, $D = d$ on $\Omega^k(M)$.
@@ -251,7 +251,7 @@ The common error in the uniqueness proof is to overlook the locality step and th
 $$D\omega(X_0, \dots, X_k) = \sum_i(-1)^i X_i\omega(X_0, \dots, \widehat{X_i}, \dots, X_k) + \sum_{i<j}(-1)^{i+j}\omega([X_i, X_j], \ldots)$$
 defines an operator on smooth forms. Verify directly that it is linear, agrees with $df$ on functions, satisfies graded Leibniz, and has $D^2 = 0$. By uniqueness, $D = d$. This gives an alternative chart-free construction of $d$.
 
-**Naturality of $d$ via uniqueness.** Given a smooth map $F : M \to N$, define the operator $D : \Omega^k(M) \to \Omega^{k+1}(M)$ by $D = F^* \circ d_N \circ$ (a fixed section of $F^*$, when it exists). Show $D$ satisfies the four axioms on the image of $F^*$. Conclude $D = d_M$, hence $F^* \circ d_N = d_M \circ F^*$ on the image of $F^*$. This is the slick proof of [[Thm - Pullback Commutes with d for Forms on Manifolds]].
+**Naturality under a diffeomorphism via uniqueness.** For a diffeomorphism $F:M\to N$, define $D=(F^{-1})^*\circ d_N\circ F^*$ on $\Omega^\bullet(M)$, verify the four axioms, and conclude $D=d_M$. Explain separately why this conjugation argument does not apply to a noninvertible smooth map, then prove $F^*d_N=d_MF^*$ for a general $F$ on local generators $f_0\,df_1\wedge\cdots\wedge df_k$.
 
 **Find an operator on $\Omega^\bullet(M)$ that satisfies three of the four axioms but not the fourth.** For each axiom (linearity, boundary, Leibniz, $d^2 = 0$), construct an operator satisfying the other three. The constructions reveal which axiom does which work: e.g., dropping $d^2 = 0$ allows the operator $D_\nabla = d + A\wedge$ for a $1$-form $A$ (with $D_\nabla^2 = dA + A\wedge A \neq 0$ in general), the gauge-theoretic covariant exterior derivative.
 
@@ -263,7 +263,7 @@ defines an operator on smooth forms. Verify directly that it is linear, agrees w
 
 - **[[Def - Exterior Derivative on a Manifold]]** — The definition of $d$ via the four axioms; the uniqueness theorem is what makes the definition meaningful (showing the four axioms together uniquely determine the operator). Without uniqueness, the "definition" would just be a description of an operator that might not exist.
 
-- **[[Thm - Pullback Commutes with d for Forms on Manifolds]]** — The proof of naturality uses uniqueness. Define the operator $D = F^* \circ d_N$ and verify it satisfies the four axioms on the image of $F^*$; conclude $D = d_M$ on that image. This is the slick proof.
+- **[[Thm - Pullback Commutes with d for Forms on Manifolds]]** — Naturality for arbitrary smooth maps is verified on functions and wedges of their differentials; uniqueness gives a shorter conjugation proof only when the map is a diffeomorphism.
 
 - **[[Thm - d-Squared-is-Zero]]** — One of the four axioms is $d^2 = 0$, which is the algebraic shadow of Schwarz's theorem on mixed partials. The uniqueness theorem uses this axiom critically — without it, the propagation of $d$ from $0$-forms to higher-degree forms via Leibniz would not be consistent.
 
