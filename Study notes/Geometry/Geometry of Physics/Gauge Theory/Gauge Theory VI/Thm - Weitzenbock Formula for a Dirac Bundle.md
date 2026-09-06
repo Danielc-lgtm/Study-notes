@@ -9,7 +9,7 @@ tags: [gauge-theory, weitzenbock-formula, dirac-operator]
 
 > [!theorem] Weitzenböck formula
 > Let $D$ be the Dirac operator of a Dirac bundle $(E,c,\nabla)$. If $R^E$ is the connection curvature, then
-> $$D^2=\nabla^*\nabla+\mathcal R,qquad
+> $$D^2=\nabla^*\nabla+\mathcal R,\qquad
 > \mathcal R=\frac12\sum_{i,j}c(e^i)c(e^j)R^E_{e_i,e_j}.$$
 
 # Motivation
