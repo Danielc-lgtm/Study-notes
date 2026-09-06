@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "paper/Brownian Loops — Homotopy and Homology/Subpages/Paper - Brownian Loops — Homotopy and Homology — Whole-Paper Story.md",
+                "file": "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Paper - Brownian Loops — Homotopy and Homology — Whole-Paper Story"
+              "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket"
             }
           }
         ]
@@ -188,11 +188,20 @@
   },
   "active": "c5b52a9d138c61af",
   "lastOpenFiles": [
+    "Geometry/Differential Geometry/Differential Geometry V/Def - Smooth Vector Field.md",
+    "Algebra/Modules/Modules I/Def - Module.md",
+    "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
+    "Geometry/Differential Geometry/Differential Geometry V/Def - Vector Field on a Manifold.md",
+    "Geometry/Differential Geometry/Differential Geometry IX/Def - Orientation of a Vector Space.md",
+    "Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
+    "Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md",
+    "Category Theory/Category Theory IV — Adjunctions.md",
+    "Category Theory/Category Theory III — Limits and Colimits.md",
+    "paper/Brownian Loops — Homotopy and Homology/Subpages/Paper - Brownian Loops — Homotopy and Homology — Whole-Paper Story.md",
     "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology.md",
     "Algebra/Rings/Rings II/Def - Euclidean Domain.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Relation to the Path Integral.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages/Paper - Brownian Loops — Homotopy and Homology — §3 Decomposition over Homotopy Classes.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Paper - Brownian Loops — Homotopy and Homology — Whole-Paper Story.md",
     "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology — §5 Renormalising the Total Mass.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Why the Surface Construction Lifts to 3-Manifolds.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Why the Selberg Zeta Derivative Appears in Finite Area.md",
@@ -205,15 +214,6 @@
     "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Restriction Property of the Brownian Loop Measure.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Regrouping the L-Function Sum by Homology Class.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Provenance of the Homology Class Definition.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Non-Compound-Poisson Assumption on the Bernstein Function.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Naud's Geodesic Term as a Total Loop Mass.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Moment Generating Function via a Selberg Zeta Shift.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Killing Case Fits the Selberg Zeta Criterion.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Jacobian Form of the Fourier Inversion.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - In-House Derivation of the H3 Strip Integral.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Homotopy Classes for Jump Processes.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Descent of the Heat Kernel by Periodisation.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - D'Hoker-Phong Determinant Formula.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages",
     "Category Theory/Higher Categories - Globular Operads",
     "Category Theory/Higher Categories - Generalized Operads"
