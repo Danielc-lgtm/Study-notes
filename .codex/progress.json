@@ -380,7 +380,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded before content editing. First rewrite: rebuild cotangent transition maps with a single convention and remove drafting leakage."
+      "notes": "Diagnosis and target recorded before content editing. First rewrite: rebuild cotangent transition maps with a single convention and remove drafting leakage. Cotangent checkpoint replaces contradictory index calculations with pairing-invariance proof, fixes (AB)^(-T) order and cocycle convention, and aligns the construction exercise."
     },
     "dg-vii": {
       "title": "Differential Geometry VII — Tensors and Tensor Fields",
@@ -655,9 +655,9 @@
     }
   },
   "current_unit": "dg-vi",
-  "next_action": "Rebuild the cotangent-bundle transition and cocycle proofs with one fixed trivialization convention, then align the construction exercise.",
+  "next_action": "Audit vector-bundle construction and bundle-homomorphism pages, then repair pullback, exactness, and line-integral claims and examples.",
   "unresolved": [],
-  "last_commit": "a94bee2",
+  "last_commit": "5c68cf5",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

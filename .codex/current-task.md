@@ -48,10 +48,10 @@ Differential Geometry VI–XII (seven units; VI is active).
 _none_.
 
 ## Exact next action
-Rebuild the cotangent-bundle transition and cocycle proofs with one fixed trivialization convention, then align the construction exercise.
+Audit vector-bundle construction and bundle-homomorphism pages, then repair pullback, exactness, and line-integral claims and examples.
 
 ## Last completed commit
-`a94bee2`
+`5c68cf5`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
