@@ -63,17 +63,23 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-ii",
+  "branch": "codex/create-complete-gauge-theory-gt-iii",
   "pr": {
-    "number": 20,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/20",
-    "status": "open"
+    "number": null,
+    "url": null,
+    "status": null
   },
   "merged_prs": [
     {
       "number": 19,
       "unit": "gt-i",
       "main_sha": "961b960",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 20,
+      "unit": "gt-ii",
+      "main_sha": "40e54fd",
       "date": "2026-09-06"
     }
   ],
@@ -188,7 +194,7 @@
     "gt-iii": {
       "title": "Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
@@ -449,10 +455,10 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-ii",
-  "next_action": "Merge Gauge Theory II through PR #20, then create the Gauge Theory III branch and diagnose principal connections, curvature, holonomy, and gauge symmetry from both sources.",
+  "current_unit": "gt-iii",
+  "next_action": "Read Haydys §§2.2.3–2.2.5 and §3.3 and Wernli §§2.3–2.4 and §§2.6–2.7; audit the full Gauge Theory III graph and record its diagnosis, target, and manifest.",
   "unresolved": [],
-  "last_commit": "ea7d623",
+  "last_commit": "40e54fd",
   "ready_to_merge": false,
-  "updated": "2026-09-06T09:40:00Z"
+  "updated": "2026-09-06T09:50:00Z"
 }
