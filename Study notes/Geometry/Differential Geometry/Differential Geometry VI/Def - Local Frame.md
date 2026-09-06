@@ -55,7 +55,7 @@ A local frame is **the bundle-theoretic analogue of a basis of a vector space**,
 $$\Phi^{-1}(p, v) = v^i \sigma_i(p) \quad \text{(trivialization from frame)}, \qquad \sigma_i(p) = \Phi^{-1}(p, e_i) \quad \text{(frame from trivialization)}.$$
 Either piece of data determines the other, and the choice between them is a matter of computational convenience: trivializations emphasize the diffeomorphism with $U \times \mathbb{R}^k$, frames emphasize the basis at each fibre.
 
-A local frame is also **a local section of the frame bundle** $\mathrm{Fr}(E) \to M$: $\mathrm{Fr}(E)$ has fibre over $p$ equal to the set of ordered bases of $E_p$, and a smooth local section of $\mathrm{Fr}(E)$ over $U$ is exactly a smooth local frame of $E$ over $U$. The frame bundle is a principal $\mathrm{GL}(k, \mathbb{R})$-bundle, and the structure-group action permutes frames at each point.
+A local frame is also **a local section of the frame bundle** $\mathrm{Fr}(E) \to M$: $\mathrm{Fr}(E)$ has fibre over $p$ equal to the set of ordered bases of $E_p$, and a smooth local section of $\mathrm{Fr}(E)$ over $U$ is exactly a smooth local frame of $E$ over $U$. The frame bundle is a principal $\mathrm{GL}(k, \mathbb{R})$-bundle, and the right $\mathrm{GL}(k,\mathbb{R})$-action changes an ordered frame by an invertible matrix; on each fibre this action is free and transitive.
 
 **True name:** the true name of a local frame is "**a smooth field of bases on $U$, in which every section becomes a tuple of smooth functions**". The operational consequence is that local-frame computations *are* multivariable-calculus computations. Once a frame is fixed, the bundle disappears and is replaced by $C^\infty(U)^k$ — the space of $k$-tuples of smooth functions on $U$.
 

@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry V merged; Differential Geometry VI diagnosis in progress
+**Overall status:** active — Differential Geometry VI complete and ready to merge; Differential Geometry VII is next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -11,7 +11,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 3. Differential Geometry III — Tangent Vectors and the Differential — complete
 4. Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds — complete
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — complete
-6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — in progress
+6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — complete
 7. Differential Geometry VII — Tensors and Tensor Fields — pending
 8. Differential Geometry VIII — Differential Forms — pending
 9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — pending
@@ -37,18 +37,19 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry III — Tangent Vectors and the Differential (`8228dec`, PR #5)
 - Differential Geometry IV — Rank and Submanifold Theory (`937c276`, PR #7)
 - Differential Geometry V — Vector Fields, Flows, and Brackets (`b6c873f`, PR #9)
+- Differential Geometry VI — Vector Bundles and the Cotangent Bundle (complete on PR #10; final commit pending)
 
 ## Current unit
-`dg-vi` — Differential Geometry VI, workflow Phase 4.1 (target-driven rewrite).
+`dg-vi` — Differential Geometry VI, workflow Phase 6 (final checklist passed; ready to commit and merge).
 
 ## Remaining units
-Differential Geometry VI–XII (seven units; VI is active).
+Differential Geometry VII–XII (six pending units).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Audit vector-bundle construction and bundle-homomorphism pages, then finish pullback, line-integral, frame, Möbius, and graph review passes.
+Commit and push the completed DG VI review, merge PR #10, then create the DG VII branch and diagnose tensors and tensor fields.
 
 ## Last completed commit
 `8994ef6`

@@ -62,7 +62,7 @@
   "goal": "Improve every differential geometry topic and its complete subpage graph, sequentially, to the repository's rigour, self-containedness, explanation, and concision standards.",
   "mode": "improve",
   "merge_policy": "auto",
-  "status": "in_progress",
+  "status": "active",
   "branch": "codex/improve-all-differential-geometry-dg-vi",
   "pr": {
     "number": 10,
@@ -337,7 +337,7 @@
     "dg-vi": {
       "title": "Differential Geometry VI — Vector Bundles and the Cotangent Bundle",
       "mode": "improve",
-      "status": "in_progress",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
@@ -372,15 +372,15 @@
       ],
       "diagnosis": "Diagnosis: the unit has a strong local-frame/cocycle spine but the cotangent-bundle proof loses control of transition-map conventions and contains explicit drafting corrections instead of a valid cocycle proof. The topic falsely says vector-field pushforward is legal exactly for diffeomorphisms, several section-to-bundle “fully faithful” statements need base-map and locality qualifications, and the punctured-plane angle discussion confuses arctan with a genuine branch. Exactness, reparametrization orientation, bundle gluing topology, Möbius nontriviality, and all inverse-transpose formulas require line-by-line review. Target: organize the chapter around vector bundles as locally free linear data glued by a GL(k)-cocycle, with precise equivalence among trivializations, frames, sections, and transition matrices. Construct dual/cotangent bundles with one fixed convention and prove pairing invariance and cocycles without index ambiguity; distinguish pullback of covectors from projectable pushforward of vectors; derive df, line integrals, exactness, periods, and simply-connected path independence with oriented reparametrizations and complete proofs. Exercises should move fluently among gluing matrices, frames, sections, dual transformations, and integral tests.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded before content editing. First rewrite: rebuild cotangent transition maps with a single convention and remove drafting leakage. Cotangent checkpoint replaces contradictory index calculations with pairing-invariance proof, fixes (AB)^(-T) order and cocycle convention, and aligns the construction exercise. Contravariance checkpoint replaces the false diffeomorphism-only pushforward rule by F-related projectability, corrects angle branches on the punctured plane, and separates the 1-form exactness theorem from higher-degree magnetic potentials."
+      "notes": "Diagnosis and target recorded before content editing. First rewrite: rebuild cotangent transition maps with a single convention and remove drafting leakage. Cotangent checkpoint replaces contradictory index calculations with pairing-invariance proof, fixes (AB)^(-T) order and cocycle convention, and aligns the construction exercise. Contravariance checkpoint replaces the false diffeomorphism-only pushforward rule by F-related projectability, corrects angle branches on the punctured plane, and separates the 1-form exactness theorem from higher-degree magnetic potentials. Final review corrected base-map uniqueness, supplied a genuine non-covering map, qualified vector-field transport by F-relatedness, corrected frame-group action and zero-section dimension, and distinguished reparameterization invariance from dependence on an image set. All mechanical and 29-page graph audits pass."
     },
     "dg-vii": {
       "title": "Differential Geometry VII — Tensors and Tensor Fields",
@@ -655,9 +655,9 @@
     }
   },
   "current_unit": "dg-vi",
-  "next_action": "Audit vector-bundle construction and bundle-homomorphism pages, then finish pullback, line-integral, frame, Möbius, and graph review passes.",
+  "next_action": "Commit and push the completed DG VI review, merge PR #10, then create the DG VII branch and diagnose tensors and tensor fields.",
   "unresolved": [],
   "last_commit": "8994ef6",
-  "ready_to_merge": false,
-  "updated": "2026-09-05T00:00:00Z"
+  "ready_to_merge": true,
+  "updated": "2026-09-06"
 }
