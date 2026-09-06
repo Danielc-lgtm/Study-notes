@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-v",
+  "branch": "codex/create-complete-gauge-theory-gt-vi",
   "pr": {
-    "number": 24,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/24",
+    "number": 25,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/25",
     "status": "open"
   },
   "merged_prs": [
@@ -80,6 +80,24 @@
       "number": 20,
       "unit": "gt-ii",
       "main_sha": "40e54fd",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 21,
+      "unit": "gt-iii",
+      "main_sha": "ce4a900",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 23,
+      "unit": "gt-iv",
+      "main_sha": "6173fb5",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 24,
+      "unit": "gt-v",
+      "main_sha": "6f77dba",
       "date": "2026-09-06"
     }
   ],
@@ -335,22 +353,35 @@
     "gt-vi": {
       "title": "Gauge Theory VI — Clifford Algebras, Spin Geometry, and Dirac Operators",
       "mode": "create",
-      "status": "pending",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI — Spin Geometry and Dirac Operators.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI — Clifford Algebras, Spin Geometry, and Dirac Operators.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI — Spin Geometry and Dirac Operators.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI — Clifford Algebras, Spin Geometry, and Dirac Operators.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Def - Clifford Algebra and Clifford Module.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Thm - Weitzenbock Formula for a Dirac Bundle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Exercise Index - §6.1 Clifford Algebra and Spin Groups.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Thm - Formal Self-Adjointness of a Dirac Operator.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Def - Dirac Bundle and Dirac Operator.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Ex - Exterior Forms as a Clifford Module.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Exercise Index - §6.2 Dirac and Spin-c Geometry.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Def - Connection Laplacian.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Def - Spin and Spin-c Structures.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Def - Spin Group and Low-Dimensional Spin Groups.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Def - Spinor Bundle, Chirality, and Twisted Dirac Operator.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Ex - Variation of a Spin-c Dirac Operator.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VI/Ex - Positive Scalar Curvature Kills Harmonic Spinors.md"
       ],
       "diagnosis": "Create-mode unit; filename manifest pending.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Built from Haydys §4 with Clifford universal property, low-dimensional spin groups, Dirac bundles, spin/spin-c lifting and torsors, chirality, twisting, formal self-adjointness, connection Laplacian, and a complete Weitzenböck proof."
     },
     "gt-vii": {
       "title": "Gauge Theory VII — Sobolev Spaces, Elliptic Operators, and Elliptic Complexes",
@@ -471,10 +502,10 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-vi",
-  "next_action": "Merge Gauge Theory V, then create Gauge Theory VI covering Clifford algebras, spin and Spin^c structures, Dirac operators, and the Weitzenböck formula.",
+  "current_unit": "gt-vii",
+  "next_action": "Merge Gauge Theory VI and create Gauge Theory VII for Sobolev spaces, elliptic operators, Fredholm theory, elliptic complexes, gauge deformation complexes, and Hodge theory.",
   "unresolved": [],
-  "last_commit": "c83565e",
+  "last_commit": "0c79aa2",
   "ready_to_merge": false,
   "updated": "2026-09-06T00:00:00Z"
 }

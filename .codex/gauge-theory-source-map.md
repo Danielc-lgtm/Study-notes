@@ -15,10 +15,10 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §3.1, invariant polynomials, Chern–Weil theory, Chern classes | 26–29 | IV | complete |
 | §3.2, Chern–Simons functional | 30–31 | IV | complete |
 | §3.3, flat connections, parallel transport, holonomy, monodromy | 32–33 | III, IV | complete |
-| §4.1, spin groups and Clifford algebras | 34–35 | VI | pending |
-| §4.2, Dirac operators | 36–37 | VI | pending |
-| §4.3, spin and $\operatorname{Spin}^c$ structures and their classification | 37–41 | VI | pending |
-| §4.4, Weitzenböck formula | 41–42 | VI | pending |
+| §4.1, spin groups and Clifford algebras | 34–35 | VI | complete |
+| §4.2, Dirac operators | 36–37 | VI | complete |
+| §4.3, spin and $\operatorname{Spin}^c$ structures and their classification | 37–41 | VI | complete |
+| §4.4, Weitzenböck formula | 41–42 | VI | complete |
 | §5.1, Sobolev spaces | 43–46 | VII | pending |
 | §5.2, elliptic operators | 46–49 | VII | pending |
 | §5.3, elliptic complexes, gauge interpretation, de Rham complex | 49–51 | VII | pending |

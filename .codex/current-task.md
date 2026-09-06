@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–IV merged; Gauge Theory V complete and ready to merge
+**Overall status:** in progress — Gauge Theory I–V merged; Gauge Theory VI is current
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -8,10 +8,10 @@ Create a complete, self-contained Obsidian lecture-note series covering both `so
 ## Scope
 1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete (PR #19)
 2. Gauge Theory II — Principal bundles, representations, and bundle classification — complete (PR #20)
-3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — complete (PR #21; ready to merge)
-4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — complete (PR #23; ready to merge)
-5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — complete (PR #24; ready to merge)
-6. Gauge Theory VI — Clifford algebras, spin geometry, and Dirac operators — pending
+3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — complete (PR #21; merged)
+4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — complete (PR #23; merged)
+5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — complete (PR #24; merged)
+6. Gauge Theory VI — Clifford algebras, spin geometry, and Dirac operators — in progress
 7. Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes — pending
 8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — pending
 9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — pending
@@ -25,10 +25,10 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
 
 ## Working branch
-`codex/create-complete-gauge-theory-gt-v`
+`codex/create-complete-gauge-theory-gt-vi`
 
 ## Pull request
-PR #24 — Gauge Theory V complete and ready to merge.
+PR #25 — open; remains unmerged until Gauge Theory VI passes every review.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -50,10 +50,10 @@ Gauge Theory VI–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Merge PR #24, then create Gauge Theory VI from Haydys §4 on a fresh branch.
+Extract Haydys §4 and build the Gauge Theory VI Clifford/spin/Dirac/Weitzenböck graph.
 
 ## Last completed commit
-`978d5c8` — deepened the principal-connection definition with axiom-failure analysis, examples, calibration, and operational interpretation.
+`0c79aa2` — corrected the Gauge Theory V curvature-variation and stress-energy formulas while initializing Gauge Theory VI.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
@@ -61,3 +61,6 @@ Merge PR #24, then create Gauge Theory VI from Haydys §4 on a fresh branch.
 ## Merge history
 - #19 Gauge Theory I → `main` (`961b960`, 2026-09-06).
 - #20 Gauge Theory II → `main` (`40e54fd`, 2026-09-06).
+- #21 Gauge Theory III → `main` (`ce4a900`, 2026-09-06).
+- #23 Gauge Theory IV → `main` (`6173fb5`, 2026-09-06).
+- #24 Gauge Theory V → `main` (`6f77dba`, 2026-09-06).

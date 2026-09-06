@@ -25,7 +25,7 @@ Curvature is the nonlinear derivative of a connection. The proof follows the ord
 
 > [!proof]- Formal Proof
 > The space of connections is affine over $\Omega^1(M;\operatorname{Ad}P)$, so every variation is $A_t=A+ta$ with compactly supported $a$. Expanding curvature gives
-> $$F_{A_t}=F_A+t,d_Aa+\frac{t^2}{2}[a,a],$$
+> $$F_{A_t}=F_A+t\,d_Aa+\frac{t^2}{2}[a,a],$$
 > hence $\dot F_0=d_Aa$. Differentiating the quadratic action and using symmetry of the $L^2$ pairing yields
 > $$\left.\frac d{dt}\right|_0S_{\mathrm{YM}}(A_t)
 > =\int_M\langle d_Aa\wedge *F_A\rangle
