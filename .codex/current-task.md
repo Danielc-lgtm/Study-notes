@@ -50,7 +50,7 @@ Gauge Theory III–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Rebuild local connection forms and their gauge law, principal curvature/Cartan/Bianchi, adjoint and induced associated-bundle connections, eliminating all abandoned chain-rule calculations.
+Add and prove horizontal lift, principal parallel transport, holonomy group, gauge group, and flat-monodromy classification pages; then rebuild the seven calibration examples and four exercise indexes.
 
 ## Last completed commit
 `40e54fd` — merge of Gauge Theory II through PR #20.

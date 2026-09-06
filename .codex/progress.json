@@ -241,7 +241,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Topic renamed and all 18 incoming title links updated. The independent topic map and core are rebuilt: valued forms and graded bracket normalization, Maurer–Cartan form/equation, fundamental fields with right-action anti-homomorphism sign, horizontal distributions, principal connection forms, trivial-bundle formula, affine structure, and the two-way connection/distribution theorem."
+      "notes": "Local/global curvature calculus rebuilt: local potentials, passive gauge law with a clean curve derivative, curvature horizontality/equivariance, Cartan structure equation, graded Bianchi proof, adjoint bundle, exterior covariant derivative, and induced associated-bundle connection. The factor 1/2 bracket versus matrix-wedge convention is fixed throughout."
     },
     "gt-iv": {
       "title": "Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli",
@@ -461,9 +461,9 @@
     }
   },
   "current_unit": "gt-iii",
-  "next_action": "Rebuild local connection forms and their gauge law, principal curvature/Cartan/Bianchi, adjoint and induced associated-bundle connections, eliminating all abandoned chain-rule calculations.",
+  "next_action": "Add and prove horizontal lift, principal parallel transport, holonomy group, gauge group, and flat-monodromy classification pages; then rebuild the seven calibration examples and four exercise indexes.",
   "unresolved": [],
-  "last_commit": "15b8956",
+  "last_commit": "58fa2e4",
   "ready_to_merge": false,
-  "updated": "2026-09-06T10:40:00Z"
+  "updated": "2026-09-06T11:10:00Z"
 }
