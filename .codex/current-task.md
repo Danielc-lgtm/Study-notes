@@ -51,7 +51,7 @@ _none_.
 Audit vector-bundle construction and bundle-homomorphism pages, then finish pullback, line-integral, frame, Möbius, and graph review passes.
 
 ## Last completed commit
-`b9756b2`
+`8994ef6`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
