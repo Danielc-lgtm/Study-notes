@@ -28,7 +28,7 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `codex/create-complete-gauge-theory-gt-ii`
 
 ## Pull request
-_none yet — open after the Gauge Theory II initialization checkpoint_.
+PR #20 — open; remains unmerged until Gauge Theory II passes every review.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Read Haydys §§2.2.1–2.2.2 and §2.4 and Wernli chapter 1 plus §§2.1–2.2; audit the full existing Gauge Theory II graph, then record its diagnosis, target, and filename manifest.
+Rename the Gauge Theory II topic page to its principal-bundle title while updating all 34 incoming links, then rebuild its topic map and the fibre/principal/representation/associated-bundle core pages.
 
 ## Last completed commit
 `961b960` — merge of Gauge Theory I through PR #19.

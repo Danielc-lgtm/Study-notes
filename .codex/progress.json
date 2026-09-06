@@ -65,9 +65,9 @@
   "status": "in_progress",
   "branch": "codex/create-complete-gauge-theory-gt-ii",
   "pr": {
-    "number": null,
-    "url": null,
-    "status": null
+    "number": 20,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/20",
+    "status": "open"
   },
   "merged_prs": [
     {
@@ -176,9 +176,15 @@
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - First Chern Class of the Hopf Bundle is One.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - Gauss-Bonnet for Closed Surfaces (Chern's Proof).md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - Gauss-Bonnet-Chern Theorem.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - Principal Bundles are Locally Trivial via G-Action.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - Principal Bundles are Locally Trivial via G-Action.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Representation of a Lie Group.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Extension and Reduction of Structure Group.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Universal Bundle and Classifying Space.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Thm - Classification of Principal Bundles by Maps to BG.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Ex - Weight Representations of U(1).md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Ex - Quaternionic Hopf Bundle and SU(2) Classification.md"
       ],
-      "diagnosis": "Pending source-grounded diagnosis.",
+      "diagnosis": "Rigour failures include treating freeness as sufficient for a smooth quotient, abandoned Hopf-quaternion algebra, a Berry factor-of-two false start, and mixed frame conventions. The graph lacks a representation bridge, extension/reduction of structure group, and Haydys universal-bundle classification. Replace the prose around the independent question “what topology exists before a connection?”, using cocycles, representations, reductions, classifying maps, and the Hopf obstruction; reserve characteristic forms and Berry theory for Gauge Theory IV.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -188,7 +194,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Source pass and existing-graph audit complete. Manifest adds representation, extension/reduction, universal/classifying-space, principal-bundle classification, U(1) weight, and quaternionic Hopf pages. Existing Lie-theory pages are prerequisites rather than duplicated."
     },
     "gt-iii": {
       "title": "Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry",
@@ -443,9 +449,9 @@
     }
   },
   "current_unit": "gt-ii",
-  "next_action": "Read Haydys §§2.2.1–2.2.2 and §2.4 and Wernli chapter 1 plus §§2.1–2.2; audit the full existing Gauge Theory II graph, then record its diagnosis, target, and filename manifest.",
+  "next_action": "Rename the Gauge Theory II topic page to its principal-bundle title while updating all 34 incoming links, then rebuild its topic map and the fibre/principal/representation/associated-bundle core pages.",
   "unresolved": [],
-  "last_commit": "961b960",
+  "last_commit": "d109b11",
   "ready_to_merge": false,
-  "updated": "2026-09-06T07:00:00Z"
+  "updated": "2026-09-06T07:20:00Z"
 }
