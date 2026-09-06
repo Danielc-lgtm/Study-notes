@@ -38,7 +38,7 @@ For a closed loop this is conjugation, so $\operatorname{tr}U_\gamma$ is gauge i
 
 # Examples / Corollaries
 
-If $F=0$, transport is invariant under endpoint-fixed homotopies of paths. It need not depend only on endpoints: a flat connection defines a representation $\pi_1(M,x)\to G$. On a simply connected region every flat connection is gauge-equivalent to the trivial one.
+A flat connection can retain nontrivial loop transport on a nonsimply-connected base. The explicit calculation in [[Ex - The Aharonov-Bohm Phase from the Magnetic Solenoid]] proves this phenomenon without requiring the general flat-holonomy classification, which is developed in Gauge Theory III.
 
 When $U(1)$ curvature is exact on a surface $\Sigma$ with $\partial\Sigma=\gamma$, Stokes gives
 $$U_\gamma=\exp\!\left(-iq\int_\Sigma F\right).$$

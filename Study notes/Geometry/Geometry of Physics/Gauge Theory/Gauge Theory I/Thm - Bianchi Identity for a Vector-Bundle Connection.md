@@ -25,7 +25,7 @@ and $d_A\beta=d\beta+[A,\beta]$.
 > $$d_AF_A=dF_A+A\wedge F_A-F_A\wedge A=0.$$
 > Equivalently, for vector fields $X,Y,Z$,
 > $$
-> \sum_{\mathrm{cyc}}\left((\nabla_XF_\nabla)(Y,Z)+F_\nabla([X,Y],Z)\right)=0,
+> \sum_{\mathrm{cyc}}\left((\nabla_XF_\nabla)(Y,Z)-F_\nabla([X,Y],Z)\right)=0,
 > $$
 > where $\nabla$ on $F_\nabla$ is the induced connection on $\operatorname{End}E$.
 

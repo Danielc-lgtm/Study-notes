@@ -41,7 +41,7 @@ Differentiate each potential, compare them on the overlap, exponentiate the gaug
 > =-\frac{q}{2\pi}(4\pi g)=-2qg.
 > $$
 > The sign agrees with the degree of the transition map for the overlap
-> convention used here. Since line bundles over $S^2$ are classified by this
+> convention used here. By [[Thm - First Chern Class Classifies Line Bundles over a CW Complex]], line bundles over $S^2$ are classified by this
 > integer, the bundle is the corresponding tensor power of a Hopf line bundle,
 > with the dual chosen if the opposite Hopf generator is used.
 

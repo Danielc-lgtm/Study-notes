@@ -40,7 +40,7 @@ Under $e'=eg$, one has $F_{A'}=g^{-1}F_Ag$. Thus the local matrices assemble int
 
 # Relate to Other Fields / Compression
 
-Curvature is the infinitesimal holonomy: parallel transport around a sufficiently small oriented parallelogram with side vectors $\varepsilon X$ and $\varepsilon Y$ differs from the identity by $-\varepsilon^2F_\nabla(X,Y)+O(\varepsilon^3)$, with the sign reversed if the transport convention is reversed. The invariant statement is that $F_\nabla=0$ exactly when the connection is locally gauge-equivalent to the trivial connection on a simply connected coordinate neighbourhood.
+Curvature is the infinitesimal holonomy: parallel transport around a sufficiently small oriented parallelogram with side vectors $\varepsilon X$ and $\varepsilon Y$ differs from the identity by $-\varepsilon^2F_\nabla(X,Y)+O(\varepsilon^3)$, with the sign reversed if the transport convention is reversed. Vanishing curvature therefore removes the infinitesimal obstruction to path-independent transport. The global conclusion additionally depends on the topology of the base, as the Aharonov–Bohm example shows.
 
 For a complex line bundle, endomorphisms commute, so $A\wedge A=0$ and $F_A=dA$. This abelian simplification is the geometric origin of the linearity of Maxwell theory.
 

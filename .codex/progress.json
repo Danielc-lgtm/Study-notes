@@ -62,7 +62,7 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "in_progress",
+  "status": "review",
   "branch": "codex/create-complete-gauge-theory-gt-i",
   "pr": {
     "number": null,
@@ -93,7 +93,7 @@
     "gt-i": {
       "title": "Gauge Theory I — Vector-Bundle Connections and the Electromagnetic Prototype",
       "mode": "improve",
-      "status": "in_progress",
+      "status": "review",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
@@ -126,15 +126,15 @@
       ],
       "diagnosis": "Rigour audit found an untyped graded-bracket cancellation, an incomplete Poincaré–Hopf argument, monopole normalization ambiguity, and Euclidean/Lorentzian convention mixing. Self-containedness is weakened by scattered vector-bundle operations and gauge laws. Replace all explanatory prose: organize independently around connection as fibrewise comparison, curvature as path-dependence, and electromagnetism as the Hermitian-line-bundle specialization; preserve the Euler material as linked enrichment rather than the chapter entrance.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "The optional vector-field enrichment is now corrected and compressed: the coordinate-singularity error in ∂θ is replaced by the smooth height gradient, Poincaré–Hopf has a complete oriented-surface proof through moving frames and Gauss–Bonnet, and hairy ball has an independent degree proof. All 26 subpages have now been rewritten or audited. Next execute the five unit reviews."
+      "notes": "All 27 pages reviewed. Correctness fixed the Bianchi cyclic sign, unified the Chern-class sign convention, corrected the nonsmooth ∂θ sphere field, and removed unsupported local-flatness overclaims. Pedagogy now follows comparison→curvature→U(1)→global effects; rederivation scaffolds cover every theorem; all 113 incoming references retain valid anchors; prose and concision pass after independent replacement. Mechanical and 27-page structural audits pass."
     },
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
@@ -436,9 +436,9 @@
     }
   },
   "current_unit": "gt-i",
-  "next_action": "Perform separate correctness, pedagogy, rederivation, knowledge-graph/self-containedness, and prose/conciseness reviews of all 27 Gauge Theory I files; fix every finding, run final mechanical audits, and update source coverage.",
+  "next_action": "Commit the reviewed Gauge Theory I unit, record its completion SHA and source coverage in both ledgers, update PR #19, and merge it into main.",
   "unresolved": [],
   "last_commit": "fc5e357",
   "ready_to_merge": false,
-  "updated": "2026-09-06T06:20:00Z"
+  "updated": "2026-09-06T06:40:00Z"
 }

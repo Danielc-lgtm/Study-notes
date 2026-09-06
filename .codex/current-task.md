@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — source coverage mapped; Gauge Theory I is the current unit
+**Overall status:** review — Gauge Theory I passes all five review passes and awaits its completion commit
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Perform separate correctness, pedagogy, rederivation, knowledge-graph/self-containedness, and prose/conciseness reviews of all 27 Gauge Theory I files; fix every finding, run final mechanical audits, and update source coverage.
+Commit the reviewed Gauge Theory I unit, record its completion SHA and source coverage in both ledgers, update PR #19, and merge it into main.
 
 ## Last completed commit
 `570c6a7` is the user-provided source import immediately preceding this task; the task initialization commit follows this ledger update.
