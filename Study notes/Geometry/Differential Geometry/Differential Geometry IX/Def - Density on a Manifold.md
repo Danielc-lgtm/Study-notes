@@ -112,7 +112,7 @@ In **mathematical physics**, half-densities ($s = 1/2$ densities) are the natura
 
 **Corollary — Stokes's theorem fails for densities.** Densities have no exterior derivative — there is no analog of $d$ on the density bundle that satisfies $\int_M d\mu = \int_{\partial M}\mu$. The reason: $d$ uses the signed structure of forms, which densities have discarded. So *one cannot do Stokes's theorem with densities*; this is the price of orientation-blindness.
 
-**Calibration check.** Verify that the density bundle has positive transition functions $|\det DF|$ and is therefore trivial; that every smooth manifold admits a positive density via partition of unity; that the integral of a density depends on the choice of density (it is not intrinsic the way the integral of a top-form is — but it is well-defined for any *given* density); and that Stokes's theorem fails for densities. If you can also explain why complex manifolds have a *canonical* density (the absolute value of the canonical top-form, equivalently the determinant of the Hermitian metric), you have understood the structural picture.
+**Calibration check.** Verify that the density bundle has positive transition functions $|\det DF|$ and is therefore trivial; that every smooth manifold admits a positive density via partition of unity; that the integral of a density depends on the choice of density (it is not intrinsic the way the integral of a top-form is — but it is well-defined for any *given* density); and that Stokes's theorem does not apply directly to densities. A complex structure canonically orients the underlying real manifold, but it does not select a density: a positive density requires additional data, such as a Hermitian metric.
 
 ---
 

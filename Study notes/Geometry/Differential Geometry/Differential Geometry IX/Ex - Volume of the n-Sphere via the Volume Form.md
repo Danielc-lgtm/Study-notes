@@ -109,20 +109,10 @@ $$g_{\varphi_k\varphi_k} = \sin^2\varphi_1\sin^2\varphi_2\cdots\sin^2\varphi_{k-
 >
 > Cross terms vanish by orthogonality (each pair $\partial_{\varphi_i}, \partial_{\varphi_j}$ for $i \neq j$ has zero dot product, by the structure of the spherical parametrization).
 
-The volume form is therefore
-$$\omega_g = \sqrt{\det(g_{ij})}\,d\varphi_1\wedge\cdots\wedge d\varphi_{n-1}\wedge d\theta = \sqrt{\prod_{k=1}^{n}\sin^{2(k-1)}\varphi_{k}}\,\text{(...)}$$
-
-Computing the product:
-$$\det g_{ij} = g_{\varphi_1\varphi_1}\cdots g_{\varphi_{n-1}\varphi_{n-1}}g_{\theta\theta} = 1\cdot\sin^2\varphi_1\cdot\sin^4\varphi_1\sin^2\varphi_2\cdots,$$
-which telescopes to give $\det g_{ij} = \sin^{2(n-1)}\varphi_1\,\sin^{2(n-2)}\varphi_2\,\cdots\sin^2\varphi_{n-1}$. Hence
-$$\omega_g = \sin^{n-1}\varphi_1\,\sin^{n-2}\varphi_2\,\cdots\sin\varphi_{n-1}\,d\varphi_1\wedge\cdots\wedge d\varphi_{n-1}\wedge d\theta.$$
-
-> [!note]- Derivation
-> $\det(g_{ij})$ is the product of diagonal entries:
-> $$\det g = 1\cdot\sin^2\varphi_1\cdot(\sin^2\varphi_1\sin^2\varphi_2)\cdots(\sin^2\varphi_1\cdots\sin^2\varphi_{n-1}).$$
-> Each factor $\sin^2\varphi_k$ appears in the $k$-th, $(k+1)$-th, ..., $n$-th positions, so its total exponent is $n - k$. Wait — recount: $\sin^2\varphi_1$ appears in $g_{\varphi_2\varphi_2}, g_{\varphi_3\varphi_3}, \ldots, g_{\theta\theta}$, that's $n - 1$ positions. $\sin^2\varphi_2$ appears in $g_{\varphi_3\varphi_3}, \ldots, g_{\theta\theta}$, that's $n - 2$ positions. ... $\sin^2\varphi_{n-1}$ appears only in $g_{\theta\theta}$, $1$ position.
->
-> So $\det g = \prod_{k=1}^{n-1}\sin^{2(n-k)}\varphi_k = \sin^{2(n-1)}\varphi_1\sin^{2(n-2)}\varphi_2\cdots\sin^2\varphi_{n-1}$, and $\sqrt{\det g} = \sin^{n-1}\varphi_1\sin^{n-2}\varphi_2\cdots\sin\varphi_{n-1}$. The exponent on $\sin\varphi_k$ is $n - k$.
+The diagonal metric therefore has determinant
+$$\det(g_{ij})=\prod_{k=1}^{n-1}\sin^{2(n-k)}\varphi_k.$$
+Indeed, $\sin^2\varphi_k$ occurs once in each diagonal entry corresponding to $\varphi_{k+1},\ldots,\varphi_{n-1},\theta$, hence exactly $n-k$ times. Because $0<\varphi_k<\pi$, every sine is positive, and
+$$\omega_g=\sin^{n-1}\varphi_1\,\sin^{n-2}\varphi_2\cdots\sin\varphi_{n-1}\,d\varphi_1\wedge\cdots\wedge d\varphi_{n-1}\wedge d\theta.$$
 
 **Step 2: Set up and evaluate the iterated integral.**
 

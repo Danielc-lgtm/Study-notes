@@ -97,6 +97,9 @@ The reader is assumed to be comfortable with smooth manifolds and atlases ([[Dif
 - **[[Ex - Computing the Integral of a 2-Form on the Sphere]]** (⭐⭐)
 	- Using spherical-coordinate parametrization $F(\varphi, \theta) = (\sin\varphi\cos\theta, \sin\varphi\sin\theta, \cos\varphi)$ and the 2-form $\omega = x\,dy\wedge dz + y\,dz\wedge dx + z\,dx\wedge dy$ on $\mathbb{R}^3$, compute $\int_{S^2}\omega = 4\pi$. Verify that the parametrization is orientation-preserving by computing the Jacobian, and observe that the answer is the surface area of the unit sphere.
 
+- **[[Ex - Integration of a Pseudoform on the Möbius Strip]]** (⭐⭐)
+	- Track the sign reversal under the Möbius identification, show why an ordinary top form cannot descend, and integrate the corresponding twisted top form without choosing an orientation.
+
 - **[[Ex - Volume of the n-Sphere via the Volume Form]]** (⭐⭐⭐)
 	- Compute the Riemannian volume $\int_{S^n}\omega_g$ of the unit sphere by integrating the induced round-metric volume form $\omega_g = \sin^{n-1}\varphi_1\,\sin^{n-2}\varphi_2\,\cdots\sin\varphi_{n-1}\,d\varphi_1\cdots d\varphi_{n-1}\,d\theta$ in spherical coordinates. The answer $\mathrm{vol}(S^n) = 2\pi^{(n+1)/2}/\Gamma\!\big(\tfrac{n+1}{2}\big)$ recovers $2\pi$, $4\pi$, $2\pi^2$, $\tfrac{8\pi^2}{3}$ for $n = 1, 2, 3, 4$ respectively.
 

@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry VIII merged; Differential Geometry IX diagnosis complete and rewrite in progress
+**Overall status:** active — Differential Geometry IX complete and ready to merge; Differential Geometry X is next
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-ix`
 
 ## Pull request
-`not opened yet`
+`#13 https://github.com/Danielc-lgtm/Study-notes/pull/13 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -42,16 +42,16 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry VIII — Differential Forms (`a85c2ca`, PR #12)
 
 ## Current unit
-`dg-ix` — Differential Geometry IX, workflow Phase 3.1 (diagnosis and target complete).
+`dg-ix` — Differential Geometry IX, workflow Phase 6 (final checklist passed; ready to merge).
 
 ## Remaining units
-Differential Geometry IX–XII (four units; IX is active).
+Differential Geometry X–XII (three pending units).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Open the DG IX checkpoint PR, then repair the Riemannian-volume Jacobian proof and audit boundary orientation, integration well-definedness, change of variables, and Stokes.
+Commit and push DG IX, merge PR #13, then create the DG X branch and diagnose de Rham cohomology, distributions, and Frobenius.
 
 ## Last completed commit
 `5384ab2`
