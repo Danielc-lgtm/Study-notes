@@ -103,13 +103,9 @@ The **hat map** $\widehat{\cdot} : \mathbb{R}^3 \to \mathfrak{so}(3)$ is the lin
 $$[\widehat u, \widehat v] = \widehat u \widehat v - \widehat v \widehat u = \widehat{u \times v}.$$
 
 > [!note]- Derivation
-> Verify directly. Take $u = e_1 = (1, 0, 0)$ and $v = e_2 = (0, 1, 0)$. Then
-> $$\widehat{e_1} = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0 \end{pmatrix}, \qquad \widehat{e_2} = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 0 & 0 \\ -1 & 0 & 0 \end{pmatrix}.$$
-> Compute
-> $$\widehat{e_1} \widehat{e_2} = \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}, \qquad \widehat{e_2} \widehat{e_1} = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & -1 & 0 \end{pmatrix}.$$
-> So
-> $$[\widehat{e_1}, \widehat{e_2}] = \widehat{e_1} \widehat{e_2} - \widehat{e_2} \widehat{e_1} = \begin{pmatrix} 0 & 0 & 0 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix} - \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & -1 & 0 \end{pmatrix}.$$
-> Hmm, let me recompute. $\widehat{e_1} \widehat{e_2}$: row 2 of $\widehat{e_1}$ is $(0, 0, -1)$, column 1 of $\widehat{e_2}$ is $(0, 0, -1)^T$, so $(\widehat{e_1}\widehat{e_2})_{21} = 0 \cdot 0 + 0 \cdot 0 + (-1)(-1) = 1$. Row 3 of $\widehat{e_1}$ is $(0, 1, 0)$, column 3 of $\widehat{e_2}$ is $(1, 0, 0)^T$, so $(\widehat{e_1}\widehat{e_2})_{33} = 0 + 0 + 0 = 0$. After careful computation, $[\widehat{e_1}, \widehat{e_2}] = \widehat{e_3}$ matches $e_1 \times e_2 = e_3$. By linearity in both arguments, this extends to all $u, v$: $[\widehat u, \widehat v] = \widehat{u \times v}$.
+> The hat map satisfies $\widehat u\,x=u\times x$. Therefore, for every $x\in\mathbb R^3$,
+> $$[\widehat u,\widehat v]x=u\times(v\times x)-v\times(u\times x)=(u\times v)\times x=\widehat{u\times v}x,$$
+> where the middle equality is the vector triple-product identity. Hence $[\widehat u,\widehat v]=\widehat{u\times v}$; in particular $[\widehat e_1,\widehat e_2]=\widehat e_3$.
 
 > [!note]- Complete formal solution
 > Let $A : (-\epsilon, \epsilon) \to \mathrm{SO}(3)$ be a smooth curve with $A(0) = I$ and $A'(0) = X$. Writing $A(t) = I + tX + O(t^2)$, substitute into the defining equation $A^T A = I$:

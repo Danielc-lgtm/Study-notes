@@ -63,10 +63,10 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "active",
-  "branch": "codex/improve-all-differential-geometry-dg-x",
+  "branch": "codex/improve-all-differential-geometry-dg-xi",
   "pr": {
-    "number": 14,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/14",
+    "number": 15,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/15",
     "status": "open"
   },
   "merged_prs": [
@@ -563,7 +563,7 @@
     "dg-xi": {
       "title": "Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map",
       "mode": "improve",
-      "status": "pending",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map.md",
@@ -597,17 +597,17 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry XI/Thm - Orbit-Stabilizer for Lie Group Actions.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry XI/Thm - The Closed Subgroup Theorem.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the unit has the right group–invariant-field–Lie-algebra–exponential progression, but several matrix examples contain visible abandoned computations. The SU(2) parametrization must use one Hermitian-inner-product convention, the so(3) commutator/cross-product signs need a typed identity, and a transported topological-group nonexample needs a clean conjugation formula. The closed-subgroup, homogeneous-space, orbit–stabilizer, exponential naturality, and induced-Lie-map proofs require hypotheses and kernel/image statements audited; global surjectivity of exp must not be inferred from its local behavior. Target: present a Lie group as symmetry carrying its infinitesimal algebra at the identity, with left translation as the transport mechanism and the exponential as integration of constant infinitesimal data. Derive invariant fields, brackets, homomorphism differentials, adjoint action, one-parameter subgroups, matrix exponentials, subgroup and quotient geometry, actions, orbits, stabilizers, and homogeneous spaces. Exercises should make GL(n), SO(3), SU(2), adjoint actions, and S²=SO(3)/SO(2) mutually reinforcing with explicit calculations and global/local caveats.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Diagnosis and target written before editing; first pass repairs matrix conventions and removes failed computations. Review replaces failed SU(2), so(3), and transported-group computations; corrects the non-exponential SL(2,R) example, the projective-space submersion justification, and dense-subgroup topology. Mechanical audits and the 30-page graph audit pass."
     },
     "dg-xii": {
       "title": "Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds",
@@ -654,8 +654,8 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-x",
-  "next_action": "Commit and push DG X, merge PR #14, then create the DG XI branch and diagnose Lie groups, Lie algebras, and the exponential map.",
+  "current_unit": "dg-xi",
+  "next_action": "Commit and push DG XI, merge PR #15, then create the DG XII branch and diagnose Riemannian and semi-Riemannian geometry.",
   "unresolved": [],
   "last_commit": "8994ef6",
   "ready_to_merge": true,
