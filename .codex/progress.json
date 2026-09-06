@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "review",
-  "branch": "codex/create-complete-gauge-theory-gt-ix",
+  "branch": "codex/create-complete-gauge-theory-gt-x",
   "pr": {
-    "number": 28,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/28",
+    "number": null,
+    "url": null,
     "status": "open"
   },
   "merged_prs": [
@@ -116,6 +116,12 @@
       "number": 27,
       "unit": "gt-viii",
       "main_sha": "102510d",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 28,
+      "unit": "gt-ix",
+      "main_sha": "19b1031",
       "date": "2026-09-06"
     }
   ],
@@ -495,22 +501,30 @@
     "gt-x": {
       "title": "Gauge Theory X — Seiberg–Witten Invariants and Four-Manifold Applications",
       "mode": "create",
-      "status": "pending",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X — Seiberg–Witten Invariants.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X — Seiberg–Witten Invariants and Four-Manifold Applications.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X — Seiberg–Witten Invariants.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X — Seiberg–Witten Invariants and Four-Manifold Applications.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Def - Framed Seiberg-Witten Moduli Space and Mu Class.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Def - Landmark Applications of Seiberg-Witten Theory.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Def - Seiberg-Witten Invariant.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Ex - Degree Matching in the Seiberg-Witten Invariant.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Exercise Index - §10.1 Invariants, Bordisms, and Applications.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Thm - Bordism Invariance of the Seiberg-Witten Invariant.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Thm - Finiteness of Seiberg-Witten Basic Classes.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory X/Thm - Positive Scalar Curvature Forces Seiberg-Witten Vanishing.md"
       ],
-      "diagnosis": "Create-mode unit; filename manifest pending.",
+      "diagnosis": "Create mode. The invariant must be derived as a characteristic number of the framed moduli-space circle bundle, with bordism invariance, finiteness, and a fully proved positive-scalar-curvature application; deeper source landmarks must be clearly delimited rather than passed off as consequences of the introductory analysis.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Covers Haydys §§7.2–7.2.1: based gauge group, mu class, degree matching, bordism invariance, finiteness of basic classes, positive-scalar-curvature vanishing, and an honest roadmap for connected sums, Taubes nonvanishing, and smooth-structure applications."
     },
     "gt-xi": {
       "title": "Gauge Theory XI — Algebraic Topology, Intersection Forms, Classification, and Donaldson Theory",
@@ -551,10 +565,10 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-ix",
-  "next_action": "Commit and merge Gauge Theory IX, then create Gauge Theory X from Haydys §7.2 and §7.2.1.",
+  "current_unit": "gt-x",
+  "next_action": "Commit Gauge Theory X, open and merge its PR, then initialize Gauge Theory XI from Wernli Chapters 4–5.",
   "unresolved": [],
-  "last_commit": "a72d973",
+  "last_commit": "b0d29f1",
   "ready_to_merge": false,
-  "updated": "2026-09-06T23:15:00Z"
+  "updated": "2026-09-06T23:40:00Z"
 }
