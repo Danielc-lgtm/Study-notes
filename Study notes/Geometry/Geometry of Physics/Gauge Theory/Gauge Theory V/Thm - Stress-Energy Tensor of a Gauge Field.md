@@ -9,7 +9,7 @@ tags: [gauge-theory, stress-energy, yang-mills]
 
 > [!theorem] Gauge-field stress-energy
 > For an invariant inner product $\langle\ ,\ \rangle$ on $\mathfrak g$ and Yang–Mills Lagrangian $-\frac14\langle F_{\alpha\beta},F^{\alpha\beta}\rangle$, metric variation gives
-> $$T_{\mu\nu}=\left\langle F_{\mu\alpha},F_\nu{}^\alpha\right\rangle-rac14g_{\mu\nu}\left\langle F_{\alpha\beta},F^{\alpha\beta}\right\rangle.$$
+> $$T_{\mu\nu}=\left\langle F_{\mu\alpha},F_\nu{}^\alpha\right\rangle-\frac14g_{\mu\nu}\left\langle F_{\alpha\beta},F^{\alpha\beta}\right\rangle.$$
 > If $d_AF=0$ and $d_A*F=*J$, then
 > $$\nabla^\mu T_{\mu\nu}=\langle J^\alpha,F_{\nu\alpha}\rangle.$$
 > In vacuum it is divergence-free; for $U(1)$ the right side is the Lorentz-force density.
