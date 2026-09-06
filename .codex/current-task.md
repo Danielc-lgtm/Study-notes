@@ -38,7 +38,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry IV — Rank and Submanifold Theory (`937c276`, PR #7)
 
 ## Current unit
-`dg-v` — Differential Geometry V, workflow Phase 3.1 (diagnose and envision).
+`dg-v` — Differential Geometry V, workflow Phase 4.1 (target-driven rewrite).
 
 ## Remaining units
 Differential Geometry V–XII (eight units; V is active).
@@ -47,10 +47,10 @@ Differential Geometry V–XII (eight units; V is active).
 _none_.
 
 ## Exact next action
-Read the complete 28-page DG V graph, audit flow and Lie-bracket proofs, and record the target description before editing.
+Repair the DG V flow definitions and maximal-flow theorem, beginning with arbitrary one-parameter families versus local one-parameter actions.
 
 ## Last completed commit
-`59a0633`
+`9b5c2d2`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

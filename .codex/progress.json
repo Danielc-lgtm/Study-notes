@@ -316,7 +316,7 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry V/Thm - Pushforward of Vector Fields under a Diffeomorphism.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry V/Thm - Reynolds Transport Theorem.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the graph is extensive but repeatedly substitutes slogans for hypotheses. The Hopf proof contains a circular rank-nullity argument; arbitrary one-parameter families are conflated with flows; submersions with fibre bundles; flowout charts with tubular neighbourhoods; and Sard-style genericity with transversality. Several flow and bracket pages use untyped local-domain compositions, omit the maximal-flow-domain logic, or state noncommutation remainders and sign conventions imprecisely. The straightening, commuting-flow, compact-support completeness, Reynolds transport, and Jacobi proofs require line-by-line review. Target: organize DG V around a vector field as both a derivation and an autonomous ODE, with the maximal flow as its local one-parameter action. Prove existence, uniqueness, smooth dependence, the group law, completeness criteria, straightening, bracket naturality/Jacobi, and the bracket–flow commutator relation with all domains and signs explicit. Separate local from global statements, distinguish arbitrary isotopies from flows, explain vertical/horizontal and Lie-derivative constructions without importing later bundle hypotheses, and use examples/exercises that move between coordinate ODEs, derivations, flows, pushforwards, and commutators.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -326,7 +326,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Phase 3.1 active: diagnose and envision the full vector-field/flow graph before editing."
+      "notes": "Diagnosis and target recorded before content editing. First target gap: repair flow definitions and maximal-flow theorem, then audit bracket/commuting-flow calculus."
     },
     "dg-vi": {
       "title": "Differential Geometry VI — Vector Bundles and the Cotangent Bundle",
@@ -649,9 +649,9 @@
     }
   },
   "current_unit": "dg-v",
-  "next_action": "Read the complete 28-page DG V graph, audit flow and Lie-bracket proofs, and record the target description before editing.",
+  "next_action": "Repair the DG V flow definitions and maximal-flow theorem, beginning with arbitrary one-parameter families versus local one-parameter actions.",
   "unresolved": [],
-  "last_commit": "59a0633",
+  "last_commit": "9b5c2d2",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
