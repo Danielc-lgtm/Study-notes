@@ -1,11 +1,11 @@
 ---
 type: exercise-index
 subject: gauge-theory
-section: "4.3"
+section: "5.3"
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
-## §4.3 Self-Duality and Instantons — Exercises
+## §5.3 Self-Duality and Instantons — Exercises
 
 This section drills the *self-duality machinery* on 4-dimensional Riemannian manifolds: the Hodge-star decomposition $\Omega^2 = \Omega^2_+\oplus\Omega^2_-$, the BPS bound on the YM action, and the central role of self-dual configurations as minimum-action representatives of each topological sector. The exercises here build comfort with the algebraic 't Hooft-symbol formalism that encodes self-duality and with the topological identification of the instanton number with a homotopy class. The reusable principle: *self-duality reduces a second-order non-linear PDE to a first-order one, and the BPS bound says self-dual configurations achieve the absolute minimum action*.
 

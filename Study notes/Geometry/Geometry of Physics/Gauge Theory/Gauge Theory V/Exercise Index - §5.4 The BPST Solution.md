@@ -1,11 +1,11 @@
 ---
 type: exercise-index
 subject: gauge-theory
-section: "4.4"
+section: "5.4"
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
-## §4.4 The BPST Solution — Exercises
+## §5.4 The BPST Solution — Exercises
 
 This section drills the *concrete construction and properties of the BPST instanton*: computing its field strength, verifying its self-duality and topological charge, and probing its geometry via holonomy. The exercises here build hands-on familiarity with the simplest non-trivial Yang-Mills solution — the quaternionic ansatz, the Maurer-Cartan equation, the 't Hooft-symbol formalism, the Chern-Simons transgression. The reusable principle: *explicit gauge-theory computations rely on a small set of algebraic identities (Pauli matrices, 't Hooft symbols, Maurer-Cartan, Chern-Simons) repeated many times*.
 

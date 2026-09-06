@@ -44,9 +44,9 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §2.5, characteristic classes | 59–64 | IV | complete |
 | §2.6, parallel transport and holonomy | 65–74 | III | complete |
 | §2.7, automorphisms and gauge transformations | 75–78 | III | complete |
-| §3.1, Hodge-star operator in arbitrary signature | 79–83 | V | pending |
-| §3.2, electrodynamics, Maxwell equations, action, stress-energy | 84–96 | I, V | I connection prototype complete; V field theory pending |
-| §3.3, Yang–Mills fields, variation, characteristic number | 97–106 | V | pending |
+| §3.1, Hodge-star operator in arbitrary signature | 79–83 | V | complete |
+| §3.2, electrodynamics, Maxwell equations, action, stress-energy | 84–96 | I, V | complete |
+| §3.3, Yang–Mills fields, variation, characteristic number | 97–106 | V | complete |
 | §4.1, homotopy theory | 107–115 | XI | pending |
 | §4.2, homology theory | 116–125 | XI | pending |
 | §4.3, orientations and fundamental class | 126–130 | XI | pending |

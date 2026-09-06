@@ -1,11 +1,11 @@
 ---
 type: exercise-index
 subject: gauge-theory
-section: "4.1"
+section: "5.1"
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
-## §4.1 Noether and Gauge Symmetry — Exercises
+## §5.1 Hodge Theory, Maxwell, and Noether Symmetry — Exercises
 
 This section drills the *gauge principle in action*: take a Lagrangian with a global symmetry, derive its Noether current via the variational identity, then promote the global symmetry to local by introducing a gauge-covariant derivative. The exercises here build fluency with the variational manipulation that connects Lagrangians to field equations, and with the indispensable technique of integrating by parts inside an action functional. The reusable principle in each problem: *a symmetry of the action determines either a conservation law (Noether) or a new field structure (gauge principle)*.
 

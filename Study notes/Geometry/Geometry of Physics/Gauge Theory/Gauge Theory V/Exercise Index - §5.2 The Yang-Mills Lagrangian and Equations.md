@@ -1,11 +1,11 @@
 ---
 type: exercise-index
 subject: gauge-theory
-section: "4.2"
+section: "5.2"
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
-## §4.2 The Yang-Mills Lagrangian and Equations — Exercises
+## §5.2 The Yang-Mills Lagrangian and Equations — Exercises
 
 This section drills the *Lagrangian-to-field-equation pipeline* for Yang-Mills theory: take the action, vary with respect to the gauge potential, integrate by parts to get the EOM, identify the result with Maxwell-like equations. The exercises here build comfort with the differential-form calculus of $\mathfrak{g}$-valued forms, the covariant exterior derivative $d_A$, and the relationship between the abstract YM equation and concrete physics. The reusable principle: *the YM equations are non-abelian Maxwell, with the commutator term encoding gauge-field self-interaction*.
 
