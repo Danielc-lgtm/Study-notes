@@ -62,7 +62,7 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "review",
+  "status": "in_progress",
   "branch": "codex/create-complete-gauge-theory-gt-ii",
   "pr": {
     "number": 20,
@@ -146,7 +146,7 @@
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
       "mode": "improve",
-      "status": "review",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
@@ -182,7 +182,7 @@
         "prose": "pass",
         "checklist": "pass"
       },
-      "commit": null,
+      "commit": "ea7d623",
       "notes": "All 23 pages pass review. Correctness repaired quotient properness, associated-action inverses, frame columns, Hopf quaternion algebra, and supplied a highest-weight proof for U(1)/SU(2) representation coverage. Pedagogy follows topology-before-connection; theorem pages have rederivation scaffolds and proofs; all 76 incoming refs and anchors resolve; source coverage includes Wernli ch.1 and §§2.1–2.2 and Haydys frame/associated/classification sections. Characteristic/Berry files are cleanly assigned to IV and Yang–Mills to V."
     },
     "gt-iii": {
@@ -450,9 +450,9 @@
     }
   },
   "current_unit": "gt-ii",
-  "next_action": "Commit Gauge Theory II after review, record its SHA and completed source rows, update PR #20, merge it, and start Gauge Theory III from main.",
+  "next_action": "Merge Gauge Theory II through PR #20, then create the Gauge Theory III branch and diagnose principal connections, curvature, holonomy, and gauge symmetry from both sources.",
   "unresolved": [],
-  "last_commit": "b7a9521",
+  "last_commit": "ea7d623",
   "ready_to_merge": false,
-  "updated": "2026-09-06T09:35:00Z"
+  "updated": "2026-09-06T09:40:00Z"
 }

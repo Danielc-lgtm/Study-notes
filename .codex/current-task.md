@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** review — Gauge Theory II passes all reviews and awaits completion transport
+**Overall status:** in progress — Gauge Theory II complete and ready to merge; Gauge Theory III follows
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -40,7 +40,7 @@ PR #20 — open; remains unmerged until Gauge Theory II passes every review.
 - Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, merged in PR #19.
 
 ## Current unit
-Gauge Theory II — Principal bundles, representations, and bundle classification.
+Gauge Theory II — complete; transport through PR #20 is the next action.
 
 ## Remaining units
 Gauge Theory II–XI and the final audit.
@@ -49,10 +49,10 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Commit Gauge Theory II after review, record its SHA and completed source rows, update PR #20, merge it, and start Gauge Theory III from `main`.
+Merge Gauge Theory II through PR #20, then create the Gauge Theory III branch and diagnose principal connections, curvature, holonomy, and gauge symmetry from both sources.
 
 ## Last completed commit
-`961b960` — merge of Gauge Theory I through PR #19.
+`ea7d623` — Gauge Theory II completion commit.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
