@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-vii`
 
 ## Pull request
-`not opened yet`
+`#11 https://github.com/Danielc-lgtm/Study-notes/pull/11 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -49,7 +49,7 @@ Differential Geometry VII–XII (six units; VII is active).
 _none_.
 
 ## Exact next action
-Open the DG VII checkpoint PR, then audit the variance registry, transformation theorem, tensoriality characterization, contraction, pullback, and symmetrization proof.
+Audit tensoriality, contraction, pullback, and tensor-bundle pages; then review all examples and the complete DG VII graph.
 
 ## Last completed commit
 `5384ab2`

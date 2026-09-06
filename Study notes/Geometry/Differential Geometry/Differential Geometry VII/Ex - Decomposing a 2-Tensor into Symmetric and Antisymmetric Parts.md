@@ -116,15 +116,8 @@ On $V = \mathbb{R}^2$ with dual basis $(\varepsilon^1, \varepsilon^2)$, the tens
 > - $\varepsilon^1 \otimes \varepsilon^2 \otimes \varepsilon^2$: components $\tau_{122} = 1$, all others $0$.
 > - $-\varepsilon^2 \otimes \varepsilon^1 \otimes \varepsilon^2$: components $\tau_{212} = -1$, all others $0$.
 >
-> So $\tau$ has non-zero components: $\tau_{122} = 1, \tau_{212} = -1$, with all six other component values $\tau_{111}, \tau_{222}, \tau_{112}, \tau_{121}, \tau_{211}, \tau_{221}$ being $0$.
->
-> Symmetrization: $(\mathrm{Sym}\,\tau)_{i_1 i_2 i_3} = \frac{1}{6}\sum_\sigma \tau_{i_{\sigma(1)} i_{\sigma(2)} i_{\sigma(3)}}$. The result is symmetric in the indices, i.e., it depends only on the multiset $\{i_1, i_2, i_3\}$. The only multiset with one $1$ and two $2$'s contributes from $\tau_{122} = 1$ and $\tau_{212} = -1$ (and permutations that bring other index orderings to these two — six total permutations, of which exactly three give $\tau_{122}, \tau_{212}, \tau_{221}$; but $\tau_{221}$ is also a permutation of $(1, 2, 2)$, and $\tau$ has $\tau_{221} = 0$). Hmm, let me redo this carefully.
->
-> $\mathrm{Sym}\,\tau$ evaluated on the multiset $\{1, 2, 2\}$ (any of $\tau_{122}, \tau_{212}, \tau_{221}$ in the symmetrized output): the sum over all six permutations of "$(\tau$ evaluated on $(\sigma(1), \sigma(2), \sigma(3))$ for the index multiset $\{1, 2, 2\})$" equals... wait this is getting tangled.
->
-> Let me redo. The clean statement: $(\mathrm{Sym}\,\tau)_{i_1 i_2 i_3} = \frac{1}{6}\sum_\sigma \tau_{i_{\sigma(1)} i_{\sigma(2)} i_{\sigma(3)}}$. Computing for $(i_1, i_2, i_3) = (1, 2, 2)$:
-> $(\mathrm{Sym}\,\tau)_{122} = \frac{1}{6}[\tau_{122} + \tau_{122} + \tau_{221} + \tau_{212} + \tau_{212} + \tau_{221}] = \frac{1}{6}[\tau_{122} + \tau_{122} + 0 + \tau_{212} + \tau_{212} + 0] = \frac{1}{6}[2 \cdot 1 + 0 + 2 \cdot (-1) + 0] = 0$.
->
+> Thus $\tau_{122}=1$, $\tau_{212}=-1$, and all other components vanish. For the multiset $\{1,2,2\}$,
+> $$(\mathrm{Sym}\,\tau)_{122}=\frac16(2\tau_{122}+2\tau_{212}+2\tau_{221})=\frac16(2-2+0)=0.$$
 > By the symmetry under permutation, $(\mathrm{Sym}\,\tau)_{212} = (\mathrm{Sym}\,\tau)_{221} = (\mathrm{Sym}\,\tau)_{122} = 0$. All other components of $\mathrm{Sym}\,\tau$ vanish because $\tau$ has zero entries on other multisets. So $\mathrm{Sym}\,\tau = 0$.
 >
 > *Compute $\mathrm{Alt}\,\tau$.* The antisymmetrization $\mathrm{Alt}\,\tau$ vanishes whenever any two indices coincide (by the alternation property). Since both terms of $\tau$ have $\varepsilon^2$ repeated (in slots 2,3 of the first term and slots 1,3 of the second), every component of $\mathrm{Alt}\,\tau$ corresponds to a multiset with a repeated index, hence vanishes.

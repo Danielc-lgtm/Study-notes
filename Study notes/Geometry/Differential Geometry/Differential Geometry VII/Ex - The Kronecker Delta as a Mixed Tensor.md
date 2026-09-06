@@ -29,7 +29,7 @@ A [[Def - Mixed Tensor|mixed tensor of type (1, 1)]] on $V$ is a multilinear fun
 
 A [[Def - Linear Map|linear map]] $A : V \to V$ corresponds to the $(1, 1)$-tensor $W_A(\omega, v) := \omega(Av)$, with components equal to the matrix of $A$.
 
-The [[Thm - Transformation Rule for Tensor Components|transformation rule]] says that under change of basis $E_j \mapsto \tilde E_i = (C^{-1})^j_i E_j$ (with $C$ the change-of-basis matrix, $C^j_i$ the component of $\tilde E_i$ along $E_j$... wait, let me use clean conventions): If $\tilde x^i = \tilde x^i(x)$ is a change of coordinates with Jacobians $\partial \tilde x^i / \partial x^a$ and $\partial x^a / \partial \tilde x^i$, the components of a $(1, 1)$-tensor transform by
+Using coordinate bases fixes the convention cleanly. If $\tilde x^i=\tilde x^i(x)$ is a coordinate change, then the [[Thm - Transformation Rule for Tensor Components|transformation rule]] for a $(1,1)$-tensor is
 
 $$\tilde W^i_j = \frac{\partial \tilde x^i}{\partial x^a}\, \frac{\partial x^b}{\partial \tilde x^j}\, W^a_b.$$
 
@@ -43,7 +43,7 @@ $$\tilde W^i_j = \frac{\partial \tilde x^i}{\partial x^a}\, \frac{\partial x^b}{
 
 **Theorem routing.** For part (a), verify multilinearity directly from the bilinearity of evaluation. For part (b), evaluate $W_{\mathrm{id}}(\varepsilon^i, E_j)$ using the dual basis identity $\varepsilon^i(E_j) = \delta^i_j$. For part (c), invoke the [[Thm - Transformation Rule for Tensor Components|transformation rule]] and verify the right-hand side equals $\delta^i_j$ after applying the chain rule for Jacobians. For part (d), recognize that the linear map associated to $W_{\mathrm{id}}$ via the isomorphism $W_A(\omega, v) = \omega(Av)$ is the identity, hence the matrix is the identity matrix, hence the trace is $n$.
 
-**Key decision point.** The non-obvious step is part (c): showing the components are basis-invariant. The trick is to write the transformation rule and recognize that the Jacobian factors precisely cancel, giving $\tilde\delta^i_j = \delta^i_j$. This is the *unique* tensor with this property — every other tensor has components that genuinely depend on the choice of basis.
+**Key decision point.** The non-obvious step is part (c): showing the components are basis-invariant. The trick is to write the transformation rule and recognize that the Jacobian factors precisely cancel, giving $\tilde\delta^i_j = \delta^i_j$. This invariance reflects the basis-free identity map. More generally, the endomorphisms whose matrices are unchanged under every basis change are precisely the scalar multiples of the identity.
 
 ---
 

@@ -64,7 +64,11 @@
   "merge_policy": "auto",
   "status": "active",
   "branch": "codex/improve-all-differential-geometry-dg-vii",
-  "pr": null,
+  "pr": {
+    "number": 11,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/11",
+    "status": "open"
+  },
   "merged_prs": [
     {
       "number": 2,
@@ -418,7 +422,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target description written before editing; next pass audits conventions and theorem proofs."
+      "notes": "Diagnosis and target description written before editing; next pass audits conventions and theorem proofs. Convention checkpoint removes drafting leakage, distinguishes forms from densities, qualifies higher-rank symmetry claims, and corrects torsion and velocity-gradient decompositions."
     },
     "dg-viii": {
       "title": "Differential Geometry VIII — Differential Forms",
@@ -651,7 +655,7 @@
     }
   },
   "current_unit": "dg-vii",
-  "next_action": "Open the DG VII checkpoint PR, then audit the variance registry, transformation theorem, tensoriality characterization, contraction, pullback, and symmetrization proof.",
+  "next_action": "Audit tensoriality, contraction, pullback, and tensor-bundle pages; then review all examples and the complete DG VII graph.",
   "unresolved": [],
   "last_commit": "8994ef6",
   "ready_to_merge": false,

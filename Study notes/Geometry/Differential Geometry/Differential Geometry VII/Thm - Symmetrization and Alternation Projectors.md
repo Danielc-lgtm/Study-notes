@@ -28,7 +28,7 @@ $V$ is a finite-dimensional real vector space, $\dim V = n$. $S_k$ is the symmet
 
 > **Corollary (Decomposition for $k = 2$).** $T^2(V^*) = \Sigma^2(V^*) \oplus \Lambda^2(V^*)$, with the projections $\mathrm{Sym}$ and $\mathrm{Alt}$. Every covariant 2-tensor decomposes uniquely as $\beta = \mathrm{Sym}\,\beta + \mathrm{Alt}\,\beta$.
 
-> **Counterexample for $k \geq 3$.** For $k \geq 3$, $T^k(V^*) \supsetneq \Sigma^k(V^*) \oplus \Lambda^k(V^*)$ — there exist covariant $k$-tensors that are neither symmetric nor alternating nor a sum of one of each. They live in *mixed Young tableau* representations of $S_k$, beyond the trivial (symmetric) and sign (alternating) ones.
+> **Counterexample for $k \geq 3$ and $\dim V\geq2$.** Under these hypotheses, $T^k(V^*) \supsetneq \Sigma^k(V^*) \oplus \Lambda^k(V^*)$ — there exist covariant $k$-tensors that are neither symmetric nor alternating nor a sum of one of each. They live in *mixed Young tableau* representations of $S_k$, beyond the trivial (symmetric) and sign (alternating) ones.
 
 ---
 
@@ -218,7 +218,7 @@ The common error: writing every tensor as a symmetric plus antisymmetric part fo
 
 # Cross-Field Exercise Suggestions
 
-**Continuum mechanics: decomposition of the velocity gradient.** The velocity gradient $\partial_i v^j$ of a fluid is a $(1, 1)$-tensor (or $(0, 2)$ after lowering). Its symmetric part is the *rate of strain* $D_{ij} = \frac{1}{2}(\partial_i v_j + \partial_j v_i)$ — describing local stretching and shearing. Its antisymmetric part is the *vorticity* $\omega_{ij} = \frac{1}{2}(\partial_i v_j - \partial_j v_i)$ — describing local rotation. The decomposition into symmetric and antisymmetric parts is *physically* the decomposition into stretching and rotation, and is foundational in fluid mechanics. Lee's projectors are exactly these classical operations.
+**Continuum mechanics: decomposition of the velocity gradient.** On Euclidean space with its standard flat connection, the velocity gradient $\nabla_i v^j$ of a fluid is a $(1,1)$-tensor (or a $(0,2)$-tensor after lowering an index). Bare partial derivatives $\partial_i v^j$ do not define tensor components in arbitrary coordinates. Its symmetric part is the *rate of strain* $D_{ij} = \frac{1}{2}(\partial_i v_j + \partial_j v_i)$ — describing local stretching and shearing. Its antisymmetric part is the *vorticity* $\omega_{ij} = \frac{1}{2}(\partial_i v_j - \partial_j v_i)$ — describing local rotation. The decomposition into symmetric and antisymmetric parts is *physically* the decomposition into stretching and rotation, and is foundational in fluid mechanics. Lee's projectors are exactly these classical operations.
 
 **General relativity: the Weyl tensor as a "traceless" Riemann.** The Riemann curvature has 20 independent components in 4D. Subtracting the Ricci part (the "trace" of Riemann) gives the *Weyl tensor*, which has the same symmetries as Riemann but with all traces vanishing. The construction uses projectors of the kind discussed here: the Riemann tensor is decomposed into Weyl + Ricci-trace pieces using a specific Young projector arrangement.
 
@@ -234,7 +234,7 @@ The common error: writing every tensor as a symmetric plus antisymmetric part fo
 
 - **The exterior algebra $\Lambda^\bullet(V^*)$.** The graded direct sum $\bigoplus_k \Lambda^k(V^*)$ with the wedge product is the exterior algebra. The wedge product $\omega \wedge \eta = \binom{k+\ell}{k}\,\mathrm{Alt}(\omega \otimes \eta)$ uses the projector $\mathrm{Alt}$ (up to a normalization factor). So the projector $\mathrm{Alt}$ is the algebraic projector onto multivectors of fixed degree.
 
-- **Torsion of a connection.** The torsion tensor $T(X, Y) = \nabla_X Y - \nabla_Y X - [X, Y]$ is the *antisymmetric part* of the connection's lower indices. The fact that this is a *tensor* (despite $\nabla$ not being one) follows from the alternation killing the non-tensorial parts. The decomposition $\nabla = \nabla^{\text{sym}} + T$ where $\nabla^{\text{sym}}$ is the torsion-free symmetrized connection separates a connection into a tensor and a symmetric connection.
+- **Torsion of a connection.** The torsion tensor $T(X, Y) = \nabla_X Y - \nabla_Y X - [X, Y]$ is the *antisymmetric part* of the connection's lower indices. The fact that this is a *tensor* (despite $\nabla$ not being one) follows from the alternation killing the non-tensorial parts. Defining $\nabla^0_XY:=\nabla_XY-\tfrac12T(X,Y)$ gives a torsion-free connection and the precise decomposition $\nabla=\nabla^0+\tfrac12T$ separates a connection into a tensor and a symmetric connection.
 
 - **Riemann curvature symmetries.** The Riemann tensor $R_{ijk\ell}$ has antisymmetric pairs (anti)symmetrization properties read using the projectors. The first Bianchi identity is the vanishing of $\mathrm{Alt}_{[jk\ell]}\, R_{ijk\ell}$ (alternation in the last three indices), and the symmetry under pair exchange is $\mathrm{Sym}_{(ij)\leftrightarrow(k\ell)}\, R_{ijk\ell} = R_{ijk\ell}$. So the structure of the Riemann tensor is described by a battery of projector identities.
 
@@ -246,7 +246,7 @@ The common error: writing every tensor as a symmetric plus antisymmetric part fo
 > The wedge product $\omega \wedge \eta = \binom{k+\ell}{k}\,\mathrm{Alt}(\omega \otimes \eta)$ uses the $\mathrm{Alt}$ projector with a combinatorial normalization. Computing wedge products in coordinates is exactly applying $\mathrm{Alt}$ to a tensor product and remembering the factorial factor.
 
 > [!tip] The Torsion-Free Symmetric Connection *(from Riemannian Geometry)*
-> Every connection $\nabla$ has a *symmetric part* $\nabla^{\text{sym}}$ (a connection) and an antisymmetric part *torsion* $T$ (a tensor field). The decomposition $\nabla = \nabla^{\text{sym}} + T$ separates the connection into a "geometric" piece (torsion-free) and a "tensorial" piece. The Levi-Civita connection is the unique torsion-free, metric-compatible connection — built using the metric and projecting away the antisymmetric (torsion) part.
+> Every connection $\nabla$ determines a torsion-free connection $\nabla^0_XY=\nabla_XY-\tfrac12T(X,Y)$. Thus $\nabla=\nabla^0+\tfrac12T$; the difference of the two connections is tensorial even though neither connection is itself a tensor. The Levi-Civita connection is the unique torsion-free, metric-compatible connection — built using the metric and projecting away the antisymmetric (torsion) part.
 
 > [!tip] Young Symmetrizers and the Schur-Weyl Duality *(from Representation Theory)*
 > For $k \geq 3$, the projectors generalize to **Young symmetrizers** $c_\lambda$, one for each partition $\lambda \vdash k$. These project $T^k(V^*)$ onto the $\lambda$-isotypic component. The Schur-Weyl duality relates the resulting decomposition to representations of $GL(V)$: each $c_\lambda(T^k(V^*))$ is an irreducible $GL(V) \times S_k$ representation. This is the foundation of the *Schur functor* construction in representation theory.
