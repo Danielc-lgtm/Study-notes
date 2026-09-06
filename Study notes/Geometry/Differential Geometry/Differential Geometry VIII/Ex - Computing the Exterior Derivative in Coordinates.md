@@ -157,26 +157,6 @@ $du \wedge dx = (\partial_x u\,dx + \partial_y u\,dy + \partial_z u\,dz) \wedge 
 
 $dv \wedge dy = (\partial_x v\,dx + \partial_z v\,dz) \wedge dy = (\partial_x v)\,dx \wedge dy - (\partial_z v)\,dy \wedge dz$ (the $\partial_y v\,dy \wedge dy = 0$ term drops; the $\partial_z v\,dz \wedge dy = -\partial_z v\,dy \wedge dz$ flips).
 
-Wait, let me redo this more carefully. $dv \wedge dy = (\partial_x v)\,dx \wedge dy + (\partial_y v)\,dy \wedge dy + (\partial_z v)\,dz \wedge dy = (\partial_x v)\,dx \wedge dy + 0 + (\partial_z v)\,dz \wedge dy$. Now $dz \wedge dy = -dy \wedge dz$, so $dv \wedge dy = (\partial_x v)\,dx \wedge dy - (\partial_z v)\,dy \wedge dz$.
-
-$dw \wedge dz = (\partial_x w)\,dx \wedge dz + (\partial_y w)\,dy \wedge dz + (\partial_z w)\,dz \wedge dz = (\partial_x w)\,dx \wedge dz + (\partial_y w)\,dy \wedge dz$. To normalize, $dx \wedge dz = -dz \wedge dx$, so this becomes $-(\partial_x w)\,dz \wedge dx + (\partial_y w)\,dy \wedge dz$.
-
-Hmm, let me write things in the standard increasing basis $\{dy \wedge dz, dz \wedge dx, dx \wedge dy\}$ (which is the orientation-respecting basis for $\Omega^2(\mathbb{R}^3)$).
-
-$du \wedge dx$: $(\partial_y u)\,dy \wedge dx = -(\partial_y u)\,dx \wedge dy$. And $(\partial_z u)\,dz \wedge dx$ — already in the $dz \wedge dx$ form, but we want to express in the dual basis. Let me use the basis $\{dy\wedge dz, dz\wedge dx, dx\wedge dy\}$ (cyclic). Then $dy \wedge dx = -dx \wedge dy$, contribution to $dx \wedge dy$ is $-(\partial_y u)$.
-
-$dv \wedge dy$: $(\partial_x v)\,dx \wedge dy$ + $(\partial_z v)\,dz \wedge dy = -(\partial_z v)\,dy \wedge dz$, contributions: $(\partial_x v)$ to $dx \wedge dy$, $-(\partial_z v)$ to $dy \wedge dz$.
-
-$dw \wedge dz$: $(\partial_x w)\,dx \wedge dz = -(\partial_x w)\,dz \wedge dx$, contribution $-(\partial_x w)$ to $dz \wedge dx$. And $(\partial_y w)\,dy \wedge dz$, contribution $(\partial_y w)$ to $dy \wedge dz$.
-
-Summing coefficients in the basis $\{dy\wedge dz, dz\wedge dx, dx\wedge dy\}$:
-- $dy \wedge dz$: $-(\partial_z v) + (\partial_y w) = (\partial_y w - \partial_z v)$.
-- $dz \wedge dx$: $-(\partial_x w) + (\partial_z u) = (\partial_z u - \partial_x w)$. 
-
-Hmm wait. The $du \wedge dx$ contributed $(\partial_z u)\,dz \wedge dx$ — yes positive. So $dz \wedge dx$ coefficient is $(\partial_z u) - (\partial_x w) = (\partial_z u - \partial_x w)$.
-
-- $dx \wedge dy$: $-(\partial_y u) + (\partial_x v) = (\partial_x v - \partial_y u)$.
-
 So
 $$d\omega = (\partial_y w - \partial_z v)\,dy \wedge dz + (\partial_z u - \partial_x w)\,dz \wedge dx + (\partial_x v - \partial_y u)\,dx \wedge dy.$$
 

@@ -68,7 +68,7 @@ The third target combination is **$d^2 = 0$ + integration over a closed cycle = 
 
 **The one-liner mechanism:** **the mixed partials of a smooth function are symmetric (Schwarz's theorem), while the basic forms $dx^i \wedge dx^j$ are antisymmetric, and symmetric paired against antisymmetric is zero.**
 
-This is the entire content of $d^2 = 0$. Let me explain in slow motion.
+This cancellation is the entire mechanism behind $d^2=0$.
 
 By bilinearity and graded Leibniz, it suffices to verify $d^2 = 0$ on $0$-forms — once it holds on functions, the graded Leibniz rule propagates it to higher degrees. So focus on a function $f \in C^\infty(M)$.
 

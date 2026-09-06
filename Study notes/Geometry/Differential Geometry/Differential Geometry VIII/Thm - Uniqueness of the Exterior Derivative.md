@@ -206,13 +206,7 @@ The common error in the uniqueness proof is to overlook the locality step and th
 > **Why needed:** Without locality, the chart definition might not match the axiomatic $D$ at points where the chart breaks down.
 >
 > > [!note]- Full proof
-> > Take $\omega \in \Omega^k(M)$ with $\omega \equiv 0$ on an open set $U$. Pick $p \in U$ and a bump function $\rho \in C^\infty(M)$ with $\rho(p) = 1$, $\operatorname{supp}\rho \subset U$. Then $\rho\omega$ has support in $U$, so $\rho\omega \equiv 0$ on $M \setminus U$, hence $\rho\omega \equiv 0$ on all of $M$ — actually wait, that's not the situation: $\omega$ is zero on $U$, and we want to conclude $D\omega(p) = 0$ for $p \in U$.
-> >
-> > Reconsider. Let $\rho$ be a bump with $\rho(p) = 0$ and $\rho \equiv 1$ outside a small neighborhood of $p$ in $U$. Then $\rho\omega = \omega$ outside the small neighborhood, $\rho\omega \equiv 0$ near $p$. So $\omega - \rho\omega = (1-\rho)\omega$ is supported in the small neighborhood of $p$ (and in fact zero on $U$ minus that neighborhood... wait, this is getting tangled).
-> >
-> > Lee's actual argument (proof of Theorem 14.24): for $p \in U$, let $\rho$ be a bump function with $\rho \equiv 1$ in a neighborhood of $p$ and $\rho \equiv 0$ outside $U$. Then $\rho\omega = \omega$ near $p$ (since $\rho \equiv 1$ and $\omega \equiv 0$ on $U$ so both sides are $\omega$ near $p$ — wait, $\omega \equiv 0$ means $\omega = 0$ on $U$, so $\rho\omega = 0$ near $p$ too).
-> >
-> > OK, the right Lee version: pick a bump $\psi$ with $\psi(p) = 1$ and $\operatorname{supp}\psi \subset U$. Then $\psi \cdot \omega$ vanishes everywhere ($\psi = 0$ outside $U$, where $\omega$ is arbitrary; $\omega = 0$ on $U$, where $\psi \cdot \omega = 0$). So $\psi\omega \equiv 0$ identically. Applying $D$: $D(\psi\omega) = 0$. By Leibniz, $D(\psi\omega) = D\psi \wedge \omega + \psi D\omega = D\psi \wedge \omega + \psi D\omega$. At $p$, $\psi(p) = 1$ and $\omega_p = 0$ (since $p \in U$ where $\omega = 0$), so the first term is $D\psi \wedge 0 = 0$ and the equation becomes $0 = 0 + 1 \cdot D\omega(p) = D\omega(p)$. So $D\omega(p) = 0$, as claimed.
+> > pick a bump $\psi$ with $\psi(p) = 1$ and $\operatorname{supp}\psi \subset U$. Then $\psi \cdot \omega$ vanishes everywhere ($\psi = 0$ outside $U$, where $\omega$ is arbitrary; $\omega = 0$ on $U$, where $\psi \cdot \omega = 0$). So $\psi\omega \equiv 0$ identically. Applying $D$: $D(\psi\omega) = 0$. By Leibniz, $D(\psi\omega) = D\psi \wedge \omega + \psi D\omega = D\psi \wedge \omega + \psi D\omega$. At $p$, $\psi(p) = 1$ and $\omega_p = 0$ (since $p \in U$ where $\omega = 0$), so the first term is $D\psi \wedge 0 = 0$ and the equation becomes $0 = 0 + 1 \cdot D\omega(p) = D\omega(p)$. So $D\omega(p) = 0$, as claimed.
 
 > [!note]- Lemma 4: $D = d$ on $k$-forms by induction
 > **Statement:** For any operator $D$ satisfying the four axioms, $D = d$ on $\Omega^k(M)$.

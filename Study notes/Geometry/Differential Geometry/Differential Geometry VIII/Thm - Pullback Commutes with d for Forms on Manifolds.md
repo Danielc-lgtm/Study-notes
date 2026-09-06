@@ -140,8 +140,7 @@ The proof's challenge is choosing the right level of abstraction. The slick "uni
 >
 > > [!note]- Full proof
 > > Both $F^*(df)$ and $d(F^*f)$ are $1$-forms on $M$. To show they are equal, evaluate on an arbitrary tangent vector $v \in T_pM$:
-> > $$(F^*(df))_p(v) = (df)_{F(p)}(dF_p(v)) = d_v[df]_{F(p)}.$$
-> > Wait, let me redo this. The pullback of a $1$-form is, by definition, $(F^*\omega)_p(v) = \omega_{F(p)}(dF_p(v))$. So
+> > By the definition of pullback of a $1$-form,
 > > $$(F^*(df))_p(v) = (df)_{F(p)}(dF_p(v)) = (dF_p(v))(f),$$
 > > where the last equality uses that $df(w) = w(f)$ for a tangent vector $w$.
 > >

@@ -64,7 +64,11 @@
   "merge_policy": "auto",
   "status": "active",
   "branch": "codex/improve-all-differential-geometry-dg-viii",
-  "pr": null,
+  "pr": {
+    "number": 12,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/12",
+    "status": "open"
+  },
   "merged_prs": [
     {
       "number": 2,
@@ -463,7 +467,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target written before editing; drafting leakage identifies the first proof-repair pass."
+      "notes": "Diagnosis and target written before editing; drafting leakage identifies the first proof-repair pass. First proof-repair pass removes all failed-calculation dialogue and replaces it with typed derivations for pullback, locality, angular-form closedness, Cartan calculus, and grad-curl-div signs."
     },
     "dg-ix": {
       "title": "Differential Geometry IX — Orientation, Integration, and Stokes' Theorem",
@@ -651,7 +655,7 @@
     }
   },
   "current_unit": "dg-viii",
-  "next_action": "Open the DG VIII checkpoint PR, then replace the tangled uniqueness/locality and pullback proofs and repair every coordinate sign derivation.",
+  "next_action": "Audit the exterior-derivative uniqueness proof after cleanup, then verify wedge, d-squared, pullback, Cartan, and every exercise sign computation.",
   "unresolved": [],
   "last_commit": "8994ef6",
   "ready_to_merge": false,

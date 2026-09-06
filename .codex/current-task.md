@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-viii`
 
 ## Pull request
-`not opened yet`
+`#12 https://github.com/Danielc-lgtm/Study-notes/pull/12 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -50,7 +50,7 @@ Differential Geometry VIII–XII (five units; VIII is active).
 _none_.
 
 ## Exact next action
-Open the DG VIII checkpoint PR, then replace the tangled uniqueness/locality and pullback proofs and repair every coordinate sign derivation.
+Audit the exterior-derivative uniqueness proof after cleanup, then verify wedge, d-squared, pullback, Cartan, and every exercise sign computation.
 
 ## Last completed commit
 `5384ab2`
