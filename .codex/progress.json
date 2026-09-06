@@ -194,7 +194,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Architecture rename is complete. Six planned atomic pages now cover representations, U(1) weights, extension/reduction, universal bundles, classification by BG, and quaternionic Hopf/SU(2). Fibre, principal, and associated bundles plus the section/trivialization and associated-bundle theorems are independently rebuilt with explicit right-action conventions, proper quotient hypotheses, and complete local-chart proofs."
+      "notes": "The frame, orthonormal-frame, homogeneous, and Hopf definitions are rebuilt, together with explicit frame-triviality, Möbius association, tangent-sphere association, and quaternionic Hopf exercises. Abandoned calculations are gone and every quotient/action convention is typed. Remaining unit work is the deferred preview audit, exercise-index repair, universal-classification proof audit, and five reviews."
     },
     "gt-iii": {
       "title": "Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry",
@@ -449,9 +449,9 @@
     }
   },
   "current_unit": "gt-ii",
-  "next_action": "Rebuild the frame, orthonormal-frame, homogeneous, and Hopf pages plus their three core exercises; audit the universal classification proof; then separate the deferred characteristic/Berry preview and run all five reviews.",
+  "next_action": "Audit the universal classification theorem line by line, rewrite the four exercise indexes, and inspect the preserved Pfaffian/Euler/Gauss–Bonnet/Berry preview pages for correctness or move-ready status; then execute all five reviews.",
   "unresolved": [],
-  "last_commit": "7b2a972",
+  "last_commit": "ba69c06",
   "ready_to_merge": false,
-  "updated": "2026-09-06T08:15:00Z"
+  "updated": "2026-09-06T08:40:00Z"
 }

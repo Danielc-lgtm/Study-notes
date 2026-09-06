@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Rebuild the frame, orthonormal-frame, homogeneous, and Hopf pages plus their three core exercises; audit the universal classification proof; then separate the deferred characteristic/Berry preview and run all five reviews.
+Audit the universal classification theorem line by line, rewrite the four exercise indexes, and inspect the preserved Pfaffian/Euler/Gauss–Bonnet/Berry preview pages for correctness or move-ready status; then execute all five reviews.
 
 ## Last completed commit
 `961b960` — merge of Gauge Theory I through PR #19.
