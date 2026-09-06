@@ -75,6 +75,8 @@ Curvature measures the failure of horizontal directions to close under brackets.
 - [[Def - Gauge Group of a Principal Bundle]] describes vertical bundle automorphisms as equivariant maps $P\to G$.
 - [[Thm - Flat Connections and Monodromy Representations]] identifies flat gauge classes with conjugacy classes of representations of $\pi_1(M)$.
 
+![[Exercise Index - §3.5 Parallel Transport, Holonomy, and Gauge Symmetry]]
+
 # Sources and Targets
 
 The source may be any one of four input types: a horizontal distribution, a principal connection form, compatible local potentials, or a parallel-transport rule. The principal task is to convert it into whichever representation makes the desired calculation easiest. Curvature questions are local and use $F=dA+A^2$. Global transport questions use horizontal lifts. Moduli questions use the affine space of connections and quotient by the gauge group.

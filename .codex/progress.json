@@ -229,7 +229,9 @@
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Holonomy Group of a Principal Connection.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Gauge Group of a Principal Bundle.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Horizontal Lift Existence and Uniqueness.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Flat Connections and Monodromy Representations.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Flat Connections and Monodromy Representations.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Ex - Flat U(1) Connections on the Circle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Exercise Index - §3.5 Parallel Transport, Holonomy, and Gauge Symmetry.md"
       ],
       "diagnosis": "Central proofs contain abandoned gauge-chain-rule and representation-derivative calculations; bracket normalizations are mixed; principal parallel transport, holonomy, gauge automorphisms, and flat monodromy are missing. Replace the architecture around the equivalence of horizontal distributions, connection forms, local potentials, and parallel transport, with curvature as nonintegrability and holonomy as integrated memory under fixed right-action conventions.",
       "review": {
