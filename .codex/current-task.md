@@ -47,10 +47,10 @@ Differential Geometry V–XII (eight units; V is active).
 _none_.
 
 ## Exact next action
-Repair the DG V flow definitions and maximal-flow theorem, beginning with arbitrary one-parameter families versus local one-parameter actions.
+Audit and rebuild the Fundamental Theorem on Flows and completeness pages, with maximal-domain and smooth-dependence arguments explicit.
 
 ## Last completed commit
-`9b5c2d2`
+`070c227`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

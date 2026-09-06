@@ -326,7 +326,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded before content editing. First target gap: repair flow definitions and maximal-flow theorem, then audit bracket/commuting-flow calculus."
+      "notes": "Diagnosis and target recorded before content editing. First target gap: repair flow definitions and maximal-flow theorem, then audit bracket/commuting-flow calculus. Flow-definition checkpoint separates open total domains from open time slices, records maximal-domain translation, avoids assuming a Lie structure on Diff(M), distinguishes regular from singular orbit foliations, and separates isotopies from autonomous flows."
     },
     "dg-vi": {
       "title": "Differential Geometry VI — Vector Bundles and the Cotangent Bundle",
@@ -649,9 +649,9 @@
     }
   },
   "current_unit": "dg-v",
-  "next_action": "Repair the DG V flow definitions and maximal-flow theorem, beginning with arbitrary one-parameter families versus local one-parameter actions.",
+  "next_action": "Audit and rebuild the Fundamental Theorem on Flows and completeness pages, with maximal-domain and smooth-dependence arguments explicit.",
   "unresolved": [],
-  "last_commit": "9b5c2d2",
+  "last_commit": "070c227",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
