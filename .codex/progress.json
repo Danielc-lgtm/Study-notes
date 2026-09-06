@@ -65,9 +65,9 @@
   "status": "in_progress",
   "branch": "codex/create-complete-gauge-theory-gt-iii",
   "pr": {
-    "number": null,
-    "url": null,
-    "status": null
+    "number": 21,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/21",
+    "status": "open"
   },
   "merged_prs": [
     {
@@ -224,9 +224,14 @@
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Gauge Transformation Law for Local Connection 1-Forms.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Maurer-Cartan Equation.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Principal Connection Induces a Connection on Every Associated Bundle.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Principal Connection is Equivalent to a Horizontal Distribution.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Principal Connection is Equivalent to a Horizontal Distribution.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Parallel Transport of a Principal Connection.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Holonomy Group of a Principal Connection.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Gauge Group of a Principal Bundle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Horizontal Lift Existence and Uniqueness.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Flat Connections and Monodromy Representations.md"
       ],
-      "diagnosis": "Pending source-grounded diagnosis.",
+      "diagnosis": "Central proofs contain abandoned gauge-chain-rule and representation-derivative calculations; bracket normalizations are mixed; principal parallel transport, holonomy, gauge automorphisms, and flat monodromy are missing. Replace the architecture around the equivalence of horizontal distributions, connection forms, local potentials, and parallel transport, with curvature as nonintegrability and holonomy as integrated memory under fixed right-action conventions.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -236,7 +241,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Diagnosis and target complete. Manifest adds principal parallel transport, holonomy group, gauge group, horizontal-lift existence/uniqueness, and flat-monodromy classification."
     },
     "gt-iv": {
       "title": "Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli",
@@ -456,9 +461,9 @@
     }
   },
   "current_unit": "gt-iii",
-  "next_action": "Read Haydys §§2.2.3–2.2.5 and §3.3 and Wernli §§2.3–2.4 and §§2.6–2.7; audit the full Gauge Theory III graph and record its diagnosis, target, and manifest.",
+  "next_action": "Rebuild the Gauge Theory III topic page and the Maurer–Cartan, fundamental-field, horizontal-space, principal-connection, and horizontal-distribution-equivalence core with fixed right-action conventions.",
   "unresolved": [],
-  "last_commit": "40e54fd",
+  "last_commit": "7f98559",
   "ready_to_merge": false,
-  "updated": "2026-09-06T09:50:00Z"
+  "updated": "2026-09-06T10:10:00Z"
 }

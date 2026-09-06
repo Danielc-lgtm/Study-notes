@@ -28,7 +28,7 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `codex/create-complete-gauge-theory-gt-iii`
 
 ## Pull request
-_none yet — open after the Gauge Theory III initialization checkpoint_.
+PR #21 — open; remains unmerged until Gauge Theory III passes every review.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -50,7 +50,7 @@ Gauge Theory III–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Read Haydys §§2.2.3–2.2.5 and §3.3 and Wernli §§2.3–2.4 and §§2.6–2.7; audit the full Gauge Theory III graph and record its diagnosis, target, and manifest.
+Rebuild the Gauge Theory III topic page and the Maurer–Cartan, fundamental-field, horizontal-space, principal-connection, and horizontal-distribution-equivalence core with fixed right-action conventions.
 
 ## Last completed commit
 `40e54fd` — merge of Gauge Theory II through PR #20.
