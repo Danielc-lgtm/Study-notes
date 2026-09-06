@@ -47,10 +47,10 @@ Differential Geometry V–XII (eight units; V is active).
 _none_.
 
 ## Exact next action
-Audit the Lie bracket, Lie derivative, pushforward, Jacobi, and commuting-flow pages, making every sign and local-domain condition explicit.
+Finish the DG V bracket/Lie-derivative audit, then review straightening and Reynolds transport and run the complete unit audits.
 
 ## Last completed commit
-`cc3617f`
+`25bb1a8`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

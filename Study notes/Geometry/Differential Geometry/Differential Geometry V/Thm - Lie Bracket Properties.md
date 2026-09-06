@@ -41,7 +41,7 @@ In particular, $(\mathfrak{X}(M), [\cdot, \cdot])$ is a **Lie algebra over $\mat
 
 # Motivation
 
-These are the **structural properties** of the Lie bracket that make it the central object of differential geometry. Each one is the precise statement of a different intuition about what the bracket should do, and together they characterize the bracket as the unique natural binary operation on $\mathfrak{X}(M)$ (up to scaling).
+These are the structural properties that make the Lie bracket central in differential geometry. They explain how it interacts with scalars, functions, coordinates, smooth maps, and flows. A uniqueness classification of natural operations would require additional locality hypotheses and is not asserted here.
 
 The roles:
 
@@ -89,7 +89,7 @@ The second combination is **naturality + a diffeomorphism gives a Lie algebra is
 
 The third combination is **Lie derivative + the commuting flows theorem gives geometric commutator vanishing.** Property $D$: $[X, Y] = 0$. The amplification (via Lie derivative identification + [[Thm - Commuting Flows Theorem]]): the flows of $X$ and $Y$ commute, $\phi^X_s \circ \phi^Y_t = \phi^Y_t \circ \phi^X_s$. So a bracket calculation, via $\mathcal{L}_X Y = [X, Y]$, becomes a flow-commutation statement.
 
-The fourth combination is **function product rule + a vector field of constant length gives angular vs radial decomposition.** Property $D$: $X$ is a unit vector field with respect to some metric (so $|X|^2 = 1$). The function product rule applied to $[f X, X]$ separates the bracket into the radial change of $f$ and the "transverse" component of $fX$. This is the geometric source of the **scalar curvature** decomposition in Riemannian geometry.
+The fourth combination is **the function product rule + rescaling a field changes its clock.** Since $[fX,X]=-X(f)X$, the rescaled field $fX$ commutes with $X$ precisely where $f$ is constant along $X$-orbits. Multiplication by a first integral changes speed from orbit to orbit without changing unparametrized trajectories; varying $X(f)$ obstructs commutation of the two time parametrizations.
 
 ---
 
@@ -111,7 +111,7 @@ Each property unpacks as follows:
 
 **(f) Naturality.** If $X \sim_F X'$ and $Y \sim_F Y'$, then $X(f \circ F) = (X'f) \circ F$ and similarly for $Y$, by the characterization in [[Def - F-Related Vector Fields]]. So $[X, Y](f \circ F) = XY(f \circ F) - YX(f \circ F) = X((Y'f) \circ F) - Y((X'f) \circ F) = (X'Y'f) \circ F - (Y'X'f) \circ F = ([X', Y']f) \circ F$, which is the characterization "$[X, Y] \sim_F [X', Y']$".
 
-**(g) Lie derivative identification.** This is the deepest of the seven. The Lie derivative is defined geometrically by flow-pullback; the bracket is defined algebraically by the commutator. They agree, point by point. The cleanest proof (Lee 9.38) is to *straighten* the vector field $X$: at any regular point of $X$ choose coordinates so $X = \partial/\partial s^1$ (by [[Thm - Canonical Form for a Nonvanishing Vector Field]]). In these coordinates, the flow of $X$ is $\phi^X_t(s) = (s^1 + t, s^2, \dots, s^n)$, and the pullback of $Y_{\phi^X_t(p)} = Y^j(s^1 + t, \dots, s^n)\partial_j$ is again $Y^j(s^1 + t, \dots, s^n)\partial_j$ (since $\phi^X_{-t}$ has identity Jacobian). Differentiating in $t$ at $t = 0$ gives $\partial Y^j/\partial s^1 \cdot \partial_j = X^i \partial_i Y^j \partial_j$, which is the first-order part of the bracket formula (the second term $-Y^i \partial_i X^j$ vanishes since the components of $X$ are constants). For singular points of $X$, the identification follows by continuity from the regular points (since both sides depend continuously on $p$ and the singular set has empty interior unless $X$ is identically zero, in which case both sides are zero).
+**(g) Lie derivative identification.** At a regular point, straighten $X$ to $\partial/\partial s^1$. Its flow is translation in $s^1$, so differentiating the pulled-back components of $Y$ gives $(\partial_1Y^j)\partial_j=[X,Y]$. At a zero $p$ of $X$, there are two cases. If $p$ lies in the interior of the zero set, then $X$ vanishes on a neighbourhood, so both the local flow and $[X,Y]$ vanish there. Otherwise $p$ is a limit of regular points, and equality follows from smoothness of both $\mathcal L_XY$ and $[X,Y]$. This covers singular sets with nonempty interior without claiming that such an interior forces $X$ to vanish globally.
 
 ---
 

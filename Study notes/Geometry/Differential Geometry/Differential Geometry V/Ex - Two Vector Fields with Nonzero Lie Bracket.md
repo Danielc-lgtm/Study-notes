@@ -137,7 +137,7 @@ The [[Thm - Commuting Flows Theorem]] says flows commute iff bracket vanishes. W
 >
 > Interpret this in $T_p \mathbb{R}^2 \cong \mathbb{R}^2$: the vector $(0, ts) = ts \cdot (0, 1) = ts \cdot \partial_y|_p = ts \cdot [X, Y]_p$.
 >
-> So the non-commutation of flows is, in this case, *exactly* $ts$ times the bracket — the leading-order Taylor expansion of the "parallelogram closure" matches the bracket. More generally (for higher-order terms) the parallelogram closes up to $O(\sqrt{ts}^3)$ when the bracket vanishes, but in this simple example the leading term is exact (the higher-order corrections happen to vanish because $X$ and $Y$ have very simple coefficients).
+> In this affine example the coordinate difference between the two ordered compositions is exactly $st\,\partial_y$. In general, after choosing a chart and fixing an order convention, the difference has leading mixed term $st[X,Y]_p$ and remainder $O(|s|^2|t|+|s||t|^2)$. Thus bracket vanishing removes the mixed second-order term; the expression $O(\sqrt{st}^{,3})$ is neither a well-defined two-parameter estimate nor needed here.
 
 > [!note]- Complete formal solution
 > **(a)** With $X = \partial_x$ ($X^1 = 1, X^2 = 0$) and $Y = x \partial_y$ ($Y^1 = 0, Y^2 = x$), the coordinate formula gives $[X, Y]^1 = 0 - 0 = 0$ and $[X, Y]^2 = X^1 \partial_x Y^2 + X^2 \partial_y Y^2 - 0 = 1 \cdot 1 + 0 = 1$. So $[X, Y] = \partial/\partial y \neq 0$.
@@ -152,7 +152,7 @@ The [[Thm - Commuting Flows Theorem]] says flows commute iff bracket vanishes. W
 
 # Key Takeaways
 
-**The bracket geometrically measures the failure of flow parallelograms to close.** This exercise gives a concrete, computable instance of the parallelogram intuition: starting at $p$, flowing along $X$ for time $s$ and then along $Y$ for time $t$ gives a different endpoint from flowing in the other order, and the gap is, to leading order, $st \cdot [X, Y]_p$. In this example the gap is *exactly* $st \partial_y$ — the bracket times the area $st$. The general parallelogram statement is approximate: the gap is $st [X, Y]_p + O((st)^{3/2})$, but the leading order is always the bracket. Trigger pattern: when seeing a "flow commutation" question, expect the answer to involve the bracket.
+**The bracket measures failure of flow parallelograms to close.** In a coordinate chart, reversing the order of the two short flows changes the endpoint by a mixed term $st[X,Y]_p$, up to the sign determined by which ordered difference is taken, plus $O(|s|^2|t|+|s||t|^2)$. Here the chosen difference is exactly $st\partial_y$, with all higher terms absent. The invariant formulation uses the four-flow commutator rather than subtracting points of a manifold.
 
 **Position-dependent coefficients are the source of non-commutation.** $X = \partial_x$ has constant coefficients; $Y = x \partial_y$ has a position-dependent coefficient (the speed of $y$-motion depends on $x$). It is this position-dependence that creates the non-commutation: flowing along $X$ changes $x$, which then changes how $Y$ behaves on the next flow step. Two vector fields with constant coefficients on $\mathbb{R}^n$ always commute (their bracket is zero by the coordinate formula). So non-commutation requires that at least one vector field have non-constant coefficients in some direction. This is the geometric source of all the rich structure in non-trivial Lie algebras.
 
