@@ -334,13 +334,19 @@ small PR.
 
 ## Phase 7 — End of run
 
-**Loop before reporting.** Unless the user explicitly requested `Do the next
-batch`, inspect `progress.json` before ending. If any unit is not `complete`,
-return to Phase 1.4 for the next unit and continue in this same run. The
-end-of-run report below is written only when no work remains in scope or the
-platform is actually cutting the run off. One merged unit is never a stopping
-condition; never ask whether to continue when the ledger already says what is
-next.
+**Mandatory continuation gate before reporting.** Unless the user explicitly
+requested `Do the next batch`, inspect both ledgers before producing any
+user-facing final or progress report. If any in-scope unit is not `complete`
+and tool execution is still available, do not answer: return to Phase 1.4 and
+perform its recorded next action in this same run. Repeat this gate after every
+checkpoint, review pass, commit, push, PR, and merge. Those events are durable
+boundaries, not response boundaries. “The platform is cutting the run off”
+means an external cutoff actually prevents another tool call; do not infer it
+from elapsed time, completed effort, context size, or the availability of a
+useful progress summary. One merged unit is never a stopping condition, and
+the ledger replaces any need to ask whether to continue.
+
+Only after that gate allows reporting:
 
 1. Working tree clean; ledgers updated; every completed unit merged; any
    unfinished unit checkpointed on its pushed branch with an open PR.
@@ -358,4 +364,5 @@ Phase 0 → read ledgers → if `branch` is null, start the next unit from
 committed but did not update the ledger: reconcile from the diff before doing
 anything else) → go straight to the unit and step named in `next_action` →
 Phases 2–6 for that unit → merge it → Phase 7 loop → next unit immediately;
-continue until the task is complete or the platform interrupts the run.
+continue until the task is complete or an actual external cutoff prevents the
+next tool call.

@@ -41,8 +41,8 @@ persistent multi-topic plan into the ledgers, then complete the topics one at a
 time in dependency order. Each finished topic is its own branch, commit, PR,
 and immediate merge into `main`; the next topic starts from the updated `main`
 **in the same run**. Codex keeps going until every topic in scope is complete or
-the platform interrupts the run. It checkpoint-commits and pushes after every
-coherent sub-step, with the ledgers naming the exact next action, so everything
+an actual external cutoff prevents another tool call. It checkpoint-commits and
+pushes after every coherent sub-step, with the ledgers naming the exact next action, so everything
 completed is always on GitHub. It never stops merely because one topic finished
 and never asks whether to continue when the ledger already says what is next.
 An interrupted run leaves the current topic checkpointed on its branch with
@@ -59,7 +59,10 @@ auto-link, audit, review, commit, PR.
 commits, on the existing branch and PR, starting at the recorded exact next
 action. After completing and merging that unit, continue through every
 remaining unit in the same run until the task is complete or the platform
-interrupts.
+actually prevents another tool call. Codex does not emit an interim progress
+response merely because a checkpoint or topic is complete; it consults the
+ledger and performs the next action. A progress summary is an end-of-run
+artifact, not a substitute for continued execution.
 
 `Do the next batch`
 → Same as `Continue`, but intentionally stop after completing exactly the next
@@ -106,8 +109,10 @@ push completed units straight to `main`.
 - The task plan lives in `.codex/` and therefore on `main` after every merge,
   so a multi-topic task continues across any number of runs and merges. After
   each merge, Codex immediately starts the next unit in the same run unless the
-  task is complete, the platform interrupts, or the prompt was `Do the next
-  batch`.
+  task is complete, an external cutoff prevents another tool call, or the
+  prompt was `Do the next batch`. Before any final or progress response, Codex
+  checks the ledgers; remaining work plus available tool execution means it
+  continues rather than responds.
 - If one unit remains in progress across three runs, the next run splits it:
   pages already at standard become a smaller completed unit, and the remainder
   becomes a new unit rather than staying open-ended.
