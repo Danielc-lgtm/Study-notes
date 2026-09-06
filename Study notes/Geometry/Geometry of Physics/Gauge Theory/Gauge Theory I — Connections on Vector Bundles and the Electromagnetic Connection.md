@@ -26,7 +26,7 @@ A derivative compares nearby values. For an ordinary function those values lie i
 
 Gauge theory begins when the comparison rule itself is dynamical or physically observable. In electromagnetism, a charged wavefunction is locally a complex function only after choosing a unitary frame of a line bundle. Changing that frame changes the local potential $A$ but not the connection. The field strength is curvature, and a charged particle transported around a loop acquires its holonomy. Thus “gauge freedom” is not freedom to change the physical field; it is freedom to change a local representative of one global geometric object.
 
-The chapter develops this claim in the smallest setting where every mechanism is visible. Principal bundles and non-abelian structure are deferred to [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] and [[Gauge Theory III — Connections in Principal and Associated Bundles]].
+The chapter develops this claim in the smallest setting where every mechanism is visible. Principal bundles and non-abelian structure are deferred to [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] and [[Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry]].
 
 # Concept Map
 
@@ -140,7 +140,7 @@ First type every object: global connection, local potential, global curvature, l
 # Bridges
 
 - [[Riemannian Geometry I — Connections and Covariant Differentiation]] develops affine connections, parallel transport, and Levi–Civita geometry.
-- [[Gauge Theory III — Connections in Principal and Associated Bundles]] replaces frame matrices by a global principal connection.
+- [[Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry]] replaces frame matrices by a global principal connection.
 - Gauge Theory IV will turn invariant polynomials in curvature into characteristic classes.
 - Gauge Theory V will derive Maxwell and Yang–Mills equations from the Hodge star and action principles.
 

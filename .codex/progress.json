@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-ii",
+  "branch": "codex/create-complete-gauge-theory-gt-iii",
   "pr": {
-    "number": 20,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/20",
+    "number": 21,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/21",
     "status": "open"
   },
   "merged_prs": [
@@ -74,6 +74,12 @@
       "number": 19,
       "unit": "gt-i",
       "main_sha": "961b960",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 20,
+      "unit": "gt-ii",
+      "main_sha": "40e54fd",
       "date": "2026-09-06"
     }
   ],
@@ -188,10 +194,10 @@
     "gt-iii": {
       "title": "Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry",
       "mode": "improve",
-      "status": "pending",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Connections in Principal and Associated Bundles.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Adjoint Bundle.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Bracket of g-Valued Forms.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Connection 1-Form on a Principal Bundle.md",
@@ -218,19 +224,26 @@
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Gauge Transformation Law for Local Connection 1-Forms.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Maurer-Cartan Equation.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Principal Connection Induces a Connection on Every Associated Bundle.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Principal Connection is Equivalent to a Horizontal Distribution.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Principal Connection is Equivalent to a Horizontal Distribution.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Parallel Transport of a Principal Connection.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Holonomy Group of a Principal Connection.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Def - Gauge Group of a Principal Bundle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Horizontal Lift Existence and Uniqueness.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Thm - Flat Connections and Monodromy Representations.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Ex - Flat U(1) Connections on the Circle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory III/Exercise Index - §3.5 Parallel Transport, Holonomy, and Gauge Symmetry.md"
       ],
-      "diagnosis": "Pending source-grounded diagnosis.",
+      "diagnosis": "Central proofs contain abandoned gauge-chain-rule and representation-derivative calculations; bracket normalizations are mixed; principal parallel transport, holonomy, gauge automorphisms, and flat monodromy are missing. Replace the architecture around the equivalence of horizontal distributions, connection forms, local potentials, and parallel transport, with curvature as nonintegrability and holonomy as integrated memory under fixed right-action conventions.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
-      "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "commit": "c83565e",
+      "notes": "Local/global curvature calculus rebuilt: local potentials, passive gauge law with a clean curve derivative, curvature horizontality/equivariance, Cartan structure equation, graded Bianchi proof, adjoint bundle, exterior covariant derivative, and induced associated-bundle connection. The factor 1/2 bracket versus matrix-wedge convention is fixed throughout."
     },
     "gt-iv": {
       "title": "Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli",
@@ -449,10 +462,10 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-ii",
-  "next_action": "Merge Gauge Theory II through PR #20, then create the Gauge Theory III branch and diagnose principal connections, curvature, holonomy, and gauge symmetry from both sources.",
+  "current_unit": "gt-iv",
+  "next_action": "Create Gauge Theory IV on a fresh branch from merged main, covering invariant polynomials, Chern–Weil, characteristic classes, Chern–Simons, and flat moduli.",
   "unresolved": [],
-  "last_commit": "ea7d623",
+  "last_commit": "c83565e",
   "ready_to_merge": false,
-  "updated": "2026-09-06T09:40:00Z"
+  "updated": "2026-09-06T00:00:00Z"
 }
