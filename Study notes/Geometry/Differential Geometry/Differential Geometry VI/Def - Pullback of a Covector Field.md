@@ -25,7 +25,7 @@ The natural construction: given $\omega_q$ and $dF_p$, the composition $\omega_q
 
 This definition has three remarkable features.
 
-**First, it works for arbitrary smooth $F$.** No invertibility, no diffeomorphism — just smoothness suffices, because the construction only needs $dF_p$ (which exists for any smooth $F$) and the pointwise evaluation of $\omega$ at $F(p)$. This is unlike the pushforward of vector fields, which requires $F$ to be a diffeomorphism.
+**First, it works for arbitrary smooth $F$.** No invertibility, no diffeomorphism — just smoothness suffices, because the construction only needs $dF_p$ (which exists for any smooth $F$) and the pointwise evaluation of $\omega$ at $F(p)$. This is unlike transporting an arbitrary vector field to the target: for a general $F$, a pushforward exists only when the field is $F$-related to some smooth target field; a diffeomorphism guarantees such a field uniquely.
 
 **Second, the construction is contravariant.** $F^*$ goes from forms on $N$ (the target of $F$) to forms on $M$ (the source). This is the opposite direction from $F$ itself. The contravariance is structural: it comes from the dual-map structure of $(dF_p)^*$, which reverses arrows.
 
@@ -37,7 +37,7 @@ What is forced by demanding $F^*\omega$ be **smooth** as a 1-form on $M$? Smooth
 
 What is forced by demanding pullback **respect the differential operator**? The identity $F^*(dg) = d(F^*g)$ is forced by the chain rule: $(F^*(dg))_p(v) = dg_{F(p)}(dF_p(v)) = dF_p(v)(g) = v(g \circ F) = d(g \circ F)_p(v)$ — the third equality uses the duality definition of $dg$, the fourth uses the chain rule for derivations. So naturality with $d$ is *automatic*, not separately imposed.
 
-What if we **strengthened** by demanding $F$ be a diffeomorphism? Then we could also pull back vector fields, using $F^{-1}$ — but the pullback of covectors works without this. Strengthening would lose the universal applicability.
+What if we **strengthened** by demanding $F$ be a diffeomorphism? Then we could also transport vector fields in either direction, using $F^{-1}$ — but the pullback of covectors works without this. Strengthening would lose the universal applicability.
 
 What if we **weakened** by allowing $\omega$ to be merely continuous? Then $F^*\omega$ would be continuous but not smooth. The smooth-pullback is the special case for the smooth-forms theory.
 
@@ -66,7 +66,7 @@ The coefficient of $dx^i$ is the pullback of the coefficient $\omega_j$ composed
 - **Functoriality:** $(G \circ F)^* = F^* \circ G^*$ for composable smooth maps $F : M \to N$, $G : N \to P$, and $\mathrm{id}_M^* = \mathrm{id}_{\Omega^1(M)}$.
 - **Naturality with $d$:** $F^*(dg) = d(F^*g) = d(g \circ F)$ for $g \in C^\infty(N)$.
 
-The pullback **does not** require $F$ to be a diffeomorphism, an immersion, an embedding, or anything other than smooth. This is the structural feature distinguishing covector fields (which pull back universally) from vector fields (which can be pushed forward only along [[Def - Diffeomorphism|diffeomorphisms]]).
+The pullback **does not** require $F$ to be a diffeomorphism, an immersion, an embedding, or anything other than smooth. This is the structural feature distinguishing covector fields (which pull back universally) from vector fields (whose target-side pushforward along a general map requires an additional $F$-relatedness condition).
 
 ---
 
@@ -78,7 +78,7 @@ The pullback is also a **morphism in the category of smooth manifolds**, viewed 
 
 **True name:** the true name of $F^*\omega$ is "**$\omega$ composed with the differential of $F$**", or equivalently "**the covector field obtained by pulling tangent vectors at $p$ forward via $dF_p$ and evaluating $\omega$ at $F(p)$**". The operational signature: $F^*\omega$ takes a tangent vector $v$ at $p \in M$, pushes it to $dF_p(v) \in T_{F(p)}N$, and then evaluates $\omega_{F(p)}$ on that pushed vector. The verbiage "pull-back" is appropriate because the *covector field* is being pulled from $N$ to $M$, even though the *tangent vector* is being pushed.
 
-A useful slogan: **vector fields are intrinsic to a point — they cannot be transported along non-invertible maps; covector fields are evaluators — they are transported by composition with the differential**. This is the formal source of the asymmetry between $TM$ and $T^*M$ from the perspective of category theory: $TM$ is *covariant* (functorial in the same direction as $F$), while $T^*M$ at the level of sections is *contravariant*.
+A useful slogan: **vector fields transform covariantly and therefore need compatible values over every fibre of the base map; covector fields are evaluators and pull back automatically by precomposition with the differential**. This is the formal source of the asymmetry between $TM$ and $T^*M$ from the perspective of category theory: $TM$ is *covariant* (functorial in the same direction as $F$), while $T^*M$ at the level of sections is *contravariant*.
 
 In **physics**, pullback is the natural operation for restricting a field on a "big" space to a "smaller" space. The electromagnetic 4-potential $A$ on Minkowski space pulls back to any worldline (a smooth map $\gamma : \mathbb{R} \to \mathbb{R}^4$), giving the worldline's experienced potential $\gamma^*A$. The pullback to a surface (a smooth $f : \Sigma \to \mathbb{R}^4$) gives the surface's induced 1-form. This is the canonical way to compute fluxes and work integrals.
 
@@ -96,7 +96,7 @@ In **physics**, pullback is the natural operation for restricting a field on a "
 
 **Is NOT a pullback that respects $d$ — pullback by a non-smooth map.** If $F$ is only continuous, then $dF$ doesn't exist as a bundle homomorphism, and the formula $F^*\omega = \omega \circ dF$ does not give a well-defined 1-form. Smoothness of $F$ is essential.
 
-**Is NOT analogous to pushforward — pullback always works.** Pushforward of vector fields requires $F$ to be a diffeomorphism. For example, with $F : \mathbb{R} \to \mathbb{R}$, $F(x) = x^2$, the vector field $X = \partial/\partial x$ does not push forward to a well-defined vector field on $\mathbb{R}$, because $F(-1) = F(1) = 1$ and $dF_{-1}(\partial/\partial x) = -2 \partial/\partial x \neq 2 \partial/\partial x = dF_1(\partial/\partial x)$ — two candidates at $y = 1$. But the pullback of a 1-form $\omega$ on $\mathbb{R}$ always works: $F^*\omega = \omega(x^2) \cdot 2x \, dx$.
+**Is NOT analogous to an automatic pushforward — pullback always works.** A diffeomorphism gives a pushforward of every vector field, whereas a general smooth map does not. For example, with $F : \mathbb{R} \to \mathbb{R}$, $F(x) = x^2$, the vector field $X = \partial/\partial x$ does not push forward to a well-defined vector field on $\mathbb{R}$, because $F(-1) = F(1) = 1$ and $dF_{-1}(\partial/\partial x) = -2 \partial/\partial x \neq 2 \partial/\partial x = dF_1(\partial/\partial x)$ — two candidates at $y = 1$. But the pullback of a 1-form $\omega$ on $\mathbb{R}$ always works: $F^*\omega = \omega(x^2) \cdot 2x \, dx$.
 
 **Corollary — pullback of an exact form is exact.** If $\omega = df$ for $f \in C^\infty(N)$, then $F^*\omega = F^*(df) = d(F^*f) = d(f \circ F)$ — exact, with the pullback function $f \circ F$ as its potential. So pullback preserves exactness.
 

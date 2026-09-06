@@ -143,30 +143,26 @@ Apply the vector-bundle construction lemma. The fibres are $T_p^*M$ (defined lin
 > > So $CA = I$, meaning $C = A^{-1}$. The entries are $c^i_\ell = (A^{-1})^i_\ell = \partial x^i/\partial \tilde x^\ell$.
 
 > [!note]- Lemma 2: Covector components transform by inverse transpose
-> **Statement:** Under the same change of basis, the components $\omega_i, \tilde\omega_j$ of a covector $\omega = \omega_i \, dx^i = \tilde\omega_j \, d\tilde x^j$ are related by $\tilde\omega_j = A^i_j \omega_i$ where $A^i_j = \partial \tilde x^i/\partial x^j$ is the Jacobian — wait, let me recompute carefully.
+> **Statement:** Let $J_{\beta\alpha}=D(x_\beta\circ x_\alpha^{-1})$. If $v_\beta=J_{\beta\alpha}v_\alpha$ are tangent-component columns, then covector-component columns satisfy
+> $$\omega_\beta=J_{\beta\alpha}^{-T}\omega_\alpha.$$
 >
-> Actually: $\omega = \omega_i dx^i = \omega_i (\partial x^i/\partial \tilde x^j) d\tilde x^j$, so $\tilde\omega_j = \omega_i (\partial x^i/\partial \tilde x^j)$. The matrix transforming components is $(\partial x^i/\partial \tilde x^j) = (J^{-1})^i_j$ where $J = (\partial \tilde x^j/\partial x^i)$ is the Jacobian. As a transformation of components (column vector indexed by $j$), this is multiplication by $J^{-T}$ — the inverse transpose of the Jacobian.
->
-> **Hint:** Compute the components of $\omega$ in the new basis using Lemma 1.
->
-> **Why needed:** This is the transition function for the cotangent bundle.
+> **Why needed:** This is the cotangent transition function and is forced by invariance of the scalar pairing.
 >
 > > [!note]- Full proof
-> > By Lemma 1, $dx^i = (\partial x^i/\partial \tilde x^j) d\tilde x^j$. So
-> > $$\omega = \omega_i \, dx^i = \omega_i \cdot \frac{\partial x^i}{\partial \tilde x^j} \, d\tilde x^j.$$
-> > Reading off coefficients: $\tilde\omega_j = \omega_i \cdot \partial x^i / \partial \tilde x^j$. As a matrix relation on the column vector $(\tilde\omega_j)$: if $\omega$ is the column $(\omega_i)$, then $\tilde\omega = M \omega$ where $M_{ji} = \partial x^i / \partial \tilde x^j$. The matrix $M$ has $M_{ji} = (J^{-1})_{ij}$ — that is, $M = (J^{-1})^T = J^{-T}$, the inverse transpose of the Jacobian.
+> > The scalar $\omega(v)$ is coordinate independent, so
+> > $$\omega_\beta^Tv_\beta=\omega_\alpha^Tv_\alpha.$$
+> > Substituting $v_\beta=J_{\beta\alpha}v_\alpha$ gives $\omega_\beta^TJ_{\beta\alpha}=\omega_\alpha^T$ for every $v_\alpha$. Transposing and solving yields $\omega_\beta=J_{\beta\alpha}^{-T}\omega_\alpha$. Equivalently, $dx_\alpha^i=(\partial x_\alpha^i/\partial x_\beta^j)dx_\beta^j$ and coefficient comparison gives the same formula.
 
-> [!note]- Lemma 3: Cocycle condition for inverse-transpose Jacobians
-> **Statement:** For three coordinate charts with Jacobian matrices $J_{ij}$ between charts $i$ and $j$ satisfying the chain rule $J_{13} = J_{12} J_{23}$, the inverse transposes satisfy $J_{13}^{-T} = J_{23}^{-T} J_{12}^{-T}$.
+> [!note]- Lemma 3: Inverse transpose preserves the cocycle order
+> **Statement:** If $J_{\gamma\alpha}=J_{\gamma\beta}J_{\beta\alpha}$, then
+> $$J_{\gamma\alpha}^{-T}=J_{\gamma\beta}^{-T}J_{\beta\alpha}^{-T}.$$
 >
-> **Hint:** Use $(AB)^{-T} = B^{-T} A^{-T}$.
->
-> **Why needed:** This is the cocycle condition for $T^*M$.
+> **Why needed:** Hence $\tau_{\beta\alpha}=J_{\beta\alpha}^{-T}$ satisfies $\tau_{\gamma\alpha}=\tau_{\gamma\beta}\tau_{\beta\alpha}$.
 >
 > > [!note]- Full proof
-> > $(AB)^{-T} = ((AB)^{-1})^T = (B^{-1} A^{-1})^T = (A^{-1})^T (B^{-1})^T = A^{-T} B^{-T}$. Wait, let me re-do: $(AB)^{-T}$ — first invert: $(AB)^{-1} = B^{-1} A^{-1}$. Then transpose: $((AB)^{-1})^T = (B^{-1} A^{-1})^T = (A^{-1})^T (B^{-1})^T = A^{-T} B^{-T}$.
-> >
-> > Applying with $A = J_{12}, B = J_{23}$: $J_{13}^{-T} = (J_{12} J_{23})^{-T} = J_{12}^{-T} J_{23}^{-T}$. Hmm, this gives the cocycle in one order. The cocycle convention for transition functions is $\tau_{13} = \tau_{12} \tau_{23}$, so we need the order to match. The inverse-transpose Jacobians for $T^*M$ transitions are defined to make this cocycle hold, and the algebra shows $J_{13}^{-T} = J_{12}^{-T} J_{23}^{-T}$ when $J_{13} = J_{12} J_{23}$. (The cocycle for the inverse-transposed transitions is the same as for the original, after careful index identification — this is the standard "dual cocycle" relation.)
+> > For invertible $A,B$,
+> > $$(AB)^{-T}=((AB)^{-1})^T=(B^{-1}A^{-1})^T=(A^{-1})^T(B^{-1})^T=A^{-T}B^{-T}.$$
+> > Taking $A=J_{\gamma\beta}$ and $B=J_{\beta\alpha}$ proves the claim. Inverse transpose preserves—not reverses—the displayed cocycle order because inversion and transposition each reverse multiplication order.
 
 ---
 
@@ -181,16 +177,15 @@ Apply the vector-bundle construction lemma. The fibres are $T_p^*M$ (defined lin
 > $$\Phi_\alpha : \pi^{-1}(U_\alpha) \to U_\alpha \times \mathbb{R}^n, \qquad \omega_i \, dx^i_\alpha|_p \mapsto (p, \omega_1, \dots, \omega_n).$$
 > This is a bijection, fibrewise linear (since the coefficients $\omega_i$ are extracted by linear pairings), and commutes with projection.
 >
-> **Step 3 — Transition functions.** For two charts $(U_\alpha, \varphi_\alpha)$ and $(U_\beta, \varphi_\beta)$ overlapping on $U_\alpha \cap U_\beta$, compute the composition $\Phi_\beta \circ \Phi_\alpha^{-1}$. For $\omega = \omega^\alpha_i dx^i_\alpha = \omega^\beta_j dx^j_\beta$ at $p \in U_\alpha \cap U_\beta$, by Lemma 2, $\omega^\beta_j = (\partial x^i_\alpha / \partial x^j_\beta)(p) \omega^\alpha_i$. The matrix of this transformation on the column $(\omega_i)$ is $M_{\beta\alpha}(p) := (\partial x^i_\alpha / \partial x^j_\beta(p))_{j, i}$, the inverse transpose of the Jacobian $(\partial x^j_\beta / \partial x^i_\alpha(p))$.
+> **Step 3 — Transition functions.** On $U_\alpha\cap U_\beta$, write $J_{\beta\alpha}(p)=D(x_\beta\circ x_\alpha^{-1})_{x_\alpha(p)}$. Lemma 2 gives $\omega_\beta=J_{\beta\alpha}^{-T}\omega_\alpha$, and therefore
+> $$\Phi_\beta\circ\Phi_\alpha^{-1}(p,a)=(p,J_{\beta\alpha}(p)^{-T}a).$$
 >
-> Wait — let me re-examine. The Jacobian of $\varphi_\beta \circ \varphi_\alpha^{-1}$ at the appropriate image point is $J_{\beta\alpha}^j_i = \partial x^j_\beta / \partial x^i_\alpha$. So $J_{\beta\alpha}$ is a $n \times n$ matrix with entries indexed by $(j, i)$ where $j$ is the row and $i$ is the column. Its inverse is $J^{-1}_{\beta\alpha} = J_{\alpha\beta}$ with entries $\partial x^i_\alpha / \partial x^j_\beta$. The inverse transpose is $J_{\beta\alpha}^{-T}$ with entries $(J_{\beta\alpha}^{-T})^j_i = J^{-1}_{\beta\alpha}{}^i_j = \partial x^j_\alpha / \partial x^i_\beta$ ... actually the index gymnastics are taking over.
+> **Step 4 — Smoothness.** The Jacobian-valued map $J_{\beta\alpha}$ is smooth and lands in $\mathrm{GL}(n,\mathbb R)$. Inversion is smooth on $\mathrm{GL}(n,\mathbb R)$ and transpose is linear, so $\tau_{\beta\alpha}=J_{\beta\alpha}^{-T}$ is smooth.
 >
-> Concretely: the transition function $\tau_{\beta\alpha} : U_\alpha \cap U_\beta \to \mathrm{GL}(n, \mathbb{R})$ for $T^*M$ is defined by $(\Phi_\beta \circ \Phi_\alpha^{-1})(p, v) = (p, \tau_{\beta\alpha}(p) v)$. Identifying the column $v = (\omega^\alpha_i)$, the transformation rule from Lemma 2 gives $(\tau_{\beta\alpha}(p))^j_i = \partial x^i_\alpha / \partial x^j_\beta(p)$. This matrix is the **inverse transpose** of the Jacobian $J_{\beta\alpha}^j_i = \partial x^j_\beta / \partial x^i_\alpha$ of the chart transition $\varphi_\beta \circ \varphi_\alpha^{-1}$.
->
-> **Step 4 — Smoothness of transitions.** $J_{\beta\alpha}$ is smooth on $U_\alpha \cap U_\beta$ (it is the Jacobian of a smooth chart transition). Matrix inversion is smooth on $\mathrm{GL}(n, \mathbb{R})$ (by Cramer's rule). Matrix transposition is smooth (it is a linear operation). So $\tau_{\beta\alpha} = J_{\beta\alpha}^{-T}$ is smooth.
->
-> **Step 5 — Cocycle condition.** For three charts $\alpha, \beta, \gamma$, the Jacobians satisfy $J_{\gamma\alpha} = J_{\gamma\beta} J_{\beta\alpha}$ on the triple overlap (chain rule). Inverting and transposing: $J_{\gamma\alpha}^{-T} = (J_{\gamma\beta} J_{\beta\alpha})^{-T} = J_{\beta\alpha}^{-T} J_{\gamma\beta}^{-T}$. Wait, this gives the cocycle in one order. The cocycle convention is $\tau_{\gamma\alpha} = \tau_{\gamma\beta} \tau_{\beta\alpha}$, and the algebra of $(AB)^{-T} = B^{-T} A^{-T}$ gives this in the reverse order. The standard fix is to redefine the transition function with the opposite convention, so that the cocycle holds in the standard form. With the appropriate convention, the cocycle is verified by Lemma 3.
->
+> **Step 5 — Cocycle.** The chain rule gives $J_{\gamma\alpha}=J_{\gamma\beta}J_{\beta\alpha}$. Lemma 3 then gives
+> $$\tau_{\gamma\alpha}=J_{\gamma\alpha}^{-T}=J_{\gamma\beta}^{-T}J_{\beta\alpha}^{-T}=\tau_{\gamma\beta}\tau_{\beta\alpha},$$
+> exactly the transition convention used by the construction lemma.
+
 > **Step 6 — Apply the construction lemma.** The data — open cover, candidate trivializations linear on fibres, smooth transition functions satisfying the cocycle — satisfies the hypotheses of the [[Thm - Vector Bundle Construction Lemma]]. The lemma asserts the existence and uniqueness of a smooth rank-$n$ vector bundle structure on $T^*M$ with these trivializations. The total space $T^*M$ becomes a smooth manifold of dimension $2n$.
 >
 > **Step 7 — Coordinate covector fields are smooth.** In the trivialization $\Phi_\alpha$, the coordinate covector field $dx^i_\alpha$ corresponds to the constant section $p \mapsto (p, e_i)$, which is smooth. So $dx^i_\alpha$ is a smooth section of $T^*M$ over $U_\alpha$, confirming the prescribed property.

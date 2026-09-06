@@ -49,7 +49,7 @@ $$\pi' \circ F = f \circ \pi.$$
 $$F|_{E_p} : E_p \to E'_{f(p)}$$
    is a linear map of vector spaces.
 
-The base map $f$ is uniquely determined by $F$ (when $F$ is nonzero on all fibres), since $f(p) = \pi'(F(v))$ for any $v \in E_p$.
+The base map $f$ is uniquely determined by $F$: for every $p \in M$ and every $v \in E_p$, the covering identity gives $f(p)=\pi'(F(v))$. In particular, evaluating at the zero vector $0_p$ already recovers $f(p)$.
 
 A **bundle homomorphism over $M$** is the special case $M = M'$ and $f = \mathrm{id}_M$: a smooth map $F : E \to E'$ with $\pi' \circ F = \pi$, linear on each fibre $E_p \to E'_p$. Bundle homomorphisms over $M$ are the morphisms of the category $\mathbf{Vect}_M$ of vector bundles over $M$.
 
@@ -93,7 +93,7 @@ A useful slogan: **bundle homomorphisms are $C^\infty(M)$-linear; differential o
 
 **Is NOT a bundle homomorphism — the exterior derivative.** The exterior derivative $d : \Omega^k(M) \to \Omega^{k+1}(M)$ is $\mathbb{R}$-linear but not $C^\infty(M)$-linear: $d(f \omega) = df \wedge \omega + f \, d\omega$. The Leibniz rule shows $d$ involves differentiation, not pointwise linear algebra.
 
-**Is NOT a bundle homomorphism — a smooth map of total spaces that doesn't cover any base map.** Define $F : T\mathbb{R}^2 \to T\mathbb{R}$, $F(x, y, v, w) = (x + y, v + w)$. This is a smooth map of manifolds, but $\pi'(F(x, y, v, w)) = x + y$, which depends on the second base coordinate $y$ even though the source point is $(x, y)$ — so $F$ does not have a well-defined "base map" of the form $f(x, y) =$ something. Actually, $f(x, y) = x + y$ *is* a well-defined base map here, and the projection condition is satisfied. So this *is* a bundle homomorphism after all. (Genuine non-examples of the covering condition are harder to construct because the projection condition is automatically forced once $F$ takes fibres to fibres.)
+**Is NOT a bundle homomorphism — a map whose base point depends on the fibre coordinate.** In the standard coordinates $T\mathbb{R}\cong\mathbb{R}^2$, define $H(x,v)=(x+v,v)$. If $H$ covered a map $h:\mathbb{R}\to\mathbb{R}$, then the covering identity would require $h(x)=\pi(H(x,v))=x+v$ for every $v$, which is impossible. Thus smoothness of the total-space map alone does not make it a bundle map.
 
 **Corollary — bundle homomorphisms over $M$ form a $C^\infty(M)$-module.** The set $\mathrm{Hom}_M(E, E')$ of bundle homomorphisms over $M$ is itself a $C^\infty(M)$-module under pointwise operations. Sum, scalar-function multiplication, and the zero homomorphism are all bundle homomorphisms.
 

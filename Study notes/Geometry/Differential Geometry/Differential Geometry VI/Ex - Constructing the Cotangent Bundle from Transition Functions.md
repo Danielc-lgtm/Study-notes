@@ -69,7 +69,7 @@ For the [[Thm - Vector Bundle Construction Lemma|construction lemma]]: open cove
 > The transition function $\tau_{\beta\alpha}$ acts on the components of a covector. If $\omega = \omega^\alpha_i dx^i_\alpha = \omega^\beta_j dx^j_\beta$, then $\omega^\beta_j = (\partial x^i_\alpha/\partial x^j_\beta) \omega^\alpha_i$. The matrix is the inverse transpose of the Jacobian.
 
 > [!note]- Hint 4
-> For the cocycle condition: $J_{\alpha\gamma} = J_{\alpha\beta} J_{\beta\gamma}$ by the chain rule. Inverse-transposing: $J_{\alpha\gamma}^{-T} = (J_{\alpha\beta} J_{\beta\gamma})^{-T}$. Use the identity $(AB)^{-T} = A^{-T} B^{-T}$... wait, let me check. $(AB)^{-T} = ((AB)^{-1})^T = (B^{-1} A^{-1})^T = (A^{-1})^T (B^{-1})^T = A^{-T} B^{-T}$. So yes, the order is preserved.
+> Fix the convention $J_{\beta\alpha}=D(x_\beta\circ x_\alpha^{-1})$. The chain rule gives $J_{\gamma\alpha}=J_{\gamma\beta}J_{\beta\alpha}$, and $(AB)^{-T}=A^{-T}B^{-T}$. Hence the dual transitions satisfy the cocycle in the same displayed order.
 
 ---
 
