@@ -65,9 +65,9 @@
   "status": "in_progress",
   "branch": "codex/improve-all-differential-geometry-dg-vi",
   "pr": {
-    "number": null,
-    "url": null,
-    "state": null
+    "number": 10,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/10",
+    "state": "open"
   },
   "merged_prs": [
     {
@@ -657,7 +657,7 @@
   "current_unit": "dg-vi",
   "next_action": "Read the complete 29-page DG VI graph, audit bundle gluing, cotangent, pullback, exactness, and line-integral claims, then record the target.",
   "unresolved": [],
-  "last_commit": "577a002",
+  "last_commit": "7729eb5",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

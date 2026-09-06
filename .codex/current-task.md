@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-vi`
 
 ## Pull request
-_not opened yet for DG VI_
+`#10 https://github.com/Danielc-lgtm/Study-notes/pull/10 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -51,7 +51,7 @@ _none_.
 Read the complete 29-page DG VI graph, audit bundle gluing, cotangent, pullback, exactness, and line-integral claims, then record the target.
 
 ## Last completed commit
-`577a002`
+`7729eb5`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
