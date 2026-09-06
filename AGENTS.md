@@ -313,7 +313,18 @@ voluntarily while units and working budget remain, and never ask “should I
 continue?” when the ledger already supplies the next action. `Do the next
 batch` is the explicit user request that limits a run to one unit.
 
-If the platform is about to interrupt a run:
+**The continuation check controls whether Codex may answer, not merely what it
+should do after a merge.** Before sending any user-facing final or progress
+report, reread both ledgers. If an in-scope unit remains and the execution
+environment still accepts tool calls, sending that report is prohibited:
+perform the recorded next action instead. A clean checkpoint, a merged PR, the
+completion of a review pass, or the availability of a useful progress summary
+does not count as an interruption. “The platform interrupts the run” means an
+actual external cutoff that prevents another tool call, not an anticipated
+limit, elapsed effort, or a convenient response boundary.
+
+If the platform explicitly signals an imminent hard cutoff but still permits a
+final checkpoint tool call:
 
 - bring the current atomic unit to a coherent state if feasible;
 - run the required review;
@@ -365,9 +376,9 @@ Policy — **auto-merge per completed unit**:
 - The user can override for one task with `... without merging` (leave PRs
   open) or `... directly on main` (skip PRs; commit and push to `main`).
 
-Always end a run by telling the user which units were merged (PR numbers),
-what remains, the exact next action, and whether an unfinished unit was left
-on an open branch.
+When—and only when—the continuation check permits a run to end, tell the user
+which units were merged (PR numbers), what remains, the exact next action, and
+whether an unfinished unit was left on an open branch.
 
 ---
 
