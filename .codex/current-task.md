@@ -48,10 +48,10 @@ Differential Geometry VI–XII (seven units; VI is active).
 _none_.
 
 ## Exact next action
-Audit vector-bundle construction and bundle-homomorphism pages, then repair pullback, exactness, and line-integral claims and examples.
+Audit vector-bundle construction and bundle-homomorphism pages, then finish pullback, line-integral, frame, Möbius, and graph review passes.
 
 ## Last completed commit
-`5c68cf5`
+`b9756b2`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.

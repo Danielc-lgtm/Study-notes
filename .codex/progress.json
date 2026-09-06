@@ -380,7 +380,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Diagnosis and target recorded before content editing. First rewrite: rebuild cotangent transition maps with a single convention and remove drafting leakage. Cotangent checkpoint replaces contradictory index calculations with pairing-invariance proof, fixes (AB)^(-T) order and cocycle convention, and aligns the construction exercise."
+      "notes": "Diagnosis and target recorded before content editing. First rewrite: rebuild cotangent transition maps with a single convention and remove drafting leakage. Cotangent checkpoint replaces contradictory index calculations with pairing-invariance proof, fixes (AB)^(-T) order and cocycle convention, and aligns the construction exercise. Contravariance checkpoint replaces the false diffeomorphism-only pushforward rule by F-related projectability, corrects angle branches on the punctured plane, and separates the 1-form exactness theorem from higher-degree magnetic potentials."
     },
     "dg-vii": {
       "title": "Differential Geometry VII — Tensors and Tensor Fields",
@@ -655,9 +655,9 @@
     }
   },
   "current_unit": "dg-vi",
-  "next_action": "Audit vector-bundle construction and bundle-homomorphism pages, then repair pullback, exactness, and line-integral claims and examples.",
+  "next_action": "Audit vector-bundle construction and bundle-homomorphism pages, then finish pullback, line-integral, frame, Möbius, and graph review passes.",
   "unresolved": [],
-  "last_commit": "5c68cf5",
+  "last_commit": "b9756b2",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
