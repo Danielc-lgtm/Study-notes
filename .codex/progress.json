@@ -124,7 +124,7 @@
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Thm - Hairy Ball Theorem.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Thm - Poincare-Hopf Theorem.md"
       ],
-      "diagnosis": "Pending source-grounded diagnosis.",
+      "diagnosis": "Rigour audit found an untyped graded-bracket cancellation, an incomplete Poincaré–Hopf argument, monopole normalization ambiguity, and Euclidean/Lorentzian convention mixing. Self-containedness is weakened by scattered vector-bundle operations and gauge laws. Replace all explanatory prose: organize independently around connection as fibrewise comparison, curvature as path-dependence, and electromagnetism as the Hermitian-line-bundle specialization; preserve the Euler material as linked enrichment rather than the chapter entrance.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -134,7 +134,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Source extracts, existing-page audit, incoming-link inventory, diagnosis, and target are complete in scratch. Next rebuild the topic page and core connection/curvature theorem pages using the fixed convention ∇=d+iqA."
     },
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
@@ -436,9 +436,9 @@
     }
   },
   "current_unit": "gt-i",
-  "next_action": "Read Haydys §2.1 and Wernli §§3.1–3.2 plus the full existing Gauge Theory I graph and prerequisites; record the diagnosis and filename manifest, then rebuild the unit.",
+  "next_action": "Rebuild the Gauge Theory I topic page and the connection, curvature, existence, tensoriality, and Bianchi atomic pages from Haydys §2.1, fixing ∇=d+iqA and all local-frame conventions; then run mechanical audits and checkpoint.",
   "unresolved": [],
-  "last_commit": "570c6a7",
+  "last_commit": "d76e37a",
   "ready_to_merge": false,
-  "updated": "2026-09-06T04:25:00Z"
+  "updated": "2026-09-06T04:40:00Z"
 }

@@ -28,7 +28,7 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `codex/create-complete-gauge-theory-gt-i`
 
 ## Pull request
-Open after this initialization checkpoint; it remains unmerged until Gauge Theory I passes every review.
+PR #19 — open; remains unmerged until Gauge Theory I passes every review.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Read Haydys §§2.1 and Wernli §§3.1–3.2 plus every existing Gauge Theory I page and its prerequisite links; record the unit diagnosis and filename manifest, then rebuild the unit.
+Rebuild the Gauge Theory I topic page and the connection, curvature, existence, tensoriality, and Bianchi atomic pages from Haydys §2.1, fixing `∇=d+iqA` and all local-frame conventions; then run mechanical audits and checkpoint.
 
 ## Last completed commit
 `570c6a7` is the user-provided source import immediately preceding this task; the task initialization commit follows this ledger update.
