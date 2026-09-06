@@ -50,7 +50,7 @@ Gauge Theory III–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Add and prove horizontal lift, principal parallel transport, holonomy group, gauge group, and flat-monodromy classification pages; then rebuild the seven calibration examples and four exercise indexes.
+Rebuild the seven Gauge Theory III calibration examples and four exercise indexes; then execute correctness, pedagogy, rederivation, graph, and prose reviews and close the mapped source rows.
 
 ## Last completed commit
 `40e54fd` — merge of Gauge Theory II through PR #20.
