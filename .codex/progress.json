@@ -63,11 +63,11 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/improve-all-differential-geometry-dg-iv",
+  "branch": "codex/improve-all-differential-geometry-dg-v",
   "pr": {
-    "number": 7,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/7",
-    "state": "open"
+    "number": null,
+    "url": null,
+    "state": null
   },
   "merged_prs": [
     {
@@ -93,6 +93,12 @@
       "unit": "dg-iii",
       "main_sha": "31ef0ac",
       "date": "2026-09-05"
+    },
+    {
+      "number": 7,
+      "unit": "dg-iv",
+      "main_sha": "86a334b",
+      "date": "2026-09-06"
     }
   ],
   "sources": [
@@ -278,7 +284,7 @@
     "dg-v": {
       "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket",
       "mode": "improve",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
@@ -320,7 +326,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Phase 3.1 active: diagnose and envision the full vector-field/flow graph before editing."
     },
     "dg-vi": {
       "title": "Differential Geometry VI — Vector Bundles and the Cotangent Bundle",
@@ -642,10 +648,10 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-iv",
-  "next_action": "Merge completed PR #7, update from main, create the DG V unit branch, and diagnose and envision Differential Geometry V.",
+  "current_unit": "dg-v",
+  "next_action": "Read the complete 28-page DG V graph, audit flow and Lie-bracket proofs, and record the target description before editing.",
   "unresolved": [],
-  "last_commit": "c0766e4",
+  "last_commit": "86a334b",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }
