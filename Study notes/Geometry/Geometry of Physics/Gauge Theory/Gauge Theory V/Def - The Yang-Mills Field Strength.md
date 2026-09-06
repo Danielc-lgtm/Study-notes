@@ -15,7 +15,7 @@ $M$ is a smooth manifold, $G$ a compact Lie group with Lie algebra $\mathfrak{g}
 
 The bracket $[A, B]$ on $\mathfrak{g}$-valued forms is **graded**: for $A$ a $p$-form and $B$ a $q$-form, $[A, B] = A \wedge B - (-1)^{pq} B \wedge A$, where the wedge involves multiplying coefficients via the Lie bracket on $\mathfrak{g}$. In particular for two 1-forms, $[A, A]_{\mu\nu} = [A_\mu, A_\nu] - [A_\nu, A_\mu] = 2[A_\mu, A_\nu]$, so $\tfrac12[A, A] = [A_\mu, A_\nu]dx^\mu\wedge dx^\nu$ (summing without the factor $1/2$).
 
-Index conventions and the wider gauge-theory notation are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Index conventions and the wider gauge-theory notation are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

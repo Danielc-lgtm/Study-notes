@@ -33,6 +33,15 @@ The needed Lie theory is recalled rather than duplicated:
 
 The new bridge is **[[Def - Representation of a Lie Group]]**. Direct sums, tensor products, duals, exterior and symmetric powers, complexification, and differentiation to a Lie-algebra representation are the operations that later generate matter bundles. [[Ex - Weight Representations of U(1)]] records the integer weights; the standard and symmetric-power representations of $SU(2)$ supply the spin examples used later.
 
+Two quotient criteria from the source will be used repeatedly. A free action of a
+compact Lie group is proper, and its orbit space is a smooth manifold for which
+the quotient map is a principal bundle. A free action of a discrete group has
+the same conclusion when it is properly discontinuous; without that hypothesis
+the quotient can fail to be Hausdorff, as for the translation action of
+$\mathbb Q$ on $\mathbb R$. The source's calculations of $SO(2)\cong U(1)$,
+$SU(2)\cong S^3$, the classical matrix Lie algebras, and the exponential map
+are covered by the linked Differential Geometry XI pages and their examples.
+
 ## §2.2 Fibre bundles and principal bundles
 
 - **[[Def - Fibre Bundle]]** — a locally trivial family with typical fibre $F$; pullback is the universal way to change the base.
@@ -60,7 +69,7 @@ The new bridge is **[[Def - Representation of a Lie Group]]**. Direct sums, tens
 - [[Thm - First Chern Class Classifies Line Bundles over a CW Complex]] specializes this to $U(1)$ because $BU(1)\simeq\mathbb{CP}^\infty\simeq K(\mathbb Z,2)$.
 - [[Ex - Quaternionic Hopf Bundle and SU(2) Classification]] explains why $BSU(2)\simeq\mathbb{HP}^\infty$ and why $SU(2)$-bundles over a closed four-manifold are measured by $c_2$.
 
-## §2.5 Preview: characteristic geometry and Berry phase
+## §2.5 Preview: characteristic geometry and Berry phase (developed in Gauge Theory IV)
 
 The existing Pfaffian, Euler, Gauss–Bonnet, and Berry pages are preserved as previews. Their systematic derivation belongs to Gauge Theory IV, after curvature on principal bundles has been developed:
 

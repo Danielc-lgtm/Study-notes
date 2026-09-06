@@ -43,7 +43,7 @@ For $G = U(1)$, the Lie algebra $\mathfrak{u}(1) = i\mathbb{R}$ is one-dimension
 
 # Legal Operations Used
 
-This solution deploys the following legal operations from [[Gauge Theory IV — Yang–Mills Fields and Instantons#Legal Operations|the topic page's Legal Operations]]:
+This solution deploys the following legal operations from [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons#Legal Operations|the topic page's Legal Operations]]:
 
 1. **Apply the Bianchi identity to eliminate a $d_A F$** (operation 2). For $G = U(1)$, the Bianchi identity reads $dF = 0$, whose components give the two homogeneous Maxwell equations.
 

@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Audit the universal classification theorem line by line, rewrite the four exercise indexes, and inspect the preserved Pfaffian/Euler/Gauss–Bonnet/Berry preview pages for correctness or move-ready status; then execute all five reviews.
+Perform separate correctness, pedagogy, rederivation, graph/self-containedness, and prose/conciseness reviews of all 22 Gauge Theory II files, fix findings, update source coverage, and merge PR #20.
 
 ## Last completed commit
 `961b960` — merge of Gauge Theory I through PR #19.

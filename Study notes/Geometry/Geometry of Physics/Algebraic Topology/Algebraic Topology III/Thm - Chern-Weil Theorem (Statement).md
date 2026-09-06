@@ -235,7 +235,7 @@ Closedness uses the Bianchi identity $\nabla\theta = 0$ and $\mathrm{Ad}$-invari
 
 - **[[Gauge Theory III — Connections in Principal and Associated Bundles|Connections on principal bundles]]** — The geometric input to Chern–Weil is a connection on a principal $G$-bundle. Frankel's formulation in Ch 17–18 (principal bundles, connections, curvature) is exactly the geometric setup for Chern–Weil, with the curvature 2-form $\theta$ being the central object.
 
-- **[[Gauge Theory IV — Yang–Mills Fields and Instantons|Yang–Mills theory]]** — The Yang–Mills action $\int \mathrm{Tr}(F \wedge \star F)$ is gauge-invariant but not topological; the difference $\int \mathrm{Tr}(F \wedge F) - 8\pi^2 \int c_2 = 0$ from Chern–Weil makes the second Chern number into a *topological* part of the action. This is the foundation of the **Bogomolnyi bound** and the moduli space of self-dual instantons.
+- **[[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons|Yang–Mills theory]]** — The Yang–Mills action $\int \mathrm{Tr}(F \wedge \star F)$ is gauge-invariant but not topological; the difference $\int \mathrm{Tr}(F \wedge F) - 8\pi^2 \int c_2 = 0$ from Chern–Weil makes the second Chern number into a *topological* part of the action. This is the foundation of the **Bogomolnyi bound** and the moduli space of self-dual instantons.
 
 - **Atiyah–Singer index theorem.** The index of an elliptic operator is computed as $\int_M$ (Chern–Weil polynomial in the symbol's characteristic classes). The proof uses heat-kernel methods, but the *formula* is purely Chern–Weil. So the index theorem is a Chern–Weil identity in disguise — the deepest application of the construction.
 

@@ -13,7 +13,7 @@ $(M, g)$ is an oriented 4-dimensional (pseudo-)Riemannian manifold; $P \to M$ a 
 
 For a connection $A \in \mathcal{A}$, $F_A$ is its field strength (curvature). The $L^2$ inner product on $\mathfrak{g}$-valued $k$-forms uses the metric $g$, the Hodge star $\star$, and the trace pairing: $(\alpha, \beta) = -\int_M\operatorname{tr}(\alpha \wedge \star\beta)$.
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

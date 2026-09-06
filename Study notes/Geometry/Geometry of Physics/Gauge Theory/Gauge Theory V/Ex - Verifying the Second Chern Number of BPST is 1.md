@@ -52,7 +52,7 @@ $$\operatorname{wn}(g) = \frac{1}{24\pi^2}\int_{S^3}\operatorname{tr}(g^{-1}dg)^
 
 # Legal Operations Used
 
-This solution deploys the following legal operations from [[Gauge Theory IV — Yang–Mills Fields and Instantons#Legal Operations|the topic page's Legal Operations]]:
+This solution deploys the following legal operations from [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons#Legal Operations|the topic page's Legal Operations]]:
 
 1. **Pull a finite-action $SU(2)$ connection back to a map $S^3_\infty \to SU(2) \cong S^3$ and read off its degree** (operation 7). The asymptotic gauge transformation of BPST is the canonical winding-1 map, so the instanton number is 1.
 

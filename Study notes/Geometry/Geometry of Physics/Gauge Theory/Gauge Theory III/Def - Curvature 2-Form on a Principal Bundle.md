@@ -109,7 +109,7 @@ In **Riemannian geometry**, the curvature of the Levi-Civita connection on the o
 $$
 F = dA + A \wedge A = \tfrac{i}{2}\sigma_a\,(F^a_{\mu\nu}/2)\,dx^\mu \wedge dx^\nu,
 $$
-with $F^a_{\mu\nu} = \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + \varepsilon^a{}_{bc}A^b_\mu A^c_\nu$. The non-abelian term $\varepsilon^a{}_{bc}A^b A^c$ is responsible for the **instantons** of [[Gauge Theory IV — Yang–Mills Fields and Instantons|Gauge Theory IV]] — without this term, the BPST solution would not exist.
+with $F^a_{\mu\nu} = \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + \varepsilon^a{}_{bc}A^b_\mu A^c_\nu$. The non-abelian term $\varepsilon^a{}_{bc}A^b A^c$ is responsible for the **instantons** of [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons|Gauge Theory IV]] — without this term, the BPST solution would not exist.
 
 **Example (Hopf bundle).** For the Hopf bundle $S^3 \to S^2$ with the standard $U(1)$-connection, the curvature is $F = -\tfrac{i}{2}\sin\theta\,d\theta \wedge d\varphi$ in spherical coordinates on $S^2$ — proportional to the area form $\omega_{S^2}$. The integral $\int_{S^2} F = -2\pi i$ (or $2\pi$ after dividing out the $i$), reflecting the non-trivial Chern class of the Hopf bundle.
 
@@ -140,7 +140,7 @@ The inhomogeneous term in the gauge transformation of $A$ cancels in the curvatu
 > The curvature satisfies $d_\omega\Omega = 0$, equivalently $dF + [A, F] = 0$ for the local field strength — the [[Thm - Bianchi Identity for Principal Connections|Bianchi identity]]. It is a *geometric identity*, true for every connection, not a dynamical equation.
 
 > [!tip] Yang-Mills Equations *(from Yang-Mills Theory)*
-> Together with the Bianchi identity $d_\omega F = 0$, the Yang-Mills equation $d_\omega \star F = 0$ (derived from extremising the Yang-Mills action) gives the gauge-field dynamics. For self-dual connections in four dimensions ($F = \star F$), Bianchi implies Yang-Mills automatically — this is the **instanton equation** of [[Gauge Theory IV — Yang–Mills Fields and Instantons|Gauge Theory IV]].
+> Together with the Bianchi identity $d_\omega F = 0$, the Yang-Mills equation $d_\omega \star F = 0$ (derived from extremising the Yang-Mills action) gives the gauge-field dynamics. For self-dual connections in four dimensions ($F = \star F$), Bianchi implies Yang-Mills automatically — this is the **instanton equation** of [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons|Gauge Theory IV]].
 
 > [!tip] Chern-Weil Theory and Characteristic Classes *(from Algebraic Topology)*
 > Invariant polynomials of the curvature form $F$ produce de Rham representatives of the characteristic classes of the principal bundle — Chern classes for $U(n)$, Pontryagin and Euler classes for $O(n)$ and $SO(n)$. These are topological invariants of the bundle (independent of the connection) and obstruct triviality of $P$. The integrals $\int_M c_k$ give topological invariants like the **instanton number** for $SU(2)$-bundles over $S^4$. See [[Algebraic Topology III — Higher Homotopy and Chern Forms]].

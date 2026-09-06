@@ -18,7 +18,7 @@ Euclidean $\mathbb{R}^4$ with the standard metric $\delta_{\mu\nu}$ and orientat
 
 **Instanton parameter:** $\rho > 0$, the scale; centre is at the origin (translations add a 4-parameter family).
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

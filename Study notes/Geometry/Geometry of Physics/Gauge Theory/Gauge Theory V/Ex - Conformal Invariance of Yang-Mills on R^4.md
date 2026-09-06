@@ -50,7 +50,7 @@ The total weight of the YM integrand $\operatorname{tr}(F\wedge\star F)$ is $0 +
 
 # Legal Operations Used
 
-This solution deploys the following legal operations from [[Gauge Theory IV — Yang–Mills Fields and Instantons#Legal Operations|the topic page's Legal Operations]]:
+This solution deploys the following legal operations from [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons#Legal Operations|the topic page's Legal Operations]]:
 
 1. **Use the trace pairing on the Lie algebra as an inner product** (operation 5). The Yang-Mills action is built from this pairing combined with the metric and the Hodge star.
 

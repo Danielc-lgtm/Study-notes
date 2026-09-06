@@ -45,7 +45,7 @@ The **Hodge star** on $\mathbb{R}^4$ with the Euclidean metric and standard orie
 
 # Legal Operations Used
 
-This solution deploys the following legal operations from [[Gauge Theory IV — Yang–Mills Fields and Instantons#Legal Operations|the topic page's Legal Operations]]:
+This solution deploys the following legal operations from [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons#Legal Operations|the topic page's Legal Operations]]:
 
 1. **Compute $g^{-1}dg$ via the explicit matrix derivative** (operation 6). The Maurer–Cartan form for the quaternionic-valued $g(x) = (x_0 - i\vec\sigma\cdot\vec x)/r$ is computed by direct matrix differentiation and inversion.
 

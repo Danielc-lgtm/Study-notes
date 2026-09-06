@@ -20,7 +20,7 @@ $$k = \frac{1}{8\pi^2}\int_M\operatorname{tr}(F\wedge F) \in \mathbb{Z}.$$
 
 For compact $M$, integrality follows from $\operatorname{tr}(F\wedge F) \in H^4(M; 8\pi^2\mathbb{Z})$ being a representative of $8\pi^2 c_2(P)$, where $c_2 \in H^4(M; \mathbb{Z})$ is the integral second Chern class. For non-compact $M = \mathbb{R}^4$ with finite action, integrality comes from the asymptotic-gauge classification $\pi_3(G) = \mathbb{Z}$.
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

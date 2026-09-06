@@ -2,7 +2,7 @@
 type: topic
 subject: gauge-theory
 chapter: "20.1-20.6"
-title: "Gauge Theory IV — Yang–Mills Fields and Instantons"
+title: "Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons"
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 

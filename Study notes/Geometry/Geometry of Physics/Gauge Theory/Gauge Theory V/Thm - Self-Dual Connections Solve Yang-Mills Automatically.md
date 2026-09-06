@@ -14,7 +14,7 @@ $(M, g)$ is an oriented 4-dimensional Riemannian manifold (where $\star^2 = 1$ o
 
 A connection $A$ is **self-dual** if $F_A = \star F_A$, **anti-self-dual** if $F_A = -\star F_A$.
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

@@ -16,7 +16,7 @@ The formal adjoint of $d_A$ with respect to the $L^2$ inner product is $d_A^* = 
 
 A current source $J \in \Omega^1(M; \operatorname{ad} P)$ is a $\mathfrak{g}$-valued 1-form on $M$.
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

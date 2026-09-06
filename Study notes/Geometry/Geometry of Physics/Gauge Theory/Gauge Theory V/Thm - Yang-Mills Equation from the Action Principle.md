@@ -17,7 +17,7 @@ The $L^2$ inner product on $\mathfrak{g}$-valued $k$-forms is $(\alpha, \beta) =
 
 The Yang–Mills action is $S_{\text{YM}}[A] = -\tfrac12\int_M\operatorname{tr}(F\wedge\star F) = \tfrac12\|F\|^2_{L^2}$.
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

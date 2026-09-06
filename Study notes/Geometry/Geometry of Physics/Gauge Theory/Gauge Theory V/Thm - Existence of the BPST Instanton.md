@@ -15,7 +15,7 @@ Euclidean $\mathbb{R}^4$ with the standard metric. $SU(2)$ via the quaternionic 
 
 The BPST instanton with scale $\rho > 0$ is $A = \frac{\rho^2}{\rho^2 + r^2}\,g^{-1}dg$.
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]] and [[Def - The BPST Instanton]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]] and [[Def - The BPST Instanton]].
 
 ---
 

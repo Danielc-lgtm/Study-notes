@@ -48,7 +48,7 @@ Self-dual 2-forms satisfy $\omega = \star\omega$; ASD 2-forms satisfy $\omega = 
 
 # Legal Operations Used
 
-This solution deploys the following legal operations from [[Gauge Theory IV — Yang–Mills Fields and Instantons#Legal Operations|the topic page's Legal Operations]]:
+This solution deploys the following legal operations from [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons#Legal Operations|the topic page's Legal Operations]]:
 
 1. **Decompose a 2-form on a 4-manifold into self-dual and anti-self-dual parts** (operation 4). The 't Hooft symbols provide an explicit basis for the SD and ASD subspaces of $\Omega^2(\mathbb{R}^4; \mathfrak{su}(2))$.
 

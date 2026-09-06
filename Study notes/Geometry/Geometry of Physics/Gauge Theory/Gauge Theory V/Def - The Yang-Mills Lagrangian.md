@@ -14,7 +14,7 @@ $M$ is a (pseudo-)Riemannian 4-manifold with metric $g_{\mu\nu}$ (Lorentzian sig
 
 The trace pairing on $\mathfrak{g} \subset \mathfrak{u}(N)$ is $\langle X, Y\rangle = -\operatorname{tr}(XY)$, real symmetric positive-definite on skew-Hermitian matrices. The field strength is $F = F_{\mu\nu}\,\tfrac12 dx^\mu\wedge dx^\nu$, with $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu - iq[A_\mu, A_\nu]$.
 
-The wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+The wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

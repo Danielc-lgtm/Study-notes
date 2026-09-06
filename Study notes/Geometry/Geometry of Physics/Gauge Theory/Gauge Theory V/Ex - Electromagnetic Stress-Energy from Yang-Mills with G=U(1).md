@@ -43,7 +43,7 @@ The **stress-energy tensor** of a field theory is the symmetric tensor sourcing 
 
 # Legal Operations Used
 
-This solution deploys the following legal operations from [[Gauge Theory IV — Yang–Mills Fields and Instantons#Legal Operations|the topic page's Legal Operations]]:
+This solution deploys the following legal operations from [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons#Legal Operations|the topic page's Legal Operations]]:
 
 1. **Use the trace pairing on the Lie algebra as an inner product** (operation 5). Although $\mathfrak{u}(1)$ is one-dimensional, the trace pairing reduces to the obvious scalar product, and the Yang-Mills Lagrangian $-\tfrac14 F^{\mu\nu}F_{\mu\nu}$ is built from this pairing — which the metric variation then varies.
 

@@ -18,7 +18,7 @@ Maxwell's equations in their classical vector form are:
 - Faraday: $\nabla\times\vec E + \partial_t\vec B = 0$
 - Ampère–Maxwell: $\nabla\times\vec B - \partial_t\vec E = \vec j$
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

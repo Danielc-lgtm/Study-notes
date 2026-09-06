@@ -15,7 +15,7 @@ $(M, g)$: oriented Riemannian 4-manifold. $G$: compact Lie group, often $SU(2)$.
 
 $\Omega^2_+(M)$: space of self-dual 2-forms (eigenvalue $+1$ of $\star$), dimension 3 pointwise. $\Omega^2_-(M)$: anti-self-dual 2-forms, eigenvalue $-1$, also dimension 3. Decomposition: $\Omega^2 = \Omega^2_+ \oplus \Omega^2_-$. For a $\mathfrak{g}$-valued 2-form, the same decomposition applies fibrewise.
 
-The wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+The wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 

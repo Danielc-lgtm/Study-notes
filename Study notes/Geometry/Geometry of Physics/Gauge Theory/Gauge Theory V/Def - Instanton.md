@@ -15,7 +15,7 @@ $\mathbb{R}^4$ with Euclidean metric. $G$: compact Lie group, often $SU(2)$. $A$
 
 The instanton number $k$ is the integer $k = \frac{1}{8\pi^2}\int_{\mathbb{R}^4}\operatorname{tr}(F\wedge F)$.
 
-Wider conventions are in [[Gauge Theory IV — Yang–Mills Fields and Instantons]].
+Wider conventions are in [[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons]].
 
 ---
 
