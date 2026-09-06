@@ -95,7 +95,7 @@ df = 2r\cos\theta\, dr - r^2\sin\theta\, d\theta,
 $$
 and raising the index gives
 $$
-\mathrm{grad}_g f = 2r\cos\theta\, \partial_r - \frac{\sin\theta}{r}\, \partial_\theta.
+\operatorname{grad}_g f=2r\cos\theta\,\partial_r-\sin\theta\,\partial_\theta.
 $$
 
 > [!note]- Derivation
@@ -104,24 +104,10 @@ $$
 > df = \partial_r f\, dr + \partial_\theta f\, d\theta = 2r\cos\theta\, dr - r^2\sin\theta\, d\theta.
 > $$
 >
-> **Gradient by raising index.** The sharp map $\sharp$ has matrix $g^{ij}$ in the dual-basis-to-coordinate-basis correspondence. So $(df)^\sharp = (df)^i\, \partial_i$ with $(df)^i = g^{ij}\, \partial_j f$:
-> $$
-> (df)^r = g^{rr}\, \partial_r f + g^{r\theta}\, \partial_\theta f = 1 \cdot 2r\cos\theta + 0 = 2r\cos\theta,
-> $$
-> $$
-> (df)^\theta = g^{\theta r}\, \partial_r f + g^{\theta\theta}\, \partial_\theta f = 0 + \frac{1}{r^2}(-r^2\sin\theta) = -\sin\theta \cdot \frac{r^2}{r^2} = -\sin\theta \cdot 1.
-> $$
-> Wait — let me redo that step carefully:
-> $$
-> (df)^\theta = g^{\theta\theta}\, \partial_\theta f = \frac{1}{r^2} \cdot (-r^2\sin\theta) = -\sin\theta.
-> $$
-> Hmm, this gives $-\sin\theta$ exactly, not $-\sin\theta/r$. Let me re-examine.
->
-> The factor $r^2$ in the numerator (from $\partial_\theta f = -r^2\sin\theta$) and the $r^2$ in the denominator (from $g^{\theta\theta} = 1/r^2$) cancel cleanly. So the $\theta$-component of the gradient is $-\sin\theta$, not $-\sin\theta/r$ as my Hint 3 might have suggested generically.
->
-> Therefore $\mathrm{grad}\, f = 2r\cos\theta\, \partial_r - \sin\theta\, \partial_\theta$.
-
-Correction noted in the derivation: the answer in this specific case is $\mathrm{grad}\, f = 2r\cos\theta\, \partial_r - \sin\theta\, \partial_\theta$ (the $r^2$ from $\partial_\theta f$ cancels with the $1/r^2$ from $g^{\theta\theta}$, leaving a clean $-\sin\theta$).
+> **Gradient by raising index.** Since $(df)^i=g^{ij}\partial_jf$ and $(g^{ij})=\operatorname{diag}(1,r^{-2})$,
+> $$(df)^r=2r\cos\theta,\qquad (df)^\theta=\frac1{r^2}(-r^2\sin\theta)=-\sin\theta.$$
+> Therefore
+> $$\operatorname{grad}_g f=(df)^\sharp=2r\cos\theta\,\partial_r-\sin\theta\,\partial_\theta.$$
 
 **Step 3: Verify via Cartesian coordinates.**
 
@@ -140,7 +126,6 @@ In Cartesian coordinates $(x, y) = (r\cos\theta, r\sin\theta)$, $f = r^2\cos\the
 > $$
 > \partial_x f = \frac{2r^2\cos^2\theta + r^2\sin^2\theta}{r} = r(2\cos^2\theta + \sin^2\theta) = r(\cos^2\theta + 1) = r + r\cos^2\theta.
 > $$
-> Hmm — let me simplify differently: $2\cos^2\theta + \sin^2\theta = \cos^2\theta + (\cos^2\theta + \sin^2\theta) = \cos^2\theta + 1$, so $\partial_x f = r(\cos^2\theta + 1)$.
 >
 > Similarly $\partial_y f = \frac{r\cos\theta \cdot r\sin\theta}{r} = r\sin\theta\cos\theta$.
 >

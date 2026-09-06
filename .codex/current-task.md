@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry XI merged; Differential Geometry XII diagnosis complete and rewrite in progress
+**Overall status:** active — Differential Geometry XII complete and ready to merge; final cross-topic review remains
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-xii`
 
 ## Pull request
-`not opened yet`
+`#16 https://github.com/Danielc-lgtm/Study-notes/pull/16 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -45,16 +45,16 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry XI — Lie Groups and the Exponential Map (`85139f3`, PR #15)
 
 ## Current unit
-`dg-xii` — Differential Geometry XII, workflow Phase 3.1 (diagnosis and target complete).
+`dg-xii` — Differential Geometry XII, workflow Phase 6 (final checklist passed; ready to merge).
 
 ## Remaining units
-Differential Geometry XII (active final unit).
+No topic units remain after DG XII merges; the final cross-topic review remains.
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Open the DG XII checkpoint PR, repair polar musical calculations and Lorentzian existence, then audit metric existence, distance topology, isometries, causal conventions, and graph consistency.
+Commit and push DG XII, merge PR #16, then run the final cross-topic consistency and repository-wide Differential Geometry graph audit and close the ledgers.
 
 ## Last completed commit
 `5384ab2`
