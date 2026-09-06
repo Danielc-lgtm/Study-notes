@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-vi",
+  "branch": "codex/create-complete-gauge-theory-gt-vii",
   "pr": {
-    "number": 25,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/25",
+    "number": null,
+    "url": null,
     "status": "open"
   },
   "merged_prs": [
@@ -98,6 +98,12 @@
       "number": 24,
       "unit": "gt-v",
       "main_sha": "6f77dba",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 25,
+      "unit": "gt-vi",
+      "main_sha": "c296516",
       "date": "2026-09-06"
     }
   ],
@@ -386,7 +392,7 @@
     "gt-vii": {
       "title": "Gauge Theory VII — Sobolev Spaces, Elliptic Operators, and Elliptic Complexes",
       "mode": "create",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII — Elliptic Analysis for Gauge Theory.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VII — Elliptic Analysis for Gauge Theory.md"
@@ -503,7 +509,7 @@
     }
   },
   "current_unit": "gt-vii",
-  "next_action": "Merge Gauge Theory VI and create Gauge Theory VII for Sobolev spaces, elliptic operators, Fredholm theory, elliptic complexes, gauge deformation complexes, and Hodge theory.",
+  "next_action": "Build Gauge Theory VII from Haydys §5: Sobolev spaces and embeddings, elliptic symbols and estimates, Fredholm alternative, elliptic complexes, Hodge representatives, and gauge fixing.",
   "unresolved": [],
   "last_commit": "0c79aa2",
   "ready_to_merge": false,
