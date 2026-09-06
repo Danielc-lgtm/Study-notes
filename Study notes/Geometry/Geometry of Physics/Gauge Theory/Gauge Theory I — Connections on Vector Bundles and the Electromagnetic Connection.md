@@ -1,279 +1,137 @@
 ---
 type: topic
 subject: gauge-theory
-chapter: "Frankel 16"
+chapter: "Gauge Theory I"
 title: "Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection"
 tags: [geometry, gauge-theory, vector-bundles, electromagnetism]
 ---
 
 # Notation Registry
 
-The setting throughout is a smooth manifold $M$ together with a smooth (real or complex) vector bundle $\pi : E \to M$, in the sense of [[Def - Vector Bundle]]. When physics enters we work on a region of $\mathbb{R}^3$ or of $\mathbb{R}^4 \cong M^3 \times \mathbb{R}$, with the spatial part Riemannian and the time direction added by hand.
+Throughout, $M$ is a smooth manifold, $E\to M$ is a rank-$r$ real or complex vector bundle, $\Gamma(E)$ is its space of smooth sections, and $\Omega^k(M;E)=\Gamma(\Lambda^kT^*M\otimes E)$. A connection is written $\nabla$; in a local frame it is $d+A$, with curvature $F_A=dA+A\wedge A$.
 
-**Standing convention (Gaussian units, $c = 1$).** Frankel writes the electromagnetic potential and field in *Gaussian* units, in which Maxwell's equations are $\nabla \cdot E = 4\pi\rho$, $\nabla \times B = 4\pi J + \partial_t E$, and the Lorentz force on a charge $e$ is $e(E + v \times B)$. Throughout the chapter the speed of light is set to $c = 1$, so that "charge times potential" $eA$ has the dimensions of momentum. To convert to SI units replace $A \to A/c$, $eA \to eA/c$, and reinstate the dimensional $c$ in formulas like $H = \frac{1}{2m}(p - \frac{e}{c}A)^2$. The Dirac quantization condition in §1.4 also picks up a $c$: $\frac{eg}{2\pi\hbar c} \in \mathbb{Z}$ in SI, $\frac{eg}{2\pi\hbar} \in \mathbb{Z}$ here.
-
-- $E \to M$ — a smooth vector bundle over the manifold $M$; $E_p = \pi^{-1}(p)$ is the **fibre** over $p$
-- $\Gamma(E)$ — the $C^\infty(M)$-module of smooth global sections
-- $\mathfrak{X}(M) = \Gamma(TM)$ — smooth vector fields on $M$
-- $\Omega^k(M)$ — smooth $k$-forms on $M$; an **$E$-valued $k$-form** is a section of $E \otimes \Lambda^k T^*M$
-- $\nabla : \Gamma(E) \to \Gamma(E \otimes T^*M)$ — a **connection** on $E$; for $X \in \mathfrak{X}(M)$, the covariant derivative is $\nabla_X : \Gamma(E) \to \Gamma(E)$
-- $\omega = (\omega^\alpha{}_\beta)$ — the **connection 1-form** matrix in a local frame $(e_1, \dots, e_K)$; in components $\nabla e_\beta = e_\alpha \otimes \omega^\alpha{}_\beta$
-- $F$ or $\theta = d\omega + \omega \wedge \omega$ — the **curvature 2-form** matrix; for a vector-bundle connection the operator definition is $F(X, Y) = \nabla_X \nabla_Y - \nabla_Y \nabla_X - \nabla_{[X,Y]}$
-- $c_{VU}(x) \in \mathrm{GL}(K)$ — **transition functions** between local trivializations; for a $U(1)$-bundle these are $\mathrm{U}(1)$-valued
-- $G$ — the **structure group** of the bundle (the Lie group containing all transition functions); $\mathrm{GL}(K, \mathbb{R})$ for a general rank-$K$ real bundle, $\mathrm{GL}(K, \mathbb{C})$ for complex, $\mathrm{U}(K)$ if hermitian
-- $j_v(p) \in \mathbb{Z}$ — the **(Kronecker) index** of a vector field $v$ at an isolated zero $p$, $j_v(p) = \frac{1}{2\pi}\oint_{S^1_\epsilon(p)} d\theta_v$
-- $\chi(M)$ — the **Euler characteristic**, $\sum_p j_v(p)$ for any vector field with isolated zeros
-- $A = A_\mu dx^\mu$ — the **electromagnetic 4-potential**, a real 1-form; for a $U(1)$-bundle the connection is $\omega = -(ie/\hbar) A$
-- $F = dA$ — the electromagnetic field-strength 2-form; the curvature of the $U(1)$-connection is $\theta = -(ie/\hbar) F$
-- $e$ — the charge of the particle (electron); $\hbar$ — reduced Planck constant; $m$ — particle mass
-- $\psi$ — a complex-valued wave function, in general a section of the appropriate $U(1)$-bundle
-- $g$ — the strength of a magnetic monopole (so $\vec B = (g/r^2) \hat r$); also reused for elements of a Lie group, distinguished by context
-- $\mathfrak{u}(1) = i\mathbb{R}$ — the Lie algebra of $U(1)$; a $\mathfrak{u}(1)$-valued 1-form is just $i$ times a real 1-form
-
----
+For the electromagnetic specialization, $L\to M$ is a Hermitian line bundle, $q\in\mathbb R$ is the charge appearing in the representation $e^{i\theta}\mapsto e^{iq\theta}$, and a unitary frame writes
+$$
+\nabla=d+iqA,qquad A\in\Omega^1(M;\mathbb R),qquad F_\nabla=iqF,quad F=dA.
+$$
+A change of unitary frame $e'=e^{iq\chi}e$ gives
+$$
+A'=A+d\chi.
+$$
+Equivalently, if one actively transforms the coefficient of a fixed-frame section by $\psi'=e^{-iq\chi}\psi$, then $A'=A+d\chi$ and $(d+iqA')\psi'=e^{-iq\chi}(d+iqA)\psi$. These passive and active descriptions must not be mixed.
 
 # Motivation
 
-This topic is the bridge from differential geometry to physics: it is where **the apparatus of vector bundles and connections, built so carefully in [[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]] and [[Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds]], stops being mathematical infrastructure and becomes the actual language of electromagnetism**. The single equation $\omega = -\frac{ie}{\hbar} A$ says: the electromagnetic 4-potential of physics *is* the connection 1-form of a $U(1)$-bundle on spacetime. The field-strength $F = dA$ is its curvature. Charged wave functions are sections. Gauge transformations are changes of local frame. This identification is not a metaphor or a useful analogy; it is what the objects in fact are, and once you accept it, much of quantum electrodynamics writes itself.
+A derivative compares nearby values. For an ordinary function those values lie in one fixed vector space; for a section, $s(x)\in E_x$ and $s(y)\in E_y$ lie in different fibres. A connection is the additional rule that makes differentiation possible. Its curvature records the obstruction to making that comparison path-independent.
 
-We arrive at this dictionary in two stages. The first half of the chapter is geometric. We begin with the classical question "can you comb the hair on a sphere?" — and the answer is no, because of [[Thm - Poincare-Hopf Theorem|Poincaré's theorem]]: for any vector field $v$ on a closed surface with isolated zeros, the sum of [[Def - Index of a Vector Field at a Zero|Kronecker indices]] equals the [[Def - Euler Characteristic|Euler characteristic]] $\chi(M)$. The Euler characteristic is a topological invariant of $M$ — a count of vertices minus edges plus faces — yet it is forced on every vector field via a local rotation count at each zero. This is the first appearance in the chapter of the central theme of all gauge theory: **a global topological invariant fixes the value of a local geometric integral**. We then take the same construction in higher generality. The transition functions $c_{VU}$ of a vector bundle live in a Lie group $G$ (the *structure group*); when $E = TM$ for an oriented Riemannian surface, $G = SO(2) = U(1)$, and the tangent bundle becomes a *complex line bundle*. The Levi-Civita connection becomes a connection in this line bundle, and its curvature is the (imaginary version of the) Gaussian curvature. The chapter's structural backbone is the following hierarchy, generalising as we move right:
+Gauge theory begins when the comparison rule itself is dynamical or physically observable. In electromagnetism, a charged wavefunction is locally a complex function only after choosing a unitary frame of a line bundle. Changing that frame changes the local potential $A$ but not the connection. The field strength is curvature, and a charged particle transported around a loop acquires its holonomy. Thus “gauge freedom” is not freedom to change the physical field; it is freedom to change a local representative of one global geometric object.
 
-$$\text{real vector bundle} \;\supset\; \text{complex vector bundle} \;\supset\; \text{hermitian bundle (structure group } U(K)\text{)} \;\supset\; \text{complex line bundle (} U(1) \text{)}$$
-
-The complex line bundles, the rightmost objects, are the ones electromagnetism lives on.
-
-The second half of the chapter installs the physics. A particle of charge $e$ in an external EM field obeys a *modified* Lagrangian $L^* = L + e A_\mu \dot x^\mu$ (relativistic action plus the integral of the EM 4-potential along the world line); the modified Hamiltonian is $H^* = \frac{1}{2m}(p - eA)^2 + V$. Promoting the canonical momentum $p_\mu$ to the operator $-i\hbar\partial_\mu$ gives Schrödinger's equation in an EM field:
-
-$$i\hbar\,\partial_t\psi \;=\; \frac{1}{2m}\Bigl(-i\hbar\nabla - eA\Bigr)^2 \psi \;+\; (V - e\varphi)\psi.$$
-
-The bracket on the right is precisely the [[Def - Connection on a Vector Bundle|covariant derivative]] $-i\hbar\nabla_\alpha$ on a $U(1)$-bundle with connection $\omega = -(ie/\hbar) A$. **The minimal-coupling prescription $\partial_\mu \to \partial_\mu - \frac{ie}{\hbar} A_\mu$ is geometrically the act of replacing ordinary differentiation by covariant differentiation in a $U(1)$-bundle.** Weyl's *principle of gauge invariance* — that the wave function transforms by $\psi \to e^{(ie/\hbar)f}\psi$ when $A \to A + df$ — is then just the change-of-frame law for sections under a change of [[Def - Local Trivialization|local trivialization]].
-
-The chapter closes with two stunning consequences that could not even be stated without bundles. The *Dirac monopole*: a magnetic monopole at the origin of $\mathbb{R}^3$ produces a field $B$ with $\nabla \cdot B \ne 0$ at the origin, so by [[Def - Closed and Exact Forms|Poincaré's lemma]] no globally defined potential $A$ can exist on the punctured space. One must instead patch together two potentials $A_U, A_V$ on hemispheres, related on the overlap by $A_V = A_U + df_{UV}$. This is precisely the data of a non-trivial $U(1)$-bundle on $S^2$, and the consistency condition for the patching is the [[Thm - Dirac Quantization Condition|Dirac quantization condition]] $\frac{eg}{2\pi\hbar} \in \mathbb{Z}$. Magnetic charge, if it exists at all, is quantized in units of $\hbar/(2e)$ — for *purely topological reasons*. The *Aharonov–Bohm effect*: an electron passing through a region where $B = 0$ but $A \ne 0$ acquires a measurable phase shift $\exp(\frac{ie}{\hbar}\oint A) = \exp(\frac{ie}{\hbar}\Phi)$, where $\Phi$ is the magnetic flux through the encircled region. The phase is the **holonomy** of the EM connection around the loop, and its observability proves that the electromagnetic potential is a *physical* object, not just a mathematical convenience.
-
-The reader is assumed to have a working grasp of vector bundles, sections, local frames, and transition functions ([[Differential Geometry VI — Vector Bundles and the Cotangent Bundle]]); of differential forms, exterior derivative, and de Rham cohomology ([[Differential Geometry VIII — Differential Forms]] and [[Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius]]); of Lie groups and Lie algebras ([[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map]]); and of the Riemannian connection on a surface ([[Differential Geometry XII — Riemannian and Semi-Riemannian Manifolds]]). The minimum-coupling discussion presupposes classical Lagrangian and Hamiltonian mechanics at the level of [[Geometric Mechanics I — Symplectic Manifolds and Hamiltonian Dynamics]] (forthcoming) and the basic formalism of Schrödinger quantum mechanics.
-
----
+The chapter develops this claim in the smallest setting where every mechanism is visible. Principal bundles and non-abelian structure are deferred to [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] and [[Gauge Theory III — Connections in Principal and Associated Bundles]].
 
 # Concept Map
 
-## §1.1 Vector Fields and Euler Characteristic
-
-- **[[Def - Index of a Vector Field at a Zero]]**
-	- The **(Kronecker) index** $j_v(p)$ of a vector field $v$ at an isolated zero $p$ is the Brouwer degree of the map $S^{n-1}_\epsilon(p) \to S^{n-1}$ sending a point $q$ on a small sphere around $p$ to the unit vector $v(q)/|v(q)|$. In two dimensions it is the number of full rotations $v$ makes as you walk once around $p$ counterclockwise, given by $\frac{1}{2\pi}\oint d\theta$ where $\theta$ is the angle $v$ makes with a fixed reference direction. Sources have index $+1$, sinks $+1$, saddles $-1$, centres $+1$, dipoles $\pm 2$. The index is independent of the choice of metric, coordinates, and small sphere — a topological invariant of the local zero.
-
-- **[[Thm - Poincare-Hopf Theorem]]**
-	- For a vector field $v$ on a closed (compact without boundary) $n$-manifold $M$ with only isolated zeros, $\sum_p j_v(p) = \chi(M)$, the [[Def - Euler Characteristic|Euler characteristic]]. The sum is *independent of the field* — a strikingly rigid constraint. Two proofs are given: the standard topological/de Rham proof comparing two fields via Stokes, and the Morse-theoretic proof using $v = \nabla h$ for a generic $h$ with critical points indexed by Morse index. Consequences: $\chi(S^{2k}) = 2$, so even-dimensional spheres do not admit nowhere-zero vector fields; $\chi(T^n) = 0$, so the torus does.
-
-- **[[Thm - Hairy Ball Theorem]]**
-	- $S^{2k}$ admits no nowhere-zero continuous tangent vector field. Equivalently, the tangent bundle $TS^{2k}$ is not trivial. Special case $k=1$: you cannot comb the hair on a sphere. The proof is one line from [[Thm - Poincare-Hopf Theorem|Poincaré-Hopf]]: $\chi(S^{2k}) = 2 \ne 0$, so any vector field has a zero. The converse (when $\chi = 0$, a nowhere-zero field exists — Hopf's theorem) is much harder. Odd spheres, $\chi(S^{2k+1}) = 0$, do admit nowhere-zero fields — explicitly the **Stiefel vector field** below.
-
-- **[[Ex - Index of the Source-Sink Vector Field on the Sphere]]** (⭐)
-	- Compute $\sum j_v$ for the field $\partial/\partial\theta$ on $S^2$ (lines of longitude). The field has a source at the north pole and a sink at the south pole; both have index $+1$, summing to $\chi(S^2) = 2$. Also compute the stereographic-projection field with a single zero of index $+2$ at the north pole.
-
-- **[[Ex - Stiefel Vector Field on the Odd Sphere is Nowhere-Zero]]** (⭐⭐)
-	- Exhibit the field $v(x_1, \dots, x_{2k+2}) = (-x_2, x_1, -x_4, x_3, \dots)$ on $S^{2k+1} \subset \mathbb{R}^{2k+2}$, verify it is tangent and nowhere zero, and conclude $\chi(S^{2k+1}) = 0$. (This is Euler's theorem: $S^n$ admits a nowhere-zero vector field iff $n$ is odd.)
-
-> [!tip] Unlocked: Generalized Gauss–Bonnet *(from Differential Topology)*
-> Poincaré-Hopf has a curvature-side counterpart: the Chern–Gauss–Bonnet theorem expresses $\chi(M)$ for closed even-dimensional Riemannian $M$ as the integral of a curvature polynomial (the Pfaffian of the curvature 2-form). The right-hand side is geometric, the left topological — see [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]]. The Poincaré-Hopf result is the special case where you replace the curvature integral by a sum of local indices at zeros of a section, the two perspectives meeting in the **Atiyah-Singer index theorem**.
-
-> [!tip] Unlocked: Morse Theory *(from Differential Topology)*
-> Taking $v = \nabla h$ for a Morse function $h$ gives $\chi(M) = \sum_p (-1)^{\mathrm{index}(p)}$, where the Morse index counts negative eigenvalues of the Hessian. This is the entry point to **Morse theory** — the study of the topology of $M$ via the critical-point structure of smooth functions — and leads to the Morse inequalities $b_k(M) \le m_k(h)$ and ultimately to **Floer homology** in infinite-dimensional settings.
-
-> [!note] Exercise Index — §1.1
-> [[Exercise Index - §1.1 Vector Fields and Euler Characteristic]]
-
-## §1.2 Connections on Vector Bundles
+## §1.1 Connections as differentiation between fibres
 
 - **[[Def - Connection on a Vector Bundle]]**
-	- A **connection** on a vector bundle $E \to M$ is an $\mathbb{R}$-linear map $\nabla : \Gamma(E) \to \Gamma(E \otimes T^*M)$ satisfying the Leibniz rule $\nabla(f\sigma) = f\nabla\sigma + \sigma \otimes df$ for $f \in C^\infty(M)$, $\sigma \in \Gamma(E)$. Equivalently, for each vector field $X \in \mathfrak{X}(M)$ the covariant derivative $\nabla_X : \Gamma(E) \to \Gamma(E)$ is $\mathbb{R}$-linear and satisfies $\nabla_X(f\sigma) = (Xf)\sigma + f\nabla_X\sigma$. In a local frame $(e_\alpha)$, $\nabla e_\beta = e_\alpha \otimes \omega^\alpha{}_\beta$ for a matrix $\omega = (\omega^\alpha{}_\beta)$ of 1-forms — the **connection 1-form**. Under a change of frame $e_V = e_U c_{UV}$, $\omega$ transforms by the affine rule $\omega_V = c_{UV}^{-1}\omega_U c_{UV} + c_{UV}^{-1} dc_{UV}$ — it is *not* a tensor.
-
-- **[[Def - Curvature of a Vector-Bundle Connection]]**
-	- The **curvature** of a connection $\nabla$ on $E$ is the operator $F(X, Y) = \nabla_X\nabla_Y - \nabla_Y\nabla_X - \nabla_{[X,Y]} : \Gamma(E) \to \Gamma(E)$, which despite its definition involving derivatives is $C^\infty(M)$-linear in $X$, $Y$, and the section it acts on — hence a 2-form valued in $\mathrm{End}(E)$. In a local frame, $F = d\omega + \omega \wedge \omega$, written componentwise $F^\alpha{}_\beta = d\omega^\alpha{}_\beta + \omega^\alpha{}_\gamma \wedge \omega^\gamma{}_\beta$. The curvature measures the **failure of covariant derivatives to commute** and equivalently the **failure of parallel transport to be path-independent for small loops**.
-
-- **[[Thm - Curvature is C-Infinity Linear in Sections]]**
-	- The curvature operator $F(X, Y)\sigma = \nabla_X\nabla_Y\sigma - \nabla_Y\nabla_X\sigma - \nabla_{[X,Y]}\sigma$ is $C^\infty(M)$-linear in each of $X$, $Y$, $\sigma$ separately. This is highly nontrivial: each of the three terms individually involves derivatives of $f$, but the derivatives all cancel. The conclusion is that $F$ is *tensorial* — its value at a point depends only on the values of $X, Y, \sigma$ at that point — and so defines a section of $\Lambda^2 T^*M \otimes \mathrm{End}(E)$, an $\mathrm{End}(E)$-valued 2-form. The cancellation is the same as in the proof that $T(X, Y) = \nabla_XY - \nabla_YX - [X, Y]$ is tensorial (Frankel §9.7).
-
-- **[[Thm - Bianchi Identity for a Vector-Bundle Connection]]**
-	- The curvature 2-form satisfies the **second Bianchi identity** $d_\nabla F = 0$, where $d_\nabla$ is the exterior covariant derivative. In a local frame this is $dF + \omega \wedge F - F \wedge \omega = 0$, equivalently $\nabla_X F(Y, Z) + \nabla_Y F(Z, X) + \nabla_Z F(X, Y) = 0$ (after appropriate symmetrization). This is the differential identity satisfied by *every* curvature, regardless of bundle, connection, or structure group. In electromagnetism it gives the homogeneous Maxwell equations $dF = 0$ (no magnetic monopoles); in general relativity it gives the contracted Bianchi $\nabla_\mu G^{\mu\nu} = 0$, which forces energy-momentum conservation.
-
+  - A connection is a first-order operator $\nabla:\Gamma(E)\to\Omega^1(M;E)$ satisfying the Leibniz rule.
+  - In a frame, $\nabla=d+A$ and $A'=g^{-1}Ag+g^{-1}dg$.
+  - Connections form an affine space over $\Omega^1(M;\operatorname{End}E)$.
 - **[[Thm - Existence of Connections via Partitions of Unity]]**
-	- Every smooth vector bundle $E \to M$ admits a connection. The proof: in each trivializing chart $U_\alpha$, the trivial connection $\nabla^\alpha\sigma = d\sigma$ (componentwise) is a connection on $E|_{U_\alpha}$; given a [[Def - Partition of Unity on a Manifold|partition of unity]] $\{\rho_\alpha\}$ subordinate to the cover, $\nabla = \sum_\alpha \rho_\alpha \nabla^\alpha$ is a connection on all of $E$ (the Leibniz rule and the affine combination work out cleanly). This is the analogue of "every paracompact manifold admits a Riemannian metric" — affine spaces of geometric structures on paracompact manifolds are non-empty.
+  - Local trivial connections glue because the coefficients of a partition of unity sum to one.
+- **[[Ex - Connection on the Tangent Bundle of S^2 from the Round Metric]]**
+  - The Levi–Civita connection is the basic nontrivial vector-bundle connection.
 
-- **[[Ex - Curvature of a Trivial Bundle with Trivial Connection is Zero]]** (⭐)
-	- For $E = M \times \mathbb{R}^k$ with the connection $\nabla\sigma = d\sigma$ (componentwise differentiation), verify that $\omega = 0$ in the standard global frame and hence $F = d\omega + \omega \wedge \omega = 0$. Conclude that a non-zero curvature in *any* frame proves the bundle does not admit a flat connection — and conversely, a flat connection on a trivial bundle is given by a single matrix of closed 1-forms whose Wilson lines define the holonomy representation $\pi_1(M) \to \mathrm{GL}(K)$.
-
-- **[[Ex - Connection on the Tangent Bundle of S^2 from the Round Metric]]** (⭐⭐)
-	- Use the orthonormal frame $(e_\theta, e_\phi)$ on $S^2$ with the round metric and compute the connection 1-form matrix $\omega = \begin{pmatrix} 0 & -\cos\theta\,d\phi \\ \cos\theta\,d\phi & 0 \end{pmatrix}$. Verify the curvature 2-form is $F^1{}_2 = -d(\cos\theta\,d\phi) = \sin\theta\,d\theta \wedge d\phi$, which is the volume form scaled by the Gaussian curvature $K = 1$. Connect this to Gauss-Bonnet: $\int_{S^2} K\,dA = 4\pi = 2\pi \chi(S^2)$.
-
-> [!tip] Unlocked: Levi-Civita Connection *(from Riemannian Geometry)*
-> The **Levi-Civita connection** on a Riemannian manifold is the unique connection on $TM$ that is *metric-compatible* ($\nabla g = 0$) and *torsion-free* ($T(X, Y) = \nabla_X Y - \nabla_Y X - [X, Y] = 0$). Its curvature is the Riemann curvature tensor. See [[Riemannian Geometry I — Connections and Covariant Differentiation]] for the construction and the Koszul formula. Vector-bundle connections in this topic are the generalization where we forget the metric and just keep the differentiation operator.
-
-> [!tip] Unlocked: Holonomy and the Ambrose-Singer Theorem *(from Differential Geometry)*
-> Parallel transport around closed loops based at $p$ defines the **holonomy group** $\mathrm{Hol}_p(\nabla) \subseteq \mathrm{GL}(E_p)$. The **Ambrose-Singer theorem** says the Lie algebra of $\mathrm{Hol}_p$ is spanned by all values of the curvature operator $F(X, Y) : E_p \to E_p$ at all points reachable from $p$ by paths — making precise the slogan "curvature is the infinitesimal generator of holonomy". For abelian structure groups like $U(1)$, $\mathrm{Hol}$ is a torus and is detected by integrals of the curvature over surfaces bounding loops.
-
-> [!note] Exercise Index — §1.2
+> [!note] Exercises
 > [[Exercise Index - §1.2 Connections on Vector Bundles]]
 
-## §1.3 The Electromagnetic Connection
+## §1.2 Curvature: the failure of second derivatives to commute
 
-- **[[Def - Complex Line Bundle]]**
-	- A **complex line bundle** $L \to M$ is a complex vector bundle of rank $1$ — a smooth choice of complex 1-dimensional fibre $L_p \cong \mathbb{C}$ at each point. Equivalently, it is a real rank-$2$ bundle equipped with a smoothly varying linear endomorphism $J : L \to L$ with $J^2 = -\mathrm{id}$, making each fibre a complex line via $iv := Jv$. Its transition functions are non-vanishing complex-valued functions $c_{VU} : U \cap V \to \mathbb{C}^\times = \mathrm{GL}(1, \mathbb{C})$. Hermitian line bundles (with a hermitian inner product on each fibre) have structure group $U(1) = \{z \in \mathbb{C} : |z| = 1\}$.
+- **[[Def - Curvature of a Vector-Bundle Connection]]**
+  - $F_\nabla(X,Y)=[\nabla_X,\nabla_Y]-\nabla_{[X,Y]}$ and locally $F_A=dA+A\wedge A$.
+- **[[Thm - Curvature is C-Infinity Linear in Sections]]**
+  - All derivative terms cancel, so curvature is an $\operatorname{End}E$-valued $2$-form.
+- **[[Thm - Bianchi Identity for a Vector-Bundle Connection]]**
+  - $d_\nabla F_\nabla=0$ is the compatibility identity forced by $F_A=dA+A^2$.
+- **[[Ex - Curvature of a Trivial Bundle with Trivial Connection is Zero]]**
+  - Triviality of the bundle does not force zero curvature; the chosen trivial connection does.
 
-- **[[Def - Hermitian Vector Bundle]]**
-	- A **hermitian vector bundle** is a complex vector bundle $E \to M$ equipped with a smoothly varying hermitian inner product $\langle\cdot,\cdot\rangle_p$ on each fibre $E_p$ — that is, sesquilinear (conjugate-linear in the first slot), positive definite. The structure group then reduces from $\mathrm{GL}(K, \mathbb{C})$ to $U(K)$: transition functions between orthonormal frames are unitary. A **hermitian connection** is one compatible with the inner product: $d\langle\sigma, \tau\rangle = \langle\nabla\sigma, \tau\rangle + \langle\sigma, \nabla\tau\rangle$. The connection 1-form in a unitary frame is then anti-hermitian, $\omega^* = -\omega$, taking values in the Lie algebra $\mathfrak{u}(K)$.
+## §1.3 Hermitian line bundles and electromagnetism
 
+- **[[Def - Complex Line Bundle]]** and **[[Def - Hermitian Vector Bundle]]**
+  - A unitary frame reduces the local connection matrix to $iqA$ with $A$ real.
 - **[[Def - U(1) Gauge Field and Electromagnetic Connection]]**
-	- The **electromagnetic connection** is the connection on a hermitian complex line bundle $L \to M$ (with $M$ spacetime) whose local connection 1-form is $\omega = -(ie/\hbar) A$, where $A = A_\mu dx^\mu$ is the electromagnetic 4-potential and $e$ is the particle charge. Equivalently, a **$U(1)$ gauge field** is a $\mathfrak{u}(1) = i\mathbb{R}$-valued 1-form on $M$, identified with the electromagnetic potential up to the factor $-ie/\hbar$. Its curvature 2-form is $\theta = d\omega = -(ie/\hbar) F = -(ie/\hbar) dA$, the field strength up to the same constant.
-
+  - The electromagnetic potential is the local representative $A$; the field strength $F=dA$ is its curvature after removing the factor $iq$.
 - **[[Def - Gauge Transformation]]**
-	- A **gauge transformation** for a $U(1)$-bundle is a change of local frame by a unit complex number $g(x) = e^{i\lambda(x)/\hbar}$; on the wave function $\psi \to g\psi = e^{i\lambda/\hbar}\psi$, and on the connection 1-form $\omega \to g^{-1}\omega g + g^{-1}dg = \omega + i\,d\lambda/\hbar$, i.e. $A \to A - (1/e)d\lambda$. Writing $\lambda = -ef$ (real $f$) this is the familiar **classical gauge freedom** $A \to A + df$ combined with the phase rotation $\psi \to e^{-(ie/\hbar)f}\psi$ of the wave function — Weyl's principle of gauge invariance. The covariant derivative $\nabla_\mu\psi = (\partial_\mu - (ie/\hbar) A_\mu)\psi$ transforms covariantly because the connection's affine rule precisely compensates the inhomogeneous part of the gauge transformation.
+  - Passive frame change and active transformation are two descriptions of the same covariance equation.
+- **[[Ex - Gauge-Invariant Coupling of Schrödinger to EM Field]]**
+  - Minimal coupling replaces $d$ by $d+iqA$ because ordinary differentiation does not preserve local phase covariance.
 
-- **[[Ex - Gauge-Invariant Coupling of Schrödinger to EM Field]]** (⭐⭐)
-	- Derive Schrödinger's equation in an EM field via the minimal-coupling prescription $-i\hbar\partial_\mu \to -i\hbar\partial_\mu - eA_\mu$. Show that the result $i\hbar\partial_t\psi = \frac{1}{2m}(-i\hbar\nabla - eA)^2\psi + (V - e\varphi)\psi$ is invariant under simultaneous transformation $A \to A + df$, $\varphi \to \varphi - \partial_t f$, $\psi \to e^{(ie/\hbar)f}\psi$. Recognize this as $\nabla$-covariance of the $U(1)$-bundle equation $i\hbar\nabla_0\psi = -(\hbar^2/2m)\sum_\alpha\nabla_\alpha\nabla_\alpha\psi + V\psi$ under a change of frame.
-
-> [!tip] Unlocked: First Chern Class *(from Algebraic Topology)*
-> A complex line bundle $L \to M$ is classified up to isomorphism by a single integer cohomology class $c_1(L) \in H^2(M, \mathbb{Z})$, the **first Chern class**. For a $U(1)$-connection with curvature $\theta = -2\pi i\,c$, the real form $c$ is a closed 2-form whose de Rham class equals the image of $c_1(L)$ in $H^2(M, \mathbb{R})$. The integrality $\int_{S} c \in \mathbb{Z}$ on any closed surface $S \subset M$ is the topological statement underlying [[Thm - Dirac Quantization Condition|Dirac quantization]] — see [[Algebraic Topology III — Higher Homotopy and Chern Forms]].
-
-> [!tip] Unlocked: Berry's Geometric Phase *(from Quantum Mechanics)*
-> When a quantum system depends on slowly varying external parameters $\lambda \in M$, the adiabatic theorem produces a wave function transported around a closed loop in parameter space. The resulting phase shift has two parts: a *dynamical* phase $-\frac{1}{\hbar}\oint E\,dt$ and a *geometric* phase $\oint A_{\mathrm{Berry}}$, where $A_{\mathrm{Berry}}$ is the **Berry connection** $A = i\langle\psi|d\psi\rangle$ on the parameter manifold. This is precisely the holonomy of a $U(1)$-connection on the line bundle of energy eigenspaces over parameter space — Aharonov-Bohm is a special case where the parameter is position and the connection is the EM connection.
-
-> [!note] Exercise Index — §1.3
+> [!note] Exercises
 > [[Exercise Index - §1.3 Electromagnetic Connection]]
 
-## §1.4 Monopoles, Aharonov-Bohm, and Topological Effects
+## §1.4 Global effects: flux and holonomy
 
 - **[[Def - Wilson Line and Holonomy of a Connection]]**
-	- For a connection $\nabla$ on a vector bundle $E \to M$ and a smooth curve $\gamma : [0, 1] \to M$, the **parallel transport** $P_\gamma : E_{\gamma(0)} \to E_{\gamma(1)}$ is the linear map sending $v_0 \in E_{\gamma(0)}$ to $\sigma(1)$, where $\sigma : [0, 1] \to E$ is the unique horizontal lift of $\gamma$ with $\sigma(0) = v_0$ (solving $\nabla_{\dot\gamma}\sigma = 0$ with initial condition $v_0$). The **Wilson line** $W_\gamma$ is the matrix of $P_\gamma$ in a chosen frame, written $W_\gamma = \mathcal{P}\exp\bigl(-\int_\gamma \omega\bigr)$ (path-ordered exponential of the connection). For a closed loop $\gamma$, $W_\gamma \in \mathrm{GL}(E_p)$ is the **holonomy** of $\nabla$ around $\gamma$; for an abelian connection like $U(1)$, $W_\gamma = \exp\bigl(-\oint_\gamma \omega\bigr) = \exp\bigl((ie/\hbar)\oint_\gamma A\bigr)$.
+  - Parallel transport along a path is the path-ordered exponential; for $U(1)$ path ordering disappears.
+- **[[Def - The Dirac Monopole Bundle]]**, **[[Ex - Dirac Monopole as a Non-Trivial Bundle over S^2]]**, and **[[Thm - Dirac Quantization Condition]]**
+  - Local potentials patch to a global connection precisely when the normalized flux is integral.
+- **[[Ex - The Aharonov-Bohm Phase from the Magnetic Solenoid]]**
+  - A flat connection may have nontrivial holonomy when the base is not simply connected.
 
-- **[[Def - The Dirac Monopole Bundle]]**
-	- The **Dirac monopole bundle** is the non-trivial $U(1)$-bundle over $S^2$ associated with a magnetic monopole of charge $g$ at the origin of $\mathbb{R}^3$. Cover $S^2 = \{r = 1\}$ by $U = S^2 \setminus \{\text{south pole}\}$ and $V = S^2 \setminus \{\text{north pole}\}$; on $U$ take $A_U = g(1 - \cos\theta)d\phi$, on $V$ take $A_V = -g(1 + \cos\theta)d\phi$. The transition function $c_{VU} = \exp(-2ieg\phi/\hbar)$ is single-valued (as a function of $\phi \in [0, 2\pi)$) exactly when $2eg/\hbar \in \mathbb{Z}$. This is the topologically simplest non-trivial complex line bundle, with first Chern number $2eg/\hbar \in \mathbb{Z}$.
-
-- **[[Thm - Dirac Quantization Condition]]**
-	- For the wave function of a charge-$e$ particle in the field of a magnetic monopole of strength $g$ to be a well-defined section of a $U(1)$-bundle on $\mathbb{R}^3 \setminus \{0\}$, the product $eg$ must satisfy $\frac{2eg}{\hbar} \in \mathbb{Z}$. Equivalently, the magnetic charge is quantized in units of $\hbar/(2e)$. The proof: $\int_{S^2}\frac{\theta}{2\pi i} = \int_{S^2}\frac{eF}{2\pi\hbar} = \frac{eg \cdot 4\pi}{2\pi\hbar} = \frac{2eg}{\hbar}$, and this integer is the first Chern number of the bundle. The startling consequence — *the existence of any single magnetic monopole anywhere in the universe would quantize all electric charge* — is the original physical motivation for the existence of monopoles in grand unified theories.
-
-- **[[Ex - The Aharonov-Bohm Phase from the Magnetic Solenoid]]** (⭐⭐⭐)
-	- Consider an infinitely long, infinitely thin solenoid along the $z$-axis with magnetic flux $\Phi$ confined to its interior; outside the solenoid $B = 0$. Show that $A = \frac{\Phi}{2\pi} d\phi$ is a valid potential on $\mathbb{R}^3 \setminus \{z\text{-axis}\}$, and that for an electron passing on opposite sides of the solenoid the two paths differ by a holonomy phase $e^{(ie/\hbar)\oint A} = e^{ie\Phi/\hbar}$. Conclude that the interference pattern shifts by an amount depending only on $\Phi$, proving the potential is physically observable in quantum mechanics even when the field vanishes on the particle's trajectory.
-
-- **[[Ex - Dirac Monopole as a Non-Trivial Bundle over S^2]]** (⭐⭐⭐)
-	- Build the Dirac monopole bundle explicitly using the two-patch trivialization above. Verify the transition function $c_{VU} = e^{-2ieg\phi/\hbar}$ is single-valued iff $2eg/\hbar \in \mathbb{Z}$. Compute the first Chern number $c_1 = \frac{1}{2\pi}\int_{S^2}F = 2g/\hbar$ (in units with $e = 1$), giving a topological derivation of the quantization condition independent of the local patching argument.
-
-> [!tip] Unlocked: Topological Quantum Field Theory *(from Mathematical Physics)*
-> Wilson lines and their products around closed loops are the *only* gauge-invariant local observables of a pure gauge theory. **Chern-Simons theory** in $2 + 1$ dimensions is the topological field theory whose action is $\frac{k}{4\pi}\int_M \mathrm{tr}(A \wedge dA + \frac{2}{3} A \wedge A \wedge A)$, and whose correlation functions of Wilson loops compute the **Jones polynomial** of the link the loops trace — a deep connection between gauge theory and knot theory. The Aharonov-Bohm effect is the simplest possible instance of the "Wilson line as physical observable" principle.
-
-> [!tip] Unlocked: Magnetic Monopoles in Grand Unified Theories *(from Particle Physics)*
-> 't Hooft and Polyakov showed independently in 1974 that *any* spontaneously broken gauge theory whose unbroken subgroup contains a $U(1)$ factor — including all realistic grand unified theories with $G \supset SU(5)$ — automatically contains topologically stable magnetic monopole solutions of mass $\sim M_W/\alpha$. Dirac's quantization condition, which here was a consequence of bundle topology, becomes a *prediction* of the spectrum of stable particles, and the early universe should have produced monopoles in abundance. The **monopole problem** — that we observe none — was a major motivation for the inflationary cosmology of Guth and Linde.
-
-> [!note] Exercise Index — §1.4
+> [!note] Exercises
 > [[Exercise Index - §1.4 Monopoles, Aharonov-Bohm, and Topological Effects]]
 
----
+## §1.5 Topological enrichment: zeros of vector fields
+
+The existing vector-field material is preserved as an enrichment linking local indices to global topology. It is not needed for the connection–electromagnetism development.
+
+- [[Def - Index of a Vector Field at a Zero]]
+- [[Thm - Poincare-Hopf Theorem]] and [[Thm - Hairy Ball Theorem]]
+- [[Ex - Index of the Source-Sink Vector Field on the Sphere]]
+- [[Ex - Stiefel Vector Field on the Odd Sphere is Nowhere-Zero]]
+- [[Exercise Index - §1.1 Vector Fields and Euler Characteristic]]
 
 # Sources and Targets
 
-**Targets — what do we usually try to prove?**
-
-Problems in this topic fall into a small number of recurring shapes. The first and most common target is **computing the curvature of a given connection** — start from a connection 1-form $\omega$ in a local frame and use $F = d\omega + \omega \wedge \omega$ to extract the field strength. The second is **proving a bundle is non-trivial**, usually by computing the integral of the curvature over a closed surface and getting a non-zero integer (the first Chern number); a non-trivial bundle admits no global frame and so its sections must be patched together from local sections. The third is **proving a connection is flat** (curvature zero) or computing its holonomy around given loops — the typical question "is parallel transport path-independent?" reduces to "is the connection flat *and* the loop simply connected?". The fourth target is **deriving gauge-invariant physical equations** from a Lagrangian by the minimal-coupling prescription, then verifying gauge invariance explicitly. The fifth target, distinctive to the physics half of the chapter, is **detecting a topological/global effect** — Aharonov-Bohm phase, monopole quantization, magnetic flux through a non-contractible loop — where the answer is forced by topology even when the local fields are zero. Recognizing which target you have is half the battle, because each comes with a stereotyped route.
-
-**Sources — what assumptions do we usually leverage?**
-
-The recurring sources are equally stereotyped. **A local trivialization or frame is chosen** — almost every computation begins by picking a frame on a patch and writing the connection 1-form as a matrix; the answer is then frame-independent (a tensor) only after explicit verification. **A topological condition is given** — "the bundle is over $S^2$", "the configuration space is $\mathbb{R}^3$ minus the $z$-axis", "the parameter space has $\pi_1 = \mathbb{Z}$" — and these immediately determine which integrals are well-defined and which are not. **A symmetry or gauge invariance is required** — the form of the answer (the modified Lagrangian, the covariant derivative, the field strength) is largely fixed once you demand gauge invariance, leaving only one or two free coefficients. **A specific connection is given by its local potential** — the Levi-Civita connection on a surface, the trivial connection on $M \times \mathbb{R}^k$, the EM connection with $A = q(1 - \cos\theta)d\phi$. The route from source to target almost always runs: choose a frame → write down $\omega$ → compute $F = d\omega + \omega \wedge \omega$ → integrate over the relevant cycle → interpret the integer obtained as either a Chern number, a holonomy phase, or a quantization condition. The explicit articulation of this route is the content of the Problem-Solving Strategy section below.
-
----
+A typical input is a bundle whose local coefficients must be differentiated covariantly. The immediate targets are a connection, its curvature, and gauge-covariant observables. Local frames turn the problem into matrix-valued differential forms; frame-change laws decide which expressions are global. In the abelian case, the hierarchy compresses to
+$$
+\text{unitary connection }\nabla
+\longrightarrow \text{local potential }A
+\longrightarrow \text{curvature }F=dA
+\longrightarrow \text{flux and holonomy}.
+$$
+Local questions are answered by choosing a frame. Global questions are answered by checking overlap data, periods, or holonomy.
 
 # Legal Operations
 
-These are the moves almost every problem in this topic is assembled from. When stuck, scan the list and try each one. Everything is self-contained: a reader with no gauge-theory background should be able to follow each operation from the description alone.
-
-**Legal operations:**
-
-1. **Choose a local trivialization and compute everything component-wise.** A vector bundle is locally a product, and the connection 1-form $\omega^\alpha{}_\beta$, curvature $F^\alpha{}_\beta$, and section components $\psi^\alpha$ all become matrices/columns of ordinary smooth functions and forms once a [[Def - Local Trivialization|trivialization]] is chosen. The frame-dependence rules ($\omega_V = c_{UV}^{-1}\omega_U c_{UV} + c_{UV}^{-1}dc_{UV}$, $F_V = c_{UV}^{-1} F_U c_{UV}$, $\psi_V = c_{VU}\psi_U$) tell you what changes and what is invariant. *Trigger:* any computation involving covariant derivatives; *Pattern:* "pick a frame, do the calculation, check the answer transforms correctly."
-
-2. **Apply the curvature formula $F = d\omega + \omega \wedge \omega$.** Once the connection 1-form $\omega$ is written down in a frame, the curvature is given by the structure equation. For abelian connections like $U(1)$ the $\omega \wedge \omega$ term vanishes (commuting matrix entries), so $F = d\omega$ — making EM curvature literally exact in any patch where $A$ is single-valued. For non-abelian connections (Yang-Mills, Levi-Civita) the quadratic term survives and produces the famous "curvature is non-linear in the gauge field" structure. *Trigger:* "compute the field strength"; *Pattern:* identify whether the structure group is abelian to know whether to keep or drop the $\omega \wedge \omega$ term.
-
-3. **Integrate the curvature over a closed surface to extract a Chern number.** For a $U(1)$-bundle on a manifold $M$, the quantity $\frac{1}{2\pi i}\int_\Sigma F$ over any closed surface $\Sigma \subset M$ is an integer — the first Chern number of the bundle restricted to $\Sigma$. This is how topology of the bundle is extracted from local geometric data. *Trigger:* "is this bundle trivial?", "what is the magnetic charge?", "what is the quantization condition?"; *Pattern:* set up the integral over a topologically essential 2-cycle and demand it be an integer multiple of $2\pi$.
-
-4. **Use the Leibniz rule to break covariant derivatives apart.** $\nabla(f\sigma) = f\nabla\sigma + \sigma \otimes df$ converts a problem about $\nabla(f\sigma)$ into a problem about $\nabla\sigma$ plus a known correction. This is the *only* axiom that distinguishes a connection from a generic differential operator, and it is the move that justifies "factoring out smooth functions" in component computations. *Trigger:* a covariant derivative of a product $f\sigma$ or a tensor product $\sigma \otimes \tau$; *Pattern:* split into "differentiate-each-factor" terms.
-
-5. **Apply the minimal-coupling prescription $\partial_\mu \to \partial_\mu - (ie/\hbar) A_\mu$.** Given any equation of motion for a free particle, the equation for the same particle in an external EM field is obtained by replacing ordinary partials by the $U(1)$-covariant derivative. This converts a *gauge-non-invariant* equation (which transforms inconsistently under $\psi \to e^{(ie/\hbar)f}\psi$) into a gauge-invariant one. *Trigger:* "write down the Schrödinger/Dirac/Klein-Gordon equation with EM interaction"; *Pattern:* find every $\partial_\mu$, replace it with $\nabla_\mu = \partial_\mu - (ie/\hbar)A_\mu$, verify gauge invariance afterwards.
-
-6. **Compute holonomy as a path-ordered exponential of $-\int_\gamma\omega$.** Parallel transport around a path is the path-ordered exponential of the connection's negative integral; for *abelian* connections the path-ordering is unnecessary and holonomy reduces to $\exp\bigl(-\oint_\gamma\omega\bigr)$. For the EM connection this gives $\exp\bigl((ie/\hbar)\oint A\bigr) = \exp\bigl((ie/\hbar)\int_\Sigma F\bigr)$ where $\Sigma$ bounds $\gamma$ — the latter by Stokes. *Trigger:* "what phase does the wave function pick up around a loop?", "what is the Aharonov-Bohm phase?"; *Pattern:* convert line integral of $A$ to surface integral of $F$ when applicable.
-
-7. **Compute the Kronecker index of a vector field at a zero by going to a small circle and counting rotations.** For a vector field $v$ on a surface with $v(p) = 0$, surround $p$ by a small circle $S^1_\epsilon$, choose a metric, measure the angle $\theta(q)$ that $v$ makes with a fixed reference direction, and compute $\frac{1}{2\pi}\oint_{S^1_\epsilon}d\theta \in \mathbb{Z}$. The answer is the [[Def - Index of a Vector Field at a Zero|index]] $j_v(p)$, independent of the choices. *Trigger:* "what is the index?" or "verify Poincaré-Hopf for this field"; *Pattern:* zero-by-zero summation always gives $\chi(M)$.
-
-8. **Use a partition of unity to construct global objects from local ones.** Every paracompact manifold admits a [[Def - Partition of Unity on a Manifold|partition of unity]] subordinate to any open cover, and this is the universal tool for building global connections, metrics, hermitian forms, etc.: choose a trivializing cover, do the trivial construction locally, glue via the partition of unity. *Trigger:* "does there exist a connection / hermitian form / global section of...?"; *Pattern:* the answer is yes whenever it would be locally; partition of unity does the assembly.
-
-9. **Detect non-triviality of a bundle by a non-zero topological invariant.** A vector bundle is trivial iff it admits a global frame iff (for line bundles) its first Chern class vanishes. To prove a bundle is *not* trivial, compute a topological invariant (Chern number, Stiefel-Whitney class, or just an index of a section) and show it is non-zero. *Trigger:* "is the bundle trivial?" or "does it admit a nowhere-zero section?"; *Pattern:* trivial bundles have trivial topological invariants — the contrapositive forces non-triviality.
-
-**Illegal but tempting operations:**
-
-> [!warning] 1. Treating the connection 1-form $\omega$ as a tensor
-> It is tempting to think of $\omega$ as a 1-form on $M$ taking values in $\mathrm{End}(E)$ — and locally it is — but $\omega$ does *not* transform as a tensor under change of frame. The correct transformation $\omega_V = c_{UV}^{-1}\omega_U c_{UV} + c_{UV}^{-1}dc_{UV}$ contains an inhomogeneous "Maurer-Cartan" piece $c_{UV}^{-1}dc_{UV}$ that destroys tensoriality. A standard error is to compute $\omega$ in two frames and conclude they "should be related by conjugation alone"; getting different answers is then misdiagnosed as a calculation error rather than as the genuine inhomogeneity. The fix: always include the $c^{-1}dc$ correction, or work with the *difference* of two connections (which *is* a tensor — see [[Thm - Existence of Connections via Partitions of Unity]]).
-
-> [!warning] 2. Concluding that a closed 2-form is exact on a non-simply-connected manifold
-> On a contractible domain like $\mathbb{R}^n$ the Poincaré lemma says every closed form is exact, so any field $F = dA$ for some global $A$. Outside a contractible setting this fails dramatically. The classic case is the Dirac monopole: on $\mathbb{R}^3 \setminus \{0\}$ the field $B = (g/r^2)\hat r$ is closed but *not* exact, because $\int_{S^2} B = 4\pi g \ne 0$ violates Stokes. The fix: check the relevant de Rham cohomology before assuming a global potential exists; if $H^2_{\mathrm{dR}}(M) \ne 0$ you may need a bundle with non-trivial topology rather than a global gauge.
-
-> [!warning] 3. Discarding the $\omega \wedge \omega$ term in non-abelian curvature
-> For the $U(1)$-bundle of electromagnetism, $F = dA$ — clean and exact in any patch. It is tempting to copy this to general bundles and write $F = d\omega$. This is *wrong* for any non-abelian structure group: the correct formula is $F = d\omega + \omega \wedge \omega$, with the quadratic piece reflecting that $\omega$ takes values in a non-commutative matrix algebra. The Yang-Mills field strength $F = dA + A \wedge A$ has this non-linearity essentially, and it is the source of the *self-interaction* of the gluon and the asymptotic-freedom phenomenon of QCD. The fix: only drop $\omega \wedge \omega$ when the structure group is abelian.
-
-> [!warning] 4. Treating gauge transformations as physical motions
-> Two field configurations related by a gauge transformation $A \to A + df$ are physically *identical* — they describe the same physical situation, even though the components of $A$ change. It is tempting to think of $A \to A + df$ as a small physical perturbation, or to compute energies for the "two different configurations". This is a category error: a gauge transformation is a relabelling, not a process. The fix: only quote *gauge-invariant* quantities ($F$, $\oint A$ over closed loops, $|\psi|^2$); never quote $A_\mu$ at a single point as a physical observable.
-
----
+1. **Choose a local frame.** Write $s=eu$ and $\nabla=d+A$; never treat $A$ as a global tensor.
+2. **Change frame covariantly.** Use $A'=g^{-1}Ag+g^{-1}dg$ and $F'=g^{-1}Fg$.
+3. **Take differences of connections.** The inhomogeneous terms cancel, so $\nabla'-\nabla\in\Omega^1(M;\operatorname{End}E)$.
+4. **Square the covariant derivative.** On sections, $d_\nabla^2=F_\nabla\wedge(-)$.
+5. **Specialize to rank one.** Commutators vanish, hence $F=dA$ and $dF=0$.
+6. **Integrate curvature over a closed surface.** For a Hermitian line bundle, $(2\pi i)^{-1}\int F_\nabla$ is an integer when evaluated on an integral $2$-cycle.
+7. **Integrate the connection along a path.** In $U(1)$, transport is $\exp(-iq\int_\gamma A)$ for the convention $\nabla=d+iqA$.
 
 # Problem-Solving Strategy
 
-The problems in this topic are won or lost at the moment you identify whether the question is *local* or *global* — that is, whether the answer requires only the connection 1-form on a patch or whether it depends on how the patches glue together. The local questions are straightforward calculus; the global questions are topology in disguise. Sorting them out cleanly is the master skill.
-
-If the problem **asks for the curvature of a given connection** — for example, "compute the field strength of the EM connection $A = q(1 - \cos\theta)d\phi$" — then you are squarely in the local regime. The route is fixed: write $\omega$ as a matrix of 1-forms in a frame, compute $d\omega$ entry-by-entry, compute $\omega \wedge \omega$ as a matrix product (zero if the structure group is abelian), add. The answer is a matrix of 2-forms, $F = d\omega + \omega \wedge \omega$, and you can then read off scalar curvatures, sectional curvatures, or Chern integrands depending on what the problem wants. The most common mistake is to forget the $\omega \wedge \omega$ term — it vanishes for the EM connection but contributes for Yang-Mills, Levi-Civita, and any other non-abelian connection.
-
-If the problem **asks whether a bundle is trivial**, switch immediately to the global perspective. A real-line or complex-line bundle is trivial iff it admits a nowhere-zero section iff its first Chern class (for complex) or orientation class (for real) vanishes. The simplest test is to construct an obstruction: compute $\int_\Sigma F$ for the curvature of *any* connection on the bundle and any closed surface $\Sigma$; if this integer is non-zero the bundle is non-trivial. This is how Poincaré-Hopf detects non-triviality of $TS^2$, how the Dirac quantization condition detects non-triviality of the monopole bundle, and how characteristic classes detect non-triviality in general.
-
-If the problem **involves a charged particle in an EM field** and asks for the equation of motion, the route runs through *minimal coupling*. Start from the free-particle action $S_0[\gamma] = -m\int dt$ (relativistic) or $S_0 = \int (T - V)\,dt$ (non-relativistic), add the coupling term $e\int_\gamma A$ (the integral of the 4-potential along the world line), and obtain the modified Lagrangian $L^* = L + eA_\mu \dot x^\mu$. The Euler-Lagrange equations reproduce the Lorentz force, and the modified canonical momentum is $p^* = p + eA$. To quantize, replace $p^*_\mu \to -i\hbar\partial_\mu$, i.e. $p_\mu \to -i\hbar\partial_\mu - eA_\mu$ — the [[Def - Connection on a Vector Bundle|covariant-derivative]] prescription. *Every* result in this section, from the modified Hamiltonian to Schrödinger's equation in a magnetic field to the Dirac equation in QED, is obtained by this single substitution.
-
-If the problem **involves a topological or global effect** — Aharonov-Bohm phase, monopole quantization, flux through a non-contractible 2-cycle — the route runs through *holonomy and Chern numbers*. The wave function picks up a phase $\exp\bigl(\frac{ie}{\hbar}\oint_\gamma A\bigr)$ around any closed loop $\gamma$, even if $F = dA$ vanishes everywhere on $\gamma$. By Stokes' theorem this phase equals $\exp\bigl(\frac{ie}{\hbar}\int_\Sigma F\bigr)$ whenever $\gamma = \partial\Sigma$, but on a topologically non-trivial domain $\gamma$ may not bound, in which case the phase depends only on the cohomology class of $A$. For the Aharonov-Bohm setup, the solenoid is "removed from spacetime" and the phase becomes $\exp(ie\Phi/\hbar)$ where $\Phi$ is the magnetic flux through the solenoid — a quantity *defined as an integral over a forbidden region*, yet observable through interference. For the Dirac monopole, the consistency of the two-patch gauge requires $\frac{2eg}{\hbar} \in \mathbb{Z}$; this is the same statement as "the first Chern number of the bundle is an integer."
-
-If the problem **asks about the existence of vector fields with prescribed zeros**, route through Poincaré-Hopf. The total index $\sum j_v(p)$ is forced to equal $\chi(M)$; this *constrains* what zero patterns are realizable. A field on $S^2$ with a single zero must have index $+2$; a field on $T^2$ may have no zeros at all (since $\chi = 0$); a field on a genus-$g$ surface must have total index $2 - 2g$.
-
-The meta-strategy threading through all of the above: **every problem in this chapter ultimately reduces to "is this integral over a closed cycle non-zero?", and a non-zero answer is a topological invariant**. The chapter is the introductory case of the deep mantra of gauge theory and characteristic classes: the integrals of curvature polynomials over cycles are integers, and these integers classify the bundle. Whether you are computing $\chi(S^2)$ as the integral of the Gauss curvature, the Chern number as the integral of $F$, or the Aharonov-Bohm phase as the line integral of $A$, you are always computing the same kind of object — a topological invariant disguised as a geometric integral.
-
----
+First type every object: global connection, local potential, global curvature, local coefficient of a section. Next choose whether the transformation is passive or active and keep that choice fixed. Compute locally, then prove the answer glues using its transformation law. For a local differential question, calculate $F=dA+A^2$. For a global question, inspect transition functions and periods. For an observable attached to a loop, compute holonomy; Stokes' theorem may replace it by curvature flux only when a suitable spanning surface and trivialization exist.
 
 # Most Reusable Properties
 
-- **[[Thm - Poincare-Hopf Theorem|Poincaré-Hopf Theorem]]**: $\sum_p j_v(p) = \chi(M)$. This single equation is reused throughout topology, geometry, and physics: it forces *every* tangent vector field on $S^{2k}$ to vanish somewhere, it constrains the zero pattern of any flow on a closed manifold, and via the Morse-theoretic version it computes Euler characteristics from critical-point counts of smooth functions. **Typical use:** Whenever you are studying flows, gradient fields, or sections of $TM$ on a closed manifold, the total index is fixed by topology; this turns existence questions ("does a nowhere-zero field exist?") into divisibility questions ("does $\chi$ vanish?").
-
-- **[[Def - Connection on a Vector Bundle|Covariant Derivative]] $\nabla$**: an $\mathbb{R}$-linear Leibniz operator $\Gamma(E) \to \Gamma(E \otimes T^*M)$. This is the *universal* tool for differentiating sections of any bundle, generalizing $d$ on functions, $\partial_\mu$ on tensor components, the Levi-Civita connection on $TM$, and the EM gauge connection on a wave function. **Typical use:** any time you need to differentiate a section of a non-trivial bundle, you reach for *some* connection; the choice may be canonical (Levi-Civita on a Riemannian manifold) or arbitrary (then you use the affine-space structure: any two connections differ by an $\mathrm{End}(E)$-valued 1-form).
-
-- **Curvature formula $F = d\omega + \omega \wedge \omega$**: in any local frame, the curvature of a connection is the exterior derivative of the connection 1-form plus the wedge-square. The $\omega \wedge \omega$ term vanishes iff the structure group is abelian. **Typical use:** translating physics into geometry. The Yang-Mills field strength is $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + [A_\mu, A_\nu]$, the Riemann curvature is $R^\rho{}_{\sigma\mu\nu} = \partial_\mu\Gamma^\rho{}_{\nu\sigma} - \dots + \Gamma\Gamma - \Gamma\Gamma$, and the EM field is $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$ — all instances of the same formula in different bundles.
-
-- **[[Thm - Bianchi Identity for a Vector-Bundle Connection|Bianchi Identity]] $d_\nabla F = 0$**: the curvature of any connection satisfies the exterior covariant derivative being zero. **Typical use:** This is the source of every conservation law in geometric physics: the homogeneous Maxwell equations $dF = 0$ (no monopoles), the conservation of energy-momentum $\nabla_\mu T^{\mu\nu} = 0$ (from the contracted second Bianchi $\nabla_\mu G^{\mu\nu} = 0$), and the Jacobi identity for Yang-Mills fields. The Bianchi identity is "free" — it costs nothing once you have a connection, and it constrains how the curvature can vary in spacetime.
-
-- **The minimal-coupling prescription $\partial_\mu \to \partial_\mu - (ie/\hbar) A_\mu$**: replace ordinary derivatives by $U(1)$-covariant derivatives to couple any free-field equation to electromagnetism. **Typical use:** going from a free Schrödinger / Klein-Gordon / Dirac equation to the EM-coupled version, and verifying gauge invariance of the result. The same prescription generalises to non-abelian gauge theories (Yang-Mills) by replacing $A_\mu \in \mathfrak{u}(1)$ with a Lie-algebra-valued field; this is the route by which the entire Standard Model of particle physics is written down.
-
----
+- Connections exist but are not canonical; their differences are tensors.
+- Curvature is global although the connection matrix is not.
+- Flat means locally pure gauge, not necessarily globally trivial.
+- In an abelian theory $A\wedge A=0$, but topology may still obstruct a global potential.
+- Gauge covariance is a bookkeeping identity forced by changing local frames.
 
 # Bridges
 
-1. **[[Riemannian Geometry I — Connections and Covariant Differentiation]] — Levi-Civita is a vector-bundle connection.** Every vector-bundle connection of this topic specialises to the Levi-Civita connection when applied to the tangent bundle $TM$ of a Riemannian manifold and the additional axioms of metric compatibility and zero torsion are imposed. The connection 1-form becomes the Christoffel symbols $\omega^i{}_j = \Gamma^i{}_{jk} dx^k$; the curvature 2-form becomes the Riemann tensor $R^i{}_{jkl}$. Conversely, a connection on $E$ does not require any metric on $E$; one can have a perfectly good connection on the wave-function line bundle without ever introducing a metric on the fibre. Vector-bundle connections are therefore the more *general* notion, with Levi-Civita the special case where the bundle happens to be $TM$ and a Riemannian metric is fixed.
+- [[Riemannian Geometry I — Connections and Covariant Differentiation]] develops affine connections, parallel transport, and Levi–Civita geometry.
+- [[Gauge Theory III — Connections in Principal and Associated Bundles]] replaces frame matrices by a global principal connection.
+- Gauge Theory IV will turn invariant polynomials in curvature into characteristic classes.
+- Gauge Theory V will derive Maxwell and Yang–Mills equations from the Hodge star and action principles.
 
-2. **[[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] — vector-bundle connections become principal-bundle connections.** The transition functions of a vector bundle take values in a Lie group $G$ (the structure group), and forgetting the fibre and remembering only the action of $G$ on itself produces the **principal $G$-bundle** associated with the vector bundle. A connection on the vector bundle then becomes a connection on the principal bundle — a $\mathfrak{g}$-valued 1-form on the total space, satisfying equivariance and reproducing the Maurer-Cartan form on vertical vectors. This bridge is essential for non-abelian gauge theories: the fields of Yang-Mills are most naturally connections on a principal $SU(N)$-bundle, with the vector-bundle version (the connection on an *associated* bundle for some representation) being a derived notion.
+# Sources
 
-3. **[[Algebraic Topology III — Higher Homotopy and Chern Forms]] — Chern classes are integrals of curvature.** Given a hermitian connection on a complex vector bundle $E$ of rank $k$, the **Chern forms** $c_j(E, \nabla) = \frac{1}{(2\pi i)^j} \cdot j!^{-1}\cdot$ (a polynomial in $F$) are closed differential forms whose de Rham cohomology classes are independent of $\nabla$ — they are *topological invariants of $E$ alone*. The first Chern form of a line bundle is $c_1 = \frac{F}{2\pi i}$, whose integral over any closed 2-cycle is an integer. This is the general framework in which the Dirac quantization condition lives — see [[Thm - Dirac Quantization Condition]] and the Algebraic Topology topic for the higher-rank story.
-
-4. **[[Algebraic Topology II — Fundamental Group and Covering Spaces]] — holonomy is a representation of $\pi_1$.** For a *flat* connection ($F = 0$), parallel transport around a loop depends only on the loop's homotopy class, giving a homomorphism $\pi_1(M) \to G$ (the **holonomy representation**). The space of flat connections modulo gauge equivalence on a manifold $M$ is the space $\mathrm{Hom}(\pi_1(M), G)/G$ of conjugacy classes of representations. The Aharonov-Bohm setup is the simplest case: $M = \mathbb{R}^3 \setminus \{z\text{-axis}\}$ has $\pi_1 = \mathbb{Z}$, $G = U(1)$, and the space of flat $U(1)$-connections modulo gauge is $\mathrm{Hom}(\mathbb{Z}, U(1)) = U(1)$ — parameterized by the magnetic flux through the removed axis, modulo $2\pi$.
-
-5. **[[Riemannian Geometry IV — Classical Geometry of Surfaces in R^3]] — Poincaré-Hopf is Gauss-Bonnet for surfaces.** For a closed orientable surface $M$, Poincaré-Hopf says $\sum j_v(p) = \chi(M)$, and the Gauss-Bonnet theorem says $\frac{1}{2\pi}\int_M K\,dA = \chi(M)$. These are two computations of the *same* integer, by genuinely different means: the first is a sum of local rotation counts at zeros, the second is the integral of the Gaussian curvature. The bridge between them is provided by Chern's intrinsic proof of Gauss-Bonnet, which interpolates between the two via a clever choice of connection on $TM$ that vanishes away from the zeros of a chosen vector field — see [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for details.
-
----
-
-# Insights
-
-**The unifying frame: a vector bundle with connection is "the same shape of geometry as a Riemannian manifold, with an arbitrary structure group replacing $O(n)$".** All the apparatus of differential geometry — parallel transport, curvature, geodesics, holonomy — generalizes from the tangent bundle to an arbitrary vector bundle, provided you keep track of what role each piece played. The Levi-Civita connection becomes "a connection", the Riemann tensor becomes "the curvature of that connection", and the orthogonality group becomes "the structure group $G$". The benefit of this generality is that you can do geometry on bundles that are *not* tangent bundles — for example, the wave-function bundle of a charged particle, on which there is no notion of distance between two states but a perfectly good notion of phase comparison along a path. The Levi-Civita connection turns out to be one specific vector-bundle connection (on $TM$, with $G = O(n)$), and the EM connection another (on a line bundle, with $G = U(1)$); they are siblings, not separate frameworks.
-
-**The true name of a connection is "infinitesimal parallel transport".** The formal definition — an operator satisfying linearity and Leibniz — is the *check*, but the operational meaning is parallel transport. To say $\nabla_X \sigma = 0$ along a curve is to say that $\sigma$ is parallel-transported by the connection. The covariant derivative $\nabla_X \sigma$ at a point is the *failure* of $\sigma$ to be parallel-transported, measured in a coordinate-invariant way: it is the rate at which $\sigma(p + tX)$ deviates from its parallel translate from $p$. Whenever you encounter $\nabla_X \sigma$ in a formula and find it abstract, replace it mentally with "the deviation from parallelism" and the geometry becomes vivid. The whole calculus of curvature, holonomy, and Chern classes is the calculus of *deviations from parallelism* organized at all scales.
-
-**A trigger-reaction pattern.** **When you see a covariant derivative acting on a section of a $U(1)$-bundle of wave functions, react by reading off the EM 4-potential.** The map $\nabla_\mu \mapsto -i\hbar A_\mu$ (up to factors of $e/\hbar$) is the dictionary; once you know it, *every* quantum-mechanical equation in an EM field is recognized as a $U(1)$-covariant version of a free-particle equation. Conversely, **when you see a closed but possibly non-exact 1-form on a non-simply-connected region, react by suspecting a magnetic flux through a hole**. The Aharonov-Bohm setup is the prototype, but the same pattern shows up in superconductivity (flux quantization in superconducting rings), in the quantum Hall effect (the integer Chern number of the Bloch bundle over the Brillouin zone), and throughout topological condensed matter. The reaction is: "compute the line integral around a non-contractible loop — that is the gauge-invariant observable."
-
-**The first Chern number is the world's simplest topological invariant, and electromagnetism made it physical.** Of all the characteristic classes that distinguish bundles, the first Chern class is the simplest: a single integer per closed surface, $c_1(L) = \frac{1}{2\pi}\int_\Sigma F \in \mathbb{Z}$. Dirac noticed in 1931 that this integer has a physical interpretation: it is the magnetic charge enclosed (in units of $\hbar/(2e)$). This is the first historical example of a topological invariant being measured experimentally; the entire modern subject of *topological phases of matter* (quantum Hall, topological insulators, Weyl semimetals) descends from this insight, with various Chern numbers and their generalizations becoming experimental observables. The chapter's punchline — that the physical world is built out of $U(1)$-bundles whose topology constrains physical observables — was first formulated by Dirac in the context of a hypothetical particle that has never been observed, yet predicts a structural feature of electromagnetism (quantization of electric charge) that is universal.
-
-**Inheritance: Poincaré-Hopf, Gauss-Bonnet, Chern-Gauss-Bonnet, and the Atiyah-Singer index theorem all inherit from a single principle.** Each of these theorems sets a global topological invariant equal to an integral of a local geometric quantity, and each is a special case of the next. Poincaré-Hopf ($\sum j_v = \chi$) is for vector fields on a manifold; Gauss-Bonnet ($\int K = 2\pi\chi$) is for a Riemannian metric on a closed surface; Chern-Gauss-Bonnet generalizes to higher even dimensions; Atiyah-Singer ($\mathrm{ind}\,D = \int \widehat{A}(M) \mathrm{ch}(E)$) generalizes to arbitrary elliptic operators on vector bundles. The lineage is one of progressively more general "objects whose zeros have an index that sums to a topological number" — and **Atiyah-Singer**, the deepest geometric theorem of the twentieth century, is the universal version of "an analytic count of zeros equals a topological invariant". The chapter's two-line Poincaré-Hopf result is the seed from which all of this grows.
+- Andriy Haydys, *Introduction to Gauge Theory*, §2.1 and §2.3.
+- Konstantin Wernli, *Mathematical Gauge Theory*, §§3.1–3.2 for the electromagnetic specialization and Hodge-sign conventions developed later in Gauge Theory V.

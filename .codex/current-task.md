@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Rewrite the Gauge Theory I topic page around the connection–curvature–electromagnetism arc, then rebuild the Hermitian line-bundle, `U(1)` connection, gauge transformation, Wilson holonomy, minimal-coupling, monopole, and Aharonov–Bohm pages with one normalization.
+Audit and rewrite the remaining Gauge Theory I examples and vector-field enrichment, repair exercise indexes, then run the five substantive review passes and full mechanical/link audits.
 
 ## Last completed commit
 `570c6a7` is the user-provided source import immediately preceding this task; the task initialization commit follows this ledger update.

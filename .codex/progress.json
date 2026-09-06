@@ -134,7 +134,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Core vector-bundle connection calculus rebuilt independently: definition, local frame law, induced exterior derivative, affine structure, curvature, tensoriality, existence, and Bianchi now have fixed conventions and complete proofs. Mechanical math/LaTeX/wikilink audits pass on the changed files. Next rebuild the chapter map and abelian electromagnetic pages."
+      "notes": "Core calculus plus the chapter map and abelian specialization are independently rebuilt: complex/Hermitian lines, U(1) connection, active/passive gauge laws, Wilson transport, minimal coupling, monopole bundle, flux quantization, and Aharonov–Bohm holonomy use one convention. Math, LaTeX, wikilink, and notation-gap audits are clean. Remaining unit pages are the Levi–Civita/trivial-curvature/monopole calculations, exercise indexes, and preserved vector-field enrichment; audit or rewrite these, then perform five reviews."
     },
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
@@ -436,9 +436,9 @@
     }
   },
   "current_unit": "gt-i",
-  "next_action": "Rewrite the Gauge Theory I topic page around the connection–curvature–electromagnetism arc, then rebuild the Hermitian line-bundle, U(1) connection, gauge transformation, Wilson holonomy, minimal-coupling, monopole, and Aharonov–Bohm pages with one normalization.",
+  "next_action": "Audit and rewrite the remaining Gauge Theory I examples and vector-field enrichment, repair exercise indexes, then run the five substantive review passes and full mechanical/link audits.",
   "unresolved": [],
-  "last_commit": "2cea9a1",
+  "last_commit": "d699b78",
   "ready_to_merge": false,
-  "updated": "2026-09-06T05:10:00Z"
+  "updated": "2026-09-06T05:35:00Z"
 }
