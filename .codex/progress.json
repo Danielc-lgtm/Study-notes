@@ -65,9 +65,9 @@
   "status": "in_progress",
   "branch": "codex/improve-all-differential-geometry-dg-v",
   "pr": {
-    "number": null,
-    "url": null,
-    "state": null
+    "number": 9,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/9",
+    "state": "open"
   },
   "merged_prs": [
     {
@@ -651,7 +651,7 @@
   "current_unit": "dg-v",
   "next_action": "Read the complete 28-page DG V graph, audit flow and Lie-bracket proofs, and record the target description before editing.",
   "unresolved": [],
-  "last_commit": "86a334b",
+  "last_commit": "59a0633",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

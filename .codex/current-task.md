@@ -26,7 +26,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `codex/improve-all-differential-geometry-dg-v`
 
 ## Pull request
-_not opened yet for DG V_
+`#9 https://github.com/Danielc-lgtm/Study-notes/pull/9 (open checkpoint)`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -50,7 +50,7 @@ _none_.
 Read the complete 28-page DG V graph, audit flow and Lie-bracket proofs, and record the target description before editing.
 
 ## Last completed commit
-`86a334b`
+`59a0633`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
