@@ -6,8 +6,8 @@
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
 
 ## Scope
-1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — in progress
-2. Gauge Theory II — Principal bundles, representations, and bundle classification — pending
+1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete (PR #19)
+2. Gauge Theory II — Principal bundles, representations, and bundle classification — in progress
 3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — pending
 4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — pending
 5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — pending
@@ -37,7 +37,7 @@ PR #20 — open; remains unmerged until Gauge Theory II passes every review.
 - Relevant prerequisite pages in Differential Geometry, Functional Analysis, Algebraic Topology, and Special Relativity
 
 ## Completed units
-- Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, PR #19 ready to merge.
+- Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, merged in PR #19.
 
 ## Current unit
 Gauge Theory II — Principal bundles, representations, and bundle classification.
