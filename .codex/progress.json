@@ -65,8 +65,8 @@
   "status": "in_progress",
   "branch": "codex/create-complete-gauge-theory-gt-xi",
   "pr": {
-    "number": null,
-    "url": null,
+    "number": 30,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/30",
     "status": "open"
   },
   "merged_prs": [
@@ -574,7 +574,7 @@
   "current_unit": "gt-xi",
   "next_action": "Extract Wernli §§4.1–5.3 and build Gauge Theory XI from homotopy and homology through intersection forms, four-manifold classification, and Donaldson theory.",
   "unresolved": [],
-  "last_commit": "4745d4a",
+  "last_commit": "e41e1a1",
   "ready_to_merge": false,
-  "updated": "2026-09-06T23:50:00Z"
+  "updated": "2026-09-06T23:55:00Z"
 }

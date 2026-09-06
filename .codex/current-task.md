@@ -28,7 +28,7 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `codex/create-complete-gauge-theory-gt-xi`
 
 ## Pull request
-Gauge Theory XI PR pending creation.
+Gauge Theory XI PR #30 (open): https://github.com/Danielc-lgtm/Study-notes/pull/30
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
