@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-vii",
+  "branch": "codex/create-complete-gauge-theory-gt-viii",
   "pr": {
-    "number": 26,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/26",
+    "number": null,
+    "url": null,
     "status": "open"
   },
   "merged_prs": [
@@ -104,6 +104,12 @@
       "number": 25,
       "unit": "gt-vi",
       "main_sha": "c296516",
+      "date": "2026-09-06"
+    },
+    {
+      "number": 26,
+      "unit": "gt-vii",
+      "main_sha": "746386e",
       "date": "2026-09-06"
     }
   ],
@@ -424,7 +430,7 @@
     "gt-viii": {
       "title": "Gauge Theory VIII — Fredholm Maps, Transversality, Determinant Lines, and Degree",
       "mode": "create",
-      "status": "pending",
+      "status": "in_progress",
       "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII — Fredholm Theory and Transversality.md",
       "paths": [
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory VIII — Fredholm Theory and Transversality.md"
@@ -521,9 +527,9 @@
     }
   },
   "current_unit": "gt-viii",
-  "next_action": "Merge Gauge Theory VII, then create Gauge Theory VIII for Kuranishi models, Sard-Smale and parametric transversality, mod-2 and integer degree, determinant lines, orientations, and equivariance.",
+  "next_action": "Extract Haydys §6 and build Gauge Theory VIII: Kuranishi models, Sard-Smale and parametric transversality, mod-2 and integer degree, determinant lines, orientations, and equivariant Fredholm maps.",
   "unresolved": [],
-  "last_commit": "0c79aa2",
+  "last_commit": "746386e",
   "ready_to_merge": false,
   "updated": "2026-09-06T00:00:00Z"
 }
