@@ -16,7 +16,7 @@ Gauge-field equations use the metric only through the Hodge star. Its square cha
 > $$*: \Omega^k(M)\to\Omega^{n-k}(M)$$
 > satisfying
 > $$\alpha\wedge *\beta=\langle\alpha,\beta\rangle_g\operatorname{vol}_g$$
-> for all $k$-forms $\alpha,eta$.
+> for all $k$-forms $\alpha,\beta$.
 
 On $k$-forms,
 $$*^2=(-1)^{k(n-k)+q}.$$
