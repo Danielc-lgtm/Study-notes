@@ -122,7 +122,9 @@ So the Lie derivative of a coordinate $1$-form is the differential of the corres
 
 **Corollary — Lie derivative of a closed form is exact.** If $d\omega = 0$, then by Cartan $\mathcal{L}_X\omega = d(\iota_X\omega)$, which is exact. So the Lie derivative of a closed form is exact, and on the level of de Rham cohomology, the Lie derivative is zero: $[\mathcal{L}_X\omega] = 0$ in $H^k_{dR}(M)$. This is the cohomological statement of "infinitesimal symmetries of a closed form leave its cohomology class fixed".
 
-**Calibration check.** Compute $\mathcal{L}_{\partial_x}(y\,dx)$ on $\mathbb{R}^2$ via Cartan (answer: $0$, since $\iota_{\partial_x}(y\,dx) = y$ and $d(y) = dy$, then $\iota_{\partial_x}(dy) = 0$ — wait, recompute: $\iota_{\partial_x}(y\,dx) = y \cdot dx(\partial_x) = y$. Then $d(y) = dy$. So $d(\iota_{\partial_x}(y\,dx)) = dy$. Now $d(y\,dx) = dy \wedge dx = -dx \wedge dy$, and $\iota_{\partial_x}(-dx \wedge dy) = -(dx(\partial_x)\,dy - dy(\partial_x)\,dx) = -(1\cdot dy - 0) = -dy$. So $\mathcal{L}_{\partial_x}(y\,dx) = dy + (-dy) = 0$ — correct, since $y\,dx$ is invariant under $x$-translation); compute $\mathcal{L}_{\partial_\theta}(d\theta)$ on $\mathbb{R}^2 \setminus \{0\}$ (answer: $0$); verify $\mathcal{L}_X(dx \wedge dy) = (\partial_x X^1 + \partial_y X^2)\,dx \wedge dy$ for $X = X^1 \partial_x + X^2 \partial_y$ on $\mathbb{R}^2$ (the divergence in the plane); confirm $\mathcal{L}_X = \mathcal{L}_X \mathcal{L}_Y - \mathcal{L}_Y \mathcal{L}_X$ where $[X, Y]$ replaces the operator commutator. If you can also explain why $\mathcal{L}_X$ commutes with $d$ (one line via Cartan and $d^2 = 0$), you have understood the operator.
+**Calibration check.** On $\mathbb{R}^2$, compute $\mathcal{L}_{\partial_x}(y\,dx)=0$ from Cartan's formula: $d(\iota_{\partial_x}(y\,dx))=dy$ while $\iota_{\partial_x}d(y\,dx)=-dy$. Verify also
+$$\mathcal{L}_X(dx\wedge dy)=(\partial_xX^1+\partial_yX^2)\,dx\wedge dy$$
+for $X=X^1\partial_x+X^2\partial_y$, and the operator identities $[\mathcal{L}_X,\mathcal{L}_Y]=\mathcal{L}_{[X,Y]}$ and $[\mathcal{L}_X,d]=0$.
 
 ---
 

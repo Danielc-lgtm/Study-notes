@@ -96,7 +96,6 @@ The coefficient triple is $\operatorname{curl}(P, Q, R)$. Applying $\beta^{-1}$ 
 >
 > Similarly $dQ \wedge dy = (\partial_x Q)\,dx \wedge dy - (\partial_z Q)\,dy \wedge dz$ and $dR \wedge dz = (\partial_x R)\,dx \wedge dz + (\partial_y R)\,dy \wedge dz$ (after sign normalization to increasing multi-indices).
 >
-> Wait, let me be more careful. $dR \wedge dz = (\partial_x R)\,dx \wedge dz + (\partial_y R)\,dy \wedge dz + (\partial_z R)\,dz \wedge dz = (\partial_x R)\,dx \wedge dz + (\partial_y R)\,dy \wedge dz$. To normalize, $dx \wedge dz = -dz \wedge dx$.
 >
 > Summing all three:
 > $d\omega = -(\partial_y P)\,dx \wedge dy - (\partial_z P)\,dx \wedge dz + (\partial_x Q)\,dx \wedge dy - (\partial_z Q)\,dy \wedge dz + (\partial_x R)\,dx \wedge dz + (\partial_y R)\,dy \wedge dz$.

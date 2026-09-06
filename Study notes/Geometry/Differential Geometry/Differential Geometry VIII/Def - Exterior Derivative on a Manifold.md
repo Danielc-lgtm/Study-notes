@@ -118,7 +118,11 @@ The coefficients are the three components of $\operatorname{curl}(P, Q, R)$, wit
 $$d\omega = \left(\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} + \frac{\partial w}{\partial z}\right)dx \wedge dy \wedge dz = (\operatorname{div}(u, v, w))\,dx \wedge dy \wedge dz.$$
 The divergence is $d$ on $2$-forms in [[Def - Dimension|dimension]] three.
 
-**Is an instance — the closed-not-exact angular form.** On $\mathbb{R}^2 \setminus \{0\}$, $\omega = (-y\,dx + x\,dy)/(x^2 + y^2)$ satisfies $d\omega = 0$. The verification is a direct computation: $d\omega = (\partial_x \frac{x}{x^2+y^2})\,dx \wedge dy + (\partial_y \frac{-y}{x^2+y^2})\,dy \wedge dx$; the two coefficient functions are equal (both are $(y^2-x^2)/(x^2+y^2)^2$), and the signs $dy \wedge dx = -dx \wedge dy$ cause the terms to add (because the second term has $\partial_y$ acting on $-y/(x^2+y^2)$ which is $(y^2 - x^2)/(x^2+y^2)^2$, opposite sign to $\partial_x \frac{x}{x^2+y^2} = (y^2-x^2)/(x^2+y^2)^2$ — actually the same sign — wait, let me redo. We need $d\omega = \partial_x(x/(x^2+y^2))\,dx\wedge dy + \partial_y(-y/(x^2+y^2))\,dy \wedge dx = ((y^2-x^2)/(x^2+y^2)^2 - (x^2-y^2)/(x^2+y^2)^2)\,dx \wedge dy$... after careful computation this equals zero). See [[Ex - A Form that is Closed but Not Exact on the Punctured Plane]] for the full computation; $\omega$ is closed but not exact, since $\int_{S^1}\omega = 2\pi \neq 0$.
+**Is an instance — the closed-not-exact angular form.** On $\mathbb{R}^2\setminus\{0\}$, write
+$$\omega=P\,dx+Q\,dy,\qquad P=-\frac{y}{x^2+y^2},\quad Q=\frac{x}{x^2+y^2}.$$
+Then $d\omega=(\partial_xQ-\partial_yP)\,dx\wedge dy$. Direct differentiation gives
+$$\partial_xQ=\frac{y^2-x^2}{(x^2+y^2)^2}=\partial_yP,$$
+so $d\omega=0$. Nevertheless $\int_{S^1}\omega=2\pi$, so $\omega$ is not exact; see [[Ex - A Form that is Closed but Not Exact on the Punctured Plane]].
 
 **Is NOT an instance — partial differentiation alone.** The operator "differentiate each coefficient and put the result back where it was" is *not* the exterior derivative. The exterior derivative wedges on a new $dx^j$, raising the degree; without that wedge the operator would not satisfy $d^2 = 0$, would not commute with pullbacks, and would not have an invariant formula. The degree-raising wedge is essential.
 

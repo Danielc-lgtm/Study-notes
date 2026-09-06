@@ -63,10 +63,10 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "active",
-  "branch": "codex/improve-all-differential-geometry-dg-vii",
+  "branch": "codex/improve-all-differential-geometry-dg-viii",
   "pr": {
-    "number": 11,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/11",
+    "number": 12,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/12",
     "status": "open"
   },
   "merged_prs": [
@@ -427,7 +427,7 @@
     "dg-viii": {
       "title": "Differential Geometry VIII — Differential Forms",
       "mode": "improve",
-      "status": "pending",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry VIII — Differential Forms.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry VIII — Differential Forms.md",
@@ -457,17 +457,17 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry VIII/Thm - Wedge Product Properties.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry VIII/Thm - d-Squared-is-Zero.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the unit has broad coverage of wedge, d, pullback, contraction, Lie derivative, and vector-calculus correspondences, but multiple pages retain explicit failed calculations and drafting dialogue. The uniqueness/locality proof for d is tangled, coordinate d computations require sign verification, one Lie-derivative calibration states a malformed commutator identity, and the punctured-plane derivative explanation is arithmetically inconsistent. Target: organize differential forms as the alternating algebra carrying the unique natural degree-one derivation. Derive wedge signs from permutations, construct d locally and prove uniqueness/locality without circularity, establish d^2=0 and pullback naturality with complete coordinate arguments, and make interior/Lie derivatives executable through Cartan calculus. Exercises should give clean grad-curl-div translations, exact/closed obstructions, sign drills, and direct checks of the operator identities.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Diagnosis and target written before editing; drafting leakage identifies the first proof-repair pass. First proof-repair pass removes all failed-calculation dialogue and replaces it with typed derivations for pullback, locality, angular-form closedness, Cartan calculus, and grad-curl-div signs. Final proof audit replaces the invalid arbitrary-map uniqueness argument by a local-generator proof and distinguishes diffeomorphism conjugation. All mechanical audits pass; all 26 pages have resolved links and all examples occur on the topic page. Section 8.2 intentionally contains embedded exercise prompts rather than atomic exercise links."
     },
     "dg-ix": {
       "title": "Differential Geometry IX — Orientation, Integration, and Stokes' Theorem",
@@ -654,8 +654,8 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-vii",
-  "next_action": "Commit and push DG VII, merge PR #11, then create the DG VIII branch and diagnose differential forms.",
+  "current_unit": "dg-viii",
+  "next_action": "Commit and push DG VIII, merge PR #12, then create the DG IX branch and diagnose orientation, integration, and Stokes.",
   "unresolved": [],
   "last_commit": "8994ef6",
   "ready_to_merge": true,

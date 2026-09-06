@@ -105,9 +105,8 @@ $$\mathcal{L}_X(u\,dv) = Xu \cdot dv + u \cdot d(Xv).$$
 
 Compute the right side. First $\iota_X(u\,dv) = u \cdot \iota_X(dv) = u \cdot dv(X) = u \cdot Xv$. Now $d(\iota_X(u\,dv)) = d(u \cdot Xv) = du \cdot Xv + u \cdot d(Xv)$. (Using the standard product rule for $d$ on a product of functions, which is the $k = 0$ case of graded Leibniz.)
 
-Wait, that's slightly imprecise — $u \cdot Xv$ is a single function, and $d(u \cdot Xv)$ as a $1$-form is $du \cdot (Xv) + u \cdot d(Xv) = (Xv)\,du + u\,d(Xv)$ — Leibniz on a product of functions.
-
-Hmm, but $du \cdot Xv$ should be written as $(Xv)\,du$ since scalar multiplication is commutative. So $d(\iota_X(u\,dv)) = (Xv)\,du + u\,d(Xv)$.
+Since $\iota_X(u\,dv)=u(Xv)$ is a function, the ordinary Leibniz rule gives
+$$d(\iota_X(u\,dv))=d(u(Xv))=(Xv)\,du+u\,d(Xv).$$
 
 Next, $d(u\,dv) = du \wedge dv + u \cdot d^2(v) = du \wedge dv$ (using $d^2 v = 0$). So $\iota_X(d(u\,dv)) = \iota_X(du \wedge dv) = \iota_X(du) \wedge dv + (-1)^1 du \wedge \iota_X(dv) = (Xu)\,dv - du \wedge (Xv) = (Xu)\,dv - (Xv)\,du$ (the last by $du \wedge (Xv) = (Xv)\,du$, since $Xv$ is a scalar function and the wedge of a scalar function with $du$ is just scalar multiplication).
 
