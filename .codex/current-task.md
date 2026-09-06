@@ -28,7 +28,7 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `codex/create-complete-gauge-theory-gt-vi`
 
 ## Pull request
-Gauge Theory VI PR pending creation.
+PR #25 — open; remains unmerged until Gauge Theory VI passes every review.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages

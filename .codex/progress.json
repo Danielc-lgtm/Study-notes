@@ -65,8 +65,8 @@
   "status": "in_progress",
   "branch": "codex/create-complete-gauge-theory-gt-vi",
   "pr": {
-    "number": null,
-    "url": null,
+    "number": 25,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/25",
     "status": "open"
   },
   "merged_prs": [
@@ -492,7 +492,7 @@
   "current_unit": "gt-vi",
   "next_action": "Extract Haydys §4 and build Gauge Theory VI: Clifford algebras, spin representations, spin and Spin^c structures, Dirac operators, and the Weitzenböck formula.",
   "unresolved": [],
-  "last_commit": "6f77dba",
+  "last_commit": "f82c8c6",
   "ready_to_merge": false,
   "updated": "2026-09-06T00:00:00Z"
 }
