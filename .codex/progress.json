@@ -370,7 +370,7 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry VI/Thm - The Cotangent Bundle is a Smooth Manifold.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry VI/Thm - Vector Bundle Construction Lemma.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the unit has a strong local-frame/cocycle spine but the cotangent-bundle proof loses control of transition-map conventions and contains explicit drafting corrections instead of a valid cocycle proof. The topic falsely says vector-field pushforward is legal exactly for diffeomorphisms, several section-to-bundle “fully faithful” statements need base-map and locality qualifications, and the punctured-plane angle discussion confuses arctan with a genuine branch. Exactness, reparametrization orientation, bundle gluing topology, Möbius nontriviality, and all inverse-transpose formulas require line-by-line review. Target: organize the chapter around vector bundles as locally free linear data glued by a GL(k)-cocycle, with precise equivalence among trivializations, frames, sections, and transition matrices. Construct dual/cotangent bundles with one fixed convention and prove pairing invariance and cocycles without index ambiguity; distinguish pullback of covectors from projectable pushforward of vectors; derive df, line integrals, exactness, periods, and simply-connected path independence with oriented reparametrizations and complete proofs. Exercises should move fluently among gluing matrices, frames, sections, dual transformations, and integral tests.",
       "review": {
         "correctness": "open",
         "pedagogy": "open",
@@ -380,7 +380,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Phase 3.1 active."
+      "notes": "Diagnosis and target recorded before content editing. First rewrite: rebuild cotangent transition maps with a single convention and remove drafting leakage."
     },
     "dg-vii": {
       "title": "Differential Geometry VII — Tensors and Tensor Fields",
@@ -655,9 +655,9 @@
     }
   },
   "current_unit": "dg-vi",
-  "next_action": "Read the complete 29-page DG VI graph, audit bundle gluing, cotangent, pullback, exactness, and line-integral claims, then record the target.",
+  "next_action": "Rebuild the cotangent-bundle transition and cocycle proofs with one fixed trivialization convention, then align the construction exercise.",
   "unresolved": [],
-  "last_commit": "7729eb5",
+  "last_commit": "a94bee2",
   "ready_to_merge": false,
   "updated": "2026-09-05T00:00:00Z"
 }

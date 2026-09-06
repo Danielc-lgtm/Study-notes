@@ -39,7 +39,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry V — Vector Fields, Flows, and Brackets (`b6c873f`, PR #9)
 
 ## Current unit
-`dg-vi` — Differential Geometry VI, workflow Phase 3.1 (diagnose and envision).
+`dg-vi` — Differential Geometry VI, workflow Phase 4.1 (target-driven rewrite).
 
 ## Remaining units
 Differential Geometry VI–XII (seven units; VI is active).
@@ -48,10 +48,10 @@ Differential Geometry VI–XII (seven units; VI is active).
 _none_.
 
 ## Exact next action
-Read the complete 29-page DG VI graph, audit bundle gluing, cotangent, pullback, exactness, and line-integral claims, then record the target.
+Rebuild the cotangent-bundle transition and cocycle proofs with one fixed trivialization convention, then align the construction exercise.
 
 ## Last completed commit
-`7729eb5`
+`a94bee2`
 
 ## Merge policy
 `auto` — merge each completed unit into `main` immediately.
