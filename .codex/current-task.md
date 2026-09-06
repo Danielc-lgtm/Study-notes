@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–VI merged; Gauge Theory VII is current
+**Overall status:** in progress — Gauge Theory I–VI merged; Gauge Theory VII complete and ready to merge
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -12,7 +12,7 @@ Create a complete, self-contained Obsidian lecture-note series covering both `so
 4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — complete (PR #23; merged)
 5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — complete (PR #24; merged)
 6. Gauge Theory VI — Clifford algebras, spin geometry, and Dirac operators — complete (PR #25; merged)
-7. Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes — in progress
+7. Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes — complete (PR #26; ready to merge)
 8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — pending
 9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — pending
 10. Gauge Theory X — Seiberg–Witten invariants and four-manifold applications — pending
@@ -28,7 +28,7 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `codex/create-complete-gauge-theory-gt-vii`
 
 ## Pull request
-Gauge Theory VII PR pending creation.
+PR #26 — Gauge Theory VII complete and ready to merge.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -41,16 +41,16 @@ Gauge Theory VII PR pending creation.
 - Gauge Theory II — Principal bundles, representations, and classification — complete, merged in PR #20.
 
 ## Current unit
-Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes.
+Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree.
 
 ## Remaining units
-Gauge Theory VI–XI and the final audit.
+Gauge Theory VIII–XI and the final audit.
 
 ## Unresolved issues
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Build Gauge Theory VII from Haydys §5, including Sobolev multiplication, elliptic estimates, Fredholm theory, elliptic complexes, and gauge fixing.
+Merge PR #26, then create Gauge Theory VIII from Haydys §6.
 
 ## Last completed commit
 `0c79aa2` — corrected the Gauge Theory V curvature-variation and stress-energy formulas while initializing Gauge Theory VI.
