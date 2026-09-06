@@ -2,104 +2,39 @@
 type: definition
 subject: gauge-theory
 prereqs:
-  - "Def - Lie Group"
-  - "Def - The Lie Algebra of a Lie Group"
-  - "Def - Smooth Action of a Lie Group"
-  - "Def - Vector Field on a Manifold"
-tags: [geometry, gauge-theory, principal-bundles, lie-groups]
+  - "Def - Principal G-Bundle"
+  - "Def - One-Parameter Subgroup"
+tags: [gauge-theory, principal-bundle, fundamental-vector-field]
 ---
 
 # Notation
 
-$P \to M$ is a principal $G$-bundle: $G$ acts on $P$ smoothly, freely, and transitively on each fibre, on the right (we write $R_g : P \to P$, $p \mapsto p \cdot g$). $\mathfrak{g} = T_e G$ is the [[Def - The Lie Algebra of a Lie Group|Lie algebra]] of $G$, with elements $\xi, \eta, \zeta$. $V_p P := \ker(d\pi_p) \subseteq T_p P$ is the **vertical subspace** at $p \in P$, where $\pi : P \to M$ is the projection.
-
----
-
-# Axiom Motivation
-
-The first question is: given a Lie group action $G \curvearrowright P$, what is the natural way to package the *infinitesimal* version of this action? Each element $\xi \in \mathfrak{g}$ should generate a one-parameter subgroup $\exp(t\xi)$ of $G$, which acts on $P$ via the right action $R_{\exp(t\xi)}$. The orbit of a point $p \in P$ under this one-parameter group is a smooth curve $t \mapsto p \cdot \exp(t\xi)$ in $P$ — and its tangent vector at $t = 0$ is, by definition, the **fundamental vector field** $\xi^*$ at $p$:
-$$
-\xi^*_p := \frac{d}{dt}\bigg|_{t=0} R_{\exp(t\xi)}(p) = \frac{d}{dt}\bigg|_{t=0} p \cdot \exp(t\xi).
-$$
-This is the universal way of associating a vector field on $P$ to a Lie-algebra element of the acting group. It exists for any smooth Lie group action (not just principal bundles), and it is the geometric content of the slogan "the Lie algebra is the tangent space to the group at the identity".
-
-Now, why is $\xi^*$ *tangent to the fibre*? Because the right action preserves fibres: $\pi(p \cdot g) = \pi(p)$ for all $g \in G$, $p \in P$ (this is part of the definition of a principal bundle). So the orbit $t \mapsto p \cdot \exp(t\xi)$ lies entirely in the fibre $\pi^{-1}(\pi(p))$, and its tangent vector at $t = 0$ is tangent to the fibre — that is, vertical: $\xi^*_p \in V_p P = \ker(d\pi_p)$.
-
-Why is the map $\xi \mapsto \xi^*_p$ a *linear isomorphism* from $\mathfrak{g}$ to $V_p P$? Because the right action is free and transitive on each fibre. *Transitivity* means the orbit map $G \to \pi^{-1}(\pi(p))$, $g \mapsto p \cdot g$, is surjective; *freeness* means it is injective (no nonzero $\xi$ has $p \cdot \exp(t\xi) = p$ for all $t$). Together: the orbit map is a *diffeomorphism* $G \to \pi^{-1}(\pi(p))$. Differentiating at $e$ gives the linear isomorphism $\mathfrak{g} = T_e G \xrightarrow{\sim} T_p(\pi^{-1}(\pi(p))) = V_p P$.
-
-This isomorphism is the **vertical-space isomorphism**, and it is the foundation of the principal-connection formalism. It is what makes the verticality axiom $\omega(\xi^*) = \xi$ of a [[Def - Connection 1-Form on a Principal Bundle|connection 1-form]] well posed: $\omega$ acting on a fundamental vector field $\xi^*$ should reproduce the Lie-algebra element $\xi$ that generated it, and this is meaningful because every vertical vector at $p$ is uniquely $\xi^*_p$ for exactly one $\xi \in \mathfrak{g}$.
-
-A natural alternative: one could try to associate vector fields to Lie-algebra elements via the *left* action of $G$ on itself (giving left-invariant vector fields on $G$), then transport them to $P$ via the projection or via a section. The left-invariant approach works on $G$ itself but does not extend canonically to $P$ — it requires a choice of trivialisation, breaking canonicality. The right action, by contrast, *is* canonical (every principal bundle has a canonical right action, by definition), and the fundamental vector field construction passes through it. This is why fundamental vector fields are right-action fields, despite the use of left-invariant vector fields elsewhere in Lie theory.
-
-The map $\xi \mapsto \xi^*$ is a **Lie algebra anti-homomorphism**: $[\xi, \eta]^* = -[\xi^*, \eta^*]$, where the left bracket is on $\mathfrak{g}$ and the right is the Lie bracket of vector fields. The minus sign comes from the right-action convention (a left action would give $[\xi, \eta]^* = +[\xi^*, \eta^*]$). This is a standard fact about Lie group actions; the convention is consistent throughout the principal-bundle literature.
-
-What would break if we used a left action instead? The verticality axiom and the equivariance axiom of a connection would acquire opposite signs, the gauge transformation law would flip, and many formulas would change sign. The right-action convention is universal in the literature, and we follow it.
-
----
+Let $P\to M$ be a right principal $G$-bundle and $\mathfrak g=T_eG$.
 
 # The Definition
 
-Let $P \to M$ be a principal $G$-bundle with right action $R : P \times G \to P$, $(p, g) \mapsto p \cdot g$. Let $\xi \in \mathfrak{g} = T_e G$.
+> [!definition] Fundamental vector field
+> For $\xi\in\mathfrak g$, the **fundamental vector field** generated by the right action is
+> $$
+> \xi_P(p)=\left.\frac d{dt}\right|_0p\exp(t\xi).
+> $$
 
-The **fundamental vector field** generated by $\xi$ is the smooth vector field $\xi^* \in \mathfrak{X}(P)$ defined pointwise by
+It is vertical because the curve stays in $P_{\pi(p)}$. The map
+$$\mathfrak g\to V_pP=\ker d\pi_p,qquad\xi\mapsto\xi_P(p)$$
+is an isomorphism: it is the differential at $e$ of the torsor diffeomorphism $G\to P_{\pi(p)}$, $g\mapsto pg$.
+
+# Equivariance and Bracket Convention
+
+For $g\in G$,
 $$
-\xi^*_p := \frac{d}{dt}\bigg|_{t=0} R_{\exp(t\xi)}(p) = \frac{d}{dt}\bigg|_{t=0} p \cdot \exp(t\xi) \in T_p P.
+(dR_g)_p\xi_P(p)=(\operatorname{Ad}_{g^{-1}}\xi)_P(pg).
 $$
-Equivalently, $\xi^*_p = (dR_p)_e(\xi)$, where $R_p : G \to P$, $g \mapsto p \cdot g$, is the orbit map of $p$ and $(dR_p)_e : T_e G = \mathfrak{g} \to T_p P$ is its differential at the identity.
-
-**Properties:**
-
-1. **Verticality:** $\xi^*_p \in V_p P = \ker(d\pi_p)$ for every $\xi \in \mathfrak{g}$ and $p \in P$.
-
-2. **Vertical-space isomorphism:** the map $\xi \mapsto \xi^*_p$ is a linear isomorphism $\mathfrak{g} \xrightarrow{\sim} V_p P$ at every $p \in P$. In particular, $\dim V_p P = \dim G$ at every $p$.
-
-3. **Equivariance:** $(R_g)_*\xi^* = (\mathrm{Ad}_{g^{-1}}\xi)^*$, where $(R_g)_*$ denotes pushforward under $R_g$ and $\mathrm{Ad}_{g^{-1}}$ is the adjoint action of $G$ on $\mathfrak{g}$. Equivalently: pushing the fundamental vector field of $\xi$ forward by right-translation gives the fundamental vector field of the adjoint-transformed element.
-
-4. **Lie algebra anti-homomorphism:** $[\xi, \eta]^* = -[\xi^*, \eta^*]$, where the left bracket is the Lie bracket on $\mathfrak{g}$ and the right is the Lie bracket of vector fields on $P$.
-
-The collection $\{\xi^*\}_{\xi \in \mathfrak{g}}$ spans a rank-$(\dim G)$ subbundle of $TP$, the **vertical distribution** $VP \subseteq TP$, which equals $\ker(d\pi) \subseteq TP$.
-
----
-
-# Relate to Other Fields / Compression
-
-Fundamental vector fields are the prototypical **infinitesimal generators of a Lie group action**. The same construction works for any smooth left or right action of $G$ on a manifold $N$: each $\xi \in \mathfrak{g}$ generates a vector field $\xi^* \in \mathfrak{X}(N)$ given by $\xi^*_n = \tfrac{d}{dt}|_{t=0} \exp(t\xi) \cdot n$ (left action) or $n \cdot \exp(t\xi)$ (right action). For the rotation action of $SO(3)$ on $\mathbb{R}^3$, the fundamental vector fields are exactly the rotational generators $\mathbf{e}_a \times \mathbf{x}$. For the time-translation action of $\mathbb{R}$ on phase space (Hamiltonian flow), the fundamental vector field of the generator $1 \in \mathbb{R} = \mathfrak{g}$ is the Hamiltonian vector field $X_H$.
-
-In **geometric mechanics**, the fundamental vector fields of a Lie group action on a symplectic manifold are the infinitesimal generators of momentum-map symmetries: the momentum map $\mu : M \to \mathfrak{g}^*$ has the property that $\xi^*$ is the Hamiltonian vector field of the function $\langle \mu, \xi \rangle$. The bridge between group actions and Hamiltonian flow is via fundamental vector fields.
-
-In **representation theory**, the differential of a representation $\rho : G \to \mathrm{GL}(V)$ at the identity is $d\rho : \mathfrak{g} \to \mathfrak{gl}(V)$, sending each $\xi \in \mathfrak{g}$ to a linear endomorphism of $V$. This $d\rho(\xi)$ is the fundamental "vector field" of $\xi$ for the action of $G$ on $V$ — except $V$ is linear, so the vector field reduces to the linear endomorphism $v \mapsto d\rho(\xi)(v)$.
-
-**True name:** the fundamental vector field is *the velocity vector at the identity of the one-parameter group of right-translations generated by $\xi$, transported to the basepoint $p$ via the orbit diffeomorphism*. The operational picture: $\xi^*_p$ is "the direction in which the right action moves $p$ when you flow it by $\exp(t\xi)$". This picture explains why fundamental vector fields are tangent to fibres (the right action preserves fibres) and why they exhaust the vertical directions (the action is transitive on each fibre).
-
----
-
-# Examples / Corollaries
-
-**Example ($P = G$ over a point).** For the trivial principal bundle $G \to \{*\}$ — $G$ itself as a principal $G$-bundle over a point — the right action is right-translation $R_g(h) = hg$, and the fundamental vector field of $\xi \in \mathfrak{g}$ at $h \in G$ is $\xi^*_h = \tfrac{d}{dt}|_{t=0} h \exp(t\xi) = (dL_h)_e \xi = \xi^L_h$, the value at $h$ of the **left-invariant vector field** $\xi^L$ associated to $\xi$. So fundamental vector fields *on $G$ for the right action* are the same as left-invariant vector fields — the standard objects of Lie theory.
-
-**Example ($P = M \times G$, trivial bundle).** For the trivial principal bundle $P = M \times G$ over $M$ with right action $(x, g) \cdot h = (x, gh)$, the fundamental vector field of $\xi$ at $(x, g)$ is $\xi^*_{(x, g)} = (0, (dL_g)_e\xi) \in T_x M \oplus T_g G$ — entirely vertical (no $T_x M$ component), and equal in the $T_g G$ slot to the left-invariant vector field on $G$. So vertical vectors are exactly tangent to the fibre $\{x\} \times G$, and the vertical-space isomorphism is $\xi \mapsto (dL_g)_e\xi$.
-
-**Example ($P = F^O(M)$, orthonormal frame bundle).** For the orthonormal frame bundle of a Riemannian manifold $(M, g)$ — a principal $O(n)$-bundle — fundamental vector fields of $\xi \in \mathfrak{o}(n)$ correspond to "infinitesimal orthogonal rotations of the frame". Each $\xi$ is an antisymmetric $n \times n$ matrix, and $\xi^*$ at a frame $f = (e_1, \ldots, e_n) \in F^O(M)_x$ is the velocity vector of the curve $t \mapsto (f \cdot \exp(t\xi))_1, \ldots, (f \cdot \exp(t\xi))_n)$ — that is, rotating the frame in the tangent space $T_x M$.
-
-**Is NOT an instance:** a vector field on $P$ that is *tangent to the fibre but not generated by a Lie-algebra element* does not exist — by the vertical-space isomorphism, every fibre-tangent vector at $p$ is $\xi^*_p$ for some $\xi \in \mathfrak{g}$. So "vertical" and "fundamental" are pointwise the same.
-
-**Is NOT an instance:** the horizontal lift $\tilde X$ of a vector field $X$ on $M$ (the lift to $P$ that is horizontal with respect to a chosen connection) is *not* a fundamental vector field — it is horizontal, not vertical. Horizontal lifts depend on the connection; fundamental vector fields do not.
-
-**Corollary.** For any connection 1-form $\omega \in \Omega^1(P; \mathfrak{g})$ satisfying the verticality axiom $\omega(\xi^*) = \xi$ (see [[Def - Connection 1-Form on a Principal Bundle]]), the map $\omega : V_p P \to \mathfrak{g}$ is the *inverse* of the vertical-space isomorphism $\mathfrak{g} \to V_p P$. So a connection 1-form, restricted to the vertical subspace, is fixed and depends only on the bundle structure — the connection degree of freedom is in how $\omega$ acts on *horizontal* tangent vectors.
-
-**Corollary.** The vertical distribution $VP$ is an integrable distribution (in the sense of Frobenius), and its integral manifolds are the fibres of $\pi$. This is the geometric content of "the fundamental vector fields are tangent to fibres".
-
-**Calibration check.** If you have understood the definition, you should be able to: (i) compute the fundamental vector field of $\xi = i \in \mathfrak{u}(1) = i\mathbb{R}$ on a $U(1)$-bundle locally trivialised as $U \times U(1)$ with coordinates $(x, e^{i\theta})$ — answer: $\xi^*_{(x, e^{i\theta})} = (0, i e^{i\theta} \partial_{e^{i\theta}})$ which in the angular coordinate $\theta$ is just $\partial_\theta$; (ii) verify that for $\xi = i\sigma_3/2 \in \mathfrak{su}(2)$ acting on $SU(2) = S^3$ from the right, the fundamental vector field generates the Hopf fibration's fibres ($U(1)$-orbits inside $S^3$); (iii) explain why the assignment $\xi \mapsto \xi^*$ is an *anti*-homomorphism (with a minus sign) for the right-action convention, by computing $[\xi, \eta]^*$ versus $[\xi^*, \eta^*]$ on the trivial bundle $G \to *$.
-
----
+Indeed
+$$p\exp(t\xi)g=pg\bigl(g^{-1}\exp(t\xi)g\bigr)=pg\exp(t\operatorname{Ad}_{g^{-1}}\xi).$$
+Because this is a right action, $\xi\mapsto\xi_P$ is a Lie-algebra **anti-homomorphism**:
+$$[\xi_P,\eta_P]=-[\xi,\eta]_P.$$
+The sign reverses for the fundamental-field convention using $\exp(-t\xi)$.
 
 # Unlocked by This
 
-> [!tip] Verticality Axiom of a Connection *(from Gauge Theory III)*
-> The fundamental vector fields are the input to the verticality axiom $\omega(\xi^*) = \xi$ of a [[Def - Connection 1-Form on a Principal Bundle|principal connection]]. This axiom says: the connection 1-form, restricted to the canonically determined vertical subspace, is the inverse of the vertical-space isomorphism $\mathfrak{g} \to V_p P$. Without fundamental vector fields, this axiom is meaningless — they are the bridge between $\mathfrak{g}$ and $V_p P$.
-
-> [!tip] Momentum Maps and Hamiltonian Actions *(from Geometric Mechanics)*
-> On a symplectic manifold $(M, \omega)$ with a Hamiltonian action of $G$, every $\xi \in \mathfrak{g}$ generates a fundamental vector field $\xi^*$ that is also a Hamiltonian vector field — the Hamiltonian of $\langle \mu, \xi \rangle$ for the momentum map $\mu : M \to \mathfrak{g}^*$. This is the bridge from Lie group actions to conserved quantities (Noether's theorem in its modern symplectic form), and the foundational construction of **symplectic reduction**.
-
-> [!tip] Equivariant Cohomology *(from Algebraic Topology)*
-> Fundamental vector fields are the input to the **Cartan model** of equivariant cohomology: the equivariant de Rham complex is $(\Omega^\bullet(M) \otimes S^\bullet \mathfrak{g}^*)^G$ with differential $d_G = d - \iota_{\xi^*}$ acting on equivariant differential forms. The Cartan model uses fundamental vector fields to twist the de Rham differential by the group action, producing a complex whose cohomology is the equivariant cohomology $H_G^\bullet(M)$ — the bridge between differential geometry and the algebraic topology of $G$-actions.
+A principal connection form is the inverse of $\xi\mapsto\xi_P(p)$ on vertical vectors and vanishes on a chosen horizontal complement.

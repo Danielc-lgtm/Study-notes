@@ -59,7 +59,7 @@ $$
 
 In the category of pointed covers of $X$, a pointed cover $(\tilde X, \tilde x_0) \to (X, x_0)$ is **regular** when the corresponding subgroup of $\pi_1(X, x_0)$ does not depend on the choice of base point $\tilde x_0 \in p^{-1}(x_0)$ — equivalently, when all conjugates of the subgroup coincide. Equivalently, in the unpointed category of covers, a cover $\tilde X \to X$ is regular when it is isomorphic to itself by every fibre permutation — the cover has "full Galois symmetry."
 
-In the language of [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet|fibre bundles]], regular covers are exactly the **principal $G$-bundles** for $G$ a discrete group: the deck group acts freely and transitively on fibres, making each fibre a $G$-torsor. Non-regular covers are associated bundles to principal bundles via the action of $G$ on a set with non-trivial stabilisers.
+In the language of [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification|fibre bundles]], regular covers are exactly the **principal $G$-bundles** for $G$ a discrete group: the deck group acts freely and transitively on fibres, making each fibre a $G$-torsor. Non-regular covers are associated bundles to principal bundles via the action of $G$ on a set with non-trivial stabilisers.
 
 ---
 

@@ -245,7 +245,7 @@ Closedness uses Bianchi $\nabla\theta = 0$ combined with the cyclic property of 
 
 - **Stokes's theorem and integration.** Combined with Stokes, this theorem makes Chern numbers $\int_{M^{2r}} c_r$ well-defined invariants: integration of an exact form over a closed manifold vanishes (Stokes), so the transgression difference does not affect the integral. This is the cornerstone of the integration-based extraction of topological invariants from geometric data.
 
-- **[[Gauge Theory IV — Yang–Mills Fields and Instantons|Yang–Mills theory]]** — In Yang–Mills, the action is $\int \mathrm{Tr}(F \wedge \star F)$ (depends on metric via $\star$) and the topological term is $\int \mathrm{Tr}(F \wedge F)$ (depends only on cohomology class). By this theorem, the topological term is connection-independent on a closed manifold, allowing the Bogomolnyi bound $S_{YM} \geq 8\pi^2|c_2|$ to be derived purely topologically. Instantons saturate the bound; their action is determined by the topology alone.
+- **[[Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons|Yang–Mills theory]]** — In Yang–Mills, the action is $\int \mathrm{Tr}(F \wedge \star F)$ (depends on metric via $\star$) and the topological term is $\int \mathrm{Tr}(F \wedge F)$ (depends only on cohomology class). By this theorem, the topological term is connection-independent on a closed manifold, allowing the Bogomolnyi bound $S_{YM} \geq 8\pi^2|c_2|$ to be derived purely topologically. Instantons saturate the bound; their action is determined by the topology alone.
 
 ---
 

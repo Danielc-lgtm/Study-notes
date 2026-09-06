@@ -64,7 +64,7 @@ In the category $\mathbf{Top}_{/X}$ of topological spaces over $X$ (with morphis
 
 # Relate to Other Fields / Compression
 
-A covering map is a **fibre bundle with discrete fibre**. Once you know fibre bundles, covering maps are the simplest case: the fibre is a discrete set (no continuous structure), so the structure group is the symmetric group of the fibre (or a subgroup thereof). The bundle classification of covers is by subgroups of $\pi_1$ of the base — see [[Thm - Galois Correspondence for Covering Spaces]] and [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]].
+A covering map is a **fibre bundle with discrete fibre**. Once you know fibre bundles, covering maps are the simplest case: the fibre is a discrete set (no continuous structure), so the structure group is the symmetric group of the fibre (or a subgroup thereof). The bundle classification of covers is by subgroups of $\pi_1$ of the base — see [[Thm - Galois Correspondence for Covering Spaces]] and [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]].
 
 A covering map is also the **topological analogue of a Galois extension of fields**. In Galois theory, finite separable extensions of $K$ correspond to subgroups of $\mathrm{Gal}(\bar K / K)$; in covering-space theory, connected covers correspond to subgroups of $\pi_1$. The analogy is precise: Grothendieck's étale fundamental group makes it a literal statement of equivalence of categories.
 
@@ -92,7 +92,7 @@ A covering map is also the **topological analogue of a Galois extension of field
 
 **Is NOT an instance: the projection $\mathbb{R}^2 \to \mathbb{R}$, $(x,y) \mapsto x$.** This is a fibre bundle with fibre $\mathbb{R}$, but $\mathbb{R}$ is *not discrete* — the fibre is connected, not a disjoint union of points. So this is a fibration but not a covering map.
 
-**Is NOT an instance: the Hopf map $S^3 \to S^2$.** This is a fibre bundle with fibre $S^1$ — connected, not discrete — so it is not a covering. (It is a principal $\mathrm{U}(1)$-bundle, generalising the structure of a covering.) See [[Ex - The Hopf Map is a Submersion]] and [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]].
+**Is NOT an instance: the Hopf map $S^3 \to S^2$.** This is a fibre bundle with fibre $S^1$ — connected, not discrete — so it is not a covering. (It is a principal $\mathrm{U}(1)$-bundle, generalising the structure of a covering.) See [[Ex - The Hopf Map is a Submersion]] and [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]].
 
 **Corollary (uniqueness of path lifts):** for a covering $p : \tilde X \to X$, any continuous path $\gamma : I \to X$ together with a chosen starting lift $\tilde x_0 \in p^{-1}(\gamma(0))$ has a unique lift $\tilde\gamma : I \to \tilde X$ with $\tilde\gamma(0) = \tilde x_0$ — see [[Thm - Path Lifting and Homotopy Lifting]].
 
@@ -110,7 +110,7 @@ A covering map is also the **topological analogue of a Galois extension of field
 > Once you have coverings, every connected cover $\tilde X \to X$ corresponds to a subgroup $p_*\pi_1(\tilde X) \leq \pi_1(X)$, and this correspondence is a bijection — see [[Thm - Galois Correspondence for Covering Spaces]]. So the cardinality of the **set of connected covers** of $X$ equals the cardinality of the **set of subgroups** of $\pi_1(X)$, a purely algebraic count.
 
 > [!tip] Fibre Bundles and Principal Bundles *(from Gauge Theory II)*
-> A covering map is a fibre bundle with discrete fibre. The general theory of [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet|fibre bundles]] allows the fibre to be any topological space and the structure group to be any topological group acting on the fibre. Principal bundles ($G$-torsors) are the "fundamental" fibre bundles; vector bundles come from associated-bundle constructions. The whole machinery of [[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection|gauge theory]] generalises the covering-space picture.
+> A covering map is a fibre bundle with discrete fibre. The general theory of [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification|fibre bundles]] allows the fibre to be any topological space and the structure group to be any topological group acting on the fibre. Principal bundles ($G$-torsors) are the "fundamental" fibre bundles; vector bundles come from associated-bundle constructions. The whole machinery of [[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection|gauge theory]] generalises the covering-space picture.
 
 > [!tip] The Étale Fundamental Group *(from Algebraic Geometry)*
 > Grothendieck replaced topological covers with **étale morphisms** of schemes (algebraic-geometric analogues of "local isomorphisms") and recovered a fundamental group $\pi_1^{\mathrm{ét}}(X)$ classifying finite étale covers. For complex algebraic varieties $\pi_1^{\mathrm{ét}}$ is the profinite completion of the topological $\pi_1$; for $X = \mathrm{Spec}\,K$ it is the absolute Galois group of $K$. This was Grothendieck's bridge from topology to number theory.
