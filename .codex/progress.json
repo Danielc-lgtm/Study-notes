@@ -65,8 +65,8 @@
   "status": "in_progress",
   "branch": "codex/create-complete-gauge-theory-gt-viii",
   "pr": {
-    "number": null,
-    "url": null,
+    "number": 27,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/27",
     "status": "open"
   },
   "merged_prs": [
@@ -529,7 +529,7 @@
   "current_unit": "gt-viii",
   "next_action": "Extract Haydys §6 and build Gauge Theory VIII: Kuranishi models, Sard-Smale and parametric transversality, mod-2 and integer degree, determinant lines, orientations, and equivariant Fredholm maps.",
   "unresolved": [],
-  "last_commit": "746386e",
+  "last_commit": "a72d973",
   "ready_to_merge": false,
   "updated": "2026-09-06T00:00:00Z"
 }

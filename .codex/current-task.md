@@ -28,7 +28,7 @@ The persistent section-by-section coverage matrix is `.codex/gauge-theory-source
 `codex/create-complete-gauge-theory-gt-viii`
 
 ## Pull request
-Gauge Theory VIII PR pending creation.
+PR #27 — open; remains unmerged until Gauge Theory VIII passes every review.
 
 ## Sources
 - `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
@@ -53,7 +53,7 @@ _none_. Source convention conflicts will be made explicit rather than silently n
 Extract Haydys §6 and build Gauge Theory VIII from Kuranishi models through equivariant degree.
 
 ## Last completed commit
-`0c79aa2` — corrected the Gauge Theory V curvature-variation and stress-energy formulas while initializing Gauge Theory VI.
+`a72d973` — initialized Gauge Theory VIII after merging the completed Sobolev and elliptic unit.
 
 ## Merge policy
 `auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
