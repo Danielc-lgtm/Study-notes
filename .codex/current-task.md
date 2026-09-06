@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** active — Differential Geometry VII complete and ready to merge; Differential Geometry VIII is next
+**Overall status:** active — Differential Geometry VII merged; Differential Geometry VIII diagnosis complete and rewrite in progress
 
 ## Goal
 Improve every Differential Geometry topic and its complete subpage graph to the vault standard.
@@ -13,7 +13,7 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 5. Differential Geometry V — Vector Fields, Flows, and the Lie Bracket — complete
 6. Differential Geometry VI — Vector Bundles and the Cotangent Bundle — complete
 7. Differential Geometry VII — Tensors and Tensor Fields — in progress
-8. Differential Geometry VIII — Differential Forms — pending
+8. Differential Geometry VIII — Differential Forms — in progress
 9. Differential Geometry IX — Orientation, Integration, and Stokes' Theorem — pending
 10. Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius — pending
 11. Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map — pending
@@ -23,10 +23,10 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 `improve`
 
 ## Working branch
-`codex/improve-all-differential-geometry-dg-vii`
+`codex/improve-all-differential-geometry-dg-viii`
 
 ## Pull request
-`#11 https://github.com/Danielc-lgtm/Study-notes/pull/11 (open checkpoint)`
+`not opened yet`
 
 ## Sources
 `Study notes/Prerequisite DAG.md`; repository source search found no dedicated differential-geometry source file.
@@ -37,19 +37,20 @@ Improve every Differential Geometry topic and its complete subpage graph to the 
 - Differential Geometry III — Tangent Vectors and the Differential (`8228dec`, PR #5)
 - Differential Geometry IV — Rank and Submanifold Theory (`937c276`, PR #7)
 - Differential Geometry V — Vector Fields, Flows, and Brackets (`b6c873f`, PR #9)
-- Differential Geometry VI — Vector Bundles and the Cotangent Bundle (`5384ab2`, PR #10)
+- Differential Geometry VI — Vector Bundles and the Cotangent Bundle (`5b34532`, PR #10)
+- Differential Geometry VII — Tensors and Tensor Fields (`5b34532`, PR #11)
 
 ## Current unit
-`dg-vii` — Differential Geometry VII, workflow Phase 6 (final checklist passed; ready to merge).
+`dg-viii` — Differential Geometry VIII, workflow Phase 3.1 (diagnosis and target complete).
 
 ## Remaining units
-Differential Geometry VIII–XII (five pending units).
+Differential Geometry VIII–XII (five units; VIII is active).
 
 ## Unresolved issues
 _none_.
 
 ## Exact next action
-Commit and push DG VII, merge PR #11, then create the DG VIII branch and diagnose differential forms.
+Open the DG VIII checkpoint PR, then replace the tangled uniqueness/locality and pullback proofs and repair every coordinate sign derivation.
 
 ## Last completed commit
 `5384ab2`
@@ -65,3 +66,4 @@ Commit and push DG VII, merge PR #11, then create the DG VIII branch and diagnos
 - #7 Differential Geometry IV → main @ 86a334b (2026-09-06)
 - #9 Differential Geometry V → main @ 577a002 (2026-09-06)
 - #10 Differential Geometry VI → main @ 9aea8d5 (2026-09-06)
+- #11 Differential Geometry VII → main @ 2e5c3ac (2026-09-06)
