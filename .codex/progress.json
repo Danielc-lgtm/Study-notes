@@ -63,11 +63,11 @@
   "mode": "improve",
   "merge_policy": "auto",
   "status": "active",
-  "branch": "codex/improve-all-differential-geometry-dg-vi",
+  "branch": "codex/improve-all-differential-geometry-dg-vii",
   "pr": {
-    "number": 10,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/10",
-    "state": "open"
+    "number": 11,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/11",
+    "status": "open"
   },
   "merged_prs": [
     {
@@ -385,7 +385,7 @@
     "dg-vii": {
       "title": "Differential Geometry VII — Tensors and Tensor Fields",
       "mode": "improve",
-      "status": "pending",
+      "status": "complete",
       "topic_page": "Study notes/Geometry/Differential Geometry/Differential Geometry VII — Tensors and Tensor Fields.md",
       "paths": [
         "Study notes/Geometry/Differential Geometry/Differential Geometry VII — Tensors and Tensor Fields.md",
@@ -412,17 +412,17 @@
         "Study notes/Geometry/Differential Geometry/Differential Geometry VII/Thm - Tensor Field is C-Infinity Multilinear over C-Infinity Functions.md",
         "Study notes/Geometry/Differential Geometry/Differential Geometry VII/Thm - Transformation Rule for Tensor Components.md"
       ],
-      "diagnosis": "Pending full page-graph diagnosis.",
+      "diagnosis": "Diagnosis: the topic has a useful tensoriality spine and a substantial exercise graph, but conventions need a line-by-line audit: variance, slot order, coordinate-component transformations, pullback domains, and contraction must use one consistent type (k,l) convention. The symmetrization page overstates a canonical connection decomposition and its higher-rank counterexample must be checked; stress and curvature claims need type qualifications; tensoriality must distinguish global-section formulations from locality. Target: rebuild the unit around tensors as basis-independent multilinear maps whose components obey forced change-of-basis laws. Give one consistent slot/type registry, derive tensor bundles and smooth fields from local frames, prove the C-infinity multilinearity characterization locally, and make tensor product, symmetry, alternation, contraction, and covariant pullback executable operations. Exercises should test invariant meaning against coordinate calculations, include genuine non-tensor counterexamples, and bridge metrics, stress, forms, and curvature without importing unproved structure.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": ""
+      "notes": "Diagnosis and target description written before editing; next pass audits conventions and theorem proofs. Convention checkpoint removes drafting leakage, distinguishes forms from densities, qualifies higher-rank symmetry claims, and corrects torsion and velocity-gradient decompositions. Final review and 23-page graph audit pass."
     },
     "dg-viii": {
       "title": "Differential Geometry VIII — Differential Forms",
@@ -654,8 +654,8 @@
       "notes": ""
     }
   },
-  "current_unit": "dg-vi",
-  "next_action": "Commit and push the completed DG VI review, merge PR #10, then create the DG VII branch and diagnose tensors and tensor fields.",
+  "current_unit": "dg-vii",
+  "next_action": "Commit and push DG VII, merge PR #11, then create the DG VIII branch and diagnose differential forms.",
   "unresolved": [],
   "last_commit": "8994ef6",
   "ready_to_merge": true,

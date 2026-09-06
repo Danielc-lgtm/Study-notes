@@ -112,7 +112,9 @@ From the physics side, the **electromagnetic field strength** $F_{\mu\nu}$ is an
 
 **Corollary (1-tensors are both symmetric and alternating).** $\Lambda^1(V^*) = T^1(V^*) = V^* = \Sigma^1(V^*)$. The vacuous-symmetry phenomenon: for $k = 1$ there are no pairs of indices to swap, so the conditions for symmetric and alternating coincide and are automatic.
 
-**Calibration check.** If you have understood the definition, you should be able to: (i) compute $\dim \Lambda^2(\mathbb{R}^3{}^*) = \binom{3}{2} = 3$ and verify a basis $dx \wedge dy, dx \wedge dz, dy \wedge dz$ has 3 elements; (ii) verify that for $\omega \in \Lambda^k(V^*)$ and $v \in V$ with $v$ in the image of some other argument, $\omega(\dots, v, \dots, v, \dots) = 0$; (iii) check that the cross product $u \times v$ on $\mathbb{R}^3$ corresponds, via the Hodge star, to the alternating 2-form $\omega(a, b) = \det(u, v, a, b)$ — wait, that does not type-check; the actual statement is that the *Hodge dual* of $u \times v$ as a vector is the 2-form $\iota_{(u \times v)}(\mathrm{vol})$. For a clean version, just verify that on $\mathbb{R}^3$ the 2-form $\omega = a\, dy\wedge dz + b\, dz\wedge dx + c\, dx\wedge dy$ has $\omega(e_1, e_2) = c, \omega(e_2, e_3) = a, \omega(e_3, e_1) = b$, identifying its components with a vector $(a, b, c)$.
+**Calibration check.** Compute $\dim \Lambda^2(\mathbb{R}^3{}^*)=3$ and verify that $dx\wedge dy,dx\wedge dz,dy\wedge dz$ form a basis. Check directly that an alternating tensor vanishes whenever two arguments coincide. Finally, for
+$$\omega=a\,dy\wedge dz+b\,dz\wedge dx+c\,dx\wedge dy,$$
+verify $\omega(e_1,e_2)=c$, $\omega(e_2,e_3)=a$, and $\omega(e_3,e_1)=b$. After choosing the Euclidean metric and orientation, this is the coefficient correspondence between $2$-forms and vectors induced by the Hodge star; it is not canonical without those choices.
 
 ---
 
