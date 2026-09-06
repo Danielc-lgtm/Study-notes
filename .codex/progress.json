@@ -63,10 +63,10 @@
   "mode": "mixed",
   "merge_policy": "auto",
   "status": "in_progress",
-  "branch": "codex/create-complete-gauge-theory-gt-iii",
+  "branch": "codex/create-complete-gauge-theory-gt-iv",
   "pr": {
-    "number": 21,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/21",
+    "number": 23,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/23",
     "status": "open"
   },
   "merged_prs": [
@@ -248,34 +248,40 @@
     "gt-iv": {
       "title": "Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli",
       "mode": "create",
-      "status": "pending",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV — Chern–Weil Theory, Chern–Simons, and Flat Connections.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV — Chern–Weil Theory, Chern–Simons, and Flat Connections.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Berry Connection.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Pfaffian.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - The Euler Class of a Real Oriented Vector Bundle.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Ex - Berry Phase for a Spin-Half in a Magnetic Field.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV — Chern–Weil Theory, Characteristic Classes, Chern–Simons, and Flat Moduli.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Chern-Weil Theorem.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Ex - Computing the Euler Class of the Tangent Bundle of CP^n.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Ex - Gauss-Bonnet for the Torus.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Exercise Index - §2.3 Gauss-Bonnet-Chern Theorem.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Exercise Index - §2.4 Topological Quantization and Berry Phase.md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Berry Phase Equals Holonomy of the Berry Connection.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - First Chern Class of the Hopf Bundle is One.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Berry Phase Equals Holonomy of the Berry Connection.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Exercise Index - §2.3 Gauss-Bonnet-Chern Theorem.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Gauss-Bonnet-Chern Theorem.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Moduli Space of Flat Connections.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Chern Classes from Curvature.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Berry Connection.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Ex - Gauss-Bonnet for the Torus.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Chern-Simons Functional.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Gauss-Bonnet for Closed Surfaces (Chern's Proof).md",
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Gauss-Bonnet-Chern Theorem.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Pfaffian.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Exercise Index - §2.4 Topological Quantization and Berry Phase.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Ad-Invariant Polynomial.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - Chern-Simons Transgression Form.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Def - The Euler Class of a Real Oriented Vector Bundle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Ex - Berry Phase for a Spin-Half in a Magnetic Field.md"
       ],
       "diagnosis": "Create-mode unit; filename manifest pending.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Independent Chern–Weil architecture with invariant polynomials, explicit transgression proof, normalized Chern classes, Chern–Simons variation, flat moduli, and retained Euler/Berry calibrations."
     },
     "gt-v": {
       "title": "Gauge Theory V — Hodge Theory, Maxwell, Yang–Mills, and Instantons",
@@ -462,8 +468,8 @@
       "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
     }
   },
-  "current_unit": "gt-iv",
-  "next_action": "Create Gauge Theory IV on a fresh branch from merged main, covering invariant polynomials, Chern–Weil, characteristic classes, Chern–Simons, and flat moduli.",
+  "current_unit": "gt-v",
+  "next_action": "Audit and expand Gauge Theory V for Wernli §§3.1–3.3: arbitrary-signature Hodge star, Maxwell action and stress-energy, Yang–Mills variation, topological charge, self-duality, and BPST.",
   "unresolved": [],
   "last_commit": "c83565e",
   "ready_to_merge": false,

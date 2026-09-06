@@ -12,9 +12,9 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §2.2.3–2.2.5, principal connections, curvature, gauge group | 16–21 | III | complete |
 | §2.3, Levi–Civita connection | 22–23 | I, III | complete |
 | §2.4, classification of $U(1)$ and $SU(2)$ bundles; complex and quaternionic lines | 23–25 | II | complete |
-| §3.1, invariant polynomials, Chern–Weil theory, Chern classes | 26–29 | IV | pending |
-| §3.2, Chern–Simons functional | 30–31 | IV | pending |
-| §3.3, flat connections, parallel transport, holonomy, monodromy | 32–33 | III, IV | III complete; IV pending |
+| §3.1, invariant polynomials, Chern–Weil theory, Chern classes | 26–29 | IV | complete |
+| §3.2, Chern–Simons functional | 30–31 | IV | complete |
+| §3.3, flat connections, parallel transport, holonomy, monodromy | 32–33 | III, IV | complete |
 | §4.1, spin groups and Clifford algebras | 34–35 | VI | pending |
 | §4.2, Dirac operators | 36–37 | VI | pending |
 | §4.3, spin and $\operatorname{Spin}^c$ structures and their classification | 37–41 | VI | pending |
@@ -41,7 +41,7 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §1.1–1.5, Lie groups, Lie algebras, representations, exponential, actions | 7–36 | II, with prerequisite recalls | complete |
 | §2.1–2.2, fibre and principal bundles | 37–49 | II | complete |
 | §2.3–2.4, connections and curvature | 50–58 | III | complete |
-| §2.5, characteristic classes | 59–64 | IV | pending |
+| §2.5, characteristic classes | 59–64 | IV | complete |
 | §2.6, parallel transport and holonomy | 65–74 | III | complete |
 | §2.7, automorphisms and gauge transformations | 75–78 | III | complete |
 | §3.1, Hodge-star operator in arbitrary signature | 79–83 | V | pending |
