@@ -134,7 +134,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Source extracts, existing-page audit, incoming-link inventory, diagnosis, and target are complete in scratch. Next rebuild the topic page and core connection/curvature theorem pages using the fixed convention ∇=d+iqA."
+      "notes": "Core vector-bundle connection calculus rebuilt independently: definition, local frame law, induced exterior derivative, affine structure, curvature, tensoriality, existence, and Bianchi now have fixed conventions and complete proofs. Mechanical math/LaTeX/wikilink audits pass on the changed files. Next rebuild the chapter map and abelian electromagnetic pages."
     },
     "gt-ii": {
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
@@ -436,9 +436,9 @@
     }
   },
   "current_unit": "gt-i",
-  "next_action": "Rebuild the Gauge Theory I topic page and the connection, curvature, existence, tensoriality, and Bianchi atomic pages from Haydys §2.1, fixing ∇=d+iqA and all local-frame conventions; then run mechanical audits and checkpoint.",
+  "next_action": "Rewrite the Gauge Theory I topic page around the connection–curvature–electromagnetism arc, then rebuild the Hermitian line-bundle, U(1) connection, gauge transformation, Wilson holonomy, minimal-coupling, monopole, and Aharonov–Bohm pages with one normalization.",
   "unresolved": [],
-  "last_commit": "d76e37a",
+  "last_commit": "2cea9a1",
   "ready_to_merge": false,
-  "updated": "2026-09-06T04:40:00Z"
+  "updated": "2026-09-06T05:10:00Z"
 }

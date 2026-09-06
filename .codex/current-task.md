@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Rebuild the Gauge Theory I topic page and the connection, curvature, existence, tensoriality, and Bianchi atomic pages from Haydys §2.1, fixing `∇=d+iqA` and all local-frame conventions; then run mechanical audits and checkpoint.
+Rewrite the Gauge Theory I topic page around the connection–curvature–electromagnetism arc, then rebuild the Hermitian line-bundle, `U(1)` connection, gauge transformation, Wilson holonomy, minimal-coupling, monopole, and Aharonov–Bohm pages with one normalization.
 
 ## Last completed commit
 `570c6a7` is the user-provided source import immediately preceding this task; the task initialization commit follows this ledger update.
