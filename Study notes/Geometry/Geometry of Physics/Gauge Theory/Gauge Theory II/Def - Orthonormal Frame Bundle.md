@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, riemannian, frame-bundles]
 
 # Notation
 
-For an oriented Riemannian manifold $(M, g)$ of dimension $n$, the **orthonormal frame bundle** is denoted $\mathrm{Fr}^{\mathrm{SO}}(M)$ or $\mathrm{Fr}^+_{\mathrm{O}}(M)$, a principal $\mathrm{SO}(n)$-bundle. If $M$ is Riemannian but not oriented, the **full orthonormal frame bundle** $\mathrm{Fr}^{\mathrm{O}}(M)$ is a principal $\mathrm{O}(n)$-bundle. For a Riemannian *vector bundle* $E \to M$ (with metric on fibres), $\mathrm{Fr}^{\mathrm{O}}(E)$ denotes the corresponding orthonormal frame bundle. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the full registry.
+For an oriented Riemannian manifold $(M, g)$ of dimension $n$, the **orthonormal frame bundle** is denoted $\mathrm{Fr}^{\mathrm{SO}}(M)$ or $\mathrm{Fr}^+_{\mathrm{O}}(M)$, a principal $\mathrm{SO}(n)$-bundle. If $M$ is Riemannian but not oriented, the **full orthonormal frame bundle** $\mathrm{Fr}^{\mathrm{O}}(M)$ is a principal $\mathrm{O}(n)$-bundle. For a Riemannian *vector bundle* $E \to M$ (with metric on fibres), $\mathrm{Fr}^{\mathrm{O}}(E)$ denotes the corresponding orthonormal frame bundle. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the full registry.
 
 ---
 

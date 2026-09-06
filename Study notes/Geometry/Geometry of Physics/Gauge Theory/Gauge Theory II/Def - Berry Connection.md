@@ -9,7 +9,7 @@ tags: [geometry, gauge-theory, quantum-mechanics, berry-phase]
 
 # Notation
 
-A **Berry connection** is the connection on a complex line bundle $E \to V$ arising from a family of one-dimensional complex subspaces $E_\alpha \subset \mathcal{H}$ of a Hermitian vector space $\mathcal{H}$, parametrized by $\alpha$ in a smooth manifold $V$. Local unit sections are written $e(\alpha)$ or $\phi_\alpha$; the connection 1-form is $\omega = \langle e(\alpha), de(\alpha)\rangle$, where $\langle\cdot,\cdot\rangle$ is the Hermitian inner product on $\mathcal{H}$ (linear in the second argument). The curvature 2-form is $\theta = d\omega = \langle de, de\rangle$. The Berry phase accumulated around a closed loop $C \subset V$ is $\gamma(C) = i\oint_C \omega$. Frankel calls this the **Simon connection**. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry.
+A **Berry connection** is the connection on a complex line bundle $E \to V$ arising from a family of one-dimensional complex subspaces $E_\alpha \subset \mathcal{H}$ of a Hermitian vector space $\mathcal{H}$, parametrized by $\alpha$ in a smooth manifold $V$. Local unit sections are written $e(\alpha)$ or $\phi_\alpha$; the connection 1-form is $\omega = \langle e(\alpha), de(\alpha)\rangle$, where $\langle\cdot,\cdot\rangle$ is the Hermitian inner product on $\mathcal{H}$ (linear in the second argument). The curvature 2-form is $\theta = d\omega = \langle de, de\rangle$. The Berry phase accumulated around a closed loop $C \subset V$ is $\gamma(C) = i\oint_C \omega$. Frankel calls this the **Simon connection**. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry.
 
 ---
 

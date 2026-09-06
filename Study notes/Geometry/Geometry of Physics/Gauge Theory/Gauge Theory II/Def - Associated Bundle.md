@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, associated-bundles]
 
 # Notation
 
-For a principal $G$-bundle $\pi : P \to M$ and a smooth left $G$-action on a manifold $F$, the **associated bundle** is written $P \times_G F$ or $P \times^G F$. A point of $P \times_G F$ is an equivalence class $[u, y]$ with $u \in P$, $y \in F$, modulo $(u, y) \sim (u \cdot g, g^{-1} \cdot y)$ for all $g \in G$. The projection $P \times_G F \to M$ sends $[u, y]$ to $\pi_P(u)$. For a representation $\rho : G \to \mathrm{GL}(V)$, the associated vector bundle is $P \times_\rho V = P \times_G V$ with the corresponding action. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the full registry.
+For a principal $G$-bundle $\pi : P \to M$ and a smooth left $G$-action on a manifold $F$, the **associated bundle** is written $P \times_G F$ or $P \times^G F$. A point of $P \times_G F$ is an equivalence class $[u, y]$ with $u \in P$, $y \in F$, modulo $(u, y) \sim (u \cdot g, g^{-1} \cdot y)$ for all $g \in G$. The projection $P \times_G F \to M$ sends $[u, y]$ to $\pi_P(u)$. For a representation $\rho : G \to \mathrm{GL}(V)$, the associated vector bundle is $P \times_\rho V = P \times_G V$ with the corresponding action. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the full registry.
 
 ---
 

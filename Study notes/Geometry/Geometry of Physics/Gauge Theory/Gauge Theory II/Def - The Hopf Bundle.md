@@ -9,7 +9,7 @@ tags: [geometry, gauge-theory, hopf-bundle, topology]
 
 # Notation
 
-The **Hopf bundle** is the principal $U(1)$-bundle $S^1 \to S^3 \to S^2$ obtained from the action of $U(1) \subset \mathbb{C}^*$ on $S^3 \subset \mathbb{C}^2$. The total space is $S^3 = \{(z_0, z_1) \in \mathbb{C}^2 : |z_0|^2 + |z_1|^2 = 1\}$; the base is $S^2 = \mathbb{CP}^1$; the projection is $\pi(z_0, z_1) = [z_0 : z_1]$. The corresponding complex line bundle (tautological line bundle) is denoted $\mathcal{O}(-1)$ or $H_{-1}$ over $\mathbb{CP}^1$; its dual is $\mathcal{O}(1) = H_1$. Tensor powers $H_n = H_1^{\otimes n}$ (with $H_{-n} = H_{-1}^{\otimes n}$) realize all integer first Chern classes. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry.
+The **Hopf bundle** is the principal $U(1)$-bundle $S^1 \to S^3 \to S^2$ obtained from the action of $U(1) \subset \mathbb{C}^*$ on $S^3 \subset \mathbb{C}^2$. The total space is $S^3 = \{(z_0, z_1) \in \mathbb{C}^2 : |z_0|^2 + |z_1|^2 = 1\}$; the base is $S^2 = \mathbb{CP}^1$; the projection is $\pi(z_0, z_1) = [z_0 : z_1]$. The corresponding complex line bundle (tautological line bundle) is denoted $\mathcal{O}(-1)$ or $H_{-1}$ over $\mathbb{CP}^1$; its dual is $\mathcal{O}(1) = H_1$. Tensor powers $H_n = H_1^{\otimes n}$ (with $H_{-n} = H_{-1}^{\otimes n}$) realize all integer first Chern classes. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry.
 
 ---
 

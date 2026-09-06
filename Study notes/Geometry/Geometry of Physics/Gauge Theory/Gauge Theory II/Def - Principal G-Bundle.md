@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, principal-bundles]
 
 # Notation
 
-A principal $G$-bundle is written $\pi : P \to M$ or $G \to P \to M$; the right action of $g \in G$ on a point $u \in P$ is denoted $u \cdot g$ or $R_g(u)$. The fibre over $p \in M$ is $\pi^{-1}(p)$ and is a single $G$-orbit, diffeomorphic to $G$ once a basepoint has been chosen. Local sections are written $s_U : U \to P$; choosing a local section is equivalent to choosing a local trivialization $\Phi_U(s_U(p) \cdot g) = (p, g)$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the full registry.
+A principal $G$-bundle is written $\pi : P \to M$ or $G \to P \to M$; the right action of $g \in G$ on a point $u \in P$ is denoted $u \cdot g$ or $R_g(u)$. The fibre over $p \in M$ is $\pi^{-1}(p)$ and is a single $G$-orbit, diffeomorphic to $G$ once a basepoint has been chosen. Local sections are written $s_U : U \to P$; choosing a local section is equivalent to choosing a local trivialization $\Phi_U(s_U(p) \cdot g) = (p, g)$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the full registry.
 
 ---
 

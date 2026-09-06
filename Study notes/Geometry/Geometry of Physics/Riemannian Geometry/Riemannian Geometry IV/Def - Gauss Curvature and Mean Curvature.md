@@ -77,7 +77,7 @@ Structurally, $K$ and $H$ are the **elementary symmetric polynomials** in the ei
 
 From the perspective of **characteristic classes**, the Gauss curvature $K$ is a degree-$2$ form on $M$ (specifically $K\cdot \mathrm{vol}^2_M = K\, dA$ is a $2$-form), and on a closed oriented surface its integral is a topological invariant — the **Euler number** $\chi(M)$ — via Gauss–Bonnet. The mean curvature $H$ does not produce a topological invariant on integration; $\int H\, dA$ is a non-topological quantity (the **total mean curvature**), although $\int H^2\, dA$ is a conformal invariant (the **Willmore energy**).
 
-In the language of **principal bundles**, the curvature 2-form of the connection on the principal $O(2)$-bundle of orthonormal frames on $M$ is $K\, dA$ — see [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]]. The Gauss curvature is the local coefficient of the curvature of the Levi-Civita connection.
+In the language of **principal bundles**, the curvature 2-form of the connection on the principal $O(2)$-bundle of orthonormal frames on $M$ is $K\, dA$ — see [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]]. The Gauss curvature is the local coefficient of the curvature of the Levi-Civita connection.
 
 ---
 

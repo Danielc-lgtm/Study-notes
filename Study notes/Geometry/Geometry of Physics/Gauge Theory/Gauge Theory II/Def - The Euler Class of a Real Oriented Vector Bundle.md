@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, characteristic-classes]
 
 # Notation
 
-For a real oriented vector bundle $E \to M$ of rank $k$, the **Euler class** is denoted $e(E) \in H^k(M; \mathbb{Z})$ (or $H^k(M; \mathbb{R})$ via the de Rham isomorphism). When $k$ is odd, $e(E) = 0$. For the tangent bundle of a closed oriented manifold, $\int_M e(TM) = \chi(M)$. The Pfaffian-of-curvature representative is denoted $\mathrm{Pf}(\Omega^\nabla)/(2\pi)^{k/2}$, where $\Omega^\nabla$ is the curvature 2-form of any metric connection $\nabla$ on $E$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry.
+For a real oriented vector bundle $E \to M$ of rank $k$, the **Euler class** is denoted $e(E) \in H^k(M; \mathbb{Z})$ (or $H^k(M; \mathbb{R})$ via the de Rham isomorphism). When $k$ is odd, $e(E) = 0$. For the tangent bundle of a closed oriented manifold, $\int_M e(TM) = \chi(M)$. The Pfaffian-of-curvature representative is denoted $\mathrm{Pf}(\Omega^\nabla)/(2\pi)^{k/2}$, where $\Omega^\nabla$ is the curvature 2-form of any metric connection $\nabla$ on $E$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry.
 
 ---
 

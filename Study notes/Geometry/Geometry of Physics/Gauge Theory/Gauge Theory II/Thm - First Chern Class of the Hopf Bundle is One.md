@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, hopf-bundle, characteristic-classes]
 
 # Notation
 
-The Hopf bundle is $U(1) \to S^3 \to S^2 = \mathbb{CP}^1$, with the associated tautological complex line bundle $H_{-1} = \mathcal{O}(-1) \to \mathbb{CP}^1$. On the chart $U = \{z_0 \neq 0\}$ with coordinate $z = z_1/z_0$, the unit section is $e_U(z) = (1, z)^T/\sqrt{1+|z|^2}$. The connection 1-form on $U$ is $\omega_U = \langle e_U, de_U\rangle$ (Berry / Hermitian connection), the curvature is $\theta = d\omega$. The first Chern number is $c_1(L) = \frac{i}{2\pi}\int_{S^2}\theta \in \mathbb{Z}$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry.
+The Hopf bundle is $U(1) \to S^3 \to S^2 = \mathbb{CP}^1$, with the associated tautological complex line bundle $H_{-1} = \mathcal{O}(-1) \to \mathbb{CP}^1$. On the chart $U = \{z_0 \neq 0\}$ with coordinate $z = z_1/z_0$, the unit section is $e_U(z) = (1, z)^T/\sqrt{1+|z|^2}$. The connection 1-form on $U$ is $\omega_U = \langle e_U, de_U\rangle$ (Berry / Hermitian connection), the curvature is $\theta = d\omega$. The first Chern number is $c_1(L) = \frac{i}{2\pi}\int_{S^2}\theta \in \mathbb{Z}$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry.
 
 ---
 

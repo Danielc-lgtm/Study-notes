@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, frame-bundles]
 
 # Notation
 
-For a real rank-$k$ vector bundle $\pi : E \to M$, the **frame bundle** is denoted $\mathrm{Fr}(E)$ or $FE$, with projection $\pi_{\mathrm{Fr}} : \mathrm{Fr}(E) \to M$. A point of $\mathrm{Fr}(E)$ over $p \in M$ is an ordered basis $(f_1, \ldots, f_k)$ of $E_p$. The right action of $g = (g^\alpha{}_\beta) \in \mathrm{GL}(k, \mathbb{R})$ is $(f \cdot g)_\beta = f_\alpha g^\alpha{}_\beta$ (using Einstein summation). For $E = TM$, the frame bundle is denoted $\mathrm{Fr}(TM)$ or simply $\mathrm{Fr}(M)$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the full registry.
+For a real rank-$k$ vector bundle $\pi : E \to M$, the **frame bundle** is denoted $\mathrm{Fr}(E)$ or $FE$, with projection $\pi_{\mathrm{Fr}} : \mathrm{Fr}(E) \to M$. A point of $\mathrm{Fr}(E)$ over $p \in M$ is an ordered basis $(f_1, \ldots, f_k)$ of $E_p$. The right action of $g = (g^\alpha{}_\beta) \in \mathrm{GL}(k, \mathbb{R})$ is $(f \cdot g)_\beta = f_\alpha g^\alpha{}_\beta$ (using Einstein summation). For $E = TM$, the frame bundle is denoted $\mathrm{Fr}(TM)$ or simply $\mathrm{Fr}(M)$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the full registry.
 
 ---
 

@@ -11,7 +11,7 @@ tags: [geometry, gauge-theory, homogeneous-spaces, principal-bundles]
 
 # Notation
 
-A **homogeneous bundle** is a principal $H$-bundle of the form $H \to G \to G/H$, where $H$ is a closed Lie subgroup of a Lie group $G$. The coset space is written $G/H$ and consists of left cosets $gH = \{gh : h \in H\}$. The projection $\pi : G \to G/H$ sends $g \mapsto [g] = gH$. The right $H$-action on $G$ is right multiplication $(g, h) \mapsto gh$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry and [[Def - Homogeneous Space]] for the underlying coset construction.
+A **homogeneous bundle** is a principal $H$-bundle of the form $H \to G \to G/H$, where $H$ is a closed Lie subgroup of a Lie group $G$. The coset space is written $G/H$ and consists of left cosets $gH = \{gh : h \in H\}$. The projection $\pi : G \to G/H$ sends $g \mapsto [g] = gH$. The right $H$-action on $G$ is right multiplication $(g, h) \mapsto gh$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry and [[Def - Homogeneous Space]] for the underlying coset construction.
 
 ---
 

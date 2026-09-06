@@ -11,7 +11,7 @@ tags: [geometry, gauge-theory, characteristic-classes]
 
 # Notation
 
-For a closed oriented Riemannian $2n$-manifold $M^{2n}$, the Levi-Civita connection has curvature 2-form $\Omega \in \Omega^2(M; \mathfrak{so}(2n))$ (skew-symmetric matrix-valued, with respect to a local orthonormal frame). The Pfaffian polynomial $\mathrm{Pf}$ on $\mathfrak{so}(2n)$ gives a scalar-valued $2n$-form $\mathrm{Pf}(\Omega) \in \Omega^{2n}(M)$. The Euler class is $e(TM) = [\mathrm{Pf}(\Omega)/(2\pi)^n] \in H^{2n}(M;\mathbb{Z})$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry, [[Def - Pfaffian]] for the polynomial, and [[Def - The Euler Class of a Real Oriented Vector Bundle]] for the Euler class.
+For a closed oriented Riemannian $2n$-manifold $M^{2n}$, the Levi-Civita connection has curvature 2-form $\Omega \in \Omega^2(M; \mathfrak{so}(2n))$ (skew-symmetric matrix-valued, with respect to a local orthonormal frame). The Pfaffian polynomial $\mathrm{Pf}$ on $\mathfrak{so}(2n)$ gives a scalar-valued $2n$-form $\mathrm{Pf}(\Omega) \in \Omega^{2n}(M)$. The Euler class is $e(TM) = [\mathrm{Pf}(\Omega)/(2\pi)^n] \in H^{2n}(M;\mathbb{Z})$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry, [[Def - Pfaffian]] for the polynomial, and [[Def - The Euler Class of a Real Oriented Vector Bundle]] for the Euler class.
 
 ---
 

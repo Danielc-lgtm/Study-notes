@@ -10,7 +10,7 @@ tags: [geometry, gauge-theory, associated-bundles]
 
 # Notation
 
-For a principal $G$-bundle $\pi_P : P \to M$ and a smooth left $G$-action on $F$, the associated bundle is $E = P \times_G F$, with projection $\pi : E \to M$ sending $[u, y] \mapsto \pi_P(u)$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry.
+For a principal $G$-bundle $\pi_P : P \to M$ and a smooth left $G$-action on $F$, the associated bundle is $E = P \times_G F$, with projection $\pi : E \to M$ sending $[u, y] \mapsto \pi_P(u)$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry.
 
 ---
 

@@ -11,7 +11,7 @@ tags: [geometry, gauge-theory, fibre-bundles]
 
 # Notation
 
-A fibre bundle is data $(E, M, \pi, F, G)$ where $E$ is the **total space**, $M$ the **base**, $\pi : E \to M$ the **projection**, $F$ the **typical fibre** (a smooth manifold, possibly non-linear), and $G$ a **structure group** (a Lie group, see [[Def - Lie Group]]) acting smoothly on $F$. Local trivializations are written $\Phi_U : \pi^{-1}(U) \to U \times F$; transition functions $c_{VU} : U \cap V \to G$ act on $F$ by diffeomorphisms. The fibre over $p \in M$ is $\pi^{-1}(p)$ and is diffeomorphic to $F$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the full registry.
+A fibre bundle is data $(E, M, \pi, F, G)$ where $E$ is the **total space**, $M$ the **base**, $\pi : E \to M$ the **projection**, $F$ the **typical fibre** (a smooth manifold, possibly non-linear), and $G$ a **structure group** (a Lie group, see [[Def - Lie Group]]) acting smoothly on $F$. Local trivializations are written $\Phi_U : \pi^{-1}(U) \to U \times F$; transition functions $c_{VU} : U \cap V \to G$ act on $F$ by diffeomorphisms. The fibre over $p \in M$ is $\pi^{-1}(p)$ and is diffeomorphic to $F$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the full registry.
 
 ---
 

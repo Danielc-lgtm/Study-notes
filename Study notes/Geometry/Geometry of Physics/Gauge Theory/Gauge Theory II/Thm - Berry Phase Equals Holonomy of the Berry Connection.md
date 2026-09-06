@@ -9,7 +9,7 @@ tags: [geometry, gauge-theory, quantum-mechanics, berry-phase]
 
 # Notation
 
-A parameter-dependent Hamiltonian $H(\alpha)$ acts on a Hilbert space $\mathcal{H}$, with $\alpha \in V$ a smooth parameter manifold. The lowest-energy eigenvalue $\lambda(\alpha)$ is assumed nondegenerate and smoothly varying. The eigenspace bundle $E \to V$ has fibre $E_\alpha = \ker(H(\alpha) - \lambda(\alpha)I)$, a complex line. The Berry connection 1-form is $\omega = \langle e(\alpha), de(\alpha)\rangle$ for a local unit section $e(\alpha) \in E_\alpha$. The Berry phase is $\gamma(C) = i\oint_C \omega$ for a closed loop $C \subset V$. See [[Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet]] for the registry and [[Def - Berry Connection]] for the connection.
+A parameter-dependent Hamiltonian $H(\alpha)$ acts on a Hilbert space $\mathcal{H}$, with $\alpha \in V$ a smooth parameter manifold. The lowest-energy eigenvalue $\lambda(\alpha)$ is assumed nondegenerate and smoothly varying. The eigenspace bundle $E \to V$ has fibre $E_\alpha = \ker(H(\alpha) - \lambda(\alpha)I)$, a complex line. The Berry connection 1-form is $\omega = \langle e(\alpha), de(\alpha)\rangle$ for a local unit section $e(\alpha) \in E_\alpha$. The Berry phase is $\gamma(C) = i\oint_C \omega$ for a closed loop $C \subset V$. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry and [[Def - Berry Connection]] for the connection.
 
 ---
 

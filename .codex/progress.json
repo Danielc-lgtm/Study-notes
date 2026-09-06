@@ -147,9 +147,9 @@
       "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification",
       "mode": "improve",
       "status": "in_progress",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet.md",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Fibre Bundles, Principal Bundles, and Gauss–Bonnet.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Associated Bundle.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Berry Connection.md",
         "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II/Def - Fibre Bundle.md",
@@ -194,7 +194,7 @@
         "checklist": "open"
       },
       "commit": null,
-      "notes": "Source pass and existing-graph audit complete. Manifest adds representation, extension/reduction, universal/classifying-space, principal-bundle classification, U(1) weight, and quaternionic Hopf pages. Existing Lie-theory pages are prerequisites rather than duplicated."
+      "notes": "Source-grounded diagnosis and manifest complete. The topic page is renamed to the principal-bundle title, all 34 incoming links are updated, and the topic is independently rebuilt around topology-before-connection: Lie/representation recall, torsors and cocycles, associated bundles, reductions, universal classification, and a clearly deferred characteristic/Berry preview."
     },
     "gt-iii": {
       "title": "Gauge Theory III — Principal Connections, Curvature, Holonomy, and Gauge Symmetry",
@@ -449,9 +449,9 @@
     }
   },
   "current_unit": "gt-ii",
-  "next_action": "Rename the Gauge Theory II topic page to its principal-bundle title while updating all 34 incoming links, then rebuild its topic map and the fibre/principal/representation/associated-bundle core pages.",
+  "next_action": "Create the representation, extension/reduction, universal-bundle, classifying theorem, U(1)-weight, and quaternionic-Hopf atomic pages; then rebuild Fibre Bundle, Principal G-Bundle, Associated Bundle, and their two core theorem pages.",
   "unresolved": [],
-  "last_commit": "d109b11",
+  "last_commit": "4c7a80a",
   "ready_to_merge": false,
-  "updated": "2026-09-06T07:20:00Z"
+  "updated": "2026-09-06T07:45:00Z"
 }

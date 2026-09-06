@@ -49,7 +49,7 @@ Gauge Theory II–XI and the final audit.
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Rename the Gauge Theory II topic page to its principal-bundle title while updating all 34 incoming links, then rebuild its topic map and the fibre/principal/representation/associated-bundle core pages.
+Create the representation, extension/reduction, universal-bundle, classifying theorem, U(1)-weight, and quaternionic-Hopf atomic pages; then rebuild Fibre Bundle, Principal G-Bundle, Associated Bundle, and their two core theorem pages.
 
 ## Last completed commit
 `961b960` — merge of Gauge Theory I through PR #19.
