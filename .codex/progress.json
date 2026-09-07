@@ -62,7 +62,7 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "in_progress",
+  "status": "review",
   "branch": "codex/create-complete-gauge-theory-gt-xi",
   "pr": {
     "number": 30,
@@ -535,22 +535,34 @@
     "gt-xi": {
       "title": "Gauge Theory XI — Algebraic Topology, Intersection Forms, Classification, and Donaldson Theory",
       "mode": "create",
-      "status": "in_progress",
-      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI — Four-Manifold Topology and Donaldson Theory.md",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI — Topology, Intersection Forms, and Donaldson Theory.md",
       "paths": [
-        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI — Four-Manifold Topology and Donaldson Theory.md"
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI — Topology, Intersection Forms, and Donaldson Theory.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Def - Donaldson Moduli Space and Uhlenbeck Compactification.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Def - Homotopy Groups and Homotopy Equivalence.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Def - Intersection Form of a Four-Manifold.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Def - Orientation Fundamental Class and Poincare Duality.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Def - Singular Homology and Cohomology Operations.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Ex - Freedman versus Donaldson for the E8 Form.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Ex - Intersection Forms of Basic Four-Manifolds.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Exercise Index - §11.1 Topology and Four-Manifold Gauge Theory.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Thm - Classification of Simply Connected Topological Four-Manifolds.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Thm - Donaldson Diagonalization Theorem.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Thm - Long Exact Homotopy Sequence of a Fibre Bundle.md",
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory XI/Thm - Spin Parity and Rochlin Divisibility.md"
       ],
-      "diagnosis": "Create-mode unit; filename manifest pending.",
+      "diagnosis": "Create mode. Wernli Chapters 4–5 need a coherent topology-to-gauge-theory pipeline: homotopy and homology must feed Poincaré duality, the intersection lattice, category-sensitive classification, and finally Donaldson compactification rather than appearing as disconnected survey material.",
       "review": {
-        "correctness": "open",
-        "pedagogy": "open",
-        "rederivation": "open",
-        "graph": "open",
-        "prose": "open",
-        "checklist": "open"
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
       },
       "commit": null,
-      "notes": "Coverage assignment is recorded in .codex/gauge-theory-source-map.md."
+      "notes": "Covers the Wernli preface and §§4.1–5.3 with explicit category boundaries, complete elementary arguments, exact hypotheses for deep classification theorems, and an honest map of the additional Uhlenbeck/gluing machinery behind Donaldson diagonalization."
     },
     "final-audit": {
       "title": "Gauge Theory — Final Source-Coverage and Cross-Topic Audit",
@@ -572,9 +584,9 @@
     }
   },
   "current_unit": "gt-xi",
-  "next_action": "Extract Wernli §§4.1–5.3 and build Gauge Theory XI from homotopy and homology through intersection forms, four-manifold classification, and Donaldson theory.",
+  "next_action": "Commit and merge Gauge Theory XI, then run the final source-coverage and cross-topic consistency audit on a fresh branch.",
   "unresolved": [],
   "last_commit": "e41e1a1",
   "ready_to_merge": false,
-  "updated": "2026-09-06T23:55:00Z"
+  "updated": "2026-09-07T00:30:00Z"
 }

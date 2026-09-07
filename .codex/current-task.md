@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–X merged; Gauge Theory XI is current
+**Overall status:** in progress — Gauge Theory I–X merged; Gauge Theory XI is ready to merge
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
@@ -16,7 +16,7 @@ Create a complete, self-contained Obsidian lecture-note series covering both `so
 8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — complete (PR #27; merged)
 9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — complete (PR #28; merged)
 10. Gauge Theory X — Seiberg–Witten invariants and four-manifold applications — complete (PR #29; merged)
-11. Gauge Theory XI — Algebraic topology, intersection forms, classification, and Donaldson theory — in progress
+11. Gauge Theory XI — Algebraic topology, intersection forms, classification, and Donaldson theory — complete; PR #30 ready to merge
 12. Final source-coverage and cross-topic consistency audit — pending
 
 The persistent section-by-section coverage matrix is `.codex/gauge-theory-source-map.md`.
@@ -41,16 +41,16 @@ Gauge Theory XI PR #30 (open): https://github.com/Danielc-lgtm/Study-notes/pull/
 - Gauge Theory II — Principal bundles, representations, and classification — complete, merged in PR #20.
 
 ## Current unit
-Gauge Theory XI — algebraic topology, intersection forms, classification, and Donaldson theory.
+Gauge Theory XI — algebraic topology, intersection forms, classification, and Donaldson theory; reviewed and ready to merge.
 
 ## Remaining units
-Gauge Theory XI and the final audit.
+Final source-coverage and cross-topic consistency audit.
 
 ## Unresolved issues
 _none_. Source convention conflicts will be made explicit rather than silently normalized.
 
 ## Exact next action
-Extract Wernli §§4.1–5.3 and build Gauge Theory XI from homotopy and homology through intersection forms, four-manifold classification, and Donaldson theory.
+Commit and merge Gauge Theory XI, then run the final source-coverage and cross-topic consistency audit on a fresh branch.
 
 ## Last completed commit
 `e7fcf5c` — merged Gauge Theory X: Seiberg–Witten invariants and applications.
