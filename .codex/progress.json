@@ -62,12 +62,12 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "complete",
-  "branch": "codex/create-complete-gauge-theory-final-audit",
+  "status": "merged",
+  "branch": null,
   "pr": {
-    "number": 31,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/31",
-    "status": "open"
+    "number": null,
+    "url": null,
+    "status": null
   },
   "merged_prs": [
     {
@@ -134,6 +134,12 @@
       "number": 30,
       "unit": "gt-xi",
       "main_sha": "f741a1e",
+      "date": "2026-09-07"
+    },
+    {
+      "number": 31,
+      "unit": "final-audit",
+      "main_sha": "6cfdf6b",
       "date": "2026-09-07"
     }
   ],
@@ -596,7 +602,7 @@
   "current_unit": null,
   "next_action": "No remaining Gauge Theory campaign unit; maintain the source map when future material is added.",
   "unresolved": [],
-  "last_commit": "ef8d1a6",
-  "ready_to_merge": true,
-  "updated": "2026-09-07T00:50:00Z"
+  "last_commit": "6cfdf6b",
+  "ready_to_merge": false,
+  "updated": "2026-09-07T01:00:00Z"
 }
