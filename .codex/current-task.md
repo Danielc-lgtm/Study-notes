@@ -17,7 +17,7 @@ Repair malformed bare `qquad`/`quad` tokens and make prerequisite concepts direc
 `codex/fix-gauge-theory-prerequisites`
 
 ## Pull request
-Pending creation.
+PR #33: https://github.com/Danielc-lgtm/Study-notes/pull/33
 
 ## Remaining work
 _none_.

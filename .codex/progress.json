@@ -65,8 +65,8 @@
   "status": "review",
   "branch": "codex/fix-gauge-theory-prerequisites",
   "pr": {
-    "number": null,
-    "url": null,
+    "number": 33,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/33",
     "status": "open"
   },
   "merged_prs": [
@@ -624,7 +624,7 @@
   "current_unit": "gauge-prerequisite-link-repair",
   "next_action": "Commit the prerequisite-link and TeX-spacing repair, open its PR, and merge it.",
   "unresolved": [],
-  "last_commit": "6cfdf6b",
+  "last_commit": "52a67dd5",
   "ready_to_merge": true,
-  "updated": "2026-09-07T02:00:00Z"
+  "updated": "2026-09-07T02:10:00Z"
 }
