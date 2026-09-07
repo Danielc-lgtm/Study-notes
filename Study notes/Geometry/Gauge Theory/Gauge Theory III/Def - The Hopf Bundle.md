@@ -50,7 +50,7 @@ a nowhere-vanishing vector field tangent to $S^{2n+1}$ (it is tangent because $\
 $$h\cdot q=(h_0q,\dots,h_nq),\qquad q\in Sp(1).$$
 Quaternionic projective space $\mathbb{HP}^n$ is the orbit space of the scaling action $h\mapsto hq$, $q\in\mathbb H^\times$, on $\mathbb H^{n+1}\setminus\{0\}$; equivalently it is $S^{4n+3}/Sp(1)$. The **quaternionic Hopf bundle** is the principal $Sp(1)$-bundle
 $$\pi\colon S^{4n+3}\longrightarrow\mathbb{HP}^n,\qquad h\cdot q=hq,$$
-principal by the same free–proper argument. Under [[Ex - SU(2) is the Group of Unit Quaternions|the isomorphism $Sp(1)\cong SU(2)$]] these are principal $SU(2)$-bundles. The case $n=0$ is $S^3\to\mathbb{HP}^0=\{*\}$, the group $Sp(1)\cong SU(2)\cong S^3$ itself over a point.
+principal by the same free–proper argument. Under the isomorphism $Sp(1)\cong SU(2)$ ([[Ex - SU(2) is the Group of Unit Quaternions]]) these are principal $SU(2)$-bundles. The case $n=0$ is $S^3\to\mathbb{HP}^0=\{*\}$, the group $Sp(1)\cong SU(2)\cong S^3$ itself over a point.
 
 **The tautological line bundle.** Over $\mathbb{CP}^n$ the **tautological line bundle** $\mathcal O(-1)$ is the complex line bundle whose fibre over $[z]$ is the line $\mathbb C z\subset\mathbb C^{n+1}$ it names,
 $$\mathcal O(-1)=\{([z],w)\in\mathbb{CP}^n\times\mathbb C^{n+1}:w\in\mathbb C z\},$$
@@ -74,7 +74,7 @@ The construction recurs across mathematics under different names. In algebraic g
 
 # Examples / Corollaries
 
-**Is a principal bundle — the complex Hopf bundle.** We verify the four clauses of [[Def - Principal G-Bundle|the definition of a principal $U(1)$-bundle]] for $\pi\colon S^{2n+1}\to\mathbb{CP}^n$.
+**Is a principal bundle — the complex Hopf bundle.** We verify the four clauses of the definition of a principal $U(1)$-bundle ([[Def - Principal G-Bundle]]) for $\pi\colon S^{2n+1}\to\mathbb{CP}^n$.
 - *Free action.* If $z\cdot\lambda=z$ with $z\in S^{2n+1}$, then $z_j\lambda=z_j$ for every $j$; since $z\neq0$ some $z_j\neq0$, giving $\lambda=1$. So no nonidentity element of $U(1)$ has a fixed point, and by [[Def - Free, Transitive, Effective, and Proper Group Actions|freeness]] the action is free.
 - *Proper action.* $U(1)$ is compact and $S^{2n+1}$ is Hausdorff, so the action is automatically proper (the map $U(1)\times S^{2n+1}\to S^{2n+1}\times S^{2n+1}$, $(\lambda,z)\mapsto(z\lambda,z)$, has compact-fibred, hence closed, image with the right lifting property; compactness of $U(1)$ is what is used).
 - *Orbits are the fibres.* Two points $z,z'\in S^{2n+1}$ have $[z]=[z']$ if and only if $z'=z\mu$ for some $\mu\in\mathbb C^\times$; taking norms, $|\mu|=1$, so $\mu\in U(1)$ and $z'=z\cdot\mu$ lies in the orbit of $z$. Hence $\pi^{-1}([z])=\{z\cdot\lambda:\lambda\in U(1)\}$, the orbit, which is the great circle $\{ze^{is}:s\in[0,2\pi)\}$.
@@ -106,7 +106,7 @@ $$s_1\cdot g_{12}=s_2,\qquad g_{12}(z,t)=\frac{z}{|z|}\colon U_{12}=S^2\setminus
 $$\begin{array}{ccc}S^{2n+1}&\hookrightarrow&S^{2n+3}\\ \downarrow&&\downarrow\\ \mathbb{CP}^n&\hookrightarrow&\mathbb{CP}^{n+1}\end{array}\qquad\text{and}\qquad\begin{array}{ccc}S^{4n+3}&\hookrightarrow&S^{4n+7}\\ \downarrow&&\downarrow\\ \mathbb{HP}^n&\hookrightarrow&\mathbb{HP}^{n+1},\end{array}$$
 each vertical arrow a Hopf bundle and each horizontal arrow equivariant (the inclusion commutes with the $U(1)$- respectively $Sp(1)$-action), so the diagrams commute. The direct limits are the ladders $S^3\subset S^5\subset\cdots$ over $\mathbb{CP}^1\subset\mathbb{CP}^2\subset\cdots$ and $S^7\subset S^{11}\subset\cdots$ over $\mathbb{HP}^1\subset\mathbb{HP}^2\subset\cdots$, whose colimits $S^\infty\to\mathbb{CP}^\infty$ and $S^\infty\to\mathbb{HP}^\infty$ are the classifying bundles of $U(1)$ and $Sp(1)$ (§3.6).
 
-**Calibration check.** Two verifications the reader can carry out from the page. First, on the equator $\{|z|=1,t=0\}$ the transition function is $g_{12}(z,0)=z/|z|=z$, a full turn of $U(1)$ as $z$ runs once around $S^1$: winding number $1$. Second, the cocycle condition $g_{12}g_{21}=1$ holds because $s_2\cdot g_{21}=s_1$ forces $g_{21}=g_{12}^{-1}=\overline{z/|z|}=\bar z/|z|$, and indeed $\frac{z}{|z|}\cdot\frac{\bar z}{|z|}=\frac{|z|^2}{|z|^2}=1$, consistent with [[Def - Transition Functions and the Cocycle Condition|the cocycle identity $g_{\alpha\beta}=g_{\beta\alpha}^{-1}$]].
+**Calibration check.** Two verifications the reader can carry out from the page. First, on the equator $\{|z|=1,t=0\}$ the transition function is $g_{12}(z,0)=z/|z|=z$, a full turn of $U(1)$ as $z$ runs once around $S^1$: winding number $1$. Second, the cocycle condition $g_{12}g_{21}=1$ holds because $s_2\cdot g_{21}=s_1$ forces $g_{21}=g_{12}^{-1}=\overline{z/|z|}=\bar z/|z|$, and indeed $\frac{z}{|z|}\cdot\frac{\bar z}{|z|}=\frac{|z|^2}{|z|^2}=1$, consistent with the cocycle identity $g_{\alpha\beta}=g_{\beta\alpha}^{-1}$ ([[Def - Transition Functions and the Cocycle Condition]]).
 
 ---
 

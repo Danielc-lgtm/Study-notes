@@ -99,7 +99,7 @@ Before proper discontinuity is even a meaningful question we record that transla
 
 > [!note]- Derivation
 > Write $\theta(k, t) = k + t$. The two axioms of a left action hold: $\theta(0, t) = 0 + t = t$ for every $t$, and for $k, l \in \mathbb{Z}$,
-> $$\theta\big(k, \theta(l, t)\big) = k + (l + t) = (k + l) + t = \theta(k + l, t) \qquad \text{(associativity and commutativity of addition in } \mathbb{R}\text{).}$$
+> $$\theta\big(k, \theta(l, t)\big) = k + (l + t) = (k + l) + t = \theta(k + l, t) \qquad \text{(associativity of addition in } \mathbb{R}\text{).}$$
 > Since $\mathbb{Z}$ carries the discrete topology, it is a $0$-dimensional Lie group, and for each fixed $k$ the map $t \mapsto k + t$ is smooth on $\mathbb{R}$; hence $\theta$ is a smooth action in the sense of [[Def - Smooth Action of a Lie Group|a smooth Lie group action]]. Each orbit is the coset $\mathbb{Z} \cdot t = \{t + k : k \in \mathbb{Z}\} = t + \mathbb{Z}$, and two reals $s, t$ lie in the same orbit if and only if $t - s \in \mathbb{Z}$.
 
 **Step 1 (Part A, condition (i)): Distinct integer translates of a length-$1$ interval are disjoint.**
@@ -150,8 +150,10 @@ By part (A), the quotient theorem endows $\mathbb{Z}\backslash\mathbb{R}$ with a
 > *$\tilde{f}$ is surjective.* Every point of $S^1$ has the form $(\cos \varphi, \sin \varphi)$ for some $\varphi \in \mathbb{R}$; taking $t = \varphi/(2\pi)$ gives $f(t) = (\cos \varphi, \sin \varphi)$, so $f$ is surjective. Since $f = \tilde{f} \circ \pi$ is surjective, $\tilde{f}$ is surjective (the last map of a surjective composite is surjective).
 >
 > *$\tilde{f}$ is injective.* Because $\pi$ is surjective, every element of $\mathbb{Z}\backslash\mathbb{R}$ is $\pi(t)$ for some $t$. Suppose $\tilde{f}(\pi(s)) = \tilde{f}(\pi(t))$; then $f(s) = f(t)$ (as $\tilde f\circ\pi = f$), that is
-> $$\cos 2\pi s = \cos 2\pi t \quad \text{and} \quad \sin 2\pi t = \sin 2\pi s.$$
-> A point of $\mathbb{R}$ is determined modulo $2\pi$ by its cosine and sine, so $2\pi s \equiv 2\pi t \pmod{2\pi}$, i.e. $2\pi(t - s) = 2\pi m$ for some $m \in \mathbb{Z}$, whence $t - s = m \in \mathbb{Z}$. By Step 0 this means $s$ and $t$ lie in the same orbit, so $\pi(s) = \pi(t)$. Thus $\tilde{f}$ is injective.
+> $$\cos 2\pi s = \cos 2\pi t \quad \text{and} \quad \sin 2\pi s = \sin 2\pi t.$$
+> Write $a := 2\pi t$ and $b := 2\pi s$. The angle-subtraction formula gives
+> $$\cos(a - b) = \cos a \cos b + \sin a \sin b = \cos^2 b + \sin^2 b = 1 \qquad \text{(substituting } \cos a = \cos b \text{, } \sin a = \sin b \text{, then the Pythagorean identity),}$$
+> and $\cos\vartheta = 1$ holds for a real $\vartheta$ if and only if $\vartheta \in 2\pi\mathbb{Z}$ (the zeros of $1 - \cos$ are exactly the integer multiples of $2\pi$). Hence $a - b = 2\pi(t - s) = 2\pi m$ for some $m \in \mathbb{Z}$, whence $t - s = m \in \mathbb{Z}$. By Step 0 this means $s$ and $t$ lie in the same orbit, so $\pi(s) = \pi(t)$. Thus $\tilde{f}$ is injective.
 >
 > Hence $\tilde{f}$ is a smooth bijection.
 
