@@ -18,7 +18,7 @@ where $dF_p : T_pM \to T_{F(p)}N$ is the differential of $F$ at $p$. On function
 For a chart $(V, y^j)$ on $N$ we use increasing multi-indices $J = (j_1 < \cdots < j_k)$, write $dy^J = dy^{j_1} \wedge \cdots \wedge dy^{j_k}$, and abbreviate the primed sum over increasing multi-indices of length $k$ by $\sum'_J$. For a smooth map into such a chart we write $F^j = y^j \circ F \in C^\infty(F^{-1}(V))$ for the $j$-th component function of $F$. The symbol $\operatorname{supp}$ denotes the support of a function, and $\chi$ denotes a bump function. The full symbol registry for the chapter is on the topic page [[Gauge Theory II — Vector Bundles, Covariant Derivatives, and Curvature]].
 
 > [!warning] Convention: this page re-proves a flagged prerequisite
-> The differential-geometry chapter records the higher-degree naturality statement $F^*(d\omega) = d(F^*\omega)$ on a page whose proof is incomplete. That page is **flagged** in this series and is never cited as an authority. The present page carries the complete proof and is the page every gauge-theory result links to when it needs naturality of $d$. We invoke only fully proved inputs: the degree-zero case [[Thm - Pullback Commutes with d for 1-Forms]], the [[Thm - Coordinate Expression for the Exterior Derivative|coordinate formula for $d$]], the [[Thm - Wedge Product Properties|properties of the wedge product]], the nilpotence [[Thm - d-Squared-is-Zero]], and the existence of [[Thm - Existence of Smooth Bump Functions|smooth bump functions]].
+> The differential-geometry chapter records the higher-degree naturality statement $F^*(d\omega) = d(F^*\omega)$ on a page whose proof is incomplete. That page is **flagged** in this series and is never cited as an authority. The present page carries the complete proof and is the page every gauge-theory result links to when it needs naturality of $d$. We invoke only fully proved inputs: the degree-zero case [[Thm - Pullback Commutes with d for 1-Forms]], the [[Thm - Coordinate Expression for the Exterior Derivative|coordinate formula for the exterior derivative]], the [[Thm - Wedge Product Properties|properties of the wedge product]], the nilpotence [[Thm - d-Squared-is-Zero]], and the existence of [[Thm - Existence of Smooth Bump Functions|smooth bump functions]].
 
 ---
 
@@ -245,7 +245,7 @@ The single subtle point is that neither side is defined by a formula that visibl
 > $$d\omega = \sum'_J d\omega_J \wedge dy^{j_1} \wedge \cdots \wedge dy^{j_k} \qquad \text{(coordinate formula for }d\text{).}$$
 > Apply $F^*$, again by its $\mathbb{R}$-linearity and the wedge-homomorphism property (**Lemma 3**):
 > $$F^*(d\omega) = \sum'_J (F^* d\omega_J) \wedge (F^*dy^{j_1}) \wedge \cdots \wedge (F^*dy^{j_k}) \qquad \text{(Lemma 3).}$$
-> Now $d\omega_J$ is the differential of the function $\omega_J \in C^\infty(V)$, so the same degree-zero naturality [[Thm - Pullback Commutes with d for 1-Forms|($F^*(dg) = d(g \circ F)$)]], applied with $g = \omega_J$, gives $F^*(d\omega_J) = d(\omega_J \circ F)$; and $F^*(dy^{j_i}) = dF^{j_i}$ as in Step 2. Substituting,
+> Now $d\omega_J$ is the differential of the function $\omega_J \in C^\infty(V)$, so the same degree-zero naturality [[Thm - Pullback Commutes with d for 1-Forms|used in Step 2]] — the identity $F^*(dg) = d(g \circ F)$ — applied with $g = \omega_J$, gives $F^*(d\omega_J) = d(\omega_J \circ F)$; and $F^*(dy^{j_i}) = dF^{j_i}$ as in Step 2. Substituting,
 > $$F^*(d\omega) = \sum'_J d(\omega_J \circ F) \wedge dF^{j_1} \wedge \cdots \wedge dF^{j_k}. \tag{$\ast\ast\ast$}$$
 >
 > **Step 5 — compare and globalise.** The right-hand sides of $(\ast\ast)$ and $(\ast\ast\ast)$ are identical term by term, so
@@ -273,7 +273,7 @@ The gauge-theoretic uses of naturality are almost always for forms whose coeffic
 > $$F^*(d\omega) = F^*\!\Big(\sum_a (d\omega^a) \otimes e_a\Big) = \sum_a F^*(d\omega^a) \otimes e_a = \sum_a d(F^*\omega^a) \otimes e_a = d\Big(\sum_a (F^*\omega^a) \otimes e_a\Big) = d(F^*\omega),$$
 > where the first and last equalities are the componentwise definitions, the second is the definition of $F^*$ on a $V$-valued form (with the constant basis vectors $e_a$ untouched), the third applies clause (ii) of the scalar theorem to each scalar component $\omega^a$, and the fourth is again the componentwise definition of $d$.
 >
-> **Compatibility with the scalar wedge.** Similarly,
+> **Compatibility with the scalar wedge.** By the same componentwise reduction,
 > $$F^*(\eta \wedge \omega) = F^*\!\Big(\sum_a (\eta \wedge \omega^a) \otimes e_a\Big) = \sum_a F^*(\eta \wedge \omega^a) \otimes e_a = \sum_a (F^*\eta \wedge F^*\omega^a) \otimes e_a = F^*\eta \wedge F^*\omega,$$
 > the third equality being clause (i) of the scalar theorem applied to the pair $(\eta, \omega^a)$.
 >
@@ -283,7 +283,7 @@ The gauge-theoretic uses of naturality are almost always for forms whose coeffic
 >
 > **Conclusion.** The $V$-valued pullback commutes with the exterior derivative and with the scalar wedge, and does so basis-independently. $\blacksquare$
 
-When $V = \mathfrak{g}$ is a Lie algebra there is in addition the bracket-wedge $[\cdot \wedge \cdot]$ of $\mathfrak{g}$-valued forms. Its naturality, $F^*[\alpha \wedge \beta] = [F^*\alpha \wedge F^*\beta]$, follows by the same componentwise argument together with clause (i): in a basis $[\alpha \wedge \beta] = \sum_{a,b} (\alpha^a \wedge \beta^b) \otimes [e_a, e_b]$, and $F^*$ acts as a wedge homomorphism on each scalar factor while leaving the constant brackets $[e_a, e_b]$ fixed. This is the form of naturality that carries $s^*\Omega = dA_s + \tfrac12[A_s \wedge A_s]$ downstairs in Step of the local structure equation.
+When $V = \mathfrak{g}$ is a Lie algebra there is in addition the bracket-wedge $[\cdot \wedge \cdot]$ of $\mathfrak{g}$-valued forms. Its naturality, $F^*[\alpha \wedge \beta] = [F^*\alpha \wedge F^*\beta]$, follows by the same componentwise argument together with clause (i): in a basis $[\alpha \wedge \beta] = \sum_{a,b} (\alpha^a \wedge \beta^b) \otimes [e_a, e_b]$, and $F^*$ acts as a wedge homomorphism on each scalar factor while leaving the constant brackets $[e_a, e_b]$ fixed. This is the form of naturality that carries $s^*\Omega = dA_s + \tfrac12[A_s \wedge A_s]$ downstairs in the derivation of the local structure equation.
 
 ---
 
