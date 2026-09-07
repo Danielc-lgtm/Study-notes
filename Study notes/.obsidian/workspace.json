@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
+                "file": "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Differential Geometry V — Vector Fields, Flows, and the Lie Bracket"
+              "title": "Gauge Theory II — Principal Bundles, Representations, and Bundle Classification"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "365b19c7bfd998b8",
@@ -188,32 +187,32 @@
   },
   "active": "c5b52a9d138c61af",
   "lastOpenFiles": [
-    "Geometry/Differential Geometry/Differential Geometry V/Def - Smooth Vector Field.md",
-    "Algebra/Modules/Modules I/Def - Module.md",
-    "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
-    "Geometry/Differential Geometry/Differential Geometry V/Def - Vector Field on a Manifold.md",
-    "Geometry/Differential Geometry/Differential Geometry IX/Def - Orientation of a Vector Space.md",
-    "Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory — Series Map.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Gauss-Bonnet for Closed Surfaces (Chern's Proof).md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory IV/Thm - Gauss-Bonnet-Chern Theorem.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory II — Principal Bundles, Representations, and Bundle Classification.md",
+    "Geometry/Differential Geometry/Differential Geometry II — Smooth Maps and Partitions of Unity.md",
+    "Geometry/Differential Geometry/Differential Geometry II/Def - Bump Function and Smooth Cutoff.md",
+    "Geometry/Differential Geometry/Differential Geometry II/Thm - Smooth Maps are Continuous.md",
     "Geometry/Differential Geometry/Differential Geometry I — Smooth Manifolds and Atlases.md",
-    "Category Theory/Category Theory IV — Adjunctions.md",
-    "Category Theory/Category Theory III — Limits and Colimits.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Paper - Brownian Loops — Homotopy and Homology — Whole-Paper Story.md",
-    "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology.md",
-    "Algebra/Rings/Rings II/Def - Euclidean Domain.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Relation to the Path Integral.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Paper - Brownian Loops — Homotopy and Homology — §3 Decomposition over Homotopy Classes.md",
-    "paper/Brownian Loops — Homotopy and Homology/Paper - Brownian Loops — Homotopy and Homology — §5 Renormalising the Total Mass.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Why the Surface Construction Lifts to 3-Manifolds.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Why the Selberg Zeta Derivative Appears in Finite Area.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Total Mass Divergence of the Brownian Loop Measure.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - The Range of the Killing Parameter.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - The Infinite-Area Determinant Case.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Systole Limit of the Homotopy Probability Measure.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Subordination versus PCAF Time Change.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Standard Form as Coordinates on the Axis.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Restriction Property of the Brownian Loop Measure.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Regrouping the L-Function Sum by Homology Class.md",
-    "paper/Brownian Loops — Homotopy and Homology/Subpages/Remark - Provenance of the Homology Class Definition.md",
+    "Geometry/Differential Geometry/Differential Geometry III — Tangent Vectors and the Differential.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Thm - Existence of Connections via Partitions of Unity.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Thm - Bianchi Identity for a Vector-Bundle Connection.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Exercise Index - §1.2 Connections on Vector Bundles.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Ex - Curvature of a Trivial Bundle with Trivial Connection is Zero.md",
+    "Geometry/Geometry of Physics/Gauge Theory/Gauge Theory I/Ex - Connection on the Tangent Bundle of S^2 from the Round Metric.md",
+    "Geometry/Differential Geometry/Differential Geometry VIII — Differential Forms.md",
+    "Geometry/Differential Geometry/Differential Geometry VII — Tensors and Tensor Fields.md",
+    "Geometry/Differential Geometry/Differential Geometry V — Vector Fields, Flows, and the Lie Bracket.md",
+    "Geometry/Differential Geometry/Differential Geometry IX — Orientation, Integration, and Stokes' Theorem.md",
+    "Geometry/Differential Geometry/Differential Geometry IV — Submersions, Immersions, Embeddings, and Submanifolds.md",
+    "Geometry/Differential Geometry/Differential Geometry VI — Vector Bundles and the Cotangent Bundle.md",
+    "Geometry/Differential Geometry/Differential Geometry X/Thm - The Mayer-Vietoris Sequence.md",
+    "Geometry/Differential Geometry/Differential Geometry X — de Rham Cohomology, Distributions, and Frobenius.md",
+    "Geometry/Differential Geometry/Differential Geometry X/Thm - The Frobenius Theorem.md",
+    "Geometry/Differential Geometry/Differential Geometry X/Def - Distribution on a Manifold.md",
+    "Geometry/Differential Geometry/Differential Geometry X/Def - de Rham Cohomology.md",
     "paper/Brownian Loops — Homotopy and Homology/Subpages",
     "Category Theory/Higher Categories - Globular Operads",
     "Category Theory/Higher Categories - Generalized Operads"
