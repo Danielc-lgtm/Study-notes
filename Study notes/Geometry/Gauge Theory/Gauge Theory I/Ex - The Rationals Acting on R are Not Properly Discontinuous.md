@@ -102,15 +102,21 @@ The plan is to run everything off one fact — the density of each orbit $t + \m
 For every $p \in \mathbb{R}$ and every neighbourhood $U$ of $p$ there is a nonzero $q \in \mathbb{Q}$ with $q \cdot U \cap U \neq \emptyset$; hence no neighbourhood witnesses condition (i), and (i) fails at $p$.
 
 > [!note]- Derivation
-> Fix $p \in \mathbb{R}$ and any neighbourhood $U$ of $p$. Since $U$ is a neighbourhood, it contains an open interval $(p - \delta, p + \delta)$ for some $\delta > 0$. By density of the rationals there is a rational $q$ with
-> $$0 < q < 2\delta \qquad \text{(the interval } (0, 2\delta) \text{ contains a rational).}$$
-> This $q$ is nonzero. Consider the point $p - \delta + \tfrac{q}{2}$. Because $0 < q < 2\delta$ we have $0 < \tfrac{q}{2} < \delta$, so
-> $$p - \delta < p - \delta + \tfrac{q}{2} < p + \delta, \qquad\text{hence}\qquad p - \delta + \tfrac{q}{2} \in (p - \delta, p + \delta) \subseteq U.$$
-> Its image under $q$ is $q \cdot \left(p - \delta + \tfrac{q}{2}\right) = p - \delta + \tfrac{q}{2} + q = p - \delta + \tfrac{3q}{2}$; since $0 < \tfrac{3q}{2} < 3\delta$ we cannot immediately place it, so instead we exhibit a common point of $q\cdot U$ and $U$ directly. The overlap of the interval $(p - \delta, p + \delta)$ and its translate $(p - \delta + q, p + \delta + q)$ is nonempty precisely when $q < 2\delta$, which holds; explicitly the point
-> $$x := p + \delta - \tfrac{q}{2}$$
-> satisfies $x \in (p - \delta, p + \delta) \subseteq U$ (as $0 < \tfrac{q}{2} < \delta$ gives $p - \delta < x < p + \delta$) and also $x \in (p - \delta + q, p + \delta + q)$ (since $x - q = p + \delta - \tfrac{3q}{2} > p - \delta$ because $\tfrac{3q}{2} < 3\delta$ is not yet enough — instead note $x > p - \delta + q \iff \delta - \tfrac{q}{2} > -\delta + q \iff 2\delta > \tfrac{3q}{2}$, i.e. $q < \tfrac{4\delta}{3}$). To avoid the borderline, simply choose $q$ at the outset with $0 < q < \delta$; then $x = p + \delta - \tfrac{q}{2}$ lies in $(p - \delta, p + \delta)$ and in $(p - \delta + q, p + \delta + q)$ because $x - q = p + \delta - \tfrac{3q}{2} > p + \delta - \tfrac{3\delta}{2} = p - \tfrac{\delta}{2} > p - \delta$. Hence
-> $$x \in U \cap (U + q) \subseteq U \cap (q \cdot U), \qquad\text{so}\qquad q \cdot U \cap U \neq \emptyset \text{ with } q \neq 0.$$
-> As $U$ was an arbitrary neighbourhood of $p$, no neighbourhood of $p$ satisfies "$q \cdot U \cap U \neq \emptyset \Rightarrow q = 0$". Therefore condition (i) fails at $p$, and $p$ was arbitrary.
+> Fix $p \in \mathbb{R}$ and any neighbourhood $U$ of $p$. Since $U$ is a neighbourhood, it contains an open interval $U' := (p - \delta, p + \delta)$ for some $\delta > 0$. By density of the rationals there is a rational $q$ with
+> $$0 < q < \delta \qquad \text{(the interval } (0, \delta) \text{ contains a rational),}$$
+> and this $q$ is nonzero. The translate $q \cdot U'$ is the interval $(p - \delta + q, p + \delta + q)$. We exhibit a point lying in both $U'$ and $q \cdot U'$; take
+> $$x := p + \delta - \tfrac{q}{2}.$$
+> **$x$ lies in $U'$.** Since $0 < q < \delta$ we have $0 < \tfrac{q}{2} < \delta$, so
+> $$p - \delta < p + \delta - \tfrac{q}{2} < p + \delta \qquad \text{(the left inequality is } 2\delta > \tfrac{q}{2}\text{, the right is } \tfrac{q}{2} > 0\text{),}$$
+> that is $x \in U' \subseteq U$.
+>
+> **$x$ lies in $q \cdot U'$.** We check $p - \delta + q < x < p + \delta + q$. The right inequality is $-\tfrac{q}{2} < q$, which holds. The left inequality is
+> $$p + \delta - \tfrac{q}{2} > p - \delta + q \iff 2\delta > \tfrac{3q}{2} \iff q < \tfrac{4\delta}{3},$$
+> and $q < \delta < \tfrac{4\delta}{3}$, so it holds. Thus $x \in q \cdot U'$.
+>
+> Since $U' \subseteq U$ we also have $q \cdot U' \subseteq q \cdot U$, so
+> $$x \in U \cap (q \cdot U), \qquad\text{giving}\qquad q \cdot U \cap U \neq \emptyset \text{ with } q \neq 0.$$
+> As $U$ was an arbitrary neighbourhood of $p$, no neighbourhood of $p$ satisfies the implication "$q \cdot U \cap U \neq \emptyset \Rightarrow q = 0$" required by condition (i). Therefore condition (i) fails at $p$, and $p$ was arbitrary.
 
 **Step 2 (Part A, condition (ii) fails): Density slides a translate of one neighbourhood into the other.**
 
