@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Field Strength]]
+- [[Def - The Yang-Mills Action Functional]]
+- [[Def - Gauge-Covariant Derivative]]
+
 # Notation
 
 $(M, g)$ is an oriented 4-manifold with metric; $G$ a compact Lie group; $A$ a connection on a principal $G$-bundle with field strength $F$. The exterior covariant derivative on $\mathfrak{g}$-valued forms is $d_A\alpha = d\alpha + [\omega, \alpha]$ (or $d_A\alpha = d\alpha - iq[A, \alpha]$ in physics notation), where the bracket is the graded Lie bracket on $\mathfrak{g}$-valued forms. The Hodge star $\star : \Omega^k \to \Omega^{n-k}$ depends on the metric and orientation; on a 4-manifold, $\star\star = (-1)^{k(n-k)}\cdot(\text{sign}) = (\pm)$ on $k$-forms depending on signature.

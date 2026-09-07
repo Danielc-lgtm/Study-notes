@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Field Strength]]
+- [[Def - The Lie Algebra of a Lie Group]]
+- [[Def - Lorentzian Manifold]]
+
 # Notation
 
 $M$ is a (pseudo-)Riemannian 4-manifold with metric $g_{\mu\nu}$ (Lorentzian signature $(-,+,+,+)$ in physics applications, Riemannian for instanton calculations), $G$ a compact Lie group with Lie algebra $\mathfrak{g}$. Indices are raised and lowered with $g^{\mu\nu}$ and $g_{\mu\nu}$. The volume form is $\operatorname{vol}_g = \sqrt{|g|}\, d^4x$ (with the absolute value for Lorentzian signature).

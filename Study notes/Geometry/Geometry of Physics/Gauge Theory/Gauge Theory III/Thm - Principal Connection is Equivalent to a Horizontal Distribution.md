@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, principal-connection, horizontal-distribution]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection 1-Form on a Principal Bundle]]
+- [[Def - Horizontal Subspace]]
+
 # Statement
 
 > [!theorem] Two equivalent definitions

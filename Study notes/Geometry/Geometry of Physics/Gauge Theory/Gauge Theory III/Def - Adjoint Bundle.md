@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, adjoint-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Associated Bundle]]
+- [[Def - Adjoint Representation]]
+
 # The Definition
 
 > [!definition] Adjoint bundle
@@ -21,7 +26,7 @@ The fibrewise Lie bracket is well defined because $\operatorname{Ad}_g$ is a Lie
 # Geometric Meaning
 
 The vertical tangent bundle satisfies
-$$VP\cong\pi^*(\operatorname{Ad}P),qquad (p,[p,\xi])\longmapsto\xi_P(p).$$
+$$VP\cong\pi^*(\operatorname{Ad}P),\qquad (p,[p,\xi])\longmapsto\xi_P(p).$$
 Thus an adjoint-bundle section is an infinitesimal gauge transformation. Curvature descends as an element of $\Omega^2(M;\operatorname{Ad}P)$, and differences of connections lie in $\Omega^1(M;\operatorname{Ad}P)$.
 
 # Abelian Case

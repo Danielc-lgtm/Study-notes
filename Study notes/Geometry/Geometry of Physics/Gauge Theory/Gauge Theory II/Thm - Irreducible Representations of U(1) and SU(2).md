@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, representation-theory, u1, su2]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Representation of a Lie Group]]
+- [[Ex - SU(2) is Diffeomorphic to S^3]]
+
 # Statement
 
 > [!theorem] Compact rank-one representation classification
@@ -25,7 +30,7 @@ Compactness makes representations unitary and therefore completely reducible. Fo
 
 > [!note]- Lemma 2 — Finite-dimensional irreducible $\mathfrak{sl}_2$-modules are highest-weight modules
 > For generators $H,E,F$ with $[H,E]=2E$, $[H,F]=-2F$, $[E,F]=H$, an irreducible module has a vector $v_0$ with $Ev_0=0$ and $Hv_0=mv_0$ for a unique $m\in\mathbb Z_{\ge0}$. The vectors $v_j=F^jv_0$, $0\le j\le m$, form a basis and
-> $$Hv_j=(m-2j)v_j,quad Fv_j=v_{j+1},quad Ev_j=j(m-j+1)v_{j-1}.$$
+> $$Hv_j=(m-2j)v_j,\quad Fv_j=v_{j+1},\quad Ev_j=j(m-j+1)v_{j-1}.$$
 
 # Formal Proof
 

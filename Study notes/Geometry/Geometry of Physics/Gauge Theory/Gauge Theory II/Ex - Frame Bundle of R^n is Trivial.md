@@ -7,6 +7,10 @@ prereqs:
 tags: [gauge-theory, frame-bundle, triviality]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Frame Bundle of a Vector Bundle]]
+
 # Problem Statement
 
 Construct an explicit principal-bundle isomorphism

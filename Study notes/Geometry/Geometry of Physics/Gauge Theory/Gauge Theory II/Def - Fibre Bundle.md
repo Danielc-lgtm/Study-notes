@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, fibre-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Smooth Manifold]]
+- [[Def - Local Trivialization]]
+
 # Notation
 
 Let $E,B,F$ be smooth manifolds and $\pi:E\to B$ a smooth map. Write $E_b=\pi^{-1}(b)$.
@@ -30,7 +35,7 @@ A **section** is a smooth map $s:B\to E$ with $\pi s=\operatorname{id}_B$. Unlik
 
 For $f:N\to B$, the pullback is
 $$
-f^*E=\{(x,e)\in N\times E:f(x)=\pi(e)\}\longrightarrow N,qquad(x,e)\mapsto x.
+f^*E=\{(x,e)\in N\times E:f(x)=\pi(e)\}\longrightarrow N,\qquad(x,e)\mapsto x.
 $$
 Pulling back a trivialization over $U$ gives one over $f^{-1}(U)$, so this is again a fibre bundle with fibre $F$. It satisfies the universal property: maps $X\to f^*E$ over $N$ are equivalent to maps $X\to E$ whose projection equals $f$ composed with the map $X\to N$.
 

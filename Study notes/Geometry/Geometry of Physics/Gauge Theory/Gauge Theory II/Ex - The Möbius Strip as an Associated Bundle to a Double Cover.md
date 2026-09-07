@@ -8,6 +8,11 @@ prereqs:
 tags: [gauge-theory, associated-bundle, mobius]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Associated Bundle]]
+- [[Def - Covering Space]]
+
 # Problem Statement
 
 View $p:S^1\to S^1$, $p(z)=z^2$, as a principal $\mathbb Z/2$-bundle. Let the nontrivial element act on $\mathbb R$ by $t\mapsto-t$. Prove that the associated line bundle is the Möbius line bundle. Compare with the trivial representation.

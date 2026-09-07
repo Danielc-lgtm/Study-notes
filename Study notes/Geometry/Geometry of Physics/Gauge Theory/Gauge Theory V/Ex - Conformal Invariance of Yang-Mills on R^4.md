@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Action Functional]]
+- [[Def - The Yang-Mills Lagrangian]]
+
 # Problem Statement
 
 Show that the **Yang-Mills action** $S_{\text{YM}}[A] = -\tfrac12\int_M\operatorname{tr}(F\wedge\star F)$ on an oriented 4-dimensional Riemannian manifold $(M, g)$ is invariant under **conformal rescalings** of the metric: $g_{\mu\nu} \to \tilde g_{\mu\nu} = e^{2\sigma(x)}g_{\mu\nu}$ for any smooth function $\sigma : M \to \mathbb{R}$.

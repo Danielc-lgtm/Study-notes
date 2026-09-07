@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, curvature, tensoriality]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Curvature of a Vector-Bundle Connection]]
+- [[Def - Connection on a Vector Bundle]]
+
 # Notation
 
 Let $\nabla$ be a connection on $E\to M$ and let $F_\nabla(X,Y)=[\nabla_X,\nabla_Y]-\nabla_{[X,Y]}$.

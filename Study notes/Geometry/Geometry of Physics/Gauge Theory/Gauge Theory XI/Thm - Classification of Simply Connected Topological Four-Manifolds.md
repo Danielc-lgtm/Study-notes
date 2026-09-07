@@ -4,6 +4,11 @@ subject: gauge-theory
 prereqs: ["Def - Intersection Form of a Four-Manifold"]
 tags: [four-manifolds, freedman, classification]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Intersection Form of a Four-Manifold]]
+
 # Statements
 > [!theorem] Whitehead and Freedman
 > Closed simply connected oriented four-manifolds are homotopy equivalent exactly when their intersection forms are isomorphic. Every unimodular symmetric integral form occurs as the intersection form of such a topological four-manifold. An even form determines one homeomorphism type; an odd form determines two, distinguished by the Kirby–Siebenmann invariant.

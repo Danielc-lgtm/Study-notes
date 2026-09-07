@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, lie-group, maurer-cartan]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Lie Group]]
+- [[Def - The Lie Algebra of a Lie Group]]
+
 # The Definition
 
 > [!definition] Left Maurer–Cartan form

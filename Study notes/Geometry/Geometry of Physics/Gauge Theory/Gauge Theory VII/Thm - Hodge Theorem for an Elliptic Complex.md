@@ -5,6 +5,11 @@ prereqs: ["Def - Elliptic Complex and Associated Laplacian", "Thm - Elliptic Ope
 tags: [gauge-theory, hodge-theorem, elliptic-complex]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Elliptic Complex and Associated Laplacian]]
+- [[Thm - Elliptic Operators are Fredholm and the Fredholm Alternative]]
+
 # Statement
 
 > [!theorem] Hodge theorem for elliptic complexes

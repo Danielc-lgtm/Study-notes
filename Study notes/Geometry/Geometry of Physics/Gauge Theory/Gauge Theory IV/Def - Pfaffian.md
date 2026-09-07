@@ -6,6 +6,10 @@ prereqs:
 tags: [geometry, gauge-theory, algebra, characteristic-classes]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Linear Map]]
+
 # Notation
 
 For a $2n \times 2n$ skew-symmetric matrix $A = -A^T$, the Pfaffian is denoted $\mathrm{Pf}(A)$. It is a polynomial of degree $n$ in the entries $A_{ij}$, satisfying $\mathrm{Pf}(A)^2 = \det(A)$. When $A$ is the matrix of a $2$-form $\Omega$ on a $2n$-dimensional oriented vector space with respect to an oriented basis, $\mathrm{Pf}(\Omega)$ is the canonical "top exterior power" of $\Omega$. For an $\mathfrak{so}(2n)$-valued differential $2$-form $\Omega \in \Omega^2(M; \mathfrak{so}(2n))$ on a manifold $M$, $\mathrm{Pf}(\Omega)$ is the resulting scalar-valued $2n$-form, written componentwise in terms of an orthonormal frame. See [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification]] for the registry.

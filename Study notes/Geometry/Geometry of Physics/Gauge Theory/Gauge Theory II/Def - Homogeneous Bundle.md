@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, homogeneous-space, associated-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Homogeneous Space]]
+- [[Def - Associated Bundle]]
+
 # Notation
 
 Let $G$ be a Lie group and $H\subset G$ a closed subgroup. Then $G/H$ denotes right cosets and $G\to G/H$ carries the right action of $H$.
@@ -16,7 +21,7 @@ Let $G$ be a Lie group and $H\subset G$ a closed subgroup. Then $G/H$ denotes ri
 > [!definition] Homogeneous bundle
 > For a representation $\rho:H\to\mathrm{GL}(V)$, the bundle
 > $$
-> G\times_HV\longrightarrow G/H,qquad[g,v]\longmapsto gH,
+> G\times_HV\longrightarrow G/H,\qquad[g,v]\longmapsto gH,
 > $$
 > is the **homogeneous vector bundle** associated to $\rho$.
 

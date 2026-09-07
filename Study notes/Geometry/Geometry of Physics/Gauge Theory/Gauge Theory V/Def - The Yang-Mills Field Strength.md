@@ -9,6 +9,13 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Gauge-Covariant Derivative]]
+- [[Def - Exterior Derivative on a Manifold]]
+- [[Def - The Wedge Product on a Manifold]]
+- [[Def - The Lie Algebra of a Lie Group]]
+
 # Notation
 
 $M$ is a smooth manifold, $G$ a compact Lie group with Lie algebra $\mathfrak{g}$, and $A$ a $\mathfrak{g}$-valued 1-form on $M$ (the gauge potential). In local coordinates $A = A_\mu(x)\, dx^\mu$ with each $A_\mu(x) \in \mathfrak{g}$, and in matrix form $A_\mu = A_\mu^a T^a$ with $\{T^a\}$ a basis of $\mathfrak{g}$. The geometric connection is $\omega = -iqA$, where $q$ is the coupling constant.

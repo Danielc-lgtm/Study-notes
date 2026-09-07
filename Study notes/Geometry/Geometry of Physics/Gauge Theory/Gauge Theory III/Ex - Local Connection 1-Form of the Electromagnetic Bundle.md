@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, electromagnetism, principal-bundles]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection 1-Form on a Principal Bundle]]
+- [[Def - Local Connection 1-Form (Gauge Potential)]]
+
 # Problem Statement
 
 On $P=M\times U(1)$, construct the principal connection determined by

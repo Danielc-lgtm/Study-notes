@@ -4,6 +4,12 @@ subject: gauge-theory
 prereqs: ["Def - Homotopy Groups and Homotopy Equivalence", "Def - Fibre Bundle"]
 tags: [algebraic-topology, fibration]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Homotopy Groups and Homotopy Equivalence]]
+- [[Def - Fibre Bundle]]
+
 # Statement
 > [!theorem] Long exact sequence
 > For a fibre bundle $F\hookrightarrow E\xrightarrow p B$ with compatible base points, there are connecting maps making

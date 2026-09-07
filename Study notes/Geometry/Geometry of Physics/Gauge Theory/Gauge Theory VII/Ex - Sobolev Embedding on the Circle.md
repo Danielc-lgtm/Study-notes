@@ -6,6 +6,10 @@ prereqs: ["Thm - Sobolev Embedding, Compactness, and Multiplication"]
 tags: [gauge-theory, sobolev-embedding, circle]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Sobolev Embedding, Compactness, and Multiplication]]
+
 # Problem Statement
 
 Prove directly that $W^{1,2}(S^1)\hookrightarrow C^0(S^1)$ and that bounded subsets are precompact in $C^0$.

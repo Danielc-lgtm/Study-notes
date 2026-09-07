@@ -5,6 +5,10 @@ prereqs: ["Thm - Chern-Weil Theorem"]
 tags: [gauge-theory, chern-class, characteristic-class]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Chern-Weil Theorem]]
+
 # The Definition
 
 > [!definition] Chern forms and classes
@@ -13,7 +17,7 @@ tags: [gauge-theory, chern-class, characteristic-class]
 > The de Rham class $c_j(E)=[c_j(A)]\in H^{2j}_{\mathrm{dR}}(M)$ is its $j$th Chern class, and $c(E)=1+c_1(E)+\cdots+c_r(E)$ is the total Chern class.
 
 The normalization makes these real classes the images of integral cohomology classes. In particular
-$$c_1(A)=\frac{i}{2\pi}\operatorname{tr}F_A,qquad
+$$c_1(A)=\frac{i}{2\pi}\operatorname{tr}F_A,\qquad
 c_2(A)=\frac1{8\pi^2}\bigl(\operatorname{tr}(F_A\wedge F_A)-(\operatorname{tr}F_A)^2\bigr)$$
 
 with the second formula interpreted under the anti-Hermitian convention; for $SU(r)$, $\operatorname{tr}F_A=0$ and the sign depends on whether curvature matrices are chosen Hermitian or anti-Hermitian. We use Haydys' anti-Hermitian convention, in which $c_2(P)=\frac1{8\pi^2}[\operatorname{tr}(F_A\wedge F_A)]$ for $SU(2)$.

@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Lie Group]]
+- [[Def - The Lie Algebra of a Lie Group]]
+- [[Def - Differential k-Form on a Manifold]]
+
 # Notation
 
 $M$ is a smooth manifold (spacetime); $G$ is a compact Lie group with Lie algebra $\mathfrak{g}$; $E \to M$ is a vector bundle whose structure group is $G$, with fibre $V$ (typically $\mathbb{C}^N$) carrying a representation $\rho : G \to GL(V)$. The "matter field" $\psi$ is a section of $E$, locally an $N$-component column $\psi^a(x)$.

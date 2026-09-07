@@ -5,6 +5,11 @@ prereqs: ["Def - Sobolev Space of Bundle Sections", "Def - Gauge Action and Seib
 tags: [gauge-theory, seiberg-witten, sobolev]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Sobolev Space of Bundle Sections]]
+- [[Def - Gauge Action and Seiberg-Witten Moduli Space]]
+
 # The Definition
 
 > [!definition] Sobolev completion

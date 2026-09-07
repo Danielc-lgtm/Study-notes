@@ -7,6 +7,10 @@ prereqs:
 tags: [gauge-theory, representation-theory, u1]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Representation of a Lie Group]]
+
 # Problem Statement
 
 For $k\in\mathbb Z$, define $\rho_k:U(1)\to\mathrm{GL}_1(\mathbb C)$ by $\rho_k(z)=z^k$. Prove that it is a representation, compute its differentiated representation, and show

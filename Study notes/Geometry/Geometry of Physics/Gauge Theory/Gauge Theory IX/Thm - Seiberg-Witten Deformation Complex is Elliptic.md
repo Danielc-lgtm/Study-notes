@@ -5,6 +5,11 @@ prereqs: ["Def - Seiberg-Witten Equations and Quadratic Spinor Map", "Def - Elli
 tags: [gauge-theory, seiberg-witten, elliptic-complex]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Equations and Quadratic Spinor Map]]
+- [[Def - Elliptic Complex and Associated Laplacian]]
+
 # Statement
 
 > [!theorem] Seiberg–Witten deformation complex

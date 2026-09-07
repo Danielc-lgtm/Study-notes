@@ -4,6 +4,12 @@ subject: gauge-theory
 prereqs: ["Def - Intersection Form of a Four-Manifold", "Def - Instanton"]
 tags: [four-manifolds, donaldson, instantons]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Intersection Form of a Four-Manifold]]
+- [[Def - Instanton]]
+
 # Statement
 > [!theorem] Donaldson diagonalization
 > If $X$ is a closed simply connected oriented smooth four-manifold and $Q_X$ is positive definite, then $Q_X$ is isomorphic over $\mathbb Z$ to the identity form. Equivalently, a negative-definite form is diagonal with entries $-1$ after reversing orientation.

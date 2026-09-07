@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, topology, sphere]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Brouwer Degree of a Map]]
+- [[Def - The Tangent Bundle]]
+
 # Statement
 
 > [!theorem] Hairy-ball theorem

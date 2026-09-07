@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The BPST Instanton]]
+- [[Def - Gauge-Covariant Derivative]]
+
 # Problem Statement
 
 Compute the **$SU(2)$ holonomy** of the BPST instanton

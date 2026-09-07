@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, yang-mills, curvature]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Cartan Structural Equation for Principal Connections]]
+- [[Thm - Gauge Transformation Law for Local Connection 1-Forms]]
+
 # Problem Statement
 
 Let $T_a=-i\sigma_a/2$, so $[T_a,T_b]=\varepsilon_{ab}{}^cT_c$, and write

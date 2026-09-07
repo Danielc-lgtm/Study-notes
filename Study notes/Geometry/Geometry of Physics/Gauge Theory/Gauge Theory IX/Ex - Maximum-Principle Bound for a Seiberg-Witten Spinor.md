@@ -5,6 +5,11 @@ prereqs: ["Def - Seiberg-Witten Equations and Quadratic Spinor Map", "Thm - Weit
 tags: [gauge-theory, seiberg-witten, compactness]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Equations and Quadratic Spinor Map]]
+- [[Thm - Weitzenbock Formula for a Dirac Bundle]]
+
 # Exercise
 
 For a solution of $D_A^+\psi=0$ and $F_A^+=q(\psi)+\eta$, combine the spin-c Weitzenböck formula with

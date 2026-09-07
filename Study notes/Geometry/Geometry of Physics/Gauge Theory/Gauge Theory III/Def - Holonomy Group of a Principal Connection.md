@@ -6,6 +6,10 @@ prereqs:
 tags: [gauge-theory, holonomy]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Parallel Transport of a Principal Connection]]
+
 # The Definition
 
 > [!definition] Holonomy

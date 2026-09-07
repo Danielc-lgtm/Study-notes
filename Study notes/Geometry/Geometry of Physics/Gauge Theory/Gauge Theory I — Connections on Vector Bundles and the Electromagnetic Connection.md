@@ -12,7 +12,7 @@ Throughout, $M$ is a smooth manifold, $E\to M$ is a rank-$r$ real or complex vec
 
 For the electromagnetic specialization, $L\to M$ is a Hermitian line bundle, $q\in\mathbb R$ is the charge appearing in the representation $e^{i\theta}\mapsto e^{iq\theta}$, and a unitary frame writes
 $$
-\nabla=d+iqA,qquad A\in\Omega^1(M;\mathbb R),qquad F_\nabla=iqF,quad F=dA.
+\nabla=d+iqA,\qquad A\in\Omega^1(M;\mathbb R),\qquad F_\nabla=iqF,\quad F=dA.
 $$
 A change of unitary frame $e'=e^{iq\chi}e$ gives
 $$

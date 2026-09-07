@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, gauge-group, automorphism]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+- [[Def - Adjoint Bundle]]
+
 # The Definition
 
 > [!definition] Gauge group
@@ -23,7 +28,7 @@ Indeed equivariance of $\Phi$ gives the condition; conversely the condition make
 The active action is pullback by the inverse,
 $$\Phi\cdot\omega=(\Phi^{-1})^*\omega,$$
 so covariant objects transform with the same action as sections. In a local section and matrix notation, if the local gauge function is $g:U\to G$,
-$$A\longmapsto gAg^{-1}-(dg)g^{-1},qquad F\longmapsto gFg^{-1}.$$
+$$A\longmapsto gAg^{-1}-(dg)g^{-1},\qquad F\longmapsto gFg^{-1}.$$
 Using pullback by $\Phi$ instead reverses $g$; both conventions describe the same orbit.
 
 # Based Gauge Group

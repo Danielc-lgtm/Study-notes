@@ -5,6 +5,10 @@ prereqs: ["Def - Seiberg-Witten Invariant"]
 tags: [gauge-theory, seiberg-witten, exercise]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Invariant]]
+
 # Exercise
 
 Suppose the Seiberg–Witten moduli space has dimension $d$. Explain why the point class defines a numerical invariant only when $d$ is even, and recover the signed-count definition when $d=0$.

@@ -6,6 +6,10 @@ prereqs:
 tags: [gauge-theory, gauge-transformation, bundle-automorphism]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+
 # Notation
 
 Let $E\to M$ be a rank-$r$ vector bundle with connection $\nabla$. A gauge transformation is written $u:E\to E$. In a local frame it is a map $g:U\to\mathrm{GL}_r(\mathbb K)$. For a Hermitian bundle, $g$ takes values in $U(r)$.
@@ -22,11 +26,11 @@ Let $E\to M$ be a rank-$r$ vector bundle with connection $\nabla$. A gauge trans
 
 If $\nabla=d+A$ and $u$ is represented by $g$, then
 $$
-A^g=gAg^{-1}-dg\,g^{-1},qquad F_{A^g}=gF_Ag^{-1}.
+A^g=gAg^{-1}-dg\,g^{-1},\qquad F_{A^g}=gF_Ag^{-1}.
 $$
 This is the **active** convention. A passive frame change $e'=eg$ instead gives
 $$
-A'=g^{-1}Ag+g^{-1}dg,qquad F'=g^{-1}F_Ag.
+A'=g^{-1}Ag+g^{-1}dg,\qquad F'=g^{-1}F_Ag.
 $$
 The formulas look different because the same matrix $g$ is being used for inverse operations. Either convention is valid; mixing them in one calculation is not.
 
@@ -38,7 +42,7 @@ Gauge-equivalent pairs encode the same comparison rule in different fibre coordi
 
 For $\nabla=d+iqA$ on a line bundle, take the active transformation $u=e^{-iq\chi}$. Then
 $$
-\psi^u=e^{-iq\chi}\psi,qquad A^u=A+d\chi,qquad
+\psi^u=e^{-iq\chi}\psi,\qquad A^u=A+d\chi,\qquad
 (d+iqA^u)\psi^u=e^{-iq\chi}(d+iqA)\psi.
 $$
 Thus $F=dA$ and the norm $|\psi|$ are invariant, while $A$ and $\psi$ separately depend on gauge.

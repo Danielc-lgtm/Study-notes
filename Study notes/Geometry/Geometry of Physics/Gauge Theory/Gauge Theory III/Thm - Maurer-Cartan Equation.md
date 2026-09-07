@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, maurer-cartan, structure-equation]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Maurer-Cartan Form]]
+- [[Def - Bracket of g-Valued Forms]]
+
 # Statement
 
 > [!theorem] Maurer–Cartan equation

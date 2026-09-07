@@ -5,6 +5,11 @@ prereqs: ["Def - Chern-Simons Transgression Form", "Def - Gauge Group of a Princ
 tags: [gauge-theory, chern-simons, flat-connection]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Chern-Simons Transgression Form]]
+- [[Def - Gauge Group of a Principal Bundle]]
+
 # The Definition
 
 > [!definition] Chern–Simons functional

@@ -9,6 +9,13 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The BPST Instanton]]
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+- [[Def - Instanton]]
+- [[Thm - BPS Bound on the Yang-Mills Action]]
+
 # Notation
 
 Euclidean $\mathbb{R}^4$ with the standard metric. $SU(2)$ via the quaternionic identification $\mathbb{R}^4 \cong \mathbb{H}$, $SU(2) \cong S^3$. The canonical winding-1 map is $g(x) = (x_0 - i\vec\sigma\cdot\vec x)/r = \bar x/|x|$, where $\bar x$ is the quaternionic conjugate and $r = |x|$. The Pauli matrices satisfy $\sigma_a\sigma_b = \delta_{ab}I + i\epsilon_{abc}\sigma_c$.

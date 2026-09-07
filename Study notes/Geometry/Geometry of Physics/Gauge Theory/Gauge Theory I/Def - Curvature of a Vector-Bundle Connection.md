@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, curvature]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+- [[Def - The Lie Bracket of Vector Fields]]
+
 # Notation
 
 Let $\nabla$ be a connection on $E\to M$, with exterior covariant derivative $d_\nabla$. In a local frame, write $\nabla=d+A$.
@@ -27,7 +32,7 @@ Differentiating first along $X$ and then along $Y$ need not agree with doing it 
 
 In a local frame,
 $$
-F_A=dA+A\wedge A,qquad
+F_A=dA+A\wedge A,\qquad
 (A\wedge A)^a{}_b=A^a{}_c\wedge A^c{}_b.
 $$
 To derive the formula, apply $(d+A)^2$ to a column $u$:

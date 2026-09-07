@@ -6,11 +6,15 @@ prereqs:
 tags: [gauge-theory, parallel-transport]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Horizontal Lift Existence and Uniqueness]]
+
 # The Definition
 
 > [!definition] Principal parallel transport
 > For a path $\gamma:[a,b]\to M$, define
-> $$\operatorname{PT}_\gamma:P_{\gamma(a)}\to P_{\gamma(b)},qquad
+> $$\operatorname{PT}_\gamma:P_{\gamma(a)}\to P_{\gamma(b)},\qquad
 > p\mapsto\widetilde\gamma_p(b),$$
 > where $\widetilde\gamma_p$ is the horizontal lift beginning at $p$.
 

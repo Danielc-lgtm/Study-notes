@@ -5,6 +5,11 @@ prereqs: ["Def - Hodge Star in Arbitrary Signature", "Def - U(1) Gauge Field and
 tags: [gauge-theory, maxwell, electromagnetism]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Hodge Star in Arbitrary Signature]]
+- [[Def - U(1) Gauge Field and Electromagnetic Connection]]
+
 # The Definition
 
 > [!definition] Maxwell field

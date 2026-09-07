@@ -6,6 +6,10 @@ prereqs: ["Def - Spinor Bundle, Chirality, and Twisted Dirac Operator"]
 tags: [gauge-theory, spin-c, dirac-operator]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Spinor Bundle, Chirality, and Twisted Dirac Operator]]
+
 # Problem Statement
 
 If determinant-line connections differ by $a\in\Omega^1(M;i\mathbb R)$, prove

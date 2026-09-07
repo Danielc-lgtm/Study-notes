@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, topology, Euler-characteristic]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Index of a Vector Field at a Zero]]
+- [[Thm - Gauss-Bonnet Theorem for Surfaces]]
+
 # Notation
 
 Let $M$ be a closed oriented smooth surface, $v$ a smooth tangent vector field with isolated zeros $p_1,\ldots,p_N$, and $\operatorname{ind}_{p_j}(v)$ their local indices.
@@ -42,7 +47,7 @@ Normalize $v$ on the punctured surface, complete it to an oriented orthonormal f
 > because the boundary orientation inherited from the punctured surface is opposite to the positive boundary orientation of each deleted disc.
 >
 > Fix a smooth oriented orthonormal reference frame $(f_1,f_2)$ on $D_j$. Along $\partial D_j(\varepsilon)$ write
-> $$e_1=\cos\theta,f_1+\sin\theta,f_2,qquad
+> $$e_1=\cos\theta,f_1+\sin\theta,f_2,\qquad
 > e_2=-\sin\theta,f_1+\cos\theta,f_2.$$
 > If $\beta$ is the connection component in the reference frame, the passive rotation formula is $\alpha=\beta-d\theta$. Therefore
 > $$

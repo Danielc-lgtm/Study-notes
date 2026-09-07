@@ -8,6 +8,11 @@ prereqs:
 tags: [gauge-theory, flat-connection, holonomy, circle]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Flat Connections and Monodromy Representations]]
+- [[Def - Holonomy Group of a Principal Connection]]
+
 # Problem Statement
 
 Classify flat $U(1)$-connections on $S^1$ up to gauge equivalence. For

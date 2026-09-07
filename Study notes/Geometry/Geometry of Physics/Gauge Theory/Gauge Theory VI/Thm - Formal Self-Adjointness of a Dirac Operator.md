@@ -5,6 +5,10 @@ prereqs: ["Def - Dirac Bundle and Dirac Operator"]
 tags: [gauge-theory, dirac-operator, formal-adjoint]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Dirac Bundle and Dirac Operator]]
+
 # Statement
 
 > [!theorem] Formal self-adjointness

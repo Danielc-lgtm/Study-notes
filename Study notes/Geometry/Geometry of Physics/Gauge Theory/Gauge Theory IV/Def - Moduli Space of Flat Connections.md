@@ -5,6 +5,11 @@ prereqs: ["Def - Chern-Simons Functional", "Thm - Flat Connections and Monodromy
 tags: [gauge-theory, flat-connection, moduli-space]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Chern-Simons Functional]]
+- [[Thm - Flat Connections and Monodromy Representations]]
+
 # The Definition
 
 > [!definition] Flat moduli space

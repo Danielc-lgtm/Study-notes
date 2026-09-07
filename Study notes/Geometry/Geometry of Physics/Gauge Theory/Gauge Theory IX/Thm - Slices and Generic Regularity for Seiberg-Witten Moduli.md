@@ -5,6 +5,11 @@ prereqs: ["Thm - Seiberg-Witten Deformation Complex is Elliptic", "Thm - Sard-Sm
 tags: [gauge-theory, seiberg-witten, slice, transversality]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Seiberg-Witten Deformation Complex is Elliptic]]
+- [[Thm - Sard-Smale and Parametric Transversality]]
+
 # Statement
 
 > [!theorem] Slice and generic regularity

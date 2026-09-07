@@ -5,6 +5,10 @@ prereqs: ["Def - Connection on a Vector Bundle"]
 tags: [gauge-theory, connection-laplacian]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+
 # The Definition
 
 > [!definition] Connection Laplacian

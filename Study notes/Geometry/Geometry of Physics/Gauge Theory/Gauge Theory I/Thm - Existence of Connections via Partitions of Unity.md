@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, existence, partitions-of-unity]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+- [[Def - Vector Bundle]]
+- [[Def - Partition of Unity on a Manifold]]
+
 # Notation
 
 Let $E\to M$ be a smooth vector bundle over a paracompact smooth manifold. Write $\mathcal A(E)$ for its set of connections.

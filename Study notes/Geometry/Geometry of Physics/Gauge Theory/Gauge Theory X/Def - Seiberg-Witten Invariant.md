@@ -5,6 +5,11 @@ prereqs: ["Def - Framed Seiberg-Witten Moduli Space and Mu Class", "Thm - Reduci
 tags: [gauge-theory, seiberg-witten, invariant]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Framed Seiberg-Witten Moduli Space and Mu Class]]
+- [[Thm - Reducibles and Orientation of Seiberg-Witten Moduli]]
+
 # The Definition
 
 Let $X$ be a closed oriented four-manifold with $b_2^+(X)\ge2$, equipped with a homology orientation, and let $\mathfrak s$ be a spin-c structure. For a generic perturbation, write

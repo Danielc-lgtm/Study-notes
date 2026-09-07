@@ -5,6 +5,10 @@ prereqs: ["Thm - Kuranishi Model for a Fredholm Map"]
 tags: [gauge-theory, equivariant, fredholm-map, moduli]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Kuranishi Model for a Fredholm Map]]
+
 # The Definition
 
 > [!definition] Equivariant Fredholm problem

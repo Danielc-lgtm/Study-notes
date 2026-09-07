@@ -5,6 +5,11 @@ prereqs: ["Def - Dirac Bundle and Dirac Operator", "Def - Connection Laplacian"]
 tags: [gauge-theory, weitzenbock-formula, dirac-operator]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Dirac Bundle and Dirac Operator]]
+- [[Def - Connection Laplacian]]
+
 # Statement
 
 > [!theorem] Weitzenböck formula

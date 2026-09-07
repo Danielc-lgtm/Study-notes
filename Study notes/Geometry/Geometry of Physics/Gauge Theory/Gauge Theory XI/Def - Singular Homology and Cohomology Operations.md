@@ -1,9 +1,15 @@
 ---
 type: definition
 subject: gauge-theory
-prereqs: []
+prereqs: ["Def - Topological Space", "Def - Continuous Map"]
 tags: [algebraic-topology, homology, cohomology]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Topological Space]]
+- [[Def - Continuous Map]]
+
 # Chain-level construction
 The singular chain group $C_k(X;R)$ is the free $R$-module on continuous simplices $\sigma:\Delta^k\to X$. The alternating face map
 $$\partial\sigma=\sum_{j=0}^k(-1)^j\sigma|_{[v_0,\ldots,\widehat v_j,\ldots,v_k]}$$

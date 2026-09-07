@@ -5,6 +5,11 @@ prereqs: ["Thm - Slices and Generic Regularity for Seiberg-Witten Moduli", "Def 
 tags: [gauge-theory, seiberg-witten, reducible, orientation]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Slices and Generic Regularity for Seiberg-Witten Moduli]]
+- [[Def - Determinant Line and Orientation of a Fredholm Operator]]
+
 # Statement
 
 > [!theorem] Removing reducibles and orienting

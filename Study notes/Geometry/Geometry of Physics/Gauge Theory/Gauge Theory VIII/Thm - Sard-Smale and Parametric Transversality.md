@@ -5,6 +5,10 @@ prereqs: ["Def - Smooth Fredholm Map and Regular Value"]
 tags: [gauge-theory, sard-smale, transversality]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Smooth Fredholm Map and Regular Value]]
+
 # Statement
 
 > [!theorem] Sard–Smale

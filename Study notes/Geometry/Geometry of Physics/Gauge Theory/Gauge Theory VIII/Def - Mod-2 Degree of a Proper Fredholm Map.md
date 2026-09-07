@@ -5,6 +5,10 @@ prereqs: ["Def - Smooth Fredholm Map and Regular Value"]
 tags: [gauge-theory, degree, fredholm-map]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Smooth Fredholm Map and Regular Value]]
+
 # The Definition
 
 > [!definition] Mod-two degree

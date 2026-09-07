@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, holonomy, wilson-line]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+- [[Def - Gauge Transformation]]
+
 # Notation
 
 Let $\gamma:[0,1]\to M$ be piecewise smooth and let $\nabla=d+A$ in a frame along $\gamma$. Parallel transport $U_\gamma(t)$ is normalized by $U_\gamma(0)=I$.

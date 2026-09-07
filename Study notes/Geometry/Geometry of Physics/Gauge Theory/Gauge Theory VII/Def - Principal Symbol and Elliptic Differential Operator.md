@@ -5,6 +5,10 @@ prereqs: ["Def - Sobolev Space of Bundle Sections"]
 tags: [gauge-theory, elliptic-operator, principal-symbol]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Sobolev Space of Bundle Sections]]
+
 # Motivation
 
 Lower-order terms affect solutions but not the high-frequency obstruction to inversion. The principal symbol retains exactly the top derivative terms and tests whether every nonzero cotangent direction can be inverted.

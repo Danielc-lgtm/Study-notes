@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, topology, index, sphere]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Index of a Vector Field at a Zero]]
+- [[Thm - Poincare-Hopf Theorem]]
+
 # Problem Statement
 
 On the unit sphere let $z:S^2\to\mathbb R$ be the height function and let $v=\operatorname{grad}z$. Find its zeros, compute their indices, and check Poincaré–Hopf.

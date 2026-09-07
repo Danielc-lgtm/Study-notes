@@ -5,6 +5,11 @@ prereqs: ["Def - Seiberg-Witten Invariant", "Thm - Positive Scalar Curvature For
 tags: [gauge-theory, seiberg-witten, four-manifolds, roadmap]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Invariant]]
+- [[Thm - Positive Scalar Curvature Forces Seiberg-Witten Vanishing]]
+
 # Purpose
 
 Haydys closes with a map of what the invariant can detect. The statements below are landmarks rather than consequences of the introductory analytic package alone; each requires substantial additional geometry. Recording the hypotheses and mechanisms prevents their use as black-box slogans.

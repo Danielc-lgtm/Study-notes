@@ -5,6 +5,10 @@ prereqs: ["Def - Clifford Algebra and Clifford Module"]
 tags: [gauge-theory, spin-group, quaternions]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Clifford Algebra and Clifford Module]]
+
 # The Definition
 
 > [!definition] Spin group

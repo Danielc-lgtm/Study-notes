@@ -9,6 +9,12 @@ prereqs:
 tags: [geometry, gauge-theory, principal-bundles, affine-spaces, moduli]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection 1-Form on a Principal Bundle]]
+- [[Def - Adjoint Bundle]]
+- [[Def - Exterior Covariant Derivative on Associated Bundles]]
+
 # Problem Statement
 
 Prove that the space $\mathcal A(P)$ of principal connections on $P\to M$ is an affine space modeled on $\Omega^1(M;\operatorname{Ad}P)$. If $A_0$ is a reference connection and $a$ an adjoint-valued one-form, prove

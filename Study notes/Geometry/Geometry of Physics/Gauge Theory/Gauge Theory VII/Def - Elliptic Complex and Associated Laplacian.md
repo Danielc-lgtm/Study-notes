@@ -5,6 +5,10 @@ prereqs: ["Def - Principal Symbol and Elliptic Differential Operator"]
 tags: [gauge-theory, elliptic-complex, deformation-complex]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal Symbol and Elliptic Differential Operator]]
+
 # The Definition
 
 > [!definition] Elliptic complex

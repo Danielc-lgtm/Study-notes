@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, hermitian, unitary]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Vector Bundle]]
+- [[Def - Complex Line Bundle]]
+
 # Notation
 
 Let $E\to M$ be a rank-$r$ complex vector bundle. We take Hermitian inner products to be conjugate-linear in the first variable and linear in the second.
@@ -18,7 +23,7 @@ Let $E\to M$ be a rank-$r$ complex vector bundle. We take Hermitian inner produc
 > $$h_x:E_x\times E_x\to\mathbb C.$$
 > Equivalently, $h(s,t)$ is smooth for all local smooth sections $s,t$, and fibrewise
 > $$h(au,bv)=\overline a,b,h(u,v),\qquad
-> h(v,u)=\overline{h(u,v)},qquad h(v,v)>0\ (v\ne0).$$
+> h(v,u)=\overline{h(u,v)},\qquad h(v,v)>0\ (v\ne0).$$
 > A complex vector bundle equipped with $h$ is a **Hermitian vector bundle**.
 
 A local frame $(e_1,\ldots,e_r)$ is **unitary** if $h(e_a,e_b)=\delta_{ab}$. Such frames exist by smooth Gram–Schmidt. Their transition maps take values in $U(r)$, so choosing $h$ is equivalent to reducing the frame bundle's structure group from $\mathrm{GL}_r(\mathbb C)$ to $U(r)$.

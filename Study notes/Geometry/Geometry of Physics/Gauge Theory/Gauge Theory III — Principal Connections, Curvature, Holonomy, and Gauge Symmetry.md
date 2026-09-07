@@ -11,11 +11,11 @@ tags: [geometry, gauge-theory, principal-bundles, connections, holonomy]
 $P\xrightarrow\pi M$ is a right principal $G$-bundle, $R_g(p)=pg$, and $\mathfrak g=T_eG$. For $\xi\in\mathfrak g$ the fundamental field is
 $$\xi_P(p)=\left.\frac d{dt}\right|_0p\exp(t\xi).$$
 A principal connection is $\omega\in\Omega^1(P;\mathfrak g)$ with
-$$\omega(\xi_P)=\xi,qquad R_g^*\omega=\operatorname{Ad}_{g^{-1}}\omega.$$
+$$\omega(\xi_P)=\xi,\qquad R_g^*\omega=\operatorname{Ad}_{g^{-1}}\omega.$$
 Its curvature is
 $$\Omega=d\omega+\tfrac12[\omega,\omega].$$
 For a local section $s_\alpha$, set $A_\alpha=s_\alpha^*\omega$ and $F_\alpha=s_\alpha^*\Omega$. If $s_\beta=s_\alpha g_{\alpha\beta}$, then
-$$A_\beta=\operatorname{Ad}_{g_{\alpha\beta}^{-1}}A_\alpha+g_{\alpha\beta}^{-1}dg_{\alpha\beta},qquad F_\beta=\operatorname{Ad}_{g_{\alpha\beta}^{-1}}F_\alpha.$$
+$$A_\beta=\operatorname{Ad}_{g_{\alpha\beta}^{-1}}A_\alpha+g_{\alpha\beta}^{-1}dg_{\alpha\beta},\qquad F_\beta=\operatorname{Ad}_{g_{\alpha\beta}^{-1}}F_\alpha.$$
 For matrix groups, $F_A=dA+A\wedge A=dA+\tfrac12[A,A]$.
 
 # Motivation

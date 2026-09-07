@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+- [[Def - The BPST Instanton]]
+
 # Problem Statement
 
 The **'t Hooft symbols** $\eta^a_{\mu\nu}$ and $\bar\eta^a_{\mu\nu}$ are a pair of tensors with indices $a \in \{1, 2, 3\}$ and $\mu, \nu \in \{0, 1, 2, 3\}$, antisymmetric in $\mu\nu$, that encode the embedding of $SU(2) \cong S^3$ in the Euclidean rotation group $SO(4)$ via the splitting $\operatorname{Spin}(4) = SU(2)_+ \times SU(2)_-$. Define:

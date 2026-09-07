@@ -6,6 +6,10 @@ prereqs: ["Thm - Weitzenbock Formula for a Dirac Bundle"]
 tags: [gauge-theory, spin-geometry, vanishing-theorem]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Weitzenbock Formula for a Dirac Bundle]]
+
 # Problem Statement
 
 Let $M$ be a closed spin manifold with positive scalar curvature. Prove that its spin Dirac operator has zero kernel.

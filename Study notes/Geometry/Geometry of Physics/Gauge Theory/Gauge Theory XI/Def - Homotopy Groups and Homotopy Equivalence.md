@@ -1,9 +1,15 @@
 ---
 type: definition
 subject: gauge-theory
-prereqs: []
+prereqs: ["Def - Topological Space", "Def - Continuous Map"]
 tags: [algebraic-topology, homotopy]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Topological Space]]
+- [[Def - Continuous Map]]
+
 # Motivation
 Homotopy forgets rigid coordinates while retaining the obstruction to continuously deforming one map into another. Gauge theory uses this twice: to classify bundles and gauge transformations, and to read topology from fibrations.
 

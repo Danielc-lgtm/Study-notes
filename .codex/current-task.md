@@ -1,44 +1,26 @@
 # Current task
 
-**Overall status:** complete and merged — Gauge Theory I–XI and final audit
+**Overall status:** review complete — Gauge Theory prerequisite links and TeX spacing repaired
 
 ## Goal
-Create a complete, self-contained Obsidian lecture-note series covering `sources/IntroGaugeTheory_LectNotes.pdf` and `sources/mathematical_gauge_theory.pdf`, with an independently derived presentation and durable source coverage.
+Repair malformed bare `qquad`/`quad` tokens and make prerequisite concepts directly navigable from every Gauge Theory definition, theorem, and exercise subpage.
 
-## Completed scope
-1. Gauge Theory I–X — complete and merged in PRs #19–#29.
-2. Gauge Theory XI — complete and merged in PR #30.
-3. Final source-coverage and cross-topic consistency audit — complete on the current branch.
+## Completed work
+- Added a visible `Prerequisite Concepts` section to all 168 Gauge Theory definition, theorem, and exercise pages.
+- Converted every declared YAML prerequisite into a direct Obsidian wikilink in that section.
+- Added explicit topology prerequisites to the two foundational pages whose prerequisite arrays were empty.
+- Replaced the nonexistent `Def - Pullback Bundle` prerequisite with `Def - Fibre Bundle`, whose page defines pullback bundles.
+- Repaired every bare `qquad` and `quad` TeX token in Gauge Theory and the sole additional occurrence found by the vault-wide audit.
+- Verified all prerequisite targets and all new links resolve.
 
 ## Working branch
-_none_; all work is merged to `main`.
+`codex/fix-gauge-theory-prerequisites`
 
 ## Pull request
-Final audit merged in PR #31.
+PR #33: https://github.com/Danielc-lgtm/Study-notes/pull/33
 
-## Results
-- All Haydys and Wernli source rows are complete in `.codex/gauge-theory-source-map.md`.
-- The Gauge Theory subtree contains 204 pages before the series-map addition and has no unresolved originating wikilinks.
-- All audited Gauge Theory pages have frontmatter and contain no control characters.
-- `Gauge Theory — Series Map.md` now supplies a single entry point and re-entry routes.
-- Detailed results are recorded in `.codex/gauge-theory-final-audit.md`.
-
-## Remaining units
+## Remaining work
 _none_.
 
 ## Exact next action
-No remaining action; the campaign is complete.
-
-## Merge history
-- #19 Gauge Theory I (`961b960`).
-- #20 Gauge Theory II (`40e54fd`).
-- #21 Gauge Theory III (`ce4a900`).
-- #23 Gauge Theory IV (`6173fb5`).
-- #24 Gauge Theory V (`6f77dba`).
-- #25 Gauge Theory VI (`c296516`).
-- #26 Gauge Theory VII (`746386e`).
-- #27 Gauge Theory VIII (`102510d`).
-- #28 Gauge Theory IX (`19b1031`).
-- #29 Gauge Theory X (`e7fcf5c`).
-- #30 Gauge Theory XI (`f741a1e`).
-- #31 Final coverage and graph audit (`6cfdf6b`).
+Commit the repair, create its pull request, and merge it into `main`.

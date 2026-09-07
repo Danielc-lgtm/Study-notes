@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, curvature, principal-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection 1-Form on a Principal Bundle]]
+- [[Def - Bracket of g-Valued Forms]]
+
 # The Definition
 
 > [!definition] Principal curvature
@@ -16,7 +21,7 @@ tags: [gauge-theory, curvature, principal-bundle]
 > $$
 
 It is horizontal and equivariant:
-$$\iota_{\xi_P}\Omega=0,qquad R_g^*\Omega=\operatorname{Ad}_{g^{-1}}\Omega.$$
+$$\iota_{\xi_P}\Omega=0,\qquad R_g^*\Omega=\operatorname{Ad}_{g^{-1}}\Omega.$$
 Therefore it descends to a form in $\Omega^2(M;\operatorname{Ad}P)$.
 
 # Local Form

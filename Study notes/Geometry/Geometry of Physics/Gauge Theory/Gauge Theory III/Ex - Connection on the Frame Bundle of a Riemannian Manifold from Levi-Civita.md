@@ -9,6 +9,12 @@ prereqs:
 tags: [geometry, gauge-theory, riemannian-geometry, principal-bundles]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection 1-Form on a Principal Bundle]]
+- [[Def - Levi-Civita Connection]]
+- [[Def - Orthonormal Frame Bundle]]
+
 # Problem Statement
 
 Let $F^O(M)$ be the orthonormal frame bundle of a Riemannian $n$-manifold. Construct from its Levi–Civita connection a principal $O(n)$-connection and identify its local connection form.

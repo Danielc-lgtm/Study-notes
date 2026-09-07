@@ -8,6 +8,12 @@ prereqs:
 tags: [gauge-theory, flat-connection, monodromy]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Holonomy Group of a Principal Connection]]
+- [[Def - Gauge Group of a Principal Bundle]]
+- [[Def - Universal Cover]]
+
 # Statement
 
 > [!theorem] Flat monodromy correspondence
@@ -43,7 +49,7 @@ tags: [gauge-theory, flat-connection, monodromy]
 >
 > Conversely let $\rho:\pi_1(M,x_0)\to G$. Let $\widetilde M$ be the universal cover with deck action written on the left. Define
 > $$
-> P_\rho=(\widetilde M\times G)/\pi_1(M),qquad
+> P_\rho=(\widetilde M\times G)/\pi_1(M),\qquad
 > \gamma\cdot(\widetilde x,h)=(\gamma\widetilde x,\rho(\gamma)h).
 > $$
 > The action is free and properly discontinuous and commutes with right multiplication on $G$, so $P_\rho\to M$ is principal. The product horizontal distribution $T\widetilde M\oplus0$ is invariant under the action and descends to a flat connection. Lifting a loop to $\widetilde M$ shows its endpoint differs by the deck transformation $\gamma$. Since

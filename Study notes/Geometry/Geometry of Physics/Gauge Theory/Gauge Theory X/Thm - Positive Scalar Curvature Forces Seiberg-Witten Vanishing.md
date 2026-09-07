@@ -5,6 +5,11 @@ prereqs: ["Def - Seiberg-Witten Invariant", "Thm - Weitzenbock Formula for a Dir
 tags: [gauge-theory, seiberg-witten, scalar-curvature, vanishing]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Invariant]]
+- [[Thm - Weitzenbock Formula for a Dirac Bundle]]
+
 # Statement
 
 > [!theorem] Witten's vanishing theorem

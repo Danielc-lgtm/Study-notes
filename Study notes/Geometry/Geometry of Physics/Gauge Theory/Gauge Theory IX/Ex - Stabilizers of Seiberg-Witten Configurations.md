@@ -5,6 +5,10 @@ prereqs: ["Def - Gauge Action and Seiberg-Witten Moduli Space"]
 tags: [gauge-theory, seiberg-witten, stabilizer]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Gauge Action and Seiberg-Witten Moduli Space]]
+
 # Exercise
 
 Let $X$ be connected and let $g:X\to U(1)$ fix a Seiberg–Witten configuration $(\psi,A)$ under

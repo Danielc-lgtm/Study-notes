@@ -5,6 +5,11 @@ prereqs: ["Def - Clifford Algebra and Clifford Module", "Def - Connection on a V
 tags: [gauge-theory, dirac-operator, clifford-module]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Clifford Algebra and Clifford Module]]
+- [[Def - Connection on a Vector Bundle]]
+
 # Axiom Motivation
 
 Pointwise Clifford multiplication alone cannot be differentiated coherently. A Dirac bundle requires a metric connection compatible with Clifford multiplication, so differentiating $c(\alpha)s$ differentiates both the cotangent factor and the section. This compatibility is what makes the square of the resulting first-order operator Laplace type.

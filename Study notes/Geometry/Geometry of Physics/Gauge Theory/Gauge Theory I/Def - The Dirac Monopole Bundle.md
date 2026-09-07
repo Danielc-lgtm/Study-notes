@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, monopole, line-bundle, chern-class]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Complex Line Bundle]]
+- [[Def - U(1) Gauge Field and Electromagnetic Connection]]
+
 # Notation
 
 Use spherical coordinates $(\theta,\varphi)$ on the unit sphere and fix $n\in\mathbb Z$. Let $U_N=S^2\setminus\{\text{south pole}\}$ and $U_S=S^2\setminus\{\text{north pole}\}$.

@@ -5,6 +5,11 @@ prereqs: ["Thm - Elliptic Estimate and Regularity", "Def - Fredholm Operator and
 tags: [gauge-theory, elliptic-operator, fredholm-alternative]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Elliptic Estimate and Regularity]]
+- [[Def - Fredholm Operator and Index]]
+
 # Statement
 
 > [!theorem] Elliptic Fredholm theorem

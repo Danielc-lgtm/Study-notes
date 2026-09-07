@@ -5,6 +5,11 @@ prereqs: ["Def - Seiberg-Witten Invariant", "Thm - Sard-Smale and Parametric Tra
 tags: [gauge-theory, seiberg-witten, bordism]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Invariant]]
+- [[Thm - Sard-Smale and Parametric Transversality]]
+
 # Statement
 
 > [!theorem] Perturbation independence

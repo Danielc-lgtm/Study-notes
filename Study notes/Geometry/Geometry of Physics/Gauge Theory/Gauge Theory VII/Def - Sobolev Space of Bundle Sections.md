@@ -5,6 +5,10 @@ prereqs: ["Def - Connection on a Vector Bundle"]
 tags: [gauge-theory, sobolev-space, functional-analysis]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+
 # Motivation
 
 Variational sequences rarely converge smoothly. Sobolev norms retain finitely many weak derivatives in $L^p$, producing complete spaces in which bounded sequences can have convergent subsequences. Gauge theory uses them both for fields and for gauge transformations.

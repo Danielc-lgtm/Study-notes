@@ -4,6 +4,12 @@ subject: gauge-theory
 prereqs: ["Def - Self-Dual and Anti-Self-Dual Connection", "Def - Moduli Space of Flat Connections"]
 tags: [gauge-theory, donaldson, moduli-space]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+- [[Def - Moduli Space of Flat Connections]]
+
 # The Definition
 For a principal $SU(2)$-bundle $P\to X$, the anti-self-dual moduli space is
 $$\mathcal M_k(X)=\{A:F_A^+=0,\ c_2(P)=k\}/\mathcal G(P).$$

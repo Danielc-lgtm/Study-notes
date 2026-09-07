@@ -8,6 +8,11 @@ prereqs:
 tags: [gauge-theory, associated-bundle, sphere]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Homogeneous Bundle]]
+- [[Def - Orthonormal Frame Bundle]]
+
 # Problem Statement
 
 Identify $SO(3)\to S^2$, $R\mapsto Re_3$, as the oriented orthonormal frame bundle of $S^2$ and prove

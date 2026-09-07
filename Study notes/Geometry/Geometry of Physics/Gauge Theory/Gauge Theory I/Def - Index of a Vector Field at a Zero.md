@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, topology, index]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Vector Field on a Manifold]]
+- [[Def - Brouwer Degree of a Map]]
+
 # Notation
 
 Let $M$ be an oriented smooth $n$-manifold, $v\in\mathfrak X(M)$, and let $p$ be an isolated zero of $v$.

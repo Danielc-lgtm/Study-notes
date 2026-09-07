@@ -7,11 +7,16 @@ prereqs:
 tags: [gauge-theory, covariant-derivative, associated-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Associated Bundle]]
+- [[Def - Connection 1-Form on a Principal Bundle]]
+
 # The Definition
 
 Let $E=P\times_\rho V$ and let $\rho_*:\mathfrak g\to\mathfrak{gl}(V)$. In a gauge with potential $A$ define
 $$
-d_A\alpha=d\alpha+\rho_*(A)\wedge\alpha,qquad \alpha\in\Omega^k(U;V).
+d_A\alpha=d\alpha+\rho_*(A)\wedge\alpha,\qquad \alpha\in\Omega^k(U;V).
 $$
 Here
 $$

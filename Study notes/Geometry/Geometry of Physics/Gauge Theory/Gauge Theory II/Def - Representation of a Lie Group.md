@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, lie-groups, representations]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Lie Group]]
+- [[Def - Lie Group Homomorphism]]
+
 # Notation
 
 Let $G$ be a Lie group, $V$ a finite-dimensional real or complex vector space, and $\mathfrak g=T_eG$.
@@ -20,7 +25,7 @@ Let $G$ be a Lie group, $V$ a finite-dimensional real or complex vector space, a
 
 Differentiation at the identity gives the Lie-algebra representation
 $$
-\rho_*:\mathfrak g\to\mathfrak{gl}(V),qquad
+\rho_*:\mathfrak g\to\mathfrak{gl}(V),\qquad
 \rho_*([X,Y])=[\rho_*X,\rho_*Y].
 $$
 The bracket identity follows from [[Thm - Lie Group Homomorphism Induces Lie Algebra Homomorphism]].
