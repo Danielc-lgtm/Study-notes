@@ -65,8 +65,8 @@
   "status": "complete",
   "branch": "codex/create-complete-gauge-theory-final-audit",
   "pr": {
-    "number": null,
-    "url": null,
+    "number": 31,
+    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/31",
     "status": "open"
   },
   "merged_prs": [
@@ -596,7 +596,7 @@
   "current_unit": null,
   "next_action": "No remaining Gauge Theory campaign unit; maintain the source map when future material is added.",
   "unresolved": [],
-  "last_commit": "b5fcd50",
+  "last_commit": "ef8d1a6",
   "ready_to_merge": true,
   "updated": "2026-09-07T00:50:00Z"
 }

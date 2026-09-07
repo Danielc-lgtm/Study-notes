@@ -14,7 +14,7 @@ Create a complete, self-contained Obsidian lecture-note series covering `sources
 `codex/create-complete-gauge-theory-final-audit`
 
 ## Pull request
-Final-audit PR pending creation.
+Final-audit PR #31: https://github.com/Danielc-lgtm/Study-notes/pull/31
 
 ## Results
 - All Haydys and Wernli source rows are complete in `.codex/gauge-theory-source-map.md`.
