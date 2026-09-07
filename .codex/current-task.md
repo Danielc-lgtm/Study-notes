@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** review complete — Gauge Theory prerequisite links and TeX spacing repaired
+**Overall status:** complete and merged — Gauge Theory prerequisite links and TeX spacing repaired
 
 ## Goal
 Repair malformed bare `qquad`/`quad` tokens and make prerequisite concepts directly navigable from every Gauge Theory definition, theorem, and exercise subpage.
@@ -14,13 +14,13 @@ Repair malformed bare `qquad`/`quad` tokens and make prerequisite concepts direc
 - Verified all prerequisite targets and all new links resolve.
 
 ## Working branch
-`codex/fix-gauge-theory-prerequisites`
+_none_; merged to `main`.
 
 ## Pull request
-PR #33: https://github.com/Danielc-lgtm/Study-notes/pull/33
+Merged in PR #33.
 
 ## Remaining work
 _none_.
 
 ## Exact next action
-Commit the repair, create its pull request, and merge it into `main`.
+No remaining action; the repair is merged.
