@@ -26,7 +26,7 @@ The objects in play are the special linear group and its Lie algebra, the identi
 
 ![[Thm - The Exponential Map of a Matrix Group is the Matrix Exponential#Statement]]
 
-In the case at hand this says: for every $X\in\operatorname{Mat}(2\times2;\mathbb{R})$ the series $e^{X}=\sum_{k\ge0}X^{k}/k!$ converges absolutely; for the closed subgroup $G=SL(2;\mathbb{R})\subset GL(2;\mathbb{R})$ with Lie algebra $\mathfrak{g}=\mathfrak{sl}(2;\mathbb{R})$, the abstract Lie-group exponential [[Def - Exponential Map of a Lie Group|$\exp_{G}$]] coincides with this matrix exponential, $\exp_{G}(X)=e^{X}$, and $e^{tX}\in G$ for all $t\in\mathbb{R}$. So computing the image of $\exp$ on $\mathfrak{sl}(2;\mathbb{R})$ is computing the set of matrix exponentials $e^{X}$ of traceless real $X$.
+In the case at hand this says: for every $X\in\operatorname{Mat}(2\times2;\mathbb{R})$ the series $e^{X}=\sum_{k\ge0}X^{k}/k!$ converges absolutely; for the closed subgroup $G=SL(2;\mathbb{R})\subset GL(2;\mathbb{R})$ with Lie algebra $\mathfrak{g}=\mathfrak{sl}(2;\mathbb{R})$, the [[Def - Exponential Map of a Lie Group|abstract Lie-group exponential]] $\exp_{G}$ coincides with this matrix exponential, $\exp_{G}(X)=e^{X}$, and $e^{tX}\in G$ for all $t\in\mathbb{R}$. So computing the image of $\exp$ on $\mathfrak{sl}(2;\mathbb{R})$ is computing the set of matrix exponentials $e^{X}$ of traceless real $X$.
 
 ![[Thm - Lie Algebras and Dimensions of the Classical Matrix Groups#Statement]]
 
@@ -153,7 +153,7 @@ Matching the forced spectrum $\{e^{\lambda},e^{-\lambda}\}$ against the actual s
 >
 > First, $g_0\in SL(2;\mathbb{R})$ because $\det g_0=(-2)(-\tfrac12)=1$; its eigenvalues are $-2$ and $-\tfrac12$.
 >
-> Suppose $g_0=\exp(X)=e^{X}$ with $X\in\mathfrak{sl}(2;\mathbb{R})$; here $\exp(X)=e^{X}$ by [[Thm - The Exponential Map of a Matrix Group is the Matrix Exponential|the matrix-exponential theorem]] for the closed subgroup $SL(2;\mathbb{R})\subset GL(2;\mathbb{R})$, and $X$ is a real $2\times2$ matrix with $\operatorname{tr}X=0$ by [[Thm - Lie Algebras and Dimensions of the Classical Matrix Groups|the description of $\mathfrak{sl}(2;\mathbb{R})$]].
+> Suppose $g_0=\exp(X)=e^{X}$ with $X\in\mathfrak{sl}(2;\mathbb{R})$; here $\exp(X)=e^{X}$ by [[Thm - The Exponential Map of a Matrix Group is the Matrix Exponential|the matrix-exponential theorem]] for the closed subgroup $SL(2;\mathbb{R})\subset GL(2;\mathbb{R})$, and $X$ is a real $2\times2$ matrix with $\operatorname{tr}X=0$ by [[Thm - Lie Algebras and Dimensions of the Classical Matrix Groups|the Lie-algebra description]].
 >
 > Because $\operatorname{tr}X=0$, the characteristic polynomial of $X$ is $\chi_{X}(t)=t^{2}+\det X$. Let $\lambda\in\mathbb{C}$ satisfy $\lambda^{2}=-\det X$; then $\chi_{X}(t)=(t-\lambda)(t+\lambda)$, so $X$ has eigenvalues $\pm\lambda$. Since $\det X\in\mathbb{R}$, the number $\lambda^{2}$ is real, hence $\lambda$ is real or purely imaginary.
 >

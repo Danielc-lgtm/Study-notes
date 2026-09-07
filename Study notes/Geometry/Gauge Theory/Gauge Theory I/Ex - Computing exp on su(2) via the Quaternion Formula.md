@@ -49,7 +49,7 @@ The exercise [[Ex - SU(2) is the Group of Unit Quaternions]] establishes a Lie-g
 
 **Assumption pattern.** The decisive hypothesis is $|n|=1$. It enters through the Pauli multiplication law $(a\cdot\sigma)(b\cdot\sigma)=(a\cdot b)I+i(a\times b)\cdot\sigma$, which for $a=b=n$ gives $(n\cdot\sigma)^{2}=|n|^{2}I=I$; the cross-product term dies because $n\times n=0$. Hence $J:=n\cdot(-i\sigma)=-i(n\cdot\sigma)$ satisfies $J^{2}=-(n\cdot\sigma)^{2}=-I$. The recognisable trigger is any element of $\mathfrak{su}(2)$ written as $\theta$ times a *unit-norm* direction: the unit-norm condition is exactly what makes the direction square to $-I$, i.e. behave like the imaginary unit.
 
-**Theorem routing.** The route is: [[Thm - The Exponential Map of a Matrix Group is the Matrix Exponential|matrix-exponential theorem]] (absolute convergence and $\exp=e^{(\cdot)}$) to justify summing the series and to place the answer in $SU(2)$; the Pauli law and $|n|=1$ to get $J^{2}=-I$; splitting the series into even and odd powers to obtain $(\ast)$; the quaternion identification of [[Ex - SU(2) is the Group of Unit Quaternions|$SU(2)$ with unit quaternions and with $S^{3}$]] to interpret $(\ast)$ as a polar decomposition and thereby read off surjectivity and the ball picture.
+**Theorem routing.** The route is: [[Thm - The Exponential Map of a Matrix Group is the Matrix Exponential|matrix-exponential theorem]] (absolute convergence and $\exp=e^{(\cdot)}$) to justify summing the series and to place the answer in $SU(2)$; the Pauli law and $|n|=1$ to get $J^{2}=-I$; splitting the series into even and odd powers to obtain $(\ast)$; the quaternion identification of [[Ex - SU(2) is the Group of Unit Quaternions|SU(2) with unit quaternions and with S³]] to interpret $(\ast)$ as a polar decomposition and thereby read off surjectivity and the ball picture.
 
 **Key decision point.** The one move that unlocks everything is recognising $n\cdot(-i\sigma)$ as a *square root of $-I$* and hence as a copy of the imaginary unit inside $2\times2$ matrices; once $J^{2}=-I$ is in hand, the exponential is forced to be $\cos\theta\,I+\sin\theta\,J$ by the identical bookkeeping that proves $e^{i\theta}=\cos\theta+i\sin\theta$. The second decision, for the geometry, is to parametrise a target $A\in SU(2)$ by its quaternion coordinates $(a_{0},\vec a)$ and to *choose the polar angle* $\theta\in[0,\pi]$ with $\cos\theta=a_{0}$; the subtlety, which produces the collapsed boundary, is that at $\theta\in\{0,\pi\}$ the vector part $\sin\theta\,n$ vanishes, so the direction $n$ becomes invisible and a whole sphere of $X$'s maps to one matrix.
 
@@ -65,7 +65,7 @@ This solution deploys the following legal operations from the topic page's Legal
 
 3. **Place the exponential in the group by the closed-subgroup clause.** [[Thm - The Exponential Map of a Matrix Group is the Matrix Exponential|the matrix-exponential theorem]] guarantees $e^{X}\in SU(2)$ for $X\in\mathfrak{su}(2)$; alternatively verify $A^{*}A=I$ and $\det A=1$ directly from $(\ast)$.
 
-4. **Parametrise the target by quaternion coordinates.** Write $A\in SU(2)$ as $a_{0}I+\vec a\cdot(-i\sigma)$ with $a_{0}^{2}+|\vec a|^{2}=1$, using the identification of [[Ex - SU(2) is the Group of Unit Quaternions|$SU(2)$ with unit quaternions]]; this is the coordinate system in which $(\ast)$ becomes a polar decomposition.
+4. **Parametrise the target by quaternion coordinates.** Write $A\in SU(2)$ as $a_{0}I+\vec a\cdot(-i\sigma)$ with $a_{0}^{2}+|\vec a|^{2}=1$, using the identification of [[Ex - SU(2) is the Group of Unit Quaternions|SU(2) with unit quaternions]]; this is the coordinate system in which $(\ast)$ becomes a polar decomposition.
 
 5. **Solve for the polar data.** Given $(a_{0},\vec a)$ on the unit sphere, choose $\theta\in[0,\pi]$ with $\cos\theta=a_{0}$ and, when $\sin\theta\ne0$, recover the unit direction $n=\vec a/|\vec a|$; handle the degenerate cases $\sin\theta=0$ separately to obtain surjectivity and the boundary-collapse picture.
 
@@ -98,9 +98,19 @@ We record the two structural facts the computation rests on.
 > [!note]- Derivation
 > *The basis.* Each Pauli matrix $\sigma_{a}$ is Hermitian ($\sigma_{a}^{*}=\sigma_{a}$, visible from the displayed entries) and traceless ($\operatorname{tr}\sigma_{a}=0$). Hence $-i\sigma_{a}$ is anti-Hermitian, $(-i\sigma_{a})^{*}=\overline{(-i)}\,\sigma_{a}^{*}=i\sigma_{a}=-(-i\sigma_{a})$, and traceless, $\operatorname{tr}(-i\sigma_{a})=-i\operatorname{tr}\sigma_{a}=0$; so $-i\sigma_{a}\in\mathfrak{su}(2)$ for each $a$. They are linearly independent over $\mathbb{R}$: a real relation $\sum_{a}c_{a}(-i\sigma_{a})=0$ reads $-i\sum_{a}c_{a}\sigma_{a}=0$, and $c_{1}\sigma_{1}+c_{2}\sigma_{2}+c_{3}\sigma_{3}=\begin{pmatrix}c_{3}&c_{1}-ic_{2}\\ c_{1}+ic_{2}&-c_{3}\end{pmatrix}=0$ forces $c_{3}=0$ and $c_{1}-ic_{2}=0$, hence $c_{1}=c_{2}=0$. Since $\dim_{\mathbb{R}}\mathfrak{su}(2)=3$ by [[Thm - Lie Algebras and Dimensions of the Classical Matrix Groups|the dimension count]], three independent elements span, so $\{-i\sigma_{1},-i\sigma_{2},-i\sigma_{3}\}$ is a basis.
 >
-> *The multiplication law.* From the displayed matrices one checks the products $\sigma_{a}\sigma_{b}$ directly; they satisfy
+> *The multiplication law.* We claim that the products $\sigma_{a}\sigma_{b}$ satisfy
 > $$\sigma_{a}\sigma_{b}=\delta_{ab}I+i\,\varepsilon_{abc}\,\sigma_{c}\qquad(a,b\in\{1,2,3\}),\tag{4}$$
-> where $\delta_{ab}$ is the Kronecker delta, $\varepsilon_{abc}$ the totally antisymmetric symbol with $\varepsilon_{123}=1$, and repeated $c$ is summed. For instance $\sigma_{1}\sigma_{2}=\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&-i\\i&0\end{pmatrix}=\begin{pmatrix}i&0\\0&-i\end{pmatrix}=i\sigma_{3}$ (matching $\delta_{12}I+i\varepsilon_{123}\sigma_{3}=i\sigma_{3}$), and $\sigma_{1}^{2}=I$ (matching $\delta_{11}I=I$); the remaining eight cases are the same short computation. Contracting (4) with $a_{a}b_{b}$ for vectors $a,b\in\mathbb{R}^{3}$ gives the vector form
+> where $\delta_{ab}$ is the Kronecker delta, $\varepsilon_{abc}$ the totally antisymmetric symbol with $\varepsilon_{123}=1$, and the repeated index $c$ is summed over $\{1,2,3\}$. We verify all nine products by direct matrix multiplication of the displayed $\sigma_{a}$. The three diagonal cases are
+> $$\sigma_{1}^{2}=\begin{pmatrix}0&1\\1&0\end{pmatrix}^{2}=I,\qquad\sigma_{2}^{2}=\begin{pmatrix}0&-i\\i&0\end{pmatrix}^{2}=I,\qquad\sigma_{3}^{2}=\begin{pmatrix}1&0\\0&-1\end{pmatrix}^{2}=I,$$
+> each matching the right-hand side $\delta_{aa}I+i\varepsilon_{aac}\sigma_{c}=I$ (no sum on $a$ here; $\varepsilon_{aac}=0$). The three products in cyclic order $123$ are
+> $$\sigma_{1}\sigma_{2}=\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&-i\\i&0\end{pmatrix}=\begin{pmatrix}i&0\\0&-i\end{pmatrix}=i\sigma_{3},$$
+> $$\sigma_{2}\sigma_{3}=\begin{pmatrix}0&-i\\i&0\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix}=\begin{pmatrix}0&i\\i&0\end{pmatrix}=i\sigma_{1},$$
+> $$\sigma_{3}\sigma_{1}=\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}=\begin{pmatrix}0&1\\-1&0\end{pmatrix}=i\sigma_{2},$$
+> each matching $\delta_{ab}I+i\varepsilon_{abc}\sigma_{c}=i\sigma_{c}$ with $(a,b,c)$ a cyclic permutation of $(1,2,3)$, so $\varepsilon_{abc}=+1$. The three products in anticyclic order are the transposes of these under $a\leftrightarrow b$,
+> $$\sigma_{2}\sigma_{1}=\begin{pmatrix}0&-i\\i&0\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}=\begin{pmatrix}-i&0\\0&i\end{pmatrix}=-i\sigma_{3},$$
+> $$\sigma_{3}\sigma_{2}=\begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0&-i\\i&0\end{pmatrix}=\begin{pmatrix}0&-i\\-i&0\end{pmatrix}=-i\sigma_{1},$$
+> $$\sigma_{1}\sigma_{3}=\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}1&0\\0&-1\end{pmatrix}=\begin{pmatrix}0&-1\\1&0\end{pmatrix}=-i\sigma_{2},$$
+> each matching $i\varepsilon_{abc}\sigma_{c}=-i\sigma_{c}$ with $(a,b,c)$ an anticyclic permutation, so $\varepsilon_{abc}=-1$. All nine products agree with (4), so (4) holds. Contracting (4) with $a_{a}b_{b}$ and summing over $a,b$ for vectors $a,b\in\mathbb{R}^{3}$ gives the vector form
 > $$(a\cdot\sigma)(b\cdot\sigma)=(a\cdot b)\,I+i\,(a\times b)\cdot\sigma,\tag{5}$$
 > since $\sum_{a,b}a_{a}b_{b}\delta_{ab}=a\cdot b$ and $\sum_{a,b}a_{a}b_{b}\,i\varepsilon_{abc}\sigma_{c}=i(a\times b)_{c}\sigma_{c}$ by the definition $(a\times b)_{c}=\varepsilon_{abc}a_{a}b_{b}$ of the cross product.
 
@@ -137,16 +147,19 @@ The matrix $(\ast)$ lies in $SU(2)$, and its four real coordinates $(\cos\theta,
 > [!note]- Derivation
 > That $e^{X}\in SU(2)$ is immediate from [[Thm - The Exponential Map of a Matrix Group is the Matrix Exponential|the matrix-exponential theorem]], since $X\in\mathfrak{su}(2)$ and $SU(2)$ is a closed subgroup of $GL(2;\mathbb{C})$. We verify it independently to expose the quaternion coordinates. Set $a_{0}=\cos\theta$ and $\vec a=\sin\theta\,n$, so that
 > $$A:=e^{X}=a_{0}I+\vec a\cdot(-i\sigma)=\begin{pmatrix}a_{0}-ia_{3}&-a_{2}-ia_{1}\\ a_{2}-ia_{1}&a_{0}+ia_{3}\end{pmatrix}\qquad\text{(inserting the entries of }\sigma_{1},\sigma_{2},\sigma_{3}\text{)}.$$
-> Writing $z=a_{0}-ia_{3}$ and $w=-a_{2}-ia_{1}$, this is $A=\begin{pmatrix}z&w\\-\bar w&\bar z\end{pmatrix}$, precisely the shape of the quaternion embedding of [[Ex - SU(2) is the Group of Unit Quaternions|$Sp(1)\cong SU(2)$]]. Then
+> Writing $z=a_{0}-ia_{3}$ and $w=-a_{2}-ia_{1}$, this is $A=\begin{pmatrix}z&w\\-\bar w&\bar z\end{pmatrix}$, precisely the shape of the quaternion embedding of [[Ex - SU(2) is the Group of Unit Quaternions|Sp(1) ≅ SU(2)]]. Then
 > $$\det A=|z|^{2}+|w|^{2}=a_{0}^{2}+a_{3}^{2}+a_{2}^{2}+a_{1}^{2}=\cos^{2}\theta+\sin^{2}\theta\,|n|^{2}=\cos^{2}\theta+\sin^{2}\theta=1\qquad\text{(since }|n|=1\text{)},$$
-> and $A^{*}A=I$ follows because a matrix of the form $\begin{pmatrix}z&w\\-\bar w&\bar z\end{pmatrix}$ with $|z|^{2}+|w|^{2}=1$ is unitary: its columns $(z,-\bar w)^{t}$ and $(w,\bar z)^{t}$ have unit norm ($|z|^{2}+|w|^{2}=1$) and are orthogonal ($\bar z w+(-w)\bar z\cdot\ldots$; concretely $\langle(z,-\bar w),(w,\bar z)\rangle=\bar z w+(-\overline{\bar w})\bar z=\bar z w-w\bar z=0$). Hence $A\in SU(2)$, with quaternion coordinates $(a_{0},a_{1},a_{2},a_{3})=(\cos\theta,\sin\theta\,n)$ satisfying $a_{0}^{2}+|\vec a|^{2}=1$, i.e. lying on $S^{3}$.
+> and $A^{*}A=I$ follows because a matrix of the form $\begin{pmatrix}z&w\\-\bar w&\bar z\end{pmatrix}$ with $|z|^{2}+|w|^{2}=1$ has orthonormal columns under the standard Hermitian inner product $\langle u,v\rangle=\bar u_{1}v_{1}+\bar u_{2}v_{2}$, which is exactly the statement $A^{*}A=I$ since $(A^{*}A)_{ij}=\langle\text{column }i,\text{column }j\rangle$. Writing the columns $u=(z,-\bar w)^{t}$ and $v=(w,\bar z)^{t}$, we compute
+> $$\langle u,u\rangle=\bar z z+\overline{(-\bar w)}(-\bar w)=|z|^{2}+|w|^{2}=1,\qquad\langle v,v\rangle=\bar w w+\overline{\bar z}\,\bar z=|w|^{2}+|z|^{2}=1,$$
+> $$\langle u,v\rangle=\bar z w+\overline{(-\bar w)}\,\bar z=\bar z w+(-w)\bar z=\bar z w-w\bar z=0\qquad\text{(scalars commute)},$$
+> using $\overline{(-\bar w)}=-w$ and $\overline{\bar z}=z$. Hence $A^{*}A=I$, so $A\in SU(2)$, with quaternion coordinates $(a_{0},a_{1},a_{2},a_{3})=(\cos\theta,\sin\theta\,n)$ satisfying $a_{0}^{2}+|\vec a|^{2}=1$, i.e. lying on $S^{3}$.
 
 **Step 4 (Consequence 1): the exponential is surjective.**
 
 Every $A\in SU(2)$ equals $e^{X}$ for some $X\in\mathfrak{su}(2)$.
 
 > [!note]- Derivation
-> Let $A\in SU(2)$. By the quaternion identification of [[Ex - SU(2) is the Group of Unit Quaternions|$SU(2)$ with unit quaternions]], $A$ has real coordinates
+> Let $A\in SU(2)$. By the quaternion identification of [[Ex - SU(2) is the Group of Unit Quaternions|SU(2) with unit quaternions]], $A$ has real coordinates
 > $$A=a_{0}I+a_{1}(-i\sigma_{1})+a_{2}(-i\sigma_{2})+a_{3}(-i\sigma_{3}),\qquad a_{0}^{2}+a_{1}^{2}+a_{2}^{2}+a_{3}^{2}=1,$$
 > with $a_{0},\dots,a_{3}\in\mathbb{R}$; write $\vec a=(a_{1},a_{2},a_{3})$, so $a_{0}^{2}+|\vec a|^{2}=1$ and in particular $a_{0}\in[-1,1]$.
 >
