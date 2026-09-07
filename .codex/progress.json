@@ -58,16 +58,16 @@
     "merge_policy": "auto | hold | direct — auto (default) merges every completed unit into main immediately; hold keeps one open PR for the task; direct pushes completed units to main without PRs"
   },
   "version": 1,
-  "active": true,
+  "active": false,
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "review",
-  "branch": "codex/fix-gauge-theory-prerequisites",
+  "status": "merged",
+  "branch": null,
   "pr": {
-    "number": 33,
-    "url": "https://github.com/Danielc-lgtm/Study-notes/pull/33",
-    "status": "open"
+    "number": null,
+    "url": null,
+    "status": null
   },
   "merged_prs": [
     {
@@ -140,6 +140,12 @@
       "number": 31,
       "unit": "final-audit",
       "main_sha": "6cfdf6b",
+      "date": "2026-09-07"
+    },
+    {
+      "number": 33,
+      "unit": "gauge-prerequisite-link-repair",
+      "main_sha": "b52d19f1",
       "date": "2026-09-07"
     }
   ],
@@ -617,14 +623,14 @@
         "prose": "pass",
         "checklist": "pass"
       },
-      "commit": null,
+      "commit": "52a67dd5",
       "notes": "Added visible Prerequisite Concepts sections with resolving wikilinks on every atomic page; repaired all bare qquad/quad spacing commands in Gauge Theory and the sole remaining vault occurrence; replaced one nonexistent Pullback Bundle prerequisite with the existing Fibre Bundle page that defines pullback."
     }
   },
-  "current_unit": "gauge-prerequisite-link-repair",
-  "next_action": "Commit the prerequisite-link and TeX-spacing repair, open its PR, and merge it.",
+  "current_unit": null,
+  "next_action": "No remaining action; Gauge Theory prerequisite links and TeX spacing are repaired.",
   "unresolved": [],
-  "last_commit": "52a67dd5",
-  "ready_to_merge": true,
-  "updated": "2026-09-07T02:10:00Z"
+  "last_commit": "b52d19f1",
+  "ready_to_merge": false,
+  "updated": "2026-09-07T02:20:00Z"
 }
