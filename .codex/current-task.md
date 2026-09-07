@@ -1,71 +1,43 @@
 # Current task
 
-**Overall status:** in progress — Gauge Theory I–X merged; Gauge Theory XI is ready to merge
+**Overall status:** complete — Gauge Theory I–XI merged; final audit ready to merge
 
 ## Goal
-Create a complete, self-contained Obsidian lecture-note series covering both `sources/IntroGaugeTheory_LectNotes.pdf` (Haydys) and `sources/mathematical_gauge_theory.pdf` (Wernli), rebuilding the existing Gauge Theory graph without using existing vault prose or proof architecture as a stylistic anchor.
+Create a complete, self-contained Obsidian lecture-note series covering `sources/IntroGaugeTheory_LectNotes.pdf` and `sources/mathematical_gauge_theory.pdf`, with an independently derived presentation and durable source coverage.
 
-## Scope
-1. Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete (PR #19)
-2. Gauge Theory II — Principal bundles, representations, and bundle classification — complete (PR #20)
-3. Gauge Theory III — Principal connections, curvature, holonomy, and gauge symmetry — complete (PR #21; merged)
-4. Gauge Theory IV — Chern–Weil theory, characteristic classes, Chern–Simons, and flat moduli — complete (PR #23; merged)
-5. Gauge Theory V — Hodge theory, Maxwell, Yang–Mills, and instantons — complete (PR #24; merged)
-6. Gauge Theory VI — Clifford algebras, spin geometry, and Dirac operators — complete (PR #25; merged)
-7. Gauge Theory VII — Sobolev spaces, elliptic operators, and elliptic complexes — complete (PR #26; merged)
-8. Gauge Theory VIII — Fredholm maps, transversality, determinant lines, and degree — complete (PR #27; merged)
-9. Gauge Theory IX — Seiberg–Witten equations and moduli-space analysis — complete (PR #28; merged)
-10. Gauge Theory X — Seiberg–Witten invariants and four-manifold applications — complete (PR #29; merged)
-11. Gauge Theory XI — Algebraic topology, intersection forms, classification, and Donaldson theory — complete; PR #30 ready to merge
-12. Final source-coverage and cross-topic consistency audit — pending
-
-The persistent section-by-section coverage matrix is `.codex/gauge-theory-source-map.md`.
-
-## Mode
-`mixed` — rebuild four existing topics and create the remaining chapters and atomic pages.
+## Completed scope
+1. Gauge Theory I–X — complete and merged in PRs #19–#29.
+2. Gauge Theory XI — complete and merged in PR #30.
+3. Final source-coverage and cross-topic consistency audit — complete on the current branch.
 
 ## Working branch
-`codex/create-complete-gauge-theory-gt-xi`
+`codex/create-complete-gauge-theory-final-audit`
 
 ## Pull request
-Gauge Theory XI PR #30 (open): https://github.com/Danielc-lgtm/Study-notes/pull/30
+Final-audit PR pending creation.
 
-## Sources
-- `sources/IntroGaugeTheory_LectNotes.pdf` — Andriy Haydys, 73 pages
-- `sources/mathematical_gauge_theory.pdf` — Konstantin Wernli, 155 pages
-- Existing Gauge Theory I–IV graph, used only as mathematical/structural material under the user's style override
-- Relevant prerequisite pages in Differential Geometry, Functional Analysis, Algebraic Topology, and Special Relativity
-
-## Completed units
-- Gauge Theory I — Vector-bundle connections and the electromagnetic prototype — complete, merged in PR #19.
-- Gauge Theory II — Principal bundles, representations, and classification — complete, merged in PR #20.
-
-## Current unit
-Gauge Theory XI — algebraic topology, intersection forms, classification, and Donaldson theory; reviewed and ready to merge.
+## Results
+- All Haydys and Wernli source rows are complete in `.codex/gauge-theory-source-map.md`.
+- The Gauge Theory subtree contains 204 pages before the series-map addition and has no unresolved originating wikilinks.
+- All audited Gauge Theory pages have frontmatter and contain no control characters.
+- `Gauge Theory — Series Map.md` now supplies a single entry point and re-entry routes.
+- Detailed results are recorded in `.codex/gauge-theory-final-audit.md`.
 
 ## Remaining units
-Final source-coverage and cross-topic consistency audit.
-
-## Unresolved issues
-_none_. Source convention conflicts will be made explicit rather than silently normalized.
+_none_.
 
 ## Exact next action
-Commit and merge Gauge Theory XI, then run the final source-coverage and cross-topic consistency audit on a fresh branch.
-
-## Last completed commit
-`e7fcf5c` — merged Gauge Theory X: Seiberg–Witten invariants and applications.
-
-## Merge policy
-`auto` — one completed unit per PR, merged immediately, then continue from fresh `main`.
+Commit the final audit, open its PR, and merge it into `main`.
 
 ## Merge history
-- #19 Gauge Theory I → `main` (`961b960`, 2026-09-06).
-- #20 Gauge Theory II → `main` (`40e54fd`, 2026-09-06).
-- #21 Gauge Theory III → `main` (`ce4a900`, 2026-09-06).
-- #23 Gauge Theory IV → `main` (`6173fb5`, 2026-09-06).
-- #24 Gauge Theory V → `main` (`6f77dba`, 2026-09-06).
-- #25 Gauge Theory VI → `main` (`c296516`, 2026-09-06).
-- #26 Gauge Theory VII → `main` (`746386e`, 2026-09-06).
-- #27 Gauge Theory VIII → `main` (`102510d`, 2026-09-06).
-- #28 Gauge Theory IX → `main` (`19b1031`, 2026-09-06).
-- #29 Gauge Theory X → `main` (`e7fcf5c`, 2026-09-06).
+- #19 Gauge Theory I (`961b960`).
+- #20 Gauge Theory II (`40e54fd`).
+- #21 Gauge Theory III (`ce4a900`).
+- #23 Gauge Theory IV (`6173fb5`).
+- #24 Gauge Theory V (`6f77dba`).
+- #25 Gauge Theory VI (`c296516`).
+- #26 Gauge Theory VII (`746386e`).
+- #27 Gauge Theory VIII (`102510d`).
+- #28 Gauge Theory IX (`19b1031`).
+- #29 Gauge Theory X (`e7fcf5c`).
+- #30 Gauge Theory XI (`f741a1e`).
