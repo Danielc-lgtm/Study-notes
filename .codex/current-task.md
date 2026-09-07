@@ -1,6 +1,6 @@
 # Current task
 
-**Overall status:** complete — Gauge Theory I–XI merged; final audit ready to merge
+**Overall status:** complete and merged — Gauge Theory I–XI and final audit
 
 ## Goal
 Create a complete, self-contained Obsidian lecture-note series covering `sources/IntroGaugeTheory_LectNotes.pdf` and `sources/mathematical_gauge_theory.pdf`, with an independently derived presentation and durable source coverage.
@@ -11,10 +11,10 @@ Create a complete, self-contained Obsidian lecture-note series covering `sources
 3. Final source-coverage and cross-topic consistency audit — complete on the current branch.
 
 ## Working branch
-`codex/create-complete-gauge-theory-final-audit`
+_none_; all work is merged to `main`.
 
 ## Pull request
-Final-audit PR #31: https://github.com/Danielc-lgtm/Study-notes/pull/31
+Final audit merged in PR #31.
 
 ## Results
 - All Haydys and Wernli source rows are complete in `.codex/gauge-theory-source-map.md`.
@@ -27,7 +27,7 @@ Final-audit PR #31: https://github.com/Danielc-lgtm/Study-notes/pull/31
 _none_.
 
 ## Exact next action
-Commit the final audit, open its PR, and merge it into `main`.
+No remaining action; the campaign is complete.
 
 ## Merge history
 - #19 Gauge Theory I (`961b960`).
@@ -41,3 +41,4 @@ Commit the final audit, open its PR, and merge it into `main`.
 - #28 Gauge Theory IX (`19b1031`).
 - #29 Gauge Theory X (`e7fcf5c`).
 - #30 Gauge Theory XI (`f741a1e`).
+- #31 Final coverage and graph audit (`6cfdf6b`).
