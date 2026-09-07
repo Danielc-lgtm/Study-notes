@@ -37,7 +37,7 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 
 | Source section | PDF pages | Destination unit | Status |
 |---|---:|---|---|
-| Preface | 5–6 | Series motivation | pending |
+| Preface | 5–6 | Series motivation | complete |
 | §1.1–1.5, Lie groups, Lie algebras, representations, exponential, actions | 7–36 | II, with prerequisite recalls | complete |
 | §2.1–2.2, fibre and principal bundles | 37–49 | II | complete |
 | §2.3–2.4, connections and curvature | 50–58 | III | complete |
@@ -47,12 +47,12 @@ This is the durable coverage ledger for the complete Gauge Theory rewrite. A sec
 | §3.1, Hodge-star operator in arbitrary signature | 79–83 | V | complete |
 | §3.2, electrodynamics, Maxwell equations, action, stress-energy | 84–96 | I, V | complete |
 | §3.3, Yang–Mills fields, variation, characteristic number | 97–106 | V | complete |
-| §4.1, homotopy theory | 107–115 | XI | pending |
-| §4.2, homology theory | 116–125 | XI | pending |
-| §4.3, orientations and fundamental class | 126–130 | XI | pending |
-| §5.1, intersection form | 131–137 | XI | pending |
-| §5.2, four-manifold classification results | 138–143 | XI | pending |
-| §5.3, Donaldson's theorem and gauge-theoretic context | 144–155 | XI | pending |
+| §4.1, homotopy theory | 107–115 | XI | complete |
+| §4.2, homology theory | 116–125 | XI | complete |
+| §4.3, orientations and fundamental class | 126–130 | XI | complete |
+| §5.1, intersection form | 131–137 | XI | complete |
+| §5.2, four-manifold classification results | 138–143 | XI | complete |
+| §5.3, Donaldson's theorem and gauge-theoretic context | 144–155 | XI | complete |
 
 ## Architecture and convention decisions
 
