@@ -23,6 +23,7 @@ Read, in this order, then follow them exactly:
 
 1. `.claude/skills/exercise-builder/SKILL.md`
 2. `.claude/skills/exercise-builder/references/obsidian-patterns.md`
+3. `.claude/skills/exercise-builder/references/prose-and-proof-standard.md` (symlink to the polymath-notes copy), then the thesis `prose/Chiang Sung En-Thesis.pdf` — the prose register and the proof floor for every solution
 
 Also read `.codex/note-quality.md` (review standard) and `.codex/workflow.md`
 (branch / commit / PR / merge mechanics) before writing anything to the vault.

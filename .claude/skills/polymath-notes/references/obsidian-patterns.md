@@ -179,6 +179,7 @@ Use callouts for:
 - "Unlocked by this" previews of advanced concepts (`[!tip]`)
 - "Illegal but tempting" warnings (`[!warning]`)
 - Trigger-reaction patterns that deserve emphasis (`[!example]`)
+- A result used without proof under the single exception of the Proof Standard (`[!warning] Imported without proof: …` — exact statement, published source by section or page, proof architecture, reason; see `prose-and-proof-standard.md` §5). This callout is the *only* place an unproved theorem may appear; it never sits inside a `> **Theorem.**` blockquote and never has its own `Thm -` page.
 
 ## YAML Frontmatter
 

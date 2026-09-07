@@ -107,7 +107,7 @@ source: "[paper Short Title]"
 # Proof
 
 > [!note]- Proof
-> [Gap-free proof (Rule 5) if short or illuminating, in the thesis's labelled-step style. Otherwise: a proof sketch with the key idea, and cite a full source — and say which. Verify against a source (Rule 6).]
+> [The complete proof (Rule 5), at or above the thesis floor — `prose-and-proof-standard.md` §6: named assumptions and goal, labelled blocks with bold lead-ins, a justification on every displayed line, every hypothesis invoked by name, all directions and cases, a closing sentence. Never a sketch: a prerequisite note exists precisely so that the result it states is *proved* somewhere in the vault. Results it uses in turn are wikilinked to pages with complete proofs. Verify against a source (Rule 6) and cite it.]
 
 ---
 
@@ -133,7 +133,7 @@ Each subpage is **fully self-contained**: it can be opened cold, without reading
 - **Its own Notation section** — every symbol it uses, typed; every above-floor term recalled with a `> [!recall]-` callout carrying formal statement + plain-language meaning.
 - **Its own formal Statement** — the paper's exact statement, typed.
 - **Its own Motivation / Why-It's-True** — thesis-voice intuition, independent of the proof.
-- **Its own Proof / Computation / Worked Example** — gap-free (Rule 5), in a `> [!note]-` collapsible. External inputs the proof invokes appear as `> [!cite]-` callouts inline.
+- **Its own Proof / Computation / Worked Example** — gap-free (Rule 5) and at the thesis floor, in a `> [!note]-` collapsible. External inputs the proof invokes appear as `> [!cite]-` callouts inline, each linked to the atomic page (or existing vault page) where that input is proved in full.
 - **Where the paper uses this** — a link back to the section page and to any downstream results, so the DAG is navigable both ways.
 
 **Scale to the item.** A theorem that carries a section gets the full apparatus (Motivation → Why-It's-True → Rederivation Scaffold → Formal Proof). A remark that is one paragraph in the paper gets a short subpage (Notation → Statement → Intuition → one link). Match the item's weight, do not pad.
@@ -227,7 +227,7 @@ paper-ref: "Theorem [paper's number]"
 # Proof
 
 > [!note]- Gap-free proof
-> [The paper's proof rewritten with every step justified (Rule 5), in the thesis's labelled-step style. External lemmas appear as `> [!cite]-` callouts. If the paper's proof has a gap you filled, mark it with ⚠️.]
+> [The paper's proof rewritten with every step justified (Rule 5), at or above the thesis floor (`prose-and-proof-standard.md` §6). External results appear as `> [!cite]-` callouts, each pointing at an atomic page (or an existing vault page) where that result is proved in full. If the paper's proof has a gap you filled, mark it with ⚠️.]
 
 ---
 

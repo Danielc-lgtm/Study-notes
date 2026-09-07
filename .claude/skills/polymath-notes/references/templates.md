@@ -39,7 +39,7 @@ tags: [area-tag, subject-tag]
 
 [Write so that someone who has forgotten everything about the topic can read this and understand why they should care. Be specific — not "this is important because it generalizes X" but "without this, we cannot do Y, and the specific obstacle is Z."]
 
-[Write in David Tong style: conversational, precise, building from the concrete problem to the abstract solution. Open with a hook in the first sentence: `Modules I` opens "Here is the entire topic in one sentence: a module is a vector space over a ring."]
+[Write in the thesis register (`prose/Chiang Sung En-Thesis.pdf`; specification in `prose-and-proof-standard.md` Part I): orient the reader, pose the guiding questions as questions, name the competing approaches and what goes wrong without this one, give the roadmap — the thesis's §1.1 Motivation and its §3.1 opener are the calibration passages. Measured first-person-plural academic voice; every claim with its reason; concrete problem before abstract solution. Open with a hook in the first sentence: `Modules I` opens "Here is the entire topic in one sentence: a module is a vector space over a ring."]
 
 [**Structural-backbone display equation (when applicable):** When the topic has a hierarchy or classification at its core, state it as a single display equation in Motivation that the rest of the chapter references. Example: `Rings II` line 41 places `field ⊂ ED ⊂ PID ⊂ UFD ⊂ ID` as a display.]
 
@@ -160,6 +160,14 @@ tags: [area-tag, subject-tag]
 
 [Written as prose paragraphs. Each insight should be self-contained and should make the reader see the topic differently or solve problems more effectively.]
 
+---
+
+# Imported Results
+
+[**Include ONLY if the chapter uses a result without proof** under the single exception of the Proof Standard (`prose-and-proof-standard.md` §5: a result whose complete published proof is genuinely book-length). The normal chapter proves everything it mentions and has no such section. One bullet per import:]
+
+- **[Name of the result]** — used in [[Thm - Page That Uses It]] (callout "Imported without proof: …"). Complete proof in [Author, *Title*, section/pages]. Imported rather than proved because [one sentence].
+
 ```
 
 ---
@@ -235,7 +243,7 @@ tags: [area-tag, subject-tag]
 
 [Concrete examples and non-examples, followed by immediate corollaries. Written as prose paragraphs, one per example or corollary.]
 
-[Examples should include both "is an instance" and "is NOT an instance" cases, each probing a different aspect of the definition. **At least one "is NOT" example** is required for any non-trivial definition. Corollaries serve as calibration checks: if the reader can verify each one after reading the definition, they have understood it correctly. Choose corollaries that test different aspects or axioms of the definition.]
+[Examples should include both "is an instance" and "is NOT an instance" cases, each probing a different aspect of the definition. **At least one "is NOT" example** is required for any non-trivial definition. **Every example is verified on the page**: check the clauses of the definition one by one for the instance and exhibit the failing clause for the non-instance, with every line justified as in the thesis's Example 2.2.1 — an asserted example violates the Proof Standard. Corollaries serve as calibration checks: if the reader can verify each one after reading the definition, they have understood it correctly. Each corollary is proved here or wikilinked to the page that proves it. Choose corollaries that test different aspects or axioms of the definition.]
 
 [**End the section with an explicit `**Calibration check.**` paragraph** naming 2–3 small verifications the reader should be able to perform. Patterns: `Def - Group.md` line 94, `Def - Topological Space.md` line 110, `Def - Compact Space.md` line 101.]
 
@@ -346,7 +354,7 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 
 [Each lemma independently practiceable in approximately 5 minutes. Each lemma is a collapsible callout; the full proof is a nested collapsible callout inside it.]
 
-[**Every lemma callout must contain all four fields**: `**Statement:**`, `**Hint:**`, `**Why needed:**`, and a nested `> [!note]- Full proof` callout. Omitting Hint or Why-needed is a quality failure. The Algebra / Multivariate / Topology lemma decompositions set the bar.]
+[**Every lemma callout must contain all four fields**: `**Statement:**`, `**Hint:**`, `**Why needed:**`, and a nested `> [!note]- Full proof` callout. Omitting Hint or Why-needed is a quality failure. The Algebra / Multivariate / Topology lemma decompositions set the bar. **Each `Full proof` is itself complete at the thesis floor** (`prose-and-proof-standard.md` §6): named assumptions and goal, bold lead-ins, a justification on every displayed line, all cases, a closing sentence. A lemma whose Full proof is missing or is a sketch is caught by `find-unproved-theorems.py` and is a Proof Standard violation.]
 
 > [!note]- Lemma 1: [Statement]
 > **Statement:** [Precise statement]
@@ -366,9 +374,13 @@ One-sentence callouts (e.g. "the conclusion is local — see Why Is It True") ma
 # Formal Proof
 
 > [!note]- Complete formal proof
-> [The complete, formal proof. Ground truth for verification after attempting rederivation from the scaffold.]
+> [The complete, formal proof. Ground truth for verification after attempting rederivation from the scaffold. **The thesis's fully written proofs are the minimum level of detail** — `prose-and-proof-standard.md` §6 lists the eleven features and §8 shows a model. In particular:]
+>
+> [Open by naming what is assumed and what must be shown: "Let … . We need to show … ."]
 >
 > [**When the theorem has well-posedness preconditions** (e.g. "the quotient exists", "the integral converges"), open the proof with **"Step 0 — [precondition]"** verifying it, separately from the substantive proof. See `Thm - First Isomorphism Theorem.md` line 163 for the pattern.]
+>
+> [Organise by labelled blocks — **Direction 1 / Direction 2** for an equivalence, **Case 1 / Case 2** (with a sentence showing the cases exhaust), **Part I / Part II**, **Step 1, 2, …** — each announced with what it establishes, each move introduced by a bold lead-in naming it. Every displayed equality, inequality, or implication carries its justification on the same line: "(by Lemma 2)", "(since … )", "(by the dominated convergence theorem; the dominating function is $g$)". Every hypothesis is invoked by name at the point it is used. Well-definedness and existence are checked clause by clause. Both directions, all cases, all parts are written out; "similarly" is expanded. Numbered intermediate lines are combined explicitly ("Combining (3) and (5) …"). Other results are used only by wikilink to a page whose Formal Proof is complete, with the statement restated at the point of use. Close in words: "Therefore … ." A sketch, a citation in place of an argument, or "clearly" anywhere in this callout means the page is not finished.]
 
 ---
 
@@ -493,7 +505,7 @@ Collapsing the derivation layer into a single block (no per-step structure) is a
 > [Full derivation.]
 
 > [!note]- Complete formal solution
-> [Complete, cleaned-up solution as a single self-contained proof. Every step justified, no gaps.]
+> [Complete, cleaned-up solution as a single self-contained proof at the thesis floor (`prose-and-proof-standard.md` §6): named goal, labelled blocks, a justification on every line, every case, a closing sentence. Every theorem invoked is wikilinked to a page whose Formal Proof is complete and restated at the point of use — a solution that leans on an unproved result is itself a Proof Standard violation.]
 
 [**Optional add-ons used in upper-tier exercises:**]
 

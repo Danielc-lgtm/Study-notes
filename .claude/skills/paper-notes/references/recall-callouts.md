@@ -84,21 +84,23 @@ This recall passes: the "In words" field uses only "closed curve", "continuously
 
 ## The external-input callout — `> [!cite]-`
 
-For a result the paper **invokes but does not prove** (Rule 5). State it, type it, give its intuition, cite the source, and include the proof only when it is short or genuinely illuminating. The reader may then take it on faith with its precondition and conclusion stated exactly.
+For a result the paper **invokes but does not prove** (Rule 5). State it, type it, give its intuition, cite the source — and **prove it in full** on its own atomic `Thm -`/`Lemma -` page in the paper's `Subpages/` folder (or wikilink an existing vault page whose Formal Proof is complete), linked from the callout. The callout is the point-of-use record of *how the paper uses* the result; the proof lives on the atomic page, at the vault's proof floor (`prose-and-proof-standard.md` §6). The reader is never asked to take a result on faith: the vault-wide Proof Standard — every theorem mentioned is proved — applies to paper notes without exception.
 
 ```markdown
 > [!cite]- External input — Radon–Nikodym theorem
 > **Statement (typed):** if $\mu, \nu$ are $\sigma$-finite measures on $(X, \mathcal{F})$ with $\mu \ll \nu$, then there is a $\nu$-almost-everywhere-unique measurable $f : X \to [0, \infty)$ with $\mu(A) = \int_A f \, d\nu$ for all $A \in \mathcal{F}$. The function $f$ is written $\frac{d\mu}{d\nu}$.
 > **Why it's true (intuition):** absolute continuity forbids $\mu$ from putting mass where $\nu$ has none, so "how much $\mu$ per unit $\nu$" is well-defined pointwise; $f$ is that local exchange rate.
-> **Source:** Folland, *Real Analysis*, Theorem 3.8. Take on faith with the precondition ($\sigma$-finite, $\mu \ll \nu$) and conclusion above; the proof (via the Hahn decomposition) is not needed here.
+> **Where the paper uses it:** to define the density of the loop measure against Lebesgue measure in §3.2.
+> **Proof:** in full on [[Thm - Radon–Nikodym Theorem]] (via the Hahn decomposition; every step written out). **Source of the statement:** Folland, *Real Analysis*, Theorem 3.8.
 ```
 
 Rules for external-input callouts:
 
 - **The `Statement (typed)` line is fully symbolic.** Both its precondition and its conclusion carry no bare jargon — every term in them is either floor-level or recalled/typed nearby.
-- **Mark a genuine gap as a gap.** If the paper cites something you could not fully verify, or which is itself non-trivial and unproven in the notes, say so in a one-line Status and, if it matters, flag it with the uncertainty marker below.
-- **Promote to an atomic `Thm -`/`Lemma -` note** when the reader will reuse the result — the callout is the point-of-use reminder, the atomic note is the reusable asset. Link them.
-- **If the imported result's proof is short or illuminating, include it** in a nested `> > [!note]- Proof` inside the callout, or write it out as a `Lemma -` atomic note. Judgement call: illuminating means the proof teaches the reader something about the object, not merely that it is true.
+- **The `Proof` line always points at a complete proof.** Either an atomic page in `Subpages/` written for this paper, or an existing vault page whose `# Formal Proof` is complete. A callout whose proof line says "take on faith", "standard", or "see [source]" without a proved page behind it is a Proof Standard violation, not a shortcut.
+- **The one exception — a genuinely book-length result** (of the order of fifty pages or more even in the most efficient textbook treatment). Such a result is used only in the `> [!warning] Imported without proof: …` callout form of `prose-and-proof-standard.md` §5 — exact statement, published source by section or page, one paragraph on the architecture of the proof, the reason it is imported — and is listed in the index page's Verification log. This is a last resort for a handful of results, never a category for anything long.
+- **Mark a genuine gap as a gap.** If the paper cites something you could not fully verify, or whose proof you had to supply from your own knowledge, say so in a one-line Status and, if it matters, flag it with the uncertainty marker below.
+- **Promote to an atomic `Thm -`/`Lemma -` note is not optional** — it is where the proof lives; the callout and the note link each other.
 
 ---
 

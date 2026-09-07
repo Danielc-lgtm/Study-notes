@@ -24,6 +24,7 @@ Read, in this order, then follow them exactly:
 1. `.claude/skills/polymath-notes/SKILL.md`
 2. `.claude/skills/polymath-notes/references/templates.md`
 3. `.claude/skills/polymath-notes/references/obsidian-patterns.md`
+4. `.claude/skills/polymath-notes/references/prose-and-proof-standard.md`, then the thesis it points at, `prose/Chiang Sung En-Thesis.pdf` (extract with `pymupdf`) — the prose register and the minimum proof standard for every note
 
 Also read `.codex/note-quality.md` (review standard) and `.codex/workflow.md`
 (branch / commit / PR / merge mechanics) before writing anything to the vault.

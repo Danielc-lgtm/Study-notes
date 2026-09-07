@@ -32,6 +32,7 @@ Read, in this order, then follow them exactly:
 4. `.claude/skills/paper-notes/references/atomic-note-templates.md`
 5. `.claude/skills/paper-notes/references/recall-callouts.md`
 6. `.claude/skills/paper-notes/references/obsidian-patterns.md`
+7. `.claude/skills/paper-notes/references/prose-and-proof-standard.md` (symlink to the polymath-notes copy), then the thesis `prose/Chiang Sung En-Thesis.pdf` — the prose register and the minimum proof standard
 
 Also read `.codex/note-quality.md` (review standard) and `.codex/workflow.md`
 (branch / commit / PR / merge mechanics) before writing anything to the vault.
