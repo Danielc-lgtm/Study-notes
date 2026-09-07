@@ -131,7 +131,9 @@ With the Jacobi identity in hand, $(\operatorname{Mat}(n\times n;\mathbb{K}),[\c
 > [!note]- Derivation
 > **Bilinearity.** For scalars $\lambda,\mu\in\mathbb{K}$ and matrices $A,A',B$,
 > $$[\lambda A+\mu A',B]=(\lambda A+\mu A')B-B(\lambda A+\mu A')=\lambda(AB-BA)+\mu(A'B-BA')=\lambda[A,B]+\mu[A',B]$$
-> (by distributivity of the matrix product over addition and its commuting with scalar multiplication); linearity in the second argument is identical. **Antisymmetry.** $[B,A]=BA-AB=-(AB-BA)=-[A,B]$. **Jacobi identity.** Proved in Steps 1–3. All three axioms hold, so the commutator makes $\operatorname{Mat}(n\times n;\mathbb{K})$ a Lie algebra. $\blacksquare$
+> (by distributivity of the matrix product over addition and its commuting with scalar multiplication). For the second argument the same distributive computation applies verbatim on the other side:
+> $$[A,\lambda B+\mu B']=A(\lambda B+\mu B')-(\lambda B+\mu B')A=\lambda(AB-BA)+\mu(AB'-B'A)=\lambda[A,B]+\mu[A,B']$$
+> (again by distributivity and scalar-homogeneity of the matrix product), so the bracket is linear in each argument separately. **Antisymmetry.** $[B,A]=BA-AB=-(AB-BA)=-[A,B]$. **Jacobi identity.** Proved in Steps 1–3. All three axioms hold, so the commutator makes $\operatorname{Mat}(n\times n;\mathbb{K})$ a Lie algebra. $\blacksquare$
 
 > [!note]- Complete formal solution
 > **Claim.** On $\operatorname{Mat}(n\times n;\mathbb{K})$ the commutator $[A,B]=AB-BA$ satisfies the Jacobi identity, and hence, being also bilinear and antisymmetric, makes $\operatorname{Mat}(n\times n;\mathbb{K})$ a Lie algebra.

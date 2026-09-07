@@ -175,7 +175,7 @@ The single non-obvious step is the cancellation of the second-order terms, and t
 > **Statement:** For all $X, Y, Z \in \mathfrak{X}(M)$,
 > $$\big[[X, Y], Z\big] + \big[[Y, Z], X\big] + \big[[Z, X], Y\big] = 0.$$
 >
-> **Hint:** Write every bracket as an operator commutator and expand into the eight triple compositions of each double bracket; the twelve resulting triple products cancel in pairs.
+> **Hint:** Write every bracket as an operator commutator and expand each double bracket into its four triple compositions; the twelve resulting triple products cancel in pairs.
 >
 > **Why needed:** It is the third Lie algebra axiom and the one that gives the structure its name.
 >
