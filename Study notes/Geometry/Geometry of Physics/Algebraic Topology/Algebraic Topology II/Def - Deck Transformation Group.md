@@ -63,7 +63,7 @@ canonically. The isomorphism sends a loop $[\gamma] \in \pi_1(X, x_0)$ to the de
 
 In the category of [[Def - Covering Space|covering spaces]] of $X$, the deck group $\mathrm{Deck}(\tilde X / X)$ is the **automorphism group of the object $\tilde X$** in this category — automorphisms in the over-category $\mathbf{Cov}(X)$ of coverings of $X$. So deck transformations are precisely the "self-isomorphisms" of $\tilde X$ as a cover of $X$.
 
-For the universal cover, $\widetilde X \to X$ is the **principal $\pi_1(X)$-bundle** over $X$: a fibre bundle whose structure group is $\pi_1(X)$, acting freely and transitively on each fibre. The deck group acts by the principal bundle action; this is one of the cleanest examples of a [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification|principal bundle]] in the topological category.
+For the universal cover, $\widetilde X \to X$ is the **principal $\pi_1(X)$-bundle** over $X$: a fibre bundle whose structure group is $\pi_1(X)$, acting freely and transitively on each fibre. The deck group acts by the principal bundle action; this is one of the cleanest examples of a [[Gauge Theory III — Fibre Bundles, Principal Bundles, and Associated Bundles|principal bundle]] in the topological category.
 
 ---
 
@@ -110,7 +110,7 @@ The terminology "regular cover" is reasonable; "Galois cover" makes the analogy 
 # Unlocked by This
 
 > [!tip] The Universal Cover as a Principal Bundle *(from Gauge Theory II)*
-> The universal cover $\widetilde X \to X$ is a **principal $\pi_1(X)$-bundle** — a fibre bundle with structure group $\pi_1(X)$, the deck group acting freely and transitively on fibres. This is the topological origin of [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification|principal bundles]] in general: gauge theories with continuous structure group are the continuous analogue of covering spaces with discrete deck group.
+> The universal cover $\widetilde X \to X$ is a **principal $\pi_1(X)$-bundle** — a fibre bundle with structure group $\pi_1(X)$, the deck group acting freely and transitively on fibres. This is the topological origin of [[Gauge Theory III — Fibre Bundles, Principal Bundles, and Associated Bundles|principal bundles]] in general: gauge theories with continuous structure group are the continuous analogue of covering spaces with discrete deck group.
 
 > [!tip] Equivariant Objects on the Universal Cover *(in this topic)*
 > Functions, vector fields, differential forms, tensors on $X$ are in bijection with $\pi_1(X)$-equivariant such objects on $\widetilde X$: a function $X \to \mathbb{R}$ lifts to a $\pi_1$-invariant function on $\widetilde X$, and conversely. So studying *invariant* objects on the simply-connected universal cover is equivalent to studying *arbitrary* objects on $X$. This is why universal covers are powerful: they let you trade global topological complexity for an equivariance condition on a simpler space. For example, the harmonic analysis of $T^n$ is **Fourier series**, which is exactly $\mathbb{Z}^n$-equivariant Fourier analysis on $\mathbb{R}^n$.

@@ -183,7 +183,7 @@ Derive the general Euler–Lagrange field equation by varying the action and int
 
 - **[[Def - Lagrangian for a Particle in a Vector Field]]** — the interaction term $\int A_\mu J^\mu$ reduces, for a single particle, to the minimal-coupling term $q\int A\cdot dX$ that gave the Lorentz force in topic XV. The field's coupling to its source and the particle's coupling to the field are the *same* term, viewed from the field side versus the particle side; this is the unity of the matter–field system.
 
-- **[[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection]]** — the action $-\tfrac14\int F^2$ is the abelian Yang–Mills action. Replacing $F = dA$ by the nonabelian curvature $F = dA + A\wedge A$ and $F^2$ by $\mathrm{tr}(F^2)$ gives the full Yang–Mills action, whose field equation $D_\mu F^{\mu\nu} = J^\nu$ is nonlinear (the field carries its own charge). Electromagnetism's action is the $\mathrm{U}(1)$ term of the Standard Model Lagrangian; the variational derivation here is the template for every gauge theory.
+- **[[Gauge Theory VII — The Hodge Star, Electrodynamics, and Yang–Mills Theory]]** — the action $-\tfrac14\int F^2$ is the abelian Yang–Mills action. Replacing $F = dA$ by the nonabelian curvature $F = dA + A\wedge A$ and $F^2$ by $\mathrm{tr}(F^2)$ gives the full Yang–Mills action, whose field equation $D_\mu F^{\mu\nu} = J^\nu$ is nonlinear (the field carries its own charge). Electromagnetism's action is the $\mathrm{U}(1)$ term of the Standard Model Lagrangian; the variational derivation here is the template for every gauge theory.
 
 ---
 
