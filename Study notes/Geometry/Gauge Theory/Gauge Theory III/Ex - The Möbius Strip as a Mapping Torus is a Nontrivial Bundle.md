@@ -116,7 +116,7 @@ Finally, the companion vector-bundle statement — that the Möbius line bundle 
 > $$\alpha(r)=[(1-r)t,\ f],\qquad r\in[0,1],$$
 > is continuous (it is the image under the quotient map of the continuous path $r\mapsto((1-r)t,f)$), has $\alpha(0)=[t,f]$ and $\alpha(1)=[0,f]$, and stays in $E\setminus C$ because its second coordinate is the constant $f\neq0$.
 >
-> **Slide within the fibre over $[0]$ to $\pm\tfrac12$.** If $f>0$, the path $\beta(r)=[0,(1-r)f+r\tfrac12]$, $r\in[0,1]$, joins $[0,f]$ to $[0,\tfrac12]$ and has second coordinate $(1-r)f+r\tfrac12>0$ throughout (a convex combination of two positive numbers), so it avoids $C$. If $f<0$, the analogous path with endpoint value $-\tfrac12$ joins $[0,f]$ to $[0,-\tfrac12]$ through negative values, again avoiding $C$.
+> **Slide within the fibre over $[0]$ to $\pm\tfrac12$.** If $f>0$, the path $\beta(r)=[0,(1-r)f+r\tfrac12]$, $r\in[0,1]$, joins $[0,f]$ to $[0,\tfrac12]$ and has second coordinate $(1-r)f+r\tfrac12>0$ throughout (a convex combination of two positive numbers), so it avoids $C$. If $f<0$, the path $\beta(r)=[0,(1-r)f-r\tfrac12]$, $r\in[0,1]$, joins $[0,f]$ to $[0,-\tfrac12]$ and has second coordinate $(1-r)f-r\tfrac12<0$ throughout (a sum of two nonpositive terms, not both zero), so it too avoids $C$.
 >
 > **Cross the seam.** Finally,
 > $$\gamma(r)=[r,\tfrac12],\qquad r\in[0,1],$$

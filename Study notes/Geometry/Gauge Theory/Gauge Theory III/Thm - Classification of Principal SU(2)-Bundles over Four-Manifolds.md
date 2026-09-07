@@ -253,14 +253,14 @@ Three points are easy to get wrong. First, the reduction of "trivial" to "has a 
 
 - **The quaternionic Hopf bundle.** The generator with $k=1$ is realised concretely by the quaternionic Hopf bundle $S^7\to S^4=\mathbb{HP}^1$ of [[Def - The Hopf Bundle]]; its clutching map is $q\mapsto q$, of degree $1$, so $k=1$ (or $-1$ with the opposite disc convention). This is the bundle Donaldson theory studies.
 
-- **The winding form and the volume of $SU(2)$.** The constant $-24\pi^2=\int_{SU(2)}\operatorname{tr}(\theta^{\wedge3})$ is $-12\operatorname{Vol}(S^3)$; the factor $12$ is $3\cdot|\operatorname{tr}(E_1^2)|\cdot|{\rm struct.\ const.}|=3\cdot2\cdot2$, and the volume $2\pi^2$ comes from [[Ex - Volume of the n-Sphere via the Volume Form]]. This ties the topological normalisation to Riemannian geometry.
+- **The winding form and the volume of $SU(2)$.** The constant $-24\pi^2=\int_{SU(2)}\operatorname{tr}(\theta^{\wedge3})$ is $-12\operatorname{Vol}(S^3)$; the factor $12$ is $3\cdot|\operatorname{tr}(E_1^2)|\cdot|\mathrm{structure\ constant}|=3\cdot2\cdot2$, and the volume $2\pi^2$ comes from [[Ex - Volume of the n-Sphere via the Volume Form]]. This ties the topological normalisation to Riemannian geometry.
 
 ---
 
 # Unlocked by This
 
 > [!tip] The Yang–Mills topological energy bound *(from Gauge Theory VII)*
-> Once $k(P)$ is an integer invariant, the inequality $\mathcal{YM}(A)\ge8\pi^2|k(P)|$ follows, with equality for instantons; see **[[Thm - Energy Identity and the Topological Bound for Yang-Mills]]**.
+> Once $k(P)$ is an integer invariant, the inequality $\mathcal{YM}(A)\ge8\pi^2|k(P)|$ follows, with equality for instantons; this is the **Yang–Mills energy identity and topological bound** of chapter VII.
 
 > [!tip] Donaldson's theorem *(from Gauge Theory XIII)*
-> The moduli space of anti-self-dual connections on the bundle with $k(P)=1$ over a definite four-manifold is the input to **[[Thm - Donaldson Diagonalisation Theorem]]**; existence of that bundle is part (C) of this page.
+> The moduli space of anti-self-dual connections on the bundle with $k(P)=1$ over a definite four-manifold is the input to **Donaldson's diagonalisation theorem** (chapter XIII); existence of that bundle is part (C) of this page.

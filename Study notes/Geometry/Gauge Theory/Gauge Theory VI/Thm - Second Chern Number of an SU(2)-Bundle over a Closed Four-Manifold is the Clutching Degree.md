@@ -133,8 +133,8 @@ The subtle steps are three. First, one must resist the temptation to apply Stoke
 >
 > > [!note]- Full proof
 > > This is the identity proved in full on [[Thm - Gauge Variation of the Chern-Simons Functional]]; we restate the computation. Write $A^g=B+\theta$ with $B=g^{-1}Ag$, so $dB=g^{-1}(dA)g-\theta B-B\theta$ and $d\theta=-\theta^{\wedge2}$. Expanding $\operatorname{cs}(A^g)=\operatorname{tr}(A^g\,dA^g+\tfrac23(A^g)^{\wedge3})$ and using cyclicity of the trace on products of one-forms, the terms quadratic in $B$ and $\theta$ collect to
-> > $$\operatorname{cs}(A^g)=\operatorname{cs}(B)+\operatorname{tr}(\theta\,dB)+\operatorname{tr}(B\theta^{\wedge2})-\tfrac13\operatorname{tr}(\theta^{\wedge3}),$$
-> > and, using $\operatorname{tr}(B^{\wedge3})=\operatorname{tr}(A^{\wedge3})$, $\operatorname{tr}(B\,dB)=\operatorname{tr}(A\,dA)-2\operatorname{tr}(B^2\theta)$, one finds $\operatorname{cs}(B)=\operatorname{cs}(A)-2\operatorname{tr}(B^2\theta)$. Substituting and cancelling the $B^2\theta$ terms leaves $\operatorname{cs}(A^g)=\operatorname{cs}(A)+\operatorname{tr}(\theta\,dB)+\operatorname{tr}(B\theta^{\wedge2})-\tfrac13\operatorname{tr}(\theta^{\wedge3})$. Writing $\bar\theta=dg\,g^{-1}=g\theta g^{-1}$ (so $d\bar\theta=\bar\theta^{\wedge2}$), the middle two terms equal $\operatorname{tr}(\bar\theta\,dA)-\operatorname{tr}(A\bar\theta^{\wedge2})=-d\operatorname{tr}(\bar\theta\wedge A)$, whence
+> > $$\operatorname{cs}(A^g)=\operatorname{cs}(B)+\operatorname{tr}(\theta\,dB)+\operatorname{tr}(B\theta^{\wedge2})+2\operatorname{tr}(B^2\theta)-\tfrac13\operatorname{tr}(\theta^{\wedge3}),$$
+> > and, using $\operatorname{tr}(B^{\wedge3})=\operatorname{tr}(A^{\wedge3})$, $\operatorname{tr}(B\,dB)=\operatorname{tr}(A\,dA)-2\operatorname{tr}(B^2\theta)$, one finds $\operatorname{cs}(B)=\operatorname{cs}(A)-2\operatorname{tr}(B^2\theta)$. Substituting, the $-2\operatorname{tr}(B^2\theta)$ from $\operatorname{cs}(B)$ cancels the $+2\operatorname{tr}(B^2\theta)$ above, leaving $\operatorname{cs}(A^g)=\operatorname{cs}(A)+\operatorname{tr}(\theta\,dB)+\operatorname{tr}(B\theta^{\wedge2})-\tfrac13\operatorname{tr}(\theta^{\wedge3})$. Writing $\bar\theta=dg\,g^{-1}=g\theta g^{-1}$ (so $d\bar\theta=\bar\theta^{\wedge2}$), the middle two terms equal $\operatorname{tr}(\bar\theta\,dA)-\operatorname{tr}(A\bar\theta^{\wedge2})=-d\operatorname{tr}(\bar\theta\wedge A)$, whence
 > > $$\operatorname{cs}(A^g)=\operatorname{cs}(A)-\tfrac13\operatorname{tr}(\theta^{\wedge3})-d\operatorname{tr}(dg\,g^{-1}\wedge A).$$
 > > The full term-by-term expansion, with every cancellation displayed, is on the linked page. $\;\blacksquare$
 
@@ -193,7 +193,7 @@ The subtle steps are three. First, one must resist the temptation to apply Stoke
 
 - **The gauge variation of Chern–Simons.** The boundary term $\operatorname{cs}(A_2)-\operatorname{cs}(A_1)$ is exactly the gauge variation studied on [[Thm - Gauge Variation of the Chern-Simons Functional]]; over a closed three-manifold it makes the Chern–Simons functional multivalued by integers, and over the clutching sphere it produces the Chern number here.
 
-- **The Yang–Mills bound.** Since $\frac1{8\pi^2}\int_X\operatorname{tr}(F\wedge F)=k(P)$ and $\operatorname{tr}(F\wedge F)$ compares pointwise with $|F|^2\,\mathrm{vol}$, chapter VII's **[[Thm - Energy Identity and the Topological Bound for Yang-Mills]]** turns this identity into the instanton energy floor $\mathcal{YM}(A)\ge8\pi^2|k(P)|$.
+- **The Yang–Mills bound.** Since $\frac1{8\pi^2}\int_X\operatorname{tr}(F\wedge F)=k(P)$ and $\operatorname{tr}(F\wedge F)$ compares pointwise with $|F|^2\,\mathrm{vol}$, chapter VII's **Yang–Mills energy identity and topological bound** turns this identity into the instanton energy floor $\mathcal{YM}(A)\ge8\pi^2|k(P)|$.
 
 - **The sign ledger.** The plus sign in $c_2[X]=+k(P)$ is a consequence of $\int_{SU(2)}\operatorname{tr}(\theta^{\wedge3})=-24\pi^2$ (item (a) of [[Def - The Hopf Bundle#Sign ledger]]) combined with the two minus signs of Steps 2 and 4; changing the orientation of $S^3$ would flip all three and preserve the plus.
 
@@ -205,4 +205,4 @@ The subtle steps are three. First, one must resist the temptation to apply Stoke
 > Integrality of $\frac1{8\pi^2}\int_X\operatorname{tr}(F\wedge F)$ over closed four-manifolds is exactly what makes **[[Def - Chern-Simons Functional]]** well defined modulo $\mathbb Z$ on a three-manifold.
 
 > [!tip] Instanton moduli on the $k=1$ bundle *(from Gauge Theory XIII)*
-> The bundle with $\frac1{8\pi^2}\int\operatorname{tr}(F\wedge F)=1$ carries the anti-self-dual moduli space at the heart of **[[Thm - Donaldson Diagonalisation Theorem]]**.
+> The bundle with $\frac1{8\pi^2}\int\operatorname{tr}(F\wedge F)=1$ carries the anti-self-dual moduli space at the heart of **Donaldson's diagonalisation theorem** (chapter XIII).
