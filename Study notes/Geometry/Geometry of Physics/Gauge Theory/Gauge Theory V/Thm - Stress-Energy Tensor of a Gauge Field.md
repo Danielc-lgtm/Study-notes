@@ -5,6 +5,11 @@ prereqs: ["Def - The Yang-Mills Action Functional", "Def - Hodge Star in Arbitra
 tags: [gauge-theory, stress-energy, yang-mills]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Action Functional]]
+- [[Def - Hodge Star in Arbitrary Signature]]
+
 # Statement
 
 > [!theorem] Gauge-field stress-energy

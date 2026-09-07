@@ -5,6 +5,10 @@ prereqs: ["Def - Fredholm Operator and Index"]
 tags: [gauge-theory, fredholm-map, regular-value]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Fredholm Operator and Index]]
+
 # The Definition
 
 > [!definition] Smooth Fredholm map

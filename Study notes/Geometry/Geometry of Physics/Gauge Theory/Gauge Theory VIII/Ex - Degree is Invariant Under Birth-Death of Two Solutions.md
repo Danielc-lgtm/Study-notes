@@ -6,6 +6,10 @@ prereqs: ["Def - Integer Degree of an Oriented Fredholm Map"]
 tags: [gauge-theory, degree, cobordism]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Integer Degree of an Oriented Fredholm Map]]
+
 # Problem Statement
 
 For $f_t(x)=x^2-t$ on $\mathbb R$, explain why the unsigned number of zeros changes at $t=0$ but the signed degree does not.

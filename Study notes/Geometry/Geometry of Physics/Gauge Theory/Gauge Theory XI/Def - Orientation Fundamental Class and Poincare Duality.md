@@ -4,6 +4,11 @@ subject: gauge-theory
 prereqs: ["Def - Singular Homology and Cohomology Operations"]
 tags: [algebraic-topology, orientation, poincare-duality]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Singular Homology and Cohomology Operations]]
+
 # The Definition
 An $R$-orientation of an $n$-manifold $M$ is a coherent choice of generator of each local group $H_n(M,M\setminus\{x\};R)\cong R$. For compact connected oriented $M$, these local generators assemble uniquely into the **fundamental class** $[M]\in H_n(M;R)$.
 

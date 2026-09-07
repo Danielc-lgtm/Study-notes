@@ -4,6 +4,12 @@ subject: gauge-theory
 prereqs: ["Def - Intersection Form of a Four-Manifold", "Def - Spin and Spin-c Structures"]
 tags: [four-manifolds, spin, rochlin]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Intersection Form of a Four-Manifold]]
+- [[Def - Spin and Spin-c Structures]]
+
 # Statement
 > [!theorem] Parity and Rochlin
 > For a closed simply connected oriented smooth four-manifold, $Q_X$ is even exactly when $X$ is spin. If it is even, then $\sigma(X)\equiv0\pmod{16}$.

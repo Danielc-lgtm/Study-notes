@@ -7,17 +7,22 @@ prereqs:
 tags: [gauge-theory, electromagnetism, quantum-mechanics, minimal-coupling]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - U(1) Gauge Field and Electromagnetic Connection]]
+- [[Def - Gauge Transformation]]
+
 # Problem Statement
 
 Let $\psi(t,x)$ be a particle of mass $m$ and charge $q$ on $\mathbb R^3$. Define
-$$D_t=\partial_t+iq\phi,qquad D_j=\partial_j+iqA_j$$
+$$D_t=\partial_t+iq\phi,\qquad D_j=\partial_j+iqA_j$$
 (in units $\hbar=1$). Show that
 $$
 iD_t\psi=-\frac{1}{2m}\sum_{j=1}^3D_jD_j\psi
 $$
 is invariant under
 $$
-\psi'=e^{-iq\chi}\psi,qquad A'=A+d_x\chi,qquad
+\psi'=e^{-iq\chi}\psi,\qquad A'=A+d_x\chi,\qquad
 \phi'=\phi+\partial_t\chi.
 $$
 Explain why replacing only the spatial derivatives would fail for time-dependent $\chi$.

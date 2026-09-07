@@ -9,10 +9,16 @@ prereqs:
 tags: [geometry, gauge-theory, curvature, sphere, Gauss-Bonnet]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+- [[Def - Curvature of a Vector-Bundle Connection]]
+- [[Def - Levi-Civita Connection]]
+
 # Problem Statement
 
 On the unit round sphere use the oriented orthonormal coframe
-$$\vartheta^1=d\theta,qquad \vartheta^2=\sin\theta\,d\varphi.$$
+$$\vartheta^1=d\theta,\qquad \vartheta^2=\sin\theta\,d\varphi.$$
 Find the Levi–Civita connection matrix from Cartan's first structure equation, compute its curvature, and verify the Gauss–Bonnet integral.
 
 # Convergent Strategy

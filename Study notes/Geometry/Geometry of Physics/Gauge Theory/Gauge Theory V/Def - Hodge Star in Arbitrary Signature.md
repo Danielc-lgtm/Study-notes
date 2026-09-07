@@ -5,6 +5,10 @@ prereqs: ["Def - The Hodge Star Operator"]
 tags: [gauge-theory, hodge-star, pseudo-riemannian]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Hodge Star Operator]]
+
 # Motivation
 
 Gauge-field equations use the metric only through the Hodge star. Its square changes between Euclidean and Lorentzian signature, so self-duality and the sign of the action cannot be transported between the two settings without an explicit convention.

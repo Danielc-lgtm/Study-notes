@@ -5,6 +5,11 @@ prereqs: ["Def - Seiberg-Witten Equations and Quadratic Spinor Map", "Def - Gaug
 tags: [gauge-theory, seiberg-witten, gauge-action, moduli]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Equations and Quadratic Spinor Map]]
+- [[Def - Gauge Group of a Principal Bundle]]
+
 # The Definition
 
 > [!definition] Gauge action and moduli space

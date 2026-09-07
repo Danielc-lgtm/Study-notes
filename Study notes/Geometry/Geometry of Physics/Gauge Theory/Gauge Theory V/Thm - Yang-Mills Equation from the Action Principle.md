@@ -8,6 +8,12 @@ prereqs:
 tags: [gauge-theory, yang-mills, variational-calculus]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Action Functional]]
+- [[Def - Gauge-Covariant Derivative]]
+- [[Thm - Bianchi Identity for Principal Connections]]
+
 # Statement
 
 > [!theorem] Yang–Mills Euler–Lagrange equation

@@ -4,6 +4,11 @@ subject: gauge-theory
 prereqs: ["Def - Orientation Fundamental Class and Poincare Duality"]
 tags: [four-manifolds, intersection-form]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Orientation Fundamental Class and Poincare Duality]]
+
 # The Definition
 For a closed connected oriented four-manifold $X$, the intersection form on the free lattice $H^2(X;\mathbb Z)/\mathrm{Tor}$ is
 $$Q_X(a,b)=\langle a\smile b,[X]\rangle.$$

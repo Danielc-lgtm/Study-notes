@@ -5,6 +5,11 @@ prereqs: ["Def - Sobolev Seiberg-Witten Configuration Space", "Thm - Weitzenbock
 tags: [gauge-theory, seiberg-witten, compactness]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Sobolev Seiberg-Witten Configuration Space]]
+- [[Thm - Weitzenbock Formula for a Dirac Bundle]]
+
 # Statement
 
 > [!theorem] Seiberg–Witten compactness

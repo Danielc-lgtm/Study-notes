@@ -9,6 +9,12 @@ prereqs:
 tags: [geometry, gauge-theory, gauss-bonnet]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Gauss-Bonnet for Closed Surfaces (Chern's Proof)]]
+- [[Def - Riemannian Metric]]
+- [[Def - Riemannian Volume Form]]
+
 # Problem Statement
 
 Verify the Gauss-Bonnet theorem for the 2-torus $T^2 = S^1 \times S^1$ in two ways:

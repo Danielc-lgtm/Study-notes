@@ -8,12 +8,17 @@ prereqs:
 tags: [geometry, gauge-theory, monopole, Chern, line-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Dirac Monopole Bundle]]
+- [[Thm - Dirac Quantization Condition]]
+
 # Problem Statement
 
 Let the physical monopole field on $S^2$ be
 $$F=g\sin\theta,d\theta\wedge d\varphi.$$
 Use
-$$A_N=g(1-\cos\theta)d\varphi,qquad
+$$A_N=g(1-\cos\theta)d\varphi,\qquad
 A_S=-g(1+\cos\theta)d\varphi$$
 on the northern and southern patches. Prove that they define a connection for a charge-$q$ field exactly when $2qg\in\mathbb Z$ (units $\hbar=1$), and compute the first Chern number.
 

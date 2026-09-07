@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+- [[Def - The Yang-Mills Equation]]
+- [[Thm - Yang-Mills Equation from the Action Principle]]
+
 # Notation
 
 $(M, g)$ is an oriented 4-dimensional Riemannian manifold (where $\star^2 = 1$ on 2-forms); $G$ a compact Lie group; $A$ a connection on a principal $G$-bundle with field strength $F$. $d_A$ is the covariant exterior derivative on $\mathfrak{g}$-valued forms, and $d_A^* = -\star d_A\star$ is its formal adjoint on 2-forms.

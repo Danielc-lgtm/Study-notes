@@ -5,6 +5,11 @@ prereqs: ["Def - Principal Symbol and Elliptic Differential Operator", "Thm - So
 tags: [gauge-theory, elliptic-estimate, regularity]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal Symbol and Elliptic Differential Operator]]
+- [[Thm - Sobolev Embedding, Compactness, and Multiplication]]
+
 # Statement
 
 > [!theorem] Global elliptic estimate

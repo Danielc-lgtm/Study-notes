@@ -8,6 +8,11 @@ prereqs:
 tags: [gauge-theory, hopf-fibration, quaternions]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Hopf Bundle]]
+- [[Def - Homogeneous Bundle]]
+
 # Problem Statement
 
 Identify $S^3$ with unit quaternions and $S^2$ with unit imaginary quaternions. For

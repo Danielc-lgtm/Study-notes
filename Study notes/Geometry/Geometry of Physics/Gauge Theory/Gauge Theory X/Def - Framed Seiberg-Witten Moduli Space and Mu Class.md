@@ -5,6 +5,11 @@ prereqs: ["Def - Gauge Action and Seiberg-Witten Moduli Space", "Def - Principal
 tags: [gauge-theory, seiberg-witten, characteristic-class]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Gauge Action and Seiberg-Witten Moduli Space]]
+- [[Def - Principal G-Bundle]]
+
 # Motivation
 
 A positive-dimensional moduli space cannot be counted point by point. The missing datum is a canonical degree-two cohomology class. It comes from remembering a frame at one base point before quotienting by gauge.

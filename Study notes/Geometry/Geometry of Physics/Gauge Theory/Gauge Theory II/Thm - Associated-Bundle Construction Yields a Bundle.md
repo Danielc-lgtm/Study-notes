@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, associated-bundle, quotient]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Associated Bundle]]
+- [[Def - Principal G-Bundle]]
+
 # Statement
 
 > [!theorem] Associated-bundle construction

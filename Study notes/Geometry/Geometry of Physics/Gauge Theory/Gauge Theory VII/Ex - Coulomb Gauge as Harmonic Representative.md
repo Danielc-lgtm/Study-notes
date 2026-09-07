@@ -6,6 +6,10 @@ prereqs: ["Thm - Hodge Theorem for an Elliptic Complex"]
 tags: [gauge-theory, gauge-fixing, hodge-theory]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Hodge Theorem for an Elliptic Complex]]
+
 # Problem Statement
 
 For the abelian deformation complex $\Omega^0\xrightarrow d\Omega^1\xrightarrow d\Omega^2$ on a closed manifold, prove that every closed one-form has a unique gauge-equivalent representative satisfying $d^*a=0$ after quotienting constant gauge parameters.

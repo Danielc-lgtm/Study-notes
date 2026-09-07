@@ -7,11 +7,16 @@ prereqs:
 tags: [gauge-theory, horizontal-lift, ode]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Horizontal Subspace]]
+- [[Def - Connection 1-Form on a Principal Bundle]]
+
 # Statement
 
 > [!theorem] Horizontal lift
 > Let $\gamma:[a,b]\to M$ be piecewise smooth and $p_0\in P_{\gamma(a)}$. There is a unique piecewise-smooth curve $\widetilde\gamma:[a,b]\to P$ such that
-> $$\pi\widetilde\gamma=\gamma,qquad \widetilde\gamma(a)=p_0,qquad
+> $$\pi\widetilde\gamma=\gamma,\qquad \widetilde\gamma(a)=p_0,\qquad
 > \omega(\dot{\widetilde\gamma})=0.$$
 > It exists on the whole compact interval and obeys
 > $$\widetilde\gamma_{p_0g}(t)=\widetilde\gamma_{p_0}(t)g.$$

@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, topology, sphere]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Vector Field on a Manifold]]
+- [[Thm - Hairy Ball Theorem]]
+
 # Problem Statement
 
 Let $J:\mathbb R^{2k+2}\to\mathbb R^{2k+2}$ be

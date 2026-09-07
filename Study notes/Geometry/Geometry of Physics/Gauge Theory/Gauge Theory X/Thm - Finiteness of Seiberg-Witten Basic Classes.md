@@ -5,6 +5,11 @@ prereqs: ["Def - Seiberg-Witten Invariant", "Thm - Compactness and Smoothness of
 tags: [gauge-theory, seiberg-witten, basic-class]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Seiberg-Witten Invariant]]
+- [[Thm - Compactness and Smoothness of the Seiberg-Witten Moduli Space]]
+
 # Statement
 
 > [!theorem] Finiteness

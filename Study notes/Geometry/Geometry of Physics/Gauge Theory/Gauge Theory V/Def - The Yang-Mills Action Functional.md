@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Lagrangian]]
+- [[Def - The Yang-Mills Field Strength]]
+
 # Notation
 
 $(M, g)$ is an oriented 4-dimensional (pseudo-)Riemannian manifold; $P \to M$ a principal $G$-bundle for a compact Lie group $G$; $\mathcal{A}$ the space of all connections on $P$; $\mathcal{G}$ the group of gauge transformations (smooth sections of the adjoint bundle of automorphisms of $P$). The space $\mathcal{A}$ is an affine space modelled on $\Omega^1(M; \operatorname{ad} P)$ — the difference of two connections is a $\mathfrak{g}$-valued 1-form. The group $\mathcal{G}$ acts on $\mathcal{A}$, and the quotient $\mathcal{A}/\mathcal{G}$ is the **moduli space of connections**.

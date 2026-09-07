@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, frame-bundle, principal-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+- [[Def - Vector Bundle]]
+
 # Notation
 
 Let $E\to B$ be a rank-$r$ vector bundle over $\mathbb K=\mathbb R$ or $\mathbb C$.

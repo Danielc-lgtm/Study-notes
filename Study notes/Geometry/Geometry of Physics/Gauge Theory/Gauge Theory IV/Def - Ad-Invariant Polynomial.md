@@ -5,6 +5,10 @@ prereqs: ["Def - Adjoint Bundle"]
 tags: [gauge-theory, invariant-polynomial, chern-weil]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Adjoint Bundle]]
+
 # Motivation
 
 Curvature changes by conjugation when the gauge changes. A scalar polynomial can therefore turn curvature into a globally defined form only when it cannot detect conjugation. This is exactly the invariance imposed below.

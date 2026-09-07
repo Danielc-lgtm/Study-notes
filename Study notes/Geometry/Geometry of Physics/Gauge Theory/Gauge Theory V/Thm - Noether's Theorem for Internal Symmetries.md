@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Noether Current for an Internal Symmetry]]
+- [[Def - The Lie Algebra of a Lie Group]]
+
 # Notation
 
 $M$ is a (pseudo-)Riemannian $n$-dimensional manifold (typically $n = 4$, spacetime); $E \to M$ a vector bundle whose fibre carries a representation of a Lie group $G$; $\phi$ a smooth section of $E$, locally $\phi^a(x)$. $\mathcal{L} = \mathcal{L}(\phi, \partial\phi, x)$ is a Lagrangian density, a scalar function of the field, its first derivatives, and the spacetime point.

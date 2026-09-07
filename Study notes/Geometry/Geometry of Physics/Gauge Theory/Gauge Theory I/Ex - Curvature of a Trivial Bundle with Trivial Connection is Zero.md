@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, curvature, trivial-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection on a Vector Bundle]]
+- [[Def - Curvature of a Vector-Bundle Connection]]
+
 # Problem Statement
 
 On $E=M\times\mathbb K^r$, let $e=(e_1,\ldots,e_r)$ be the constant global frame and define $\nabla^0(eu)=e\,du$. Prove that $\nabla^0$ is a connection and $F_{\nabla^0}=0$. Then express the same connection in a moving frame $e'=eg$ and verify flatness directly.

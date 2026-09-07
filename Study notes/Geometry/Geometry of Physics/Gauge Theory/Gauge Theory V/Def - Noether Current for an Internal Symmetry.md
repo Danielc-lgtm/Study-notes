@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Lie Group]]
+- [[Def - The Lie Algebra of a Lie Group]]
+- [[Def - Differential k-Form on a Manifold]]
+
 # Notation
 
 Throughout, $M$ is a (pseudo-)Riemannian 4-manifold and $E \to M$ is a vector bundle whose fibre $\mathbb{R}^N$ (or $\mathbb{C}^N$) carries a representation of a Lie group $G$. The "field" $\phi$ is a smooth section of $E$, locally an $N$-tuple of functions $\phi^a(x)$, $a = 1, \dots, N$. A Lagrangian density $\mathcal{L}$ is a scalar function of $\phi$, $\partial_\mu\phi$ (or covariant derivative $\nabla_\mu\phi$), and the spacetime point $x$.

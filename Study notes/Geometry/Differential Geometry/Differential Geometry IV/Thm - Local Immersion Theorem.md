@@ -159,7 +159,7 @@ Reduce to Euclidean coordinates via initial charts. Permute target coordinates s
 > **Step 1 (permute target coordinates).** $D\hat F(0)$ has rank $m$, so it has $m$ linearly independent rows. After permuting target coordinates, assume the first $m$ rows are linearly independent, i.e., the upper $m \times m$ block of $D\hat F(0)$ is invertible.
 >
 > **Step 2 (square completion).** Put $\Omega=\varphi_0(U_0)\subseteq\mathbb R^m$. By Lemma 1, the map
-> $$G:\Omega\times\mathbb R^{n-m}\to\mathbb R^n,qquad G(x,t)=(\hat F^1(x),\ldots,\hat F^m(x),\hat F^{m+1}(x)+t^1,\ldots,\hat F^n(x)+t^{n-m})$$
+> $$G:\Omega\times\mathbb R^{n-m}\to\mathbb R^n,\qquad G(x,t)=(\hat F^1(x),\ldots,\hat F^m(x),\hat F^{m+1}(x)+t^1,\ldots,\hat F^n(x)+t^{n-m})$$
 > has invertible differential at $(0,0)$. The inverse function theorem supplies open neighbourhoods $A$ of $(0,0)$ and $B$ of $0$ such that $G|_A:A\to B$ is a diffeomorphism. Denote its inverse by $\psi:B\to A$.
 >
 > **Step 3 (verify normal form).** Shrink to an open neighbourhood $A_0\subseteq\Omega$ of $0$ for which $(x,0)\in A$ and $\hat F(x)\in B$. Since $G(x,0)=\hat F(x)$, uniqueness of the inverse gives

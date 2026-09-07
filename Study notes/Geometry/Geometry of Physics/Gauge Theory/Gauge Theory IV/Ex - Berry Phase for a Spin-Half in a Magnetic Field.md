@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, quantum-mechanics, berry-phase]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Berry Phase Equals Holonomy of the Berry Connection]]
+- [[Def - Berry Connection]]
+
 # Problem Statement
 
 A spin-$\tfrac{1}{2}$ particle in a magnetic field $\mathbf{B}$ has Hamiltonian

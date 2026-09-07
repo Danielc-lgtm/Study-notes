@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, associated-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+- [[Def - Representation of a Lie Group]]
+
 # Notation
 
 Let $P\to B$ be a right principal $G$-bundle and let $G$ act smoothly on the left of a manifold $F$. For a vector bundle take $F=V$ and a representation $\rho:G\to\mathrm{GL}(V)$.
@@ -17,7 +22,7 @@ Let $P\to B$ be a right principal $G$-bundle and let $G$ act smoothly on the lef
 > Define a right action on $P\times F$ by
 > $$(p,y)g=(pg,g^{-1}y).$$
 > The **associated bundle** is
-> $$P\times_GF=(P\times F)/G\longrightarrow B,qquad[p,y]\mapsto\pi(p).$$
+> $$P\times_GF=(P\times F)/G\longrightarrow B,\qquad[p,y]\mapsto\pi(p).$$
 > For a representation, write $P\times_\rho V$.
 
 The inverse in $g^{-1}y$ is forced: it makes $(p g,y)$ and $(p,gy)$ represent the same geometric vector. If $s_\alpha$ is a local section of $P$, then
@@ -33,7 +38,7 @@ Given $\phi$, set $\sigma(x)=[p,\phi(p)]$ for any $p\in P_x$; equivariance makes
 # Examples / Corollaries
 
 For the frame bundle $\operatorname{Fr}(E)$ and defining representation on $\mathbb K^r$,
-$$\operatorname{Fr}(E)\times_{\mathrm{GL}_r}\mathbb K^r\cong E,qquad[u,v]\mapsto u(v).$$
+$$\operatorname{Fr}(E)\times_{\mathrm{GL}_r}\mathbb K^r\cong E,\qquad[u,v]\mapsto u(v).$$
 Dual, tensor, exterior, and endomorphism representations recover the corresponding bundles. For a closed subgroup $H\subset G$, $G\to G/H$ is a principal $H$-bundle and $G\times_HV\to G/H$ is a homogeneous vector bundle.
 
 # Unlocked by This

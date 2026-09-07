@@ -5,6 +5,11 @@ prereqs: ["Def - Spinor Bundle, Chirality, and Twisted Dirac Operator", "Def - S
 tags: [gauge-theory, seiberg-witten, spin-c]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Spinor Bundle, Chirality, and Twisted Dirac Operator]]
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+
 # Convention and Motivation
 
 Fix a spin-c structure on a closed oriented Riemannian four-manifold, with bundles $S^\pm$ and determinant line $L$. Clifford multiplication identifies $i\Lambda^2_+$ with trace-free Hermitian endomorphisms of $S^+$. The equations couple a linear Dirac equation to a curvature equation whose source is the unique natural quadratic expression in the spinor.

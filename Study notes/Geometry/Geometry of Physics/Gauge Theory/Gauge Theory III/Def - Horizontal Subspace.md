@@ -6,11 +6,15 @@ prereqs:
 tags: [gauge-theory, principal-connection, horizontal-distribution]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Fundamental Vector Field of a Principal Bundle]]
+
 # The Definition
 
 > [!definition] Horizontal distribution
 > A **principal horizontal distribution** on $P\to M$ is a smooth subbundle $H\subset TP$ such that
-> $$T_pP=H_p\oplus V_pP,qquad (dR_g)_pH_p=H_{pg}.$$
+> $$T_pP=H_p\oplus V_pP,\qquad (dR_g)_pH_p=H_{pg}.$$
 > A vector in $H_p$ is horizontal.
 
 Since $d\pi_p$ has kernel $V_pP$, its restriction

@@ -9,6 +9,13 @@ prereqs:
 tags: [geometry, gauge-theory, connection, covariant-derivative]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Vector Bundle]]
+- [[Def - Section of a Vector Bundle]]
+- [[Def - Local Frame]]
+- [[Def - Differential k-Form on a Manifold]]
+
 # Notation
 
 Let $\mathbb K\in\{\mathbb R,\mathbb C\}$, let $E\to M$ be a smooth rank-$r$ $\mathbb K$-vector bundle, and write $\Omega^k(M;E)=\Gamma(\Lambda^kT^*M\otimes E)$. Thus $\Omega^0(M;E)=\Gamma(E)$.
@@ -30,7 +37,7 @@ Values $s(x)\in E_x$ and $s(y)\in E_y$ lie in different vector spaces, so their 
 > $$
 > For $X\in\mathfrak X(M)$, set $\nabla_Xs=(\nabla s)(X)$. Equivalently,
 > $$
-> \nabla_{fX+gY}s=f\nabla_Xs+g\nabla_Ys,qquad
+> \nabla_{fX+gY}s=f\nabla_Xs+g\nabla_Ys,\qquad
 > \nabla_X(fs)=X(f)s+f\nabla_Xs.
 > $$
 
@@ -52,11 +59,11 @@ Indeed $\nabla(e' u')=\nabla(eg u')=e(d(gu')+Agu')=e'g^{-1}(d+A)g,u'$. The inhom
 
 A connection extends uniquely to $E$-valued forms by
 $$
-d_\nabla(\alpha\otimes s)=d\alpha\otimes s+(-1)^k\alpha\wedge\nabla s,qquad \alpha\in\Omega^k(M).
+d_\nabla(\alpha\otimes s)=d\alpha\otimes s+(-1)^k\alpha\wedge\nabla s,\qquad \alpha\in\Omega^k(M).
 $$
 In a frame, $d_\nabla\eta=d\eta+A\wedge\eta$. It also induces connections on $E^*$, direct sums, tensor products, and endomorphism bundles by requiring evaluation and tensor product to satisfy Leibniz rules. In particular,
 $$
-(\nabla_XT)(s)=\nabla_X(Ts)-T(\nabla_Xs),qquad T\in\Gamma(\operatorname{End}E).
+(\nabla_XT)(s)=\nabla_X(Ts)-T(\nabla_Xs),\qquad T\in\Gamma(\operatorname{End}E).
 $$
 
 The set $\mathcal A(E)$ of connections is affine over $\Omega^1(M;\operatorname{End}E)$: if $\nabla'$ and $\nabla$ are connections, $a=\nabla'-\nabla$ is $C^\infty(M)$-linear in $s$, hence is an endomorphism-valued $1$-form; conversely $\nabla+a$ is a connection.

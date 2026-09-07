@@ -4,6 +4,11 @@ subject: gauge-theory
 prereqs: ["Def - Intersection Form of a Four-Manifold"]
 tags: [four-manifolds, exercise]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Intersection Form of a Four-Manifold]]
+
 # Exercise
 Compute $Q_X$ for $S^4$, $S^2\times S^2$, $\mathbb{CP}^2$, $\overline{\mathbb{CP}}{}^2$, and $k\mathbb{CP}^2\#\ell\overline{\mathbb{CP}}{}^2$. Determine rank, signature, parity, and definiteness.
 

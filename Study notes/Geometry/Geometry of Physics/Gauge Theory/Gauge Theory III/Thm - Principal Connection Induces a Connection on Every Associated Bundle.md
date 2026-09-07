@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, associated-bundle, induced-connection]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Exterior Covariant Derivative on Associated Bundles]]
+- [[Def - Associated Bundle]]
+
 # Statement
 
 > [!theorem] Induced connection

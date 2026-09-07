@@ -5,6 +5,10 @@ prereqs: ["Thm - Chern-Weil Theorem"]
 tags: [gauge-theory, chern-simons, transgression]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Chern-Weil Theorem]]
+
 # The Definition
 
 > [!definition] Transgression

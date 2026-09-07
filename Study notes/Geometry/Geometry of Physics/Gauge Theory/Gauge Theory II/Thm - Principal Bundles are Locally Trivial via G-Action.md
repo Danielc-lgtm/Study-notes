@@ -6,6 +6,10 @@ prereqs:
 tags: [gauge-theory, principal-bundle, trivialization, section]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+
 # Statement
 
 > [!theorem] Sections and trivializations

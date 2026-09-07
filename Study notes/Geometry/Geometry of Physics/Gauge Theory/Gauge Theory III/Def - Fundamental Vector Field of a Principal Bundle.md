@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, principal-bundle, fundamental-vector-field]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+- [[Def - One-Parameter Subgroup]]
+
 # Notation
 
 Let $P\to M$ be a right principal $G$-bundle and $\mathfrak g=T_eG$.
@@ -20,7 +25,7 @@ Let $P\to M$ be a right principal $G$-bundle and $\mathfrak g=T_eG$.
 > $$
 
 It is vertical because the curve stays in $P_{\pi(p)}$. The map
-$$\mathfrak g\to V_pP=\ker d\pi_p,qquad\xi\mapsto\xi_P(p)$$
+$$\mathfrak g\to V_pP=\ker d\pi_p,\qquad\xi\mapsto\xi_P(p)$$
 is an isomorphism: it is the differential at $e$ of the torsor diffeomorphism $G\to P_{\pi(p)}$, $g\mapsto pg$.
 
 # Equivariance and Bracket Convention

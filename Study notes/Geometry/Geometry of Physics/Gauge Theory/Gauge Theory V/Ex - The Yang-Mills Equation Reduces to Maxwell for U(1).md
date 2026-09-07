@@ -9,6 +9,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Equation]]
+- [[Def - The Yang-Mills Field Strength]]
+- [[Thm - Bianchi Identity and Yang-Mills Together Parallel Maxwell]]
+
 # Problem Statement
 
 Verify *in detail* that the Yang-Mills equation $d_A\star F = 0$ together with the Bianchi identity $d_A F = 0$, for $G = U(1)$ on Minkowski space $\mathbb{R}^{1,3}$ with signature $(-,+,+,+)$, reproduce all four of Maxwell's equations in their classical vector form:

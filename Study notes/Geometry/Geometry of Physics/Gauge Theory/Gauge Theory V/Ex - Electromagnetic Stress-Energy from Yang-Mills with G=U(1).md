@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Lagrangian]]
+- [[Def - The Yang-Mills Field Strength]]
+
 # Problem Statement
 
 Derive the **electromagnetic stress-energy tensor** $T_{\mu\nu}^{\text{EM}}$ from the Yang-Mills Lagrangian $\mathcal{L}_{\text{YM}} = -\tfrac14 F^{\mu\nu}F_{\mu\nu}$ for $G = U(1)$, via the standard variational recipe $T_{\mu\nu} = -\frac{2}{\sqrt{-g}}\frac{\delta(\sqrt{-g}\,\mathcal{L})}{\delta g^{\mu\nu}}$. Verify that the resulting tensor:

@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, electromagnetism, abelian, adjoint-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Adjoint Bundle]]
+- [[Def - Adjoint Representation]]
+
 # Problem Statement
 
 Let $P\to M$ be a principal $U(1)$-bundle. Prove canonically that

@@ -4,6 +4,12 @@ subject: gauge-theory
 prereqs: ["Thm - Classification of Simply Connected Topological Four-Manifolds", "Thm - Donaldson Diagonalization Theorem"]
 tags: [four-manifolds, exercise]
 ---
+
+# Prerequisite Concepts
+
+- [[Thm - Classification of Simply Connected Topological Four-Manifolds]]
+- [[Thm - Donaldson Diagonalization Theorem]]
+
 # Exercise
 Explain why there is a closed simply connected topological four-manifold with intersection form $E_8$, why it cannot be smooth, and why the two obstructions supplied by Rochlin and Donaldson are logically independent checks here.
 

@@ -5,6 +5,10 @@ prereqs: ["Def - Sobolev Space of Bundle Sections"]
 tags: [gauge-theory, sobolev-embedding, rellich, multiplication]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Sobolev Space of Bundle Sections]]
+
 # Statement
 
 > [!theorem] Sobolev package on a compact $n$-manifold

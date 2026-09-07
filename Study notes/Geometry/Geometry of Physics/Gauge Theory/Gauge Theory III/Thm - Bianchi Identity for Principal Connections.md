@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, curvature, Bianchi]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Curvature 2-Form on a Principal Bundle]]
+- [[Def - Exterior Covariant Derivative on Associated Bundles]]
+
 # Statement
 
 > [!theorem] Bianchi identity

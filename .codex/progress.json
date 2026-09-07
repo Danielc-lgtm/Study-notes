@@ -62,12 +62,12 @@
   "goal": "Create a complete independently structured Obsidian gauge-theory lecture-note series fully covering both supplied PDFs, with complete proofs, self-contained explanations, explicit conventions, per-unit review and automatic merge.",
   "mode": "mixed",
   "merge_policy": "auto",
-  "status": "merged",
-  "branch": null,
+  "status": "review",
+  "branch": "codex/fix-gauge-theory-prerequisites",
   "pr": {
     "number": null,
     "url": null,
-    "status": null
+    "status": "open"
   },
   "merged_prs": [
     {
@@ -160,7 +160,8 @@
     "gt-ix",
     "gt-x",
     "gt-xi",
-    "final-audit"
+    "final-audit",
+    "gauge-prerequisite-link-repair"
   ],
   "units": {
     "gt-i": {
@@ -597,12 +598,33 @@
       },
       "commit": null,
       "notes": "All source rows complete; 204 Gauge Theory pages audited with zero unresolved originating wikilinks, zero missing frontmatter, and zero control characters. Added a series-level re-entry map and recorded deep-theorem proof boundaries."
+    },
+    "gauge-prerequisite-link-repair": {
+      "title": "Gauge Theory prerequisite-link and TeX-spacing repair",
+      "mode": "improve",
+      "status": "complete",
+      "topic_page": "Study notes/Geometry/Geometry of Physics/Gauge Theory/Gauge Theory — Series Map.md",
+      "paths": [
+        "Study notes/Geometry/Geometry of Physics/Gauge Theory/",
+        "Study notes/Geometry/Differential Geometry/Differential Geometry IV/Thm - Local Immersion Theorem.md"
+      ],
+      "diagnosis": "All 168 Gauge Theory definition, theorem, and exercise subpages encoded prerequisites only as unclickable YAML strings, and malformed bare qquad/quad tokens remained in generated display mathematics.",
+      "review": {
+        "correctness": "pass",
+        "pedagogy": "pass",
+        "rederivation": "pass",
+        "graph": "pass",
+        "prose": "pass",
+        "checklist": "pass"
+      },
+      "commit": null,
+      "notes": "Added visible Prerequisite Concepts sections with resolving wikilinks on every atomic page; repaired all bare qquad/quad spacing commands in Gauge Theory and the sole remaining vault occurrence; replaced one nonexistent Pullback Bundle prerequisite with the existing Fibre Bundle page that defines pullback."
     }
   },
-  "current_unit": null,
-  "next_action": "No remaining Gauge Theory campaign unit; maintain the source map when future material is added.",
+  "current_unit": "gauge-prerequisite-link-repair",
+  "next_action": "Commit the prerequisite-link and TeX-spacing repair, open its PR, and merge it.",
   "unresolved": [],
   "last_commit": "6cfdf6b",
-  "ready_to_merge": false,
-  "updated": "2026-09-07T01:00:00Z"
+  "ready_to_merge": true,
+  "updated": "2026-09-07T02:00:00Z"
 }

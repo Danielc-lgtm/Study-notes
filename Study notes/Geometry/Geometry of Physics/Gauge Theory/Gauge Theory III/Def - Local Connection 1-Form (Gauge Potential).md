@@ -6,6 +6,10 @@ prereqs:
 tags: [gauge-theory, local-connection, gauge-potential]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Connection 1-Form on a Principal Bundle]]
+
 # The Definition
 
 > [!definition] Local gauge potential

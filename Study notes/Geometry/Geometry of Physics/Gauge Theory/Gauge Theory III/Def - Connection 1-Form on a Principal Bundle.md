@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, principal-connection, connection-form]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Fundamental Vector Field of a Principal Bundle]]
+- [[Def - Lie-Algebra-Valued Differential Form]]
+
 # Notation
 
 Throughout, $P\xrightarrow{\pi}M$ is a right principal $G$-bundle,
@@ -42,7 +47,7 @@ can be integrated into [[Def - Parallel Transport of a Principal Connection|para
 > [!definition] Principal connection form
 > A **principal connection** on a right principal $G$-bundle $P\to M$ is a form $\omega\in\Omega^1(P;\mathfrak g)$ such that
 > $$
-> \omega_p(\xi_P(p))=\xi,qquad
+> \omega_p(\xi_P(p))=\xi,\qquad
 > R_g^*\omega=\operatorname{Ad}_{g^{-1}}\omega.
 > $$
 

@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, frame-bundle, orthonormal, reduction]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Frame Bundle of a Vector Bundle]]
+- [[Def - Hermitian Vector Bundle]]
+
 # The Definition
 
 > [!definition] Orthonormal frame bundle

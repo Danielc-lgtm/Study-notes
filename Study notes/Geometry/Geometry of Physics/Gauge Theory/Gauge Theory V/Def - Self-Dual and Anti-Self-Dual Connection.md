@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Field Strength]]
+- [[Def - The Yang-Mills Equation]]
+
 # Notation
 
 **Standing convention — Euclidean signature.** The notion of self-duality requires the Hodge star $\star : \Omega^2(M) \to \Omega^2(M)$ to satisfy $\star^2 = 1$, which on 2-forms in 4 dimensions holds *only in Riemannian (Euclidean) signature*. In Lorentzian signature $\star^2 = -1$ on 2-forms, so $F = \star F$ has no non-zero real solutions and one works with *complex* self-duality $F = i\star F$ or with chiral spinor decompositions instead. Throughout this page, $(M, g)$ is an oriented Riemannian 4-manifold unless explicitly stated otherwise.

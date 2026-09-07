@@ -5,6 +5,11 @@ prereqs: ["Def - Spin Group and Low-Dimensional Spin Groups", "Def - Orthonormal
 tags: [gauge-theory, spin-structure, spin-c]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Spin Group and Low-Dimensional Spin Groups]]
+- [[Def - Orthonormal Frame Bundle]]
+
 # Motivation
 
 The oriented frame bundle has structure group $SO(n)$, but spinor representations live on its double cover. A spin structure is the global lift required to associate spinors. When the lift is obstructed, adjoining a compensating $U(1)$ phase often removes the obstruction; this is the role of $\operatorname{Spin}^c$.

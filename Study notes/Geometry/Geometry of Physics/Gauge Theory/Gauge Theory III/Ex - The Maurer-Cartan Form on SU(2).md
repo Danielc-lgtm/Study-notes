@@ -8,6 +8,11 @@ prereqs:
 tags: [geometry, gauge-theory, lie-groups, differential-forms]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Maurer-Cartan Form]]
+- [[Thm - Maurer-Cartan Equation]]
+
 # Problem Statement
 
 Write $g=aI+i b^j\sigma_j\in SU(2)$ with $a^2+|b|^2=1$. Compute the left Maurer–Cartan form $g^{-1}dg$ and verify its structural equation.

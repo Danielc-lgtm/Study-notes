@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, differential-forms, lie-algebra]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Differential k-Form on a Manifold]]
+- [[Def - Lie Algebra]]
+
 # The Definition
 
 > [!definition] Lie-algebra-valued form

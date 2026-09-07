@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Action Functional]]
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+- [[Def - Instanton]]
+
 # Notation
 
 $(M, g)$ is an oriented Riemannian 4-manifold (either $\mathbb{R}^4$ or compact); $G$ a compact Lie group; $A$ a connection on a principal $G$-bundle with field strength $F$. The $L^2$ inner product on $\mathfrak{g}$-valued 2-forms is $(\alpha, \beta) = -\int_M\operatorname{tr}(\alpha\wedge\star\beta)$, positive-definite. The pointwise norm is $|F|^2 = -\operatorname{tr}(F_{\mu\nu}F^{\mu\nu})/2 \ge 0$ (in Riemannian signature, with the convention $\operatorname{tr}$ in the matrix representation of $\mathfrak{g} \subset \mathfrak{u}(N)$).

@@ -5,6 +5,11 @@ prereqs: ["Def - Ad-Invariant Polynomial", "Thm - Bianchi Identity for Principal
 tags: [gauge-theory, chern-weil, characteristic-class]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Ad-Invariant Polynomial]]
+- [[Thm - Bianchi Identity for Principal Connections]]
+
 # Statement
 
 > [!theorem] Chern–Weil

@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, principal-bundles, structure-group]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+- [[Def - Associated Bundle]]
+
 # Notation
 
 Let $\varphi:G\to H$ be a Lie-group homomorphism and let $P\to B$ be a right principal $G$-bundle.

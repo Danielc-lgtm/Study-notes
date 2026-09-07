@@ -5,6 +5,10 @@ prereqs: ["Def - Representation of a Lie Group"]
 tags: [gauge-theory, clifford-algebra, spin-geometry]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Representation of a Lie Group]]
+
 # Motivation
 
 A Dirac operator should square to a Laplace-type operator. If its principal symbol is multiplication by a cotangent vector $\xi$, this demands $c(\xi)^2=-|\xi|^2$. The Clifford algebra is the universal associative algebra imposing exactly this quadratic relation.

@@ -5,6 +5,11 @@ prereqs: ["Def - Spin and Spin-c Structures", "Def - Dirac Bundle and Dirac Oper
 tags: [gauge-theory, spinor-bundle, chirality, twisted-dirac]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Spin and Spin-c Structures]]
+- [[Def - Dirac Bundle and Dirac Operator]]
+
 # The Definition
 
 > [!definition] Spinor bundle

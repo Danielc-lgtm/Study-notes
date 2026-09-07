@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, aharonov-bohm, holonomy, electromagnetism]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Wilson Line and Holonomy of a Connection]]
+- [[Def - U(1) Gauge Field and Electromagnetic Connection]]
+
 # Problem Statement
 
 Let $M=\mathbb R^2\setminus\{0\}$ and let

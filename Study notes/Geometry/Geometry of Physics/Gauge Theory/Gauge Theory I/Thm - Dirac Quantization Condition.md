@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, monopole, quantization, chern-class]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Dirac Monopole Bundle]]
+- [[Def - U(1) Gauge Field and Electromagnetic Connection]]
+
 # Notation
 
 Let $L\to S^2$ be a Hermitian line bundle with unitary connection $\nabla=d+iqA_\alpha$ in local frames over northern and southern patches. Write $F=dA_\alpha$, which is globally defined. The charge convention is fixed by the representation $e^{i\theta}\mapsto e^{iq\theta}$; hence the mathematical curvature is $F_\nabla=iqF$.

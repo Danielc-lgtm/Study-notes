@@ -5,6 +5,11 @@ prereqs: ["Def - Mod-2 Degree of a Proper Fredholm Map", "Def - Determinant Line
 tags: [gauge-theory, degree, orientation]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Mod-2 Degree of a Proper Fredholm Map]]
+- [[Def - Determinant Line and Orientation of a Fredholm Operator]]
+
 # The Definition
 
 > [!definition] Oriented Fredholm degree

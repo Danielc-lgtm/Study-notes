@@ -3,9 +3,14 @@ type: definition
 subject: gauge-theory
 prereqs:
   - "Def - Principal G-Bundle"
-  - "Def - Pullback Bundle"
+  - "Def - Fibre Bundle"
 tags: [gauge-theory, classifying-spaces, principal-bundles]
 ---
+
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+- [[Def - Fibre Bundle]]
 
 # Notation
 

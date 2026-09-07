@@ -9,6 +9,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The BPST Instanton]]
+- [[Def - The Yang-Mills Field Strength]]
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+
 # Problem Statement
 
 Compute the field strength $F = dA - iA\wedge A$ of the BPST instanton

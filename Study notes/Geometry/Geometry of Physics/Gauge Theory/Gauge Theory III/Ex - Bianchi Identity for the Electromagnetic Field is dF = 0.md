@@ -9,6 +9,12 @@ prereqs:
 tags: [geometry, gauge-theory, electromagnetism, maxwell, bianchi]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Bianchi Identity for Principal Connections]]
+- [[Def - Curvature 2-Form on a Principal Bundle]]
+- [[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection]]
+
 # Problem Statement
 
 Let $F\in\Omega^2(M;i\mathbb R)$ be the curvature of a principal $U(1)$-connection.

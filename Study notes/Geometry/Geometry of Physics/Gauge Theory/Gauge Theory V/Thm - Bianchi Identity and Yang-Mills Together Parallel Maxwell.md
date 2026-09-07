@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Equation]]
+- [[Def - The Yang-Mills Field Strength]]
+- [[Thm - Yang-Mills Equation from the Action Principle]]
+
 # Notation
 
 $(M, g)$ is an oriented 4-manifold (typically Minkowski $\mathbb{R}^{1,3}$ or Euclidean $\mathbb{R}^4$); $G$ a compact Lie group; $A$ a connection on a principal $G$-bundle with field strength $F$; $J$ a current source. For $G = U(1)$, the standard EM identifications are $F_{0i} = -E_i$ (electric field components), $F_{ij} = \epsilon_{ijk}B_k$ (magnetic field components), $A^\mu = (\phi, \vec A)$ (scalar and vector potentials), $J^\mu = (\rho, \vec j)$ (charge density and current density).

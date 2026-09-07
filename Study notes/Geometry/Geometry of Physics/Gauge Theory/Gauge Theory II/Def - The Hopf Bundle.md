@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, hopf-fibration, principal-bundle]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Principal G-Bundle]]
+- [[Def - Complex Line Bundle]]
+
 # The Definition
 
 > [!definition] Complex Hopf bundle

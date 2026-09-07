@@ -5,6 +5,10 @@ prereqs: ["Def - Fredholm Operator and Index"]
 tags: [gauge-theory, determinant-line, orientation]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Fredholm Operator and Index]]
+
 # The Definition
 
 > [!definition] Determinant line

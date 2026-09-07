@@ -8,6 +8,12 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Instanton]]
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+- [[Def - The Yang-Mills Field Strength]]
+
 # Notation
 
 Euclidean $\mathbb{R}^4$ with the standard metric $\delta_{\mu\nu}$ and orientation $dx^0\wedge dx^1\wedge dx^2\wedge dx^3$. Coordinates $x = (x_0, x_1, x_2, x_3) = (x_0, \vec x)$. Radial coordinate $r = |x| = \sqrt{x_0^2 + x_1^2 + x_2^2 + x_3^2}$.

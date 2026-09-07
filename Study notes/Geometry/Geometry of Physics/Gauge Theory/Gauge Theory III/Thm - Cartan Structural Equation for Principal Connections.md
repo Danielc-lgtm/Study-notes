@@ -6,13 +6,17 @@ prereqs:
 tags: [gauge-theory, curvature, structure-equation]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Curvature 2-Form on a Principal Bundle]]
+
 # Statement
 
 > [!theorem] Cartan structure equation
 > For a principal connection $\omega$, the form
 > $$\Omega=d\omega+\tfrac12[\omega,\omega]$$
 > is horizontal and $\operatorname{Ad}$-equivariant. Its local representatives satisfy
-> $$F_A=dA+\tfrac12[A,A],qquad F_{A^g}=\operatorname{Ad}_{g^{-1}}F_A.$$
+> $$F_A=dA+\tfrac12[A,A],\qquad F_{A^g}=\operatorname{Ad}_{g^{-1}}F_A.$$
 
 # Formal Proof
 

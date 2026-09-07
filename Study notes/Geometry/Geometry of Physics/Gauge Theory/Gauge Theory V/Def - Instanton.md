@@ -7,6 +7,11 @@ prereqs:
 tags: [geometry, gauge-theory, mathematical-physics]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Yang-Mills Equation]]
+- [[Def - Self-Dual and Anti-Self-Dual Connection]]
+
 # Notation
 
 **Standing convention — Euclidean signature.** Instantons are inherently Euclidean objects, defined on $\mathbb{R}^4$ with the flat Euclidean metric $\delta_{\mu\nu}$. The reason is that the finite-action condition makes sense only for positive-definite metrics — in Lorentzian signature the action density $\tfrac12(\vec E^2 - \vec B^2)$ can be arbitrarily negative, so $|S| < \infty$ is no constraint. The term "instanton" reflects this: in the Wick-rotated picture, what is a tunneling event in Lorentzian time becomes a localised "instant" in Euclidean time.

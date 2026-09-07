@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, gauge-transformation, local-connection]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Local Connection 1-Form (Gauge Potential)]]
+- [[Def - The Maurer-Cartan Form]]
+
 # Statement
 
 > [!theorem] Passive gauge law

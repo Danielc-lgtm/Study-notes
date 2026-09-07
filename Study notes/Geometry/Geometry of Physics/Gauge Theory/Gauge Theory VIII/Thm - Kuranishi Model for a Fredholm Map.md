@@ -5,6 +5,10 @@ prereqs: ["Def - Smooth Fredholm Map and Regular Value"]
 tags: [gauge-theory, kuranishi-model, fredholm-map]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Smooth Fredholm Map and Regular Value]]
+
 # Statement
 
 > [!theorem] Kuranishi model

@@ -9,6 +9,12 @@ prereqs:
 tags: [geometry, gauge-theory, characteristic-classes, projective-spaces]
 ---
 
+# Prerequisite Concepts
+
+- [[Thm - Gauss-Bonnet-Chern Theorem]]
+- [[Def - The Euler Class of a Real Oriented Vector Bundle]]
+- [[Def - The Hopf Bundle]]
+
 # Problem Statement
 
 Show that

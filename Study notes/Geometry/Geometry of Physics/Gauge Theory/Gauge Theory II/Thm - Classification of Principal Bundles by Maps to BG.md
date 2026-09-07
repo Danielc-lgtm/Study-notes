@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, classifying-spaces, classification]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Universal Bundle and Classifying Space]]
+- [[Def - Principal G-Bundle]]
+
 # Statement
 
 > [!theorem] Classification theorem

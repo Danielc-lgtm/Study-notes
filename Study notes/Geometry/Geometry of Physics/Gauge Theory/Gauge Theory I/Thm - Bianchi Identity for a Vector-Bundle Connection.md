@@ -7,11 +7,16 @@ prereqs:
 tags: [geometry, gauge-theory, curvature, Bianchi]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Curvature of a Vector-Bundle Connection]]
+- [[Def - Connection on a Vector Bundle]]
+
 # Notation
 
 Let $\nabla$ be a connection on $E\to M$. In a local frame let $A\in\Omega^1(U;\mathfrak{gl}_r)$ and $F_A=dA+A\wedge A$. For matrix-valued forms define
 $$
-[\alpha,\beta]=\alpha\wedge\beta-(-1)^{pq}\beta\wedge\alpha,qquad
+[\alpha,\beta]=\alpha\wedge\beta-(-1)^{pq}\beta\wedge\alpha,\qquad
 \deg\alpha=p, \deg\beta=q,
 $$
 and $d_A\beta=d\beta+[A,\beta]$.

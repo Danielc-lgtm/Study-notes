@@ -8,6 +8,11 @@ prereqs:
 tags: [gauge-theory, hopf-fibration, su2, quaternionic]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - The Hopf Bundle]]
+- [[Def - Universal Bundle and Classifying Space]]
+
 # Problem Statement
 
 Let $Sp(1)=\{q\in\mathbb H:|q|=1\}\cong SU(2)$ act on

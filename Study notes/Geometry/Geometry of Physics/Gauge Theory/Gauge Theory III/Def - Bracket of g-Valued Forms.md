@@ -6,6 +6,10 @@ prereqs:
 tags: [gauge-theory, graded-lie-algebra, differential-forms]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Lie-Algebra-Valued Differential Form]]
+
 # The Definition
 
 > [!definition] Graded bracket

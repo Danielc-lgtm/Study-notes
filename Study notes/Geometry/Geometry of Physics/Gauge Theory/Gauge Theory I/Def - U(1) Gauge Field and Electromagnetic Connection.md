@@ -7,6 +7,11 @@ prereqs:
 tags: [gauge-theory, electromagnetism, u1, connection]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Complex Line Bundle]]
+- [[Def - Connection on a Vector Bundle]]
+
 # Notation
 
 Let $L\to M$ be a Hermitian line bundle and fix a real charge $q$. A local unitary frame $e$ identifies a section with $s=e\psi$. We use the convention
@@ -21,7 +26,7 @@ A charged field has a phase which can be described only relative to a chosen loc
 
 > [!definition] Electromagnetic connection
 > A **$U(1)$ gauge field** on $L$ is a unitary connection $\nabla$. In a unitary frame it has the unique form
-> $$\nabla=d+iqA,qquad A\in\Omega^1(U;\mathbb R).$$
+> $$\nabla=d+iqA,\qquad A\in\Omega^1(U;\mathbb R).$$
 > The real $1$-form $A$ is the **local gauge potential**. The real electromagnetic field strength is
 > $$F=dA,$$
 > so the curvature of $\nabla$ is $F_\nabla=iqF$.

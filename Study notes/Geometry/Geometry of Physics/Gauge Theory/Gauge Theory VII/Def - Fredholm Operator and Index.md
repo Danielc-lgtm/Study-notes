@@ -5,6 +5,10 @@ prereqs: ["Def - Sobolev Space of Bundle Sections"]
 tags: [gauge-theory, fredholm-operator, index]
 ---
 
+# Prerequisite Concepts
+
+- [[Def - Sobolev Space of Bundle Sections]]
+
 # The Definition
 
 > [!definition] Fredholm operator
