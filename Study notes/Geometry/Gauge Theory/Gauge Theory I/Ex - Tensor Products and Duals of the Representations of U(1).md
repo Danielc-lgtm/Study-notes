@@ -23,7 +23,7 @@ verifying the equivariance (intertwining) condition in full.
 
 **Part (b) — duals.** Exhibit the natural isomorphism $\mathbb{C}^{*} \cong \mathbb{C}$ (the dual space of the one-dimensional space $\mathbb{C}$) and use it to prove
 $$\varrho_k^{*} \cong \varrho_{-k} \qquad \text{for all } k \in \mathbb{Z},$$
-again verifying equivariance in full. Recall that the dual representation is defined by $\varrho_k^{*}(z) := \varrho_k(z^{-1})^{*}$, the transpose (adjoint) of the operator $\varrho_k(z^{-1})$.
+again verifying equivariance in full. Recall that the dual representation is defined by $\varrho_k^{*}(z) := \varrho_k(z^{-1})^{*}$, where $(\cdot)^{*}$ denotes the transpose (dual) map on functionals, $S^{*}(\lambda) = \lambda \circ S$ — not the Hermitian adjoint; the distinction matters here, since on $U(1)$ the Hermitian adjoint would conjugate the scalar and produce the wrong sign of the exponent.
 
 **Recall:**
 
@@ -108,7 +108,7 @@ The plan is uniform across both parts: identify the natural one-dimensional isom
 The map $\mu(u \otimes w) = uw$ exists as a linear map by the universal property and is bijective because both spaces are one-dimensional.
 
 > [!note]- Derivation
-> Consider the map $\beta : \mathbb{C} \times \mathbb{C} \to \mathbb{C}$, $\beta(u, w) = uw$. It is $\mathbb{C}$-bilinear: $\beta(au + a'u', w) = (au + a'u')w = a(uw) + a'(u'w)$, and symmetrically in the second slot (distributivity and commutativity of complex multiplication). By [[Thm - Universal Property of the Tensor Product|the universal property of the tensor product]], there is a **unique** linear map
+> Consider the map $\beta : \mathbb{C} \times \mathbb{C} \to \mathbb{C}$, $\beta(u, w) = uw$. It is $\mathbb{C}$-bilinear: in the first slot $\beta(au + a'u', w) = (au + a'u')w = a(uw) + a'(u'w) = a\beta(u,w) + a'\beta(u',w)$ (distributivity of complex multiplication), and in the second slot $\beta(u, bw + b'w') = u(bw + b'w') = b(uw) + b'(uw') = b\beta(u,w) + b'\beta(u,w')$ for $b, b' \in \mathbb{C}$ (distributivity again). By [[Thm - Universal Property of the Tensor Product|the universal property of the tensor product]], there is a **unique** linear map
 > $$\mu : \mathbb{C} \otimes_{\mathbb{C}} \mathbb{C} \to \mathbb{C}, \qquad \mu(u \otimes w) = uw,$$
 > defined on all of $\mathbb{C} \otimes \mathbb{C}$, not just on simple tensors. It is surjective because $\mu(u \otimes 1) = u$ realises every $u \in \mathbb{C}$; and since $\dim_{\mathbb{C}}(\mathbb{C} \otimes \mathbb{C}) = 1\cdot 1 = 1 = \dim_{\mathbb{C}}\mathbb{C}$, a surjective linear map between spaces of equal finite dimension is an isomorphism. (Concretely, $1 \otimes 1$ is a basis of $\mathbb{C} \otimes \mathbb{C}$ and $\mu(1 \otimes 1) = 1 \neq 0$, so $\mu$ carries a basis to a basis.) Thus $\mu$ is the required isomorphism $\mathbb{C} \otimes \mathbb{C} \cong \mathbb{C}$.
 

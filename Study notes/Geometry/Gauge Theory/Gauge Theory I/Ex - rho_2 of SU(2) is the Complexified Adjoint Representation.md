@@ -71,7 +71,7 @@ We also use that $SU(2)$ is **compact and connected** (it is diffeomorphic to $S
 
 # Legal Operations Used
 
-1. **Differentiate a group identity to a Lie-algebra identity, then integrate back** (operation "pass to the Lie algebra on a connected group", using [[Thm - The Exponential Map of a Compact Connected Lie Group is Surjective|$\exp$ surjectivity]] and [[Thm - Naturality of the Exponential Map|naturality]]). *Trigger:* a linear relation asserted for all $g$ in a connected matrix group. *Pattern:* it holds for all $g$ if and only if its differential holds for all $X$ in the Lie algebra, i.e. on a basis.
+1. **Differentiate a group identity to a Lie-algebra identity, then integrate back** (operation "pass to the Lie algebra on a connected group", using [[Thm - The Exponential Map of a Compact Connected Lie Group is Surjective|surjectivity of the exponential]] and [[Thm - Naturality of the Exponential Map|naturality]]). *Trigger:* a linear relation asserted for all $g$ in a connected matrix group. *Pattern:* it holds for all $g$ if and only if its differential holds for all $X$ in the Lie algebra, i.e. on a basis.
 
 2. **Compute $\operatorname{ad}$ from structure constants** (from [[Thm - Ad is a Smooth Representation and its Differential is ad|the adjoint page]], $\operatorname{ad}_{X}Y=[X,Y]$). *Trigger:* need the matrix of $\operatorname{ad}_{b_{a}}$. *Pattern:* its columns are the brackets $[b_{a},b_{1}],[b_{a},b_{2}],[b_{a},b_{3}]$ expressed in the basis.
 
@@ -95,7 +95,7 @@ We also use that $SU(2)$ is **compact and connected** (it is diffeomorphic to $S
 > Test Bär's $T$ in the form $T\operatorname{ad}_{b_{a}}=\varrho_{2*}(b_{a})T$. The $b_{3}$ (diagonal / torus) case works. Now try $b_{1}$: the two sides disagree. Bär's diagonal verification never saw $b_{1}$ or $b_{2}$.
 
 > [!note]- Hint 4
-> The failure is a *relative scale*. Diagonalise $\operatorname{ad}_{b_{3}}$: its eigenvectors are $b_{3}$ (eigenvalue $0$) and $b_{1}\pm ib_{2}$ (eigenvalues $\mp 2i$). An intertwiner must send each of these eigenlines into the matching eigenline of $\varrho_{2*}(b_{3})=\operatorname{diag}(-2i,2i,0)$, but the *ratio* of the scales on the two lines $b_{1}\pm ib_{2}$ is fixed by Schur to a single value. Bär's $T$ uses the wrong ratio. Impose the $b_{1}$-relation to pin the ratio and read off the corrected $T'$.
+> The failure is a *relative scale*. Diagonalise $\operatorname{ad}_{b_{3}}$: its eigenvectors are $b_{3}$ (eigenvalue $0$) and $b_{1}\pm ib_{2}$ (eigenvalues $\pm 2i$). An intertwiner must send each of these eigenlines into the matching eigenline of $\varrho_{2*}(b_{3})=\operatorname{diag}(-2i,2i,0)$, but the *ratio* of the scales on the two lines $b_{1}\pm ib_{2}$ is fixed by Schur to a single value. Bär's $T$ uses the wrong ratio. Impose the $b_{1}$-relation to pin the ratio and read off the corrected $T'$.
 
 > [!note]- Hint 5
 > For Route 2: a complex subspace $W\subseteq\mathfrak{su}(2)_{\mathbb{C}}$ invariant under $(\operatorname{Ad})_{\mathbb{C}}$ is invariant under $(\operatorname{ad})_{\mathbb{C}}$ (differentiate), i.e. $[X,W]\subseteq W$ for all $X$ — a complex ideal of $\mathfrak{sl}(2;\mathbb{C})=\mathfrak{su}(2)_{\mathbb{C}}$. Show $\mathfrak{sl}(2;\mathbb{C})$ has no nonzero proper ideals, conclude irreducibility, and quote the classification.
@@ -136,8 +136,16 @@ The plan is: prove the reduction lemma that turns $(\ast)$ into a Lie-algebra ch
 > [!note]- Derivation
 > Fix the ordered basis $f_{1}=e_{1}\odot e_{1}$, $f_{2}=e_{2}\odot e_{2}$, $f_{3}=e_{2}\odot e_{1}$ of $\odot^{2}\mathbb{C}^{2}$ (note $e_{1}\odot e_{2}=e_{2}\odot e_{1}=f_{3}$ by symmetry). By operation 3, $\varrho_{2*}(X)(u\odot v)=(Xu)\odot v+u\odot(Xv)$. Reading the action of each $b_{a}$ on $e_{1},e_{2}$ off the $2\times2$ matrices — $b_{1}e_{1}=e_{2},\ b_{1}e_{2}=-e_{1}$; $b_{2}e_{1}=-ie_{2},\ b_{2}e_{2}=-ie_{1}$; $b_{3}e_{1}=-ie_{1},\ b_{3}e_{2}=ie_{2}$ — we compute, for $b_{1}$,
 > $$\varrho_{2*}(b_{1})f_{1}=(b_{1}e_{1})\odot e_{1}+e_{1}\odot(b_{1}e_{1})=e_{2}\odot e_{1}+e_{1}\odot e_{2}=2f_{3},$$
-> $$\varrho_{2*}(b_{1})f_{2}=-e_{1}\odot e_{2}-e_{2}\odot e_{1}=-2f_{3},\qquad\varrho_{2*}(b_{1})f_{3}=(b_{1}e_{2})\odot e_{1}+e_{2}\odot(b_{1}e_{1})=-e_{1}\odot e_{1}+e_{2}\odot e_{2}=-f_{1}+f_{2},$$
-> and analogously for $b_{2}$ (using $b_{2}e_{1}=-ie_{2},\,b_{2}e_{2}=-ie_{1}$) and $b_{3}$ (using $b_{3}e_{1}=-ie_{1},\,b_{3}e_{2}=ie_{2}$). Collecting columns,
+> $$\varrho_{2*}(b_{1})f_{2}=-e_{1}\odot e_{2}-e_{2}\odot e_{1}=-2f_{3},\qquad\varrho_{2*}(b_{1})f_{3}=(b_{1}e_{2})\odot e_{1}+e_{2}\odot(b_{1}e_{1})=-e_{1}\odot e_{1}+e_{2}\odot e_{2}=-f_{1}+f_{2}.$$
+> For $b_{2}$, using $b_{2}e_{1}=-ie_{2}$ and $b_{2}e_{2}=-ie_{1}$,
+> $$\varrho_{2*}(b_{2})f_{1}=(b_{2}e_{1})\odot e_{1}+e_{1}\odot(b_{2}e_{1})=(-ie_{2})\odot e_{1}+e_{1}\odot(-ie_{2})=-2i f_{3},$$
+> $$\varrho_{2*}(b_{2})f_{2}=(b_{2}e_{2})\odot e_{2}+e_{2}\odot(b_{2}e_{2})=(-ie_{1})\odot e_{2}+e_{2}\odot(-ie_{1})=-2i f_{3},$$
+> $$\varrho_{2*}(b_{2})f_{3}=(b_{2}e_{2})\odot e_{1}+e_{2}\odot(b_{2}e_{1})=(-ie_{1})\odot e_{1}+e_{2}\odot(-ie_{2})=-i f_{1}-i f_{2}.$$
+> For $b_{3}$, using $b_{3}e_{1}=-ie_{1}$ and $b_{3}e_{2}=ie_{2}$,
+> $$\varrho_{2*}(b_{3})f_{1}=(b_{3}e_{1})\odot e_{1}+e_{1}\odot(b_{3}e_{1})=(-ie_{1})\odot e_{1}+e_{1}\odot(-ie_{1})=-2i f_{1},$$
+> $$\varrho_{2*}(b_{3})f_{2}=(b_{3}e_{2})\odot e_{2}+e_{2}\odot(b_{3}e_{2})=(ie_{2})\odot e_{2}+e_{2}\odot(ie_{2})=2i f_{2},$$
+> $$\varrho_{2*}(b_{3})f_{3}=(b_{3}e_{2})\odot e_{1}+e_{2}\odot(b_{3}e_{1})=(ie_{2})\odot e_{1}+e_{2}\odot(-ie_{1})=i f_{3}-i f_{3}=0.$$
+> Collecting columns,
 > $$\varrho_{2*}(b_{1})=\begin{pmatrix}0&0&-1\\0&0&1\\2&-2&0\end{pmatrix},\qquad\varrho_{2*}(b_{2})=\begin{pmatrix}0&0&-i\\0&0&-i\\-2i&-2i&0\end{pmatrix},\qquad\varrho_{2*}(b_{3})=\begin{pmatrix}-2i&0&0\\0&2i&0\\0&0&0\end{pmatrix}.$$
 > The diagonal $\varrho_{2*}(b_{3})=\operatorname{diag}(-2i,2i,0)$ matches the differential of Bär's diagonal $\varrho_{2}(\operatorname{diag}(e^{i\varphi},e^{-i\varphi}))=\operatorname{diag}(e^{2i\varphi},e^{-2i\varphi},1)$ at $\varphi=0$ (recall $\operatorname{diag}(e^{i\varphi},e^{-i\varphi})=\exp(-\varphi b_{3})$, so the derivative is $-(-2i,2i,0)\cdot(-1)$, i.e. $\operatorname{diag}(-2i,2i,0)$).
 
@@ -163,7 +171,7 @@ The plan is: prove the reduction lemma that turns $(\ast)$ into a Lie-algebra ch
 **Step 4: The corrected intertwiner $T'$. — pins the one wrong scale and verifies $(\ast)$ on all generators.**
 
 > [!note]- Derivation
-> **Diagnosis.** The operator $\operatorname{ad}_{b_{3}}$ is diagonalisable with eigenvalue $0$ on $b_{3}$ and eigenvalues $\mp2i$ on $b_{1}\pm ib_{2}$: indeed $\operatorname{ad}_{b_{3}}(b_{1}+ib_{2})=[b_{3},b_{1}]+i[b_{3},b_{2}]=-2b_{2}+i(2b_{1})=2i(b_{1}+ib_{2})$, so $b_{1}+ib_{2}$ has eigenvalue $+2i$, and likewise $b_{1}-ib_{2}$ has eigenvalue $-2i$. On the target side, $\varrho_{2*}(b_{3})=\operatorname{diag}(-2i,2i,0)$ has eigenvalue $+2i$ on $f_{2}$, $-2i$ on $f_{1}$, $0$ on $f_{3}$. An intertwiner $T'$ must carry each $\operatorname{ad}_{b_{3}}$-eigenline to the equal-eigenvalue $\varrho_{2*}(b_{3})$-eigenline:
+> **Diagnosis.** The operator $\operatorname{ad}_{b_{3}}$ is diagonalisable with eigenvalue $0$ on $b_{3}$ and eigenvalues $\pm2i$ on $b_{1}\pm ib_{2}$: indeed $\operatorname{ad}_{b_{3}}(b_{1}+ib_{2})=[b_{3},b_{1}]+i[b_{3},b_{2}]=-2b_{2}+i(2b_{1})=2i(b_{1}+ib_{2})$, so $b_{1}+ib_{2}$ has eigenvalue $+2i$, and likewise $b_{1}-ib_{2}$ has eigenvalue $-2i$. On the target side, $\varrho_{2*}(b_{3})=\operatorname{diag}(-2i,2i,0)$ has eigenvalue $+2i$ on $f_{2}$, $-2i$ on $f_{1}$, $0$ on $f_{3}$. An intertwiner $T'$ must carry each $\operatorname{ad}_{b_{3}}$-eigenline to the equal-eigenvalue $\varrho_{2*}(b_{3})$-eigenline:
 > $$T'(b_{1}+ib_{2})=\beta f_{2},\qquad T'(b_{1}-ib_{2})=\alpha f_{1},\qquad T'(b_{3})=\gamma f_{3},$$
 > for scalars $\alpha,\beta,\gamma$. Any such $T'$ automatically satisfies the $b_{3}$-relation (this is why the torus check cannot detect an error): the scalars $\alpha,\beta,\gamma$ are three *independent* degrees of freedom on the torus. Bär's $T$ corresponds to $\alpha_{\mathrm{B}}=-2i$, $\beta_{\mathrm{B}}=2$, $\gamma_{\mathrm{B}}=1$ (read off by applying $T$ to $b_{1}\pm ib_{2}$ and $b_{3}$), whose ratio $\alpha_{\mathrm{B}}/\beta_{\mathrm{B}}=-i$ is what the $b_{1}$-relation forbids.
 >
@@ -206,7 +214,7 @@ The plan is: prove the reduction lemma that turns $(\ast)$ into a Lie-algebra ch
 >
 > *Bär's $T$ fails.* With $T=\left(\begin{smallmatrix}-i&1&0\\1&-i&0\\0&0&1\end{smallmatrix}\right)$ the relation holds for $b_{3}$ but $T\operatorname{ad}_{b_{1}}\neq\varrho_{2*}(b_{1})T$ (their $(1,3)$ entries are $2$ and $-1$); equivalently $T\operatorname{Ad}_{g}T^{-1}\neq\varrho_{2}(g)$ at $g=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$. So Bär's intertwiner is valid only on the maximal torus.
 >
-> *Corrected intertwiner.* An intertwiner must map $b_{1}\pm ib_{2}$ (the $\mp2i$-eigenlines of $\operatorname{ad}_{b_{3}}$) into $f_{1},f_{2}$ and $b_{3}$ into $f_{3}$; imposing the $b_{1}$-relation forces the relative scale to $\alpha=\beta,\ \gamma=-i\alpha$, giving $T'=\left(\begin{smallmatrix}1/2&i/2&0\\1/2&-i/2&0\\0&0&-i\end{smallmatrix}\right)$. Direct computation confirms $T'\operatorname{ad}_{b_{a}}=\varrho_{2*}(b_{a})T'$ for $a=1,2,3$, so $T'\operatorname{Ad}_{g}T'^{-1}=\varrho_{2}(g)$ for all $g$, and $\varrho_{2}\cong(\operatorname{Ad})_{\mathbb{C}}$.
+> *Corrected intertwiner.* An intertwiner must map $b_{1}\pm ib_{2}$ (the $\pm2i$-eigenlines of $\operatorname{ad}_{b_{3}}$) into $f_{2},f_{1}$ respectively and $b_{3}$ into $f_{3}$; imposing the $b_{1}$-relation forces the relative scale to $\alpha=\beta,\ \gamma=-i\alpha$, giving $T'=\left(\begin{smallmatrix}1/2&i/2&0\\1/2&-i/2&0\\0&0&-i\end{smallmatrix}\right)$. Direct computation confirms $T'\operatorname{ad}_{b_{a}}=\varrho_{2*}(b_{a})T'$ for $a=1,2,3$, so $T'\operatorname{Ad}_{g}T'^{-1}=\varrho_{2}(g)$ for all $g$, and $\varrho_{2}\cong(\operatorname{Ad})_{\mathbb{C}}$.
 >
 > *Classification route.* A complex $(\operatorname{Ad})_{\mathbb{C}}$-invariant subspace is a complex ideal of $\mathfrak{sl}(2;\mathbb{C})$; $\mathfrak{sl}(2;\mathbb{C})$ is simple (the $H,E,F$ argument), so $(\operatorname{Ad})_{\mathbb{C}}$ is irreducible of dimension $3$. By the classification (part B) the unique three-dimensional irreducible complex representation of $SU(2)$ is $\varrho_{2}$; hence $(\operatorname{Ad})_{\mathbb{C}}\cong\varrho_{2}$. By Schur the intertwiner is unique up to one scalar, matching the free parameter $\alpha$ in $T'$. $\blacksquare$
 
