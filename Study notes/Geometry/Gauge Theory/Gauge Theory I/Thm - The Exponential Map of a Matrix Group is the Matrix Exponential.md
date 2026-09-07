@@ -190,7 +190,9 @@ The genuinely non-obvious step is the one Bär's text passes over: that $e^{tX} 
 > > $$F'(t) = X \sum_{j=0}^{\infty} \frac{t^j X^j}{j!} = X\, e^{tX}, \qquad F'(t) = \left(\sum_{j=0}^{\infty} \frac{t^j X^j}{j!}\right) X = e^{tX}\, X.$$
 > > Setting $t = 0$ leaves only the $j = 0$ term, giving $\left.\tfrac{d}{dt}\right|_0 e^{tX} = X\, e^{0} = X$.
 > >
-> > **Smoothness.** The same argument applied to $t \mapsto X^j e^{tX}$ shows it is differentiable with derivative $X^{j+1} e^{tX}$; by induction every derivative $\tfrac{d^j}{dt^j} e^{tX} = X^j e^{tX}$ exists and is continuous, so $t \mapsto e^{tX}$ is of class $C^\infty$. Therefore the matrix exponential is a smooth curve with the stated derivative. $\blacksquare$
+> > **Smoothness.** The same argument applied to $t \mapsto X^j e^{tX}$ shows it is differentiable with derivative $X^{j+1} e^{tX}$; by induction every derivative $\tfrac{d^j}{dt^j} e^{tX} = X^j e^{tX}$ exists and is continuous, so $t \mapsto e^{tX}$ is of class $C^\infty$.
+> >
+> > **Real-analyticity.** On every bounded interval $t \mapsto e^{tX} = \sum_{k \ge 0} (X^k/k!)\, t^k$ is the sum of a power series in the real variable $t$ with matrix coefficients $X^k/k! \in \operatorname{Mat}(n \times n; \mathbb{K})$, and this series converges for every $t \in \mathbb{R}$ (Lemma 1 applied to $tX$); a function given on an interval by an everywhere-convergent power series is real-analytic there, which justifies the parenthetical claim of the statement. Therefore the matrix exponential is a smooth (indeed real-analytic) curve with the stated derivative. $\blacksquare$
 
 > [!note]- Lemma 4: The curve $t \mapsto e^{tX}$ is the one-parameter subgroup $\exp_{GL}(tX)$
 > **Statement:** For every $X \in \mathfrak{gl}(n; \mathbb{K}) = \operatorname{Mat}(n \times n; \mathbb{K})$, the curve $t \mapsto e^{tX}$ is a smooth group homomorphism $\mathbb{R} \to GL(n; \mathbb{K})$ with $\left.\tfrac{d}{dt}\right|_0 e^{tX} = X$, and it equals the abstract one-parameter subgroup: $e^{tX} = \exp_{GL(n;\mathbb{K})}(tX)$ for all $t$; in particular $\exp_{GL}(X) = e^X$.

@@ -41,7 +41,7 @@ The Christoffel symbols of the round metric in these coordinates were computed i
 $$
 \Gamma^\theta_{\varphi\varphi} = -\sin\theta\cos\theta, \qquad \Gamma^\varphi_{\theta\varphi} = \Gamma^\varphi_{\varphi\theta} = \cot\theta,
 $$
-with all other symbols zero, and they are defined by $\nabla^{\mathrm{LC}}_{\partial_k}\partial_j = \sum_i \Gamma^i_{kj}\,\partial_i$ (see [[Def - Christoffel Symbols]]).
+with all other symbols zero, and they are defined by $\nabla^{\mathrm{LC}}_{\partial_k}\partial_j = \sum_i \Gamma^i_{kj}\,\partial_i$ (see [[Riemannian Geometry I/Def - Christoffel Symbols|the definition of the Christoffel symbols]]).
 
 > [!warning] Convention:
 > This series follows Haydys's row-vector convention $\nabla e = e \cdot A$, in which the frame $e = (e_1, \dots, e_k)$ is a *row* of sections and the connection matrix multiplies it on the right, so that $\nabla e_j = \sum_i e_i\,A^i{}_j$ and the entry $A^i{}_j$ carries the upper index as its row index. The Riemannian-geometry pages write the same matrix as connection $1$-forms $\omega^i{}_j = A^i{}_j$ via $\nabla e_j = e_i \otimes \omega^i{}_j$; the two are identical objects. Throughout, $d$ denotes the componentwise exterior derivative of the coefficient column, and $A\sigma$ is ordinary matrix–column multiplication with the wedge of a $1$-form against a $0$-form (a function) reducing to the product.
