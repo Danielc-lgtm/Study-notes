@@ -30,7 +30,7 @@ The objects in play are the ring of $\operatorname{Ad}$-invariant homogeneous po
 
 ![[Def - Ad-Invariant Polynomial#The Definition]]
 
-Concretely, a function $p\colon\mathfrak{g}\to\mathbb{K}$ (here $\mathfrak{g}=\mathfrak{gl}_r(\mathbb{C})$ or $\mathfrak{u}(r)$, and $\mathbb{K}=\mathbb{C}$ or $\mathbb{R}$) is an **[[Def - Ad-Invariant Polynomial|$\operatorname{Ad}$-invariant homogeneous polynomial of degree $d$]]** when (1) it is a homogeneous polynomial of degree $d$ in the matrix entries, (2) $p(\operatorname{Ad}_g\xi)=p(\xi)$ for all $g\in G$, and (3) $p(\lambda\xi)=\lambda^{d}p(\xi)$; for a matrix group $\operatorname{Ad}_g\xi=g\xi g^{-1}$ is conjugation. Conditions (2) and (3) are the two we must verify here; condition (1) is visible from the determinant expansion.
+Concretely, a function $p\colon\mathfrak{g}\to\mathbb{K}$ (here $\mathfrak{g}=\mathfrak{gl}_r(\mathbb{C})$ or $\mathfrak{u}(r)$, and $\mathbb{K}=\mathbb{C}$ or $\mathbb{R}$) is an **[[Def - Ad-Invariant Polynomial|Ad-invariant homogeneous polynomial]]** of degree $d$ when (1) it is a homogeneous polynomial of degree $d$ in the matrix entries, (2) $p(\operatorname{Ad}_g\xi)=p(\xi)$ for all $g\in G$, and (3) $p(\lambda\xi)=\lambda^{d}p(\xi)$; for a matrix group $\operatorname{Ad}_g\xi=g\xi g^{-1}$ is conjugation. Conditions (2) and (3) are the two we must verify here; condition (1) is visible from the determinant expansion.
 
 ![[Thm - Determinant is Multiplicative#Statement]]
 
