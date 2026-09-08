@@ -1,0 +1,10 @@
+# PAGE SPEC
+
+- **Filename:** `Def - Elliptic Complex and Its Laplacians.md`
+- **Type:** definition
+- **Chapter:** Gauge Theory IX — Sobolev Spaces, Elliptic Operators, and Elliptic Complexes  (folder `Gauge Theory IX/`)
+- **Section:** §9.6 Elliptic Complexes and the Hodge Theorem
+
+## Spec (from the manifest)
+
+type: definition (anchor; compound: complex of differential operators and its cohomology; ellipticity via the symbol sequence; the Laplacians; harmonic sections; $b_j(E)$); source items: A-D5.3.1, A-D5.3.2, A-D5.3.3, A-D5.3.4, A-D5.3.5, A-R5.3.1 (→ inside, Axiom Motivation: the gauge-theoretic reading $\mathcal B = \Gamma(E_j)$, $\mathcal G = \Gamma(E_{j-1})$ acting by $s\mapsto s+Lt$, "moduli space" $L^{-1}(0)/\mathcal G = H^j(E)$; footnote 4 on Sobolev completions), A-R5.3.2 (→ inside, Relate: $H^j(E)$ is never compact; the dilation action and $(H^j\setminus0)/\mathbb R_{>0}$ compact), A-R5.3.4 (→ inside, Examples: $b_j(E)$ as the isomorphism class; source typo: Haydys p. 51 "non-positive integer" should read "non-negative"); prereqs: [Def - Elliptic Differential Operator and Principal Symbol, Def - Formal Adjoint of a Differential Operator, Thm - The Principal Symbol is Well-Defined and Multiplicative, Def - Exact Sequence of Groups]; spec: a sequence $0\to\Gamma(E_1)\xrightarrow{L_1}\Gamma(E_2)\to\cdots\xrightarrow{L_{k-1}}\Gamma(E_k)\to0$ of differential operators with $L_j\circ L_{j-1} = 0$; cohomology $H^j(E) := \ker L_j/\operatorname{Im}L_{j-1}$; *elliptic* if the symbol sequence $0\to\pi^*E_1\xrightarrow{\sigma_{L_1}(\xi)}\pi^*E_2\to\cdots\to\pi^*E_k\to0$ is exact for every $\xi\ne0$; a two-term complex is elliptic iff $L$ is elliptic (proved); Laplacians $\Delta_j := L_j^*L_j + L_{j-1}L_{j-1}^*$ (with fibre metrics; all $L_j$ assumed of order 1 from here on, as Haydys does — remark on the general case); harmonic sections $\mathcal H^j(E) := \ker\Delta_j$; $b_j(E) := \dim H^j(E)$; examples: the de Rham complex (§9.6 last page), the Atiyah complex (XI), the two-term complex of an elliptic operator; non-example: $0\to\Omega^0\xrightarrow{d}\Omega^1\to0$ on a surface (symbol sequence not exact at $\Omega^1$).

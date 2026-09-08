@@ -1,0 +1,10 @@
+# PAGE SPEC
+
+- **Filename:** `Thm - Critical Points of the Chern-Simons Functional are the Flat Connections.md`
+- **Type:** theorem
+- **Chapter:** Gauge Theory VI — Chern–Weil Theory, Characteristic Classes, and the Chern–Simons Functional  (folder `Gauge Theory VI/`)
+- **Section:** §6.4 The Chern-Simons Functional and Flat Connections
+
+## Spec (from the manifest)
+
+type: theorem; source items: A-T3.2.1, A-R3.2.2, A-D3.2.3 (link `Def - Flat Connection`); prereqs: [Def - Chern-Simons Functional, Def - Flat Connection, Thm - Stokes' Theorem on Manifolds, Thm - Curvature of a Shifted Connection]; statement: For $A\in\Omega^1(M;\mathfrak{su}(2))$ on a closed oriented 3-manifold and $a\in\Omega^1(M;\mathfrak{su}(2))$, $\tfrac{d}{ds}\big|_0\vartheta(A+sa)=\tfrac1{4\pi^2}\int_M\operatorname{tr}(F_A\wedge a)$; hence $d\vartheta_A=0$ iff $F_A=0$: the critical points of $\vartheta$ (well defined on $\mathcal A/\mathcal G$ since $d\vartheta$ is gauge invariant) are exactly the flat connections; proof: A full modulo integration by parts and non-degeneracy — write: expand $\operatorname{cs}(A+sa)$ to first order, integrate by parts $\int\operatorname{tr}(A\wedge da)=\int\operatorname{tr}(dA\wedge a)$ (Stokes, closed $M$, signs displayed), collect $\operatorname{tr}((dA+A\wedge A)\wedge a)$ using cyclicity, and use that $(\xi,\eta)\mapsto-\operatorname{tr}(\xi\eta)$ is positive definite on $\mathfrak{su}(2)$ so the pairing $(F,a)\mapsto\int\operatorname{tr}(F\wedge a)$ is non-degenerate (choose $a=\star F$ with respect to any metric — or, to avoid the Hodge star before VII, choose $a$ supported in a chart with $\operatorname{tr}(F\wedge a)=|F|^2dx^1dx^2dx^3$ locally, written explicitly); reference: Freed, *Classical Chern–Simons theory I* Prop 2.? ; Donaldson–Kronheimer §5.? (Chern–Simons and flat connections); spec: Mechanism: "the Chern–Simons functional is the antiderivative of the curvature." Targets: flat connections as the "vacua" of 3-dimensional gauge theory; the representation variety of V as the critical set; instanton Floer homology (bold).

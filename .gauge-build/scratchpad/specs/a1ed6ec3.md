@@ -1,0 +1,10 @@
+# PAGE SPEC
+
+- **Filename:** `Thm - Einstein-Maxwell Equations from the Coupled Action.md`
+- **Type:** theorem
+- **Chapter:** Gauge Theory VII — The Hodge Star, Electrodynamics, and Yang–Mills Theory  (folder `Gauge Theory VII/`)
+- **Section:** §7.3 The Energy-Momentum Tensor and the Symmetries of the Action
+
+## Spec (from the manifest)
+
+type: theorem; source items: B-R3.2.9 ((3.14), (3.15)), B-I3.2.3; prereqs: [Def - Einstein-Hilbert Lagrangian and the Coupled Action, Thm - Metric Variation of the Electromagnetic Lagrangian, Thm - Hilbert's Variational Principle Yields Einstein Equations, Def - Ricci Tensor]; statement: $g$ is critical for $\int(L_{geom}(g)+L_1(\omega,g)+L_2(\omega))$ under compactly supported variations $h$ if and only if $\operatorname{ric}_g - \tfrac12\operatorname{scal}_g\,g = T$ (Einstein field equations with the electromagnetic energy-momentum tensor as source); proof: uses $\frac{d}{dt}\big|_0\operatorname{scal}_{g(t)} = -\operatorname{ric}^{ij}h_{ij} + \operatorname{div}X$ for a compactly supported vector field $X$ (I3.2.3) — the vault's `Thm - Hilbert's Variational Principle Yields Einstein Equations` (GR I, unflagged, 254 lines) derives $\delta(R\sqrt{-g})$ via the Palatini identity; **the writer must check that page proves the Palatini identity $\delta R_{\mu\nu} = \nabla_\rho\delta\Gamma^\rho_{\nu\mu}-\nabla_\nu\delta\Gamma^\rho_{\rho\mu}$ in full; if it only states it, prove the first variation of scalar curvature as Lemma 1 on this page** (route: $\delta\Gamma$ is a tensor; $\delta R^\rho{}_{\sigma\mu\nu} = \nabla_\mu\delta\Gamma^\rho_{\nu\sigma}-\nabla_\nu\delta\Gamma^\rho_{\mu\sigma}$ by direct computation in normal coordinates or from the definition; contract; then $\int\operatorname{div}X\,\mathrm{vol} = 0$ for compactly supported $X$ by Stokes); combine with (a) and (c) of the previous page and the fundamental lemma for symmetric 2-tensors; spec: link `Def - The Einstein Field Equations`, `Def - Einstein Tensor` (GR I); mechanism: the metric variation of the matter action *defines* the stress-energy source of Einstein's equation.

@@ -1,0 +1,174 @@
+[
+ {
+  "chapnum": 1,
+  "title": "Gauge Theory I — Lie Groups, Representations, and Group Actions",
+  "manifestFile": "manifest-1.md",
+  "topicId": null,
+  "indexIds": [
+   "79b7a199",
+   "85d3a25e",
+   "fb37c2ff",
+   "00b1f0fc",
+   "c3da56b9"
+  ]
+ },
+ {
+  "chapnum": 2,
+  "title": "Gauge Theory II — Vector Bundles, Covariant Derivatives, and Curvature",
+  "manifestFile": "manifest-1.md",
+  "topicId": null,
+  "indexIds": [
+   "c6c307fc",
+   "cd02a7f9",
+   "1f6d53de",
+   "dd086711",
+   "99b40b29"
+  ]
+ },
+ {
+  "chapnum": 3,
+  "title": "Gauge Theory III — Fibre Bundles, Principal Bundles, and Associated Bundles",
+  "manifestFile": "manifest-1.md",
+  "topicId": null,
+  "indexIds": [
+   "ffdb9460",
+   "935b8740",
+   "dab9f082",
+   "391dbe36",
+   "922279dc",
+   "9c9b9613"
+  ]
+ },
+ {
+  "chapnum": 4,
+  "title": "Gauge Theory IV — Connections and Curvature on Principal Bundles",
+  "manifestFile": "manifest-1.md",
+  "topicId": null,
+  "indexIds": [
+   "c62ab102",
+   "19169fdd",
+   "8dd63c5a",
+   "59dd7bc6"
+  ]
+ },
+ {
+  "chapnum": 5,
+  "title": "Gauge Theory V — Parallel Transport, Holonomy, Gauge Transformations, and Flat Connections",
+  "manifestFile": "manifest-1.md",
+  "topicId": null,
+  "indexIds": [
+   "f5a7ba00",
+   "94b8f4d7",
+   "def9ebfe",
+   "96a62052"
+  ]
+ },
+ {
+  "chapnum": 6,
+  "title": "Gauge Theory VI — Chern–Weil Theory, Characteristic Classes, and the Chern–Simons Functional",
+  "manifestFile": "manifest-1.md",
+  "topicId": null,
+  "indexIds": [
+   "4ff6c47d",
+   "14d2e198",
+   "a460af83",
+   "7f14e0f9"
+  ]
+ },
+ {
+  "chapnum": 7,
+  "title": "Gauge Theory VII — The Hodge Star, Electrodynamics, and Yang–Mills Theory",
+  "manifestFile": "manifest-2.md",
+  "topicId": null,
+  "indexIds": [
+   "18281b3c",
+   "611d7688",
+   "44ccb14a",
+   "45c19d13"
+  ]
+ },
+ {
+  "chapnum": 8,
+  "title": "Gauge Theory VIII — Clifford Algebras, Spin Structures, and Dirac Operators",
+  "manifestFile": "manifest-2.md",
+  "topicId": null,
+  "indexIds": [
+   "fe1c12c3",
+   "d2dc8c1e",
+   "faf6e606",
+   "8b945eff"
+  ]
+ },
+ {
+  "chapnum": 9,
+  "title": "Gauge Theory IX — Sobolev Spaces, Elliptic Operators, and Elliptic Complexes",
+  "manifestFile": "manifest-2.md",
+  "topicId": null,
+  "indexIds": [
+   "3c872726",
+   "1dec5026",
+   "e826ce98",
+   "b1b7f0b1",
+   "cb681375",
+   "1393747d"
+  ]
+ },
+ {
+  "chapnum": 10,
+  "title": "Gauge Theory X — Fredholm Maps, Transversality, and Degree",
+  "manifestFile": "manifest-2.md",
+  "topicId": null,
+  "indexIds": [
+   "5c09adaa",
+   "67b868bb",
+   "0bcab569",
+   "d7a4665b",
+   "ac73456a"
+  ]
+ },
+ {
+  "chapnum": 11,
+  "title": "Gauge Theory XI — Seiberg–Witten Theory",
+  "manifestFile": "manifest-2.md",
+  "topicId": null,
+  "indexIds": [
+   "990de077",
+   "599220e9",
+   "92078eee",
+   "d67d381f",
+   "4ae32e9e"
+  ]
+ },
+ {
+  "chapnum": 12,
+  "title": "Gauge Theory XII — Homotopy, Homology, Orientation, and Poincaré Duality",
+  "manifestFile": "manifest-3.md",
+  "topicId": null,
+  "indexIds": [
+   "b95820c9",
+   "885a26c8",
+   "f8d37eda",
+   "9c6fcbb7",
+   "54e1b6af",
+   "4dc9d4f8",
+   "a3164d68",
+   "2857cc3a"
+  ]
+ },
+ {
+  "chapnum": 13,
+  "title": "Gauge Theory XIII — Intersection Forms, Four-Manifold Classification, and Donaldson's Theorem",
+  "manifestFile": "manifest-3.md",
+  "topicId": null,
+  "indexIds": [
+   "a844999b",
+   "002af5d9",
+   "166d5f21",
+   "e26889e9",
+   "2b27b3c7",
+   "6d880e85",
+   "10bcebcd",
+   "d584046a"
+  ]
+ }
+]

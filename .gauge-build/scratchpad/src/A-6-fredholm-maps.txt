@@ -1,0 +1,598 @@
+# Haydys, Introduction to Gauge Theory: PDF pages 51-61 (section proper: 52-60; one page of context on each side)
+
+
+===== PDF PAGE 51 =====
+Introduction to Gauge Theory
+Exercise 159. Show that the short complex
+0 →Γ(E1)
+L1
+−−→Γ(E2)
+L2
+−−→Γ(E3) →0
+is elliptic if and only if the operator
+(L2, L∗
+1): Γ(E2) →Γ(E3 ⊕E1)
+is elliptic.
+5.3.1
+A gauge-theoretic interpretation
+The cohomology group Hj(E) is an example of a linear gauge–theoretic moduli space, cf. Sec-
+tion 1. Let me spell some details. The manifold4 B = Γ(Ej) carries an action of the additive group
+G := Γ(Ej−1) by translations: (s, t) 7→s + Lt. If Γ(Ej+1) is viewed as a trivial G–representation,
+L: Γ(Ej) →Γ(Ej+1) is a G-equivariant map, which in this particular case just means that L is
+G-invariant. The action of the gauge group on L−1(0) is not free in general, however ker L acts
+trivially so that the corresponding ‘moduli space’ L−1(0)/G = Hj(E) is a finite dimensional man-
+ifold (a vector space, in fact) provided the complex is elliptic and the base manifold is compact.
+This explains our interest in the theory of elliptic operators.
+Notice, however, that because of the linear setting we can not expect that the ‘moduli space’
+Hj(E) will be compact. The reason is that Hj(E) inherits the action of R>0 by dilations and if we
+take the quotient of Hj \ {0} by this action the resulting space is compact. Thus, in this setting
+dim Hj(E) < ∞is a suitable replacement for the compactness of the moduli space.
+One more important feature we have seen is the so called gauge fixing. Namely, we have shown
+that for each point s ∈L−1(0) there is a unique representative h(s) in the ‘gauge-equivalence class
+of s’ such that h(s) is harmonic. Moreover, the map
+L−1(0) →Hj(E),
+s 7→h(s)
+induces a diffeomorphism L−1(0)/G →Hj(E).
+Furthermore, an isomorphism class of a finite dimensional vector space is determined by a
+unique non-positive integer, namely its dimension. Hence, bj(E) := dim Hj(E) is an ‘invariant’
+of E. In many cases, these invariants capture a subtle information about the underlying manifold
+M.
+The example of the de Rham complex in the following subsection will make these constructions
+more concrete.
+5.3.2
+The de Rham complex
+Recall that for any manifold M of dimension n we have the de Rham complex
+0 →Ω0(M)
+d
+−→Ω1(M)
+d
+−→Ω2(M) −→. . . −→Ωn(M) →0.
+4One can consider Γ(Ej) as a Banach manifold by taking a Sobolev completion. Since this is not really important
+at this point, I describe the setting in the smooth category.
+51
+
+
+===== PDF PAGE 52 =====
+Introduction to Gauge Theory
+Exercise 160. Show that the de Rham complex is elliptic.
+If M is oriented and Riemannian, we have the Hodge operator ∗: ΛjT ∗M →Λn−jT ∗M. Using
+this, the formal adjoint of the exterior derivative can be expressed as
+d∗= (−1)n(j−1)+1 ∗d ∗: Ωj(M) →Ωj−1(M)
+so that the Hodge–de Rham Laplacian is ∆= dd∗+ d∗d. If M is in addition compact, the space
+Hj of harmonic forms of degree j is naturally isomorphic to the jth de Rham cohomology group.
+Then bj(M) := dim Hj is the jth Betti number of M. This is a topological invariant of M even
+though in this approach a smooth structure has been used.
+6
+Fredholm maps
+6.1
+The Kuranishi model and the Sard–Smale theorem
+Let X and Y be Banach manifolds.
+Definition 161. A map F ∈C∞(X; Y ) is said to be Fredholm if the differential dF is a Fredholm
+linear map at each point.
+Hence, for each x ∈X the index of dxF is well defined. If X is connected, then index dxF
+does not depend on x and this common value is denoted by index F.
+Fredholm maps have a lot in common with smooth maps between finite dimensional manifolds.
+A manifestation of this is the following result.
+Theorem 162 (Kuranishi model). Let X and Y be Banach spaces and F : X →Y a Fredholm
+map. Pick a point p ∈F −1(0) and denote X0 = ker dpF,
+Y0 := im dpF. Furthermore, choose
+subspaces X1 ⊂X and Y1 ⊂Y such that
+X = X0 ⊕X1
+and
+Y = Y0 ⊕Y1.
+Then there is a diffeomorphism φ of a neighborhood of the origin in X onto a neighbourhood of p
+such that φ(0) = p, a linear isomorphism T : X1 →Y0, and a smooth map f : X →Y1 such that
+F ◦φ(x0, x1) = Tx1 + f(x0, x1)
+for all (x0, x1) ∈X0 ⊕X1 in the neighborhood of the origin.
+In particular, if f0 : X0 →Y1 denotes the restriction of f to X0, then a neighborhood of p in
+F −1(0) is homeomorphic to a neighborhood of the origin in f −1
+0 (0).
+□
+Corollary 163. Assume the hypotheses of Theorem 162. Suppose also that 0 is a regular value of
+F, i.e., the dpF is surjective for all p ∈F −1(0). Then F −1(0) is a smooth manifold of dimension
+index F.
+Proof. Since Im dpF = Y , we necessarily have Y1 = {0} so that f0 is a constant map. Hence,
+F −1(0) is diffeomorphic to a neighborhood of the origin in X0, i.e., a manifold of dimension
+dim X0 = index F.
+□
+52
+
+
+===== PDF PAGE 53 =====
+Introduction to Gauge Theory
+For a smooth map between finite dimensional manifolds, almost any value is regular by Sard’s
+theorem [BT03, Thm. 9.5.4]. There is a generalization of this statement for an infinite dimensional
+setting due to Smale. This is commonly known as the Sard–Smale theorem.
+Recall that a subset A of a topological space is said to be of second category, if A can be
+represented as a countable intersection of open dense subsets. If the underlying topological space
+is a Banach manifold, then a subset of second category is dense.
+Theorem 164. Let F be a smooth Fredholm map between paracompact Banach manifolds. Then
+the set of regular values of F is of second category, in particular dense.
+□
+Let Z ⊂Y be a smoothly embedded finite dimensional submanifold. A map F is said to be
+transverse to Z, if for any z ∈Z and any x ∈F −1(Z) the following holds:
+Im dxF + TzZ = TzY.
+In particular, F is transverse to Z = {z} is and only if z is a regular value of F. It is well-known
+that the notion of transversality is a useful generalization of the notion of regular value, see for
+instance [GP10].
+Just as in the finite dimensional case we have the following result.
+Theorem 165. Let Z ⊂Y be a smoothly embedded finite dimensional submanifold. If F is trans-
+verse to Z, then F −1(Z) is a smooth submanifold of X and
+dim F −1(Z) = index F + dim Z.
+□
+6.2
+The Z/2Z degree
+Recall that a map F : X →Y is called proper if preimages of compact subsets are compact.
+Let F : X →Y be a proper Fredholm map between (paracompact) Banach manifolds of index
+zero, where Y is connected. Then for any regular value y ∈Y the preimage F −1(y) is a compact
+manifold of dimension zero, hence a finite number of points. The number
+deg2 F := #f −1(y)
+mod 2
+is called the Z/2Z degree of F.
+Theorem 166.
+(i) deg2 F does not depend on the choice of the regular value y;
+(ii) If F0 and F1 are homotopic within the class of proper Fredholm maps of vanishing index,
+then deg2 F0 = deg2 F1.
+Proof. The proof requires a number of steps.
+Step 1. If F is a proper Fredholm map, then the set of regular values of F is open and dense.
+First notice that the set of critical points Crit(F) is closed. Since any proper map is closed, the
+set of critical values F(Crit(F)) is closed.
+53
+
+
+===== PDF PAGE 54 =====
+Introduction to Gauge Theory
+Step 2. The function
+y 7→#F −1(y)
+mod 2
+is locally constant on the set of regular values.
+Let y be a regular point of F, F −1(y) = {x1, . . . , xk}. By the inverse function theorem, there
+is a neighborhood U of y and a neighborhood Vj of xj such that F : Vj →U is a diffeomorphism.
+Then, for any y′ ∈U we have #f −1(y′) = k, hence the claim.
+Step 3. Let F0 and F1 be homotopic so that the homotopy is within the class of proper Fredholm
+maps. Then
+#F −1
+0 (y) = #F −1
+1 (y)
+mod 2
+(167)
+for any y, which is a regular value for both F0 and F1.
+Let Ft, t ∈[0, 1], be a homotopy. Let me assume first that, y is a regular value for F : X ×
+[0, 1] →Y . Then F −1(y) is a 1-dimensional manifold with boundary such that ∂F −1(y) =
+F −1
+0 (y) ∪F −1
+1 (y). Hence, (167) holds.
+If y is not a regular value of F, then we can choose y1 arbitrarily close to y such that y1 is a
+regular value for any of F0, F1, F. The conclusion of this step follows by Step 2.
+Step 4. Let x be an arbitrary point in the unit ball of a Banach space B. Then there is a diffeo-
+morphism φ of B such that the following holds: φ(0) = x, φ is the identity map on the complement
+of the Ball of radius 2, and φ is homotopic to the identity map relative to the complement of the
+ball of radius 2.
+This is really a finite dimensional statement. Indeed, choose decomposition B = V ⊕V ′, where
+V is finite dimensional and x ∈V . By [Mil97, P. 22] there is a 1-parameter family ψt : V →V of
+diffeomorphisms such that ψ1(0) = x, ψ0 = idV , and ψt is identity outside the unit ball in V .
+Choose a smooth function χ: R≥0 →R≥0 such that χ(0) = 1 and χ(t) = 0 for t ≥1. Then
+φt(v, v′) := ψtχ(|v′|)(v) + v′
+is a family of diffeomorphisms such that φ0 = id and φ1(0, 0) = ψ1(0) = x. Clearly, for any t we
+have ∥φt(v, v′)∥≤2 by the triangle inequality.
+Let us check that φt is identity on the complement of the ball of radius 2. Thus, pick any (v, v′)
+such that ∥v∥+ ∥v′∥≥2. Then either ∥v∥≥1 or ∥v′∥≥1. The first case is clear and the second
+one we have φt(v, v′) = ψ0(v) + v′ = v + v′ since χ(∥v′∥) = 0 by the construction.
+Step 5. If Y is a connected Banach manifold, then for any y1, y2 ∈Y there is a diffeomorphism
+φ ∈Diff0(Y ) such that φ(y1) = y2, where Diff0(Y ) denotes the subgroup of all diffeomorphisms
+homotopic to the identity.
+Fix y2 ∈Y and denote
+C(y2) :=
+
+y1 ∈Y | ∃φ ∈Diff0(Y ) such that φ(y1) = y2
+	
+By the previous step, C(y2) is open and non-empty, hence C(y2) = Y .
+Step 6. We prove the claim of this theorem.
+54
+
+
+===== PDF PAGE 55 =====
+Introduction to Gauge Theory
+Let F be as in the statement of this theorem. Pick any regular values y1 and y2 and φ ∈Diff0(Y )
+such that φ(y1) = y2. Then y2 is a common regular value for F and φ ◦F. Since these maps are
+homotopic, by Step 3 we have
+F −1(y2) = (φ ◦F)−1(y2) = F −1(y1)
+mod 2.
+This proves (i).
+Furthermore, if F : X × [0, 1] →Y is a homotopy between F0 and F1, we can choose y ∈Y
+which is a regular value for any of the following maps: F0, F1, and F. This implies the second
+assertion.
+□
+Corollary 168. Let F : X →Y be a proper Fredholm map between (paracompact) Banach mani-
+folds of index zero, where Y is connected. If deg2 F̸ = 0, then F is surjective.
+□
+6.3
+The parametric transversality
+Given a ‘random’ point y in the target, there is no reason to expect that the preimage F −1(y) will be
+a submanifold. Of course, if F is Fredholm the theorem of Sard–Smale implies that we can choose
+y′ arbitrarily close to y so that F −1(y′) is a manifold indeed. In practice, however, it is not always
+the case that one has a freedom to choose a point in the target. This is typically the case, which will
+be considered in some detail below, if X and Y are equipped with an action of a Lie group G and
+F is G–equivariant. In this case it is natural to choose y as a fixed point of the G–action on Y so
+that F −1(y) inherits a G–action. This, however, restricts severely possible choices of y so that the
+Sard–Smale theorem is not applicable in a straightforward manner.
+One way to deal with this problem is as follows. Assume there is a connected Banach manifold
+W and a smooth Fredholm map F : X × W →Y with the following properties:
+(A) For each w ∈W the map Fw : X × {w} →Y is Fredholm;
+(B) There is a point w0 ∈W such that Fw0 = F;
+(C) y is a regular value of F;
+Typically, it is not too hard to construct a map F satisfying these properties.
+Since y is a regular value, F−1(y) ⊂X × W is a smooth Banach submanifold. We have a
+natural projection π: F−1(y) →W, which is just the restriction of the projection X × W →W.
+Lemma 169.
+(i) π is a Fredholm map and index π = index F;
+(ii) There is a subset W0 ⊂W of second category such that y is a regular value for Fw for all
+w ∈W0.
+□
+Hence, by the Sard–Smale theorem, there is w arbitrarily close to w0 such that
+π−1(w) = F−1
+w (y)
+is a smooth submanifold of dimension index F.
+Suppose that in addition to hypotheses (A)–(B), the following holds:
+55
+
+
+===== PDF PAGE 56 =====
+Introduction to Gauge Theory
+(D) Each map Fw is proper.
+In what follows I will also assume that index F = 0, since this is the setting where the degree
+of a Fredholm map was defined. However, this is by no means essential.
+Thus, if (A)–(D) holds, F−1
+w (y) = π−1(w) consists of finitely many points. Since W is con-
+nected by assumption, there is a path connecting w0 and w so that Fw is homotopic to Fw0 = F.
+Hence,
+deg2 F = #F−1
+w (y)
+mod 2.
+In particular, #F−1
+w (y) mod 2 does not depend on w.
+Of course, this conclusion is pretty much straightforward thanks to the facts we have established
+in the preceding subsection. The point is that the number #F−1
+w (y) mod 2 could be taken as a
+definition of the degree of F thus omitting the construction of Section 6.2. For instance, this is
+commonly used in the equivariant setting as discussed at the beginning of this section.
+Let me describe this alternative construction of the degree of a proper Fredholm map in some
+detail. Thus, choose any w1, w2 ∈W0 so that y is a regular value for Fj := Fwj. For a fixed k ≥0
+denote
+Γ(w1, w2) :=
+n
+γ ∈Ck [1, 2]; W
+
+| γ(1) = w1 and γ(2) = w2
+o
+,
+which is a Banach manifold. Consider the map
+F: X × Γ(w1, w2) × [1, 2] →Y,
+F(x, γ, t) := F(x, γ(t)).
+Clearly, y is a regular value for F too so that F−1(y) is a submanifold of X × Γ(w1, w2) × [1, 2].
+Applying the Sard–Smale theorem to the restriction of the projection X × Γ(w1, w2) × [1, 2] →
+Γ(w1, w2) we obtain that for a generic γ ∈Γ(w1, w2) the subset
+Mγ :=
+
+(x, t) ∈X × [1, 2] | F(x, γ, t) = y
+	
+is a smooth submanifold of dimension 1 and
+∂Mγ = F−1
+1 (y) ∪F−1
+2 (y).
+Hence,
+#F−1
+1 (y) = #F−1
+2 (y)
+mod 2
+so that the number #F−1
+w (y) mod 2 does not depend on w ∈W0. This common value, as we
+already know, is just deg2(F).
+6.4
+The determinant line bundle
+If X and Y are closed oriented manifolds of the same finite dimension, for any map F : X →Y
+the degree can be extended to take values in Z rather than Z/2Z [GP10]. This generalization
+requires orientations of the background manifolds and this tool is not readily available in infinite
+dimensions. In this section I will describe how to deal with this problem.
+Let P be a topological space and {Tp | p ∈P} be a continuous family of linear Fredholm
+maps. This means that the map
+P →Fred(X; Y ),
+p 7→Tp
+56
+
+
+===== PDF PAGE 57 =====
+Introduction to Gauge Theory
+is continuous with respect to the operator norm, where X, Y are Banach spaces and Fred(X; Y )
+denotes the subspace of linear Fredholm maps.
+Pick a point p ∈P. Since both the kernel and cokernel of Tp are finite dimensional, we can
+construct the (real) line
+det Tp := Λtop ker Tp ⊗Λtop(coker Tp)∗.
+As p varies, we obtain a family of vector spaces of dimension one. It turns out that this family is
+actually a locally trivial vector bundle, which is somewhat non-obvious given that the dimensions
+of the kernel as well as cokernel may ‘jump’ as p varies.
+To understand why this is the case, pick a point p0 and a finite dimensional subspace V ⊂Y
+transverse to Im Tp0. The linear map
+Tp,V : X ⊕V →Y,
+Tp,V (x, v) = Tp x + v
+is surjective for p = p0 and, hence, also for all p sufficiently close to p0. Therefore, we have the
+exact sequence
+0 →ker Tp →ker Tp,V →V →V/ Im Tp ∩V →0
+(170)
+Notice that coker Tp = (Im Tp + V )/ Im Tp = V/ Im Tp ∩V .
+Exercise 171. Let 0 →U0 →U1 →U2 →0 be a short exact sequence of real vector spaces. Show
+that the ‘inner product map’
+ΛtopU0 ⊗ΛtopU ∗
+1 →Λtop(U1/U0)∗= ΛtopU ∗
+2
+induces an isomorphism ΛtopU1 ∼= ΛtopU0 ⊗ΛtopU2.
+More generally, show that for any exact sequence of real vector spaces 0 →U0 →U1 →U2 →
+· · · →Uk →0 there is a canonical isomorphism
+O
+ΛtopUeven ∼=
+O
+ΛtopUodd.
+Hence, by (170) we have a canonical isomorphism
+det Tp ∼= Λtop ker Tp,V ⊗ΛtopV ∗.
+It can be shown not only that dim ker Tp,V is constant in p near p0 but also that ker Tp,V is trivial
+in a neighborhood W of p0. Details can be found for instance in [MS12, Thm. A.2.2]. Thus, the
+family of real lines {det Tp | p ∈W } admits a trivialization, i.e., det T is a vector bundle.
+Definition 172. Two continuous families of Fredholm operators {Tp, i | p ∈P}, i ∈{0, 1} are said
+to be homotopic, if there is a continuous family of Fredholm operators {Tp, t | (p, t) ∈P × [0, 1] },
+whose restriction to P × {0} and P × {1} yields the initial families.
+Assume that {Tp, 0} is homotopic to {Tp, 1} and the determinant line bundle det Tp, 1 is trivial.
+Since P × [0, 1] is homotopy equivalent to P, the bundle det Tp, t is also trivial. In particular,
+det Tp, 0 is trivial. More precisely, we have the following statement.
+Proposition 173. Let {Tp, 0} and {Tp, 1} be homotopic families of Fredholm operators such that
+det Tp, 1 is trivial. Then det Tp, 0 is also trivial. Moreover, a choice of a trivialization of det Tp, 1
+and a homotopy {Tp,t | t ∈[0, 1]} yields a trivialization of det Tp, 0. This is unique up to a
+multiplication with a positive function.
+□
+57
+
+
+===== PDF PAGE 58 =====
+Introduction to Gauge Theory
+6.5
+Orientations and the Z–valued degree
+Let X, Y, and W be Banach manifolds. Let F : X × W →Y be a smooth map such that the
+following holds:
+(a) Fw = F|X×{w} : X →Y is a Fredholm map of index d for each w ∈W;
+(b) y ∈Y is a regular value of F;
+(c) F −1
+w (y) is compact for any w ∈W;
+(d) det dxFw is trivial over X × W.
+Furthermore, I assume that a trivialization of the determinant line bundle has been fixed.
+Pick any w ∈W such that y is a regular value of Fw. Then for any x ∈F −1
+w (y) we have
+det dxFw = Λtop ker dxFw = ΛtopTxF −1
+w (y)
+so that the hypotheses above imply that Mw := F −1
+w (y) is an oriented d–manifold.
+Furthermore, let γ : [0, 1] →W be a path connecting w0 and w1 akin to the situation considered
+in Section 6.3. For generic γ the space
+Mγ :=
+
+(x, t) ∈X × [0, 1] | Fγ(t)(x) = y
+	
+is an oriented manifold of dimension d + 1 such that
+∂Mγ = Mw1 ⊔Mw0,
+(174)
+where Mw0 means that the orientation of Mw0 is reversed.
+In the particular case d = 0, Mw is just a finite collection of points {m1, . . . , mk} equipped
+with signs {ε1, . . . , εk } so that we can define
+deg Fw :=
+k
+X
+i=1
+εk ∈Z.
+(175)
+In fact, for any two choices w0 and w1 as above, (174) implies that deg Fw0 = deg Fw1 provided w0
+and w1 are in the same connected component. Thus, deg Fw does not depend on w as long as W is
+connected.
+The following result summarizes the considerations above.
+Theorem 176.
+Assume F : X × W →Y satisfies Hypotheses (a)–(d) above. Then deg Fw does
+not depend on w.
+□
+Clearly, the case d = 0 is not really special. Indeed, as we already know for any d ≥0,
+Mw = F −1
+w (y) is a smooth oriented manifold for all w in a dense subset in W. Then (174) shows
+that for any two choices w0 and w1 in this subset, Mw0 and Mw1 are cobordant, i.e., the oriented
+cobordism class of [Mw] is well–defined and does not depend on w. One can take this oriented
+cobordism class as an invariant, however, in practice it may be hard to deal with. One way to extract
+a number out of this cobordism class is as follows.
+58
+
+
+===== PDF PAGE 59 =====
+Introduction to Gauge Theory
+Let P →X be a (principal) bundle. Assume there are characteristic classes α1, . . . αk of P
+such that α := α1 ∪· · · ∪αk ∈Hd(X; Z) ⊂Hd(X; R). Since the restriction of α to Mw can be
+represented by a closed d–form, say ω, Stokes’ theorem implies that
+⟨α, [Mw]⟩=
+Z
+Mw
+ω
+does not depend on w. In fact, this is an integer, since [ω] represents an integral cohomology class.
+6.6
+An equivariant setup
+Let X be a Banach manifold equipped with an action of a Banach Lie group G. For any x ∈X the
+infinitesimal action of G at x is given by the linear map
+Rx : Lie(G) →TxX,
+(177)
+whose image is the tangent space to the orbit through x.
+For the sake of simplicity of exposition let me assume that G acts freely on X. It will be also
+convenient to assume that X and G are Hilbert manifolds.
+Definition 178. A Hilbert submanifold S ⊂X containing x is said to be a local slice of the G-
+action at x, if the set GS := {g · s | g ∈G, s ∈S} is open in X and the natural map
+G × S →GS,
+(g, s) 7→g · s
+is a diffeomorphism.
+Proposition 179. Assume G acts freely on X. If the G–action admits a slice at any point, then the
+quotient X/G is a manifold.
+The proof of this proposition is clear: S can be identified with a neighbourhood of the orbit
+G · x in the quotient space X/G.
+Example 180. The group U(1) acts on S2 by rotations around the z-axis. If we remove the north
+and the south poles, this action is free. The submanifold
+S :=
+
+(x, 0, z) | x2 + z2 = 1, x > 0
+	 ∼= (−1, 1)
+is a global slice for the U(1)–action. In particular, the quotient is a manifold, which in this case is
+naturally diffeomorphic to an interval.
+Let Y be a smooth manifold equipped with a G–action and F : X × W →Y be a smooth map
+such that each Fw : X →Y is G–equivariant. Let y ∈Y be a fixed point of the G–action, i.e.,
+g · y = y for all g ∈G. For any x ∈F −1
+w (y) we can construct the sequence
+0 →Lie(G)
+Rx
+−−→TxX
+dxFw
+−−−−→TyY →0,
+(181)
+which is in fact a complex. This follows immediately from the equivariancy of Fw (and the as-
+sumption that y is a fixed point). This is called the deformation complex at x.
+59
+
+
+===== PDF PAGE 60 =====
+Introduction to Gauge Theory
+The zero’s cohomology group of the deformation complex is just the Lie algebra of the stabilizer
+of x. Our assumption implies that this is trivial.
+The second cohomology group is just the cokernel of dxFw. This is trivial if and only if y is a
+regular value for Fw.
+It is also easy to understand the meaning of the first cohomology group. Indeed, ker dxFw is the
+Zariski tangent space to F −1
+w (y). Since y is fixed, G acts on F −1
+w (y) so that the first cohomology
+group can be thought of as the tangent space to the ‘moduli space’
+Mw := F −1
+w (y)/G
+at G · x.
+Since TxX is by assumption a Hilbert space, we have a linear map
+Dx := (R∗
+x, dxFw): TxX →Lie(G) ⊕TyY
+(182)
+whose kernel can be identified with the first cohomology group of the deformation complex.
+Theorem 183. Let y is a fixed point of the G–action on Y . Assume that the following holds:
+(i) G acts freely on X;
+(ii) y is a regular value for Fw;
+(iii) There is a local slice at each point x ∈F −1
+w (y);
+(iv) Dx is a Fredholm linear map of index d.
+Then Mw is a smooth manifold of dimension d.
+Proof. The statement is local, so we can restrict our attention to a neighborhood of a point x ∈
+F −1
+w (y). Let S be a slice at x so that TxS and Im Rw are complementary subspaces in TxX. Then
+y is still a regular value for Fw|S and
+ker dxFw|S = ker(R∗
+x, dxFw)
+so that F −1
+w ∩S is a manifold of dimension dim ker Dx = d.
+□
+By tracing through the discussion of Section 6.5 it is easy to see that the following theorem
+holds.
+Theorem 184. Assume that in addition to Hypotheses (i)–(iv) of Theorem 183 the determinant line
+bundle det Dx is trivialized and this trivialization is preserved by the action of G. Then Mw is
+oriented. If in addition Mw is compact for any w, then the oriented bordism class of Mw does not
+depend on w.
+□
+60
+
+
+===== PDF PAGE 61 =====
+Introduction to Gauge Theory
+7
+The Seiberg–Witten gauge theory
+7.1
+The Seiberg–Witten equations
+Recall that in dimension 4 we have an isomorphism of Spin(4) representations
+R4 ⊗C ∼= Hom(/S
++; /S
+−),
+(185)
+where Spin(4) acts on R4 via the homomorphism Spin(4) →SO(4).
+(185) is still valid as
+an isomorphisms of Spinc(4)–representations. Somewhat more explicitly, the standard inclusion
+R4 →Cl(R4) yields a monomorphism
+R4 →Hom(/S
++; /S
+−),
+v 7→(ψ 7→v · ψ).
+Of course, we have also an inclusion R4 →Hom(/S
+−; /S
++). Hence, the Clifford multiplication with
+a 2–form yields a map Λ2R4 →End(/S
+±), whose kernel is Λ2
+∓R4 as a straightforward computation
+shows. Moreover, the image of this map consists of skew-Hermitian endomorphisms so that we
+obtain an isomorphism
+Λ2
++R4 →su(/S
++),
+whose complexification yields Λ2
++R4 ⊗C ∼= End0(/S), cf. (111).
+Notice also that we have a quadratic map
+µ: /S
++ →i su(/S
++) ⊂End0(/S
++),
+µ(ψ) = ψψ∗−1
+2|ψ|2,
+where the expression on the right hand side means the following: µ(ψ)(φ) = ⟨φ, ψ⟩ψ + 1
+2|ψ|2 φ.
+Somewhat more concretely, µ is just the map
+C2 →i su(2),
+ψ1
+ψ2
+
+7→1
+2
+|ψ1|2 −|ψ2|2
+2 ψ1 ¯ψ2
+2 ¯ψ1ψ2
+|ψ2|2 −|ψ1|2
+
+.
+Hence, we can think of µ(ψ) as a purely imaginary self–dual 2-form.
+A more global version of these identifications is as follows. Pick an oriented Riemannian four–
+manifold M equipped with a spinc structure. Denote by /S
+± the corresponding spinor bundles, see
+Section 4.3 for details. Then we have the isomorphisms of vector bundles
+T ∗
+CM ∼= Hom(/S
++; /S
+−),
+(186)
+i Λ2
++T ∗M ∼= i su(/S
++)
+(187)
+and a fiberwise quadratic map
+µ: /S
++ →i Λ2
++T ∗M.
+With this understood, the Seiberg–Witten equations for a pair (ψ, A) ∈Γ(/S
++) × A(Pdet) are as
+follows:
+/D
++
+Aψ = 0
+and
+F +
+A = µ(ψ).
+(188)
+It is also convenient to introduce the Seiberg–Witten map by
+SW : Γ(/S
++) × A(Pdet) →Γ(/S
+−) × Ω2
++(M; Ri),
+SW(ψ, A) =
+
+/D
++ψ, F +
+A −µ(ψ)
+
+.
+61

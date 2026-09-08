@@ -1,0 +1,50 @@
+# Bär, Gauge Theory (Potsdam 2011; file mathematical_gauge_theory.pdf): PDF pages 4-7 (section proper: 5-6; one page of context on each side)
+
+
+===== PDF PAGE 4 =====
+
+
+===== PDF PAGE 5 =====
+Preface
+These are the lecture notes of an introductory course on gauge theory which I taught at
+Potsdam University in 2009. The aim was to develop the mathematical underpinnings
+of gauge theory such as bundle theory, characteristic classes etc. and to give applications
+both in physics (electrodynamics, Yang-Mills ﬁelds) as well as in mathematics (theory
+of 4-manifolds).
+To keep the necessary prerequisites of the students at a minimum, there are introductory
+chapters on Lie groups and on algebraic topology. Basic diﬀerential geometric notions
+such as manifolds are assumed to be known.
+I am very grateful to Christian Becker, who wrote a ﬁrst draft of these lecture notes in
+excellent quality and produced most of the pstricks-ﬁgures.
+Potsdam, February 2011
+Christian B¨ar
+v
+
+
+===== PDF PAGE 6 =====
+
+
+===== PDF PAGE 7 =====
+1 Lie groups and Lie algebras
+1.1 Lie groups
+Deﬁnition 1.1.1. A diﬀerentiable manifold G which is at the same time a group is
+called a Lie group iﬀthe maps
+G × G →G,
+(g1, g2) 7→g1 · g2
+G →G,
+g 7→g−1
+are smooth.
+Example 1.1.2
+1. G = Rn with addition is a Lie group.
+2. G = GL(n; R) = {A ∈Mat(n × n; R) | det(A)̸ = 0} ⊂Mat(n × n; R) = Rn2 is an
+open subset, since det : Mat(n × n; R) →R is continuous. The multiplication map
+(A, B) 7→A · B is smooth, because the matrix coeﬃcients of A · B are polynomials
+in the matrix coeﬃcients of A and B. The inversion A 7→A−1 is smooth, because
+the matrix coeﬃcients of A−1 are rational functions of the matrix coeﬃcients of A.
+3. GL(n; C) ⊂Mat(n × n; C) = Cn2 = R(2n)2.
+Theorem 1.1.3
+Let G be a Lie group, let H ⊂G be a subgroup (algebraically) and closed as a subset.
+Then H ⊂G is a submanifold and a Lie group in its own right.
+Example 1.1.4
+1. H = O(n) := {A ∈GL(n; R) | At · A = 1n} is called the orthogonal group.
+1

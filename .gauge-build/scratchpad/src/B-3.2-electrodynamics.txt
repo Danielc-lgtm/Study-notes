@@ -1,0 +1,1445 @@
+# Bär, Gauge Theory (Potsdam 2011; file mathematical_gauge_theory.pdf): PDF pages 83-97 (section proper: 84-96; one page of context on each side)
+
+
+===== PDF PAGE 83 =====
+3.1 The Hodge-star operator
+4. exercise
+5. We compute, using (3.3) and (3.4):
+ω ∧η
+=
+⟨∗ω, η⟩· vol
+(3.4)
+=
+(−1)p · ⟨∗∗ω, ∗η⟩· vol
+(3.3)
+=
+(−1)k(n−k)+2p ⟨ω, ∗η⟩· vol
+=
+(−1)k(n−k) · ⟨ω, ∗η⟩· vol .
+2
+Remark 3.1.9. Let us consider the important special case of the Hodge-star operator
+∗: Λ2V ∗→Λ2V ∗on 2-forms on a 4-dimensional euclidean vector space V , i.e. n = 4,
+k = 2, p = 0. By (3.3), we have ∗◦∗= (−1)2(4−2) = 1. By (3.4), ∗is an isometry. Hence
+∗has eigenvalues ±1, and we have the eigenspace decomposition:
+Λ2V ∗= Λ2
++V ∗⊕Λ2
+−V ∗,
+where Λ2
+±V ∗= {ω ∈Λ2 | ∗ω = ±ω} is the space of self-dual resp. anti-self-dual
+2-forms. Choosing an orthonormal basis e1, . . . , e4 of V , we have:
+∗(e∗
+1 ∧e∗
+2)
+=
+e∗
+3 ∧e∗
+4
+∗(e∗
+1 ∧e∗
+3)
+=
+−e∗
+2 ∧e∗
+4
+∗(e∗
+1 ∧e∗
+4)
+=
+e∗
+2 ∧e∗
+3 .
+Hence
+e∗
+1 ∧e∗
+2 ± e∗
+3 ∧e∗
+4
+∈
+Λ2
+±V ∗,
+e∗
+1 ∧e∗
+3 ∓e∗
+2 ∧e∗
+4
+∈
+Λ2
+±V ∗,
+e∗
+1 ∧e∗
+4 ± e∗
+2 ∧e∗
+3
+∈
+Λ2
+±V ∗.
+These elements are easily seen to be linearly independent: indeed, they are pairwise
+orthogonal.
+We thus have dim Λ2
+±V ∗≥3.
+In fact, dim Λ2V ∗=
+4
+2
+
+= 6, so that
+dim Λ2
+±V ∗= 3, and the elements given above form bases of Λ2
+±V ∗.
+Remark 3.1.10. A reversal of orientation turns the volume form into its negative. By
+(3.1), the same holds for the Hodge-star operator. In the special situation above, the
+subspaces Λ2
+±V ∗are interchanged upon reversal of orientation.
+77
+
+
+===== PDF PAGE 84 =====
+3 Applications to Physics
+Remark 3.1.11. If W is another R-vector space with inner product ⟨·, ·⟩, then V ⊗W
+carries a natural inner product characterized by
+
+v ⊗w, v′ ⊗w′
+=
+
+v, v′
+·
+
+w, w′
+.
+This induces a natural Hodge-star operator on W-valued forms by
+∗: ΛkV ∗⊗W →Λn−kV ∗⊗W ,
+∗(ω ⊗w) := (∗ω) ⊗w .
+3.2 Electrodynamics
+Throughout this section, let M be an oriented Lorentzian 4-manifold. This manifold is
+the mathematical model for spacetime in general relativity. For example, the spacetime
+of special relativity is Minkowski space.
+Furthermore, let P →M be a U(1)-principal bundle. For any ω ∈C(P) let Ωbe its
+curvature form. The 2-form s∗Ωfor some local section s does not depend on the choice
+of s. This yields a well-deﬁned 2-form ¯Ω∈Ω2(M; iR). We write Ω= iF, F ∈Ω2(M; R).
+The Bianchi identity (2.6) tells us that dF = 0.
+Now we introduce local coordinates (t, x, y, z) on M such that ⟨∂
+∂t, ∂
+∂t⟩< 0 and
+⟨∂
+∂x, ∂
+∂x⟩, ⟨∂
+∂y, ∂
+∂y⟩, ⟨∂
+∂z, ∂
+∂z⟩> 0. With respect to these coordinates, we write
+F = Ex dx ∧dt + Ey dy ∧dt + Ez dz ∧dt + Bx dy ∧dz + By dz ∧dx + Bz dx ∧dy .
+Now we compute dF in these coordinates:
+dF = ∂Ex
+∂y dy ∧dx ∧dt + ∂Ex
+∂z dz ∧dx ∧dt + ∂Ey
+∂x dx ∧dy ∧dt + ∂Ey
+∂z dz ∧dy ∧dt
++ ∂Ez
+∂x dx ∧dz ∧dt + ∂Ez
+∂y dy ∧dz ∧dt + ∂Bx
+∂t dt ∧dy ∧dz + ∂Bx
+∂x dx ∧dy ∧dz
++ ∂By
+∂t dt ∧dz ∧dx + ∂By
+∂y dy ∧dz ∧dx + ∂Bz
+∂t dt ∧dx ∧dy + ∂Bz
+∂z dz ∧dx ∧dy
+=
+∂Bx
+∂x + ∂By
+∂y + ∂Bz
+∂z
+
+· dx ∧dy ∧dz +
+
+−∂Ez
+∂y + ∂Ez
+∂y + ∂Bx
+∂t
+
+· dt ∧dy ∧dz
++
+∂Ex
+∂z −∂Ez
+∂x + ∂By
+∂t
+
+· dt ∧dz ∧dy +
+
+−∂Ex
+∂y + ∂Ey
+∂x + ∂Bz
+∂t
+
+· dt ∧dx ∧dy .
+To abbreviate this, we introduce the time dependent vector ﬁelds⃗B := (Bx, By, Bz) and⃗
+E := (Ex, Ey, Ez). In terms of classical electrodynamics,⃗E is the electric ﬁeld and⃗B
+is the magnetic ﬁeld. Note that the deﬁnition of these vector ﬁelds depends on the
+choice of coordinate system. Then we have:
+dF = 0 ⇔
+div⃗B = 0
+(Gauß’ law)
+(3.7)
+and
+∂⃗B
+∂t + rot⃗E = 0
+(Faraday’s law) .
+(3.8)
+78
+
+
+===== PDF PAGE 85 =====
+3.2 Electrodynamics
+Hence the ﬁrst two of the classical Maxwell equations for the electric ﬁeld⃗E and the mag-
+netic ﬁeld⃗B have shown up as special instances of the Bianchi identity for a connection
+on a U(1)-principal bundle. To derive the two remaining (non-homogeneous) Maxwell
+equations, we need to introduce an appropriate action functional for the connection ω.
+Let J ∈Ω3(M; R) and pick a ”back-ground” connection (or reference connection)
+ω0 ∈C(P). Then for any connection ω ∈C(P), we have that s∗(ω −ω0) for some
+local section s is independent of the choice of s and yields a well-deﬁned 1-form
+iA = iA(ω, ω0) ∈Ω1(M; iR). We then have dA = F −F0. With these data, we in-
+troduce the Lagrangian
+L : C(P) →Ω4(M; iR) ,
+L(ω) := 1
+2F ∧∗F + A ∧J .
+We say that ω is critical for L iﬀ
+∀open U ⋐M, ∀η ∈Ω1(M; R), supp(η) ⊂U :
+d
+dt
+
+t=0
+Z
+¯U
+L (ωt,η) = 0 ,
+where ωt,η ∈C(P) is such that A(ωt,η, ω0) = A(ω, ω0) + tη.
+For the corresponding
+curvature, we obtain:
+F (ωt,η) −F(ω) = d (A(ωt,η, ω0) −A (ω, ω0)) = t · dη ,
+hence F(ωt,η) = F(ω) + t · dη. To compute the Euler-Lagrange equations for the La-
+grangian L, we write L = L1 + L2 with L1(ω) := 1
+2F ∧∗F and L2(ω) = A ∧J. Now we
+compute:
+∂
+∂t
+
+t=0L1 (ωt,η) = 1
+2 · d
+dt
+
+t=0(F + t · dη) ∧∗(F + t · dη)
+= 1
+2 · (dη ∧∗F + F ∧∗dη)
+(3.5)
+= dη ∧∗F ,
+hence
+d
+dt
+
+t=0
+Z
+¯U
+L1(ωt,η) =
+Z
+¯U
+dη ∧∗F
+=
+Z
+¯U
+d (η ∧∗F) + η ∧d (∗F)
+Stokes
+=
+Z
+¯U
+η ∧d (∗F)
+supp(η)⊂U
+=
+Z
+M
+η ∧d (∗F) .
+79
+
+
+===== PDF PAGE 86 =====
+3 Applications to Physics
+Similarly, for L2, we compute:
+d
+dt
+
+t=0
+Z
+¯U
+L2 (ωt,η)
+=
+d
+dt
+
+t=0
+Z
+¯U
+(A + t · η) ∧J
+=
+Z
+¯U
+η ∧J
+supp(η)⊂U
+=
+Z
+M
+η ∧J .
+Hence
+ω ∈C(P) is critical for L
+⇔
+∀η ∈Ω1(M; R) , supp(η) ⋐M :
+Z
+M
+η ∧(d ∗F + J) = 0
+⇔
+d ∗F + J = 0 .
+We observe that the Lagrangian L depends on the choice of the background connec-
+tion ω0 but the Euler-Lagrange equation d ∗F + J = 0 does not.
+This is because
+replacing ω0 by some other background connection ˜ω0 yields for the Lagrangians
+L(ω) −˜L(ω) = A (˜ω0, ω0) ∧J.
+Hence, after integration, the Lagrangians diﬀer only by a constant.
+In the local coordinates as above, we write:
+J =̺
+· dx ∧dy ∧dz −jx · dt ∧dy ∧dz −jy · dt ∧dz ∧dx −jz · dt ∧dx ∧dy .
+As for⃗E and⃗B above, we write the coeﬃcients as a time dependent vector ﬁeld⃗
+j := (jx, jy, jz). In terms of classical electrodynamics,̺
+is the electric charge density
+and⃗j is the electric current density.
+Now for Minkowski space with the standard coordinates (t, x, y, z), we compute:
+∗dt ∧dx = dy ∧dz
+∗dy ∧dz = −dt ∧dx
+∗dt ∧dy = dz ∧dx
+∗dz ∧dx = −dt ∧dy
+∗dt ∧dz = dx ∧dy
+∗dx ∧dy = −dt ∧dz .
+Hence for ∗F, we obtain:
+∗F
+=
+−Ex dy ∧dz −Ey dz ∧dx −Ez dx ∧dy
++Bx dx ∧dt + By dy ∧dt −Bz dz ∧dt ,
+80
+
+
+===== PDF PAGE 87 =====
+3.2 Electrodynamics
+and for d ∗F, we obtain by a computation similar to the one for dF above:
+d (∗F)
+=
+
+−div⃗E
+
+· dx ∧dy ∧dz +
+ 
+rot⃗B −∂⃗E
+∂t
+!
+x
+· dt ∧dy ∧dz
++
+ 
+rot⃗B −∂⃗E
+∂t
+!
+y
+· dt ∧dz ∧dx +
+ 
+rot⃗B −∂⃗E
+∂t
+!
+z
+· dt ∧dx ∧dy .
+Hence on Minkowski space with the standard coordinates, we have:
+ω critical for L ⇔
+d(∗F) + J = 0
+⇔
+div⃗E =̺
+(Coulomb’s law)
+(3.9)
+and rot⃗B −∂⃗E
+∂t =⃗j
+(Amp`ere’s law) .
+(3.10)
+From the equation d(∗F) + J = 0, we deduce 0 = d(d(∗F) + J) = dJ. In standard
+coordinates on Minkowski space, we thus have
+0 = dJ
+=
+∂̺
+∂t + ∂jx
+∂x + ∂jy
+∂y + ∂jz
+∂z
+
+· dt ∧dx ∧dy ∧dz
+⇔
+∂̺
+∂t + div⃗j = 0 .
+(continuity equation)
+(3.11)
+To illustrate this equation, let B ⊂R3 be compact with smooth boundary. Then we
+have:
+0
+=
+Z
+[t0,t1]×B
+dJ
+Stokes
+=
+Z
+∂([t0,t1]×B)
+J
+=
+Z
+B̺
+(t1) dx dy dz
+|
+{z
+}
+charge of B at time t1
+−
+Z
+B̺
+(t0) dx dy dz
+|
+{z
+}
+charge of B at time t0
++
+t1
+Z
+t0
+Z
+∂B
+D⃗
+j, ν
+E
+dvol∂B dt
+|
+{z
+}
+ﬂux through ∂B
+.
+(Here ν denotes the exterior normal of ∂B). Hence the continuity equation yields the
+conservation of charge.
+How do we feel the electromagnetic ﬁeld F? A test particle (of mass 1 and charge 1) is
+described by its worldline, meaning a timelike smooth curve c : I →M, ⟨c′, c′⟩< 0. In
+standard coordinates on Minkowski space we write
+c(τ) = (t(τ), x(τ), y(τ), z(τ)) = (t(τ),⃗c(τ))
+and
+c′(τ) =
+ t′(τ),⃗c ′(τ)
+
+.
+81
+
+
+===== PDF PAGE 88 =====
+3 Applications to Physics
+The condition for c to be timelike reads ⟨c′, c′⟩= −(t′)2 + |⃗c ′|2 < 0. For the observed
+velocity⃗
+v = d⃗c
+dt = d⃗c
+dτ · dτ
+dt =⃗c ′
+t′ ,
+we thus have the condition |⃗v|2 < 1, i.e. the observed velocity of the test particle is less
+than the speed of light. The force imposed on the test particle in the electromagnetic
+ﬁeld is given by the curvature F, so by Newton’s law, we have the following equation of
+motion:1
+∇
+dτ c′ + F
+ c′, ·
+♯= 0 .
+(3.12)
+Remark 3.2.1. For any timelike smooth curve c satisfying (3.12), we have:
+d
+dt
+
+c′, c′
+= 2
+ ∇
+dτ c′, c′
+
+= 2
+D
+F
+ c′, ·
+♯, c′E
+= 2F
+ c′, c′
+= 0 ,
+i.e. c′ is parametrized proportionally to eigentime.
+Remark 3.2.2. Note that since (3.12) is a linear ODE of second order, for any p ∈M
+and any X ∈TpM, there exists a unique maximal solution c to (3.12) satisfying c(t0) = p
+and c′(t0) = X.
+W.l.o.g. we will henceforth assume c to be parametrized by eigentime, so that
+⟨c′, c′⟩= −(t′)2 + |⃗c ′|2 = −1. This can of course always be achieved by an appropriate
+rescaling. We will henceforth also assume that t′ > 0, which can be achieved by replacing
+τ by −τ.
+Recall that the mass m of a test particle with rest mass m0 varies with the velocity of
+the particle as
+m =
+m0
+q
+1 −|⃗v|2 =
+m0
+r
+1 −
+⃗c ′
+t′
+
+2 =
+m0 · t′
+q
+(t′)2 −|⃗c ′|2 = m0 · t′ .
+Now let us compute the equation of motion in the standard coordinates on Minkowski
+space. For the left hand side of (3.12), we have:
+d
+dt m⃗v = d
+dt m0 · t′ ·⃗c ′
+t′ = m0 · d
+dt⃗c ′ = m0 · dτ
+dt ·⃗c ′′ = m0 ·⃗c ′′
+t′ .
+1For any η ∈T ∗
+x M, the vector η♯∈TxM is deﬁned as the dual to η with respect to the (non-degenerate)
+inner product, i.e. for any Y ∈TxM, we have: η(Y ) = ⟨η♯, Y ⟩.
+82
+
+
+===== PDF PAGE 89 =====
+3.2 Electrodynamics
+For the right hand side we have:
+F
+ c′, ·
+♯
+=
+F
+
+t′ · ∂
+∂t + x′ · ∂
+∂x + y′ ∂
+∂y + z′ · ∂
+∂z , ·
+♯
+=
+
+−t′ ·
+ Ex dx + Ey dy + Ez dz
+
++ x′ ·
+ Ex dt −By dz + Bz dy
+
++ y′ ·
+ Ey dt + Bx dz −Bz dx
+
++ z′ ·
+ Ez dt −Bx dy + By dx
+♯
+=
+ x′ · Ex + y′ · Ey + z′ · Ez
+
+· dt♯+
+ −t′ · Ex −y′ · Bz + z′ · By
+
+· dx♯
++
+ −t′ · Ey + x′ · Bz −z′ · Bx
+
+· dy♯+
+ −t′ · Ez −x′ · By + y′ · Bx
+
+· dz♯
+=
+−
+D⃗
+c ′,⃗E
+E
+· ∂
+∂t +
+
+−t′ ·⃗E +⃗B ×⃗c ′
+.
+Hence (3.12) is equivalent to the equations:
+t′′ + ⟨⃗c ′,⃗E⟩
+=
+0
+and⃗
+v ′′ −t′ ·⃗E +⃗B ×⃗c ′
+=
+0 .
+Now note that 0 =
+d
+dt⟨c′, c′⟩= −2t′t′′ + 2⟨⃗c ′,⃗c ′′⟩yields t′ = ⟨⃗v,⃗c ′′⟩. Hence the ﬁrst
+equation follows from the second by scalar multiplication with⃗v. We thus found:
+∇
+dτ c′ + F
+ c′, ·
+♯= 0
+⇔⃗
+c ′′
+t′ −⃗E +⃗B ×⃗v = 0
+⇔
+d
+dt (m ·⃗v) =⃗E +⃗v ×⃗B .
+(Lorentz force law) (3.13)
+Let L be the Lagrangian for classical electrodynamics as deﬁned above. So far, we only
+considered variations of L with respect to the connection ω on the U(1)-principal bundle
+P →M. We derived the two inhomogeneous Maxwell equations as the Euler-Lagrange
+equations for this variation. But the Lagrangian L := 1
+2F ∧∗F + A ∧J also depends on
+the chosen Riemannian metric, since the Hodge-star operator does.
+In general relativity, the metric is to be considered as a dynamical variable, so we should
+also study variations of the metric in L and compute the Euler-Lagrange equations
+thereof. So we take another look at the Lagrangian L, varying the metric this time (and
+ﬁxing the connection ω). First of all, we have:
+L1(ω, g) = 1
+2F ∧∗gF = 1
+2⟨F, F⟩g · volg ,
+so we should ﬁrst compute the derivatives of the two factors separately. To this end, let
+g(t) be a smooth 1-parameter family of Riemannian metrics on M such that g(0) = g
+83
+
+
+===== PDF PAGE 90 =====
+3 Applications to Physics
+and
+d
+dt
+
+t=0g(t) = h ∈⊙2T ∗M. Computing in local coordinates, we ﬁnd:2
+d
+dt
+
+t=0volg(t)
+=
+d
+dt
+
+t=0
+q
+−det gij(t) · dx0 ∧. . . ∧dx3
+=
+−1
+2 (−det gij)−1/2 · det (gij) · tr
+ gij · hjk
+i
+k
+
+· dx0 ∧. . . ∧dx3
+=
+1
+2 (−det gij)1/2 · gij · hji · dx0 ∧. . . ∧dx3
+=
+1
+2trg(h) · volg .
+For the curvature term, we ﬁnd:3
+d
+dt
+
+t=0⟨F, F⟩g(t)
+=
+d
+dt
+
+t=0
+*X
+α<β
+Fαβdxα ∧dxβ,
+X
+γ<δ
+Fγδdxγ ∧dxδ
++
+g(t)
+=
+1
+4 · d
+dt
+
+t=0Fαβ · Fγδ
+D
+dxα ∧dxβ, dxγ ∧dxδE
+g(t)
+=
+1
+4 · Fαβ · Fγδ
+d
+dt
+
+t=0
+
+gαγ(t) · gβδ(t) −gαδ(t) · gβγ(t)
+
+=
+1
+4 · FαβFγδ ·
+
+−gαi hij gjγ gβδ −gαγ gβi hij gjδ
++gαi hij gjδ gβγ + gαδ gβi hij gjγ
+=
+1
+4 ·
+
+−F iδF jδ −F γiFγi + F iγFγj + F δiF jδ
+
+· hij
+=
+F δiF jδ hij .
+Collecting the terms, we ﬁnd:
+d
+dt
+
+t=0L1(ω, g(t))
+=
+1
+2 ·
+
+F δiF jδ hij + ⟨F, F⟩g · 1
+2 · trg(h)
+
+=
+−1
+2 · T ijhij · volg ,
+where T ij := −F δiF jδ −1
+2 · ⟨F, F⟩g · gij. The (2, 0)-tensor ﬁeld T := T ij ∂
+∂xi ⊗
+∂
+∂xj is
+called the energy momentum tensor (ﬁeld) of ω (or of F).
+To see at which point the energy momentum tensor becomes important, we brieﬂy recall
+that general relativity deals with yet another action functional of the metric, given by
+the geometric Lagrangian or the Einstein-Hilbert action:
+Lgeom(g) := −1
+2 · scalg · volg .
+One computes that for a smooth curve g(t) as above with g′(0) = h, we have:
+d
+dt
+
+t=0scalg(t) = −ricij
+g hij +div(X) for some vector ﬁeld X (which is of no further interest
+2Here we use the formula: (det A(t))−1 ·
+d
+dt det A(t)) = tr(A(t)−1 ·
+d
+dtA(t)) .
+3Here we use: 0 =
+d
+dtgik(t) · gkj(t) = ˙gik · gkj + gik · ˙gkj, which implies ˙gil = −gij · ˙gjk · gkl.
+84
+
+
+===== PDF PAGE 91 =====
+3.2 Electrodynamics
+for us, since the divergence term vanishes upon integration anyway). If h ∈⊙2T ∗M has
+compact support, then we get for the corresponding action functional:
+d
+dt
+
+t=0
+Z
+M
+Lgeom(g(t))
+=
+−1
+2 ·
+Z
+M
+
+−ricij
+g hij + 1
+2 · gij hij · scalg
+
+· volg
+=
+1
+2 ·
+Z
+M
+
+ricij
+g −1
+2 · gij · scalg
+
+· hij · volg .
+Putting the two action principles together, we ﬁnd:
+g is critical for Lgeom(g) + L1(ω, g) + L2(ω)
+(3.14)
+⇔
+∀h ∈⊙2T ∗M, supp(h) ⋐M :
+Z
+M
+
+ricij
+g −1
+2 · gij · scalg −T ij
+
+· hij · volg
+⇔
+ricg −1
+2 scalg · g = T
+(Einstein ﬁeld equations)
+(3.15)
+(Here T := Tijdxi ⊗dxj is the (0, 2)-tensor ﬁeld associated to the (2, 0)-tensor ﬁeld
+deﬁned above.)
+Next we want to express the energy momentum tensor T in terms of the electric ﬁeld⃗E
+and the magnetic ﬁeld⃗B. On Minkowski space with the standard coordinates we ﬁnd:
+⟨F, F⟩
+=
+−
+3
+X
+k=1
+F0k F0k +
+X
+1≤i<k≤3
+Fik Fik
+=
+−
+D⃗
+E,⃗E
+E
++
+D⃗
+B,⃗B
+E
+=
+−
+⃗E
+2 +
+⃗B
+2
+T 00
+=
+F 0kF 0k −1
+2 ·
+⃗B
+2 −
+⃗E
+2
+· g00
+=
+⃗E
+2 + 1
+2 ·
+⃗B
+2 −
+⃗E
+2
+=
+1
+2 ·
+⃗E
+2 +
+⃗B
+2
+(energy density)
+T 01
+=
+F 0kF 1k −1
+2 ·
+⃗B
+2 −
+⃗E
+2
+· g01
+=
+E2B3 −E3B2
+=
+⃗
+E ×⃗B
+
+1
+and similarly
+T 02
+=
+⃗
+E ×⃗B
+
+2
+T 03
+=
+⃗
+E ×⃗B
+
+3 .
+The vector ﬁeld (T 01, T 02, T 03) =⃗E ×⃗B =:⃗S is called the Poynting vector. Finally,
+85
+
+
+===== PDF PAGE 92 =====
+3 Applications to Physics
+for 1 ≤i, j ≤3, we ﬁnd:
+T ij
+=
+F i0F j0 +
+3
+X
+k=1
+F ikF jk −1
+2 ·
+⃗B
+2 −
+⃗E
+2
+· gij
+=
+(
+−EiEj −BjBi
+:
+i̸ = j
+−E2
+i +
+⃗B
+2 −B2
+i −1
+2 ·
+ ⃗B
+2 −
+⃗E
+2
+:
+i = j
+=
+−EiEj −BiBj + 1
+2 ·
+⃗B
+2 +
+⃗E
+2
+· gij
+=:
+−σij .
+The (2, 0)-tensor ﬁeld
+σ :=⃗E ⊗⃗E +⃗B ⊗⃗B −1
+2 ·
+⃗B
+2 +
+⃗E
+2
+· g
+is called the Maxwell stress tensor.
+(Note that the g on the right is the inverse
+metric.)
+Now we exploit some geometrical properties of the electromagnetic Lagrangian (resp. the
+associated action functional) to derive further physical properties of the energy momen-
+tum tensor.
+Conformal invariance
+Let V be an oriented n-dimensional R-vector space with inner product g = ⟨·, ·⟩. We
+discuss how the Hodge-star operator ∗changes, if we rescale the metric g to g′ = λ2 · g
+by a positive factor λ > 0:
+If e1, . . . , en is a generalized orthonormal basis of V for g, then e′
+1 := 1
+λ · e1, . . . , e′
+n := 1
+λ·en
+is a generalized orthonormal basis of V for g′. If e∗
+1, . . . , e∗
+n is the basis of V ∗dual to
+e1, . . . , en, then (e∗
+1)′ := λ · e∗
+1, . . . , (e∗
+n)′ := λ · e∗
+n is the basis of V ∗dual to e′
+1, . . . , e′
+n.
+Correspondingly, (e∗
+i1)′ ∧. . . ∧(e∗
+ik)′ = λke∗
+i1 ∧. . . ∧e∗
+ik, 1 ≤i1 < . . . < ik ≤n, is a
+generalized orthonormal basis for the inner product on ΛkV ∗induced by g′. Hence this
+product itself is given as ⟨·, ·⟩′ = λ−2k · ⟨·, ·⟩. In particular, we have for the volume forms
+induced from the two inner products:
+volg′ = λn · volg .
+For any ω ∈ΛkV ∗, η ∈Λn−kV ∗, we then have:
+⟨ω, ∗η⟩· volg
+=
+ω ∧η
+=
+
+ω, ∗′η
+′ · volg′
+=
+λ−2k ·
+
+ω, ∗′η
+
+· λn · volg
+=
+λn−2k ·
+
+ω, ∗′η
+
+· volg ,
+whence ∗′ = λ2k−n · ∗. In particular, if 2k = n, then ∗′ = ∗.
+86
+
+
+===== PDF PAGE 93 =====
+3.2 Electrodynamics
+In electrodynamics, we have n = 4, k = 2, hence the electrodynamical Lagrangian
+L is conformally invariant, meaning that for g′ = λ · g, g ∈C∞(M), λ > 0, we
+have L(ω, g′) = L(ω, g).
+So let us compute the eﬀect of the conformal invariance on
+the energy momentum tensor. To this end, we take the family g(t) := (1 + t) · g of
+conformally equivalent metrics, so that g(0) = g, ˙g(0) = g. We then have:
+0
+=
+d
+dt
+
+t=0L1(ω, g)
+=
+d
+dt
+
+t=0L1(ω, g(t))
+=
+−1
+2 · T · ˙g(0) · volg
+=
+−1
+2 · T · g · volg
+=
+−1
+2trg(T) · volg ,
+which yields trg(T) = 0.
+Hence by conformal invariance of the electrodynamic La-
+grangian, the energy momentum tensor is trace free.
+Diﬀeomorphism invariance
+For any diﬀeomorphism ϕ ∈Diﬀ(M) with supp(ϕ) ⊂U ⋐M, we have the pull-back
+diagram:
+ϕ∗P
+Φ
+/
+
+P
+
+M
+ϕ
+/ M
+So let us compute the eﬀect of a diﬀeomorphism ϕ ∈Diﬀ(M) and its induced bundle
+isomorphism Φ : ϕ∗P →P on the action functional for the electrodynamics Lagrangian:
+Z
+U
+L1 (Φ∗ω, ϕ∗g)
+=
+1
+2 ·
+Z
+U
+ϕ∗F ∧∗ϕ∗g ϕ∗F
+=
+1
+2 ·
+Z
+U
+⟨ϕ∗F, ϕ∗F⟩ϕ∗g · ϕ∗volg
+=
+1
+2 ·
+Z
+U
+⟨F, F⟩g ◦ϕ · ϕ∗volg
+=
+1
+2 ·
+Z
+U
+⟨F, F⟩g · volg
+=
+1
+2 ·
+Z
+U
+L1(ω, g) .
+87
+
+
+===== PDF PAGE 94 =====
+3 Applications to Physics
+Hence the action functional given by the electrodynamic Lagrangian L is invariant under
+(compactly supported) diﬀeomorphisms of the basis M. Note that in contrast to the
+pointwise conformal invariance, this diﬀeomorphism invariance is not a pointwise invari-
+ance of the Lagrangian density itself, but only of the corresponding action functional.
+Now let us compute the eﬀect of diﬀeomorphism invariance on the energy momentum
+tensor.
+To this end, let X ∈X(M) be a smooth vector ﬁeld with compact support
+and let ϕt be its ﬂow.
+Then we study the family gt := ϕ∗
+tg.
+We ﬁrst claim that
+h =
+d
+dt
+
+t=0ϕ∗
+t g = LXg = 2∇symX, where ∇symX is the symmetrization of the covariant
+derivative, to be deﬁned in the following justiﬁcation of the claim:
+(LXg)(Y, Z)
+=
+LX(g(Y, Z)) −g(LXY, Z) −g(Y, LXZ)
+=
+∂Xg(Y, Z) −g([X, Y ], Z) −g(Y, [X, Z])
+=
+g(∇XY, Z) + g(Y, ∇XZ) −g(∇XY −∇Y X, Z) −g(Y, ∇XZ −∇ZX)
+=
+g(∇Y X, Z) + g(Y, ∇ZX)
+=:
+2(∇symX)(Y, Z) .
+Putting the above family gt of metrics into the action functional, we may now compute
+the eﬀect of diﬀeomorphism invariance. (Note that to compute the derivative with re-
+spect to t of Φ∗
+tω, we need to identify the forms Φ∗
+tω for diﬀerent t, which by construction
+live on the diﬀerent bundles ϕ∗
+t P. This is most easily done via the local sections sα,t of
+ϕ∗
+t P given by sα,t := Φ−1
+t
+◦sα ◦ϕt, where sα is any local section of P.) For the variation
+of the electrodynamic Lagrangian L1 along the family (Φ∗
+t ω, ϕ∗
+t g), we thus ﬁnd:
+0
+=
+d
+dt
+
+t=0
+Z
+U
+L1(ω, g)
+=
+d
+dt
+
+t=0
+Z
+U
+L1 (Φ∗
+tω, ϕ∗
+t g)
+=
+d
+dt
+
+t=0
+Z
+U
+L1 (Φ∗
+tω, g) + d
+dt
+
+t=0
+Z
+U
+L1 (ω, ϕ∗
+t g)
+=
+Z
+U
+η ∧d ∗F −1
+2 ·
+Z
+U
+T · h · volg ,
+where η is the following 1-form:4
+iη
+:=
+d
+dt
+
+t=0s∗
+α,t Φ∗
+tω
+=
+d
+dt
+
+t=0ϕ∗
+t s∗
+αω
+=
+LX (s∗
+αω)
+4Here we use the so called Cartan’s magic formula: for any α ∈Ωk(M), X ∈X(M), we have LXα =
+d(ιXα) + ιX(dα). Here ιX denotes the insertion of X in the ﬁrst slot of a form, i.e. ιXβ = β(X, . . .).
+88
+
+
+===== PDF PAGE 95 =====
+3.2 Electrodynamics
+Cartan
+=
+ιXd (s∗
+αω) + d
+ s∗
+αω(X)
+| {z }
+=:f
+
+=
+i · (ιXF + df) .
+We thus have as a consequence of the diﬀeomorphism invariance:
+Z
+M
+T · ∇symX · volg
+=
+Z
+M
+(ιXF + df) ∧d ∗F
+=
+Z
+M
+ιXF ∧d ∗F + d(f · d ∗F)
+Stokes
+=
+Z
+M
+⟨ιXF, ∗d ∗F⟩· volg .
+To see what this equations means for the energy momentum tensor T, we deﬁne the
+divergence of T (and similarly of any (2, 0)-tensor) as:
+div(T) :=
+n
+X
+i=1
+(∇eiT) (e∗
+i , ·) ∈X(M) ,
+where e1, . . . , en is a generalized orthonormal basis of TM. The vector ﬁeld div(T) does
+not depend on the choice of orthonormal basis.
+With this deﬁnition, we ﬁnd
+R
+M T · ∇symX · volg = −
+R
+M ⟨div(T), X⟩· volg by Stokes
+theorem, and hence:
+∀X ∈X(M), supp(X) ⋐M :
+−
+Z
+M
+⟨div(T), X⟩· volg =
+Z
+M
+⟨ιXF, ∗d ∗F⟩· volg
+⇔
+∀X ∈TM :
+−⟨div(T), X⟩= ⟨ιXF, ∗d ∗F⟩.
+(3.16)
+If ω is critical for L, thus d ∗F = J, then −⟨div(T), X⟩= ⟨ιXF, ∗J⟩. So in Minkowski
+space with standard coordinates, we ﬁnd for X = ∂
+∂t in the left hand side of (3.16):
+−
+
+div(T), ∂
+∂t
+
+=
+(−div(T))0
+=
+−∂iT i0
+=
+−∂
+∂tT 00 −
+3
+X
+i=1
+∂
+∂xi T i0
+=
+−1
+2 · ∂
+∂t
+⃗E
+2 +
+⃗B
+2
+−div
+ ⃗
+S
+
+.
+For X = ∂
+∂t we ﬁnd in the right hand side of (3.16):
+D
+ι ∂
+∂t F, ∗J
+E
+=
+* 3
+X
+i=1
+−Exidxi,̺ dt −
+3
+X
+i=1
+jxidxi
++
+=
+D⃗
+E,⃗j
+E
+.
+89
+
+
+===== PDF PAGE 96 =====
+3 Applications to Physics
+Finally, the diﬀeomorphism invariance of the action functional associated with the elec-
+tromagnetic Lagrangian L1 results in the equation:
+1
+2 · ∂
+∂t
+⃗E
+2 +
+⃗B
+2
++ div
+ ⃗
+S
+
+= −
+D⃗
+E,⃗j
+E
+.
+(Poynting’s theorem)
+(3.17)
+In case⃗j = 0, we can (similarly to what we did for the continuity equation) use Stokes
+theorem to get an interpretation of the Poynting vector⃗S. So let B ⊂R3 be compact
+with smooth boundary. Then we have:
+0
+=
+Z
+[t0,t1]×B
+1
+2 · ∂
+∂t
+⃗E
+2 +
+⃗B
+2
++ div
+ ⃗
+S
+
+Stokes
+=
+1
+2 ·
+Z
+B
+⃗E
+2 +
+⃗B
+2
+(t1)
+|
+{z
+}
+energy at time t1
+−1
+2 ·
+Z
+B
+⃗E
+2 +
+⃗B
+2
+(t0)
+|
+{z
+}
+energy at time t0
+−
+t1
+Z
+t0
+Z
+∂B
+D⃗
+S,⃗ν
+E
+(t) dvol∂B dt
+|
+{z
+}
+energy ﬂux through ∂B
+.
+(Here ν denotes the exterior normal of ∂B). This yields an interpretation of the Poynting
+vector⃗S as the current density of the energy of the electromagnetic ﬁeld F.
+Gauge invariance
+For ω ∈C(P) and ϕ ∈G(P), we have: L1(ϕ∗ω, g) = L1(ω, g). Indeed, since G = U(1) is
+abelian, for ω′ := ϕ∗ω we have ¯Ω′ = ¯Ω, hence F ′ = F and
+L1
+ ω′, g
+
+= 1
+2F ′ ∧∗F ′ = 1
+2F ∧∗F = L1(ω, g) .
+90
+
+
+===== PDF PAGE 97 =====
+3.3 Yang-Mills ﬁelds
+3.3 Yang-Mills ﬁelds
+Let M be a smooth manifold and let E →M be a smooth K-vector bundle (K = R, C)
+with covariant derivative ∇. Recall that diﬀerential forms η ∈Ωk(M; E) with values in
+E are just smooth sections of the vector bundle ΛkT ∗M ⊗E.
+Deﬁnition 3.3.1. The exterior derivative d∇: Ωk(M; E) →Ωk+1(M; E) associated
+with ∇is deﬁned by:
+d∇η (X0, . . . , Xk)
+:=
+k
+X
+i=0
+(−1)i∇Xi
+
+η
+
+X0, . . . , c
+Xi, . . . , Xk
+
++
+X
+i<j
+(−1)i+j η
+
+[Xi, Xj] , X0, . . . , c
+Xi, . . . , c
+Xj, . . . , Xk
+
+.
+Remark 3.3.2. This exterior derivative does not satisfy d∇◦d∇= 0 in general! Indeed,
+on Ω0(M; E) = Γ(E), we ﬁnd:
+(d∇◦d∇σ)(X, Y )
+=
+∇X(d∇σ(Y )) −∇Y (d∇σ(X)) −d∇σ([X, Y ])
+=
+∇X(∇Y σ) −∇Y (∇Xσ) −∇[X,Y ]σ
+=
+R(X, Y ) · σ ,
+where R is the curvature tensor of the covariant derivative ∇. Indeed, d∇◦d∇≡0 iﬀ
+the curvature R ≡0.
+Remark 3.3.3. Let E carry a Riemannian resp. Hermitean metric ⟨·, ·⟩.
+For η ∈
+Ωk(M; E) and µ ∈Ωl(M; E), we can build ω ∧η ∈Ωk+l(M; E ⊗E) by writing in
+local coordinates:
+η
+=
+X
+i1<...<ik
+ηi1,...,ik ⊗dxi1 ∧. . . ∧dxik
+µ
+=
+X
+j1<...<jl
+ηj1,...,jl ⊗dxj1 ∧. . . ∧dxjl
+η ∧µ
+:=
+X
+i1<...<ik
+j1<...<jl
+ηi1,...,ik ⊗µj1,...,jl ⊗dxi1 ∧. . . ∧dxik ∧dxj1 ∧. . . ∧dxjl .
+91
