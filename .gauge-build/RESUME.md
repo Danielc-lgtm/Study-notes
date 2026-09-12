@@ -44,3 +44,16 @@ mkdir -p "$S" && cp -r /home/user/Study-notes/.gauge-build/scratchpad/* "$S/"
 7. Update `.codex/current-task.md` and `.codex/progress.json`; optionally note the
    series in `Study notes/Prerequisite DAG.md`.
 8. Remove `.gauge-build/` and commit the cleanup.
+
+## Scope directive (user, 2026-09-12)
+Cover ONLY content in the two sources (Haydys, Bär). Do NOT create new
+prerequisite pages for standard machinery the sources cite without proof
+(e.g. Hahn-Banach, the sign of a permutation as a homomorphism, the
+Weierstrass M-test, term-by-term differentiation, the Banach-algebra Cauchy
+product). Those invocations remain links to existing vault pages or inline
+recalls. The find-unproved-theorems audit must NOT treat such a
+linked/recalled standard prerequisite as a defect to be fixed by writing a
+new page — only genuine gaps inside source-covered results are fixed.
+Reconcile only [NEEDED FROM …] markers that point at series pages.
+This intentionally relaxes the vault-wide "every theorem proved" floor for
+THIS build only, to conserve usage.
