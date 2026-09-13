@@ -1,0 +1,691 @@
+# Haydys, Introduction to Gauge Theory: PDF pages 33-43 (section proper: 34-42; one page of context on each side)
+
+
+===== PDF PAGE 33 =====
+Introduction to Gauge Theory
+In a special case, namely when γ is a loop, the parallel transport yields an isomorphism of the
+fiber. If we concatenate two loops, the parallel transport is the composition of the parallel transports
+corresponding to the initial loops. Hence, for a fixed connection the set of all parallel transports is
+in fact a group.
+Definition 101. Pick a point m ∈M. The group
+Holm(∇) :=
+
+PTγ ∈GL(Em) | γ is a loop based at m
+	
+is called the holonomy group of ∇based at m.
+Choosing a basis of Em, we can think of Holm(∇) as a subgroup of GLk(R).
+A stand-
+ard argument shows that if m and m′ lie in the same connected component, then the holonomy
+groups Holm(∇) and Holm′(∇) are conjugate, i.e., there is A ∈GLk(R) such that Holm′(∇) =
+A Holm(∇)A−1. With this understood, we can drop the basepoint from the notation. Even though
+Hol(∇) is defined up to a conjugacy only, it is still commonly referred to as a subgroup of GLk(R).
+Exercise 102. Show that the following holds:
+• ∇is Euclidean =⇒PTγ is orthogonal =⇒Hol(∇) ⊂O(k).
+• ∇is complex =⇒PTγ is complex linear =⇒Hol(∇) ⊂GLk/2(C).
+• ∇is complex Hermitian =⇒PTγ is unitary =⇒Hol(∇) ⊂U(k/2).
+Remark 103. The concept of the parallel transport also makes sense for connections on principal
+bundles. The construction does not differ substantially from the case of vector bundles. The details
+are left to the readers.
+3.3.2
+The monodromy representation of a flat connection
+Let ∇be a flat connection on a vector bundle E of rank k. We can view the parallel transport as a
+map
+γ 7→Hol(∇; γ),
+where γ is a loop based at some fixed point m. If A is flat, this map depends on the homotopy class
+of γ only [KN96, II.9] so that effectively we obtain a representation of the fundamental group:
+ρA : π1(M) →GLk(R).
+Exercise 104. Show that a gauge-equivalent connection yields a conjugate representation.
+Conversely, given a representation ρ: ˜
+M →GLk(R) we can construct the bundle
+E := ˜
+M ×π1(M), ρ Rk.
+Here π1(M) acts on ˜
+M by the deck transformations. This means that ˜
+M can be viewed as a
+principal π1(M)–bundle so that E is the associated bundle corresponding to the representation ρ.
+This bundle is equipped with a natural flat connection. Indeed, interpreting a section s of E as
+a π1(M)–equivariant map ˆs: ˜
+M →Rk, we can define ∇s via
+π∗∇s = dˆs,
+33
+
+
+===== PDF PAGE 34 =====
+Introduction to Gauge Theory
+cf. (47).
+These constructions establish a bijective correspondence between the space of all flat connec-
+tions M♭and the representation variety
+R(M; GLk(R)) :=
+
+ρ: π1(M) →GLk(R) is a group homomorphism
+	
+/Conj,
+where two representations are considered to be equivalent if they are conjugate.
+Remark 105. We could equally well consider flat connections on Euclidean or Hermitian vec-
+tor bundles. This requires only cosmetic changes and the outcome is the representation space
+R(M; O(k)) and R(M; U(k)) respectively. Even more generally, the constructions above can be
+modified to the case of principal G–bundles so that the space of flat G–connections correspond to
+R(M; G). I leave the details to the readers.
+Since the fundamental group of a manifold is finitely presented, we can choose a finite number
+of generators of π1(M), say γ1, . . . , γN. Then any representation ρ is uniquely specified by the
+images of the generators gi = ρ(γi) ∈G, which satisfy a finite number of relations. This shows the
+inclusion
+R(M; G) ⊂GN/G,
+where G acts by the adjoint action on each factor. This implies in particular the following.
+Proposition 106. Let M be a manifold. If G is a compact Lie group, then the space M♭of all flat
+G-connections is compact.
+□
+Example 107. For M = Tn, we have clearly
+R(Tn; U(1)) = Hom(Tn, U(1)) = U(1)n ∼= Tn.
+Example 108. Let Σ be a compact Riemann suface of genus γ without boundary. It is well-known
+that the fundamental group of Σ has the following representation
+π1(Σ) ∼=
+D
+a1, . . . , aγ, b1, . . . , bγ |
+Y
+i
+[ai, bi] = 1
+E
+.
+Hence,
+R(Σ, G) =
+n
+A1, . . . , Aγ, B1, . . . , Bγ ∈G |
+Y
+i
+[Ai, Bi] = 1
+o
+/G.
+For instance, for G = SL(n; C) the representation variety has a rich geometric structure, which is
+being actively studied, see for example [BGPG07,Got14,Ray18] and references therein.
+4
+Dirac operators
+4.1
+Spin groups and Clifford algebras
+In this subsection I recall briefly the notions of Clifford algebra and spin group focusing on low
+dimensions. More details can be found for instance in [LM89].
+Since π1(SO(n)) ∼= Z/2Z for any n ≥3, there is a simply connected Lie group denoted by
+Spin(n) together with a homomorphism Spin(n) →SO(n), which is a double covering. This
+34
+
+
+===== PDF PAGE 35 =====
+Introduction to Gauge Theory
+characterizes Spin(n) up to an isomorphism. The spin groups can be constructed explicitly with
+the help of Clifford algebras, however in low dimensions this can be done more directly with the
+help of quaternions.
+Since Sp(1) ∼= SU(2) is diffeomorphic to the 3–sphere, this is a connected and simply connec-
+ted Lie group. Identify Im H = {¯h = −h} with R3 and consider the homomorphism
+α: Sp(1) →SO(3),
+q 7→Aq,
+(109)
+where Aqh = qh¯q. It is easy to check that the corresponding Lie-algebra homomorphism is in fact
+an isomorphism. Since SO(3) is connected, α is surjective. Moreover, ker α = {±1}. Hence,
+(109) is a non-trivial double covering, i.e., Spin(3) ∼= Sp(1).
+To construct the group Spin(4), recall first that the Hodge operator ∗yields the splitting Λ2(R4)∗=
+Λ2
++(R4)∗⊕Λ2
+−(R4)∗, where Λ2
+±(R4)∗= {ω | ∗ω = ±ω}. Since so(4) ∼= Λ2(R4)∗= Λ2
++(R4)∗⊕
+Λ2
+−(R4)∗= so(3) ⊕so(3), the adjoint representation yields a homomorphism SO(4) →SO(3) ×
+SO(3).
+Identify R4 with H and consider the homomorphism3
+β : Sp+(1) × Sp−(1) →SO(4),
+(q+, q−) 7→Aq+, q−,
+where Aq+, q−h = q+h¯q−. An explicit computation shows that the composition Sp+(1)×Sp−(1) →
+SO(4) →SO(3) × SO(3) is given by (q+, q−) 7→(Aq+, Aq−). Hence, the Lie algebra homomorph-
+ism corresponding to β is an isomorphism and ker β is contained in {(±1, ±1)}. As it is readily
+checked, ker β = {±(1, 1)} ∼= Z/2Z. Hence, Sp+(1) × Sp−(1) ∼= Spin(4).
+Let U be an Euclidean vector space. Then the Clifford algebra Cl(U) is the tensor algebra
+TU = R ⊕U ⊕U ⊗U ⊕. . . modulo the ideal generated by elements u ⊗u + |u|2 · 1. In other
+words, Cl(U) is generated by elements of U subject to the relations u · u = −|u|2. For instance,
+Cl(R1) ∼= R[x]/(x2 + 1) ∼= C. The algebra Cl(R2) is generated by 1, e1, e2 subject to the relations
+e2
+1 = −1 = e2
+2 and e1 · e2 = −e2 · e1, which follows from (e1 + e2)2 = −2. In other words,
+Cl(R2) ∼= H. In general, Cl(Rn) is generated by 1, e1, . . . , en subject to the relations e2
+i = −1 and
+ei · ej = −ej · ei for i̸ = j.
+It can be shown that the subgroup of Cl(Rn) generated by elements of the form v1 · v2 · . . . · v2k
+is isomorphic to Spin(n), where each vj ∈Rn has the unit norm. In particular, this shows that
+Spin(n) is a subgroup of Cl(Rn).
+It is convenient to have some examples of modules over Clifford algebras. Such module is
+given by a vector space V together with a map
+U ⊗V →V,
+u ⊗v 7→u · v,
+which satisfies u · (u · v) = −|u|2v for all u ∈U and v ∈V . An example of a Cl(U)–module is
+V = ΛU ∗, where the Cl(U)–module structure is given by the map
+u ⊗φ 7→ıuφ −⟨u, ·⟩∧φ.
+(110)
+Let V be a quaternionic vector space. Then the quaternionic multiplication gives rise to the
+map Im H ⊗V →V , h ⊗v 7→h · v, which satisfies h · (h · v) = −h¯hv = −|h|2v. Thus,
+3We adopt the common convention Sp±(1) = Sp(1). The significance of the subscripts “±” will be clear below.
+35
+
+
+===== PDF PAGE 36 =====
+Introduction to Gauge Theory
+any quaternionic vector space is a Cl(R3)–module. In particular, the fundamental representation
+/S ∼= H of Sp(1) ∼= Spin(3) with the action given by the left multiplication is a Cl(R3)–module.
+The multiplication on the right by¯i endows /S with the structure of a complex Sp(1)–representation,
+which is in fact also Hermitian (this is just another manifestation of the isomorphism Sp(1) ∼=
+SU(2)). It is then an elementary exercise in the representation theory to show the isomorphisms
+Im H ⊗C ∼= End0(/S),
+(111)
+where the left hand side is viewed as an Sp(1)–representation via the homomorphism α and
+End0(/S) denotes the subspace of traceless endomorphisms. Moreover, the real subspace Im H
+can be identified with the subspace of traceless Hermitian endomorphisms.
+Furthermore, for any quaternionic vector space V the space V ⊕V is a Cl(R4)–module. Indeed,
+the Cl(R4)–module structure is induced by the map
+H ⊗R (V ⊕V ) →V ⊕V,
+h ⊗(v1, v2) 7→(hv2, −¯hv1) =
+ 0
+h
+−¯h
+0
+ v1
+v2
+
+.
+(112)
+In particular, the Sp+(1) × Sp−(1)–representation /S
++ ⊕/S
+−is a Cl(R4)–module. Here, as the
+notation suggests, /S
+± is the fundamental representation of Sp±(1).
+Just like in the case of dimension three, we have an isomorphism of Spin(4)–representations
+H ⊗C ∼= Hom(/S
++; /S
+−),
+where the left hand side is viewed as a Spin(4)–representation via the homomorphism β.
+4.2
+Dirac operators
+Let M be a Riemannian oriented manifold of dimension n. The tautological action of SO(n) on
+Rn extends to an action on Cl(Rn) so that we can construct the associated bundle
+Cl(M) := FrSO ×SO(n)Cl(Rn).
+This can be thought of as the bundle, whose fiber at a point m ∈M is Cl(TmM) ∼= Cl(T ∗
+mM).
+Notice that the Levi–Civita connection yields a connection on Cl(M). This is denoted by the same
+symbol ∇LC.
+Let E →M be a bundle of Cl(M)–modules, i.e., there is a morphism of vector bundles
+Cl: TM ⊗E →E,
+(v, e) 7→v · e,
+such that v · (v · e) = −|v|2e. Then E is called a Dirac bundle if it is equipped with an Euclidean
+scalar product and a connection ∇such that the following conditions hold:
+• ∇is Euclidean;
+• ⟨v · e1, v · e2⟩= |v|2⟨e1, e2⟩for any v ∈TmM and e1, e2 ∈Em;
+• ∇(φ · s) = (∇LCφ) · s + φ · ∇s for any φ ∈Γ(Cl(M)) and s ∈Γ(E).
+36
+
+
+===== PDF PAGE 37 =====
+Introduction to Gauge Theory
+Definition 113. If E is a Dirac bundle, the operator
+D: Γ(E)
+∇
+−−→Γ(T ∗M ⊗E)
+Cl
+−−→Γ(E)
+is called the Dirac operator of E.
+In other words, if e1, . . . , en is a local orthonormal oriented frame of TM, then
+D s =
+n
+X
+i=1
+ei · ∇eis
+Example 114. The bundle ΛT ∗M = ⊕n
+k=0ΛkT ∗M has a natural structure of a Dirac bundle,
+where the Clifford multiplication is given by (110). The corresponding Dirac operator equals
+d + d∗[LM89, Thm 5.12], where d∗is the formal adjoint of d, see Section 5.3.2 below for more
+details.
+Exercise 115. Show that the Dirac operator on a closed manifold is formally self-adjoint, i.e., for
+any s1, s2 ∈Γ(E) we have
+Z
+M
+⟨D s1, s2⟩=
+Z
+M
+⟨s1, D s2⟩.
+4.3
+Spin and Spinc structures
+Let FrSO →M be the principal bundle of orthonormal oriented frames of M.
+Definition 116. M is said to be spinnable, if there is a principal Spin(n) bundle P equipped with
+a Spin(n)–equivariant map τ : P →FrSO, which covers the identity map on M and is a fiberwise
+double covering. Here Spin(n) acts on FrSO via the homomorphism Spin(n) →SO(n).
+A choice of a bundle P as above is called a spin structure. A manifold equipped with a spin
+structure is called a spin manifold.
+For a given M a spin structure may or may not exist. If M is spinnable, there may be many
+non-equivalent spin structures. The questions on existence and classification of spin structures may
+be completely answered in terms of the Stiefel–Whitney classes [LM89]. However, I will not go
+into the details here. For the remaining part of this section I assume throughout that M is spin.
+Let ω ∈Ω1 FrSO; so(n)
+
+be the connection 1-form of the Levi–Civita connection. Since the
+homomorphism Spin(n) →SO(n) is a local diffeomorphism, we have an isomorphism of Lie
+algebras spin(n) ∼= so(n). Hence, τ ∗ω ∈Ω1 P; spin(n)
+
+is a connection on P. Slightly abusing
+terminology, this is still called the Levi–Civita connection.
+For any n ≥3 there is a unique complex representation ρ: Spin(n) →End(/S) distinguished
+by the property that it extends to a complex irreducible representation of Cl(Rn). Notice that this
+means neither that /S is a unique Spin(n)–representation, nor that /S is an irreducible Spin(n)–
+representation. For example, for n = 3 this representation coincides with the fundamental repres-
+entation of Sp(1) = Spin(3). For n = 4 we have /S = /S
++ ⊕/S
+−, see (112).
+If M is spin, we can construct the spinor bundle
+/S := P ×Spin(n), ρ /S.
+37
+
+
+===== PDF PAGE 38 =====
+Introduction to Gauge Theory
+Here, as it is quite common, we use the same notation both for the representation and the associated
+vector bundle.
+Since ρ extends to a representation of Cl(Rn), the spinor bundle is in fact a bundle of Cl(M)–
+modules. Hence, the construction of Section 4.2 yields the spin Dirac operator
+/D: Γ(/S) →Γ(/S).
+Remark 117. Recall that in the case dim M = 4, the spinor bundle splits: /S = /S
++ ⊕/S
+−. By (112),
+the Clifford multiplication with 1–forms changes the chirality, i.e., for any ω ∈Ω1(M) we have
+ω·: /S
+± →/S
+∓. Hence,
+/D =
+ 
+0
+/D
+−
+/D
++
+0
+!
+,
+where /D
+± : Γ(/S
+±) →Γ(/S
+∓).
+The following two variations of this construction are frequently used. First, let P be a principal
+G–bundle equipped with a connection A and let τ : G →U(n) be a unitary representation of G so
+that we have the associated bundle E = P ×G,τ Cn, which is Hermitian. Then the twisted spinor
+bundle /S ⊗E is also a Dirac bundle so that we have a twisted Dirac operator
+/DA : Γ(/S ⊗E) →Γ(/S ⊗E).
+Example 118. Let us assume that dim M = 3 for the sake of definiteness. Choose E = /S, which
+is equipped with the Levi–Civita connection. Then we have
+/S ⊗/S = Sym2(/S) ⊕Λ2/S ∼= T ∗
+CM ⊕C,
+cf. (111). Hence, the twisted spinors can be identified with the complexification of odd forms. Of
+course, the Hodge ∗-operator yields and isomorphism between odd and even forms so that we can
+identify the twisted spinors with even forms too. We already have seen above a Dirac operator
+acting on forms, namely
+d + d∗: Ωodd(M) →Ωeven(M),
+cf. Example 114. One can show that the complexification of d + d∗coincides with the twisted
+Dirac operator on Γ(/S ⊗/S).
+Exercise 119. The Clifford multiplication combined with the map ad P →End(E) yields the
+‘twisted’ Clifford multiplication
+T ∗M ⊗ad P →End(/S) ⊗End(E) ∼= End(/S ⊗E).
+Show that for a ∈Ω1(ad P) the following holds:
+/DA+aψ = /DAψ + a · ψ.
+Let me explain the second variation, which in essence is not really much different from the first
+one, however the details are somewhat involved.
+Thus, by the construction of Spin(n) we have the exact sequence
+{1} →{±1} →Spin(n) →SO(n) →{1}.
+38
+
+
+===== PDF PAGE 39 =====
+Introduction to Gauge Theory
+Moreover, one can show that the kernel {±1} lies in the center of Spin(n). This is clear anyway in
+our main cases of interest, namely for n = 3 and n = 4. Denote
+Spinc(n) := Spin(n) × U(1)/ ± 1,
+where {±1} is embedded diagonally. Notice that both Spin(n) and U(1) are subgroups of Spinc(n)
+and U(1) lies in fact in the center of Spinc(n).
+Furthermore, we have the following exact sequences:
+{1} →U(1) →Spinc(n)
+ρ0
+−−→Spin(n)/ ± 1 = SO(n) →{1},
+{1} →Spin(n) →Spinc(n)
+ρdet
+−−−→U(1)/ ± 1 ∼= U(1) →{1}.
+These in turn give rise to the exact sequence
+{1} →{±1} →Spinc(n)
+(ρ0, ρdet)
+−−−−−−→SO(n) × U(1) →{1},
+(120)
+which shows that Spinc(n) is a double covering of SO(n) × U(1).
+Example 121.
+(a) For n = 3 we have Spinc(3) = SU(2) × U(1)/ ± 1 ∼= U(2). In particular, ρdet(A) = det A
+and the sequence (120) has the following form
+{1} →
+
+±1
+	
+→U(2) →SO(3) × U(1) →{1},
+where the homomorphism U(2) →SO(3) = PU(2) is the natural projection.
+(b) For n = 4 we have
+Spinc(4) =
+ SU(2) × SU(2)
+
+× U(1)
+
+/ ± 1
+=
+
+(A+, A−) ∈U(2) × U(2) | det A+ = det A−
+	
+.
+In particular, ρdet(A+, A−) = det A+ = det A−.
+Notice that in this case we also have the homomorphisms
+ρ± : Spinc(4) →U(2),
+ρ±(A+, A−) = A±.
+Definition 122. A spinc structure on M is a principal Spinc(n)–bundle P →M equipped with a
+Spinc(n)–equivariant map P →FrSO which induces an isomorphism P/U(1) ∼= FrSO.
+Just like in the case of spin structures, spinc structures may or may not exist. If a spinc structure
+exists, it is rarely unique. It is also clear that if M is spin, then M is also spinc.
+It turns out that four–manifolds are somewhat special as the following result shows.
+Proposition 123. Any closed oriented four–manifold admits a spinc structure.
+□
+39
+
+
+===== PDF PAGE 40 =====
+Introduction to Gauge Theory
+A proof of this claim can be found for example in [Mor96, Lem. 3.1.2]. Notice however, that
+there are closed four–manifolds that are not spin. In dimension three the situation is different: Any
+closed oriented three–manifold is spin [GS99a, Rem. 1.4.27], and hence also spinc.
+With these preliminaries at hand, let M be a manifold equipped with a spinc structure P. Define
+the determinant line bundle
+Ldet := P ×ρdet C.
+This is clearly a Hermitian line bundle and its U(1)–structure is
+Pdet := P/Spin(n).
+By (120), we have a double cover map
+τ : P →P/{±1} = FrSO ×MPdet.
+Hence, if A is a connection on Pdet, then τ ∗(ω + A) ∈Ω1 P; spinc(n)
+
+, where we have used the
+isomorphism spinc(n) ∼= so(n)⊕u(1). Thus, the choice of a unitary connection on the determinant
+line bundle together with the Levi–Civita connection determines a connection on the spinc bundle.
+Let /S be the distinguished representation of Spin(n). This can be clearly extended to a Spinc(n)–
+representation, which is still denoted by /S: [g, z] · s = zρ(g) s. This in turn yields the spinc spinor
+bundle
+/S := P ×Spinc(n) /S,
+which is a Dirac bundle. Hence, we obtain the spinc Dirac operator /DA : Γ(/S) →Γ(/S).
+Example 124. Assume M is spin and pick a spin structure PSpin. Pick also a principal U(1)–bundle
+P0. Then
+P := PSpin ×M P0/ ± 1
+is a principal
+ Spin(n) × U(1)
+
+/ ± 1 = Spinc(n) bundle. In this case the spinc spinor bundle is
+just the twisted spinor bundle /S ⊗L0, where /S is the pure spinor bundle and L0 := P0 ×U(1) C
+is the associated complex line bundle. Likewise, the spinc Dirac operator is just the twisted Dirac
+operator.
+Remark 125. In some sense, any spinc spinor bundle can be thought of as the twisted spinor bundle
+just like in the example above. The problem is that in general neither /S nor L0 is globally well-
+defined, however their product /S ⊗L0 is well-defined. The notion of a spinc structure is just a
+convenient way to make this ‘definition’ precise.
+Exercise 126. For a ∈Ω1(M; Ri) prove that
+/DA+aψ = /DAψ + 1
+2 a · ψ.
+(127)
+The coefficient 1
+2 in (127) can be explained as follows: Think of the spinc spinor bundle as
+/S ⊗L0 just like in Remark 125. Then the determinant line bundle is Λ2(/S ⊗L0) = L2
+0 so that
+A0 ∈A(L0) induces some connection A on L2
+0. Then A0 + a0 corresponds to A + 2 a0.
+40
+
+
+===== PDF PAGE 41 =====
+Introduction to Gauge Theory
+4.3.1
+On the classification of spinc structures
+Let P be a spinc structure with the spinor bundle /S. If L is any Hermitian line bundle, then /S ⊗L is
+a spinc spinor bundle corresponding to a spinc structure PL. This defines an action of H2(M; Z) on
+the set S = S(M) of all spinc structures on M. This action can be shown to be free and transitive,
+hence S(M) can be identified with H2(M; Z), however, such an identification is not canonical.
+For example, let M be spin and let /S be the pure spinor bundle. The spin structure of M can be
+also viewed as a distinguished spinc structure so that S(M) has a preferred point, the origin. This
+choice fixes an isomorphism S(M) ∼= H2(M; Z).
+4.4
+The Weitzenböck formula
+For a function u: R4 →H the operators
+/D
++(u) =
+∂u
+∂x0
++ i ∂u
+∂x1
++ j ∂u
+∂x2
++ k ∂u
+∂x3
+,
+/D
+−(u) = −∂u
+∂x0
++ i ∂u
+∂x1
++ j ∂u
+∂x2
++ k ∂u
+∂x3
+can be thought of as four-dimensional analogues of the ¯∂= 1
+2( ∂
+∂x + i ∂
+∂y) and ∂= 1
+2( ∂
+∂x −i ∂
+∂y)
+operators for complex–valued functions of one complex variable z = x + yi respectively. In
+fact, tracing through the construction, it is easy to see that for the flat four–manifold R4 the Dirac
+operator can be written as follows
+/D =
+ 
+0
+/D
+−
+/D
++
+0
+!
+,
+cf. (112). Here I use the fact, that the spinor bundle of R4 is (canonically) the product bundle. A
+straightforward computation yields
+/D
+2 =
+ 
+/D
+−/D
++
+0
+0
+/D
++ /D
+−
+!
+= ∆,
+(128)
+where ∆= −P3
+i=0
+∂2
+∂x2
+i is the Laplacian. This is usually phrased as “the Dirac operator is the
+square root of the Laplacian”.
+Remark 129. The Dirac operator on R2 has the form
+ 0
+2 ∂
+∂z
+−2 ∂
+∂¯z
+0
+
+: C∞(R2; C2) →C∞(R2; C2)
+and squares to the Laplacian just like in dimension four. Notice, however, that the case of dimension
+two requires a special treatment due to the fact that π1(SO(2)) ∼= Z, which was one of the reasons
+I assumed n ≥3 in this section.
+On R3 the spinor bundle can be identified with the product bundle H so that the corresponding
+Dirac operator is
+/D(u) = i ∂
+∂x1
++ j ∂
+∂x2
++ k ∂
+∂x3
+,
+which also squares to the Laplacian.
+41
+
+
+===== PDF PAGE 42 =====
+Introduction to Gauge Theory
+On general Riemannian manifolds the relation /D
+2 = ∆still holds up to a zero order operator.
+This is known as the Weitzenböck formula, which I describe next.
+Thus, given an Euclidean vector bundle E with a connection ∇the connection Laplacian is
+defined by
+∇∗∇: Γ(E)
+∇
+−−→Ω1(E)
+∇∗=−∗d∇∗
+−−−−−−−→Γ(E).
+(130)
+Exercise 131.
+(a) Let (e1, . . . , en) be a local orthonormal frame of TM over an open subset of M. Show that
+the connection Laplacian can be expressed as follows
+∇∗∇s = −
+n
+X
+i=1
+ ∇ei∇eis −∇∇eiei s
+
+,
+where ∇ei means the Levi–Civita connection applied to ei.
+(b) Prove that the connection Laplacian is formally self-adjoint.
+(c) In the case M is closed, prove the identity ⟨∇∗∇s, s⟩L2 = ∥∇s∥2
+L2.
+Assume that E is a Dirac bundle and let R ∈Ω2(End(E)) be the curvature 2-form of the corres-
+ponding connection ∇. Using the Clifford multiplication, we obtain a homomorphism Λ2T ∗M ⊗
+End(E) →End(E), which maps R to an endomorphism R. In a local frame (ei) of TM this can
+be expressed as follows
+R(s) := 1
+2
+n
+X
+i,j=1
+ei · ej · Rei,ej(s).
+Theorem 132 (Weitzenböck formula). Let /D be the Dirac operator for the Dirac bundle E. Then
+the following holds:
+/D
+2 = ∇∗∇+ R.
+Proof. Pick a point m ∈M and a local frame (ei) such that ∇eiej vanishes at m. Then at m we
+have the following:
+/D
+2s =
+n
+X
+i=1
+ei · ∇ei
+ n
+X
+j=1
+ej · ∇ejs
+
+=
+n
+X
+i,j=1
+ei · ej · ∇ei∇ejs
+=
+n
+X
+i=1
+ei · ei · ∇ei∇eis + 1
+2
+X
+i̸=j
+ei · ej ·
+ ∇ei∇ej −∇ej∇ei
+
+s
+= ∇∗∇s + Rs.
+□
+In the case of the spinc spinor bundle, a straightforward computation yields the following co-
+rollary, whose proof is left as an exercise.
+42
+
+
+===== PDF PAGE 43 =====
+Introduction to Gauge Theory
+Corollary 133. Let A be a Hermitian connection on the determinant line bundle with the curvature
+form FA. Then the spinc Dirac operator satisfies:
+/D
+2ψ = ∇∗∇ψ + 1
+4sg ψ + 1
+2FA · ψ,
+where sg is the scalar curvature of the background metric g.
+□
+In particular, in the case M is spin and /S is the pure spinor bundle, we have
+/D
+2ψ = ∇∗∇ψ + 1
+4sg ψ.
+This implies, for example, that for a metric with positive scalar curvature the space of harmonic
+spinors ker /D is trivial.
+Recall that in dimension four, the spinor bundle splits: /S = /S
++ ⊕/S
+−. With respect to this
+splitting the Dirac operator takes the form
+/D =
+ 
+0
+/D
+−
+/D
++
+0
+!
+,
+which we already have seen above in the case of the flat space. By Corollary 133 for ψ ∈Γ(/S
++)
+we obtain
+/D
+−/D
++ψ = ( /D
++)∗/D
++ψ = ∇∗∇ψ + 1
+4sg ψ + 1
+2F +
+A · ψ.
+Here we used the fact that anti-self-dual 2-forms act trivially on /S
++.
+5
+Linear elliptic operators
+5.1
+Sobolev spaces
+Consider the following classical boundary value problem in the theory of PDEs: Let Ω⊂Rn be
+a bounded domain with a smooth boundary ∂Ω. Does there exist a function u ∈C2(Ω) ∩C0(¯Ω)
+such that
+∆u = 0
+in Ω
+and
+u|∂Ω= φ,
+(134)
+where φ is a given function on ∂Ω?
+Consider the energy functional
+E(u) := 1
+2
+Z
+Ω
+|∇u(x)|2 dx,
+where dx denotes the standard volume form on Rn. Assume there exists an absolute minimum of
+E, i.e., a function u ∈C2(Ω) ∩C0(¯Ω) such that
+E(u) = inf
+
+E(v) | v ∈C2(Ω) ∩C0(¯Ω), v|∂Ω= φ
+	
+.
+43

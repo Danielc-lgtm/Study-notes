@@ -1,0 +1,4 @@
+I-4: Thm - The Exponential Map of a Matrix Group is the Matrix Exponential needs Analysis pages (Weierstrass M-test, Cauchy product in Banach algebra, term-by-term differentiation) — reconcile in audit phase
+I-3: unproved_invocation — sign of a permutation well-defined homomorphism (needs Group Theory II 'Thm - The Sign of a Permutation is a Well-Defined Homomorphism'); also affects Def - Determinant, Def - Alternating Multilinear Form
+SIGNS: Def - The Hopf Bundle carries an honest warning marker on the z/|z| vs |z|/z transition function (only |winding|=1 matters downstream) — acceptable per brief.
+SIGNS: stray link [[Thm - Energy Identity and the Topological Bound for Yang-Mills]] (chapter VII page) appears on Gauge Theory VI/Thm - Trivial Bundles Have Vanishing Characteristic Classes.md line ~291 and on a SIGNS page as bold text; verify it resolves once chapter VII is written, else demote.

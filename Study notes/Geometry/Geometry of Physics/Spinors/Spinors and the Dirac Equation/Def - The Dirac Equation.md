@@ -67,7 +67,7 @@ For $m = 0$, the system **decouples** into independent **Weyl equations** $(\pm\
 
 **EM coupling.** In the presence of an electromagnetic field with $4$-potential $A_\mu$, the Dirac equation becomes
 $$(\gamma^\mu(\partial_\mu - ieA_\mu) - m)\psi = 0,$$
-the standard **minimal coupling** prescription. See [[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection]].
+the standard **minimal coupling** prescription. See [[Gauge Theory VII — The Hodge Star, Electrodynamics, and Yang–Mills Theory]].
 
 ---
 

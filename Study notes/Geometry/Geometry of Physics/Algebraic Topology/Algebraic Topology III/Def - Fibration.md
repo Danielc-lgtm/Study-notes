@@ -85,7 +85,7 @@ A more refined notion is the **homotopy fibre** of an arbitrary map $f : X \to Y
 
 **True name:** a fibration is **a map whose lifts behave like the projection of a product bundle, up to homotopy**. The homotopy lifting property is the precise statement of "behaves like a projection" — paths and higher homotopies in the base can be lifted to the total space, with the lifts depending continuously on the starting position.
 
-In **differential geometry**, every smooth [[Def - Vector Bundle|vector bundle]] and every smooth [[Gauge Theory II — Principal Bundles, Representations, and Bundle Classification|principal bundle]] is a fibration in the topological sense. The smooth structure gives more: connections, curvature, characteristic classes. But the *topological* notion of fibration captures the bare minimum needed for homotopy-theoretic computation.
+In **differential geometry**, every smooth [[Def - Vector Bundle|vector bundle]] and every smooth [[Gauge Theory III — Fibre Bundles, Principal Bundles, and Associated Bundles|principal bundle]] is a fibration in the topological sense. The smooth structure gives more: connections, curvature, characteristic classes. But the *topological* notion of fibration captures the bare minimum needed for homotopy-theoretic computation.
 
 In **homological algebra**, fibrations are the analogues of **surjective maps of chain complexes**. The long exact sequence of a fibration is the analogue of the long exact sequence in homology associated to a short exact sequence of chain complexes; both come from the same source — a "boundary map" between consecutive levels.
 

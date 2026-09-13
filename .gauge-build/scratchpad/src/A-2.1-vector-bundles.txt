@@ -1,0 +1,501 @@
+# Haydys, Introduction to Gauge Theory: PDF pages 3-11 (section proper: 4-10; one page of context on each side)
+
+
+===== PDF PAGE 3 =====
+Introduction to Gauge Theory
+nonessential. The quotient B := C/G may fail to be a nice space1 in a few ways, for example due
+to the presence of points with nontrivial stabilizers. Denote by Cirr ⊂C the subspace consisting of
+all points with the trivial stabilizer. Then G acts on Cirr and the quotient Birr := Cirr/G is better
+behaved. Let me assume that Birr is in fact a manifold.
+Pick a G–representation V and a smooth G–equivariant map F : C →V , where the equivariancy
+means the following:
+F(a · g) = g−1 · F(a).
+Here V is thought of as a left G–module.
+More to the point, assuming that 0 ∈V is a regular value of F, we obtain a submanifold
+Mirr := F −1(0) ∩Cirr/G ⊂Birr. Furthermore, assume also d := dim Mirr < ∞. Mirr will be
+referred to as the ‘moduli space’, although the terminology may seem odd at this moment. If Mirr
+is compact and oriented, it has the fundamental class [Mirr] ∈Hd(Birr; Z). In particular, for any
+cohomology class η ∈Hd(Birr; Z) we obtain an integer
+
+[Mirr], η
+
+=
+Z
+Mirr
+η,
+where η is thought of as a closed form of degree d on Birr. This is the ‘invariant’ we are interested
+in.
+One way to construct cohomology classes on Birr is as follows.
+Assume there is a nor-
+mal subgroup G0 ⊂G so that G := G/G0 is a Lie group.
+Then the ‘framed moduli space’
+ˆ
+Mirr := F −1(0) ∩Cirr/G0 is equipped with an action of G/G0 = G such that ˆ
+Mirr/G = Mirr.
+In other words, ˆ
+Mirr can be viewed as a principal G bundle, whose characteristic classes yield the
+cohomology classes we are after. More details on this is provided in Section 3.
+While this scheme is clearly very general, the details in each particular case may differ to some
+extend. The aim of these notes is to explain this basic scheme in some details rather than variations
+enforced by a concrete setup. As an illustration I consider the Seiberg–Witten theory in dimension
+four, where this scheme works particularly well. Due to the tight timeframe of the lectures this
+remains essentially the only example of a gauge–theoretic problem considered in these notes.
+At present a number of monographs in gauge theory is available, for example [Mor96,Moo96,
+DK90,FU91,Don02,KM07] just to name a few. All of them are however pretty much specialized
+to a concrete setting or problem while many features are common to virtually any theory, which
+is based on counting solutions of non-linear elliptic PDEs, even not necesserily of gauge–theoretic
+origin. While the presentation here does not differ substantially from the treatment of [Mor96,
+DK90], I tried to keep separate general principles from peculiar features of concrete problems.
+Also, I hopefully streamlined somewhat some arguments, for example the proof of the compactness
+for the Seiberg–Witten moduli space. Although I did not cover any other examples of gauge–
+theoretic invariants except the Seiberg–Witten invariant, the reader will be hopefully well prepared
+to read advanced texts on other enumerative invariants such as [DK90] on his own.
+The reader may ask why should we actually care about gauge theories beyond the Seiberg–
+Witten one, since most of the results obtained by gauge–theoretic means can be reproduced with
+the help of the Seiberg–Witten gauge theory. One answer is that the Seiberg–Witten theory does not
+generalize to higher dimensions, whereas for example the anti–self–duality equations do generalize
+1Ideally, one wishes the quotient to be a smooth manifold.
+3
+
+
+===== PDF PAGE 4 =====
+Introduction to Gauge Theory
+and are currently a topic of intense research. Even in low dimensions physics suggests that gauge
+theories based on non-abelian groups such as SL(2, C) or more traditional SU(2) may provide
+insights that the Seiberg–Witten theory is not capable of. For example, the Kapustin–Witten equa-
+tions play a central rôle in Witten’s approach to the construction of the Jones polynomial.
+These notes are organized as follows. In introductory Sections 2 – 4 I describe those properties
+of the ‘points’ in C that are important for the intended applications. Sections 5 and 6 are devoted
+to analytic tools used in the studies of gauge–theoretic moduli spaces. This can be viewed as
+studies of properties of F from a (somewhat) abstract point of view. The concepts and theorems
+considered in this part are not really specific to gauge theory, the same toolbox is used in virtually
+any enumerative problem based on elliptic PDEs. The last section is devoted to the Seiberg–Witten
+theory.
+I tried to keep these notes self-contained where this did not require long and technical detours. I
+hope this will make the notes available to early graduate students. Part of such course is necessarily
+certain tools from PDEs. I tried to state clearly the facts that play a rôle in the main part of these
+notes, however I did not intend to give a detailed description or complete proofs of those. The
+reader may wish to consult a more specialized literature on this topic, for example relevant chapters
+of [Eva10,Wel80].
+2
+Bundles and connections
+2.1
+Vector bundles
+2.1.1
+Basic notions
+Roughly speaking, a vector bundle is just a family of vector spaces parametrized by points of a
+manifold (or, more generally, of a topological space).
+More formally, the notion of a vector bundle is defined as follows.
+Definition 1. Choose a non-negative integer k. A real smooth vector bundle of rank k is a triple
+(π, E, M) such that the following holds:
+(i) E and M are smooth manifolds, π: E →M is a smooth submersion (the differential is
+surjective at each point);
+(ii) For each m ∈M the fiber Em := π−1(m) has the structure of a vector space and Em ∼= Rk;
+(iii) For each m ∈M there is a neighborhood U ∋m and a smooth map ψU such that the
+following diagram
+π−1(U)
+U × Rk
+U
+π
+ψU
+pr1
+commutes. Moreover, ψU is a fiberwise linear isomorphism.
+4
+
+
+===== PDF PAGE 5 =====
+Introduction to Gauge Theory
+The following terminology is commonly used: E is the total space, M is the base, π is the
+projection, and ψU is the local trivialization (over U).
+Example 1.
+(a) The product bundle: M × Rk;
+(b) The tangent bundle TM of any smooth manifold M.
+Let E and F be two vector bundles over a common base M. A homomorphism between E and
+F is a smooth map φ: E →F such that the diagram
+E
+F
+M
+πE
+ϕ
+πF
+commutes and φ is a fiberwise linear map.
+Two bundles E and F are said to be isomorphic, if there is a homomorphism φ, which is
+fiberwise an isomorphism.
+A bundle E is said to be trivial, if E is isomorphic to the product bundle.
+2.1.2
+Operations on vector bundles
+Let E and F be two vector bundles over a common base M. Then we can construct new bundles
+E∗, ΛpE, E ⊕F, E ⊗F, and Hom(E, F) as follows:
+(∗) (E∗)m = (Em)∗;
+(Λ) (ΛpE)m = Λp(Em);
+(⊕) (E ⊕F)m := Em ⊕Fm;
+(⊗) (E ⊗F)m := Em ⊗Fm;
+(Hom) Hom(E, F)m := Hom(Em, Fm).
+If f : M ′ →M is a smooth map, we can define the pull-back of E →M via
+(f ∗E)m′ := Ef(m′).
+For example, if M ′ is an open subset of M and ι is the inclusion, then E|M′ := ι∗E is just the
+restriction of E to M ′.
+The reader should check that the families of vector spaces defined above satisfy the properties
+required by Definition 1.
+Exercise 2. Prove that E∗⊗F is isomorphic to Hom(E, F).
+Exercise 3. Prove that the tangent bundle of the 2-sphere is non-trivial. (Hint: Apply the hairy ball
+theorem).
+5
+
+
+===== PDF PAGE 6 =====
+Introduction to Gauge Theory
+2.1.3
+Sections
+Definition 4. A smooth map s: M →E is called a section, if π ◦s = idM.
+In other words, a section assigns to each point m ∈M a vector s(m) ∈Em such that s(m)
+depends smoothly on m.
+Sections of the tangent bundle TM are called vector fields. Sections of ΛpT ∗M are called
+differential p-forms.
+Example 2. If f is a smooth function on M, then the differential df is a 1-form on M. More
+generally, given functions f1, . . . , fp we can also construct a p-form ω := df1 ∧· · · ∧dfp.
+Exercise 5. Let E →M be a vector bundle of rank k and U ⊂M be an open subset. Prove that
+E is trivial over U if and only if there are k sections e = (e1, . . . , ek), ej ∈Γ(U; E), such that
+e(m) is a basis of Em for each m ∈U. More precisely, given e show that ψU can be constructed
+according to the formula
+ψ−1
+U : U × Rk −→E|U,
+(m, x) 7→e(m) · x.
+In fact this establishes a one-to-one correspondence between k-tuples of pointwise linearly inde-
+pendent sections and local trivializations of E.
+We denote by Γ(E) = Γ(M; E) the space of all smooth sections of E. Clearly, Γ(E) is a vector
+space, where the addition and multiplication with a scalar are defined pointwise. In fact, Γ(E) is a
+C∞(M)-module.
+Given a local trivialization e over U (cf. Exercise 5) and a section s, we can write
+s(m) =
+k
+X
+j=1
+σj(m)ej(m)
+for some functions σj : U →R. Thus, locally any section of a vector bundle can be thought of as a
+map σ: U →Rk.
+It is important to notice that σ depends on the choice of a local trivialization. Indeed, if e′ is
+another local trivialization of E over U ′, then there is a map
+g: U ∩U ′ −→GLn(R)
+such that
+e = e′ · g.
+(6)
+If σ′ : U ′ →Rk is a local representation of s with respect to e′, we have
+s = e′σ′ = eg−1σ′ = eσ
+=⇒
+σ′ = gσ.
+2.1.4
+Covariant derivatives
+The reader surely knows from the basic analysis course that the notion of the derivative is very
+useful. It is natural to ask whether there is a way to differentiate sections of bundles too.
+To answer this question, recall the definition of the derivative of a function f : M →R. Namely,
+choose a smooth curve γ : (−ε, ε) →M and denote m := γ(0), v := ˙γ(0) ∈TmM. Then
+df(v) = lim
+t→0
+f(γ(t)) −f(m)
+t
+.
+(7)
+6
+
+
+===== PDF PAGE 7 =====
+Introduction to Gauge Theory
+Trying to replace f by a section s of a vector bundle, we immediately run into a problem, namely
+the difference s(γ(t)) −s(m) is ill-defined in general since these two vectors may lie in different
+vector spaces.
+Hence, instead of trying to mimic (7) we will define the derivatives of sections axiomatically,
+namely asking that the most basic property of the derivative—the Leibnitz rule—holds.
+Definition 8. Let E →M be a vector bundle. A covariant derivative is an R-linear map ∇: Γ(E) →
+Γ(T ∗M ⊗E) such that
+∇(fs) = df ⊗s + f∇s
+(9)
+holds for all f ∈C∞(M) and all s ∈Γ(E).
+Example 10. Let M ⊂RN be an embedded submanifold. Then the tangent bundle TM is naturally
+a subbundle of the product bundle RN := M × RN. In particular, any section s of TM can be
+regarded as a map M →RN. With this at hand we can define a connection on TM as follows
+∇s := pr(ds),
+where pr is the orthogonal projection onto TM. A straightforward computation shows that this
+satisfies the Leibniz rule, i.e., ∇is a connection indeed.
+Theorem 11. For any vector bundle E →M the space of all connections A(E) is an affine space
+modelled on Ω1(End E) = Γ
+ T ∗M ⊗End(E)
+
+.
+To be somewhat more concrete, the above theorem consists of the following statements:
+(a) A(E) is non-empty.
+(b) For any two connections ∇and ˆ∇the difference ∇−ˆ∇is a 1-form with values in End(E);
+(c) For any ∇∈A(E) and any a ∈Ω1(End E) the following
+(∇+ a)s := ∇s + as
+is a connection.
+For the proof of Theorem 11 we need the following elementary lemma, whose proof is left as
+an exercise.
+Lemma 12. Let A: Γ(E) →Ωp(F) be an R-linear map, which is also C∞(M)-linear, i.e.,
+A(fs) = fA(s)
+∀f ∈C∞(M)
+and
+∀s ∈Γ(E).
+Then there exists a ∈Ωp Hom(E, F)
+
+such that A(s) = a · s.
+□
+Proof of Theorem 11. Notice first that A(E) is convex, i.e., for any ∇, ˆ∇∈A(E) and any t ∈[0, 1]
+the following t∇+ (1 −t) ˆ∇is also a connection.
+If ψU is a local trivialization of E over U, then we can define a connection ∇U on E|U by
+declaring
+∇Us := ψ−1
+U d(ψU(s)).
+Using a partition of unity and the convexity property, a collection of these local covariant derivatives
+can be sewed into a global covariant derivative just like in the proof of the existence of Riemannian
+metrics on manifolds, cf. [BT03, Thm. 3.3.7]. This proves (a).
+By (9), the difference ∇−ˆ∇is C∞(M)–linear. Hence, (b) follows by Lemma 12.
+The remaining step, namely (c), is straightforward. This finishes the proof of this theorem.
+□
+7
+
+
+===== PDF PAGE 8 =====
+Introduction to Gauge Theory
+While Theorem 11 answers the question of the existence of connections, the reader may wish
+to have a more direct way to put his hands on a connection. One way to do this is as follows.
+Let e be a local trivialization. Since e is a pointwise base we can write
+∇e = e · A,
+(13)
+where A = A(∇, e) is a k × k-matrix, whose entries are 1-forms defined on U. A is called the
+connection matrix of ∇with respect to e.
+If σ is a local representation of a section s, then
+∇s = ∇(eσ) = ∇(e)σ + e ⊗dσ = e
+ Aσ + dσ
+
+.
+Hence, it is common to say that locally
+∇= d + A,
+which means that dσ + Aσ is a local representation of ∇s. In particular, ∇is uniquely determined
+by its connection matrix over U and any A ∈Ω1(U; glk(R)) appears as a connection matrix of
+some connection (cf. Theorem 11).
+Just like σ, the connection matrix also depends on the choice of e. If e′ = eg, we have
+∇e′ = ∇(eg) = (∇e)g + e ⊗dg = e
+ Ag + dg
+
+= e′ g−1Ag + g−1dg
+
+.
+Hence, the connection matrix A′ of ∇with respect to e′ can be expressed as follows:
+A′ = g−1Ag + g−1dg.
+(14)
+2.1.5
+The curvature
+While Definition 8 yields a way to differentiate sections, some properties very well known from
+multivariable analysis are not preserved. One of the most important cases is that covariant deriv-
+atives with respect to two variables do not need to commute. The failure of the commutativity of
+partial covariant derivatives is closely related to the notion of curvature, which is described next.
+Denote Ωp(E) := Γ
+ ΛpT ∗M ⊗E
+
+.
+We can extend the covariant derivative ∇to a map
+d∇: Ωp(E) →Ωp+1(E) as follows. If s ∈Γ(E) and ω ∈Ωp(M) we declare
+d∇(ω ⊗s) := dω ⊗s + (−1)pω ∧∇s,
+which yields a unique R-linear map d∇defined on all of Ωp(E). This satisfies the following variant
+of the Leibniz rule
+d∇(α ∧ω) = dα ∧ω + (−1)qα ∧d∇ω,
+for all α ∈Ωq(M) and ω ∈Ωp(M; E).
+Thus, we obtain a sequence
+0 →Ω0(E)
+d∇=∇
+−−−−→Ω1(E)
+d∇
+−−→· · · →Ωn(E) →0,
+where n = dim M. However, unlike in the case of the de Rham differential, the above does not
+need to be a complex.
+8
+
+
+===== PDF PAGE 9 =====
+Introduction to Gauge Theory
+Proposition 15. There is a 2-form F∇with values in End E such that
+d∇◦d∇= F∇.
+(16)
+The above equality means that for any ω ∈Ωp(E) we have d∇
+ d∇(ω)
+
+= F∇∧ω, where
+the right hand side of the letter equality is a combination of the wedge-product and the natural
+contraction End(E) ⊗E →E.
+Proof of Proposition 15. We prove the proposition for p = 0 first. Applying the Leibniz rule twice,
+we see that d∇◦∇: Ω0(E) →Ω2(E) is C∞(M)–linear. Hence, by Lemma 12 we obtain a 2-form
+F∇such that
+d∇(∇s) = F∇s
+holds for any s ∈Ω0(E).
+It remains to consider the case p > 0. For any η ∈Ωp(M) and s ∈Γ(E) we have
+d∇
+ d∇(η ⊗s)
+
+= d∇
+ dη ⊗s + (−1)pη ∧∇s
+
+= 0 + (−1)p+1dη ∧∇s + (−1)pdη ∧∇s + (−1)2pη ∧d∇
+ ∇s
+
+= η ∧F∇s
+= F∇∧(η ⊗s).
+Here the last equality holds because F∇is a differential form of even degree.
+□
+Definition 17. The 2-form F∇defined by (16) is called the curvature form of ∇.
+Our next aim is to clarify somewhat the meaning of the curvature form. If v is a tangent vector
+at some point m ∈M, we call
+∇v s := ıv∇s
+the covariant derivative of s in the direction of v.
+Choose local coordinates (x1, . . . , xn) and denote by ∂i =
+∂
+∂xi the tangent vector of the curve
+γ(t) = (x0
+1, . . . , x0
+i−1, t, x0
+i+1, . . . , x0
+n).
+We may call
+∇i s := ∇∂i s
+“partial covariant derivatives”. With these notations at hand we have the expression
+∇s =
+n
+X
+i=1
+dxi ⊗∇i s,
+which is just a form of the familiar expression for the differential of a function: df = P ∂f
+∂xidxi.
+Furthermore, we have
+d∇(∇s) = −
+n
+X
+i=1
+dxi ∧∇
+ ∇i s
+
+= −
+n
+X
+i,j=1
+dxi ∧dxj ⊗∇j(∇is)
+=
+n
+X
+i,j=1
+dxi ∧dxj ⊗∇i(∇js).
+9
+
+
+===== PDF PAGE 10 =====
+Introduction to Gauge Theory
+From this we conclude
+F∇
+ ∂i, ∂j
+
+= ∇i(∇js) −∇j(∇is),
+i.e., the curvature form measures the failure of partial covariant derivatives to commute as men-
+tioned at the beginning of this section.
+Sometimes it is useful to have an expression of the curvature form in a local frame. Thus,
+pick a local frame e of E and let A be the connection form of ∇with respect to e. If σ is a local
+representation of some s ∈Γ(E), then we have
+d∇
+ ∇(eσ)
+
+= d∇
+ e(dσ + Aσ)
+
+= ∇e ∧(dσ + Aσ) + e(dA σ −A ∧dσ)
+= e
+
+A ∧dσ + A ∧A σ + dA σ −A ∧dσ
+
+= e
+ dA + A ∧A
+
+σ.
+Hence, we conclude that locally
+F∇= dA + A ∧A.
+(18)
+In particular, the curvature form is a first order non-linear operator in terms of the connection form.
+Remark 19. It turns out to be useful to think of A as a 1–form with values in the Lie algebra
+glk(R) = End(Rk). From this perspective it is more suitable to write (18) in the following form
+F∇= dA + 1
+2[A ∧A],
+(20)
+where the last term is a combination of the wedge product and the Lie brackets.
+If e′ is another local frame such that e = e′ · g, then using (14) one can show that
+F ′
+∇= dA′ + A′ ∧A′ = g−1F∇g.
+The reader is strongly encouraged to check the details of this computation.
+Local expression (18) implies immediately the following.
+Proposition 21. If a ∈Ω1(End E), then the curvature forms of ∇and ∇+ a are related by the
+equality:
+F∇+a = F∇+ d∇a + a ∧a.
+□
+2.1.6
+The gauge group
+Pick a vector bundle E and consider
+G = G(E) :=
+n
+g ∈Γ
+ End(E)
+
+| ∀m ∈M g(m) ∈GL(Em)
+o
+,
+which is endowed with the C∞–topology. If E is endowed with an extra structure, for example an
+orientation or a scalar product, we also require that gauge transformations respect this structure.
+Clearly, G is a topological group, where the group operations are defined pointwise. G is called
+the group of gauge transformations of E or simply the gauge group.
+If ∇is a connection on E and g ∈G, we can define another connection as follows
+∇gs := g−1∇(gs).
+This yields a right action of G on A(E).
+10
+
+
+===== PDF PAGE 11 =====
+Introduction to Gauge Theory
+Definition 22. Two connections are called gauge equivalent, if there is a gauge transformation that
+transforms one of the connections into the other one.
+Pick a local trivialization e of E over an open subset U. Let A = A(e, ∇) ∈Ω1(U; glk(R)) be
+a local representation of ∇, i.e., ∇e = e · A. Let us compute the local representation of ∇g. Notice
+first, that using e we may think of g as a map U →GLk(R), i.e., g(e) = e · g. Then
+∇ge = g−1 ∇(e · g)
+
+= g−1 e · Ag + e · dg
+
+= g−1(e) · (Ag + dg) = e ·
+ g−1Ag + g−1dg
+
+.
+We conclude
+A(∇g, e) = g−1Ag + g−1dg = A(∇, e · g),
+where the last equality follows by (14). Thus, (14) expresses both the change of the connection
+matrix under the change of local trivializations and the action of the gauge group.
+2.2
+Principal bundles
+The computations we met in the previous sections on the dependence of our objects on the choice
+of a local frame become formidable quite soon. The notion of a principal bundle is useful in dealing
+with this and turns out to have other advantages as we will see below. The idea is to consider all
+possible frames at once rather than choosing local trivializations when needed.
+2.2.1
+The frame bundle and the structure group
+Let G be a Lie group.
+Definition 23. A principal bundle with the structure group G is a triple (P, M, π), where
+(i) P and M are smooth manifolds and π: P →M is a surjective submersion;
+(ii) G acts on P on the right such that π(p · g) = π(p) for all p ∈P and all g ∈G;
+(iii) G acts freely and transitively on each fiber π−1(m);
+(iv) For each m ∈M there is a neighborhood U ∋m and a map ψU such that the diagram
+π−1(U)
+U × G
+U
+π
+ψU
+pr1
+commutes. Moreover, ψU is G–equivariant ψU(p · g) = ψU(p) · g, where G acts on U × G
+by the multiplication on the right on the second factor.
+A fundamental example of a principal bundle is the frame bundle of a vector bundle E →M.
+We take a moment to describe the construction in some detail.
+Thus, for a fixed m ∈M let Fr(Em) denote the set of all bases of Em. The group GLk(R) acts
+freely and transitively on Fr(Em) so that we can in fact identify Fr(Em) with GLk(R) even though
+in a non-canonical way. In any case, Fr(Em) can be viewed as an open subset of Rk2.
+11

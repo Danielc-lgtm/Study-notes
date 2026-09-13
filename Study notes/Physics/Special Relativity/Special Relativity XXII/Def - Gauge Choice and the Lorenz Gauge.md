@@ -67,7 +67,7 @@ For comparison, the **Coulomb gauge** $\nabla\cdot\boldsymbol{\mathcal A} = 0$ i
 
 # Relate to Other Fields / Compression
 
-A gauge choice is the electromagnetic instance of **fixing a section of a principal bundle** — choosing, at each event, a reference for the $\mathrm{U}(1)$ phase, the bundle-theoretic content of [[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection|gauge theory]]. The same notion recurs whenever a theory has a redundancy: coordinate gauges in general relativity (harmonic coordinates, the analogue of Lorenz gauge), the unitary and $R_\xi$ gauges of the electroweak theory, and the conformal gauge of string theory are all conditions that fix a redundancy to make the dynamics tractable.
+A gauge choice is the electromagnetic instance of **fixing a section of a principal bundle** — choosing, at each event, a reference for the $\mathrm{U}(1)$ phase, the bundle-theoretic content of [[Gauge Theory — Series Map|gauge theory]]. The same notion recurs whenever a theory has a redundancy: coordinate gauges in general relativity (harmonic coordinates, the analogue of Lorenz gauge), the unitary and $R_\xi$ gauges of the electroweak theory, and the conformal gauge of string theory are all conditions that fix a redundancy to make the dynamics tractable.
 
 **True name:** the Lorenz gauge is "the divergence-free, Lorentz-invariant gauge that decouples the wave equation". This is what you reach for: it is always available, it respects boosts, and it turns $\nabla_\mu F^{\mu\nu} = \mu_0 J^\nu$ into $\Box A = \mu_0 J$. The defining operational fact is the reduction to four uncoupled scalar wave equations — that is the entire reason to impose it.
 

@@ -124,7 +124,11 @@ Record every file in the unit in `progress.json` → `units[<id>].paths`.
 
 Repository sources live in `sources/` (and `paper_source/` for paper notes).
 Match by filename/topic; for long PDFs extract only the relevant chapters
-(`pdftotext`, `qpdf --pages` — see SKILL.md "Source Material"). In **create**
+(`pdftotext`, `qpdf --pages` — see SKILL.md "Source Material"). Before
+writing, also extract and read the prose exemplar `prose/Chiang Sung
+En-Thesis.pdf` against `prose-and-proof-standard.md` — it fixes the register
+and the proof floor for the unit, and it is re-read on every run, not only
+the first. In **create**
 mode do the two-pass procedure from SKILL.md Step 4: Pass 1 skim → content map in
 `.scratch/<slug>/content-map.md`; Pass 2 write chapter by chapter. Web search is
 allowed when the environment permits it and the sources are thin (SKILL.md
@@ -197,6 +201,7 @@ branch say exactly what comes next.**
     python3 .claude/skills/polymath-notes/scripts/find-math-bugs.py
     python3 .claude/skills/polymath-notes/scripts/find-latex-bugs.py
     python3 .claude/skills/polymath-notes/scripts/find-wikilink-bugs.py
+    python3 .claude/skills/polymath-notes/scripts/find-unproved-theorems.py "<unit folder>"   # Proof Standard gate
     python3 .claude/skills/polymath-notes/scripts/find-notation-gaps.py     # triage list, not a bug list
     python3 .claude/skills/polymath-notes/scripts/autolinker.py --apply --max-per-file 10   # create mode, or after adding pages
 
@@ -211,7 +216,9 @@ Run them as separate passes, in this order, and *fix* what they find:
 
 1. **Correctness and rigour** — statements, hypotheses, conventions, and a
    line-by-line audit of every proof and solution against `note-quality.md`
-   P1 (complete, all cases, every step justified, no "clearly").
+   P1 (every theorem mentioned proved; complete at the thesis floor, all
+   cases, every step justified, no "clearly", no sketch, no statement-only
+   page, imports registered).
 2. **Pedagogy** — motivation precedes machinery; concrete before abstract.
 3. **Rederivation** — scaffolds, "why is it true", true names, legal operations
    are enough to reconstruct the development from a few handles.

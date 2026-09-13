@@ -14,8 +14,9 @@ Before creating or substantially rewriting study notes, read:
 2. `.claude/skills/polymath-notes/SKILL.md`
 3. `.claude/skills/polymath-notes/references/templates.md`
 4. `.claude/skills/polymath-notes/references/obsidian-patterns.md`
-5. `.codex/note-quality.md`
-6. `.codex/workflow.md`
+5. `.claude/skills/polymath-notes/references/prose-and-proof-standard.md`, and the thesis it points at, `prose/Chiang Sung En-Thesis.pdf` (extract with `pymupdf`) — the prose register and the minimum proof standard for every note
+6. `.codex/note-quality.md`
+7. `.codex/workflow.md`
 
 The directory name `.claude` is historical. Its specifications are authoritative for Codex as well. The `.agents/skills/` directory contains pointer skills only, so that Codex's skill loader sees the same three skills; the content is in `.claude/skills/`.
 
@@ -126,12 +127,12 @@ A longer rewrite is not automatically a better rewrite. Added material should in
 
 ## 5. Writing standard
 
-Follow the writing rules in the polymath-notes skill.
+Follow the writing rules in the polymath-notes skill. **The prose baseline is the owner's thesis, `prose/Chiang Sung En-Thesis.pdf`**, specified in `.claude/skills/polymath-notes/references/prose-and-proof-standard.md` Part I; read both before writing.
 
 In particular:
 
 - formal definitions and theorem statements are precise and conventional;
-- explanatory material uses flowing, mathematically mature prose;
+- explanatory material uses the thesis register: orient, motivate, state formally, unpack in the smallest concrete case, re-explain in a purpose-titled remark, close in words — in a measured first-person-plural academic voice, with every claim carrying its reason;
 - motivate before formalizing;
 - use concrete cases before abstraction when appropriate;
 - prefer prose over bullets except for genuinely enumerative material;
@@ -142,7 +143,7 @@ In particular:
 - explain why each important construction or proof step has the form it does;
 - mathematical notation follows the vault's LaTeX conventions.
 
-Aim for the explanatory quality of excellent mathematical lecture notes: conversational enough to expose the thought process, rigorous enough to rely on later.
+Aim for the explanatory quality of the thesis's background and results chapters: expansive enough to re-explain every object in its smallest concrete case, rigorous enough to rely on later.
 
 ---
 
@@ -203,18 +204,30 @@ self-containedness, P3 explanation, then P4 conciseness.
 When rewriting existing notes, three dimensions take precedence over every
 other improvement and are diagnosed and fixed first, in this order:
 
-1. **Rigour.** Every theorem, lemma, proposition, and corollary page carries a
-   complete, fully rigorous proof (in its collapsible `Formal Proof` section,
-   with the lemma decomposition feeding it). Every existing proof is audited
-   line by line: no "clearly", "it is easy to see", "similarly", or omitted
-   case that a careful reader could not expand in under a minute; every
-   hypothesis used is named at the point of use; every limit interchange,
-   measurability, well-definedness, or convergence step is justified. Claims
-   made in definition pages (examples, non-examples, corollaries, calibration
-   checks) and in exercise solutions get the same treatment: a stated fact is
-   either proved on the page or transcluded from the page that proves it.
-   Comprehensive means all cases and all directions of an equivalence, not a
-   representative one.
+1. **Rigour.** Every theorem, lemma, proposition, and corollary that the unit
+   *mentions* — on a concept map, on its own page, inside a proof, in a
+   solution, in a definition's examples, in a bridge — carries a complete,
+   fully rigorous proof on its own page (in its collapsible `Formal Proof`
+   section, with the lemma decomposition feeding it), and every use of it
+   elsewhere wikilinks that page and restates the statement at the point of
+   use. **The thesis's fully written proofs are the minimum level of
+   detail** (`prose-and-proof-standard.md` §6): named assumptions and goal,
+   labelled blocks with bold lead-ins, a justification on every displayed
+   line, every hypothesis invoked by name, clause-by-clause well-definedness,
+   all directions and cases, a closing sentence in words. Every existing
+   proof is audited line by line: no "clearly", "it is easy to see",
+   "similarly", "sketch", or omitted case; every limit interchange,
+   measurability, well-definedness, or convergence step is justified. A
+   `Thm - X (Statement)` page, or a Formal Proof that is a sketch or a
+   citation, is a defect to repair by writing the proof — never to
+   preserve. The only result that may be used without proof is a genuinely
+   book-length one, inside the `Imported without proof` callout and listed
+   in the topic page's `# Imported Results`. Claims made in definition pages
+   (examples, non-examples, corollaries, calibration checks) and in exercise
+   solutions get the same treatment: a stated fact is either proved on the
+   page or transcluded from the page that proves it. Comprehensive means all
+   cases and all directions of an equivalence, not a representative one.
+   `find-unproved-theorems.py` is the mechanical gate.
 
 2. **Self-containedness.** Every page links or loads the context needed to
    understand it: every definition and theorem it uses is transcluded
@@ -226,8 +239,8 @@ other improvement and are diagnosed and fixed first, in this order:
    necessity.
 
 3. **Explanation quality, with permission to replace.** The polymath-notes
-   register (motivation before formalism, concrete before abstract, Tong-style
-   prose) remains the target. But when Codex's own default explanation of a
+   register (the thesis register: orient, motivate, state formally, unpack in
+   the smallest concrete case, re-explain, close in words) remains the target. But when Codex's own default explanation of a
    construction or proof is clearly superior to the existing note's — clearer
    mechanism, better-chosen example, more honest about what is hard, tighter
    route to the result — Codex replaces the existing explanation rather than

@@ -4,7 +4,7 @@ The paper's reading surface has three layers: an **index page** at the top of th
 
 The index is short scaffolding — it names the paper, links prominently to the Whole-Paper Story, and lists the section pages. The Whole-Paper Story is the *reading experience* — a reader who wants to understand the paper reads it top to bottom. The section pages are for looking things up and for depth — big-picture indices that click through to atomic subpages.
 
-Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the reference thesis for the prose voice. Every subpage is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
+Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the reference thesis (`prose/Chiang Sung En-Thesis.pdf`, specified in `prose-and-proof-standard.md`) for the prose voice and the proof floor. Every subpage is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
 
 Filename pattern (**index at the top of the folder, everything else in `Subpages/`**):
 - Index: `Study notes/paper/[Short Title]/Paper - [Short Title].md`
@@ -31,7 +31,7 @@ tags: [paper, primary-field-tag, secondary-field-tag]
 # Paper — [Short Title]
 
 > [!tip] Whole-paper story — read this first
-> **[[Paper - [Short Title] — Whole-Paper Story|The whole paper as one connected story]]** — a single top-to-bottom narrative with mental pictures at every step, in the voice of `paper_source/example.md`. If you are here to understand the paper (rather than look up a specific theorem), start there.
+> **[[Paper - [Short Title] — Whole-Paper Story|The whole paper as one connected story]]** — a single top-to-bottom narrative with mental pictures at every step. If you are here to understand the paper (rather than look up a specific theorem), start there.
 
 > [!abstract] What this paper does
 > [A one-to-two-paragraph plain-language account, thesis voice: what problem it addresses, what it establishes, why that matters. State it so a floor-level reader understands the point of the paper before any machinery appears.]
@@ -94,7 +94,7 @@ Every section page is **modularly self-contained** — you can open §5 without 
 
 Filename: `Subpages/Paper - [Short Title] — Whole-Paper Story.md`.
 
-**The exemplar is `paper_source/example.md`.** Read it end to end before writing. The template below records the structural elements; it does not substitute for reading the exemplar's prose voice.
+**The structural exemplar is `paper_source/example.md`; the sentences are in the thesis register** (`prose-and-proof-standard.md` Part I — measured first-person-plural academic prose, every claim with its reason). Read the exemplar end to end before writing. The template below records the structural elements; it does not substitute for reading the exemplar's construction of the narrative, and the exemplar's chattier phrasing is not the voice to copy.
 
 ```markdown
 ---
@@ -136,6 +136,7 @@ tags: [paper, primary-field-tag, story]
 - Every joint gets a "why" ("Why two boundary points: the fixed points of the Möbius map solve a quadratic, and the sign of its discriminant is …").
 - Connective sentences at every section boundary that name the mechanism ("And here's the payoff of Section 3's whole setup …").
 - Optional pull-quotes for one-line summaries the reader should carry.
+- Sentences in the thesis register throughout (`prose-and-proof-standard.md` Part I): the exemplar supplies the *architecture* of the story, the thesis supplies the *voice*.
 
 ---
 

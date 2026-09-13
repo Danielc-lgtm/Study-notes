@@ -198,7 +198,7 @@ The proof has three subtleties. First, **constructing the lift** of a loop requi
 
 **Number theory: roots of unity and the cyclotomic Galois group.** Each $n$-th root of unity $\zeta_n = e^{2\pi i / n}$ corresponds to a loop $\omega_1$ traversed $n$ times — winding $n$ in $S^1$. The Galois group $\mathrm{Gal}(\mathbb{Q}(\zeta_n)/\mathbb{Q}) = (\mathbb{Z}/n)^\times$ acts by permuting the roots, mirroring the action of the deck group $\mathbb{Z}$ on the lifts in $\mathbb{R}$ (mod $n$). The cyclotomic Galois group is essentially the algebraic shadow of $\pi_1(S^1) = \mathbb{Z}$.
 
-**Physics: monopole charge and quantization.** In the magnetic monopole setup ([[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection]]), the magnetic charge is constrained to be an integer multiple of a basic unit — the **Dirac quantization condition** — and the integer is precisely a winding number on $S^2 \setminus \{\text{poles}\}$ (where $\pi_1 = \mathbb{Z}$, by deformation retract to $S^1$). The fact that the charge is integer-valued is a direct manifestation of $\pi_1(S^1) = \mathbb{Z}$.
+**Physics: monopole charge and quantization.** In the magnetic monopole setup ([[Gauge Theory VII — The Hodge Star, Electrodynamics, and Yang–Mills Theory]]), the magnetic charge is constrained to be an integer multiple of a basic unit — the **Dirac quantization condition** — and the integer is precisely a winding number on $S^2 \setminus \{\text{poles}\}$ (where $\pi_1 = \mathbb{Z}$, by deformation retract to $S^1$). The fact that the charge is integer-valued is a direct manifestation of $\pi_1(S^1) = \mathbb{Z}$.
 
 ---
 

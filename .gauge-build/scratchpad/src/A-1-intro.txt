@@ -1,0 +1,316 @@
+# Haydys, Introduction to Gauge Theory: PDF pages 1-4 (section proper: 2-3; one page of context on each side)
+
+
+===== PDF PAGE 1 =====
+Introduction to Gauge Theory
+Andriy Haydys
+26th April 2024
+This is lecture notes for a course given at the PCMI Summer School “Quantum Field The-
+ory and Manifold Invariants” (July 1 – July 5, 2019). I describe basics of gauge-theoretic
+approach to construction of invariants of manifolds. The main example considered here is
+the Seiberg–Witten gauge theory. However, I tried to present the material in a form, which
+is suitable for other gauge-theoretic invariants too.
+Contents
+1
+Introduction
+2
+2
+Bundles and connections
+4
+2.1
+Vector bundles
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+2.1.1
+Basic notions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4
+2.1.2
+Operations on vector bundles . . . . . . . . . . . . . . . . . . . . . . . . .
+5
+2.1.3
+Sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+2.1.4
+Covariant derivatives . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6
+2.1.5
+The curvature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8
+2.1.6
+The gauge group . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10
+2.2
+Principal bundles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11
+2.2.1
+The frame bundle and the structure group . . . . . . . . . . . . . . . . . .
+11
+2.2.2
+The associated vector bundle . . . . . . . . . . . . . . . . . . . . . . . . .
+14
+2.2.3
+Connections on principal bundles
+. . . . . . . . . . . . . . . . . . . . . .
+16
+2.2.4
+The curvature of a connection on a principal bundle . . . . . . . . . . . . .
+19
+2.2.5
+The gauge group . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+21
+2.3
+The Levi–Civita connection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+22
+2.4
+Classification of U(1) and SU(2) bundles
+. . . . . . . . . . . . . . . . . . . . . .
+23
+2.4.1
+Complex line bundles . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+24
+2.4.2
+Quaternionic line bundles
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+25
+3
+The Chern–Weil theory
+26
+3.1
+The Chern–Weil theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+26
+3.1.1
+The Chern classes
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+28
+3.2
+The Chern–Simons functional
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+30
+3.3
+The modui space of flat connections . . . . . . . . . . . . . . . . . . . . . . . . .
+32
+3.3.1
+Parallel transport and holonomy . . . . . . . . . . . . . . . . . . . . . . .
+32
+1
+
+
+===== PDF PAGE 2 =====
+Introduction to Gauge Theory
+3.3.2
+The monodromy representation of a flat connection . . . . . . . . . . . . .
+33
+4
+Dirac operators
+34
+4.1
+Spin groups and Clifford algebras
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+34
+4.2
+Dirac operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+36
+4.3
+Spin and Spinc structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+37
+4.3.1
+On the classification of spinc structures
+. . . . . . . . . . . . . . . . . . .
+41
+4.4
+The Weitzenböck formula . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+41
+5
+Linear elliptic operators
+43
+5.1
+Sobolev spaces
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+43
+5.2
+Elliptic operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+46
+5.3
+Elliptic complexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+49
+5.3.1
+A gauge-theoretic interpretation . . . . . . . . . . . . . . . . . . . . . . .
+51
+5.3.2
+The de Rham complex . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+51
+6
+Fredholm maps
+52
+6.1
+The Kuranishi model and the Sard–Smale theorem
+. . . . . . . . . . . . . . . . .
+52
+6.2
+The Z/2Z degree . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+53
+6.3
+The parametric transversality . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+55
+6.4
+The determinant line bundle
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+56
+6.5
+Orientations and the Z–valued degree
+. . . . . . . . . . . . . . . . . . . . . . . .
+58
+6.6
+An equivariant setup
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+59
+7
+The Seiberg–Witten gauge theory
+61
+7.1
+The Seiberg–Witten equations
+. . . . . . . . . . . . . . . . . . . . . . . . . . . .
+61
+7.1.1
+The gauge group action . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+62
+7.1.2
+The deformation complex
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+62
+7.1.3
+Sobolev completions . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+63
+7.1.4
+Compactness of the Seiberg–Witten moduli space . . . . . . . . . . . . . .
+64
+7.1.5
+Slices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+67
+7.1.6
+A perturbation
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+68
+7.1.7
+Reducible solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+69
+7.1.8
+Orientability of the Seiberg–Witten moduli space . . . . . . . . . . . . . .
+70
+7.2
+The Seiberg–Witten invariant . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+71
+7.2.1
+Sample application of the Seiberg–Witten invariant . . . . . . . . . . . . .
+72
+1
+Introduction
+Gauge theory by now is a vast subject with many connections in geometry, analysis, and physics.
+In these notes I focus on gauge theory as it is used in the construction of manifolds invariants, other
+uses of gauge theory remain beyond the scope of these notes.
+The basic scheme of construction invariants of manifolds via gauge theory is quite simple. To
+be more concrete, let me describe some details. Thus, let G be a Lie group acting on a manifold
+C. The common convention, which I will follow, is that G acts on the right, although this is clearly
+2
+
+
+===== PDF PAGE 3 =====
+Introduction to Gauge Theory
+nonessential. The quotient B := C/G may fail to be a nice space1 in a few ways, for example due
+to the presence of points with nontrivial stabilizers. Denote by Cirr ⊂C the subspace consisting of
+all points with the trivial stabilizer. Then G acts on Cirr and the quotient Birr := Cirr/G is better
+behaved. Let me assume that Birr is in fact a manifold.
+Pick a G–representation V and a smooth G–equivariant map F : C →V , where the equivariancy
+means the following:
+F(a · g) = g−1 · F(a).
+Here V is thought of as a left G–module.
+More to the point, assuming that 0 ∈V is a regular value of F, we obtain a submanifold
+Mirr := F −1(0) ∩Cirr/G ⊂Birr. Furthermore, assume also d := dim Mirr < ∞. Mirr will be
+referred to as the ‘moduli space’, although the terminology may seem odd at this moment. If Mirr
+is compact and oriented, it has the fundamental class [Mirr] ∈Hd(Birr; Z). In particular, for any
+cohomology class η ∈Hd(Birr; Z) we obtain an integer
+
+[Mirr], η
+
+=
+Z
+Mirr
+η,
+where η is thought of as a closed form of degree d on Birr. This is the ‘invariant’ we are interested
+in.
+One way to construct cohomology classes on Birr is as follows.
+Assume there is a nor-
+mal subgroup G0 ⊂G so that G := G/G0 is a Lie group.
+Then the ‘framed moduli space’
+ˆ
+Mirr := F −1(0) ∩Cirr/G0 is equipped with an action of G/G0 = G such that ˆ
+Mirr/G = Mirr.
+In other words, ˆ
+Mirr can be viewed as a principal G bundle, whose characteristic classes yield the
+cohomology classes we are after. More details on this is provided in Section 3.
+While this scheme is clearly very general, the details in each particular case may differ to some
+extend. The aim of these notes is to explain this basic scheme in some details rather than variations
+enforced by a concrete setup. As an illustration I consider the Seiberg–Witten theory in dimension
+four, where this scheme works particularly well. Due to the tight timeframe of the lectures this
+remains essentially the only example of a gauge–theoretic problem considered in these notes.
+At present a number of monographs in gauge theory is available, for example [Mor96,Moo96,
+DK90,FU91,Don02,KM07] just to name a few. All of them are however pretty much specialized
+to a concrete setting or problem while many features are common to virtually any theory, which
+is based on counting solutions of non-linear elliptic PDEs, even not necesserily of gauge–theoretic
+origin. While the presentation here does not differ substantially from the treatment of [Mor96,
+DK90], I tried to keep separate general principles from peculiar features of concrete problems.
+Also, I hopefully streamlined somewhat some arguments, for example the proof of the compactness
+for the Seiberg–Witten moduli space. Although I did not cover any other examples of gauge–
+theoretic invariants except the Seiberg–Witten invariant, the reader will be hopefully well prepared
+to read advanced texts on other enumerative invariants such as [DK90] on his own.
+The reader may ask why should we actually care about gauge theories beyond the Seiberg–
+Witten one, since most of the results obtained by gauge–theoretic means can be reproduced with
+the help of the Seiberg–Witten gauge theory. One answer is that the Seiberg–Witten theory does not
+generalize to higher dimensions, whereas for example the anti–self–duality equations do generalize
+1Ideally, one wishes the quotient to be a smooth manifold.
+3
+
+
+===== PDF PAGE 4 =====
+Introduction to Gauge Theory
+and are currently a topic of intense research. Even in low dimensions physics suggests that gauge
+theories based on non-abelian groups such as SL(2, C) or more traditional SU(2) may provide
+insights that the Seiberg–Witten theory is not capable of. For example, the Kapustin–Witten equa-
+tions play a central rôle in Witten’s approach to the construction of the Jones polynomial.
+These notes are organized as follows. In introductory Sections 2 – 4 I describe those properties
+of the ‘points’ in C that are important for the intended applications. Sections 5 and 6 are devoted
+to analytic tools used in the studies of gauge–theoretic moduli spaces. This can be viewed as
+studies of properties of F from a (somewhat) abstract point of view. The concepts and theorems
+considered in this part are not really specific to gauge theory, the same toolbox is used in virtually
+any enumerative problem based on elliptic PDEs. The last section is devoted to the Seiberg–Witten
+theory.
+I tried to keep these notes self-contained where this did not require long and technical detours. I
+hope this will make the notes available to early graduate students. Part of such course is necessarily
+certain tools from PDEs. I tried to state clearly the facts that play a rôle in the main part of these
+notes, however I did not intend to give a detailed description or complete proofs of those. The
+reader may wish to consult a more specialized literature on this topic, for example relevant chapters
+of [Eva10,Wel80].
+2
+Bundles and connections
+2.1
+Vector bundles
+2.1.1
+Basic notions
+Roughly speaking, a vector bundle is just a family of vector spaces parametrized by points of a
+manifold (or, more generally, of a topological space).
+More formally, the notion of a vector bundle is defined as follows.
+Definition 1. Choose a non-negative integer k. A real smooth vector bundle of rank k is a triple
+(π, E, M) such that the following holds:
+(i) E and M are smooth manifolds, π: E →M is a smooth submersion (the differential is
+surjective at each point);
+(ii) For each m ∈M the fiber Em := π−1(m) has the structure of a vector space and Em ∼= Rk;
+(iii) For each m ∈M there is a neighborhood U ∋m and a smooth map ψU such that the
+following diagram
+π−1(U)
+U × Rk
+U
+π
+ψU
+pr1
+commutes. Moreover, ψU is a fiberwise linear isomorphism.
+4

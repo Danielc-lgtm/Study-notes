@@ -1,0 +1,10 @@
+# PAGE SPEC
+
+- **Filename:** `Def - The Quadratic Map on Positive Spinors.md`
+- **Type:** definition
+- **Chapter:** Gauge Theory XI — Seiberg–Witten Theory  (folder `Gauge Theory XI/`)
+- **Section:** §11.1 The Seiberg–Witten Equations and the Gauge Group Action
+
+## Spec (from the manifest)
+
+type: definition; source items: A-D7.1.1, A-R7.1.1; prereqs: [Thm - Spinor Representations of Spin(4) and the Self-Dual Forms, Def - Spin-c Dirac Operator Twisted by a Connection, Thm - Self-Dual Decomposition of 2-Forms in Four Dimensions]; spec: on a closed oriented Riemannian 4-manifold $M$ with spin$^c$ structure and positive spinor bundle $\slashed S^+$, the *quadratic map* $\mu:\slashed S^+\to i\,\mathfrak{su}(\slashed S^+)$, $\mu(\psi) := \psi\psi^* - \tfrac12|\psi|^2\,\mathrm{id}$ (the traceless part of $\psi\psi^*$); via the isomorphism $i\Lambda^2_+T^*M\cong i\,\mathfrak{su}(\slashed S^+)$ ((187), on `Thm - Spinor Representations of Spin(4) and the Self-Dual Forms`) it is a fibrewise-quadratic $\mu:\slashed S^+\to i\Lambda^2_+T^*M$; in the $\mathbb C^2$-model, $\begin{pmatrix}\psi_1\\\psi_2\end{pmatrix}\mapsto\tfrac12\begin{pmatrix}|\psi_1|^2-|\psi_2|^2 & 2\psi_1\bar\psi_2 \\ 2\bar\psi_1\psi_2 & |\psi_2|^2-|\psi_1|^2\end{pmatrix}$; the polarisation $\mu(\psi,\phi) := \tfrac12(\mu(\psi+\phi)-\mu(\psi)-\mu(\phi))$; **source typo (Haydys B16, p. 61): the expanded form is $\mu(\psi)(\phi) = \langle\phi,\psi\rangle\psi - \tfrac12|\psi|^2\phi$ with a MINUS sign (the printed $+\tfrac12|\psi|^2\phi$ is inconsistent with tracelessness); the series uses the traceless minus-sign version and verifies $\operatorname{tr}\mu(\psi) = 0$ and $\langle\mu(\psi)\psi,\psi\rangle = \tfrac12|\psi|^4$ on the page**; Convention callout: the sign $F_A^+ = +\mu(\psi)$ (not $-\mu(\psi)$) is the one for which the $C^0$ bound of §11.3 holds (Remark 197, T7.1.9); examples: $\mu(\psi) = 0\iff\psi = 0$; $|\mu(\psi)| = \tfrac12|\psi|^2$ (computed); non-example: $\psi\psi^*$ without the trace subtraction is not in $\mathfrak{su}$.

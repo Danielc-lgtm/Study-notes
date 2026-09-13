@@ -37,20 +37,31 @@ complete source coverage, and all updated incoming links. Ambition applies
 within the unchanged priority order P1 rigour → P2 self-containedness → P3
 explanation → P4 conciseness; diff size and length are not objectives.
 
-**P1. Rigour — complete proofs everywhere.** Applicable to every Thm / Lemma /
-Prop / Cor page (Formal Proof section), every Def page (Examples /
-Corollaries and Calibration check), and every Ex page (Complete formal
-solution). Pass when: every proof is complete with all cases and both
-directions; each step's justification is explicit (which hypothesis, which
-earlier lemma, which theorem — wikilinked); no "clearly / obviously /
-similarly / it is easy to see / the other case is analogous" stands in for an
-argument a careful reader could not expand within a minute; interchanges of
-limits, sums, integrals, and derivatives cite the theorem that licenses them;
+**P1. Rigour — every theorem mentioned is proved, at or above the thesis
+floor.** Applicable to every Thm / Lemma / Prop / Cor page (Formal Proof
+section), every Def page (Examples / Corollaries and Calibration check), every
+Ex page (Complete formal solution), and every *invocation* of a result
+anywhere in the unit. The governing text is
+`.claude/skills/polymath-notes/references/prose-and-proof-standard.md` Part II.
+Pass when: every result the unit mentions has a complete proof on its own
+page and every use wikilinks that page and restates the statement at the
+point of use; every proof does what the thesis's fully written proofs do
+(named assumptions and goal; labelled blocks with bold lead-ins; a
+justification on every displayed line; every hypothesis invoked by name;
+clause-by-clause well-definedness; all cases and both directions; numbered
+lines combined explicitly; a closing sentence in words); no "clearly /
+obviously / similarly / it is easy to see / the other case is analogous /
+sketch / omitted" stands in for an argument; interchanges of limits, sums,
+integrals, and derivatives cite the theorem that licenses them;
 well-definedness and existence are checked before use (Step 0 pattern);
 stated facts on Def and Ex pages are proved on the page or transcluded from the
-page that proves them. Fail examples: a proof sketch labelled as a proof; a
-"Lemma decomposition" whose full proofs are missing; an example asserted
-without verification; an equivalence with one direction shown.
+page that proves them; no page named `(Statement)` exists in or is linked from
+the unit; any result used without proof is genuinely book-length, sits in an
+`Imported without proof` callout, and is listed in `# Imported Results`;
+`find-unproved-theorems.py` is clean on the unit. Fail examples: a proof
+sketch labelled as a proof; a "Lemma decomposition" whose full proofs are
+missing; an example asserted without verification; an equivalence with one
+direction shown; a solution that invokes a theorem whose page has no proof.
 
 **P2. Self-containedness — context is linked or loaded.** Applicable to every
 page. Pass when: every definition and theorem used is transcluded or restated
@@ -95,13 +106,18 @@ precise, complete, conventional, and stated once in a clearly marked place
 (`# The Definition`; `# Statement` with a `> **Theorem (name).**` blockquote,
 immediately after `# Notation`). Hypotheses and conclusion sit in one block.
 
-**A2. Tong register everywhere else.** Motivation, axiom motivation, why-is-it-
-true, legal operations, strategy, bridges, takeaways: flowing prose, whiteboard
-voice, concrete situation before the formal punchline, mixed sentence rhythm.
-Fail signals: bullet inventories where prose would work; labelled fragments
-("Trigger: … Action: …") outside the permitted inline `*Trigger:*`/`*Pattern:*`
-markers in Legal Operations; hedge stacking; inspirational filler; "w.r.t.",
-"iff" in prose; corporate parallelism.
+**A2. Thesis register everywhere else.** Motivation, axiom motivation, why-is-
+it-true, legal operations, strategy, bridges, takeaways: the register of
+`prose/Chiang Sung En-Thesis.pdf` as specified in
+`prose-and-proof-standard.md` Part I — orient, motivate, state formally,
+unpack in the smallest concrete case, re-explain in a purpose-titled remark,
+close in words; measured first-person-plural academic voice; every claim with
+its reason; expansive rather than compressed; standard terminology; typed
+symbols. Fail signals: bullet inventories where prose would work; labelled
+fragments ("Trigger: … Action: …") outside the permitted inline
+`*Trigger:*`/`*Pattern:*` markers in Legal Operations; whiteboard chattiness
+or slogans; a general statement never instantiated; hedge stacking;
+inspirational filler; "w.r.t.", "iff" in prose; corporate parallelism.
 
 **A3. Notation typed and complete.** Every pivotal symbol in a Statement, The
 Definition, or display math is introduced earlier on the same page (Notation
@@ -263,8 +279,10 @@ high-level strategy plus subgoal decomposition with minimal hints; passes the
 `**Statement:**`, `**Hint:**`, `**Why needed:**`, and a nested
 `> [!note]- Full proof`; each practiceable in about five minutes.
 
-**D8. Formal Proof** — complete, collapsible, opens with "Step 0 — [precondition]"
-when well-posedness needs checking; no hidden steps.
+**D8. Formal Proof** — complete, collapsible, at or above the thesis floor
+(P1), opens with "Step 0 — [precondition]" when well-posedness needs checking;
+no hidden steps; cites other results only by wikilink to a page whose own
+Formal Proof is complete.
 
 **D9. Cross-Field Exercise Suggestions** — 3+ genuinely different contexts;
 applicable unless the theorem is narrowly technical.
@@ -346,6 +364,7 @@ Record the result in `progress.json` → `units[<id>].review`.
 1. `python3 .claude/skills/polymath-notes/scripts/find-math-bugs.py` → 0 hits in the unit.
 2. `python3 .claude/skills/polymath-notes/scripts/find-latex-bugs.py` → 0 hits in the unit.
 3. `python3 .claude/skills/polymath-notes/scripts/find-wikilink-bugs.py` → 0 hits in the unit.
+3a. `python3 .claude/skills/polymath-notes/scripts/find-unproved-theorems.py "<unit>"` → 0 findings (no statement-only pages, no missing/short/sketched Formal Proof, no lemma without a Full proof, no link into a statement-only page).
 4. Link audit: every `[[...]]` and `![[...#...]]` in the unit resolves (grep the targets against `find "Study notes" -name "*.md"`).
 5. `grep -L "^# Statement$" "<unit>/Thm - "*.md` → empty.
 6. `grep -L "Calibration check" "<unit>/Def - "*.md` → empty (or each exception is trivial and noted).
@@ -362,7 +381,7 @@ Record the result in `progress.json` → `units[<id>].review`.
 17. Parity sample against gold-standard subjects and a from-scratch Codex target done; every losing dimension rewritten (F4).
 18. Nothing correct from the pre-edit version was lost (diff reviewed); no planning text leaked (F6).
 19. Improve mode only: every "fail" in the Phase-3 diagnosis is now "pass" or listed under Unresolved with a reason.
-20. **P1 rigour gate:** `grep -n -i "clearly\|obviously\|it is easy to see\|similarly\|analogous\|left to the reader\|omitted" "<unit>"/*.md` reviewed line by line — every hit either expanded into an argument or justified as genuinely trivial; every Thm/Lemma/Prop/Cor page has a non-empty `Formal Proof` covering all cases and directions; every `> [!note]- Full proof` inside a lemma callout is present and complete; every Ex page has its `Complete formal solution`.
+20. **P1 rigour gate:** `grep -n -i "clearly\|obviously\|it is easy to see\|similarly\|analogous\|left to the reader\|omitted\|sketch" "<unit>"/*.md` reviewed line by line — every hit either expanded into an argument or justified as a genuinely non-mathematical use of the word; every Thm/Lemma/Prop/Cor page has a `Formal Proof` that is complete at the thesis floor (`prose-and-proof-standard.md` §6, all eleven points) covering all cases and directions; every `> [!note]- Full proof` inside a lemma callout is present and complete; every Ex page has its `Complete formal solution`; every theorem *invoked* anywhere in the unit links to a page whose Formal Proof is complete; no `(Statement)` page is created or linked; every result used without proof is in the `Imported without proof` callout form and listed in `# Imported Results`. The two longest proofs in the unit have been checked point by point against §6.
 21. **P2 self-containedness gate:** for every page in the unit, the first use of each Def/Thm is a transclusion or a restatement-with-wikilink (grep each `[[Def -` / `[[Thm -` target and confirm a `![[` or restatement precedes or accompanies it); cold-read test done on every Thm page and every Ex page, not just three samples.
 22. **P3 explanation gate:** the diagnosis names, per explanatory section, `keep / tighten / replace`, and every `replace` has a one-line reason; replaced sections re-read against A2 (register) and A1 (statements untouched).
 23. **P4 conciseness gate:** a final tightening pass was made over every page in the unit; for each page the pre/post diff was checked to confirm that every deleted or shortened passage carried no fact, case, justification, example, or connection that is absent from the final text (`git diff --word-diff` on the page, read the removals); no proof step, source item, example, or bridge was removed.

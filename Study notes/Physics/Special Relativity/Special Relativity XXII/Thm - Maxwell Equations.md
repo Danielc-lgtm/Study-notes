@@ -186,7 +186,7 @@ The two equations $dF = 0$ and $d{\star}F = \mu_0{\star}J$ are postulated (or de
 
 - **[[Thm - Hodge Star and the Exterior Product]]** — the inhomogeneous equation's Hodge star is what carries the metric and makes the equation Lorentz-invariant; converting $d{\star}F$ to the divergence $\nabla\cdot F^\sharp$ relies on the double-dual identity $\star\star = -1$ on $2$-forms and the covariant constancy of the Levi-Civita tensor, both established in the Hodge-duality machinery of topic XVIII.
 
-- **[[Gauge Theory I — Connections on Vector Bundles and the Electromagnetic Connection]]** — the two-part structure of Maxwell generalises to Yang–Mills: the homogeneous equation $dF = 0$ becomes the Bianchi identity $DF = 0$ that every curvature satisfies, and the inhomogeneous equation becomes the Yang–Mills equation $D{\star}F = {\star}J$, now nonlinear because $F = dA + A\wedge A$ carries the self-interaction $A\wedge A$. Electromagnetism is the abelian case where the bracket vanishes.
+- **[[Gauge Theory VII — The Hodge Star, Electrodynamics, and Yang–Mills Theory]]** — the two-part structure of Maxwell generalises to Yang–Mills: the homogeneous equation $dF = 0$ becomes the Bianchi identity $DF = 0$ that every curvature satisfies, and the inhomogeneous equation becomes the Yang–Mills equation $D{\star}F = {\star}J$, now nonlinear because $F = dA + A\wedge A$ carries the self-interaction $A\wedge A$. Electromagnetism is the abelian case where the bracket vanishes.
 
 ---
 
