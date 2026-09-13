@@ -235,7 +235,7 @@ Take a harmonic $1$-form $h$. The Weitzenböck formula gives $\Delta h = \nabla^
 
 **Complex geometry — Bochner for Kähler manifolds and Kodaira vanishing.** On a compact Kähler manifold with positive bisectional curvature, the Bochner technique on $(p, q)$-forms with bundle coefficients gives **Kodaira vanishing**: $H^q(X, K_X^{-1}\otimes L) = 0$ for $q > 0$, when $L$ is positive (ample). The proof structure parallels Bochner: harmonic $L$-valued forms, Weitzenböck involving the curvature of $L$ and the metric, integration, positivity forcing vanishing.
 
-**Mathematical physics — gauge theories on positive-Ricci backgrounds.** In Yang–Mills theory on a closed Riemannian $4$-manifold with positive Ricci curvature, the moduli space of [[Def - Instanton|instantons]] (self-dual connections) has dimension bounded by Hodge-theoretic data on the base; positive Ricci constrains $b^+_2$ and $b^-_2$ via Bochner-style arguments. For positive scalar curvature, the **Lichnerowicz–Singer theorem** says: a closed spin manifold with positive scalar curvature has no harmonic spinors. This is the spin-geometric Bochner.
+**Mathematical physics — gauge theories on positive-Ricci backgrounds.** In Yang–Mills theory on a closed Riemannian $4$-manifold with positive Ricci curvature, the moduli space of **instantons** (self-dual connections) has dimension bounded by Hodge-theoretic data on the base; positive Ricci constrains $b^+_2$ and $b^-_2$ via Bochner-style arguments. For positive scalar curvature, the **Lichnerowicz–Singer theorem** says: a closed spin manifold with positive scalar curvature has no harmonic spinors. This is the spin-geometric Bochner.
 
 ---
 

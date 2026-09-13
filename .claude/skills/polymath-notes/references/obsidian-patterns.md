@@ -61,7 +61,7 @@ The skill ships two scripts to enforce this:
 **Re-entering math from `\text{...}` (rule).** Inside a `$...$` math region, the command `\text{...}` switches to text mode. You may re-enter math mode with `$X$` *inside* the `\text` braces — KaTeX supports this — **but only if the inner `$...$` is separated from the surrounding text by whitespace**. The bad pattern is `\text{ is a$\sigma$-algebra}` (no space before `$\sigma$`): KaTeX's math/text toggle gets confused and renders incorrectly. Two safe fixes:
 
 - **Spaced re-entry**: `\text{ is a $\sigma$-algebra }` — surround the inner `$...$` with spaces.
-- **Split-text idiom (preferred for crisp typesetting)**: `\text{ is a } \sigma \text{-algebra}` — break the text around the math command. Each `\text{...}` contains only text; math commands stand outside. This is the David-Tong / typesetting style and avoids every spacing pitfall.
+- **Split-text idiom (preferred for crisp typesetting)**: `\text{ is a } \sigma \text{-algebra}` — break the text around the math command. Each `\text{...}` contains only text; math commands stand outside. This is the clean typesetting style and avoids every spacing pitfall.
 
 **Display-math pairing (rule).** Every `$$` must be paired. An odd count of `$$` tokens in a file means a stray delimiter — KaTeX will render display math up to a stray single `$` somewhere and the rest of the file as math. Run the detector to catch this.
 

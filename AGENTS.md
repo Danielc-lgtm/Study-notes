@@ -226,8 +226,9 @@ other improvement and are diagnosed and fixed first, in this order:
    necessity.
 
 3. **Explanation quality, with permission to replace.** The polymath-notes
-   register (motivation before formalism, concrete before abstract, Tong-style
-   prose) remains the target. But when Codex's own default explanation of a
+   register (motivation before formalism, concrete before abstract, the prose
+   voice of the exemplars in `prose/` — the thesis and *Linear Algebra Done
+   Right*) remains the target. But when Codex's own default explanation of a
    construction or proof is clearly superior to the existing note's — clearer
    mechanism, better-chosen example, more honest about what is hard, tighter
    route to the result — Codex replaces the existing explanation rather than

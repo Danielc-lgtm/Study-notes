@@ -39,7 +39,7 @@ tags: [area-tag, subject-tag]
 
 [Write so that someone who has forgotten everything about the topic can read this and understand why they should care. Be specific — not "this is important because it generalizes X" but "without this, we cannot do Y, and the specific obstacle is Z."]
 
-[Write in David Tong style: conversational, precise, building from the concrete problem to the abstract solution. Open with a hook in the first sentence: `Modules I` opens "Here is the entire topic in one sentence: a module is a vector space over a ring."]
+[Write in the exemplar voice (the thesis and *Linear Algebra Done Right* in `prose/`; see the Writing Style section of SKILL.md): conversational, precise, building from the concrete problem to the abstract solution. Open with a hook in the first sentence: `Modules I` opens "Here is the entire topic in one sentence: a module is a vector space over a ring."]
 
 [**Structural-backbone display equation (when applicable):** When the topic has a hierarchy or classification at its core, state it as a single display equation in Motivation that the rest of the chapter references. Example: `Rings II` line 41 places `field ⊂ ED ⊂ PID ⊂ UFD ⊂ ID` as a display.]
 

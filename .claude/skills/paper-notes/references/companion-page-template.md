@@ -4,7 +4,7 @@ The paper's reading surface has three layers: an **index page** at the top of th
 
 The index is short scaffolding — it names the paper, links prominently to the Whole-Paper Story, and lists the section pages. The Whole-Paper Story is the *reading experience* — a reader who wants to understand the paper reads it top to bottom. The section pages are for looking things up and for depth — big-picture indices that click through to atomic subpages.
 
-Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the reference thesis for the prose voice. Every subpage is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
+Follow `notation-discipline.md` for typing and terminology, `recall-callouts.md` for the callouts, and the two exemplars in `prose/` (the reference thesis and *Linear Algebra Done Right*) for the prose voice and the proof-detail floor. Every subpage is written intuition-first, then formal, then unpacked in a concrete case (the Prose Standard in SKILL.md).
 
 Filename pattern (**index at the top of the folder, everything else in `Subpages/`**):
 - Index: `Study notes/paper/[Short Title]/Paper - [Short Title].md`

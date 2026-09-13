@@ -1,6 +1,6 @@
 # Notation Discipline — Typing, Terminology, Prose
 
-This document holds Rules 3, 4, and 7 of the paper-notes skill in full. The SKILL.md body summarises them and points here. Read this before writing any statement, definition, or proof. The governing prose voice is the reference thesis (`paper_source/Chiang Sung En-Thesis.pdf`); this document is about *precision*, and the SKILL's Prose Standard is about *voice* — they work together.
+This document holds Rules 3, 4, and 7 of the paper-notes skill in full. The SKILL.md body summarises them and points here. Read this before writing any statement, definition, or proof. The governing prose voice is set by the two exemplars in `prose/` — the reference thesis (`prose/Chiang Sung En-Thesis.pdf`) and *Linear Algebra Done Right* (`prose/linear_algebra_done_right.pdf`); this document is about *precision*, and the SKILL's Prose Standard is about *voice* — they work together.
 
 ---
 

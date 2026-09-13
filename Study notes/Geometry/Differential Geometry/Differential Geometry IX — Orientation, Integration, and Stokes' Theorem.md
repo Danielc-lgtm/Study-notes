@@ -134,12 +134,12 @@ The reader is assumed to be comfortable with smooth manifolds and atlases ([[Dif
 > [!tip] Unlocked: Chern–Gauss–Bonnet Theorem *(from Differential Geometry)*
 > The **Chern–Gauss–Bonnet theorem** states that for a closed oriented even-dimensional Riemannian manifold $M^{2n}$,
 > $$\chi(M) = \int_M \mathrm{Pf}(\Omega/2\pi),$$
-> where $\Omega$ is the curvature 2-form of the Levi-Civita connection and $\mathrm{Pf}$ is the [[Def - Pfaffian|Pfaffian]]. The right side uses every ingredient of this topic (orientation, top-degree form, integration) plus curvature; the left side is a topological invariant. The theorem says a *geometric* integral computes a *topological* integer — the prototype of all index theorems.
+> where $\Omega$ is the curvature 2-form of the Levi-Civita connection and $\mathrm{Pf}$ is the **Pfaffian**. The right side uses every ingredient of this topic (orientation, top-degree form, integration) plus curvature; the left side is a topological invariant. The theorem says a *geometric* integral computes a *topological* integer — the prototype of all index theorems.
 
 > [!tip] Unlocked: Yang–Mills Action Functional *(from Gauge Theory)*
 > On a closed oriented 4-manifold $M$ with a principal $G$-bundle and connection 1-form $A$ of curvature $F_A$, the **Yang–Mills action** is the integral
 > $$S_{YM}[A] = \tfrac{1}{2}\int_M \mathrm{tr}(F_A \wedge {\star}F_A).$$
-> Its critical points are the Yang–Mills equations $d_A{\star}F_A = 0$ (with $dF_A = 0$ automatic by the Bianchi identity) — the form-language version of the source-free Maxwell equations, generalized to non-abelian gauge group. The variational principle uses Stokes via integration by parts; in [[Def - Dimension|dimension]] four, [[Def - Instanton|instantons]] (self-dual solutions $F_A = {\star}F_A$) tie this to Donaldson's invariants of smooth 4-manifolds.
+> Its critical points are the Yang–Mills equations $d_A{\star}F_A = 0$ (with $dF_A = 0$ automatic by the Bianchi identity) — the form-language version of the source-free Maxwell equations, generalized to non-abelian gauge group. The variational principle uses Stokes via integration by parts; in [[Def - Dimension|dimension]] four, **instantons** (self-dual solutions $F_A = {\star}F_A$) tie this to Donaldson's invariants of smooth 4-manifolds.
 
 > [!note] Exercise Index — §9.3
 > [[Exercise Index - §9.3 Stokes's Theorem on Manifolds]]

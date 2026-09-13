@@ -107,7 +107,7 @@ source: "[paper Short Title]"
 # Proof
 
 > [!note]- Proof
-> [Gap-free proof (Rule 5) if short or illuminating, in the thesis's labelled-step style. Otherwise: a proof sketch with the key idea, and cite a full source — and say which. Verify against a source (Rule 6).]
+> [A complete, self-contained, gap-free proof (Rule 5) is the default, in the thesis's labelled-step style with every step naming the result/definition/hypothesis it uses (the *Linear Algebra Done Right* citation discipline). The thesis's proof detail is the MINIMUM baseline — never terser. A proof sketch with the key idea plus a cited full source is acceptable *only* for a genuinely standard imported prerequisite the reader need not re-derive (e.g. Radon–Nikodym) — say which source, and treat it as an external input (Rule 5). Verify against a source (Rule 6).]
 
 ---
 
@@ -227,7 +227,7 @@ paper-ref: "Theorem [paper's number]"
 # Proof
 
 > [!note]- Gap-free proof
-> [The paper's proof rewritten with every step justified (Rule 5), in the thesis's labelled-step style. External lemmas appear as `> [!cite]-` callouts. If the paper's proof has a gap you filled, mark it with ⚠️.]
+> [The paper's proof rewritten complete and self-contained, every step justified (Rule 5), in the thesis's labelled-step style with each step naming the result/definition/hypothesis it uses (the *Linear Algebra Done Right* citation discipline). The thesis's proof detail is the MINIMUM baseline — never terser than a thesis proof. A reader landing here cold must be able to check every line without opening another page. External lemmas appear as `> [!cite]-` callouts. If the paper's proof has a gap you filled, mark it with ⚠️.]
 
 ---
 

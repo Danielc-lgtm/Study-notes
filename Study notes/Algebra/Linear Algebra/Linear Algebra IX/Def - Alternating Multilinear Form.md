@@ -115,7 +115,7 @@ The determinant of the $m \times m$ matrix $[\varphi_i(v_j)]$ is alternating in 
 
 **Is an instance: any alternating bilinear form (from §9A).** When $m = 2$, the alternating $m$-linear forms are exactly the alternating bilinear forms of §9A: $\dim V^{(2)}_{\mathrm{alt}} = \binom{n}{2}$, parametrised by antisymmetric $n \times n$ matrices.
 
-**Is an instance: the "[[Def - Pfaffian|Pfaffian]]" associated with a symplectic form.** For an antisymmetric $2n \times 2n$ matrix $A$, the **[[Def - Pfaffian|Pfaffian]]** $\operatorname{Pf}(A)$ is the unique polynomial in entries of $A$ with $\operatorname{Pf}(A)^2 = \det(A)$ and $\operatorname{Pf}(J) = 1$ for the standard symplectic matrix. It arises naturally from alternating bilinear-form theory and has interpretation as a top wedge product.
+**Is an instance: the "**Pfaffian**" associated with a symplectic form.** For an antisymmetric $2n \times 2n$ matrix $A$, the **Pfaffian** $\operatorname{Pf}(A)$ is the unique polynomial in entries of $A$ with $\operatorname{Pf}(A)^2 = \det(A)$ and $\operatorname{Pf}(J) = 1$ for the standard symplectic matrix. It arises naturally from alternating bilinear-form theory and has interpretation as a top wedge product.
 
 **Is NOT an instance: a general (non-alternating) multilinear form.** The trace product $\operatorname{tr}(T_1 T_2 \cdots T_m)$ on $\mathcal{L}(V)^m$ is multilinear but only cyclic, not antisymmetric. In particular $\operatorname{tr}(T_1 T_2) = \operatorname{tr}(T_2 T_1)$ is *symmetric* in two slots, not antisymmetric.
 
