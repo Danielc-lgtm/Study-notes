@@ -66,8 +66,8 @@ The **rank** of the tensor bundle is $n^{k+\ell}$. Special cases:
 | $(k, \ell)$ | Tensor bundle | Standard name |
 |---|---|---|
 | $(0, 0)$ | $M \times \mathbb{R}$ | Trivial line bundle |
-| $(1, 0)$ | $TM$ | [[Def - The Tangent Bundle|Tangent bundle]] |
-| $(0, 1)$ | $T^*M$ | [[Def - Cotangent Space and Cotangent Bundle|Cotangent bundle]] |
+| $(1, 0)$ | $TM$ | [[Def - The Tangent Bundle\|Tangent bundle]] |
+| $(0, 1)$ | $T^*M$ | [[Def - Cotangent Space and Cotangent Bundle\|Cotangent bundle]] |
 | $(k, 0)$ | $T^kTM$ | Contravariant $k$-tensor bundle |
 | $(0, \ell)$ | $T^\ell T^*M$ | Covariant $\ell$-tensor bundle |
 | $(1, 1)$ | $\mathrm{End}(TM)$ | Endomorphism bundle |
