@@ -120,7 +120,7 @@ This topic assumes the reader has refreshed the following before working through
 > [!tip] Unlocked: [[Def - Lie Group|Lie Group]] *(from Differential Geometry and Mathematical Physics)*
 > The general linear group $\mathrm{GL}(n, \mathbb{R})$ is the prototype of a **Lie group** — a smooth manifold equipped with smooth group operations. Adding "group structure" to "smooth manifold" gives an enormously rigid object whose entire local structure is captured by its Lie algebra. The orthogonal, unitary, symplectic, and special linear groups are all matrix Lie groups, and their representation theory is the algebraic backbone of quantum mechanics, gauge theory, and harmonic analysis. The development is in [[Differential Geometry XI — Lie Groups, Lie Algebras, and the Exponential Map|DG XI]].
 
-> [!tip] Unlocked: [[Def - Fibre Bundle|Fibre Bundle]] *(from Topology and Geometry)*
+> [!tip] Unlocked: **Fibre Bundle** *(from Topology and Geometry)*
 > The Grassmannian $G_k(\mathbb{R}^n)$ carries a **tautological bundle** — at each point (a $k$-plane $V \subseteq \mathbb{R}^n$) we attach the vector space $V$ itself — and every rank-$k$ vector bundle on a paracompact space is a pullback of this tautological bundle along a map to $G_k$. Grassmannians are therefore the **classifying spaces** for vector bundles, and the cohomology classes (Chern, Stiefel–Whitney, Pontryagin) of a bundle are read off from the [[Def - Homotopy|homotopy]] class of its classifying map. The general theory of **fibre bundles** and **principal bundles** sits on top of this.
 
 > [!tip] Unlocked: [[Def - Riemannian Manifold|Riemannian Manifold]] *(from Riemannian Geometry)*

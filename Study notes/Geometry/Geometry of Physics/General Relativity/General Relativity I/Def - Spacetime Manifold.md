@@ -42,7 +42,7 @@ The dimension is four because special relativity has four-dimensional Minkowski 
 
 (c) *If we drop second countable*: long lines, etc. — topologically pathological, blocks construction of partitions of unity.
 
-(d) *If we drop Lorentzian signature*: no causal structure, no relativity. Riemannian 4-manifolds describe "Euclidean gravity" (a tool in **quantum gravity via the Euclidean path integral**, **gravitational [[Def - Instanton|instantons]]**), but not physical spacetimes.
+(d) *If we drop Lorentzian signature*: no causal structure, no relativity. Riemannian 4-manifolds describe "Euclidean gravity" (a tool in **quantum gravity via the Euclidean path integral**, **gravitational instantons**), but not physical spacetimes.
 
 (e) *If we drop time orientation*: causally consistent in some patches but no global "arrow of time"; **closed timelike curves** can exist, and one runs into the **grandfather paradox**.
 

@@ -201,7 +201,7 @@ The conceptual obstacle is the **duality between brackets and exterior derivativ
 
 # Cross-Field Exercise Suggestions
 
-**[[Def - Pfaffian|Pfaffian]] systems and integrating factors in classical mechanics.** For a velocity constraint $\omega(\dot q) = 0$ on configuration space $Q$, holonomicity (existence of a configuration submanifold realizing the constraint) is equivalent to $\omega \wedge d\omega = 0$. When this holds, $\omega = \lambda\,df$ locally for an integrating factor $\lambda > 0$ and a function $f$, and the constraint surface is $\{f = c\}$. *Example:* a particle constrained to a surface $f(q) = c$ has $\omega = df$, automatically involutive.
+**Pfaffian systems and integrating factors in classical mechanics.** For a velocity constraint $\omega(\dot q) = 0$ on configuration space $Q$, holonomicity (existence of a configuration submanifold realizing the constraint) is equivalent to $\omega \wedge d\omega = 0$. When this holds, $\omega = \lambda\,df$ locally for an integrating factor $\lambda > 0$ and a function $f$, and the constraint surface is $\{f = c\}$. *Example:* a particle constrained to a surface $f(q) = c$ has $\omega = df$, automatically involutive.
 
 **Thermodynamic state functions via $\omega \wedge d\omega = 0$.** Infinitesimal heat $\delta Q$ on the state space of a thermodynamic system is *not* closed (entropy is generated, not just transferred). But $\delta Q/T$ has $d(\delta Q/T) = 0$ as a consequence of the second law, so $\omega = \delta Q/T \wedge d\omega = 0$ vacuously (since $d\omega = 0$ implies $\omega \wedge d\omega = 0$). Frobenius then produces $S$ with $dS = \delta Q/T$ — the entropy function. The integrating factor $1/T$ is what makes the heat $1$-form integrable.
 

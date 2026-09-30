@@ -76,7 +76,7 @@ A reader is assumed to have refreshed the foundations: [[Differential Geometry I
 - **[[Ex - The General Linear Group is a Smooth Manifold]]** *(from [[Differential Geometry I — Smooth Manifolds and Atlases|DG I]])*
 	- Already established that $\mathrm{GL}(n, \mathbb{R})$ is open in $M(n, \mathbb{R})$ and hence an $n^2$-dimensional smooth manifold; multiplication and inversion are smooth because matrix products and Cramer's rule are polynomial in the entries.
 
-> [!tip] Unlocked: Principal Bundle *(from Gauge Theory and [[Def - Fibre Bundle|Fibre Bundles]])*
+> [!tip] Unlocked: Principal Bundle *(from Gauge Theory and **Fibre Bundles**)*
 > A **principal $G$-bundle** is a smooth manifold $P$ with a free smooth right action of a Lie group $G$ such that $P \to P/G$ is a fibre bundle with fibre $G$. The Lie group $G$ acts as the "internal symmetry" at each point of the base, and a **connection** on $P$ is a smoothly varying choice of horizontal [[Def - Subspace|subspace]] transverse to the orbits. Principal bundles are the geometric foundation of gauge theory in physics — the structure group $\mathrm{U}(1)$ gives electromagnetism, $\mathrm{SU}(2)$ the weak interaction, $\mathrm{SU}(3)$ the strong interaction, and the curvature of the connection is the field strength.
 
 > [!note] Exercise Index — §11.1
